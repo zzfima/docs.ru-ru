@@ -2,18 +2,18 @@
 title: Использование в WCF нескольких схем проверки подлинности
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593814"
 ---
-# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="1c252-102">Использование в WCF нескольких схем проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="1c252-102">Using Multiple Authentication Schemes with WCF</span></span>
-<span data-ttu-id="1c252-103">В WCF теперь можно указать несколько схем проверки подлинности на одной конечной точке.</span><span class="sxs-lookup"><span data-stu-id="1c252-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="1c252-104">Кроме того, службы, размещенные на веб-серверах, могут наследовать свои параметры проверки подлинности непосредственно из IIS.</span><span class="sxs-lookup"><span data-stu-id="1c252-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="1c252-105">Резидентные службы могут указывать, какие схемы проверки подлинности можно использовать.</span><span class="sxs-lookup"><span data-stu-id="1c252-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="1c252-106">Дополнительные сведения о настройке параметров проверки подлинности в службах IIS, см. в разделе [проверки подлинности IIS](https://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="1c252-106">For more information about setting authentication settings in IIS, see [IIS Authentication](https://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
+# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="c0bad-102">Использование в WCF нескольких схем проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="c0bad-102">Using Multiple Authentication Schemes with WCF</span></span>
+<span data-ttu-id="c0bad-103">В WCF теперь можно указать несколько схем проверки подлинности на одной конечной точке.</span><span class="sxs-lookup"><span data-stu-id="c0bad-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="c0bad-104">Кроме того, службы, размещенные на веб-серверах, могут наследовать свои параметры проверки подлинности непосредственно из IIS.</span><span class="sxs-lookup"><span data-stu-id="c0bad-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="c0bad-105">Резидентные службы могут указывать, какие схемы проверки подлинности можно использовать.</span><span class="sxs-lookup"><span data-stu-id="c0bad-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="c0bad-106">Дополнительные сведения о настройке параметров проверки подлинности в службах IIS, см. в разделе [проверки подлинности IIS](https://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="c0bad-106">For more information about setting authentication settings in IIS, see [IIS Authentication](https://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
   
-## <a name="iis-hosted-services"></a><span data-ttu-id="1c252-107">Службы, размещенные в IIS</span><span class="sxs-lookup"><span data-stu-id="1c252-107">IIS-Hosted Services</span></span>  
- <span data-ttu-id="1c252-108">Для служб, размещенных в IIS, задайте схемы проверки подлинности, которые планируется использовать в IIS.</span><span class="sxs-lookup"><span data-stu-id="1c252-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="1c252-109">Затем в файле web.config службы, в конфигурации привязки укажите тип clientCredential как «InheritedFromHost» как показано в следующем фрагменте XML:</span><span class="sxs-lookup"><span data-stu-id="1c252-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
+## <a name="iis-hosted-services"></a><span data-ttu-id="c0bad-107">Службы, размещенные в IIS</span><span class="sxs-lookup"><span data-stu-id="c0bad-107">IIS-Hosted Services</span></span>  
+ <span data-ttu-id="c0bad-108">Для служб, размещенных в IIS, задайте схемы проверки подлинности, которые планируется использовать в IIS.</span><span class="sxs-lookup"><span data-stu-id="c0bad-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="c0bad-109">Затем в файле web.config службы, в конфигурации привязки укажите тип clientCredential как «InheritedFromHost» как показано в следующем фрагменте XML:</span><span class="sxs-lookup"><span data-stu-id="c0bad-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ ms.locfileid: "43521703"
     </bindings>  
 ```  
   
- <span data-ttu-id="1c252-110">Можно указать, что требуется только подмножество схем проверки подлинности для использования с вашей службой, с помощью ServiceAuthenticationBehavior или \<serviceAuthenticationManager > элемента.</span><span class="sxs-lookup"><span data-stu-id="1c252-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="1c252-111">Настраивая это в коде, используйте ServiceAuthenticationBehavior, как показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="1c252-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
+ <span data-ttu-id="c0bad-110">Можно указать, что требуется только подмножество схем проверки подлинности для использования с вашей службой, с помощью ServiceAuthenticationBehavior или \<serviceAuthenticationManager > элемента.</span><span class="sxs-lookup"><span data-stu-id="c0bad-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="c0bad-111">Настраивая это в коде, используйте ServiceAuthenticationBehavior, как показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="c0bad-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="1c252-112">Настраивая это в файле конфигурации, используйте \<serviceAuthenticationManager > элемента, как показано в следующем фрагменте кода XML.</span><span class="sxs-lookup"><span data-stu-id="1c252-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="c0bad-112">Настраивая это в файле конфигурации, используйте \<serviceAuthenticationManager > элемента, как показано в следующем фрагменте кода XML.</span><span class="sxs-lookup"><span data-stu-id="c0bad-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="1c252-113">Это гарантирует использование только подмножество перечисленных здесь схем проверки подлинности для применения на конечной точке службы в зависимости от того, что было выбрано на IIS.</span><span class="sxs-lookup"><span data-stu-id="1c252-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="1c252-114">Это означает, что разработчик может исключить, например, простую проверку подлинности из списка путем исключения ее из списка serviceAuthenticationManager, и она не будет применена на конечной точке службы, даже если она активирована в IIS.</span><span class="sxs-lookup"><span data-stu-id="1c252-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
+ <span data-ttu-id="c0bad-113">Это гарантирует использование только подмножество перечисленных здесь схем проверки подлинности для применения на конечной точке службы в зависимости от того, что было выбрано на IIS.</span><span class="sxs-lookup"><span data-stu-id="c0bad-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="c0bad-114">Это означает, что разработчик может исключить, например, простую проверку подлинности из списка путем исключения ее из списка serviceAuthenticationManager, и она не будет применена на конечной точке службы, даже если она активирована в IIS.</span><span class="sxs-lookup"><span data-stu-id="c0bad-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
   
-## <a name="self-hosted-services"></a><span data-ttu-id="1c252-115">Резидентные службы</span><span class="sxs-lookup"><span data-stu-id="1c252-115">Self-Hosted Services</span></span>  
- <span data-ttu-id="1c252-116">Резидентные службы настраиваются несколько иначе, так как отсутствует наследование параметров из IIS.</span><span class="sxs-lookup"><span data-stu-id="1c252-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="1c252-117">Здесь используется \<serviceAuthenticationManager > элемента или ServiceAuthenticationBehavior для указания наследуемых параметров проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="1c252-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="1c252-118">Соответствующий код выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="1c252-118">In code it looks like this:</span></span>  
+## <a name="self-hosted-services"></a><span data-ttu-id="c0bad-115">Резидентные службы</span><span class="sxs-lookup"><span data-stu-id="c0bad-115">Self-Hosted Services</span></span>  
+ <span data-ttu-id="c0bad-116">Резидентные службы настраиваются несколько иначе, так как отсутствует наследование параметров из IIS.</span><span class="sxs-lookup"><span data-stu-id="c0bad-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="c0bad-117">Здесь используется \<serviceAuthenticationManager > элемента или ServiceAuthenticationBehavior для указания наследуемых параметров проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c0bad-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="c0bad-118">Соответствующий код выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="c0bad-118">In code it looks like this:</span></span>  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="1c252-119">В конфигурации это выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="1c252-119">In config, it looks like this:</span></span>  
+ <span data-ttu-id="c0bad-119">В конфигурации это выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="c0bad-119">In config, it looks like this:</span></span>  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="1c252-120">Затем можно указать InheritFromHost в параметрах привязки, как показано в следующем фрагменте кода XML.</span><span class="sxs-lookup"><span data-stu-id="1c252-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="c0bad-120">Затем можно указать InheritFromHost в параметрах привязки, как показано в следующем фрагменте кода XML.</span><span class="sxs-lookup"><span data-stu-id="c0bad-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- <span data-ttu-id="1c252-121">Кроме того, можно определить схемы проверки подлинности в пользовательской привязке, задав схемы проверки подлинности на элементе привязки транспорта HTTP, как показано в следующем фрагменте конфигурации.</span><span class="sxs-lookup"><span data-stu-id="1c252-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
+ <span data-ttu-id="c0bad-121">Кроме того, можно определить схемы проверки подлинности в пользовательской привязке, задав схемы проверки подлинности на элементе привязки транспорта HTTP, как показано в следующем фрагменте конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c0bad-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1c252-122">См. также</span><span class="sxs-lookup"><span data-stu-id="1c252-122">See Also</span></span>  
- [<span data-ttu-id="1c252-123">Привязки и безопасность</span><span class="sxs-lookup"><span data-stu-id="1c252-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [<span data-ttu-id="1c252-124">Конечные точки: адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="1c252-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [<span data-ttu-id="1c252-125">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="1c252-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="1c252-126">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="1c252-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="1c252-127">Привязки</span><span class="sxs-lookup"><span data-stu-id="1c252-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="1c252-128">Привязки</span><span class="sxs-lookup"><span data-stu-id="1c252-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="1c252-129">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="1c252-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="c0bad-122">См. также</span><span class="sxs-lookup"><span data-stu-id="c0bad-122">See also</span></span>
+- [<span data-ttu-id="c0bad-123">Привязки и безопасность</span><span class="sxs-lookup"><span data-stu-id="c0bad-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [<span data-ttu-id="c0bad-124">Конечные точки: Адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="c0bad-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [<span data-ttu-id="c0bad-125">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="c0bad-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="c0bad-126">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="c0bad-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="c0bad-127">Привязки</span><span class="sxs-lookup"><span data-stu-id="c0bad-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [<span data-ttu-id="c0bad-128">Привязки</span><span class="sxs-lookup"><span data-stu-id="c0bad-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [<span data-ttu-id="c0bad-129">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="c0bad-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)
