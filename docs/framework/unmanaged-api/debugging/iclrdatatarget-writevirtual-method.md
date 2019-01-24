@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745484"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>Метод ICLRDataTarget::WriteVirtual
 Записывает данные из указанного буфера указанного адреса виртуальной памяти.  
@@ -41,10 +41,10 @@ HRESULT WriteVirtual (
   
 #### <a name="parameters"></a>Параметры  
  `address`  
- [in] CLRDATA_ADDRESS, в которой хранятся адресов виртуальной памяти.  
+ [in] CLRDATA_ADDRESS, который хранит адрес виртуальной памяти.  
   
  `buffer`  
- [in] Указатель на буфер, в которой хранятся данные, которые требуется записать.  
+ [in] Указатель на буфер, в котором хранятся данные для записи.  
   
  `bytesRequested`  
  [in] Число байтов для записи.  
@@ -53,13 +53,13 @@ HRESULT WriteVirtual (
  [out] Указатель на фактическое число байтов, которые были записаны.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

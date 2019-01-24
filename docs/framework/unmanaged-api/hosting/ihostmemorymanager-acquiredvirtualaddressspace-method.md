@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d93c50968192a7789cbf08968d7ec272c9775d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6133b558e62d66cfaac201317f66d784aac264c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513715"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Метод IHostMemoryManager::AcquiredVirtualAddressSpace
-Уведомляет узел, что общеязыковой среды выполнения (CLR) получила указанную память от операционной системы.  
+Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) получила указанную память от операционной системы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,19 +41,19 @@ HRESULT AcquiredVirtualAddressSpace(
  [in] Начальный адрес памяти.  
   
  `size`  
- [in] Размер в байтах в памяти.  
+ [in] Размер в байтах объем памяти.  
   
 ## <a name="remarks"></a>Примечания  
- `AcquiredVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы разработчиком ведущего приложения. Он вызывается средой CLR.  
+ `AcquiredVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы модулем записи ведущего приложения. Он вызывается средой CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

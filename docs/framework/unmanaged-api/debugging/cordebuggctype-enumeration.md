@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74f564a483d80fd6312cf015802750d48e73ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e08a486089a5697b9b3bb4b52c69fda3b661a6ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654754"
 ---
 # <a name="cordebuggctype-enumeration"></a>Перечисление CorDebugGCType
 Указывает, где выполняется сборщик мусора: на рабочей станции или на сервере.  
@@ -39,7 +39,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="members"></a>Участники  
   
-|Имя члена|Описание|  
+|Имя члена|Описание:|  
 |-----------------|-----------------|  
 |`CorDebugWorkstationGC`|Сборщик мусора работает на рабочей станции.|  
 |`CorDebugServerGC`|Сборщик мусора работает на сервере.|  
@@ -47,13 +47,13 @@ typedef enum CorDebugGCType {
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

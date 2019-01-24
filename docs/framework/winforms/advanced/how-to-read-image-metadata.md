@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Чтение метаданных изображения
+title: Как выполнить Чтение метаданных изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741448"
 ---
-# <a name="how-to-read-image-metadata"></a>Практическое руководство. Чтение метаданных изображения
-Некоторые файлы изображений содержат метаданные, которые могут прочитать, чтобы определить возможности изображения. Например цифровая фотография может содержать метаданные, которые могут прочитать, чтобы определить Марка и модель камеры, использованной для создания образа. С [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно считывать существующие метаданные и файлы изображений, также могут записывать новые метаданные.  
+# <a name="how-to-read-image-metadata"></a>Как выполнить Чтение метаданных изображения
+Некоторые файлы изображений содержат метаданные, которые можно прочитать, чтобы определить возможности изображения. Например цифровой фотографии может содержать метаданные, которые можно прочитать, чтобы определить марки и модели фотоаппарата, использованного для создания образа. С помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно считывать существующие метаданные, и можно также добавлять новые метаданные в файлы изображений.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] хранит каждый отдельный блок метаданных в <xref:System.Drawing.Imaging.PropertyItem> объекта. Можно прочитать <xref:System.Drawing.Image.PropertyItems%2A> свойство <xref:System.Drawing.Image> объекта для извлечения метаданных из файла. <xref:System.Drawing.Image.PropertyItems%2A> Свойство возвращает массив <xref:System.Drawing.Imaging.PropertyItem> объектов.  
   
  Объект <xref:System.Drawing.Imaging.PropertyItem> имеет следующие четыре свойства: `Id`, `Value`, `Len`, и `Type`.  
   
-## <a name="id"></a>Id  
- Тег, определяющий элемент метаданных. Некоторые значения, которые могут быть назначены <xref:System.Drawing.Imaging.PropertyItem.Id%2A> показано в следующей таблице.  
+## <a name="id"></a>Идентификатор  
+ Тег, определяющий элемент метаданных. Некоторые значения, которые могут быть назначены <xref:System.Drawing.Imaging.PropertyItem.Id%2A> показаны в следующей таблице.  
   
-|Шестнадцатеричное значение|Описание|  
+|Шестнадцатеричное значение|Описание:|  
 |-----------------------|-----------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Изображение заголовка<br /><br /> Изготовитель оборудования<br /><br /> Модель оборудования<br /><br /> ExifDTOriginal<br /><br /> Время выдержки EXIF<br /><br /> Таблица яркости<br /><br /> Таблица цветности|  
+|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Изображение заголовка<br /><br /> Поставщик вычислительной техники<br /><br /> Модель оборудования<br /><br /> ExifDTOriginal<br /><br /> Время выдержки EXIF<br /><br /> Таблицы освещенности<br /><br /> Таблицы цветности|  
   
 ## <a name="value"></a>Значение  
  Массив значений. Формат значений определяется <xref:System.Drawing.Imaging.PropertyItem.Type%2A> свойство.  
   
 ## <a name="len"></a>Len  
- Размер (в байтах) массива значений, на который указывает <xref:System.Drawing.Imaging.PropertyItem.Value%2A> свойство.  
+ Размер (в байтах) массив значений, на который указывает <xref:System.Drawing.Imaging.PropertyItem.Value%2A> свойство.  
   
 ## <a name="type"></a>Тип  
- Тип данных значения в массиве, на который указывает `Value` свойство. Типы, определяемые по `Type` в следующей таблице показаны значения свойств  
+ Тип значений в массиве, на который указывает `Value` свойство. Типы, определяемые по `Type` в следующей таблице показаны значения свойств  
   
-|Числовое значение|Описание|  
+|Числовое значение|Описание:|  
 |-------------------|-----------------|  
 |1|`Byte`|  
 |2|Массив `Byte` объекты в кодировке ASCII|  
 |3|16-разрядное целое число|  
 |4|32-разрядное целое число|  
-|5|Массив из двух `Byte` объектов, представляющих рациональное число|  
+|5|Массив из двух `Byte` объекты, представляющие рациональное число|  
 |6|Не используется|  
 |7|Не определено|  
 |8|Не используется|  
@@ -53,10 +53,10 @@ ms.locfileid: "33526582"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- В следующем примере кода считывает и отображает семи блоков метаданных из файла `FakePhoto.jpg`. Второй элемент свойства (позиция 1) в списке имеет <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (производитель оборудования) и <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (массив байтов в кодировке ASCII). Пример кода отображает значение данного свойства.  
+### <a name="description"></a>Описание:  
+ В следующем примере кода считывает и отображает семи блоков метаданных в файле `FakePhoto.jpg`. Второй элемент свойства (индекс 1) в списке <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (производитель) и <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (массив байтов в кодировке ASCII). В примере кода отображает значение данного свойства.  
   
- Код создает выходные данные, аналогичные следующим:  
+ В коде создается результат, аналогичный приведенному ниже:  
   
  `Property Item 0`  
   
@@ -121,8 +121,8 @@ ms.locfileid: "33526582"
  [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Обрабатывать формы <xref:System.Windows.Forms.Control.Paint> событий и вставьте этот код в обработчик событий paint. Необходимо заменить `FakePhoto.jpg` допустимы для системы и импорта путь и имя образа `System.Drawing.Imaging` пространства имен.  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Обработка формы <xref:System.Windows.Forms.Control.Paint> событий и вставьте этот код в обработчик событий paint. Необходимо заменить `FakePhoto.jpg` допустимы для системы и импорта путь и имя образа `System.Drawing.Imaging` пространства имен.  
   
-## <a name="see-also"></a>См. также  
- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также
+- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

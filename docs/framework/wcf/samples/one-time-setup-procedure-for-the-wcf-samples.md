@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583424"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске; Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.
@@ -44,7 +44,7 @@ ms.locfileid: "48840120"
   
 7.  Если образцы не установлены, установите их из загрузочного каталога для [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) или [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  После установки образцов перейдите на страницу: \<Диск_установки >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  После установки образцов перейдите на страницу: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Запустите **Setupvroot.bat** пакетный файл. Выполняются следующие действия.  
   

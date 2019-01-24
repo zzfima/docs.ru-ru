@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702942"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Абстракции (абстрактные типы и интерфейсы)
 Абстракция — это тип, который описывает контракт, но не содержит полной реализации контракта. Абстракции обычно реализуются как абстрактных классов или интерфейсов, и они поставляются с четко определенный набор справочная документация, описывающие необходимую семантику типов, реализующих контракт. Ниже перечислены некоторые из важнейших абстракций в .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, и <xref:System.Object>.  
@@ -39,5 +39,5 @@ ms.locfileid: "53149917"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

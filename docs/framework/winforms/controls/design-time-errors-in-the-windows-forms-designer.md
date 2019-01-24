@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26f57b039b8e2fb3c56af926eeb63dc3c4c33b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542409"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Ошибки во время разработки в конструкторе Windows Forms Designer
 В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms. При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.  
@@ -52,8 +52,8 @@ ms.locfileid: "47196009"
 ### <a name="ignore-and-continue"></a>Игнорировать и продолжить  
  Условие ошибки можно проигнорировать и продолжить загрузку конструктора. Такое решение может привести к непредвиденному поведению. Например, на поверхности разработки могут отсутствовать элементы управления.  
   
-## <a name="see-also"></a>См. также  
- [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Сообщения об ошибках конструктора Windows Forms](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a>См. также
+- [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
+- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Сообщения об ошибках конструктора Windows Forms](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

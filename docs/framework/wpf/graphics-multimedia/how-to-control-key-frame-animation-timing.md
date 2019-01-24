@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Распределение времени для анимации с ключевыми кадрами
+title: Как выполнить Распределение времени для анимации с полными кадрами
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3a8e11ee8bfbbe87ca5a1c51b815dd21c124a951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712029"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>Практическое руководство. Распределение времени для анимации с ключевыми кадрами
+# <a name="how-to-control-key-frame-animation-timing"></a>Как выполнить Распределение времени для анимации с полными кадрами
 В этом примере показано, как управлять временем ключевые кадры в анимации по полным кадрам. Как и другие виды анимации, имеют покадровой анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство. Помимо задания длительности анимации, необходимо указать, какая часть, в течение выделенного для каждого из его ключевых кадров. Чтобы выделить время, необходимо указать <xref:System.Windows.Media.Animation.KeyTime> для каждого ключевого кадра анимации.  
   
  <xref:System.Windows.Media.Animation.KeyTime> Для каждого ключевого кадра определяет, когда полного кадра (не указывает продолжительность времени ключевого кадра). Можно указать <xref:System.Windows.Media.Animation.KeyTime> как <xref:System.TimeSpan> значение, в процентах, а также <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> или <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> специальное значение.  
@@ -65,7 +65,7 @@ ms.locfileid: "44086197"
   
  Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012). Дополнительные сведения об анимации см. в разделе [сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

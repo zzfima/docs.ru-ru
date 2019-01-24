@@ -17,12 +17,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac306038aefba4ca0e0f13fa2945d01c27c0804d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654689"
 ---
 # <a name="-operator-visual-basic"></a>Оператор \ (Visual Basic)
 Делит два числа и возвращает целочисленный результат.  
@@ -35,44 +35,44 @@ expression1 \ expression2
   
 ## <a name="parts"></a>Части  
  `expression1`  
- Обязательно. Произвольное числовое выражение.  
+ Обязательный. Произвольное числовое выражение.  
   
  `expression2`  
- Обязательно. Произвольное числовое выражение.  
+ Обязательный. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
  Все числовые типы, включая типы без знака и с плавающей запятой и `Decimal`.  
   
 ## <a name="result"></a>Результат  
- Результатом является целочисленное частное `expression1` деленная `expression2`, что остальная часть отбрасывается и возвращается только целая часть числа. Это называется *усечение*.  
+ Результатом является целочисленное частное `expression1` деления на `expression2`, котором остаток отбрасывается и возвращается только целая часть результата. Этот процесс называется *усечение*.  
   
- Тип данных результата является числовым типом, соответствующим для типов данных `expression1` и `expression2`. В таблице «Целочисленных арифметических операций» в [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Тип данных результата является числовым типом, соответствующим типам данных `expression1` и `expression2`. См. в таблицах «Целочисленных арифметических операций» [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
- [-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, в котором сохраняется остаток в дробной части.  
+ [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, в котором сохраняется остаток в дробной части.  
   
 ## <a name="remarks"></a>Примечания  
- Перед выполнением деления, Visual Basic пытается преобразовать любое числовое выражение, с плавающей запятой для `Long`. Если `Option Strict` — `On`, возникает ошибка компилятора. Если `Option Strict` — `Off`, <xref:System.OverflowException> возможна, если значение находится за пределами диапазона [тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md). Преобразование в `Long` также является объектом *банковское округление*. Дополнительные сведения см. в разделе «Дробных частей» в [функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Перед выполнением деления, Visual Basic пытается преобразовать любое с плавающей запятой числовое выражение, чтобы `Long`. Если `Option Strict` является `On`, возникает ошибка компилятора. Если `Option Strict` — `Off`, <xref:System.OverflowException> возможно в том случае, если значение находится вне диапазона [тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md). Преобразование в `Long` также является *банковское округление*. Дополнительные сведения см. в разделе «Дробных частей» в [функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Если `expression1` или `expression2` равен [ничего](../../../visual-basic/language-reference/nothing.md), интерпретируется как ноль.  
+ Если `expression1` или `expression2` принимает значение [ничего не](../../../visual-basic/language-reference/nothing.md), он интерпретируется как ноль.  
   
 ## <a name="attempted-division-by-zero"></a>Попытка деления на ноль  
- Если `expression2` равняется нулю, `\` вызывает оператор <xref:System.DivideByZeroException> исключение. Это верно для всех числовых типов данных операндов.  
+ Если `expression2` результатом которого является ноль, `\` вызывает оператор <xref:System.DivideByZeroException> исключение. Это справедливо для всех числовых типов данных операндов.  
   
 > [!NOTE]
->  `\` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  `\` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `\` оператора для выполнения операции деления целое число со знаком. Результатом является целое число, представляющее целочисленное частное двух операндов, с отброшенным остатком.  
+ В следующем примере используется `\` оператора для выполнения операции деления целое число. Результатом является целое число, представляющее целочисленное частное двух операндов, а остальное удаляются.  
   
  [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  Выражения в предыдущем примере возвращают значения 2, 3, 33 и -22 соответственно.  
   
-## <a name="see-also"></a>См. также  
- [\\= Оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
- [/ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>См. также
+- [\\= Оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

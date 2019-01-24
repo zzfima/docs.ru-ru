@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655014"
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
 Вызывает событие, объявленное на уровне модуля в классе, форме или документа.  
@@ -75,9 +75,9 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемых потоков](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>См. также  
- [События](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>См. также
+- [События](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

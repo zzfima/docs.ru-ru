@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630961"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>Метод ISymUnmanagedReader::GetNamespaces
-Возвращает пространства имен, определенные в глобальной области в данном хранилище символов.  
+Получает пространства имен, определенные в глобальной области в данном хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,13 +46,13 @@ HRESULT GetNamespaces (
  [out] Указатель на переменную, которая получает длину списка пространств имен.  
   
  `namespaces`  
- [out] Указатель на переменную, которая получает список пространств имен.  
+ [out] Указатель на переменную, которая получает список имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

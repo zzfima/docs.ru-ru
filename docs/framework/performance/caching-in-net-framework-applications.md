@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9fc63f860bad96d7dd304de31dd6e9b6626c90b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721088"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -42,7 +42,7 @@ ms.locfileid: "43862021"
 > [!NOTE]
 >  Класс <xref:System.Runtime.Caching.MemoryCache> моделируется на основе объекта кэша ASP.NET, определенного в пространстве имен <xref:System.Web.Caching>. Следовательно, внутренняя логика кэширования подобна логике, предоставляемой в более ранних версиях ASP.NET.  
   
- Пример использования кэширования в приложении WPF см. в разделе [Пошаговое руководство. Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+ Пример использования кэширования в приложении WPF, см. в разделе [Пошаговое руководство: Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
   
 ## <a name="caching-in-aspnet-applications"></a>Кэширование в приложениях ASP.NET  
  Классы кэширования в пространстве имен <xref:System.Runtime.Caching> предоставляют функциональные возможности кэширования данных в ASP.NET.  
@@ -51,7 +51,7 @@ ms.locfileid: "43862021"
 >  Если приложение предназначено для работы с [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] или более ранней версией, необходимо использовать классы кэширования, определенные в пространстве имен <xref:System.Web.Caching>. Дополнительные сведения см. в разделе [Общие сведения о кэшировании в ASP.NET](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
   
 > [!NOTE]
->  При разработке новых приложений рекомендуется использовать класс <xref:System.Runtime.Caching.MemoryCache>. Интерфейс API, предоставленный в пространстве имен <xref:System.Runtime.Caching>, подобен API, предоставленному в пространстве имен <xref:System.Web.Caching.Cache>. Следовательно, этот API будет знаком вам, если вы использовали кэширование в более ранних версиях ASP.NET. Пример использования кэширования в приложениях ASP.NET см. в разделе [Пошаговое руководство. Кэширование данных приложения в ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
+>  При разработке новых приложений рекомендуется использовать класс <xref:System.Runtime.Caching.MemoryCache>. Интерфейс API, предоставленный в пространстве имен <xref:System.Runtime.Caching>, подобен API, предоставленному в пространстве имен <xref:System.Web.Caching.Cache>. Следовательно, этот API будет знаком вам, если вы использовали кэширование в более ранних версиях ASP.NET. Пример использования кэширования в приложениях ASP.NET, см. в разделе [Пошаговое руководство: Кэширование данных приложения в ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Кэширование выходных данных  
  Для ручного кэширования данных приложения можно использовать класс <xref:System.Runtime.Caching.MemoryCache> в ASP.NET. ASP.NET также поддерживает кэширование выходных данных, при котором в памяти сохраняются созданные выходные данные страниц, элементов управления и HTTP-ответов. Кэширование выходных данных можно настроить декларативно на веб-странице ASP.NET или с помощью параметров в файле Web.config. Дополнительные сведения см. в разделе [Элемент outputCache для элемента caching (схема параметров ASP.NET)](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
@@ -76,8 +76,8 @@ ms.locfileid: "43862021"
   
  Дополнительные сведения см. в записи [Расширенное кэширование выходных данных в ASP.NET 4 (серия, посвященная VS 2010 и .NET 4.0)](https://go.microsoft.com/fwlink/?LinkId=185772) блога Скотта Гатри (Scott Guthrie).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Caching.ObjectCache>  
- <xref:System.Runtime.Caching.MemoryCache>  
- [Пошаговое руководство. Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [Пошаговое руководство. Кэширование данных приложения в ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Caching.ObjectCache>
+- <xref:System.Runtime.Caching.MemoryCache>
+- [Пошаговое руководство: Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: Кэширование данных приложения в ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

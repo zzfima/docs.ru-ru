@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 688c5a4b5a18cea444ebf1d63f3ea012a5d815c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3243429f52bda58953296c4bb32624440792ad02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636473"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>Метод ICorDebugManagedCallback::EvalComplete
 Уведомляет отладчик о завершении вычисления.  
@@ -38,22 +39,22 @@ HRESULT EvalComplete (
   
 #### <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в которой была выполнена оценка.  
+ [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором была выполнена оценка.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в которой была выполнена оценка.  
+ [in] Указатель на объект ICorDebugThread, представляющий поток, в котором была выполнена оценка.  
   
  `pEval`  
- [in] Указатель на объект ICorDebugEval, который представляет код, который выполняется вычисление.  
+ [in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

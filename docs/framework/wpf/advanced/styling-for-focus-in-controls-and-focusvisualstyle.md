@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562600"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Стилизация фокуса в элементах управления и FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет два параллельных механизма для изменения внешнего вида элемента управления при получении фокуса клавиатуры. Первый механизм — использование методов задания свойств для свойств, таких как <xref:System.Windows.UIElement.IsKeyboardFocused%2A> внутри стиля или шаблона, который применяется к элементу управления. Второй механизм представляет собой отдельный стиль в качестве значения <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> свойство; «стиль визуального отображения фокуса» создает отдельное визуальное дерево для декоративного элемента, который отображается поверх элемента управления, а не изменяет визуальное дерево элемента управления или другой пользовательский Интерфейс элемент путем ее замены. В данном разделе рассматриваются сценарии, для которых подходит любой из этих механизмов.  
@@ -76,8 +76,8 @@ ms.locfileid: "43744989"
 ### <a name="other-focus-properties"></a>Другие свойства фокуса  
  Если требуется, чтобы все возможные причины изменения фокуса для порождали визуальное поведение, следует установить метод доступа или триггер на <xref:System.Windows.UIElement.IsFocused%2A> свойства зависимостей, либо на <xref:System.Windows.UIElement.GotFocus> или <xref:System.Windows.UIElement.LostFocus> события, которые используются для <xref:System.Windows.EventSetter>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)

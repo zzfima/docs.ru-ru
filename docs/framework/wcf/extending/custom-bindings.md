@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720555"
 ---
 # <a name="custom-bindings"></a>Пользовательские привязки
 Класс <xref:System.ServiceModel.Channels.CustomBinding> можно использовать, когда ни одна из системных привязок не соответствует требованиям службы. Все привязки создаются из упорядоченных наборов элементов привязки. Пользовательские привязки можно создавать из набора предоставляемых системой элементов привязки или в них можно включать определяемые пользователем элементы привязки. Пользовательские элементы привязки можно применять, например, для использования в конечной точке службы новых транспортов или кодировщиков. Рабочие примеры см. в разделе [примеры привязки Custom](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Дополнительные сведения см. в разделе [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -72,10 +72,10 @@ ms.locfileid: "47192814"
   
  Кроме того, можно определить собственные элементы привязки и вставить их между любыми из приведенных выше заданных уровней.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Использование привязок для настройки служб и клиентов](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Практическое руководство. Изменение привязки, предоставляемой системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Пользовательская привязка](../../../../docs/framework/wcf/samples/custom-binding.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Использование привязок для настройки служб и клиентов](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Практическое руководство. Настройка привязки, предоставляемой системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Пользовательская привязка](../../../../docs/framework/wcf/samples/custom-binding.md)

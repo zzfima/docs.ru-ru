@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 9883f9166007405c3f47a9a1d66a3f4c546197d0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683928"
 ---
 # <a name="varieties-of-custom-controls"></a>Создание собственных элементов управления
 Платформа .NET Framework предоставляет возможности разработки и реализации новых элементов управления. С ее помощью можно расширить функциональные возможности привычных пользовательских элементов управления, а также уже существующих элементов управления через наследование. Кроме того, она позволяет писать настраиваемые элементы управления с собственной отрисовкой.  
@@ -53,7 +53,7 @@ ms.locfileid: "43884566"
   
  Составной элементе управления содержит все унаследованные функциональные возможности, связанные с каждым входящим в него элементом управления Windows Forms, и позволяет выборочно представлять и связывать их свойства. Кроме того, составной элемент управления предоставляет немало функций для обработки событий клавиатуры по умолчанию, не требуя дополнительной разработки с вашей стороны.  
   
- Например, составной элемент управления можно собрать таким образом, чтобы он отображал данные адреса клиента из базы данных. Этот элемент управления может включать <xref:System.Windows.Forms.DataGridView> управления для отображения полей базы данных, <xref:System.Windows.Forms.BindingSource> для обработки привязки к источнику данных и <xref:System.Windows.Forms.BindingNavigator> элемент управления для перемещения по записям. Вы можете выборочно предоставить свойства привязки данных, а также упаковать и повторно использовать весь элемент управления в других приложениях. Пример составного элемента управления такого вида см. в разделе [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Например, составной элемент управления можно собрать таким образом, чтобы он отображал данные адреса клиента из базы данных. Этот элемент управления может включать <xref:System.Windows.Forms.DataGridView> управления для отображения полей базы данных, <xref:System.Windows.Forms.BindingSource> для обработки привязки к источнику данных и <xref:System.Windows.Forms.BindingNavigator> элемент управления для перемещения по записям. Вы можете выборочно предоставить свойства привязки данных, а также упаковать и повторно использовать весь элемент управления в других приложениях. Пример такого рода составного элемента управления, см. в разделе [как: Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
  Создание составного элемента управления, являются производными от <xref:System.Windows.Forms.UserControl> класса. <xref:System.Windows.Forms.UserControl> Базовый класс обеспечивает маршрутизацию клавиатуры для дочерних элементов управления и позволяет им работать сообща. Дополнительные сведения см. в разделе [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "43884566"
   
  Чтобы реализовать пользовательский элемент управления, необходимо написать код для <xref:System.Windows.Forms.Control.OnPaint%2A> событие элемента управления, а также любые определенные функции код, необходимый. Можно также переопределить <xref:System.Windows.Forms.Control.WndProc%2A> метод и обработать сообщения windows напрямую. Это самый эффективный способ создания элементов управления, однако для того, чтобы использовать его эффективно, необходимо знание API Microsoft Win32®.  
   
- Примером нестандартного элемента управления служит элемент управления "Часы", который выглядит и действует как часы со стрелками. Чтобы заставить стрелки часов двигаться в ответ на вызывается пользовательская отрисовка <xref:System.Windows.Forms.Timer.Tick> событий из внутреннего <xref:System.Windows.Forms.Timer> компонента. Дополнительные сведения см. в разделе [Практическое руководство. Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Примером нестандартного элемента управления служит элемент управления "Часы", который выглядит и действует как часы со стрелками. Чтобы заставить стрелки часов двигаться в ответ на вызывается пользовательская отрисовка <xref:System.Windows.Forms.Timer.Tick> событий из внутреннего <xref:System.Windows.Forms.Timer> компонента. Дополнительные сведения см. в разделе [Как Разработка элемента управления форм Windows простой](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
  **Рекомендация**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "43884566"
 -   — если требуется реализовать пользовательские функциональные возможности, которые недоступны в стандартных элементах управления.  
   
 ### <a name="activex-controls"></a>Элементы управления ActiveX  
- Несмотря на то что инфраструктура Windows Forms оптимизирована для размещения элементов управления Windows Forms, элементы управления ActiveX также можно использовать. Эта задача поддерживается в Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Несмотря на то что инфраструктура Windows Forms оптимизирована для размещения элементов управления Windows Forms, элементы управления ActiveX также можно использовать. Эта задача поддерживается в Visual Studio. Дополнительные сведения см. в разделе [Как Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Элементы управления без окон  
  Технологии Microsoft Visual Basic® 6.0 и ActiveX поддерживают элементы управления *без окон*. В Windows Forms элементы управления без окон не поддерживаются.  
@@ -104,11 +104,11 @@ ms.locfileid: "43884566"
 ## <a name="custom-design-experience"></a>Пользовательская среда разработки  
  Если вам требуется пользовательская среда разработки, вы можете создать свой собственный конструктор. Для составных элементов управления, создайте производный пользовательский класс конструктора из <xref:System.Windows.Forms.Design.ParentControlDesigner> или <xref:System.Windows.Forms.Design.DocumentDesigner> классы. Для расширенных и настраиваемых элементов управления, создайте производный пользовательский класс конструктора из <xref:System.Windows.Forms.Design.ControlDesigner> класса.  
   
- Используйте <xref:System.ComponentModel.DesignerAttribute> должен быть сопоставлен конструктора элемента управления. Дополнительные сведения см. в разделах [Расширение поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) и [Практическое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций, применяемых во время разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Используйте <xref:System.ComponentModel.DesignerAttribute> должен быть сопоставлен конструктора элемента управления. Дополнительные сведения см. в разделе [расширение поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) и [как: Создание элемента управления Windows Forms, используются преимущества функций разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
-## <a name="see-also"></a>См. также  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Практическое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций, применяемых во время разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+## <a name="see-also"></a>См. также
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Практическое руководство. Разработка элемента управления простого Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

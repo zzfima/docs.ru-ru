@@ -1,18 +1,18 @@
 ---
-title: Как предоставить доступ к каналу в форматах Atom и RSS
+title: Как выполнить Публикация канала в форматах Atom и RSS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681174"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Как предоставить доступ к каналу в форматах Atom и RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Как выполнить Публикация канала в форматах Atom и RSS
 Windows Communication Foundation (WCF) позволяет создавать службы, которая предоставляет веб-канала синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации с помощью Atom 1.0 и RSS 2.0. Эта служба предоставляет одну конечную точку, которая может вернуть любой формат синдикации. В целях упрощения в данном образце используется резидентная служба. В рабочей среде служба такого типа размещается в IIS или WAS. Дополнительные сведения о различных вариантах размещения WCF, см. в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
@@ -95,6 +95,6 @@ Windows Communication Foundation (WCF) позволяет создавать с�
 ## <a name="compiling-the-code"></a>Компиляция кода  
  При компиляции приведенного выше кода задайте ссылки на файлы System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

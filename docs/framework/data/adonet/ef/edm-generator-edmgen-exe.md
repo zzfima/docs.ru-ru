@@ -2,23 +2,23 @@
 title: Генератор модели EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722127"
 ---
 # <a name="edm-generator-edmgenexe"></a>Генератор модели EDM (EdmGen.exe)
 EdmGen.exe - программа командной строки, предназначенная для работы с файлами моделей и сопоставлениями [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Средство EdmGen.exe применяется для следующих целей.  
   
--   Соединения с источником данных с помощью определяемого источником данных поставщика данных .NET Framework, а также формирования файлов концептуальной модели (CSDL), модели хранения (SSDL) и сопоставления (MSL), используемых платформой [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [как: использование EdmGen.exe для формирования модели и сопоставления файлов](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+-   Соединения с источником данных с помощью определяемого источником данных поставщика данных .NET Framework, а также формирования файлов концептуальной модели (CSDL), модели хранения (SSDL) и сопоставления (MSL), используемых платформой [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использование EdmGen.exe для создания файлов модели и сопоставления](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
--   проверки существующей модели Дополнительные сведения см. в разделе [как: использование EdmGen.exe для проверки модели и сопоставления файлов](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
+-   проверки существующей модели Дополнительные сведения см. в разделе [Как Использование EdmGen.exe для проверки файлов модели и сопоставления](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
   
--   Создания файла кода C# или Visual Basic, который содержит классы объектов, сформированные из файла концептуальной модели (CSDL). Дополнительные сведения см. в разделе [как: использование EdmGen.exe для формирования кода уровня объекта](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
+-   Создания файла кода C# или Visual Basic, который содержит классы объектов, сформированные из файла концептуальной модели (CSDL). Дополнительные сведения см. в разделе [Как Использование EdmGen.exe для создания кода уровня объекта](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
   
--   Создания файла кода C# или Visual Basic, который содержит заранее сформированные представления для существующей модели. Дополнительные сведения [как: Pre-Generate представлений для повышения производительности запросов](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
+-   Создания файла кода C# или Visual Basic, который содержит заранее сформированные представления для существующей модели. Дополнительные сведения [как: Предварительное создание представлений для повышения производительности запросов](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
   
  Средство EdmGen.exe устанавливается в каталог [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Чаще всего она находится в папке C:\windows\Microsoft.NET\Framework\v4.0. Для 64-разрядных версий систем она находится в папке C:\windows\Microsoft.NET\Framework64\v4.0. Средство EdmGen.exe можно также войти через командную строку Visual Studio (щелкните **запустить**, пункты **все программы**, пункты **Microsoft Visual Studio 2010**, выберите пункт **Средств visual Studio**, а затем нажмите кнопку **Командная строка Visual Studio 2010**).  
   
@@ -41,7 +41,7 @@ EdmGen /mode:choice [options]
   
 ## <a name="options"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`/p[roject]:`\<строка >|Задает используемое имя проекта. Имя проекта используется в качестве значения по умолчанию для параметра пространства имен, имен файлов модели и сопоставления, имени файла источника объекта и имени исходного файла создания представления. Имени контейнера сущностей назначается значение \<проекта > контекста.|  
 |`/prov[ider]:`\<строка >|Имя поставщика данных [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] для создания файла модели хранения (SSDL). Поставщик по умолчанию [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
@@ -67,11 +67,11 @@ EdmGen /mode:choice [options]
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [Практическое руководство. Использование EdmGen.exe для создания кода объектного уровня](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [Практическое руководство. Использование EdmGen.exe для создания кода уровня объекта](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
  [Практическое руководство. Использование EdmGen.exe для проверки файлов модели и сопоставления](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>См. также  
- [Средства работы с моделью EDM ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
- [Сущностная модель данных](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [Спецификации CSDL, SSDL и MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>См. также
+- [Средства работы с моделью EDM ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Сущностная модель данных](../../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Спецификации CSDL, SSDL и MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

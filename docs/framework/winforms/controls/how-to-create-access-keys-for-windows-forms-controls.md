@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
+title: Как выполнить Определение клавиш доступа для элементов управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597857"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
-*Ключ доступа* — это подчеркнутый символ в тексте меню, пункт меню или метки элемента управления, например кнопки. С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой. Например, если кнопка запускает процесс печати формы и, следовательно, его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» вызывает буквы «P» подчеркнуть в тексте кнопки во время выполнения. Пользователь может запускать команды, связанные с кнопкой, нажав сочетание клавиш ALT + P. Не может иметь клавишу доступа для элемента управления, который не может получить фокус.  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Как выполнить Определение клавиш доступа для элементов управления Windows Forms
+*Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка. С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой. Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» приводит к буква «P» будет подчеркнут в тексте кнопки во время выполнения. Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P. Не может иметь ключ доступа для элемента управления, который не может получить фокус.  
   
-### <a name="to-create-an-access-key-for-a-control"></a>Чтобы создать сочетание клавиш для элемента управления  
+### <a name="to-create-an-access-key-for-a-control"></a>Чтобы создать ключ доступа для элемента управления  
   
-1.  Задать `Text` свойства в строку, содержащую знак амперсанда (&) перед буквой, которая будет использоваться в сочетании клавиш.  
+1.  Задайте `Text` свойство на строку, которая включает знак амперсанда (&) перед буквой, которая будет использоваться в сочетании клавиш.  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,10 @@ ms.locfileid: "33530953"
     ```  
   
     > [!NOTE]
-    >  Чтобы включить знак амперсанда в заголовок без создания ключа доступа, добавьте два амперсанда (& &). Один знак амперсанда, отображаемый в заголовке и без символов будут подчеркнуты.  
+    >  Чтобы включить знак амперсанда в захвате без создания ключа доступа, добавьте два амперсанда (& &). Один знак амперсанда отображается в заголовке, и никакие символы не будут подчеркнуты.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Button>  
- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Button>
+- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

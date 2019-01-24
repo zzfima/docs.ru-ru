@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
+title: Как выполнить Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1a9baa5a602edd0ef91ef7dff5cdc42832bd7532
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633326"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Как выполнить Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
 После добавления элементов управления в форму и определения пользовательского интерфейса для вашего приложения, можно привязать элементы управления к источнику данных, чтобы во время выполнения, пользователи могут изменять и сохранять данные, связанные с приложением.  
   
  Привязка одного или нескольких элементов управления в Windows Forms проще всего с помощью <xref:System.Windows.Forms.BindingSource> управления в качестве моста между элементов управления в форме и источником данных.  
@@ -59,8 +59,8 @@ ms.locfileid: "44042313"
   
      **DataSource** типа пользовательского интерфейса редактора закроется, а набор данных, <xref:System.Windows.Forms.BindingSource> и адаптер таблицы для что подключение к данным добавляются в форму.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [Добавление новых источников данных](/visualstudio/data-tools/add-new-data-sources)  
- [Окно "Источники данных"](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [Добавление новых источников данных](/visualstudio/data-tools/add-new-data-sources)
+- [Окно "Источники данных"](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)

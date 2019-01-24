@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6a4a9bda348ce4c0dfd1e41d4154cad88d4966a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701759"
 ---
 # <a name="startupflags-enumeration"></a>Перечисление STARTUP_FLAGS
 Содержит значения, указывающие поведение при запуске общеязыковой среды выполнения (CLR). По умолчанию, сбора мусора связана с непараллельной, а только библиотеки базовых классов загружаются в область нейтральных к домену.  
@@ -55,9 +55,9 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Указывает, что следует использовать параллельную сборку мусора. Если вызывающий объект запрашивает сервер сборки и параллельная сборка мусора на однопроцессорном компьютере, вместо этого выполняются построение рабочей станции и непараллельной сборки мусора. **Примечание:** параллельная сборка мусора не поддерживается в приложениях, работающих под управлением WOW64 x86 эмулятора на 64-разрядных системах, которые реализуют архитектуру Intel Itanium (прежнее название — IA-64). Дополнительные сведения об использовании WOW64 в 64-разрядных системах Windows, см. в разделе [под управлением 32-разрядных приложений](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Указывает, что следует использовать параллельную сборку мусора. Если вызывающий объект запрашивает сервер сборки и параллельная сборка мусора на однопроцессорном компьютере, вместо этого выполняются построение рабочей станции и непараллельной сборки мусора. **Примечание.**  Параллельная сборка мусора не поддерживается в приложениях, работающих под управлением WOW64 x86 эмулятора на 64-разрядных системах, которые реализуют архитектуру Intel Itanium (прежнее название — IA-64). Дополнительные сведения об использовании WOW64 в 64-разрядных системах Windows, см. в разделе [под управлением 32-разрядных приложений](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Указывает, что этой оптимизации загрузчика.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Указывает, что сборки не загружены как нейтральные к домену.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Указывает, что все сборки загружаются как нейтральные к домену.|  
@@ -75,13 +75,13 @@ typedef enum {
 |`STARTUP_ARM`|Указывает, что включено отслеживание ресурсов домена приложения. См. в разделе <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> свойство и [ \<appDomainResourceMonitoring > элемент](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

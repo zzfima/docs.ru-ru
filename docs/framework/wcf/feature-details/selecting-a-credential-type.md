@@ -2,12 +2,12 @@
 title: Выбор типа учетных данных
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577117"
 ---
 # <a name="selecting-a-credential-type"></a>Выбор типа учетных данных
 *Учетные данные* — это данные, Windows Communication Foundation (WCF) использует для подтверждения заявленной идентификации или возможностей. Например, паспорт - это документ, выданный властями, в котором содержатся учетные данные, подтверждающие гражданство страны или региона. В WCF учетные данные могут принимать различные формы, например маркеры имен пользователей и сертификаты X.509. В этом разделе рассматриваются учетные данные, как они используются в WCF и способ выбора правильных учетных данных для вашего приложения.  
@@ -26,8 +26,8 @@ ms.locfileid: "43503395"
 |Параметр|Описание|  
 |-------------|-----------------|  
 |Нет|Указывает, что клиенту не требуется предоставлять учетные данные. Это означает, что клиент является анонимным.|  
-|Basic|Задает для клиента обычную проверку подлинности. Дополнительные сведения см. в документе RFC2617 —[проверки подлинности HTTP: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Digest|Задает для клиента дайджест-проверку подлинности. Дополнительные сведения см. в документе RFC2617 —[проверки подлинности HTTP: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Basic|Задает для клиента обычную проверку подлинности. Дополнительные сведения см. в документе RFC2617 —[проверки подлинности HTTP: обычная и дайджест-проверка подлинности](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Digest|Задает для клиента дайджест-проверку подлинности. Дополнительные сведения см. в документе RFC2617 —[проверки подлинности HTTP: обычная и дайджест-проверка подлинности](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Ntlm|Задает проверку подлинности NTLM (NT LAN Manager). Этот параметр используется, если по какой-то причине нельзя использовать проверку подлинности Kerberos. Можно также отключить его использование в качестве запасного варианта, задав <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> свойства `false`, чего WCF сделать усилия для создания исключения, если используется NTLM. Обратите внимание, что установка для данного свойства значения `false` не предотвращает отправки учетных данных NTLM по сети.|  
 |Windows|Задает проверку подлинности Windows. Чтобы установить в домене Windows режим использования только протокола Kerberos, задайте свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> значение `false` (по умолчанию `true`).|  
 |Сертификат|Выполняет проверку подлинности клиента с использованием сертификата X.509.|  
@@ -97,20 +97,20 @@ ms.locfileid: "43503395"
   
  Дополнительные сведения о учетные данные и безопасные сеансы, см. в разделе [соображения о защите безопасных сеансов](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

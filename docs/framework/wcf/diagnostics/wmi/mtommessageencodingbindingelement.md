@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490986"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -33,28 +33,28 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ### <a name="encoding"></a>кодировка  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Кодировка, используемая при отправке сообщений через привязку.  
   
 ### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Тип данных: sint32  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Целое число, определяющее количество сообщений, которые можно читать одновременно, не выделяя памяти для новых средств чтения.  
   
 ### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Тип данных: sint32  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Целое число, обозначающее количество сообщений, которые можно отправлять одновременно, не выделяя памяти для новых средств записи.  
   
 ### <a name="readerquotas"></a>ReaderQuotas  
  Тип данных: XmlDictionaryReaderQuotas  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Квоты средств чтения.  
   
@@ -64,5 +64,5 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

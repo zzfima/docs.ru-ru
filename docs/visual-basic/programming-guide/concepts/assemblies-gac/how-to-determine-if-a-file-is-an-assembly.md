@@ -1,15 +1,15 @@
 ---
-title: 'Как: определить, является ли файл сборкой (Visual Basic)'
+title: Как выполнить Определить, является ли файл сборкой (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520098"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Как: определить, является ли файл сборкой (Visual Basic)
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Как выполнить Определить, является ли файл сборкой (Visual Basic)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Как вручную определить, является ли файл сборкой  
@@ -18,7 +18,7 @@ ms.locfileid: "47089403"
   
 2.  Загрузите файл, который нужно протестировать.  
   
-3.  Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [Практическое руководство. Просмотр содержимого сборок](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [как: просмотреть одержимое сборки](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Как программно определить, является ли файл сборкой  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Reflection.AssemblyName>  
-- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Сборки и глобальный кэш сборок (Visual Basic)](index.md)

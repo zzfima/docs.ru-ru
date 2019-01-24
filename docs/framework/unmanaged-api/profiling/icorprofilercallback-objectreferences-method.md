@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e64eeff8ef80aa264c9c49bd12a0cc45e0da18a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9fc10344757d4dd9f9df7d4931eb339b652303f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683733"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>Метод ICorProfilerCallback::ObjectReferences
 Уведомляет профилировщик об объектах в памяти, на которые ссылаются заданным объектом.  
@@ -45,28 +45,28 @@ HRESULT ObjectReferences(
  [in] Идентификатор, указанный объект является экземпляром класса.  
   
  `cObjectRefs`  
- [in] Число объектов ссылается указанный объект (то есть, количество элементов в `objectRefIds` массива).  
+ [in] Число объектов, на которые ссылается указанный объект (то есть, количество элементов в `objectRefIds` массива).  
   
  `objectRefIds`  
  [in] Массив идентификаторов объектов, на которые ссылаются по `objectId`.  
   
 ## <a name="remarks"></a>Примечания  
- `ObjectReferences` Метод вызывается для каждого объекта, оставшихся в куче после завершения сборки мусора. Если профилировщик возвращает сообщение об ошибке из этого обратного вызова, профилирующей службы перестанет работать, вызов этого обратного вызова до следующей сборки мусора.  
+ `ObjectReferences` Метод вызывается для каждого объекта, оставшихся в куче, после завершения сбора мусора. Если профилировщик возвращает сообщение об ошибке из этого обратного вызова, профилирующей службы будет прекратить вызов этой функции обратного вызова до следующей сборки мусора.  
   
- `ObjectReferences` Обратного вызова можно использовать в сочетании с [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) обратного вызова, чтобы создать граф ссылок полный объект среды выполнения. Общеязыковая среда выполнения (CLR) гарантирует, что каждая ссылка объекта выводится только один раз `ObjectReferences` метод.  
+ `ObjectReferences` Обратного вызова можно использовать в сочетании с [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) обратного вызова, чтобы создать диаграмму полный объект ссылки для среды выполнения. Среда CLR (CLR) гарантирует, что каждая ссылка объекта выводится только один раз `ObjectReferences` метод.  
   
- Идентификаторы объектов, возвращенных `ObjectReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов. Таким образом, профилировщик должен не пытаться проверять объекты во время `ObjectReferences` вызова. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) вызывается сборке мусора коллекции завершена, и можно безопасно выполнить проверку.  
+ Идентификаторы объектов, возвращенных `ObjectReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов. Таким образом, профилировщики не должны пытаться проверять объекты во время `ObjectReferences` вызова. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) вызывается сборке мусора коллекции завершена, и можно безопасно выполнить проверку.  
   
- Значение null `ClassId` указывает, что `objectId` имеет тип, который будет выгружен.  
+ Значение null `ClassId` указывает, что `objectId` имеет тип, который выгружается.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

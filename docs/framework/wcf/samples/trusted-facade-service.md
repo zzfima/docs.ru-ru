@@ -2,12 +2,12 @@
 title: Доверенная фасадная служба
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 6acea5204ae2c05483978eb6187d1de02ae1b268
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4b18f0eb4183a9dd6d0801dd022176cd3220c62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640424"
 ---
 # <a name="trusted-facade-service"></a>Доверенная фасадная служба
 В этом примере сценария показано, как передать информацию удостоверения вызывающей стороны от одной службы к другой с помощью Windows Communication Foundation (WCF) инфраструктуры безопасности.  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-6.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+6.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

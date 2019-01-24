@@ -2,12 +2,12 @@
 title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701096"
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM. До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка. Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.  
@@ -37,7 +37,7 @@ Values(1, 0x00, default)
 GO  
 ```  
   
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Пример. Чтение, перезапись и вставка данных FILESTREAM  
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Пример Чтение, перезапись и вставка данных FILESTREAM  
  В приведенном ниже образце демонстрируется чтение данных из потока FILESTREAM. В коде определяется логический путь к файлу, свойству `FileAccess` присваивается значение `Read`, а свойству `FileOptions` - значение `SequentialScan`. Затем в коде считываются в буфер байты данных из потока SqlFileStream. Эти байты данных затем выводятся в окно консоли.  
   
  В приведенном ниже образце также демонстрируется запись данных в поток FILESTREAM с перезаписью всех существующих данных. В коде определяется логический путь к файлу, создается поток `SqlFileStream`, свойству `FileAccess` присваивается значение `Write`, а свойству `FileOptions` - значение `SequentialScan`. В поток `SqlFileStream` записывается один байт, заменяющий все данные в файле.  
@@ -172,15 +172,15 @@ namespace FileStreamTest
 ## <a name="resources-in-sql-server-books-online"></a>Ресурсы электронной документации по SQL Server  
  Полная документация по FILESTREAM содержится в следующих разделах документации по SQL Server.  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.|  
 |[Создание клиентских приложений для данных FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Описываются функции API-интерфейса Win32, предназначенные для работы с данными FILESTREAM.|  
 |[FILESTREAM и другими компонентами SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Приводятся общие сведения, рекомендации и ограничения при использовании данных FILESTREAM совместно с другими возможностями SQL Server.|  
   
-## <a name="see-also"></a>См. также  
- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+## <a name="see-also"></a>См. также
+- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

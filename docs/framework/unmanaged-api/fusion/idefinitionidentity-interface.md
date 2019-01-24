@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb97c545d2d57ef589b5a7a5b3618eaa2b6f364f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687002"
 ---
 # <a name="idefinitionidentity-interface"></a>Интерфейс IDefinitionIdentity
 Представляет уникальную подпись кода, определяющего приложение в текущей области.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Получает указатель интерфейса на новый `IDefinitionIdentity` объекта, идентичным этому `IDefinitionIdentity`, за исключением изменения указанного атрибута.|  
-|`IDefinitionIdentity::EnumAttributes`|Возвращает указатель интерфейса [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) объект, содержащий атрибуты, связанные с этим `IDefinitionIdentity`.|  
-|`IDefinitionIdentity::GetAttribute`|Возвращает значение атрибута с заданным именем в указанном пространстве имен.|  
-|`IDefinitionIdentity::SetAttribute`|Устанавливает атрибут с указанным именем в указанное пространство имен с указанным значением.|  
+|`IDefinitionIdentity::Clone`|Получает указатель интерфейса на новый `IDefinitionIdentity` , идентичный данному `IDefinitionIdentity`, за исключением изменения указанного атрибута.|  
+|`IDefinitionIdentity::EnumAttributes`|Получает указатель интерфейса на [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) , содержащий атрибуты, связанные с этим `IDefinitionIdentity`.|  
+|`IDefinitionIdentity::GetAttribute`|Получает значение атрибута с указанным именем в указанном пространстве имен.|  
+|`IDefinitionIdentity::SetAttribute`|Задает атрибут с указанным именем в указанное пространство имен для указанного значения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Isolation.h  
+ **Заголовок.** Isolation.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728074"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Устранение неполадок, связанных с типами данных (Visual Basic)
 Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при выполнении операций над встроенными типами данных.  
@@ -112,11 +112,11 @@ ms.locfileid: "48850378"
 ### <a name="meaningless-values"></a>Смысла значения  
  В общем случае `String` значения не имеют смысла в другие типы данных и преобразования является очень искусственный и опасным. Когда это возможно, следует ограничить использование `String` переменных к последовательности символов, для которых они предназначены. Никогда не следует писать код, основанный на эквивалентные значения в других типах.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

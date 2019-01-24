@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: ff68c30c4e58cebb70c59352593d7b084413dce8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012590a21ac24b1146c30405c9872355a4b50802
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627256"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-Вызывается PresentationHost.exe для получения пользовательских хода выполнения и сообщения об ошибках с узла, если реализовано.  
+Вызывается программой PresentationHost.exe для получения пользовательских ход выполнения и сообщения об ошибках из узла, если реализовано.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,11 +23,11 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
 #### <a name="parameters"></a>Параметры  
  `pwzProgressAssemblyName`  
   
- [out] Указатель на сборку, содержащую пользовательский интерфейс узла предоставленный хода выполнения.  
+ [out] Указатель на сборку, содержащую пользовательский интерфейс хода выполнения, предоставляемую узла.  
   
  `pwzProgressClassName`  
   
- [out] Имя класса, интерфейс пользователя хода выполнения на указанный узел меньшее [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] , что файл <xref:System.Windows.Controls.Page> — его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzProgressAssemblyName`.  
+ [out] Имя класса, пользовательском интерфейсе ход выполнения, предоставляемую узла предпочтительно [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] файл с <xref:System.Windows.Controls.Page> является его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,15 +35,15 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- [out] Имя класса пользователя об узле интерфейса, предпочтительно XAML-файл с <xref:System.Windows.Controls.Page> — его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzErrorAssemblyName`.  
+ [out] Имя класса, то есть пользователем узла об интерфейсе, предпочтительно файл XAML с <xref:System.Windows.Controls.Page> является его элемент верхнего уровня. Этот класс находится в сборке, который задается параметром `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
- Значение HRESULT: игнорируется.  
+ HRESULT: Не обрабатывается.  
   
 ## <a name="remarks"></a>Примечания  
- Ведущее приложение может иметь особую тему, которая может не соответствовать PresentationHost.exe по умолчанию пользовательских интерфейсов. Если это так, можно реализовать ведущее приложение [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) для возврата хода выполнения и ошибки пользовательские интерфейсы PresentationHost.exe. Всегда будет вызывать PresentationHost.exe [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) перед использованием его пользовательские интерфейсы по умолчанию.  
+ Ведущее приложение может иметь конкретной темы, могут не соответствовать PresentationHost.exe по умолчанию пользовательские интерфейсы. Если это так, можно реализовать ведущее приложение [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) для возврата ход выполнения и ошибки пользовательских интерфейсов PresentationHost.exe. PresentationHost.exe всегда будет вызывать [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md) перед использованием его пользовательские интерфейсы по умолчанию.  
   
- Эта функция вызывается один раз во время инициализации PresentationHost элемента.  
+ Эта функция вызывается один раз во время инициализации процесс PresentationHost элемента.  
   
-## <a name="see-also"></a>См. также  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+## <a name="see-also"></a>См. также
+- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

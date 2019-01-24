@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 36651de5053e994103f79c9021e8e18e126f91fa
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c8b3f338659e2784db8deca3e1776e7926c30c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506088"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>Перечисление CLRDataSourceType
 
@@ -39,7 +39,7 @@ typedef enum
 
 ## <a name="members"></a>Участники
 
-| Член                        | Описание                           |
+| Член                        | Описание:                           |
 | ----------------------------- | ------------------------------------- |
 | `CLRDATA_SOURCE_TYPE_INVALID` | Чтобы указать, что ничего применяется |
 

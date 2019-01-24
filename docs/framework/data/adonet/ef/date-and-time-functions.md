@@ -2,17 +2,17 @@
 title: Функции даты и времени
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 358d124da5fb60d38d5e906a821c0b4bc86baab2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690778"
 ---
 # <a name="date-and-time-functions"></a>Функции даты и времени
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет функции даты и времени, которые выполняют операции с входным значением типа `System.DateTime` и возвращают значение типа `string` `System.DateTime` или числовое значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции. В следующей таблице показаны функции даты и времени SqlClient.  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |`DATEADD(datepart, number, date)`|Возвращает новое значение типа `DateTime`, получаемое добавлением интервала к указанной дате.<br /><br /> **Аргументы**<br /><br /> `datepart`: Объект `String` , представляющий часть даты, для которого необходимо вернуть новое значение.<br /><br /> `number`: Значение типа `Int32`, `Int64`, `Decimal` или `Double`, используемое для увеличения значения `datepart`.<br /><br /> `date:` Выражение, возвращающее `DateTime`, или `DateTimeOffset`, или `Time` с точностью = [0-7] или строку символов в формате даты.<br /><br /> **Возвращаемое значение**<br /><br /> Новое значение `DateTime`, `DateTimeOffset` или `Time` с точностью = [0-7].<br /><br /> **Пример**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
 |`DATEDIFF(datepart,startdate,enddate)`|Возвращает количество границ даты и времени, пересекаемых между двумя указанными датами.<br /><br /> **Аргументы**<br /><br /> `datepart`: Объект `String` , представляющий часть даты для вычисления разницы.<br /><br /> `startdate`: Начальная дата для вычисления — это выражение, возвращающее `DateTime`, или `DateTimeOffset`, или `Time` значение с точностью = [0-7] или строку символов в формате даты.<br /><br /> `enddate:` Конечная дата для вычисления — это выражение, возвращающее `DateTime`, или `DateTimeOffset`, или `Time` значение с точностью = [0-7] или строку символов в формате даты.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.<br /><br /> **Пример**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
@@ -33,5 +33,5 @@ ms.locfileid: "53148994"
 |---------------------|---------------------|---------------------|  
 |[Функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[Функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[Функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>См. также  
- [Функции SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>См. также
+- [Функции SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

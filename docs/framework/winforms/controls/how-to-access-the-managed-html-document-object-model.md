@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к управляемой объектной модели HTML-документов
+title: Как выполнить Доступ к объектной модели управляемого HTML-документ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637155"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к управляемой объектной модели HTML-документов
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Как выполнить Доступ к объектной модели управляемого HTML-документ
 Получить доступ к управляемой объектной модели HTML-документа (DOM) можно из двух типов приложений.  
   
 -   Приложение Windows Forms (.EXE), в котором размещен управляемый элемент управления <xref:System.Windows.Forms.WebBrowser>. Эти две технологии дополняют друг друга: элемент управления <xref:System.Windows.Forms.WebBrowser> отображает страницу пользователю, а HTML DOM представляет логическую структуру документа.  
@@ -30,7 +30,7 @@ ms.locfileid: "33527665"
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Доступ к DOM из элемента управления UserControl, размещенного в Internet Explorer  
   
-1.  Создайте собственный пользовательский класс, производный от класса <xref:System.Windows.Forms.UserControl>. Дополнительные сведения см. в разделе [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Создайте собственный пользовательский класс, производный от класса <xref:System.Windows.Forms.UserControl>. Дополнительные сведения см. в разделе [Как Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
   
 2.  Поместите в обработчик события загрузки для <xref:System.Windows.Forms.UserControl> следующий код:  
   
@@ -45,5 +45,5 @@ ms.locfileid: "33527665"
   
 1.  Для получения доступа к управляемому HTML DOM приложение или <xref:System.Windows.Forms.UserControl> потребуют полного доверия. Если приложение Windows Forms развертывается с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], можно запросить полное доверие, используя повышение уровня разрешения или развертывание доверенных приложений (см. раздел [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)).  
   
-## <a name="see-also"></a>См. также  
- [Использование управляемой объектной модели HTML-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>См. также
+- [Использование управляемой объектной модели HTML-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

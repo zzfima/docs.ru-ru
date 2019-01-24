@@ -3,21 +3,21 @@ title: '&lt;nameClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737433"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Задает тип утверждения, указывающее <xref:System.Security.Principal.IIdentity.Name%2A> свойство. Тип утверждения используется для поиска <xref:System.Security.Claims.Claim> в коллекцию <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращенных <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> метод данного обработчика токенов. Задайте значение соответствующее утверждение имени <xref:System.Security.Principal.IIdentity> созданные из этого обработчика токенов.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<securityTokenHandlers >  
 \<add>  
-\<samlSecurityTokenRequirement >  
+\<samlSecurityTokenRequirement>  
 \<nameClaimType >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,16 +44,16 @@ ms.locfileid: "49123167"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|value|Строка, указывающая URI, представляющий тип требования утверждения для <xref:System.Security.Principal.IIdentity.Name%2A> свойство. Обязательно.|  
+|value|Строка, указывающая URI, представляющий тип требования утверждения для <xref:System.Security.Principal.IIdentity.Name%2A> свойство. Обязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класс или класс, производный от любого из этих классов.|  
+|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класс или класс, производный от любого из этих классов.|  
   
 ## <a name="remarks"></a>Примечания  
  `<nameClaimType>` Наборов элементов <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> свойство при <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объект инициализирован из конфигурации.  
@@ -68,5 +68,5 @@ ms.locfileid: "49123167"
 </add>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
