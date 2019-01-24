@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608093"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Метод ICorDebugManagedCallback2::MDANotification
-Предоставляет уведомление о том, что выполнение кода обнаружил помощник по отладке управляемого (кода MDA) в отлаживаемом приложении.  
+Предоставляет уведомление, что выполнение кода обнаружил помощник по отладке управляемого (кода MDA) в отлаживаемом приложении.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,39 +39,39 @@ HRESULT MDANotification(
   
 #### <a name="parameters"></a>Параметры  
  `pController`  
- [in] Указатель на интерфейс ICorDebugController, предоставляющую процесс или домен приложения, в котором произошло MDA.  
+ [in] Указатель на интерфейс ICorDebugController, предоставляющей процесса или домена приложения, в котором произошло MDA.  
   
- Отладчик не следует делать никаких предположений о типе контроллера: процесс или домен приложения, несмотря на то, что он всегда может запросить выполнение такого определения интерфейса.  
+ Отладчик не следует вносить никаких предположений о том, является ли контроллер процесс или домен приложения, несмотря на то, что он всегда может запросить интерфейс принимать решения.  
   
  `pThread`  
- [in] Указатель на интерфейс ICorDebugThread, который представляет управляемый поток, в котором произошло событие отладки.  
+ [in] Указатель на интерфейс ICorDebugThread, который предоставляет управляемый поток, в котором произошло событие отладки.  
   
- Если MDA встречается на неуправляемый поток, значение `pThread` будет иметь значение null.  
+ Если произошла по отладке управляемого кода в неуправляемый поток, значение `pThread` будет иметь значение null.  
   
- Из самого объекта MDA, необходимо получить идентификатор потока операционной системы (ОС).  
+ Из самого объекта по отладке управляемого кода необходимо получить идентификатор потока операционной системы (ОС).  
   
  `pMDA`  
- [in] Указатель на [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) интерфейс, который предоставляет сведения об MDA.  
+ [in] Указатель на [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) интерфейс, предоставляющий сведения по отладке управляемого кода.  
   
 ## <a name="remarks"></a>Примечания  
- MDA — это эвристическое предупреждение и не требуют никакого отладчика явного действия, за исключением вызова [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) для возобновления выполнения отлаживаемого приложения.  
+ MDA — это эвристическое предупреждение и не требует никаких действий явные отладчика, за исключением вызова [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) возобновить выполнение отлаживаемого приложения.  
   
- Общеязыковая среда выполнения (CLR) можно определить MDA, и какие данные оказываются в любой данный MDA в любой момент. Таким образом отладчики не должны использовать все функции, требующие определенных шаблонов управляемого кода.  
+ Среда CLR (CLR) можно определить MDA, и какие данные оказываются в любой данный MDA, в любой момент. Таким образом отладчики не должны строить любые функции, требующие определенных шаблонов по отладке управляемого кода.  
   
- Помощники отладки управляемого кода может быть в очередь и вызывать сразу же после обнаружения. Это может произойти, если среда выполнения должна ожидать, пока не достигнет безопасной точки для вызова управляемого кода, вместо вызова MDA при его обнаружении. Это также означает, что среда выполнения может вызвать несколько помощников в один набор в очередь обратных вызовов (аналогично операции события «присоединить»).  
+ Помощники отладки управляемого кода в очередь и вызывать сразу же после обнаружения. Это может произойти, если среда выполнения должна ждать, пока он достигает безопасной точки для вызова MDA, вместо вызова MDA при ее обнаружении. Это также означает, что среда выполнения может возникнуть ряд Помощники отладки управляемого кода в один набор в очередь обратных вызовов (аналогично операции «присоединение» событий).  
   
- Отладчик должен освободить ссылку на `ICorDebugMDA` экземпляр сразу после возврата из `MDANotification` обратного вызова, чтобы разрешить CLR повторно использовать память, занятая MDA. Освобождение экземпляра может повысить производительность, если нескольких MDA.  
+ Отладчик должен освободить ссылку на `ICorDebugMDA` экземпляр сразу после возврата из `MDANotification` обратного вызова, чтобы разрешить CLR позволяет очистить память, занятая MDA. Освобождение экземпляра может повысить производительность, если нескольких MDA.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Интерфейс ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Интерфейс ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

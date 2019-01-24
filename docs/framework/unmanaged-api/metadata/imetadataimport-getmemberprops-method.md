@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93763da2afbbdb1e738c802ba172e9f16e5f7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611414"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Метод IMetaDataImport::GetMemberProps
-Возвращает сведения о метаданных, в том числе имя, двоичную подпись и относительный виртуальный адрес из <xref:System.Type> члена ссылается указанный токен метаданных.  
+Возвращает сведения о метаданных, в том числе имя, двоичную подпись и относительный виртуальный адрес <xref:System.Type> члена ссылается указанный токен метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,19 +52,19 @@ HRESULT GetMemberProps (
  [in] Токен, который ссылается на связанные метаданные для члена.  
   
  `pClass`  
- [out] Указатель на токен метаданных, представляющий класс элемента.  
+ [out] Указатель на токен метаданных, представляющий класс члена.  
   
  `szMember`  
  [out] Имя элемента.  
   
  `cchMember`  
- [in] Размер в расширенных символах с `szMember` буфера.  
+ [in] Размер в расширенных символах `szMember` буфера.  
   
  `pchMember`  
  [out] Размер в расширенных символах возвращаемое имя.  
   
  `pdwAttr`  
- [out] Любые значения флага, применении к элементу.  
+ [out] Любые значения флага, применения к элементу.  
   
  `ppvSigBlob`  
  [out] Указатель на двоичную подпись метаданных элемента.  
@@ -76,26 +76,26 @@ HRESULT GetMemberProps (
  [out] Указатель на относительный виртуальный адрес элемента.  
   
  `pdwImplFlags`  
- [out] Любые флаги реализации метода, связанное с элементом.  
+ [out] Все флаги реализации метода, связанное с элементом.  
   
  `pdwCPlusTypeFlag`  
- [out] Флаг, обозначающий <xref:System.ValueType>.  
+ [out] Флаг, который помечает <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Постоянное строковое значение, возвращенное этим членом.  
+ [out] Постоянное строковое значение, возвращаемое этим элементом.  
   
  `pcchValue`  
  [out] Размер в символах `ppValue`, или нуль, если `ppValue` не содержит строку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

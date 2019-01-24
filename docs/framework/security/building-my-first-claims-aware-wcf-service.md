@@ -3,12 +3,12 @@ title: Создание первой службы WCF на основе утве
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599209"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Создание первой службы WCF на основе утверждений
 ## <a name="applies-to"></a>Применение  
@@ -38,7 +38,7 @@ ms.locfileid: "48836237"
   
  AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать STS локальной разработки, который является частью [Identity and Access Tool для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) которая доступна через Интернет.  
   
- Для создания первой по утверждениям службы WCF с помощью WIF, см. в разделе [How To: Включение WIF для веб-службы приложения WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Чтобы построить на основе утверждений первой службы WCF, с помощью WIF, см. в разделе [How To: Включение WIF для веб-службы приложения WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
-## <a name="see-also"></a>См. также  
- [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>См. также
+- [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)

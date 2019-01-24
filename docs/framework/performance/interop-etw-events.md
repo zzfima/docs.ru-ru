@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc9a90e9d889673d8f67e4f9158edebcb65235b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611778"
 ---
 # <a name="interop-etw-events"></a>События взаимодействия (трассировка событий Windows)
 <a name="top"></a> С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
@@ -39,7 +39,7 @@ ms.locfileid: "33396371"
   
  В таблице ниже представлены данные события.  
   
-|Имя поля|Тип данных|Описание|  
+|Имя поля|Тип данных|Описание:|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Идентификатор модуля.|  
 |StubMethodID|win:UInt64|Идентификатор метода-заглушки.|  
@@ -71,7 +71,7 @@ ms.locfileid: "33396371"
   
  В таблице ниже представлены данные события.  
   
-|Имя поля|Тип данных|Описание|  
+|Имя поля|Тип данных|Описание:|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Идентификатор модуля.|  
 |StubMethodID|win:UInt64|Идентификатор метода-заглушки.|  
@@ -83,5 +83,5 @@ ms.locfileid: "33396371"
   
  [К началу](#top)  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>См. также
+- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

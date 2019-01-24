@@ -2,28 +2,28 @@
 title: Внешнее сопоставление
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 640dff5555ab346782825c44ded758a681226648
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614646"
 ---
 # <a name="external-mapping"></a>Внешнее сопоставление
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает *внешнего сопоставления*, по которому отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной модели процесса. Файл внешнего сопоставления имеет следующие преимущества.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает *внешнего сопоставления*, процесс, по которому использовать отдельный файл XML для указания сопоставления между моделью данных базы данных и объектной модели. Файл внешнего сопоставления имеет следующие преимущества.  
   
 -   Код сопоставления можно хранить вне кода приложения. Этот подход уменьшает перегруженность кода приложения.  
   
 -   Файл внешнего сопоставления можно считать подобным файлу конфигурации. Например, можно изменить поведение приложения после предоставления двоичных файлов, просто выгрузив файл внешнего сопоставления.  
   
 ## <a name="requirements"></a>Требования  
- Файл сопоставления должен быть XML-файла и проверен на соответствие [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] файл схемы определения (.xsd).  
+ Файл сопоставления должен быть XML-файл и проверен на соответствие [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] файлу определения схемы (XSD).  
   
  Действуют следующие правила.  
   
 -   Файл сопоставления должен быть файлом XML.  
   
--   Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML. Дополнительные сведения см. в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+-   Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML. Дополнительные сведения см. в разделе [Как Проверка внешние файлы сопоставлений и DBML-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 -   Внешнее сопоставление переопределяет сопоставление на основе атрибутов. Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления. Данная модель работает, если класс включен в файл внешнего сопоставления.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33365219"
  Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Пользователи Visual Studio будет находить XSD-файл в диалоговом окне схем XML «Linqtosqlmapping.xsd». Правильно использовать этот файл для проверки внешнего файла сопоставления, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Пользователи Visual Studio будет также найти этот файл XSD в диалоговом окне схем XML «Linqtosqlmapping.xsd». Чтобы правильно использовать этот файл для проверки файла внешнего сопоставления, см. в разделе [как: Проверка внешние файлы сопоставлений и DBML-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -141,7 +141,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Практическое руководство. Создание модели объекта в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a>См. также
+- [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Практическое руководство. Создание модели объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

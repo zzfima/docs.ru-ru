@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605803"
 ---
 # <a name="geometries"></a>Геометрия
-<xref:System.Windows.Media.Geometry> — Это универсальный класс, используемый для отрисовки [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] графики, объектов проверки нажатия и определения области отсечения  
+<xref:System.Windows.Media.Geometry> — Это универсальный класс, используемый для визуализации [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] нажатия объектов графики и определения отсеченных областей  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Синтаксис разметки пути](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)

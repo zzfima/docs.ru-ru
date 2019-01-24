@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606455"
 ---
 # <a name="hosttype-enumeration"></a>Перечисление HOST_TYPE
 Содержит значения, указывающие тип узла, которое запускает приложение.  
@@ -38,20 +38,20 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Запустите приложение от AppLaunch.exe.<br /><br /> Это значение можно используйте для приложений с частичным доверием.|  
-|`HOST_TYPE_CORFLAG`|Запустите приложение непосредственно. То есть запустите приложение из свой собственный файл .exe.<br /><br /> Это значение можно используйте для приложений с полным доверием.|  
-|`HOST_TYPE_DEFAULT`|То же, как HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Запустите приложение из AppLaunch.exe.<br /><br /> Используйте это значение для частично доверенных приложениях.|  
+|`HOST_TYPE_CORFLAG`|Запустите приложение напрямую. То есть запуска приложения из свой собственный файл .exe.<br /><br /> Это значение используется для приложений с полным уровнем доверия.|  
+|`HOST_TYPE_DEFAULT`|Совпадает со значением HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

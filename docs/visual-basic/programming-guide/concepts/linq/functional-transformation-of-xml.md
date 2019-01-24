@@ -2,12 +2,12 @@
 title: Функциональное преобразование XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-ms.openlocfilehash: 06803feb0fe23ae4afe2237b64bf920f6e229060
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 62edd7adf425f8a36128497a6dae445a3e9cbfc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609425"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Функциональное преобразование XML (Visual Basic)
 В этом разделе описан подход с использованием чисто функционального преобразования для изменения XML-документов и производится сравнение его с процедурным подходом.  
@@ -24,15 +24,15 @@ ms.locfileid: "50190480"
  В целом наиболее эффективный подход к преобразованию XML из одной формы в другую состоит в чисто функциональном преобразовании. При данном подходе основной задачей программиста будет создать преобразование, которое применяется ко всему XML-документу (к одному или множеству жестко определенных узлов). Функциональное преобразование является, возможно, самым простым для кода (после того как программист приобретет навыки работы с данным подходом), дает наилучший для сопровождения код и часто более компактно, чем другие подходы.  
   
 ### <a name="xml-functional-transformational-technologies"></a>Технологии функционального преобразования XML  
- Майкрософт предлагает две технологии функционального преобразования для использования в XML-документах: XSLT и LINQ to XML. XSLT поддерживается в управляемом пространстве имен <xref:System.Xml.Xsl>, а также в собственной COM реализации MSXML. Не смотря на то что XSLT представляет собой надежную технологию работы с XML-документами, для ее использования требуется опыт в специализированных областях, а именно в области языка XSLT и поддерживающих его API-интерфейсов.  
+ Корпорация Майкрософт предоставляет две технологии функционального преобразования для использования в XML-документах: XSLT и LINQ to XML. XSLT поддерживается в управляемом пространстве имен <xref:System.Xml.Xsl>, а также в собственной COM реализации MSXML. Не смотря на то что XSLT представляет собой надежную технологию работы с XML-документами, для ее использования требуется опыт в специализированных областях, а именно в области языка XSLT и поддерживающих его API-интерфейсов.  
   
- В LINQ to XML предусмотрены инструменты, необходимые для чисто функциональных преобразований, кодируемых выразительно и эффективно внутри кода на языках C# и Visual Basic. Например, многие примеры в документации LINQ to XML используют чисто функциональный подход. Кроме того, в [руководство: управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) руководстве мы используем LINQ to XML функциональный подход для управления сведениями в документе Microsoft Word.  
+ В LINQ to XML предусмотрены инструменты, необходимые для чисто функциональных преобразований, кодируемых выразительно и эффективно внутри кода на языках C# и Visual Basic. Например, многие примеры в документации LINQ to XML используют чисто функциональный подход. Кроме того, в [руководства: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) руководстве мы используем LINQ to XML функциональный подход для управления сведениями в документе Microsoft Word.  
   
  Для более полного сравнения LINQ to XML с другими технологиями Microsoft XML см. раздел [Сравнение LINQ to XML с другими XML-технологиями](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md).  
   
- XSLT - это рекомендованный инструмент для преобразований, ориентированных на работу с документами, когда исходный документ имеет неправильную структуру. Несмотря на это, LINQ to XML также может осуществлять преобразования, ориентированные на работу с документами. Дополнительные сведения см. в разделе [как: использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+ XSLT - это рекомендованный инструмент для преобразований, ориентированных на работу с документами, когда исходный документ имеет неправильную структуру. Несмотря на это, LINQ to XML также может осуществлять преобразования, ориентированные на работу с документами. Дополнительные сведения см. в разделе [Как Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Сравнение LINQ to XML с другими XML-технологиями](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

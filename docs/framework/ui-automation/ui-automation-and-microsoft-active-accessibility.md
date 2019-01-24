@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603746"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Предыдущее решение по обеспечению доступности приложений —[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая модель специальных возможностей для [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] , предназначенная для удовлетворения потребностей продуктов поддержки специальных возможностей и средств автоматизированного тестирования. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет множество улучшений по сравнению с [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48036218"
   
  Навигация по элементам в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]может быть пространственной (например, переход к элементу, который располагается слева на экране), логической (например, перемещение к следующему пункту меню или к следующему элементу в последовательности табуляции в диалоговом окне) или иерархической (например, перемещение в первый дочерний элемент в контейнере или от дочернего элемента к родительскому). Иерархическая навигация осложняется тем, что дочерние элементы не всегда являются объектами, которые реализуют `IAccessible`.  
   
- В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]все элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] являются объектами <xref:System.Windows.Automation.AutomationElement> , которые поддерживают те же базовые функциональные возможности. (С точки зрения поставщика они являются объектами, реализующими интерфейс, унаследованный от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) Большей частью навигация является иерархической: от родительских элементов к дочерним и от одного элемента того же уровня к следующему. (Навигация между одноуровневыми элементами имеет логическую составляющую, так как она может следовать последовательности табуляции.) Вы можете переходить из любой начальной точки, используя любое отфильтрованное представление дерева, с помощью <xref:System.Windows.Automation.TreeWalker> класса. Вы также можете переходить к конкретному дочернему элементу или к потомкам с помощью методов <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> и <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; например, очень легко получить все элементы в диалоговом окне, поддерживающем указанный шаблон элемента управления.  
+ В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]все элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] являются объектами <xref:System.Windows.Automation.AutomationElement> , которые поддерживают те же базовые функциональные возможности. (С точки зрения поставщика они являются объектами, которые реализуют интерфейс, унаследованный от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) Большей частью навигация является иерархической: от родительских элементов к дочерним и от одного элемента того же уровня к следующему. (Навигация между одноуровневыми элементами имеет логическую составляющую, так как она может следовать последовательности табуляции.) Вы можете переходить из любой начальной точки, используя любое отфильтрованное представление дерева, с помощью класса <xref:System.Windows.Automation.TreeWalker>. Вы также можете переходить к конкретному дочернему элементу или к потомкам с помощью методов <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> и <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; например, очень легко получить все элементы в диалоговом окне, поддерживающем указанный шаблон элемента управления.  
   
  Навигация в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] более последовательна, чем в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Некоторые элементы, например раскрывающиеся списки и всплывающие окна, появляются дважды в дереве [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] , и навигация из них может иметь непредсказуемые результаты. Фактически невозможно правильно реализовать [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] для элемента управления "Главная панель". [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] допускает переподчинение и изменение расположения, так что элемент можно разместить в любом месте дерева, независимо от иерархии, обусловленной принадлежностью окон.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48036218"
 |STATE_SYSTEM_MUTLISELECTABLE|<xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>|в|  
 |STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = True|в|  
 |STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|в|  
-|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>.|в|  
+|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|в|  
 |STATE_SYSTEM_SELECTABLE|Поддерживается<xref:System.Windows.Automation.SelectionItemPattern> |в|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|в|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|в|  
@@ -209,7 +209,7 @@ ms.locfileid: "48036218"
 |EVENT_OBJECT_SELECTIONWITHIN|Эквивалент отсутствует|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Различные события изменения свойств|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> изменен|  
+|EVENT_OBJECT_VALUECHANGE|Изменены<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> .|  
 |EVENT_SYSTEM_ALERT|Эквивалент отсутствует|  
 |EVENT_SYSTEM_CAPTUREEND|Эквивалент отсутствует|  
 |EVENT_SYSTEM_CAPTURESTART|Эквивалент отсутствует|  
@@ -251,5 +251,5 @@ ms.locfileid: "48036218"
   
  В модели [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] устранена необходимость вызова поставщиками кода другого поставщика. Основная служба [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] выполняет все необходимое агрегирование.  
   
-## <a name="see-also"></a>См. также  
- [Основы модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>См. также
+- [Основы модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/index.md)

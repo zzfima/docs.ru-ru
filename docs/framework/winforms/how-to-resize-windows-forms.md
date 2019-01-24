@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение размера формы в Windows Forms
+title: Как выполнить Изменение размера формы Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 40a2ff3dcde9d0fbbc9a7e6c67430eb8313614e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f9a1aae4e9a787b798d6c27f9daa597955b208a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614622"
 ---
-# <a name="how-to-resize-windows-forms"></a>Практическое руководство. Изменение размера формы в Windows Forms
-Размер формы Windows Forms можно указать несколькими способами. Вы можете изменить высоту и ширину формы программными средствами, задав новое значение для свойства <xref:System.Windows.Forms.Form.Size%2A> или изменив свойства <xref:System.Windows.Forms.Control.Height%2A> или <xref:System.Windows.Forms.Control.Width%2A> по отдельности. Если вы используете Visual Studio, можно изменить размер, с помощью конструктора Windows Forms. Также см. в разделе [как: изменение размера Windows Forms с помощью конструктора](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
+# <a name="how-to-resize-windows-forms"></a>Как выполнить Изменение размера формы Windows Forms
+Размер формы Windows Forms можно указать несколькими способами. Вы можете изменить высоту и ширину формы программными средствами, задав новое значение для свойства <xref:System.Windows.Forms.Form.Size%2A> или изменив свойства <xref:System.Windows.Forms.Control.Height%2A> или <xref:System.Windows.Forms.Control.Width%2A> по отдельности. Если вы используете Visual Studio, можно изменить размер, с помощью конструктора Windows Forms. Также см. раздел [Как Изменение размера формы Windows Forms, с помощью конструктора](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Изменение размера формы программными средствами  
   
@@ -112,6 +112,6 @@ ms.locfileid: "43521190"
     f->Size->X += 100;  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+## <a name="see-also"></a>См. также
+- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)

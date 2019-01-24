@@ -2,19 +2,19 @@
 title: '&lt;transport&gt; для &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 678f3fd34f368abae11404fcbb1546b2135a75d2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7eac5c7a0da71e2d06929322ac5c702d83a1ea65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597441"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;transport&gt; для &lt;netMsmqBinding&gt;
 Определяет параметры безопасности транспорта.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
-\<netMsmqBinding >  
+\<netMsmqBinding>  
 \<Привязка >  
 \<Безопасность >  
 \<Транспорт >  
@@ -51,18 +51,18 @@ ms.locfileid: "54147035"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Определяет параметры безопасности для поставленного в очередь транспорта.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>  
- <xref:System.ServiceModel.MsmqTransportSecurity>  
- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>
+- <xref:System.ServiceModel.MsmqTransportSecurity>
+- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

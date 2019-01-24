@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c33cb9ba0479df5e69b6979a789253f9fae565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597337"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Нельзя присвоить значение выражению, поскольку оно является значением
 Оператор пытается присвоить значение выражению. Можно назначить значение только записываемой переменной, свойства или элемента массива во время выполнения. В следующем примере показано, как эта ошибка может возникать.  
@@ -28,7 +28,7 @@ maximum = 50
   
  Аналогичные примеры можно применить к свойствам и элементам массива.  
   
- **Косвенный доступ.** Эту ошибку может также вызывать косвенный доступ через тип значения. Рассмотрим следующий пример кода, который пытается установить значение <xref:System.Drawing.Point> , обратившись к косвенно через <xref:System.Windows.Forms.Control.Location%2A>.  
+ **Косвенный доступ.** Непрямой доступ через тип значения можно также создать эту ошибку. Рассмотрим следующий пример кода, который пытается установить значение <xref:System.Drawing.Point> обращения к ним косвенно через <xref:System.Windows.Forms.Control.Location%2A>.  
   
 ```  
 ' Assume this code runs inside Form1.  
@@ -38,7 +38,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.  
 ```  
   
- Последней инструкцией в предыдущем примере завершается ошибкой, так как она создает временный выделение для <xref:System.Drawing.Point> структуры, возвращенный <xref:System.Windows.Forms.Control.Location%2A> свойство. Структура является типом значения, а временная структура не сохраняется после выполнения инструкции. Проблемы путем объявления и использования переменной для <xref:System.Windows.Forms.Control.Location%2A>, которая создает постоянное выделение памяти для <xref:System.Drawing.Point> структуры. В примере показан код, который можно заменить последней инструкции в предыдущем примере.  
+ Последней инструкцией в предыдущем примере завершается сбоем, так как она создает временное размещение для <xref:System.Drawing.Point> структура, возвращенная <xref:System.Windows.Forms.Control.Location%2A> свойство. Структура является типом значения, а временная структура не сохраняется после выполнения инструкции. Проблема решается путем объявления и использования переменной для <xref:System.Windows.Forms.Control.Location%2A>, который создает постоянное выделение памяти для <xref:System.Drawing.Point> структуры. В следующем примере кода, которая может использоваться вместо последней инструкции в предыдущем примере.  
   
 ```  
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
@@ -53,11 +53,11 @@ exitButton.Location = exitLocation
   
 -   Если инструкция делает косвенный доступ через тип значения (обычно структуры), создайте переменную для хранения типа значения.  
   
--   Присвойте переменной подходящую структуру (или другого типа значения).  
+-   Присвойте переменной подходящей структурой (или другого типа значения).  
   
--   Используйте переменную для доступа к свойству присвоено значение.  
+-   Используйте переменную для доступа к свойству, чтобы присвоить ему значение.  
   
-## <a name="see-also"></a>См. также  
- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+## <a name="see-also"></a>См. также
+- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

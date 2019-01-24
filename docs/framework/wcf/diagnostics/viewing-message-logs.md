@@ -2,12 +2,12 @@
 title: Просмотр журналов сообщений
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f368d4f8f2a214feaa24b732513a99edf2e28296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603589"
 ---
 # <a name="viewing-message-logs"></a>Просмотр журналов сообщений
 В этом разделе описывается порядок просмотра журналов сообщений.  
@@ -60,7 +60,7 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
   
 -   Когда для преобразования в UTF-8 включено кодирование.  
   
-## <a name="see-also"></a>См. также  
- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+## <a name="see-also"></a>См. также
+- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)

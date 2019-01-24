@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597208"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе перечислены типы элементов управления и связанные с ними шаблоны элементов управления.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47113125"
 |Combo Box|Развернуть свернуть|Selection, Value|Scroll|  
 |Data Grid|Grid|Scroll, Selection, Table|Нет|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Нет|  
-|Document|Text|Scroll, Value|Нет|  
+|Document|Текста|Scroll, Value|Нет|  
 |Правка|Нет|Text, Range Value, Value|Нет|  
 |Группа|Нет|Развернуть свернуть|Нет|  
 |Header|Нет|Transform|Нет|  
@@ -66,7 +66,7 @@ ms.locfileid: "47113125"
 |Tab|Выбранное|Scroll|Нет|  
 |Tab Item|Selection Item|Нет|Вызвать|  
 |Таблица|Grid, Grid Item, Table, Table Item|Нет|Нет|  
-|Text|Нет|Grid Item, Table Item, Text|Значение|  
+|Текста|Нет|Grid Item, Table Item, Text|Значение|  
 |Бегунок|Transform|Нет|Нет|  
 |Title Bar|Нет|Нет|Нет|  
 |Tool Bar|Нет|Dock, Expand Collapse, Transform|Нет|  
@@ -78,5 +78,5 @@ ms.locfileid: "47113125"
 > [!NOTE]
 >  Если тип элемента управления не имеет поддерживаемых шаблонов элементов управления в списке, но имеет один или несколько условно поддерживаемых шаблонов элементов управления, то один из этих условных шаблонов элементов управления будет поддерживаться все время.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)

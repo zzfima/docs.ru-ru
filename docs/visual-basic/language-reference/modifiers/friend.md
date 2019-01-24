@@ -10,35 +10,35 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616203"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-Указывает, что один или несколько объявленных программных элементов доступны только из внутри сборки, содержащей их объявления.  
+Указывает, что один или несколько объявленных программных элементов доступны только внутри сборки, которая содержит их объявления.  
   
 ## <a name="remarks"></a>Примечания  
- Во многих случаях требуется программных элементов, таких как классы и структуры, используемые всей сборке, не только компонентом, который объявляет их. Тем не менее могут не хотелось бы быть доступны для кода за пределами сборки (например, если приложение является собственным). Если вы хотите ограничить доступ к элементу таким образом, можно объявить его с помощью `Friend` модификатор.  
+ Во многих случаях требуется программных элементов, таких как классы и структуры, используемые для всей сборки не только компонент, который объявляет их. Тем не менее вы не можете их доступными коду вне сборки (например, если приложение является собственным). Если вы хотите ограничить доступ к элементу таким образом, его можно объявить с помощью `Friend` модификатор.  
   
- Код в других классах, структурах и модули, скомпилированные с тем же сборке может получать доступ ко всем `Friend` элементы в этой сборке.  
+ Код в другие классы, структуры и модули, скомпилированные в тот же сборки можно получить доступ ко всем `Friend` элементы в этой сборке.  
   
- `Friend` доступ часто является предпочтительным уровнем для элементов программирования приложений, и `Friend` — доступ по умолчанию уровне интерфейса, модуля, класса или структуры.  
+ `Friend` доступ часто является предпочтительным уровнем для элементов программирования приложения, и `Friend` — по умолчанию доступ уровня интерфейса, модуля, класса или структуры.  
   
- Можно использовать `Friend` только на уровне модуля, интерфейсом или пространством имен. Таким образом, что контекст объявления для `Friend` элемент должен быть исходный файл, пространство имен, интерфейсом, модуля, класса или структуры; он не может быть процедурой.  
+ Можно использовать `Friend` только на уровне модуля, интерфейса или пространства имен. Таким образом, что контекст объявления для `Friend` элемент должен быть исходным файлом, пространство имен, интерфейсом, модуля, класса или структуры; не может быть процедуры.  
 
 > [!NOTE]
-> Можно также использовать [Protected Friend](protected-friend.md) модификатор доступа, что делает член класса, доступный из этого класса из производных классов и из той же сборки, в котором определен класс. Чтобы ограничить доступ к члену из внутри класса и из производных классов в той же сборке, используйте [защищенный закрытый](private-protected.md) модификатор доступа.
+> Можно также использовать [Protected Friend](protected-friend.md) модификатор доступа, что делает член класса, доступный из этого класса из производных классов, а также из той же сборке, в котором определен класс. Чтобы ограничить доступ к элементу из внутри класса и из производных классов в той же сборке, используйте [Private Protected](private-protected.md) модификатор доступа.
 
- Сравнение `Friend` и другие модификаторы доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Сравнение `Friend` и другие модификаторы доступа, см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Можно указать, что другая сборка является дружественной сборки, что позволяет получить доступ к все типы и члены, помеченные как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+>  Можно указать, что другой сборки является дружественной сборки, что обеспечивает доступ ко всем типы и члены, помеченные как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ## <a name="example"></a>Пример  
- Следующий класс использует `Friend` модификатор, чтобы разрешить другими элементами программирования в одной и той же сборки для доступа к определенным элементам.  
+ Следующий класс использует `Friend` модификатор, чтобы разрешить другими элементами программирования в той же сборке, для доступа к определенным элементам.  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
@@ -71,14 +71,14 @@ ms.locfileid: "34234593"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
- [Protected Private](./private-protected.md)   
- [Protected Friend](./protected-friend.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

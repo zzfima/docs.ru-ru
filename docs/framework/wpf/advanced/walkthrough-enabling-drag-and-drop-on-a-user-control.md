@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600678"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Пошаговое руководство. Включение перетаскивания для пользовательского элемента управления
 
@@ -33,12 +33,12 @@ ms.locfileid: "47193747"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Требуется Visual Studio для выполнения этого пошагового руководства.
+Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
 ## <a name="create-the-application-project"></a>Создание проекта приложения
  В этом разделе вы создадите инфраструктуру приложения, которая включает главную страницу с двумя панелями и <xref:System.Windows.Controls.TextBox>.
 
-1.  Создайте проект приложения WPF на Visual Basic или Visual C# с именем `DragDropExample`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Создайте проект приложения WPF на Visual Basic или Visual C# с именем `DragDropExample`. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
 2.  Откройте файл MainWindow.xaml.
 

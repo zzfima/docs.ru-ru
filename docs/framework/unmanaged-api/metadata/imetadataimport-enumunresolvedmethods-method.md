@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611960"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>Метод IMetaDataImport::EnumUnresolvedMethods
 Перечисляет токены MemberDef, представляющие неразрешенные методы в текущей области метаданных.  
@@ -43,35 +43,35 @@ HRESULT EnumUnresolvedMethods (
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
  `rMethods`  
- [out] Массив, используемый для хранения MemberDef токенов.  
+ [out] Массив, используемый для хранения токенов MemberDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rMethods`.  
   
  `pcTokens`  
- [out] Количество возвращаемых в токены MemberDef `rMethods`.  
+ [out] Число возвращенных в токены MemberDef `rMethods`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumUnresolvedMethods` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="remarks"></a>Примечания  
- Неразрешенный метод является один, который объявлен, но не реализован. Метод включается в перечислении, если метод помечен `miForwardRef` и либо `mdPinvokeImpl` или `miRuntime` присваивается нулевое значение. Другими словами, неразрешенный метод является методом класса, помеченного `miForwardRef` , но которой не реализован в неуправляемом коде (посредством PInvoke) не реализуются внутренне самой средой выполнения.  
+ Неразрешенный метод — это приложения, был объявлен, но не реализован. Метод включается в перечисление, если метод помечен `miForwardRef` и либо `mdPinvokeImpl` или `miRuntime` присваивается нулевое значение. Другими словами, неразрешенный метод является методом класса, помеченного `miForwardRef` , но который не реализован в неуправляемом коде (посредством PInvoke) и не реализуются внутренним образом средой в самой среде выполнения  
   
  Перечисление исключает все методы, определенные в области модуля (глобальные) или в интерфейсы или абстрактные классы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

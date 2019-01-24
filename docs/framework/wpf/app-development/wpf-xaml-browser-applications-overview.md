@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611986"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43745480"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Создание приложения обозревателя XAML (XBAP)  
- Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения обозревателя WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения браузера WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP в Visual Studio, приложение запускается с разрешениями зоны Интернета и, следовательно, если эти разрешения будут превышены исключения безопасности. Дополнительные сведения см. в разделах [Безопасность](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия в WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -186,6 +186,6 @@ ms.locfileid: "43745480"
   
  Кроме того улучшенный параллелизм последовательности загрузки ClickOnce сокращает время запуска почти на десять процентов. После ClickOnce загрузит и проверит манифесты, запускается загрузка приложения и индикатор выполнения начинает обновляться.  
   
-## <a name="see-also"></a>См. также  
- [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Развертывание приложений WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a>См. также
+- [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Развертывание приложений WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
