@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9115657c52f31d9b7b7da3c843338670343da26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747886"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Метод IMetaDataAssemblyEmit::DefineAssembly
-Создает `Assembly` структура содержащую метаданные для указанной сборки и возвращает связанный токен метаданных.  
+Создает `Assembly` структуры содержащие метаданные для указанной сборки и возвращает связанный токен метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,16 +49,16 @@ HRESULT DefineAssembly (
  [in] Размер в байтах `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] Идентификатор алгоритма хэширования, используемого для шифрования файлов в сборке, или значение NULL для задания алгоритма SHA-1.  
+ [in] Идентификатор алгоритма хэширования, используемый для шифрования файлов в сборке, или значение NULL для задания алгоритма SHA-1.  
   
  `szName`  
- [in] Понятное текстовое имя сборки. Это значение не должно превышать 1024 символа.  
+ [in] Понятное текстовое имя сборки. Это значение не должна превышать 1024 символа.  
   
  `pMetaData`  
  [in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.  
   
  `dwAssemblyFlags`  
- [in] Сочетание [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения, описывающие функции сборки.  
+ [in] Сочетание [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения, описывающие возможности сборки.  
   
  `pmda`  
  [out] Указатель на токен метаданных.  
@@ -67,13 +67,13 @@ HRESULT DefineAssembly (
  Только один `Assembly` структуру метаданных можно определить в манифесте.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

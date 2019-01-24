@@ -8,31 +8,31 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: a48d1621e5568d556a1177578cc662813d70a283
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58861a036d95fcef41da455b25ad71d6e6afaef5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726823"
 ---
 # <a name="timing-events-overview"></a>Общие сведения о временных событиях
-В этом разделе описывается использование пять временных событий, доступных на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов.  
+В этом разделе описываются способы использования пяти временных событий, доступных на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для понимания этого раздела вы должны знать, как создавать и использовать анимации. Чтобы начать работу с анимацией, см. [Обзор анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Для понимания этого раздела вы должны знать, как создавать и использовать анимации. Чтобы приступить к работе с анимацией, см. в разделе [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
- Существует несколько способов для анимации свойства в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ Существует несколько способов анимирования свойств в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Использование объектов раскадровки** (разметка и код): можно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов упорядочить и распространять анимации на один или несколько объектов. Пример см. в разделе [анимации свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
+-   **Использование объектов раскадровки** (разметки и кода): Можно использовать <xref:System.Windows.Media.Animation.Storyboard> упорядочить анимации для одного или нескольких объектов и объектов. Например, см. в разделе [анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Использование локальных анимаций** (только код): можно применить <xref:System.Windows.Media.Animation.AnimationTimeline> объекты напрямую к свойствам, их которого должна начаться анимация. Пример см. в разделе [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+-   **Использование локальных анимаций** (только в коде): Можно применить <xref:System.Windows.Media.Animation.AnimationTimeline> объекты непосредственно к анимируемым свойствам. Пример см. в разделе [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Использование часов** (только в коде): вы можете явно управлять созданием часов и самостоятельно распределять часы для анимации.  Пример см. в разделе [анимировать свойство с помощью AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).  
+-   **Использование часов** (только в коде): Кроме того, можно явно управлять созданием часов и самостоятельно распределять часы для анимации.  Например, см. в разделе [Анимирование свойства с помощью AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).  
   
- Так как их можно использовать в разметку и код, в примерах в этом обзоре используется <xref:System.Windows.Media.Animation.Storyboard> объектов. Тем не менее описанные здесь идеи также применяются к другим методам анимирования свойств.  
+ Так как их можно использовать в разметке и коде, в примерах в этом обзоре используются <xref:System.Windows.Media.Animation.Storyboard> объектов. Тем не менее описанные здесь идеи также применяются к другим методам анимирования свойств.  
   
 ### <a name="what-is-a-clock"></a>Что такое часы?  
- Временная шкала сама по себе просто описывает сегмент времени. Он является временной шкалы <xref:System.Windows.Media.Animation.Clock> объект, который не работает: он обеспечивает состояние синхронизации для временной шкалы во время выполнения. В большинстве случаев, например при использовании раскадровок, часы для временной шкалы создаются автоматически. Можно также создать <xref:System.Windows.Media.Animation.Clock> явным образом с помощью <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> метод. Дополнительные сведения о <xref:System.Windows.Media.Animation.Clock> объектов, в разделе [анимации и общие сведения о синхронизации системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Временная шкала сама по себе просто описывает сегмент времени. Он является временной шкалы <xref:System.Windows.Media.Animation.Clock> объект, который не работает: он обеспечивает связана со временем состояние времени выполнения для временной шкалы. В большинстве случаев, например при использовании раскадровок, часы для временной шкалы создаются автоматически. Вы также можете создать <xref:System.Windows.Media.Animation.Clock> явным образом с помощью <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> метод. Дополнительные сведения о <xref:System.Windows.Media.Animation.Clock> объектов, см. в разделе [анимации и общие сведения о характере системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
 ## <a name="why-use-events"></a>Зачем использовать события?  
  Все интерактивные временные операции являются асинхронными. Исключение составляет лишь поиск, который выравнивается по последнему такту. Точно определить, когда будут выполнены операции, невозможно. При наличии другого кода, который зависит от вашей операции, это может вызвать проблемы. Предположим, что вы хотите остановить временную шкалу, которая анимировала прямоугольник. После остановки временной шкалы вы изменяете цвет прямоугольника.  
@@ -49,7 +49,7 @@ ms.locfileid: "33565491"
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- Более полный пример см. в разделе [изменения состояния получать уведомления при часов](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).  
+ Более полный пример, см. в разделе [получения уведомлений при изменениях состояния часов](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).  
   
 ## <a name="public-events"></a>Открытые события  
  <xref:System.Windows.Media.Animation.Timeline> И <xref:System.Windows.Media.Animation.Clock> классы предоставляют пять временных событий. В следующей таблице перечислены эти события и условия, которые их вызывают.  
@@ -72,11 +72,11 @@ ms.locfileid: "33565491"
   
 <a name="registeringforclockeventswithatimeline"></a>   
 ## <a name="registering-for-clock-events-with-a-timeline"></a>Регистрация событий часов на временной шкале  
- Несмотря на то что временной шкалы <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, и <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> отображаются события, связываемое со шкалой, регистрация этих событий фактически связывает обработчик событий с <xref:System.Windows.Media.Animation.Clock> создать для временной шкалы.  
+ Несмотря на то что временной шкалы <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, и <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> события могут быть связаны с временной шкалой, регистрация для этих событий фактически связывает обработчик событий с <xref:System.Windows.Media.Animation.Clock> созданным для временной шкалы.  
   
- При регистрации для <xref:System.Windows.Media.Animation.Timeline.Completed> события на временной шкале, например, фактически дается системы для регистрации <xref:System.Windows.Media.Animation.Clock.Completed> событий всех часов, созданный для временной шкалы. В коде, необходимо зарегистрировать для этого события перед <xref:System.Windows.Media.Animation.Clock> создается для этой шкалы времени; в противном случае не будет получено уведомление. Это происходит автоматически в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; средство синтаксического анализа автоматически регистрирует события, прежде чем <xref:System.Windows.Media.Animation.Clock> создается.  
+ При регистрации для <xref:System.Windows.Media.Animation.Timeline.Completed> события на временной шкале, например, фактически дается система для регистрации <xref:System.Windows.Media.Animation.Clock.Completed> событий всех часов, которая создается для временной шкалы. В коде, необходимо зарегистрировать для этого события перед <xref:System.Windows.Media.Animation.Clock> создается для этой шкалы времени; в противном случае вы не получите уведомление. Это происходит автоматически в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; средство синтаксического анализа автоматически регистрирует событие до <xref:System.Windows.Media.Animation.Clock> создается.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения о характере поведения во времени](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения о характере поведения во времени](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

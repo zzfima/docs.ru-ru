@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация класса PriorityBinding
+title: Как выполнить Реализация PriorityBinding
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717919"
 ---
-# <a name="how-to-implement-prioritybinding"></a>Практическое руководство. Реализация класса PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>Как выполнить Реализация PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] работает путем указания списка привязок. Список привязок упорядочен от наиболее важных к наименее важным. Если привязка наивысшего приоритета возвращает значение успешно при его обработке то нет необходимости обрабатывать другие привязки в списке. Возможно, что привязка наивысшего приоритета занимает много времени для оценки, будет использоваться самым высоким приоритетом, которое возвращает значение успешно, пока не будет успешно возвращает значение привязки более высокий приоритет.  
   
 ## <a name="example"></a>Пример  
@@ -44,7 +44,7 @@ ms.locfileid: "47398814"
   
  См. в разделе <xref:System.Windows.Data.PriorityBinding> сведения о того, что считается успешной возвращаемое значение из привязки.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

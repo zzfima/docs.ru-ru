@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d17ac4230296674381c87851377fcb535837ad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600457"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Метод ICorDebugNativeFrame::GetIP
-Возвращает расположение, к которому в настоящее время имеет значение указателя инструкций смещения в машинном коде.  
+Получает расположение, к которому в настоящее время задать указатель инструкций смещения в машинном коде.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,16 +40,16 @@ HRESULT GetIP (
  [out] Указатель на расположение смещения в машинном коде.  
   
 ## <a name="remarks"></a>Примечания  
- Если кадр стека, представленный «ICorDebugNativeFrame» активен, смещение — это адрес следующую инструкцию для выполнения. Если этот кадр стека не активен, смещение — это адрес следующую инструкцию для выполнения при повторной активации кадра стека.  
+ Если кадр стека, представленного «ICorDebugNativeFrame» активен, значением offset является адрес следующую инструкцию для выполнения. Если данный кадр стека не активен, смещение является адресом следующую инструкцию для выполнения при повторной активации кадра стека.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

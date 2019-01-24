@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4414bab535b63f55a580e93cc6de9cb0dedc073c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1705b9d77d0d91196201d713cceb0ccf0f8635a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728019"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>Метод ICorDebugManagedCallback::EvalException
-Уведомляет отладчик, что оценку завершилось с необработанным исключением.  
+Уведомляет отладчик о том, что оценку был завершен с необработанным исключением.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ HRESULT EvalException (
   
 #### <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором Вычисление прервано.  
+ [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором прерывание оценки.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, в котором Вычисление прервано.  
+ [in] Указатель на объект ICorDebugThread, представляющий поток, в котором прерывание оценки.  
   
  `pEval`  
- [in] Указатель на объект ICorDebugEval, который представляет код, который выполняется вычисление.  
+ [in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

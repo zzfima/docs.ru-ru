@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545034"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Рекомендации по разработке элементов управления с возможностью использования стилей
 В этом документе содержатся рекомендации по разработке элементов управления, стили и шаблоны которых можно с легкостью изменять. Эти рекомендации являются результатом продолжительного периода проб и ошибок при работе над стилями тем оформления для встроенного набора элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Было выяснено, что успешное изменение стилей зависит как от хорошо спроектированной объектной модели, так и самого стиля. Данный документ предназначен именно для разработчиков элементов управления, а не для разработчиков стилей.  
@@ -30,10 +30,10 @@ ms.locfileid: "33558228"
  Вводная информация, касающаяся стилей и шаблонов, представлена в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Перед началом работы: общие сведения об элементе управления  
+## <a name="before-you-start-understanding-your-control"></a>Перед началом работы: Основные сведения о элемент управления  
  Прежде чем перейти к рекомендациям, важно понять и определить типичные способы использования элементов управления. Зачастую стили предоставляют неуправляемый набор возможностей. Проблема элементов управления, написанных для широкого применения (многими разработчиками, во многих приложениях), состоит в том, что стили можно использовать для масштабных изменений внешнего вида элементов управления. На самом же деле элемент управления, к которому применен стиль, может не соответствовать замыслу разработчика. Поскольку стили по сути представляют безграничную гибкость, можно использовать подход, подразумевающий типичные способы их использования, чтобы ограничить область их применения.  
   
- Чтобы понять, какие существуют типичные способы использования элементов управления, можно рассмотреть область значений, предоставляемых элементом управления. Какие специфические свойства отличают конкретный элемент управления от всех остальных? Типичные способы использования не подразумевают какой-либо определенный внешний вид, они подразумевают концепцию элемента управления и соответствующий набор ожидаемых функций. В этом свете можно сделать некоторые предположения о структурной модели и поведении элемента управления в соответствии с примененным стилем в общем случае. В случае использования <xref:System.Windows.Controls.ComboBox>, например, понимание общего использования не даст представления об ли конкретный <xref:System.Windows.Controls.ComboBox> имеет скругленные углы, но она даст вам представление о тот факт, <xref:System.Windows.Controls.ComboBox> скорее всего необходимо всплывающее окно и Включение и выключение ли он открыт какой-либо способ.  
+ Чтобы понять, какие существуют типичные способы использования элементов управления, можно рассмотреть область значений, предоставляемых элементом управления. Какие специфические свойства отличают конкретный элемент управления от всех остальных? Типичные способы использования не подразумевают какой-либо определенный внешний вид, они подразумевают концепцию элемента управления и соответствующий набор ожидаемых функций. В этом свете можно сделать некоторые предположения о структурной модели и поведении элемента управления в соответствии с примененным стилем в общем случае. В случае использования <xref:System.Windows.Controls.ComboBox>, например, основные сведения о типичных способов использования не даст представления о ли конкретный <xref:System.Windows.Controls.ComboBox> имеет скругленные углы, но она даст вам представление о тот факт, <xref:System.Windows.Controls.ComboBox> скорее всего, необходимы всплывающее окно и способ переключения при открытии.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Общие рекомендации  
@@ -58,13 +58,13 @@ ms.locfileid: "33558228"
   
     |Элемент|Тип|Где используется|  
     |-------------|----------|-------------|  
-    |<xref:System.Windows.Controls.ContentPresenter>|Основанные на типе|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>и так далее (все <xref:System.Windows.Controls.ContentControl> типы)|  
-    |<xref:System.Windows.Controls.ItemsPresenter>|Основанные на типе|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>и так далее (все <xref:System.Windows.Controls.ItemsControl> типы)|  
+    |<xref:System.Windows.Controls.ContentPresenter>|Основанные на типе|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, и так далее (все <xref:System.Windows.Controls.ContentControl> типы)|  
+    |<xref:System.Windows.Controls.ItemsPresenter>|Основанные на типе|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, и так далее (все <xref:System.Windows.Controls.ItemsControl> типы)|  
     |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Именованные|<xref:System.Windows.Controls.ToolBar>|  
-    |<xref:System.Windows.Controls.Primitives.Popup>|Автономные|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>и так далее|  
-    |<xref:System.Windows.Controls.Primitives.RepeatButton>|Именованные|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>и так далее|  
+    |<xref:System.Windows.Controls.Primitives.Popup>|Автономные|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>, и так далее|  
+    |<xref:System.Windows.Controls.Primitives.RepeatButton>|Именованные|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>, и так далее|  
     |<xref:System.Windows.Controls.Primitives.ScrollBar>|Именованные|<xref:System.Windows.Controls.ScrollViewer>|  
-    |<xref:System.Windows.Controls.ScrollViewer>|Автономные|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.Frame>и так далее|  
+    |<xref:System.Windows.Controls.ScrollViewer>|Автономные|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.Frame>, и так далее|  
     |<xref:System.Windows.Controls.Primitives.TabPanel>|Автономные|<xref:System.Windows.Controls.TabControl>|  
     |<xref:System.Windows.Controls.TextBox>|Именованные|<xref:System.Windows.Controls.ComboBox>|  
     |<xref:System.Windows.Controls.Primitives.TickBar>|Основанные на типе|<xref:System.Windows.Controls.Slider>|  
@@ -73,7 +73,7 @@ ms.locfileid: "33558228"
   
     -   Именованные вспомогательные элементы должны идентифицироваться по родительскому элементу, который должен устанавливать все необходимые параметры вспомогательного элемента.  
   
-    -   Основанные на типах вспомогательные элементы должны непосредственно устанавливать себе все необходимые параметры. Это может потребовать запроса вспомогательным элементом информационного контекста, в котором он используется, включая его `TemplatedParent` (тип элемента управления для шаблона, в котором он используется). Например <xref:System.Windows.Controls.ContentPresenter> автоматически связывает `Content` свойство его `TemplatedParent` для его <xref:System.Windows.Controls.ContentPresenter.Content%2A> свойства при использовании в <xref:System.Windows.Controls.ContentControl> производный тип.  
+    -   Основанные на типах вспомогательные элементы должны непосредственно устанавливать себе все необходимые параметры. Это может потребовать запроса вспомогательным элементом информационного контекста, в котором он используется, включая его `TemplatedParent` (тип элемента управления для шаблона, в котором он используется). Например <xref:System.Windows.Controls.ContentPresenter> автоматически привязывает `Content` свойство его `TemplatedParent` для его <xref:System.Windows.Controls.ContentPresenter.Content%2A> свойства при использовании в <xref:System.Windows.Controls.ContentControl> производный тип.  
   
     -   Изолированные вспомогательные элементы не могут быть оптимизированы таким образом, так как по определению ни вспомогательный элемент, ни родительский элемент не знают друг о друге.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "33558228"
   
 -   **Как можно реже используйте триггеры стиля (в отличие от триггеров шаблона)**. Триггеры, которые влияют на свойства элементов в шаблоне, должны быть объявлены в шаблоне. Триггеры, которые влияют на свойства элемента управления (не `TargetName`), могут быть объявлены в стиле, если только не известно, что при изменении шаблона триггер уничтожится.  
   
--   **Поддерживайте согласованность с существующими шаблонами стилей**. Зачастую существуют различные способы решения проблемы. Следите за шаблонами стилей элементов управления и, если возможно, обеспечивайте согласованность с существующими шаблонами стилей элементов управления. Это особенно важно для элементов управления, которые являются производными от одного базового типа (например, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>и так далее).  
+-   **Поддерживайте согласованность с существующими шаблонами стилей**. Зачастую существуют различные способы решения проблемы. Следите за шаблонами стилей элементов управления и, если возможно, обеспечивайте согласованность с существующими шаблонами стилей элементов управления. Это особенно важно для элементов управления, производных от одного базового типа (например, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, и так далее).  
   
 -   **Предоставляйте свойства, чтобы разрешить выполнение общих сценариев настройки без создания новых шаблонов**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не поддерживает подключаемые/настраиваемые части, поэтому пользователю элемента управления доступны только два метода настройки: непосредственная установка свойств или установка свойств с использованием стилей. Исходя из этого, удобно предоставлять ограниченное количество свойств, нацеленных на очень общие, высокоприоритетные сценарии настройки, которые в противном случае потребуют создания новых шаблонов. Ниже приведены советы и рекомендации по тому, когда и как разрешать сценарии настройки.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "33558228"
   
 -   **Для стилей тем не требуется согласованной для всех тем семантики "макета"**. Например, стиль по умолчанию не должен гарантировать, что элемент управления будет иметь тот же размер во всех темах или что у него во всех темах будут те же границы/поля содержимого.  
   
-## <a name="see-also"></a>См. также  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>См. также
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

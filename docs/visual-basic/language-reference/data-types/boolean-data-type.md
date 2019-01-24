@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e90d1dc5eb0beb3afd8fc69da32f89943e94c48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741916"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Тип данных Boolean (Visual Basic)
 Содержит значения, которые могут быть только `True` или `False`. Ключевые слова `True` и `False` соответствуют двух состояний `Boolean` переменные.  
@@ -53,11 +53,11 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Boolean?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Boolean?displayProperty=nameWithType>
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)

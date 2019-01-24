@@ -2,12 +2,12 @@
 title: Аналитическая трассировка WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748146"
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
 Этот образец демонстрирует способы добавления собственных событий трассировки событий в поток трассировки, которые записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. В этом примере показано, как использовать <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами WCF.  
@@ -24,18 +24,18 @@ ms.locfileid: "53147428"
   
 -   Если приложение находится не в корне.  
   
-     \<Имя сайта >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<имя_службы >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   Если приложение находится в корне.  
   
-     \<Имя сайта >&#124;\<ServiceVirtualPath >&#124;\<имя_службы >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  Для резидентных служб трассировки WCF не заполняют поле «HostReference». В этом образце класс `WCFUserEventProvider` ведет себя согласованно при использовании резидентной службой.  
   
 ## <a name="custom-event-details"></a>Данные пользовательских событий  
  Манифест поставщика событий ETW WCF определяет три события, которые предназначены для выдачи авторами службы WCF в коде службы. В следующей таблице приведена разбивка этих трех событий.  
   
-|событие|Описание|Идентификатор события|  
+|событие|Описание:|Идентификатор события|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Это событие выдается, когда в службе происходит что-то примечательное, что не является проблемой. Например, можно выдать событие после успешного вызова базы данных.|301|  
 |UserDefinedWarningOccurred|Это событие выдается, когда возникает проблема, которая в будущем может привести к сбою. Например, можно выдавать событие предупреждения, когда вызов базы данных завершается неудачей, но удалось выполнить восстановление, переключившись на резервное хранилище данных.|302|  
@@ -117,5 +117,5 @@ ms.locfileid: "53147428"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>См. также  
- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>См. также
+- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

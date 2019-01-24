@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3cf8b8735fc10b741d13b041eedc3e96607bef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6576dc19ed092ca12846a9780236e041daa64956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727135"
 ---
 # <a name="corprfexclauseinfo-structure"></a>Структура COR_PRF_EX_CLAUSE_INFO
 Хранит сведения об определенном экземпляре исключительного предложения и связанном с ним кадре.  
@@ -39,15 +39,15 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`clauseType`|Значение [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) перечисления, которое указывает тип предложения исключения кода, который только что введен или удален.|  
-|`programCounter`|Точка входа в машинный код обработчика условий — например, содержимое регистра X86 EIP.|  
+|`clauseType`|Значение [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) перечисление, указывающее тип предложения исключения только что введенный код или влево.|  
+|`programCounter`|Точка входа собственного обработчика условий — например, содержимое регистра X86 EIP.|  
 |`framePointer`|Указатель на логический кадр обработчика условий — например, содержимое регистра X86 EBP.|  
-|`shadowStackPointer`|Указатель на теневой стек. Это значение является содержимым регистра BSP и применяется только к IA64.|  
+|`shadowStackPointer`|Указатель на теневой стек. Это значение представляет собой содержание регистра BSP и применяется только к IA64.|  
   
 ## <a name="remarks"></a>Примечания  
- Получив уведомление об исключении, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) можно использовать для получения собственного сведения о кадре и адрес для предложения исключения (`catch` / `finally`/filter), будет выполняться, или только что запущенного.  
+ Получив уведомление об исключении, [ICorProfilerInfo2::GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) можно использовать для получения собственного кадре и адрес сведений о предложении исключение (`catch` / `finally`/filter), будет выполняться или только что запущенного.  
   
  Выполнение условия исключения включает в себя эти обратные вызовы из общеязыковой среды выполнения (CLR):  
   
@@ -64,13 +64,13 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 -   [ICorProfilerCallback::ExceptionSearchFilterLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl  
+ **Заголовок.** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>См. также
+- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

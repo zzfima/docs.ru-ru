@@ -1,5 +1,5 @@
 ---
-title: ICorDebugErrorInfoEnum интерфейс1
+title: Интерфейс1 ICorDebugErrorInfoEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugErrorInfoEnum
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7872a13dea7746b40d5525e4d758c1d8cd7117a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f60387f9e327246ce5bfa9f92b7c7e00ceda8b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737511"
 ---
-# <a name="icordebugerrorinfoenum-interface1"></a>ICorDebugErrorInfoEnum интерфейс1
+# <a name="icordebugerrorinfoenum-interface1"></a>Интерфейс1 ICorDebugErrorInfoEnum
 `ICorDebugErrorInfoEnum` устарел. Не следует использовать данный интерфейс.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,21 +2,21 @@
 title: Протокол обмена контекстом
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494776"
 ---
 # <a name="context-exchange-protocol"></a>Протокол обмена контекстом
-В этом разделе описывается протокол обмена контекстом, представленных в выпуске Windows Communication Foundation (WCF) .NET Framework версии 3.5. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом может использовать один из двух механизмов: файлы cookie HTTP или заголовок SOAP.  
+В этом разделе описывается протокол обмена контекстом, представленных в выпуске Windows Communication Foundation (WCF) .NET Framework версии 3.5. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом можно использовать один из двух механизмов: Файлы cookie HTTP или заголовок SOAP.  
   
  Протокол обмена контекстом реализуется на уровне пользовательских каналов. Канал передает контекст на уровень приложения и обратно с помощью свойства <xref:System.ServiceModel.Channels.ContextMessageProperty>. Для передачи данных между конечными точками значение контекста либо сериализуется в качестве заголовка SOAP на уровне канала, либо преобразуется в свойства сообщения, представляющие HTTP-запрос и ответ. В последнем случае предполагается, что один из используемых уровней канала преобразует свойства сообщений HTTP-запроса и ответа в файлы cookie HTTP и обратно соответственно. Выбор механизма обмена контекстом осуществляется с помощью свойства <xref:System.ServiceModel.Channels.ContextExchangeMechanism> в элементе привязки <xref:System.ServiceModel.Channels.ContextBindingElement>. Допустимые значения - `HttpCookie` и `SoapHeader`.  
   
  На стороне клиента экземпляр канала может работать в двух режимах на основе параметров в свойстве канала <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.  
   
-## <a name="mode-1-channel-context-management"></a>Режим 1: управление контекстом канала  
+## <a name="mode-1-channel-context-management"></a>Режим 1: Управление контекстом канала  
  Этот режим используется по умолчанию, если параметру <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> задано значение `true`. В этом режиме канал контекста управляет контекстом и кэширует его в течение времени его существования. Контекст может быть извлечен из канала с помощью свойства канала `IContextManager` вызовом метода `GetContext`. Можно также заранее инициализировать канал с конкретным контекстом до его открытия вызовом метода `SetContext` для свойства канала. Если канал инициализирован с контекстом, его сброс невозможен.  
   
  В этом режиме перечисленное ниже остается неизменным.  
@@ -32,7 +32,7 @@ ms.locfileid: "33493216"
   
 -   Свойство <xref:System.ServiceModel.Channels.ContextMessageProperty> для входящего сообщения всегда null.  
   
-## <a name="mode-2-application-context-management"></a>Режим 2: управление контекстом приложения  
+## <a name="mode-2-application-context-management"></a>Режим 2: Управление контекстом приложения  
  Этот режим используется, если свойству <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> присвоено значение `false`. В этом режиме канал контекста не управляет контекстом. Ответственность за извлечение, обработку и применение контекста с использованием свойства <xref:System.ServiceModel.Channels.ContextMessageProperty> возлагается на приложение. Любая попытка вызова метода `GetContext` или `SetContext` приводит к возникновению исключения <xref:System.InvalidOperationException>.  
   
  Независимо от выбранного режима работы фабрика клиентских каналов поддерживает шаблоны обмена сообщениями <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel> и <xref:System.ServiceModel.Channels.IDuplexSessionChannel>  
@@ -67,5 +67,5 @@ ms.locfileid: "33493216"
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Руководство по взаимодействию протоколов веб-служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+## <a name="see-also"></a>См. также
+- [Руководство по взаимодействию протоколов веб-служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

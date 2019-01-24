@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731530"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Вызов свойства или метода с помощью строкового имени (Visual Basic)
 В большинстве случаев доступ к свойствам и методам объекта во время разработки и написать код для их обработки. Однако в некоторых случаях может не известно, какие свойства и методы объекта заранее или необходима гибкость конечному пользователю для указания свойств или выполнения методов во время выполнения.  
@@ -46,6 +46,6 @@ ms.locfileid: "42911650"
 > [!NOTE]
 >  Хотя `CallByName` функция может быть полезна в некоторых случаях, необходимо учитывать его влияние на производительность — с помощью `CallByName` для вызова процедуры немного медленнее, чем вызов с поздним связыванием. Если вы вызываете функцию, которая вызывается повторно, например в цикле, `CallByName` может иметь существенно повлиять на производительность.  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [Определение типа объекта](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [Определение типа объекта](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

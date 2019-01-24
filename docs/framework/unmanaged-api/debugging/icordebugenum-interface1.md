@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum интерфейс1
+title: Интерфейс1 ICorDebugEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732756"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum интерфейс1
+# <a name="icordebugenum-interface1"></a>Интерфейс1 ICorDebugEnum
 Служит абстрактным базовым интерфейсом для перечислителей, которые используются приложением для отладки.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию объекта `ICorDebugEnum` объекта.|  
+|[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию данного объекта `ICorDebugEnum` объекта.|  
 |[Метод GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Получает число элементов в перечислении.|  
 |[Метод Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
-|[Метод Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Перемещение курсора вперед в перечислении указанное число элементов.|  
+|[Метод Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Перемещение курсора вперед в перечислении на указанное число элементов.|  
   
 ## <a name="remarks"></a>Примечания  
  Следующие перечислители являются производными от `ICorDebugEnum`:  
   
--   «ICorDebugAppDomainEnum»  
+-   "ICorDebugAppDomainEnum"  
   
 -   «ICorDebugAssemblyEnum»  
   
 -   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   «ICorDebugBreakpointEnum»  
+-   "ICorDebugBreakpointEnum"  
   
--   «ICorDebugChainEnum»  
+-   "ICorDebugChainEnum"  
   
--   «ICorDebugCodeEnum»  
+-   "ICorDebugCodeEnum"  
   
 -   «ICorDebugErrorInfoEnum»  
   
 -   [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   «ICorDebugFrameEnum»  
+-   "ICorDebugFrameEnum"  
   
 -   [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
@@ -66,17 +66,17 @@ ms.locfileid: "33422309"
   
 -   «ICorDebugModuleEnum»  
   
--   «ICorDebugObjectEnum»  
+-   "ICorDebugObjectEnum"  
   
--   «ICorDebugProcessEnum»  
+-   "ICorDebugProcessEnum"  
   
--   «ICorDebugStepperEnum»  
+-   "ICorDebugStepperEnum"  
   
--   «ICorDebugThreadEnum»  
+-   "ICorDebugThreadEnum"  
   
--   «ICorDebugTypeEnum»  
+-   "ICorDebugTypeEnum"  
   
--   «ICorDebugValueEnum»  
+-   "ICorDebugValueEnum"  
   
 -   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
@@ -84,13 +84,13 @@ ms.locfileid: "33422309"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

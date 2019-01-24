@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8643a4d207fb570195caa00a1ac659c78c2ff2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bdd5e92ce7423fbbe0708f8a35368b871508a70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493434"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>Метод IMetaDataAssemblyEmit::SetExportedTypeProps
 Изменяет указанную структуру метаданных `ExportedType`.  
@@ -40,28 +40,28 @@ HRESULT SetExportedTypeProps (
   
 #### <a name="parameters"></a>Параметры  
  `ct`  
- [in] Токен метаданных, указывает `ExportedType` изменение структуры метаданных.  
+ [in] Токен метаданных, указывающее `ExportedType` изменение структуры метаданных.  
   
  `tkImplementation`  
- [in] Маркер типа `File`, `AssemblyRef`, или `ExportedType`, указывающий реализации этого типа.  
+ [in] Токен типа `File`, `AssemblyRef`, или `ExportedType`, указывающий реализации этого типа.  
   
  `tkTypeDef`  
- [in] `TypeDef` Маркер, указанный в файле кода.  
+ [in] `TypeDef` Токена, на которые ссылается файл кода.  
   
  `dwExportedTypeFlags`  
- [in] Побитовое сочетание значений, которые определяют атрибуты типа.  
+ [in] Побитовое сочетание значений, определяющих атрибуты типа.  
   
 ## <a name="remarks"></a>Примечания  
- Для создания `ExportedType` структуру метаданных, используйте [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) метод.  
+ Чтобы создать `ExportedType` структура метаданных, используйте [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
