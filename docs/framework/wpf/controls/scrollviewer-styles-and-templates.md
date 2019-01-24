@@ -9,36 +9,36 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ScrollViewer
 - ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
-ms.openlocfilehash: 5ad3738972ae9b33764d3b710077f6d4a0526a13
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 1f5c3d98d6fe2814addaad3e6c898f5341fac7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672205"
 ---
 # <a name="scrollviewer-styles-and-templates"></a>Стили и шаблоны элемента ScrollViewer
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ScrollViewer> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ScrollViewer> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="scrollviewer-parts"></a>Элементы управления ScrollViewer  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Заполнитель для содержимого в <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar> Используется для прокрутки содержимого по горизонтали.|  
 |PART_VerticalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar> Используется для прокрутки содержимого по вертикали.|  
   
-## <a name="scrollviewer-states"></a>ScrollViewer состояний  
+## <a name="scrollviewer-states"></a>Состояния ScrollViewer  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
   
 ## <a name="scrollviewer-controltemplate-example"></a>Пример шаблона элемента управления ScrollViewer  
- В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
+ В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
   
  [!code-xaml[ControlTemplateExamples#ScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollviewer.xaml#scrollviewer)]  
   
@@ -48,10 +48,10 @@ ms.locfileid: "34457734"
   
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

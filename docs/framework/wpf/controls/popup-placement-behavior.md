@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 99875de320d6728fdacb55c153064c5c1267efdf
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 924d099a17390eeac61bd87a0c3ca0e05b1c8172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672088"
 ---
 # <a name="popup-placement-behavior"></a>Поведение при размещении контекстного меню
 Объект <xref:System.Windows.Controls.Primitives.Popup> управления отображает содержимое в отдельном окне, расположенном поверх приложения. Можно указать положение <xref:System.Windows.Controls.Primitives.Popup> по отношению к элементу управления, мыши или экрана с помощью <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства.  Эти свойства совместной работы позволяют гибко указывать положение <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -227,5 +227,5 @@ ms.locfileid: "54362929"
 ### <a name="customizing-popup-placement"></a>Настройка размещения контекстного меню  
  Точка выравнивания всплывающего окна целевой можно настроить, задав <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Затем определите <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат, который возвращает набор возможных точек размещения и основные оси (в порядке предпочтения) для <xref:System.Windows.Controls.Primitives.Popup>. Точка, в которой отображается наибольшую часть <xref:System.Windows.Controls.Primitives.Popup> выбран.  Положение <xref:System.Windows.Controls.Primitives.Popup> изменяется автоматически в том случае, если <xref:System.Windows.Controls.Primitives.Popup> скрыто за краем экрана. См. пример в разделе [Указание пользовательского расположения контекстного меню](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
   
-## <a name="see-also"></a>См. также  
- [Пример размещения всплывающего окна](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+## <a name="see-also"></a>См. также
+- [Пример размещения всплывающего окна](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

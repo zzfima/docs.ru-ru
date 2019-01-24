@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 7db9b71ee5b2c6b82bdb638471f9598df7f64097
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671920"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Задает формат выходных данных компилятора.  
@@ -25,7 +25,7 @@ ms.locfileid: "53148680"
 ## <a name="remarks"></a>Примечания  
  В следующей таблице перечислены последствия `-target` параметр.  
   
-|**Параметр**|**Поведение**|  
+|**Параметр**|**Реакция на событие**|  
 |----------------|------------------|  
 |`-target:exe`|Предписывает компилятору создать исполняемое консольное приложение.<br /><br /> Это параметр по умолчанию, если аргумент `-target` параметра. Исполняемый файл создается с расширением .exe.<br /><br /> Если не указано иное с `/out` , имя выходного файла совпадает с именем входного файла, который содержит `Sub Main` процедуры.<br /><br /> Только один `Sub Main` процедура является обязательной в файлах исходного кода, которые компилируются в файл .exe. Используйте `-main` параметр компилятора, чтобы указать, какой класс содержит `Sub Main` процедуры.|  
 |`-target:library`|Предписывает компилятору создать библиотеку динамической компоновки (DLL).<br /><br /> Файл библиотеки динамической компоновки создается с расширением DLL.<br /><br /> Если не указано иное с `-out` параметр, выходной файл получает имя первого входного файла.<br /><br /> При построении библиотеки DLL, `Sub Main` процедура не требуется.|  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>См. также
 
-- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
-- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
-- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
-- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
-- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
+- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
