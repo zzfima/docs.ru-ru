@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
+title: Как выполнить Визуализация каждого кадра с помощью CompositionTarget
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511229"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Как выполнить Визуализация каждого кадра с помощью CompositionTarget
 Подсистема анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество возможностей для создания анимации на основе кадров. Однако существуют сценарии приложений, в которых необходим детальный контроль отрисовки каждого кадра. <xref:System.Windows.Media.CompositionTarget> Предоставляет возможность создания пользовательской анимации на основе покадрового обратного вызова.  
   
  <xref:System.Windows.Media.CompositionTarget> является статическим классом, который представляет отображаемую поверхность, на котором рисуется приложение. <xref:System.Windows.Media.CompositionTarget.Rendering> Событие возникает каждый раз при рисовании сцены приложения. Частота кадров отрисовки — это количество отрисовок сцены за секунду.  
@@ -40,6 +40,6 @@ ms.locfileid: "43526445"
   
  Добавление или удаление визуализации <xref:System.EventHandler> делегата во время срабатывания события будет отложено до момента завершения события обработки. Это согласуется с тем, как <xref:System.MulticastDelegate>-на основе события обрабатываются в Common Language Runtime (CLR). Также обратите внимание, что порядок вызова событий отрисовки не гарантируется. Если имеется несколько <xref:System.EventHandler> делегаты, которые зависят от определенного порядка, необходимо зарегистрировать один <xref:System.Windows.Media.CompositionTarget.Rendering> событий и мультиплексировать делегаты в правильном порядке.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.CompositionTarget>  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.CompositionTarget>
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

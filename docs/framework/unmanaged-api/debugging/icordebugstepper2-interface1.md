@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4652bcb00d3437350b5fd3e1071b3c538403cfe3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712880"
 ---
 # <a name="icordebugstepper2-interface1"></a>Интерфейс1 ICorDebugStepper2
 Обеспечивает поддержку Отладка только собственного кода (JMC).  
@@ -30,7 +30,7 @@ ms.locfileid: "33418693"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод SetJMC](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Задает значение, указывающее, является ли ICorDebugStepper пошаговое выполнение только код, созданный разработчиком приложения.|  
+|[Метод SetJMC](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Задает значение, указывающее ли ICorDebugStepper проходит только через код, который создается разработчиком приложения.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33418693"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

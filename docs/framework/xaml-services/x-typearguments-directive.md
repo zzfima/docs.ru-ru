@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520182"
 ---
 # <a name="xtypearguments-directive"></a>Директива x:TypeArguments
 Передает аргументы типов ограничений универсального в конструктор универсального типа.  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  В WPF и при нацеливании на [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], можно использовать возможности XAML 2009 вместе с `x:TypeArguments` , но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009. Если вы необходимости компиляции разметки XAML, нужно следовать ограничениям, указанным в разделе «XAML 2006 и универсального XAML способы использования WPF».  
   
-## <a name="see-also"></a>См. также  
- [Директива x:Class](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Встроенные типы для общих примитивов языка XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Универсальные шаблоны в XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>См. также
+- [Директива x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Встроенные типы для общих примитивов языка XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Универсальные шаблоны в XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

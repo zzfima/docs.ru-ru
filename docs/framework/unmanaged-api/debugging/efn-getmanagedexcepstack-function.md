@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587717"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>Функция _EFN_GetManagedExcepStack
 Учитывая адрес объекта управляемого исключения, возвращает строковую версию трассировки стека, содержащейся внутри.  
@@ -39,7 +39,7 @@ HRESULT _EFN_GetManagedExcepStack(
   
 #### <a name="parameters"></a>Параметры  
  `Client`  
- [in] Клиент которого выполняется отладка.  
+ [in] Клиент, для которого выполняется отладка.  
   
  `StackObjAddr`  
  [in] Указатель на управляемый объект, производный от <xref:System.Exception>.  
@@ -48,17 +48,17 @@ HRESULT _EFN_GetManagedExcepStack(
  [out] Возвращаемая строка.  
   
  `cbString`  
- [out] Число символов в буфере строки.  
+ [out] Доступное число символов в буфере строк.  
   
 ## <a name="remarks"></a>Примечания  
- Если нет управляемого кода в потоке в данный момент в контексте, функция возвращает значение HRESULT SOS_E_NOMANAGEDCODE со значением устройства 0xa0 и кодом ошибки 0x1000.  
+ Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает HRESULT SOS_E_NOMANAGEDCODE со значением сообщения 0xa0 и кодом ошибки 0x1000.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** SOS_Stacktrace.h  
+ **Заголовок.** SOS_Stacktrace.h  
   
- **Версия платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

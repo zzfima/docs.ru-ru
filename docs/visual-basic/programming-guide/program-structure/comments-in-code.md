@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597545"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
 В примерах кодов часто встречается символ начала комментария (`'`). Этот символ дает компилятору Visual Basic проигнорировать последующий текст, или *комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
@@ -59,9 +59,9 @@ ms.locfileid: "44194594"
 > [!NOTE]
 >  Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее `'` символов и **комментарий**/**Uncomment** кнопки гораздо проще использовать и требует меньше места и памяти.  
   
-## <a name="see-also"></a>См. также  
- [Документирование кода с комментариями XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Оператор REM](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>См. также
+- [Документирование кода с комментариями XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Оператор REM](../../../visual-basic/language-reference/statements/rem-statement.md)

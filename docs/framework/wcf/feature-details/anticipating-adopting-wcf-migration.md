@@ -2,12 +2,12 @@
 title: 'Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 41deb6cb982e65b2af054840cdcb84e3d1db3451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695261"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции
 Чтобы упростить миграцию в будущем новых приложений ASP.NET на платформу WCF, выполните выше рекомендаций, а также следующие рекомендации.  
@@ -124,5 +124,5 @@ throw new SoapException(
   
 -   Не принимайте во внимание использование поставщиков ролей ASP.NET 2.0 для авторизации доступа к ресурсам службы.  
   
-## <a name="see-also"></a>См. также  
- [Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+## <a name="see-also"></a>См. также
+- [Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

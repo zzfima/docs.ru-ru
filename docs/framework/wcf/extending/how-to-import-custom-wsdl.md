@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Импорт пользовательской информации WSDL
+title: Как выполнить Импорт пользовательского языка WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 33762afffca6e90cb32c358bee6d9f29ca609994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dba3ec52d03939a306709e7756ff4e801699cf38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575610"
 ---
-# <a name="how-to-import-custom-wsdl"></a>Практическое руководство. Импорт пользовательской информации WSDL
+# <a name="how-to-import-custom-wsdl"></a>Как выполнить Импорт пользовательского языка WSDL
 В этом разделе описывается, как импортировать пользовательский код WSDL. Для работы с пользовательским кодом WSDL необходимо реализовать интерфейс <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
   
 ### <a name="to-import-custom-wsdl"></a>Импорт пользовательского кода WSDL  
@@ -77,7 +77,7 @@ ms.locfileid: "33488274"
     WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+## <a name="see-also"></a>См. также
+- [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

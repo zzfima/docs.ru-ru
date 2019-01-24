@@ -2,12 +2,12 @@
 title: Сведения о производительности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 8adf3a2787c47efd929ebc5c0198e13240c279ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43194baeaaeefd8748980a8542bea199d3e8d29f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732015"
 ---
 # <a name="performance-considerations-entity-framework"></a>Сведения о производительности (Entity Framework)
 В этом подразделе описаны характеристики производительности платформы ADO.NET Entity Framework, а также приведены соображения по повышению производительности приложений платформы Entity Framework.  
@@ -153,5 +153,5 @@ ms.locfileid: "53130224"
   
 -   [Сравнение производительности платформы ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>См. также  
- [Вопросы разработки и развертывания](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>См. также
+- [Вопросы разработки и развертывания](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

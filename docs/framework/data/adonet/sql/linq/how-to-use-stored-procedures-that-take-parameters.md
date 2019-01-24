@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Использование хранимых процедур, принимающих параметры
+title: Как выполнить использовать хранимые процедуры, которые принимают параметры
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: d1c9337f59b8cf218b9d2ab8fe4cf21afd2da689
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604253"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Использование хранимых процедур, принимающих параметры
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Как выполнить использовать хранимые процедуры, которые принимают параметры
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.  
   
- Пример демонстрирует использование входного параметра в запросе, который возвращает набор строк, см. в разделе [как: возвращают наборы строк](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ Пример демонстрирует использование входного параметра в запросе, который возвращает набор строк, см. в разделе [как: Возврат наборов строк](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере передается один входной параметр (код клиента) и возвращается один выходной параметр (общий объем продаж по этому клиенту).  
@@ -39,8 +39,8 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [Использование допускающих значение NULL типов](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)  
- [Типы значений, допускающие значение NULL](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>См. также
+- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Использование допускающих значение NULL типов](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Типы значений, допускающие значение NULL](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

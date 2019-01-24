@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665140"
 ---
 # <a name="names-of-namespaces"></a>Имена пространств имен.
 Как с помощью других рекомендациях по именованию, целью при именовании пространств имен является создание достаточно ясности для программиста, с помощью платформы для сразу знать содержимое пространства имен, вероятно, будет. Следующий шаблон определяет правило именования пространства имен:  
@@ -36,7 +36,7 @@ ms.locfileid: "53143445"
   
  **✓ CONSIDER** с помощью имена во множественном числе пространств имен, где это применимо.  
   
- Например, использовать `System.Collections` вместо `System.Collection`. Марки и акронимы, тем не менее исключения из этого правила. Например, использовать `System.IO` вместо `System.IOs`.  
+ Например, используйте `System.Collections` вместо `System.Collection`. Марки и акронимы, тем не менее исключения из этого правила. Например, используйте `System.IO` вместо `System.IOs`.  
   
  **X DO NOT** использовать то же имя для пространства имен и типа в этом пространстве имен.  
   
@@ -86,5 +86,5 @@ ms.locfileid: "53143445"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712630"
 ---
 # <a name="myforms-object"></a>Объект My.Forms
 Предоставляет свойства для доступа к экземпляру каждой формы Windows, объявленные в текущем проекте.  
@@ -66,11 +66,11 @@ ms.locfileid: "48582662"
 |Служба Windows|Нет|  
 |Веб-сайт|Нет|  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [Объекты](../../../visual-basic/language-reference/objects/index.md)  
- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)  
- [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Доступ к формам приложения](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [Объекты](../../../visual-basic/language-reference/objects/index.md)
+- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)
+- [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Доступ к формам приложения](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

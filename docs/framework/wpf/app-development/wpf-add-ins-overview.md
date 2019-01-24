@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662742"
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 <a name="Introduction"></a> .NET Framework включает модель надстроек, разработчики могут использовать для создания приложений, поддерживающих расширяемость надстроек. Эта модель позволяет создавать надстройки, которые интегрируются с функциональностью приложения и расширяют ее. В некоторых сценариях приложения также должны отображать пользовательские интерфейсы, которые предоставляются надстройками. В этом разделе показано, как WPF расширяет модель надстроек платформы .NET Framework для поддержки таких сценариев, архитектуры, его преимущества и ограничения.  
@@ -282,10 +282,10 @@ ms.locfileid: "53397037"
 ## <a name="performance-optimization"></a>Оптимизация производительности  
  По умолчанию при использовании нескольких доменов приложений различные сборки .NET Framework, необходимые для каждого приложения все загружаются в домен приложения. В результате время, необходимое для создания новых доменов приложений и запуска приложений в них, может повлиять на производительность. Тем не менее платформа .NET Framework предоставляет способ сократить время запуска, предписывая приложения для совместного использования сборок в доменах приложений, если они уже загружены. Это делается с помощью <xref:System.LoaderOptimizationAttribute> атрибут, который должен применяться к методу точки входа (`Main`). В данном случае необходимо использовать только код для реализации определения приложения (см. [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.LoaderOptimizationAttribute>  
- [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Домены приложений](../../../../docs/framework/app-domains/application-domains.md)  
- [Обзор удаленного взаимодействия .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Обеспечение поддержки удаленного взаимодействия объектами](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Разделы практического руководства](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.LoaderOptimizationAttribute>
+- [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Домены приложений](../../../../docs/framework/app-domains/application-domains.md)
+- [Обзор удаленного взаимодействия .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Обеспечение поддержки удаленного взаимодействия объектами](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Разделы практического руководства](../../../../docs/framework/wpf/app-development/how-to-topics.md)

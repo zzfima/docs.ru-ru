@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeClosing
 ms.date: 03/30/2017
 ms.assetid: 47a008f0-04d7-4cf3-9099-c056f78c9bfa
-ms.openlocfilehash: 1431f501fa392bc2044aab59475b8e97a7199571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e469ba0a9d3a26ed1d11a57916cbfc0c7ebd600
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33478284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674915"
 ---
 # <a name="systemservicemodelchannelspeernodeclosing"></a>System.ServiceModel.Channels.PeerNodeClosing
 Началось закрытие узла PeerNode.  
@@ -15,7 +15,7 @@ ms.locfileid: "33478284"
 ## <a name="description"></a>Описание  
  Эта трассировка происходит в начале выполнения метода Close для PeerNode.  
   
-## <a name="see-also"></a>См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>См. также
+- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

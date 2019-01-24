@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вставка элемента в текст программными средствами
+title: Как выполнить Вставка элемента в текст программными средствами
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: 8eaf0c6a1e3ad3c64800f8611aba555110aa4c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 460524a88427ef5fa822461a7bb985426fefea53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693192"
 ---
-# <a name="how-to-insert-an-element-into-text-programmatically"></a>Практическое руководство. Вставка элемента в текст программными средствами
-В следующем примере показано, как использовать два <xref:System.Windows.Documents.TextPointer> объектов, чтобы указать диапазон, в тексте, чтобы применить <xref:System.Windows.Documents.Span> элемента.  
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>Как выполнить Вставка элемента в текст программными средствами
+В следующем примере показано, как использовать два <xref:System.Windows.Documents.TextPointer> объектов, чтобы указать диапазон внутри текста для применения <xref:System.Windows.Documents.Span> элемента.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[FlowMiscSnippets_procedural_snip#InsertInlineIntoTextExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_procedural_snip/CSharp/InsertInlineIntoTextExample.cs#insertinlineintotextexamplewholepage)]
@@ -29,5 +29,5 @@ ms.locfileid: "33543290"
   
  ![Элемент Span, применяемый к диапазону текста ](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

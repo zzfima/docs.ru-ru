@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568066"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Метод IHostMemoryManager::VirtualProtect
-Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualProtect` изменяет защиту в области зафиксированных страниц в виртуальном адресном пространстве вызывающего процесса.  
+Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualProtect` изменяет защиту на области зафиксированных страниц в виртуальном адресном пространстве вызывающего процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT VirtualProtect (
   
 #### <a name="parameters"></a>Параметры  
  `lpAddress`  
- [in] Указатель на базовый адрес виртуальной памяти, атрибуты которого защиты будут изменены.  
+ [in] Указатель на базовый адрес виртуальной памяти, атрибуты которого защиты должны быть изменены.  
   
  `dwSize`  
  [in] Размер в байтах, области страниц памяти, которые необходимо изменить.  
   
  `flNewProtect`  
- [in] Тип защиты памяти вступили в силу.  
+ [in] Тип защиты памяти, чтобы применить.  
   
  `pflOldProtect`  
  [out] Указатель на предыдущее значение защиты памяти.  
@@ -59,20 +59,20 @@ HRESULT VirtualProtect (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта реализация `VirtualProtect` возвращает значение HRESULT, а реализация Win32 возвращает ненулевое значение, указывающее на успех, а нулевое значение, указывающее на неудачу. Дополнительные сведения см. в документации по платформе Windows.  
+ Эта реализация `VirtualProtect` возвращает значение HRESULT, тогда как реализация Win32 возвращает ненулевое значение в случае успеха и нулевое значение, указывающее на ошибку. Дополнительные сведения см. в документации платформы Windows.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

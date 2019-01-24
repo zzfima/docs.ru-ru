@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94a473d00110c07615ccdfc98bb8944e40dc30e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 851ff82a539ce354d5507e829d8c461a0f2494ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729477"
 ---
 # <a name="getpublickeytoken-method"></a>Метод GetPublicKeyToken
-Возвращает токен открытого ключа для заданного файла ключа или контейнер ключа.  
+Извлекает токен открытого ключа для заданного файла или контейнера ключей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,15 +48,15 @@ HRESULT GetPublicKeyToken(
  Адрес, где будет храниться ключ.  
   
  `pcbPublicKeyToken`  
- Указывает размер в байтах буфера, обозначенном `pvPublicKeyToken`. По возвращении содержит фактическое число байтов, используемых.  
+ Указывает размер в байтах буфера, обозначается `pvPublicKeyToken`. По возвращении содержит фактическое число байтов, используемых.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

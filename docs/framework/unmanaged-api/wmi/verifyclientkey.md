@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8a74633d3e950f6cf7ba87c00a9efa45206545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711763"
 ---
 # <a name="verifyclientkey-function"></a>Функция VerifyClientKey
-Гарантирует, что ключ клиента имеет неправильные параметры безопасности.  
+Проверяет, что ключ клиента имеет верные параметры безопасности.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -38,14 +38,14 @@ LONG VerifyClientKey();
 
 Если функция выполняется успешно, возвращаемое значение равно `ERROR_SUCCESS` (0).
 
-Если функция завершается с ошибкой, возвращается ошибка ненулевой код, определенный в *WinError.h*.
+Если функция завершается с ошибкой, возвращается код ошибки, определенный в *WinError.h*.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.def  
+ **Заголовок.** WMINet_Utils.def  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

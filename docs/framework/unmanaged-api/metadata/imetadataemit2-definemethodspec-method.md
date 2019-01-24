@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492524"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Метод IMetaDataEmit2::DefineMethodSpec
 Создает экземпляр универсального метода и возвращает маркер для определения.  
@@ -40,26 +40,26 @@ HRESULT DefineMethodSpec (
   
 #### <a name="parameters"></a>Параметры  
  `tkParent`  
- [in] Токен, для которой необходимо создать экземпляр универсального метода. Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.  
+ [in] Токен, для которого необходимо создать экземпляр универсального метода. Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.  
   
  `pvSigBlob`  
  [in] Указатель на двоичную подпись COM + метода.  
   
  `cbSibBlob`  
- [in] Размер в байтах для `pvSigBlob`.  
+ [in] Размер в байтах из `pvSigBlob`.  
   
  `pmi`  
- [out] Маркер для определения подписи метаданных метода.  
+ [out] Маркер для определения сигнатуры метаданных метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

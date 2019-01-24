@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657198"
 ---
 # <a name="correftodefcheck-enumeration"></a>Перечисление CorRefToDefCheck
 Задает флаги для элемента управления, на который ссылаются элементы, преобразуемые в их определения для оптимизации кода.  
@@ -40,20 +40,20 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Указывает, что тип ссылки и ссылки на элементы должны быть преобразованы в определения. Значение по умолчанию (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Указывает, что все ссылаются элементы должны быть преобразованы в определения.|  
+|`MDRefToDefDefault`|Указывает, что тип ссылки и ссылки на член должно быть преобразовано в определения. Это значение по умолчанию (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Указывает, что все элементы, на которые имеются ссылки, должны преобразовываться к определениям.|  
 |`MDRefToDefNone`|Указывает, что не ссылаются элементы должны быть преобразованы в определения.|  
-|`MDTypeRefToDef`|Указывает, что только ссылки типа необходимо преобразовать в определения типа.|  
-|`MDMemberRefToDef`|Указывает, что ссылки на элементы следует преобразовать в определения. То есть для определения метода или определения полей должны преобразоваться ссылок на элементы.|  
+|`MDTypeRefToDef`|Указывает, что только ссылки на тип должно быть преобразовано в тип определения.|  
+|`MDMemberRefToDef`|Указывает, что только ссылки на член должно быть преобразовано в определения. То есть ссылки на элементы должны преобразовываться в определения метода или определения полей.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

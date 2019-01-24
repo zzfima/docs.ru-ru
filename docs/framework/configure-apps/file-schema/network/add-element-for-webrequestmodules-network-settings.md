@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 4c823f366baf51b35c15a87c2a9f6c9c4d3102d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d78405546d00797677134e038bbaa69bf088f88e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575714"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Добавление&gt; элемент для webRequestModules (параметры сети)
 Добавляет пользовательский модуль веб-запросов к приложению.  
   
  \<configuration>  
-\<System.NET >  
-\<webRequestModules >  
+\<system.net>  
+\<webRequestModules>  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -81,6 +81,6 @@ ms.locfileid: "50188549"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.WebRequest>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

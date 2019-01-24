@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Импорт утверждений пользовательской политики
+title: Как выполнить Импорт утверждений пользовательской политики
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674785"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Практическое руководство. Импорт утверждений пользовательской политики
+# <a name="how-to-import-custom-policy-assertions"></a>Как выполнить Импорт утверждений пользовательской политики
 В утверждениях политики описываются возможности и требования конечной точки службы.  Клиентские приложения могут использовать утверждения политики в метаданных службы для настройки привязки клиента или для настройки контракта службы для конечной точки службы.  
   
  Утверждения настраиваемой политики импортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> и передачи этого объекта системе метаданных или путем регистрации типа реализации в файле конфигурации приложения.  Реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension> должны предоставлять конструктор по умолчанию.  
@@ -40,11 +40,11 @@ ms.locfileid: "33491157"
   
 3.  Настройте привязку или контракт, поддерживающие возможность или требование, задаваемое утверждением политики. Как правило, в утверждениях указывается, что привязка требует определенной конфигурации или определенного элемента привязки. Внесите эти изменения, обратившись к свойству <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. Другие утверждения требуют изменения контракта.  Обратиться к контракту и внести в него изменения можно с помощью свойства <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Обратите внимание, что импортер политики может вызываться несколько раз для одной и той же привязки и контракта, однако для разных альтернативных политик, если импортировать альтернативную политику не удается. Код должен быть устойчив к такому поведению.  
   
-4.  Удалите утверждение настраиваемой политики из коллекции утверждений. Если не удалить утверждение Windows Communication Foundation (WCF) предполагается, что Импорт политики завершилась неудачно и не импортирует связанную привязку. Если использовался метод <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> для поиска утверждения настраиваемой политики и удаления его из коллекции за один шаг, выполнять этот шаг не требуется.  
+4.  Удалите утверждение настраиваемой политики из коллекции утверждений. Если не удалить утверждение Windows Communication Foundation (WCF) предполагается, что не удалось выполнить импорт политики и не импортирует связанную привязку. Если использовался метод <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> для поиска утверждения настраиваемой политики и удаления его из коллекции за один шаг, выполнять этот шаг не требуется.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью файла конфигурации  
   
-1.  Добавьте тип импорта для `<extensions>` внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации клиента.  
+1.  Добавьте тип импортера в `<extensions>` элемент внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации клиента.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,7 +55,7 @@ ms.locfileid: "33491157"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью Svcutil.exe  
   
-1.  Добавьте тип импорта для `<extensions>` внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации Svcutil.exe.config. Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.  
+1.  Добавьте тип импортера в `<extensions>` элемент внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации Svcutil.exe.config. Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.  
   
 2.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для импорта метаданных и импортер будет вызываться автоматически.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "33491157"
   
 1.  Добавьте импортер в свойство <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> (например, если используется класс <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>), прежде чем импортировать метаданные.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

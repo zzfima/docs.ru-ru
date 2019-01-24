@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
-ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
+ms.openlocfilehash: c7a2cdd9fe0be020584ab87216a9d1322be185f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606813"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.  
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 ## <a name="general-options"></a>Общие параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/h\[elp\]**|Отображает синтаксис команд и параметров программы.|  
 |**/o\[utputdir\]:**_каталога_|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|  
@@ -42,14 +42,14 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 ## <a name="xsd-file-options"></a>Параметры файла XSD  
  Для файлов XSD следует указать только один из следующих параметров.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/c\[лассы\]**|Создает классы, соответствующие указанной схеме. Чтобы считать данные XML в объект, используйте метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|  
 |**/d[ataset]**|Создает классы, которые являются производными класса <xref:System.Data.DataSet> и соответствуют указанной схеме. Чтобы считать данные XML в производный класс, используйте метод <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|  
   
  Для файлов XSD также можно указать любой из следующих параметров.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/e\[реализовать\]:**_элемент_|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|  
 |**/enableDataBinding**|Реализует интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для всех созданных типов для обеспечения привязки данных. Краткая форма: `/edb`.|  
@@ -64,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 ## <a name="dll-and-exe-file-options"></a>Параметры файлов DLL и EXE  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/t\[ипу\]:**_typename_|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|  
   
@@ -136,7 +136,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
   
  Параметры, которые можно задать для элемента `\<generateClasses>`, включают в себя следующие.  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |\<element>|Определяет элемент в файле XSD, для которого создается код.|  
 |\<schemaImporterExtensions>|Определяет тип, унаследованный от класса <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>.|  
@@ -218,10 +218,10 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Data.DataSet>  
-- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
-- [Инструменты](../../../docs/framework/tools/index.md)      
-- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
-- [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- <xref:System.Data.DataSet>
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

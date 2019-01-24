@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf9e04ed1d3a68fed120c4c13ad992af1f777244
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d10fe0240073464e3c2677343288e5379840885d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732795"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>Интерфейс ICLRErrorReportingManager
-Предоставляет методы, позволяющие основному приложению настроить пользовательские дампы стека для отчетов об ошибках.  
+Предоставляет методы, позволяющие узла настроить пользовательские дампы стека для отчетов об ошибках.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Указывает конфигурацию пользовательских дампов стека для отчетов об ошибках.|  
-|[Метод EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Очищает конфигурацию пользовательского дампа стека, заданные с предыдущими вызовами метода `BeginCustomDump`.|  
-|[Метод GetBucketParametersForCurrentException](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Получает блок Watson для текущего исключения в вызывающем потоке.|  
+|[Метод EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Удаляет конфигурацию пользовательского дампа стека, установленное с предыдущими вызовами `BeginCustomDump`.|  
+|[Метод GetBucketParametersForCurrentException](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Возвращает сегмент Watson для текущего исключения в вызывающем потоке.|  
   
 ## <a name="remarks"></a>Примечания  
  `BeginCustomDump` Метод задает конфигурацию пользовательского дампа стека. `EndCustomDump` Метод очищает конфигурацию пользовательского дампа стека и освобождает все связанные состояния. Он должен вызываться после завершения пользовательского дампа.  
   
 > [!IMPORTANT]
->  Сбой при вызове `EndCustomDump` вызывает утечку памяти.  
+>  Сбой при вызове `EndCustomDump` приводит к утечке памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисление ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Перечисление ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

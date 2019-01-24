@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Указание типа учетных данных клиента
+title: Как выполнить Указание типа учетных данных клиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 5e1ff85d8a0bd45c87786f98c2cafe06472052b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643384"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Практическое руководство. Указание типа учетных данных клиента
-После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о задании режима безопасности (необходимым этапом, прежде чем устанавливать тип учетных данных клиента) см. в разделе [как: режим безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-specify-the-client-credential-type"></a>Как выполнить Указание типа учетных данных клиента
+После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о задании режима безопасности (обязательный шаг перед настройкой типа учетных данных клиента), см. в разделе [как: Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Установка типа учетных данных клиента в коде  
   
@@ -31,13 +31,13 @@ ms.locfileid: "33499341"
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>Установка типа учетных данных клиента в файле конфигурации  
   
-1.  Добавить [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) в файле конфигурации.  
+1.  Добавить [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемент в файле конфигурации.  
   
-2.  В качестве дочернего элемента, добавить [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента.  
+2.  Как дочерний элемент, добавьте [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент.  
   
-3.  Добавьте соответствующую привязку. В этом примере используется [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемента.  
+3.  Добавьте соответствующую привязку. В этом примере используется [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент.  
   
-4.  Добавить [ \<привязки >](../../../docs/framework/misc/binding.md) и присвойте `name` соответствующее значение атрибута. В этом примере используется имя "SecureBinding".  
+4.  Добавить [ \<привязки >](../../../docs/framework/misc/binding.md) и присвойте `name` атрибут соответствующее значение. В этом примере используется имя "SecureBinding".  
   
 5.  Добавьте привязку `<security>`. Присвойте атрибуту `mode` соответствующее значение. В данном примере используется значение `"Message"`.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "33499341"
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Защита служб](../../../docs/framework/wcf/securing-services.md)  
- [Практическое руководство. Задание режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+## <a name="see-also"></a>См. также
+- [Защита служб](../../../docs/framework/wcf/securing-services.md)
+- [Практическое руководство. Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

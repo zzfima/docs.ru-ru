@@ -2,12 +2,12 @@
 title: Руководство по программированию (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636486"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Руководство по программированию (LINQ to DataSet)
 Этот раздел содержит основные сведения о программировании с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] и примеры.  
@@ -25,7 +25,7 @@ ms.locfileid: "43513374"
  [Создание DataTable из запроса](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Содержит сведения о создании <xref:System.Data.DataTable> из [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса с помощью <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> метод.  
   
- [Практическое: реализовать метод CopyToDataTable\<T > где универсальный тип T не является DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Практическое руководство. Реализовать метод CopyToDataTable\<T > где универсальный тип T не является DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Описывает процедуру применения пользовательского метода `CopyToDataTable<T>`, где общий параметр T не принадлежит к типу <xref:System.Data.DataRow>.  
   
  [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -54,5 +54,5 @@ ms.locfileid: "43513374"
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ и ADO.NET](linq-and-ado-net.md)  
+- [LINQ и ADO.NET](linq-and-ado-net.md)
 - [LINQ](../../../csharp/programming-guide/concepts/linq/index.md)

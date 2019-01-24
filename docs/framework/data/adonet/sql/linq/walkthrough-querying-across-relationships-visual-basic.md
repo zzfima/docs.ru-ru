@@ -1,24 +1,25 @@
 ---
-title: Пошаговое руководство. Запросы по связям (Visual Basic)
+title: Пошаговое руководство. Выполнение запросов со связями (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585477"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Пошаговое руководство. Запросы по связям (Visual Basic)
-В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей внешних ключей в базе данных.  
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>Пошаговое руководство. Выполнение запросов со связями (Visual Basic)
+В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей по внешнему ключу в базе данных.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Это пошаговое руководство было написано с помощью параметров разработки Visual Basic.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Необходимо выполнить [Пошаговое руководство: простая модель объекта и запрос (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). На этом пошаговом руководстве основано руководство, описываемое в данном разделе. В частности на компьютере должен иметься файл northwnd.mdf в папке c:\linqtest.  
+ Необходимо выполнить [Пошаговое руководство: Простая модель объектов и запрос (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). На этом пошаговом руководстве основано руководство, описываемое в данном разделе. В частности на компьютере должен иметься файл northwnd.mdf в папке c:\linqtest.  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из трех основных задач.  
@@ -85,10 +86,10 @@ ms.lasthandoff: 05/04/2018
   
 4.  Чтобы закрыть приложение, в окне "Консоль" нажмите клавишу ВВОД.  
   
-5.  На **файл** меню, нажмите кнопку **сохранить все** Если вы хотите сохранить это приложение.  
+5.  На **файл** меню, щелкните **сохранить все** Если вы хотите сохранить приложение.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Следующего пошагового руководства ([Пошаговое руководство: управление данными (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
+ Следующего пошагового руководства ([Пошаговое руководство: Обработка данных (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
   
-## <a name="see-also"></a>См. также  
- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>См. также
+- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

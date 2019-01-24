@@ -1,5 +1,5 @@
 ---
-title: 'Время существования: создание и уничтожение объектов (Visual Basic)'
+title: 'Время существования: Как объекты создаются и удаляются (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610335"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Время существования: создание и уничтожение объектов (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Время существования: Как объекты создаются и удаляются (Visual Basic)
 Экземпляр класса, объект, создается с помощью ключевого слова `New`. Задачи инициализации зачастую необходимо выполнять на новых объектах до их использования. К распространенным задачам инициализации относится открытие файлов, подключение к базам данных и чтение значений параметров реестра. Visual Basic управляет инициализацией новых объектов с помощью процедур, которые называются *конструкторы* (специальные методы, позволяющие управлять инициализацией).  
   
  Когда объект выходит из области, он высвобождается средой CLR. Visual Basic управляет высвобождением системных ресурсов с помощью процедур, которые называются *деструкторы*. Вместе конструкторы и деструкторы поддерживают создание надежных и предсказуемых библиотек класса.  
@@ -146,9 +146,9 @@ End Sub
   
  Еще одно отличие от систем сборки мусора заключается в использовании `Nothing`. Чтобы воспользоваться подсчетом ссылок в Visual Basic 6.0 и более ранних версиях, программисты часто назначали `Nothing` переменным объектов, чтобы высвобождать ссылки, удерживаемые этими переменными. Если переменная содержала последнюю ссылку на объект, ресурсы объекта были немедленно высвобождены. В более поздних версиях Visual Basic, хотя по-прежнему могут быть случаи, когда эта процедура еще применима, ее выполнение больше не приводит к немедленному высвобождению ресурсов объектом. Чтобы немедленно высвободить ресурсы, используйте метод объекта <xref:System.IDisposable.Dispose%2A>, если он доступен. Для переменной следует устанавливать значение `Nothing` лишь в тех случаях, когда ее время жизни достаточно велико по отношению ко времени, за которое сборщик мусора обнаруживает потерянные объекты.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IDisposable.Dispose%2A>  
- [Инициализация и прекращение работы компонентов](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Очистка неуправляемых ресурсов](../../../../standard/garbage-collection/unmanaged.md)  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IDisposable.Dispose%2A>
+- [Инициализация и прекращение работы компонентов](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Очистка неуправляемых ресурсов](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709433"
 ---
 # <a name="distributed-application-security"></a>Защита распределенных приложений
 Безопасность Windows Communication Foundation (WCF) делится на три основные функциональные области: безопасность передачи, управление доступом и аудита. Безопасность передачи обеспечивает целостность, конфиденциальность и проверку подлинности. Безопасность передачи обеспечивается одним из следующих способов: безопасность транспорта, безопасность сообщений или `TransportWithMessageCredential`.  
@@ -38,7 +38,7 @@ ms.locfileid: "50189632"
 ## <a name="security-modes"></a>Режимы безопасности  
  WCF предусмотрены несколько режимов безопасности передачи, которые описаны в следующей таблице.  
   
-|Режим|Описание|  
+|Режим|Описание:|  
 |----------|-----------------|  
 |Нет|Безопасность на уровне транспорта или на уровне сообщений не обеспечивается. Используйте этот режим, ни один из предопределенных привязок по умолчанию, за исключением [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент или, при использовании кода, <xref:System.ServiceModel.BasicHttpBinding> класса.|  
 |Transport|Для обеспечения целостности, конфиденциальности и взаимной проверки подлинности используется безопасный транспорт, такой как HTTPS.|  
@@ -65,8 +65,8 @@ ms.locfileid: "50189632"
 |Параметр|Описание|  
 |-------------|-----------------|  
 |Нет|Указывает, что клиенту не требуется предоставлять учетные данные. Это означает, что клиент является анонимным.|  
-|Basic|Задает обычную проверку подлинности.  Дополнительные сведения см. в документе RFC2617, "[проверки подлинности HTTP: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313).»|  
-|Digest|Задает дайджест-проверку подлинности.  Дополнительные сведения см. в документе RFC2617, "[проверки подлинности HTTP: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313).»|  
+|Basic|Задает обычную проверку подлинности.  Дополнительные сведения см. в документе RFC2617, "[проверки подлинности HTTP: Основные и дайджест-проверка подлинности](https://go.microsoft.com/fwlink/?LinkId=88313).»|  
+|Digest|Задает дайджест-проверку подлинности.  Дополнительные сведения см. в документе RFC2617, "[проверки подлинности HTTP: Основные и дайджест-проверка подлинности](https://go.microsoft.com/fwlink/?LinkId=88313).»|  
 |Ntlm|Задает проверку подлинности Windows с использованием согласования SSPI с домене Windows.<br /><br /> При согласовании SSPI выбирается либо протокол Kerberos, либо протокол NT LanMan (NTLM).|  
 |Windows|Задает проверку подлинности Windows с использованием согласования SSPI с домене Windows. В качестве службы проверки подлинности SSPI выбирает либо протокол Kerberos, либо протокол NT LanMan (NTLM).<br /><br /> Сначала SSPI пытается использовать протокол Kerberos; если это не удается, используется NTLM.|  
 |Сертификат|Выполняет проверку подлинности клиента с использованием сертификата, обычно X.509.|  
@@ -94,8 +94,8 @@ ms.locfileid: "50189632"
   
  Режим безопасности сообщений также позволяет обеспечивать безопасность передачи таким образом, чтобы учетные данные службы передавались клиенту в процессе начального согласования. Для разрешения согласования задайте для свойства <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> значение `true`.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>См. также
+- [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

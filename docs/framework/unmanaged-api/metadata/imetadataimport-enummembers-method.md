@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645968"
 ---
 # <a name="imetadataimportenummembers-method"></a>Метод IMetaDataImport::EnumMembers
 Перечисляет токены MemberDef, представляющие члены указанного типа.  
@@ -44,7 +44,7 @@ HRESULT EnumMembers (
  [in, out] Указатель на перечислитель.  
   
  `cl`  
- [in] Токен TypeDef, представляющий тип, членами которой являются перечисления.  
+ [in] Токен TypeDef, представляющий тип, члены которого необходимо перечислить.  
   
  `rMembers`  
  [out] Массив, используемый для хранения токены MemberDef.  
@@ -53,27 +53,27 @@ HRESULT EnumMembers (
  [in] Максимальный размер массива `rMembers`.  
   
  `pcTokens`  
- [out] Фактическое число токены MemberDef, возвращаемых в `rMembers`.  
+ [out] Фактическое количество возвращаемых в токены MemberDef `rMembers`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMembers` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры MemberDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="remarks"></a>Примечания  
- При перечислении коллекций членов для класса `EnumMembers` возвращает только члены, определенные непосредственно в классе. Он не возвращает члены, которые наследует класс, даже если класс предоставляет реализацию этих унаследованных членов. Для перечисления унаследованных членов, вызывающий объект явно необходимо пройти в цепочке наследования. Обратите внимание, что правила для цепи наследования может меняться в зависимости от языка или компилятора, выдавшего исходные метаданные.  
+ При перечислении коллекций членов для класса, `EnumMembers` возвращает только те члены, определенные непосредственно в классе. Он не возвращает элементы, класс наследуется, даже если этот класс предоставляет реализацию для этих унаследованных членов. Чтобы перечислить унаследованные члены, вызывающий объект явным образом необходимо пройти по цепочке наследования. Обратите внимание, что правила для цепи наследования может меняться в зависимости от языка или компилятора, выдавшего исходные метаданные.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

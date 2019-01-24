@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731053"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Метод ICorDebugStackWalk::GetContext
 Возвращает контекст для текущего кадра в [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта.  
@@ -38,10 +38,10 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 #### <a name="parameters"></a>Параметры  
  `contextFlags`  
- [in] Флаги, указывающие запрошенное содержимое буфера контекста (определенный в заголовке WinNT.h).  
+ [in] Флаги, указывающие запрошенное содержимое буфера контекста (определяется в заголовке WinNT.h).  
   
  `contextBufSize`  
- [in] Размер выделенного буфера контекста.  
+ [in] Выделенный размер буфера контекста.  
   
  `contextSize`  
  [out] Фактический размер контекста. Это значение должно быть меньше или равен размеру буфера контекста.  
@@ -55,8 +55,8 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Контекст для текущего кадра успешно возвращен.|  
-|E_FAIL|Невозможно вернуть контекст.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Выделен слишком малый буфер контекста.|  
+|E_FAIL|Контекст не может быть возвращено.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Буфер контекста слишком мал.|  
 |CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
   
 ## <a name="exceptions"></a>Исключения  
@@ -65,14 +65,14 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  Поскольку раскрутке восстанавливается только подмножество регистров, например неизменяемые регистры, контекст может не соответствовать состоянию регистра во время вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

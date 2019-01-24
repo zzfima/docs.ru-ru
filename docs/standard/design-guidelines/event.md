@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632027"
 ---
 # <a name="event-design"></a>Разработка событий
 События являются наиболее часто используемые формой обратные вызовы (конструкции, которые позволяют framework для вызова пользовательского кода). Другие механизмы обратного вызова участием делегатов, виртуальные члены и основанная на интерфейсах подключаемых модулей. Данные из исследований об удобстве использования, указывают, что большинство разработчиков удобнее работать с помощью событий, чем они при использовании других методов обратного вызова. События хорошо интегрированы с Visual Studio и многих языков.  
@@ -72,5 +72,5 @@ ms.locfileid: "53129094"
   
 ## <a name="see-also"></a>См. также
 
-- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  
+- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

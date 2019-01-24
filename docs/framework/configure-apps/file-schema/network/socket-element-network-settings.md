@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ff06fd6518e67020b4d67d4e081307b8e54bae85
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 01e4b5ef4583d30114720ffe559a342b45fe2b98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640021"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;сокет&gt; (сетевые параметры)
 Указывает, используют ли операции сокета порты завершения.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Параметры >  
 \<сокет >  
   
@@ -103,10 +103,10 @@ ms.locfileid: "50194700"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

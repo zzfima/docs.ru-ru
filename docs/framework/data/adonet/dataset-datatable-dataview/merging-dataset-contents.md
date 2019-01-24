@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0cba481770708ae11aee9cb4e192019c733eba5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702591"
 ---
 # <a name="merging-dataset-contents"></a>Слияние содержимого набора данных
-Метод <xref:System.Data.DataSet.Merge%2A> можно использовать для объединения содержимого массива <xref:System.Data.DataSet>, <xref:System.Data.DataTable> или <xref:System.Data.DataRow> с существующим `DataSet`. Несколько факторов и параметров влияют на то, как новые данные объединяются с существующим `DataSet`.  
+Метод <xref:System.Data.DataSet.Merge%2A> можно использовать для слияния содержимого массива <xref:System.Data.DataSet>, <xref:System.Data.DataTable> или <xref:System.Data.DataRow> с существующим `DataSet`. Несколько факторов и параметров влияют на то, как новые данные объединяются с существующим `DataSet`.  
   
 ## <a name="primary-keys"></a>Первичные ключи  
  Если таблица, получающая в результате объединения новые данные и схему, имеет первичный ключ, новые строки входных данных сравниваются с существующими строками, имеющими такие же значения первичного ключа <xref:System.Data.DataRowVersion.Original>, что и во входных данных. Если столбцы из входной схемы соответствуют столбцам существующей схемы, данные в существующих строках изменяются. Столбцы, не соответствующие существующей схеме, либо пропускаются, либо добавляются на основании параметра <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Новые строки со значениями первичного ключа, которые не соответствуют существующим строкам, добавляются к существующей таблице.  
@@ -78,10 +78,10 @@ ms.locfileid: "45658799"
  [!code-csharp[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#2)]
  [!code-vb[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#2)]  
   
-## <a name="see-also"></a>См. также  
- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

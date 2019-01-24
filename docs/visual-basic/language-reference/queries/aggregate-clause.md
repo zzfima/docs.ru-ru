@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547096"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Предложение Aggregate (Visual Basic)
 Применяет один или несколько агрегатных функций к коллекции.  
@@ -33,11 +33,11 @@ Aggregate element [As type] In collection _
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательно. Переменная, используемая для итерации по элементам коллекции.|  
-|`type`|Необязательный. Тип параметра `element`. Если тип не указан, тип `element` выводится из `collection`.|  
-|`collection`|Обязательно. Ссылается на коллекцию для работы.|  
-|`clause`|Необязательный. Один или несколько предложения запроса, такие как `Where` предложение для уточнения результатов запроса, чтобы применить предложение aggregate или предложений для.|  
-|`expressionList`|Обязательно. Одно или несколько разделенных запятыми выражений, которые идентифицируют агрегатную функцию для применения к коллекции. Псевдоним можно применять в статистической функции, чтобы указать имя элемента для получения результата запроса. Если псевдоним не указан, используется имя агрегатной функции. Примеры см. в разделе об агрегатных функциях, далее в этом разделе.|  
+|`element`|Обязательный. Переменная, используемая для итерации по элементам коллекции.|  
+|`type`|Необязательный параметр. Тип параметра `element`. Если тип не указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательный. Ссылается на коллекцию для работы.|  
+|`clause`|Необязательный параметр. Один или несколько предложения запроса, такие как `Where` предложение для уточнения результатов запроса, чтобы применить предложение aggregate или предложений для.|  
+|`expressionList`|Обязательный. Одно или несколько разделенных запятыми выражений, которые идентифицируют агрегатную функцию для применения к коллекции. Псевдоним можно применять в статистической функции, чтобы указать имя элемента для получения результата запроса. Если псевдоним не указан, используется имя агрегатной функции. Примеры см. в разделе об агрегатных функциях, далее в этом разделе.|  
   
 ## <a name="remarks"></a>Примечания  
  `Aggregate` Предложение может использоваться для включения агрегатных функций в запросах. Агрегатные функции выполняют проверку и вычисление на наборе значений и возвращают одиночное значение. Вычисляемое значение доступны с помощью члена типа результата запроса. Стандартные агрегатные функции, которые можно использовать, `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, и `Sum` функции. Эти функции хорошо знакомы разработчикам, знакомым с помощью статистических функций в SQL. Они описаны в следующем разделе этой статьи.  
@@ -120,9 +120,9 @@ Aggregate element [As type] In collection _
   
 ## <a name="see-also"></a>См. также
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
-- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
-- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)

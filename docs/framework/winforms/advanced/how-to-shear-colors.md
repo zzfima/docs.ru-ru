@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сдвиг цветов
+title: Как выполнить Сместить цвета
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: 204f15ce44d5ad688be0ea9ac0fa4a90781b25dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bde3271398c6bc6a37c975476b76acb85511c1a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589836"
 ---
-# <a name="how-to-shear-colors"></a>Практическое руководство. Сдвиг цветов
-Наклон увеличивает или уменьшает компонент цвета на сумму пропорционально другому компоненту цвета. Например рассмотрим преобразование, в котором красный компонент увеличивается на половину значения синего компонента. При таком преобразовании цвет (0,2, 0,5, 1) станут (0,7, 0,5, 1). Новое значение красного компонента равняется 0,2 + (1/2)(1) = 0,7.  
+# <a name="how-to-shear-colors"></a>Как выполнить Сместить цвета
+Пропорциональное изменение увеличивает или уменьшает компонент цвета, обратно пропорционально значению другого компонента цвета. Например рассмотрим преобразования, где красный компонент увеличивается на половину значения синего компонента. При таком преобразовании цвет (0,2, 0,5, 1) станет (0,7, 0,5, 1). Новое значение красного компонента — 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars4.bmp. Затем код применяет наклон преобразование, описанное в предыдущем абзаце к каждой точке в изображении.  
+ В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars4.bmp. Затем код применяет наклон преобразование, описанное в предыдущем абзаце для каждого пикселя в изображении.  
   
- Ниже показан исходный образ в левой части экрана и преобразованное изображение справа.  
+ Ниже показан исходное изображение в левой части и преобразованное изображение справа.  
   
- ![Сместить цвета](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
+ ![Сдвиг цветов](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
   
  Ниже перечислены эти векторы четырех полос до и после преобразования.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "33522451"
  [!code-vb[System.Drawing.Misc3#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчика событий. Замените `ColorBars.bmp` в вашей системе путь и имя образа.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `ColorBars.bmp` в вашей системе путь и имя образа.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)

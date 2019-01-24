@@ -7,53 +7,53 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 82d76c1656ff14c6d1c9bbbb1c79ec3a30708a90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635719"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Разработка составного элемента Windows Forms
-Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, которые являются производными от <xref:System.Web.UI.UserControl> называются пользовательскими элементами управления. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления, см. в разделе <xref:System.Windows.Forms.UserControl> в [как: применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, которые являются производными от <xref:System.Web.UI.UserControl> называются пользовательскими элементами управления. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления, см. в разделе <xref:System.Windows.Forms.UserControl> в [как: Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
  Конструктор Windows Forms в Visual Studio предоставляет широкие возможности поддержки времени разработки для пользовательских элементов управления.  
   
--   [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [Пошаговое руководство: Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Пример. Наследование элементов управления форм Windows Forms с помощью Visual C#](https://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438)  
+-   [Пошаговое руководство: Наследование от Windows Forms элемента управления с визуальным C# ](https://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438))  
   
 -   [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [Практическое руководство. Наследование существующих элементов управления Windows Forms](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [Практическое руководство. Наследование Windows существующих элементов управления формы](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во время разработки](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [Практическое руководство. Наследование класса Control](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [Практическое руководство. Наследовать от класса Control](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [Практическое руководство. Выравнивание элементов управления по границам формы во время разработки](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
 -   [Практическое руководство. Наследование класса UserControl](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [Практическое руководство. Создание элементов управления для форм Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [Практическое руководство. Автор элементы управления для форм Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
 -   [Практическое руководство. Создание составных элементов управления](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Пример. Создание составного элемента управления с помощью C#](https://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f)  
+-   [Пошаговое руководство: Создание составного элемента управления с визуальным C# ](https://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f))  
   
--   [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [Практическое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций, применяемых во время разработки](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Практическое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций, применяемых во время разработки](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Применение атрибутов к элементам управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Рисование эллипса или круга
+title: Как выполнить Рисование эллипса или круга
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ellipses [WPF], drawing
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], drawing circles
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-ms.openlocfilehash: ddeada8619d1b6c8970f1efb7cca1bc98773d0c5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7aac743b0cd2119107e48493b3ee9563b81b391d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689121"
 ---
-# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Практическое руководство. Рисование эллипса или круга
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Как выполнить Рисование эллипса или круга
 В этом примере показано, как рисование эллипсов и кругов с помощью <xref:System.Windows.Shapes.Ellipse> элемент. Чтобы нарисовать эллипс, создайте <xref:System.Windows.Shapes.Ellipse> элемент и указать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>. Используйте его <xref:System.Windows.Shapes.Shape.Fill%2A> свойство, чтобы указать <xref:System.Windows.Media.Brush> , используемый для закрашивания внутренней части эллипса. Используйте его <xref:System.Windows.Shapes.Shape.Stroke%2A> свойство, чтобы указать <xref:System.Windows.Media.Brush> , используемый для рисования контура эллипса. <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Свойство задает толщину контура эллипса.  
   
  Чтобы нарисовать окружность, <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> из <xref:System.Windows.Shapes.Ellipse> элемент, равный друг с другом.  
@@ -30,7 +30,7 @@ ms.locfileid: "46003949"
   
  Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Shapes.Ellipse>  
- <xref:System.Windows.Shapes.Shape>  
- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Shapes.Ellipse>
+- <xref:System.Windows.Shapes.Shape>
+- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)

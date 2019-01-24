@@ -1,16 +1,16 @@
 ---
-title: 'Как: запроса к ArrayList с помощью LINQ (Visual Basic)'
+title: Как выполнить Выполнение запроса к ArrayList с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 24865842d073dbd4cbb60fe4a228520e98010f4d
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5e1a7e84c8f8789edb3f0c867986d5a5e27674c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669033"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Как: запроса к ArrayList с помощью LINQ (Visual Basic)
-При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, к [предложения From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Как выполнить Выполнение запроса к ArrayList с помощью LINQ (Visual Basic)
+При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, ваш [предложение From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:  
   
 ```  
 Dim query = From student As Student In arrList   
@@ -19,7 +19,7 @@ Dim query = From student As Student In arrList
   
  Указав тип переменной диапазона, вы приводите каждый элемент в <xref:System.Collections.ArrayList> к `Student`.  
   
- Использование явным образом типизированной переменной диапазона в выражении запроса эквивалентно вызову метода <xref:System.Linq.Enumerable.Cast%2A>. Если выполнить приведение не удается, <xref:System.Linq.Enumerable.Cast%2A> создает исключение. Методы <xref:System.Linq.Enumerable.Cast%2A> и <xref:System.Linq.Enumerable.OfType%2A> стандартного оператора запроса используются для работы с неуниверсальными типами <xref:System.Collections.IEnumerable>. В Visual Basic, необходимо явным образом вызвать <xref:System.Linq.Enumerable.Cast%2A> метод в источнике данных, чтобы обеспечить конкретный тип переменной диапазона. Дополнительные сведения см. в разделе [связи между типами в операциях запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ Использование явным образом типизированной переменной диапазона в выражении запроса эквивалентно вызову метода <xref:System.Linq.Enumerable.Cast%2A>. Если выполнить приведение не удается, <xref:System.Linq.Enumerable.Cast%2A> создает исключение. Методы <xref:System.Linq.Enumerable.Cast%2A> и <xref:System.Linq.Enumerable.OfType%2A> стандартного оператора запроса используются для работы с неуниверсальными типами <xref:System.Collections.IEnumerable>. В Visual Basic, необходимо явно вызывать <xref:System.Linq.Enumerable.Cast%2A> метод в источнике данных, чтобы обеспечить конкретный тип переменной диапазона. Дополнительные сведения см. в разделе [связи типов в операциях запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показан простой запрос к объекту <xref:System.Collections.ArrayList>. Обратите внимание на то, что в этом примере инициализаторы объектов используются, когда код вызывает метод <xref:System.Collections.ArrayList.Add%2A>, но это не обязательно.  
@@ -76,5 +76,5 @@ End Module
 '   Garcia: 97  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>См. также
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

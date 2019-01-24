@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: d786a77a0f787515ce1ab2ca61cbc1251aa14563
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eccd68d77eb9afabdc3bd4301f6258b80b7d7e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736657"
 ---
 # <a name="-doc"></a>-doc
 Обрабатывает комментарии к документации в XML-файл.  
@@ -28,7 +28,7 @@ ms.locfileid: "50192464"
   
 |Термин|Определение|  
 |---|---|  
-|`+` &#124; `-`|Необязательный. Если задать + или `-doc`, компилятор создаст документацию и поместит ее в XML-файл. Если задать `-`, что эквивалентно отсутствию `-doc`, компилятор не будет создавать документацию.|  
+|`+` &#124; `-`|Необязательный параметр. Если задать + или `-doc`, компилятор создаст документацию и поместит ее в XML-файл. Если задать `-`, что эквивалентно отсутствию `-doc`, компилятор не будет создавать документацию.|  
 |`file`|Является обязательным, если используется параметр `-doc:`. Определяет выходной XML-файл, который заполняется комментариями из файлов исходного кода, участвующих в компиляции. Если имя файла содержит пробел, заключите его в кавычки (" ").|  
   
 ## <a name="remarks"></a>Примечания  
@@ -53,6 +53,6 @@ ms.locfileid: "50192464"
 ## <a name="example"></a>Пример  
  Пример см. в статье [Документирование кода с помощью XML-комментариев](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Документирование кода с помощью XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+## <a name="see-also"></a>См. также
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Документирование кода с помощью XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

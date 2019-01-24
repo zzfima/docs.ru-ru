@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626489"
 ---
 # <a name="double-data-type-visual-basic"></a>Тип данных Double (Visual Basic)
 Содержит знаком IEEE 64-разрядные (8-байтные) числа двойной точности с плавающей запятой числа, в диапазоне от - 1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений и от 4.94065645841246544E-324 до 1, 79769313486231570E + 308 положительные значения. Числа двойной точности хранят приближенное значение вещественного числа.  
@@ -55,13 +55,13 @@ ms.locfileid: "44180232"
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Double?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Знаки типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Double?displayProperty=nameWithType>
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Знаки типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

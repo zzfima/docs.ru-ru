@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c515a8184e8c01b0e292057f3f66ffef28f2c5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15890bb4052905ef448501ae759669f8a1dfd444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735601"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Метод ICLRDataTarget::GetMachineType
-Возвращает идентификатор для типа набора инструкций, целевым процессом.  
+Получает идентификатор для типа набора инструкций, целевым процессом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT GetMachineType (
   
 #### <a name="parameters"></a>Параметры  
  `machineType`  
- [out] Использует указатель на значение, которое указывает, что набора инструкций, в целевом процессе. Возвращенный `machineType` является одним из IMAGE_FILE_MACHINE констант, которые определены в файле заголовка WinNT.h.  
+ [out] Использует указатель на значение, указывающее набора инструкций, в целевом процессе. Возвращенный `machineType` является одной из констант IMAGE_FILE_MACHINE, которые определены в файле заголовка WinNT.h.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

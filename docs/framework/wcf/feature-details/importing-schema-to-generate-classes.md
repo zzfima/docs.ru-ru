@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620530"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Для создания классов из схемы, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  
@@ -42,7 +42,7 @@ ms.locfileid: "47197375"
     > [!NOTE]
     > В случае сбоя при импорте объект `CodeCompileUnit` будет находиться в непредсказуемом состоянии. Использование объекта `CodeCompileUnit`, возникшего после сбоя импорта, может привести к образованию уязвимых мест в системе безопасности.  
   
-5. Для доступа к объекту `CodeCompileUnit` используется свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>.  
+5. Для доступа к объекту `CodeCompileUnit` используется свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> .  
   
 ### <a name="import-options-customizing-the-generated-types"></a>Параметры импорта. Настройка созданных типов  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractImporter> экземпляру класса <xref:System.Runtime.Serialization.ImportOptions> для управления различными аспектами процесса импорта. Некоторые параметры непосредственно влияют на созданные типы.  
@@ -143,7 +143,7 @@ ms.locfileid: "47197375"
 > [!NOTE]
 >  При использовании Svcutil.exe или (в Visual Studio) **Add Service Reference** автоматически добавляются ссылки на средства, все типы в библиотеке MsCorLib.dll.  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Параметры импорта. Импорт схемы, отличной от DataContract, в виде типов IXmlSerializable  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Параметры импорта. Импорт схемы, отличной от DataContract в виде типов IXmlSerializable  
  Объект <xref:System.Runtime.Serialization.XsdDataContractImporter> поддерживает ограниченное подмножество схемы. При наличии неподдерживаемых конструкций схемы (например, атрибутов XML) попытка импорта заканчивается с ошибкой, и возникает исключение. Однако, если присвоить свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> значение `true`, диапазон поддерживаемых схем увеличится. При выборе значения `true` объект <xref:System.Runtime.Serialization.XsdDataContractImporter> создает типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable>. Это обеспечивает прямой доступ к XML-представлению этих типов.  
   
 ##### <a name="design-considerations"></a>Вопросы проектирования  
@@ -156,7 +156,7 @@ ms.locfileid: "47197375"
   
 -   При импорте и экспорте точность схемы для созданных типов <xref:System.Xml.Serialization.IXmlSerializable> не сохраняется. Это значит, что при экспорте схемы из созданных типов и импорте в виде классов исходная схема не возвращается.  
   
- Можно сгруппировать параметр <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> и параметр <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>, описанные выше. В случае типов, которые необходимо создать как реализации <xref:System.Xml.Serialization.IXmlSerializable>, структурная проверка пропускается при использовании функции <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>.  
+ Можно сгруппировать параметр <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> и параметр <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>, описанные выше. В случае типов, которые необходимо создать как реализации <xref:System.Xml.Serialization.IXmlSerializable>, структурная проверка пропускается при использовании возможности <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>.  
   
  <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> Параметр соответствует параметру **/importXmlTypes** в средстве Svcutil.exe.  
   
@@ -170,22 +170,22 @@ ms.locfileid: "47197375"
  Это достигается путем применения <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> атрибут в созданный `IXmlSerializable` классы и указанию метода, который вызывает <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> метод для создания типа «anyType».  
   
 > [!NOTE]
->  Тип <xref:System.Runtime.Serialization.XmlSerializableServices> существует только для поддержки этой конкретной функции. Не рекомендуется использовать его для других целей.  
+>  Тип <xref:System.Runtime.Serialization.XmlSerializableServices> существует только для поддержки этой конкретной возможности. Не рекомендуется использовать его для других целей.  
   
 #### <a name="import-options-advanced-options"></a>Параметры импорта. Дополнительные параметры  
  Ниже представлены дополнительные параметры импорта.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать функций, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор функций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
+-   Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать возможностей, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор возможностей [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
   
 -   Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Импорт и экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Импорт и экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

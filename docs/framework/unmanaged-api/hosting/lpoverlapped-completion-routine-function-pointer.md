@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4b7ffef9c0ba3aba54387245b2d5c9ec1ae906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2c3040adddabee716976d778c29d1f6729efc39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576932"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>Указатель функции LPOVERLAPPED_COMPLETION_ROUTINE
-Указывает на функцию, которая уведомляет основное приложение перекрывающегося (то есть асинхронные) завершения ввода-вывода на устройстве.  
+Указывает на функцию, которая уведомляет основное приложение перекрывающегося (то есть асинхронный) завершения ввода-вывода на устройство.  
   
- Указатель на функцию рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Этот указатель функции был объявлен устаревшим в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 #### <a name="parameters"></a>Параметры  
  `dwErrorCode`  
- [in] Значение, которое представляет собой код ошибки, если устройство было закрыто; в противном случае это значение равно нулю.  
+ [in] Значение, является кодом ошибки, если устройство было закрыто; в противном случае это значение равно нулю.  
   
  Закрытие устройства приводит к немедленному завершению всех ожидающих операций ввода-вывода на устройстве.  
   
@@ -51,16 +51,16 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  [in] Указатель на структуру, содержащую информацию, используемую для выполнения запроса ввода-вывода.  
   
 ## <a name="remarks"></a>Примечания  
- Функция, к которому `LPOVERLAPPED_COMPLETION_ROUTINE` точек — функция обратного вызова и должны быть реализованы разработчиком ведущего приложения. Функция обратного вызова позволяет основному приложению обработать выполненный запрос ввода-вывода.  
+ Функция, которая `LPOVERLAPPED_COMPLETION_ROUTINE` точки — это функция обратного вызова и должны быть реализованы модулем записи ведущего приложения. Функция обратного вызова позволяет основному приложению обработать выполненный запрос ввода-вывода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** MSCorWks.dll  
+ **Библиотека:** "Mscorwks.dll"  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

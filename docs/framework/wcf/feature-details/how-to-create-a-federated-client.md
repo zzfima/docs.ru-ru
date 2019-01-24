@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание федеративного клиента
+title: Как выполнить Создание федеративного клиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 5c33c26043d90d99c295b2e066c897e2cdad32d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614335"
 ---
-# <a name="how-to-create-a-federated-client"></a>Практическое руководство. Создание федеративного клиента
-В Windows Communication Foundation (WCF), создает клиент для *федеративной службы* состоит из трех основных этапов:  
+# <a name="how-to-create-a-federated-client"></a>Как выполнить Создание федеративного клиента
+В Windows Communication Foundation (WCF), создание клиента для *федеративной службы* состоит из трех основных этапов:  
   
-1.  Настройка [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или аналогичной пользовательской привязки. Дополнительные сведения о создании соответствующую привязку см. в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для конечной точки метаданных службы федерации для создания файла конфигурации для взаимодействия с федеративной службы и один или несколько службы маркеров безопасности.  
+1.  Настройка [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или аналогичную пользовательскую привязку. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Кроме того, запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) от конечной точки метаданных федеративной службы, чтобы создать файл конфигурации для взаимодействия с федеративной службы и один или несколько службы маркеров безопасности.  
   
 2.  Задайте свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential>, управляющие различными аспектами взаимодействия клиента со службой маркеров безопасности.  
   
@@ -27,22 +27,22 @@ ms.locfileid: "33496975"
 > [!NOTE]
 >  Исключение <xref:System.Security.Cryptography.CryptographicException> может возникнуть, если клиент использует олицетворенные учетные данные, привязку <xref:System.ServiceModel.WSFederationHttpBinding> или выданный пользовательский маркер и асимметричные ключи. Асимметричные ключи используются с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> и выданными пользовательскими маркерами, если для свойств <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> и <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> соответственно задано значение <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. Исключение <xref:System.Security.Cryptography.CryptographicException> возникает, когда клиент пытается отправить сообщение, а для идентификации, которую олицетворяет клиент, отсутствует профиль пользователя. Чтобы подавить эту проблему, перед отправкой сообщения войдите в систему на клиентском компьютере или вызовите метод `LoadUserProfile`.  
   
- В этом разделе приведены подробные сведения об этих процедурах. Дополнительные сведения о создании соответствующую привязку см. в разделе [как: создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Дополнительные сведения о работе федеративной службы см. в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
+ В этом разделе приведены подробные сведения об этих процедурах. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Дополнительные сведения о работе федеративной службы см. в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Создание и проверка конфигурации для федеративной службы  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с адресом URL-адрес метаданных службы в виде параметра командной строки.  
+1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) адрес URL-адрес метаданных службы в качестве параметра командной строки.  
   
 2.  Откройте созданный файл конфигурации в подходящем редакторе.  
   
-3.  Просмотрите атрибуты и содержимое любого создан [ \<издателя >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) и [ \<issuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) элементов. Они находятся в [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) элементы для [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или элементы пользовательских привязок. Убедитесь, что адреса содержат ожидаемые имена доменов или другую адресную информацию. Важно проверить эту информацию, так как клиент проверяет свою подлинность по этим адресам, и возможно раскрытие такой информации, как пары "имя пользователя-пароль". Если адреса отличаются от ожидаемых, это может привести к передаче информации неправильному получателю.  
+3.  Изучите атрибуты и содержимое всех созданных [ \<издателя >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) и [ \<issuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) элементов. Они находятся в [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) элементы для [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или элементах пользовательских привязок. Убедитесь, что адреса содержат ожидаемые имена доменов или другую адресную информацию. Важно проверить эту информацию, так как клиент проверяет свою подлинность по этим адресам, и возможно раскрытие такой информации, как пары "имя пользователя-пароль". Если адреса отличаются от ожидаемых, это может привести к передаче информации неправильному получателю.  
   
-4.  Проверьте все Дополнительно [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) элементов внутри комментария out <`alternativeIssuedTokenParameters`> элемент. Если при использовании средства Svcutil.exe для создания конфигурации для федеративной службы эта федеративная служба или любая промежуточная служба маркеров безопасности указывает не адрес издателя, а адрес метаданных для службы маркеров безопасности с несколькими конечными точками, получающийся файл конфигурации ссылается на первую конечную точку. Дополнительные конечные точки находятся в файле конфигурации как комментарий <`alternativeIssuedTokenParameters`> элементов.  
+4.  Проверьте все дополнительные [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) элементы внутри закомментированного out <`alternativeIssuedTokenParameters`> элемента. Если при использовании средства Svcutil.exe для создания конфигурации для федеративной службы эта федеративная служба или любая промежуточная служба маркеров безопасности указывает не адрес издателя, а адрес метаданных для службы маркеров безопасности с несколькими конечными точками, получающийся файл конфигурации ссылается на первую конечную точку. Дополнительные конечные точки присутствуют в файле конфигурации в виде закомментированных <`alternativeIssuedTokenParameters`> элементы.  
   
-     Определить, является ли один из этих <`issuedTokenParameters`> является более предпочтительным, чем тот, уже присутствует в конфигурации. Например, может быть предпочтительно выполнять проверку подлинности клиента в службе маркеров безопасности с использованием маркера [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Windows, а не с помощью пары "имя пользователя-пароль".  
+     Определить, является ли один из них <`issuedTokenParameters`> является более предпочтительным, чем уже имеющийся в конфигурации. Например, может быть предпочтительно выполнять проверку подлинности клиента в службе маркеров безопасности с использованием маркера [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Windows, а не с помощью пары "имя пользователя-пароль".  
   
     > [!NOTE]
-    >  Если перед началом взаимодействия со службой необходимо пройти через несколько служб маркеров безопасности, промежуточная служба маркеров безопасности может направить клиента в неправильную службу маркеров безопасности. Убедитесь, что конечная точка для службы маркеров безопасности в [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) службы маркеров безопасности ожидаемый и не Неизвестная служба маркеров безопасности.  
+    >  Если перед началом взаимодействия со службой необходимо пройти через несколько служб маркеров безопасности, промежуточная служба маркеров безопасности может направить клиента в неправильную службу маркеров безопасности. Убедитесь, что конечная точка для службы маркеров безопасности в [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) является ожидаемой службой маркеров безопасности и не неизвестной службой маркеров безопасности.  
   
 ### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>Настройка IssuedTokenClientCredential в коде  
   
@@ -51,21 +51,21 @@ ms.locfileid: "33496975"
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-2.  Если кэширование маркера не требуется, установите для свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> значение `false`. Свойство <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> определяет, будут ли кэшироваться такие маркеры, полученные от службы маркеров безопасности. Если для этого свойства задано значение `false`, клиент запрашивает новый маркер у службы маркеров безопасности каждый раз, когда ему требуется заново подтвердить свою подлинность в федеративной службе, независимо от того, действует ли еще предыдущий маркер. Если для этого свойства задано значение `true`, клиент повторно использует существующий маркер, когда ему требуется заново подтвердить свою подлинность в федеративной службе (до тех пор, пока не истечет срок действия этого маркера). Значение по умолчанию — `true`.  
+2.  Если кэширование маркера не требуется, установите для свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> значение `false`. Свойство <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> определяет, будут ли кэшироваться такие маркеры, полученные от службы маркеров безопасности. Если для этого свойства задано значение `false`, клиент запрашивает новый маркер у службы маркеров безопасности каждый раз, когда ему требуется заново подтвердить свою подлинность в федеративной службе, независимо от того, действует ли еще предыдущий маркер. Если для этого свойства задано значение `true`, клиент повторно использует существующий маркер, когда ему требуется заново подтвердить свою подлинность в федеративной службе (до тех пор, пока не истечет срок действия этого маркера). Значение по умолчанию — `true`.  
   
 3.  Если для кэшированных маркеров требуется ограничение по времени, задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> значение <xref:System.TimeSpan>. Это свойство указывает, как долго маркер может оставаться в кэше. По истечении указанного времени маркер удаляется из кэша клиента. По умолчанию время нахождения маркеров в кэше не ограничено. В следующем примере задается промежуток времени 10 минут.  
   
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4.  Необязательный. Задайте для <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> значение в процентах. По умолчанию используется значение 60 процентов. Это свойство задается в процентах от срока действия маркера. Например, если срок действия выданного маркера составляет 10 часов, и для параметра <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> задано значение 80, маркер обновляется через 8 часов. В следующем примере задается значение 80 процентов.  
+4.  Необязательный параметр. Задайте для <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> значение в процентах. По умолчанию используется значение 60 процентов. Это свойство задается в процентах от срока действия маркера. Например, если срок действия выданного маркера составляет 10 часов, и для параметра <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> задано значение 80, маркер обновляется через 8 часов. В следующем примере задается значение 80 процентов.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
   
      Интервал обновления, заданный сроком действия маркера и значением `IssuedTokenRenewalThresholdPercentage`, заменяется значением `MaxIssuedTokenCachingTime`, если время кэширования меньше порогового времени обновления. Например, если произведение `IssuedTokenRenewalThresholdPercentage` и срока действия маркера равно восьми часам, а значение `MaxIssuedTokenCachingTime` равно 10 минутам, клиент обращается в службу маркеров безопасности за обновленным маркером каждые 10 минут.  
   
-5.  Если для привязки требуется режим энтропии ключа, отличный от <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, и при этом привязка не использует безопасность сообщений или безопасность транспорта с учетными данными сообщения (например, в привязке отсутствует элемент <xref:System.ServiceModel.Channels.SecurityBindingElement>), задайте свойству <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> соответствующее значение. *Энтропии* режим определяет, является ли симметричные ключи можно управлять с помощью <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> свойство. По умолчанию используется значение <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, когда и клиент, и издатель маркера предоставляют данные, совместно используемые для создания фактического ключа. Также предусмотрены значения <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> и <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, которые означают, что весь ключ задается клиентом или сервером соответственно. В следующем примере свойству задается значение, означающее, что для ключа используются только данные сервера.  
+5.  Если для привязки требуется режим энтропии ключа, отличный от <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, и при этом привязка не использует безопасность сообщений или безопасность транспорта с учетными данными сообщения (например, в привязке отсутствует элемент <xref:System.ServiceModel.Channels.SecurityBindingElement>), задайте свойству <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> соответствующее значение. *Энтропии* режим определяет, можно ли управлять симметричные ключи с помощью <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> свойство. По умолчанию используется значение <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy>, когда и клиент, и издатель маркера предоставляют данные, совместно используемые для создания фактического ключа. Также предусмотрены значения <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> и <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>, которые означают, что весь ключ задается клиентом или сервером соответственно. В следующем примере свойству задается значение, означающее, что для ключа используются только данные сервера.  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
@@ -80,14 +80,14 @@ ms.locfileid: "33496975"
   
 ### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Настройка IssuedTokenClientCredential в конфигурации  
   
-1.  Создание [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) элемента в качестве дочернего элемента [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) элемента поведения конечной точки.  
+1.  Создание [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) как дочерний элемент элемента [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) в поведении конечной точки.  
   
-2.  Если кэширование маркера не требуется, задайте `cacheIssuedTokens` атрибут (из <`issuedToken`> элемент) для `false`.  
+2.  Если кэширование маркера не требуется, задайте `cacheIssuedTokens` атрибут (из <`issuedToken`> элемент) к `false`.  
   
-3.  Если в кэшированных маркеров требуется ограничение по времени, задайте `maxIssuedTokenCachingTime` атрибут <`issuedToken`> элемент соответствующее значение. Пример:  
+3.  Для кэшированных маркеров требуется ограничение по времени, задайте `maxIssuedTokenCachingTime` атрибут <`issuedToken`> элемент соответствующее значение. Пример:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
-4.  Если значение, отличное от по умолчанию является предпочтительной, задайте `issuedTokenRenewalThresholdPercentage` атрибут <`issuedToken`> элемент соответствующее значение, например:  
+4.  Если значение, отличное от по умолчанию, задайте `issuedTokenRenewalThresholdPercentage` атрибут <`issuedToken`> элемент соответствующее значение, например:  
   
     ```xml  
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
@@ -99,7 +99,7 @@ ms.locfileid: "33496975"
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6.  Необязательный. Настроить любой специфичных для издателя настраиваемые поведения конечной точки, создав <`issuerChannelBehaviors`> элемент в качестве дочернего элемента <`issuedToken`> элемент. Каждое поведение создания <`add`> элемент в качестве дочернего элемента <`issuerChannelBehaviors`> элемент. Укажите адрес издателя поведение, задав `issuerAddress` атрибут <`add`> элемент. Укажите поведение, задав `behaviorConfiguration` атрибут <`add`> элемент.  
+6.  Необязательный параметр. Настройте все поведения пользовательской конечной точки специфичной для издателя, создав <`issuerChannelBehaviors`> как дочерний элемент элемента <`issuedToken`> элемента. Для каждого поведения создайте <`add`> как дочерний элемент элемента <`issuerChannelBehaviors`> элемента. Укажите адрес издателя для поведения, задав `issuerAddress` атрибут <`add`> элемента. Укажите само поведение, задав `behaviorConfiguration` атрибут <`add`> элемента.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -126,7 +126,7 @@ ms.locfileid: "33496975"
   
 ### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>Настройка X509CertificateRecipientClientCredential в конфигурации  
   
-1.  Создание [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) элемента в качестве дочернего элемента [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) элемент, который сам является потомком [ \< clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемента поведения конечной точки.  
+1.  Создание [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) как дочерний элемент элемента [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) элемент, который сам является дочерним элементом [ \< clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) в поведении конечной точки.  
   
 2.  Создайте элемент `<add>`, являющийся дочерним для элемента `<scopedCertificates>`. Задайте значения атрибутов `storeLocation`, `storeName`, `x509FindType` и `findValue`, указывающие на соответствующий сертификат. Задайте для атрибута `targetUri` значение, предоставляющее адрес конечной точки, для которой предназначен сертификат, как показано в следующем примере.  
   
@@ -152,19 +152,19 @@ ms.locfileid: "33496975"
 ## <a name="localissuer-required"></a>Требуется LocalIssuer  
  Если требуется, чтобы клиенты всегда использовали локального издателя, обратите внимание на следующее: выходные данные средства Svcutil.exe по умолчанию задают, что локальный издатель не используется, если в предпоследней службе маркеров безопасности в цепочке указан адрес издателя или адрес метаданных издателя.  
   
- Дополнительные сведения о параметре <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, и <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential> см. в описании [как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Дополнительные сведения о параметре <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, и <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> свойства <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , представлена в разделе [как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Сертификаты с областью действия  
  Если требуется задать сертификаты службы для взаимодействия с любыми службами маркеров безопасности (обычно в связи с тем, что не используется согласование сертификатов), их можно задать с помощью свойства <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. Метод <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> принимает в качестве параметров <xref:System.Uri> и <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Указанный сертификат используется при взаимодействии с конечными точками по указанному универсальному коду ресурса (URI). В качестве альтернативы можно с помощью метода <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> добавить сертификат в коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
   
 > [!NOTE]
->  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Не применяется к сертификатам, используемым для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращенной <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. Дополнительные сведения см. в разделе [как: Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+>  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Он неприменим к сертификатам, которые используются для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращаемой <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. Дополнительные сведения см. в разделе [Как Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
-## <a name="see-also"></a>См. также  
- [Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Практическое руководство. Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Практическое руководство. Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Практическое руководство. Защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+## <a name="see-also"></a>См. также
+- [Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [Практическое руководство. Отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Практическое руководство. Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Практическое руководство. Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Практическое руководство. Защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

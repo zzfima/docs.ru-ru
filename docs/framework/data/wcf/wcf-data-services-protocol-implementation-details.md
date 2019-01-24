@@ -2,12 +2,12 @@
 title: Сведения о реализации протокола служб данных WCF
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728756"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Сведения о реализации протокола служб данных WCF
 ## <a name="odata-protocol-implementation-details"></a>Сведения о реализации протокола OData  
@@ -22,6 +22,6 @@ ms.locfileid: "47195684"
 ### <a name="default-sorting-behavior"></a>Порядок сортировки по умолчанию  
  Если запрос, отправляемый в службу данных, включает системный параметр запроса `$top` или `$skip` и не включает системный параметр запроса `$orderby`, возвращаемый канал сортируется по ключевым свойствам в порядке возрастания. Это происходит потому, что упорядочение необходимо для правильного разбиения результатов на страницы. Для этого служба данных добавляет к запросу выражение упорядочения. Этот способ также используется в том случае, если в службе данных включено разбиение по страницам, управляемое сервером. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Для управления упорядочением возвращаемого канала, следует включить `$orderby` в URI запроса.  
   
-## <a name="see-also"></a>См. также  
- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>См. также
+- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623629"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Метод ISymUnmanagedMethod::GetSequencePoints
 Возвращает все точки следования в методе.  
@@ -46,19 +46,19 @@ HRESULT GetSequencePoints(
  [in] Объект `ULONG32` , получающий размер `offsets`, `documents`, `lines`, `columns`, `endLines`, и `endColumns` массивов.  
   
  `pcPoints`  
- [out] Указатель на `ULONG32` , который получает длину буфера, требуемое для размещения точек следования.  
+ [out] Указатель на `ULONG32` , получающий длину буфера, необходимый для точек следования.  
   
  `offsets`  
- [in] Массив, в котором для хранения промежуточных Microsoft (MSIL) смещений на языке от начала метода для точек следования.  
+ [in] Массив, в которой будут храниться промежуточные Microsoft языка MSIL смещений от начала метода для точек следования.  
   
  `documents`  
- [in] Массив для хранения документов, в которых находятся точки следования.  
+ [in] Массив, в котором для хранения документов, в которых находятся точки следования.  
   
  `lines`  
- [in] Массив для сохранения строк в документах, в которых находятся точки следования.  
+ [in] Массив для хранения строк в документах, в которых находятся точки следования.  
   
  `columns`  
- [in] Массив для хранения этих столбцов в документах, в которых находятся точки следования.  
+ [in] Массив, в котором для хранения этих столбцов в документах, в которых находятся точки следования.  
   
  `endLines`  
  [in] Массив строк в документах, в которых заканчиваются точки следования.  
@@ -70,7 +70,7 @@ HRESULT GetSequencePoints(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

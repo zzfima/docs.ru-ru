@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661364"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Сущности знаков XML и XAML
 XAML использует сущности символов, определенные в XML для специальных символов. В этом разделе описываются некоторые особые сущности знаков и общие вопросы, связанные с другими концепциями XML в XAML.  
@@ -62,8 +62,8 @@ XAML использует сущности символов, определен�
 ## <a name="xml-processing-instructions"></a>Инструкции по обработке XML  
  XAML обрабатывает инструкции по обработке XML в соответствии со спецификациями XML, в которых указано, что инструкции должны передаваться. Обработка в службах XAML .NET Framework XAML не использует инструкции по обработке. Другие существующие платформы, использующие XAML, также не применяют инструкции по обработке из XAML.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Грамматика XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Грамматика XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [Обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

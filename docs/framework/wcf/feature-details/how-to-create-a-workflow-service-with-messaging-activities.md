@@ -1,16 +1,16 @@
 ---
-title: Как создать службу рабочего процесса с помощью действий обмена сообщениями
+title: Как выполнить создать службу рабочего процесса с помощью действий обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584981"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Как создать службу рабочего процесса с помощью действий обмена сообщениями
-В этом разделе приведены сведения о том, как создать простую службу рабочего процесса с помощью действий обмена сообщениями. В нем рассматривается механизм создания службы рабочего процесса, когда служба состоит только из действий обмена сообщениями. В реальных службах рабочий процесс содержит множество других действий. Служба реализует одну операцию с именем Echo, которая принимает строку и возвращает строку вызывающему коду. Это первый из двух разделов. Следующий раздел [How To: доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) рассматривается процесс создания приложения рабочего процесса, способного обращаться к службе, созданной в этом разделе.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Как выполнить создать службу рабочего процесса с помощью действий обмена сообщениями
+В этом разделе приведены сведения о том, как создать простую службу рабочего процесса с помощью действий обмена сообщениями. В нем рассматривается механизм создания службы рабочего процесса, когда служба состоит только из действий обмена сообщениями. В реальных службах рабочий процесс содержит множество других действий. Служба реализует одну операцию с именем Echo, которая принимает строку и возвращает строку вызывающему коду. Это первый из двух разделов. Следующий раздел [How To: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) рассматривается процесс создания приложения рабочего процесса, способного обращаться к службе, созданной в этом разделе.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Создание проекта службы рабочего процесса  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48580502"
   
      ![Страница справки WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Перейдите к [How To: доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) раздела, чтобы создать клиент рабочего процесса, вызывающего эту службу.  
+4.  Перейдите к [как: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) раздела, чтобы создать клиент рабочего процесса, вызывающего эту службу.  
   
-## <a name="see-also"></a>См. также  
- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Общие сведения о размещении служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>См. также
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Общие сведения о размещении служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

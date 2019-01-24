@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699809"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Оператор Imports (пространство имен .NET и тип)
 Разрешает типа ссылаться на них без квалификации пространства имен.  
@@ -38,9 +38,9 @@ Imports [ aliasname = ] namespace.element
   
 |Термин|Определение|  
 |---|---|  
-|`aliasname`|Необязательный. *Псевдоним импорта* или имя, по которому код может обращаться к `namespace` вместо полной строки. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Обязательно. Полное имя импортируемого пространства имен. Могут быть строкой пространства имен, на которое имеется вложенными на любом уровне.|  
-|`element`|Необязательный. Имя элемента программирования, объявленные в пространстве имен. Может быть любой элемент-контейнер.|  
+|`aliasname`|Необязательный параметр. *Псевдоним импорта* или имя, по которому код может обращаться к `namespace` вместо полной строки. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`namespace`|Обязательный. Полное имя импортируемого пространства имен. Могут быть строкой пространства имен, на которое имеется вложенными на любом уровне.|  
+|`element`|Необязательный параметр. Имя элемента программирования, объявленные в пространстве имен. Может быть любой элемент-контейнер.|  
   
 ## <a name="remarks"></a>Примечания  
  `Imports` Инструкция включает типы, содержащиеся в заданном пространстве имен напрямую ссылаться на.  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  Обратите внимание, что `Imports` инструкции не делает элементы из других проектов и сборок для проекта. Импорт не замещать ссылку. Он только избавляет от необходимости для уточнения имен, которые уже доступны в проекте. Дополнительные сведения см. в разделе «Импорт элементов с содержимым» в [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
->  Вы можете определить неявные `Imports` , используя [страница "ссылки", конструктор проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Дополнительные сведения см. в разделе [как: Добавление или удаление Импортируемые пространства имен (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+>  Вы можете определить неявные `Imports` , используя [страница "ссылки", конструктор проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Дополнительные сведения см. в разделе [Как Добавление или удаление импортированных пространств имен (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>Импорт псевдонимов  
  *Псевдоним импорта* определяет псевдоним для пространства имен или типа. Импорт псевдонимов полезны в тех случаях, когда необходимо использовать элементы с тем же именем, которые были определены в один или несколько пространств имен. Дополнительные сведения и пример см. в разделе «Уточнение имя элемента» в [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>См. также
+- [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

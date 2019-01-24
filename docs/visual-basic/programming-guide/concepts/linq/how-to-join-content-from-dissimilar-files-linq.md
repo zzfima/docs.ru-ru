@@ -1,15 +1,15 @@
 ---
-title: 'Как: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)'
+title: Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655469"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Как: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
 
 В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Создание и компиляция проекте, ориентированном на один из следующих вариантов:
+Создайте и скомпилируйте проект, который ориентирован на один из следующих вариантов:
 
-- .NET framework версии 3.5 и ссылки на библиотеку System.Core.dll.
-- .NET framework 4.0 или более поздней версии.
-- .NET core версии 1.0 или более поздней версии.
+- Платформа .NET Framework версии 3.5 со ссылкой на библиотеку System.Core.dll.
+- .NET Framework версии 4.0 или более поздней.
+- .NET Core версии 1.0 или более поздней.
   
 ## <a name="see-also"></a>См. также
 
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

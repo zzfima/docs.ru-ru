@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640437"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Пошаговое руководство. Определение классов (Visual Basic)
 
@@ -77,9 +77,9 @@ ms.locfileid: "43403546"
   
 1.  Запустите приложение, нажав клавишу F5. Нажмите кнопку на форме, чтобы вызвать процедуру тестирования. Оно отображает сообщение о том, что исходный `UserName` является «MOORE, BOBBY», так как вызвана процедура `Capitalize` метод объекта.  
   
-2.  Нажмите кнопку **ОК** для закрытия окна сообщения. `Button1 Click` Процедура изменяет значение `UserName` свойства и отображает сообщение о том, что новое значение `UserName` «Worden, Joe».  
+2.  Нажмите кнопку **ОК**, чтобы закрыть окно сообщения. `Button1 Click` Процедура изменяет значение `UserName` свойства и отображает сообщение о том, что новое значение `UserName` «Worden, Joe».  
   
 ## <a name="see-also"></a>См. также
 
-[Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md) (Объектно-ориентированное программирование на языке Visual Basic)  
-[Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md) (Объектно-ориентированное программирование на языке Visual Basic)
+- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

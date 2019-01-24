@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674168"
 ---
 # <a name="corelementtype-enumeration1"></a>Перечисление1 CorElementType
 Указывает, среда CLR <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.  
@@ -78,7 +78,7 @@ typedef enum CorElementType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`ELEMENT_TYPE_END`|Используется внутренним образом.|  
 |`ELEMENT_TYPE_VOID`|Значение типа void.|  
@@ -130,7 +130,7 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE < `mdTypeDef` токен метаданных >|  
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS < `mdTypeDef` токен метаданных >|  
 |`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<номер >|  
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < `CorElementType` значение > \<ранг > \<count1 > \<bound1 >... \<countN > \<boundN >|  
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|  
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < `mdTypeDef` токен метаданных > \<аргумент Count > \<arg1 >... \<argN >|  
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<Полная сигнатура для функции, включая соглашение о вызовах >|  
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < `CorElementType` значение >|  
@@ -139,11 +139,11 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < `mdTypeRef` или `mdTypeDef` маркер метаданных >|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

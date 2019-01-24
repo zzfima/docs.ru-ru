@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae241e2a1f64c4480cea5e81dff1e62816fc31ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745666"
 ---
 # <a name="instancing"></a>Создание экземпляров
 В образце создания экземпляра демонстрируется действие параметра, регулирующего способ создания экземпляров класса службы при получении запросов от клиентов. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. В этом образце определен новый контракт `ICalculatorInstance`, производный от класса `ICalculator`. Контракт, указанный для `ICalculatorInstance`, обеспечивает три дополнительные операции для проверки состояния экземпляра службы. Изменив параметр создания экземпляров, можно запустить клиент и проверить, как изменилось поведение создания экземпляров.  
@@ -22,11 +22,11 @@ ms.locfileid: "50193699"
   
  Доступны следующие режимы создания экземпляров:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: создание нового экземпляра для каждого запроса клиента.  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Новый экземпляр службы создается для каждого запроса клиента.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: новый контекст создается для каждого нового сеанса клиента и существует в течение времени существования этого сеанса (для этого требуется привязка, поддерживающая сеанс).  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Новый экземпляр создается для каждого нового сеанса клиента и сохраняется в течение времени существования этого сеанса (требуется привязка, поддерживающая сеанс).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: все запросы клиентов за время существования приложения обрабатываются одним экземпляром класса службы.  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>: Все запросы клиентов обрабатываются одним экземпляром класса службы в течение времени существования приложения.  
   
  Класс службы задает поведение создания экземпляров с помощью атрибута `[ServiceBehavior(InstanceContextMode=<setting>)]`, как показано в следующем образце кода. Можно проследить поведение каждого режима создания экземпляров, вставляя и удаляя символы комментирования перед различными строками кода. Не забывайте заново построить службу после изменения режима создания экземпляров. На клиенте не задаются никакие параметры, связанные с созданием экземпляров.  
   

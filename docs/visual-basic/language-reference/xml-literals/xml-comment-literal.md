@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 60c354215c627683fd6c69d9ca66fc115c26ccda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96a7281cde546c3077cf15c625c6e09d2d0ee46f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624682"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML-литерал комментариев (Visual Basic)
 Объект литерал, представляющий <xref:System.Xml.Linq.XComment> объекта.  
@@ -29,21 +29,21 @@ ms.locfileid: "33603942"
   
 |Термин|Определение|  
 |---|---|  
-|`<!--`|Обязательно. Обозначает начало комментария XML.|  
-|`content`|Обязательно. Текст, отображаемый в комментарии XML. Не может содержать последовательность двух дефисов (--) или заканчиваться дефисом рядом закрывающий тег.|  
-|`-->`|Обязательно. Обозначает конец комментария XML.|  
+|`<!--`|Обязательный. Обозначает начало комментария XML.|  
+|`content`|Обязательный. Текст, появляющийся в комментарии XML. Не может содержать ряд два дефиса (-) или заканчиваться дефисом рядом закрывающий тег.|  
+|`-->`|Обязательный. Обозначает конец комментария XML.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XComment>.  
   
 ## <a name="remarks"></a>Примечания  
- XML-литералы комментариев не содержат содержимого документа. они содержат сведения о документе. Раздел комментария XML заканчивается последовательностью «-->». Это подразумевает следующее:  
+ XML-литералы комментариев не содержат содержимого документа; они содержат сведения о документе. Раздел комментариев XML заканчивается последовательность «-->». Это подразумевает следующее:  
   
--   Нельзя использовать внедренное выражение в XML-литерал комментария, поскольку разделители внедренного выражения являются допустимым содержимым комментария XML.  
+-   Нельзя использовать внедренное выражение в XML-литерал комментария, поскольку разделители внедренного выражения представляют допустимое содержимое комментария XML.  
   
--   Разделы комментария XML не может быть вложенными, поскольку `content` не может содержать значение «-->».  
+-   Разделы комментария XML не могут быть вложенными, так как `content` не может содержать значение «-->».  
   
- XML-литерал комментария можно присвоить переменной, или его можно включить в литерале XML-элемента.  
+ XML-литерал комментария можно присвоить переменной, или ее можно включить в литерале XML-элемента.  
   
 > [!NOTE]
 >  XML-литерал может занимать несколько строк без использования символа продолжения строки. Эта функция позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в программу Visual Basic.  
@@ -51,12 +51,12 @@ ms.locfileid: "33603942"
  Компилятор Visual Basic преобразует XML-литерал комментария в вызов <xref:System.Xml.Linq.XComment.%23ctor%2A> конструктор.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается XML-комментарий, содержащее текст «Это комментарий».  
+ В следующем примере создается XML-комментарий, содержащий текст «Это комментарий».  
   
  [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XComment>  
- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XComment>
+- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

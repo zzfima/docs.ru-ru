@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d673ccec58cd9f8ba0b49fafa9871efd208e4a40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b382ec6d4be5023649565d411e8c65b5dee5213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661156"
 ---
 # <a name="typography"></a>Типографская разметка
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает поддержку форматированного представления текстового содержимого. Текст в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отрисовывается с помощью [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], что улучшает четкость и читаемость текста. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также поддерживает [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты, которые обеспечивают дополнительные возможности помимо тех, которые определяются [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] формат.  
@@ -28,8 +28,8 @@ ms.locfileid: "33546127"
  [Глифы](../../../../docs/framework/wpf/advanced/glyphs.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Documents.Typography>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Documents.Typography>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51c696679626a598be422376e9dc89b5add1773d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725731"
 ---
 # <a name="importtypes2-method"></a>Метод ImportTypes2
-Инициирует импорт типов. Вызовите этот метод, чтобы начать импорт типов из каждой области, импортированной посредством [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Инициирует импорт типов. Вызовите этот метод, чтобы начать импорт типов из каждой области, импортированной с помощью [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,27 +44,27 @@ HRESULT ImportTypes2(
  Идентификатор сборки, в который планируется импортировать.  
   
  `FileToken`  
- Идентификатор файла, из которого требуется импортировать.  
+ Идентификатор файла, из которого импортируются.  
   
  `dwScope`  
- Отсчитываемый от нуля область, из которого требуется импортировать.  
+ Отсчитываемый от нуля область, из которого импортируются.  
   
  `phEnum`  
  Получает дескриптор перечислителя для типов в заданной области.  
   
  `ppImportScope`  
- При необходимости получает [IMetaDataImport2-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) интерфейс.  
+ При необходимости получает [интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) интерфейс.  
   
  `pdwCountOfTypes`  
  При необходимости получает число типов в указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

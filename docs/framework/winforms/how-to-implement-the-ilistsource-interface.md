@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация интерфейса IListSource
+title: Как выполнить Реализация интерфейса IListSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: 3b580208e003a1706cca8e9fdff4ab374b7193ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 331abebf3336d8444559c117f5747597bc3b0122
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728217"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Практическое руководство. Реализация интерфейса IListSource
+# <a name="how-to-implement-the-ilistsource-interface"></a>Как выполнить Реализация интерфейса IListSource
 Реализовать <xref:System.ComponentModel.IListSource> интерфейс, чтобы создать связываемый класс, который не реализует <xref:System.Collections.IList> , но вместо этого предоставляет список из другого расположения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано, как реализовать <xref:System.ComponentModel.IListSource> интерфейса. Компонент с именем `EmployeeListSource` предоставляет <xref:System.Collections.IList> для привязки данных, реализовав <xref:System.ComponentModel.IListSource.GetList%2A> метод.  
+ В следующем примере кода показано, как реализовать <xref:System.ComponentModel.IListSource> интерфейс. Компонент с именем `EmployeeListSource` предоставляет <xref:System.Collections.IList> для привязки данных путем реализации <xref:System.ComponentModel.IListSource.GetList%2A> метод.  
   
  [!code-csharp[System.ComponentModel.IListSource#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/EmployeeListSource.cs#1)]
  [!code-vb[System.ComponentModel.IListSource#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/EmployeeListSource.vb#1)]  
@@ -38,9 +38,9 @@ ms.locfileid: "33539420"
   
 -   ссылки на сборки System.Drawing и System.Windows.Forms.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.IListSource>  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ComponentModel.IListSource>
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

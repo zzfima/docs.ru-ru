@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671659"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>Метод IMetaDataImport::GetTypeRefProps
 Возвращает метаданные, связанные с <xref:System.Type> ссылается указанный токен TypeRef.  
@@ -41,29 +41,29 @@ HRESULT GetTypeRefProps (
   
 #### <a name="parameters"></a>Параметры  
  `tr`  
- [in] Токен TypeRef, который представляет тип, для возврата метаданных для.  
+ [in] Токен TypeRef, который представляет метаданные для возвращаемого типа.  
   
  `ptkResolutionScope`  
- [out] Указатель на область, в котором имеется ссылка. Это значение является маркером AssemblyRef или ModuleRef.  
+ [out] Указатель на область, в котором имеется ссылка. Это значение является маркером AssemblyRef или ModuleRef, представляющий.  
   
  `szName`  
  [out] Буфер, содержащий имя типа.  
   
  `cchName`  
- [in] Запрошенный размер в расширенных символах с `szName`.  
+ [in] Запрошенный размер в расширенных символах `szName`.  
   
  `pchName`  
- [out] Возвращаемый размер в расширенных символах с `szName`.  
+ [out] Возвращаемый размер в расширенных символах `szName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

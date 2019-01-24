@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 53e2d14cf331cf41b20300afbe8966538bf621ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748081"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters и XAML
 Этот раздел посвящен цели преобразования типов из строк — одной из основных функций языка XAML. В .NET Framework <xref:System.ComponentModel.TypeConverter> класс служит конкретной цели как часть реализации для управляемого пользовательского класса, который можно использовать в качестве значения свойства в использование атрибута XAML. При написании пользовательского класса, и вы хотите, чтобы экземпляры класса могли использоваться как значения настраиваемого атрибута XAML, может потребоваться применить <xref:System.ComponentModel.TypeConverterAttribute> к классу, написание пользовательского <xref:System.ComponentModel.TypeConverter> класс, или оба.  
@@ -112,10 +112,10 @@ ms.locfileid: "43407113"
 ## <a name="applying-the-typeconverterattribute"></a>Применение TypeConverterAttribute  
  Чтобы пользовательский преобразователь типов для использования в качестве действующего преобразователя для пользовательского класса обработчика XAML, необходимо применить [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса. Имя <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> , указываемое в атрибуте, должно быть именем типа пользовательского преобразователя типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения, в которых тип свойства использует тип пользовательского класса, обработчик может ввести строки и вернуть экземпляры объекта.  
   
- Вы также можете предоставить преобразователь типов для отдельных свойств. Вместо применения [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса применить его к определению свойства (главному определению, не `get` / `set` реализаций внутри него). Тип свойства должен соответствовать типу, который обрабатывается пользовательским преобразователем типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения этого свойства, он может обработать входные строки и вернуть экземпляры объекта. Метод преобразователь типа каждого свойства особенно полезен, если вы решили использовать типа свойства из Microsoft .NET Framework или из другой библиотеки, где невозможно управлять определением класса и нельзя применять <xref:System.ComponentModel.TypeConverterAttribute> существует.  
+ Вы также можете предоставить преобразователь типов для отдельных свойств. Вместо применения [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> к определению класса применить его к определению свойства (главному определению, а не реализации `get`/`set` внутри него). Тип свойства должен соответствовать типу, который обрабатывается пользовательским преобразователем типов. Если этот атрибут применен, то в случае, когда обработчик XAML обрабатывает значения этого свойства, он может обработать входные строки и вернуть экземпляры объекта. Метод преобразователь типа каждого свойства особенно полезен, если вы решили использовать типа свойства из Microsoft .NET Framework или из другой библиотеки, где невозможно управлять определением класса и нельзя применять <xref:System.ComponentModel.TypeConverterAttribute> существует.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.TypeConverter>  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ComponentModel.TypeConverter>
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

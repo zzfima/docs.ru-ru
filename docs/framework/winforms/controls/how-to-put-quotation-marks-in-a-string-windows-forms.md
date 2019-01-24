@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление кавычек в строку (Windows Forms)
+title: Как выполнить Добавление кавычек в строку (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7fcc2e8692880f1e5c2b8df807cf7943a5575c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24d7ea17384a912fda454bfb1136696ab18d9843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651647"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Практическое руководство. Добавление кавычек в строку (Windows Forms)
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Как выполнить Добавление кавычек в строку (Windows Forms)
 Бывает, что в строку текста нужно вставить кавычки (" "). Пример:  
   
  Она сказала: "Ты этого заслуживаешь!"  
   
- В качестве альтернативы можно также использовать <xref:Microsoft.VisualBasic.ControlChars.Quote> качестве константы.  
+ Кроме того, можно также использовать <xref:Microsoft.VisualBasic.ControlChars.Quote> качестве константы.  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Вставка кавычек в строку в коде  
   
-1.  В Visual Basic вставьте двойные кавычки в строке как кавычек. В Visual C# и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], вставьте escape-последовательность \\«как кавычек. Например, для создания представленной выше строки используйте следующий код.  
+1.  В Visual Basic вставьте двойные кавычки в строку как внедренную кавычку. В визуальном элементе C# и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], вставьте escape-последовательность \\«как внедренную кавычку. Например, для создания представленной выше строки используйте следующий код.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "33534837"
   
      - или -  
   
-2.  Вставьте для получения кавычки символ ASCII или Юникод. В Visual Basic используйте символ ASCII (34). В Visual C#, используйте символ Юникода (\u0022).  
+2.  Вставьте для получения кавычки символ ASCII или Юникод. В Visual Basic используйте символ ASCII (34). В визуальном элементе C#, используйте символ Юникод (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -88,13 +88,13 @@ ms.locfileid: "33534837"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.TextBox>  
- <xref:Microsoft.VisualBasic.ControlChars.Quote>  
- [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.TextBox>
+- <xref:Microsoft.VisualBasic.ControlChars.Quote>
+- [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Создать только для чтения текстовое поле](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Раскрытие информации
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588253"
 ---
 # <a name="information-disclosure"></a>Раскрытие информации
 Раскрытие информации позволяет злоумышленнику получить ценную информацию о системе. Следовательно, всегда обращайте внимание на то, какая информация раскрывается, и может ли ее использовать злоумышленник. Далее перечислены возможные атаки, связанные с раскрытием информации, и способы устранения рисков.  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Если домен указан, но с помощью возможности идентификации конечной точки задано недействительное имя участника-службы, то будет использоваться NTLM. Дополнительные сведения о как указывается идентификатор конечной точки, см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## <a name="see-also"></a>См. также  
- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>См. также
+- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

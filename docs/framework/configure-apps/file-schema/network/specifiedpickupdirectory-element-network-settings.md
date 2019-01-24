@@ -8,18 +8,18 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: d39fdf910aaec1d0a53d68fa7c6715ec344e734d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7735aea55f03b0703ebb7b0e3c5f958b57f1238d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611310"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; (сетевые параметры)
 Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
 \<SMTP >  
 \<specifiedPickupDirectory >  
@@ -37,7 +37,7 @@ ms.locfileid: "50194635"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`pickupDirectoryLocation`|Каталог, в которой приложения сохраняют сообщения электронной почты для последующей обработки SMTP-сервером.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "50194635"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).|  
   
@@ -70,8 +70,8 @@ ms.locfileid: "50194635"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

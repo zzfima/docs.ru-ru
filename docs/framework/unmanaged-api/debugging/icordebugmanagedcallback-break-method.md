@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732392"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Метод ICorDebugManagedCallback::Break
-Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> инструкции в поток кода.  
+Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> выполнения инструкции в потоке кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +38,19 @@ HRESULT Break (
   
 #### <a name="parameters"></a>Параметры  
  `pAppDOmain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который содержит инструкцию break.  
+ [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит инструкцию break.  
   
  `thread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, содержащий инструкцию break.  
+ [in] Указатель на объект ICorDebugThread, представляющий поток, который содержит инструкцию break.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

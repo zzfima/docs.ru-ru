@@ -1,21 +1,21 @@
 ---
-title: 'Как: вычисления промежуточных значений (Visual Basic)'
+title: Как выполнить Вычисление промежуточных значений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: e3aa54c365e90a11ac8c31e0bf7d901c5a4a6b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2908abae5f4c4738752fba62c36da340fb3b2ba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628829"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Как: вычисления промежуточных значений (Visual Basic)
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Как выполнить Вычисление промежуточных значений (Visual Basic)
 В этом примере показано, как вычислять промежуточные значения, которые используются в сортировке, фильтрации и выборке.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется предложение `Let`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Числовые данные (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -43,7 +43,7 @@ Next
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные пространства имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Числовые данные в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -74,5 +74,5 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

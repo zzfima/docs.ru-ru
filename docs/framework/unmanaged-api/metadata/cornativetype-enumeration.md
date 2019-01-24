@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612259"
 ---
 # <a name="cornativetype-enumeration"></a>Перечисление CorNativeType
 Содержит значения, описывающие собственные неуправляемые типы.  
@@ -89,24 +89,24 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Является устаревшей.|  
 |`NATIVE_TYPE_VOID`|Является устаревшей.|  
-|`NATIVE_TYPE_BOOLEAN`|4-байтовое логическое значение, где значение TRUE, ненулевое значение и FALSE равно нулю.|  
-|`NATIVE_TYPE_I1`|Значение 8-разрядное целое число со знаком.|  
+|`NATIVE_TYPE_BOOLEAN`|4-байтовое логическое значение, где значение TRUE, ненулевое значение и значение FALSE, равно нулю.|  
+|`NATIVE_TYPE_I1`|8-разрядное целое число со знаком.|  
 |`NATIVE_TYPE_U1`|8-разрядное целочисленное значение без знака.|  
-|`NATIVE_TYPE_I2`|Значение 16-разрядное целое число со знаком.|  
+|`NATIVE_TYPE_I2`|16-разрядное целое число со знаком.|  
 |`NATIVE_TYPE_U2`|16-разрядное целочисленное значение без знака.|  
 |`NATIVE_TYPE_I4`|32-разрядное целое значение со знаком.|  
 |`NATIVE_TYPE_U4`|32-разрядное целое значение без знака.|  
-|`NATIVE_TYPE_I8`|Значение 64-разрядное знаковое целое число.|  
+|`NATIVE_TYPE_I8`|Значение 64-битового знакового целого числа.|  
 |`NATIVE_TYPE_U8`|64-разрядное целочисленное значение без знака.|  
 |`NATIVE_TYPE_R4`|4-байтовое числовое значение с плавающей запятой.|  
-|`NATIVE_TYPE_R8`|8-байтовое значение с плавающей запятой числовые.|  
+|`NATIVE_TYPE_R8`|8-байтное числовое значение с плавающей запятой.|  
 |`NATIVE_TYPE_SYSCHAR`|Является устаревшей.|  
 |`NATIVE_TYPE_VARIANT`|Является устаревшей.|  
-|`NATIVE_TYPE_CURRENCY`|Числовой тип модели COM, соответствующий управляемый <xref:System.Decimal> типа.|  
+|`NATIVE_TYPE_CURRENCY`|Числовой тип COM, который соответствует управляемого <xref:System.Decimal> типа.|  
 |`NATIVE_TYPE_PTR`|Является устаревшей.|  
 |`NATIVE_TYPE_DECIMAL`|Является устаревшей.|  
 |`NATIVE_TYPE_DATE`|Является устаревшей.|  
@@ -114,38 +114,38 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_LPSTR`|Строковое значение LPSTR.|  
 |`NATIVE_TYPE_LPWSTR`|Строковое значение LPWSTR.|  
 |`NATIVE_TYPE_LPTSTR`|Строковое значение LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Значение типа string фиксированное, определенная системой.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Фиксированное, системный строковое значение.|  
 |`NATIVE_TYPE_OBJECTREF`|Является устаревшей.|  
 |`NATIVE_TYPE_IUNKNOWN`|COM-взаимодействия.|  
 |`NATIVE_TYPE_IDISPATCH`|COM-взаимодействия.|  
-|`NATIVE_TYPE_STRUCT`|Значение машинной структуры.|  
+|`NATIVE_TYPE_STRUCT`|Значение собственной структуры.|  
 |`NATIVE_TYPE_INTF`|COM-взаимодействия.|  
 |`NATIVE_TYPE_SAFEARRAY`|COM-взаимодействия.|  
 |`NATIVE_TYPE_FIXEDARRAY`|Значение массива фиксированной длины.|  
-|`NATIVE_TYPE_INT`|Значение собственного 16-разрядное целое число со знаком.|  
+|`NATIVE_TYPE_INT`|Собственный 16-разрядное целое число со знаком.|  
 |`NATIVE_TYPE_UINT`|Значение собственного 16-разрядное целое число без знака.|  
 |`NATIVE_TYPE_NESTEDSTRUCT`|Является устаревшей.<br /><br /> Используйте NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|COM-взаимодействия.|  
 |`NATIVE_TYPE_ANSIBSTR`|COM-взаимодействия.|  
 |`NATIVE_TYPE_TBSTR`|COM-взаимодействия.<br /><br /> Выберите BSTR или ANSIBSTR в зависимости от платформы.|  
-|`NATIVE_TYPE_VARIANTBOOL`|2-байтовое значение Boolean, где значение TRUE — -1, а FALSE равно нулю.|  
+|`NATIVE_TYPE_VARIANTBOOL`|2-байтовое логическое значение, где значение TRUE — -1, а FALSE равно нулю.|  
 |`NATIVE_TYPE_FUNC`|Указатель функции.|  
 |`NATIVE_TYPE_ASANY`|Ссылка на машинный тип.|  
 |`NATIVE_TYPE_ARRAY`|Ссылка на массив с членами незаданного типа.|  
 |`NATIVE_TYPE_LPSTRUCT`|Указатель на структуру 32-разрядное целое число.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Собственный тип пользовательского упаковщика.<br /><br /> Это следует указать строку в следующем формате: «имя/0Custom упаковщик собственный тип типа имя/0Optional cookie/0» или «{собственного введите идентификатор GUID} / упаковщик 0Custom введите имя или 0Optional cookie/0 "|  
-|`NATIVE_TYPE_ERROR`|COM-взаимодействия.<br /><br /> Этот тип с ELEMENT_TYPE_I4 соответствует VT_HRESULT.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Собственный тип настраиваемого модуля маршалинга.<br /><br /> Это следует указать строку в следующем формате: «Имя/0Custom упаковщик собственный тип типа имя/0Optional cookie/0» или «{собственного введите GUID} / упаковщик 0Custom введите имя/0Optional файл cookie или 0 "|  
+|`NATIVE_TYPE_ERROR`|COM-взаимодействия.<br /><br /> С помощью ELEMENT_TYPE_I4 этот тип сопоставляется VT_HRESULT.|  
 |`NATIVE_TYPE_IINSPECTABLE`|Собственный `IInspectable` типа.|  
 |`NATIVE_TYPE_HSTRING`|Собственный `HString`.|  
 |`NATIVE_TYPE_MAX`|Недопустимое значение.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

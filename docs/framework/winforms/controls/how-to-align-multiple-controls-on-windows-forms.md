@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
+title: Как выполнить Выравнивание нескольких элементов управления в формах Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 003d45f9384caa6a5b63187d20fe3e3e040e3e5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519805"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Как выполнить Выравнивание нескольких элементов управления в формах Windows Forms
 Чтобы стандартизировать макет пользовательского интерфейса (UI) приложения на базе Windows, можно разместить группы элементов управления с помощью одной команды.  
   
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "43524017"
   
 3.  На **формат** последовательно выберите пункты **выровнять**, а затем выберите одну из семи доступных команд.  
   
-## <a name="see-also"></a>См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [Практическое руководство. Переназначение существующих элементов управления другим родительским элементам](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a>См. также
+- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Практическое руководство. Добавление элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Практическое руководство. Переназначение существующих элементов управления другим родительским](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

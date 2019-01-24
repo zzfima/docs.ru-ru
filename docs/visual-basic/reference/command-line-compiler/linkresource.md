@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730000"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Создает ссылку на управляемый ресурс.  
@@ -29,10 +29,10 @@ ms.locfileid: "48849924"
   
 ## <a name="arguments"></a>Аргументы  
  `filename`  
- Обязательно. Файл ресурсов, ссылки на сборку. Если имя файла содержит пробел, заключите имя в кавычки (» «).  
+ Обязательный. Файл ресурсов, ссылки на сборку. Если имя файла содержит пробел, заключите имя в кавычки (» «).  
   
  `identifier`  
- Необязательный. Логическое имя ресурса. Имя, которое используется для загрузки ресурса. По умолчанию используется имя файла. При необходимости можно указать, является ли файл открытым или закрытым в манифесте сборки, например: `-linkres:filename.res,myname.res,public`. По умолчанию `filename` является открытым в сборке.  
+ Необязательный параметр. Логическое имя ресурса. Имя, которое используется для загрузки ресурса. По умолчанию используется имя файла. При необходимости можно указать, является ли файл открытым или закрытым в манифесте сборки, например: `-linkres:filename.res,myname.res,public`. По умолчанию `filename` является открытым в сборке.  
   
 ## <a name="remarks"></a>Примечания  
  `-linkresource` Параметр не внедрить файл ресурсов в выходной файл; используйте `-resource` параметр, чтобы это сделать.  
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>См. также
 
-- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
-- [-ресурсов (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-ресурсов (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
