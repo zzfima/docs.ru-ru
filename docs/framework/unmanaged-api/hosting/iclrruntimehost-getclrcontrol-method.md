@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86858d5fe5bf9ac07a91e810599c27a479141f4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f426bac735c780d63b75eeaf49151651fd2fa65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692903"
 ---
-# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="32ead-102">Метод ICLRRuntimeHost::GetCLRControl</span><span class="sxs-lookup"><span data-stu-id="32ead-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
-<span data-ttu-id="32ead-103">Получает указатель интерфейса типа [ICLRControl-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) , узлы можно использовать для настройки аспектов среды common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="32ead-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
+# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="5dc7d-102">Метод ICLRRuntimeHost::GetCLRControl</span><span class="sxs-lookup"><span data-stu-id="5dc7d-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
+<span data-ttu-id="5dc7d-103">Получает указатель интерфейса типа [интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) , узлы можно использовать для настройки аспектов общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="5dc7d-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32ead-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="32ead-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5dc7d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5dc7d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCLRControl(  
@@ -35,34 +35,34 @@ HRESULT GetCLRControl(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="32ead-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="32ead-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5dc7d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5dc7d-105">Parameters</span></span>  
  `pCLRControl`  
- <span data-ttu-id="32ead-106">[out] Указатель на интерфейс типа [ICLRControl-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) , позволяет узлам настраивать дополнительные параметры среды CLR.</span><span class="sxs-lookup"><span data-stu-id="32ead-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
+ <span data-ttu-id="5dc7d-106">[out] Указатель интерфейса типа [интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) , позволяет узлам настроить дополнительные аспекты класса среды CLR.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32ead-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="32ead-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5dc7d-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5dc7d-107">Return Value</span></span>  
   
-|<span data-ttu-id="32ead-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32ead-108">HRESULT</span></span>|<span data-ttu-id="32ead-109">Описание</span><span class="sxs-lookup"><span data-stu-id="32ead-109">Description</span></span>|  
+|<span data-ttu-id="5dc7d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5dc7d-108">HRESULT</span></span>|<span data-ttu-id="5dc7d-109">Описание</span><span class="sxs-lookup"><span data-stu-id="5dc7d-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="32ead-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="32ead-110">S_OK</span></span>|<span data-ttu-id="32ead-111">`GetCLRControl` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="32ead-111">`GetCLRControl` returned successfully.</span></span>|  
-|<span data-ttu-id="32ead-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="32ead-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="32ead-113">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="32ead-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="32ead-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="32ead-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="32ead-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="32ead-115">The call timed out.</span></span>|  
-|<span data-ttu-id="32ead-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="32ead-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="32ead-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="32ead-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="32ead-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="32ead-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="32ead-119">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="32ead-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="32ead-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="32ead-120">E_FAIL</span></span>|<span data-ttu-id="32ead-121">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="32ead-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="32ead-122">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="32ead-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="32ead-123">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="32ead-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="32ead-124">ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="32ead-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="32ead-125">Среда CLR уже запущена.</span><span class="sxs-lookup"><span data-stu-id="32ead-125">The CLR has already started.</span></span>|  
+|<span data-ttu-id="5dc7d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5dc7d-110">S_OK</span></span>|<span data-ttu-id="5dc7d-111">`GetCLRControl` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-111">`GetCLRControl` returned successfully.</span></span>|  
+|<span data-ttu-id="5dc7d-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5dc7d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5dc7d-113">Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5dc7d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5dc7d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5dc7d-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-115">The call timed out.</span></span>|  
+|<span data-ttu-id="5dc7d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5dc7d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5dc7d-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5dc7d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5dc7d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5dc7d-119">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5dc7d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5dc7d-120">E_FAIL</span></span>|<span data-ttu-id="5dc7d-121">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5dc7d-122">Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5dc7d-123">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5dc7d-124">ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="5dc7d-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="5dc7d-125">Среда CLR уже запущена.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-125">The CLR has already started.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32ead-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="32ead-126">Remarks</span></span>  
- <span data-ttu-id="32ead-127">`ICLRControl` предоставляет [getclrmanager-метод](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод, который позволяет ведущему приложению получить указатель интерфейса на один из типов manager.</span><span class="sxs-lookup"><span data-stu-id="32ead-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5dc7d-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="5dc7d-126">Remarks</span></span>  
+ <span data-ttu-id="5dc7d-127">`ICLRControl` предоставляет [метод GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод, который позволяет ведущему приложению получить указатель интерфейса на один из типов manager.</span><span class="sxs-lookup"><span data-stu-id="5dc7d-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32ead-128">Требования</span><span class="sxs-lookup"><span data-stu-id="32ead-128">Requirements</span></span>  
- <span data-ttu-id="32ead-129">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32ead-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5dc7d-128">Требования</span><span class="sxs-lookup"><span data-stu-id="5dc7d-128">Requirements</span></span>  
+ <span data-ttu-id="5dc7d-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5dc7d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32ead-130">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32ead-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5dc7d-130">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5dc7d-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="32ead-131">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="32ead-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5dc7d-131">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5dc7d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="32ead-132">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32ead-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5dc7d-132">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5dc7d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32ead-133">См. также</span><span class="sxs-lookup"><span data-stu-id="32ead-133">See Also</span></span>  
- [<span data-ttu-id="32ead-134">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="32ead-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="32ead-135">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="32ead-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5dc7d-133">См. также</span><span class="sxs-lookup"><span data-stu-id="5dc7d-133">See also</span></span>
+- [<span data-ttu-id="5dc7d-134">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="5dc7d-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="5dc7d-135">Интерфейс ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="5dc7d-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

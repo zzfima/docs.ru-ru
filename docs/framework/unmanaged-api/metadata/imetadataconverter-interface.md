@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29709a4297d53cc5e40daf732ac89751ead95152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc1f813cac237642fdaab653cd47552ab7472ab0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732931"
 ---
-# <a name="imetadataconverter-interface"></a><span data-ttu-id="cdd79-102">Интерфейс IMetaDataConverter</span><span class="sxs-lookup"><span data-stu-id="cdd79-102">IMetaDataConverter Interface</span></span>
-<span data-ttu-id="cdd79-103">Предоставляет методы для сопоставления библиотек типов с их сигнатурами метаданных и для преобразования из одних в другие.</span><span class="sxs-lookup"><span data-stu-id="cdd79-103">Provides methods to map type libraries to their metadata signatures, and to convert from one to the other.</span></span>  
+# <a name="imetadataconverter-interface"></a><span data-ttu-id="c723a-102">Интерфейс IMetaDataConverter</span><span class="sxs-lookup"><span data-stu-id="c723a-102">IMetaDataConverter Interface</span></span>
+<span data-ttu-id="c723a-103">Предоставляет методы для сопоставления библиотек типов с их сигнатурами метаданных и для преобразования из одних в другие.</span><span class="sxs-lookup"><span data-stu-id="c723a-103">Provides methods to map type libraries to their metadata signatures, and to convert from one to the other.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cdd79-104">Методы</span><span class="sxs-lookup"><span data-stu-id="cdd79-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c723a-104">Методы</span><span class="sxs-lookup"><span data-stu-id="c723a-104">Methods</span></span>  
   
-|<span data-ttu-id="cdd79-105">Метод</span><span class="sxs-lookup"><span data-stu-id="cdd79-105">Method</span></span>|<span data-ttu-id="cdd79-106">Описание</span><span class="sxs-lookup"><span data-stu-id="cdd79-106">Description</span></span>|  
+|<span data-ttu-id="c723a-105">Метод</span><span class="sxs-lookup"><span data-stu-id="c723a-105">Method</span></span>|<span data-ttu-id="c723a-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="c723a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cdd79-107">Метод GetMetaDataFromTypeInfo</span><span class="sxs-lookup"><span data-stu-id="cdd79-107">GetMetaDataFromTypeInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|<span data-ttu-id="cdd79-108">Возвращает указатель на [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) экземпляр, представляющий подпись метаданных для библиотеки типов, который ссылается заданный дескриптор `ITypeInfo` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="cdd79-108">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature for the type library referenced by the specified `ITypeInfo` instance.</span></span>|  
-|[<span data-ttu-id="cdd79-109">Метод GetMetaDataFromTypeLib</span><span class="sxs-lookup"><span data-stu-id="cdd79-109">GetMetaDataFromTypeLib Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypelib-method.md)|<span data-ttu-id="cdd79-110">Возвращает указатель на `IMetaDataImport` экземпляр, представляющий подпись метаданных для библиотеки типов, представленный указанным `ITypeLib` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="cdd79-110">Gets a pointer to an `IMetaDataImport` instance that represents the metadata signature for the type library represented by the specified `ITypeLib` instance.</span></span>|  
-|[<span data-ttu-id="cdd79-111">Метод GetTypeLibFromMetaData</span><span class="sxs-lookup"><span data-stu-id="cdd79-111">GetTypeLibFromMetaData Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-gettypelibfrommetadata-method.md)|<span data-ttu-id="cdd79-112">Возвращает указатель на `ITypeLib` экземпляр, представляющий библиотеку типов с указанными именами модуль и библиотеки.</span><span class="sxs-lookup"><span data-stu-id="cdd79-112">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified module and library names.</span></span>|  
+|[<span data-ttu-id="c723a-107">Метод GetMetaDataFromTypeInfo</span><span class="sxs-lookup"><span data-stu-id="c723a-107">GetMetaDataFromTypeInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|<span data-ttu-id="c723a-108">Возвращает указатель на [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) экземпляр, представляющий подпись метаданных для библиотеки типов, который ссылается заданный `ITypeInfo` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c723a-108">Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature for the type library referenced by the specified `ITypeInfo` instance.</span></span>|  
+|[<span data-ttu-id="c723a-109">Метод GetMetaDataFromTypeLib</span><span class="sxs-lookup"><span data-stu-id="c723a-109">GetMetaDataFromTypeLib Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypelib-method.md)|<span data-ttu-id="c723a-110">Возвращает указатель на `IMetaDataImport` экземпляр, представляющий подпись метаданных для библиотеки типов, представленного указанным `ITypeLib` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c723a-110">Gets a pointer to an `IMetaDataImport` instance that represents the metadata signature for the type library represented by the specified `ITypeLib` instance.</span></span>|  
+|[<span data-ttu-id="c723a-111">Метод GetTypeLibFromMetaData</span><span class="sxs-lookup"><span data-stu-id="c723a-111">GetTypeLibFromMetaData Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-gettypelibfrommetadata-method.md)|<span data-ttu-id="c723a-112">Возвращает указатель на `ITypeLib` экземпляр, представляющий библиотеку типов, с заданными именами модуля и библиотеки.</span><span class="sxs-lookup"><span data-stu-id="c723a-112">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified module and library names.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cdd79-113">Требования</span><span class="sxs-lookup"><span data-stu-id="cdd79-113">Requirements</span></span>  
- <span data-ttu-id="cdd79-114">**Платформа:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cdd79-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c723a-113">Требования</span><span class="sxs-lookup"><span data-stu-id="c723a-113">Requirements</span></span>  
+ <span data-ttu-id="c723a-114">**Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c723a-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cdd79-115">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cdd79-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c723a-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c723a-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cdd79-116">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cdd79-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c723a-116">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c723a-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cdd79-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cdd79-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c723a-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c723a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdd79-118">См. также</span><span class="sxs-lookup"><span data-stu-id="cdd79-118">See Also</span></span>  
- [<span data-ttu-id="cdd79-119">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="cdd79-119">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [<span data-ttu-id="cdd79-120">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="cdd79-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c723a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c723a-118">See also</span></span>
+- [<span data-ttu-id="c723a-119">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="c723a-119">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="c723a-120">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="c723a-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

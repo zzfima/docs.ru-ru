@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4987b025450f2207a01a472a0c39fc6da2de0782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c513ba06ac79eb3da229605120c4f59ab8d32665
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554547"
 ---
-# <a name="dllmainreturnsfalse-mda"></a><span data-ttu-id="8a976-102">Помощник по отладке управляемого кода dllMainReturnsFalse</span><span class="sxs-lookup"><span data-stu-id="8a976-102">dllMainReturnsFalse MDA</span></span>
-<span data-ttu-id="8a976-103">Помощник по отладке управляемого кода `dllMainReturnsFalse` (MDA) активируется в том случае, если управляемая функция `DllMain` в пользовательской сборке вызывается с причиной DLL_PROCESS_ATTACH и возвращает значение FALSE.</span><span class="sxs-lookup"><span data-stu-id="8a976-103">The `dllMainReturnsFalse` managed debugging assistant (MDA) is activated if the managed `DllMain` function of a user assembly, called with reason DLL_PROCESS_ATTACH, returns FALSE.</span></span>  
+# <a name="dllmainreturnsfalse-mda"></a><span data-ttu-id="74a61-102">Помощник по отладке управляемого кода dllMainReturnsFalse</span><span class="sxs-lookup"><span data-stu-id="74a61-102">dllMainReturnsFalse MDA</span></span>
+<span data-ttu-id="74a61-103">Помощник по отладке управляемого кода `dllMainReturnsFalse` (MDA) активируется в том случае, если управляемая функция `DllMain` в пользовательской сборке вызывается с причиной DLL_PROCESS_ATTACH и возвращает значение FALSE.</span><span class="sxs-lookup"><span data-stu-id="74a61-103">The `dllMainReturnsFalse` managed debugging assistant (MDA) is activated if the managed `DllMain` function of a user assembly, called with reason DLL_PROCESS_ATTACH, returns FALSE.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="8a976-104">Симптомы</span><span class="sxs-lookup"><span data-stu-id="8a976-104">Symptoms</span></span>  
- <span data-ttu-id="8a976-105">Функция `DllMain` возвращает значение FALSE, свидетельствующее о сбое при ее выполнении.</span><span class="sxs-lookup"><span data-stu-id="8a976-105">The `DllMain` function returned FALSE, indicating that it did not execute properly.</span></span> <span data-ttu-id="8a976-106">Это может привести к возникновению неопределенных проблем, поскольку функции `DllMain` обычно содержат важный код инициализации.</span><span class="sxs-lookup"><span data-stu-id="8a976-106">This can cause undetermined issues because `DllMain` functions typically contain important initialization code.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="74a61-104">Симптомы</span><span class="sxs-lookup"><span data-stu-id="74a61-104">Symptoms</span></span>  
+ <span data-ttu-id="74a61-105">Функция `DllMain` возвращает значение FALSE, свидетельствующее о сбое при ее выполнении.</span><span class="sxs-lookup"><span data-stu-id="74a61-105">The `DllMain` function returned FALSE, indicating that it did not execute properly.</span></span> <span data-ttu-id="74a61-106">Это может привести к возникновению неопределенных проблем, поскольку функции `DllMain` обычно содержат важный код инициализации.</span><span class="sxs-lookup"><span data-stu-id="74a61-106">This can cause undetermined issues because `DllMain` functions typically contain important initialization code.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="8a976-107">Причина</span><span class="sxs-lookup"><span data-stu-id="8a976-107">Cause</span></span>  
- <span data-ttu-id="8a976-108">Функция `DllMain` вызывается с причиной DLL_PROCESS_ATTACH для инициализации библиотеки DLL при загрузке.</span><span class="sxs-lookup"><span data-stu-id="8a976-108">The `DllMain` function is called with reason DLL_PROCESS_ATTACH for DLL initialization upon load.</span></span> <span data-ttu-id="8a976-109">Если она возвращает значение FALSE, значит инициализация библиотеки DLL завершилась сбоем.</span><span class="sxs-lookup"><span data-stu-id="8a976-109">If it returns FALSE, it means that DLL initialization failed.</span></span>  
+## <a name="cause"></a><span data-ttu-id="74a61-107">Причина</span><span class="sxs-lookup"><span data-stu-id="74a61-107">Cause</span></span>  
+ <span data-ttu-id="74a61-108">Функция `DllMain` вызывается с причиной DLL_PROCESS_ATTACH для инициализации библиотеки DLL при загрузке.</span><span class="sxs-lookup"><span data-stu-id="74a61-108">The `DllMain` function is called with reason DLL_PROCESS_ATTACH for DLL initialization upon load.</span></span> <span data-ttu-id="74a61-109">Если она возвращает значение FALSE, значит инициализация библиотеки DLL завершилась сбоем.</span><span class="sxs-lookup"><span data-stu-id="74a61-109">If it returns FALSE, it means that DLL initialization failed.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="8a976-110">Решение</span><span class="sxs-lookup"><span data-stu-id="8a976-110">Resolution</span></span>  
- <span data-ttu-id="8a976-111">Проанализируйте код функции `DllMain` для указанной библиотеки DLL и определите причину сбоя при инициализации.</span><span class="sxs-lookup"><span data-stu-id="8a976-111">Analyze the code of the `DllMain` function of the failed DLL and identify the cause of the initialization failure.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="74a61-110">Решение</span><span class="sxs-lookup"><span data-stu-id="74a61-110">Resolution</span></span>  
+ <span data-ttu-id="74a61-111">Проанализируйте код функции `DllMain` для указанной библиотеки DLL и определите причину сбоя при инициализации.</span><span class="sxs-lookup"><span data-stu-id="74a61-111">Analyze the code of the `DllMain` function of the failed DLL and identify the cause of the initialization failure.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="8a976-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="8a976-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="8a976-113">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="8a976-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="8a976-114">Он только выводит данные о возвращаемом значении для `DllMain`.</span><span class="sxs-lookup"><span data-stu-id="8a976-114">It only reports data about the return value for `DllMain`.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="74a61-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="74a61-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="74a61-113">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="74a61-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="74a61-114">Он только выводит данные о возвращаемом значении для `DllMain`.</span><span class="sxs-lookup"><span data-stu-id="74a61-114">It only reports data about the return value for `DllMain`.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="8a976-115">Вывод</span><span class="sxs-lookup"><span data-stu-id="8a976-115">Output</span></span>  
- <span data-ttu-id="8a976-116">Сообщение, указывающее, что функция `DllMain` была вызвана с причиной DLL_PROCESS_ATTACH и вернула значение FALSE.</span><span class="sxs-lookup"><span data-stu-id="8a976-116">A message indicating that a `DllMain` function, called for reason DLL_PROCESS_ATTACH, returned FALSE.</span></span> <span data-ttu-id="8a976-117">Обратите внимание, что этот помощник по отладке кода вызывается только в том случае, если в управляемом коде реализована функция `DllMain`.</span><span class="sxs-lookup"><span data-stu-id="8a976-117">Note that this MDA is activated only if `DllMain` is implemented in managed code.</span></span>  
+## <a name="output"></a><span data-ttu-id="74a61-115">Вывод</span><span class="sxs-lookup"><span data-stu-id="74a61-115">Output</span></span>  
+ <span data-ttu-id="74a61-116">Сообщение, указывающее, что функция `DllMain` была вызвана с причиной DLL_PROCESS_ATTACH и вернула значение FALSE.</span><span class="sxs-lookup"><span data-stu-id="74a61-116">A message indicating that a `DllMain` function, called for reason DLL_PROCESS_ATTACH, returned FALSE.</span></span> <span data-ttu-id="74a61-117">Обратите внимание, что этот помощник по отладке кода вызывается только в том случае, если в управляемом коде реализована функция `DllMain`.</span><span class="sxs-lookup"><span data-stu-id="74a61-117">Note that this MDA is activated only if `DllMain` is implemented in managed code.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="8a976-118">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="8a976-118">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="74a61-118">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="74a61-118">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -44,5 +44,5 @@ ms.locfileid: "33386497"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8a976-119">См. также</span><span class="sxs-lookup"><span data-stu-id="8a976-119">See Also</span></span>  
- [<span data-ttu-id="8a976-120">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="8a976-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="74a61-119">См. также</span><span class="sxs-lookup"><span data-stu-id="74a61-119">See also</span></span>
+- [<span data-ttu-id="74a61-120">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="74a61-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
