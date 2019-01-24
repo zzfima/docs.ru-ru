@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee003d668916baec313c6115cc12826286f6cdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597493"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="4a71a-102">Указатель функции PFN_CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="4a71a-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
-<span data-ttu-id="4a71a-103">Указывает на функцию, которая создает объект интерфейса для заданного целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="4a71a-103">Points to a function that creates an interface object for the specified target item.</span></span>  
+# <a name="pfnclrdatacreateinstance-function-pointer"></a><span data-ttu-id="b632e-102">Указатель функции PFN_CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="b632e-102">PFN_CLRDataCreateInstance Function Pointer</span></span>
+<span data-ttu-id="b632e-103">Указывает на функцию, которая создает объект интерфейса для заданного целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="b632e-103">Points to a function that creates an interface object for the specified target item.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a71a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4a71a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b632e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b632e-104">Syntax</span></span>  
   
 ```  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
@@ -36,27 +36,27 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4a71a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4a71a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b632e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b632e-105">Parameters</span></span>  
  `iid`  
- <span data-ttu-id="4a71a-106">[in] Идентификатор интерфейса для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="4a71a-106">[in] The identifier of the interface to be instantiated.</span></span>  
+ <span data-ttu-id="b632e-106">[in] Идентификатор интерфейса для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b632e-106">[in] The identifier of the interface to be instantiated.</span></span>  
   
  `target`  
- <span data-ttu-id="4a71a-107">[in] Указатель на реализации пользователя [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого необходимо создать объект интерфейса.</span><span class="sxs-lookup"><span data-stu-id="4a71a-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
+ <span data-ttu-id="b632e-107">[in] Указатель на реализуется пользователем [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.</span><span class="sxs-lookup"><span data-stu-id="b632e-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
   
  `iface`  
- <span data-ttu-id="4a71a-108">[out] Указатель на адрес объекта, возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="4a71a-108">[out] A pointer to the address of the returned interface object.</span></span>  
+ <span data-ttu-id="b632e-108">[out] Указатель на адрес объекта возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="b632e-108">[out] A pointer to the address of the returned interface object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4a71a-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="4a71a-109">Remarks</span></span>  
- <span data-ttu-id="4a71a-110">`ICLRDataTarget` Объект реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="4a71a-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="4a71a-111">Реализация зависит от типа представляемого целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="4a71a-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="4a71a-112">Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.</span><span class="sxs-lookup"><span data-stu-id="4a71a-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b632e-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="b632e-109">Remarks</span></span>  
+ <span data-ttu-id="b632e-110">`ICLRDataTarget` Объект реализуется разработчиком отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="b632e-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="b632e-111">Реализация зависит от тип представляемого целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="b632e-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="b632e-112">Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.</span><span class="sxs-lookup"><span data-stu-id="b632e-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a71a-113">Требования</span><span class="sxs-lookup"><span data-stu-id="4a71a-113">Requirements</span></span>  
- <span data-ttu-id="4a71a-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a71a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b632e-113">Требования</span><span class="sxs-lookup"><span data-stu-id="b632e-113">Requirements</span></span>  
+ <span data-ttu-id="b632e-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b632e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4a71a-115">**Заголовок:** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="4a71a-115">**Header:** ClrData.idl</span></span>  
+ <span data-ttu-id="b632e-115">**Заголовок.** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="b632e-115">**Header:** ClrData.idl</span></span>  
   
- <span data-ttu-id="4a71a-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a71a-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b632e-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b632e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4a71a-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a71a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b632e-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b632e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a71a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="4a71a-118">See Also</span></span>  
- [<span data-ttu-id="4a71a-119">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="4a71a-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="b632e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b632e-118">See also</span></span>
+- [<span data-ttu-id="b632e-119">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="b632e-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

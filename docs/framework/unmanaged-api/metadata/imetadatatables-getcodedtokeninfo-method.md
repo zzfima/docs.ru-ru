@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7a36d14b67efb3934089dc16de41a3b80ea0c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669696"
 ---
-# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="65a5b-102">Метод IMetaDataTables::GetCodedTokenInfo</span><span class="sxs-lookup"><span data-stu-id="65a5b-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
-<span data-ttu-id="65a5b-103">Возвращает указатель на массив маркеров, связанных с заданным индексом строки.</span><span class="sxs-lookup"><span data-stu-id="65a5b-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
+# <a name="imetadatatablesgetcodedtokeninfo-method"></a><span data-ttu-id="9eff9-102">Метод IMetaDataTables::GetCodedTokenInfo</span><span class="sxs-lookup"><span data-stu-id="9eff9-102">IMetaDataTables::GetCodedTokenInfo Method</span></span>
+<span data-ttu-id="9eff9-103">Получает указатель на массив токенов, связанных с заданного индекса строки.</span><span class="sxs-lookup"><span data-stu-id="9eff9-103">Gets a pointer to an array of tokens associated with the specified row index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65a5b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="65a5b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9eff9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9eff9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodedTokenInfo (   
@@ -38,28 +38,28 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="65a5b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="65a5b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9eff9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9eff9-105">Parameters</span></span>  
  `ixCdTkn`  
- <span data-ttu-id="65a5b-106">[in] Вид закодированного маркер для возвращения.</span><span class="sxs-lookup"><span data-stu-id="65a5b-106">[in] The kind of coded token to return.</span></span>  
+ <span data-ttu-id="9eff9-106">[in] Вид закодированный токен для возврата.</span><span class="sxs-lookup"><span data-stu-id="9eff9-106">[in] The kind of coded token to return.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="65a5b-107">[out] Указатель на длину `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="65a5b-107">[out] A pointer to the length of `ppTokens`.</span></span>  
+ <span data-ttu-id="9eff9-107">[out] Указатель на длину `ppTokens`.</span><span class="sxs-lookup"><span data-stu-id="9eff9-107">[out] A pointer to the length of `ppTokens`.</span></span>  
   
  `ppTokens`  
- <span data-ttu-id="65a5b-108">[out] Указатель на указатель на массив, содержащий список возвращенных токенов.</span><span class="sxs-lookup"><span data-stu-id="65a5b-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
+ <span data-ttu-id="9eff9-108">[out] Указатель на указатель на массив, содержащий список возвращаемые метки.</span><span class="sxs-lookup"><span data-stu-id="9eff9-108">[out] A pointer to a pointer to an array that contains the list of returned tokens.</span></span>  
   
  `ppName`  
- <span data-ttu-id="65a5b-109">[out] Указатель на указатель на имя маркер на `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="65a5b-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
+ <span data-ttu-id="9eff9-109">[out] Указатель на указатель на имя маркера в `ixCdTkn`.</span><span class="sxs-lookup"><span data-stu-id="9eff9-109">[out] A pointer to a pointer to the name of the token at `ixCdTkn`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65a5b-110">Требования</span><span class="sxs-lookup"><span data-stu-id="65a5b-110">Requirements</span></span>  
- <span data-ttu-id="65a5b-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65a5b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9eff9-110">Требования</span><span class="sxs-lookup"><span data-stu-id="9eff9-110">Requirements</span></span>  
+ <span data-ttu-id="9eff9-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9eff9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65a5b-112">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="65a5b-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9eff9-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9eff9-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="65a5b-113">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="65a5b-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9eff9-113">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9eff9-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="65a5b-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65a5b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9eff9-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9eff9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65a5b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="65a5b-115">See Also</span></span>  
- [<span data-ttu-id="65a5b-116">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="65a5b-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="65a5b-117">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="65a5b-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9eff9-115">См. также</span><span class="sxs-lookup"><span data-stu-id="9eff9-115">See also</span></span>
+- [<span data-ttu-id="9eff9-116">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="9eff9-116">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="9eff9-117">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="9eff9-117">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

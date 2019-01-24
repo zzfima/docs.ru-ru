@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2df33e3edebbf558bf78986e737c4f7bb9b2f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607177"
 ---
-# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="550b1-102">Метод IGCHostControl::RequestVirtualMemLimit</span><span class="sxs-lookup"><span data-stu-id="550b1-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
-<span data-ttu-id="550b1-103">Запрашивает узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="550b1-103">Requests the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="781f3-102">Метод IGCHostControl::RequestVirtualMemLimit</span><span class="sxs-lookup"><span data-stu-id="781f3-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
+<span data-ttu-id="781f3-103">Запрашивает узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="781f3-103">Requests the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="550b1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="550b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="781f3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="781f3-104">Syntax</span></span>  
   
 ```  
 HRESULT RequestVirtualMemLimit (  
@@ -35,21 +36,21 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="550b1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="550b1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="781f3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="781f3-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="550b1-106">[in] Запрошенный размер выделяемой памяти.</span><span class="sxs-lookup"><span data-stu-id="550b1-106">[in] The requested size of memory to be allocated.</span></span>  
+ <span data-ttu-id="781f3-106">[in] Запрошенный размер выделяемой памяти.</span><span class="sxs-lookup"><span data-stu-id="781f3-106">[in] The requested size of memory to be allocated.</span></span>  
   
  `psztNewMaxVirtualMemMB`  
- <span data-ttu-id="550b1-107">[in, out] Указатель на фактический размер выделенной памяти.</span><span class="sxs-lookup"><span data-stu-id="550b1-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
+ <span data-ttu-id="781f3-107">[in, out] Указатель на фактический размер выделенной памяти.</span><span class="sxs-lookup"><span data-stu-id="781f3-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="550b1-108">Требования</span><span class="sxs-lookup"><span data-stu-id="550b1-108">Requirements</span></span>  
- <span data-ttu-id="550b1-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="550b1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="781f3-108">Требования</span><span class="sxs-lookup"><span data-stu-id="781f3-108">Requirements</span></span>  
+ <span data-ttu-id="781f3-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="781f3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="550b1-110">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="550b1-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="781f3-110">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="781f3-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="550b1-111">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="550b1-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="781f3-111">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="781f3-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="550b1-112">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="550b1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="781f3-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="781f3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="550b1-113">См. также</span><span class="sxs-lookup"><span data-stu-id="550b1-113">See Also</span></span>  
- [<span data-ttu-id="550b1-114">Интерфейс IGCHostControl</span><span class="sxs-lookup"><span data-stu-id="550b1-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="781f3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="781f3-113">See also</span></span>
+- [<span data-ttu-id="781f3-114">Интерфейс IGCHostControl</span><span class="sxs-lookup"><span data-stu-id="781f3-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

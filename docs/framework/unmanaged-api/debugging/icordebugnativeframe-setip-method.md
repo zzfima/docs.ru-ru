@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8b6bf60790c10b9869dcc41678be050b8979dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2d0628d3c8bf5912c811ddf4b2a00b9dfca4687
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639215"
 ---
-# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="e9050-102">Метод ICorDebugNativeFrame::SetIP</span><span class="sxs-lookup"><span data-stu-id="e9050-102">ICorDebugNativeFrame::SetIP Method</span></span>
-<span data-ttu-id="e9050-103">Задает указатель инструкций заданное расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="e9050-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
+# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="e6b5a-102">Метод ICorDebugNativeFrame::SetIP</span><span class="sxs-lookup"><span data-stu-id="e6b5a-102">ICorDebugNativeFrame::SetIP Method</span></span>
+<span data-ttu-id="e6b5a-103">Задает указатель инструкций в указанное расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9050-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e9050-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6b5a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e6b5a-104">Syntax</span></span>  
   
 ```  
 HRESULT SetIP (  
@@ -35,25 +35,25 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9050-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e9050-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e6b5a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e6b5a-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="e9050-106">[in] Расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="e9050-106">[in] The offset location in the native code.</span></span>  
+ <span data-ttu-id="e6b5a-106">[in] Расположение смещения в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-106">[in] The offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9050-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="e9050-107">Remarks</span></span>  
- <span data-ttu-id="e9050-108">Вызовы `SetIP` немедленно сделать недействительными все фреймы и цепочки для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="e9050-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="e9050-109">Если отладчик сведениях о кадрах после вызова `SetIP`, он должен выполнить новую трассировку стека.</span><span class="sxs-lookup"><span data-stu-id="e9050-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6b5a-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="e6b5a-107">Remarks</span></span>  
+ <span data-ttu-id="e6b5a-108">Вызовы `SetIP` немедленно сделать недействительными все фреймы и цепочки для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="e6b5a-109">Если отладчику требуется сведения о кадре после вызова `SetIP`, он должен выполнить новую трассировку стека.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
   
- <span data-ttu-id="e9050-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) предпримет попытку сохранить кадр стека в допустимом состоянии.</span><span class="sxs-lookup"><span data-stu-id="e9050-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="e9050-111">Тем не менее даже если кадр находится в допустимом состоянии, как среды выполнения, по-прежнему возможно проблемы, такие как неинициализированных локальных переменных и т. д.</span><span class="sxs-lookup"><span data-stu-id="e9050-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="e9050-112">Вызывающий объект отвечает за обеспечение согласованности выполняемой программы.</span><span class="sxs-lookup"><span data-stu-id="e9050-112">The caller is responsible for insuring coherency of the running program.</span></span>  
+ <span data-ttu-id="e6b5a-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) попытается сохранить кадр стека в допустимом состоянии.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="e6b5a-111">Тем не менее, даже если кадр находится в допустимом состоянии, как среды выполнения, по-прежнему может существовать проблемы, такие как неинициализированных локальных переменных и т. д.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="e6b5a-112">Вызывающий объект несет ответственность за обеспечение согласованности выполняемой программы.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-112">The caller is responsible for insuring coherency of the running program.</span></span>  
   
- <span data-ttu-id="e9050-113">На 64-разрядных платформах, не может быть перемещен указатель инструкций из `catch` или `finally` блока.</span><span class="sxs-lookup"><span data-stu-id="e9050-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="e9050-114">Если `SetIP` вызывается для выполнения такого перемещения на 64-разрядной платформе, она возвратит значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="e9050-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
+ <span data-ttu-id="e6b5a-113">На 64-разрядных платформах, нельзя перемещать указатель инструкций из `catch` или `finally` блока.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="e6b5a-114">Если `SetIP` вызывается для выполнения такого перемещения на 64-разрядной платформе, возвращается значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="e6b5a-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9050-115">Требования</span><span class="sxs-lookup"><span data-stu-id="e9050-115">Requirements</span></span>  
- <span data-ttu-id="e9050-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9050-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6b5a-115">Требования</span><span class="sxs-lookup"><span data-stu-id="e6b5a-115">Requirements</span></span>  
+ <span data-ttu-id="e6b5a-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6b5a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9050-117">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e9050-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e6b5a-117">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6b5a-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e9050-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9050-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6b5a-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6b5a-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e9050-119">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9050-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e6b5a-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6b5a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9050-120">См. также</span><span class="sxs-lookup"><span data-stu-id="e9050-120">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="e6b5a-120">См. также</span><span class="sxs-lookup"><span data-stu-id="e6b5a-120">See also</span></span>
+
