@@ -1,5 +1,5 @@
 ---
-title: Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
+title: Тестирование библиотеки классов .NET Standard с помощью .NET Core в Visual Studio 2017
 description: Создайте проект модульного теста для библиотеки классов .NET Core. Проверьте правильность работы библиотеки классов .NET Core с помощью модульных тестов.
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170799"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362695"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки .NET Standard с помощью .NET Core в Visual Studio 2017
 
-В статье [Создание библиотеки классов на C# с помощью .NET Core в Visual Studio 2017](library-with-visual-studio.md) или [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md) вы уже создали простую библиотеку классов, которая добавляет метод расширения к классу <xref:System.String>. Теперь вы создадите модульный тест и убедитесь, что все работает правильно. Новый проект модульного теста вы добавите к решению, созданному в предыдущей статье.
+При работе с руководствами по созданию библиотеки с помощью .NET Standard в Visual Studio 2017 на [C# ](library-with-visual-studio.md) или [Visual Basic](vb-library-with-visual-studio.md) вы уже создали простую библиотеку классов, которая добавляет метод расширения к классу <xref:System.String>. Теперь вы создадите модульный тест и убедитесь, что все работает правильно. Новый проект модульного теста вы добавите к решению, созданному при работе с предыдущей статьей.
 
 ## <a name="creating-a-unit-test-project"></a>Создание проекта модульного теста
 

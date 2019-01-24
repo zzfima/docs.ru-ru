@@ -1,7 +1,7 @@
 ---
 title: Справочник по C#. Оператор []
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244007"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333399"
 ---
-# <a name="-operator-c-reference"></a>Оператор [] (Справочник по C#)
-Квадратные скобки (`[]`) используются для массивов, индексаторов и атрибутов. Кроме того, их можно использовать с указателями.  
-  
-## <a name="remarks"></a>Примечания  
- Тип массива указывается перед оператором `[]`:  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- Для доступа к элементу массива его индекс необходимо заключить в скобки:  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- Если индекс массива выходит за границы диапазона, создается исключение.  
-  
- Перегрузка оператора индексирования массива невозможна. Однако типы могут определять индексаторы, принимающие один или несколько параметров. Параметры индексатора заключаются в квадратные скобки, как и индексы массива, но, в отличие от индексов массива, которые должны быть целочисленными, эти параметры могут быть любого типа.  
-  
- Например, в платформе .NET Framework определен тип `Hashtable`, связывающий ключи и значения произвольного типа.  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- Кроме того, квадратные скобки используются для определения [атрибутов](../../../csharp/programming-guide/concepts/attributes/index.md):  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- Квадратные скобки можно использовать для создания индекса на основе указателя:  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- Проверка границ не выполняется.  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="-operator-c-reference"></a>Оператор [].Справочник по C#
+
+Квадратные скобки, `[]`, обычно используются для доступа к элементам массива, индексатора или указателя.
+
+Дополнительные сведения см. в [практическом руководстве по доступу к элементу массива с использованием указателя](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+
+Кроме того, с помощью квадратных скобок можно указывать [атрибуты](../../programming-guide/concepts/attributes/index.md).
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>Доступ к массиву
+
+В приведенном ниже примере показано, как получить доступ к элементам массива.
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+Если индекс массива выходит за границы соответствующего измерения массива, возникает исключение <xref:System.IndexOutOfRangeException>.
+
+Как показано в предыдущем примере, квадратные скобки также используются в объявлении типа массива и для создания экземпляров массива.
+
+Дополнительные сведения см. в руководстве по работе с [массивами](../../programming-guide/arrays/index.md).
+
+## <a name="indexer-access"></a>Доступ к индексатору
+
+В приведенном ниже примере используется тип .NET <xref:System.Collections.Generic.Dictionary%602> для демонстрации доступа к индексатору.
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+Индексаторы позволяют индексировать экземпляры определяемого пользователем типа аналогично индексации массива. В отличие от индексов массива, которые должны быть целым числом, аргументы индексатора могут быть объявлены любым типом.
+
+Дополнительные сведения см. в [руководстве по работе с индексаторами](../../programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Доступ к элементам `[]` не считается перегружаемым оператором. Используйте [индексаторы](../../programming-guide/indexers/index.md) для поддержки индексирования с помощью определяемых пользователем типов.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделах [Доступ к элементам](~/_csharplang/spec/expressions.md#element-access) и [Доступ к элементу указателя](~/_csharplang/spec/unsafe-code.md#pointer-element-access) [спецификации C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
-- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
+- [Массивы](../../programming-guide/arrays/index.md)
+- [Индексаторы](../../programming-guide/indexers/index.md)
+- [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Атрибуты](../../programming-guide/concepts/attributes/index.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239005"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362500"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
+
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
   
  Следующая строка кода C# содержит один унарный оператор и еще один операнд. Оператор инкремента `++`изменяет значение операнда `y`.  
@@ -25,7 +26,8 @@ ms.locfileid: "53239005"
   
  [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Операторы, вычисление выражений и приоритет операторов  
+## <a name="operators-evaluation-and-operator-precedence"></a>Операторы, вычисление выражений и приоритет операторов
+
  Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью* и скобками.  
   
  Каждый оператор имеет определенный приоритет. В выражении, содержащем несколько операторов с разными уровнями приоритета, порядок вычисления операторов определяется их приоритетом. Например, в следующем операторе переменной `n1`присваивается значение 3.  
@@ -38,7 +40,7 @@ ms.locfileid: "53239005"
   
  **Основные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Доступ к членам<br /><br /> Условный доступ к членам|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Вызов метода и делегата|  
@@ -84,14 +86,14 @@ ms.locfileid: "53239005"
   
  **Операторы сдвига**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
   
  **Относительные операторы и операторы типов**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Меньше|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Больше|  
@@ -102,7 +104,7 @@ ms.locfileid: "53239005"
   
  **Операторы равенства**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Равно|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Не равно|  
@@ -121,13 +123,14 @@ ms.locfileid: "53239005"
   
  **Операторы присваивания и анонимные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
 |x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Анонимная функция (лямбда-выражение)|  
   
-## <a name="associativity"></a>Ассоциативность  
+## <a name="associativity"></a>Ассоциативность
+
  Когда выражение содержит два или более операторов с одинаковым приоритетом, они вычисляются на основе ассоциативности. Операторы с левой ассоциативностью вычисляются слева направо. Например, выражение `x * y / z` вычисляется как `(x * y) / z`. Операторы с правой ассоциативностью вычисляются справа налево. Например, оператор присваивания имеет правую ассоциативность. Если бы это было не так, следующий код вызвал бы ошибку.  
   
 ```csharp  
@@ -154,7 +157,8 @@ a = (b = c);
 |`a = b - c + d`|a, b, c, -, d, +, =|  
 |`a += b -= c`|a, b, c, -=, +=|  
   
-## <a name="adding-parentheses"></a>Добавление скобок  
+## <a name="adding-parentheses"></a>Добавление скобок
+
  Порядок, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок. Например, выражение `2 + 3 * 2` в обычном случае будет иметь значение 8, поскольку операторы умножения выполняются раньше операторов сложения. Однако если выражение записано в форме `(2 + 3) * 2`, сложение выполняется перед умножением и в результате получается 10. В следующих примерах иллюстрируется порядок вычисления выражений в скобках. Как и в предыдущих примерах, перед применением оператора вычисляются операнды.  
   
 |Оператор|Порядок вычислений|  
@@ -163,13 +167,15 @@ a = (b = c);
 |`a = b - (c + d)`|a, b, c, d, +, -, =|  
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
-## <a name="operator-overloading"></a>Перегрузка операторов  
+## <a name="operator-overloading"></a>Перегрузка операторов
+
  Поведение операторов для пользовательских классов и структур можно изменить. Такой процесс называется *перегрузкой операторов*. Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) и в статье о ключевом слове [operator](../../../csharp/language-reference/keywords/operator.md).  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы
+
  Дополнительные сведения см. в разделах [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md) и [Операторы C#](../../../csharp/language-reference/operators/index.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
 - [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)

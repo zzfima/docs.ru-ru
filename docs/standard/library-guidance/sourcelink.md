@@ -3,13 +3,13 @@ title: SourceLink и библиотеки .NET
 description: Практические рекомендации по использованию SourceLink для повышения эффективности отладки для библиотек .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128935"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333542"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ SourceLink — это технология, которая дает возмож
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> дает отладчику указание о сквозной обработке кода (вместо выполнения по шагам).
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> определяет, будет ли член отображаться в окнах переменных отладчика.
 
-**✔️ РЕКОМЕНДУЕТСЯ** включить файлы символов (`*.pdb`) в пакет NuGet.
+**✔️ ДОПУСТИМО.** Публикация файлов символов (`*.pdb`).
 
-> Как правило, файлы символов публикуются в [пакете символов](./nuget.md#symbol-packages). Сейчас самая популярная платформа для пакетов символов не поддерживает формат переносимых файлов символов (`*.pdb`), которые создаются из проектов в стиле SDK, и пакеты символов использовать нельзя.
+> См. дополнительные сведения о [файлах и пакетах символов](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Назад](dependencies.md)

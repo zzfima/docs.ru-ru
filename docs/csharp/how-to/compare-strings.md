@@ -1,16 +1,16 @@
 ---
 title: Как выполнить Сравнение строк (руководство по C#)
 description: Сведения о том, как сравнивать и упорядочивать строковые значения с учетом или без учета регистра и порядка для определенного языка.
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334838"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415888"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C\#
 
@@ -29,7 +29,13 @@ ms.locfileid: "53334838"
 
 ## <a name="default-ordinal-comparisons"></a>Порядковые сравнения по умолчанию
 
-Самые распространенные операции, применяемые для тестирования на равенство (<xref:System.String.Equals%2A?displayProperty=nameWithType> и <xref:System.String.op_Equality%2A?displayProperty=nameWithType>), используют порядковое сравнение с учетом регистра. Соответствующие результаты показаны в примере ниже.
+Самые распространенные операции:
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+порядковое сравнение, сравнение с учетом регистра и текущие значения языка и региональных параметров. Соответствующие результаты показаны в примере ниже.
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

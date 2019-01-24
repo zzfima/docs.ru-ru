@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236821"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362734"
 ---
-# <a name="conversion-operators-c-programming-guide"></a>Операторы преобразования (Руководство по программированию в C#)
+# <a name="conversion-operators-c-programming-guide"></a>Руководство по программированию на C#. Операторы преобразования
+
 Разработчики на C# могут объявлять преобразования классов или структур в другие классы, структуры или базовые типы и обратно. Преобразования определяются как операторы и называются по имени типа, в который осуществляется преобразование. В качестве содержащего типа должен выступать либо тип преобразуемого аргумента, либо тип результата преобразования, но не оба эти типа.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>Обзор операторов преобразования  
+## <a name="conversion-operators-overview"></a>Общие сведения об операторах преобразования
+
  Операторы преобразования имеют следующие свойства:  
   
 -   Преобразования, объявленные как `implicit`, выполняются автоматически при необходимости.  
@@ -29,7 +31,8 @@ ms.locfileid: "53236821"
   
 -   Все преобразования должны объявляться как `static`.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы
+
  Дополнительные сведения:  
   
 -   [Использование операторов преобразования](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

@@ -4,12 +4,12 @@ description: Описание вариантов управления микро
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152734"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307439"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 
@@ -91,7 +91,7 @@ ms.locfileid: "53152734"
 
 **Рис. 4-24**. Упрощенная структура и топология кластера Kubernetes
 
-На рис. 4-24 показана структура кластера Kubernetes, где главный узел (ВМ) управляет большинством операций по координации кластера, и вы можете развертывать контейнеры на остальных узлах (управляемых как единый пул с точки зрения приложения), что позволяет вам расширять среду до тысяч и даже десятков тысяч контейнеров.
+На рис. 4-24 показана структура кластера Kubernetes, где главный узел (виртуальная машина) управляет большинством операций по координации кластера, и вы можете развертывать контейнеры на остальных узлах (управляемых как единый пул с точки зрения приложения). Это позволяет расширять среду до тысяч и даже десятков тысяч контейнеров.
 
 ## <a name="development-environment-for-kubernetes"></a>Среда разработки для Kubernetes
 

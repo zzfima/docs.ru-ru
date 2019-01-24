@@ -3,12 +3,12 @@ title: Изучение кода с помощью визуализатора с
 description: Визуализатор синтаксиса предоставляет визуальное средство для изучения моделей, создаваемых для кода пакетом SDK .NET Compiler Platform.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143570"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307205"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Изучение кода с помощью визуализатора синтаксиса Roslyn в Visual Studio
 
@@ -80,11 +80,11 @@ ms.locfileid: "53143570"
 
 При работе с двумя мониторами можно также вывести окно графа синтаксиса на второй монитор.
 
-# <a name="inspecting-semantics"></a>Изучение семантики
+## <a name="inspecting-semantics"></a>Изучение семантики
 
 Визуализатор синтаксиса обладает простейшими функциями для просмотра символов и семантической информации. Введите `double x = 1 + 1;` внутри Main() в примере C#. Выберите выражение `1 + 1` в окне редактора кода. Визуализатор выделяет узел **AddExpression**. Щелкните правой кнопкой мыши узел **AddExpression** и выберите команду **View Symbol (if any)** (Просмотреть символ (при наличии)). Обратите внимание, что большинство пунктов меню имеют квалификатор "if any" (при наличии). Визуализатор синтаксиса проверяет свойства узла, включая свойства, которые могут присутствовать не для всех узлов. 
 
-Сетка свойств в визуализаторе обновляется, как показано на рисунке ниже: символом для выражения является **SynthesizedIntrinsicOperatorSymbol**, у которого **Вид = Метод**.
+Сетка свойств в визуализаторе обновляется, как показано на рисунке ниже. Символом для выражения является **SynthesizedIntrinsicOperatorSymbol**, у которого **Вид = Метод**.
 
 ![Свойства символов](media/syntax-visualizer/symbol-properties.png)
 

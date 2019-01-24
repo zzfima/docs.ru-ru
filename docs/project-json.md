@@ -4,12 +4,12 @@ description: Где найти документацию о средствах в
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ccdf897727ed52ccbed3e56b5a9a08cb45427d70
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47216621"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361967"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>project.json и Visual Studio 2015 с .NET Core
 
@@ -17,12 +17,9 @@ ms.locfileid: "47216621"
 
 Версия документации до 7 марта доступна в виде PDF-файла и в ветви в репозитории документации.
 
-## <a name="pdf-files"></a>PDF-файлы
+## <a name="pdf-documentation"></a>Документация в формате PDF
 
-Для просмотра предыдущей документации лучше всего воспользоваться PDF-файлами:
-
-* [.NET Core — PDF для project.json и Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [ASP.NET Core — PDF для project.json и Visual Studio 2015](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+Лучший источник предыдущих версий документации — это [PDF-файл по .NET Core для project.json и Visual Studio 2015](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf).
 
 ## <a name="documentation-repository-branch"></a>Ветвь репозитория документации
 

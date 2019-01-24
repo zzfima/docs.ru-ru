@@ -3,13 +3,13 @@ title: NuGet и библиотеки .NET
 description: Практические рекомендации по упаковке библиотек .NET с помощью NuGet.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614549"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333425"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ NuGet.org размещает свой собственный [репозитор
 
 > [!IMPORTANT]
 > Сервер символов NuGet.org поддерживает только новые [файлы переносимых символов](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), созданные проектами в стиле пакетов SDK.
+>
+> Чтобы использовать сервер символов NuGet.org при отладке библиотеки .NET, у разработчиков должна быть версия Visual Studio 2017 15.9 или выше.
 
 Альтернатива созданию пакета символов — внедрение файлов символов в главный пакет NuGet. Главный пакет NuGet будет больше, но внедренные файлы символов позволяют разработчикам не настраивать сервер символов NuGet.org. Если вы создаете пакет NuGet из проекта в стиле SDK, файлы символов в него можно внедрить с помощью свойства `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

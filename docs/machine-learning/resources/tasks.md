@@ -1,15 +1,15 @@
 ---
 title: Задачи машинного обучения. Использование ML.NET
-description: Изучите возможности задач машинного обучения и связанных алгоритмов обучения, поддерживаемых в ML.NET.
+description: Изучите возможности задач машинного обучения и связанных задач, поддерживаемых в ML.NET.
 ms.custom: seodec18
-ms.date: 11/29/2018
+ms.date: 01/15/2019
 author: jralexander
-ms.openlocfilehash: 4b333fb8c954c94ed84033d9858a496f591f2169
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126592"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415706"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Задачи машинного обучения в ML.NET
 
@@ -45,9 +45,10 @@ ms.locfileid: "53126592"
 * [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer);
 * [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification);
 * [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer);
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.Runtime.FactorizationMachine.FieldAwareFactorizationMachineTrainer);
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmBinaryTrainer);
-* [LinearSvm](xref:Microsoft.ML.Trainers.Online.LinearSvm);
+* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer);
+* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer);
+* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
+* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression);
 * [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer);
 * [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer);
 * [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer);
@@ -77,9 +78,8 @@ ms.locfileid: "53126592"
 
 Для задач многоклассовой классификации доступны следующие алгоритмы обучения:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmMulticlassTrainer);
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Runtime.Learners.MetaMulticlassTrainer%602);
-* [MultiClassClassificationTrainers](xref:Microsoft.ML.Trainers.MultiClassClassificationTrainers);
+* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer);
+* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602);
 * [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer);
 * [Ova](xref:Microsoft.ML.Trainers.Ova);
 * [Pkpd](xref:Microsoft.ML.Trainers.Pkpd);
@@ -105,18 +105,15 @@ ms.locfileid: "53126592"
 Для задач регрессии доступны следующие алгоритмы обучения:
 
 * [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer);
-* [FastTreeRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRegressionFastTreeTrainer);
-* [FastTreeTweedieRegressionFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeTweedieRegressionFastTreeTrainer);
 * [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer);
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRegressorTrainer);
-* [LogisticRegression](xref:Microsoft.ML.Runtime.Learners.LogisticRegression);
+* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer);
 * [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer);
 * [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer);
 * [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression);
 * [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer);
 * [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer);
 * [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer);
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.Runtime.LightGBM.SingleTrainer).
+* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer).
 
 ## <a name="clustering"></a>Кластеризация
 
@@ -161,9 +158,8 @@ ms.locfileid: "53126592"
 
 Для задач ранжирования доступны следующие алгоритмы обучения:
 
-* [FastTreeRankingFastTreeTrainer](xref:Microsoft.ML.Runtime.FastTreeRankingFastTreeTrainer);
 * [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer);
-* [LightGbmRankingTrainer](xref:Microsoft.ML.Runtime.LightGBM.LightGbmRankingTrainer).
+* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer).
 
 ## <a name="recommendation"></a>Рекомендация
 

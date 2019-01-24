@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232850"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415927"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -64,7 +64,7 @@ ms.locfileid: "47232850"
 Дополнительные сведения см в следующих разделах.
 
 * Для C# — [Оператор using (Справочник по C#)](../csharp/language-reference/keywords/using-statement.md).
-* Для For F# — [Управление ресурсами: ключевое слово use](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Для F# см. дополнительные сведения об [управлении ресурсами и использовании ключевого слова use](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Для VB — [Оператор Using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Безопасность типа
@@ -125,7 +125,7 @@ LINQ — это эффективный набор функций для C# и V
 
 Основная часть поддержки взаимодействия Mono (и, следовательно, Xamarin) для Java и Objective-C построена аналогичным образом, то есть использует схожие принципы.
 
-Дополнительные сведения о взаимодействии на уровне машинного кода см. в документе [Взаимодействие на уровне машинного кода](native-interop.md).
+См. дополнительные сведения о [взаимодействии на уровне машинного кода](native-interop/index.md).
 
 ## <a name="unsafe-code"></a>Небезопасный код
 

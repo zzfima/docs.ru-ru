@@ -1,5 +1,5 @@
 ---
-title: Применение библиотеки .NET Standard в Visual Studio 2017
+title: Использование библиотеки .NET Standard в Visual Studio 2017
 description: Создайте приложение .NET Core, которое вызывает члены из другой библиотеки классов, в Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168906"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362396"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Применение библиотеки .NET Standard в Visual Studio 2017
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Использование библиотеки .NET Standard в Visual Studio 2017
 
 Итак, вы создали библиотеку классов .NET Standard, проделав шаги, описанные в статье [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./library-with-visual-studio.md) или [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md), протестировали ее по инструкциям из статьи [Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017](testing-library-with-visual-studio.md), а затем создали версию выпуска этой библиотеки. Теперь пора предоставить ее для использования вызывающим объектам. Для этого существуют два способа:
 
