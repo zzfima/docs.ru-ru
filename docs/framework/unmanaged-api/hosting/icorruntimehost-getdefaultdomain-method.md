@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2351fbb26a38f408d330db3f7600120bd57d6e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d301ace3ed99ff8e15ed6ab80781fd8c7f83aaec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743495"
 ---
-# <a name="icorruntimehostgetdefaultdomain-method"></a><span data-ttu-id="db210-102">Метод ICorRuntimeHost::GetDefaultDomain</span><span class="sxs-lookup"><span data-stu-id="db210-102">ICorRuntimeHost::GetDefaultDomain Method</span></span>
-<span data-ttu-id="db210-103">Получает указатель интерфейса типа <xref:System._AppDomain?displayProperty=nameWithType> , представляющий домен по умолчанию для текущего процесса.</span><span class="sxs-lookup"><span data-stu-id="db210-103">Gets an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the default domain for the current process.</span></span>  
+# <a name="icorruntimehostgetdefaultdomain-method"></a><span data-ttu-id="518d5-102">Метод ICorRuntimeHost::GetDefaultDomain</span><span class="sxs-lookup"><span data-stu-id="518d5-102">ICorRuntimeHost::GetDefaultDomain Method</span></span>
+<span data-ttu-id="518d5-103">Получает указатель интерфейса типа <xref:System._AppDomain?displayProperty=nameWithType> , представляющий домен по умолчанию для текущего процесса.</span><span class="sxs-lookup"><span data-stu-id="518d5-103">Gets an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the default domain for the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db210-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="db210-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="518d5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="518d5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDefaultDomain (  
@@ -35,31 +35,31 @@ HRESULT GetDefaultDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db210-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="db210-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="518d5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="518d5-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="db210-106">[out] Указатель на интерфейс типа <xref:System._AppDomain?displayProperty=nameWithType> для <xref:System.AppDomain> экземпляр, который представляет домен приложения по умолчанию для процесса.</span><span class="sxs-lookup"><span data-stu-id="db210-106">[out] An interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> to the <xref:System.AppDomain> instance that represents the default application domain for the process.</span></span>  
+ <span data-ttu-id="518d5-106">[out] Указатель интерфейса типа <xref:System._AppDomain?displayProperty=nameWithType> для <xref:System.AppDomain> экземпляр, который представляет домен приложения по умолчанию для процесса.</span><span class="sxs-lookup"><span data-stu-id="518d5-106">[out] An interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType> to the <xref:System.AppDomain> instance that represents the default application domain for the process.</span></span>  
   
- <span data-ttu-id="db210-107">Этот указатель является типизированным `IUnknown`, поэтому обычно следует вызывать вызывающим объектам `QueryInterface` для получения указателя на интерфейс типа <xref:System._AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="db210-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="518d5-107">Этот указатель является типизированным `IUnknown`, поэтому вызывающие объекты обычно должен вызвать `QueryInterface` для получения указателя интерфейса типа <xref:System._AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="518d5-107">This pointer is typed `IUnknown`, so callers should generally call `QueryInterface` to obtain an interface pointer of type <xref:System._AppDomain?displayProperty=nameWithType>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db210-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="db210-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="518d5-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="518d5-108">Return Value</span></span>  
   
-|<span data-ttu-id="db210-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="db210-109">HRESULT</span></span>|<span data-ttu-id="db210-110">Описание</span><span class="sxs-lookup"><span data-stu-id="db210-110">Description</span></span>|  
+|<span data-ttu-id="518d5-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="518d5-109">HRESULT</span></span>|<span data-ttu-id="518d5-110">Описание</span><span class="sxs-lookup"><span data-stu-id="518d5-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="db210-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="db210-111">S_OK</span></span>|<span data-ttu-id="db210-112">Операция выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="db210-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="db210-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="db210-113">S_FALSE</span></span>|<span data-ttu-id="db210-114">Не удалось завершить операцию.</span><span class="sxs-lookup"><span data-stu-id="db210-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="db210-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="db210-115">E_FAIL</span></span>|<span data-ttu-id="db210-116">Неизвестный, Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="db210-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="db210-117">Если метод вернет значение E_FAIL, общеязыковой среды выполнения (CLR) больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="db210-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="db210-118">Последующие вызовы любых размещающих интерфейсов API, возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="db210-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="db210-119">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="db210-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="db210-120">Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="db210-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="518d5-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="518d5-111">S_OK</span></span>|<span data-ttu-id="518d5-112">Операция выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="518d5-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="518d5-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="518d5-113">S_FALSE</span></span>|<span data-ttu-id="518d5-114">Не удалось завершить операцию.</span><span class="sxs-lookup"><span data-stu-id="518d5-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="518d5-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="518d5-115">E_FAIL</span></span>|<span data-ttu-id="518d5-116">Произошла неизвестная, разрушительного сбоя.</span><span class="sxs-lookup"><span data-stu-id="518d5-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="518d5-117">Если метод вернет значение E_FAIL, общеязыковой среды выполнения (CLR) больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="518d5-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="518d5-118">Последующие вызовы для любого API хостинга, возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="518d5-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="518d5-119">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="518d5-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="518d5-120">Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="518d5-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="db210-121">Требования</span><span class="sxs-lookup"><span data-stu-id="db210-121">Requirements</span></span>  
- <span data-ttu-id="db210-122">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db210-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="518d5-121">Требования</span><span class="sxs-lookup"><span data-stu-id="518d5-121">Requirements</span></span>  
+ <span data-ttu-id="518d5-122">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="518d5-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db210-123">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db210-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="518d5-123">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="518d5-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="db210-124">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db210-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="518d5-124">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="518d5-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="db210-125">**Версии платформы .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="db210-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="518d5-125">**Версии платформы .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="518d5-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db210-126">См. также</span><span class="sxs-lookup"><span data-stu-id="db210-126">See Also</span></span>  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [<span data-ttu-id="db210-127">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="db210-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="518d5-126">См. также</span><span class="sxs-lookup"><span data-stu-id="518d5-126">See also</span></span>
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [<span data-ttu-id="518d5-127">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="518d5-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

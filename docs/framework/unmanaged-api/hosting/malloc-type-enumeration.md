@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97aded59f880412a6a26e7e3d664c50ff1c2f103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557413"
 ---
-# <a name="malloctype-enumeration"></a><span data-ttu-id="db359-102">MALLOC_TYPE - перечисление</span><span class="sxs-lookup"><span data-stu-id="db359-102">MALLOC_TYPE Enumeration</span></span>
-<span data-ttu-id="db359-103">Содержит значения, указывающие характеристики выделяемой памяти.</span><span class="sxs-lookup"><span data-stu-id="db359-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
+# <a name="malloctype-enumeration"></a><span data-ttu-id="b76a5-102">MALLOC_TYPE - перечисление</span><span class="sxs-lookup"><span data-stu-id="b76a5-102">MALLOC_TYPE Enumeration</span></span>
+<span data-ttu-id="b76a5-103">Содержит значения, определяющие характеристики выделяемой памяти.</span><span class="sxs-lookup"><span data-stu-id="b76a5-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db359-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="db359-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b76a5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b76a5-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,21 +35,21 @@ typedef enum {
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="db359-105">Участники</span><span class="sxs-lookup"><span data-stu-id="db359-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b76a5-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b76a5-105">Members</span></span>  
   
-|<span data-ttu-id="db359-106">Член</span><span class="sxs-lookup"><span data-stu-id="db359-106">Member</span></span>|<span data-ttu-id="db359-107">Описание</span><span class="sxs-lookup"><span data-stu-id="db359-107">Description</span></span>|  
+|<span data-ttu-id="b76a5-106">Член</span><span class="sxs-lookup"><span data-stu-id="b76a5-106">Member</span></span>|<span data-ttu-id="b76a5-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="b76a5-107">Description</span></span>|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|<span data-ttu-id="db359-108">Выделенная память может содержать исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="db359-108">The allocated memory can contain an executable file.</span></span>|  
-|`MALLOC_THREADSAFE`|<span data-ttu-id="db359-109">Выделенная память является потокобезопасной.</span><span class="sxs-lookup"><span data-stu-id="db359-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="db359-110">То есть память может осуществляться несколькими потоками без всякой синхронизации.</span><span class="sxs-lookup"><span data-stu-id="db359-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="db359-111">Если этот флаг не установлен, вызовы объекта должны быть сериализованы.</span><span class="sxs-lookup"><span data-stu-id="db359-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
+|`MALLOC_EXECUTABLE`|<span data-ttu-id="b76a5-108">Используемый объем выделенной памяти может содержать исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="b76a5-108">The allocated memory can contain an executable file.</span></span>|  
+|`MALLOC_THREADSAFE`|<span data-ttu-id="b76a5-109">Используемый объем выделенной памяти является поточно ориентированной.</span><span class="sxs-lookup"><span data-stu-id="b76a5-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="b76a5-110">То есть память может осуществляться несколькими потоками без всякой синхронизации.</span><span class="sxs-lookup"><span data-stu-id="b76a5-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="b76a5-111">Если этот флаг не установлен, вызовы объекта должны быть сериализованы.</span><span class="sxs-lookup"><span data-stu-id="b76a5-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="db359-112">Требования</span><span class="sxs-lookup"><span data-stu-id="db359-112">Requirements</span></span>  
- <span data-ttu-id="db359-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db359-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b76a5-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b76a5-112">Requirements</span></span>  
+ <span data-ttu-id="b76a5-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b76a5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db359-114">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db359-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b76a5-114">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b76a5-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="db359-115">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db359-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="b76a5-115">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b76a5-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="db359-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db359-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b76a5-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b76a5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db359-117">См. также</span><span class="sxs-lookup"><span data-stu-id="db359-117">See Also</span></span>  
- [<span data-ttu-id="db359-118">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="db359-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b76a5-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b76a5-117">See also</span></span>
+- [<span data-ttu-id="b76a5-118">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="b76a5-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

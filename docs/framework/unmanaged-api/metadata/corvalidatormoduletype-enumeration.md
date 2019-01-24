@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716782"
 ---
-# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="7c0c9-102">Перечисление CorValidatorModuleType</span><span class="sxs-lookup"><span data-stu-id="7c0c9-102">CorValidatorModuleType Enumeration</span></span>
-<span data-ttu-id="7c0c9-103">Указывает тип модуля.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-103">Specifies the type of a module.</span></span>  
+# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="ac4da-102">Перечисление CorValidatorModuleType</span><span class="sxs-lookup"><span data-stu-id="ac4da-102">CorValidatorModuleType Enumeration</span></span>
+<span data-ttu-id="ac4da-103">Указывает тип модуля.</span><span class="sxs-lookup"><span data-stu-id="ac4da-103">Specifies the type of a module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c0c9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7c0c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac4da-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ac4da-104">Syntax</span></span>  
   
 ```  
 typedef enum  
@@ -41,26 +41,26 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7c0c9-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7c0c9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ac4da-105">Участники</span><span class="sxs-lookup"><span data-stu-id="ac4da-105">Members</span></span>  
   
-|<span data-ttu-id="7c0c9-106">Член</span><span class="sxs-lookup"><span data-stu-id="7c0c9-106">Member</span></span>|<span data-ttu-id="7c0c9-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7c0c9-107">Description</span></span>|  
+|<span data-ttu-id="ac4da-106">Член</span><span class="sxs-lookup"><span data-stu-id="ac4da-106">Member</span></span>|<span data-ttu-id="ac4da-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ac4da-107">Description</span></span>|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|<span data-ttu-id="7c0c9-108">Модуль является недопустимым типом.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-108">The module is an invalid type.</span></span>|  
-|`ValidatorModuleTypeMin`|<span data-ttu-id="7c0c9-109">Минимальное значение `CorValidatorModuleType` перечисления.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
-|`ValidatorModuleTypePE`|<span data-ttu-id="7c0c9-110">Модуль является переносимого исполняемого (PE) файла.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-110">The module is a portable executable (PE) file.</span></span>|  
-|`ValidatorModuleTypeObj`|<span data-ttu-id="7c0c9-111">Модуль является OBJ-файле.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-111">The module is a .obj file.</span></span>|  
-|`ValidatorModuleTypeEnc`|<span data-ttu-id="7c0c9-112">Модуль является сеансом отладчика edit-and-continue.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-112">The module is an edit-and-continue debugger session.</span></span>|  
-|`ValidatorModuleTypeIncr`|<span data-ttu-id="7c0c9-113">Модуль является одним из пошагово строить.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-113">The module is one that has been incrementally built.</span></span>|  
-|`ValidatorModuleTypeMax`|<span data-ttu-id="7c0c9-114">Максимальное значение `CorValidatorModuleType` перечисления.</span><span class="sxs-lookup"><span data-stu-id="7c0c9-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypeInvalid`|<span data-ttu-id="ac4da-108">Модуль является недопустимым типом.</span><span class="sxs-lookup"><span data-stu-id="ac4da-108">The module is an invalid type.</span></span>|  
+|`ValidatorModuleTypeMin`|<span data-ttu-id="ac4da-109">Минимальное значение `CorValidatorModuleType` перечисления.</span><span class="sxs-lookup"><span data-stu-id="ac4da-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypePE`|<span data-ttu-id="ac4da-110">Модуль — это файл переносимого исполняемого (PE).</span><span class="sxs-lookup"><span data-stu-id="ac4da-110">The module is a portable executable (PE) file.</span></span>|  
+|`ValidatorModuleTypeObj`|<span data-ttu-id="ac4da-111">Модуль является OBJ-файле.</span><span class="sxs-lookup"><span data-stu-id="ac4da-111">The module is a .obj file.</span></span>|  
+|`ValidatorModuleTypeEnc`|<span data-ttu-id="ac4da-112">Модуль является сеанс отладчика, изменить и продолжить.</span><span class="sxs-lookup"><span data-stu-id="ac4da-112">The module is an edit-and-continue debugger session.</span></span>|  
+|`ValidatorModuleTypeIncr`|<span data-ttu-id="ac4da-113">Модуль — это приложения, пошаговое построение.</span><span class="sxs-lookup"><span data-stu-id="ac4da-113">The module is one that has been incrementally built.</span></span>|  
+|`ValidatorModuleTypeMax`|<span data-ttu-id="ac4da-114">Максимальное значение `CorValidatorModuleType` перечисления.</span><span class="sxs-lookup"><span data-stu-id="ac4da-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7c0c9-115">Требования</span><span class="sxs-lookup"><span data-stu-id="7c0c9-115">Requirements</span></span>  
- <span data-ttu-id="7c0c9-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c0c9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac4da-115">Требования</span><span class="sxs-lookup"><span data-stu-id="ac4da-115">Requirements</span></span>  
+ <span data-ttu-id="ac4da-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac4da-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c0c9-117">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7c0c9-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ac4da-117">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ac4da-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7c0c9-118">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7c0c9-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ac4da-118">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ac4da-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7c0c9-119">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c0c9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ac4da-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac4da-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c0c9-120">См. также</span><span class="sxs-lookup"><span data-stu-id="7c0c9-120">See Also</span></span>  
- [<span data-ttu-id="7c0c9-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="7c0c9-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="ac4da-120">См. также</span><span class="sxs-lookup"><span data-stu-id="ac4da-120">See also</span></span>
+- [<span data-ttu-id="ac4da-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="ac4da-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

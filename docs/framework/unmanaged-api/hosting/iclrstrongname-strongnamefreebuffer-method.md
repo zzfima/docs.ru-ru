@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef8c1e96c12b554a89d012633d1e5c347dab6de4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ec34bde2b94fc6e03cb01647be9e92daa8955a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743196"
 ---
-# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="516f5-102">Метод ICLRStrongName::StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="516f5-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
-<span data-ttu-id="516f5-103">Освобождает память, выделенную предыдущим вызовом метода строгого имени, таких как [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), или [ ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span><span class="sxs-lookup"><span data-stu-id="516f5-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
+# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="f8227-102">Метод ICLRStrongName::StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="f8227-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
+<span data-ttu-id="f8227-103">Освобождает память, выделенную предыдущим вызовом метода строгого имени, таких как [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), или [ ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span><span class="sxs-lookup"><span data-stu-id="f8227-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="516f5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="516f5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8227-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f8227-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameFreeBuffer (   
@@ -35,21 +35,21 @@ HRESULT StrongNameFreeBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="516f5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="516f5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f8227-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f8227-105">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="516f5-106">[in] Указатель на область памяти для освобождения.</span><span class="sxs-lookup"><span data-stu-id="516f5-106">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="f8227-106">[in] Указатель на область памяти для освобождения.</span><span class="sxs-lookup"><span data-stu-id="f8227-106">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="516f5-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="516f5-107">Return Value</span></span>  
- <span data-ttu-id="516f5-108">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="516f5-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f8227-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f8227-107">Return Value</span></span>  
+ <span data-ttu-id="f8227-108">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="f8227-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="516f5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="516f5-109">Requirements</span></span>  
- <span data-ttu-id="516f5-110">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="516f5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8227-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f8227-109">Requirements</span></span>  
+ <span data-ttu-id="f8227-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8227-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="516f5-111">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="516f5-111">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f8227-111">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f8227-111">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="516f5-112">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="516f5-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f8227-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8227-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="516f5-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="516f5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f8227-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8227-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="516f5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="516f5-114">See Also</span></span>  
- [<span data-ttu-id="516f5-115">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="516f5-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f8227-114">См. также</span><span class="sxs-lookup"><span data-stu-id="f8227-114">See also</span></span>
+- [<span data-ttu-id="f8227-115">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="f8227-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

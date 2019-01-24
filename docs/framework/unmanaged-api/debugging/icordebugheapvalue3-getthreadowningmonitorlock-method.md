@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709147"
 ---
-# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="9e9b5-102">Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock</span><span class="sxs-lookup"><span data-stu-id="9e9b5-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
-<span data-ttu-id="9e9b5-103">Возвращает управляемый поток, который владеет блокировкой монитора на этот объект.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
+# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="a33f3-102">Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock</span><span class="sxs-lookup"><span data-stu-id="a33f3-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
+<span data-ttu-id="a33f3-103">Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.</span><span class="sxs-lookup"><span data-stu-id="a33f3-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e9b5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9e9b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a33f3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a33f3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadOwningMonitorLock (  
@@ -36,45 +36,45 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9e9b5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9e9b5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a33f3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a33f3-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="9e9b5-106">[out] Управляемый поток владеет блокировкой монитора на этот объект.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
+ <span data-ttu-id="a33f3-106">[out] Управляемый поток, которому принадлежит блокировка монитора для этого объекта.</span><span class="sxs-lookup"><span data-stu-id="a33f3-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
   
  `pAcquisitionCount`  
- <span data-ttu-id="9e9b5-107">[out] Количество раз, этот поток будет необходимо снять блокировку перед возвратом монитором.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
+ <span data-ttu-id="a33f3-107">[out] Количество раз, этот поток необходимо снять блокировку, прежде чем он возвращается монитором.</span><span class="sxs-lookup"><span data-stu-id="a33f3-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9e9b5-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9e9b5-108">Return Value</span></span>  
- <span data-ttu-id="9e9b5-109">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a33f3-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a33f3-108">Return Value</span></span>  
+ <span data-ttu-id="a33f3-109">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="a33f3-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="9e9b5-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9e9b5-110">HRESULT</span></span>|<span data-ttu-id="9e9b5-111">Описание</span><span class="sxs-lookup"><span data-stu-id="9e9b5-111">Description</span></span>|  
+|<span data-ttu-id="a33f3-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a33f3-110">HRESULT</span></span>|<span data-ttu-id="a33f3-111">Описание</span><span class="sxs-lookup"><span data-stu-id="a33f3-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9e9b5-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e9b5-112">S_OK</span></span>|<span data-ttu-id="9e9b5-113">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="9e9b5-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="9e9b5-114">S_FALSE</span></span>|<span data-ttu-id="9e9b5-115">Не управляемый поток владеет блокировкой монитора на этот объект.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-115">No managed thread owns the monitor lock on this object.</span></span>|  
+|<span data-ttu-id="a33f3-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="a33f3-112">S_OK</span></span>|<span data-ttu-id="a33f3-113">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="a33f3-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="a33f3-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="a33f3-114">S_FALSE</span></span>|<span data-ttu-id="a33f3-115">Не управляемый поток владеет блокировкой монитора на этот объект.</span><span class="sxs-lookup"><span data-stu-id="a33f3-115">No managed thread owns the monitor lock on this object.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="9e9b5-116">Исключения</span><span class="sxs-lookup"><span data-stu-id="9e9b5-116">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="a33f3-116">Исключения</span><span class="sxs-lookup"><span data-stu-id="a33f3-116">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9e9b5-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="9e9b5-117">Remarks</span></span>  
- <span data-ttu-id="9e9b5-118">Если управляемый поток владеет блокировкой монитора на этот объект:</span><span class="sxs-lookup"><span data-stu-id="9e9b5-118">If a managed thread owns the monitor lock on this object:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a33f3-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="a33f3-117">Remarks</span></span>  
+ <span data-ttu-id="a33f3-118">Если управляемый поток владеет блокировкой монитора на этот объект:</span><span class="sxs-lookup"><span data-stu-id="a33f3-118">If a managed thread owns the monitor lock on this object:</span></span>  
   
--   <span data-ttu-id="9e9b5-119">Метод возвращает значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-119">The method returns S_OK.</span></span>  
+-   <span data-ttu-id="a33f3-119">Метод возвращает значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="a33f3-119">The method returns S_OK.</span></span>  
   
--   <span data-ttu-id="9e9b5-120">Объект потока действителен до завершения потока.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-120">The thread object is valid until the thread exits.</span></span>  
+-   <span data-ttu-id="a33f3-120">Поток выходит из объекта потока остается действительным.</span><span class="sxs-lookup"><span data-stu-id="a33f3-120">The thread object is valid until the thread exits.</span></span>  
   
- <span data-ttu-id="9e9b5-121">Если нет управляемого потока, владеющего блокировкой монитора на этот объект `ppThread` и `pAcquisitionCount` не изменяются, и метод возвращает значение S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
+ <span data-ttu-id="a33f3-121">Если не управляемый поток владеет блокировкой монитора на этот объект `ppThread` и `pAcquisitionCount` ничем не отличаются, и метод возвращает значение S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="a33f3-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
   
- <span data-ttu-id="9e9b5-122">Если `ppThread` или `pAcquisitionCount` не является допустимым указателем, результат будет неопределенным.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="a33f3-122">Если `ppThread` или `pAcquisitionCount` не является допустимым указателем, результат не определен.</span><span class="sxs-lookup"><span data-stu-id="a33f3-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="9e9b5-123">При возникновении ошибки таким образом, что он не может определить, какие при его наличии, поток владеет блокировкой монитора на этот объект, метод возвращает значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="a33f3-123">При возникновении ошибки таким образом, что не удается определить, который, если таковые имеются, поток владеет блокировкой монитора на этот объект, метод возвращает значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="a33f3-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e9b5-124">Требования</span><span class="sxs-lookup"><span data-stu-id="9e9b5-124">Requirements</span></span>  
- <span data-ttu-id="9e9b5-125">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e9b5-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a33f3-124">Требования</span><span class="sxs-lookup"><span data-stu-id="a33f3-124">Requirements</span></span>  
+ <span data-ttu-id="a33f3-125">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a33f3-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e9b5-126">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e9b5-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a33f3-126">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a33f3-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9e9b5-127">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e9b5-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a33f3-127">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a33f3-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e9b5-128">**Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e9b5-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a33f3-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a33f3-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e9b5-129">См. также</span><span class="sxs-lookup"><span data-stu-id="9e9b5-129">See Also</span></span>  
- [<span data-ttu-id="9e9b5-130">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="9e9b5-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="9e9b5-131">Отладка</span><span class="sxs-lookup"><span data-stu-id="9e9b5-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a33f3-129">См. также</span><span class="sxs-lookup"><span data-stu-id="a33f3-129">See also</span></span>
+- [<span data-ttu-id="a33f3-130">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a33f3-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a33f3-131">Отладка</span><span class="sxs-lookup"><span data-stu-id="a33f3-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

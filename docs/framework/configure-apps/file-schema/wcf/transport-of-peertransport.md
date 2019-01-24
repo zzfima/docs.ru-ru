@@ -2,25 +2,25 @@
 title: '&lt;transport&gt; для &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d02bb1cb4c20ab7dc482001ea7ce21180394eee7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716587"
 ---
-# <a name="lttransportgt-of-ltpeertransportgt"></a><span data-ttu-id="d5ec3-102">&lt;transport&gt; для &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="d5ec3-102">&lt;transport&gt; of &lt;peerTransport&gt;</span></span>
-<span data-ttu-id="d5ec3-103">Задает тип транспорта для безопасных сообщений, отправленных одноранговыми узлами, настроенными с помощью этой привязки.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  
+# <a name="lttransportgt-of-ltpeertransportgt"></a><span data-ttu-id="2eb21-102">&lt;transport&gt; для &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="2eb21-102">&lt;transport&gt; of &lt;peerTransport&gt;</span></span>
+<span data-ttu-id="2eb21-103">Задает тип транспорта для безопасных сообщений, отправленных одноранговыми узлами, настроенными с помощью этой привязки.</span><span class="sxs-lookup"><span data-stu-id="2eb21-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  
   
- <span data-ttu-id="d5ec3-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="d5ec3-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-105">\<bindings></span></span>  
-<span data-ttu-id="d5ec3-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-106">\<customBinding></span></span>  
-<span data-ttu-id="d5ec3-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-107">\<binding></span></span>  
-<span data-ttu-id="d5ec3-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-108">\<peerTransport></span></span>  
-<span data-ttu-id="d5ec3-109">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-109">\<security></span></span>  
-<span data-ttu-id="d5ec3-110">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-110">\<transport></span></span>  
+ <span data-ttu-id="2eb21-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="2eb21-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="2eb21-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="2eb21-105">\<bindings></span></span>  
+<span data-ttu-id="2eb21-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="2eb21-106">\<customBinding></span></span>  
+<span data-ttu-id="2eb21-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="2eb21-107">\<binding></span></span>  
+<span data-ttu-id="2eb21-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="2eb21-108">\<peerTransport></span></span>  
+<span data-ttu-id="2eb21-109">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="2eb21-109">\<security></span></span>  
+<span data-ttu-id="2eb21-110">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="2eb21-110">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5ec3-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d5ec3-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2eb21-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2eb21-111">Syntax</span></span>  
   
 ```xml  
 <security>
@@ -28,43 +28,43 @@ ms.locfileid: "54148947"
 </security>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d5ec3-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="d5ec3-112">Attributes and Elements</span></span>  
- <span data-ttu-id="d5ec3-113">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-113">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2eb21-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="2eb21-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="2eb21-113">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="2eb21-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d5ec3-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d5ec3-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2eb21-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2eb21-114">Attributes</span></span>  
   
-|<span data-ttu-id="d5ec3-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="d5ec3-115">Attribute</span></span>|<span data-ttu-id="d5ec3-116">Описание</span><span class="sxs-lookup"><span data-stu-id="d5ec3-116">Description</span></span>|  
+|<span data-ttu-id="2eb21-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="2eb21-115">Attribute</span></span>|<span data-ttu-id="2eb21-116">Описание</span><span class="sxs-lookup"><span data-stu-id="2eb21-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d5ec3-117">credentialType</span><span class="sxs-lookup"><span data-stu-id="d5ec3-117">credentialType</span></span>|<span data-ttu-id="d5ec3-118">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-118">Optional.</span></span> <span data-ttu-id="d5ec3-119">Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-119">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="d5ec3-120">Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-120">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
+|<span data-ttu-id="2eb21-117">credentialType</span><span class="sxs-lookup"><span data-stu-id="2eb21-117">credentialType</span></span>|<span data-ttu-id="2eb21-118">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="2eb21-118">Optional.</span></span> <span data-ttu-id="2eb21-119">Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="2eb21-119">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="2eb21-120">Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="2eb21-120">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
   
-## <a name="credentialtype-attribute"></a><span data-ttu-id="d5ec3-121">Атрибут credentialType</span><span class="sxs-lookup"><span data-stu-id="d5ec3-121">credentialType Attribute</span></span>  
+## <a name="credentialtype-attribute"></a><span data-ttu-id="2eb21-121">Атрибут credentialType</span><span class="sxs-lookup"><span data-stu-id="2eb21-121">credentialType Attribute</span></span>  
   
-|<span data-ttu-id="d5ec3-122">Значение</span><span class="sxs-lookup"><span data-stu-id="d5ec3-122">Value</span></span>|<span data-ttu-id="d5ec3-123">Описание</span><span class="sxs-lookup"><span data-stu-id="d5ec3-123">Description</span></span>|  
+|<span data-ttu-id="2eb21-122">Значение</span><span class="sxs-lookup"><span data-stu-id="2eb21-122">Value</span></span>|<span data-ttu-id="2eb21-123">Описание</span><span class="sxs-lookup"><span data-stu-id="2eb21-123">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="d5ec3-124">Сертификат</span><span class="sxs-lookup"><span data-stu-id="d5ec3-124">Certificate</span></span>|<span data-ttu-id="d5ec3-125">Для проверки подлинности однорангового транспорта канала необходим сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-125">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
-|<span data-ttu-id="d5ec3-126">Пароль</span><span class="sxs-lookup"><span data-stu-id="d5ec3-126">Password</span></span>|<span data-ttu-id="d5ec3-127">Для проверки подлинности однорангового транспорта канала необходим правильный пароль.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-127">Authentication of the peer channel transport requires a correct password.</span></span>|  
+|<span data-ttu-id="2eb21-124">Сертификат</span><span class="sxs-lookup"><span data-stu-id="2eb21-124">Certificate</span></span>|<span data-ttu-id="2eb21-125">Для проверки подлинности однорангового транспорта канала необходим сертификат X.509.</span><span class="sxs-lookup"><span data-stu-id="2eb21-125">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
+|<span data-ttu-id="2eb21-126">Пароль</span><span class="sxs-lookup"><span data-stu-id="2eb21-126">Password</span></span>|<span data-ttu-id="2eb21-127">Для проверки подлинности однорангового транспорта канала необходим правильный пароль.</span><span class="sxs-lookup"><span data-stu-id="2eb21-127">Authentication of the peer channel transport requires a correct password.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d5ec3-128">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="d5ec3-128">Child Elements</span></span>  
- <span data-ttu-id="d5ec3-129">Нет</span><span class="sxs-lookup"><span data-stu-id="d5ec3-129">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2eb21-128">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="2eb21-128">Child Elements</span></span>  
+ <span data-ttu-id="2eb21-129">Нет</span><span class="sxs-lookup"><span data-stu-id="2eb21-129">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d5ec3-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="d5ec3-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2eb21-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="2eb21-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="d5ec3-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="d5ec3-131">Element</span></span>|<span data-ttu-id="d5ec3-132">Описание:</span><span class="sxs-lookup"><span data-stu-id="d5ec3-132">Description</span></span>|  
+|<span data-ttu-id="2eb21-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="2eb21-131">Element</span></span>|<span data-ttu-id="2eb21-132">Описание:</span><span class="sxs-lookup"><span data-stu-id="2eb21-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d5ec3-133">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-133">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|<span data-ttu-id="d5ec3-134">Определяет параметры безопасности для однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-134">Defines the security settings for a peer transport.</span></span>|  
+|[<span data-ttu-id="2eb21-133">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="2eb21-133">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|<span data-ttu-id="2eb21-134">Определяет параметры безопасности для однорангового транспорта.</span><span class="sxs-lookup"><span data-stu-id="2eb21-134">Defines the security settings for a peer transport.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d5ec3-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="d5ec3-135">Remarks</span></span>  
- <span data-ttu-id="d5ec3-136">Этот элемент имеет значение только в том случае, если атрибуту режима [ \<безопасности >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) присваивается `Transport` или `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="d5ec3-136">This element is set only if the mode attribute of [\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) is set to `Transport` or `TransportWithMessageCredential`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2eb21-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="2eb21-135">Remarks</span></span>  
+ <span data-ttu-id="2eb21-136">Этот элемент имеет значение только в том случае, если атрибуту режима [ \<безопасности >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) присваивается `Transport` или `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="2eb21-136">This element is set only if the mode attribute of [\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) is set to `Transport` or `TransportWithMessageCredential`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5ec3-137">См. также</span><span class="sxs-lookup"><span data-stu-id="d5ec3-137">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
- <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="d5ec3-138">Безопасность транспорта</span><span class="sxs-lookup"><span data-stu-id="d5ec3-138">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [<span data-ttu-id="d5ec3-139">Транспорты</span><span class="sxs-lookup"><span data-stu-id="d5ec3-139">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [<span data-ttu-id="d5ec3-140">Выбор транспорта</span><span class="sxs-lookup"><span data-stu-id="d5ec3-140">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [<span data-ttu-id="d5ec3-141">Привязки</span><span class="sxs-lookup"><span data-stu-id="d5ec3-141">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="d5ec3-142">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="d5ec3-142">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="d5ec3-143">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="d5ec3-143">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="d5ec3-144">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="d5ec3-144">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="2eb21-137">См. также</span><span class="sxs-lookup"><span data-stu-id="2eb21-137">See also</span></span>
+- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
+- <xref:System.ServiceModel.PeerTransportSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [<span data-ttu-id="2eb21-138">Безопасность транспорта</span><span class="sxs-lookup"><span data-stu-id="2eb21-138">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [<span data-ttu-id="2eb21-139">Транспорты</span><span class="sxs-lookup"><span data-stu-id="2eb21-139">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [<span data-ttu-id="2eb21-140">Выбор транспорта</span><span class="sxs-lookup"><span data-stu-id="2eb21-140">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [<span data-ttu-id="2eb21-141">Привязки</span><span class="sxs-lookup"><span data-stu-id="2eb21-141">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="2eb21-142">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="2eb21-142">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="2eb21-143">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="2eb21-143">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="2eb21-144">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="2eb21-144">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

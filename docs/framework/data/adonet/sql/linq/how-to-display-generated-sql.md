@@ -1,24 +1,24 @@
 ---
-title: Практическое руководство. Отображение созданного SQL
+title: Как выполнить отобразить сформированный код SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: edc0f8fea2768391a47e12940cbe083e41852f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725692"
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="80c07-102">Практическое руководство. Отображение созданного SQL</span><span class="sxs-lookup"><span data-stu-id="80c07-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="80c07-103">Для просмотра кода SQL, созданного для запросов, и изменения обработки используется свойство <xref:System.Data.Linq.DataContext.Log%2A>.</span><span class="sxs-lookup"><span data-stu-id="80c07-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="80c07-104">Такой подход может оказаться полезным для получения основных сведений о функциях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и для отладки конкретных проблем.</span><span class="sxs-lookup"><span data-stu-id="80c07-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="04b1e-102">Как выполнить отобразить сформированный код SQL</span><span class="sxs-lookup"><span data-stu-id="04b1e-102">How to: Display Generated SQL</span></span>
+<span data-ttu-id="04b1e-103">Для просмотра кода SQL, созданного для запросов, и изменения обработки используется свойство <xref:System.Data.Linq.DataContext.Log%2A>.</span><span class="sxs-lookup"><span data-stu-id="04b1e-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="04b1e-104">Такой подход может оказаться полезным для получения основных сведений о функциях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и для отладки конкретных проблем.</span><span class="sxs-lookup"><span data-stu-id="04b1e-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="80c07-105">Пример</span><span class="sxs-lookup"><span data-stu-id="80c07-105">Example</span></span>  
- <span data-ttu-id="80c07-106">В следующем примере для отображения кода SQL в окне консоли перед его выполнением использовано свойство <xref:System.Data.Linq.DataContext.Log%2A>.</span><span class="sxs-lookup"><span data-stu-id="80c07-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="80c07-107">Это свойство можно применять с командами выполнения запросов, вставки, обновления и удаления.</span><span class="sxs-lookup"><span data-stu-id="80c07-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="04b1e-105">Пример</span><span class="sxs-lookup"><span data-stu-id="04b1e-105">Example</span></span>  
+ <span data-ttu-id="04b1e-106">В следующем примере для отображения кода SQL в окне консоли перед его выполнением использовано свойство <xref:System.Data.Linq.DataContext.Log%2A>.</span><span class="sxs-lookup"><span data-stu-id="04b1e-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="04b1e-107">Это свойство можно применять с командами выполнения запросов, вставки, обновления и удаления.</span><span class="sxs-lookup"><span data-stu-id="04b1e-107">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="80c07-108">Строки в окне консоли соответствуют результату при выполнении, следующий код Visual Basic или C#.</span><span class="sxs-lookup"><span data-stu-id="80c07-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
+ <span data-ttu-id="04b1e-108">Строки в окне консоли соответствуют результату выполнения Visual Basic или C# следующего кода.</span><span class="sxs-lookup"><span data-stu-id="04b1e-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,5 +42,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="80c07-109">См. также</span><span class="sxs-lookup"><span data-stu-id="80c07-109">See Also</span></span>  
- [<span data-ttu-id="80c07-110">Поддержка отладки</span><span class="sxs-lookup"><span data-stu-id="80c07-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="04b1e-109">См. также</span><span class="sxs-lookup"><span data-stu-id="04b1e-109">See also</span></span>
+- [<span data-ttu-id="04b1e-110">Поддержка отладки</span><span class="sxs-lookup"><span data-stu-id="04b1e-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
