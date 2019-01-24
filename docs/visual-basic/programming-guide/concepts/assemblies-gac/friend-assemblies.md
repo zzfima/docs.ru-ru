@@ -2,19 +2,19 @@
 title: Дружественные сборки (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579801"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Дружественные сборки (Visual Basic)
 Объект *дружественной сборки* — это сборка, можно получить доступ к другой сборке [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) типы и члены. Если сборка определяется как дружественная, помечать типы и члены как открытые для того, чтобы другие сборки могли получить к ним доступ, больше не требуется. Это особенно удобно в следующих ситуациях:  
   
--   Во время модульного тестирования, если тестовый код выполняется отдельной сборке, но требует доступ к членам в тестируемой сборке, которые помечены как `Friend`.  
+-   Во время модульного теста, если тестовый код выполняется отдельной сборке, но требует доступ к членам тестируемой сборки, которые помечены как `Friend`.  
   
--   Если вы разрабатываете библиотеку классов, и дополнения к библиотеке содержатся в отдельных сборках, но требуют доступа к членам в существующих сборках, которые помечены как `Friend`.  
+-   Если вы разрабатываете библиотеку классов и дополнения к этой библиотеке содержатся в отдельных сборках, но требуют доступа к членам в существующих сборках, которые помечены как `Friend`.  
   
 ## <a name="remarks"></a>Примечания  
  С помощью атрибута <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> можно определить одну или несколько дружественных сборок для указанной сборки. В следующем примере используется атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> в сборке A, а сборка `AssemblyB` указывается в качестве дружественной. В результате сборка `AssemblyB` получает доступ ко всем типам и членам в сборке А, помеченным как `Friend`.  
@@ -50,9 +50,9 @@ End Class
   
      Имя дружественной сборки, передаваемое в атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, не может быть строгим именем сборки *B*, поэтому включать в него версию сборки, язык и региональные параметры, архитектуру или маркер открытого ключа не следует.  
   
--   Если сборка *A* не имеет строгого имени, имя дружественной сборки должно состоять только из имени сборки. Дополнительные сведения см. в разделе [как: создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Если сборка *A* не имеет строгого имени, имя дружественной сборки должно состоять только из имени сборки. Дополнительные сведения см. в разделе [Как Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Если сборка *B* имеет строгое имя, необходимо указать ключ строгого имени для сборки *B*, используя параметр проекта или параметр компилятора командной строки `/keyfile`. Дополнительные сведения см. в разделе [как: создать подпись дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Если сборка *B* имеет строгое имя, необходимо указать ключ строгого имени для сборки *B*, используя параметр проекта или параметр компилятора командной строки `/keyfile`. Дополнительные сведения см. в разделе [Как Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
  Класс <xref:System.Security.Permissions.StrongNameIdentityPermission> также позволяет обеспечить общий доступ к типам, но имеет следующие отличия:  
   
@@ -62,12 +62,12 @@ End Class
   
 -   Если вы используете <xref:System.Security.Permissions.StrongNameIdentityPermission>, типы для общего доступа необходимо объявить как открытые. При использовании дружественной сборки общие типы объявляются как `Friend`.  
   
- Сведения о том, как обращаться к сборке `Friend` типы и методы из файла модуля (файл с расширением NETMODULE-файл), в разделе [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
+ Сведения о доступе к сборки `Friend` типы и методы из файла модуля (файл с расширением NETMODULE), см. в разделе [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Как: создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Как: Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>
+- [Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)

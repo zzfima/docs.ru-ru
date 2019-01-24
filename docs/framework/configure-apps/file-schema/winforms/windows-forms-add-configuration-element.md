@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507373"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms добавьте элемент конфигурации
 
@@ -42,7 +42,7 @@ ms.locfileid: "53155097"
 | Имя в `key` | Значения | Описание |
 | ---------- | ------ | ----------- |
 | «AnchorLayout.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить единый передать масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#Remarks) Дополнительные сведения. |
-| «DpiAwareness» | «PerMonitorV2»&#124;«false» | Указывает, является ли приложение поддерживает определение DPI. Ключ «PerMonitorV2» для поддержки поддержка DPI; в противном случае ему присвоено значение «false». Поддержка DPI является дополнительной функции; Чтобы воспользоваться преимуществами поддержка высокого Разрешения Windows Forms, необходимо задать его значение для «PerMonitorV2». См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
+| «DpiAwareness» | "PerMonitorV2"&#124;"false" | Указывает, является ли приложение поддерживает определение DPI. Ключ «PerMonitorV2» для поддержки поддержка DPI; в противном случае ему присвоено значение «false». Поддержка DPI является дополнительной функции; Чтобы воспользоваться преимуществами поддержка высокого Разрешения Windows Forms, необходимо задать его значение для «PerMonitorV2». См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
 | «CheckedListBox.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.CheckedListBox> элемент управления использует преимущества масштабирования и разметки улучшений, появившихся в .NET Framework 4.7. «true», чтобы отказаться от улучшения caling и макет; в противном случае — значение «false». |
 | «DataGridView.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.DataGridView> управления масштабирования и разметки усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от поддержки определения DPI; «false» в противном случае. |
 | «DisableDpiChangedMessageHandling» | «true»&#124;«false» | «true», чтобы отказаться от получения сообщений, связанных с точек на ДЮЙМ, масштабирование изменения; «false» в противном случае. См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
@@ -109,6 +109,6 @@ ms.locfileid: "53155097"
 Одной или несколькими pass Масштабирование влияет воспринимаемая пользователем скорость реагирования пользовательского интерфейса и внешний вид элементов пользовательского интерфейса, как они масштабируются. Начиная с .NET Framework 4.7, Windows Forms используется масштабирование один проход. В предыдущих версиях .NET Framework масштабирование было выполнено через несколько проходов, которые вызвала некоторые элементы управления масштабировать больше, чем была необходима. Масштабирование однократного прохода следует отключать только если приложение зависит от старого поведения.  
 
 ## <a name="see-also"></a>См. также
- 
-[Раздел конфигурации Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Поддержка высокого DPI в Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Раздел конфигурации Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Поддержка высокого DPI в Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

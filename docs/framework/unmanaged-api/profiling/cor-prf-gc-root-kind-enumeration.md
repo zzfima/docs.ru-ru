@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f5b12825c9a348cd16eed9f5be0f41e03c367c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd8c5e05d3f331d46b2d31f3f2448a674f090eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508630"
 ---
 # <a name="corprfgcrootkind-enumeration"></a>Перечисление COR_PRF_GC_ROOT_KIND
-Указывает вид корня сборки мусора, представленного [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) обратного вызова.  
+Указывает вид корня сборки мусора, предоставляемый [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) обратного вызова.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +39,21 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_STACK`|Корень — это переменная в стеке.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|Корнем является запись в очереди метода завершения.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|Корень — это запись в очередь метода завершения.|  
 |`COR_PRF_GC_ROOT_HANDLE`|Корнем является дескриптор сборки мусора.|  
 |`COR_PRF_GC_ROOT_OTHER`|Тип корня не определен.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571487"
 ---
 # <a name="assemblyoptions-enumeration"></a>Перечисление AssemblyOptions
 Перечисляет параметры сборки.  
@@ -64,19 +64,19 @@ typedef enum _AssemblyOptions {
 |optAssemOS|Строка - кодировке: «dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion».|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|Строка — содержит языковой стандарт сборки.|  
-|optAssemVersion|Строка - кодировке: «Основной_номер.дополнительный_номер.сборка.редакция».|  
+|optAssemVersion|Строка - кодировке: «Основная.дополнительная.сборка.редакция».|  
 |optAssemCompany|Строка — содержит компании.|  
 |optAssemProduct|Строка — содержит имя продукта.|  
 |optAssemProductVersion|Строка (также известный как InformationalVersion).|  
 |optAssemCopyright|Строка — содержит сведения об авторских правах.|  
 |optAssemTrademark|Строка — содержит сведения о товарном знаке.|  
-|optAssemKeyFile|Строка (имя файла).|  
+|optAssemKeyFile|String (имя файла).|  
 |optAssemKeyName|Строка (имя ключа).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Значение типа bool (также называется DelaySign).|  
-|optAssemFileVersion|Строка - кодируется как «Основной_номер.дополнительный_номер.сборка.редакция» — то же, что ProductVersion.|  
-|optAssemSatelliteVer|Строка - кодируется как «Основной_номер.дополнительный_номер.сборка.редакция».|  
+|optAssemHalfSign|Bool (также известен как DelaySign).|  
+|optAssemFileVersion|Строка - кодируется как «Основная.дополнительная.сборка.редакция»--так же, как ProductVersion.|  
+|optAssemSatelliteVer|Строка - кодируется как «Основная.дополнительная.сборка.редакция».|  
 |optLastAssemOption|Счетчик числа элементов.|  
   
 ## <a name="requirements"></a>Требования  
@@ -84,5 +84,5 @@ typedef enum _AssemblyOptions {
   
  **Библиотека**: alink.dll  
   
-## <a name="see-also"></a>См. также  
- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>См. также
+- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

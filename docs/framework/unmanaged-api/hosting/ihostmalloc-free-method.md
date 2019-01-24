@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8bd7b16f06433970d1222dbeaa843e187715faa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 719c963d1627250da5f3705af9801dc287e1bb19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507256"
 ---
 # <a name="ihostmallocfree-method"></a>Метод IHostMAlloc::Free
 Освобождает память, выделенную с помощью [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) функции.  
@@ -37,7 +37,7 @@ HRESULT Free (
   
 #### <a name="parameters"></a>Параметры  
  `pMem`  
- [in] Указатель на область памяти, освобождаемой.  
+ [in] Указатель на область памяти, который требуется освободить.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -47,22 +47,22 @@ HRESULT Free (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|Была предпринята попытка освободить память, выделенная не через узел.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|Для освобождения памяти, который не был выделен через узел была предпринята.|  
   
 ## <a name="remarks"></a>Примечания  
  Если `pMem` параметр ссылается на область памяти, который не был выделен с помощью вызова `Alloc`, основное приложение должно возвратить значение HOST_E_INVALIDOPERATION.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [Интерфейс IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [Интерфейс IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

@@ -2,12 +2,12 @@
 title: Настройка службы совместного использования портов Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585527"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Настройка службы совместного использования портов Net.TCP
 Резидентные службы, использующие транспорт Net.TCP, могут управлять несколькими дополнительными параметрами, такими как `ListenBacklog` и `MaxPendingAccepts`, которые, в свою очередь, управляют поведением базового сокета TCP, используемого для сетевого взаимодействия. Однако эти параметры для каждого сокета применяются только на уровне привязки, если в привязке транспорта отключено совместное использование портов (по умолчанию совместное использование включено).  
@@ -61,5 +61,5 @@ ms.locfileid: "54029363"
 > [!WARNING]
 >  В файле SMSvcHost.exe.config по умолчанию задается пользовательское значение `etwProviderId`, чтобы трассировка SMSvcHost.exe не вмешивалась в работу трассировок служб.  
   
-## <a name="see-also"></a>См. также  
- [\<NET.TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+## <a name="see-also"></a>См. также
+- [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568898"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>Метод ICorDebugRegisterSet::GetRegisters
-Получает значение каждого регистра (на компьютере, который в данный момент выполняется код), который указан битовой маской.  
+Получает значение каждого из регистров (на компьютере, на который в данный момент выполняется код), который указан битовой маской.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,28 +40,28 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Параметры  
  `mask`  
- [in] Битовая маска, указывающая регистра, какие значения должны быть получены. Каждый бит соответствует регистру. Если бит присваивается одно, извлекается значение регистра; в противном случае — значение регистра не извлекается.  
+ [in] Битовую маску, которая указывает, зарегистрируйтесь, какие значения должны быть получены. Каждый бит соответствует регистру. Если немного присваивается одно, извлекается значение регистра; в противном случае значение регистра не извлекается.  
   
  `regCount`  
- [in] Количество значений регистра требуется получить.  
+ [in] Количество значений регистров требуется получить.  
   
  `regBuffer`  
  [out] Массив `CORDB_REGISTER` объектов, каждый из которых получает значение регистра.  
   
 ## <a name="remarks"></a>Примечания  
- Размер массива должно быть равно числу битов, значение в битовой маске. `regCount` Указывает количество элементов в буфере, которые будут получать значения регистра. Если `regCount` значение слишком мало для количества регистров, указанного маской, регистры с более будут отброшены из набора. Если `regCount` значение слишком велико, неиспользуемые `regBuffer` элементы будут изменены.  
+ Размер массива должно быть равно числу битов на один в битовой маске. `regCount` Параметр указывает число элементов в буфер для получения значений регистров. Если `regCount` значение слишком мал для числа регистрами, указанными в маске, регистры с более будет усечено из набора. Если `regCount` значение слишком велико, неиспользуемые `regBuffer` элементы будут изменены.  
   
- Если битовая маска указывает недоступный регистр, `GetRegisters` возвращает неопределенное значение для данного регистра.  
+ Если битовая маска указывает регистр, который недоступен, `GetRegisters` возвращает неопределенное значение для этого регистра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

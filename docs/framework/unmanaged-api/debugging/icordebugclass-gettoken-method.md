@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f67bd427c83385b2433b9f2e97f0b54e3b29a76f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582322"
 ---
 # <a name="icordebugclassgettoken-method"></a>Метод ICorDebugClass::GetToken
-Возвращает `TypeDef` токен метаданных, который ссылается на определение этого класса.  
+Получает `TypeDef` токен метаданных, который ссылается на определение этого класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT GetToken (
  [out] Указатель на `mdTypeDef` маркер, который ссылается на определение этого класса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

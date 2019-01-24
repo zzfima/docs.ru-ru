@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление элемента управления в на панель, представленную компонентом ToolStripContentPanel
+title: Как выполнить Руководство Добавление элемента управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: fc907eb078044ae06e0da19e38a4bbff28192346
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 646451be26e8e6e833b9b204aee722aa3e8a5666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584666"
 ---
-# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Практическое руководство. Добавление элемента управления в на панель, представленную компонентом ToolStripContentPanel
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Как выполнить Руководство Добавление элемента управления
 Можно программно добавить один или несколько элементов для <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="example"></a>Пример  
@@ -28,10 +28,10 @@ ms.locfileid: "43516168"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) или [Диалоговое окно задач ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) или [диалоговое окно задач ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolStripContentPanel>  
- <xref:System.Windows.Forms.ToolStripContainer>  
- [Элемент управления ToolStripContainer](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolStripContentPanel>
+- <xref:System.Windows.Forms.ToolStripContainer>
+- [Элемент управления ToolStripContainer](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)
+- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

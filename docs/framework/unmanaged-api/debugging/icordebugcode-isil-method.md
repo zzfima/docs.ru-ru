@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccebe01c853677f7c78731e757ef7a5f090d6919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496170"
 ---
 # <a name="icordebugcodeisil-method"></a>Метод ICorDebugCode::IsIL
-Возвращает значение, указывающее, является ли «ICorDebugCode» представляет код, который был скомпилирован в промежуточный язык Майкрософт (MSIL).  
+Получает значение, указывающее, представляет ли этот «ICorDebugCode» код, который был скомпилирован в промежуточный язык Майкрософт (MSIL).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT IsIL (
   
 #### <a name="parameters"></a>Параметры  
  `pbIL`  
- [out] `true` при этом `ICorDebugCode` представляет собой код, скомпилированные в MSIL; в противном случае — `false`.  
+ [out] `true` Если `ICorDebugCode` представляет код, скомпилированные в MSIL; в противном случае — значение `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

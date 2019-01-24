@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582384"
 ---
 # <a name="corassemblyflags-enumeration"></a>Перечисление CorAssemblyFlags
 Содержит значения, которые описывают метаданные, применяемые к компиляции сборки.  
@@ -57,33 +57,33 @@ typedef enum CorAssemblyFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`afPublicKey`|Указывает, что ссылка содержит полный, не хэшированный открытый ключ.|  
-|`afPA_None`|Указывает, что архитектура процессора не задана.|  
-|`afPA_MSIL`|Указывает, что архитектура процессора нейтральный (PE32).|  
-|`afPA_x86`|Указывает, что архитектура процессора — x86 (PE32).|  
+|`afPublicKey`|Указывает, что ссылки на сборку содержит полный, не хэшированный открытый ключ.|  
+|`afPA_None`|Указывает, что архитектура процессора не определен.|  
+|`afPA_MSIL`|Указывает, что архитектура процессора является нейтральный (PE32).|  
+|`afPA_x86`|Указывает архитектуру процессора x86 (PE32).|  
 |`afPA_IA64`|Указывает архитектуру процессора Itanium (PE32 +).|  
-|`afPA_AMD64`|Указывает, что архитектура процессора — AMD X64 (PE32 +).|  
+|`afPA_AMD64`|Указывает архитектуру процессора AMD X64 (PE32 +).|  
 |`afPA_ARM`|Указывает архитектуру процессора ARM (PE32).|  
-|`afPA_NoPlatform`|Указывает, что сборка является ссылочной сборкой; Это значит относится к любой архитектуры, но не может работать на любой архитектуры. Таким образом, флаг совпадает со значением `afPA_Mask`.|  
-|`afPA_Specified`|Указывает, что флаги архитектуры процессора должны распространяться на `AssemblyRef` запись.|  
-|`afPA_Mask`|Маска, описывающая архитектуру процессора.|  
+|`afPA_NoPlatform`|Указывает, что сборка является ссылочной сборки; то есть применяется к любой архитектуры, но не могут работать на компьютерах с любой архитектурой. Таким образом, флаг совпадает со значением `afPA_Mask`.|  
+|`afPA_Specified`|Указывает, что флаги архитектуры процессора должны распространяться на `AssemblyRef` записи.|  
+|`afPA_Mask`|Маска, которая описывает архитектуру процессора.|  
 |`afPA_FullMask`|Указывает, что включено описание архитектуры процессора.|  
 |`afPA_Shift`|Указывает число смещений во флагах архитектуры процессора и из индекса.|  
 |`afEnableJITcompileTracking`|Указывает, соответствующее значение в <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> из <xref:System.Diagnostics.DebuggableAttribute>.|  
 |`afDisableJITcompileOptimizer`|Указывает, соответствующее значение в <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> из <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Указывает, что сборки могут быть перенаправлены во время выполнения на сборку из другого издателя.|  
+|`afRetargetable`|Указывает, что сборка может быть перенацелена во время выполнения на сборку от другого издателя.|  
 |`afContentType_Mask`|Маска, которая описывает тип содержимого.|  
 |`afContentType_Default`|Указывает тип содержимого по умолчанию.|  
 |`afContentType_WindowsRuntime`|Указывает [!INCLUDE[wrt](../../../../includes/wrt-md.md)] тип содержимого.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

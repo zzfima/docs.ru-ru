@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c16cf910546dcbe0a19efa13b552ffd4d9b6411
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580975"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Параметры компилятора Visual Basic, перечисленных в алфавитном порядке
 Компилятор командной строки Visual Basic служит альтернативой программам компиляции в среде разработки Visual Studio (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированный в алфавитном порядке.  
@@ -25,7 +25,7 @@ ms.locfileid: "50197305"
 |`-analyzer`|Запускает анализаторы из этой сборки (краткая форма: -a)|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Задает базовый адрес библиотеки DLL.|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.|  
-|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
+|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения:: SHA1 (по умолчанию) или SHA256.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Создает отладочную информацию.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Определяет символы условной компиляции.|  
@@ -80,8 +80,8 @@ ms.locfileid: "50197305"
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Внедряет ресурс Win32 в выходной файл.|  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора Visual Basic по категориям](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [Знакомство с конструктором проектов](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>См. также
+- [Параметры компилятора Visual Basic по категориям](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+- [Знакомство с конструктором проектов](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)
+- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)

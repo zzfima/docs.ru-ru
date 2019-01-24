@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574876"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>Метод ICorDebugModule::IsInMemory
 Получает значение, указывающее, существует ли этот модуль только в памяти.  
@@ -40,17 +40,17 @@ HRESULT IsInMemory(
  [out] `true` Если этот модуль существует только в памяти; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
- Общеязыковая среда выполнения (CLR) поддерживает загрузку модулей из необработанных потоков байтов. Такие модули называются *модули в памяти* и не существуют на диске.  
+ Среда CLR (CLR) поддерживает загрузку модулей из необработанных потоков байтов. Такие модули называются *модули в памяти* и не существуют на диске.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
-    
- 
+## <a name="see-also"></a>См. также
+
+

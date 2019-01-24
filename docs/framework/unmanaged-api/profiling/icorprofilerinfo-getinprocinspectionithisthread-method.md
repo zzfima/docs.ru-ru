@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d603d9bc7a343a41224cf8d889a69823875d9db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513156"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>Метод ICorProfilerInfo::GetInprocInspectionIThisThread
-Возвращает объект, который может запрашиваться для ICorDebugThread-интерфейс. Этот метод является устаревшим в .NET Framework версии 2.0.  
+Получает объект, который можно запросить для ICorDebugThread-интерфейс. Этот метод является устаревшим в .NET Framework версии 2.0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,19 +36,19 @@ HRESULT GetInprocInspectionIThisThread(
   
 #### <a name="parameters"></a>Параметры  
  `ppicd`  
- [out](/cpp/atl/iunknown) объекта, который может запрашиваться для `ICorDebugThread` интерфейса.  
+ [out](/cpp/atl/iunknown) объект, который можно запросить для `ICorDebugThread` интерфейс.  
   
 ## <a name="remarks"></a>Примечания  
- Общеязыковой среды выполнения (CLR), службами отладки поддерживается только в процессе отладки в .NET Framework версии 1.0. Внутрипроцессная отладка позволяла профилировщику использовать проверочную API отладки. В результате отзывов клиентов внутрипроцессная отладка были удалены из .NET Framework версии 2.0 и заменена набором функциональных возможностей, которые лучше подходят для API профилирования.  
+ Общеязыковой среды выполнения (CLR), службы отладки поддерживается только в процессе отладки в .NET Framework версии 1.0. В процессе отладки включить профилировщик для использования для проверки часть API отладки. В результате отзывов в процессе отладки удален из .NET Framework версии 2.0 и заменены набором функциональных возможностей, которые лучше соответствуют API профилирования.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версия платформы .NET framework:** 1.0  
+ **Версии платформы .NET framework:** 1.0  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

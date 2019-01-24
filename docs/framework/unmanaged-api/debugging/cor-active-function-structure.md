@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502056"
 ---
 # <a name="coractivefunction-structure"></a>Структура COR_ACTIVE_FUNCTION
 Содержит сведения о функциях, которые в данный момент активны в кадрах потока. Эта структура используется [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) метод.  
@@ -42,21 +42,21 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pAppDomain`|Указатель на владельца домена приложений `ilOffset` поля.|  
+|`pAppDomain`|Указатель на владельца домена приложения `ilOffset` поля.|  
 |`pModule`|Указатель на владельца модуля `ilOffset` поля.|  
 |`pFunction`|Указатель на владельца функции `ilOffset` поля.|  
 |`ilOffset`|Смещение промежуточного языка MSIL Microsoft кадра.|  
 |`flags`|Зарезервировано для будущего расширения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl  
+ **Заголовок.** CorDebug.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

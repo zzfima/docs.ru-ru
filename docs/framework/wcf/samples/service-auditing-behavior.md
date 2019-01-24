@@ -2,15 +2,15 @@
 title: Поведение аудита службы
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: ae190be48a20af5c108e56c6b0fd7965e39f8b66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574954"
 ---
 # <a name="service-auditing-behavior"></a>Поведение аудита службы
-Этот образец демонстрирует, как использовать <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> для включения аудита событий безопасности во время выполнения операций службы. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Служба и клиент были настроены с помощью [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ему было присвоено `Message` и `clientCredentialType` ему было присвоено `Windows`. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
+Этот образец демонстрирует, как использовать <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> для включения аудита событий безопасности во время выполнения операций службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Служба и клиент настроены с использованием [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) было присвоено `Message` и `clientCredentialType` было присвоено `Windows`. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -34,9 +34,9 @@ ms.locfileid: "33504310"
   
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне консоли.  
   
- Получающиеся журналы аудита можно просматривать в программе Просмотр событий. По умолчанию в Windows XP события аудита отображаются в журнале приложений, а в операционных системах Windows Server 2003 и Windows Vista события аудита можно просмотреть в журнале безопасности. В Windows Server 2008 и Windows 7 события аудита можно увидеть в журналах приложений и служб. Местоположение событий аудита можно указать, задав `auditLogLocation` атрибут «Приложение» или «Безопасность». Дополнительные сведения см. в разделе [как: события аудита безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Если события записываются в журнал безопасности, то для Success и Failure необходимо выбрать параметр LocalSecurityPolicy-> Enable Object Access.  
+ Получающиеся журналы аудита можно просматривать в программе Просмотр событий. По умолчанию в Windows XP события аудита отображаются в журнале приложений, а в операционных системах Windows Server 2003 и Windows Vista события аудита можно просмотреть в журнале безопасности. В Windows Server 2008 и Windows 7 события аудита можно увидеть в журналах приложений и служб. Местоположение событий аудита можно задать, присвоив `auditLogLocation` атрибут «Приложение» или «Безопасность». Дополнительные сведения см. в разделе [Как Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Если события записываются в журнал безопасности, то для Success и Failure необходимо выбрать параметр LocalSecurityPolicy-> Enable Object Access.  
   
- При просмотре журнала событий источником событий аудита является "ServiceModel Audit 3.0.0.0". Записи аудита проверки подлинности сообщений имеют категории «Messageauthentication», а записи аудита авторизации служб к категории «ServiceAuthorization».  
+ При просмотре журнала событий источником событий аудита является "ServiceModel Audit 3.0.0.0". Записи аудита проверки подлинности сообщений имеют категории «MessageAuthentication», а записи аудита авторизации служб категории «ServiceAuthorization».  
   
  События аудита проверки подлинности сообщений указывают, не было ли сообщение подделано, не истек ли срок его действия, а также может ли клиент пройти проверку подлинности при подключении к службе. Они предоставляют следующие сведения: результат проверки подлинности, идентификационные данные клиента и конечной точки, в которую было отправлено сообщение, а также действие, связанное с сообщением.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "33504310"
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>См. также  
- [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+## <a name="see-also"></a>См. также
+- [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

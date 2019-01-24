@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585228"
 ---
 # <a name="getassemblyrefhash-method"></a>Метод GetAssemblyRefHash
-Извлекает хэш-blob для данной сборки.  
+Извлекает большой двоичный объект хэша для данной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ HRESULT GetAssemblyRefHash(
   
 #### <a name="parameters"></a>Параметры  
  `FileToken`  
- Идентификатор сборки, на который будет ссылаться хэш.  
+ Идентификатор сборки, в которую будет ссылаться хэш.  
   
  `ppvHash`  
- Получает результирующее хэш-blob.  
+ Получает результирующее большого двоичного объекта хэша.  
   
  `pcbHash`  
- Получает размер в байтах хэш-blob.  
+ Получает размер в байтах, большого двоичного объекта хэша.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

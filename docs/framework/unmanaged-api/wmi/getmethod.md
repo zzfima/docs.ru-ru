@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5a405c5e245558e6b8d1b389bfc143faae4550a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577598"
 ---
 # <a name="getmethod-function"></a>Функция GetMethod
 Получает сведения об указанном методе.
@@ -65,7 +65,7 @@ HRESULT GetMethod (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найден. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
@@ -82,9 +82,9 @@ HRESULT GetMethod (
 ## <a name="requirements"></a>Требования  
 **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

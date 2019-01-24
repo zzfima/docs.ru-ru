@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d1d767de88b239c96cb98130b6ff006e3f75b09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495036"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Интерфейс ICLRMetadataLocator
 Используемый уровнем служб доступа к данным для определения местонахождения метаданных сборок в целевом процессе.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Метод GetMetadata](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Извлекает метаданные образа из целевого процесса.|  
+|[Метод GetMetadata](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Извлекает метаданные изображения из целевого процесса.|  
   
 ## <a name="remarks"></a>Примечания  
  Клиент API (то есть отладчик) должен реализовывать этот интерфейс для определенного целевого процесса по мере необходимости. Например реализация активного процесса будет отличаться от дампа памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **.** **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.** **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

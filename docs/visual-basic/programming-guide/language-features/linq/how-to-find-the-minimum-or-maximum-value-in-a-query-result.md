@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
+title: Как выполнить Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514274"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Как выполнить Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов.  
   
  В следующем примере показано, как создать новое приложение, которое выполняет запросы к базе данных SQL Server. В примере определяются минимальное и максимальное значения для результатов с помощью `Aggregate` и `Group By` предложения. Дополнительные сведения см. в разделе [предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
@@ -76,8 +76,8 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
-## <a name="see-also"></a>См. также  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>См. также
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Запросы](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -2,17 +2,17 @@
 title: '&lt;message&gt; для &lt;wsDualHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 4aec0bf3c88bcbb634c1b6ab44cbb0bcdf2f24e5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cdba592f5d85e6475921692deebda574a2a3f601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509653"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;message&gt; для &lt;wsDualHttpBinding&gt;
 Определяет безопасность уровня сообщений для [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 \<wsDualHttpBinding >  
 \<Привязка >  
@@ -78,17 +78,17 @@ ms.locfileid: "54147516"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Определяет возможности безопасности [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
- <xref:System.ServiceModel.MessageSecurityOverHttp>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>
+- <xref:System.ServiceModel.MessageSecurityOverHttp>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

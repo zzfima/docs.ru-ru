@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570883"
 ---
 # <a name="prebindassemblyex-function"></a>Функция PreBindAssemblyEx
 Возвращает после применения политики отображаемое имя сборки.  
@@ -46,16 +46,16 @@ HRESULT PreBindAssemblyEx (
  [in] Определяет контекст приложения.  
   
  `pName`  
- [in] Указывает имя сборки.  
+ [in] Обозначает имя сборки.  
   
  `pAsmParent`  
- [in] Идентификатор родительской сборки. Этот параметр не учитывается.  
+ [in] Идентифицирует родительской сборки. Этот параметр не учитывается.  
   
  `pwzRuntimeVersion`  
  [in] Определяет версию среды выполнения.  
   
  `ppNamePostPolicy`  
- [out] Содержит имя отображения после применения политики.  
+ [out] Содержит имя отображаемое после применения политики.  
   
  `pvReserved`  
  [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
@@ -64,13 +64,13 @@ HRESULT PreBindAssemblyEx (
  `ppNamePostPolicy` Выходной параметр имеет значение только в том случае, если функция возвращает значение HRESULT FUSION_E_REF_DEF_MISMATCH. В противном случае — значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Fusion.h  
+ **Заголовок.** Fusion.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

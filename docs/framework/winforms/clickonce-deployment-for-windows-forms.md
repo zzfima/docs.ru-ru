@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582110"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Развертывание ClickOnce для форм Windows Forms
 В приведенных ниже разделах описывается технология [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], предназначенная для простого развертывания приложений Windows Forms на клиентских компьютерах.  
@@ -38,16 +38,16 @@ ms.locfileid: "44192045"
  [ClickOnce и технология Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Описывается использование технологии Authenticode при развертывании надежных приложений.  
   
- [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Демонстрируется применение командной строки и средств SDK для развертывания приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] без использования Visual Studio.  
   
- [Инструкции: добавление надежного издателя на клиентский компьютер для приложений ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Практическое руководство. Добавление надежного издателя на клиентский компьютер для приложений ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Демонстрируется однократная настройка клиентских компьютеров, необходимая для развертывания надежных приложений.  
   
  [Практическое руководство. Задание альтернативного местоположения для обновлений развертывания](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Демонстрируется настройка приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] с помощью средств SDK с целью проверки другого расположения на предмет наличия новых версий приложения.  
   
- [Пошаговое руководство. Загрузка сборок по требованию с помощью API развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [Пошаговое руководство: Загрузка сборок по требованию с помощью API развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Демонстрируется использование вызовов API для получения сборки при первой попытке приложения загрузить ее.  
   
  [Практическое руководство. Извлечение сведений строки запроса в интернет-приложении ClickOnce](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
@@ -62,10 +62,10 @@ ms.locfileid: "44192045"
  [Практическое руководство. Включение файла данных в приложение ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Демонстрируется, как пометить файл так, чтобы он был доступен в каталоге данных [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)  
- [Построение ClickOnce-приложений из командной строки](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [Отладка ClickOnce-приложений, использующих System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [Развертывание компонентов COM с помощью ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>См. также
+- [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
+- [Построение ClickOnce-приложений из командной строки](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [Отладка ClickOnce-приложений, использующих System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Развертывание компонентов COM с помощью ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

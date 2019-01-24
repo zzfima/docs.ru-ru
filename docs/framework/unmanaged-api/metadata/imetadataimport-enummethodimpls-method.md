@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574772"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Метод IMetaDataImport::EnumMethodImpls
 Перечисляет токены MethodBody и MethodDeclaration, представляющие методы указанного типа.  
@@ -45,13 +45,13 @@ HRESULT EnumMethodImpls (
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
  `td`  
- [in] TypeDef для типа токена которого реализации метода для перечисления.  
+ [in] TypeDef для типа маркера, реализации метода для перечисления.  
   
  `rMethodBody`  
  [out] Массив для хранения токены MethodBody.  
   
  `rMethodDecl`  
- [out] Массив для хранения токенов Объявление_метода.  
+ [out] Массив для хранения токенов MethodDeclaration.  
   
  `cMax`  
  [in] Максимальный размер `rMethodBody` и `rMethodDecl` массивов.  
@@ -67,14 +67,14 @@ HRESULT EnumMethodImpls (
 |`S_FALSE`|Существуют маркеры нет метода для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

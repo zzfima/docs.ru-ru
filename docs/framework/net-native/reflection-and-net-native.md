@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 351748d0b27fa6ffc2368aacddc6c7aca290cddb
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507230"
 ---
 # <a name="reflection-and-net-native"></a>Отражение и машинный код .NET
 В платформа.NET Framework управляемая разработка поддерживает метапрограммирование через интерфейс API отражения. Отражение позволяет проверять объекты в приложении, вызывать методы для объектов, обнаруженные в результате проверки, создавать новые типы во время выполнения и поддерживает множество других сценариев динамического кода. Оно также поддерживает сериализацию и десериализацию, позволяющую сохранять значения полей объекта и восстанавливать их позже. Все эти сценарии требуют использования JIT-компилятора платформы .NET Framework для генерации машинного кода на основе имеющихся метаданных.  
@@ -33,6 +33,6 @@ ms.locfileid: "49323114"
   
 -   [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>См. также  
- [Компиляция приложений с помощью машинного кода .NET](../../../docs/framework/net-native/index.md)  
- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
+## <a name="see-also"></a>См. также
+- [Компиляция приложений с помощью машинного кода .NET](../../../docs/framework/net-native/index.md)
+- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Задание учетных данных безопасности канала
+title: Как выполнить Задание учетных данных безопасности канала
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: f4c2977fe5bc819ff7e9b7a8030b2c2e20b71429
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495205"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
+# <a name="how-to-specify-channel-security-credentials"></a>Как выполнить Задание учетных данных безопасности канала
 Моникер служб Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинство служб WCF потребовать от клиента указать учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF, можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
@@ -137,9 +137,9 @@ ms.locfileid: "50201469"
   
      Дополнительные сведения о параметрах для этого метода см. в разделе <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
-## <a name="see-also"></a>См. также  
- [Федерация](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a>См. также
+- [Федерация](../../../../docs/framework/wcf/feature-details/federation.md)
+- [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

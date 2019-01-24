@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514755"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities обеспечивает поддержку LINQ при запросах к сущностям. Компонент позволяет разработчикам писать запросы к концептуальной модели Entity Framework на языке Visual Basic или Visual C#. Запросы к платформе Entity Framework представляются в виде дерева команд запроса, выполняемого на контексте объектов. Технология LINQ to Entities преобразует запросы Language-Integrated Queries (LINQ) в запросы в виде дерева команд, выполняет эти запросы на платформе Entity Framework и возвращает объекты, которые могут использоваться как платформой Entity Framework, так и технологией LINQ. Далее описывается процесс создания и исполнения запроса в технологии LINQ to Entities.  
@@ -88,8 +88,8 @@ LINQ to Entities обеспечивает поддержку LINQ при зап�
   
  [Рекомендации и известные проблемы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации и известные проблемы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ и ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>См. также
+- [Рекомендации и известные проблемы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ и ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

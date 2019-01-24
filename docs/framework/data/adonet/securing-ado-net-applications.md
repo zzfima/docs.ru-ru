@@ -2,12 +2,12 @@
 title: Защита приложений ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585371"
 ---
 # <a name="securing-adonet-applications"></a>Защита приложений ADO.NET
 При написании безопасного приложения ADO.NET следует не просто избегать обычных проблем кодирования, таких как отсутствие проверки входных данных пользователя. В приложении, в котором выполняется обращение к данным, много потенциально уязвимых мест, которые атакующий может использовать для получения конфиденциальных данных, манипулирования ими или их уничтожения. Поэтому важно понимать все аспекты безопасности, от моделирования угроз на этапе проектирования приложения до развертывания и текущего обслуживания.  
@@ -51,6 +51,6 @@ ms.locfileid: "43526973"
  [Библиография по вопросам безопасности](/visualstudio/ide/security-bibliography)  
  Предоставляет ссылки на внешние ресурсы, доступные в Интернете и в печатной форме.  
   
-## <a name="see-also"></a>См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

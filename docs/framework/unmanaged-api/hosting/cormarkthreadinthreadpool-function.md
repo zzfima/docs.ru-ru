@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b395bc4d199738b309be74868243b61f924878c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1e0f79304c4ed0d052bb05e364f64d6cb524f21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495244"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>Функция CorMarkThreadInThreadPool
-Помечает текущий выполняемый поток из пула потоков для выполнения управляемого кода. Начиная с .NET Framework версии 2.0, эта функция не делает ничего. Он не является обязательным и может быть удален из кода. Эта функция устарела в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+Помечает текущий выполняемый поток пула потоков для выполнения управляемого кода. Начиная с .NET Framework версии 2.0, эта функция не оказывает влияния. Он не является обязательным и может быть удалена из кода. Эта функция является устаревшей в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,13 +33,13 @@ void CorMarkThreadInThreadPool ();
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

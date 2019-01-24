@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580997"
 ---
 # <a name="corlaunchapplication-function"></a>Функция CorLaunchApplication
 Запускает приложение по указанному сетевому пути, используя заданные манифесты и другие данные приложения.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,31 +48,31 @@ HRESULT CorLaunchApplication (
  [in] Значение [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) перечисление, указывающее тип узла, которое запускает приложение.  
   
  `pwzAppFullName`  
- [in] Полное имя запускаемое приложение.  
+ [in] Полное имя приложения, запускаемый.  
   
  `dwManifestPaths`  
  [in] Количество путей манифестов для приложения.  
   
  `ppwzManifestPaths`  
- [in] Массив строк, каждый из которых задает путь к манифесту приложения, которое запускается.  
+ [in] Массив строк, каждый из которых указывает путь к манифесту приложения, запускаемый.  
   
  `dwActivationData`  
- [in] Число элементов данных активации для приложения, в которой запускается.  
+ [in] Число элементов данных активации для приложения, запускаемый.  
   
  `ppwzActivationData`  
- [in] Массив строк, каждый из которых является активации элемента данных для приложения, в которой запускается.  
+ [in] Массив строк, каждый из которых представляет элемент данных активации для приложения, запускаемый.  
   
  `lpProcessInformation`  
- [out] Указатель на сведения о процессе, в котором был загружен приложения.  
+ [out] Указатель на сведения о процессе, в котором было загружено приложение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

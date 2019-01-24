@@ -2,12 +2,12 @@
 title: Проблемы безопасности и полезные советы при трассировке
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580399"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Проблемы безопасности и полезные советы при трассировке
 В этом разделе описываются способы защиты конфиденциальных сведений от раскрытия, а также приводятся полезные советы по использованию WebHost.  
@@ -90,5 +90,5 @@ ms.locfileid: "50184850"
   
  Кроме того, IP-адрес отправителя сообщения регистрируется при каждом подключении в случае транспорта, ориентированного на подключения, а в остальных случаях - при каждом сообщении. Это делается без согласия отправителя. Впрочем, эта регистрация выполняется только на уровнях трассировки «Данные» и «Подробно», которые не используются по умолчанию и не рекомендуются для использования в производственной среде, за исключением отладки.  
   
-## <a name="see-also"></a>См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>См. также
+- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

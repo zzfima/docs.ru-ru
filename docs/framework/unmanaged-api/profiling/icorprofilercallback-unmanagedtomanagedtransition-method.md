@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6bd0c9796fa2c5d8eff8dfb9d3fa3f707ce4761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 421b729468cad365c48bccdae3b31132dd1ed894
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496027"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>Метод ICorProfilerCallback::UnmanagedToManagedTransition
-Уведомляет профилировщик о переход от неуправляемого кода в управляемый код.  
+Уведомляет профилировщик о переход из неуправляемого кода в управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +40,24 @@ HRESULT UnmanagedToManagedTransition(
  [in] Идентификатор функции, которая вызывается.  
   
  `reason`  
- [in] Значение [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) перечисления, которое указывает, произошло из-за вызова управляемого кода из неуправляемого кода или из-за возврат из неуправляемой функции, вызываемой управляемыми перехода.  
+ [in] Значение [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) перечисление, указывающее, произошла ли переход из-за вызова управляемого кода из неуправляемого кода или из-за возврат из неуправляемой функции, вызываемой управляемыми.  
   
 ## <a name="remarks"></a>Примечания  
- Если значение `reason` — COR_PRF_TRANSITION_RETURN и `functionId` не равно NULL, функция ID будет соответствовать неуправляемой функции и никогда не будет выполняться компиляция с помощью время JIT-компилятора. Неуправляемые функции имеют некоторые основные сведения, связанные с ними, такие как имя и некоторые метаданные.  
+ Если значение `reason` является COR_PRF_TRANSITION_RETURN и `functionId` не равно NULL, функция идентификатор является то, что неуправляемой функции и никогда не будет выполняться компиляция с помощью компилятора just-in-time (JIT). Неуправляемые функции имеют некоторые основные сведения, связанные с ними, такие как имя и некоторые метаданные.  
   
- Если значение `reason` является COR_PRF_TRANSITION_CALL, возможно, вызываемой функции (то есть, управляемую функцию) еще не JIT-компиляции.  
+ Если значение `reason` является COR_PRF_TRANSITION_CALL, может оказаться, что вызываемая функция (то есть управляемую функцию) еще не JIT-компиляции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Метод ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)  
- [Использование явного вызова Pinvoke в C++ (атрибут DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)  
- [Использование взаимодействия языка C++ (неявный PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Метод ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
+- [Использование явного вызова Pinvoke в C++ (атрибут DllImport)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [Использование взаимодействия языка C++ (неявный PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)

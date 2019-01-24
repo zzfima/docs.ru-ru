@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5232a01d877484591df63afc68f672327d4b9d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569707"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
 Помощник отладки управляемого кода `disconnectedContext` (MDA) активируется, когда среда CLR пытается перейти в отключенное подразделение или контекст во время обслуживания запроса, связанного с COM-объектом.  
@@ -46,7 +46,7 @@ ms.locfileid: "33386253"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

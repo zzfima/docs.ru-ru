@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516191"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Метод IMetaDataEmit::TranslateSigWithScope
-Импортирует сборку в текущую область и получает новую подпись метаданных для объединяемой области.  
+Импортирует сборки в текущей области и возвращает новую подпись метаданных для объединенных области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,50 +47,50 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>Параметры  
  `pAssemImport`  
- [in] Интерфейс для сборки импорта (в котором определен подпись).  
+ [in] Интерфейс для импорта сборки (в котором определен подпись).  
   
  `pbHashValue`  
- [in] Хэш-blob для сборки.  
+ [in] Большой двоичный объект хэша для сборки.  
   
  `cbHashValue`  
  [in] Число байт в `pbHashValue`.  
   
  `import`  
- [in] Интерфейс для импорта области метаданных.  
+ [in] Интерфейс для области импорта метаданных.  
   
  `pbSigBlob`  
  [in] Сигнатура для импорта.  
   
  `cbSigBlob`  
- [in] Размер в байтах для `pbSigBlob`.  
+ [in] Размер в байтах из `pbSigBlob`.  
   
  `pAssemEmit`  
  [in] Интерфейс для экспорта сборки.  
   
  `emit`  
- [in] Интерфейс для экспорта области метаданных.  
+ [in] Интерфейс для области экспорта метаданных.  
   
  `pvTranslatedSig`  
- [out] Буфер для хранения BLOB-объекта переведенные подписи.  
+ [out] Буфер для хранения больших двоичных объектов переведенные подписи.  
   
  `cbTranslatedSigMax`  
- [in] Размер в байтах для `pvTranslatedSig`.  
+ [in] Емкость, в байтах из `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] Число фактические байты в сигнатуре преобразованием.  
+ [out] Число фактические байты в переведенные подписи.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

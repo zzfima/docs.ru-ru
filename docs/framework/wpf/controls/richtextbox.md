@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508648"
 ---
 # <a name="richtextbox"></a>RichTextBox
-<xref:System.Windows.Controls.RichTextBox> Элемент определяет элемент управления редактирования со встроенной поддержкой возможностей, например вырезания и вставки, форматированного документа и выделение содержимого.  
+<xref:System.Windows.Controls.RichTextBox> Элемент определяет элемент управления редактирования со встроенной поддержкой для функции, такие как вырезать и вставить, форматированного документа и Выбор содержимого.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.TextBox>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.TextBox>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

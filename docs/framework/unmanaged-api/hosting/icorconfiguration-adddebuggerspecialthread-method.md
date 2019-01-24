@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b940c0dbe9462dda513e933b7360ff55a9b447
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca33c8eb5e214cdaaa49905c311fd62042285d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569297"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>Метод ICorConfiguration::AddDebuggerSpecialThread
-Указывает службы отладки, в определенном потоке, что следует разрешить продолжить выполнение при завершении работы приложения во время отладки сценариев управляемого или неуправляемого отладчика.  
+Указывает службы отладки, что определенным потоком должны продолжить выполнение при завершении работы приложения во время сценариев отладки управляемого или неуправляемого отладчика.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,16 +40,16 @@ HRESULT AddDebuggerSpecialThread (
  [in] Идентификатор потока, должны продолжать выполнение.  
   
 ## <a name="remarks"></a>Примечания  
- Указанный поток не может выполнить управляемый код или вход в среду выполнения каким-либо образом. Примером такого потока может служить поток в процессе, для поддержки сценариев прежних версий отладчики.  
+ Указанный поток не разрешено выполнять управляемый код, или введите среды выполнения любым способом. Примером такой поток будет поток в процессе, для поддержки сценариев прежних версий отладчики.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

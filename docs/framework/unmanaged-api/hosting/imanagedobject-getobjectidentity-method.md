@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586316"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Метод IManagedObject::GetObjectIdentity
-Возвращает идентификатор этого управляемого объекта.  
+Получает идентификатор данного управляемого объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,25 +39,25 @@ HRESULT GetObjectIdentity (
   
 #### <a name="parameters"></a>Параметры  
  `pBSTRGUID`  
- [out] Указатель на идентификатор GUID процесса, в которой находится объект.  
+ [out] Указатель на идентификатор GUID процесса, в котором размещен объект.  
   
  `AppDomainID`  
- [out] Указатель на идентификатор объекта в домене приложения.  
+ [out] Указатель на идентификатор объекта домена приложения.  
   
  `pCCW`  
  [out] Указатель на индекс объекта в классической виртуальной таблице COM.  
   
 ## <a name="remarks"></a>Примечания  
- Идентификация управляемого объекта включает GUID процесса, идентификатор домена приложения и индексу объекта в классической виртуальной таблице COM.  
+ Идентификатор управляемого объекта включает GUID процесса, идентификатор домена приложения и индексу объекта в классической виртуальной таблице COM.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IManagedObject](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IManagedObject](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

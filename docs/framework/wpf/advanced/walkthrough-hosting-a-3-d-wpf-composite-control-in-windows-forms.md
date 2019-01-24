@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms
+title: Пошаговое руководство. Размещение составного элемента управления WPF, трехмерного в Windows Forms
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: d84fe4314a162b4ed5d7d710964882dec85e8524
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4c5001e671db9d615f3bcbc0a35b7b36b45bb01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506866"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms
+# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF, трехмерного в Windows Forms
 
 В этом пошаговом руководстве показано, как создать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления и его размещения в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления и форм с помощью <xref:System.Windows.Forms.Integration.ElementHost> элемента управления.
 
@@ -51,7 +51,7 @@ ms.locfileid: "43501915"
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>Создание ведущего проекта
 
-1.  Добавить **приложение WPF (.NET Framework)** проект с именем `WpfUserControlHost` в решение. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Добавить **приложение WPF (.NET Framework)** проект с именем `WpfUserControlHost` в решение. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
 2.  В **обозревателе решений**, добавьте ссылку на сборку WindowsFormsIntegration с именем WindowsFormsIntegration.dll.
 
@@ -90,6 +90,6 @@ ms.locfileid: "43501915"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Размещение составного элемента управления WPF в примере Windows Forms](https://go.microsoft.com/fwlink/?LinkID=160001)

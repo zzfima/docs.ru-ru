@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24efa08e9c4b2e242af95112b7f055e9173aaa7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7693111427f3181adcd2127ad5ecb2a317e30921
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515619"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>Метод ICorDebugManagedCallback::CreateProcess
-Уведомляет отладчик о присоединенного процесс или работы в первый раз.  
+Уведомляет отладчик присоединен процесс или запускается в первый раз.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +37,19 @@ HRESULT CreateProcess (
   
 #### <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, который представляет процесс, который подключен или запущен.  
+ [in] Указатель на объект ICorDebugProcess, представляющий процесс, которые присоединены и к работе.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод не вызывается, пока не будет инициализирован общеязыковая среда выполнения. Большинство [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) методы возвращают CORDBG_E_NOTREADY перед `CreateProcess` обратного вызова.  
+ Этот метод не вызывается до инициализации среда CLR. Большая часть [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) методы возвращают CORDBG_E_NOTREADY перед `CreateProcess` обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

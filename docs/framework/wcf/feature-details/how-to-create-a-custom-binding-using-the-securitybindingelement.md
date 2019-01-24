@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576165"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Как выполнить Создание пользовательской привязки с использованием элемента SecurityBindingElement
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -99,17 +99,17 @@ Windows Communication Foundation (WCF) включает в себя нескол
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  Следующий пример кода представляет собой полноценную функцию для создания пользовательской привязки с использованием класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Код  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)

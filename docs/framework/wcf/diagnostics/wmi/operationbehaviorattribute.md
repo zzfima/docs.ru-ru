@@ -2,12 +2,12 @@
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 6266713307846ab953299370835726958196fac1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0bf59e6064748a045f761777a2f8f3e88f1cb5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504331"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
@@ -34,35 +34,35 @@ class OperationBehaviorAttribute : Behavior
 ### <a name="autodisposeparameters"></a>AutoDisposeParameters  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
- Состояние функции автоматического удаления для параметров.  
+ Состояние возможности автоматического удаления для параметров.  
   
 ### <a name="impersonation"></a>Олицетворение  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Указывает уровень олицетворения вызывающей стороны, который поддерживает операция.  
   
 ### <a name="releaseinstancemode"></a>ReleaseInstanceMode  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Указывает, когда удалять объект в процессе вызова операции.  
   
 ### <a name="transactionautocomplete"></a>TransactionAutoComplete  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Указывает, следует ли автоматически фиксировать текущую транзакцию при отсутствии необработанных исключений.  
   
 ### <a name="transactionscoperequired"></a>TransactionScopeRequired  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Указывает, требует ли операция транзакции.  
   
@@ -72,5 +72,5 @@ class OperationBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.OperationBehaviorAttribute>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.OperationBehaviorAttribute>

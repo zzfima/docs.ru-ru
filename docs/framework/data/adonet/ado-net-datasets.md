@@ -2,12 +2,12 @@
 title: Наборы данных ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569431"
 ---
 # <a name="adonet-datasets"></a>Наборы данных ADO.NET
 Объект <xref:System.Data.DataSet> является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **Набора данных** является оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. **Набора данных** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. На следующем рисунке показано **набора данных** объектной модели.  
@@ -45,8 +45,8 @@ ms.locfileid: "44178355"
   
  Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

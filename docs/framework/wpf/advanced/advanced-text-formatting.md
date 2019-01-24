@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577413"
 ---
 # <a name="advanced-text-formatting"></a>Дополнительное форматирование текста
 Windows Presentation Foundation (WPF) предоставляет набор надежных [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] для включения текста в приложении. Макет и [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], такие как <xref:System.Windows.Controls.TextBlock>, обеспечивают наиболее распространенные и общие использовать элементы для представления текста. Рисование [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], такие как <xref:System.Windows.Media.GlyphRunDrawing> и <xref:System.Windows.Media.FormattedText>, предоставляют средства для включения форматированного текста в рисунки. На наиболее продвинутом уровне [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет расширяемый механизм форматирования текста для управления каждым аспектом представления текста: управление хранением текста, исполнением форматирования текста и внедренными объектами.  
@@ -94,6 +94,6 @@ Windows Presentation Foundation (WPF) предоставляет набор на
 ## <a name="specifying-formatting-properties"></a>Задание свойств форматирования  
  <xref:System.Windows.Media.TextFormatting.TextRun> объекты форматируются с помощью свойств, предоставляемых хранилищем текста. Эти свойства бывают двух типов <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> обрабатывать все свойства абзаца, например <xref:System.Windows.TextAlignment> и <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> — Это свойства, которые могут быть разными для каждого текста в абзаце, например кисть переднего плана, <xref:System.Windows.Media.Typeface>и размер шрифта. Для реализации пользовательских абзацев и текст, типов свойств, приложение должно создавать классы, производные от <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties> соответственно.  
   
-## <a name="see-also"></a>См. также  
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>См. также
+- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

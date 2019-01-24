@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2b3ce24a967a4c8a15facb3f0a5dbdc0243a06ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515944"
 ---
 # <a name="guidelines-and-best-practices"></a>Правила и рекомендации
 Этот раздел содержит разделы, в которых приведены указания по созданию приложений Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Рекомендации. Управление версиями контракта данных](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Советы и рекомендации: Управление версиями контракта данных](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Рассматривается, как и когда создавать контракты данных, которые не будут нарушены при создании новых версий.  
   
  [Управление версиями служб](../../../docs/framework/wcf/service-versioning.md)  
@@ -44,8 +44,8 @@ ms.locfileid: "48850445"
   
  [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>См. также  
- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Примеры Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)  
- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>См. также
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Примеры Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)
+- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)

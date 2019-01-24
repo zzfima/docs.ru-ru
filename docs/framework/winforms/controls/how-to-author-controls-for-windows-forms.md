@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание элементов управления для форм Windows Forms
+title: Как выполнить Автор элементы управления для форм Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844e38fc62fc9fb04a723c1a4a8ad834e957c8ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579528"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Создание элементов управления для форм Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Как выполнить Автор элементы управления для форм Windows Forms
 Элемент управления выполняет роль визуальной связи между пользователем и программой. Он может предоставлять или обрабатывать данные, принимать входные данные пользователя, реагировать на события или выполнять любые другие функции, устанавливающие связь между пользователем и приложением. Поскольку элемент управления — это по сути компонент с графическим интерфейсом, он может выполнять любую функцию компонента и в то же время обеспечивать взаимодействие с пользователем. Элементы управления создаются для конкретных целей, и процесс их создания входит в процесс программирования. Ниже описан процесс создания элемента управления с учетом всего вышесказанного. Ссылки указывают на дополнительные сведения об отдельных этапах.  
   
 > [!NOTE]
@@ -41,9 +41,9 @@ ms.locfileid: "44178316"
   
 5.  Если для элемента управления необходима пользовательская отрисовка, добавьте соответствующий код. Дополнительные сведения см. в разделе [Рисование и отрисовка пользовательского элемента управления](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
   
-6.  Если элемент управления наследуется из <xref:System.Windows.Forms.UserControl>, можно проверить его поведение во время выполнения, построение проекта элемента управления и запустив его в **тестового контейнера UserControl**. Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+6.  Если элемент управления наследуется из <xref:System.Windows.Forms.UserControl>, можно проверить его поведение во время выполнения, построение проекта элемента управления и запустив его в **тестового контейнера UserControl**. Дополнительные сведения см. в разделе [Как Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-7.  Кроме того, для тестирования и отладки элемента управления можно создать новый проект, например приложение Windows, и поместив его в контейнер. Этот процесс демонстрируется в разделе [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).  
+7.  Кроме того, для тестирования и отладки элемента управления можно создать новый проект, например приложение Windows, и поместив его в контейнер. Этот процесс описан в составе [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).  
   
 8.  При добавлении каждой функции добавляйте ее в тестовый проект для реализации новых функциональных возможностей.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "44178316"
   
 10. Упакуйте и разверните элемент управления. Дополнительные сведения см. в разделе [Развертывание приложений, служб и компонентов](https://msdn.microsoft.com/library/wtzawcsz).  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Практическое руководство. Наследование класса UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Практическое руководство. Наследование класса Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Практическое руководство. Наследование существующих элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>См. также
+- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Практическое руководство. Наследование класса UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
+- [Практическое руководство. Наследовать от класса Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование Windows существующих элементов управления формы](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

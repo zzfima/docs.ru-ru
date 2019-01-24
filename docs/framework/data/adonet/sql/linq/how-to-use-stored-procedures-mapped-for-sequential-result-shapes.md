@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Использование хранимых процедур, сопоставленных для последовательных форм результатов
+title: Как выполнить использовать хранимые процедуры, сопоставленные с последовательными результирующими формами
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
-ms.openlocfilehash: ade123f10e1c9ffd6d042b45599cc6e352614e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296870029d2329640466b3a540e9057738173aa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495660"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Практическое руководство. Использование хранимых процедур, сопоставленных для последовательных форм результатов
-Этот тип хранимых процедур может создавать несколько результирующих форм, но всегда известно, в каком порядке возвращаются результаты. Этот сценарий противоположен сценарию, в котором порядок возвращения результатов не известен. Дополнительные сведения см. в разделе [как: используйте хранимые процедуры, сопоставленные с несколькими формами результатов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Как выполнить использовать хранимые процедуры, сопоставленные с последовательными результирующими формами
+Этот тип хранимых процедур может создавать несколько результирующих форм, но всегда известно, в каком порядке возвращаются результаты. Этот сценарий противоположен сценарию, в котором порядок возвращения результатов не известен. Дополнительные сведения см. в разделе [Как Использовать хранимые процедуры, сопоставленные с несколькими результирующими формами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
   
 ## <a name="example"></a>Пример  
  Ниже представлен код T-SQL для хранимой процедуры, которая последовательно возвращает несколько результирующих наборов.  
@@ -34,5 +34,5 @@ select * from customers
  [!code-csharp[DLinqSprox#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#7)]
  [!code-vb[DLinqSprox#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#7)]  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>См. также
+- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

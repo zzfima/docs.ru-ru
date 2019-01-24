@@ -2,17 +2,17 @@
 title: '&lt;security&gt; для &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 12477c36c2771621e5f8b88ce245746c6f5ec120
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 966dcba7c70419cfb7ca62016b4ee1d24df29827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502030"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; для &lt;webHttpBinding&gt;
 Задает требования к безопасности для конечной точки, настроенной с [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 \<webHttpBinding >  
 \<Привязка >  
@@ -61,20 +61,20 @@ ms.locfileid: "54145410"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Элемент привязки, который используется для настройки конечных точек для Windows Communication Foundation (WCF) веб-служб, которые отвечают на запросы HTTP вместо сообщений SOAP.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.WebHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.WebHttpSecurity>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [Модель веб-программирования HTTP WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.WebHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.WebHttpSecurity>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Модель веб-программирования HTTP WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

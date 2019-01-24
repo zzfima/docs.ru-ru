@@ -10,12 +10,12 @@ helpviewer_keywords:
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: KrzysztofCwalina
-ms.openlocfilehash: ae188fc7cd55dd843e93afccbe1ea05575a9c36d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572686"
 ---
 # <a name="equality-operators"></a>Операторы равенства
 В этом разделе обсуждаются перегрузка операторов равенства и ссылается на `operator==` и `operator!=` как операторы равенства.  
@@ -50,5 +50,5 @@ ms.locfileid: "53129081"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила использования](../../../docs/standard/design-guidelines/usage-guidelines.md)

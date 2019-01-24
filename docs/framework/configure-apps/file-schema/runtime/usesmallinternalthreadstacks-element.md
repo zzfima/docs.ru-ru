@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ed128cc2ddec3c599932cd5a82364d1cf6642cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505241"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; элемент
 Запросы, что сокращает общеязыковой среды выполнения (CLR) используют путем указания явных размеров стека при создании определенных потоков, используемых для внутренних целей, вместо размер стека по умолчанию для этих потоков.  
@@ -72,6 +72,6 @@ ms.locfileid: "53613795"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>См. также
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -2,12 +2,12 @@
 title: Объекты DataAdapter и DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583513"
 ---
 # <a name="dataadapters-and-datareaders"></a>Объекты DataAdapter и DataReader
 Можно использовать ADO.NET **DataReader** для получения только для чтения однопроходный поток данных из базы данных. Результаты возвращаются после выполнения запроса и хранятся в сетевом буфере на клиенте, пока не запрошены с помощью **чтения** метод **DataReader**. С помощью **DataReader** позволяет увеличить производительность приложения как путем получения данных, как только он доступен, так и (по умолчанию) хранится только одна строка в памяти, уменьшая нагрузку на системные ресурсы одновременно.  
@@ -44,9 +44,9 @@ ms.locfileid: "43516781"
  [Выполнение пакетных операций с использованием объектов DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Показывает, как повысить производительность приложения путем уменьшения количества циклов обмена данными с SQL Server в ходе применения обновлений из `DataSet`.  
   
-## <a name="see-also"></a>См. также  
- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

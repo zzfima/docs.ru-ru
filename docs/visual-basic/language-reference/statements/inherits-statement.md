@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502902"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Вызывает текущий класс или интерфейс для наследования атрибутов, переменных, свойства, процедуры и события из другого класса или набора интерфейсов.  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Термин|Определение|  
 |---|---|  
-|`basetypenames`|Обязательно. Имя класса, из которого происходит данный класс.<br /><br /> - или -<br /><br /> Имена интерфейсов, от которых наследует этот интерфейс. Используйте запятые для разделения нескольких имен.|  
+|`basetypenames`|Обязательный. Имя класса, из которого происходит данный класс.<br /><br /> - или -<br /><br /> Имена интерфейсов, от которых наследует этот интерфейс. Используйте запятые для разделения нескольких имен.|  
   
 ## <a name="remarks"></a>Примечания  
  При использовании `Inherits` инструкция должна быть первой непустой строкой, не являющихся комментариями строки в определении класса или интерфейса. Он должен следовать непосредственно за `Class` или `Interface` инструкции.  
@@ -63,9 +63,9 @@ Inherits basetypenames
   
  Интерфейс, с именем `thisInterface` теперь включает все определения в <xref:System.IComparable>, <xref:System.IDisposable>, и <xref:System.IFormattable> интерфейсы, наследуемые члены предоставляют соответственно для сравнения двух объектов освобождения выделенных ресурсов и выражения значение объекта как `String`. Класс, реализующий `thisInterface` должен реализовать каждый член каждого базового интерфейса.  
   
-## <a name="see-also"></a>См. также  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>См. также
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

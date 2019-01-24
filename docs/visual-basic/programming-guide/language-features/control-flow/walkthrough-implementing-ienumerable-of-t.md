@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499764"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Пошаговое руководство. Реализация IEnumerable(Of T) в Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Интерфейс реализуется классами, которые могут возвращать последовательность значений по одному элементу за раз. Преимущество возвращения данных одного элемента за раз в том, что не нужно загрузить полный набор данных в памяти для работы с ним. Необходимо использовать достаточно памяти для загрузки одного элемента из данных. Классы, реализующие `IEnumerable(T)` интерфейс можно использовать с `For Each` циклы или запросов LINQ.  
@@ -93,8 +93,8 @@ ms.locfileid: "48837002"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Оператор For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>См. также
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Оператор For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

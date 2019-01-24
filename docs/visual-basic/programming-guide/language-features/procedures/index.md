@@ -2,21 +2,15 @@
 title: Процедуры в Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-- procedures [Visual Basic], structured code
-- Visual Basic code, procedures
-- procedures [Visual Basic], types of
-- structured code [Visual Basic], procedures
-- procedures
+  - 'procedures [Visual Basic], structured code'
+  - 'Visual Basic code, procedures'
+  - 'procedures [Visual Basic], types of'
+  - 'structured code [Visual Basic], procedures'
+  - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655141"
 ---
 # <a name="procedures-in-visual-basic"></a>Процедуры в Visual Basic
-Объект *процедура* — это блок операторов Visual Basic, заключенным в операторе объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующим `End` объявления. Все исполняемые операторы в Visual Basic должен быть в пределах некоторой процедуры.  
+Объект *процедуры* представляет собой блок операторов Visual Basic, заключенным в операторе объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующий `End` объявления. Все исполняемые операторы в Visual Basic должны находиться в пределах некоторой процедуры.  
   
 ## <a name="calling-a-procedure"></a>Вызов процедуры  
  Процедура вызывается из другого места в коде. Это называется *вызовом процедуры*. После завершения процедуры она возвращает управление в код, из которого она была вызвана (*вызывающий код*). Вызывающий код — это оператор или выражение в составе оператора, в которых указывается имя процедуры и передается управление процедуре.  
@@ -61,14 +55,14 @@ ms.locfileid: "33655141"
   
 -   После разработки процедур для использования в одной программе их можно использовать в других программах без изменений или с небольшими изменениями. Это помогает избежать дублирования кода.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Создание процедуры](./how-to-create-a-procedure.md)  
- [Подпрограммы](./sub-procedures.md)  
- [Процедуры функций](./function-procedures.md)  
- [Процедуры свойств](./property-procedures.md)  
- [Процедуры операторов](./operator-procedures.md)  
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
- [Рекурсивные процедуры](./recursive-procedures.md)  
- [Перегрузка процедур](./procedure-overloading.md)  
- [Универсальные процедуры в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Создание процедуры](./how-to-create-a-procedure.md)
+- [Подпрограммы](./sub-procedures.md)
+- [Процедуры функций](./function-procedures.md)
+- [Процедуры свойств](./property-procedures.md)
+- [Процедуры операторов](./operator-procedures.md)
+- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
+- [Рекурсивные процедуры](./recursive-procedures.md)
+- [Перегрузка процедур](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

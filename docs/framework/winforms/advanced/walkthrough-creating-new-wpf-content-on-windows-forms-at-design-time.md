@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки
+title: Пошаговое руководство. Создание нового содержимого WPF в формах Windows Forms во время разработки
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500503"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF в формах Windows Forms во время разработки
 
 В этом разделе показано, как создать элемент управления Windows Presentation Foundation (WPF) для использования в приложениях на основе Windows Forms.
 
@@ -61,7 +61,7 @@ ms.locfileid: "45653281"
 
     - Файл UserControl1.xaml открывается в [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [как: Выбор и перемещение элементов в рабочей области конструирования](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. Убедитесь в том, что элемент `UserControl1` выбран в конструкторе. Дополнительные сведения см. в разделе [Как Выберите и перемещать элементы в области конструктора](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства **200**.
 
@@ -102,11 +102,11 @@ ms.locfileid: "45653281"
 
 Windows Forms и WPF — это разные технологии, но они предназначены для тесного взаимодействия. Чтобы обеспечить богатый внешний вид и поведение в приложениях, попробуйте сделайте следующее:
 
-- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элемента управления Windows Forms в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Практическое руководство. Включение визуальных стилей в гибридном приложении](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Задание стиля содержимого WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Применение стилей к содержимому WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>См. также
 

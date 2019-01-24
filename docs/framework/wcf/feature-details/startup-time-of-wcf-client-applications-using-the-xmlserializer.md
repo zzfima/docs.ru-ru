@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
+title: Как выполнить Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: 6f61c57998cfc21b66f278a1a2381407ec2c39ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503136"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Как выполнить Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer
 Службы и клиентские приложения, использующие типы данных, сериализуемые с помощью сериализатора <xref:System.Xml.Serialization.XmlSerializer>, создают и компилируют код сериализации для этих типов данных во время выполнения, что может привести к снижению производительности при запуске.  
   
 > [!NOTE]
 >  Предварительно созданный код сериализации может использоваться только в клиентских приложениях, но не в службах.  
   
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) может повысить производительность при запуске этих приложений путем создания кода необходимости сериализации из компилированных сборок для приложения. Svcutil.exe создает код сериализации для всех типов данных, используемых в контрактах служб в скомпилированной сборке приложения, которые могут быть сериализованы с помощью <xref:System.Xml.Serialization.XmlSerializer>. Контракты служб и операций, предусматривающие использование <xref:System.Xml.Serialization.XmlSerializer>, отмечены атрибутом <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) может повысить производительность при запуске этих приложений путем создания необходимого кода сериализации из компилированных сборок для приложения. Svcutil.exe создает код сериализации для всех типов данных, используемых в контрактах служб в скомпилированной сборке приложения, которые могут быть сериализованы с помощью <xref:System.Xml.Serialization.XmlSerializer>. Контракты служб и операций, предусматривающие использование <xref:System.Xml.Serialization.XmlSerializer>, отмечены атрибутом <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>Создание кода сериализации XmlSerializer  
   
@@ -43,15 +43,15 @@ ms.locfileid: "33500133"
   
     3.  Скомпилируйте созданный код сериализации в сборку приложения и добавьте атрибут <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> в контракт службы, в котором используется атрибут <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Не задавайте свойства <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> или <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A>. По умолчанию предполагается, что сборка сериализации по умолчанию является текущей сборкой.  
   
-### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Создание кода сериализации XmlSerializer в Visual Studio  
+### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Для создания кода сериализации XmlSerializer в Visual Studio  
   
-1.  Создание службы WCF и клиентских проектов в Visual Studio. Затем добавьте ссылку на службу в проект клиента.  
+1.  Создайте службу WCF и клиентские проекты в Visual Studio. Затем добавьте ссылку на службу в клиентский проект.  
   
-2.  Добавить <xref:System.ServiceModel.XmlSerializerFormatAttribute> в контракт службы в *reference.cs* файл в проект клиентского приложения в разделе **serviceReference** -> **reference.svcmap** . Обратите внимание, что необходимо показать все файлы в **обозревателе решений** для просмотра этих файлов.  
+2.  Добавить <xref:System.ServiceModel.XmlSerializerFormatAttribute> к контракту службы в *reference.cs* файл в проекте клиентского приложения в разделе **serviceReference** -> **reference.svcmap** . Обратите внимание на то, что вам нужно показать все файлы в **обозревателе решений** для просмотра этих файлов.  
   
 3.  Построение клиентского приложения.  
   
-4.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания предварительного сериализатора *.cs* файла с помощью команды:  
+4.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания предварительного сериализатора *.cs* файл с помощью команды:  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -67,17 +67,17 @@ ms.locfileid: "33500133"
   
      *WCFClient.XmlSerializers.dll.cs* будет создан файл.  
   
-5.  Компилировать предварительно созданную сборку сериализации.  
+5.  Скомпилируйте предварительно созданную сборку сериализации.  
   
-     Основываясь на примере на предыдущем шаге, компиляции команда будет выглядеть следующим образом:  
+     На основе образца на предыдущем шаге, компиляции команда будет выглядеть следующим образом:  
   
     ```  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
-     Убедитесь в том, созданный *WCFClient.XmlSerializers.dll* находится в каталоге, где клиентские приложения, который является *WCFClient.exe* в этом случае.  
+     Убедитесь в том, созданный *WCFClient.XmlSerializers.dll* находится в каталоге клиентского приложения, который является *WCFClient.exe* в данном случае.  
   
-6.  Запустите клиентское приложение обычным образом. Будет использоваться предварительно созданную сборку сериализации.  
+6.  Запустите клиентское приложение обычным образом. Предварительно созданной сборки сериализации будут использоваться.  
   
 ## <a name="example"></a>Пример  
  Следующая команда создает типы сериализации для типов `XmlSerializer`, используемых любыми контрактами служб в сборке.  
@@ -86,5 +86,5 @@ ms.locfileid: "33500133"
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>См. также
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c346a9b77d49cde007310a2beb13bed3b1f30d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501776"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Общие сведения об элементе управления Panel (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.Panel> элементы управления используются для предоставления возможность группировки других элементов управления. Как правило панели используются для разделения формы по функциям. Например имеется формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров на панели предоставляет пользователю логическую визуальную подсказку. В режиме разработки все элементы управления можно легко переместить — при перемещении <xref:System.Windows.Forms.Panel> управления, все содержащиеся в нем элементы перемещаются также. Элементы управления, сгруппированные на панели можно получить с помощью его <xref:System.Windows.Forms.Control.Controls%2A> свойство. Это свойство возвращает коллекцию <xref:System.Windows.Forms.Control> получить экземпляры, поэтому обычно необходимо привести элемент управления таким образом, чтобы его определенного типа.  
+Windows Forms <xref:System.Windows.Forms.Panel> элементы управления используются для предоставления возможность идентифицируемой группировки других элементов управления. Как правило панели используются для разделения формы функцией. Например возможно с формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров панели предоставляет пользователю логическую визуальную подсказку. В режиме разработки все элементы управления можно легко переместить — при перемещении <xref:System.Windows.Forms.Panel> контролируете, все его вложенные элементы управления. Элементы управления, сгруппированные на панели можно получить с помощью его <xref:System.Windows.Forms.Control.Controls%2A> свойство. Это свойство возвращает коллекцию <xref:System.Windows.Forms.Control> экземпляров, поэтому обычно необходимо будет привести элемент управления полученный таким образом, для ее определенного типа.  
   
 ## <a name="panel-versus-groupbox"></a>Панель и GroupBox  
- <xref:System.Windows.Forms.Panel> Управления аналогичен <xref:System.Windows.Forms.GroupBox> управления; Однако только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки и только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок.  
+ <xref:System.Windows.Forms.Panel> Управления аналогичен <xref:System.Windows.Forms.GroupBox> управления; тем не менее, только <xref:System.Windows.Forms.Panel> элемент управления может иметь полосы прокрутки и только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок.  
   
-## <a name="key-properties"></a>Основные свойства  
- Для отображения полос прокрутки, задайте <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> свойства `true`. Также можно настроить внешний вид панели с помощью <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, и <xref:System.Windows.Forms.Panel.BorderStyle%2A> свойства. Дополнительные сведения о <xref:System.Windows.Forms.Control.BackColor%2A> и <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойствах см. [как: Установка фона панели](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md). <xref:System.Windows.Forms.Panel.BorderStyle%2A> Свойство определяет, если описанные без видимой границы панели (<xref:System.Windows.Forms.BorderStyle.None>), простой линии (<xref:System.Windows.Forms.BorderStyle.FixedSingle>), или затемненных строки (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
+## <a name="key-properties"></a>Ключевые свойства  
+ Чтобы отобразить полосы прокрутки, задайте <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> свойства `true`. Также можно настроить внешний вид панели, задав <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, и <xref:System.Windows.Forms.Panel.BorderStyle%2A> свойства. Дополнительные сведения о <xref:System.Windows.Forms.Control.BackColor%2A> и <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойства, см. в разделе [как: Меняем цвет фона панели](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md). <xref:System.Windows.Forms.Panel.BorderStyle%2A> Свойство определяет, если панели описан с видимая граница отсутствует (<xref:System.Windows.Forms.BorderStyle.None>), простой линии (<xref:System.Windows.Forms.BorderStyle.FixedSingle>), или строку замещенных (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Panel>  
- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- [Практическое руководство. Группирование элементов управления с элементом управления Panel в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
- [Практическое руководство. Установка фона панели формы Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Panel>
+- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [Практическое руководство. Группа элементов управления с помощью панели управления Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)
+- [Практическое руководство. Меняем цвет фона панели формы Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

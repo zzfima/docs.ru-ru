@@ -2,12 +2,12 @@
 title: Ошибки смешанного декларативного и императивного кода (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-ms.openlocfilehash: 797866514a2f290a98d1a75e92f850e96d28dabd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 99987339ecfcf621bb1e21a6a5eed5df47a9d82d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513150"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Смешанные ошибки декларативного и императивного кода (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Этот интерфейс программирования описывается в [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
@@ -176,5 +176,5 @@ Dim newRoot As XElement = New XElement("Root", _
 Console.WriteLine(newRoot)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>См. также
+- [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

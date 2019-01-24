@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Использование хранимых процедур, сопоставленных для нескольких форм результатов
+title: Как выполнить использовать хранимые процедуры, сопоставленные с несколькими результирующими формами
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 03a003bd5b09ae19b01dcc9880137661ba6fccae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573677"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Практическое руководство. Использование хранимых процедур, сопоставленных для нескольких форм результатов
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Как выполнить использовать хранимые процедуры, сопоставленные с несколькими результирующими формами
 Если хранимая процедура возвращает несколько результирующих форм, тип возвращаемого значения не может быть строго типизированным в соответствии с отдельной формой проекции. Несмотря на то что [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно создать все возможные типы проекций, не известен порядок, в котором они будут возвращены.  
   
- Этот сценарий противоположен сценарию использования хранимых процедур, которые последовательно возвращают несколько результирующих форм. Дополнительные сведения см. в разделе [как: использование хранимых процедур, сопоставленных для последовательных форм результатов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
+ Этот сценарий противоположен сценарию использования хранимых процедур, которые последовательно возвращают несколько результирующих форм. Дополнительные сведения см. в разделе [Как Использовать хранимые процедуры, сопоставленные с последовательными результирующими формами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
   
  Чтобы указать набор типов, которые могут возвращать хранимые процедуры, возвращающие несколько типов результатов, к этим процедурам применяется атрибут <xref:System.Data.Linq.Mapping.ResultTypeAttribute>.  
   
@@ -43,5 +43,5 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>См. также
+- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

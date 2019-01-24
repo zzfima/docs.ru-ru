@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Очистка привязок
+title: Как выполнить Очистка привязок
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: f66477fc857a9e7a065e01b8cddf43789042b59c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd0f42b868c316cb9a6344134d4aaf01930519ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508436"
 ---
-# <a name="how-to-clear-bindings"></a>Практическое руководство. Очистка привязок
+# <a name="how-to-clear-bindings"></a>Как выполнить Очистка привязок
 В этом примере показано, как удалять привязки к объекту.  
   
 ## <a name="example"></a>Пример  
@@ -27,9 +27,9 @@ ms.locfileid: "33555861"
   
  Очистка привязки удаляет привязку так, что значение свойства зависимостей изменяется на то значение, которое было бы без привязки. Это значение может быть значением по умолчанию, унаследованным или значением из привязки шаблона данных.  
   
- Чтобы очистить привязки от всех возможных свойств объекта, используйте <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
+ Чтобы удалить привязки из всех возможных свойств объекта, используйте <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Data.BindingOperations>  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Data.BindingOperations>
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

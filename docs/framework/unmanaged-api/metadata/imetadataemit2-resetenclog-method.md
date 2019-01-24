@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c9ecabb53ace7ead95f64ed03244b9af12ed369
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493453"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>Метод IMetaDataEmit2::ResetENCLog
-Сброс журнала edit and continue и начинает новый сеанс.  
+Сбрасывает журнал изменить и продолжить и начинает новый сеанс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,17 +34,17 @@ HRESULT ResetENCLog ();
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `ResetENCLog` не имеет параметров.  
+ `ResetENCLog` не принимает никаких параметров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

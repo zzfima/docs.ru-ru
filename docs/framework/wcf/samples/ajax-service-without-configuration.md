@@ -2,12 +2,12 @@
 title: Служба AJAX без конфигурации
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 60b61a26574764f0f2ea4ca834c5ba92b49a043d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f722eac27fadbd772b85a638c3c9171c2783a8b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582192"
 ---
 # <a name="ajax-service-without-configuration"></a>Служба AJAX без конфигурации
 В этом примере показано, как использовать Windows Communication Foundation (WCF), чтобы создать базовую службу ASP.NET асинхронных скриптов JavaScript и XML (AJAX) (службы, которому можно получить доступ с помощью кода JavaScript из веб-браузера клиента), не применяя никакой конфигурации Параметры. Эта служба использует особый синтаксис в файле .svc для автоматического включения конечной точки AJAX.  
@@ -50,5 +50,5 @@ ms.locfileid: "49308424"
 > [!NOTE]
 >  При выполнении этого примера убедитесь, что анонимный доступ и проверка подлинности Windows не включены одновременно для папки ServiceModelSamples в IIS. Однако если они включены, отключите проверку подлинности Windows. По завершении выполнения примера включите проверку подлинности Windows и выполните "iisreset".  
   
-## <a name="see-also"></a>См. также  
- [Базовая служба AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>См. также
+- [Базовая служба AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

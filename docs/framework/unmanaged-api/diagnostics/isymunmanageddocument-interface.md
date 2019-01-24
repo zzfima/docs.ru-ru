@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584523"
 ---
 # <a name="isymunmanageddocument-interface"></a>Интерфейс ISymUnmanagedDocument
-Представляет документ, на который ссылается хранилище символов. Документ определяется локатора универсальный код ресурса (URL) и идентификатором GUID типа документа. Можно найти документ, независимо от того, как оно хранится с использованием URL-адрес и идентификатор GUID типа документа. Можно сохранить в хранилище символов источник документа и получение через этот интерфейс.  
+Представляет документ, на который ссылается хранилище символов. Документ определяется локатора универсальный код ресурса (URL-адрес) и GUID типа документа. Можно найти документ независимо от того, как они хранятся с помощью URL-адрес и идентификатор GUID типа документа. Можно сохранить в хранилище символов источник документа и получить его через этот интерфейс.  
   
 ## <a name="methods"></a>Методы  
   
@@ -32,14 +32,14 @@ ms.locfileid: "33427206"
 |------------|-----------------|  
 |[Метод FindClosestLine](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-findclosestline-method.md)|Возвращает ближайшую строку, являющуюся точкой следования, для заданной строки в этом документе, которые могут поддерживаться или не может являться точкой следования.|  
 |[Метод GetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksum-method.md)|Возвращает контрольную сумму.|  
-|[Метод GetCheckSumAlgorithmId](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|Возвращает идентификатор алгоритма подсчета контрольной суммы или возвращает идентификатор GUID из нулей, если контрольная сумма отсутствует.|  
-|[Метод GetDocumentType](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|Возвращает тип этого документа.|  
-|[Метод GetLanguage](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|Возвращает идентификатор языка в этом документе.|  
+|[Метод GetCheckSumAlgorithmId](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getchecksumalgorithmid-method.md)|Возвращает идентификатор алгоритма контрольной суммы, или возвращает идентификатор GUID изо всех нулей, если контрольная сумма отсутствует.|  
+|[Метод GetDocumentType](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getdocumenttype-method.md)|Получает тип документа в этом документе.|  
+|[Метод GetLanguage](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguage-method.md)|Получает идентификатор языка в этом документе.|  
 |[Метод GetLanguageVendor](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getlanguagevendor-method.md)|Возвращает поставщика языка документа.|  
 |[Метод GetSourceLength](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcelength-method.md)|Возвращает длину внедренного источника в байтах.|  
 |[Метод GetSourceRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-getsourcerange-method.md)|Возвращает заданный диапазон внедренного источника в заданный буфер.|  
 |[Метод GetURL](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-geturl-method.md)|Возвращает URL-адрес для этого документа.|  
-|[Метод HasEmbeddedSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Возвращает `true` Если документ имеет источник, внедренный в символы отладки; в противном случае возвращает `false`.|  
+|[Метод HasEmbeddedSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Возвращает `true` , содержит ли документ источника, внедренный в символы отладки; в противном случае возвращает `false`.|  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

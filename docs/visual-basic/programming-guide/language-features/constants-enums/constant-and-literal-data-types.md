@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 1d030f8058cd497212c20bca8f064f2bedc99fce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498652"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Типы данных констант и литералов (Visual Basic)
 Литерал — это значение, которое выражается само по себе, а не как значение переменной или результат выражения, например число 3 или строка «Hello». Константа представляет собой значимое имя, которое занимает место литерал и хранит это же значение для программы, в отличие от переменной, значения которых могут меняться.  
@@ -61,14 +61,14 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(нет)|F или!|  
 |`String`|"|(нет)|  
   
-## <a name="see-also"></a>См. также  
- [Константы, определенные пользователем](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
- [Практическое руководство. Объявление константы](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
- [Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [Практическое: объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
- [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Константы, определенные пользователем](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
+- [Практическое руководство. Объявление константы](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Практическое руководство. Объявления перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507581"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
 При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши, см. в разделе [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -60,9 +60,9 @@ ms.locfileid: "43864511"
   
 7.  Событие <xref:System.Windows.Forms.Control.MouseDoubleClick>.  
   
-8.  Событие <xref:System.Windows.Forms.Control.MouseUp>.  
+8.  Событие<xref:System.Windows.Forms.Control.MouseUp> .  
   
- Пример кода, который демонстрирует порядок мыши события щелчка мыши, см. в разделе [как: обработка событий пользовательского ввода в элементах управления Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Пример кода, который демонстрирует порядок мыши события щелчка мыши, см. в разделе [как: Дескриптор пользовательского ввода, события в Windows Forms, элементы управления](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Особые элементы управления  
  Поведение перечисленных ниже элементов управления при щелчке мыши не соответствует стандартному.  
@@ -74,11 +74,11 @@ ms.locfileid: "43864511"
   
     -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   Щелкните правой кнопкой мыши: Событие щелчка не вызывается  
   
     -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   Дважды щелкните справа: Событие щелчка не вызывается  
   
 -   Элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> и <xref:System.Windows.Forms.CheckedListBox>  
   
@@ -87,11 +87,11 @@ ms.locfileid: "43864511"
   
     -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   Щелкните правой кнопкой мыши: Событие щелчка не вызывается  
   
     -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   Дважды щелкните справа: Событие щелчка не вызывается  
   
 -   Элемент управления <xref:System.Windows.Forms.ListView>  
   
@@ -141,5 +141,5 @@ ms.locfileid: "43864511"
     > [!NOTE]
     >  Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>. События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.  
   
-## <a name="see-also"></a>См. также  
- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>См. также
+- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

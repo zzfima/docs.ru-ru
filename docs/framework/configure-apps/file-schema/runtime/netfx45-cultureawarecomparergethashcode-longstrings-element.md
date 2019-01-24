@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2dfd5d3944618cf94d32fac2708d6daef5a410
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576893"
 ---
 # <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; элемент
 Определяет, использует ли среда выполнения постоянный объем памяти для вычисления хэш-кодов методом <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .  
@@ -61,7 +61,7 @@ ms.locfileid: "53613691"
 > [!IMPORTANT]
 >  В `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` и более поздних версиях элемент [!INCLUDE[win8](../../../../../includes/win8-md.md)] не используется.  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>См. также
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

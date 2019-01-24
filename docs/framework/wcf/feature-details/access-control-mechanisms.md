@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 1de6731591e524080ac4ae7d5b2ec2a25a27f301
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 78d2bb3e49ae971b54d521585184a9565c4ff105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512619"
 ---
 # <a name="access-control-mechanisms"></a>Механизмы управления доступом
 Вы можете управлять доступом несколькими способами с помощью Windows Communication Foundation (WCF). В настоящем разделе кратко описываются различные механизмы и приводятся рассуждения о том, когда и какой способ использовать; раздел должен помочь пользователю выбрать правильный механизм использования. Технологии доступа перечислены в порядке сложности. Самым простым является <xref:System.Security.Permissions.PrincipalPermissionAttribute>; самым сложным - модель удостоверения.  
@@ -22,7 +22,7 @@ ms.locfileid: "44213242"
   
  Для контроля доступа к ресурсам на компьютере, на котором работает служба, используется <xref:System.Security.Permissions.PrincipalPermissionAttribute>, если пользователи службы всегда будут частью того же домена Windows, на котором работает служба. Можно легко создать группы Windows, которые имеют заданный уровень доступа (такой как отсутствие доступа, только для чтения или чтение и запись).  
   
- Дополнительные сведения об использовании атрибута см. в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Дополнительные сведения об удостоверении см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Дополнительные сведения об использовании атрибута см. в разделе [как: Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Дополнительные сведения об удостоверении см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>Поставщик участия ASP.NET  
  Функция [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] является поставщиком членства по умолчанию. Даже если поставщик членства технически не является механизмом контроля доступа, он позволяет контролировать доступ к службе путем ограничения набора возможных удостоверений, которые могут получить доступ к конечной точке службы. Возможность членства включает в себя базу данных, которая может быть заполнена комбинациями имени/пароля, что позволяет пользователям веб-сайта создавать учетные записи на сайте. Для доступа к службе, которая использует поставщика членства, пользователь должен войти в систему со своими именем пользователя и паролем.  
@@ -30,23 +30,23 @@ ms.locfileid: "44213242"
 > [!NOTE]
 >  Необходимо заполнить базу данных при помощи [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] компонентов, прежде чем служба WCF может использовать его для проверки подлинности.  
   
- Кроме того, функцию членства также можно использовать, если уже имеется база данных членства из существующего веб-сайта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и нужно разрешить тем же пользователям, авторизованным с теми же именами пользователей и паролями, использовать эту службу.  
+ Кроме того, возможность членства также можно использовать, если уже имеется база данных членства из существующего веб-сайта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и нужно разрешить тем же пользователям, авторизованным с теми же именами пользователей и паролями, использовать эту службу.  
   
- Дополнительные сведения об использовании функции членства в службе WCF см. в разделе [как: использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Дополнительные сведения об использовании функции членства в службе WCF см. в разделе [как: Использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Поставщик ролей ASP.NET  
  Другой функцией [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] является способность управлять авторизацией при помощи ролей. Поставщик ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] позволяет разработчику создавать роли для пользователей и соотносить каждого пользователя с ролью или ролями. Как и в случае с поставщиком членства, роли и назначения хранятся в базе данных и могут быть заполнены при помощи средств, предоставленных отдельной реализацией поставщика ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Как и с возможностью членства, WCF разработчики могут использовать данные в базе данных для авторизации пользователей службе ролей. Они могут, например, использовать поставщик ролей совместно с описанным выше механизмом контроля доступа `PrincipalPermissionAttribute`.  
   
  Можно также использовать [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщика ролей, если у вас есть [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] базы данных поставщика ролей и необходимо использовать тот же набор правил и назначений пользователя в службе WCF.  
   
- Дополнительные сведения об использовании функции поставщика ролей см. в разделе [как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Дополнительные сведения об использовании функции поставщика ролей см. в разделе [как: Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Диспетчер авторизации  
  Другая функция авторизации клиентов комбинирует диспетчер авторизации (AzMan) и поставщик ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Когда на [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] размещается веб-служба, AzMan можно интегрировать в приложение таким образом, чтобы авторизация для доступа к службе выполнялась через AzMan. Диспетчер ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] предусматривает API, позволяющий управлять ролями приложения, добавлять пользователей в роли и удалять из них и проверять членство в ролях, но не позволяющий выполнять запросы для определения, может ли пользователь выполнять определенную задачу или операцию. AzMan позволяет определять отдельные операции и комбинировать их в задачах. При помощи AZMan кроме проверок роли можно также проверять, может ли пользователь выполнять задачу. Назначение роли и авторизация задачи могут быть настроены вне приложения или выполнены программно внутри приложения. Оснастка администрирования AzMan консоли управления MMC позволяет администраторам менять задачи, которые может выполнять определенная роль во время выполнения и управлять членством ролей каждого пользователя.  
   
- Кроме того, AzMan и поставщик ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] можно использовать, если уже есть доступ к существующей установке AzMan и нужно авторизовать пользователей своей службы при помощи функций комбинации AzMan/поставщик ролей.  
+ Кроме того, AzMan и поставщик ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] можно использовать, если уже есть доступ к существующей установке AzMan и нужно авторизовать пользователей своей службы при помощи возможностей комбинации AzMan/поставщик ролей.  
   
- Дополнительные сведения о AzMan и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщика ролей, см. в разделе [How To: использовать диспетчер авторизации (AzMan) с ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=88951). Дополнительные сведения об использовании AzMan и поставщика ролей для служб WCF см. в разделе [как: использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Дополнительные сведения о AzMan и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщика ролей, см. в разделе [How To: Использовать диспетчер авторизации (AzMan) с помощью ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=88951). Дополнительные сведения об использовании AzMan и поставщика ролей для служб WCF см. в разделе [как: Использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Модель удостоверения  
  Модель удостоверения представляет собой набор API, которые позволяют управлять требованиями и политиками для авторизации клиентов. При помощи модели удостоверения можно рассматривать каждое требование, содержащееся в учетных данных, которое пользователь использовал для проверки своей подлинности, сравнить требования с набором политик для службы и на основе сравнения разрешить или запретить доступ.  
@@ -57,10 +57,10 @@ ms.locfileid: "44213242"
   
  Дополнительные сведения о модели удостоверения, см. в разделе [управление утверждениями и авторизацией с моделью идентификации](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

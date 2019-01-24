@@ -2,20 +2,14 @@
 title: Операторы и выражения в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805452"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Операторы и выражения в Visual Basic
 *Оператор* представляет собой элемент кода, который выполняет операцию с одним элементом кода или несколькими, содержащими значения. К элементам значений относятся переменные, константы, литералы, свойства, возвращаемые значения из процедур `Function` и `Operator`, а также выражения.  
@@ -60,11 +54,11 @@ ms.locfileid: "34805452"
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- В предыдущем примере, Visual Basic выполняет операции в выражении справа от оператора присваивания (`=`), затем присваивает результат переменной `x` в левой части экрана. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
+ В приведенном выше примере Visual Basic выполняет операции в выражении справа от оператора присваивания (`=`), затем присваивает результирующее значение переменной `x` слева. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
   
  Дополнительные сведения и примеры см. в разделе [Перегрузка операторов в Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
-## <a name="see-also"></a>См. также  
- [Операторы](../../../../visual-basic/language-reference/operators/index.md)  
- [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
- [Операторы](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>См. также
+- [Инструкции](../../../../visual-basic/language-reference/operators/index.md)
+- [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [Операторы](../../../../visual-basic/language-reference/statements/index.md)

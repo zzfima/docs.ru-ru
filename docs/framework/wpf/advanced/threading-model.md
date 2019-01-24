@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513659"
 ---
 # <a name="threading-model"></a>Модель потоков
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] призвана помочь разработчикам избежать трудностей при разработке потоков. Как следствие, большинство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработчикам не требуется писать интерфейс, использующий более одного потока. Поскольку многопотоковые программы являются сложными и трудно отлаживаемыми, их следует избегать, если существуют однопоточные решения.  
@@ -54,7 +54,7 @@ ms.locfileid: "43512470"
  <xref:System.Windows.Threading.Dispatcher> Упорядочивает элементы в своей очереди по приоритету. Существуют десять уровней, которые могут быть указаны при добавлении элемента к <xref:System.Windows.Threading.Dispatcher> очереди. Эти приоритеты сохраняются в <xref:System.Windows.Threading.DispatcherPriority> перечисления. Подробные сведения о <xref:System.Windows.Threading.DispatcherPriority> уровней можно найти в [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] документации.  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>Потоки в действии: примеры  
+## <a name="threads-in-action-the-samples"></a>Потоки в действии: Примеры  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Пример однопоточного приложения с длительным выполнением вычислений  
@@ -217,5 +217,5 @@ ms.locfileid: "43512470"
   
  Задача для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] — избежать непредвиденного повторного входа без внесения утечки памяти, поэтому мы не блокируем где.  
   
-## <a name="see-also"></a>См. также  
- [Пример однопоточного приложения с длительным выполнением вычислений](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>См. также
+- [Пример однопоточного приложения с длительным выполнением вычислений](https://go.microsoft.com/fwlink/?LinkID=160038)

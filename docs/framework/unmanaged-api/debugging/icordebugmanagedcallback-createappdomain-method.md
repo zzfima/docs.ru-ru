@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdac4b5b7a4a64a5fc939a7d35718ef276717fe7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36ded85cd2d8ebe49ee0b1e190266061cb56dfb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496745"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>Метод ICorDebugManagedCallback::CreateAppDomain
-Уведомляет отладчик, что домен приложения был создан.  
+Уведомляет отладчик о том, что домен приложения был создан.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ HRESULT CreateAppDomain (
   
 #### <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляет собой процесс, в которой был создан домен приложения.  
+ [in] Указатель на объект ICorDebugProcess, представляющий процесс, в котором был создан домен приложения.  
   
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который был создан.  
+ [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который был создан.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

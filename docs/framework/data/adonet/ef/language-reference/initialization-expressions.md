@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 352bda826c3b872d06252e168abfb1129f178bf8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bbfa101452937bcb39ee41f25f5f862179ce2503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506737"
 ---
 # <a name="initialization-expressions"></a>Выражения инициализации
 Выражения инициализации инициализируют новый объект. Поддерживается большинство выражений инициализации, в том числе большинство новых выражений инициализации языков C# 3.0 и Visual Basic 9.0. Следующие типы могут быть инициализированы и возвращены запросом LINQ to Entities:  
@@ -46,5 +46,5 @@ ms.locfileid: "32762212"
  [!code-csharp[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#typeinitialization_mq)]
  [!code-vb[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#typeinitialization_mq)]  
   
-## <a name="see-also"></a>См. также  
- [Выражения в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>См. также
+- [Выражения в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

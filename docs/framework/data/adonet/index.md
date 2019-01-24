@@ -2,12 +2,6 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519920"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET — это набор классов, предоставляющих службы доступа к данным программистам, которые используют платформу .NET Framework. ADO.NET имеет богатый набор компонентов для создания распределенных приложений, совместно использующих данные. Это неотъемлемая часть платформы .NET Framework, которая предоставляет доступ к реляционным данным, XML-данным и данным приложений. ADO.NET удовлетворяет различные потребности разработчиков, включая создание клиентских приложений баз данных, а также бизнес-объектов среднего уровня, используемых приложениями, средствами, языками и браузерам.  
@@ -62,6 +56,6 @@ ADO.NET — это набор классов, предоставляющих с
  [Образцы и примеры использования](https://msdn.microsoft.com/library/ms184422.aspx)  
  Приводит полный листинг всех образцов, а также образцов из краткого руководства, связанных с платформой .NET Framework.  
   
-## <a name="see-also"></a>См. также  
- [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

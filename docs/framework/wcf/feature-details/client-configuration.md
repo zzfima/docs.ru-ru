@@ -2,12 +2,12 @@
 title: Конфигурация клиента
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e178f8b08fbadbb5549fa10631d3a57f71a7e0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503226"
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
 Конфигурация клиента Windows Communication Foundation (WCF) можно использовать для указания адреса, привязки, поведения и контракта, «ABC» свойства конечной точки клиента, которые используются клиентами для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
@@ -93,6 +93,6 @@ ms.locfileid: "43527720"
 ### <a name="configuring-metadata"></a>Настройка метаданных  
  [ \<Метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент используется для задания параметров, используемых для регистрации метаданных расширений импорта. Дополнительные сведения о расширении системы метаданных см. в разделе [расширении системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
-## <a name="see-also"></a>См. также  
- [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Настройка поведения клиентов](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+## <a name="see-also"></a>См. также
+- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Настройка поведения клиентов](../../../../docs/framework/wcf/configuring-client-behaviors.md)

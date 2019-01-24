@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a12f3ffb14de9dcacdb4873d1c03ad1d096d7cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a07442d990694099c9402989b41c937360842316
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569879"
 ---
 # <a name="corprfmonitor-enumeration"></a>Перечисление COR_PRF_MONITOR
 Содержит значения, используемые для указания поведения, возможностей или событий, на которые желает подписаться профилировщик.  
@@ -100,7 +100,7 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>Участники  
- Ниже приводится список `COR_PRF_MONITOR` члены перечисления по категориям. Используются следующие категории:  
+ В следующих разделах описываются `COR_PRF_MONITOR` члены перечисления по категориям. Ниже перечислены категории.  
   
 -   [Нет установленных флагов](#None)  
   
@@ -122,35 +122,35 @@ typedef enum {
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Флаги обратного вызова  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Активирует все события обратного вызова.|  
-|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Элементы управления `AppDomainCreation*` и `AppDomainShutdown*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Элементы управления `AssemblyLoad*` и `AssemblyUnload*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_CACHE_SEARCHES`|Элементы управления `JITCachedFunctionSearch*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.<br /><br /> Поведение этого флага в платформе .NET Framework версии 2.0 изменено.|  
-|`COR_PRF_MONITOR_CCW`|Элементы управления `COMClassicVTable*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_CLASS_LOADS`|Элементы управления `ClassLoad*` и `ClassUnload*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Элементы управления `ExceptionCLRCatcher*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
+|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Элементы управления `AppDomainCreation*` и `AppDomainShutdown*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Элементы управления `AssemblyLoad*` и `AssemblyUnload*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_CACHE_SEARCHES`|Элементы управления `JITCachedFunctionSearch*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.<br /><br /> Поведение этого флага в платформе .NET Framework версии 2.0 изменено.|  
+|`COR_PRF_MONITOR_CCW`|Элементы управления `COMClassicVTable*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_CLASS_LOADS`|Элементы управления `ClassLoad*` и `ClassUnload*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Элементы управления `ExceptionCLRCatcher*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
 |`COR_PRF_MONITOR_CODE_TRANSITIONS`|Элементы управления [UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) и [ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса|  
 |`COR_PRF_MONITOR_ENTERLEAVE`|Элементы управления `FunctionEnter*`, `FunctionLeave*`, и `FunctionTailCall*` [глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md).|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|Элементы управления [ExceptionThrown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) обратного вызова и `ExceptionSearch*`, `ExceptionOSHandler*`, `ExceptionUnwind*`, и `ExceptionCatcher*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Элементы управления [FunctionUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) обратного вызова в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|Элементы управления [ExceptionThrown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) обратного вызова и `ExceptionSearch*`, `ExceptionOSHandler*`, `ExceptionUnwind*`, и `ExceptionCatcher*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Элементы управления [FunctionUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) обратного вызова в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
 |`COR_PRF_MONITOR_GC`|Элементы управления [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md), [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md), [ SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md), [ RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md), [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md), [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md), и [FinalizeableObjectQueued ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) обратные вызовы в `ICorProfilerCallback*` интерфейсов.|  
-|`COR_PRF_MONITOR_JIT_COMPILATION`|Элементы управления `JITCompilation*`, [JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md), и [JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|Элементы управления `ModuleLoad*`, `ModuleUnload*`, и [ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Элементы управления [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) обратного вызова в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_REMOTING`|Элементы управления `Remoting*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
+|`COR_PRF_MONITOR_JIT_COMPILATION`|Элементы управления `JITCompilation*`, [JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md), и [JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|Элементы управления `ModuleLoad*`, `ModuleUnload*`, и [ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Элементы управления [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) обратного вызова в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_REMOTING`|Элементы управления `Remoting*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|Определяет, будут ли обратные вызовы `Remoting*` отслеживать асинхронные события.|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|Определяет, будут ли передаваться файлы cookie для обратных вызовов `Remoting*`.|  
-|`COR_PRF_MONITOR_SUSPENDS`|Элементы управления `RuntimeSuspend*`, `RuntimeResume*`, [RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md), и [RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
-|`COR_PRF_MONITOR_THREADS`|Элементы управления [ThreadCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md), [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md), [ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md), и [ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md) обратных вызовов в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) интерфейсов.|  
+|`COR_PRF_MONITOR_SUSPENDS`|Элементы управления `RuntimeSuspend*`, `RuntimeResume*`, [RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md), и [RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
+|`COR_PRF_MONITOR_THREADS`|Элементы управления [ThreadCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md), [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md), [ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md), и [ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md) обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) интерфейсов.|  
   
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>Флаги включения компонентов  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|Включает извлечение точного `ClassID` для базовой функции путем вызова [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод с `COR_PRF_FRAME_INFO` значения, возвращенного [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова.|  
+|`COR_PRF_ENABLE_FRAME_INFO`|Включает получение точного `ClassID` для базовой функции путем вызова [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод с `COR_PRF_FRAME_INFO` значение, возвращенное [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Включает трассировку аргумента с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова или [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) обратного вызова и [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) метод.|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|Включает трассировку возвращаемых значений с помощью [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) обратного вызова или [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) обратного вызова и [GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) метод.|  
 |`COR_PRF_ENABLE_INPROC_DEBUGGING`|Не рекомендуется.<br /><br /> Отладка в процессе работы не поддерживается. Этот флаг ни на что не влияет.|  
@@ -182,18 +182,18 @@ typedef enum {
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|Представляет все флаги `COR_PRF_MONITOR`, для которых необходимы улучшенные профилировщиком изображения.|  
   
 ## <a name="remarks"></a>Примечания  
- Объект `COR_PRF_MONITOR` используется с [ICorProfilerInfo::GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) и [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) методы для определения уведомлений о событиях, которые вносит общеязыковая среда выполнения профилировщик.  
+ Объект `COR_PRF_MONITOR` значение используется с [ICorProfilerInfo::GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) и [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) методы для определения уведомлений о событиях, которые среда CLR позволяет профилировщик.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- [Метод GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
- [Метод SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Метод GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)
+- [Метод SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495349"
 ---
 # <a name="cordebugehclause-structure"></a>Структура CorDebugEHClause
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -67,14 +67,14 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Неправильное предложение (предложение `finally`, которое вызывается только при возникновении исключения).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>См. также
+- [Метод GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

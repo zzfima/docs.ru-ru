@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516945"
 ---
 # <a name="getdemultiplexedstub-function"></a>Функция GetDemultiplexedStub
 Создает приемник переадресации объекта, который помогает клиенту получать асинхронные вызовы из службы управления Windows.
@@ -56,11 +56,11 @@ HRESULT GetDemultiplexedStub (
 Если функция завершается с ошибкой, возвращается код ошибки. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
     
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

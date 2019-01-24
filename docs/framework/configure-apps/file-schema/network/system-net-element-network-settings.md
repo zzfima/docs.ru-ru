@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567780"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; (сетевые параметры)
 Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -92,5 +92,5 @@ ms.locfileid: "50192542"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

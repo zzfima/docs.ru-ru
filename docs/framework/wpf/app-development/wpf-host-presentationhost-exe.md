@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ca8198e17bec62866b6a58e6fd14ea468308f48b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b1ebf3cd62b77a9082c0b149469462b5dffa3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577533"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
-Windows Presentation Foundation (WPF) узла (PresentationHost.exe) — приложение, которое позволяет [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] размещение приложений можно осуществлять в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздние версии). По умолчанию Windows Presentation Foundation (WPF) узла зарегистрирован в качестве оболочки и [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] обработчик Браузерные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимое, которое содержит:  
+Ведущее приложение Windows Presentation Foundation (WPF) (PresentationHost.exe) — это приложение, которое позволяет [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, размещенных в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздних версий). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется как оболочка и [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] обработчик для Браузерные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимое, которое включает в себя:  
   
 -   Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
   
@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) узла (PresentationHost.exe) — при
   
 -   Запускает зарегистрированный [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] обработчик для размещения содержимого Windows Presentation Foundation (WPF).  
   
--   Загружает нужные версии необходимых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и сборок Windows Presentation Foundation (WPF).  
+-   Загружает правильные версии требуемых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и сборок Windows Presentation Foundation (WPF).  
   
 -   Обеспечивает наличие соответствующих уровней разрешений для зоны развертывания.  
   
@@ -57,5 +57,5 @@ Windows Presentation Foundation (WPF) узла (PresentationHost.exe) — при
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio, отладка в зоне  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>См. также  
- [Безопасность](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>См. также
+- [Безопасность](../../../../docs/framework/wpf/security-wpf.md)

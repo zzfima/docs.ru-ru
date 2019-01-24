@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569470"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Сохранение и восстановление часовых поясов
 
@@ -72,8 +72,8 @@ ms.locfileid: "44081772"
 
 Хранение строк сериализованных часовых поясов таким образом отделяет процедуру создания часового пояса от самого приложения. Например процедура создания часового пояса можно выполнять и создать файл данных, который содержит исторические данные о часовом поясе, приложение может использовать. Файл данных может быть, а затем установить приложение и ее можно открыть, и один или несколько его часовых поясов может быть десериализован, когда приложению требуется их.
 
-Пример, который использует внедренный ресурс для хранения сериализованных данных часового пояса, см. в разделе [как: сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как: восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Пример, который использует внедренный ресурс для хранения сериализованных данных часового пояса, см. в разделе [как: Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как: Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugTypeEnum интерфейс1
+title: ICorDebugTypeEnum Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugTypeEnum
@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c683c8109970c05d9f666a9ed07535d95685cd43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d8196267d1b7bd6ac2fb66fe8e099330e531b722
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513195"
 ---
-# <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum интерфейс1
+# <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum Interface1
 Реализует методы «ICorDebugEnum» и выполняет перечисление массивов «ICorDebugType».  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Возвращает заданное число `ICorDebugType` экземпляров из перечисления, начиная с текущей позиции.|  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33420288"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

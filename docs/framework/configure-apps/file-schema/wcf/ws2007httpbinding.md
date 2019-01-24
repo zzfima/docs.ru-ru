@@ -2,17 +2,17 @@
 title: '&lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 62a330eb2e8b71234d2ee683f3354834e3946bff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 05ab5c772a27c7e00e56701c6626ae8657265b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502667"
 ---
 # <a name="ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt;
 Определяет привязку с возможностью взаимодействия, которая обеспечивает поддержку для правильных версий элементов привязки <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> и <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<ws2007HttpBinding >  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54150764"
 |Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
-|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений протокола SOAP, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений протокола SOAP, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Указывает, устанавливаются ли между конечными точками канала надежные сеансы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -135,10 +135,10 @@ ms.locfileid: "54150764"
 </configuration>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.WS2007HttpBinding>  
- <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.WS2007HttpBinding>
+- <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

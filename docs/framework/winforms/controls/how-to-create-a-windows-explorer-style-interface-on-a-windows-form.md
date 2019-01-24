@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
+title: Как выполнить Создание интерфейса в стиле проводника Windows в форме Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 249210d2bcb7a9ef2c5bf1aed00bcfe138193aab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511108"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Как выполнить Создание интерфейса в стиле проводника Windows в форме Windows
 Windows Explorer является распространенным вариантом пользовательского интерфейса для приложений из-за его хорошо знаком всем пользователям.  
   
  Windows Explorer является, по сути, <xref:System.Windows.Forms.TreeView> управления и <xref:System.Windows.Forms.ListView> на отдельных панелях. Панелей вносятся можно изменять с помощью разделителя. Это упорядочение элементов управления является весьма эффективным для отображения и просмотра информации.  
@@ -40,7 +40,7 @@ Windows Explorer является распространенным вариан�
     > [!NOTE]
     >  Не используйте **выбрать все** команды **изменить** меню. Если это сделать, то свойство, необходимое на следующем шаге будет отсутствовать в **свойства** окна.  
   
-4.  В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
+4.  В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 5.  Нажмите клавишу F5 для запуска приложения.  
   
@@ -49,9 +49,9 @@ Windows Explorer является распространенным вариан�
     > [!NOTE]
     >  При перетаскивании разделителя панели Изменение размеров.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.SplitContainer>  
- [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- [Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- [Практическое руководство. Разделение окна по горизонтали](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.SplitContainer>
+- [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Практическое руководство. Определение изменения размеров и позиционирования в окне с перемещаемым разделителем](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Практическое руководство. Разделение окна по горизонтали](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
+- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

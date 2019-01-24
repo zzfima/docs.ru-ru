@@ -2,12 +2,12 @@
 title: Загрузка примеров баз данных (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573348"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Загрузка примеров баз данных (LINQ to DataSet)
 Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] документации используется образец базы данных AdventureWorks. Этот продукт можно бесплатно загрузить с веб-сайта загрузки Майкрософт. Образцы и пошаговые руководства в документации по [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] используют в качестве хранилища данных SQL Server. Вместо SQL Server можно использовать SQL Server Express Edition, который доступен для бесплатной загрузки.  
@@ -73,5 +73,5 @@ ms.locfileid: "53125565"
   
 3.  Следуйте указаниям по установке, содержащимся на веб-узле.  
   
-## <a name="see-also"></a>См. также  
- [Начало работы](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)
+## <a name="see-also"></a>См. также
+- [Начало работы](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

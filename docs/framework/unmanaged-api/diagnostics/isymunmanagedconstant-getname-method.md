@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ae532b20ec3486fe56e2dff340a5ad89941a8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c31f9bda2f1dfdb5d1f78055f53304352c5a660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515343"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>Метод ISymUnmanagedConstant::GetName
 Возвращает имя константы.  
@@ -42,18 +42,18 @@ HRESULT GetName(
  [in] Длина буфера, `szName` указывает параметр.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, должны содержать имя, включая нулем.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имени, включая завершающимся нулевым значением.  
   
  `szName`  
- [out] Буфер, в которой хранится имя.  
+ [out] Буфер, в котором хранится имя.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
- [Метод GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)  
- [Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [Метод GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+- [Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

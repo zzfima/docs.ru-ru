@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Создание основной подробности формы с помощью двух элементов управления DataGridView Windows Forms'
+title: Пошаговое руководство. Создание формы «основной-подробности» с помощью двух элементов управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 38f7c6197fb3ee79119e41ab9620bc3aa2b21900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e06e2e71e28c62f06189374e84d1469ec521c5d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585316"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms
-Одним из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> управления *иерархического* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных. Выбор строк в главной таблице приводит таблицы сведений, чтобы обновить соответствующие дочерние данные.  
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пошаговое руководство. Создание формы «основной/подробности» с помощью двух элементов управления DataGridView Windows Forms
+Один из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> элемент управления является *"основной/подробности"* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных. Выбор строк в главной таблице приводит детализации таблицы с помощью соответствующих дочерних данных.  
   
- Реализация главного и подчиненного облегчает взаимодействие между <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента. В этом пошаговом руководстве вы создадите формы, с использованием двух <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. В форме будут показаны две связанные таблицы в образце базы данных "Борей" SQL Server: `Customers` и `Orders`. Когда вы закончите, будет иметь форму, которая содержит все клиенты базы данных в базе данных master <xref:System.Windows.Forms.DataGridView> и все заказы для выбранного клиента подробно <xref:System.Windows.Forms.DataGridView>.  
+ Реализация формы «основной/подробности» легко реализовать с помощью взаимодействие между <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента. В этом пошаговом руководстве вы создадите формы, с использованием двух <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. В форме будут показаны два связанных таблиц в базе данных "Борей" SQL Server: `Customers` и `Orders`. Когда вы закончите, будет иметь форму, которая показывает всех клиентов в базе данных в базу данных master <xref:System.Windows.Forms.DataGridView> и все заказы для выбранного клиента подробно <xref:System.Windows.Forms.DataGridView>.  
   
- Скопируйте код из этой темы, в разделе [как: создание Главная и подчиненная формы с помощью двух DataGridView элементов управления Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Создание формы «основной/подробности» с помощью двух элементов управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства требуется:  
   
--   Доступ к серверу с учебной базе данных "Борей" SQL Server.  
+-   Доступ к серверу с образца базы данных "Борей" SQL Server.  
   
 ## <a name="creating-the-form"></a>Создание формы  
   
-#### <a name="to-create-a-masterdetail-form"></a>Создание главного и подчиненного  
+#### <a name="to-create-a-masterdetail-form"></a>Для создания формы «основной/подробности»  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит два <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. Ниже представлена базовая реализация формы и включает `Main` метод. При использовании конструктора Visual Studio для создания формы, используйте вместо этого кода конструктора созданный код, но следует использовать названия из объявления переменных.  
+1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит два <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. Ниже представлена базовая реализация формы и включает в себя `Main` метод. При использовании в конструкторе Visual Studio для создания формы, то можно использовать созданный код конструктора вместо этого кода, обязательно используйте имена, показанные в объявлениях переменных.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Реализуйте метод в определении класса формы для обработки подробные сведения о подключении к базе данных. В этом примере используется `GetData` метод, который заполняет <xref:System.Data.DataSet> , добавляет <xref:System.Data.DataRelation> объекта для набора данных и привязывает <xref:System.Windows.Forms.BindingSource> компонентов. Убедитесь, что переменной `connectionString` присвоено значение, соответствующее базе данных.  
+2.  Реализуйте метод в определении класса формы для обработки подробные сведения о подключении к базе данных. В этом примере используется `GetData` метод, который заполняет <xref:System.Data.DataSet> , добавляет <xref:System.Data.DataRelation> объект набора данных и привязывает <xref:System.Windows.Forms.BindingSource> компонентов. Убедитесь, что переменной `connectionString` присвоено значение, соответствующее базе данных.  
   
     > [!IMPORTANT]
     >  Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -48,36 +48,36 @@ ms.locfileid: "33529445"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Реализуйте обработчик для формы <xref:System.Windows.Forms.Form.Load> событий, который привязывает <xref:System.Windows.Forms.DataGridView> элементы управления <xref:System.Windows.Forms.BindingSource> компоненты и вызывает метод `GetData` метод. Следующий пример содержит код, который изменяет размер <xref:System.Windows.Forms.DataGridView> столбцы по размеру отображаемых данных.  
+3.  Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое привязывает <xref:System.Windows.Forms.DataGridView> элементы управления <xref:System.Windows.Forms.BindingSource> компоненты и вызывает метод `GetData` метод. Следующий пример содержит код, который изменяет размер <xref:System.Windows.Forms.DataGridView> столбцы в соответствии с отображаемых данных.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  
   
 ## <a name="testing-the-application"></a>Тестирование приложения  
- Теперь можно проверить форму, чтобы убедиться в том, что оно правильно работает.  
+ Теперь можно проверить форму, чтобы убедиться, что она правильно работает.  
   
 #### <a name="to-test-the-form"></a>Чтобы проверить форму  
   
 -   Скомпилируйте и запустите приложение.  
   
-     Вы увидите два <xref:System.Windows.Forms.DataGridView> управляет друг с другом. В верхней части являются клиентов из базы данных Northwind `Customers` таблицы, а в нижней — `Orders` соответствующего выбранному клиенту. При выборе различными строками в правом верхнем <xref:System.Windows.Forms.DataGridView>, содержимое нижнего <xref:System.Windows.Forms.DataGridView> соответствующим образом изменить.  
+     Вы увидите два <xref:System.Windows.Forms.DataGridView> элементы управления, друг с другом. В верхней части — это клиенты из базы данных Northwind `Customers` таблицы, а внизу находятся `Orders` соответствующий выбранному клиенту. При выборе различные строки в верхнем <xref:System.Windows.Forms.DataGridView>, содержимое нижнего <xref:System.Windows.Forms.DataGridView> соответствующим образом изменить.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Это приложение позволяет основные <xref:System.Windows.Forms.DataGridView> возможности элемента управления. Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:  
+ Это приложение позволяет базовое представление о <xref:System.Windows.Forms.DataGridView> возможности элемента управления. Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:  
   
--   Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [как: изменения границ и стили линий сетки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
+-   Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [Как Изменение границ и линий сетки в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Включения или отключения пользовательского ввода для <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [как: запретить добавление и удаление строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), и [как: сделать столбцы только для чтения в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+-   Разрешить или ограничить ввод данных пользователями <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [Как Запретить добавление строк и удаления в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), и [как: Определение столбцов только для чтения в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Проверка пользовательского ввода для <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: проверка данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+-   Проверка пользовательского ввода для <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Проверка данных в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
--   Обработка очень больших наборов данных в виртуальном режиме. Дополнительные сведения см. в разделе [Пошаговое руководство: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+-   Обработка очень больших наборов данных в виртуальном режиме. Дополнительные сведения см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Настройте внешний вид ячеек. Дополнительные сведения см. в разделе [как: Настройка внешнего вида ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [как: набор стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+-   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.BindingSource>  
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Практическое руководство. Отображение главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.BindingSource>
+- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Создание формы «основной/подробности» с помощью двух элементов управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)
+- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)

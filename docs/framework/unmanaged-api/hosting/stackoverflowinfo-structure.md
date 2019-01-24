@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572033"
 ---
 # <a name="stackoverflowinfo-structure"></a>Структура StackOverflowInfo
-Сохраняет тип произошедшего переполнения и сведения о исключение возникло из-за переполнения.  
+Сохраняет тип произошедшего переполнения и сведения на исключение, вызванное исключение из-за переполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`soType`|Значение [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) перечисления, указывающее тип переполнения.|  
-|`pExceptionInfo`|Указатель на объект Win32 `EXCEPTION_POINTERS` объект, который содержит запись исключения зависит от компьютера описание исключения и записи контекста, зависимых от компьютера описание контекст процессора в момент возникновения исключения.|  
+|`soType`|Значение [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) перечисление, указывающее тип переполнения.|  
+|`pExceptionInfo`|Указатель на Win32 `EXCEPTION_POINTERS` объект, который содержит запись исключения зависит от компьютера описание исключения и записи контекста, зависимых от компьютера описание контекст процессора в момент возникновения исключения.|  
   
 ## <a name="remarks"></a>Примечания  
  Объект `StackOverflowInfo` объект передается [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) метод `Event_StackOverflow` события.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.idl  
+ **Заголовок.** MSCorEE.idl  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>См. также
+- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

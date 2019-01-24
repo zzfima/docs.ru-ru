@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: faa06e4558401c1d0e9335fbc630c5371d1bc516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45618e6180cbe0206eb120fc71726d0b8de5f06d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511596"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Улучшение производительности приложений WPF
-Этот раздел предназначен в качестве справочника по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработчики приложений, которым нужны дополнительные способы повышения производительности своих приложений. Если вы являетесь разработчиком, является новой возможностью в Microsoft .NET Framework и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], следует сначала ознакомиться с обеими платформами. Этот раздел предполагает понимание принципов работы обеих и предназначен для программистов, уже достаточно информации, чтобы получить работающую систему свои приложения.  
+Этот раздел предназначен в качестве справочника по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработчикам приложений, которым нужны дополнительные способы повышения производительности своих приложений. Если вы являетесь разработчиком, даже новичок в Microsoft .NET Framework и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], следует сначала ознакомиться с обеими платформами. В этом разделе, предполагает оба и написан для программистов, которые уже знают достаточно, чтобы приступить к работе своих приложений.  
   
 > [!NOTE]
->  Данные о производительности в этом разделе основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, выполняющихся на 2,8 ГГц ПК с 512 МБ оперативной памяти и ATI Radeon 9700 видеокарте.  
+>  Данные о производительности в этом разделе основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, выполняющихся на 2,8 ГГц ПК с 512, ОЗУ и ATI Radeon 9700 видеокарте.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
@@ -43,22 +43,22 @@ ms.locfileid: "33546332"
   
  [Время запуска приложения](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.RenderOptions>  
- <xref:System.Windows.Media.RenderCapability>  
- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)  
- [Пошаговое руководство. Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.RenderOptions>
+- <xref:System.Windows.Media.RenderCapability>
+- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Пошаговое руководство: Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -1,5 +1,5 @@
 ---
-title: Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
+title: Пошаговое руководство. Создание интерфейса в стиле проводника с ListView и TreeView элементов управления с помощью конструктора
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517101"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пошаговое руководство. Создание интерфейса в стиле проводника с ListView и TreeView элементов управления с помощью конструктора
 Одним из преимуществ Visual Studio является возможность создания профессиональных приложений Windows Forms в короткие сроки. Распространенным сценарием Создание пользовательского интерфейса (UI) с <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементы управления похож на функцию Windows Explorer операционных систем Windows. Windows Explorer отображает иерархическую структуру файлов и папок на компьютере пользователя.  
   
 > [!NOTE]
@@ -94,16 +94,16 @@ ms.locfileid: "45595630"
 ## <a name="next-steps"></a>Следующие шаги  
  Это приложение служит примером способом, можно использовать <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ListView> вместе элементы управления. Дополнительные сведения об этих элементах управления см. в разделах:  
   
--   [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Практическое руководство. Добавление в элемент управления ListView возможностей поиска](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Практическое руководство. Добавление возможностей поиска в элемент управления ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
   
 -   [Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.TreeView>  
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Практическое руководство. Добавление и удаление узлов элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.TreeView>
+- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Практическое руководство. Добавление и удаление узлов с помощью элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Практическое руководство. Добавить столбцы для элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)

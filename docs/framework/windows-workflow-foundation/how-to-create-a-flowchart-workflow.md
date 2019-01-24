@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569983"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Как выполнить Создать рабочий процесс блок-схема
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Flowchart> действия и пользовательские действия из предыдущего [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
@@ -150,11 +150,11 @@ ms.locfileid: "54415251"
   
      Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса блок-схема, начиная с этого шага, сразу перейти к [построение и запуск приложения](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Программирование в Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [Разработка рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [Руководство по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Практическое руководство. Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Практическое руководство. Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Программирование в Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
+- [Разработка рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
+- [Руководство по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Практическое руководство. Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
+- [Практическое руководство. Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

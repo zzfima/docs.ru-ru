@@ -2,20 +2,20 @@
 title: '&lt;httpListener&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 896b6633ef4a741b9a7460d8ce3d879253d542da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577702"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt; (сетевые параметры)
 Настраивает параметры, используемые <xref:System.Net.HttpListener> класса.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Параметры >  
-\<httpListener >  
+\<httpListener>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50197786"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |unescapeRequestUrl|Логическое значение, указывающее, если <xref:System.Net.HttpListener> экземпляр использует преобразованный в escape-последовательность URI вместо преобразованного.|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50197786"
   
  Таким образом `http.sys` предоставляет два раздела реестра для изменения процесса:  
   
-|Раздел реестра .|Значение по умолчанию|Описание|  
+|Раздел реестра .|Значение по умолчанию|Описание:|  
 |------------------|-------------------|-----------------|  
 |EnableNonUTF8|1|Если значение равно нулю, `http.sys` принимает только URL-адреса в кодировке UTF-8.<br /><br /> Если ненулевое значение, `http.sys` также принимает URL-адреса в кодировке ANSI или кодировке (DBCS) в запросах.|  
 |FavorUTF8|1|Если ненулевое значение, `http.sys` всегда пытается декодировать URL-адрес как UTF-8; Если это преобразование завершается неудачей и EnableNonUTF8 не равно нулю, Http.sys, а затем пытается декодировать его как ANSI или DBCS.<br /><br /> Если значение равно нулю (и EnableNonUTF8 не равно нулю), `http.sys` пытается декодировать его как ANSI или DBCS; Если это не обнаруживаются, осуществляется попытка преобразования UTF-8.|  
@@ -137,8 +137,8 @@ ms.locfileid: "50197786"
 |Файл проверки||  
 |Может быть пустым||  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.Configuration.HttpListenerElement>  
-- <xref:System.Net.HttpListener>  
-- <xref:System.Net.HttpListenerRequest.Url%2A>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Configuration.HttpListenerElement>
+- <xref:System.Net.HttpListener>
+- <xref:System.Net.HttpListenerRequest.Url%2A>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

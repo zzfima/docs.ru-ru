@@ -2,17 +2,17 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500525"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Обеспечивает пользователю полный контроль над стеком обмена сообщениями.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<customBinding >  
   
@@ -186,7 +186,7 @@ ms.locfileid: "54149906"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Определяет двусторонний обмен сообщениями в пользовательской привязке. Используется транспортными протоколами, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.<br /><br /> Для осуществления контакта и установления подключения клиент должен предоставить службе адрес. Этот адрес клиента предоставляется атрибутом `ClientBaseAddress`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Определяет распознавателя имен узлов в протоколе однорангового разрешения имен (PNRP). Это элемент типа <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
@@ -290,16 +290,16 @@ ms.locfileid: "54149906"
  Дополнительные сведения об использовании пользовательской привязки для изменения привязки, предоставляемой системой, см. в разделе [как: Настройка привязки, предоставляемой системой](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
     
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [Элемент customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Элемент customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

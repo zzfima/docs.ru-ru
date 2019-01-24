@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502043"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Код программной части и XAML в WPF
 <a name="introduction"></a> Выделенный код — это термин, используемый для описания код, соединяемый с созданными в разметке объектами, когда [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, скомпилированного с разметкой. В этом разделе описываются требования для кода, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -58,8 +58,8 @@ ms.locfileid: "44085677"
 ## <a name="inline-code-limitations"></a>Ограничения встроенного кода  
  Следует избегать или ограничивать использование встроенного кода. С точки зрения архитектуры и философии кодирования обеспечение разделения разметки и кода сохраняет ролей дизайнеры и разработчики гораздо больше отдельных. На более техническом уровне, код, написанный для встроенного кода может быть неудобно записи, так как вы записываете всегда в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] создается разделяемый класс и можно использовать только сопоставления пространства имен XML по умолчанию. Поскольку невозможно добавить `using` инструкций, необходимо полностью указать многие [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] вызовов. Значение по умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сопоставления включают большинство, но не все [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространства имен, которые присутствуют в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборок; необходимо будет полностью определить вызовы к типам и членам, содержащихся в других пространствах имен среды CLR. Также любых других разделяемый класс не может определить во встроенном коде, и все сущности пользовательского кода, ссылки на которые должны существовать в качестве членов или переменных внутри созданного разделяемого класса. Другие программирования функции для конкретных языков, таких как макросы или `#ifdef` глобальные переменные или переменные сборки, также не доступны. Дополнительные сведения см. в разделе [встроенный тип XAML x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Встроенный тип XAML x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Встроенный тип XAML x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

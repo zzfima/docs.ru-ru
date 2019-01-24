@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5d541f834e829305fa2b091c45d0dc8f387bb55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512376"
 ---
 # <a name="cordllmain-function"></a>Функция _CorDllMain
-Инициализирует общеязыковой среды выполнения (CLR), находит управляемую точку входа в заголовке CLR сборки DLL и начинает выполнение.  
+Инициализирует общеязыковой среды выполнения (CLR), размещает управляемую точку входа в заголовке среды CLR сборки DLL и начинает выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,31 +41,31 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  [in] Дескриптор экземпляра загруженного модуля.  
   
  `dwReason`  
- [in] Указывает, почему вызывается функция точки входа DLL. Этот параметр может принимать одно из следующих значений: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH или DLL_PROCESS_DETACH. Описание этих значений см. в разделе `DllMain` документации пакета Platform SDK.  
+ [in] Указывает, почему вызывается функция точки входа библиотеки DLL. Этот параметр может принимать одно из следующих значений: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH или DLL_PROCESS_DETACH. Описание этих значений, см. в разделе `DllMain` документации пакета Platform SDK.  
   
  `lpReserved`  
  [in] Не используется.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает `true` успеха и `false` при возникновении ошибки.  
+ Этот метод возвращает `true` для достижения успеха и `false` при возникновении ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция вызывается загрузчиком операционной системы для DLL-сборки. Для исполняемых сборок загрузчик вызывает [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) вместо этого функцию.  
+ Эта функция вызывается загрузчиком операционной системы для DLL-сборки. Исполняемые сборки, загрузчик вызывает [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) вместо этого функцию.  
   
- Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в DLL-файле.  
+ Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в файле DLL.  
   
- В Windows 98, Windows ME, Windows NT и Windows 2000 `_CorDllMain` функция косвенно через fixupin загрузчик операционной системы. Во всех других версиях Windows он вызывается загрузчиком операционной системы.  
+ В Windows 98, Windows ME, Windows NT и Windows 2000 `_CorDllMain` функция вызывается косвенно через fixupin загрузчик операционной системы. Во всех других версиях Windows он вызывается загрузчиком операционной системы.  
   
- Дополнительные сведения см. в разделе «Примечания» в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
+ Дополнительные сведения см. в разделе "Примечания" в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

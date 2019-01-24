@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2c4f15b3fb1bc5b408382589a1c8213ffd246e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c44a150fa85ff0cbda4ff2b39acefb46045adad1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500293"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>Метод INotifySink2::OnSyncCallEnter
 Вызывается при входе вызова.  
@@ -40,21 +40,21 @@ HRESULT OnSyncCallEnter
   
 #### <a name="parameters"></a>Параметры  
  `in_CallID`  
- [in] Идентификатор вызова вводится. В разделе [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] Идентификатор вызова, вводимым. См. в разделе [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
  [in] Буфер для вызова.  
   
  `in_BufferSize`  
- [in] Размер буфера вызова, в байтах.  
+ [in] Размер буфера вызова в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** ProtocolNotify2.idl  
+ **Заголовок.** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Интерфейс INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Интерфейс INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Интерфейс INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Интерфейс INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

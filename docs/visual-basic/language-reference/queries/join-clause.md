@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514690"
 ---
 # <a name="join-clause-visual-basic"></a>Предложение Join (Visual Basic)
 Объединяет две коллекции в одну. Операция соединения основана на сопоставлении ключей и использует `Equals` оператор.  
@@ -31,19 +31,19 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Части  
  `element`  
- Обязательно. Переменная управления для присоединяемой коллекции.  
+ Обязательный. Переменная управления для присоединяемой коллекции.  
   
  `collection`  
- Обязательно. Коллекция для объединения с коллекцией, определенной в левой части `Join` оператор. Объект `Join` предложение может быть вложенным в другой `Join` предложение, или в `Group Join` предложение.  
+ Обязательный. Коллекция для объединения с коллекцией, определенной в левой части `Join` оператор. Объект `Join` предложение может быть вложенным в другой `Join` предложение, или в `Group Join` предложение.  
   
  `joinClause`  
- Необязательный. Один или более дополнительных `Join` предложений для дальнейшего уточнения запроса.  
+ Необязательный параметр. Один или более дополнительных `Join` предложений для дальнейшего уточнения запроса.  
   
  `groupJoinClause`  
- Необязательный. Один или более дополнительных `Group Join` предложений для дальнейшего уточнения запроса.  
+ Необязательный параметр. Один или более дополнительных `Group Join` предложений для дальнейшего уточнения запроса.  
   
  `key1` `Equals` `key2`  
- Обязательно. Определяет ключи для соединяемых коллекций. Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций. Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей. `key1` должен быть из коллекции в левой части `Join` оператор. `key2` должен быть из коллекции в правой части `Join` оператор.  
+ Обязательный. Определяет ключи для соединяемых коллекций. Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций. Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей. `key1` должен быть из коллекции в левой части `Join` оператор. `key2` должен быть из коллекции в правой части `Join` оператор.  
   
  Ключи, используемые в условии соединения может быть выражений, содержащих более одного элемента из коллекции. Тем не менее каждое ключевое выражение может содержать только элементы из соответствующей коллекции.  
   
@@ -87,10 +87,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a>См. также  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>См. также
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)

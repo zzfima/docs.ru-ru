@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 281c1c9556773446808f7bd4b4ef558805503cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499318"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 В этом разделе описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые предоставляют специальные функции, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  
@@ -161,8 +161,8 @@ mc:Ignorable="PresentationOptions"
   
  Пример настраиваемого <xref:System.Windows.Freezable> , представлена в разделе [пример пользовательского](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Freezable>  
- [Пример пользовательской анимации](https://go.microsoft.com/fwlink/?LinkID=159981)  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Freezable>
+- [Пример пользовательской анимации](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

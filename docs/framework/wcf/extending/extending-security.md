@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 2d2f1997534a33f246c85501e66b6aa8a684445f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 798a1d1cd21fd9a0bc21c6ccaa42c478379cc7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511541"
 ---
 # <a name="extending-security"></a>Расширение безопасности
 Чтобы адаптировать новые типы утверждений и пользовательские маркеры, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
@@ -30,7 +30,7 @@ ms.locfileid: "50190701"
  [Переопределение идентификатора службы для проверки подлинности](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  Описывается, как переопределить идентификацию службы для проверки подлинности.  
   
- [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Практическое руководство. Создание средства проверки идентификации настраиваемого клиента](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  Демонстрирует, как проверить идентификацию пользовательской конечной точки.  
   
  [Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
@@ -57,5 +57,5 @@ ms.locfileid: "50190701"
   
  [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)

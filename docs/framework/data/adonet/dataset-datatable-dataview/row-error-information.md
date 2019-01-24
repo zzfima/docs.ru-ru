@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: cf798ac88ba83e890086cec7424c8c363980718f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573287"
 ---
 # <a name="row-error-information"></a>Сведения об ошибках строк
 Чтобы не отвечать на ошибки строки при изменении значений в таблице <xref:System.Data.DataTable>, можно добавить сведения об ошибке в строку для последующего использования. Для этой цели объект <xref:System.Data.DataRow> предоставляет свойство <xref:System.Data.DataRow.RowError%2A> для каждой строки. Добавление данных к **RowError** свойство **DataRow** задает <xref:System.Data.DataRow.HasErrors%2A> свойство **DataRow** для **true**. Если **DataRow** является частью **DataTable**, и **DataRow.HasErrors** — **true**, **DataTable.HasErrors** свойство является также **true**. Это касается также **набора данных** к которому **DataTable** принадлежит. Если проверка на наличие ошибок, проверьте **HasErrors** свойства, чтобы определить, если сведения об ошибке было добавлено никаких строк. Если **HasErrors** — **true**, можно использовать <xref:System.Data.DataTable.GetErrors%2A> метод **DataTable** для возврата и изучения только строки с ошибками, как показано в следующем примере.  
@@ -77,9 +77,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataTable>  
- [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataTable>
+- [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c590944c321050c9ecca330a2961a2a7b7f31e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44771536ad7cb225c341505d4878d0cb4f2bdba5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568508"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>Метод ICorDebugSymbolProvider::GetMethodLocalSymbols
 Получает локальные символы метода для указанного относительного виртуального адреса (RVA) этого метода.  
@@ -44,15 +44,15 @@ HRESULT GetMethodLocalSymbols(
 >  Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод GetMethodParameterSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)  
- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Метод GetMethodParameterSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)
+- [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 457310fbf12ef2d6143586116f76df1720b59a6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdccc0d60cb5f4bbee5da9b07072a9aa14a8fde9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500741"
 ---
 # <a name="trace-listeners"></a>Прослушиватели трассировки
 При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений. Сообщения трассировки получаются *прослушивателями*. В задачу прослушивателя входит сбор, хранение и маршрутизация сообщений трассировки. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту, например, в журнал событий, окно или текстовый файл.  
@@ -40,7 +40,7 @@ ms.locfileid: "33391763"
   
 -   Прослушиватель <xref:System.Diagnostics.XmlWriterTraceListener> направляет вывод отладки или трассировки в качестве кодированных в XML данных в метод <xref:System.IO.TextWriter> или поток <xref:System.IO.Stream>, например <xref:System.IO.FileStream>.  
   
- Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`. Дополнительные сведения см. в разделе [Практическое руководство. Создание и инициализация прослушивателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) и [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md). Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки. Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**. Каждый прослушиватель получает одно и то же сообщение. Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.  
+ Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`. Дополнительные сведения см. в разделе [Как Создание и инициализация прослушивателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) и [как: Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md). Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки. Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**. Каждый прослушиватель получает одно и то же сообщение. Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.  
   
  В приведенном ниже примере показана отправка выходных данных в коллекцию **прослушивателей**.  
   
@@ -76,10 +76,10 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>Прослушиватели, определяемые разработчиками  
  Можно определить собственные прослушиватели путем наследования от базового класса **TraceListener** и переопределения его методов своими пользовательскими методами. Дополнительные сведения о создании прослушивателей, определяемых разработчиками, см. в описании <xref:System.Diagnostics.TraceListener> в справочнике по .NET Framework.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TraceListener>  
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TraceListener>
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575493"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Метод ICorDebugDataTarget::ReadVirtual
 Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.  
@@ -40,30 +40,30 @@ HRESULT ReadVirtual(
   
 #### <a name="parameters"></a>Параметры  
  `address`  
- [in] Начальный адрес запрошенный объем памяти.  
+ [in] Начальный адрес требуемым объемом свободной памяти.  
   
  `pbuffer`  
- [out] Буфер, где будет храниться в памяти.  
+ [out] Буфер, где будет храниться память.  
   
  `bytesRequested`  
  [in] Число байтов для получения из целевой адрес.  
   
  `pBytesRead`  
- [out] Число фактически считанных байтов из целевой адрес. Это может быть меньше, чем `bytesRequested`.  
+ [out] Число байтов, фактически считанных из целевой адрес. Это может быть меньше, чем `bytesRequested`.  
   
 ## <a name="remarks"></a>Примечания  
- Если можно прочитать первый байт (по указанному начальному адресу), вызов возвращает успешный результат (для поддержки эффективного чтения структур данных с самоописанием длину, например строки с завершающим нулем).  
+ Если первый байт (по адресу указанной начальной) могут считываться, вызов возвращает успех (для поддержки эффективного чтения структур данных с самоописанием длины, например, строки с завершающим нулем).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

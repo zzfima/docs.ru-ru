@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание конечной точки службы в коде
+title: Как выполнить Создать конечную точку службы в коде
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 38a7083662ce5ae50cc3ed7f03a224efa65622ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517478"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Практическое руководство. Создание конечной точки службы в коде
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Как выполнить Создать конечную точку службы в коде
 В этом примере контракт `ICalculator` определен для службы калькулятора, служба реализуется в классе `CalculatorService`, а затем ее конечная точка задается в коде с указанием того, что служба должна использовать класс <xref:System.ServiceModel.BasicHttpBinding>.  
   
  В большинстве случаев рекомендуется указывать привязку и адрес декларативно в конфигурации, а не принудительно в коде. Как правило, определять конечные точки в коде непрактично, поскольку привязки и адреса для развернутой службы чаще всего отличаются от привязок и адресов, используемых в процессе разработки службы. В общем случае, если не указывать привязку и адрес в коде, их можно изменять без повторной компиляции или повторного развертывания приложения.  
@@ -34,7 +34,7 @@ ms.locfileid: "33490416"
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  Создайте основное приложение и вызовите <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> или одну из других перегрузок, чтобы добавить конечную точку службы для основного приложения.  
+4.  Создайте ведущее приложение и вызовите <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> или одну из других перегрузок, чтобы добавить конечную точку службы для ведущего приложения.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
@@ -44,7 +44,7 @@ ms.locfileid: "33490416"
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     Дополнительные сведения о конечных точках по умолчанию см. в разделе [упрощенной конфигурации](../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Дополнительные сведения о конечных точках по умолчанию, см. в разделе [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Указание привязки службы в коде](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Указание привязки службы в коде](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

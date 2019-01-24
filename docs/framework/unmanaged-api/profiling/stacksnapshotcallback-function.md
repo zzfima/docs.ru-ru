@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572431"
 ---
 # <a name="stacksnapshotcallback-function"></a>Функция StackSnapshotCallback
-Предоставляет сведения о каждого управляемого кадра и каждом запуске неуправляемого кадра в стеке во время стека, который инициируется профилировщик [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.  
+Предоставляет сведения о каждого управляемого кадра и каждом запуске неуправляемых фреймов в стеке во время стека, который инициируется профилировщик [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,39 +41,39 @@ HRESULT __stdcall StackSnapshotCallback (
   
 #### <a name="parameters"></a>Параметры  
  `funcId`  
- [in] Если это значение равно нулю, этот обратный вызов предназначен для управляемого кадра. в противном случае оно является идентификатором управляемой функции, и этот обратный вызов предназначен для управляемого кадра.  
+ [in] Если это значение равно нулю, этот обратный вызов предназначен для неуправляемых фреймов; в противном случае он представляет собой идентификатор управляемой функции, и этот обратный вызов является для управляемого фрейма.  
   
  `ip`  
- [in] Значение указателя инструкций машинного кода в кадре.  
+ [in] Значение указателя инструкции машинного кода в фрейме.  
   
  `frameInfo`  
  [in] Объект `COR_PRF_FRAME_INFO` значение, которое ссылается на сведения о кадре стека. Это значение является допустимым для использования только во время этого обратного вызова.  
   
  `contextSize`  
- [in] Размер `CONTEXT` структуры, который ссылается `context` параметра.  
+ [in] Размер `CONTEXT` структуру, которая ссылается `context` параметра.  
   
  `context`  
- [in] Указатель на объект Win32 `CONTEXT` структуры, который представляет состояние ЦП для этого кадра.  
+ [in] Указатель на Win32 `CONTEXT` структура, представляющая состояние ЦП для данного кадра.  
   
- `context` Параметр допустим только в том случае, если переданный флаг COR_PRF_SNAPSHOT_CONTEXT `ICorProfilerInfo2::DoStackSnapshot`.  
+ `context` Параметр допустим только в том случае, если был передан флаг COR_PRF_SNAPSHOT_CONTEXT `ICorProfilerInfo2::DoStackSnapshot`.  
   
  `clientData`  
- [in] Указатель на данные клиента, которые передаются непосредственно от `ICorProfilerInfo2::DoStackSnapshot`.  
+ [in] Указатель на данные клиента, который передается напрямую через из `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>Примечания  
- `StackSnapshotCallback` Функция реализуется разработчиком профилировщика. Необходимо установить ограничение сложности работы, проделанной `StackSnapshotCallback`. Например, при использовании `ICorProfilerInfo2::DoStackSnapshot` в асинхронном режиме, целевой поток может удерживать блокировки. Если код в `StackSnapshotCallback` требуются те же блокировки, можно гарантировать взаимоблокировку.  
+ `StackSnapshotCallback` Функция реализуется разработчиком профилировщика. Необходимо ограничить сложность работы, проделанной `StackSnapshotCallback`. Например, при использовании `ICorProfilerInfo2::DoStackSnapshot` в асинхронном режиме, целевой поток может блокироваться. Если код в `StackSnapshotCallback` требуются те же блокировки, взаимоблокировки неприятности.  
   
- `ICorProfilerInfo2::DoStackSnapshot` Вызовы метода `StackSnapshotCallback` функцию один раз за кадр управляемого или один раз на выполнение неуправляемого кадра. Если `StackSnapshotCallback` вызывается для запуска неуправляемых кадров, профилировщик может использовать контекст регистра (ссылается `context` параметр) для выполнения собственного неуправляемого стека. В этом случае Win32 `CONTEXT` структура представляет состояние ЦП для наиболее недавно отправленных кадров в запуске неуправляемого кадра. Несмотря на то что Win32 `CONTEXT` структура включает в себя значения для всех регистров, следует полагаться только на значениях регистр указателя стека, регистр указателя фрейма, регистр указателя инструкции и постоянные (хранимые) регистры целых чисел.  
+ `ICorProfilerInfo2::DoStackSnapshot` Вызовы методов `StackSnapshotCallback` функцию один раз в управляемый блок кода, или один раз на серию неуправляемых фреймов. Если `StackSnapshotCallback` вызывается для запуска неуправляемых фреймов, профилировщик может использовать регистров (ссылается `context` параметр) для выполнения свой собственный неуправляемый разбор стека. В данном случае Win32 `CONTEXT` структура представляет состояние ЦП для наиболее недавно отправленных кадра в серию неуправляемых фреймов. Несмотря на то что Win32 `CONTEXT` структура включает значения для всех регистров, следует полагаться только на значениях регистр указателя стека, регистр указателя кадра, регистр указателя инструкции и постоянные (хранимые) целочисленных регистров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl  
+ **Заголовок.** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Метод DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

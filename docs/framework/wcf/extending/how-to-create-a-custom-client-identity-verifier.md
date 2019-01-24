@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
+title: Как выполнить Создание средства проверки идентификации настраиваемого клиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569379"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
-*Удостоверение* функции Windows Communication Foundation (WCF) позволяет клиенту заранее указывать Ожидаемое удостоверение службы. Всякий раз, когда сервер доказывает свою подлинность клиенту, удостоверение проверяется на соответствие ожидаемому удостоверению. (Описание удостоверения и как она работает, см. [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Как выполнить Создание средства проверки идентификации настраиваемого клиента
+*Удостоверений* функция Windows Communication Foundation (WCF) позволяет клиенту заранее указывать Ожидаемое удостоверение службы. Всякий раз, когда сервер доказывает свою подлинность клиенту, удостоверение проверяется на соответствие ожидаемому удостоверению. (Описание удостоверения и как это работает, см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
- При необходимости процедуру проверки можно настроить, используя пользовательское средство проверки удостоверения. Например, можно выполнять дополнительные процедуры проверки удостоверения службы. В данном примере пользовательское средство проверки удостоверения проверяет дополнительные утверждения в сертификате X.509, возвращенном от сервера. Пример приложения см. в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
+ При необходимости процедуру проверки можно настроить, используя пользовательское средство проверки удостоверения. Например, можно выполнять дополнительные процедуры проверки удостоверения службы. В данном примере пользовательское средство проверки удостоверения проверяет дополнительные утверждения в сертификате X.509, возвращенном от сервера. Образец приложения, см. в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>Расширение класса EndpointIdentity  
   
@@ -81,10 +81,10 @@ ms.locfileid: "33804480"
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- <xref:System.ServiceModel.EndpointIdentity>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- <xref:System.ServiceModel.EndpointIdentity>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)

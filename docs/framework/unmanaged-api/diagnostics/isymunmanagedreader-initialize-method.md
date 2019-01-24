@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494760"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Метод ISymUnmanagedReader::Initialize
-Инициализирует средства чтения символов, при этом интерфейс импорта метаданных, данное средство чтения связанного с, а также имя файла модуля.  
+Инициализирует средство чтения символов с интерфейсом средства импорта метаданных, что средство чтения будет сопоставлено, а также имя файла модуля.  
   
 > [!NOTE]
 >  Этот метод может вызываться только один раз и должен вызываться до всех остальных методов чтения.  
@@ -51,7 +51,7 @@ HRESULT Initialize (
  [in] Путь для поиска. Этот параметр является необязательным.  
   
  `pIStream`  
- [in] Файловый поток, используемый вместо параметра filename.  
+ [in] Файловый поток, используемый в качестве альтернативы в параметре filename.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
@@ -60,7 +60,7 @@ HRESULT Initialize (
  Необходимо указать только один из `filename` или `pIStream` параметров, не оба. Параметр `searchPath` является необязательным.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

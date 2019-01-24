@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 9b21160d-e1c2-468b-9275-26e4369ae40d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6ac90285a87112057c1b0657616305ed1ddaa3d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da030330f0f7ec285084e4a11f113a5fa44b6e0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512961"
 ---
 # <a name="ui-automation-support-for-the-tabitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления TabItem
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления TabItem. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47082699"
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|TabItem<br /><br /> <ul><li>Image (0 или 1)</li><li>Text</li><li>Панель<br /><br /> <ul><li>Различные элементы управления (0 или более)</li></ul></li></ul>|TabItem<br /><br /> <ul><li>Панель<br /><br /> <ul><li>Различные элементы управления (0 или более)</li></ul></li></ul>|  
+|TabItem<br /><br /> <ul><li>Image (0 или 1)</li><li>Текста</li><li>Панель<br /><br /> <ul><li>Различные элементы управления (0 или более)</li></ul></li></ul>|TabItem<br /><br /> <ul><li>Панель<br /><br /> <ul><li>Различные элементы управления (0 или более)</li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
@@ -73,7 +73,7 @@ ms.locfileid: "47082699"
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Обязательно|Нет|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Automation.ControlType.TabItem>  
- [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Automation.ControlType.TabItem>
+- [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)

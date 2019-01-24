@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 40c0ab5f18d5aae2c99dd66747d3435f0826af8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a81e422c2e6d8c2d342821163f860c5cb54c083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583328"
 ---
 # <a name="configuration-element"></a>\<Конфигурация > элемент
 
@@ -41,7 +41,7 @@ ms.locfileid: "47200327"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации.|
 | [**\<Startup >** параметры схемы](~/docs/framework/configure-apps/file-schema/startup/index.md) | Все элементы в схеме параметров запуска. |
@@ -61,4 +61,4 @@ ms.locfileid: "47200327"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

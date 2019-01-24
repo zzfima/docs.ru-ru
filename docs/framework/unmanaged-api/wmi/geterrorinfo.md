@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3b27dae07697943c696dc3419f2414701feb1220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577677"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo-функция
 Получает сведения об ошибках из предыдущего вызова функции.  
@@ -43,11 +43,11 @@ IErrorInfo* GetErrorInfo();
 Эта функция создает оболочку для вызова [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) метод.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.def  
+ **Заголовок.** WMINet_Utils.def  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96352ec5eaba67489dbef999925c56475611746c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5a1ae284b4f2474cb824ee9dbff2eb82c5a0ead
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568794"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>Метода ICLRRuntimeHost::ExecuteInAppDomain
 Указывает <xref:System.AppDomain> в которой выполняется указанный управляемый код.  
@@ -39,36 +39,36 @@ HRESULT ExecuteInAppDomain(
   
 #### <a name="parameters"></a>Параметры  
  `AppDomainId`  
- [in] Числовой идентификатор объекта <xref:System.AppDomain> в котором для выполнения указанного метода.  
+ [in] Числовой идентификатор <xref:System.AppDomain> для выполнения указанного метода.  
   
  `pCallback`  
  [in] Указатель на функцию, выполняемую в течение указанного <xref:System.AppDomain>.  
   
  `cookie`  
- [in] Указатель на непрозрачные памяти, выделенный вызывающим объектом. Этот параметр передается с общеязыковой среды выполнения (CLR) на обратный вызов домена. Не является управляемой средой выполнения динамической памяти; вызывающий объект управляет выделением и временем существования этой памяти.  
+ [in] Указатель на непрозрачные памяти, выделенный вызывающим объектом. Этот параметр передается по общеязыковой среды выполнения (CLR) методу обратного вызова домена. Не является управляемой средой выполнения динамической памяти; вызывающий объект управляет выделением и временем существования этой памяти.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInAppDomain` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
+|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `ExecuteInAppDomain` предоставляет узлу возможность контроль которую управляемых <xref:System.AppDomain> указанного управляемого метода следует выполнять в. Можно получить значение идентификатора домена приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойство путем вызова [GetCurrentAppDomainId-метод](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
+ `ExecuteInAppDomain` позволяет узлу для контроля над котором управляемых <xref:System.AppDomain> указанного управляемого метода должен быть выполнен в. Можно получить значение идентификатора домен приложения, который соответствует значению <xref:System.AppDomain.Id%2A> свойства, путем вызова [метод GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

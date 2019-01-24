@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505696"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Примеры устранения неполадок WCF
-В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе: [Настройка трассировки](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе: [Службы программа Trace Viewer (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: «Ошибка HTTP 404.3 - не найдено»](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1.  [После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: Ошибка HTTP 404.3-не найдено](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Ошибка HTTP 404.3 - не найдено. Запрашиваемая страница не может быть выдана из-за конфигурации расширения. Если страница - скрипт, добавьте обработчик. Если файл должен загружаться, добавьте MIME-сопоставление. Подробное описание ошибки InformationModule StaticFileModule.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "47200858"
   
 10. [При использовании одного из средств трассировки получено исключение EndpointNotFoundException. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
-11. [При вызове веб-приложения HTTP WCF из приложения службы протокола SOAP WCF возвращается следующая ошибка: «405 Метод запрещен»](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
+11. [При вызове приложения WCF Web HTTP из приложения WCF SOAP служба возвращает следующую ошибку: 405 Метод запрещен](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
  [Что такое базовый адрес? Как он связан с адресом конечной точки?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
-## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: «Ошибка HTTP 404.3 - не найдено»  
+## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: Ошибка HTTP 404.3-не найдено  
  Полное сообщение об ошибке:  
   
  Ошибка HTTP 404.3 - не найдено. Запрашиваемая страница не может быть выдана из-за конфигурации расширения. Если страница - скрипт, добавьте обработчик. Если файл должен загружаться, добавьте MIME-сопоставление. Подробное описание ошибки InformationModule StaticFileModule.  
@@ -51,7 +51,7 @@ ms.locfileid: "47200858"
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Иногда при втором запросе возникает исключение MessageSecurityException, если клиент бездействует некоторое время после первого запроса. В чем причина?  
- Сбой второго запроса может произойти по двум причинам: (1) истекло время ожидания сеанса или (2) перезапущен веб-сервер, на котором размещена служба. В первом случае сеанс действителен до того, как истечет время ожидания службы. Если служба не получает запрос от клиента в течение времени, заданного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба завершает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. Дополнительные сведения об использовании токенов контекста с отслеживанием состояния безопасности в безопасном сеансе см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) привязки, можно задать `establishSecurityContext` свойства `false` отключения безопасных сеансов. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Подробные сведения о создании пользовательской привязки см. в разделе [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
+ Второй запрос может завершиться ошибкой в первую очередь по двум причинам: (1 Истекло время ожидания сеанса или (2) веб-сервера, на котором размещается служба будет перезапущен. В первом случае сеанс действителен до того, как истечет время ожидания службы. Если служба не получает запрос от клиента в течение времени, заданного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба завершает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. Дополнительные сведения об использовании токенов контекста с отслеживанием состояния безопасности в безопасном сеансе см. в разделе [как: Создайте контекст безопасности маркера для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) привязки, можно задать `establishSecurityContext` свойства `false` отключения безопасных сеансов. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Дополнительные сведения о создании пользовательской привязки, см. в разделе [как: Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Когда со службой взаимодействует около 10 клиентов, она отклоняет подключение новых клиентов. В чем причина?  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Возможно, для приложения потребуется открыть порт. Дополнительные сведения см. в разделе [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) примеров SDK.  
   
--   Другие возможные причины этой проблемы см. в разделе примеров [выполнения примеров Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Другие возможные причины этой проблемы см. в разделе примеров [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   Если в клиенте используются учетные данные Windows и создается исключение <xref:System.ServiceModel.Security.SecurityNegotiationException>, настройте Kerberos, как указано ниже.  
   
@@ -136,7 +136,7 @@ public class MyServiceHost : ServiceHost
   
 -   [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Регистрация имен участников службы Kerberos в файле Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [Регистрация имен субъектов-служб Kerberos в файле Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
 -   [Сведения о Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
@@ -162,7 +162,7 @@ public class MyServiceHost : ServiceHost
   
  В этом случае необходимо предоставить учетной записи процесса права доступа для чтения файла с закрытым ключом. Например, если рабочий процесс IIS выполняется в учетной записи Бориса, ему необходимо предоставить права доступа для чтения файла, содержащего закрытый ключ.  
   
- Дополнительные сведения о том, как предоставить учетной записи пользователя доступ к файлу, который содержит закрытый ключ для конкретного сертификата X.509 см. в разделе [как: Make X.509 Certificates Accessible на платформу WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Дополнительные сведения о том, как предоставить учетной записи пользователя доступ к файлу, который содержит закрытый ключ для конкретного сертификата X.509 см. в разделе [как: Предоставление доступа к WCF к сертификатам X.509](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>В имени первого параметра операции прописные буквы были заменены на строчные, и теперь в клиенте выдается исключение. В чем причина?  
@@ -176,7 +176,7 @@ public class MyServiceHost : ServiceHost
   
 ```xml
 <endpoint   
-  address=http://localhost:8000/MyServer/  
+  address="http://localhost:8000/MyServer/"  
   binding="wsHttpBinding"  
   bindingConfiguration="WSHttpBinding_IMyContract"  
   behaviorConfiguration="MyClient"   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Вы получите сообщение об ошибке следующего вида: необработанное исключение: System.ServiceModel.AddressAlreadyInUseException: уже есть прослушиватель на конечной точке IP 0.0.0.0:9000 можно обойти эту ошибку, указав полный URL-адрес с другой порт для MEX конечной точки, как показано в следующем фрагменте конфигурации:  
+ Вы получите сообщение об ошибке следующего вида: необработанное исключение: System.ServiceModel.AddressAlreadyInUseException: Уже есть прослушиватель на конечной точке IP 0.0.0.0:9000, которые можно обойти эту ошибку, указав полный URL-адрес с другой порт для конечной точки MEX, как показано в следующем фрагменте конфигурации:  
   
 ```xml
 <services>  
@@ -236,8 +236,8 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BK_MK99"></a>   
-## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>При вызове веб-приложения HTTP WCF из приложения службы протокола SOAP WCF возвращается следующая ошибка: «405 Метод запрещен»  
- Вызов приложения WCF Web HTTP (службы, использующей <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>) из WCF служба может создавать следующее исключение: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: удаленный сервер вернул непредвиденный ответ : (405) метод не разрешено. "это исключение возникает, потому что WCF перезаписывает исходящий <xref:System.ServiceModel.OperationContext> входящим <xref:System.ServiceModel.OperationContext>. Чтобы решить эту проблему, создайте <xref:System.ServiceModel.OperationContextScope> в операции веб-службы HTTP WCF. Пример:  
+## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>При вызове приложения WCF Web HTTP из приложения WCF SOAP служба возвращает следующую ошибку: 405 Метод запрещен  
+ Вызов приложения WCF Web HTTP (службы, использующей <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>) из WCF служба может создавать следующее исключение: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Удаленный сервер вернул неожиданный ответ: (405) метод не разрешено. "это исключение возникает, потому что WCF перезаписывает исходящий <xref:System.ServiceModel.OperationContext> входящим <xref:System.ServiceModel.OperationContext>. Чтобы решить эту проблему, создайте <xref:System.ServiceModel.OperationContextScope> в операции веб-службы HTTP WCF. Пример:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,5 +249,5 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+## <a name="see-also"></a>См. также
+- [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

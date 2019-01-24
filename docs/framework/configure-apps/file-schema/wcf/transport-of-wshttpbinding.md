@@ -2,17 +2,17 @@
 title: '&lt;transport&gt; для &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 4bd385e8c4fee1ea340e1d9df9816e25760efb02
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a759f74e923c9d81391abf82fa08491f3b31c990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517959"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>&lt;transport&gt; для &lt;wsHttpBinding&gt;
 Определяет параметры проверки подлинности для HTTP-транспорта.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<wsHttpBinding >  
 \<Привязка >  
@@ -81,17 +81,17 @@ ms.locfileid: "54148634"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Представляет возможности безопасности [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

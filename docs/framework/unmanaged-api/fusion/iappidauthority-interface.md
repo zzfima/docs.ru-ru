@@ -16,43 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819afec2c448e5f396ab54e2dde00c01da310b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c803169f87c4033d7e231e8b0243f502b9246f70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493929"
 ---
 # <a name="iappidauthority-interface"></a>Интерфейс IAppIdAuthority
-Предоставляет методы, создающие и сравнения ключей для идентификаторов и ссылок приложения.  
+Предоставляет методы, формирующие и сравнения ключей для идентификаторов и ссылок приложения.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|Возвращает значение, указывающее, являются ли два заданных [IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) они равны. Можно передать значение флага IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION, чтобы не учитывать свои сведения о соответствующей версии.|  
-|`IAppIdAuthority::AreReferencesEqual`|Возвращает значение, указывающее, являются ли два заданных [IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) они равны. Можно передать значение флага IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION, чтобы не учитывать свои сведения о соответствующей версии.|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|Возвращает значение, указывающее, равны ли два указанных определения строки. Можно передать значение флага IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION, чтобы не учитывать свои сведения о соответствующей версии.|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|Возвращает значение, указывающее, равны ли две ссылки указанной строки. Можно передать значение флага IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION, чтобы не учитывать свои сведения о соответствующей версии.|  
-|`IAppIdAuthority::CreateDefinition`|Получает указатель интерфейса на вновь созданный `IDefinitionAppId` экземпляр, представляющий сборку в текущей области.|  
+|`IAppIdAuthority::AreDefinitionsEqual`|Получает значение, указывающее, являются ли два заданных [IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) они равны. Вы можете передать значение флага IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION игнорировать информацию о соответствующей версии.|  
+|`IAppIdAuthority::AreReferencesEqual`|Получает значение, указывающее, являются ли два заданных [IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) они равны. Вы можете передать значение флага IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION игнорировать информацию о соответствующей версии.|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|Получает значение, указывающее, равны ли два определения указанную строку. Вы можете передать значение флага IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION игнорировать информацию о соответствующей версии.|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|Получает значение, указывающее, равны ли две ссылки на указанную строку. Вы можете передать значение флага IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION игнорировать информацию о соответствующей версии.|  
+|`IAppIdAuthority::CreateDefinition`|Получает указатель интерфейса на вновь созданным `IDefinitionAppId` экземпляр, представляющий сборку в текущей области.|  
 |`IAppIdAuthority::CreateReference`|Получает указатель интерфейса на только что созданный `IReferenceAppId` , представляющий сборку в текущей области.|  
-|`IAppIdAuthority::DefinitionToText`|Получает версию строки указанного `IDefinitionAppId`, используя заданные значения флага.|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|Возвращает значение, указывающее, является ли указанный `IDefinitionAppId` и `IReferenceAppId` представляют той же сборки.|  
-|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Возвращает значение, указывающее, представляют ли заданная строка определения и строка ссылки той же сборки.|  
+|`IAppIdAuthority::DefinitionToText`|Получает строковое представление указанного `IDefinitionAppId`, используя заданные значения флага.|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|Получает значение, указывающее, является ли указанный `IDefinitionAppId` и `IReferenceAppId` представляют ту же сборку.|  
+|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Получает значение, указывающее, представляют ли заданная строка определения и строка ссылки той же сборки.|  
 |`IAppIdAuthority::GenerateDefinitionKey`|Возвращает строковый ключ, представляющий указанный `IDefinitionAppId` экземпляра.|  
 |`IAppIdAuthority::GenerateReferenceKey`|Возвращает строковый ключ, представляющий указанный `IReferenceAppId` экземпляра.|  
-|`IAppIdAuthority::HashDefinition`|Возвращает хэш-ключ для указанного `IDefinitionAppId` экземпляра.|  
-|`IAppIdAuthority::HashReference`|Возвращает хэш-ключ для указанного `IReferenceAppId` экземпляра.|  
-|`IAppIdAuthority::ReferenceToText`|Получает версию строки указанного `IReferenceAppId`, используя заданные значения флага.|  
-|`IAppIdAuthority::TextToDefinition`|Возвращает указатель интерфейса `IDefinitionAppId` экземпляр, представляющий сборку ссылается указанный ключ строки.|  
-|`IAppIdAuthority::TextToReference`|Возвращает указатель интерфейса `IReferenceAppId` экземпляр, представляющий сборку ссылается указанный ключ строки.|  
+|`IAppIdAuthority::HashDefinition`|Возвращает хэш-ключа для указанного `IDefinitionAppId` экземпляра.|  
+|`IAppIdAuthority::HashReference`|Возвращает хэш-ключа для указанного `IReferenceAppId` экземпляра.|  
+|`IAppIdAuthority::ReferenceToText`|Получает строковое представление указанного `IReferenceAppId`, используя заданные значения флага.|  
+|`IAppIdAuthority::TextToDefinition`|Получает указатель интерфейса на `IDefinitionAppId` экземпляр, который представляет сборки, упоминаемой в указанный ключ строки.|  
+|`IAppIdAuthority::TextToReference`|Получает указатель интерфейса на `IReferenceAppId` экземпляр, который представляет сборки, упоминаемой в указанный ключ строки.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Isolation.h  
+ **Заголовок.** Isolation.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

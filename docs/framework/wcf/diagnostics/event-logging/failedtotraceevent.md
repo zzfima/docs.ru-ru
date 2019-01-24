@@ -2,23 +2,23 @@
 title: FailedToTraceEvent
 ms.date: 03/30/2017
 ms.assetid: a13f19e3-a6e0-4e58-bb45-73bed6cf4421
-ms.openlocfilehash: ad3a4b337867d637068314854ade57e79201cb78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d31e3afc903310ce1f1cdb9fcca3a90863e01029
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508578"
 ---
 # <a name="failedtotraceevent"></a>FailedToTraceEvent
-Идентификатор: 104  
+ИД: 104  
   
- Важность: ошибка  
+ Уровень серьезности: Error  
   
- Категория: Tracing  
+ Категория: Трассировка  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Одно или несколько событий не трассировались. В событии указаны исходная строка события, имя и идентификатор процесса.  
   
-## <a name="see-also"></a>См. также  
- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>См. также
+- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

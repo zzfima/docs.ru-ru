@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56376d4400f4e24aefe2d1e5d4ad504b1d281cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd51f9c05c49fefc790ce69dcdc3117680c8e6b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500038"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Метод ICeeGen::AllocateMethodBuffer
-Создает буфер указанного размера для метода и получает относительный виртуальный адрес метода.  
+Создает буфер заданного размера для метода и возвращает относительный виртуальный адрес метода.  
   
  Этот метод является устаревшим и не должны использоваться.  
   
@@ -41,7 +41,7 @@ HRESULT AllocateMethodBuffer (
   
 #### <a name="parameters"></a>Параметры  
  `cchBuffer`  
- [in] Длина буфера для создания.  
+ [in] Длина буфера.  
   
  `lpBuffer`  
  [out] Возвращаемый буфер.  
@@ -50,13 +50,13 @@ HRESULT AllocateMethodBuffer (
  [out] Относительный виртуальный адрес метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503733"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Как выполнить Вызов компилятора командной строки (Visual Basic)
 Можно вызвать компилятор командной строки, введя имя соответствующего исполняемого файла в командной строке, также называется командной строки MS-DOS. При компиляции из командной строки Windows по умолчанию, необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно использовать командную строку разработчика для Visual Studio, или изменить переменную среды PATH. Оба позволяют компилировать из любого каталога, просто введя его имя.  
@@ -57,6 +57,6 @@ ms.locfileid: "54221847"
   
      Например, если вы сохранили исходный код в каталог с именем `SourceFiles`, нужно будет открыть командную строку и введите `cd SourceFiles` для изменения в этот каталог. Если каталог, содержащий исходный файл с именем `Source.vb`, скомпилировать его, введя `vbc.exe Source.vb`.  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>См. также
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

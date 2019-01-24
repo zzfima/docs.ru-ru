@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Штриховая заливка фигуры
+title: Как выполнить Заливка фигуры штриховая
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: 5b6b5b61b83e5be05999099f2cc6b9e715ca35c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb5b443aac710a5490a238e2a571ed899dec463
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512402"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Штриховая заливка фигуры
-Шаблон штриховки, состоящее из двух цветов: один для фона и один для строк, формирующих шаблон на фоне. Чтобы залить замкнутую фигуру штриховая, используйте <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Как выполнить Заливка фигуры штриховая
+Шаблон штриховки осуществляется из двух цветов: один для фона и один для строк, которые образуют узор на фоне. Для заполнения замкнутой фигуры, штриховая, использовать <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  
   
 ## <a name="example"></a>Пример  
- <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Конструктор принимает три аргумента: стиль штриховки, цвет штриховой линии и цвет фона. Стиль штриховки может иметь любое значение от <xref:System.Drawing.Drawing2D.HatchStyle> перечисления. Существует более пятидесяти элементов в <xref:System.Drawing.Drawing2D.HatchStyle> перечисления; некоторые из этих элементов приведены в следующем списке:  
+ <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Конструктор принимает три аргумента: стиль штриховки, цвет штриховой линии и цвет фона. Стиль штриховки может быть любое значение от <xref:System.Drawing.Drawing2D.HatchStyle> перечисления. Существует более пятидесяти элементов в <xref:System.Drawing.Drawing2D.HatchStyle> перечисления; часть из них элементы показаны в следующем списке:  
   
 -   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33521746"
   
 -   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- На следующем рисунке закрашенный эллипс.  
+ На следующем рисунке заполненного эллипса.  
   
  ![Шаблон штриховки](../../../../docs/framework/winforms/advanced/media/hatch1.png "hatch1")  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33521746"
  [!code-vb[System.Drawing.UsingABrush#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчика событий.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
-## <a name="see-also"></a>См. также  
- [Использование кисти для заливки фигур](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a>См. также
+- [Использование кисти для заливки фигур](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

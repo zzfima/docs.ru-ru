@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 3c60a9e430b4228117fd03a43a30f27342154b1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dd8687bac8aa8ce046fb89c109debd91409aca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573547"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Настройка операций за счет исключительного использования хранимых процедур
 Распространенным сценарием является доступ к данным с использованием только хранимых процедур.  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
- Можно изменить примера, приведенного в [Настройка операций за счет хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) , заменяя вызов метода, который создает оболочку для хранимой процедуры даже в первом запросе (в результате выполнения динамического SQL).  
+### <a name="description"></a>Описание:  
+ Можно изменить пример, приведенный в [Настройка операций за счет хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) , заменив первый запрос (который вызывает динамическое выполнение SQL) на вызов метода, который создает оболочку для хранимой процедуры.  
   
  Предположим, что `CustomersByCity` является методом, как в следующем примере.  
   
@@ -31,5 +31,5 @@ ms.locfileid: "33357518"
  [!code-csharp[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#5)]
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>См. также  
- [Ответственность разработчика при переопределении поведения по умолчанию](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>См. также
+- [Ответственность разработчика при переопределении поведения по умолчанию](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

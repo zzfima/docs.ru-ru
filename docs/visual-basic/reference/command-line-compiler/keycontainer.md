@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: f64e47922aea35ac9ddf51428107af0d4002d33e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579827"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.  
@@ -26,7 +26,7 @@ ms.locfileid: "50185827"
   
 |Термин|Определение|  
 |---|---|  
-|`container`|Обязательно. Файл контейнера, который содержит ключ. Заключите имя файла в кавычки ("»), если имя содержит пробел.|  
+|`container`|Обязательный. Файл контейнера, который содержит ключ. Заключите имя файла в кавычки ("»), если имя содержит пробел.|  
   
 ## <a name="remarks"></a>Примечания  
  Компилятор создает совместно используемый компонент, вставляя в манифест сборки открытый ключ и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, в командной строке введите `sn -k file`. `-i` Параметр устанавливает пару ключей в контейнер. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)][Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
@@ -49,8 +49,8 @@ ms.locfileid: "50185827"
 vbc -keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>См. также
+- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

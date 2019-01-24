@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573313"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
 Visual Basic предоставляет ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются постоянными в ходе выполнения приложения. Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.  
@@ -49,7 +49,7 @@ Visual Basic предоставляет ряд предопределенных 
 ## <a name="enumerations"></a>Перечисления  
  В следующей таблице перечислены и описаны перечисления, предоставляемые Visual Basic.  
   
-|Перечисление|Описание|  
+|Перечисление|Описание:|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|Указывает стиль окна для использования вызванной программы при вызове <xref:Microsoft.VisualBasic.Interaction.Shell%2A> функции.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|Указывает, как воспроизводить звуки при вызове методов воспроизведения.|  
@@ -77,8 +77,8 @@ Visual Basic предоставляет ряд предопределенных 
 |<xref:Microsoft.VisualBasic.VariantType>|Указывает тип объекта variant, возвращенные <xref:Microsoft.VisualBasic.Information.VarType%2A> функции.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Указывает, преобразование какого типа следует выполнить при вызове функции <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [Общие сведения о константах](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Общие сведения о перечислениях](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>См. также
+- [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [Общие сведения о константах](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Общие сведения о перечислениях](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

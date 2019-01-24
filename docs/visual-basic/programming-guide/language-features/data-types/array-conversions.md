@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4170ca53252fef3afda026393300e34b99e9d018
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583088"
 ---
 # <a name="array-conversions-visual-basic"></a>Преобразование массивов (Visual Basic)
 Тип массива можно преобразовать в другой тип массива при соблюдении следующих условий:  
   
 -   **Равенство ранга.** Ранги двух массивов должны быть одинаковыми, то есть они должны иметь одинаковое количество измерений. Однако длины соответствующих измерений не обязательно должны быть одинаковыми.  
   
--   **Тип данных элемента.** Типы данных элементов обоих массивов должны быть ссылочными типами. Не удается преобразовать `Integer` массив `Long` или даже для `Object` массива, так как тип по крайней мере одно значение. Дополнительные сведения см. в разделе [типов значений и ссылочных типов](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Тип данных элемента.** Типы данных элементов обоих массивов должны быть ссылочными типами. Не удается преобразовать `Integer` массив `Long` или даже для `Object` массива, так как тип по крайней мере одно значение. Для получения дополнительной информации см. [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
 -   **Возможность преобразования.** Расширяющее или сужающее преобразование должно быть возможно между типами элементов двух массивов. Например, не соответствует этим требованиям, попытка преобразования между `String` массива, а также массив класс производным от <xref:System.Attribute?displayProperty=nameWithType>. Эти два типа не имеют ничего общего и преобразование любого типа не существует между ними.  
   
@@ -59,12 +59,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Практическое: преобразование объекта в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Практическое руководство. Преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

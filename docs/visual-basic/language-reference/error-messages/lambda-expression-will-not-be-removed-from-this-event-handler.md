@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568105"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Лямбда-выражение не будет удалено из этого обработчика событий
-Лямбда-выражение не удаляется из этого обработчика событий. Присвойте переменной лямбда-выражение и используйте переменную для добавления и удаления события.  
+Лямбда-выражение не удаляется из этого обработчика событий. Назначьте лямбда-выражение переменной и используйте переменную для добавления и удаления события.  
   
- При использовании лямбда-выражения с обработчиками событий, могут не отображаться ожидаемое поведение. Компилятор создает новый метод для каждого определения лямбда-выражения, даже если они идентичны. Таким образом, следующий код отображает `False`.  
+ Когда лямбда-выражения используются с обработчиками событий, могут отсутствовать ожидаемое поведение. Компилятор создает новый метод для каждого определения лямбда-выражения, даже если они идентичны. Таким образом, следующий код отображает `False`.  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- При использовании лямбда-выражения с обработчиками событий, это может привести к непредвиденным результатам. В следующем примере лямбда-выражения, добавленные `AddHandler` не удаляется с `RemoveHandler` инструкции.  
+ Когда лямбда-выражения используются с обработчиками событий, это может привести к непредвиденным результатам. В следующем примере лямбда-выражение добавленные `AddHandler` не удалялся `RemoveHandler` инструкции.  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- По умолчанию данное сообщение является предупреждением. Дополнительные сведения о том, как скрыть предупреждения или как рассматривать предупреждения как ошибки см. в разделе [Настройка предупреждений в Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений и обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Идентификатор ошибки:** BC42326  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Чтобы избежать этого предупреждения и удалить лямбда-выражение, присвойте переменной лямбда-выражение и используйте переменную в обоих `AddHandler` и `RemoveHandler` инструкции, как показано в следующем примере.  
+-   Чтобы избежать предупреждения и удалить лямбда-выражение, назначьте лямбда-выражение переменной и используйте переменную в обоих `AddHandler` и `RemoveHandler` инструкции, как показано в следующем примере.  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [События](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>См. также
+- [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [События](../../../visual-basic/programming-guide/language-features/events/index.md)

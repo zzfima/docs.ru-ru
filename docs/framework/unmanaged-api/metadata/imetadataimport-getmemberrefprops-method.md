@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583734"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>Метод IMetaDataImport::GetMemberRefProps
 Возвращает метаданные, связанные с членом, на который ссылается указанный токен.  
@@ -43,19 +43,19 @@ HRESULT GetMemberRefProps (
   
 #### <a name="parameters"></a>Параметры  
  `mr`  
- [in] Токен MemberRef для возврата связанные с ним метаданные.  
+ [in] Токен MemberRef для возврата связанные метаданные для.  
   
  `ptk`  
- [out] Токен TypeDef или TypeRef или TypeSpec, представляющий класс, который объявляет член, или токен ModuleRef, представляющий класс модуля, который объявляет член или MethodDef, который представляет элемент.  
+ [out] Токен TypeDef или TypeRef или TypeSpec, который представляет класс, который объявляет член, или токен ModuleRef, представляющий класс модуля, который объявляет член, или MethodDef, представляемого члена.  
   
  `szMember`  
- [out] Строковый буфер для имени элемента.  
+ [out] Строковый буфер для имени члена.  
   
  `cchMember`  
- [in] Запрошенный размер в расширенных символах с `szMember`.  
+ [in] Запрошенный размер в расширенных символах `szMember`.  
   
  `pchMember`  
- [out] Возвращаемый размер в расширенных символах с `szMember`.  
+ [out] Возвращаемый размер в расширенных символах `szMember`.  
   
  `ppvSibBlob`  
  [out] Указатель на двоичную подпись метаданных для элемента.  
@@ -64,14 +64,14 @@ HRESULT GetMemberRefProps (
  [out] Размер в байтах `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

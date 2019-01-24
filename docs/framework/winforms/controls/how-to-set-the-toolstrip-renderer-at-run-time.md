@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Назначение средства визуализации компоненту ToolStrip во время выполнения
+title: Как выполнить Назначение средства визуализации компоненту ToolStrip во время выполнения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 98a027cb8cd913e3e2d00db16fc2f527159a1c87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ddedae5bd7a58b7d8babca7f92bb261a10d2ddee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511999"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Практическое руководство. Назначение средства визуализации компоненту ToolStrip во время выполнения
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Как выполнить Назначение средства визуализации компоненту ToolStrip во время выполнения
 С помощью пользовательского класса `ProfessionalColorTable` можно настраивать внешний вид элемента управления <xref:System.Windows.Forms.ToolStrip>.  
   
 ## <a name="example"></a>Пример  
@@ -48,12 +48,12 @@ ms.locfileid: "47199831"
   
 -   ссылки на сборки System.Design, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolStripManager>  
- <xref:System.Windows.Forms.ProfessionalColorTable>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolStripManager>
+- <xref:System.Windows.Forms.ProfessionalColorTable>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
+- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

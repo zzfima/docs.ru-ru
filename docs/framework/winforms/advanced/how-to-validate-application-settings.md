@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка параметров приложения
+title: Как выполнить Проверка параметров приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496290"
 ---
-# <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
+# <a name="how-to-validate-application-settings"></a>Как выполнить Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
   
- Поскольку параметры приложений являются строго типизированными, это дает некоторую уверенность в том, что пользователи не могут назначить тому или иному параметру данные неверного типа. Тем не менее, пользователь по-прежнему может попытаться присвоить значение вне допустимого диапазона, наприме указать дату рождения в будущем. <xref:System.Configuration.ApplicationSettingsBase>, родительским классом для всех классов параметров приложения предоставляет четыре события для поддержки проверки допустимости. Благодаря обработке этих событий весь код проверки размещается в одном месте, а не в разных частях проекта.  
+ Поскольку параметры приложений являются строго типизированными, это дает некоторую уверенность в том, что пользователи не могут назначить тому или иному параметру данные неверного типа. Тем не менее, пользователь по-прежнему может попытаться присвоить значение вне допустимого диапазона, наприме указать дату рождения в будущем. <xref:System.Configuration.ApplicationSettingsBase>, родительским классом для всех классов параметров приложения, предоставляет четыре события для проверки границ. Благодаря обработке этих событий весь код проверки размещается в одном месте, а не в разных частях проекта.  
   
  Используемое событие зависит от времени, когда необходимо проверить параметры, как описано в следующей таблице.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33526299"
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Происходит после изменения значения одного свойства параметра.<br /><br /> Используйте это событие для проверки одного свойства после его изменения. Это событие редко используется для проверки, если не требуется длительный процесс асинхронной проверки.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Возникает перед сохранением группы свойств параметров.<br /><br /> Используйте это событие для проверки значений для всей группы свойств перед их сохранением на диске.|  
   
- Как правило, в целях проверки все эти события внутри одного приложения не используются. Например, часто бывает невозможно выполнить все требования проверки, обрабатывая только <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
+ Как правило, в целях проверки все эти события внутри одного приложения не используются. Например, часто бывает можно выполнить все требования по проверке путем обработки только <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
   
  Обычно при обнаружении недопустимого значения обработчик событий выполняет одно из следующих действий.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33526299"
   
  Дополнительные сведения об обработке событий см. в разделе [Общие сведения об обработчиках событий](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Следующие процедуры показывают, как проверить допустимость даты рождения с помощью <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий. В этих процедурах предполагается, что вы уже создали параметры приложения. В этом примере будет выполнена проверка границ для параметра с именем `DateOfBirth`. Дополнительные сведения о создании параметров см. в разделе [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Следующие процедуры показывают, как для проверки корректности даты рождения с помощью <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий. В этих процедурах предполагается, что вы уже создали параметры приложения. В этом примере будет выполнена проверка границ для параметра с именем `DateOfBirth`. Дополнительные сведения о создании параметров см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Получение объекта параметров приложения  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33526299"
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Проверка параметров приложения при изменении параметра  
   
-1.  Если разработка осуществляется на C#, в формы или элемента управления `Load` события, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> события.  
+1.  Если вы являетесь C# developer, в формы или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
   
      - или -  
   
@@ -126,7 +126,7 @@ ms.locfileid: "33526299"
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Проверка параметров приложения в ходе сохранения  
   
-1.  В форме или элемента управления `Load` события, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> события.  
+1.  В своей форме или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -160,6 +160,6 @@ ms.locfileid: "33526299"
     End Sub  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>См. также
+- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

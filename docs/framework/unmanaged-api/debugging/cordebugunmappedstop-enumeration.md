@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d812a452910913f169d4377bafa82e823c533d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f22c045be9af71644415ae3b6b5e64d3e399dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495439"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>Перечисление CorDebugUnmappedStop
 Указывает тип несопоставимого кода, который может привести к прерыванию выполнения кода пошаговым средством.  
@@ -44,25 +44,25 @@ typedef enum CorDebugUnmappedStop {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`STOP_NONE`|Не останавливайте в любой тип несопоставимого кода.|  
+|`STOP_NONE`|Не останавливайте в любом типе неуправляемого кода.|  
 |`STOP_PROLOG`|Остановите кода пролога.|  
 |`STOP_EPILOG`|Остановится в коде эпилога.|  
-|`STOP_NO_MAPPING_INFO`|Остановится в коде, не имеет сопоставления информации.|  
-|`STOP_OTHER_UNMAPPED`|Остановится в неуправляемом коде, который не помещается в прологе, эпилога, сведения о сопоставлении нет или неуправляемой категории.|  
-|`STOP_UNMANAGED`|Остановится в неуправляемом коде. Это значение допустимо только при отладке взаимодействия.|  
-|`STOP_ALL`|Останавливается во всех типах неуправляемого кода.|  
+|`STOP_NO_MAPPING_INFO`|Остановка в коде, который не имеет сопоставления информации.|  
+|`STOP_OTHER_UNMAPPED`|Остановка в неуправляемом коде, который не помещается в прологе, эпилога, сведения о сопоставлении нет или неуправляемой категории.|  
+|`STOP_UNMANAGED`|Остановка в неуправляемом коде. Это значение допустимо только при отладке взаимодействия.|  
+|`STOP_ALL`|Остановите во всех типах неуправляемого кода.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) метод, чтобы задать флаги, указывающие несопоставимого кода, в котором будет остановлено пошаговым.  
+ Используйте [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) метод, чтобы задать флаги, определяющие несопоставленного кода, в который будет останавливаться несопоставимого.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d6486a90d952208af89428423867a3daa4e8618
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 874bbf46e74550b325631a00acc16f49d818dc61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574941"
 ---
 # <a name="functionleave2-function"></a>Функция FunctionLeave2
-Уведомляет профилировщик, функция вернет вызывающему объекту, а также сведения о стека фрейма и функция возвращаемое значение.  
+Уведомляет профилировщик, что функция должна возвращать вызывающей стороне и предоставляет сведения о стека кадра и функция возвращаемое значение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,47 +39,47 @@ void __stdcall FunctionLeave2 (
   
 #### <a name="parameters"></a>Параметры  
  `funcId`  
- [in] Идентификатор функции, которая возвращает.  
+ [in] Идентификатор функции, которое возвращает.  
   
  `clientData`  
- [in] Идентификатор повторно сопоставленной функции, который ранее указанного профилировщик с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) функции.  
+ [in] Функция пересопоставленный идентификатора, который ранее указано профилировщик с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) функции.  
   
  `func`  
  [in] Объект `COR_PRF_FRAME_INFO` значение, которое указывает на сведения о кадре стека.  
   
- Профилировщик должен интерпретировать его как непрозрачный дескриптор, который может быть передан обратно в ядро выполнения в [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод.  
+ Профилировщик должен интерпретировать его как непрозрачный дескриптор, который может быть передан в модуль выполнения в [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод.  
   
  `retvalRange`  
- [in] Указатель на [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) структура, которая задает расположение возвращаемое значение функции в памяти.  
+ [in] Указатель на [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) структура, задающая расположение памяти возвращаемое значение функции.  
   
- Чтобы получить доступ к информации возвращаемое значение `COR_PRF_ENABLE_FUNCTION_RETVAL` должен быть установлен флаг. Можно использовать профилировщик [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) метод, чтобы задать флаги событий.  
+ Чтобы получить доступ к сведения о возвращаемом значении, `COR_PRF_ENABLE_FUNCTION_RETVAL` должен быть установлен флаг. Можно использовать профилировщик [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) метод, чтобы задать флаги событий.  
   
 ## <a name="remarks"></a>Примечания  
- Значения `func` и `retvalRange` параметры не допускаются после `FunctionLeave2` функция возвращает, так как значения, могут быть изменены или удалены.  
+ Значения `func` и `retvalRange` параметров не являются действительными после `FunctionLeave2` функция возвращает потому, что значения, могут быть изменены или удалены.  
   
- `FunctionLeave2` Функция является обратным вызовом, необходимо произвести его. В реализации должен использоваться `__declspec`(`naked`) атрибут класса хранения.  
+ `FunctionLeave2` Функция является обратным вызовом; это необходимо реализовать. В реализации должен использоваться `__declspec`(`naked`) атрибут класса хранения.  
   
- Перед вызовом этой функции ядро выполнения не сохраняет значения регистров.  
+ Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.  
   
--   При входе необходимо сохранить все используемые регистры, включая те, в единицах измерения с плавающей запятой (FPU).  
+-   При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).  
   
--   При выходе необходимо восстановить стек путем выталкивания из всех параметров, переведенных вызывающим кодом.  
+-   При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.  
   
- Реализация `FunctionLeave2` не должен блокироваться, поскольку это приведет к задержке сборки мусора. Реализация не должны предпринимать попытки сбора мусора, так как стек может находиться в состоянии понятного имени сбора мусора. При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionLeave2` возвращает.  
+ Реализация `FunctionLeave2` не должен блокироваться, поскольку это приведет к задержке сборки мусора. Реализация не должны сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора. При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionLeave2` возвращает.  
   
- Кроме того `FunctionLeave2` функции не следует вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.  
+ Кроме того `FunctionLeave2` функция не должна вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl  
+ **Заголовок.** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Функция FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [Функция FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- [Метод SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  
- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Функция FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [Функция FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [Метод SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

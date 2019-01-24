@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514117"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>Перечисление CLSID_RESOLUTION_FLAGS
 Содержит значения, указывающие способ разрешения общеязыковой среды выполнения (CLR) `CLSID`.  
@@ -37,17 +37,17 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Задает поведение по умолчанию.|  
 |`CLSID_RESOLUTION_REGISTERED`|Указывает, что среда выполнения ищет в реестре и применяет политику оболочки.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

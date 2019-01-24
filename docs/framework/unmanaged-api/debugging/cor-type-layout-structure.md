@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502576"
 ---
 # <a name="cortypelayout-structure"></a>Структура COR_TYPE_LAYOUT
 Предоставляет сведения о расположении объекта в памяти.  
@@ -40,26 +40,26 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`parentID`|Идентификатор родительского типа для этого типа. Это будет идентификатор типа NULL (токен1 = 0, токен2 = 0), если идентификатор типа соответствует <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Базовый размер объекта этого типа. Это общий размер для размера объектов не переменная.|  
-|`numFields`|Номер поля, включенные в объекты этого типа.|  
-|`boxOffset`|Если этот тип находится в окне, начало смещения полей объекта. Это поле доступно только для типов значений, таких как примитивы и структуры.|  
+|`parentID`|Идентификатор родительского типа к этому типу. Это будет идентификатор типа NULL (токен1 = 0, токен2 = 0), если идентификатор типа соответствует <xref:System.Object?displayProperty=nameWithType>.|  
+|`objectSize`|Размер базового объекта этого типа. Это общий размер для размера объектов, не являющийся переменной.|  
+|`numFields`|Число полей, включенных в объекты этого типа.|  
+|`boxOffset`|Если этот тип упаковывается, начало смещения полей объекта. Это поле является допустимым только для типов значений, таких как примитивы и структуры.|  
 |`type`|CorElementType, к которой принадлежит этот тип.|  
   
 ## <a name="remarks"></a>Примечания  
- Если `numFields` больше нуля, можно вызвать [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) метод, чтобы получить сведения о полях в этом типе. Если `type` — `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, или `ELEMENT_TYPE_SZARRAY`, размер объектов этого типа различен, и можно передать [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) структуру [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) метод.  
+ Если `numFields` больше нуля, можно вызвать [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) метод, чтобы получить сведения о полях в этом типе. Если `type` — `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, или `ELEMENT_TYPE_SZARRAY`, размер объектов этого типа является переменной, и вы можете передать [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) структуру [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

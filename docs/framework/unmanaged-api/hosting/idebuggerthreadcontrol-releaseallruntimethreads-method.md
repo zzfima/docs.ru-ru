@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505030"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>Метод IDebuggerThreadControl::ReleaseAllRuntimeThreads
-Уведомляет узел, что службы отладки собираются разблокировать все заблокированные потоки.  
+Уведомляет основное приложение, что службы отладки должны освободить все потоки, которые заблокированы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +34,16 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `ReleaseAllRuntimeThreads` Метод никогда не будет вызываться в потоке среды выполнения. Если узел имеет заблокирован поток среды выполнения, он должен освободить теперь.  
+ `ReleaseAllRuntimeThreads` Метод никогда не будет вызываться в потоке среды выполнения. Если узел имеет среды выполнения поток заблокирован, он должен освободить теперь.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

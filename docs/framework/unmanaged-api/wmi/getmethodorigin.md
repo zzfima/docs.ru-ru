@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582474"
 ---
 # <a name="getmethodorigin-function"></a>Функция GetMethodOrigin
 Определяет класс, в котором объявлен метод.
@@ -57,7 +57,7 @@ HRESULT GetMethodOrigin (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |
@@ -72,11 +72,11 @@ HRESULT GetMethodOrigin (
 `pstrClassName` Параметр не должен указывать на допустимый `BSTR` перед вызовом функции, так как это `out` параметр; этот указатель не освобождается после возвращения функции.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
