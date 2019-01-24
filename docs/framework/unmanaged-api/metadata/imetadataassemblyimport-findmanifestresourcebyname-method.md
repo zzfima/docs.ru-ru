@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9afc2ecc34131f62f1f8e8e86ca73f8b8b0126b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05c9a75bf870dd3b2316d2df7c50932b26894f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702747"
 ---
-# <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a><span data-ttu-id="3bbb0-102">Метод IMetaDataAssemblyImport::FindManifestResourceByName</span><span class="sxs-lookup"><span data-stu-id="3bbb0-102">IMetaDataAssemblyImport::FindManifestResourceByName Method</span></span>
-<span data-ttu-id="3bbb0-103">Получает указатель на ресурс манифеста с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="3bbb0-103">Gets a pointer to the manifest resource with the specified name.</span></span>  
+# <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a><span data-ttu-id="2f4a3-102">Метод IMetaDataAssemblyImport::FindManifestResourceByName</span><span class="sxs-lookup"><span data-stu-id="2f4a3-102">IMetaDataAssemblyImport::FindManifestResourceByName Method</span></span>
+<span data-ttu-id="2f4a3-103">Возвращает указатель на ресурс манифеста с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="2f4a3-103">Gets a pointer to the manifest resource with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3bbb0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3bbb0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f4a3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2f4a3-104">Syntax</span></span>  
   
 ```  
 HRESULT FindManifestResourceByName (  
@@ -36,25 +36,25 @@ HRESULT FindManifestResourceByName (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3bbb0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3bbb0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2f4a3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2f4a3-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="3bbb0-106">[in] Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="3bbb0-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="2f4a3-106">[in] Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="2f4a3-106">[in] The name of the resource.</span></span>  
   
  `ptkManifestResource`  
- <span data-ttu-id="3bbb0-107">[out] Массив, используемый для хранения `mdManifestResource` лексемы метаданных, каждый из которых представляет ресурс манифеста.</span><span class="sxs-lookup"><span data-stu-id="3bbb0-107">[out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.</span></span>  
+ <span data-ttu-id="2f4a3-107">[out] Массив, используемый для хранения `mdManifestResource` маркеров метаданных, каждый из которых представляет ресурса манифеста.</span><span class="sxs-lookup"><span data-stu-id="2f4a3-107">[out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3bbb0-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="3bbb0-108">Remarks</span></span>  
- <span data-ttu-id="3bbb0-109">`FindManifestResourceByName` Метод использует стандартных правил, применяемых средой CLR для разрешения ссылок.</span><span class="sxs-lookup"><span data-stu-id="3bbb0-109">The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f4a3-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="2f4a3-108">Remarks</span></span>  
+ <span data-ttu-id="2f4a3-109">`FindManifestResourceByName` Метод использует стандартные правила, чтобы позволить среда CLR для разрешения ссылок на.</span><span class="sxs-lookup"><span data-stu-id="2f4a3-109">The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3bbb0-110">Требования</span><span class="sxs-lookup"><span data-stu-id="3bbb0-110">Requirements</span></span>  
- <span data-ttu-id="3bbb0-111">**Платформа:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3bbb0-111">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f4a3-110">Требования</span><span class="sxs-lookup"><span data-stu-id="2f4a3-110">Requirements</span></span>  
+ <span data-ttu-id="2f4a3-111">**Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f4a3-111">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3bbb0-112">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3bbb0-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2f4a3-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2f4a3-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3bbb0-113">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3bbb0-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2f4a3-113">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2f4a3-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3bbb0-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bbb0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2f4a3-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f4a3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3bbb0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="3bbb0-115">See Also</span></span>  
- [<span data-ttu-id="3bbb0-116">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="3bbb0-116">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [<span data-ttu-id="3bbb0-117">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="3bbb0-117">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="2f4a3-115">См. также</span><span class="sxs-lookup"><span data-stu-id="2f4a3-115">See also</span></span>
+- [<span data-ttu-id="2f4a3-116">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="2f4a3-116">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="2f4a3-117">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="2f4a3-117">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
