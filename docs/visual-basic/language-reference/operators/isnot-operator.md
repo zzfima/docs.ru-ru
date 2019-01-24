@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: babee364d350ca84a8379f675acc4b5c87f98303
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffafff915af8a94e9bc135246064e4c049d41838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596466"
 ---
 # <a name="isnot-operator-visual-basic"></a>Оператор IsNot (Visual Basic)
 Сравнивает две переменные объектной ссылки.  
@@ -24,31 +24,31 @@ result = object1 IsNot object2
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательно. Значение `Boolean`.  
+ Обязательный. Значение `Boolean`.  
   
  `object1`  
- Обязательно. Любой `Object` переменной или выражения.  
+ Обязательный. Любой `Object` переменной или выражения.  
   
  `object2`  
- Обязательно. Любой `Object` переменной или выражения.  
+ Обязательный. Любой `Object` переменной или выражения.  
   
 ## <a name="remarks"></a>Примечания  
- `IsNot` Оператор определяет, если две объектные ссылки на разные объекты. Однако сравнение значений не выполняется. Если `object1` и `object2` ссылаются на точное же экземпляр объекта, `result` — `False`; в противном случае, `result` — `True`.  
+ `IsNot` Оператор определяет, если два объекта ссылаются на разные объекты. Тем не менее он не выполняет сравнение значений. Если `object1` и `object2` указывают на точное же экземпляр объекта, `result` — `False`; Если нет, `result` является `True`.  
   
- `IsNot` шаблон противоположен `Is` оператор. Преимущество `IsNot` — избегать неуклюжим синтаксису `Not` и `Is`, который может быть трудно читать.  
+ `IsNot` является противоположностью `Is` оператор. Преимущество `IsNot` — избегать неуклюжим синтаксису `Not` и `Is`, который может быть трудно читать.  
   
- Можно использовать `Is` и `IsNot` операторы для проверки объектов с ранним связыванием и поздним связыванием.  
+ Можно использовать `Is` и `IsNot` операторы для проверки объектов с ранним и поздним связыванием.  
   
 > [!NOTE]
 >  `IsNot` Оператор не может использоваться для сравнения выражений, возвращенных `TypeOf` оператор. Вместо этого необходимо использовать `Not` и `Is` операторы.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода используются `Is` оператор и `IsNot` оператор для выполнения того же сравнения.  
+ В следующем примере кода используются как `Is` оператор и `IsNot` оператор для выполнения того же сравнения.  
   
  [!code-vb[VbVbalrOperators#29](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isnot-operator_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)  
- [Оператор TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Практическое руководство. Проверка совпадения двух объектов](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+## <a name="see-also"></a>См. также
+- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)
+- [Оператор TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Практическое руководство. Проверка совпадения двух объектов](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

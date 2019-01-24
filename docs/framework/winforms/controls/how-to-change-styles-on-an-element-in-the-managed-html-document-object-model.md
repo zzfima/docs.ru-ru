@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение стилей элемента в управляемой объектной модели HTML-документов
+title: Как выполнить Изменение стилей элемента в объектной модели управляемого HTML-документ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 9ecb6b90508ca53e3801a633ac2444426e2f8113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db67936e368c1cb6d942b348ebacd87b6127e19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579385"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Практическое руководство. Изменение стилей элемента в управляемой объектной модели HTML-документов
-Стили в формате HTML можно использовать для управления внешним видом документа и его элементов. <xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> поддерживает <xref:System.Windows.Forms.HtmlElement.Style%2A> свойств, которые принимают строки в следующем формате:  
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Как выполнить Изменение стилей элемента в объектной модели управляемого HTML-документ
+Стили в формате HTML можно использовать для управления внешним видом документа и его элементов. <xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> поддержки <xref:System.Windows.Forms.HtmlElement.Style%2A> свойств, которые принимают строки в следующем формате:  
   
  `name1:value1;...;nameN:valueN;`  
   
- Вот `DIV` со строкой стиля, задающей шрифт Arial и весь текст полужирным шрифтом:  
+ Вот `DIV` с стиля строка, задающая шрифт Arial и весь текст, будут выводиться полужирным шрифтом:  
   
  `<DIV style="font-face:arial;font-weight:bold;">`  
   
@@ -27,19 +27,19 @@ ms.locfileid: "33531255"
   
  `</DIV>`  
   
- Проблема при управлении стилей с помощью <xref:System.Windows.Forms.HtmlElement.Style%2A> свойство заключается в том, что может оказаться нелегкой задачей Добавление и удаление отдельных параметров стилей из строки. Например, он стал бы сложная процедура для отображение текста курсивом, при наведении курсора на `DIV`и отключение курсивного начертания, когда курсор покидает `DIV`. Времени может возникнуть проблема, если необходимо управлять большим числом стили таким образом.  
+ Проблема при управлении стилей с помощью <xref:System.Windows.Forms.HtmlElement.Style%2A> свойство является то, что он может оказаться нелегкой задачей Добавление и удаление отдельных параметров стилей из строки. Например, он стал бы сложная процедура для отображение текста курсивом, при наведении курсора на `DIV`и отключение курсивного начертания, когда курсор покидает `DIV`. Время может стать проблемой, если необходимо управлять большим числом стили таким образом.  
   
- Следующая процедура содержит код, который можно использовать, чтобы упростить управление стилями в HTML-документы и элементы. Процедура требует, что вы знаете, как для выполнения основных задач в Windows Forms, такие как создание нового проекта и добавление элемента управления в форму.  
+ Следующая процедура содержит код, который можно использовать, чтобы упростить управление стилями в HTML-документы и элементы. Процедура требует, что вы знаете, как для выполнения основных задач в Windows Forms, таких как создание нового проекта и добавление элемента управления в форму.  
   
-### <a name="to-process-style-changes-in-a-windows-forms-application"></a>Для обработки изменений стиля в приложении Windows Forms  
+### <a name="to-process-style-changes-in-a-windows-forms-application"></a>Для обработки изменений стилей в приложении Windows Forms  
   
 1.  Создайте проект Windows Forms.  
   
-2.  Создайте новый файл класса, в которых заканчиваются расширением, соответствующим выбранному языку программирования.  
+2.  Создайте новый файл класса с расширением соответствующие для используемого языка программирования.  
   
-3.  Копировать `StyleGenerator` класс в следующем примере в этом разделе в файл класса и сохраните код.  
+3.  Копировать `StyleGenerator` код в разделе "Пример" в этом разделе класса в файл класса и сохраните код.  
   
-4.  Сохраните следующий HTML-код в файл с именем отнести.  
+4.  Сохраните следующий код HTML в файл с именем отнести.  
   
     ```  
     <HTML>  
@@ -62,7 +62,7 @@ ms.locfileid: "33531255"
 6.  Добавьте следующий код в файл кода проекта.  
   
     > [!IMPORTANT]
-    >  Убедитесь, что `webBrowser1_DocumentCompleted` обработчика событий настраивается в качестве прослушивателя <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> событий. В Visual Studio, дважды щелкните <xref:System.Windows.Forms.WebBrowser> управления; в текстовом редакторе, настройте прослушиватель программными средствами.  
+    >  Убедитесь, что `webBrowser1_DocumentCompleted` обработчик событий работает в режиме прослушивателя для <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> событий. В Visual Studio, дважды щелкните <xref:System.Windows.Forms.WebBrowser> управления; в текстовом редакторе, настройте прослушиватель программными средствами.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
@@ -70,10 +70,10 @@ ms.locfileid: "33531255"
 7.  Запустите проект. Наведите курсор на первый `DIV` Обратите внимание на действия кода.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показан полный код для `StyleGenerator` класс, который выполняет синтаксический анализ значение существующего стиля, поддерживает добавление, изменение и удаление стилей и возвращает значение нового стиля с требуемыми изменениями.  
+ В следующем примере кода показан полный код для `StyleGenerator` класс, который выполняет синтаксический анализ значение существующего стиля, поддерживает добавление, изменение и удаление стилей и возвращает новое значение стиля с требуемыми изменениями.  
   
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
  [!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.HtmlElement>
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.HtmlElement>

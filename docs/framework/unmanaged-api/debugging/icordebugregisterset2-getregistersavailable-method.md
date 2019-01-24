@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071c9c9cbdb47372903ef418a4f21450d8071f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614069"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Метод ICorDebugRegisterSet2::GetRegistersAvailable
-Возвращает массив байтов, предоставляющий растровое изображение доступных регистров.  
+Возвращает массив байтов, предоставляет битовую схему, доступных регистров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +41,28 @@ HRESULT GetRegistersAvailable (
  [in] Размер массива `availableRegChunks`.  
   
  `availableRegChunks`  
- [out] Массив байтов, из которых каждый бит соответствует регистру. Если регистр, соответствующий бит регистра устанавливается.  
+ [out] Массив байтов, каждый бит соответствует регистру. Если регистр, устанавливается соответствующий бит в регистре.  
   
 ## <a name="remarks"></a>Примечания  
- Значения перечисления CorDebugRegister указывают регистры различных микропроцессоров. Верхние пять бит каждое значение — это индекс в `availableRegChunks` массива байтов. Три младших битов каждого значения идентифицируют положение бита в индексируемом байте. Получает `CorDebugRegister` значение, которое указывает определенный регистр, положение регистра в маске определяется следующим образом:  
+ Значения перечисления CorDebugRegister указывают регистры различных микропроцессоров. Старшие разряды пять каждому значению типа являются порядковым номером в `availableRegChunks` массив байтов. Нижние три бит каждого значения идентифицируют положение бита в индексируемом байте. Учитывая `CorDebugRegister` значение, указывающее определенный регистр, положение регистра в маске определяется следующим образом:  
   
-1.  Извлеките индекс, необходимые для доступа к правильно байта в `availableRegChunks` массива:  
+1.  Извлечь индекс, необходимые для доступа к правильный байта в `availableRegChunks` массива:  
   
      `CorDebugRegister` Значение >> 3  
   
-2.  Извлеките позиция разряда в индексируемом байте, в котором нулевой бит является наименее значимым битом:  
+2.  Извлеките положение бита в индексированных байт, где нулевой бит — наименее значимым битом.  
   
      `CorDebugRegister` значение & 7  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

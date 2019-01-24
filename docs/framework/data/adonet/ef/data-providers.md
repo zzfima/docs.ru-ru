@@ -2,12 +2,12 @@
 title: Поставщики данных Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: cd18e8b971af9103fdaecaebfe6f0c8e0ae9a0d3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 502bfce39a9e645f36b9be13775a0357307d6c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602836"
 ---
 # <a name="entity-framework-data-providers"></a>Поставщики данных Entity Framework
 В данном разделе содержатся сведения о поставщиках данных, поддерживающих [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -26,5 +26,5 @@ ms.locfileid: "44259601"
  [Сторонние поставщики для Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699)  
  Список поставщиков данных от сторонних разработчиков, доступных в данный момент для платформы Entity Framework.  
   
-## <a name="see-also"></a>См. также  
- [Работа с поставщиками данных](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a>См. также
+- [Работа с поставщиками данных](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

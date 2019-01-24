@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2dc1664551683066a33fb52e16e4909506601f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588695"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Метод IMetaDataEmit::SetClassLayout
-Завершает макета полей для класса, который был определен во время предыдущего вызова для [метод DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Макет полей для класса, который был определен во время предыдущего вызова для завершения [метод DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,35 +40,35 @@ HRESULT SetClassLayout (
   
 #### <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypeDef` Маркер, указывающий класс располагаться.  
+ [in] `mdTypeDef` Токен, который указывает класс располагаться.  
   
  `dwPackSize`  
- [in] Размер упаковки: 1, 2, 4, 8 или 16 байт. Размер пакета — число байтов между смежными полями.  
+ [in] Упаковочный размер: 1, 2, 4, 8 или 16 байт. Упаковочный размер равен число байтов между смежными полями.  
   
  `rFieldOffsets`  
- [in] Массив [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) структуры, каждый из которых задает поля класса и смещение в пределах класса. Массива с `mdTokenNil`.  
+ [in] Массив [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) структуры, каждый из которых указывает, что поля класса и смещение в пределах класса. Массива с `mdTokenNil`.  
   
  `ulClassSize`  
- [in] Размер в байтах класса.  
+ [in] Размер в байтах, класса.  
   
 ## <a name="remarks"></a>Примечания  
- Класс был изначально определен путем вызова [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) метод и задавая один из трех структур поля класса: автоматически, последовательные или явно. Как правило следует использовать автоматический макет и позволить среде выполнения выбрать лучший способ расположения полей.  
+ Класс изначально определяется путем вызова [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) метод и задавая один из трех структур поля класса: Авто, последовательный или явной. Как правило необходимо использование автоматической разметки и позволить среде выполнения выбрать лучший способ расположения полей.  
   
- Тем не менее может потребоваться поля, располагались в порядке их использования неуправляемым кодом. В этом случае выберите явную или последовательный макет и вызов `SetClassLayout` для завершения макета полей:  
+ Тем не менее может потребоваться поля, располагались в порядке их использования неуправляемым кодом. В этом случае выберите либо последовательный или явный макет и вызов `SetClassLayout` для завершения макета полей:  
   
--   Последовательное размещение: укажите размер упаковки. Поле выравниваются в соответствии с его фактическим размером или упаковочный размер, что приводит меньшего размера смещение поля. Задать `rFieldOffsets` и `ulClassSize` до нуля.  
+-   Последовательное размещение: Укажите размер пакета. Поле выравнивается в соответствии с его естественному размеру или упаковочный размер, что приводит меньшего размера смещение поля. Задайте `rFieldOffsets` и `ulClassSize` до нуля.  
   
--   Явно заданный макет: задайте смещение каждого поля, или установите размер класса и упаковочный размер.  
+-   Явное размещение: Задайте смещение каждого поля или размер класса, а также размером уплотнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570204"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
@@ -92,7 +92,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Например, рассмотрим следующую ситуацию. Создаются два объекта команд, один для обработки результирующего набора, а другой для обновления данных. Они используют одно соединение с режимом MARS. В этом случае `Transaction`.`Commit` происходит сбой обновления, пока не будут прочитаны все результаты на первый объект команды, выдается следующее исключение:  
   
- Сообщение: контекст транзакции используется другим сеансом.  
+ Сообщение: контекст транзакции используется другим сеансом  
   
  Источник: поставщик данных .NET SqlClient  
   
@@ -111,6 +111,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>Обнаружение поддержки режима MARS  
  Приложение может проверить, поддерживается ли режим MARS, считав значение `SqlConnection.ServerVersion`. Основным номером должно быть 9 для SQL Server 2005 и 10 для SQL Server 2008.  
   
-## <a name="see-also"></a>См. также  
- [Несколько активных результирующих наборов (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Несколько активных результирующих наборов (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

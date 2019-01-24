@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Размещение службы WCF в управляемой службе Windows
+title: Как выполнить Размещение службы WCF в службе Windows, управляемых
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613834"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Практическое руководство. Размещение службы WCF в управляемой службе Windows
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Как выполнить Размещение службы WCF в службе Windows, управляемых
 
 В этом разделе описаны основные шаги, необходимые для создания службы Windows Communication Foundation (WCF), которая размещается службой Windows. Сценарий реализуется с помощью управляемой службе Windows, варианта, является долго выполняющейся службы WCF, размещенных за пределами Internet Information Services (IIS) в защищенной среде, которая не является сообщением активации размещения. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.
 
@@ -138,4 +138,4 @@ ms.locfileid: "46000769"
 - [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Размещение в управляемом приложении](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)
-- [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
