@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugStringValue интерфейс1"
-ms.custom: 
+title: Интерфейс1 ICorDebugStringValue
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugStringValue
 api_location:
@@ -22,41 +14,38 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9958e6f5ad73658b278d83c78e58cf4166d5642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596843"
 ---
-# <a name="icordebugstringvalue-interface1"></a><span data-ttu-id="0eafc-102">ICorDebugStringValue интерфейс1</span><span class="sxs-lookup"><span data-stu-id="0eafc-102">ICorDebugStringValue Interface1</span></span>
-<span data-ttu-id="0eafc-103">Подкласс ICorDebugHeapValue, применяемый к строковым значениям.</span><span class="sxs-lookup"><span data-stu-id="0eafc-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
+# <a name="icordebugstringvalue-interface1"></a><span data-ttu-id="4cfe1-102">Интерфейс1 ICorDebugStringValue</span><span class="sxs-lookup"><span data-stu-id="4cfe1-102">ICorDebugStringValue Interface1</span></span>
+<span data-ttu-id="4cfe1-103">Подкласс ICorDebugHeapValue, применяемый к строковым значениям.</span><span class="sxs-lookup"><span data-stu-id="4cfe1-103">A subclass of ICorDebugHeapValue that applies to string values.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0eafc-104">Методы</span><span class="sxs-lookup"><span data-stu-id="0eafc-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4cfe1-104">Методы</span><span class="sxs-lookup"><span data-stu-id="4cfe1-104">Methods</span></span>  
   
-|<span data-ttu-id="0eafc-105">Метод</span><span class="sxs-lookup"><span data-stu-id="0eafc-105">Method</span></span>|<span data-ttu-id="0eafc-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="0eafc-106">Description</span></span>|  
+|<span data-ttu-id="4cfe1-105">Метод</span><span class="sxs-lookup"><span data-stu-id="4cfe1-105">Method</span></span>|<span data-ttu-id="4cfe1-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="4cfe1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0eafc-107">Метод GetLength</span><span class="sxs-lookup"><span data-stu-id="0eafc-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="0eafc-108">Возвращает число символов в строке, упоминаемой в этом `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="0eafc-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
-|[<span data-ttu-id="0eafc-109">Метод GetString</span><span class="sxs-lookup"><span data-stu-id="0eafc-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="0eafc-110">Возвращает строку, упоминаемой в этом `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="0eafc-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="4cfe1-107">Метод GetLength</span><span class="sxs-lookup"><span data-stu-id="4cfe1-107">GetLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|<span data-ttu-id="4cfe1-108">Возвращает число символов в строке, который ссылается этот `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="4cfe1-108">Gets the number of characters in the string referenced by this `ICorDebugStringValue`.</span></span>|  
+|[<span data-ttu-id="4cfe1-109">Метод GetString</span><span class="sxs-lookup"><span data-stu-id="4cfe1-109">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|<span data-ttu-id="4cfe1-110">Получает строку, на которое указывает данный `ICorDebugStringValue`.</span><span class="sxs-lookup"><span data-stu-id="4cfe1-110">Gets the string referenced by this `ICorDebugStringValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0eafc-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="0eafc-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4cfe1-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="4cfe1-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0eafc-112">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="0eafc-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="4cfe1-112">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="4cfe1-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0eafc-113">Требования</span><span class="sxs-lookup"><span data-stu-id="0eafc-113">Requirements</span></span>  
- <span data-ttu-id="0eafc-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0eafc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4cfe1-113">Требования</span><span class="sxs-lookup"><span data-stu-id="4cfe1-113">Requirements</span></span>  
+ <span data-ttu-id="4cfe1-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cfe1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0eafc-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0eafc-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4cfe1-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4cfe1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0eafc-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0eafc-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4cfe1-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4cfe1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0eafc-117">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0eafc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4cfe1-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cfe1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eafc-118">См. также</span><span class="sxs-lookup"><span data-stu-id="0eafc-118">See Also</span></span>  
- [<span data-ttu-id="0eafc-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="0eafc-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4cfe1-118">См. также</span><span class="sxs-lookup"><span data-stu-id="4cfe1-118">See also</span></span>
+- [<span data-ttu-id="4cfe1-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="4cfe1-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
