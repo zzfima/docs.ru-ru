@@ -1,20 +1,14 @@
 ---
-title: Ключевые слова C#
+title: 'Ключевые слова C#'
 ms.date: 03/07/2017
 f1_keywords:
-- cs.keywords
+  - cs.keywords
 helpviewer_keywords:
-- keywords [C#]
-- C# language, keywords
-- Visual C#, keywords
-- '@ keyword'
+  - 'keywords [C#]'
+  - 'C# language, keywords'
+  - 'Visual C#, keywords'
+  - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861937"
 ---
 # <a name="c-keywords"></a>Ключевые слова C#
 Ключевые слова — это предварительно определенные зарезервированные идентификаторы, которые имеют специальные значения для компилятора. Их нельзя использовать как идентификаторы в программах без префикса `@`. Например, допустимым идентификатором является `@if`, но не `if`, поскольку `if` является ключевым словом.  
@@ -62,5 +56,5 @@ ms.locfileid: "43861937"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

@@ -1,24 +1,18 @@
 ---
-title: Ресурсы в приложениях .NET
+title: "Ресурсы в приложениях\_.NET"
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524733"
 ---
 # <a name="resources-in-net-apps"></a>Ресурсы в приложениях .NET
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  
@@ -60,11 +54,11 @@ ms.locfileid: "43524733"
   
 -   Класс <xref:System.Resources.ResXResourceSet>, который позволяет получить в память все элементы из XML-файла ресурсов.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Globalization.CultureInfo>  
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [Основные сведения о приложениях .NET Framework](../../../docs/standard/application-essentials.md)  
- [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Извлечение ресурсов](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Globalization.CultureInfo>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
+- [Основные сведения о приложениях .NET Framework](../../../docs/standard/application-essentials.md)
+- [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Извлечение ресурсов](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

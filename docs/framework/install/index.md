@@ -4,12 +4,6 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e6432c693562221969085206bc3d3a7ac77c8ba5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386757"
 ---
 # <a name="installation-guide"></a>Руководство по установке
 
@@ -29,7 +23,7 @@ ms.locfileid: "33386757"
 
 ## <a name="see-also"></a>См. также
 
-[Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
-[Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)  
-[Установка .NET Framework для разработчиков](guide-for-developers.md)  
-[Развертывание .NET Framework для разработчиков](../deployment/deployment-guide-for-developers.md)  
+- [Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Установка .NET Framework для разработчиков](guide-for-developers.md)
+- [Развертывание .NET Framework для разработчиков](../deployment/deployment-guide-for-developers.md)

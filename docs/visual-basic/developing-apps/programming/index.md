@@ -2,15 +2,9 @@
 title: Программирование в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- programming [Visual Basic], Visual Basic
-- programming
+  - 'programming [Visual Basic], Visual Basic'
+  - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990028"
 ---
 # <a name="programming-in-visual-basic"></a>Программирование в Visual Basic
 В этом разделе рассматриваются задачи программирования, о которых вам может понадобиться дополнительная информация при создании приложения Visual Basic.  
@@ -37,8 +31,8 @@ ms.locfileid: "45990028"
  [Операции с дисками, каталогами и файлами](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
  Содержит документацию о том, как получить доступ к файловой системе с помощью объекта `My.Computer.FileSystem`.  
   
-## <a name="see-also"></a>См. также  
- [Возможности и элементы языка Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)  
- [Основные понятия программирования](../../../visual-basic/programming-guide/concepts/index.md)  
- [Коллекции](../../../visual-basic/programming-guide/concepts/collections.md)  
- [Разработка приложений в Visual Basic](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>См. также
+- [Возможности и элементы языка Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
+- [Основные понятия программирования](../../../visual-basic/programming-guide/concepts/index.md)
+- [Коллекции](../../../visual-basic/programming-guide/concepts/collections.md)
+- [Разработка приложений в Visual Basic](../../../visual-basic/developing-apps/index.md)

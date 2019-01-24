@@ -2,17 +2,11 @@
 title: Сетевое программирование в .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Networking
-- Internet
-- Internet, .NET Framework Internet services
-- Network Resources
+  - Networking
+  - Internet
+  - 'Internet, .NET Framework Internet services'
+  - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188083"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
@@ -90,7 +84,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.WebResponse?displayProperty=nameWithType> в этом пространстве имен являются основой для подключаемых протоколов.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
- Определение типов и перечислений, используемых для определения политик кэширования ресурсов, получаемых с помощью классов <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
+ Определение типов и перечислений, используемых для определения политик кэширования ресурсов, получаемых с помощью классов <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
   
  <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Классы, используемые в приложениях для программного доступа к параметрам конфигурации пространств имен System.Net и обновления этих параметров.  
@@ -134,10 +128,10 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Обеспечивает поддержку настройки аутентификации с помощью расширенной защиты приложений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
- [Рекомендации по использованию протокола TLS с .NET Framework](../../../docs/framework/network-programming/tls.md)  
- [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [Пример HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Рекомендации по использованию протокола TLS с .NET Framework](../../../docs/framework/network-programming/tls.md)
+- [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [Пример HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

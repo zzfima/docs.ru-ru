@@ -1,18 +1,12 @@
 ---
-title: Руководство по программированию на C#. События
+title: 'Руководство по программированию на C#. События'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- classes [C#], events
-- C# language, events
-- events [C#]
+  - 'classes [C#], events'
+  - 'C# language, events'
+  - 'events [C#]'
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451148"
 ---
 # <a name="events-c-programming-guide"></a>События (Руководство по программированию в C#)
 События позволяют [классу](../../../csharp/language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  
@@ -60,7 +54,7 @@ ms.locfileid: "53451148"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.EventHandler>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
-- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

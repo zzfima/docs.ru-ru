@@ -3,18 +3,13 @@ title: Начало работы с .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453139"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
 Платформа .NET Framework — это среда выполнения, которая управляет приложениями, предназначенными для .NET Framework. Она состоит из среды CLR, которая предоставляет инструменты управления памятью и другие службы системы, и обширной библиотеки классов, позволяющей программистам использовать устойчивый, надежный код во всех основных областях разработки приложений.
@@ -77,9 +72,9 @@ ms.locfileid: "49453139"
 
 ## <a name="related-topics"></a>См. также
 
-| Заголовок | Описание: |
+| Заголовок | Описание |
 | ----- |------------ |
-| [Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md) | Содержит подробные сведения для разработчиков, которые занимаются созданием приложений, предназначенных для платформы .NET Framework. |
+| [Обзор](../../../docs/framework/get-started/overview.md) | Содержит подробные сведения для разработчиков, которые занимаются созданием приложений, предназначенных для платформы .NET Framework. |
 | [Руководство по установке](../../../docs/framework/install/index.md) | Содержит сведения об установке платформы .NET Framework. |  
 | [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении. |
 | [Требования к системе](../../../docs/framework/get-started/system-requirements.md) | Содержит требования к оборудованию и операционной системе для использования платформы .NET Framework. |
@@ -89,7 +84,7 @@ ms.locfileid: "49453139"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по .NET Framework](../../../docs/framework/index.md)   
-- [Новые возможности](../../../docs/framework/whats-new/index.md)   
-- [Браузер API .NET](/dotnet/api/)   
+- [Руководство по .NET Framework](../../../docs/framework/index.md)
+- [Новые возможности](../../../docs/framework/whats-new/index.md)
+- [Браузер API .NET](/dotnet/api/)
 - [Руководство по разработке](../../../docs/framework/development-guide.md)

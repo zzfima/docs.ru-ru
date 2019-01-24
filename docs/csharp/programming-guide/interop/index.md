@@ -1,19 +1,13 @@
 ---
-title: Руководство по программированию на C#. Взаимодействие
+title: 'Руководство по программированию на C#. Взаимодействие'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- COM interop
-- interoperability
-- platform invoke, accessing APIs with C#
-- C# language, interoperability
+  - COM interop
+  - interoperability
+  - 'platform invoke, accessing APIs with C#'
+  - 'C# language, interoperability'
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235011"
 ---
 # <a name="interoperability-c-programming-guide"></a>Взаимодействие (Руководство по программированию в C#)
 Возможность взаимодействия позволяет использовать уже созданный неуправляемый код, экономя средства на разработку. Код, который выполняется под управлением среды CLR, называется *управляемым кодом*, а код, который выполняется вне среды CLR, называется *неуправляемым кодом*. COM, COM +, компоненты C++, компоненты ActiveX и Microsoft Win32 API являются примерами неуправляемого кода.  
@@ -45,7 +39,7 @@ ms.locfileid: "53235011"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)  
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)
 - [Пошаговое руководство. Программирование для Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415693"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -98,7 +92,7 @@ ms.locfileid: "54415693"
 
 ## <a name="see-also"></a>См. также
 
-* [Развертывание приложений .NET Core с помощью средств командной строки (CLI)](deploy-with-cli.md)
-* [Развертывание приложений .NET Core с помощью Visual Studio](deploy-with-vs.md)
-* [Пакеты, метапакеты и платформы](../packages.md)
-* [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
+- [Развертывание приложений .NET Core с помощью средств командной строки (CLI)](deploy-with-cli.md)
+- [Развертывание приложений .NET Core с помощью Visual Studio](deploy-with-vs.md)
+- [Пакеты, метапакеты и платформы](../packages.md)
+- [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)

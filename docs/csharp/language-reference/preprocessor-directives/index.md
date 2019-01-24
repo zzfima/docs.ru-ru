@@ -1,18 +1,12 @@
 ---
-title: Директивы препроцессора C#
+title: "Директивы препроцессора\_C#"
 ms.date: 07/20/2015
 f1_keywords:
-- cs.preprocessor
+  - cs.preprocessor
 helpviewer_keywords:
-- preprocessor directives [C#]
-- keywords [C#], preprocessor directives
+  - 'preprocessor directives [C#]'
+  - 'keywords [C#], preprocessor directives'
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036101"
 ---
 # <a name="c-preprocessor-directives"></a>Директивы препроцессора C#
 В этом разделе содержатся сведения о следующих директивах препроцессора C#:
@@ -40,5 +34,5 @@ ms.locfileid: "48036101"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

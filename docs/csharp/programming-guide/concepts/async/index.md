@@ -1,13 +1,7 @@
 ---
-title: Асинхронное программирование с использованием ключевых слов Async и Await (C#)
+title: 'Асинхронное программирование с использованием ключевых слов Async и Await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d46e499abb14964407773eca176ba0de7b43ffe2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236340"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -335,7 +329,7 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>См. также
 
-- [async](../../../../csharp/language-reference/keywords/async.md)  
-- [await](../../../../csharp/language-reference/keywords/await.md)  
-- [Асинхронное программирование](../../../../csharp/async.md)  
-- [Общие сведения об асинхронной модели](../../../../standard/async.md)  
+- [async](../../../../csharp/language-reference/keywords/async.md)
+- [await](../../../../csharp/language-reference/keywords/await.md)
+- [Асинхронное программирование](../../../../csharp/async.md)
+- [Общие сведения об асинхронной модели](../../../../standard/async.md)

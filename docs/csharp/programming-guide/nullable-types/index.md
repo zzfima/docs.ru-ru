@@ -1,19 +1,13 @@
 ---
-title: Руководство по программированию на C#. Типы, допускающие значение NULL
+title: 'Руководство по программированию на C#. Типы, допускающие значение NULL'
 ms.custom: seodec18
-description: Сведения о типах C#, допускающих значение NULL, и их использовании
+description: "Сведения о типах\_C#, допускающих значение\_NULL, и их использовании"
 ms.date: 07/30/2018
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+  - 'nullable types [C#]'
+  - 'C# language, nullable types'
+  - 'types [C#], nullable'
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245134"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Типы, допускающие значение NULL (Руководство по программированию на C#)
 
@@ -57,10 +51,10 @@ ms.locfileid: "53245134"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [?? Оператор](../../language-reference/operators/null-coalescing-operator.md)  
-- [Руководство по программированию на C#](../index.md)  
-- [Руководство по языку C#](../../index.md)  
-- [Справочник по C#](../../language-reference/index.md)  
-- [Типы значения, допускающие значение NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [?? Оператор](../../language-reference/operators/null-coalescing-operator.md)
+- [Руководство по программированию на C#](../index.md)
+- [Руководство по языку C#](../../index.md)
+- [Справочник по C#](../../language-reference/index.md)
+- [Типы значения, допускающие значение NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
