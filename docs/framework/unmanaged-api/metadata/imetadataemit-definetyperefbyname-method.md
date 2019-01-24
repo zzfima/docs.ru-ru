@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517140"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Метод IMetaDataEmit::DefineTypeRefByName
-Получает маркер метаданных для типа, определенного в указанной области, которое находится за пределами текущей области.  
+Получает маркер метаданных для типа, который определен в заданной области, которая выходит за пределы текущей области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,11 +39,11 @@ HRESULT DefineTypeRefByName (
   
 #### <a name="parameters"></a>Параметры  
  `tkResolutionScope`  
- [in] Токен, указывая область разрешения. Допустимы следующие типы токенов:  
+ [in] Токен, определяющий область разрешения. Допустимы следующие типы токенов:  
   
--   `mdModuleRef`, если тип определен в той же сборке, в которой определен вызывающий объект.  
+-   `mdModuleRef`, если тип определен в той же сборке, в котором определен вызывающий объект.  
   
--   `mdAssemblyRef`, если тип определен в сборке, отличной от той, в которой определен вызывающий объект.  
+-   `mdAssemblyRef`, если тип определен в сборке, отличной от той, в котором определен вызывающий объект.  
   
 -   `mdTypeRef`, если тип является вложенным типом.  
   
@@ -55,17 +55,17 @@ HRESULT DefineTypeRefByName (
  [in] Имя типа целевого объекта в формате Юникод.  
   
  `ptr`  
- [out] Указатель на `mdTypeRef` маркер, который назначен тип.  
+ [out] Указатель на `mdTypeRef` токен, который присваивается тип.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

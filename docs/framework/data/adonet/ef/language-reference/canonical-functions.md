@@ -2,12 +2,12 @@
 title: Канонические функции
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513884"
 ---
 # <a name="canonical-functions"></a>Канонические функции
 В этом разделе обсуждаются канонические функции, которые поддерживаются всеми поставщиками данных и могут использоваться всеми технологиями запросов. Канонические функции не могут расширяться поставщиком.  
@@ -20,7 +20,7 @@ ms.locfileid: "32760938"
   
  Во всех канонических функциях явным образом определяется обработка входных значений NULL и условия возникновения ошибок. Поставщики хранилищ должны соответствовать этому требованию, однако [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] не контролирует это соответствие.  
   
- Для сценариев LINQ запросы к [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] включают сопоставление методов CLR с методами в базовом источнике данных. Методы CLR сопоставляются с каноническими функциями, и поэтому правильное сопоставление возможно для любого набора методов, независимо от источника данных.  
+ Для сценариев LINQ запросы к [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] включают в себя сопоставление методов CLR с методами в базовом источнике данных. Методы CLR сопоставляются с каноническими функциями, и поэтому правильное сопоставление возможно для любого набора методов, независимо от источника данных.  
   
 ## <a name="canonical-functions-namespace"></a>Пространство имен канонических функций  
  Для канонических функций выделено пространство имен <xref:System.Data.Metadata.Edm>. Пространство имен <xref:System.Data.Metadata.Edm> автоматически включается во все запросы. Однако при импорте другого пространства имен, в котором содержится функция с именем, совпадающим с именем канонической функции (из пространства имен <xref:System.Data.Metadata.Edm>), то пространство имен необходимо указывать явным образом.  
@@ -47,8 +47,8 @@ ms.locfileid: "32760938"
  [Прочие канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  Обсуждаются функции, которые не являются побитовыми, строковыми, математическими, статистическими или функциями даты-времени.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Сопоставление канонических функций концептуальной модели с функциями SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Сопоставление канонических функций концептуальной модели с функциями SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

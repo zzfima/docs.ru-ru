@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514807"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Члены библиотеки времени выполнения Visual Basic
 `Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют библиотеку времени выполнения Visual Basic. Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде. Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.  
@@ -191,8 +191,8 @@ ms.locfileid: "33604592"
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic константы и перечисления  
- `Microsoft.VisualBasic` Пространство имен предоставляет константы и перечисления как часть библиотеки времени выполнения Visual Basic. Эти константы можно использовать в коде. Каждое перечисление предоставляет конкретную категорию функциональных возможностей. Дополнительные сведения см. в разделе [константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Пространство имен предоставляет константы и перечисления как часть библиотеки времени выполнения Visual Basic. Эти константы можно использовать в коде. Каждое перечисление представляет определенной категории функциональных возможностей. Дополнительные сведения см. в разделе [константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>См. также  
- [Константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>См. также
+- [Константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)
