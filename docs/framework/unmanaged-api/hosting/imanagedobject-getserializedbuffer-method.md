@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53e8180fb55336eb05d0737110fd2fe07a4c5894
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a94891b91f6ac14469e18ed6840a083ce5e9d64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516922"
 ---
-# <a name="imanagedobjectgetserializedbuffer-method"></a><span data-ttu-id="c82fa-102">Метод IManagedObject::GetSerializedBuffer</span><span class="sxs-lookup"><span data-stu-id="c82fa-102">IManagedObject::GetSerializedBuffer Method</span></span>
-<span data-ttu-id="c82fa-103">Возвращает строковое представление данного управляемого объекта.</span><span class="sxs-lookup"><span data-stu-id="c82fa-103">Gets the string representation of this managed object.</span></span>  
+# <a name="imanagedobjectgetserializedbuffer-method"></a><span data-ttu-id="3d0b5-102">Метод IManagedObject::GetSerializedBuffer</span><span class="sxs-lookup"><span data-stu-id="3d0b5-102">IManagedObject::GetSerializedBuffer Method</span></span>
+<span data-ttu-id="3d0b5-103">Возвращает строковое представление этого управляемого объекта.</span><span class="sxs-lookup"><span data-stu-id="3d0b5-103">Gets the string representation of this managed object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c82fa-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c82fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d0b5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3d0b5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSerializedBuffer (  
@@ -35,21 +35,21 @@ HRESULT GetSerializedBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c82fa-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c82fa-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3d0b5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3d0b5-105">Parameters</span></span>  
  `pBSTR`  
- <span data-ttu-id="c82fa-106">[out] Указатель на строку, являющуюся сериализованный объект.</span><span class="sxs-lookup"><span data-stu-id="c82fa-106">[out] A pointer to a string that is the serialized object.</span></span>  
+ <span data-ttu-id="3d0b5-106">[out] Указатель на строку, являющуюся сериализованного объекта.</span><span class="sxs-lookup"><span data-stu-id="3d0b5-106">[out] A pointer to a string that is the serialized object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c82fa-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="c82fa-107">Remarks</span></span>  
- <span data-ttu-id="c82fa-108">`GetSerializedBuffer` Метод сериализует объект, поэтому он может быть маршалирован клиенту.</span><span class="sxs-lookup"><span data-stu-id="c82fa-108">The `GetSerializedBuffer` method serializes the object so it can be marshaled to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d0b5-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="3d0b5-107">Remarks</span></span>  
+ <span data-ttu-id="3d0b5-108">`GetSerializedBuffer` Метод сериализует объект, поэтому он может маршалироваться клиенту.</span><span class="sxs-lookup"><span data-stu-id="3d0b5-108">The `GetSerializedBuffer` method serializes the object so it can be marshaled to the client.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c82fa-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c82fa-109">Requirements</span></span>  
- <span data-ttu-id="c82fa-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c82fa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d0b5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3d0b5-109">Requirements</span></span>  
+ <span data-ttu-id="3d0b5-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d0b5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c82fa-111">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c82fa-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3d0b5-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3d0b5-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c82fa-112">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c82fa-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3d0b5-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3d0b5-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c82fa-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c82fa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3d0b5-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d0b5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c82fa-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c82fa-114">See Also</span></span>  
- [<span data-ttu-id="c82fa-115">Интерфейс IManagedObject</span><span class="sxs-lookup"><span data-stu-id="c82fa-115">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3d0b5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="3d0b5-114">See also</span></span>
+- [<span data-ttu-id="3d0b5-115">Интерфейс IManagedObject</span><span class="sxs-lookup"><span data-stu-id="3d0b5-115">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

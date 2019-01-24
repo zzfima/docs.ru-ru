@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f5b12825c9a348cd16eed9f5be0f41e03c367c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd8c5e05d3f331d46b2d31f3f2448a674f090eaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508630"
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="8aa9f-102">Перечисление COR_PRF_GC_ROOT_KIND</span><span class="sxs-lookup"><span data-stu-id="8aa9f-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="8aa9f-103">Указывает вид корня сборки мусора, представленного [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="8aa9f-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="2976a-102">Перечисление COR_PRF_GC_ROOT_KIND</span><span class="sxs-lookup"><span data-stu-id="2976a-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="2976a-103">Указывает вид корня сборки мусора, предоставляемый [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2976a-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8aa9f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8aa9f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2976a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2976a-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,23 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8aa9f-105">Участники</span><span class="sxs-lookup"><span data-stu-id="8aa9f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2976a-105">Участники</span><span class="sxs-lookup"><span data-stu-id="2976a-105">Members</span></span>  
   
-|<span data-ttu-id="8aa9f-106">Член</span><span class="sxs-lookup"><span data-stu-id="8aa9f-106">Member</span></span>|<span data-ttu-id="8aa9f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="8aa9f-107">Description</span></span>|  
+|<span data-ttu-id="2976a-106">Член</span><span class="sxs-lookup"><span data-stu-id="2976a-106">Member</span></span>|<span data-ttu-id="2976a-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="2976a-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="8aa9f-108">Корень — это переменная в стеке.</span><span class="sxs-lookup"><span data-stu-id="8aa9f-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="8aa9f-109">Корнем является запись в очереди метода завершения.</span><span class="sxs-lookup"><span data-stu-id="8aa9f-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="8aa9f-110">Корнем является дескриптор сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="8aa9f-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="8aa9f-111">Тип корня не определен.</span><span class="sxs-lookup"><span data-stu-id="8aa9f-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="2976a-108">Корень — это переменная в стеке.</span><span class="sxs-lookup"><span data-stu-id="2976a-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="2976a-109">Корень — это запись в очередь метода завершения.</span><span class="sxs-lookup"><span data-stu-id="2976a-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="2976a-110">Корнем является дескриптор сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="2976a-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="2976a-111">Тип корня не определен.</span><span class="sxs-lookup"><span data-stu-id="2976a-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8aa9f-112">Требования</span><span class="sxs-lookup"><span data-stu-id="8aa9f-112">Requirements</span></span>  
- <span data-ttu-id="8aa9f-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8aa9f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2976a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="2976a-112">Requirements</span></span>  
+ <span data-ttu-id="2976a-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2976a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8aa9f-114">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8aa9f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2976a-114">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2976a-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8aa9f-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8aa9f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2976a-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2976a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8aa9f-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8aa9f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2976a-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2976a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8aa9f-117">См. также</span><span class="sxs-lookup"><span data-stu-id="8aa9f-117">See Also</span></span>  
- [<span data-ttu-id="8aa9f-118">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="8aa9f-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="2976a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="2976a-117">See also</span></span>
+- [<span data-ttu-id="2976a-118">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="2976a-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

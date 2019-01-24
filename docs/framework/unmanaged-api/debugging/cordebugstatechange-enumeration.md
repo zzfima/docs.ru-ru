@@ -12,17 +12,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513793"
 ---
-# <a name="cordebugstatechange-enumeration"></a><span data-ttu-id="299e1-102">Перечисление CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="299e1-102">CorDebugStateChange Enumeration</span></span>
-<span data-ttu-id="299e1-103">Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.</span><span class="sxs-lookup"><span data-stu-id="299e1-103">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
+# <a name="cordebugstatechange-enumeration"></a><span data-ttu-id="7eb82-102">Перечисление CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="7eb82-102">CorDebugStateChange Enumeration</span></span>
+<span data-ttu-id="7eb82-103">Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.</span><span class="sxs-lookup"><span data-stu-id="7eb82-103">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="299e1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="299e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7eb82-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7eb82-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugStateChange  
@@ -32,28 +32,28 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="299e1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="299e1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7eb82-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7eb82-105">Members</span></span>  
   
-|<span data-ttu-id="299e1-106">Член</span><span class="sxs-lookup"><span data-stu-id="299e1-106">Member</span></span>|<span data-ttu-id="299e1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="299e1-107">Description</span></span>|  
+|<span data-ttu-id="7eb82-106">Член</span><span class="sxs-lookup"><span data-stu-id="7eb82-106">Member</span></span>|<span data-ttu-id="7eb82-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7eb82-107">Description</span></span>|  
 |------------|-----------------|  
-|`PROCESS_RUNNING`|<span data-ttu-id="299e1-108">Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.</span><span class="sxs-lookup"><span data-stu-id="299e1-108">The process reached a new memory state via forward execution.</span></span>|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|<span data-ttu-id="299e1-109">Память процесса может отличаться произвольным образом от предыдущего варианта.</span><span class="sxs-lookup"><span data-stu-id="299e1-109">The process' memory may be arbitrarily different than it was previously.</span></span>|  
+|`PROCESS_RUNNING`|<span data-ttu-id="7eb82-108">Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.</span><span class="sxs-lookup"><span data-stu-id="7eb82-108">The process reached a new memory state via forward execution.</span></span>|  
+|`SET_CONTEXT_FLAG_UNWIND_FRAME`|<span data-ttu-id="7eb82-109">Память процесса может отличаться произвольным образом от предыдущего варианта.</span><span class="sxs-lookup"><span data-stu-id="7eb82-109">The process' memory may be arbitrarily different than it was previously.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="299e1-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="299e1-110">Remarks</span></span>  
- <span data-ttu-id="299e1-111">Член `CorDebugStateChange` перечисление предоставляется как аргумент при вызове отладчиком [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) метод</span><span class="sxs-lookup"><span data-stu-id="299e1-111">A member of the `CorDebugStateChange` enumeration is provided as an argument when the debugger calls the [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) method</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7eb82-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="7eb82-110">Remarks</span></span>  
+ <span data-ttu-id="7eb82-111">Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) метод</span><span class="sxs-lookup"><span data-stu-id="7eb82-111">A member of the `CorDebugStateChange` enumeration is provided as an argument when the debugger calls the [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) method</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="299e1-112">Это перечисление предназначено для использования только в сценариях отладки .NET Native.</span><span class="sxs-lookup"><span data-stu-id="299e1-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="7eb82-112">Это перечисление предназначено для использования только в сценариях отладки .NET Native.</span><span class="sxs-lookup"><span data-stu-id="7eb82-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="299e1-113">Требования</span><span class="sxs-lookup"><span data-stu-id="299e1-113">Requirements</span></span>  
- <span data-ttu-id="299e1-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="299e1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7eb82-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7eb82-113">Requirements</span></span>  
+ <span data-ttu-id="7eb82-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7eb82-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="299e1-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="299e1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7eb82-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7eb82-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="299e1-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="299e1-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7eb82-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7eb82-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="299e1-117">**Версии платформы .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="299e1-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="7eb82-117">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7eb82-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="299e1-118">См. также</span><span class="sxs-lookup"><span data-stu-id="299e1-118">See Also</span></span>  
- [<span data-ttu-id="299e1-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="299e1-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [<span data-ttu-id="299e1-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="299e1-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="7eb82-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7eb82-118">See also</span></span>
+- [<span data-ttu-id="7eb82-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="7eb82-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="7eb82-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="7eb82-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

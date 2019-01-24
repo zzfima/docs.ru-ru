@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502576"
 ---
-# <a name="cortypelayout-structure"></a><span data-ttu-id="05def-102">Структура COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="05def-102">COR_TYPE_LAYOUT Structure</span></span>
-<span data-ttu-id="05def-103">Предоставляет сведения о расположении объекта в памяти.</span><span class="sxs-lookup"><span data-stu-id="05def-103">Provides information about the layout of an object in memory.</span></span>  
+# <a name="cortypelayout-structure"></a><span data-ttu-id="959f2-102">Структура COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="959f2-102">COR_TYPE_LAYOUT Structure</span></span>
+<span data-ttu-id="959f2-103">Предоставляет сведения о расположении объекта в памяти.</span><span class="sxs-lookup"><span data-stu-id="959f2-103">Provides information about the layout of an object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05def-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05def-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="959f2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="959f2-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_TYPE_LAYOUT {  
@@ -38,28 +38,28 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="05def-105">Участники</span><span class="sxs-lookup"><span data-stu-id="05def-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="959f2-105">Участники</span><span class="sxs-lookup"><span data-stu-id="959f2-105">Members</span></span>  
   
-|<span data-ttu-id="05def-106">Член</span><span class="sxs-lookup"><span data-stu-id="05def-106">Member</span></span>|<span data-ttu-id="05def-107">Описание</span><span class="sxs-lookup"><span data-stu-id="05def-107">Description</span></span>|  
+|<span data-ttu-id="959f2-106">Член</span><span class="sxs-lookup"><span data-stu-id="959f2-106">Member</span></span>|<span data-ttu-id="959f2-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="959f2-107">Description</span></span>|  
 |------------|-----------------|  
-|`parentID`|<span data-ttu-id="05def-108">Идентификатор родительского типа для этого типа.</span><span class="sxs-lookup"><span data-stu-id="05def-108">The identifier of the parent type to this type.</span></span> <span data-ttu-id="05def-109">Это будет идентификатор типа NULL (токен1 = 0, токен2 = 0), если идентификатор типа соответствует <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="05def-109">This will be the NULL type id (token1= 0, token2 = 0) if the type id corresponds to <xref:System.Object?displayProperty=nameWithType>.</span></span>|  
-|`objectSize`|<span data-ttu-id="05def-110">Базовый размер объекта этого типа.</span><span class="sxs-lookup"><span data-stu-id="05def-110">The base size of an object of this type.</span></span> <span data-ttu-id="05def-111">Это общий размер для размера объектов не переменная.</span><span class="sxs-lookup"><span data-stu-id="05def-111">This is the total size for non-variable sized objects.</span></span>|  
-|`numFields`|<span data-ttu-id="05def-112">Номер поля, включенные в объекты этого типа.</span><span class="sxs-lookup"><span data-stu-id="05def-112">The number of fields included in objects of this type.</span></span>|  
-|`boxOffset`|<span data-ttu-id="05def-113">Если этот тип находится в окне, начало смещения полей объекта.</span><span class="sxs-lookup"><span data-stu-id="05def-113">If this type is boxed, the beginning offset of an object's fields.</span></span> <span data-ttu-id="05def-114">Это поле доступно только для типов значений, таких как примитивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="05def-114">This field is valid only for value types such as primitives and structures.</span></span>|  
-|`type`|<span data-ttu-id="05def-115">CorElementType, к которой принадлежит этот тип.</span><span class="sxs-lookup"><span data-stu-id="05def-115">The CorElementType to which this type belongs.</span></span>|  
+|`parentID`|<span data-ttu-id="959f2-108">Идентификатор родительского типа к этому типу.</span><span class="sxs-lookup"><span data-stu-id="959f2-108">The identifier of the parent type to this type.</span></span> <span data-ttu-id="959f2-109">Это будет идентификатор типа NULL (токен1 = 0, токен2 = 0), если идентификатор типа соответствует <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="959f2-109">This will be the NULL type id (token1= 0, token2 = 0) if the type id corresponds to <xref:System.Object?displayProperty=nameWithType>.</span></span>|  
+|`objectSize`|<span data-ttu-id="959f2-110">Размер базового объекта этого типа.</span><span class="sxs-lookup"><span data-stu-id="959f2-110">The base size of an object of this type.</span></span> <span data-ttu-id="959f2-111">Это общий размер для размера объектов, не являющийся переменной.</span><span class="sxs-lookup"><span data-stu-id="959f2-111">This is the total size for non-variable sized objects.</span></span>|  
+|`numFields`|<span data-ttu-id="959f2-112">Число полей, включенных в объекты этого типа.</span><span class="sxs-lookup"><span data-stu-id="959f2-112">The number of fields included in objects of this type.</span></span>|  
+|`boxOffset`|<span data-ttu-id="959f2-113">Если этот тип упаковывается, начало смещения полей объекта.</span><span class="sxs-lookup"><span data-stu-id="959f2-113">If this type is boxed, the beginning offset of an object's fields.</span></span> <span data-ttu-id="959f2-114">Это поле является допустимым только для типов значений, таких как примитивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="959f2-114">This field is valid only for value types such as primitives and structures.</span></span>|  
+|`type`|<span data-ttu-id="959f2-115">CorElementType, к которой принадлежит этот тип.</span><span class="sxs-lookup"><span data-stu-id="959f2-115">The CorElementType to which this type belongs.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05def-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="05def-116">Remarks</span></span>  
- <span data-ttu-id="05def-117">Если `numFields` больше нуля, можно вызвать [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) метод, чтобы получить сведения о полях в этом типе.</span><span class="sxs-lookup"><span data-stu-id="05def-117">If `numFields` is greater than zero, you can call the [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) method to obtain information about the fields in this type.</span></span> <span data-ttu-id="05def-118">Если `type` — `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, или `ELEMENT_TYPE_SZARRAY`, размер объектов этого типа различен, и можно передать [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) структуру [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="05def-118">If `type` is `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, or `ELEMENT_TYPE_SZARRAY`, the size of objects of this type is variable, and you can pass the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) structure to the [ICorDebugProcess5::GetArrayLayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="959f2-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="959f2-116">Remarks</span></span>  
+ <span data-ttu-id="959f2-117">Если `numFields` больше нуля, можно вызвать [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) метод, чтобы получить сведения о полях в этом типе.</span><span class="sxs-lookup"><span data-stu-id="959f2-117">If `numFields` is greater than zero, you can call the [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) method to obtain information about the fields in this type.</span></span> <span data-ttu-id="959f2-118">Если `type` — `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, или `ELEMENT_TYPE_SZARRAY`, размер объектов этого типа является переменной, и вы можете передать [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) структуру [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="959f2-118">If `type` is `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, or `ELEMENT_TYPE_SZARRAY`, the size of objects of this type is variable, and you can pass the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) structure to the [ICorDebugProcess5::GetArrayLayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05def-119">Требования</span><span class="sxs-lookup"><span data-stu-id="05def-119">Requirements</span></span>  
- <span data-ttu-id="05def-120">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05def-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="959f2-119">Требования</span><span class="sxs-lookup"><span data-stu-id="959f2-119">Requirements</span></span>  
+ <span data-ttu-id="959f2-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="959f2-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05def-121">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05def-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="959f2-121">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="959f2-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05def-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05def-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="959f2-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="959f2-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05def-123">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05def-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="959f2-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="959f2-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05def-124">См. также</span><span class="sxs-lookup"><span data-stu-id="05def-124">See Also</span></span>  
- [<span data-ttu-id="05def-125">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="05def-125">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="05def-126">Отладка</span><span class="sxs-lookup"><span data-stu-id="05def-126">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="959f2-124">См. также</span><span class="sxs-lookup"><span data-stu-id="959f2-124">See also</span></span>
+- [<span data-ttu-id="959f2-125">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="959f2-125">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="959f2-126">Отладка</span><span class="sxs-lookup"><span data-stu-id="959f2-126">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,31 +17,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e92ca55a04032ad9950888eb59e33ee815b14d42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514621"
 ---
-# <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="6e887-102">Метод ICorProfilerCallback::ExceptionCLRCatcherExecute</span><span class="sxs-lookup"><span data-stu-id="6e887-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
-<span data-ttu-id="6e887-103">Вызывается, когда `catch` блока исключения, выполненного в общеязыковой среде выполнения (CLR), сам.</span><span class="sxs-lookup"><span data-stu-id="6e887-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="6e887-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="6e887-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="34eb6-102">Метод ICorProfilerCallback::ExceptionCLRCatcherExecute</span><span class="sxs-lookup"><span data-stu-id="34eb6-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
+<span data-ttu-id="34eb6-103">Вызывается, когда `catch` блоков исключения выполняется внутри общеязыковой среды выполнения (CLR), сам.</span><span class="sxs-lookup"><span data-stu-id="34eb6-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="34eb6-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="34eb6-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e887-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6e887-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34eb6-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="34eb6-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionCLRCatcherExecute();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6e887-106">Требования</span><span class="sxs-lookup"><span data-stu-id="6e887-106">Requirements</span></span>  
- <span data-ttu-id="6e887-107">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e887-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34eb6-106">Требования</span><span class="sxs-lookup"><span data-stu-id="34eb6-106">Requirements</span></span>  
+ <span data-ttu-id="34eb6-107">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34eb6-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e887-108">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6e887-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="34eb6-108">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="34eb6-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6e887-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e887-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34eb6-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34eb6-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e887-110">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="6e887-110">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="34eb6-110">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="34eb6-110">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e887-111">См. также</span><span class="sxs-lookup"><span data-stu-id="6e887-111">See Also</span></span>  
- [<span data-ttu-id="6e887-112">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="6e887-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="6e887-113">Метод ExceptionCLRCatcherFound</span><span class="sxs-lookup"><span data-stu-id="6e887-113">ExceptionCLRCatcherFound Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)
+## <a name="see-also"></a><span data-ttu-id="34eb6-111">См. также</span><span class="sxs-lookup"><span data-stu-id="34eb6-111">See also</span></span>
+- [<span data-ttu-id="34eb6-112">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="34eb6-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="34eb6-113">Метод ExceptionCLRCatcherFound</span><span class="sxs-lookup"><span data-stu-id="34eb6-113">ExceptionCLRCatcherFound Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)

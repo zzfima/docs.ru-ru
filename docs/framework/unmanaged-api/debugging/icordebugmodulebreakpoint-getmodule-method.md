@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cbb1aa9c81101eb818a9e7829c777efd3923b5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce53137021fe9ccaf170bed28918b8f5fe87715b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504995"
 ---
-# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="769e4-102">Метод ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="769e4-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
-<span data-ttu-id="769e4-103">Получает указатель интерфейса на «ICorDebugModule», ссылается на модуль, в котором установлена данная точка останова.</span><span class="sxs-lookup"><span data-stu-id="769e4-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
+# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="d9f34-102">Метод ICorDebugModuleBreakpoint::GetModule</span><span class="sxs-lookup"><span data-stu-id="d9f34-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
+<span data-ttu-id="d9f34-103">Получает указатель интерфейса на «ICorDebugModule», ссылается на модуль, в котором установлена данная точка останова.</span><span class="sxs-lookup"><span data-stu-id="d9f34-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="769e4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="769e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9f34-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9f34-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -34,18 +35,18 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="769e4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="769e4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9f34-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d9f34-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="769e4-106">[out] Указатель на адрес `ICorDebugModule` интерфейс, который ссылается на модуль, в которой задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="769e4-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="d9f34-106">[out] Указатель на адрес `ICorDebugModule` интерфейс, который ссылается на модуль, в котором задана точка останова.</span><span class="sxs-lookup"><span data-stu-id="d9f34-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="769e4-107">Требования</span><span class="sxs-lookup"><span data-stu-id="769e4-107">Requirements</span></span>  
- <span data-ttu-id="769e4-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="769e4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9f34-107">Требования</span><span class="sxs-lookup"><span data-stu-id="d9f34-107">Requirements</span></span>  
+ <span data-ttu-id="d9f34-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9f34-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="769e4-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="769e4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9f34-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9f34-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="769e4-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="769e4-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9f34-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9f34-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="769e4-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="769e4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9f34-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9f34-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="769e4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="769e4-112">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="d9f34-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d9f34-112">See also</span></span>
+

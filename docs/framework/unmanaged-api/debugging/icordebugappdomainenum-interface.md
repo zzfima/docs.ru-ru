@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum интерфейс1
+title: ICorDebugAppDomainEnum Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8db3b02ba4766d046fc549eec8add31f51069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3759be77cd6e6265eb8328669c88225067b99bfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509718"
 ---
-# <a name="icordebugappdomainenum-interface1"></a><span data-ttu-id="95c52-102">ICorDebugAppDomainEnum интерфейс1</span><span class="sxs-lookup"><span data-stu-id="95c52-102">ICorDebugAppDomainEnum Interface1</span></span>
-<span data-ttu-id="95c52-103">Предоставляет `Next` метод, возвращающий заданное число `ICorDebugAppDomainEnum` значений, начиная со следующего расположения в перечислении.</span><span class="sxs-lookup"><span data-stu-id="95c52-103">Provides the `Next` method, which returns a specified number of `ICorDebugAppDomainEnum` values starting at the next location in the enumeration.</span></span> <span data-ttu-id="95c52-104">Этот интерфейс является подклассом «ICorDebugEnum».</span><span class="sxs-lookup"><span data-stu-id="95c52-104">This interface is a subclass of "ICorDebugEnum".</span></span>  
+# <a name="icordebugappdomainenum-interface1"></a><span data-ttu-id="0ae8b-102">ICorDebugAppDomainEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="0ae8b-102">ICorDebugAppDomainEnum Interface1</span></span>
+<span data-ttu-id="0ae8b-103">Предоставляет `Next` метод, возвращающий заданное число `ICorDebugAppDomainEnum` значений, начиная со следующего расположения в перечислении.</span><span class="sxs-lookup"><span data-stu-id="0ae8b-103">Provides the `Next` method, which returns a specified number of `ICorDebugAppDomainEnum` values starting at the next location in the enumeration.</span></span> <span data-ttu-id="0ae8b-104">Этот интерфейс является подклассом «ICorDebugEnum».</span><span class="sxs-lookup"><span data-stu-id="0ae8b-104">This interface is a subclass of "ICorDebugEnum".</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="95c52-105">Методы</span><span class="sxs-lookup"><span data-stu-id="95c52-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0ae8b-105">Методы</span><span class="sxs-lookup"><span data-stu-id="0ae8b-105">Methods</span></span>  
   
-|<span data-ttu-id="95c52-106">Метод</span><span class="sxs-lookup"><span data-stu-id="95c52-106">Method</span></span>|<span data-ttu-id="95c52-107">Описание</span><span class="sxs-lookup"><span data-stu-id="95c52-107">Description</span></span>|  
+|<span data-ttu-id="0ae8b-106">Метод</span><span class="sxs-lookup"><span data-stu-id="0ae8b-106">Method</span></span>|<span data-ttu-id="0ae8b-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="0ae8b-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="95c52-108">Метод Next</span><span class="sxs-lookup"><span data-stu-id="95c52-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|<span data-ttu-id="95c52-109">Возвращает заданное число доменов приложений из коллекции, начиная с текущей позиции курсора.</span><span class="sxs-lookup"><span data-stu-id="95c52-109">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>|  
+|[<span data-ttu-id="0ae8b-108">Метод Next</span><span class="sxs-lookup"><span data-stu-id="0ae8b-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|<span data-ttu-id="0ae8b-109">Возвращает указанное число доменов приложений из коллекции, начиная с текущей позиции курсора.</span><span class="sxs-lookup"><span data-stu-id="0ae8b-109">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="95c52-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="95c52-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ae8b-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="0ae8b-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="95c52-111">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="95c52-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="0ae8b-111">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="0ae8b-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95c52-112">Требования</span><span class="sxs-lookup"><span data-stu-id="95c52-112">Requirements</span></span>  
- <span data-ttu-id="95c52-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95c52-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ae8b-112">Требования</span><span class="sxs-lookup"><span data-stu-id="0ae8b-112">Requirements</span></span>  
+ <span data-ttu-id="0ae8b-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ae8b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95c52-114">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="95c52-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0ae8b-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0ae8b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="95c52-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="95c52-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0ae8b-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ae8b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="95c52-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95c52-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0ae8b-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ae8b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95c52-117">См. также</span><span class="sxs-lookup"><span data-stu-id="95c52-117">See Also</span></span>  
- [<span data-ttu-id="95c52-118">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="95c52-118">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [<span data-ttu-id="95c52-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="95c52-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0ae8b-117">См. также</span><span class="sxs-lookup"><span data-stu-id="0ae8b-117">See also</span></span>
+- [<span data-ttu-id="0ae8b-118">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="0ae8b-118">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="0ae8b-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="0ae8b-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

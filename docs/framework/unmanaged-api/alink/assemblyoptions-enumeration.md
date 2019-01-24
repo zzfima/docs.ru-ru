@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571487"
 ---
-# <a name="assemblyoptions-enumeration"></a><span data-ttu-id="28529-102">Перечисление AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="28529-102">AssemblyOptions Enumeration</span></span>
-<span data-ttu-id="28529-103">Перечисляет параметры сборки.</span><span class="sxs-lookup"><span data-stu-id="28529-103">Enumerates the assembly options.</span></span>  
+# <a name="assemblyoptions-enumeration"></a><span data-ttu-id="d0aec-102">Перечисление AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="d0aec-102">AssemblyOptions Enumeration</span></span>
+<span data-ttu-id="d0aec-103">Перечисляет параметры сборки.</span><span class="sxs-lookup"><span data-stu-id="d0aec-103">Enumerates the assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28529-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="28529-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0aec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d0aec-104">Syntax</span></span>  
   
 ```  
 typedef enum _AssemblyOptions {  
@@ -54,35 +54,35 @@ typedef enum _AssemblyOptions {
 }   AssemblyOptions;  
 ```  
   
-## <a name="fields"></a><span data-ttu-id="28529-105">Поля</span><span class="sxs-lookup"><span data-stu-id="28529-105">Fields</span></span>  
+## <a name="fields"></a><span data-ttu-id="d0aec-105">Поля</span><span class="sxs-lookup"><span data-stu-id="d0aec-105">Fields</span></span>  
   
-|<span data-ttu-id="28529-106">Поле</span><span class="sxs-lookup"><span data-stu-id="28529-106">Field</span></span>|<span data-ttu-id="28529-107">Описание</span><span class="sxs-lookup"><span data-stu-id="28529-107">Description</span></span>|  
+|<span data-ttu-id="d0aec-106">Поле</span><span class="sxs-lookup"><span data-stu-id="d0aec-106">Field</span></span>|<span data-ttu-id="d0aec-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d0aec-107">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="28529-108">optAssemTitle</span><span class="sxs-lookup"><span data-stu-id="28529-108">optAssemTitle</span></span>|<span data-ttu-id="28529-109">Строка — определяет название сборки.</span><span class="sxs-lookup"><span data-stu-id="28529-109">String - Represents the assembly title.</span></span>|  
-|<span data-ttu-id="28529-110">optAssemDescription</span><span class="sxs-lookup"><span data-stu-id="28529-110">optAssemDescription</span></span>|<span data-ttu-id="28529-111">Строка — содержит описание сборки.</span><span class="sxs-lookup"><span data-stu-id="28529-111">String - Contains the assembly description.</span></span>|  
-|<span data-ttu-id="28529-112">optAssemConfig</span><span class="sxs-lookup"><span data-stu-id="28529-112">optAssemConfig</span></span>|<span data-ttu-id="28529-113">Строка — содержит конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="28529-113">String - Contains the assembly configuration.</span></span>|  
-|<span data-ttu-id="28529-114">optAssemOS</span><span class="sxs-lookup"><span data-stu-id="28529-114">optAssemOS</span></span>|<span data-ttu-id="28529-115">Строка - кодировке: «dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion».</span><span class="sxs-lookup"><span data-stu-id="28529-115">String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".</span></span>|  
-|<span data-ttu-id="28529-116">optAssemProcessor</span><span class="sxs-lookup"><span data-stu-id="28529-116">optAssemProcessor</span></span>|<span data-ttu-id="28529-117">ULONG</span><span class="sxs-lookup"><span data-stu-id="28529-117">ULONG</span></span>|  
-|<span data-ttu-id="28529-118">optAssemLocale</span><span class="sxs-lookup"><span data-stu-id="28529-118">optAssemLocale</span></span>|<span data-ttu-id="28529-119">Строка — содержит языковой стандарт сборки.</span><span class="sxs-lookup"><span data-stu-id="28529-119">String - Contains the assembly locale.</span></span>|  
-|<span data-ttu-id="28529-120">optAssemVersion</span><span class="sxs-lookup"><span data-stu-id="28529-120">optAssemVersion</span></span>|<span data-ttu-id="28529-121">Строка - кодировке: «Основной_номер.дополнительный_номер.сборка.редакция».</span><span class="sxs-lookup"><span data-stu-id="28529-121">String - Encoded as: "Major.Minor.Build.Revision".</span></span>|  
-|<span data-ttu-id="28529-122">optAssemCompany</span><span class="sxs-lookup"><span data-stu-id="28529-122">optAssemCompany</span></span>|<span data-ttu-id="28529-123">Строка — содержит компании.</span><span class="sxs-lookup"><span data-stu-id="28529-123">String - Contains the company.</span></span>|  
-|<span data-ttu-id="28529-124">optAssemProduct</span><span class="sxs-lookup"><span data-stu-id="28529-124">optAssemProduct</span></span>|<span data-ttu-id="28529-125">Строка — содержит имя продукта.</span><span class="sxs-lookup"><span data-stu-id="28529-125">String - Contains the product name.</span></span>|  
-|<span data-ttu-id="28529-126">optAssemProductVersion</span><span class="sxs-lookup"><span data-stu-id="28529-126">optAssemProductVersion</span></span>|<span data-ttu-id="28529-127">Строка (также известный как InformationalVersion).</span><span class="sxs-lookup"><span data-stu-id="28529-127">String (also known as InformationalVersion).</span></span>|  
-|<span data-ttu-id="28529-128">optAssemCopyright</span><span class="sxs-lookup"><span data-stu-id="28529-128">optAssemCopyright</span></span>|<span data-ttu-id="28529-129">Строка — содержит сведения об авторских правах.</span><span class="sxs-lookup"><span data-stu-id="28529-129">String - Contains the copyright information.</span></span>|  
-|<span data-ttu-id="28529-130">optAssemTrademark</span><span class="sxs-lookup"><span data-stu-id="28529-130">optAssemTrademark</span></span>|<span data-ttu-id="28529-131">Строка — содержит сведения о товарном знаке.</span><span class="sxs-lookup"><span data-stu-id="28529-131">String - Contains the trademark information.</span></span>|  
-|<span data-ttu-id="28529-132">optAssemKeyFile</span><span class="sxs-lookup"><span data-stu-id="28529-132">optAssemKeyFile</span></span>|<span data-ttu-id="28529-133">Строка (имя файла).</span><span class="sxs-lookup"><span data-stu-id="28529-133">String (file name).</span></span>|  
-|<span data-ttu-id="28529-134">optAssemKeyName</span><span class="sxs-lookup"><span data-stu-id="28529-134">optAssemKeyName</span></span>|<span data-ttu-id="28529-135">Строка (имя ключа).</span><span class="sxs-lookup"><span data-stu-id="28529-135">String (The key name).</span></span>|  
-|<span data-ttu-id="28529-136">optAssemAlgID</span><span class="sxs-lookup"><span data-stu-id="28529-136">optAssemAlgID</span></span>|<span data-ttu-id="28529-137">ULONG</span><span class="sxs-lookup"><span data-stu-id="28529-137">ULONG</span></span>|  
-|<span data-ttu-id="28529-138">optAssemFlags</span><span class="sxs-lookup"><span data-stu-id="28529-138">optAssemFlags</span></span>|<span data-ttu-id="28529-139">ULONG</span><span class="sxs-lookup"><span data-stu-id="28529-139">ULONG</span></span>|  
-|<span data-ttu-id="28529-140">optAssemHalfSign</span><span class="sxs-lookup"><span data-stu-id="28529-140">optAssemHalfSign</span></span>|<span data-ttu-id="28529-141">Значение типа bool (также называется DelaySign).</span><span class="sxs-lookup"><span data-stu-id="28529-141">Bool (Also known as DelaySign).</span></span>|  
-|<span data-ttu-id="28529-142">optAssemFileVersion</span><span class="sxs-lookup"><span data-stu-id="28529-142">optAssemFileVersion</span></span>|<span data-ttu-id="28529-143">Строка - кодируется как «Основной_номер.дополнительный_номер.сборка.редакция» — то же, что ProductVersion.</span><span class="sxs-lookup"><span data-stu-id="28529-143">String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.</span></span>|  
-|<span data-ttu-id="28529-144">optAssemSatelliteVer</span><span class="sxs-lookup"><span data-stu-id="28529-144">optAssemSatelliteVer</span></span>|<span data-ttu-id="28529-145">Строка - кодируется как «Основной_номер.дополнительный_номер.сборка.редакция».</span><span class="sxs-lookup"><span data-stu-id="28529-145">String - Encoded as "Major.Minor.Build.Revision".</span></span>|  
-|<span data-ttu-id="28529-146">optLastAssemOption</span><span class="sxs-lookup"><span data-stu-id="28529-146">optLastAssemOption</span></span>|<span data-ttu-id="28529-147">Счетчик числа элементов.</span><span class="sxs-lookup"><span data-stu-id="28529-147">A counter of the number of elements.</span></span>|  
+|<span data-ttu-id="d0aec-108">optAssemTitle</span><span class="sxs-lookup"><span data-stu-id="d0aec-108">optAssemTitle</span></span>|<span data-ttu-id="d0aec-109">Строка — определяет название сборки.</span><span class="sxs-lookup"><span data-stu-id="d0aec-109">String - Represents the assembly title.</span></span>|  
+|<span data-ttu-id="d0aec-110">optAssemDescription</span><span class="sxs-lookup"><span data-stu-id="d0aec-110">optAssemDescription</span></span>|<span data-ttu-id="d0aec-111">Строка — содержит описание сборки.</span><span class="sxs-lookup"><span data-stu-id="d0aec-111">String - Contains the assembly description.</span></span>|  
+|<span data-ttu-id="d0aec-112">optAssemConfig</span><span class="sxs-lookup"><span data-stu-id="d0aec-112">optAssemConfig</span></span>|<span data-ttu-id="d0aec-113">Строка — содержит конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="d0aec-113">String - Contains the assembly configuration.</span></span>|  
+|<span data-ttu-id="d0aec-114">optAssemOS</span><span class="sxs-lookup"><span data-stu-id="d0aec-114">optAssemOS</span></span>|<span data-ttu-id="d0aec-115">Строка - кодировке: «dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion».</span><span class="sxs-lookup"><span data-stu-id="d0aec-115">String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".</span></span>|  
+|<span data-ttu-id="d0aec-116">optAssemProcessor</span><span class="sxs-lookup"><span data-stu-id="d0aec-116">optAssemProcessor</span></span>|<span data-ttu-id="d0aec-117">ULONG</span><span class="sxs-lookup"><span data-stu-id="d0aec-117">ULONG</span></span>|  
+|<span data-ttu-id="d0aec-118">optAssemLocale</span><span class="sxs-lookup"><span data-stu-id="d0aec-118">optAssemLocale</span></span>|<span data-ttu-id="d0aec-119">Строка — содержит языковой стандарт сборки.</span><span class="sxs-lookup"><span data-stu-id="d0aec-119">String - Contains the assembly locale.</span></span>|  
+|<span data-ttu-id="d0aec-120">optAssemVersion</span><span class="sxs-lookup"><span data-stu-id="d0aec-120">optAssemVersion</span></span>|<span data-ttu-id="d0aec-121">Строка - кодировке: «Основная.дополнительная.сборка.редакция».</span><span class="sxs-lookup"><span data-stu-id="d0aec-121">String - Encoded as: "Major.Minor.Build.Revision".</span></span>|  
+|<span data-ttu-id="d0aec-122">optAssemCompany</span><span class="sxs-lookup"><span data-stu-id="d0aec-122">optAssemCompany</span></span>|<span data-ttu-id="d0aec-123">Строка — содержит компании.</span><span class="sxs-lookup"><span data-stu-id="d0aec-123">String - Contains the company.</span></span>|  
+|<span data-ttu-id="d0aec-124">optAssemProduct</span><span class="sxs-lookup"><span data-stu-id="d0aec-124">optAssemProduct</span></span>|<span data-ttu-id="d0aec-125">Строка — содержит имя продукта.</span><span class="sxs-lookup"><span data-stu-id="d0aec-125">String - Contains the product name.</span></span>|  
+|<span data-ttu-id="d0aec-126">optAssemProductVersion</span><span class="sxs-lookup"><span data-stu-id="d0aec-126">optAssemProductVersion</span></span>|<span data-ttu-id="d0aec-127">Строка (также известный как InformationalVersion).</span><span class="sxs-lookup"><span data-stu-id="d0aec-127">String (also known as InformationalVersion).</span></span>|  
+|<span data-ttu-id="d0aec-128">optAssemCopyright</span><span class="sxs-lookup"><span data-stu-id="d0aec-128">optAssemCopyright</span></span>|<span data-ttu-id="d0aec-129">Строка — содержит сведения об авторских правах.</span><span class="sxs-lookup"><span data-stu-id="d0aec-129">String - Contains the copyright information.</span></span>|  
+|<span data-ttu-id="d0aec-130">optAssemTrademark</span><span class="sxs-lookup"><span data-stu-id="d0aec-130">optAssemTrademark</span></span>|<span data-ttu-id="d0aec-131">Строка — содержит сведения о товарном знаке.</span><span class="sxs-lookup"><span data-stu-id="d0aec-131">String - Contains the trademark information.</span></span>|  
+|<span data-ttu-id="d0aec-132">optAssemKeyFile</span><span class="sxs-lookup"><span data-stu-id="d0aec-132">optAssemKeyFile</span></span>|<span data-ttu-id="d0aec-133">String (имя файла).</span><span class="sxs-lookup"><span data-stu-id="d0aec-133">String (file name).</span></span>|  
+|<span data-ttu-id="d0aec-134">optAssemKeyName</span><span class="sxs-lookup"><span data-stu-id="d0aec-134">optAssemKeyName</span></span>|<span data-ttu-id="d0aec-135">Строка (имя ключа).</span><span class="sxs-lookup"><span data-stu-id="d0aec-135">String (The key name).</span></span>|  
+|<span data-ttu-id="d0aec-136">optAssemAlgID</span><span class="sxs-lookup"><span data-stu-id="d0aec-136">optAssemAlgID</span></span>|<span data-ttu-id="d0aec-137">ULONG</span><span class="sxs-lookup"><span data-stu-id="d0aec-137">ULONG</span></span>|  
+|<span data-ttu-id="d0aec-138">optAssemFlags</span><span class="sxs-lookup"><span data-stu-id="d0aec-138">optAssemFlags</span></span>|<span data-ttu-id="d0aec-139">ULONG</span><span class="sxs-lookup"><span data-stu-id="d0aec-139">ULONG</span></span>|  
+|<span data-ttu-id="d0aec-140">optAssemHalfSign</span><span class="sxs-lookup"><span data-stu-id="d0aec-140">optAssemHalfSign</span></span>|<span data-ttu-id="d0aec-141">Bool (также известен как DelaySign).</span><span class="sxs-lookup"><span data-stu-id="d0aec-141">Bool (Also known as DelaySign).</span></span>|  
+|<span data-ttu-id="d0aec-142">optAssemFileVersion</span><span class="sxs-lookup"><span data-stu-id="d0aec-142">optAssemFileVersion</span></span>|<span data-ttu-id="d0aec-143">Строка - кодируется как «Основная.дополнительная.сборка.редакция»--так же, как ProductVersion.</span><span class="sxs-lookup"><span data-stu-id="d0aec-143">String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.</span></span>|  
+|<span data-ttu-id="d0aec-144">optAssemSatelliteVer</span><span class="sxs-lookup"><span data-stu-id="d0aec-144">optAssemSatelliteVer</span></span>|<span data-ttu-id="d0aec-145">Строка - кодируется как «Основная.дополнительная.сборка.редакция».</span><span class="sxs-lookup"><span data-stu-id="d0aec-145">String - Encoded as "Major.Minor.Build.Revision".</span></span>|  
+|<span data-ttu-id="d0aec-146">optLastAssemOption</span><span class="sxs-lookup"><span data-stu-id="d0aec-146">optLastAssemOption</span></span>|<span data-ttu-id="d0aec-147">Счетчик числа элементов.</span><span class="sxs-lookup"><span data-stu-id="d0aec-147">A counter of the number of elements.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="28529-148">Требования</span><span class="sxs-lookup"><span data-stu-id="28529-148">Requirements</span></span>  
- <span data-ttu-id="28529-149">**Заголовок:** alink.h</span><span class="sxs-lookup"><span data-stu-id="28529-149">**Header:** alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0aec-148">Требования</span><span class="sxs-lookup"><span data-stu-id="d0aec-148">Requirements</span></span>  
+ <span data-ttu-id="d0aec-149">**Заголовок:** alink.h</span><span class="sxs-lookup"><span data-stu-id="d0aec-149">**Header:** alink.h</span></span>  
   
- <span data-ttu-id="28529-150">**Библиотека**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="28529-150">**Library**: alink.dll</span></span>  
+ <span data-ttu-id="d0aec-150">**Библиотека**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="d0aec-150">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28529-151">См. также</span><span class="sxs-lookup"><span data-stu-id="28529-151">See Also</span></span>  
- [<span data-ttu-id="28529-152">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="28529-152">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="d0aec-151">См. также</span><span class="sxs-lookup"><span data-stu-id="d0aec-151">See also</span></span>
+- [<span data-ttu-id="d0aec-152">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="d0aec-152">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)

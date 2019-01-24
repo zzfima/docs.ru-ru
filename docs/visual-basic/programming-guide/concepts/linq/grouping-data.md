@@ -2,31 +2,31 @@
 title: Группирование данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576974"
 ---
-# <a name="grouping-data-visual-basic"></a><span data-ttu-id="10df3-102">Группирование данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10df3-102">Grouping Data (Visual Basic)</span></span>
-<span data-ttu-id="10df3-103">Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.</span><span class="sxs-lookup"><span data-stu-id="10df3-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
+# <a name="grouping-data-visual-basic"></a><span data-ttu-id="3af81-102">Группирование данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3af81-102">Grouping Data (Visual Basic)</span></span>
+<span data-ttu-id="3af81-103">Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.</span><span class="sxs-lookup"><span data-stu-id="3af81-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- <span data-ttu-id="10df3-104">На следующем рисунке показаны результаты операции группирования последовательности символов.</span><span class="sxs-lookup"><span data-stu-id="10df3-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="10df3-105">Ключ для каждой группы — это символ.</span><span class="sxs-lookup"><span data-stu-id="10df3-105">The key for each group is the character.</span></span>  
+ <span data-ttu-id="3af81-104">На следующем рисунке показаны результаты операции группирования последовательности символов.</span><span class="sxs-lookup"><span data-stu-id="3af81-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="3af81-105">Ключ для каждой группы — это символ.</span><span class="sxs-lookup"><span data-stu-id="3af81-105">The key for each group is the character.</span></span>  
   
- <span data-ttu-id="10df3-106">![Операции группирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span><span class="sxs-lookup"><span data-stu-id="10df3-106">![LINQ Grouping Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span></span>  
+ <span data-ttu-id="3af81-106">![Операции группирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span><span class="sxs-lookup"><span data-stu-id="3af81-106">![LINQ Grouping Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span></span>  
   
- <span data-ttu-id="10df3-107">Далее перечислены методы стандартных операторов запроса, которые группируют элементы данных.</span><span class="sxs-lookup"><span data-stu-id="10df3-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
+ <span data-ttu-id="3af81-107">Далее перечислены методы стандартных операторов запроса, которые группируют элементы данных.</span><span class="sxs-lookup"><span data-stu-id="3af81-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="10df3-108">Методы</span><span class="sxs-lookup"><span data-stu-id="10df3-108">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3af81-108">Методы</span><span class="sxs-lookup"><span data-stu-id="3af81-108">Methods</span></span>  
   
-|<span data-ttu-id="10df3-109">Имя метода</span><span class="sxs-lookup"><span data-stu-id="10df3-109">Method Name</span></span>|<span data-ttu-id="10df3-110">Описание</span><span class="sxs-lookup"><span data-stu-id="10df3-110">Description</span></span>|<span data-ttu-id="10df3-111">Синтаксис выражения запроса Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10df3-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="10df3-112">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="10df3-112">More Information</span></span>|  
+|<span data-ttu-id="3af81-109">Имя метода</span><span class="sxs-lookup"><span data-stu-id="3af81-109">Method Name</span></span>|<span data-ttu-id="3af81-110">Описание:</span><span class="sxs-lookup"><span data-stu-id="3af81-110">Description</span></span>|<span data-ttu-id="3af81-111">Синтаксис выражений запросов Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3af81-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="3af81-112">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="3af81-112">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="10df3-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="10df3-113">GroupBy</span></span>|<span data-ttu-id="10df3-114">Группирует элементы с общим атрибутом.</span><span class="sxs-lookup"><span data-stu-id="10df3-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="10df3-115">Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.</span><span class="sxs-lookup"><span data-stu-id="10df3-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="10df3-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="10df3-116">ToLookup</span></span>|<span data-ttu-id="10df3-117">Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.</span><span class="sxs-lookup"><span data-stu-id="10df3-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="10df3-118">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="10df3-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="3af81-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="3af81-113">GroupBy</span></span>|<span data-ttu-id="3af81-114">Группирует элементы с общим атрибутом.</span><span class="sxs-lookup"><span data-stu-id="3af81-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="3af81-115">Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.</span><span class="sxs-lookup"><span data-stu-id="3af81-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="3af81-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="3af81-116">ToLookup</span></span>|<span data-ttu-id="3af81-117">Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.</span><span class="sxs-lookup"><span data-stu-id="3af81-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="3af81-118">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="3af81-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="10df3-119">Пример синтаксиса выражения запроса</span><span class="sxs-lookup"><span data-stu-id="10df3-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="10df3-120">В следующем примере кода предложение `Group By` используется для группирования целых чисел в списке на основании четности.</span><span class="sxs-lookup"><span data-stu-id="10df3-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="3af81-119">Пример синтаксиса выражения запроса</span><span class="sxs-lookup"><span data-stu-id="3af81-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="3af81-120">В следующем примере кода предложение `Group By` используется для группирования целых чисел в списке на основании четности.</span><span class="sxs-lookup"><span data-stu-id="3af81-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -63,9 +63,9 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="10df3-121">См. также</span><span class="sxs-lookup"><span data-stu-id="10df3-121">See Also</span></span>  
- <xref:System.Linq>  
- [<span data-ttu-id="10df3-122">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10df3-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [<span data-ttu-id="10df3-123">Предложение Group By</span><span class="sxs-lookup"><span data-stu-id="10df3-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [<span data-ttu-id="10df3-124">Как: группировка файлов по расширению (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10df3-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [<span data-ttu-id="10df3-125">Как: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10df3-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a><span data-ttu-id="3af81-121">См. также</span><span class="sxs-lookup"><span data-stu-id="3af81-121">See also</span></span>
+- <xref:System.Linq>
+- [<span data-ttu-id="3af81-122">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3af81-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="3af81-123">Предложение Group By</span><span class="sxs-lookup"><span data-stu-id="3af81-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [<span data-ttu-id="3af81-124">Практическое руководство. Группировать файлы по расширению (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3af81-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [<span data-ttu-id="3af81-125">Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3af81-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514117"
 ---
-# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="9fc4d-102">Перечисление CLSID_RESOLUTION_FLAGS</span><span class="sxs-lookup"><span data-stu-id="9fc4d-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
-<span data-ttu-id="9fc4d-103">Содержит значения, указывающие способ разрешения общеязыковой среды выполнения (CLR) `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="9fc4d-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="39518-102">Перечисление CLSID_RESOLUTION_FLAGS</span><span class="sxs-lookup"><span data-stu-id="39518-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
+<span data-ttu-id="39518-103">Содержит значения, указывающие способ разрешения общеязыковой среды выполнения (CLR) `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="39518-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fc4d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9fc4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39518-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39518-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,19 +35,19 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9fc4d-105">Участники</span><span class="sxs-lookup"><span data-stu-id="9fc4d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="39518-105">Участники</span><span class="sxs-lookup"><span data-stu-id="39518-105">Members</span></span>  
   
-|<span data-ttu-id="9fc4d-106">Член</span><span class="sxs-lookup"><span data-stu-id="9fc4d-106">Member</span></span>|<span data-ttu-id="9fc4d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="9fc4d-107">Description</span></span>|  
+|<span data-ttu-id="39518-106">Член</span><span class="sxs-lookup"><span data-stu-id="39518-106">Member</span></span>|<span data-ttu-id="39518-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="39518-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="9fc4d-108">Задает поведение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9fc4d-108">Indicates the default behavior.</span></span>|  
-|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="9fc4d-109">Указывает, что среда выполнения ищет в реестре и применяет политику оболочки.</span><span class="sxs-lookup"><span data-stu-id="9fc4d-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
+|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="39518-108">Задает поведение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="39518-108">Indicates the default behavior.</span></span>|  
+|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="39518-109">Указывает, что среда выполнения ищет в реестре и применяет политику оболочки.</span><span class="sxs-lookup"><span data-stu-id="39518-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9fc4d-110">Требования</span><span class="sxs-lookup"><span data-stu-id="9fc4d-110">Requirements</span></span>  
- <span data-ttu-id="9fc4d-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9fc4d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39518-110">Требования</span><span class="sxs-lookup"><span data-stu-id="39518-110">Requirements</span></span>  
+ <span data-ttu-id="39518-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39518-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9fc4d-112">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9fc4d-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="39518-112">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="39518-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9fc4d-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fc4d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="39518-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39518-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fc4d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9fc4d-114">See Also</span></span>  
- [<span data-ttu-id="9fc4d-115">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="9fc4d-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="39518-114">См. также</span><span class="sxs-lookup"><span data-stu-id="39518-114">See also</span></span>
+- [<span data-ttu-id="39518-115">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="39518-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

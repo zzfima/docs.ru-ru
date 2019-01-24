@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583734"
 ---
-# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="3c2c6-102">Метод IMetaDataImport::GetMemberRefProps</span><span class="sxs-lookup"><span data-stu-id="3c2c6-102">IMetaDataImport::GetMemberRefProps Method</span></span>
-<span data-ttu-id="3c2c6-103">Возвращает метаданные, связанные с членом, на который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
+# <a name="imetadataimportgetmemberrefprops-method"></a><span data-ttu-id="456a5-102">Метод IMetaDataImport::GetMemberRefProps</span><span class="sxs-lookup"><span data-stu-id="456a5-102">IMetaDataImport::GetMemberRefProps Method</span></span>
+<span data-ttu-id="456a5-103">Возвращает метаданные, связанные с членом, на который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="456a5-103">Gets metadata associated with the member referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c2c6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3c2c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="456a5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="456a5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemberRefProps (  
@@ -41,37 +41,37 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3c2c6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3c2c6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="456a5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="456a5-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="3c2c6-106">[in] Токен MemberRef для возврата связанные с ним метаданные.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-106">[in] The MemberRef token to return associated metadata for.</span></span>  
+ <span data-ttu-id="456a5-106">[in] Токен MemberRef для возврата связанные метаданные для.</span><span class="sxs-lookup"><span data-stu-id="456a5-106">[in] The MemberRef token to return associated metadata for.</span></span>  
   
  `ptk`  
- <span data-ttu-id="3c2c6-107">[out] Токен TypeDef или TypeRef или TypeSpec, представляющий класс, который объявляет член, или токен ModuleRef, представляющий класс модуля, который объявляет член или MethodDef, который представляет элемент.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
+ <span data-ttu-id="456a5-107">[out] Токен TypeDef или TypeRef или TypeSpec, который представляет класс, который объявляет член, или токен ModuleRef, представляющий класс модуля, который объявляет член, или MethodDef, представляемого члена.</span><span class="sxs-lookup"><span data-stu-id="456a5-107">[out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="3c2c6-108">[out] Строковый буфер для имени элемента.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-108">[out] A string buffer for the member's name.</span></span>  
+ <span data-ttu-id="456a5-108">[out] Строковый буфер для имени члена.</span><span class="sxs-lookup"><span data-stu-id="456a5-108">[out] A string buffer for the member's name.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="3c2c6-109">[in] Запрошенный размер в расширенных символах с `szMember`.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-109">[in] The requested size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="456a5-109">[in] Запрошенный размер в расширенных символах `szMember`.</span><span class="sxs-lookup"><span data-stu-id="456a5-109">[in] The requested size in wide characters of `szMember`.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="3c2c6-110">[out] Возвращаемый размер в расширенных символах с `szMember`.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-110">[out] The returned size in wide characters of `szMember`.</span></span>  
+ <span data-ttu-id="456a5-110">[out] Возвращаемый размер в расширенных символах `szMember`.</span><span class="sxs-lookup"><span data-stu-id="456a5-110">[out] The returned size in wide characters of `szMember`.</span></span>  
   
  `ppvSibBlob`  
- <span data-ttu-id="3c2c6-111">[out] Указатель на двоичную подпись метаданных для элемента.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
+ <span data-ttu-id="456a5-111">[out] Указатель на двоичную подпись метаданных для элемента.</span><span class="sxs-lookup"><span data-stu-id="456a5-111">[out] A pointer to the binary metadata signature for the member.</span></span>  
   
  `pbSig`  
- <span data-ttu-id="3c2c6-112">[out] Размер в байтах `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="3c2c6-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="456a5-112">[out] Размер в байтах `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="456a5-112">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c2c6-113">Требования</span><span class="sxs-lookup"><span data-stu-id="3c2c6-113">Requirements</span></span>  
- <span data-ttu-id="3c2c6-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3c2c6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="456a5-113">Требования</span><span class="sxs-lookup"><span data-stu-id="456a5-113">Requirements</span></span>  
+ <span data-ttu-id="456a5-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="456a5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c2c6-115">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3c2c6-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="456a5-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="456a5-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3c2c6-116">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3c2c6-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="456a5-116">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="456a5-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3c2c6-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c2c6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="456a5-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="456a5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c2c6-118">См. также</span><span class="sxs-lookup"><span data-stu-id="3c2c6-118">See Also</span></span>  
- [<span data-ttu-id="3c2c6-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="3c2c6-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="3c2c6-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="3c2c6-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="456a5-118">См. также</span><span class="sxs-lookup"><span data-stu-id="456a5-118">See also</span></span>
+- [<span data-ttu-id="456a5-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="456a5-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="456a5-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="456a5-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
