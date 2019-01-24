@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 03fc8c11b5553c9c3a63bdcb69bf6135050e2c89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681395"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Общие сведения об XML-литералах (Visual Basic)
 *XML-литерал* позволяет внедрять XML непосредственно в код Visual Basic. Синтаксис XML представляет [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов, который напоминает синтаксис XML 1.0. Это упрощает программное создание XML-элементов и документов, так как ваш код имеет такую же структуру, как последний XML.  
@@ -54,10 +54,10 @@ ms.locfileid: "43507652"
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement>  
- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-литералы](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XElement>
+- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML-литералы](../../../../visual-basic/language-reference/xml-literals/index.md)
