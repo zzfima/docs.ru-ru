@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668994"
 ---
 # <a name="xtype-markup-extension"></a>Расширение разметки x:Type
 Среда CLR предоставляет <xref:System.Type> объект, который является базовым типом для указанного типа XAML.  
@@ -40,8 +40,8 @@ ms.locfileid: "49086639"
   
 |||  
 |-|-|  
-|`prefix`|Необязательный. Префикс, который сопоставляет пространство имен XAML не по умолчанию. Указание префикса часто не является обязательным. См. заметки.|  
-|`typeNameValue`|Обязательно. Имя типа, которое разрешается до текущего пространства имен XAML по умолчанию; или указанного сопоставленного префикса, если `prefix` предоставляется.|  
+|`prefix`|Необязательный параметр. Префикс, который сопоставляет пространство имен XAML не по умолчанию. Указание префикса часто не является обязательным. См. заметки.|  
+|`typeNameValue`|Обязательный. Имя типа, которое разрешается до текущего пространства имен XAML по умолчанию; или указанного сопоставленного префикса, если `prefix` предоставляется.|  
   
 ## <a name="remarks"></a>Примечания  
  `x:Type` Расширение разметки имеет ту же функцию `typeof()` оператор в C# или `GetType` оператор в Microsoft Visual Basic.  
@@ -79,8 +79,8 @@ ms.locfileid: "49086639"
   
  В WPF можно использовать возможности XAML 2009, но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Style>  
- [Стилизация и использование шаблонов](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Style>
+- [Стилизация и использование шаблонов](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

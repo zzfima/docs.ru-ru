@@ -2,12 +2,12 @@
 title: '&lt;certificateReference&gt; для &lt;идентификатора&gt;'
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 17c64150edd7cb1763387323f8683ed68d064fb0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626632"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;certificateReference&gt; для &lt;идентификатора&gt;
 Задает параметры для проверки сертификата X.509. Защищенный клиент Windows Communication Foundation (WCF), подключающийся к конечной точке с использованием этого удостоверения, проверяет, что утверждения, представленные сервером, содержат идентификационное утверждение, используемое для конструирования этого удостоверения.  
@@ -44,12 +44,12 @@ ms.locfileid: "54150907"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает параметры, которые обеспечивают проверку подлинности конечной точки другими конечными точками, с которыми происходит обмен сообщениями.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>

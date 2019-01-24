@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660779"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>Метод ICorDebugProcess2::SetDesiredNGENCompilerFlags
-Задает флаги, которые должны быть внедрены в компилируемый образ для выполнения, чтобы загрузить этот образ в текущий процесс.  
+Задает флаги, которые должны быть внедрены в компилируемый образ загрузки в текущий процесс в среде выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +40,21 @@ HRESULT SetDesiredNGENCompilerFlags (
  [in] Значение [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисление, указывающее флаги компилятора, используемый для выбора нужного предварительно скомпилированного образа.  
   
 ## <a name="remarks"></a>Примечания  
- `SetDesiredNGENCompilerFlags` Метод задает флаги, которые должны быть внедрены в компилируемый образ, чтобы среда выполнения будет загружать этот образ в этот процесс. Флаги, установленные с помощью данного метода используются только для выбора надлежащего предварительно скомпилированного образа. Если изображение не существует, среда выполнения будет загрузить изображение Microsoft промежуточного языка MSIL и компилятор just-in-time (JIT). В этом случае необходимо использовать отладчик [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) метод, чтобы задать флаги в случае необходимости для JIT-компиляции.  
+ `SetDesiredNGENCompilerFlags` Метод задает флаги, которые должны быть внедрены в предварительно скомпилированный образ, чтобы среда выполнения будет загружать этот образ в этот процесс. Флаги, установленные с помощью данного метода используются только для выбора нужного предварительно скомпилированного образа. Если изображение отсутствует, среда выполнения загрузит образ Microsoft промежуточного языка MSIL и компилятор just-in-time (JIT) вместо этого. В этом случае отладчик по-прежнему необходимо использовать [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) метод, чтобы задать флаги для JIT-компиляцию полей.  
   
- Если загружается образ, но определенную JIT-компиляцию для него (что произойдет в случае, если изображение содержит универсальные шаблоны), необходимо выполнить указанные флаги компилятора по `SetDesiredNGENCompilerFlags` метод будет применяться к дополнительной JIT-компиляции.  
+ Если загрузить образ, но определенную JIT-компиляцию необходимо выполнить для него (который будет в случае, если изображение содержит универсальные шаблоны), определяемое флаги компилятора `SetDesiredNGENCompilerFlags` метода будут применяться к дополнительной JIT-компиляции.  
   
- `SetDesiredNGENCompilerFlags` Метод должен вызываться во время [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) обратного вызова. Пытается вызвать `SetDesiredNGENCompilerFlags` метод впоследствии завершится с ошибкой. Кроме того, попытки задать флаги, которые либо не определены в `CorDebugJITCompilerFlags` перечисления являются не разрешен для данного процесса, произойдет сбой.  
+ `SetDesiredNGENCompilerFlags` Метод должен вызываться во время [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) обратного вызова. Пытается вызвать `SetDesiredNGENCompilerFlags` метод впоследствии завершится с ошибкой. Кроме того, попытки задать флаги, которые либо не определены в `CorDebugJITCompilerFlags` перечисления являются недопустим для указанного процесса, произойдет сбой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcf1dca8799ac082c025e602e5d82c99d42650d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659609"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyProps
 Получает набор свойств для сборки с заданной подписью метаданных.  
@@ -48,7 +48,7 @@ HRESULT GetAssemblyProps (
  [in]. `mdAssembly` Токен метаданных, представляющий сборку, для которого нужно получить свойства.  
   
  `ppbPublicKey`  
- [out] Указатель на открытый ключ или маркер метаданных.  
+ [out] Указатель на открытый ключ или токен метаданных.  
   
  `pcbPublicKey`  
  [out] Число байтов в возвращаемый открытый ключ.  
@@ -60,10 +60,10 @@ HRESULT GetAssemblyProps (
  [out] Простое имя сборки.  
   
  `cchName`  
- [in] Размер в расширенных символов из `szName`.  
+ [in] Размер, в расширенных символах из `szName`.  
   
  `pchName`  
- [out] Число расширенных символов, фактически извлеченных в `szName`.  
+ [out] Число расширенных символов, фактически возвращенных в `szName`.  
   
  `pMetaData`  
  [out] Указатель на структуру ASSEMBLYMETADATA, которая содержит метаданные сборки.  
@@ -72,13 +72,13 @@ HRESULT GetAssemblyProps (
  [out] Флаги, описывающие метаданные, применяемые к сборке. Это значение представляет собой сочетание одного или нескольких [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

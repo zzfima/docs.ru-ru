@@ -1,15 +1,15 @@
 ---
-title: Как настраивать протокол SSL в службе WCF, размещенной в IIS
+title: Как выполнить Настройка службы WCF, размещенной в IIS с помощью протокола SSL
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639982"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Как настраивать протокол SSL в службе WCF, размещенной в IIS
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Как выполнить Настройка службы WCF, размещенной в IIS с помощью протокола SSL
 В этом разделе описано, как настроить размещенную в IIS службу WCF для использования безопасности транспорта HTTP. Для безопасности транспорта HTTP требуется, чтобы SSL-сертификат был зарегистрирован в службах IIS. Если SSL-сертификат не установлен, для создания тестового сертификата можно использовать службы IIS. Затем необходимо добавить SSL-привязку для проекта веб-сайта и установить свойства проверки подлинности веб-сайта. Наконец, необходимо настроить службу WCF на использование протокола HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Создание самозаверяющего сертификата  
@@ -144,8 +144,8 @@ ms.locfileid: "49086223"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-* [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
-* [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
-* [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
-* [Размещение в службах IIS с использованием встроенного кода](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a>См. также
+- [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [Размещение в службах IIS с использованием встроенного кода](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

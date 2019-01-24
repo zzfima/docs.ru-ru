@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645851"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  
@@ -23,25 +23,25 @@ ms.locfileid: "33365310"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- Область транзакции запускается после создания нового <xref:System.Transactions.TransactionScope> объекта.  Как показано в следующем образце кода, рекомендуется создать областей с **с помощью** инструкции. **С помощью** инструкция доступна как в C# и Visual Basic, и работает как **try... finally** блок, чтобы убедиться, что область удаляется должным образом.  
+ Область транзакции начинает действовать после создания новый <xref:System.Transactions.TransactionScope> объекта.  Как показано в следующем образце кода, рекомендуется при создании областей с **с помощью** инструкции. **С помощью** инструкция доступна как в C# и в Visual Basic и действует как **try... finally** блок, чтобы убедиться, что область правильное удаление.  
   
- При создании экземпляра <xref:System.Transactions.TransactionScope> диспетчер транзакций определяет, в какой транзакции следует участвовать. После определения область всегда участвует в этой транзакции. Решение на основе двух факторов: присутствует ли внешнюю транзакцию и значение **TransactionScopeOption** параметр в конструкторе. Внешняя транзакция - это транзакция, в рамках которой выполняется ваш код. Ссылку на внешнюю транзакцию можно получить, вызвав статическое свойство <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> класса <xref:System.Transactions.Transaction>. Дополнительные сведения об использовании этого параметра см. в разделе [управление потока транзакций с помощью TransactionScopeOption](#ManageTxFlow) этого раздела.  
+ При создании экземпляра <xref:System.Transactions.TransactionScope> диспетчер транзакций определяет, в какой транзакции следует участвовать. После определения область всегда участвует в этой транзакции. Решение зависит от двух факторов: присутствует ли внешнюю транзакцию и значение **TransactionScopeOption** параметр в конструкторе. Внешняя транзакция - это транзакция, в рамках которой выполняется ваш код. Ссылку на внешнюю транзакцию можно получить, вызвав статическое свойство <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> класса <xref:System.Transactions.Transaction>. Дополнительные сведения об использовании этого параметра см. в разделе [управление потоком транзакций с помощью объекта TransactionScopeOption](#ManageTxFlow) этого раздела.  
   
 ## <a name="completing-a-transaction-scope"></a>Завершение области транзакции  
- Когда приложение завершает все операции, подлежащие выполнению в транзакции, следует вызвать метод <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> только один раз, чтобы информировать диспетчер транзакций о возможности фиксации данной транзакции. Очень хорошо рекомендуется разместить вызова <xref:System.Transactions.TransactionScope.Complete%2A> в последнем операторе в **с помощью** блока.  
+ Когда приложение завершает все операции, подлежащие выполнению в транзакции, следует вызвать метод <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> только один раз, чтобы информировать диспетчер транзакций о возможности фиксации данной транзакции. Это очень хорошей практикой поместить вызов <xref:System.Transactions.TransactionScope.Complete%2A> в последнем операторе в **с помощью** блока.  
   
- Если вызвать этот метод, транзакция прерывается, поскольку диспетчер транзакций интерпретирует это как сбой системы или эквивалентен исключение, которое создается в пределах области транзакции. Однако вызов этого метода не гарантирует, что транзакция будет зафиксирована. Это просто способ информирования диспетчера транзакций о состоянии. После вызова метода <xref:System.Transactions.TransactionScope.Complete%2A> доступ к внешней транзакции с помощью свойства <xref:System.Transactions.Transaction.Current%2A> невозможен. При попытке такого доступа возникает исключение.  
+ Если этот метод не вызывается, транзакция прерывается, поскольку диспетчер транзакций интерпретирует это как сбой системы или возникновение исключения, созданного в пределах транзакции. Однако вызов этого метода не гарантирует, что транзакция будет зафиксирована. Это просто способ информирования диспетчера транзакций о состоянии. После вызова метода <xref:System.Transactions.TransactionScope.Complete%2A> доступ к внешней транзакции с помощью свойства <xref:System.Transactions.Transaction.Current%2A> невозможен. При попытке такого доступа возникает исключение.  
   
- Если <xref:System.Transactions.TransactionScope> объекта, изначально создана транзакция происходит фактические трудозатраты фиксации транзакции диспетчером транзакций после последней строки кода в **с помощью** блока. Если транзакция создана не этим объектом, фиксация происходит при каждом вызове метода <xref:System.Transactions.CommittableTransaction.Commit%2A> владельцем объекта <xref:System.Transactions.CommittableTransaction>. На этом этапе диспетчер транзакций вызывает диспетчеры ресурсов и о том, для фиксации или отката, в зависимости от <xref:System.Transactions.TransactionScope.Complete%2A> метод был вызван для <xref:System.Transactions.TransactionScope> объекта.  
+ Если <xref:System.Transactions.TransactionScope> объекта транзакция создана, фактическая Фиксация транзакции диспетчер транзакций происходит после последней строки кода в **с помощью** блока. Если транзакция создана не этим объектом, фиксация происходит при каждом вызове метода <xref:System.Transactions.CommittableTransaction.Commit%2A> владельцем объекта <xref:System.Transactions.CommittableTransaction>. После этого диспетчер транзакций вызывает диспетчеры ресурсов и сообщает им, чтобы commit или rollback, в зависимости от <xref:System.Transactions.TransactionScope.Complete%2A> метод был вызван для <xref:System.Transactions.TransactionScope> объекта.  
   
- **С помощью** гарантирует, что инструкция <xref:System.Transactions.TransactionScope.Dispose%2A> метод <xref:System.Transactions.TransactionScope> вызывается даже при возникновении исключения. Вызов метода <xref:System.Transactions.TransactionScope.Dispose%2A> отмечает конец области транзакции. Исключения, возникающие после вызова данного метода, могут не воздействовать на транзакцию. Данный метод также восстанавливает предыдущее состояние внешней транзакции.  
+ **С помощью** инструкции гарантирует, что <xref:System.Transactions.TransactionScope.Dispose%2A> метод <xref:System.Transactions.TransactionScope> объект называется даже при возникновении исключения. Вызов метода <xref:System.Transactions.TransactionScope.Dispose%2A> отмечает конец области транзакции. Исключения, возникающие после вызова данного метода, могут не воздействовать на транзакцию. Данный метод также восстанавливает предыдущее состояние внешней транзакции.  
   
  Если область создает транзакцию и эта транзакция прерывается, возникает исключение <xref:System.Transactions.TransactionAbortedException>. Если диспетчер транзакций не может принять решение о фиксации, возникает исключение <xref:System.Transactions.TransactionInDoubtException>. В случае фиксации транзакции исключения не возникают.  
   
 ## <a name="rolling-back-a-transaction"></a>Откат транзакции  
  Если требуется откатить транзакцию, не следует вызывать метод <xref:System.Transactions.TransactionScope.Complete%2A> в пределах области транзакции. Например, можно вызвать исключение в пределах области. При этом будет выполнен откат транзакции, в которой участвует область.  
   
-##  <a name="ManageTxFlow"></a> Управление потока транзакций с помощью TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> Управление потоком транзакций с помощью объекта TransactionScopeOption  
  Область транзакции можно сделать вложенной, вызвав метод, использующий объект <xref:System.Transactions.TransactionScope>, из метода, использующего собственную область, как в случае метода `RootMethod` в следующем примере.  
   
 ```csharp  
@@ -81,7 +81,7 @@ void SomeMethod()
   
  Если область создана со значением <xref:System.Transactions.TransactionScopeOption.RequiresNew>, она является корневой областью. Область запускает новую транзакцию, которая становится новой внешней транзакцией внутри области.  
   
- Если область создана со значением <xref:System.Transactions.TransactionScopeOption.Suppress>, она не принимает участие в транзакции независимо от существования внешней транзакции. Область, экземпляр которого создается без это значение всегда имеют **null** как его внешней транзакции.  
+ Если область создана со значением <xref:System.Transactions.TransactionScopeOption.Suppress>, она не принимает участие в транзакции независимо от существования внешней транзакции. Области, созданной с этим значением, всегда имеют **null** качестве внешней транзакции.  
   
  Сводка рассмотренных выше значений представлена в следующей таблице.  
   
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  При использовании вложенных объектов <xref:System.Transactions.TransactionScope> все вложенные области следует настроить на использование строго одного уровня изоляции, если им необходимо присоединиться к внешней транзакции. Если при попытке присоединения вложенного объекта <xref:System.Transactions.TransactionScope> к внешней транзакции обнаруживается, что для него задан другой уровень изоляции, возникает исключение <xref:System.ArgumentException>.  
   
 ## <a name="interop-with-com"></a>Взаимодействие с транзакциями COM+  
- Чтобы задать способ взаимодействия с транзакциями COM+ при создании нового экземпляра <xref:System.Transactions.TransactionScope>, можно использовать перечисление <xref:System.Transactions.EnterpriseServicesInteropOption> в одном из конструкторов. Дополнительные сведения см. в разделе [взаимодействие с Enterprise Services и транзакции COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Чтобы задать способ взаимодействия с транзакциями COM+ при создании нового экземпляра <xref:System.Transactions.TransactionScope>, можно использовать перечисление <xref:System.Transactions.EnterpriseServicesInteropOption> в одном из конструкторов. Дополнительные сведения об этом см. в разделе [взаимодействие с транзакциями COM + Enterprise Services и](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>См. также
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>

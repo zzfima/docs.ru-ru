@@ -2,12 +2,12 @@
 title: Пример службы AJAX с JSON и XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632300"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Пример службы AJAX с JSON и XML
 В этом примере показано, как использовать Windows Communication Foundation (WCF) для создания служб асинхронных сценариев JavaScript и XML (AJAX), возвращающих нотацию объектов JavaScript (JSON) или XML-данные. К службе AJAX можно обращаться с помощью кода JavaScript из веб-браузера. Этот пример основан на [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образца.  
@@ -111,5 +111,5 @@ xmlHttp.onreadystatechange=function(){
   
 3.  Перейдите к `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (не открывайте XmlAjaxClientPage.htm в браузере из каталога проекта).  
   
-## <a name="see-also"></a>См. также  
- [Служба AJAX с использованием HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+## <a name="see-also"></a>См. также
+- [Служба AJAX с использованием HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

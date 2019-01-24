@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0caa3add1a35d460527ce665352e5861df7d5d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c276df65497a0d8cafea80959b8193790c19ebba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667353"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>Помощник по отладке управляемого кода invalidMemberDeclaration
 Помощник по отладке (MDA) управляемого кода `invalidMemberDeclaration` активируется для сообщения об ошибке, которая возникает при определении способа маршалинга параметров члена, вызываемого из COM.  
@@ -45,7 +45,7 @@ ms.locfileid: "33386341"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

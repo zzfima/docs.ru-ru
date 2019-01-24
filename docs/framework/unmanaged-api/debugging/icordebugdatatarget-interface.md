@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53c054b59376a78eda83181e75aec94548e92f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499824"
 ---
 # <a name="icordebugdatatarget-interface"></a>Интерфейс ICorDebugDataTarget
 Предоставляет интерфейс обратного вызова, обеспечивающий доступ к конкретному целевому процессу.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Метод GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Предоставляет сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.|  
+|[Метод GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.|  
 |[Метод ReadVirtual](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.|  
 |[Метод GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Запрашивает текущий контекст потока для указанного потока.|  
   
 ## <a name="remarks"></a>Примечания  
  `ICorDebugDataTarget` и его методы имеют следующие характеристики:  
   
--   Службы отладки вызывают методы этого интерфейса для доступа к памяти и другими данными в целевом процессе.  
+-   Службы отладки вызывать методы на этом интерфейсе, для доступа к памяти и другие данные в целевом процессе.  
   
--   Клиент отладчика должен реализовывать этот интерфейс, в зависимости от конкретного целевого объекта (например, активный процесс или дамп памяти).  
+-   Клиент отладчика должен реализовывать этот интерфейс, подходящие для конкретного целевого объекта (например, активный процесс или дамп памяти).  
   
--   `ICorDebugDataTarget` Методы могут вызываться только из методов, реализованных в других `ICorDebug*` интерфейсов. Это гарантирует, что клиент отладчика управляет для потока, в который он вызывается и когда.  
+-   `ICorDebugDataTarget` Методы могут вызываться только из методов, реализованных в других `ICorDebug*` интерфейсов. Это гарантирует, что клиент отладчика имеет элемент управления, на каком потоке он вызывается и когда.  
   
--   `ICorDebugDataTarget` Реализация должна всегда возвращать актуальные сведения о цели.  
+-   `ICorDebugDataTarget` Реализация должна всегда возвращать последние сведения о цели.  
   
- Целевой процесс следует останавливать и не изменяется во всех отношениях `ICorDebug*` интерфейсы (и, следовательно, `ICorDebugDataTarget` методы) вызываются. Если целью является активного процесса и его изменения состояния [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод должен вызываться снова, чтобы предоставить экземпляр ICorDebugProcess замены.  
+ Целевой процесс следует останавливать и не изменяется при `ICorDebug*` интерфейсы (и, следовательно `ICorDebugDataTarget` методы) вызываются. Если цель — активного процесса и изменения своего состояния [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод должен вызываться снова, чтобы предоставить экземпляр ICorDebugProcess замены.  
   
 > [!NOTE]
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

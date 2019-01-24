@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Инициализация переменной массива в Visual Basic
+title: Как выполнить Инициализация переменной массива в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638936"
 ---
-# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Практическое руководство. Инициализация переменной массива в Visual Basic
+# <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Как выполнить Инициализация переменной массива в Visual Basic
 Инициализация переменной массива путем включения литерала массива в `New` предложения и задание начальных значений массива. Можно указать тип или разрешить его наследование от значений в литерале массива. Дополнительные сведения о том, как определить тип, см. в разделе «Заполнение массива начальными значениями» в [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Инициализация переменной массива с помощью литерала массива  
@@ -53,6 +53,6 @@ ms.locfileid: "50202007"
   
      [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>См. также
+- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

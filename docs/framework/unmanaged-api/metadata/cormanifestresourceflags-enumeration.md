@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3d3ef78da9dd639d0f9050a8b61d1e365cd8b42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650253"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>Перечисление CorManifestResourceFlags
-Задает видимость ресурсов, зашифрованных в манифесте сборки.  
+Указывает видимость ресурсов, зашифрованных в манифесте сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +40,18 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`mrVisibilityMask`|Зарезервировано.|  
 |`mrPublic`|Ресурсы являются открытыми.|  
 |`mrPrivate`|Ресурсы являются закрытыми.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

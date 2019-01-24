@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503213"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -83,13 +83,13 @@ ms.locfileid: "45990080"
   
  ![Поток данных привязки данных](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> Привязка передает изменения свойства источника для автоматического обновления целевого свойства, но изменения свойства цели не передаются обратно к свойству источника. Этот тип привязки подходит, если привязываемый элемент управления неявно доступен только для чтения. Например, можно привязаться к источнику, такому как биржевые сводки, или, возможно, свойство цели не имеет интерфейса для внесения изменений, например цвета фона привязанной к данным таблицы. Если нет необходимости отслеживать изменения целевого свойства, с помощью <xref:System.Windows.Data.BindingMode.OneWay> режим привязки избежать дополнительной нагрузки <xref:System.Windows.Data.BindingMode.TwoWay> режим привязки.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Привязка передает изменения свойства источника для автоматического обновления целевого свойства, но изменения свойства цели не передаются обратно к свойству источника. Этот тип привязки подходит, если привязываемый элемент управления неявно доступен только для чтения. Например, можно привязаться к источнику, такому как биржевые сводки, или, возможно, свойство цели не имеет интерфейса для внесения изменений, например цвета фона привязанной к данным таблицы. Если нет необходимости отслеживать изменения целевого свойства, можно работать в режиме привязки <xref:System.Windows.Data.BindingMode.OneWay> — в этом случае удастся избежать издержек режима привязки <xref:System.Windows.Data.BindingMode.TwoWay>.  
   
 -   <xref:System.Windows.Data.BindingMode.TwoWay> связывание вызывает изменения в свойство источника или целевого свойства для автоматического обновления другого. Этот тип привязки подходит для изменяемых форм или других полностью интерактивных сценариев [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Большинство свойств по умолчанию <xref:System.Windows.Data.BindingMode.OneWay> привязки, но некоторые свойства зависимостей (обычно свойства изменяемых пользователем элементов управления, такие как <xref:System.Windows.Controls.TextBox.Text%2A> свойство <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> свойство <xref:System.Windows.Controls.CheckBox>) по умолчанию для <xref:System.Windows.Data.BindingMode.TwoWay> привязки. Существует способ определить программно, использует ли свойство зависимостей односторонние или двухсторонние привязки по умолчанию: для этого нужно получить метаданные этого свойства, воспользовавшись методом <xref:System.Windows.DependencyProperty.GetMetadata%2A>, а затем проверить логическое значение свойства <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>.  
   
 -   <xref:System.Windows.Data.BindingMode.OneWayToSource> является обратным <xref:System.Windows.Data.BindingMode.OneWay> связывание; он обновляет свойство источника при изменении свойства цели. Одним из примеров является пересчет исходного значения из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
--   Не показано на рисунке является <xref:System.Windows.Data.BindingMode.OneTime> привязки, который вызывает инициализировать целевое свойство источника, но последующие изменения не распространяются. Это означает, что, если в контексте данных производятся изменения или меняется объект, это изменение не отражается в целевом свойстве. Этот тип привязки подходит при использовании данных там, где приемлемо использовать снимок текущего состояния или данные действительно являются статичными. Этот тип привязки также является полезным, если нужно инициализировать целевое свойство с использованием какого-либо значения из исходного свойства, а контекст данных заранее неизвестен. Это по сути это упрощенная форма <xref:System.Windows.Data.BindingMode.OneWay> привязка, которая обеспечивает более высокую производительность в случаях, когда исходное значение не меняется.  
+-   Не показано на рисунке является <xref:System.Windows.Data.BindingMode.OneTime> привязки, который вызывает инициализировать целевое свойство источника, но последующие изменения не распространяются. Это означает, что, если в контексте данных производятся изменения или меняется объект, это изменение не отражается в целевом свойстве. Этот тип привязки подходит при использовании данных там, где приемлемо использовать снимок текущего состояния или данные действительно являются статичными. Этот тип привязки также является полезным, если нужно инициализировать целевое свойство с использованием какого-либо значения из исходного свойства, а контекст данных заранее неизвестен. Это, по сути, упрощенная форма привязки <xref:System.Windows.Data.BindingMode.OneWay>, которая обеспечивает более высокую производительность в случаях, когда исходное значение не меняется.  
   
  Обратите внимание, что для обнаружения изменений в источнике (применимо к <xref:System.Windows.Data.BindingMode.OneWay> и <xref:System.Windows.Data.BindingMode.TwoWay> привязок), источник должен реализовывать механизм уведомлений об изменениях соответствующее свойство <xref:System.ComponentModel.INotifyPropertyChanged>. См. в разделе [реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) пример <xref:System.ComponentModel.INotifyPropertyChanged> реализации.  
   
@@ -429,11 +429,11 @@ ms.locfileid: "45990080"
 ## <a name="debugging-mechanism"></a>Механизм отладки  
  Можно задать присоединенное свойство <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> связанные с привязкой объекта для получения сведений о состоянии конкретной привязки.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [Новые возможности в WPF версии 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [Привязка к результатам запроса LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Привязка к источнику данных ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [Новые возможности в WPF версии 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [Привязка к результатам запроса LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Привязка к источнику данных ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

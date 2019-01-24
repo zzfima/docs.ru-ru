@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622602"
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью Windows Communication Foundation (WCF) можно регистрировать события безопасности (либо успех, сбой или оба) с помощью функции аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
@@ -98,12 +98,12 @@ ms.locfileid: "54030572"
 |Управление политикой аудита|Неприменимо.|Помимо конфигурации, журнал безопасности управляется также политикой администратора локальной безопасности (LSA). Необходимо также разрешить категорию "Аудит доступа к объектам".|  
 |Взаимодействие с пользователем по умолчанию|Все авторизованные пользователи могут производить запись в журнал приложения, поэтому для процессов приложения никакие дополнительные шаги, связанные с разрешениями, не требуются.|Процесс приложения (контекст) должен иметь привилегии `SeAuditPrivilege`.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
- [\<варианты поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<варианты поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

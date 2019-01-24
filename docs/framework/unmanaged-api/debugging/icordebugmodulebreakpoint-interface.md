@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint интерфейс1
+title: Интерфейс1 ICorDebugModuleBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5ead45c6747cd69a76585c81b1ff6a4801cbb34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632001"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint интерфейс1
+# <a name="icordebugmodulebreakpoint-interface1"></a>Интерфейс1 ICorDebugModuleBreakpoint
 Предоставляет доступ к конкретным модулям. Этот интерфейс является подклассом ICorDebugBreakpoint-интерфейс.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Получает указатель на интерфейс ICorDebugModule, которая ссылается на модуль, где установлена данная точка останова.|  
+|[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Получает указатель на интерфейс ICorDebugModule, ссылается на модуль, устанавливаемый данной точки останова.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33416141"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

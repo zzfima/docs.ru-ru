@@ -1,20 +1,21 @@
 ---
-title: Практическое руководство. Вызов метода расширения (Visual Basic)
+title: Как выполнить Вызов метода расширения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 32691183bcd1632a82b1e9a2668790abbf8f80fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e9391a4c4a159cd5e198689bf7af7cd64c3a872
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620452"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Практическое руководство. Вызов метода расширения (Visual Basic)
-Методы расширения позволяют добавлять методы в существующий класс. После объявления метода расширения и добавлены в область действия, его можно вызывать как метод экземпляра типа, который он расширяет. Дополнительные сведения о написании метода расширения см. в разделе [как: написание метода расширения](./how-to-write-an-extension-method.md).  
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Как выполнить Вызов метода расширения (Visual Basic)
+Методы расширения позволяют добавлять методы к существующему классу. После объявления и добавлены в область действия методом расширения, его можно вызывать как метод экземпляра типа, который он расширяет. Дополнительные сведения о том, как написание метода расширения, см. в разделе [как: Написание метода расширения](./how-to-write-an-extension-method.md).  
   
- Следующие инструкции относятся к методу расширения `PrintAndPunctuate`, который будет отображать экземпляр строки и вызывает его любое значение отправляется для второго параметра `punc`.  
+ Приведенные ниже инструкции относятся к методу расширения `PrintAndPunctuate`, для второго параметра, который будет отображать экземпляр строки и вызывает его, любое значение отправляется в `punc`.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -29,11 +30,11 @@ Module StringExtensions
 End Module  
 ```  
   
- Метод должен быть в области, когда он вызывается.  
+ Метод должен находиться в области, при вызове.  
   
-### <a name="to-call-an-extension-method"></a>Вызов метода расширения  
+### <a name="to-call-an-extension-method"></a>Для вызова метода расширения  
   
-1.  Объявите переменную, которая имеет тип данных первого параметра метода расширения. Для `PrintAndPunctuate`, требуется <xref:System.String> переменной:  
+1.  Объявите переменную, которая имеет тип данных первого параметра метода расширения. Для `PrintAndPunctuate`, вам потребуется <xref:System.String> переменной:  
   
     ```  
     Dim example = "Ready"  
@@ -52,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Объявите другую строковую переменную и вызовите метод, чтобы проверить, что он работает с любой строкой.  
+3.  Объявите другую строковую переменную и вызовите метод еще раз, чтобы увидеть, что он работает с любой строкой.  
   
     ```  
     Dim example2 = " or not"  
@@ -93,7 +94,7 @@ End Module
 ' Goodbye?  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)  
- [Методы расширения](./extension-methods.md)  
- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)
+- [Методы расширения](./extension-methods.md)
+- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

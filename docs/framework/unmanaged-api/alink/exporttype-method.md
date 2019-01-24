@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958b56266b0d2dcc317204c39a1df56baabd83e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623642"
 ---
 # <a name="exporttype-method"></a>Метод ExportType
 Указывает, что тип может быть экспортирован.  
@@ -44,27 +44,27 @@ HRESULT ExportType(
  Идентификатор сборки для экспорта.  
   
  `FileToken`  
- Маркер файла или сборки идентификатор файла, который определяет тип может быть экспортирован.  
+ Идентификатор маркера или сборки файла, определяющего экспортируемый тип файла.  
   
  `TypeToken`  
- Маркер типа будут сделаны может быть экспортирован.  
+ Токен типа, чтобы стать экспортируемый.  
   
  `pszTypename`  
- Полное имя типа будут сделаны может быть экспортирован.  
+ Полное имя типа предполагающем экспортируемым.  
   
  `dwFlags`  
- `ComType` флаги, такие как `tdPublic` или `tdNested`. Этот параметр может быть передан [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` флаги, такие как `tdPublic` или `tdNested`. Этот параметр может передаваться в [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
  Получает маркер для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

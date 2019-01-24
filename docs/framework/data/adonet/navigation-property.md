@@ -2,12 +2,12 @@
 title: свойство навигации
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 149aefe84c9d04fab1786b99c2ac8c5060bccd87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 09c0e5e5dbc7b2be89e044c4d111fdd65fada7c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662183"
 ---
 # <a name="navigation-property"></a>свойство навигации
 Объект *свойство навигации* — это необязательное свойство на [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , позволяет переходить от одной [окончания](../../../../docs/framework/data/adonet/association-end.md) из [ассоциации](../../../../docs/framework/data/adonet/association-type.md) для другой конец. В отличие от других [свойства](../../../../docs/framework/data/adonet/property.md), свойства навигации не содержат данных.  
@@ -33,8 +33,8 @@ ms.locfileid: "32767405"
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- Обратите внимание, что атрибуты XML используются для сообщения сведений, необходимых для определения свойства навигации: атрибут `Name` содержит имя свойства, `Relationship` содержит имя ассоциации, для которой осуществляется переход, и `FromRole` и `ToRole` содержат конечные точки ассоциации.  
+ Обратите внимание на то, что атрибуты XML используются для сообщения сведений, необходимых для определения свойства навигации: Атрибут `Name` содержит имя свойства, `Relationship` содержит имя ассоциации, осуществляется переход, и `FromRole` и `ToRole` содержат конечные точки ассоциации.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>См. также
+- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -2,12 +2,12 @@
 title: Циклическая трассировка
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646439"
 ---
 # <a name="circular-tracing"></a>Циклическая трассировка
 Этот образец демонстрирует реализацию прослушивателя трассировки циклического буфера. Обычным сценарием для производственных служб является длительная доступность этих служб и включенное ведение журнала трассировки на низком уровне. Этим службам требуется много пространства на диске. При устранении неполадок службы к устранению проблемы имеют отношение последние записанные данные из журнала трассировки. Этот образец демонстрирует реализацию прослушивателя трассировки циклического буфера, в котором на диске хранятся только самые последние трассировки с объемом данных, не превышающим заданного в настройках. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и включает в себя пользовательский прослушиватель трассировки.  
@@ -59,5 +59,5 @@ ms.locfileid: "45743407"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
-## <a name="see-also"></a>См. также  
- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>См. также
+- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

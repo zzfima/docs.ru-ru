@@ -8,31 +8,31 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7db55dd9d2ca79342cadb2320d08ca9235223def
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671858"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;Параметры&gt; (сетевые параметры)
 Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=nameWithType>.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Параметры >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
 <settings>  
-  <httpListener> … </httpListener>  
-  <httpWebRequest> … </httpWebRequest>  
-  <ipv6> … </ipv6>  
-  <performanceCounters> … </performanceCounters>  
-  <servicePointManager> … </servicePointManager>  
-  <socket> … </socket>  
-  <webProxyScript> … </webProxyScript>  
+  <httpListener>...</httpListener>  
+  <httpWebRequest>...</httpWebRequest>  
+  <ipv6>...</ipv6>  
+  <performanceCounters>...</performanceCounters>  
+  <servicePointManager>...</servicePointManager>  
+  <socket>...</socket>  
+  <webProxyScript>...</webProxyScript>  
 </settings>  
 ```  
   
@@ -65,6 +65,6 @@ ms.locfileid: "53151204"
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

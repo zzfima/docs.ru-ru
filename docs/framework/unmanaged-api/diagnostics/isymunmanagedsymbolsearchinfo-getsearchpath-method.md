@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c490ee97a1a74cc6fe29a5b0bbece366db6025a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f87399b1124870101531f7115d0da211e646562f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670160"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>Метод ISymUnmanagedSymbolSearchInfo::GetSearchPath
 Получает пути поиска.  
@@ -36,13 +36,13 @@ HRESULT GetSearchPathLength(
   
 #### <a name="parameters"></a>Параметры  
  `pcchPath`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, который требуется включить в путь поиска.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения пути поиска.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

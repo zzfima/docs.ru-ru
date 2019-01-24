@@ -6,32 +6,32 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: b455912468376d2f5de0ac1f30b4fcab5bb93309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b40c45905c65cdc40d77553a93e83aa417199826
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643563"
 ---
 # <a name="windows-forms-control-development-basics"></a>Основы разработки элементов управления форм Windows Forms
-Элемент управления Windows Forms — это класс, производный прямо или косвенно от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Ниже описаны распространенные сценарии для разработки элементов управления Windows Forms.  
+Элемент управления Windows Forms — это класс, производный прямо или косвенно от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Ниже перечислены распространенные сценарии для разработки элементов управления Windows Forms.  
   
 -   Объединение существующих элементов управления для создания составного элемента управления.  
   
-     Составные элементы управления инкапсулируют пользовательский интерфейс, который можно использовать как элемент управления. Пример составного элемента управления — элемент управления, который состоит из текстового поля и кнопки сброса. Визуальные конструкторы предлагают широкие возможности поддержки создания составных элементов управления. Для создания составного элемента управления, производный от <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает клавиатурную маршрутизацию для дочерних элементов управления и позволяет им работать в группе. Дополнительные сведения см. в разделе [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+     Составные элементы управления инкапсулируют пользовательский интерфейс, который можно повторно использовать как элемент управления. Пример составного элемента управления — элемент управления, который состоит из текстового поля "и" сбросить ". Визуальные конструкторы предоставляют широкие возможности поддержки создания составных элементов управления. Создание составного элемента управления, являются производными от <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию клавиатуры для дочерних элементов управления и позволяет им работать сообща. Дополнительные сведения см. в разделе [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
   
 -   Расширение существующего элемента управления для его настройки или для добавления новых функций.  
   
-     Не может изменяться, цвет кнопки и кнопки, которая имеет дополнительное свойство, которое отслеживает, сколько раз была нажата являются примерами расширенных элементов управления. Любой элемент управления Windows Forms можно настроить путем создания класса, производного от него и переопределения или добавления свойств, методов и событий.  
+     Невозможно изменить цвет которого кнопку и кнопку, которая имеет дополнительное свойство, которое отслеживает, сколько раз он был выполнен щелчок приведены примеры расширенных элементов управления. Можно настроить любой элемент управления Windows Forms, его производными и переопределения или добавления свойств, методов и событий.  
   
--   Создание элемента управления, который объединяет и не расширяет существующие элементы управления.  
+-   Создание элемента управления, не объединяется и расширять существующие элементы управления.  
   
-     В этом случае элемент управления следует наследовать от базового класса <xref:System.Windows.Forms.Control>. Можно добавить также а переопределять свойства, методы и события базового класса. Чтобы приступить к работе, см. [как: разработка простого элемента управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+     В этом случае элемент управления следует наследовать от базового класса <xref:System.Windows.Forms.Control>. Можно добавить как также переопределить свойства, методы и события базового класса. Чтобы приступить к работе, см. в разделе [как: Разработка элемента управления форм Windows простой](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
- Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет все необходимое для визуального отображения в клиентских приложений Windows. <xref:System.Windows.Forms.Control> предоставляет дескриптор окна, обработку маршрутизации сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также других пользователей. Он предоставляет дополнительный макет и имеет специальные свойства для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того он обеспечивает безопасность, поддержка и взаимодействие с элементами управления ActiveX работы с потоками. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
+ Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет базовую инфраструктуру, необходимую для визуального отображения в клиентские приложения на базе Windows. <xref:System.Windows.Forms.Control> предоставляет дескриптор окна, обрабатывает маршрутизацию сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также множество других пользователей. Он предоставляет дополнительный макет и имеет свойства, связанные с визуальным отображением, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того он обеспечивает безопасность, работа с потоками поддержки и взаимодействия с элементами управления ActiveX. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Разработка элемента управления простого Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Как: найти все узлы в пространстве имен (Visual Basic)'
+title: Как выполнить Поиск всех узлов в пространстве имен (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 8018ede1c8ef5942325caec3a97afdd89880a331
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640696"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Как: найти все узлы в пространстве имен (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Как выполнить Поиск всех узлов в пространстве имен (Visual Basic)
 Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.  
   
 ## <a name="example"></a>Пример  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Пример  
  Для доступа к XML-файлу применяется следующий запрос, содержащий заказы на покупку в двух разных пространствах имен. В запросе создается новое дерево с элементами одного из пространств имен.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Объединенные заказы на покупку](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Объединенные заказы на покупку](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -109,5 +109,5 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

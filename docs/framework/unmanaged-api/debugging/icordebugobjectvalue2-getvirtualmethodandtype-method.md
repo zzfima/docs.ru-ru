@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af07df53c094654ab86f5e6531fd78124aded988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630896"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>Метод ICorDebugObjectValue2::GetVirtualMethodAndType
 Этот метод еще не реализован.  
@@ -38,8 +38,8 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Получает указатели интерфейса на «ICorDebugFunction» и «ICorDebugType» экземпляры, которые представляют наиболее производного метода и тип для ссылки на указанный элемент.  
+ Получает указатели интерфейса на экземпляры «ICorDebugFunction» и «ICorDebugType», представляющие наиболее производный метод и тип для заданной ссылки на член.  
   
-## <a name="see-also"></a>См. также  
-    
- 
+## <a name="see-also"></a>См. также
+
+

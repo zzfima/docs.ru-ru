@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634441"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>Метод ICorDebugManagedCallback::StepComplete
 Уведомляет отладчик о выполнении шага.  
@@ -46,22 +46,22 @@ HRESULT StepComplete (
  [in] Указатель на объект ICorDebugThread, представляющий поток, в котором шага.  
   
  `pStepper`  
- [in] Указатель на объект ICorDebugStepper, представляющее шаг при выполнении кода.  
+ [in] Указатель на объект ICorDebugStepper, который представляет шаг при выполнении кода.  
   
  `reason`  
  [in] Значение перечисления CorDebugStepReason, которое указывает результат отдельного шага.  
   
 ## <a name="remarks"></a>Примечания  
- Пошаговым можно продолжить пошаговое выполнение при необходимости, если отладка завершена.  
+ Несопоставимого может использоваться для выполните шаг с заходом при необходимости, если отладка завершена.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEval интерфейс1
+title: Интерфейс1 ICorDebugEval
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval
@@ -16,54 +16,54 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ceda938798ba03a9f178776c4cd9439456182c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6da68bc4218d59320997a341f8c4a860201ba643
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620335"
 ---
-# <a name="icordebugeval-interface1"></a>ICorDebugEval интерфейс1
+# <a name="icordebugeval-interface1"></a>Интерфейс1 ICorDebugEval
 Предоставляет методы, позволяющие отладчику выполнять код в контексте отлаживаемого кода.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Метод Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Прерывает вычисление это `ICorDebugEval` объекта в данный момент производит.|  
+|[Метод Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Прерывает вычисление это `ICorDebugEval` объект в данный момент выполняет.|  
 |[Метод CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Настраивает вызов указанной функции. (Устарело в .NET Framework версии 2.0; используйте [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) вместо.)|  
-|[Метод CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Получает указатель интерфейса на объект «ICorDebugValue» указанного типа с начальным значением, равным нулю или null. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) вместо.)|  
-|[Метод GetResult](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Возвращает указатель интерфейса `ICorDebugValue` , содержащий результаты оценки.|  
+|[Метод CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Получает указатель интерфейса на объект «ICorDebugValue» указанного типа, с начальным значением, равным нулю или null. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) вместо.)|  
+|[Метод GetResult](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Получает указатель интерфейса на `ICorDebugValue` , содержащий результаты оценки.|  
 |[Метод GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Получает указатель интерфейса, для которых эта оценка выполняется или будет выполняться «ICorDebugThread».|  
-|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Возвращает значение, указывающее, является ли это `ICorDebugEval` объекта в данный момент.|  
-|[Метод NewArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Выделяет новый массив с заданным типом элементов и измерений. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) вместо.)|  
+|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Получает значение, указывающее, является ли это `ICorDebugEval` объекта в данный момент.|  
+|[Метод NewArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Выделяет новый массив элементов указанного типа и измерений. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) вместо.)|  
 |[Метод NewObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Выделяет новый экземпляр объекта и вызывает заданный метод конструктора. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) вместо.)|  
-|[Метод NewObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Выделяет новый экземпляр объекта указанного типа, не предпринимая попытки вызвать метод конструктора. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) вместо.)|  
+|[Метод NewObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Выделяет новый экземпляр объекта указанного типа, не пытается вызвать метод-конструктор. (Устарело в .NET Framework 2.0; используйте [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) вместо.)|  
 |[Метод NewString](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Выделяет новый строковый объект с указанным содержимым.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugEval` Объект создается в контексте определенного потока, который используется для выполнения оценок. Все объекты и типы, используемые в данной оценке должен находиться на том же домене приложения. Домен приложения не должны совпадать с текущего домена приложения потока. Оценки могут быть вложенными.  
+ `ICorDebugEval` Объект создается в контексте определенного потока, который используется для выполнения оценок. Все объекты и типы, используемые в данной оценке должен находиться на том же домене приложения. Этот домен приложения не должны совпадать с текущего домена приложения потока. Оценки могут быть вложенными.  
   
- Операции вычисления не завершены, пока не отладчик вызывает [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md), а затем принимается [ICorDebugManagedCallback::EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md) обратного вызова. Если необходимо использовать функцию оценки не разрешение запуска других потоков, приостановить потоки с помощью [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) или [ICorDebugController::Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)перед вызовом [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
+ Пока не вызовет отладчик не выполняйте операции вычисления [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md), а затем получает [ICorDebugManagedCallback::EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md) обратного вызова. Если вам нужно использовать функцию оценки не разрешение запуска других потоков, приостановить потоки либо при помощи [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) или [ICorDebugController::Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)перед вызовом [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
   
- Поскольку пользовательский код выполняется во время вычисления, могут возникать все события отладки, включая загрузки класса и точки останова. Отладчик будет получать обратные вызовы, как обычно, для этих событий. Состояние оценки, будет отображаться как часть проверки состояния программы в обычном режиме. Цепочка стека будет `CHAIN_FUNC_EVAL` цепочки (в перечислении «CorDebugStepReason» и [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) метода). Весь интерфейс API отладчика будет продолжать работу в обычном режиме.  
+ Поскольку пользовательский код выполняется вычисление во время выполнения, могут возникать любого события отладки, включая загрузки класса и точки останова. Отладчик будет получать обратные вызовы, в обычном режиме, для этих событий. Состояние оценки будет рассматриваться как часть проверки состояния программы в обычном режиме. Цепочка стека будет `CHAIN_FUNC_EVAL` цепочки (см. в разделе «CorDebugStepReason» перечисления и [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) метод). Полный API отладчика будет продолжать работу в обычном режиме.  
   
- Если взаимоблокировки или состояния бесконечного зацикливания пользовательский код может никогда не завершаются. В этом случае необходимо вызвать [ICorDebugEval::Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md) перед возобновлением работы программы.  
+ Если заблокированной или бесконечный зацикливания пользовательский код может никогда не завершен. В этом случае необходимо вызвать [ICorDebugEval::Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md) перед возобновлением работы программы.  
   
 > [!NOTE]
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
-    
-    
-    
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+
+
+
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

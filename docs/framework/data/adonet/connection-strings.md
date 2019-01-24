@@ -2,12 +2,12 @@
 title: Строки подключения в ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50409461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627568"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 
@@ -57,6 +57,6 @@ ms.locfileid: "50409461"
  [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  Демонстрирует методы защиты сведений, используемых для подключения к источнику данных.
   
-## <a name="see-also"></a>См. также  
- [Подключение к источнику данных](/cpp/data/odbc/connecting-to-a-data-source)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Подключение к источнику данных](/cpp/data/odbc/connecting-to-a-data-source)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Что&#39;возможности в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501599"
 ---
 # <a name="what39s-new-in-adonet"></a>Что&#39;возможности в ADO.NET
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] предоставляются следующие новые возможности.  
@@ -15,7 +15,7 @@ ms.locfileid: "43511807"
 ## <a name="sqlclient-data-provider"></a>Поставщик данных SqlClient  
  Следующие функции добавлены в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
--   Ключевые слова строки подключения ConnectRetryCount и ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) позволяют управлять функцией устойчивости бездействующего соединения.  
+-   Ключевые слова строки подключения ConnectRetryCount и ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) позволяют управлять возможностью устойчивости бездействующего соединения.  
   
 -   Поддержка потоков из SQL Server в приложение поддерживает сценарии, где неструктурированные данные на сервере.  См. в разделе [поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) Дополнительные сведения.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "43511807"
 -   Сборка Microsoft.SqlServer.Types.dll, содержащая типы пространственных данных, была обновлена с переходом от версии 10.0 к версии 11.0. Работа приложений, которые ссылаются на эту сборку, может оканчиваться сбоем. Дополнительные сведения см. в разделе [критические изменения в функциях ядра СУБД](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- В [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] добавлены новые интерфейсы API, которые позволяют реализовывать новые сценарии при работе с бета-версией платформы Entity Framework 5.0. Дополнительные сведения об улучшениях и функциях, добавленных в Entity Framework 5.0 см. в следующих разделах: [новые](https://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ В [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] добавлены новые интерфейсы API, которые позволяют реализовывать новые сценарии при работе с бета-версией платформы Entity Framework 5.0. Дополнительные сведения об улучшениях и функциях, добавленных в Entity Framework 5.0 см. в разделах: [Новые возможности](https://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
-## <a name="see-also"></a>См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Новые возможности служб данных WCF](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [Новые возможности служб данных WCF](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

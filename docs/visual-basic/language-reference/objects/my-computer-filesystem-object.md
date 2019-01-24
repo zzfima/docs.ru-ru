@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642926"
 ---
 # <a name="mycomputerfilesystem-object"></a>Объект My.Computer.FileSystem
 Включает свойства и методы для работы с дисками, файлами и каталогами.  
   
 ## <a name="remarks"></a>Примечания  
- Сведения о методах и свойствах `My.Computer.FileSystem` объекта, см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Сведения о методах и свойствах объекта `My.Computer.FileSystem` см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
  Дополнительные сведения см. в разделе [доступ к файлам с помощью Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
@@ -35,8 +35,8 @@ ms.locfileid: "47236154"
   
  **Класс:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>См. также  
- [Объект My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>См. также
+- [Объект My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
+- [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

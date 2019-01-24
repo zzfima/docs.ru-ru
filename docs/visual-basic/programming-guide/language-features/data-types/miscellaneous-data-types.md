@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 490a462859a916d21c816ff96c47d2deeb9312ee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655053"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Прочие типы данных (Visual Basic)
 Visual Basic предоставляет несколько типов данных, не предназначенных для чисел или знаков. Вместо этого они работают с специализированном например Да/нет значений, значений даты и времени и адресов объектов.  
@@ -30,10 +30,10 @@ Visual Basic предоставляет несколько типов данны
   
  Преимущество `Object` имеет тип данных, что его можно использовать для хранения данных любого типа данных. Недостатком является то, что с вас взиматься дополнительные операции, которые занимает больше времени выполнения и снижение производительности приложения. Если вы используете `Object` переменных для типов значений, то это вызовет *упаковки-преобразования* и *распаковки*. Если вы используете для ссылочных типов, то это вызовет *позднее связывание*.  
   
-## <a name="see-also"></a>См. также  
- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Раннее и позднее связывание](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a>См. также
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Раннее и позднее связывание](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a810f3a25dc90ddb234c70ca3fa5130039350136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51ea342b59bc328a5c8e187dc55b68a8e8e8a7c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657393"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>Метод IHostIoCompletionManager::SetMaxThreads
-Задает максимальное число потоков, выделяемых основным приложением для обслуживания запросов ввода-вывода.  
+Задает максимальное количество потоков, выделяемых основным приложением для обслуживания запросов ввода-вывода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT SetMaxThreads (
   
 #### <a name="parameters"></a>Параметры  
  `dwMaxIoCompletionThreads`  
- [in] Максимальное количество потоков для выделения запросов ввода-вывода.  
+ [in] Максимальное число потоков в сторону для запросов ввода-вывода.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -47,22 +47,22 @@ HRESULT SetMaxThreads (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|Узел не предоставляет реализацию `SetMaxThreads`.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|E_NOTIMPL|Узел не поддерживает реализацию `SetMaxThreads`.|  
   
 ## <a name="remarks"></a>Примечания  
- `SetMaxThreads` Среда CLR предоставляет возможность задать максимальное число потоков, доступных для обслуживания запросов на портах ввода-вывода. Узлу может потребоваться исключительный контроль над размер пула потоков для реализации, производительности или масштабирования. По этой причине узла не требуется для реализации `SetMaxThreads`. В этом случае узел должен возвращать E_NOTIMPL из этого метода.  
+ `SetMaxThreads` Среда CLR предоставляет пользователям возможность задать максимальное число потоков, доступных для обслуживания запросов на портов ввода-вывода. Узлу может потребоваться исключительный контроль над размер пула потоков, например для реализации, производительности и масштабируемости. По этой причине узел не нужно реализовать `SetMaxThreads`. В этом случае узел должен возвращать E_NOTIMPL из этого метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [Интерфейс IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [Интерфейс IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

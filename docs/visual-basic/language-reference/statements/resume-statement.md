@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624799"
 ---
 # <a name="resume-statement"></a>Оператор Resume
 Возобновляет выполнение после завершения процедуры обработки ошибок.  
@@ -35,13 +35,13 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Части  
  `Resume`  
- Обязательно. Если ошибка произошла в той же процедуре, обработчик ошибок, выполнение возобновляется с оператора, который вызвал ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, который последним вызвал процедуру, содержащую обработчик ошибок.  
+ Обязательный. Если ошибка произошла в той же процедуре, обработчик ошибок, выполнение возобновляется с оператора, который вызвал ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, который последним вызвал процедуру, содержащую обработчик ошибок.  
   
  `Next`  
- Необязательный. Если ошибка произошла в той же процедуре, обработчик ошибок, выполнение возобновляется с оператора, следующего инструкцию, которая вызвала ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, следующего оператора, который последним вызвал процедуру, содержащую обработчик ошибок (или `On Error Resume Next` инструкции).  
+ Необязательный параметр. Если ошибка произошла в той же процедуре, обработчик ошибок, выполнение возобновляется с оператора, следующего инструкцию, которая вызвала ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, следующего оператора, который последним вызвал процедуру, содержащую обработчик ошибок (или `On Error Resume Next` инструкции).  
   
  `line`  
- Необязательный. Выполнение возобновляется строки, указанной в обязательном `line` аргумент. `line` Аргумент представляет собой метку или номер строки и должно быть в той же процедуре в качестве обработчика ошибок.  
+ Необязательный параметр. Выполнение возобновляется строки, указанной в обязательном `line` аргумент. `line` Аргумент представляет собой метку или номер строки и должно быть в той же процедуре в качестве обработчика ошибок.  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -60,9 +60,9 @@ Resume [ Next | line ]
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>См. также  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Оператор Error](../../../visual-basic/language-reference/statements/error-statement.md)  
- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>См. также
+- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Оператор Error](../../../visual-basic/language-reference/statements/error-statement.md)
+- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)

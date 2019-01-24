@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662586"
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
@@ -54,9 +54,9 @@ ms.locfileid: "54030533"
   
 |Описание|Схема|  
 |--------------|------------|  
-|`include`|Поддерживается. `DataContractSerializer` поддерживает xs:include и xs:import. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location`. В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
+|`include`|Поддерживается. `DataContractSerializer` поддерживает xs:include и xs:import. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
 |`redefine`|Запрещено. Использование `xs:redefine` запрещено `DataContractSerializer` по соображениям безопасности: для `x:redefine` требуется следовать `schemaLocation` . В некоторых случаях Svcutil.exe, использующее DataContract, ограничивает применение `schemaLocation`.|  
-|`import`|Поддерживается. `DataContractSerializer` поддерживает `xs:include` и `xs:import`. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include`; документы схемы, переданные посредством `include`, не учитываются.|  
+|`import`|Поддерживается. `DataContractSerializer` поддерживает `xs:include` и `xs:import`. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
 |`simpleType`|Поддерживается. См. раздел `xs:simpleType` .|  
 |`complexType`|Поддерживается, сопоставляется контрактам данных. См. раздел `xs:complexType` .|  
 |`group`|Не обрабатывается. `DataContractSerializer` не поддерживает использование `xs:group`, `xs:attributeGroup`и `xs:attribute`. Эти объявления игнорируются как дочерние элементы `xs:schema`, но ссылки на них невозможны из `complexType` или других поддерживаемых конструкторов.|  
@@ -331,14 +331,14 @@ public enum MyEnum
 ### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` сопоставляет типы перечисления, отмеченные `System.FlagsAttribute` , `xs:list` , образованному из `xs:string`. Никакие другие виды `xs:list` не поддерживаются.  
   
-### <a name="xslist-attributes"></a>\<xs: list >: атрибуты  
+### <a name="xslist-attributes"></a>\<xs:list>: attributes  
   
 |Атрибут|Схема|  
 |---------------|------------|  
 |`itemType`|Запрещено.|  
 |`id`|Не обрабатывается.|  
   
-### <a name="xslist-contents"></a>\<xs: list >: содержимое  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Описание|Схема|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

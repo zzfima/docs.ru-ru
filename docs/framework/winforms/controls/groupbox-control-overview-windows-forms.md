@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], about GroupBox control
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-ms.openlocfilehash: 122e7a60cf31f3b7db506cb3bb69a2571e9115c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: add6756e88173982d87bebf80b78707072ff2fc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630753"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>Общие сведения об элементе управления GroupBox (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для предоставления возможность группировки других элементов управления. Как правило группы используются для разделения формы по функциям. Например имеется формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров в области группы обеспечивает пользователю логическую визуальную подсказку, а во время разработки все элементы управления можно легко переместить — при перемещении одного <xref:System.Windows.Forms.GroupBox> управления, все содержащиеся в нем элементы перемещаются также.  
+Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для предоставления возможность идентифицируемой группировки других элементов управления. Как правило группы используются для разделения формы функцией. Например возможно с формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров в группу дает пользователю логическую визуальную подсказку, а во время разработки все элементы управления можно легко переместить — при перемещении одного <xref:System.Windows.Forms.GroupBox> контролируете, все его вложенные элементы управления.  
   
- Заголовок области группы определяется <xref:System.Windows.Forms.GroupBox.Text%2A> свойство. Дополнительные сведения см. в разделе [как: значение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Заголовок «группы» определяется <xref:System.Windows.Forms.GroupBox.Text%2A> свойство. Дополнительные сведения см. в разделе [Как Задать текст, отображаемый элементом управления форм Windows](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="groupbox-and-panel"></a>GroupBox и панели  
- <xref:System.Windows.Forms.GroupBox> Управления аналогичен <xref:System.Windows.Forms.Panel> управления; Однако только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок и только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки.  
+ <xref:System.Windows.Forms.GroupBox> Управления аналогичен <xref:System.Windows.Forms.Panel> управления; тем не менее, только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок и только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки.  
   
-## <a name="see-also"></a>См. также  
- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

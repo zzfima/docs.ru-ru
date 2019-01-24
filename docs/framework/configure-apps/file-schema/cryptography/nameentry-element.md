@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626944"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; элемент
 Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
@@ -37,7 +37,7 @@ ms.locfileid: "50201365"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, который реализует криптографический класс.|  
 |**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемент.|  
@@ -77,8 +77,8 @@ ms.locfileid: "50201365"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>См. также
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642572"
 ---
 # <a name="runtime-directive-policy-settings"></a>Параметры политики директив среды выполнения
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000992"
 |`Required PublicAndInternal`|Включает политику для открытых и внутренних типов или членов и гарантирует, что эти метаданные для открытых и внутренних типов и членов всегда доступны. Этот параметр отличается от `PublicAndInternal`, который делает метаданные для открытых и внутренних типов и членов доступными, только если цепочка инструментов определяет, что это необходимо.|✓||  
 |`Required All`|Требует, чтобы цепочка инструментов сохранила все типы и члены, независимо то того, используются они или нет, и включает политику для них.|✓||  
   
-## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>См. также
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

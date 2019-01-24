@@ -8,15 +8,15 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663314"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
-*Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
+*Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения, см. в разделе [как: Олицетворение клиента в службе](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
   
 > [!IMPORTANT]
 >  Следует иметь в виду, что при олицетворении клиента в службе служба выполняется с учетными данными клиента, которые могут иметь более высокий уровень разрешений, чем серверный процесс.  
@@ -41,7 +41,7 @@ ms.locfileid: "43505421"
   
 -   привязка<xref:System.ServiceModel.BasicHttpBinding> , у которой <xref:System.ServiceModel.BasicHttpSecurityMode> имеет значение <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , или любая другая стандартная привязка, с помощью которой клиент представляет имя пользователя, которое служба может сопоставить с действительной учетной записью Windows;  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding>, использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `true`. (Свойство имеется в следующих классах: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> и <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`;  
+-   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `true`. (Свойство имеется в следующих классах: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> и <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`;  
   
 -   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , в которой клиент представляет имя пользователя. При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "43505421"
  Уровень олицетворения клиента службой зависит от привилегий, доступных учетной записи при попытке олицетворения, используемого типа олицетворения и, возможно, от уровня олицетворения, разрешенного клиентом.  
   
 > [!NOTE]
->  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. Приложения Windows Form и консольные приложения обычно выполняются от имени учетной записи находящегося в системе пользователя, поэтому эту учетную запись можно олицетворять по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , которая размещена в службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] или [!INCLUDE[iisver](../../../../includes/iisver-md.md)], то клиент по умолчанию выполняется от имени учетной записи `Network Service` . Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркеры контекста безопасности с отслеживанием состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, в клиенте невозможно использовать олицетворение. Дополнительные сведения об использовании маркеров SCT с отслеживанием состояния в безопасном сеансе см. в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. Приложения Windows Form и консольные приложения обычно выполняются от имени учетной записи находящегося в системе пользователя, поэтому эту учетную запись можно олицетворять по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , которая размещена в службах [!INCLUDE[iis601](../../../../includes/iis601-md.md)] или [!INCLUDE[iisver](../../../../includes/iisver-md.md)], то клиент по умолчанию выполняется от имени учетной записи `Network Service` . Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркеры контекста безопасности с отслеживанием состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, в клиенте невозможно использовать олицетворение. Дополнительные сведения об использовании маркеров SCT с отслеживанием состояния в безопасном сеансе см. в разделе [как: Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
-## <a name="impersonation-in-a-service-method-declarative-model"></a>Олицетворение в методе службы: декларативная модель  
- Большинство сценариев олицетворения предполагают выполнение метода службы в контексте вызывающего объекта. WCF предоставляет функцию олицетворения, который делает это легко сделать, поскольку пользователь может задать требование олицетворения в <xref:System.ServiceModel.OperationBehaviorAttribute> атрибута. Например, в следующем коде инфраструктура WCF олицетворяет вызывающую сторону перед выполнением `Hello` метод. Все попытки обратиться к собственным ресурсам внутри метода `Hello` окажутся успешными только в том случае, если список управления доступом (ACL) ресурса дает права на доступ вызывающему объекту. Чтобы включить олицетворение, присвойте свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> одно из значений перечисления <xref:System.ServiceModel.ImpersonationOption>: <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> или <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, как показано в следующем примере.  
+## <a name="impersonation-in-a-service-method-declarative-model"></a>Олицетворение в методе службы: Декларативная модель  
+ Большинство сценариев олицетворения предполагают выполнение метода службы в контексте вызывающего объекта. WCF предоставляет функцию олицетворения, который делает это легко сделать, поскольку пользователь может задать требование олицетворения в <xref:System.ServiceModel.OperationBehaviorAttribute> атрибута. Например, в следующем коде инфраструктура WCF олицетворяет вызывающую сторону перед выполнением `Hello` метод. Все попытки обратиться к собственным ресурсам внутри метода `Hello` окажутся успешными только в том случае, если список управления доступом (ACL) ресурса дает права на доступ вызывающему объекту. Чтобы включить олицетворение, присвойте свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> одно из значений перечисления <xref:System.ServiceModel.ImpersonationOption> : <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> или <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, как показано в следующем примере.  
   
 > [!NOTE]
 >  Если у службы имеется больше прав, чем у удаленного клиента, то используются учетные данные службы, если свойство <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> имеет значение <xref:System.ServiceModel.ImpersonationOption.Allowed>. Это значит, что если пользователь с более узкими правами предоставляет свои учетные данные, то метод выполняется с более широкими правами службы, и пользователь получает доступ к ресурсам, доступ к которым он бы сам получить не смог.  
@@ -73,7 +73,7 @@ ms.locfileid: "43505421"
 > [!NOTE]
 >  В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]происходит сбой олицетворения, если создается маркер контекста безопасности с отслеживанием состояния, что приводит к появлению исключения <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе [неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
-## <a name="impersonation-in-a-service-method-imperative-model"></a>Олицетворение в методе службы: императивная модель  
+## <a name="impersonation-in-a-service-method-imperative-model"></a>Олицетворение в методе службы: Императивная модель  
  Иногда вызывающему объекту требуется олицетворять не весь метод службы, а лишь его часть. В этом случае необходимо получить удостоверение Windows вызывающего объекта внутри метода службы и императивно выполнить олицетворение. Для этого необходимо с помощью свойства <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> объекта <xref:System.ServiceModel.ServiceSecurityContext> возвратить экземпляр класса <xref:System.Security.Principal.WindowsIdentity> и вызвать метод <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> перед использованием этого экземпляра.  
   
 > [!NOTE]
@@ -170,7 +170,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>Делегирование  
- Чтобы выполнить делегирование внутренней службе, служба должна выполнить многоступенчатую (SSPI без резервной проверки подлинности NTLM) проверку подлинности или прямую проверку подлинности Kerberos во внутренней службе, используя удостоверение Windows клиента. Для делегирования внутренней службе создайте объект <xref:System.ServiceModel.ChannelFactory%601> и канал, а затем используйте этот канал для взаимодействия при олицетворении клиента. При такой модели делегирования расстояние, на котором внутренняя служба может располагаться относительно внешней службы, зависит от уровня олицетворения, полученного внешней службой. Если уровень олицетворения равен <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, внешняя и внутренняя службы должны выполняться на одном компьютере. Если уровень олицетворения равен <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, внешняя и внутренняя службы могут выполняться как на различных компьютерах, так и на одном компьютере. Для включения олицетворения уровня делегирования необходимо, чтобы политика домена Windows разрешала делегирование. Дополнительные сведения о настройке поддержки делегирования в Active Directory, см. в разделе [Включение делегированной проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=99690).  
+ Чтобы выполнить делегирование внутренней службе, служба должна выполнить многоступенчатую (SSPI без резервной проверки подлинности NTLM) проверку подлинности или прямую проверку подлинности Kerberos во внутренней службе, используя удостоверение Windows клиента. Для делегирования внутренней службе создайте объект <xref:System.ServiceModel.ChannelFactory%601> и канал, а затем используйте этот канал для взаимодействия при олицетворении клиента. При такой модели делегирования расстояние, на котором внутренняя служба может располагаться относительно внешней службы, зависит от уровня олицетворения, полученного внешней службой. Если уровень олицетворения равен <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, внешняя и внутренняя службы должны выполняться на одном компьютере. Если уровень олицетворения равен <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, внешняя и внутренняя службы могут выполняться как на различных компьютерах, так и на одном компьютере. Для включения олицетворения уровня делегирования необходимо, чтобы политика домена Windows разрешала делегирование. Дополнительные сведения о настройке поддержки делегирования в Active Directory см. в разделе [Включение делегированной проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=99690).  
   
 > [!NOTE]
 >  Если клиент проходит проверку подлинности во внешней службе с использованием имени пользователя и пароля, соответствующих учетной записи Windows во внутренней службе, внешняя служба может пройти проверку подлинности во внутренней службе, используя имя пользователя и пароль клиента. Это особенно мощная форма передачи удостоверений, поскольку передача имени пользователя и пароля внутренней службе позволяет этой службе выполнять олицетворение; однако в этом случае невозможно делегирование, т. к. не использует проверка подлинности Kerberos. Действие элементов управления делегированием службы каталогов Active Directory не распространяется на проверку подлинности имени пользователя и пароля.  
@@ -189,7 +189,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Настройка приложения для использования ограниченного делегирования  
- Для использования ограниченного делегирования необходимо предварительно настроить отправитель, получатель и контроллер домена. Ниже перечислены операции по включению ограниченного делегирования. Дополнительные сведения о различиях между делегированием и ограниченным делегированием см. в разделе часть [расширения Kerberos Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=100194) , посвященной ограниченному делегированию.  
+ Для использования ограниченного делегирования необходимо предварительно настроить отправитель, получатель и контроллер домена. Ниже перечислены операции по включению ограниченного делегирования. Дополнительные сведения о различиях между делегированием и ограниченным делегированием см. в части раздела [Расширения Kerberos Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=100194) , посвященной ограниченному делегированию.  
   
 1.  На контроллере домена снимите флажок **Учетная запись важна и не может быть делегирована** для учетной записи, от имени которой выполняется клиентское приложение.  
   
@@ -205,21 +205,21 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [Передача протокола Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.OperationBehaviorAttribute>  
- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
- <xref:System.ServiceModel.ImpersonationOption>  
- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>  
- <xref:System.ServiceModel.ServiceSecurityContext>  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ChannelFactory%601>  
- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Использование олицетворения при обеспечении безопасности транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [Олицетворение клиента](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.OperationBehaviorAttribute>
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
+- <xref:System.ServiceModel.ImpersonationOption>
+- <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>
+- <xref:System.ServiceModel.ServiceSecurityContext>
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ChannelFactory%601>
+- <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
+- [Использование олицетворения при обеспечении безопасности транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Олицетворение клиента](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Практическое руководство. Олицетворение клиента в службе](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

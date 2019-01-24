@@ -2,12 +2,12 @@
 title: Размещение в приложении службы Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621982"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Размещение в приложении службы Windows
 Службы Windows (ранее называвшиеся службами Windows NT) обеспечивают модель процессов, особенно подходящую для приложений, которые должны существовать в длительно исполняемом файле и не отображают никакой формы пользовательского интерфейса. Временем существования процессов приложений служб Windows управляет диспетчер служб, который позволяет запускать, останавливать и приостанавливать приложения служб Windows. Можно настроить процесс службы Windows для автоматического запуска при запуске компьютера, сделав его подходящей средой размещения для приложений «always on». Дополнительные сведения о приложениях служб Windows, см. в разделе [приложений служб Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -36,10 +36,10 @@ ms.locfileid: "48584134"
   
      Приложений служб Windows, на которых размещены службы WCF развертываются и управляются так же, как приложения службы Windows, которые не используют WCF.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceProcess>  
- [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](https://go.microsoft.com/fwlink/?LinkId=94875)  
- [Практическое руководство. Размещение службы WCF в управляемой службе Windows](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Узел службы Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- [Программная архитектура приложений служб](https://go.microsoft.com/fwlink/?LinkId=94876)  
- [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceProcess>
+- [Пошаговое руководство: Создание приложения службы Windows в конструкторе компонентов](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [Практическое руководство. Размещение службы WCF в службе Windows, управляемых](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Узел службы Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [Программная архитектура приложений служб](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

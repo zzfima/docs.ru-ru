@@ -1,20 +1,20 @@
 ---
-title: Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)
+title: 'Образец XML-файла: заказчики и заказы (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1ee702b8a487544f89454f35a1c1bdb5658c393d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671607"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Образец XML-файла: заказчики и заказы (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о заказчиках и заказах.  
   
- Раздел [Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) содержит XSD, с помощью которого можно проверить этот документ. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
+ Раздел [пример XSD-файла: Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) содержит XSD, который может использоваться для проверки этого документа. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
   
- Пример написания запросов LINQ, которые используют преимущества этой связи с помощью `Join` предложение, см. в разделе [как: объединение двух коллекций (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Пример написания запросов LINQ, которые используют преимущества этой связи с помощью `Join` предложение, см. в разделе [как: Объединение двух коллекций (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -434,5 +434,5 @@ ms.locfileid: "39244063"
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

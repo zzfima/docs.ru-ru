@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219b511662a2e59fb6e0e55b6630bd54015fcc79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620101"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Совместимость политики разграничения доступа кода и ее миграция
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Политика разграничения доступа кода (CAS) является устаревшей в [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. В результате могут возникать предупреждения компиляции и исключения среды CLR при вызове устаревших типов политик и членов [явно](#explicit_use) или [неявно](#implicit_use) (через другие типы и члены).  
+ Политика разграничения доступа кода (CAS) является устаревшей в [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. В результате могут возникать предупреждения компиляции и исключения среды выполнения при вызове устаревших типов политик и членов [явно](#explicit_use) или [неявно](#implicit_use) (через другие типы и члены).  
   
  Избежать появления таких предупреждений и ошибок можно следующими способами:  
   
--   [Миграция](#migration) для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] заменяющих устаревшие вызовы.  
+-   [Миграция](#migration) для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] замена устаревших вызовов.  
   
      \- или -  
   
--   С помощью [элемента конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) для выбора политики разграничения доступа кода прежних версий.  
+-   С помощью [элемент конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) принять политику разграничения доступа кода прежних версий.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33393251"
   
 -   [Миграция: Замена устаревших вызовов](#migration)  
   
--   [Совместимость: Использование политики разграничения доступа кода прежних версий](#compatibility)  
+-   [Совместимость: Параметр политики разграничения доступа кода прежних версий](#compatibility)  
   
 <a name="explicit_use"></a>   
 ## <a name="explicit-use"></a>Явное использование  
@@ -102,7 +102,7 @@ ms.locfileid: "33393251"
  <xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`  
   
 <a name="migration"></a>   
-## <a name="migration-replacement-for-obsolete-calls"></a>Миграция: замена устаревших вызовов  
+## <a name="migration-replacement-for-obsolete-calls"></a>Миграция: Замена устаревших вызовов  
   
 ### <a name="determining-an-assemblys-trust-level"></a>Определение уровня доверия сборки  
  Политика разграничения доступа кода часто используется для определения набора разрешений или уровня доверия, предоставляемых сборке или домену приложения. Платформа [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет следующие полезные свойства, не требующие разрешения политики безопасности:  
@@ -116,19 +116,19 @@ ms.locfileid: "33393251"
 -   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
 ### <a name="application-domain-sandboxing"></a>Изолирование домена приложения  
- Метод <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>, как правило, используется для изолирования сборок в домене приложений. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Предоставляет члены, которые не должны использовать <xref:System.Security.Policy.PolicyLevel> для этой цели. Дополнительные сведения см. в разделе [как: выполнение частично доверенного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ Метод <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>, как правило, используется для изолирования сборок в домене приложений. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Предоставляет члены, которые не нужно использовать <xref:System.Security.Policy.PolicyLevel> для этой цели. Дополнительные сведения см. в разделе [Как Запустите частично доверенного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Определение безопасного или приемлемого набора разрешений для частично доверенного кода  
- Ведущим приложениям часто требуется определить разрешения, подходящие для изоляции кода, запускаемого из этих приложений. Прежде чем [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], политика разграничения доступа кода позволяет это сделать с помощью <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> метод. Вместо этого [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> метод, который возвращает безопасный стандартный набор разрешений для предоставленного свидетельства.  
+ Ведущим приложениям часто требуется определить разрешения, подходящие для изоляции кода, запускаемого из этих приложений. Прежде чем [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], политика разграничения доступа кода предоставляет способ это сделать с помощью <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> метод. Вместо этого [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> метод, который возвращает безопасный стандартный набор разрешений для предоставленного свидетельства.  
   
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Сценарии без использования "песочницы": перегруженные методы для загрузки сборок  
- Перегруженные методы загрузки сборок применяются, если вместо изоляции сборки в "песочнице" необходимо использовать параметры, которые недоступны иначе. Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], перегруженные методы загрузки сборки, не требующие <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> объект в качестве параметра, например, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, реализовать этот сценарий.  
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Сценарии не "песочницы": Перегрузки для загрузки сборок  
+ Перегруженные методы загрузки сборок применяются, если вместо изоляции сборки в "песочнице" необходимо использовать параметры, которые недоступны иначе. Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], перегрузки нагрузки сборки, не требующие <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> объект в качестве параметра, например, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, реализовать этот сценарий.  
   
  Чтобы поместить сборку в изолированную среду, воспользуйтесь перегрузкой <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.  
   
 <a name="compatibility"></a>   
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Совместимость: использование политики разграничения доступа кода прежних версий  
- [Элемента конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) позволяет указать, что процесс или библиотека использует политику разграничения доступа кода прежних версий. При включении этого элемента политика и перегруженные объекты свидетельств будут работать как в предыдущих версиях платформы.  
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Совместимость: Параметр политики разграничения доступа кода прежних версий  
+ [Элемент конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) позволяет указать, что процесс или библиотека использует политику разграничения доступа кода прежних версий. При включении этого элемента политика и перегруженные объекты свидетельств будут работать как в предыдущих версиях платформы.  
   
 > [!NOTE]
 >  Поведение политики разграничения доступа кода определяется для каждой версии среды выполнения, поэтому изменение этой политики для одной версии среды выполнения не повлияет на ее поведение в других версиях.  
@@ -141,6 +141,6 @@ ms.locfileid: "33393251"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
- [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Выполнение частично доверенного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

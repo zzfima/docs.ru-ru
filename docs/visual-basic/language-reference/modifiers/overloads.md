@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624922"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Указывает, что свойство или процедура повторно определяет одно или несколько существующих свойств или процедур с таким же именем.  
   
 ## <a name="remarks"></a>Примечания  
- *Перегрузка* — это предоставление нескольких определений для заданного имени свойства или процедуры в той же области. Повторное объявление свойства или процедуры с другой сигнатурой иногда называют *скрытие подписью*.  
+ *Перегрузка* — это предоставление нескольких определений для указанного имени свойства или процедуры в той же области. Повторное объявление свойства или процедуры с другой сигнатурой иногда называют *скрытием за сигнатурой*.  
   
 ## <a name="rules"></a>Правила  
   
 -   **Контекст объявления.** `Overloads` можно использовать только в операторе объявления свойства или процедуры.  
   
--   **Комбинированные модификаторы.** Нельзя указать `Overloads` вместе с [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) в объявлении процедуры.  
+-   **Комбинированные модификаторы.** Нельзя указать `Overloads` вместе с [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) в одном объявлении процедуры.  
   
--   **Обязательные различия.** *Подписи* этого объявления должна отличаться от сигнатуры каждого свойства или процедуры, которые оно переопределяет. Сигнатура включает в себя имя свойства или процедуры, а также следующие элементы:  
+-   **Обязательные различия.** *Подпись* этого объявления должна отличаться от сигнатуры каждого свойства или процедуры, которые оно переопределяет. Сигнатура включает в себя имя свойства или процедуры, а также следующие элементы:  
   
     -   число параметров;  
   
@@ -73,9 +73,9 @@ ms.locfileid: "33601918"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Перегрузка процедур](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>См. также
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Перегрузка процедур](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

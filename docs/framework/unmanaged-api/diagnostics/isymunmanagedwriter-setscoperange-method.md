@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 495089ca33df3b36656da149da45019c30b81d39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618815"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>Метод ISymUnmanagedWriter::SetScopeRange
-Определяет диапазон смещений для заданной лексической области видимости. Область становится новой текущей областью и помещается в стек областей. Области должны образовывать иерархию. Перекрытие элементов с общим родителем запрещено.  
+Определяет диапазон смещений для заданной лексической области видимости. Область становится новой текущей областью и помещается в стек области. Области должны образовывать иерархию. Одноуровневые элементы, не разрешено перекрывать.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,10 +41,10 @@ HRESULT OpenScope(
  [in] Идентификатор области для области.  
   
  `startOffset`  
- [in] Смещение в байтах первой инструкции в лексической области видимости от начала метода.  
+ [in] Смещение в байтах первой инструкции в лексической области в начале метода.  
   
  `endOffset`  
- [in] Смещение в байтах последней инструкции в лексической области видимости от начала метода.  
+ [in] Смещение в байтах последней инструкции в лексической области в начале метода.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
@@ -53,7 +53,7 @@ HRESULT OpenScope(
  [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) возвращает непрозрачный идентификатор области, можно использовать с `ISymUnmanagedWriter::SetScopeRange` для определения области начального и конечного смещения в дальнейшем. В этом случае смещения, переданные методам `ISymUnmanagedWriter::OpenScope` и [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) игнорируются. Идентификаторы областей действительны только в текущем методе.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

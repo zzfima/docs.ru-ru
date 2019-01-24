@@ -2,12 +2,12 @@
 title: LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7386556-a6b9-40d5-92b6-e8701dc2c63e
-ms.openlocfilehash: c270528a75f5b9a9948ba0b575c90e6d9fb644fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6b09bb2384b3da6e106d13aaca178252f47f5d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648963"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
 LINQ to XML обеспечивает интерфейс программирования для работы с XML в памяти на основе платформы .NET LINQ Framework. LINQ to XML использует новейшие возможности языка платформы .NET Framework и может быть сравним с обновленным, переработанным программным интерфейсом XML модели DOM.  
@@ -24,7 +24,7 @@ LINQ to XML обеспечивает интерфейс программиров
  [Ссылка (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  
  Предоставляет указатели на документацию справочника по написанию управляемого кода LINQ to XML.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

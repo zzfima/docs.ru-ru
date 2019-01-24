@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666583"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  
@@ -43,11 +43,11 @@ ms.locfileid: "46480660"
 -   Определение `Student` класса и создания списка экземпляров класса.  
   
     > [!IMPORTANT]
-    >  Код, необходимый для определения `Student` класса и создания списка, используемого в этом пошаговом руководстве примеры предоставляется в [как: создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Можно скопировать его оттуда и вставьте его в проект. Новый код заменяет код, появившийся при создании проекта.  
+    >  Код, необходимый для определения `Student` класса и создания списка, используемого в этом пошаговом руководстве примеры предоставляется в [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Можно скопировать его оттуда и вставьте его в проект. Новый код заменяет код, появившийся при создании проекта.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Чтобы добавить нового учащегося в список учащихся  
   
--   Шаблону `getStudents` метод, чтобы добавить другой экземпляр `Student` класс к списку. Добавление студентов вы узнаете о инициализаторы объектов. Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Шаблону `getStudents` метод, чтобы добавить другой экземпляр `Student` класс к списку. Добавление студентов вы узнаете о инициализаторы объектов. Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Создание запроса  
  При выполнении запроса, добавленного в этом разделе создает список студентов, успеваемость помещает их в первых десяти. Так как запрос выбирает полный `Student` объект каждый раз, а тип результата запроса является `IEnumerable(Of Student)`. Тем не менее тип запроса обычно не указан в определениях запроса. Вместо этого компилятор использует определение локального типа для определения типа. Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Переменная диапазона запроса, `currentStudent`, служащий в качестве ссылки на каждый `Student` экземпляр в источнике, `students`, предоставляя доступ к свойствам каждого объекта в `students`.  
@@ -144,11 +144,11 @@ ms.locfileid: "46480660"
   
 ## <a name="see-also"></a>См. также
 
-- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Запросы](../../../../visual-basic/language-reference/queries/index.md)

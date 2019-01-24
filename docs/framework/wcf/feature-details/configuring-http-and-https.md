@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635682"
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Проблемы, возникающие при работе с Windows XP  
  Службы IIS не поддерживают совместное использование портов в [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Если служба IIS запущена и пытается использовать пространство имен с помощью порта службы WCF, службы WCF не запускается. Службы IIS и WCF, как по умолчанию используют порт 80. Изменить назначение порта для одной из служб, либо использовать список прослушивания IP-адрес для назначения службы WCF к сетевому адаптеру, не используемому службами IIS. Службы IIS 6.0 и более поздних версий были переработаны для использования API HTTP-сервера.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [Инструкции: Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7d58154858cd5f2aef21cc6ceeb93d1ee2f2d1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619588"
 ---
 # <a name="default-service-behavior"></a>Поведение служб по умолчанию
 В этом образце показано, как могут настраиваться параметры поведения службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. В этом образце с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> явным образом определены поведения службы и операции. Поведения можно настраивать в файлах конфигурации или непосредственно в коде (как показано в этом образце).  
@@ -47,7 +47,7 @@ public class CalculatorService : ICalculator
   
  Поведения службы задаются атрибутом <xref:System.ServiceModel.ServiceBehaviorAttribute>. В приведенной ниже таблице описаны некоторые из этих поведений.  
   
-|Поведение службы|Описание|  
+|Поведение службы|Описание:|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Автоматически завершает сеанс по запросу клиента.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Задает режим параллелизма для каждого из экземпляров служб.|  
@@ -59,7 +59,7 @@ public class CalculatorService : ICalculator
   
  Поведения операций задаются атрибутом <xref:System.ServiceModel.OperationBehaviorAttribute>. В приведенной ниже таблице описаны некоторые из этих поведений.  
   
-|Поведение операции|Описание|  
+|Поведение операции|Описание:|  
 |------------------------|-----------------|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Определяет, приводит ли завершение операции службы к завершению текущей транзакции.|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Определяет, зачислятся ли операция службы в транзакции потока клиента.|  

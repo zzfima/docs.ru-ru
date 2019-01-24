@@ -2,12 +2,12 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-ms.openlocfilehash: 076313548828f1fbce9c68b48c0fa7db9cca095f
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: e968f5f2d7ffdb193b30762d32a47be3778b98dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621361"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
 AsymmetricSecurityBindingElement  
@@ -31,14 +31,14 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Порядок шифрования и подписывания сообщений для данной привязки.  
   
 ### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Указывает, требует ли привязка подтверждения подписи.  
   
@@ -48,5 +48,5 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

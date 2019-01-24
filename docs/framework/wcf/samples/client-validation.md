@@ -2,12 +2,12 @@
 title: Проверка клиента
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: ae322dbaebb07846fec3379b897114dac328817f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3a80121894ddbb753efbe047d14a14a57f8dddc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640008"
 ---
 # <a name="client-validation"></a>Проверка клиента
 Службы часто публикуют метаданные, чтобы включить автоматическое создание и настройку типов прокси клиента. Если служба не является доверенной, клиентские приложения должны убедиться, что метаданные соответствуют политике клиентского приложения в плане безопасности, транзакций, типа контракта службы и т. д. В следующем образце показано, как создать поведение конечной точки клиента, которое проверяет конечную точку службы на предмет безопасности использования.  
@@ -63,5 +63,5 @@ ms.locfileid: "54221340"
     > [!NOTE]
     >  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы запустили примеры WCF, которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - TrustedPeople хранения. Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## <a name="see-also"></a>См. также  
- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+## <a name="see-also"></a>См. также
+- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)

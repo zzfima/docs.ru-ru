@@ -3,25 +3,25 @@ title: '&lt;Переменная&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: c65b377d85783f29ca2a8223e97eb10b073cee0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 185e7e7196f6679ec3d1fae8a2a256b934022ca9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647885"
 ---
 # <a name="ltvariablegt"></a>&lt;Переменная&gt;
 Представляет коллекцию переменных, связанных с этим запросом действия.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Отслеживание >  
 \<профили >  
 \<trackingProfile >  
 \<рабочий процесс >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQueries>  
+\<activityStateQuery>  
 \<переменные >  
 \<переменная >  
   
@@ -77,8 +77,8 @@ ms.locfileid: "53155240"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

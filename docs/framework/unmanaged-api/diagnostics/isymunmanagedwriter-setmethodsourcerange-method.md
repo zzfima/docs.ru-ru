@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663548"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Метод ISymUnmanagedWriter::SetMethodSourceRange
-Указывает истинные начало и конец метода в исходном файле. Используйте этот метод, чтобы указать объем метод независимо от точки следования, которые существуют в методе.  
+Указывает истинные начало и конец метода в исходном файле. Используйте этот метод для задания длины метода независимо от точек следования, имеющихся в методе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,19 +50,19 @@ HRESULT SetMethodSourceRange(
  [in] Начальный столбец.  
   
  `endDoc`  
- [in] Указатель на документ, содержащий конечную позицию.  
+ [in] Указатель на документ, содержащий конечное положение.  
   
  `endLine`  
- [in] Конечный номер строки.  
+ [in] Номер конечной строки.  
   
  `endColumn`  
- [in] Номер последнего столбца.  
+ [in] Номер конечного столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

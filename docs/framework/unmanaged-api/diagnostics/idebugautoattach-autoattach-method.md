@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663522"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Метод IDebugAutoAttach::AutoAttach
 Выполняет отладчика, вызываемого сервером автоматического присоединения.  
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in] Всегда значение `GUID_NULL`.  
   
  `dwPid`  
- [in] Идентификатор, обычно извлекаются с помощью процесса `GetCurrentProcessId` функции.  
+ [in] Идентификатор процесса, как правило, извлекается с `GetCurrentProcessId` функции.  
   
  `dwProgramType`  
  [in] Тип программы: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, или `AUTOATTACH_PROGRAM_UNKNOWN`.  
@@ -54,13 +54,13 @@ HRESULT AutoAttach
  [in] Идентификатор программы.  
   
  `pszSessionId`  
- [in] Строка передается по команды debug.  
+ [in] Строка, переданная команду debug.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** DbgAutoAttach.h  
+ **Заголовок.** DbgAutoAttach.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

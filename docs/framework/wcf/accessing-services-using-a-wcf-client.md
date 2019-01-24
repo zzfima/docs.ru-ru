@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620203"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  Если задано только одно имя файла, это имя выходного файла. Если задано два имени файла, то первый файл является исходным файлом конфигурации, содержимое которого объединяется с создаваемой конфигурацией и записывается во второй файл. Дополнительные сведения о конфигурации см. в разделе [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Незащищенные запросы метаданных представляют определенную угрозу, подобно незащищенным сетевым запросам. Если нет уверенности, что конечная точка, с которой осуществляется взаимодействие, является той точкой, за которую она себя выдает, получаемая информация может представлять собой метаданные вредоносной службы.
+> Незащищенные запросы метаданных представляют определенную угрозу таким же образом, любой незащищенным сетевым запросам: Если вы не уверены в конечную точку, взаимодействующие с говорит, что это, можно извлечь данные могут быть метаданные вредоносной службы.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Функция «Добавить ссылку на службу» в Visual Studio
 
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Многие исключения, создаваемые клиента WCF, вызваны исключения в службе. Ниже приведены некоторые примеры.
 
--   <xref:System.Net.Sockets.SocketException>: существующее подключение было принудительно закрыто удаленным узлом.
+-   <xref:System.Net.Sockets.SocketException>: Существующее соединение было принудительно закрыто удаленным узлом.
 
--   <xref:System.ServiceModel.CommunicationException>: базовое подключение было неожиданно закрыто.
+-   <xref:System.ServiceModel.CommunicationException>: Базовое подключение было неожиданно закрыто.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: подключение к сокету было прервано. Это может быть вызвано ошибкой при обработке сообщения, истечением времени ожидания на удаленном узле или проблемой с соответствующим сетевым ресурсом.
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Подключение через сокет прервано. Это может быть вызвано ошибкой при обработке сообщения, истечением времени ожидания на удаленном узле или проблемой с соответствующим сетевым ресурсом.
 
 Если происходят исключения этих типов, лучшим решением проблемы является включение трассировки на стороне службы и определение исключения, которое там произошло. Дополнительные сведения о трассировке см. в разделе [трассировки](../../../docs/framework/wcf/diagnostics/tracing/index.md) и [с помощью трассировки для устранения неполадок приложения](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Практическое руководство. Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа "запрос-ответ"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Практическое руководство. Доступ к службе WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Практическое руководство. Доступ к WSE 3.0 служба](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Основные сведения о созданном коде клиента](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Практическое руководство. Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Указание поведения клиента во время выполнения](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)

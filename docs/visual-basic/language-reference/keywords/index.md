@@ -2,20 +2,14 @@
 title: Ключевые слова (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- reserved keywords, Visual Basic
-- keywords [Visual Basic]
-- Members [Visual Basic], Visual Basic run-time
-- Visual Basic code, keywords
-- Visual Basic, language reference
-- reserved words, Visual Basic keywords
-- Visual Basic, keywords
+  - 'reserved keywords, Visual Basic'
+  - 'keywords [Visual Basic]'
+  - 'Members [Visual Basic], Visual Basic run-time'
+  - 'Visual Basic code, keywords'
+  - 'Visual Basic, language reference'
+  - 'reserved words, Visual Basic keywords'
+  - 'Visual Basic, keywords'
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605320"
 ---
 # <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 В следующих таблицах перечислены все ключевые слова языка Visual Basic.  
@@ -51,13 +45,13 @@ ms.locfileid: "33605320"
 |[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |[Модуль](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Пространство имен](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[Ограничение New](../../../visual-basic/language-reference/statements/type-list.md)|[Оператор New](../../../visual-basic/language-reference/operators/new-operator.md)|[Вперед](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (в Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Параметр](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Необязательный](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |[Out (универсальный модификатор)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)|[Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)|[Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)|  
-|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Закрытые](../../../visual-basic/language-reference/modifiers/private.md)|[Свойство](../../../visual-basic/language-reference/statements/property-statement.md)|  
+|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Закрытые](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Выбрать](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
@@ -117,5 +111,5 @@ ms.locfileid: "33605320"
 |[Сводка по реестру](../../../visual-basic/language-reference/keywords/registry-summary.md)|Содержит список функций, используемых для чтения, сохранения и удаления параметров программы.|  
 |[Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Содержит список функций, используемых для работы со строками.|  
   
-## <a name="see-also"></a>См. также  
- [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>См. также
+- [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

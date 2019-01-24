@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653256"
 ---
 # <a name="datatables"></a>DataTables
 Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений. В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **набора данных**. Объект **DataTable** представляет одну таблицу с реляционными данными в памяти, является локальным для данных. NET-приложение в котором он находится, но могут заполняться из источника данных, например Microsoft SQL Server с помощью **DataAdapter** Дополнительные сведения см. в разделе [заполнение набора данных из объекта DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -55,5 +55,5 @@ ms.locfileid: "43786073"
  [Общие сведения о библиотеке классов](../../../../../docs/standard/class-library-overview.md)  
  Общие сведения о библиотеке классов .NET Framework, включая **системы** пространства имен и его пространство имен второго уровня, **System.Data**.  
   
-## <a name="see-also"></a>См. также  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

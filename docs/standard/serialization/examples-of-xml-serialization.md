@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 7d5ffc0b19e53cdc35f2d2e2cd224f692a0a80ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638305"
 ---
 # <a name="examples-of-xml-serialization"></a>Примеры сериализации XML
 Сериализация XML может иметь несколько форм, от простой до сложной. Например, можно сериализовать класс, который состоит всего лишь из открытых полей и свойств, как показано в разделе [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md). В следующих примерах кода представлены различные сложные сценарии, включая способы использования XML-сериализации для создания потока XML, соответствующего определенному документу схемы XML (XSD).  
@@ -182,7 +182,7 @@ public class Item
  При упорядочивании двух элементов экземпляр сериализуемого класса может выглядеть следующим образом.  
   
 ```xml  
-<PurchaseOrder xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <Items>  
         <Item>  
             <ItemID>aaa111</ItemID>  
@@ -764,9 +764,9 @@ public class Test
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
-- [Класс XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [Атрибуты управления сериализацией XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [Класс XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

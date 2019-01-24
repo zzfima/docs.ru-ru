@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1e9a2261ab5fd06e0514efdddf8a8e952a6e3d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649938"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>Метод ISymUnmanagedWriter::GetDebugInfo
-Возвращает информацию, необходимую для компилятора записать запись каталога отладки в заголовок переносимого исполняемого (PE) файла. Модуль записи символов заполнения всех полей, за исключением `TimeDateStamp` и `PointerToRawData`. (Компилятор отвечает за настройку этих полей соответствующим образом).  
+Возвращает информацию, необходимую для компилятора, чтобы написать запись каталога отладки в заголовок переносимого исполняемого (PE) файла. Модуль записи символов заполнения всех полей, за исключением `TimeDateStamp` и `PointerToRawData`. (Компилятор отвечает за правильную настройку этих полей.)  
   
- Компилятор должен вызвать этот метод, создавать большой двоичный объект, к PE-файла, задайте `PointerToRawData` в IMAGE_DEBUG_DIRECTORY пункты порожденную данных и запись IMAGE_DEBUG_DIRECTORY PE-файл. Компилятор также следует задать `TimeDateStamp` равным `TimeDateStamp` создаваемого PE-файла.  
+ Компилятор должен вызывать этот метод, порождаемого большой двоичный объект данных к PE-файлу, задайте `PointerToRawData` в IMAGE_DEBUG_DIRECTORY пункты порожденную данных и запись IMAGE_DEBUG_DIRECTORY PE-файл. Компилятор также следует задать `TimeDateStamp` равным `TimeDateStamp` создаваемого PE-файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +42,22 @@ HRESULT GetDebugInfo(
   
 #### <a name="parameters"></a>Параметры  
  `pIDD`  
- [in, out] Указатель на IMAGE_DEBUG_DIRECTORY, заполняемой модуля записи символов.  
+ [in, out] Указатель на IMAGE_DEBUG_DIRECTORY, заполняемой интерфейс записи символов.  
   
  `cData`  
- [in] Объект `DWORD` , содержащее размер данных отладки.  
+ [in] Объект `DWORD` , содержащий размер данных отладки.  
   
  `pcData`  
- [out] Указатель на `DWORD` , получающий размер буфера, который должен содержать данные отладки.  
+ [out] Указатель на `DWORD` , принимает размер буфера, требуемого для хранения данных отладки.  
   
  `data`  
- [out] Указатель на буфер, достаточное для хранения данных для хранилища символов отладки.  
+ [out] Указатель на буфер, достаточно велик для хранения данных в хранилище символов отладки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

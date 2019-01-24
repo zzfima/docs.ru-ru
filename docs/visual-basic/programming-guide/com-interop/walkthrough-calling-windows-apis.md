@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657978"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Пошаговое руководство. Вызов API Windows (Visual Basic)
 API-интерфейсы Windows, библиотеки динамической компоновки (DLL), которые являются частью операционной системы Windows. Они используются для выполнения задач при очень трудно написать собственную процедуру. Например, Windows предоставляет функцию с именем `FlashWindowEx` , позволяющий изменять строку заголовка приложения от светлые и темные оттенки.  
@@ -147,12 +147,12 @@ API-интерфейсы Windows, библиотеки динамической 
   
 12. Нажмите кнопку **Button2**. Если файл можно переместить, отображается сообщение, «файл был перемещен успешно».  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Создание прототипов в управляемом коде](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Маршалинг делегата как метода обратного вызова](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Создание прототипов в управляемом коде](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Маршалинг делегата как метода обратного вызова](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

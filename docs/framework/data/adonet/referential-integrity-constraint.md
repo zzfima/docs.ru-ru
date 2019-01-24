@@ -2,15 +2,15 @@
 title: ограничение ссылочной целостности
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: a4d63e07da0c75b8a0369933fccfc0cc66fcc40b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b6c5bb6e04b72f32f8c905526176a649257abeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637258"
 ---
 # <a name="referential-integrity-constraint"></a>ограничение ссылочной целостности
-Объект *ограничение ссылочной целостности* в модель данных сущности (EDM) похоже на ограничение ссылочной целостности в реляционной базе данных. Таким же образом, столбец (или столбцы) из таблицы базы данных может ссылаться первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который имеется ссылка называется *основной элемент* ограничения. Тип сущности, который ссылается на основной элемент называется *зависимом* ограничения.  
+Объект *ограничение ссылочной целостности* в Entity Data Model (EDM) аналогичен ограничения ссылочной целостности в реляционной базе данных. Таким же образом, столбец или столбцы из таблицы базы данных можно ссылаться на первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который приведена ссылка называется *основного конца* ограничения. Тип сущности, который ссылается на основном конечном элементе называется *зависимого конца* ограничения.  
   
  Ограничение ссылочной целостности определяется как часть [ассоциации](../../../../docs/framework/data/adonet/association-type.md) между двумя типами сущностей. Определение ограничения ссылочной целостности включает следующую информацию.  
   
@@ -33,6 +33,6 @@ ms.locfileid: "33352643"
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>См. также
+- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Рисование текста в указанной позиции
+title: Как выполнить Рисование текста в указанном расположении
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: e55afd0629c1b9e6d30c8b31116ec28a718fcb4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5a1791e21981f60e008b97a51d10f88b827de8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660376"
 ---
-# <a name="how-to-draw-text-at-a-specified-location"></a>Практическое руководство. Рисование текста в указанной позиции
-При выполнении пользовательской отрисовки, можно нарисовать текст в одной горизонтальной строки, начиная с заданной точки. Можно рисовать текст таким образом, используя <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, который принимает <xref:System.Drawing.Point> или <xref:System.Drawing.PointF> параметра. <xref:System.Drawing.Graphics.DrawString%2A> Также требует <xref:System.Drawing.Brush> и <xref:System.Drawing.Font>  
+# <a name="how-to-draw-text-at-a-specified-location"></a>Как выполнить Рисование текста в указанном расположении
+При выполнении пользовательского рисования можно рисовать текст в одной строке по горизонтали, начиная с указанной точки. Таким образом можно рисовать текст с помощью <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, принимающий <xref:System.Drawing.Point> или <xref:System.Drawing.PointF> параметра. <xref:System.Drawing.Graphics.DrawString%2A> Также требует <xref:System.Drawing.Brush> и <xref:System.Drawing.Font>  
   
- Можно также использовать <xref:System.Windows.Forms.TextRenderer.DrawText%2A> перегруженным методом <xref:System.Windows.Forms.TextRenderer> , который принимает <xref:System.Drawing.Point>. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> также требуется <xref:System.Drawing.Color> и <xref:System.Drawing.Font>.  
+ Можно также использовать <xref:System.Windows.Forms.TextRenderer.DrawText%2A> перегруженным методом <xref:System.Windows.Forms.TextRenderer> , принимающий <xref:System.Drawing.Point>. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> также требуется <xref:System.Drawing.Color> и <xref:System.Drawing.Font>.  
   
- На следующем рисунке показан текст, выведенный в заданной точке с помощью <xref:System.Drawing.Graphics.DrawString%2A> перегруженный метод.  
+ На следующем рисунке показан вывод текста, рисуемого в заданной точке при использовании <xref:System.Drawing.Graphics.DrawString%2A> перегруженный метод.  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/csfontstext1.png "csfontstext1")  
   
-### <a name="to-draw-a-line-of-text-with-gdi"></a>Чтобы нарисовать линию текста с использованием GDI +  
+### <a name="to-draw-a-line-of-text-with-gdi"></a>Рисование линии текста с помощью GDI +  
   
-1.  Используйте <xref:System.Drawing.Graphics.DrawString%2A> метод, передав текст, который будет <xref:System.Drawing.Point> или <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, и <xref:System.Drawing.Brush>.  
+1.  Используйте <xref:System.Drawing.Graphics.DrawString%2A> , передавая текст, <xref:System.Drawing.Point> или <xref:System.Drawing.PointF>, <xref:System.Drawing.Font>, и <xref:System.Drawing.Brush>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#30)]
      [!code-vb[System.Drawing.AlignDrawnText#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#30)]  
   
-### <a name="to-draw-a-line-of-text-with-gdi"></a>Чтобы нарисовать линию текста с использованием GDI  
+### <a name="to-draw-a-line-of-text-with-gdi"></a>Рисование линии текста с использованием GDI  
   
-1.  Используйте <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод, передав текст, который будет <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, и <xref:System.Drawing.Color>.  
+1.  Используйте <xref:System.Windows.Forms.TextRenderer.DrawText%2A> , передавая текст, <xref:System.Drawing.Point>, <xref:System.Drawing.Font>, и <xref:System.Drawing.Color>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#40)]
      [!code-vb[System.Drawing.AlignDrawnText#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#40)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущих примеров требуются:  
+ Для работы предыдущих примеров:  
   
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Рисование текста с использованием GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [Практическое руководство. Разработка шрифтов и их семейств](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
- [Практическое руководство. Многострочный вывод текста в прямоугольнике](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Рисование текста с использованием GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+- [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Практическое руководство. Шрифты и их семейств](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)
+- [Практическое руководство. Многострочный вывод текста в прямоугольнике](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)

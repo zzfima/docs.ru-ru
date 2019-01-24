@@ -2,19 +2,19 @@
 title: Автономная сериализация JSON
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618426"
 ---
 # <a name="stand-alone-json-serialization"></a>Автономная сериализация JSON
 JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера. Это формат данных по умолчанию, используемые службами ASP.NET AJAX, созданные в Windows Communication Foundation (WCF).  
   
  Его также можно использовать при создании служб AJAX без интеграции с ASP.NET; в данном случае форматом по умолчанию является XML, однако можно выбрать и JSON.  
   
- Наконец, если требуется поддержка JSON, однако создаваемая служба не является службой AJAX, сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> позволяет непосредственно сериализовать объекты .NET в данные JSON и десериализовать такие данные обратно в экземпляры типов .NET. Описание того, как это сделать, см. в разделе [как: сериализации и десериализации данных JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Наконец, если требуется поддержка JSON, однако создаваемая служба не является службой AJAX, сериализатор <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> позволяет непосредственно сериализовать объекты .NET в данные JSON и десериализовать такие данные обратно в экземпляры типов .NET. Описание того, как это сделать, см. в разделе [как: Сериализация и десериализация данных JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  При работе с JSON поддерживаются те же (за некоторыми исключениями) типы .NET, что поддерживаются сериализатором <xref:System.Runtime.Serialization.DataContractSerializer>. Список типов, см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). К ним относится большинство примитивных типов, большинство типов массивов и коллекций, а также сложные типы, в которых используются атрибуты <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -106,7 +106,7 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
  Подробное описание работы полиморфной сериализации и некоторых ограничений, которые необходимо принимать во внимание при ее использовании, см. в разделе "Дополнительные сведения для опытных пользователей" ниже.  
   
 ### <a name="versioning"></a>Управление версиями  
- Функции управления версиями контрактов данных, включая интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, полностью поддерживаются в JSON. Кроме того, в большинстве случаев можно десериализовать тип в один формат (например, XML) и затем сериализовать его в другой формат (например, JSON) и при этом сохранить данные в <xref:System.Runtime.Serialization.IExtensibleDataObject>. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Следует помнить, что JSON не придает значения порядку, поэтому любая информация о порядке будет потеряна. Кроме того, JSON не поддерживает множественные пары "ключ/значение" с одним и тем же именем ключа. Наконец, все операции над объектом <xref:System.Runtime.Serialization.IExtensibleDataObject> по своей природе полиморфны - то есть, их производные типы присваиваются типу <xref:System.Object>, базовому типу для всех типов.  
+ Возможности управления версиями контрактов данных, включая интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, полностью поддерживаются в JSON. Кроме того, в большинстве случаев можно десериализовать тип в один формат (например, XML) и затем сериализовать его в другой формат (например, JSON) и при этом сохранить данные в <xref:System.Runtime.Serialization.IExtensibleDataObject>. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Следует помнить, что JSON не придает значения порядку, поэтому любая информация о порядке будет потеряна. Кроме того, JSON не поддерживает множественные пары "ключ/значение" с одним и тем же именем ключа. Наконец, все операции над объектом <xref:System.Runtime.Serialization.IExtensibleDataObject> по своей природе полиморфны - то есть, их производные типы присваиваются типу <xref:System.Object>, базовому типу для всех типов.  
   
 ## <a name="json-in-urls"></a>JSON в URL-адресах  
  При использовании конечных точек ASP.NET AJAX с командой GET HTTP (с помощью атрибута <xref:System.ServiceModel.Web.WebGetAttribute>), входящие параметры присутствуют в URL-адресе запроса, а не в теле сообщения. JSON поддерживается даже в URL-АДРЕСЕ запроса, поэтому, если у вас есть операции, принимающей `Int` именем «number» и `Person` сложный тип с именем «p», URL-адрес может напоминать следующий URL-адрес.  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Допустимые имена ключей JSON  
  Сериализатор кодирует в XML имена ключей, не являющиеся допустимыми XML-именами. Например, элемент данных с именем «123» будет иметь кодированное имя, например "\_x0031\_\_x0032\_\_x0033\_", так как «123»-недопустимое имя элемента XML (начинается с цифра). Аналогичная ситуация может возникнуть с некоторыми международными кодировками, которые не допускаются в XML-именах. Объяснение влияния такого XML на обработку JSON, см. в разделе [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
 - [Поддержка JSON и других форматов передачи данных](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631369"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>Метод ICorProfilerCallback::RootReferences
-Уведомляет профилировщик с информацией о корневых ссылках после сборки мусора.  
+Уведомляет профилировщик о корневыми ссылками после сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,20 +43,20 @@ HRESULT RootReferences(
  [in] Массив идентификаторов объектов, которые ссылаются на статический объект или объект в стеке.  
   
 ## <a name="remarks"></a>Примечания  
- Оба `RootReferences` и [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) вызывается для уведомления профилировщика. Обычно профилировщик реализует один из них, но не одновременно, так как сведения передаются в `RootReferences2` является надмножеством переданный `RootReferences`.  
+ Оба `RootReferences` и [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) вызываемые для уведомления профилировщика. Обычно профилировщик реализует одно из них, но не оба одновременно, так как данные, передаваемые `RootReferences2` является надмножеством информации, переданной в `RootReferences`.  
   
- Существует возможность `rootRefIds` массива содержит пустой объект. Например все ссылки на объекты, объявленные в стеке, считаются корней сборщиком мусора и будут отображаться.  
+ Существует возможность `rootRefIds` массив должен содержать пустой объект. Например все ссылки на объекты, объявленные в стеке, рассматриваются как корни сборщиком мусора и всегда будет считаться.  
   
- Идентификаторы объектов, возвращенных `RootReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов со старых адресов на новые адреса. Таким образом, профилировщик должен не пытаться проверять объекты во время `RootReferences` вызова. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) — вызывается, все объекты были перемещены в новые расположения и можно безопасно проверить.  
+ Идентификаторы объектов, возвращенных `RootReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов из старого адреса в новые адреса. Таким образом, профилировщики не должны пытаться проверять объекты во время `RootReferences` вызова. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) является именем, все объекты были перемещены в новые расположения и можно безопасно проверить.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

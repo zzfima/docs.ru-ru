@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e798e1a31f771c63e71f2a85f8cbb684b237bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630805"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>Метод ICorProfilerInfo::BeginInprocDebugging
 Инициализирует внутрипроцессную поддержку отладки. Этот метод является устаревшим в .NET Framework версии 2.0.  
@@ -37,22 +37,22 @@ HRESULT BeginInprocDebugging(
   
 #### <a name="parameters"></a>Параметры  
  `fThisThreadOnly`  
- [in] Это значение равно `true` инициализировать поддержку отладки для текущего потока; задайте для него значение `false` инициализировать поддержку отладки для всех потоков.  
+ [in] Это значение равно `true` инициализировать поддержку отладки для всех потоков; ему присвоено `false` инициализировать поддержку отладки для всех потоков.  
   
  `pdwProfilerContext`  
  [out] Указатель на возвращаемое значение, идентифицирующее сеанс отладки.  
   
 ## <a name="remarks"></a>Примечания  
- Службы отладки среды CLR поддерживается только в процессе отладки в .NET Framework версий 1.0 и 1.1. Внутрипроцессная отладка позволяла профилировщику использовать проверочную API отладки. Однако из-за отзывов клиентов внутрипроцессная отладка удалено из платформы .NET Framework версии 2.0 и заменена набором функциональных возможностей, которые лучше подходят для API профилирования.  
+ Службы отладки среды CLR поддерживается только в процессе отладки в .NET Framework версий 1.0 и 1.1. В процессе отладки включить профилировщик для использования для проверки часть API отладки. Тем не менее согласно с отзывами пользователей в процессе отладки удален из .NET Framework версии 2.0 и заменены набором функциональных возможностей, которые лучше соответствуют API профилирования.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версия платформы .NET framework:** 1.0  
+ **Версии платформы .NET framework:** 1.0  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

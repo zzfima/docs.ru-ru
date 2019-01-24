@@ -1,16 +1,16 @@
 ---
-title: Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
+title: Как выполнить реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623694"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
-Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В этом разделе Создание службы WCF, которая отправляет сообщения объявления (`Hello` и `Bye`) для прокси-сервера обнаружения, поэтому она регистрацию и отмену регистрации прокси-сервере обнаружения.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Как выполнить реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
+Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: Реализовать прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В этом разделе, создание службы WCF, которая отправляет сообщения объявления (`Hello` и `Bye`) прокси-сервер обнаружения, вызывая ее регистрацию и отмену регистрации прокси-сервера обнаружения.  
   
 ### <a name="to-define-the-service-contract"></a>Определение контракта службы  
   
@@ -154,7 +154,7 @@ ms.locfileid: "33490601"
     }  
     ```  
   
- Реализация обнаруживаемой службы завершена. Перейдите к [как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Реализация обнаруживаемой службы завершена. Перейдите к [как: Реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Пример  
  Далее приведен полный код, используемый в этом подразделе.  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>См. также  
- [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Практическое руководство. Реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Практическое руководство. Реализация клиентского приложения, которое для поиска служб использует прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>См. также
+- [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Практическое руководство. Реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Практическое руководство. Реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

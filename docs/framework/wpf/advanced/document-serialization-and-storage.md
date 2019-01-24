@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630857"
 ---
 # <a name="document-serialization-and-storage"></a>Сериализация и хранение документов
 Microsoft .NET Framework предоставляет мощную среду для создания и отображения документов высокого качества.  Улучшенные возможности, поддерживающие фиксированные и потоковые документы, улучшенные элементы управления просмотром в сочетании с мощными возможностями двумерной и трехмерной графики позволяют вывести приложения .NET Framework на новый уровень качества и взаимодействия с пользователем.  Возможность гибко управлять представлением документа в памяти является ключевой функцией программы .NET Framework, а также возможность эффективно сохранять и загружать документы из хранилища данных необходима практически во всех приложениях.  Процесс преобразования документа из внутреннего представления в памяти во внешнее хранилище данных называется сериализацией.  Обратный процесс чтения хранилища данных и воссоздания исходного экземпляра в памяти называется десериализацией.  
@@ -73,10 +73,10 @@ Microsoft .NET Framework предоставляет мощную среду дл
   
 3.  После создания подключаемого сериализатора сценарий установки реализуется для распространения и установки (и удаления) подключаемого модуля (см. [Установка подключаемых сериализаторов](#InstallingPluginSerializers) выше).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Documents.Serialization>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Общие сведения о формате XPS (XML Paper Specification)](https://go.microsoft.com/fwlink?LinkID=106246)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Documents.Serialization>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [XML Paper Specification: обзор](https://go.microsoft.com/fwlink?LinkID=106246)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548a8a7743c02be5734b677010627f847c5bc4b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666249"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Метод ICorDebugStackWalk::GetFrame
 Получает текущий кадр [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта.  
@@ -35,34 +35,34 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 #### <a name="parameters"></a>Параметры  
  `pFrame`  
- [in] Указатель на адрес объекта созданного кадра, который представляет текущий кадр стека.  
+ [in] Указатель на адрес объекта созданный кадр, который представляет текущий кадр стека.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Среда выполнения успешно возвращен текущего кадра.|  
+|S_OK|Среда выполнения успешно возвращено текущего кадра.|  
 |E_FAIL|Текущий кадр не возвращен.|  
-|S_FALSE|Текущий кадр является собственным кадром стека.|  
+|S_FALSE|Текущий кадр является кадром стека.|  
 |E_INVALIDARG|Параметр `pFrame` имеет значение null.|  
 |CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
   
 ## <a name="exceptions"></a>Исключения  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugStackWalk` Возвращает только фактические кадры стека. Используйте [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод для возврата внутренних кадрах. (Внутренние кадры — это структуры данных, переданные в стек средой выполнения для хранения временных данных.)  
+ `ICorDebugStackWalk` Возвращает только фактические кадры стека. Используйте [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод для возврата внутренних кадрах. (Внутренние кадры — это структуры данных, помещается в стек средой выполнения для хранения временных данных.)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

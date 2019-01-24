@@ -2,12 +2,12 @@
 title: Использование действий для реализации поведения на стороне сервера
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622615"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Использование действий для реализации поведения на стороне сервера
 
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  В приведенном выше фрагменте кода класс `MoviesModel` был сформирован с помощью Visual Studio для добавления ссылки на службу данных WCF.  
   
-## <a name="see-also"></a>См. также  
- [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Разработка и развертывание служб WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>См. также
+- [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Разработка и развертывание служб WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631505"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Свойство оси атрибута XML (Visual Basic)
 Предоставляет доступ к значению атрибута для <xref:System.Xml.Linq.XElement> объект или на первый элемент в коллекцию <xref:System.Xml.Linq.XElement> объектов.  
@@ -30,24 +30,24 @@ object.@<attribute>
   
 ## <a name="parts"></a>Части  
  `object`  
- Обязательно. <xref:System.Xml.Linq.XElement> Объект или коллекция <xref:System.Xml.Linq.XElement> объектов.  
+ Обязательный. <xref:System.Xml.Linq.XElement> Объект или коллекция <xref:System.Xml.Linq.XElement> объектов.  
   
  .@  
- Обязательно. Обозначает начало свойства оси атрибута.  
+ Обязательный. Обозначает начало свойства оси атрибута.  
   
  <  
- Необязательный. Обозначает начало имени атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
+ Необязательный параметр. Обозначает начало имени атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
   
  `attribute`  
- Обязательно. Имя атрибута, чтобы открыть окно, в формате [`prefix`:]`name`.  
+ Обязательный. Имя атрибута, чтобы открыть окно, в формате [`prefix`:]`name`.  
   
-|Отделение|Описание|  
+|Отделение|Описание:|  
 |----------|-----------------|  
-|`prefix`|Необязательный. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
-|`name`|Обязательно. Имя локального атрибута. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|Необязательный параметр. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
+|`name`|Обязательный. Имя локального атрибута. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Необязательный. Обозначает конец имя атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
+ Необязательный параметр. Обозначает конец имя атрибута при `attribute` не является допустимым идентификатором в Visual Basic.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Строка, содержащая значение `attribute`. Если имя атрибута не существует, `Nothing` возвращается.  
@@ -106,9 +106,9 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement>  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XElement>
+- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

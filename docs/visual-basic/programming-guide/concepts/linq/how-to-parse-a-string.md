@@ -1,19 +1,19 @@
 ---
-title: 'Как: синтаксический анализ строки (Visual Basic)'
+title: Как выполнить Синтаксический анализ строки (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652453"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Как: синтаксический анализ строки (Visual Basic)
+# <a name="how-to-parse-a-string-visual-basic"></a>Как выполнить Синтаксический анализ строки (Visual Basic)
 В этом разделе показано, как создать XML-дерева в C#.  
   
 ## <a name="example"></a>Пример  
- Можно выполнить синтаксический анализ строки в Visual Basic с помощью `XElement.Parse` метод. Однако более эффективно используются XML-литералы, как показано в следующем коде, поскольку применение XML-литералов не приводит к снижению производительности, в отличие от синтаксического анализа кода XML, полученного из строки.  
+ Синтаксический анализ строки в Visual Basic с помощью `XElement.Parse` метод. Однако более эффективно используются XML-литералы, как показано в следующем коде, поскольку применение XML-литералов не приводит к снижению производительности, в отличие от синтаксического анализа кода XML, полученного из строки.  
   
  С помощью литералов XML, можно просто скопируйте и вставьте XML в программу Visual Basic.  
   
@@ -49,5 +49,5 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>См. также
+- [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

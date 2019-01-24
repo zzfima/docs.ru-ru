@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов Windows API (Visual Basic)
+title: Как выполнить Вызов API Windows (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650705"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a>Практическое руководство. Вызов Windows API (Visual Basic)
+# <a name="how-to-call-windows-apis-visual-basic"></a>Как выполнить Вызов API Windows (Visual Basic)
 В этом примере определяется и вызывается `MessageBox` функция в библиотеке user32.dll, а затем передается строка.  
   
 ## <a name="example"></a>Пример  
@@ -36,9 +36,9 @@ ms.locfileid: "44208274"
   
 ## <a name="see-also"></a>См. также
 
-- [Подробный обзор вызова неуправляемого кода](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
-- [Примеры вызовов неуправляемого кода](../../../framework/interop/platform-invoke-examples.md)  
-- [Использование неуправляемых функций DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
-- [Определение метода с помощью отражения порождаемого](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
-- [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+- [Подробный обзор вызова неуправляемого кода](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Примеры вызовов неуправляемого кода](../../../framework/interop/platform-invoke-examples.md)
+- [Использование неуправляемых функций DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)
+- [Определение метода с помощью отражения порождаемого](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [Пошаговое руководство: Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)

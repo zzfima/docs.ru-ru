@@ -2,12 +2,12 @@
 title: Рефакторинг в чистые функции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4be0c3574f2bd3171b8f5a86359d3181fe8731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644470"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Рефакторинг в чистые функции (Visual Basic)
 Важным аспектом чисто функциональных преобразований является освоение способов оптимизации существующего кода для получения чистых функций.  
@@ -20,7 +20,7 @@ ms.locfileid: "33654265"
   
  Одним из способов перехода к функциональному программированию является оптимизация существующего кода с целью устранения ненужных побочных эффектов и внешних зависимостей. Таким образом, из существующего кода создаются чистые функции.  
   
- В этом разделе объясняется, что представляет собой чистая функция и чем она не является. [Учебника: обработка содержимого документа WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) учебнике показано, как документом WordprocessingML и включает два примера оптимизации кода с помощью чистой функции.  
+ В этом разделе объясняется, что представляет собой чистая функция и чем она не является. [Руководства: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) руководстве показано, как документом WordprocessingML и включает в себя два примера рефакторинга с помощью чистой функции.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Устранение побочных эффектов и внешних зависимостей  
  В следующих примерах сравниваются обычные и чистые функции.  
@@ -49,7 +49,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Обратите внимание, что нет никакой разницы, имеет ли изменяемые данные `public` или `private` доступ, или `shared` член или член экземпляра. Чистая функция не изменяет не относящиеся к ней данные.  
+ Обратите внимание, что не имеет значения имеет ли изменяемые данные `public` или `private` доступ, или `shared` член или член экземпляра. Чистая функция не изменяет не относящиеся к ней данные.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Обычная функция, изменяющая аргумент  
  Более того, следующая версия той же функции представляет собой обычную функцию, поскольку изменяет содержимое своего параметра `sb`.  
@@ -97,8 +97,8 @@ End Module
 ## <a name="standard-query-operators"></a>Стандартные операторы запроса  
  Важной характеристикой стандартных операторов запросов является то, что они реализуются как чистые функции.  
   
- Дополнительные сведения см. в разделе [стандартные Обзор операторов запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Дополнительные сведения см. в разделе [Обзор операторов стандартных запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>См. также  
- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Сравнение функционального и Императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>См. также
+- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Сравнение функционального и Императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

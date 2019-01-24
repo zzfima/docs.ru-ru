@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68e6f7599db55ed9429f159b380a8a9f8ae3f034
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7190d2f9d4b64b6a97280914d63c98e505ec70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649444"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>Метод IMetaDataEmit::DefineImportType
-Создает ссылку для указанного типа, определенные вне текущей области видимости, а также определяет маркер для этой ссылки.  
+Создает ссылку для указанного типа, определенные вне текущей области, а также определяет маркер для этой ссылки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ HRESULT DefineImportType (
   
 #### <a name="parameters"></a>Параметры  
  `pAssemImport`  
- [in] [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс, который представляет сборки, из которого импортируется в целевой тип.  
+ [in] [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс, представляющий сборку, из которого импортируется в целевой тип.  
   
  `pbHashValue`  
  [in] Массив, содержащий хэш-код для сборки, определяемой параметром `pAssemImport`.  
@@ -52,10 +52,10 @@ HRESULT DefineImportType (
  [in] Число байтов в массиве `pbHashValue`.  
   
  `pImport`  
- [in] [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) интерфейс, представляющий область метаданных, из которого импортируется в целевой тип.  
+ [in] [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) интерфейс, который представляет область метаданных, из которого импортируется в целевой тип.  
   
  `tdImport`  
- [in] `mdTypeDef` Маркер, который указывает тип целевого объекта.  
+ [in] `mdTypeDef` Токен, который указывает тип целевого объекта.  
   
  `pAssemEmit`  
  [in] [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) интерфейс, представляющий сборку, в который импортируется в целевой тип.  
@@ -64,17 +64,17 @@ HRESULT DefineImportType (
  [out] `mdTypeRef` Маркер, который определен в текущей области для ссылки на тип.  
   
 ## <a name="remarks"></a>Примечания  
- До вызова метода [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) метод, можно использовать `DefineImportType` метод, чтобы создать ссылку на тип, в текущей области для родительского класса или интерфейса родительского элемента.  
+ До вызова метода [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) метод, можно использовать `DefineImportType` метод, чтобы создать ссылку на тип, в текущей области, для родительского класса или интерфейса родительского элемента.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

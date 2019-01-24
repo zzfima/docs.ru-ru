@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619688"
 ---
 # <a name="importfile-method"></a>Метод ImportFile
 Импортирует сборок и несвязанных модулей.  
@@ -44,27 +44,27 @@ HRESULT ImportFile(
  Полное имя файла для импорта.  
   
  `pszTargetName`  
- Необязательное имя файла вывода, можно использовать для переименования файла, он связан в сборку.  
+ Необязательный выходной имя файла, который может использоваться для переименования файла, так как он связан в сборку.  
   
  `fSmartImport`  
- Значение TRUE, если используется ImportTypes, в противном случае импорт должно выполняться вручную.  
+ Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
   
  `pImportToken`  
- Указатель на маркер, в котором будет храниться уникальный идентификатор файла. Это может быть файл сборки или файл.  
+ Указатель на маркер, где будет храниться уникальный идентификатор файла. Файл может быть сборки или файла.  
   
  `ppAssemblyScope`  
- Получает указатель на [imetadataassemblyimport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Может иметь значение NULL, если файл не является сборкой.  
+ Получает указатель на [интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Может иметь значение NULL, если файл не является сборкой.  
   
  `pdwCountOfScopes`  
- Указатель на число файлов и/или областей, которые были импортированы.  
+ Указатель на количество файлов и/или области, которые были импортированы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

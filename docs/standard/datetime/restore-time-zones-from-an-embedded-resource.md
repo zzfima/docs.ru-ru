@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: восстановление часовых поясов из внедренного ресурса'
+title: Как выполнить Восстановление часовых поясов из внедренного ресурса
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656809"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Практическое: восстановление часовых поясов из внедренного ресурса
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Как выполнить Восстановление часовых поясов из внедренного ресурса
 
-В этом разделе описывается восстановление часовых поясов, которые были сохранены в файле ресурсов. Сведения и инструкции по сохранению часовых поясов см. в разделе [как: сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+В этом разделе описывается восстановление часовых поясов, которые были сохранены в файле ресурсов. Сведения и инструкции по сохранению часовых поясов см. в разделе [как: Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Для десериализации объекта TimeZoneInfo из внедренного ресурса
 
@@ -60,6 +60,6 @@ ms.locfileid: "48841063"
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
-* [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
-* [Практическое руководство. Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
+- [Практическое руководство. Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

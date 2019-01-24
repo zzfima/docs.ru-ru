@@ -14,15 +14,15 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: cfa53b3585846da25711739fb7af4bde21746b29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9af1436af950346eef572c34b9d42da3e8c8cf24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671165"
 ---
 # <a name="throw-statement-visual-basic"></a>Оператор Throw (Visual Basic)
-Вызывает исключение в процедуре.  
+Возникло исключение в процедуре.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,14 @@ Throw [ expression ]
   
 ## <a name="part"></a>Отделение  
  `expression`  
- Сведения о к созданию исключения. Необязательно, если в `Catch` инструкции, в противном случае необходимо.  
+ Сведения об исключении исключение. Необязательно, если находятся в `Catch` инструкции, в противном случае необходимо.  
   
 ## <a name="remarks"></a>Примечания  
- `Throw` Оператор создает исключение, которое можно обработать с помощью кода структурированной обработки исключений (`Try`... `Catch`... `Finally`) или неструктурированных код обработки исключений (`On Error GoTo`). Можно использовать `Throw` инструкции для перехвата ошибок в коде, так как Visual Basic перемещается вверх по стеку вызовов, пока не найдет соответствующий код обработки исключений.  
+ `Throw` Оператор создает исключение, которое можно обработать с помощью структурированный код обработки исключений (`Try`... `Catch`... `Finally`) или неструктурированных код обработки исключений (`On Error GoTo`). Можно использовать `Throw` инструкции для перехвата ошибок в коде, поскольку Visual Basic перемещается вверх по стеку вызовов, пока не найдет соответствующий код обработки исключений.  
   
- Объект `Throw` оператор без выражения может использоваться только в `Catch` инструкции, исключение обрабатываемое в данный момент повторно создает инструкцию случай `Catch` инструкции.  
+ Объект `Throw` оператор выражения не может использоваться только в `Catch` инструкции, в котором операторе case повторно вызывает исключение, обрабатываемое в данный момент `Catch` инструкции.  
   
- `Throw` Инструкция сбрасывает стек вызовов для `expression` исключения. Если `expression` не указано, стек вызовов останется без изменений. Можно получить доступ к стек вызовов для исключения через <xref:System.Exception.StackTrace%2A> свойство.  
+ `Throw` Инструкция сбрасывает стек вызовов для `expression` исключение. Если `expression` не указан, стек вызовов останется без изменений. Можно получить доступ к стек вызовов для исключения через <xref:System.Exception.StackTrace%2A> свойство.  
   
 ## <a name="example"></a>Пример  
  В следующем коде используется `Throw` инструкции для создания исключения:  
@@ -51,8 +51,8 @@ Throw [ expression ]
   
  **Модуль:** `Interaction`  
   
- **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>См. также  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>См. также
+- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)

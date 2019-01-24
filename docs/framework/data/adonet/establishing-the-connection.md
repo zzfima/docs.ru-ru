@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619387"
 ---
 # <a name="establishing-the-connection"></a>Установка подключения
 Для создания соединения с Microsoft SQL Server используется объект <xref:System.Data.SqlClient.SqlConnection> поставщика данных .NET Framework для SQL Server. Для соединения с источником данных OLE DB используется объект <xref:System.Data.OleDb.OleDbConnection> поставщика данных .NET Framework для OLE DB. Для соединения с источником данных используется объект <xref:System.Data.Odbc.OdbcConnection> поставщика данных .NET Framework для ODBC. Для соединения с источником данных Oracle используется объект <xref:System.Data.OracleClient.OracleConnection> поставщика данных .NET Framework для Oracle. Для безопасного хранения и извлечения строки подключения, см. в разделе [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Встроенная безопасность и ASP.NET  
  Встроенная безопасность SQL Server (именуемая также доверительными соединениями) обеспечивает защиту при соединении с SQL Server, так как не отображает идентификатор пользователя и пароль в строке соединения, поэтому является рекомендуемым методом проверки подлинности соединения. Встроенная безопасность основана на использовании текущего идентификатора безопасности, или маркера выполняемого процесса. В приложениях рабочего стола, как правило, используется идентификатор текущего, вошедшего в систему пользователя.  
   
- Идентификатор безопасности приложений ASP.NET может быть настроен на получение одного из нескольких различных параметров. Чтобы лучше понять удостоверением безопасности, которое приложение ASP.NET использует при соединении с SQL Server, см. в разделе [олицетворение ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [проверки подлинности ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), и [как: Access SQL С помощью Windows Server встроенная система безопасности](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ Идентификатор безопасности приложений ASP.NET может быть настроен на получение одного из нескольких различных параметров. Чтобы лучше понять удостоверением безопасности, которое приложение ASP.NET использует при соединении с SQL Server, см. в разделе [олицетворение ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [проверки подлинности ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), и [как: Доступ к SQL Server с помощью Windows встроенная система безопасности](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Соединение с источником данных OLE DB  
  Поставщик данных .NET Framework для OLE DB предоставляет возможность подключения к данным источников данных OLE DB (используя SQLOLEDB, поставщик OLE DB для SQL Server) с помощью **OleDbConnection** объекта.  
@@ -142,8 +142,8 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

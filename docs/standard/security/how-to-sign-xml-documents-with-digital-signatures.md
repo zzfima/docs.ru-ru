@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Подписание XML-документов с помощью цифровых подписей
+title: Как выполнить Подписание XML-документов с помощью цифровых подписей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622628"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Практическое руководство. Подписание XML-документов с помощью цифровых подписей
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Как выполнить Подписание XML-документов с помощью цифровых подписей
 Можно использовать классы в пространстве имен <xref:System.Security.Cryptography.Xml> для подписания XML-документа или его части при помощи цифровой подписи.  Цифровые подписи XML (XMLDSIG) позволяют убедиться, что данные не были изменены после подписания.  Дополнительные сведения о стандарте XMLDSIG см. в рекомендации консорциума World Wide Web (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  В примере кода в данной процедуре показано создание цифровой подписи для всего XML-документа и прикрепление подписи к документу в элементе <`Signature`>.  Пример создает ключ подписывания RSA, добавляет его в безопасный контейнер ключей и затем использует этот ключ для создания цифровой подписи XML-документа.  Впоследствии ключ можно извлечь для проверки цифровой подписи XML либо использовать для подписывания другого XML-документа.  
@@ -120,5 +120,5 @@ ms.locfileid: "45664609"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [Практическое руководство. Проверка цифровых подписей XML-документов](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

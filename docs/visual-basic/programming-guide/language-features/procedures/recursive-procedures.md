@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660727"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Рекурсивные процедуры (Visual Basic)
 Объект *рекурсивного* процедуры — это приложения, вызывает саму себя. Как правило это не самый эффективный способ написания кода Visual Basic.  
@@ -37,15 +37,15 @@ ms.locfileid: "43514346"
   
  **Тестирование**. Если вы пишете рекурсивную процедуру, вы должны проверить его очень осторожно убедитесь в том, что он всегда соответствует некоторым условиям ограничивающим. Следует также убедиться, не хватает памяти из-за наличия слишком много рекурсивных вызовов.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.StackOverflowException>  
- [Процедуры](./index.md)  
- [Подпрограммы](./sub-procedures.md)  
- [Процедуры функций](./function-procedures.md)  
- [Процедуры свойств](./property-procedures.md)  
- [Процедуры операторов](./operator-procedures.md)  
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
- [Перегрузка процедур](./procedure-overloading.md)  
- [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)  
- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Разрешение вопросов, связанных с исключениями: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>См. также
+- <xref:System.StackOverflowException>
+- [Процедуры](./index.md)
+- [Подпрограммы](./sub-procedures.md)
+- [Процедуры функций](./function-procedures.md)
+- [Процедуры свойств](./property-procedures.md)
+- [Процедуры операторов](./operator-procedures.md)
+- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
+- [Перегрузка процедур](./procedure-overloading.md)
+- [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)
+- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Устранение исключений: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

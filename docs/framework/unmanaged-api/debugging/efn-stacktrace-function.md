@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636395"
 ---
 # <a name="efnstacktrace-function"></a>Функция _EFN_StackTrace
 Предоставляет текстовое представление трассировки управляемого стека и массив записей `CONTEXT`, по одной для каждого перехода между неуправляемым и управляемым кодом.  
@@ -42,7 +42,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 #### <a name="parameters"></a>Параметры  
  `Client`  
- [in] Клиент которого выполняется отладка.  
+ [in] Клиент, для которого выполняется отладка.  
   
  `wszTextOut`  
  [out] Текстовое представление трассировки стека.  
@@ -51,7 +51,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  [out] Указатель на число символов в `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Массив контексты перехода.  
+ [out] Массив контекстов перехода.  
   
  `puiTransitionContextCount`  
  [out] Указатель на число контекстов перехода в массиве.  
@@ -60,20 +60,20 @@ HRESULT CALLBACK _EFN_StackTrace(
  [in] Размер структуры контекста.  
   
  `Flags`  
- [in] Значение 0 или SOS_STACKTRACE_SHOWADDRESSES (0x01) для отображения регистр EBP и указатель стека ввод (ESP) перед каждой `module!functionname` строки.  
+ [in] Значение 0 или SOS_STACKTRACE_SHOWADDRESSES (0x01) для отображения регистр EBP и указатель стека ввод (ESP), перед каждым `module!functionname` строки.  
   
 ## <a name="remarks"></a>Примечания  
- `_EFN_StackTrace` Структуру может вызываться из программный интерфейс WinDbg. Параметры используются следующим образом:  
+ `_EFN_StackTrace` Структуры, которые могут вызываться из WinDbg программный интерфейс. Параметры используются следующим образом:  
   
--   Если `wszTextOut` имеет значение null и `puiTextLength` — не null, функция возвращает длину строки в `puiTextLength`.  
+-   Если `wszTextOut` имеет значение null и `puiTextLength` — не равно null, функция возвращает длину строки в `puiTextLength`.  
   
--   Если `wszTextOut` — не null, функция сохраняет текст в `wszTextOut` до местоположения, указанного параметром `puiTextLength`. Он возвращает успешно, если было достаточно места в буфере или возвращает значение E_OUTOFMEMORY, если буфер недостаточно длинный.  
+-   Если `wszTextOut` — не равно null, функция сохраняет текст в `wszTextOut` до местоположения, указанного параметром `puiTextLength`. Успешно возвращается, если было достаточно места в буфере, или возвращает значение E_OUTOFMEMORY, если буфер недостаточно длинный.  
   
 -   Переход части функции учитывается, если `pTransitionContexts` и `puiTransitionContextCount` оба имеют значение null. В этом случае функция предоставляет вызывающим объектам с помощью текстовых выходных данных только имена функций.  
   
--   Если `pTransitionContexts` имеет значение null и `puiTransitionContextCount` — не null, функция возвращает необходимое количество записей контекста в `puiTransitionContextCount`.  
+-   Если `pTransitionContexts` имеет значение null и `puiTransitionContextCount` — не равно null, функция возвращает необходимое количество записей контекста в `puiTransitionContextCount`.  
   
--   Если `pTransitionContexts` — не null, функция воспринимает его как массив структур длины `puiTransitionContextCount`. Размер структуры определяется `uiSizeOfContext`, и должен быть размер [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) или `CONTEXT` для архитектуры.  
+-   Если `pTransitionContexts` — не равно null, функция воспринимает его как массив структур длины `puiTransitionContextCount`. Задается размер структуры `uiSizeOfContext`, и должен быть размер [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) или `CONTEXT` для архитектуры.  
   
 -   `wszTextOut` записывается в следующем формате:  
   
@@ -84,22 +84,22 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Если в шестнадцатеричном формате смещение равно 0x0, смещения не записывается.  
+-   Если смещение в шестнадцатеричном формате 0x0, смещение не записывается.  
   
--   Если нет управляемого кода в потоке в данный момент в контексте, функция возвращает значение SOS_E_NOMANAGEDCODE.  
+-   Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает значение SOS_E_NOMANAGEDCODE.  
   
--   `Flags` Параметр имеет значение 0 или SOS_STACKTRACE_SHOWADDRESSES для просмотра EBP и ESP перед каждой `module!functionname` строки. По умолчанию — 0.  
+-   `Flags` Параметр имеет значение 0, или SOS_STACKTRACE_SHOWADDRESSES, чтобы увидеть EBP и ESP перед каждым `module!functionname` строки. По умолчанию — 0.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** SOS_Stacktrace.h  
+ **Заголовок.** SOS_Stacktrace.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -2,12 +2,12 @@
 title: Безопасность SQL Server, экспресс-выпуск
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664074"
 ---
 # <a name="sql-server-express-security"></a>Безопасность SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express (SQL Server Express) основан на версии Microsoft SQL Server и поддерживает большинство средств ядра базы данных этой версии. Этот выпуск спроектирован так, что несущественные функции и средства обеспечения сетевого взаимодействия отменены по умолчанию. Благодаря этому уменьшается контактная зона, доступная для атаки со стороны злонамеренного пользователя.  
@@ -37,7 +37,7 @@ ms.locfileid: "43485590"
 |[Пользовательские экземпляры для администраторов](https://msdn.microsoft.com/library/ms143684.aspx) в электронной документации по SQL Server|Описывает, как создать и развернуть пользовательские экземпляры.|  
 |[Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Описывает возможности пользовательского экземпляра в приложении ADO.NET. Предоставляет сведения о том, как разрешить пользовательский экземпляр, подключиться к пользовательскому экземпляру с помощью <xref:System.Data.SqlClient.SqlConnection>, а также о времени существования пользовательского экземпляра и сценариях пользовательского экземпляра.|  
   
-## <a name="see-also"></a>См. также  
- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

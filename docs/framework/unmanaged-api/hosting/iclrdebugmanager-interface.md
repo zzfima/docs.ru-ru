@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 515eb0633c82c3e1386487d1866de79c9898c9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654611"
 ---
 # <a name="iclrdebugmanager-interface"></a>Интерфейс ICLRDebugManager
-Предоставляет методы, позволяющие ведущему приложению связать набор задач с идентификатором и понятным именем.  
+Предоставляет методы, которые позволяют ведущему приложению связать набор задач с идентификатором и понятное имя.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|Устанавливает новое соединение между узлом и отладчик связывания задачи с идентификатором и понятным именем.|  
-|[Метод EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Удаляет связь между список задач и идентификатором и понятным именем.|  
+|[Метод BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)|Устанавливает новое соединение между узлом и отладчик связывания задачи с идентификатором и понятное имя.|  
+|[Метод EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)|Удаляет связь между список задач и идентификатора и понятным именем.|  
 |[Метод GetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-getdacl-method.md)|Этот метод не реализован.|  
 |[Метод IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-isdebuggerattached-method.md)|Получает значение, показывающее, присоединен ли отладчик к процессу.|  
 |[Метод SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|Связывает список [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляры с идентификатором и понятное имя.|  
 |[Метод SetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|Этот метод не реализован.|  
-|[Метод SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Задает политику для чтения файлов базы данных (PDB). Политика определяет, включены ли сведения о номерах строк и файлах в стеки вызовов.|  
+|[Метод SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Задает политику для чтения файлов базы данных (PDB). Политика определяет, включаются ли сведения о файлах и номера строк в стеках вызовов.|  
   
 ## <a name="remarks"></a>Примечания  
- В сценариях отладки узлу может потребоваться для группирования задач в соответствии с собственной логикой программирования. Например группирование позволит разработчику видеть только действия, необходимые для API разработчика, вместо всего списка задач, выполняемых в процессе. `ICLRDebugManager` Позволяет ведущему приложению реализовать этот вид группировки.  
+ В сценариях отладки, узел может потребоваться сгруппировать задачи в соответствии с собственной логикой программирования. Например группирование позволит разработчику видят только те задачи, необходимые для API разработчика, вместо всего списка задач, выполняемых в процессе. `ICLRDebugManager` позволяет узлу для реализации такого рода группирования.  
   
 > [!IMPORTANT]
->  Три `ICLRDebugManager` методы, `BeginConnection`, `SetConnectionTasks` и `EndConnection`, зависящие от друг с другом. Они должны вызываться в определенном порядке для правильной работы.  
+>  Три `ICLRDebugManager` методы, `BeginConnection`, `SetConnectionTasks` и `EndConnection`, зависят от друг с другом. Они должны вызываться в заданном порядке работала должным образом.  
   
  Группирование, идентификаторы и понятные имена, назначаемые узлом группированию, не имеют смысла для общеязыковой среды выполнения (CLR). Среда CLR передает информацию по отладчику.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

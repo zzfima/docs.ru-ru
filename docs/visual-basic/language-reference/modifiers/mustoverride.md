@@ -15,28 +15,28 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 5dabd90d29bc41d017436876af24a67fa87e8e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627334"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Указывает, что свойство или процедура не реализована в этом классе и должен быть переопределен в производном классе, прежде чем можно будет использовать.  
+Указывает, что свойство или процедура в этом классе не реализован и должен быть переопределен в производном классе, прежде чем можно будет использовать.  
   
 ## <a name="remarks"></a>Примечания  
- `MustOverride` можно использовать только в операторе объявления свойства или процедуры. Свойство или процедура, которая указывает `MustOverride` должен быть членом класса, и класс должен быть помечен [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ `MustOverride` можно использовать только в операторе объявления свойства или процедуры. Свойство или процедуру, которая указывает `MustOverride` должен быть членом класса, и класс должен быть помечен [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>Правила  
   
--   **Неполные объявление.** При указании `MustOverride`, можно не указывать любые дополнительные строки кода для свойства или процедуры, не даже `End Function`, `End Property`, или `End Sub` инструкции.  
+-   **Неполное объявление.** При указании `MustOverride`, не нужно вводить любые дополнительные строки кода для свойства или процедуры, не даже `End Function`, `End Property`, или `End Sub` инструкции.  
   
 -   **Комбинированные модификаторы.** Нельзя указать `MustOverride` вместе с `NotOverridable`, `Overridable`, или `Shared` в одном объявлении.  
   
 -   **Сокрытие и переопределение.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Альтернативные условия.** Иногда называется элемент, который не может использоваться только в переопределение *чистые виртуальные* элемента.  
+-   **Альтернативные условия.** Элемент, который не может использоваться только в переопределении иногда называют *чисто виртуальный* элемент.  
   
  Модификатор `MustOverride` можно использовать в следующих контекстах:  
   
@@ -46,10 +46,10 @@ ms.locfileid: "33599874"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)  
- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>См. также
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

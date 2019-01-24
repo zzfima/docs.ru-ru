@@ -2,17 +2,17 @@
 title: '&lt;add&gt; для &lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 4a8eb3df9be6b6b5bfe43aee330f3174ddca66ab
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cc7cce62082317bb86218d68bd2881b74649771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670190"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;add&gt; для &lt;backupList&gt;
 Представляет элемент конфигурации, в котором задается элемент резервной конечной точки.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<Маршрутизация >  
 \<backupLists >  
 \<backupList >  
@@ -47,9 +47,9 @@ ms.locfileid: "54151479"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Содержит список конечных точек, которые вы хотите использовать служба маршрутизации в случае, если основная конечная точка становится недоступной.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

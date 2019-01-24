@@ -2,12 +2,12 @@
 title: Управление потреблением ресурсов и повышение производительности
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 1e0512ce62f5a7b25546e8824a745fdaabb5ec72
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664165"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Управление потреблением ресурсов и повышение производительности
 В этом разделе описано несколько свойств разных областей архитектуры Windows Communication Foundation (WCF), которые работают с управления потреблением ресурсов и влияют на метрики производительности.
@@ -41,7 +41,7 @@ ms.locfileid: "43397879"
 > [!NOTE]
 > Предварительно созданный код сериализации может использоваться только в клиентских приложениях, а не в службах.
 
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) может повысить производительность при запуске этих приложений путем создания необходимого кода сериализации из компилированных сборок для приложения. Дополнительные сведения см. в разделе [как: улучшения запуска время клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+ [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) может повысить производительность при запуске этих приложений путем создания необходимого кода сериализации из компилированных сборок для приложения. Дополнительные сведения см. в разделе [Как Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Проблемы производительности при размещении служб WCF под ASP.NET
  Когда служба WCF размещается под IIS и ASP.NET, параметры конфигурации IIS и ASP.NET могут повлиять на пропускную способность и объем занимаемой службой WCF памяти.  Дополнительные сведения о производительности ASP.NET см. в разделе [повышение производительности ASP.NET](https://go.microsoft.com/fwlink/?LinkId=186462).  Есть один параметр, использование которого может иметь непредвиденные последствия. Это <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, который является свойством <xref:System.Web.Configuration.ProcessModelSection>. Если приложение имеет фиксированное или небольшое количество клиентов, изменение параметра <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> на 2 может обеспечить повышение пропускной способности на многопроцессорных компьютерах с близким к 100% использованием ЦП. За такое увеличение производительности приходится платить: оно также влечет за собой повышение использования памяти, что может снизить масштабируемость.

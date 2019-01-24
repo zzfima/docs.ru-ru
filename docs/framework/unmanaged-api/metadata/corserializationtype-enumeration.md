@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637376"
 ---
 # <a name="corserializationtype-enumeration"></a>Перечисление CorSerializationType
 Задает способ сериализации объекта средой CLR.  
@@ -57,21 +57,21 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|Сериализация объекта не определено.|  
 |`SERIALIZATION_TYPE_BOOLEAN`|Объект сериализуется как логический тип.|  
 |`SERIALIZATION_TYPE_CHAR`|Объект сериализуется как тип символа.|  
-|`SERIALIZATION_TYPE_I1`|Объект сериализуется как целое число со знаком 1 байт.|  
+|`SERIALIZATION_TYPE_I1`|Объект сериализуется как 1-байтовое целое число со знаком.|  
 |`SERIALIZATION_TYPE_U1`|Объект сериализуется как 1-байтовое целое число без знака.|  
 |`SERIALIZATION_TYPE_I2`|Объект сериализуется как целое число со знаком длиной 2 байта.|  
 |`SERIALIZATION_TYPE_U2`|Объект сериализуется как целое число без знака длиной 2 байта.|  
-|`SERIALIZATION_TYPE_I4`|Объект сериализуется как целое число со знаком 4 байта.|  
+|`SERIALIZATION_TYPE_I4`|Объект сериализуется как 4-байтовое целое число со знаком.|  
 |`SERIALIZATION_TYPE_U4`|Объект сериализуется как 4-байтовое целое число без знака.|  
-|`SERIALIZATION_TYPE_I8`|Объект сериализуется как целое число со знаком размером 8 байт.|  
+|`SERIALIZATION_TYPE_I8`|Объект сериализуется в виде целого числа со знаком размером 8 байт.|  
 |`SERIALIZATION_TYPE_U8`|Объект сериализуется как целое число без знака размером 8 байт.|  
 |`SERIALIZATION_TYPE_R4`|Объект сериализуется как 4-байтовое с плавающей запятой.|  
-|`SERIALIZATION_TYPE_R8`|Объект сериализуется как 8-байтовое число с плавающей запятой.|  
+|`SERIALIZATION_TYPE_R8`|Объект сериализуется как с плавающей запятой размером 8 байт.|  
 |`SERIALIZATION_TYPE_STRING`|Объект сериализуется как тип System.String.|  
 |`SERIALIZATION_TYPE_SZARRAY`|Объект сериализуется как одномерный, нулевой нижней границы массива.|  
 |`SERIALIZATION_TYPE_TYPE`|Объект сериализуется как универсальный тип.|  
@@ -81,11 +81,11 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|Объект сериализуется как перечисление.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

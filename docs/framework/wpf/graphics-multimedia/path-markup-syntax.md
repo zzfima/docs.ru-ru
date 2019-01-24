@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671269"
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Путями, рассматриваются в [фигур и базовых средств рисования в WPF Обзор](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются сложной и мощной мини-язык, который можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "45591936"
 ### <a name="a-note-about-white-space"></a>Примечание о пробелах  
  В следующих разделах для краткости в примерах синтаксиса показан один пробел, но допускается использовать по нескольку пробелов везде, где указан один пробел.  
   
- Два числа не обязательно должны быть разделены запятыми или пробелы, но это может быть выполнено, только если результирующая строка получается неоднозначной. Например `2..3` фактически представляет два числа: «2». и 3. Аналогичным образом `2-3` «2» и «-3". Пробелы до и после команд ставить необязательно.  
+ Два числа не обязательно должны быть разделены запятыми или пробелы, но это может быть выполнено, только если результирующая строка получается неоднозначной. Например `2..3` фактически представляет два числа: "2." и 3. Аналогичным образом `2-3` «2» и «-3". Пробелы до и после команд ставить необязательно.  
   
 ### <a name="syntax"></a>Синтаксис  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Атрибута синтаксис для использования <xref:System.Windows.Media.StreamGeometry> состоит из необязательного <xref:System.Windows.Media.FillRule> значение и один или несколько следующих описаний.  
@@ -71,7 +71,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`M` *startPoint*<br /><br /> -или-<br /><br /> `m` *startPoint*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Начальная точка новой фигуры.|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
@@ -104,7 +104,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`H`  *x*<br /><br /> -или-<br /><br /> `h`  *x*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X конечной точки линии.|  
   
@@ -118,7 +118,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`V`  *y*<br /><br /> -или-<br /><br /> `v`  *y*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y конечной точки линии.|  
 
@@ -144,7 +144,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную и конечную касательные к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -168,7 +168,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -204,7 +204,7 @@ ms.locfileid: "45591936"
 |------------|  
 |`x` `,` `y`<br /><br /> -или-<br /><br /> `x` `y`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X точки.|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y точки.|  
@@ -224,11 +224,11 @@ ms.locfileid: "45591936"
   
  Можно также использовать экспоненциальное представление чисел. Например `+1.e17` является допустимым значением.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

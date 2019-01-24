@@ -2,12 +2,12 @@
 title: Привязка данных в клиенте Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 467a81c3f574137bc95390f70d6913a532da6ffe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626905"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Привязка данных в клиенте Windows Presentation Foundation
 Этот образец демонстрирует использование привязки данных в клиенте Windows Presentation Foundation (WPF). Образец использует службу Windows Communication Foundation (WCF), которая случайным образом формирует массив альбомов для возвращения клиенту. Каждый альбом имеет имя, цену и список дорожек в альбоме. Каждая дорожка в альбоме имеет имя и длительность. Сведения, возвращаемые службой, автоматически привязывается к пользовательскому интерфейсу (UI), имеющихся в клиенте Windows Presentation Foundation (WPF).  

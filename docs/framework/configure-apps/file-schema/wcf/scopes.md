@@ -2,21 +2,21 @@
 title: '&lt;Области&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7afab700c2d9eb91ffe57bfefaf5864782a0af5f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1235b483f63ab71405803c16f2d3c9926b15cfad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642991"
 ---
 # <a name="ltscopesgt"></a>&lt;Области&gt;
 Содержит коллекцию элементов конфигурации, указывающие идентификаторы URI пользовательских областей, которые можно использовать для фильтрации конечных точек службы во время выполнения запроса.  
   
-\<система. ServiceModel >  
+\<system.ServiceModel>  
 \<варианты поведения >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<поведение >  
-\<endpointDiscovery >  
+\<endpointDiscovery>  
 \<области >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -49,9 +49,9 @@ ms.locfileid: "54145332"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Указывает различные параметры обнаружения для конечной точки, такие как возможность обнаружения, области и любые пользовательские модули для ее метаданных.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

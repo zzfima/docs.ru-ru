@@ -2,12 +2,12 @@
 title: Отслеживание рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627178"
 ---
 # <a name="workflow-tracing"></a>Отслеживание рабочих процессов
 Трассировка рабочего процесса позволяет получать сведения диагностики при помощи прослушивателей трассировки .NET Framework. Трассировку можно включить при обнаружении проблемы в работе приложения, а затем снова отключить после разрешения проблемы. Существует два способа включения трассировки отладки для рабочих процессов. Можно настроить отслеживание в средстве просмотра трассировки событий либо использовать <xref:System.Diagnostics> для отправки событий трассировки в файл.  
@@ -69,6 +69,6 @@ ms.locfileid: "45591253"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>См. также
+- [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)

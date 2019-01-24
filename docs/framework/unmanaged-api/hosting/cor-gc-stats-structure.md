@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009f1482de6e1daea21766300b4fb6a3ab0ffc8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638110"
 ---
 # <a name="corgcstats-structure"></a>Структура COR_GC_STATS
-Предоставляет статистику по механизм сборки мусора среды common language runtime (CLR).  
+Предоставляет статистику механизм сбора мусора общеязыковой среды выполнения (CLR).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,26 +46,26 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`Flags`|Указывает значения полей, которые следует вычисляется и возвращается.|  
-|`ExplicitGCCount`|Указывает номер выполнения сборки мусора, которые были принудительно вызваны внешним запросом.|  
-|`GenCollectionsTaken`|Указывает количество мусора, выполненных для каждого поколения.|  
+|`Flags`|Указывает, вычисления и возвращаемых значений полей, которые.|  
+|`ExplicitGCCount`|Указывает номер сборки мусора, которые были принудительно с помощью внешнего запроса.|  
+|`GenCollectionsTaken`|Указывает число сборов мусора, выполненных для каждого поколения.|  
 |`CommittedKBytes`|Общее число килобайтов зафиксированных во всех кучах.|  
 |`ReservedKBytes`|Общее число килобайтов зарезервированных во всех кучах.|  
-|`Gen0HeapSizeKBytes`|Размер в килобайтах, кучи нулевого поколения.|  
+|`Gen0HeapSizeKBytes`|Размер в килобайтах, нулевого поколения кучи.|  
 |`Gen1HeapSizeKBytes`|Размер в килобайтах, кучи поколения.|  
 |`Gen2HeapSizeKBytes`|Размер в килобайтах, кучи второго поколения.|  
-|`LargeObjectHeapSizeKBytes`|Размер в килобайтах, кучи больших объектов.|  
-|`KBytesPromotedFromGen0`|Размер в килобайтах, объектов, перешедших начиная с нулевого поколения в поколение один.|  
+|`LargeObjectHeapSizeKBytes`|Размер в килобайтах, куча больших объектов.|  
+|`KBytesPromotedFromGen0`|Размер в килобайтах, объектов, перенесенных из нулевого поколения, одно.|  
 |`KBytesPromotedFromGen1`|Размер в килобайтах, перенесенных из первого поколения двух объектов.|  
   
 ## <a name="remarks"></a>Примечания  
- [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод требует `Flags` поле `COR_GC_STATS` структура будет присвоено одно или несколько значений из [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) перечисления, чтобы указать, какие статистические данные должны быть заданы.  
+ [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод требует `Flags` поле `COR_GC_STATS` структура будет присвоено одно или несколько значений из [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) перечисления, чтобы указать, какие Статистика устанавливаемое значение.  
   
- В следующей таблице сопоставлены статистические данные, предоставляемые этой структуры на две [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) значения перечисления `COR_GC_COUNTS` и `COR_GC_MEMORYUSAGE`.  
+ В таблице ниже приведены статистические данные, предоставляемые этой структуры к двум [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) значений перечисления, `COR_GC_COUNTS` и `COR_GC_MEMORYUSAGE`.  
   
-|Заданные COR_GC_COUNTS|Заданные COR_GC_MEMORYUSAGE|  
+|Определяемое COR_GC_COUNTS|Определяемое COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
@@ -78,15 +78,15 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** GCHost.idl  
+ **Заголовок.** GCHost.idl  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)  
- [Сборка мусора](../../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)
+- [Сборка мусора](../../../../docs/standard/garbage-collection/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+title: Как выполнить Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669319"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Как выполнить Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 При использовании класса, модуля или структура, которая содержит члены типов целое число без знака, можно получить доступ к этим членам с помощью Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Для вызова функции Windows, принимающей тип без знака  
@@ -77,9 +77,9 @@ ms.locfileid: "43524569"
     > [!IMPORTANT]
     >  Вызов Windows API требует разрешение неуправляемого кода, которое может повлиять на выполнение в ситуациях частичного доверия. Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Пошаговое руководство: Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

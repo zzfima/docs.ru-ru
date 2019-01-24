@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636427"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Числовые типы данных (Visual Basic)
 Visual Basic предоставляет несколько *числовых типов данных* для обработки чисел в различные представления. *Целочисленный* типы представляют только целые числа (положительные, отрицательных и нулевых), и *нецелочисленным* — числа с целой и дробной частями.  
@@ -78,9 +78,9 @@ Visual Basic предоставляет несколько *числовых т�
 ### <a name="small-fractional-numbers"></a>Малые дробные числа  
  Если не требуется полный спектр `Double` тип данных, можно использовать `Single` тип данных, который может содержать числа с плавающей запятой от - 3, 4028235E + 38 до 3, 4028235E + 38. Минимальные значения `Single` переменные являются - 1, 401298E-45 для отрицательных значений и 1, 401298E-45 для положительных значений. Если у вас есть очень большое количество переменных, которые содержат небольшого числа с плавающей запятой, среда CLR, иногда может хранить ваши `Single` переменные более эффективно и снизить потребление памяти.  
   
-## <a name="see-also"></a>См. также  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Прочие типы данных](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>См. также
+- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Прочие типы данных](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648770"
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 <xref:System.Windows.PropertyPath> Поддерживает сложный встроенный объект [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксиса для настройки различных свойств, которые принимают <xref:System.Windows.PropertyPath> тип в качестве значения. Этом разделе описана <xref:System.Windows.PropertyPath> синтаксис применительно к привязки и анимации.  
@@ -196,7 +196,7 @@ or
   
  В общем случае <xref:System.Windows.PropertyPath> предназначен для использования двух различных конструкторов, один для привязки и простейших анимаций и один для сложных анимаций. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> подписи для привязок, где объект — строка. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> подпись для одношаговых путей к анимации, когда этот объект является <xref:System.Windows.DependencyProperty>. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> для сложной анимации. Последний конструктор использует строку токена для первого параметра и массив объектов, которые заполняют позиции в строке токена, чтобы определить отношение пути к свойству.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.PropertyPath>  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.PropertyPath>
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

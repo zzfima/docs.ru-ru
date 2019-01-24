@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2668e36debebb5ba71277912f37833eba584fde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e07487f536454d9d2dcfff15eb871124112d250e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634975"
 ---
 # <a name="corversion-structure"></a>Структура COR_VERSION
 Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
@@ -39,7 +39,7 @@ typedef struct _COR_VERSION {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`dwMajor`|Основной номер версии.|  
 |`dwMinor`|Дополнительный номер версии.|  
@@ -47,17 +47,17 @@ typedef struct _COR_VERSION {
 |`dwSubBuild`|Номер вложенного построения.|  
   
 ## <a name="remarks"></a>Примечания  
- Если номер версии — 1.0.3705.288, 1 — номер основной версии, 0 — дополнительный номер версии, 3705 — номер сборки, а 288 — дополнительный номер сборки.  
+ Если номер версии равен 1.0.3705.288, 1 — номер основной версии, 0 — это дополнительный номер версии, 3705 — номер сборки и 288 — номер вложенного построения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl  
+ **Заголовок.** CorDebug.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

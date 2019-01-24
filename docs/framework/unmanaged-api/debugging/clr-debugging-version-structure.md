@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: a4049b0ed25d4c0fda00fe9b0dad5887fa4f6996
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506944"
 ---
 # <a name="clrdebuggingversion-structure"></a>Структура CLR_DEBUGGING_VERSION
 Определяет версию продукта среды CLR, предназначенную для отладки.  
@@ -55,12 +55,12 @@ typedef struct _CLR_DEBUGGING_VERSION
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl  
+ **Заголовок.** CorDebug.idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

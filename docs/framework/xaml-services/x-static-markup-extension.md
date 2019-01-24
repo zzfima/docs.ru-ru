@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619331"
 ---
 # <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
 Ссылается на любой сущности кода статический по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— надлежащим способом. Статическое свойство, которое указывается может использоваться для предоставления значения свойства в XAML.  
@@ -30,9 +30,9 @@ ms.locfileid: "50181281"
   
 | | |  
 |-|-|  
-|`prefix`|Необязательный. Префикс, который ссылается на сопоставленные, не по умолчанию пространство имен XAML. `prefix` явно приведен в использовании, так как редко создаются ссылки на статические свойства, полученные из пространства имен XAML по умолчанию. См. заметки.|  
-|`typeName`|Обязательно. Имя типа, который определяет требуемый статический член.|  
-|`staticMemberName`|Обязательно. Имя требуемого статического значения члена (константа, статическое свойство, поле или значение перечисления).|  
+|`prefix`|Необязательный параметр. Префикс, который ссылается на сопоставленные, не по умолчанию пространство имен XAML. `prefix` явно приведен в использовании, так как редко создаются ссылки на статические свойства, полученные из пространства имен XAML по умолчанию. См. заметки.|  
+|`typeName`|Обязательный. Имя типа, который определяет требуемый статический член.|  
+|`staticMemberName`|Обязательный. Имя требуемого статического значения члена (константа, статическое свойство, поле или значение перечисления).|  
   
 ## <a name="remarks"></a>Примечания  
 
@@ -82,6 +82,6 @@ ms.locfileid: "50181281"
   
  Дополнительные сведения о том, как использовать префиксы и пространства имен XAML для WPF см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-## <a name="see-also"></a>См. также  
- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>См. также
+- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

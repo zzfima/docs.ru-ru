@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4db59da7a17e47b8e3df939ec64f5124e04454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622875"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 Если ваше приложение сериализует и десериализует объекты, может потребоваться добавить записи в файл директив среды выполнения (. rd.xml) файл, чтобы гарантировать наличие необходимых метаданных во время выполнения. Существует две категории сериализаторов, и каждый требует различной обработки в файла директив среды выполнения:  
@@ -64,8 +64,8 @@ ms.locfileid: "33395977"
   
  Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)  
- [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
+## <a name="see-also"></a>См. также
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
+- [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)

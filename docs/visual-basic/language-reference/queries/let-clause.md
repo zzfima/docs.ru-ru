@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634068"
 ---
 # <a name="let-clause-visual-basic"></a>Предложение Let (Visual Basic)
 Вычисляет значение и присваивает его новой переменной в запросе.  
@@ -28,8 +28,8 @@ Let variable = expression [, ...]
   
 |Термин|Определение|  
 |---|---|  
-|`variable`|Обязательно. Псевдоним, который может использоваться для ссылки на результаты предоставленного выражения.|  
-|`expression`|Обязательно. Выражение, будут вычисляются и присваиваются переменной.|  
+|`variable`|Обязательный. Псевдоним, который может использоваться для ссылки на результаты предоставленного выражения.|  
+|`expression`|Обязательный. Выражение, будут вычисляются и присваиваются переменной.|  
   
 ## <a name="remarks"></a>Примечания  
  `Let` Предложение позволяет вычислить значения для каждого результат запроса и ссылаться на них с помощью псевдонима. Псевдоним может использоваться в других предложениях, таких как `Where` предложение. `Let` Предложение позволяет создать оператор запроса, который является более удобным для чтения, поскольку можно указать псевдоним для условия выражения, включенного в запрос и заменять этот псевдоним каждый раз, используется предложение выражения.  
@@ -41,9 +41,9 @@ Let variable = expression [, ...]
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>См. также
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)

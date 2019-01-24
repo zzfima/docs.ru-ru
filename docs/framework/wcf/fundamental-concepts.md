@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664033"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Инструкции по созданию простейшей версии службы WCF и клиента, см. в разделе [Приступая к работе](../../../docs/framework/wcf/getting-started-tutorial.md). Научиться программированию WCF, см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "53286563"
  сообщение  
  Автономная единица данных, которая может состоять из нескольких частей, включая текст и заголовки.  
   
- service  
+ служба  
  Конструкция, предоставляющая доступ к одной или нескольким конечным точкам, каждая из которых предоставляет доступ к одой или нескольким операциям службы.  
   
  конечная точка  
@@ -65,7 +65,7 @@ ms.locfileid: "53286563"
  конечная точка инфраструктуры  
  Конечная точка, предоставляемая инфраструктурой для расширения функциональных возможностей, необходимых для службы или предоставляемых службой и не имеющих отношения к контракту службы. Например, со службой может быть связана конечная точка инфраструктуры, предоставляющая информацию о метаданных.  
   
- address  
+ адрес  
  Задает расположение, где принимаются сообщения. Он задается в виде универсального кода ресурса (URI). Часть URI, определяющая схему, задает транспортный механизм для доставки по адресу, например HTTP и TCP. Иерархическая часть URI содержит уникальное расположение, формат которого зависит от транспортного механизма.  
   
  Адрес конечной точки позволяет создавать уникальные адреса для каждой конечной точки в службе или при определенных условиях использовать один адрес для нескольких конечных точек. В следующем примере показан адрес, использующий протокол HTTPS с портом, не установленным по умолчанию:  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Сокращение для обозначения растущего набора спецификаций веб-служб (WS), таких как WS-Security, WS-ReliableMessaging и т. д., реализованных в WCF.  
   
-## <a name="see-also"></a>См. также  
- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>См. также
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

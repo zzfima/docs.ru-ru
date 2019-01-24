@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630844"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>Метод ICorDebugController::HasQueuedCallbacks
-Возвращает значение, указывающее ли любого управляемого обратных вызовов в настоящее время в очереди для заданного потока.  
+Получает значение, указывающее ли любой управляемый оно для указанного потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,23 +41,23 @@ HRESULT HasQueuedCallbacks (
  [in] Указатель на объект «ICorDebugThread», представляющий поток.  
   
  `pbQueued`  
- [out] Указатель на значение, являющееся `true` Если любой управляемый обратных вызовов в настоящий момент в очереди для указанного потока, в противном случае — `false`.  
+ [out] Указатель на значение, являющееся `true` в случае любого управляемого обратные вызовы в настоящее время в очереди для указанного потока, в противном случае — `false`.  
   
- Если указано значение null для `pThread` параметр `HasQueuedCallbacks` вернет `true` Если в настоящий момент в очереди управляемого обратные вызовы для любого потока.  
+ Если указано значение null для `pThread` параметра `HasQueuedCallbacks` вернет `true` Если в настоящий момент управляемый обратные вызовы в очередь для любого потока.  
   
 ## <a name="remarks"></a>Примечания  
- Обратные вызовы будет отправлено по одному, каждый раз [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) вызывается. Отладчик может установить этот флаг, если ему нужно сообщить нескольких событиях отладки, которые произошли одновременно.  
+ Обратные вызовы будут отправляемой поочередно, каждый раз [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) вызывается. Отладчик может установить этот флаг, если он хочет получить отчет несколько отладочных событий, которые выполняются одновременно.  
   
- Постановке в очередь событий отладки, они уже произошли, поэтому отладчик должен обработать всю очередь, чтобы штата отлаживаемого кода. (Вызов `ICorDebugController::Continue` истощения очереди.) Например, если очередь содержит два события отладки потока *X*, и отладчик приостанавливает выполнение потока *X* после первого события отладки, а затем вызывает `ICorDebugController::Continue`, второе событие отладки для поток *X* будет отправлено, несмотря на то, что этот поток был приостановлен.  
+ При отладке события находятся в очереди, они уже произошли, поэтому отладчик должен обработать всю очередь, чтобы о состоянии отлаживаемой программы. (Вызов `ICorDebugController::Continue` для очистки очереди.) Например, если очередь содержит два события отладки потока *X*, и отладчик приостанавливает поток *X* после первого события отладки, а затем вызывает `ICorDebugController::Continue`, второе событие отладки для поток *X* несмотря на то, что поток был приостановлен, будут переданы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

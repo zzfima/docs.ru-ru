@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: def1c04064cc9fc98c108dcdad5c017c0c8e465b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655534"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>Перечисление EMemoryCriticalLevel
-Содержит значения, указывающие влияние сбоя в случае, когда был запрошен определенного выделения памяти, но не может быть удовлетворен.  
+Содержит значения, указывающие влияние сбоя при запросе определенного выделения памяти, не может быть удовлетворен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +38,24 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`eAppDomainCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в домене, который запросил распределения. Если не удается выделить память, среда CLR не может гарантировать, что домен является по-прежнему можно использовать. Основное приложение выбирает, какие действия предпринять, если выделение не может быть удовлетворено. Его можно указать среде CLR прерывание `AppDomain` автоматически, или разрешить его выполнение, вызывая методы [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
-|`eProcessCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в процессе. Это значение используется во время запуска и при выполнении методов завершения. Если не удается выделить память, среда CLR не может работать в процессе. В случае сбоя, среда CLR полностью отключается. Все последующие вызовы к CLR завершаться значение HOST_E_CLRNOTAVAILABLE.|  
-|`eTaskCritical`|Указывает, что выделение крайне важен для выполнения задачи, запросившей выделение. Если не удается выделить память, среда CLR не гарантирует выполнения задачи. В случае сбоя, среда CLR вызывает <xref:System.Threading.ThreadAbortException> в потоке физическая операция системы.|  
+|`eAppDomainCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в домене, который запросил выделение. Если не удалось выделить память, среда CLR не может гарантировать, что домен является по-прежнему можно использовать. Узел определяет, какое действие следует предпринять, если выделение не может быть удовлетворено. Его можно указать среде CLR прерывание `AppDomain` автоматически, или разрешить его выполнение, вызывая методы [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
+|`eProcessCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в процессе. Это значение используется во время запуска и при выполнении методов завершения. Если не удалось выделить память, среда CLR не может работать в процессе. В случае сбоя, среда CLR эффективно отключено. Все последующие вызовы в среду CLR завершаться значение HOST_E_CLRNOTAVAILABLE.|  
+|`eTaskCritical`|Указывает, что выделение крайне важен для выполнения задачи, которая запросила выделение. Если не удалось выделить память, среда CLR не может гарантировать, что задача может выполняться. В случае сбоя среда CLR вызывает <xref:System.Threading.ThreadAbortException> на потоке системы физическая операция.|  
   
 ## <a name="remarks"></a>Примечания  
- Методы распределения памяти, определенные в [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) и [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) интерфейсы могут принимать параметр этого типа. В зависимости от серьезности сбоя узла можно моментально завершаются ошибкой запросов на выделение или подождите, пока не может быть удовлетворено.  
+ Методы распределения памяти, определенные в [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) и [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) интерфейса принимающие параметр этого типа. В зависимости от серьезности ошибки, узел может решить, следует ли переход на другой запрос на выделение ресурсов немедленно или подождите, пока не может быть удовлетворено.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

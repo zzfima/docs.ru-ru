@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 33406a67389cdf857fa5030e20d8a4dec7662741
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f46c84a1674a3e9352d0a4ccda23d44e650a70ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629492"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > элемент для \<конфигурации >
+# <a name="configsections-element-for-configuration"></a>\<configSections > элемент для \<configuration >
 
 Содержит раздел конфигурации и пространства имен объявления.
 
@@ -29,13 +29,13 @@ ms.locfileid: "32752082"
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<раздел >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Содержит объявление раздела конфигурации. |
 | [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
@@ -44,11 +44,11 @@ ms.locfileid: "32752082"
 
 ## <a name="remarks"></a>Примечания
 
-Если этот элемент находится в файле конфигурации, его необходимо быть первым дочерним элементом  **\<конфигурации >** элемента.
+Если этот элемент находится в файле конфигурации, его необходимо первый дочерний элемент элемента  **\<конфигурации >** элемент.
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показан способ определения раздела конфигурации и его параметров.
+В следующем примере показано, как определения раздела конфигурации и его параметров:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ ms.locfileid: "32752082"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файле конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые находятся не на уровне папки приложения.
+Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

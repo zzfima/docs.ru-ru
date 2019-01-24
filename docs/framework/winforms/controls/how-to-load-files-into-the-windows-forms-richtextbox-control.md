@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Загрузка файлов в элемент управления RichTextBox в Windows Forms
+title: Как выполнить Загрузка файлов в элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 4d43536cab7806b8cf2de3d63b2d9f7f10024c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666050"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Практическое руководство. Загрузка файлов в элемент управления RichTextBox в Windows Forms
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Как выполнить Загрузка файлов в элемента управления RichTextBox в Windows Forms
 Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> может отображать обычный текст, обычный текст в Юникоде или файл в формате RTF. Для этого вызовите метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . Метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> можно также использовать для загрузки данных из потока. Для получения дополнительной информации см. <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Загрузка файла в элемент управления RichTextBox  
   
-1.  Определить путь к открываемому файлу с помощью компонента <xref:System.Windows.Forms.OpenFileDialog> . Общие сведения см. в разделе [Общие сведения о компоненте OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
+1.  Определить путь к открываемому файлу с помощью компонента <xref:System.Windows.Forms.OpenFileDialog> . Дополнительные сведения см. в разделе [Общие сведения о компоненте OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
   
 2.  Вызовите метод <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> , указав загружаемый файл и при необходимости тип файла. В следующем примере загружаемый файл берется из свойства <xref:System.Windows.Forms.OpenFileDialog> компонента <xref:System.Windows.Forms.FileDialog.FileName%2A> . Если вы вызываете метод с именем файла в качестве единственного аргумента, предполагается, что тип файла должен быть RTF. Чтобы указать другой тип файла, вызовите метод со значением перечисления <xref:System.Windows.Forms.RichTextBoxStreamType> в качестве второго аргумента.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "33534457"
     ```  
   
     > [!IMPORTANT]
-    >  Для запуска этого процесса сборке может потребоваться уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>. При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Для запуска этого процесса сборке может потребоваться уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> . При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

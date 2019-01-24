@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650123"
 ---
 # <a name="corattributetargets-enumeration"></a>Перечисление CorAttributeTargets
 Задает элементы приложения, в которых допустимо применять аргумент.  
@@ -62,36 +62,36 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`catAssembly`|Атрибут может применяться к сборке.|  
+|`catAssembly`|Атрибут может быть применен к сборке.|  
 |`catModule`|Атрибут может применяться для переносимого исполняемого модуля (.dll или .exe).|  
-|`catClass`|Атрибут может применяться к классу.|  
-|`catStruct`|Атрибут может быть применен к структуре; то есть введите значение.|  
-|`catEnum`|Атрибут может применяться к перечислению.|  
-|`catConstructor`|Атрибут может применяться для конструктора.|  
+|`catClass`|Атрибут может быть применен к классу.|  
+|`catStruct`|Атрибут может быть применен к структуре; то есть значение type.|  
+|`catEnum`|Атрибут может быть применен к перечислению.|  
+|`catConstructor`|Атрибут может применяться к конструктору.|  
 |`catMethod`|Атрибут может применяться к методу.|  
-|`catProperty`|Атрибут может применяться к свойству.|  
-|`catField`|Атрибут может применяться к полю.|  
+|`catProperty`|Атрибут может быть применен к свойству.|  
+|`catField`|Атрибут может быть применен к полю.|  
 |`catEvent`|Атрибут может применяться к событию.|  
 |`catInterface`|Атрибут может применяться к интерфейсу.|  
-|`catParameter`|Атрибут может применяться к параметру.|  
-|`catDelegate`|Атрибут может применяться к делегату.|  
-|`catGenericParameter`|Атрибут может применяться для универсального параметра.|  
+|`catParameter`|Атрибут может быть применен к параметру.|  
+|`catDelegate`|Атрибут может быть применен к делегату.|  
+|`catGenericParameter`|Атрибут может применяться к универсальному параметру.|  
 |`catAll`|Атрибут может применяться к любому элементу приложения.|  
-|`catClassMembers`|Атрибут может применяться к члену класса.|  
+|`catClassMembers`|Атрибут может быть применен к члену класса.|  
   
 ## <a name="remarks"></a>Примечания  
- `CorAttributeTargets` Значения перечисления могут быть объединены с помощью побитовой операции или для получения необходимого сочетания.  
+ `CorAttributeTargets` Значения перечисления могут объединяться с помощью побитовой операции OR для получения необходимого сочетания.  
   
- `CorAttributeTargets` Параллельно управляемый <xref:System.AttributeTargets?displayProperty=nameWithType> перечисления.  
+ `CorAttributeTargets` Параллельно управляемого <xref:System.AttributeTargets?displayProperty=nameWithType> перечисления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 440a7eb5af425a3cea46de142e4a7d41f95559c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f967f75627debfd000a0d417c426d40109c20d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666523"
 ---
 # <a name="data-binding"></a>Привязка данных
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает привязку к распространенным элементам управления, такие как элементы управления сетки. В частности [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет основные шаблоны для привязки к сетке данных и обработки привязки основной подробности, как в отношении отображения и обновления.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает привязку к распространенным элементам управления, такие как элементы управления grid. В частности [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет основные шаблоны для привязки к сетке данных и обработки привязки «основной-подробности», как в отношении отображения и обновления.  
   
 ## <a name="underlying-principle"></a>Основной принцип  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] запросов в SQL для выполнения в базе данных. Результаты являются строго типизированной коллекцией `IEnumerable`. Поскольку эти объекты являются обычными объектами среды CLR, то для отображения результатов можно использовать привязку к данным обычных объектов. С другой стороны, для выполнения операций изменения (вставки, обновления и удаления) требуются дополнительные действия.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] запросов к SQL для выполнения в базе данных. Результаты являются строго типизированной коллекцией `IEnumerable`. Поскольку эти объекты являются обычными объектами среды CLR, то для отображения результатов можно использовать привязку к данным обычных объектов. С другой стороны, для выполнения операций изменения (вставки, обновления и удаления) требуются дополнительные действия.  
   
 ## <a name="operation"></a>Операция  
- Неявная привязка к элементам управления Windows Forms осуществляется посредством реализации интерфейса <xref:System.ComponentModel.IListSource>. Универсальные источники данных <xref:System.Data.Linq.Table%601> (`Table<T>` в C# или `Table(Of T)` в Visual Basic) и универсальный интерфейс `DataQuery` были обновлены, чтобы реализовать <xref:System.ComponentModel.IListSource>. Оба обработчика привязки данных пользовательского интерфейса (Windows Forms и Windows Presentation Foundation) проверяют, реализует ли их источник данных интерфейс <xref:System.ComponentModel.IListSource>. Поэтому написание непосредственной связи запроса с источником данных элемента управления неявно вызывает [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создание коллекции, как показано в следующем примере:  
+ Неявная привязка к элементам управления Windows Forms осуществляется посредством реализации интерфейса <xref:System.ComponentModel.IListSource>. Источники данных универсального <xref:System.Data.Linq.Table%601> (`Table<T>` в C# или `Table(Of T)` в Visual Basic) и универсальный `DataQuery` были обновлены, чтобы реализовать <xref:System.ComponentModel.IListSource>. Оба обработчика привязки данных пользовательского интерфейса (Windows Forms и Windows Presentation Foundation) проверяют, реализует ли их источник данных интерфейс <xref:System.ComponentModel.IListSource>. Поэтому написание непосредственной связи запроса с источником данных элемента управления неявно вызывает [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создание коллекции, как показано в следующем примере:  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -34,13 +34,13 @@ ms.locfileid: "33365174"
 ## <a name="ilistsource-implementation"></a>Реализация интерфейса "IListSource"  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] реализует <xref:System.ComponentModel.IListSource> в двух местах:  
   
--   Источник данных — <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает таблицу, заполняя `DataBindingList` коллекции, в которой хранится ссылка на таблицу.  
+-   Источником данных является <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает таблицу, для заполнения `DataBindingList` коллекции, в которой хранится ссылка на таблицу.  
   
 -   Источником данных является интерфейс <xref:System.Linq.IQueryable%601>. Имеется два сценария.  
   
     -   Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] находит базовый <xref:System.Data.Linq.Table%601> из <xref:System.Linq.IQueryable%601>, источник учитывает версию и ситуация аналогична описанной в первом пункте.  
   
-    -   Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается найти базовый <xref:System.Data.Linq.Table%601>, источник учитывает версию (например, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает запрос, чтобы заполнить универсальный `SortableBindingList`, который является простой <xref:System.ComponentModel.BindingList%601> , реализующий функцию сортировки сущностей "T" для данного свойства.  
+    -   Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается найти базовый <xref:System.Data.Linq.Table%601>, источник не поддерживает для выпуска (например, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает запрос, чтобы заполнить универсальный `SortableBindingList`, который является простым <xref:System.ComponentModel.BindingList%601> , реализующий возможность сортировки сущностей "T" для заданного свойства.  
   
 ## <a name="specialized-collections"></a>Специализированные коллекции  
  Для реализации многих функций, описанных ранее в этом документе, класс <xref:System.ComponentModel.BindingList%601> был специализирован для получения некоторых других классов. Этими классами являются универсальный класс `SortableBindingList` и универсальный класс `DataBindingList`. Оба класса объявляются как внутренние.  
@@ -58,10 +58,10 @@ ms.locfileid: "33365174"
  Этот класс наследует от класса `SortableBindingLIst`. Универсальный класс `DataBindingList` сохраняет ссылку на базовый универсальный класс `Table` универсального интерфейса `IQueryable`, используемого для первоначального заполнения коллекции. Универсальный класс `DatabindingList` обеспечивает отслеживание для добавления и удаления элементов в коллекции посредством переопределения методов `InsertItem`() и `RemoveItem`(). Он также реализует абстрактную функцию приостановки/возобновления, чтобы сделать отслеживание условным. Эта функция позволяет универсальному классу `DataBindingList` воспользоваться всеми преимуществами полиморфного использования функции отслеживания родительских классов.  
   
 ## <a name="binding-to-entitysets"></a>Привязка к коллекциям «EntitySet»  
- Привязка к классу `EntitySet` является особым случаем, поскольку класс `EntitySet` уже является коллекцией, реализующей интерфейс <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Добавляет сортировки и отмены (<xref:System.ComponentModel.ICancelAddNew>) поддерживает. Для хранения сущностей класс `EntitySet` использует внутренний список. Этот список представляет собой коллекцию нижнего уровня, основанную на универсальном массиве, универсальном классе `ItemList`.  
+ Привязка к классу `EntitySet` является особым случаем, поскольку класс `EntitySet` уже является коллекцией, реализующей интерфейс <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Добавляет сортировки и отмены (<xref:System.ComponentModel.ICancelAddNew>) поддержки. Для хранения сущностей класс `EntitySet` использует внутренний список. Этот список представляет собой коллекцию нижнего уровня, основанную на универсальном массиве, универсальном классе `ItemList`.  
   
 ### <a name="adding-a-sorting-feature"></a>Добавление возможности сортировки  
- Массивы предлагают метод сортировки (`Array.Sort()`), который можно использовать с классом `Comparer` типа "T". [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует универсальный класс `SortableBindingList.PropertyComparer`, описанный ранее в этом разделе, для получения данного класса `Comparer` для свойства и направления, в котором требуется выполнить сортировку. Для вызова этой функции к универсальному интерфейсу `ApplySort` добавляется метод `ItemList`.  
+ Массивы предлагают метод сортировки (`Array.Sort()`), который можно использовать с классом `Comparer` типа "T". [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует универсальный класс `SortableBindingList.PropertyComparer`, описанный ранее в этом разделе, для получения данного класса `Comparer` для свойства и направления, в котором требуется выполнить сортировку. Для вызова этой возможности к универсальному интерфейсу `ApplySort` добавляется метод `ItemList`.  
   
  На стороне класса `EntitySet` необходимо объявить поддержку сортировки.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "33365174"
   
  При использовании System.Windows.Forms.BindingSource и привязке EntitySet\<TEntity > к System.Windows.Forms.BindingSource.DataSource необходимо вызвать EntitySet\<Tentity >. GetNewBindingList для обновления BindingSource.List.  
   
- При использовании System.Windows.Forms.BindingSource и установке свойства BindingSource.DataMember и установке BindingSource.DataSource в класс, имеющий свойство, именуемое в BindingSource.DataMember, который представляет EntitySet\<TEntity >, вы Нет необходимости вызывать EntitySet\<Tentity >. GetNewBindingList для обновления BindingSource.List, но потеряна возможность сортировки.  
+ При использовании System.Windows.Forms.BindingSource и установке свойства BindingSource.DataMember и установке BindingSource.DataSource в класс, имеющий свойство, именуемое в BindingSource.DataMember, который представляет EntitySet\<TEntity >, вы Нет необходимости вызывать EntitySet\<Tentity >. GetNewBindingList для обновления BindingSource.List, но будет потеряна возможность сортировки.  
   
 ## <a name="caching"></a>Кэширование  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Реализация запросов <xref:System.ComponentModel.IListSource.GetList%2A>. Если класс Windows Forms BindingSource встречает этот интерфейс, он три раза вызывает метод GetList() для одного подключения. Чтобы обойти эту проблему, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] реализует кэш для каждого экземпляра, чтобы хранить и всегда возвращать одну созданную коллекцию.  
@@ -100,11 +100,11 @@ ms.locfileid: "33365174"
   
 -   Необходимо использовать свойства - использования одних полей недостаточно. Это требование обусловлено Windows Forms.  
   
--   По умолчанию `image`, `varbinary`, и `timestamp` типов базы данных сопоставляются с байтовыми массивами. В данном сценарии не поддерживается метод `ToString()`, поэтому эти объекты невозможно отобразить.  
+-   По умолчанию `image`, `varbinary`, и `timestamp` типы базы данных сопоставляются с массивами байтов. В данном сценарии не поддерживается метод `ToString()`, поэтому эти объекты невозможно отобразить.  
   
 -   Члена класса, сопоставленного первичному ключу, имеется метод установки, но [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает изменение идентификации объекта. Поэтому первичный/уникальный ключ, используемый в сопоставлении, не может быть обновлен в базе данных. Изменение сетки вызывает исключение при вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 -   Если сущность привязана в двух отдельных сетках (например, в основной сетке и в сетке подробных сведений), операция `Delete` в основной сетке не распространяется на сетку подробных сведений.  
   
-## <a name="see-also"></a>См. также  
- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>См. также
+- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

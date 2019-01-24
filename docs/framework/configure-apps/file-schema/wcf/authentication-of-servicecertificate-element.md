@@ -2,21 +2,21 @@
 title: '&lt;authentication&gt; элемента &lt; serviceCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 556310846f8ac307ff9c92c06784eae16937c92c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 967ab391c9a6dfe7da9b6ef0542b052872b21f52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661130"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; элемента &lt; serviceCertificate&gt;
 Задает параметры, которые использует прокси клиента для проверки подлинности сертификатов службы, полученных при помощи согласования SSL/TLS.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 раздел endpointBehaviors  
 \<поведение >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<Проверка подлинности >  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54147958"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Задает сертификат для использования при проверке подлинности службы для клиента.|  
   
@@ -100,14 +100,14 @@ ms.locfileid: "54147958"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>  
- <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>  
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>
+- <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -2,29 +2,29 @@
 title: Создание кода в LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 0345e48061132626fb714f00e44cb5637879f94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627972"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Создание кода в LINQ to SQL
 Создание кода, представляющего базу данных, можно выполнить с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы командной строки SQLMetal. В любом случае полный процесс создания кода включает три этапа.  
   
-1.  *Средство извлечения DBML* извлекает из базы данных сведения о схеме и перекомпилирует эти сведения в XML-файл DBML.  
+1.  *Средство извлечения DBML* извлекает сведения о схеме из базы данных и перекомпилирует эти сведения в XML-файл DBML.  
   
-2.  Файл DBML сканируется *средством проверки DBML* ошибок.  
+2.  Файл DBML сканируется *средством проверки DBML* наличие ошибок.  
   
 3.  Если ошибки не обнаружены, файл передается в генератор кода.  
   
- Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). С помощью Visual Studio разработчики также могут использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания кода. В разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Разработчики, использующие Visual Studio можно также использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания кода. См. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Средство извлечения DBML  
- Средство извлечения DBML является [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] компонент, который принимает метаданных базы данных в качестве входных данных и создает DBML-файла в качестве выходных данных.  
+ Средство извлечения DBML является [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] компонент, который принимает метаданные базы данных в качестве входных данных и создает выходной файл DBML.  
   
 ## <a name="code-generator"></a>Генератор кода  
- Генератор кода-это [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] файлов компонент, который преобразует файл DBML в файлы сопоставления в Visual Basic, C# или XML.  
+ Генератор кода находится [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] компонент, который преобразует файл DBML в файлы Visual Basic, C#, или файлы сопоставления XML.  
   
 ## <a name="xml-schema-definition-file"></a>Файл определения схемы XML  
  Файл DBML должен быть проверен на соответствие следующему XSD-файлу определению схемы.  
@@ -32,7 +32,7 @@ ms.locfileid: "33363384"
  Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки файла внешних сопоставлений. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Пользователи Visual Studio будет находить XSD-файл в диалоговом окне схем XML называется «DbmlSchema.xsd». Правильно использовать XSD-файл для проверки DBML-файла, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Пользователи Visual Studio будет также найти этот файл XSD в диалоговом окне схем XML называется «DbmlSchema.xsd». Чтобы правильно использовать XSD-файл для проверки DBML-файла, см. в разделе [как: Проверка внешние файлы сопоставлений и DBML-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Образец DBML-файла  
- Следующий код является фрагментом DBML-файла, созданного из образца базы данных Northwind. Весь файл можно создать с помощью SQLMetal с **/XML** параметр. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Следующий код является фрагментом DBML-файла, созданного из образца базы данных Northwind. Полностью файл можно сформировать средством SQLMetal с **/XML** параметр. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -269,9 +269,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Практическое руководство. Создание модели объекта в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>См. также
+- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Практическое руководство. Создание модели объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

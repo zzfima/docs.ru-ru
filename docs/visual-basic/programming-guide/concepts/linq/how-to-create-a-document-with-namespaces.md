@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)
+title: Как выполнить создать документ с пространствами имен (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631299"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Как выполнить создать документ с пространствами имен (LINQ to XML) (Visual Basic)
 В этом разделе описано, как создать документ с пространствами имен в Visual Basic.  
   
  При использовании литералов XML в Visual Basic пользователи могут задавать одно глобальное пространство имен XML. Это пространство имен является пространством имен по умолчанию как для литералов, так и для свойств XML. Пространство имен XML по умолчанию можно задать как на уровне проекта, так и на уровне файла. Если оно задается на уровне файла, то оно переопределяет пространство имен по умолчанию, заданное на уровне проекта.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>См. также
+- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

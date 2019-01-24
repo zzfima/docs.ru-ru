@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 474338ff1780ce9b442208cd06f8b14bc411be5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491156"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>Метод IMetaDataImport::GetUserString
 Получает строку литералов, представленную указанным токеном метаданных.  
@@ -40,26 +40,26 @@ HRESULT GetUserString (
   
 #### <a name="parameters"></a>Параметры  
  `stk`  
- [in] Маркер строки для возвращения в связанной строке.  
+ [in] Токен строки, для возврата в связанной строке.  
   
  `szString`  
- [out] Копия Запрошенная строка.  
+ [out] Копия запрошенную строку.  
   
  `cchString`  
- [in] Максимальный размер в расширенные символы запрашиваемого `szString`.  
+ [in] Максимальный размер в расширенных символах запрашиваемого `szString`.  
   
  `pchString`  
- [out] Размер в расширенные символы возвращаемого `szString`.  
+ [out] Размер в расширенных символах возвращаемого `szString`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
