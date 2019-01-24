@@ -2,17 +2,17 @@
 title: Пользовательские кодировщики
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509370"
 ---
 # <a name="custom-encoders"></a>Пользовательские кодировщики
 В данном разделе рассматривается процесс создания пользовательских кодировщиков.  
   
- В Windows Communication Foundation (WCF), используйте *привязки* для указания способа передачи данных по сети между конечными точками. Привязка состоит из последовательности *элементов привязки*. В привязку входят необязательные элементы привязки протокола такие как безопасность, обязательный *кодировщик сообщений* элемент привязки и обязательный элемент привязки транспорта. Кодировщик сообщений представлен элементом привязки кодирования сообщений. Три кодировщика сообщений в WCF: двоичный файл, механизм оптимизации передачи сообщений (MTOM) и текст.  
+ В Windows Communication Foundation (WCF), используйте *привязки* для указания способа передачи данных по сети между конечными точками. Привязка состоит из последовательности *элементов привязки*. В привязку входят необязательные элементы привязки протокола такие как безопасность, обязательный *кодировщик сообщений* элемент привязки и обязательный элемент привязки транспорта. Кодировщик сообщений представлен элементом привязки кодирования сообщений. Три кодировщика сообщений в WCF: Двоичное, механизм оптимизации передачи сообщений (MTOM) и текст.  
   
  Элемент привязки кодирования сообщений сериализует исходящее сообщение <xref:System.ServiceModel.Channels.Message> и передает его транспорту или получает сериализованную форму сообщения от транспорта и передает ее на уровень протоколов, если он имеется, или в приложение, если он отсутствует.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "50034392"
   
  WCF предоставляет следующие типы элементов привязки, производный от <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> класса, реализующего текстовое, двоичное кодирование и механизм оптимизации передачи сообщений (MTOM) кодировки:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Кодировщик для сообщений XML с наиболее широкими возможностями взаимодействия, но при этом наименее неэффективный. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста неэффективна.  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Наиболее широкими возможностями взаимодействия, но наименее эффективный кодировщик для сообщений XML. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста неэффективна.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>. Представляет собой элемент привязки, указывающий кодирование символов и управление версиями сообщений для сообщений XML в двоичном формате. Это наиболее эффективный параметры кодировки, но наименее подходящий для взаимодействия, так как он поддерживается только конечными точками WCF.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщений XML в двоичном формате. Это наиболее эффективный параметры кодировки, но наименее подходящий для взаимодействия, так как он поддерживается только конечными точками WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>. Представляет собой элемент привязки, указывающий кодирование символов и управление версиями сообщений для сообщений, для которых применяется подсистема оптимизации передачи сообщений MTOM. MTOM - это эффективный способ передачи двоичных данных в сообщениях WCF. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщения с кодировкой механизм оптимизации передачи сообщений (MTOM). MTOM - это эффективный способ передачи двоичных данных в сообщениях WCF. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
   
  Элемент привязки создает двоичную, MTOM или текстовую фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Фабрика создает двоичный, MTOM или текстовый экземпляр <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Обычно существует только один экземпляр. Однако при использовании сеансов для каждого сеанса могут предоставляться разные кодировщики. Двоичный кодировщик использует это для координации динамических словарей (см. раздел "Инфраструктура XML").  
   
@@ -89,12 +89,12 @@ ms.locfileid: "50034392"
   
  Затем подключите пользовательскую фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory> к стеку элементов привязки, используемому для настройки службы или клиента, переопределив метод <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>, чтобы вернуть экземпляр этой фабрики.  
   
- Существует два примера, в состав WCF, демонстрирующие этот процесс с помощью примера кода: [пользовательский кодировщик сообщений: кодировщик пользовательских текстовых](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) и [пользовательский кодировщик сообщений: кодировщик сжатия](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Существует два примера, предоставляемых с WCF, демонстрирующие этот процесс с помощью примера кода: [Пользовательский кодировщик сообщений: Пользовательский кодировщик текстовых](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) и [пользовательский кодировщик сообщений: Кодировщику сжатия](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [Выбор кодировщика сообщений](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Выбор кодировщика сообщений](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

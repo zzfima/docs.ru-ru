@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 0dc0ddaa1f64b75c0b4ccc1f5e73638576ea3da2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d7f5bfc1532775d092fbee1ef9cdc3c7ed5efc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496661"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Дополнительные вопросы безопасности в формах Windows Forms
 Приложение может работать по-разному в среде с частичным доверием и на локальном компьютере из-за параметров безопасности [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ограничивает доступ, помимо прочего, к таким важным локальным ресурсам, как файловая система, сеть и неуправляемые API. Параметры безопасности влияют на возможность вызова интерфейса Microsoft Win32 API или других интерфейсов API, которые не могут быть проверены системой безопасности. Безопасность также влияет на другие аспекты приложения, включая доступ к файлам и данным, и вывод на печать. Дополнительные сведения о доступе к файлам и данным в среде с частичным доверием см. в разделе [Более безопасный доступ к файлам и данным в Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Дополнительные сведения о выводе на печать в среде с частичным доверием см. в разделе [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "43523486"
   
  По умолчанию в зону локальной интрасети получает <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> доступа и зона Интернета получает <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> доступа. Это означает, что в зоне Интернета приложение может выполнять большинство операций с окнами и пользовательским интерфейсом, но внешний вид окна будет изменяться. В измененном окне при первом запуске отображается всплывающее уведомление. В таком окне также изменен заголовок, а в строке заголовка должна быть кнопка "Закрыть". Всплывающее уведомление и строка заголовка информируют пользователя приложения о том, что данное приложение выполняется в режиме частичного доверия.  
   
-|Значение UIPermissionWindow|Описание|  
+|Значение UIPermissionWindow|Описание:|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|Пользователи могут использовать все окна и события пользовательского ввода без каких-либо ограничений.|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|Пользователи могут использовать для рисования только более безопасные окна верхнего уровня и дочерние окна, а также события пользовательского ввода для пользовательского интерфейса в таких окнах и дочерних окнах. Такие более безопасные окна имеют специальные метки, а также ограничения на минимальный и максимальный размер. Эти ограничения предотвращают потенциально опасные атаки с подменой, такие как имитация экрана входа в систему или рабочего стола системы и ограничивают программный доступ к родительским windows API, связанные с фокусом и использование <xref:System.Windows.Forms.ToolTip> элемента управления,|  
@@ -86,11 +86,11 @@ ms.locfileid: "43523486"
   
  Если приложение не имеет разрешения на вызов неуправляемого кода, приложение должно запросить <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> разрешение, или необходимо подумать о других способах реализации этих возможностей; во многих случаях Windows Forms предоставляет управляемую альтернативу Win32 API функции. Если альтернативного способа нет, а приложению необходимо получать доступ к неуправляемому коду, повысьте уровень разрешений для такого приложения.  
   
- Благодаря разрешению на вызов неуправляемого кода приложение может выполнять практически любые действия. Следовательно, разрешение на вызов неуправляемого кода должно предоставляться только приложениям из доверенного источника. Кроме того, в зависимости от приложения, часть функциональных возможностей приложения, вызывающих неуправляемый код, может быть необязательной или использоваться только в среде с полным доверием. Дополнительные сведения об опасных разрешениях см. в разделе [Опасные разрешения и администрирование политик](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Дополнительные сведения о повышении уровня разрешений см. в разделе [NIB. Общее администрирование политик безопасности](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Благодаря разрешению на вызов неуправляемого кода приложение может выполнять практически любые действия. Следовательно, разрешение на вызов неуправляемого кода должно предоставляться только приложениям из доверенного источника. Кроме того, в зависимости от приложения, часть функциональных возможностей приложения, вызывающих неуправляемый код, может быть необязательной или использоваться только в среде с полным доверием. Дополнительные сведения об опасных разрешениях см. в разделе [Опасные разрешения и администрирование политик](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Дополнительные сведения о повышении уровня разрешений см. в разделе [NIB: Общее администрирование политики безопасности](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
-## <a name="see-also"></a>См. также  
- [Более безопасный доступ к файлам и данным в Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Общие сведения о безопасности в Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Безопасность Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
- [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)
+## <a name="see-also"></a>См. также
+- [Более безопасный доступ к файлам и данным в Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
+- [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Общие сведения о безопасности в Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Безопасность Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
+- [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715558"
 ---
 # <a name="iclrtaskreset-method"></a>Метод ICLRTask::Reset
-Информирует общеязыковой среды выполнения (CLR), узел завершения задачи что позволяет повторно использовать текущий CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра для представления другой задачи.  
+Информирует общеязыковой среды выполнения (CLR), что узел завершения задачи и обеспечивает работу CLR для повторного использования текущего [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра для представления другой задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT Reset (
   
 #### <a name="parameters"></a>Параметры  
  `fFull`  
- [in] `true`, если среда выполнения должна сбросить все связанные с потоками статического значения в дополнение к безопасности и языковой стандарт сведения, связанные с текущим `ICLRTask` экземпляра; в противном случае `false`.  
+ [in] `true`, если среда выполнения должна Сброс всех связанных с потоком статических значений дополняет сведения о безопасности и языковой стандарт, связанные с текущим `ICLRTask` экземпляра; в противном случае `false`.  
   
  Если значение равно `true`, среда выполнения сбрасывает данные, хранящиеся с помощью <xref:System.Threading.Thread.AllocateDataSlot%2A> или <xref:System.Threading.Thread.AllocateNamedDataSlot%2A>.  
   
@@ -46,40 +46,40 @@ HRESULT Reset (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|`Reset` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или обработать вызов. успешно|  
+|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором он не может выполнять управляемый код или обработать вызов. успешно|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR может повторно использовать ранее созданную `ICLRTask` экземпляров, чтобы избежать издержек по несколько раз, каждый раз, он должен новой задачи, создание новых экземпляров. Узел включает эту функцию, вызвав `ICLRTask::Reset` вместо [ICLRTask::ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) после его завершения задачи. В следующем списке перечислены обычный жизненный цикл `ICLRTask` экземпляр:  
+ Среда CLR может повторно использовать ранее созданный `ICLRTask` экземпляры, чтобы избежать создания новых экземпляров каждый раз при выполнении новой задачи. Узел включает эту функцию, вызвав `ICLRTask::Reset` вместо [ICLRTask::ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) после его завершения задачи. В следующем списке перечислены обычный жизненный цикл `ICLRTask` экземпляр:  
   
 1.  Среда выполнения создает новый `ICLRTask` экземпляра.  
   
-2.  Среда выполнения вызывает метод [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) получить ссылку на текущую задачу узла.  
+2.  Среда выполнения вызывает [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) для получения ссылки на текущую задачу узла.  
   
-3.  Среда выполнения вызывает метод [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) необходимо связать новый экземпляр с задачей узла.  
+3.  Среда выполнения вызывает [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) должен быть сопоставлен новому экземпляру задачи.  
   
 4.  Задача выполняет и завершается.  
   
 5.  Узел уничтожает задачи путем вызова `ICLRTask::ExitTask`.  
   
- `Reset` изменяет этот сценарий следующим образом. В шаге 5 выше, основное приложение вызывает `Reset` для сброса задачи в исходное состояние и затем отсоединяет `ICLRTask` экземпляр, связанный с ним из [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляра. При необходимости также можно кэшировать узла `IHostTask` экземпляра для повторного использования. В шаге 1 выше, среда выполнения извлекает перезапущен `ICLRTask` из кэша вместо создания нового экземпляра.  
+ `Reset` изменяет этот сценарий следующим образом. В шаге 5 выше, сервер вызывает функцию `Reset` для сброса задачи в исходное состояние и затем разрывает связь между `ICLRTask` экземпляр из сопоставленного ему [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляра. При желании также можно кэшировать узла `IHostTask` экземпляра для повторного использования. На шаге 1 выше, среда выполнения извлекает перезапущен `ICLRTask` из кэша вместо создания нового экземпляра.  
   
- Такой подход удобно использовать, когда узел также имеет пул повторно используемых рабочих задач. Когда узел Удаляет один из его `IHostTask` экземпляры, она окончательно удаляет соответствующие `ICLRTask` путем вызова `ExitTask`.  
+ Этот подход работает также в том случае, когда узел также имеет пул повторно используемых рабочих задач. Когда узел Удаляет один из его `IHostTask` экземпляры, она окончательно удаляет соответствующие `ICLRTask` путем вызова `ExitTask`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Интерфейс IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Интерфейс IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

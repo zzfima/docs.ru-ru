@@ -2,12 +2,12 @@
 title: Коллекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698769"
 ---
 # <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -176,11 +176,11 @@ End Class
   
  В этом разделе описываются следующие часто используемые классы коллекций:  
   
--   классы <xref:System.Collections.Generic>;  
+-   Классы <xref:System.Collections.Generic>  
   
 -   Классы <xref:System.Collections.Concurrent>  
   
--   классы <xref:System.Collections>;  
+-   Классы <xref:System.Collections>  
   
 -   класс `Collection` в Visual Basic.  
   
@@ -217,7 +217,7 @@ End Class
   
  В следующей таблице перечислены некоторые из часто используемых классов пространства имен `System.Collections`:  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|  
 |<xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>См. также
 
-- [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Коллекции и структуры данных](../../../standard/collections/index.md)  
-- [Управление коллекциями и их создание](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)  
-- [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Коллекции и структуры данных](../../../standard/collections/index.md)
+- [Управление коллекциями и их создание](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)
+- [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)

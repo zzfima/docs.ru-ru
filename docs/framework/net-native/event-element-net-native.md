@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ccf013398420dbeb7918f99baa922aa1bc89db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11cc51eb12edc36331bd7a2d3bb1ecfdc267985e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536754"
 ---
 # <a name="lteventgt-element-net-native"></a>Элемент &lt;Event&gt; (машинный код .NET)
 Применяет политику отражения среды выполнения к событию.  
@@ -27,7 +27,7 @@ ms.locfileid: "33395558"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание|  
+|Атрибут|Тип атрибута|Описание:|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя события.|  
 |`Browse`|Отражение|Необязательный атрибут. Определяет запрос для получения сведений о событиях или перечисляет события, но не включает динамический доступ во время выполнения.|  
@@ -58,7 +58,7 @@ ms.locfileid: "33395558"
 ## <a name="remarks"></a>Примечания  
  Если политика события не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>См. также
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

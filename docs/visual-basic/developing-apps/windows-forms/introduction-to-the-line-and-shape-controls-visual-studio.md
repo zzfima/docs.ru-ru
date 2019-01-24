@@ -7,48 +7,48 @@ helpviewer_keywords:
 - lines, drawing
 - shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-ms.openlocfilehash: 3ad740f7dd15194830959a5493970b4ba54ce142
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3623c2363f39150fd4bb202ba61ebd51df383ca8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699926"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Знакомство с элементами управления Line и Shape (Visual Studio)
-Элементы управления Visual Basic Power Packs, Line и Shape представляют собой набор из трех графических элементов управления, позволяющие Рисование линий и фигур в формах и контейнерах. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Элемент управления используется для рисовать горизонтальные, вертикальные и диагональные линии. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Управления используется для рисования окружностей и овалов и <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> управления используется для рисования, прямоугольники и квадраты.  
+Элементы управления Visual Basic Power Packs, Line и Shape — это набор из трех графических элементов управления, которые позволяют рисовать линии и фигуры в формах и контейнерах. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Управления используется для рисования горизонтальные, вертикальные и диагональные линии. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Управления используется для рисования окружностей и овалов и <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> управления используется для рисования прямоугольников и квадратов.  
   
 ## <a name="line-and-shape-controls"></a>Элементы управления Line и Shape  
- Элементы управления Line и Shape инкапсулируют множество графических методов, содержащихся в <xref:System.Drawing> пространства имен. Это позволяет без необходимости создавать графические объекты, перья и кисти рисования линий и фигур за один шаг. Можно сделать сложные графики методы, такие как градиентные заливки, просто задав несколько свойств.  
+ Элементы управления Line и Shape инкапсулируют множество графических методов, которые содержатся в <xref:System.Drawing> пространства имен. Это позволяет рисовать линии и фигуры за один шаг не требуется создавать графические объекты, перья и кисти. Достаточно настроить некоторые параметры могут выполняться сложные графические методы, такие как градиентные заливки.  
   
- Несмотря на то, что можно также для рисования линий и фигур с помощью методов графики, существует несколько преимуществ использования элементов управления Line и Shape.  
+ Несмотря на то, что это также можно рисовать линии и фигуры с помощью графических методов, существует несколько преимуществ использования элементов управления Line и Shape.  
   
--   Графики методы могут вызываться только во время выполнения. Элементы управления Line и Shape можно добавить в форму во время разработки. Это позволяет понять то, что они выглядят и точного их; они также могут добавляться во время выполнения.  
+-   Графические методы могут вызываться только во время выполнения. Элементы управления Line и Shape можно добавить в форму во время разработки. Это позволяет увидеть, как они выглядят и точного их; они также могут быть добавлены во время выполнения.  
   
--   Элементы управления Line и Shape доступны для выбора во время выполнения, предоставляющий события, такие как <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> и <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>. Выводы графических методов не могут быть выделены и не предоставляют события.  
+-   Элементы управления Line и Shape, могут быть выделены во время выполнения, предоставляющий события, такие как <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> и <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>. Выходные данные графические методы не могут быть выбраны и предоставляют события.  
   
--   Элементы управления Line и Shape предоставляют <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> и <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> методы, которые позволяют управлять z порядком во время разработки и во время выполнения. Z порядок графических методов можно управлять только путем изменения порядка выполнения во время выполнения.  
+-   Элементы управления Line и Shape предоставляют <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> и <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> методы, которые позволяют управлять их z порядок во время разработки и во время выполнения. Z порядок графических методов можно управлять только путем изменения их порядка выполнения во время выполнения.  
   
--   Элементы управления Line и Shape, поддерживающих элементы управления; у них нет дескрипторами окон и поэтому потреблять меньше системных ресурсов.  
+-   Элементы управления Line и Shape, — это элементы управления без окон; у них нет дескрипторов окон и таким образом использовать меньше системных ресурсов.  
   
 ### <a name="object-model"></a>Объектная модель  
- Элементы управления Line и Shape, являются производными от базового <xref:Microsoft.VisualBasic.PowerPacks.Shape> класс, который определяет их общие свойства, методы и события.  
+ Элементы управления Line и Shape, являются производными от базового <xref:Microsoft.VisualBasic.PowerPacks.Shape> класс, который определяет свои общие свойства, методы и события.  
   
- На следующем рисунке иерархии объектов Line и Shape.  
+ Ниже показана иерархия объектов Line и Shape.  
   
  ![Схема иерархии объектов Line и Shape](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
 Иерархия объектов Line и Shape  
   
- Производные <xref:Microsoft.VisualBasic.PowerPacks.LineShape> класс содержит свойства, методы и события, которые являются уникальными для линий. Производные <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> класс является базовым классом для <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> и <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; он содержит свойства, методы и события, общие для всех фигур. Можно также создавать производные <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> для создания собственных `Shape` элементов управления.  
+ Производные <xref:Microsoft.VisualBasic.PowerPacks.LineShape> класс содержит свойства, методы и события, которые являются уникальными для линий. Производные <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> класс является базовым классом для <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> и <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; он содержит свойства, методы и события, общие для всех фигур. Можно также являются производными от <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> для создания собственных `Shape` элементов управления.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> И <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> классы можно использовать для рисования окружностей, овалы, прямоугольников и прямоугольников со скругленными углами.  
+ <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> И <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> классы могут использоваться для рисования окружностей, овалы, прямоугольников и прямоугольников со скругленными углами.  
   
- При добавлении элемента управления Line или Shape формы или контейнер, создается невидимый <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> создан объект. <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> Выступает в качестве холста для фигур в каждый контейнерный элемент управления, каждый из которых <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> имеет соответствующий <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> , позволяющий выполнять итерацию элементов управления Line и Shape. Фигуры можно перемещать из одного контейнера в другой с помощью вырезания и вставки или перетаскивания. При удалении последней формы из контейнера, <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> тоже будет удалена.  
+ Когда элемент управления линии или фигуры добавляется в форму или контейнер, создается невидимый <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> создается объект. <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> Выступает в качестве холста для фигур в каждый контейнерный элемент управления, каждый из которых <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> имеет соответствующий <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> , позволяющий выполнять итерацию всех элементов управления Line и Shape. Фигуры можно перемещать из одного контейнера в другой с помощью вырезания и вставки или перетаскивания. При удалении последней фигуры из контейнера, <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> тоже будет удалена.  
   
 > [!NOTE]
->  Не все элементы управления контейнера поддерживают элементы управления Line и Shape. Невозможно разместить элемент управления линии или фигуры на <xref:System.Windows.Forms.TableLayoutPanel> или <xref:System.Windows.Forms.FlowLayoutPanel>.  
+>  Не все элементы управления контейнера поддерживают элементы управления Line и Shape. Нельзя разместить элемент управления линии или фигуры на <xref:System.Windows.Forms.TableLayoutPanel> или <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.PowerPacks>  
- [Пошаговое руководство. Изображение линий при помощи элемента управления LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
- [Пошаговое руководство. Рисование фигур при помощи элементов управления OvalShape и RectangleShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
- [Пошаговое руководство. Разрешение переходов между фигурами](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.PowerPacks>
+- [Практическое руководство. Рисование линий с помощью элемента управления LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+- [Практическое руководство. Рисование фигур при помощи OvalShape и RectangleShape элементов управления](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
+- [Практическое руководство. Разрешение переходов между фигурами](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

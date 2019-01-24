@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 563c1fccd0b1fd254d721f631b0c8312b3b09bbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fb663bc17458f0866e66332e40527390714fc79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720454"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>Перечисление CorDebugGenerationTypes
 Указывает на создание области памяти в управляемой куче.  
@@ -39,23 +39,23 @@ typedef enum CorDebugGenerationTypes {
   
 ## <a name="members"></a>Участники  
   
-|Имя члена|Описание|  
+|Имя члена|Описание:|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|Поколение 0.|  
 |`CorDebug_Gen1`|Поколение 1.|  
 |`CorDebug_Gen2`|Поколение 2.|  
-|`CorDebug_LOH`|Для кучи больших объектов.|  
+|`CorDebug_LOH`|Куча больших объектов.|  
   
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

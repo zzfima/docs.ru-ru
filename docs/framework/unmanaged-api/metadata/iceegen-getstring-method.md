@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7ac5ef95ca3705b11cfda51d7fd1aca7400abc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716821"
 ---
 # <a name="iceegengetstring-method"></a>Метод ICeeGen::GetString
-Возвращает строку, хранящуюся по указанному относительному виртуальному адресу.  
+Получает строку, хранящуюся в указанный относительный виртуальный адрес.  
   
  Этот метод является устаревшим и не должны использоваться.  
   
@@ -40,19 +40,19 @@ HRESULT GetString (
   
 #### <a name="parameters"></a>Параметры  
  `RVA`  
- [in] Относительный виртуальный адрес возвращаемой строки.  
+ [in] Относительный виртуальный адрес возвращаемая строка.  
   
  `lpString`  
  [out] Возвращаемая строка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731144"
 ---
 # <a name="corarraylayout-structure"></a>Структура COR_ARRAY_LAYOUT
 Предоставляет сведения о расположении объекта массива в памяти.  
@@ -43,31 +43,31 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`componentID`|Идентификатор типа объектов, содержащихся в массиве.|  
-|`componentType`|Значение перечисления CorElementType, указывающее, является ли компонент ссылка на сборку мусора, класс значений или простому типу.|  
-|`firstElementOffset`|Смещение для первого элемента в массиве.|  
+|`componentID`|Идентификатор для типа объектов, содержащихся в массиве.|  
+|`componentType`|CorElementType значение перечисления, указывающее, находится ли компонент ссылка на сборку мусора, класс значений или примитивный тип.|  
+|`firstElementOffset`|Смещение до первого элемента в массиве.|  
 |`elementSize`|Размер каждого элемента.|  
-|`countOffset`|Смещение, равное количеству элементов в массиве.|  
-|`rankSize`|Размер ранг в байтах.|  
+|`countOffset`|Смещение, в число элементов в массиве.|  
+|`rankSize`|Размер ранг, в байтах.|  
 |`numRanks`|Число ранги в массиве.|  
 |`rankOffset`|Смещение, с которой начинается ранги.|  
   
 ## <a name="remarks"></a>Примечания  
- `rankSize` Поле указывает размер ранг в многомерный массив. Он является точным для также одномерные массивы.  
+ `rankSize` Поле указывает размер ранжирования в многомерный массив. Оно является точным для также одномерные массивы.  
   
- Значение `numRanks` -1 для одномерного массива и `N` для многомерный массив `N` измерения.  
+ Значение `numRanks` равно 1 для одномерного массива и `N` для многомерный массив `N` измерений.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

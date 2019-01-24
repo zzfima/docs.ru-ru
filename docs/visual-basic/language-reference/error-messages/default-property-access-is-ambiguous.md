@@ -1,5 +1,5 @@
 ---
-title: Доступ к свойству по умолчанию определяется неоднозначно между наследуемые члены интерфейса &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса2&gt;&#39;
+title: Доступ к свойству по умолчанию определяется неоднозначно между членами наследуемых интерфейсов &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518648"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Доступ к свойству по умолчанию определяется неоднозначно между наследуемые члены интерфейса &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса2&gt;&#39;
-Интерфейс наследует от двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем. Компилятор не может разрешить доступ к этому свойству по умолчанию без уточнения. Это показано в следующем примере.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Доступ к свойству по умолчанию определяется неоднозначно между членами наследуемых интерфейсов &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;defaultpropertyname&gt; &#39; интерфейса &#39; &lt;имя_интерфейса2&gt;&#39;
+Интерфейс наследует от двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем. Компилятор не может разрешить доступ к этому свойству значение по умолчанию без указания полного имени. Это показано в следующем примере.  
   
 ```  
 Public Interface Iface1  
@@ -35,13 +35,13 @@ Public Class testClass
 End Class  
 ```  
   
- При указании `testObj(1)`, компилятор пытается разрешить ее свойства по умолчанию. Однако существуют два свойства по умолчанию невозможно из-за наследуемых интерфейсов, поэтому компилятор создает эту ошибку.  
+ При указании `testObj(1)`, компилятор пытается разрешить его в свойство по умолчанию. Тем не менее существуют два свойства по умолчанию из-за наследуемых интерфейсов, поэтому компилятор создает эту ошибку.  
   
  **Идентификатор ошибки:** BC30686  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Избегайте наследования элементов с тем же именем. В предыдущем примере если `testObj` не требуется ни один из членов, например, `Iface2`, объявите его следующим образом:  
+-   Избегайте наследования элементов с одинаковым именем. В предыдущем примере если `testObj` не требуется ни один из членов, скажем, `Iface2`, объявите ее следующим образом:  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      - или -  
   
--   Реализуйте наследуемый интерфейс в классе. Затем можно реализовать все наследуемые свойства с различными именами. Однако только один из них может быть свойство по умолчанию для реализующего класса. Это показано в следующем примере.  
+-   Реализуйте наследуемый интерфейс в классе. Затем можно реализовать все наследуемые свойства с разными именами. Однако только один из них может быть свойство по умолчанию, реализующего класса. Это показано в следующем примере.  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

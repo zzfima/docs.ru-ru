@@ -2,12 +2,12 @@
 title: Интеграция транзакционных компонентов служб Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 865756506f34fecb1848675205715acfb261ba2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686508"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Интеграция транзакционных компонентов служб Enterprise Services
 Windows Communication Foundation (WCF) обеспечивает автоматический механизм интеграции со службами Enterprise Services (см. в разделе [интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку возможность транзакций WCF построена на <xref:System.Transactions> инфраструктуры, процесс интеграции служб Enterprise Services с помощью WCF уже имеется у задания взаимодействия между <xref:System.Transactions> и Enterprise Services, как описано в [Взаимодействие с транзакциями COM + Enterprise Services и](https://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -92,6 +92,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Интеграция с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Интеграция с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a>См. также
+- [Интеграция с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Интеграция с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492689"
 ---
 # <a name="storyboards-overview"></a>Общие сведения о Storyboard
 В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для создания и применения анимаций. Он описывает, как интерактивно манипулировать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.  
@@ -261,7 +261,7 @@ ms.locfileid: "44222478"
   
  С помощью этих методов удобен тем, что не нужно создавать <xref:System.Windows.Trigger> или <xref:System.Windows.TriggerAction> объектов; нужна ссылка на управляемый <xref:System.Windows.Media.Animation.Storyboard> требуется работать.  
   
- **Примечание:** все интерактивные действия, выполняемые <xref:System.Windows.Media.Animation.Clock>и поэтому на <xref:System.Windows.Media.Animation.Storyboard> произойдет при следующем такте, который произойдет незадолго перед следующей операцией рендеринга. Например, если вы используете <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метод для перехода к следующей точке анимации, значение свойства не изменится сразу же, вместо этого изменяется значение при следующем такте.  
+ **Примечание.** Все интерактивные действия, выполняемые <xref:System.Windows.Media.Animation.Clock>и поэтому на <xref:System.Windows.Media.Animation.Storyboard> произойдет при следующем такте, который произойдет незадолго перед следующей операцией рендеринга. Например, если вы используете <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метод для перехода к следующей точке анимации, значение свойства не изменится сразу же, вместо этого изменяется значение при следующем такте.  
   
  Приведенный ниже показано, как применять анимации с помощью интерактивных методов класса и управлять <xref:System.Windows.Media.Animation.Storyboard> класса.  
   
@@ -302,7 +302,7 @@ ms.locfileid: "44222478"
   
  Анимации с помощью свойства <xref:System.Windows.Trigger> объекты ведут себя в сложнее, чем <xref:System.Windows.EventTrigger> анимации или анимации к использованию <xref:System.Windows.Media.Animation.Storyboard> методы.  Они «переходной» с анимацией определены другими <xref:System.Windows.Trigger> объектов, но compose с <xref:System.Windows.EventTrigger> и анимациями, запускаемыми.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

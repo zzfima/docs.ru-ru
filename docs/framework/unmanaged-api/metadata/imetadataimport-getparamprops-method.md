@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685533"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Метод IMetaDataImport::GetParamProps
 Возвращает значения метаданных для параметра, на который ссылается указанный токен ParamDef.  
@@ -52,22 +52,22 @@ HRESULT GetParamProps (
  [out] Указатель на токен MethodDef, предоставляющий метод, который принимает параметр.  
   
  `pulSequence`  
- [out] Порядковый номер параметра в списке аргументов метода.  
+ [out] Порядковая позиция параметра в списке аргументов метода.  
   
  `szName`  
  [out] Буфер для хранения имени параметра.  
   
  `cchName`  
- [in] Запрошенный размер в расширенных символах с `szName`.  
+ [in] Запрошенный размер в расширенных символах `szName`.  
   
  `pchName`  
- [out] Возвращаемый размер в расширенных символах с `szName`.  
+ [out] Возвращаемый размер в расширенных символах `szName`.  
   
  `pdwAttr`  
  [out] Указатель на любой атрибут флаги, связанные с параметром.  
   
  `pdwCPlusTypeFlag`  
- [out] Указатель на флаг, определяют, параметр <xref:System.ValueType>.  
+ [out] Указатель на значение типа, указывающее флаг, параметр <xref:System.ValueType>.  
   
  `ppValue`  
  [out] Указатель на строковую константу, возвращаемых параметром.  
@@ -76,14 +76,14 @@ HRESULT GetParamProps (
  [out] Размер `ppValue` в расширенные символы, или нуль, если `ppValue` не содержит строку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

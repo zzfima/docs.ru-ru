@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700303"
 ---
 # <a name="mid-statement"></a>Оператор Mid
 Заменяет указанное число символов в `String` переменной с символами из другой строки.  
@@ -32,16 +32,16 @@ Mid( _
   
 ## <a name="parts"></a>Части  
  `Target`  
- Обязательно. Имя `String` переменная, подлежащая изменению.  
+ Обязательный. Имя `String` переменная, подлежащая изменению.  
   
  `Start`  
- Обязательно. `Integer` выражение. Позиция знака в `Target` которой начинается замена текста. `Start` использует однобазовый индекс.  
+ Обязательный. `Integer` выражение. Позиция знака в `Target` которой начинается замена текста. `Start` использует однобазовый индекс.  
   
  `Length`  
- Необязательный. `Integer` выражение. Число символов для замены. Если не указано, все `String` используется.  
+ Необязательный параметр. `Integer` выражение. Число символов для замены. Если не указано, все `String` используется.  
   
  `StringExpression`  
- Обязательно. `String` выражение, которое заменяет часть `Target`.  
+ Обязательный. `String` выражение, которое заменяет часть `Target`.  
   
 ## <a name="exceptions"></a>Исключения  
   
@@ -69,7 +69,7 @@ Mid( _
   
  **Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Знакомство со строками в Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Знакомство со строками в Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
