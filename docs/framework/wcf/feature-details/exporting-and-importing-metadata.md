@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f99b8626ca4a89bf94e44652e8277f8b2c147fe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706382"
 ---
 # <a name="exporting-and-importing-metadata"></a>Экспорт и импорт метаданных
-В Windows Communication Foundation (WCF), экспорт метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
+В Windows Communication Foundation (WCF), экспорт метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, клиенты могут использовать, чтобы понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
   
 ## <a name="exporting-metadata"></a>Экспорт метаданных  
- Для экспорта метаданных из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> используется реализация абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>. <xref:System.ServiceModel.Description.WsdlExporter> Тип — это реализация <xref:System.ServiceModel.Description.MetadataExporter> абстрактный класс, входящий в состав WCF.  
+ Для экспорта метаданных из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> используется реализация абстрактного класса <xref:System.ServiceModel.Description.MetadataExporter>. <xref:System.ServiceModel.Description.WsdlExporter> Тип представляет собой реализацию <xref:System.ServiceModel.Description.MetadataExporter> абстрактный класс, в состав WCF.  
   
  Тип <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> создает метаданные языка описания веб-служб (WSDL) с присоединенными выражениями политики в экземпляре <xref:System.ServiceModel.Description.MetadataSet>. Экземпляр <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> можно использовать для итерационного экспорта метаданных для объектов <xref:System.ServiceModel.Description.ContractDescription> и объектов <xref:System.ServiceModel.Description.ServiceEndpoint>. Можно также экспортировать коллекцию объектов <xref:System.ServiceModel.Description.ServiceEndpoint> и связать их с определенным именем службы.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33495428"
 ## <a name="importing-metadata"></a>Импорт метаданных  
   
 ### <a name="importing-wsdl-documents"></a>Импорт документов WSDL  
- Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактного класса. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Тип — это реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактный класс, входящий в состав WCF. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet>.  
+ Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter> абстрактного класса. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Тип представляет собой реализацию <xref:System.ServiceModel.Description.MetadataImporter> абстрактный класс, в состав WCF. Тип <xref:System.ServiceModel.Description.WsdlImporter> импортирует метаданные языка WSDL с прикрепленными политиками, объединенными в объекте <xref:System.ServiceModel.Description.MetadataSet>.  
   
  Тип <xref:System.ServiceModel.Description.WsdlImporter> позволяет контролировать способ импорта метаданных. Можно импортировать все конечные точки, все привязки или все контракты. Можно импортировать все конечные точки, связанные с определенной службой, привязкой или типом порта WSDL. Можно также импортировать конечную точку для определенного порта WSDL, привязку для определенной привязки WSDL или контракт для определенного типа порта WSDL.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33495428"
  [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Описание сопоставления объектов описания и языка WSDL.  
   
- [Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Практическое руководство. Использование Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Описание использования средства Svcutil.exe для экспорта метаданных служб, контрактов и типов данных в скомпилированных сборках.  
   
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -68,6 +68,6 @@ ms.locfileid: "33495428"
   
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
-## <a name="see-also"></a>См. также  
- [Экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a>См. также
+- [Экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
+- [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

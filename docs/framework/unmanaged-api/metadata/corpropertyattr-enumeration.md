@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263981708af2e40bd3690a3cd344156488eed0dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577588"
 ---
 # <a name="corpropertyattr-enumeration"></a>Перечисление CorPropertyAttr
 Содержит значения, описывающие метаданные свойства.  
@@ -42,20 +42,20 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`prSpecialName`|Указывает, что это свойство является особым, и указывает его имя как.|  
+|`prSpecialName`|Указывает, что это специальное свойство, и указывает его имя как.|  
 |`prReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
-|`prRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должны проверить кодировку имени свойства.|  
+|`prRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должна проверять кодировку имени свойства.|  
 |`prHasDefault`|Указывает, что свойство имеет значение по умолчанию.|  
 |`prUnused`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: bfb8ea0d5d7a22bd66f477216129ff834023f4ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 61c8f3aa48bb5dd8b02ee8f6327fbde1f55bfe1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595309"
 ---
 # <a name="no-mouse-wheel-is-present"></a>Не обнаружено колесо мыши
 Было вызвано свойство `My.Computer.Mouse.WheelScrollLines` , но у мыши отсутствует колесо прокрутки.  
@@ -22,7 +22,7 @@ ms.locfileid: "43738202"
   
 -   Установите на компьютере мышь с колесом прокрутки.  
   
-## <a name="see-also"></a>См. также  
- [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)  
- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)  
- [Исключения и обработка ошибок в Visual Basic](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)
+## <a name="see-also"></a>См. также
+- [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
+- [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)
+- [Обработка исключений и ошибок в Visual Basic](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)

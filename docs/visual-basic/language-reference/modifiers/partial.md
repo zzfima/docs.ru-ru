@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690713"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Указывает, что объявление типа — это частичное определение типа.  
@@ -45,20 +45,20 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Термин|Определение|  
 |---|---|  
-|`attrlist`|Необязательный. Список атрибутов, применяемых к этому событию. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (`< >`).|  
-|`accessmodifier`|Необязательный. Указывает, какой код может получить доступ к этому событию. В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Необязательный. В разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Необязательный. В разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Обязательно. Имя данного типа. Оно должно соответствовать имени, определенному в других частичных объявлениях того же типа.|  
-|`Of`|Необязательный. Указывает, что это универсальный тип. В разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md). В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательный. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому событию. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловых скобках (`< >`).|  
+|`accessmodifier`|Необязательный параметр. Указывает, какой код может получить доступ к этому событию. См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный параметр. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Необязательный параметр. См. в разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Необязательный параметр. См. в разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`name`|Обязательный. Имя данного типа. Оно должно соответствовать имени, определенному в других частичных объявлениях того же типа.|  
+|`Of`|Необязательный параметр. Указывает, что это универсальный тип. См. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Требуется при использовании [из](../../../visual-basic/language-reference/statements/of-clause.md). См. в разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Необязательный параметр. См. в разделе [оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Обязательный параметр, если используется параметр `Inherits`. Имя класса или интерфейса, от которого наследует этот класс.|  
-|`Implements`|Необязательный. В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Необязательный параметр. См. в разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Обязательный параметр, если используется параметр `Implements`. Имена интерфейсов, реализуемых этим типом.|  
-|`variabledeclarations`|Необязательный. Операторы, которые объявляют дополнительные переменные и события для типа.|  
-|`proceduredeclarations`|Необязательный. Операторы, которые объявляют и определяют дополнительные процедуры для типа.|  
+|`variabledeclarations`|Необязательный параметр. Операторы, которые объявляют дополнительные переменные и события для типа.|  
+|`proceduredeclarations`|Необязательный параметр. Операторы, которые объявляют и определяют дополнительные процедуры для типа.|  
 |`End Class` или `End Structure`|Завершает этот частичное определение `Class` или `Structure`.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -93,10 +93,10 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Два частичных определения в предыдущем примере могут находиться в одном или двух исходных файлах.  
   
-## <a name="see-also"></a>См. также  
- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Повышение типа](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>См. также
+- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Повышение типа](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

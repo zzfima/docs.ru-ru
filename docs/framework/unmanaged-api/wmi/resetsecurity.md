@@ -1,6 +1,6 @@
 ---
 title: Функция ResetSecurity (Справочник по неуправляемым API)
-description: Функция ResetSecurity назначает маркер олицетворения текущего потока.
+description: Функция ResetSecurity присваивает маркер олицетворения для текущего потока.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730858"
 ---
 # <a name="resetsecurity-function"></a>Функция ResetSecurity
-Присваивает указанный олицетворения текущего потока.   
+Назначает предоставленный маркер олицетворения текущему потоку.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,20 +39,20 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Параметры
 
 `token`  
-[in] Токен олицетворения для связывания с текущим потоком. Это значение может быть равно `null`. 
+[in] Маркер олицетворения, связываемый с текущим потоком. Это значение может быть равно `null`. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).
 
-Если функция завершается с ошибкой, возвращается код ошибки ненулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
+Если функция завершается с ошибкой, возвращается код ошибки. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

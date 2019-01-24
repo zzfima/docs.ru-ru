@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Получение сертификата (WCF)
+title: Как выполнить Получение сертификата (WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cefea47d77fef9a59234584b02b03dca4cd99ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709446"
 ---
-# <a name="how-to-obtain-a-certificate-wcf"></a>Практическое руководство. Получение сертификата (WCF)
+# <a name="how-to-obtain-a-certificate-wcf"></a>Как выполнить Получение сертификата (WCF)
 Windows Communication Foundation (WCF) использовать возможности, используют сертификаты X.509, сначала нужно получить сертификаты.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Получение сертификата X.509  
@@ -27,6 +27,6 @@ Windows Communication Foundation (WCF) использовать возможно
     > [!NOTE]
     >  Независимо от того, какой способ выбран, получатель запроса SOAP, который содержит сертификат X.509, должен доверять сертификату X.509. Это означает, что сертификат X.509 или издатель в цепи сертификатов находится в хранилище сертификатов "Доверенные лица" и сертификат X.509 не помещен в хранилище ненадежных сертификатов.  
   
-## <a name="see-also"></a>См. также  
- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Практическое руководство. Создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+## <a name="see-also"></a>См. также
+- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Практическое руководство. Создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

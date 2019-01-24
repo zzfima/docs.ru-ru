@@ -10,35 +10,35 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 5f279ed0a33840bb1f2321c17a1ffba412837c07
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536299"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-Модификатор доступа члена, который указывает, один или несколько объявленных программных элементов доступны только внутри собственного класса или из производного класса.  
+Модификатор доступа к члену, который указывает, что один или несколько объявленных программных элементов доступны только внутри собственного класса или из производного класса.  
   
 ## <a name="remarks"></a>Примечания  
- Иногда программный элемент объявлен в классе содержит конфиденциальные данные или ограниченный код, и вы хотите ограничить доступ к элементу. Однако если класс является наследуемым и предполагается в иерархии производных классов, возможно, необходимые для этих производных классов для доступа к данным или коду. В этом случае требуется, чтобы элемент был доступен как из базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, можно объявить его с `Protected`.  
+ Иногда программный элемент объявлен в классе содержит конфиденциальные данные или ограниченный код, и вы хотите ограничить доступ к элементу. Тем не менее если класс является наследуемым и предполагается в иерархии производных классов, возможно, необходимые для этих производных классов для доступа к данным или коду. В этом случае требуется элемент могут быть недоступны, как от базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, его можно объявить с `Protected`.  
 
 > [!NOTE]
 > `Protected` Модификатор доступа может сочетаться с двух других модификаторов:
-> - [Protected Friend](protected-friend.md) модификатор делает член класса, доступный из этого класса из производных классов и из той же сборки, в котором определен класс. 
-> - [Защищенный закрытый](private-protected.md) модификатор делает член класса доступны с помощью производных типов, но только в пределах содержащего сборки.
+> - [Protected Friend](protected-friend.md) модификатор делает член класса, доступный из этого класса из производных классов, а также из той же сборке, в котором определен класс. 
+> - [Private Protected](private-protected.md) модификатор делает член класса доступным для производных типов, но только в пределах содержащего сборки.
   
 ## <a name="rules"></a>Правила  
   
--   **Контекст объявления.** Можно использовать `Protected` только на уровне класса. Это означает, что контекст объявления для `Protected` элемент должен быть классом и не может быть исходный файл, пространство имен, интерфейса, модуля, структуры или процедуры.  
+-   **Контекст объявления.** Можно использовать `Protected` только на уровне класса. Это означает, что контекст объявления для `Protected` элемент должен быть классом и не может быть исходный файл, пространство имен, интерфейс, модуль, структуру или процедуры.  
 
 ## <a name="behavior"></a>Поведение  
   
--   **Уровень доступа.** Весь код в классе можно получить доступ к его элементам. Код в любой класс, производный от базового класса можно получить доступ ко всем `Protected` элементы базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может получить доступ к `Protected` элементы базового класса базового класса и т. д.  
+-   **Уровень доступа.** Весь код в классе можно получить доступ к его элементам. Код в любой класс, производный от базового класса можно получить доступ ко всем `Protected` элементы базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может обращаться к `Protected` элементы базового класса, базовый класс и т. д.  
   
      Защищенный доступ не является надмножеством или подмножеством дружественный доступ.  
   
--   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа, см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Модификатор `Protected` можно использовать в следующих контекстах:  
   
@@ -66,13 +66,13 @@ ms.locfileid: "34234761"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
- [Protected Private](private-protected.md)   
- [Protected Friend](protected-friend.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>См. также
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

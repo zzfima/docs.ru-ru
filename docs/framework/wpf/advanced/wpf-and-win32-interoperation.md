@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 733a4d4ee7296d96a18e8ba4763dfa12e218c028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a242f60324f2342f3dd96edc3ccbd663ecc9807a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680485"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Взаимодействие WPF и Win32
 В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
@@ -27,7 +27,7 @@ ms.locfileid: "43526521"
   
 -   Размещение окна [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] в содержимом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. С помощью этого способа можно использовать существующий пользовательский элемент управления [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] в контексте другого содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и передавать данные через границы.  
   
- Каждый из этих способов детально представлен в этом разделе. Дополнительные примеры кода размещения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] см. в разделе [Пошаговое руководство. Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Дополнительные примеры кода размещения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Пошаговое руководство. Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Каждый из этих способов детально представлен в этом разделе. Для иллюстрации, Дополнительные примеры кода, на котором размещается [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], см. в разделе [Пошаговое руководство: Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md). Для иллюстрации, Дополнительные примеры кода, на котором размещается [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [Пошаговое руководство: Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Проекты взаимодействия WPF  
@@ -87,7 +87,7 @@ ms.locfileid: "43526521"
 > [!NOTE]
 >  Определить класс содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для шага 1 можно частично или полностью в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с помощью разделяемого класса по умолчанию класса содержимого. Для этого нужно создать отдельную сборку и сослаться на нее. Несмотря на то, что обычно содержат <xref:System.Windows.Application> объекта в процессе компиляции [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в сборку, вы не доходят до использования его <xref:System.Windows.Application> как часть взаимодействие, просто используйте один или несколько корневых классов для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов называется Чтобы для приложения и ссылаться на их разделяемые классы. Оставшаяся часть процедуры практически аналогична описанной выше.  
 >   
->  Каждое из этих действий будет показано в коде в разделе [Пошаговое руководство. Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
+>  Каждое из этих действий будет показано в коде в разделе [Пошаговое руководство: Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md).  
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Размещение окна Microsoft Win32 в WPF  
@@ -115,7 +115,7 @@ ms.locfileid: "43526521"
   
  Следующие действия создают приложение, которое работает с вводом мыши. Вы можете добавить поддержку табуляции для размещенного окна, реализовав <xref:System.Windows.Interop.IKeyboardInputSink> интерфейс.  
   
- Каждое из этих действий будет показано в коде в разделе [Пошаговое руководство. Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
+ Каждое из этих действий будет показано в коде в разделе [Пошаговое руководство: Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md).  
   
 ### <a name="hwnds-inside-wpf"></a>Дескрипторы HWND внутри WPF  
  Можно представить себе <xref:System.Windows.Interop.HwndHost> как специальный элемент управления. (С технической точки зрения <xref:System.Windows.Interop.HwndHost> — <xref:System.Windows.FrameworkElement> производного класса не <xref:System.Windows.Controls.Control> производного класса, но его можно считать элементом управления применительно к соответствующему взаимодействию.) <xref:System.Windows.Interop.HwndHost> абстрагирует базовые [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] характер размещенного содержимого таким образом, что в оставшейся части [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] считает размещенное содержимое другим объектом, схожих с элементами управления, который должен отрисовывать и обработки входных данных. <xref:System.Windows.Interop.HwndHost> обычно ведет себя подобно любому другому [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement>, несмотря на то, что существуют некоторые важные различия, связанные с выводом (рисование и графика) и вводом (мышь и клавиатура), зависимости от ограничений какие базовыми дескрипторами HWND на может поддерживать.  
@@ -156,9 +156,9 @@ ms.locfileid: "43526521"
   
  Интерфейсы обеспечивают поддержку только для событий перехода между областями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Внутри области [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] поведение перехода полностью контролируется логикой перехода, реализованной в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], если таковая имеется.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Interop.HwndHost>  
- <xref:System.Windows.Interop.HwndSource>  
- <xref:System.Windows.Interop>  
- [Пошаговое руководство. Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [Пошаговое руководство. Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Interop.HwndHost>
+- <xref:System.Windows.Interop.HwndSource>
+- <xref:System.Windows.Interop>
+- [Пошаговое руководство: Размещение элемента управления Win32 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Пошаговое руководство: Размещение содержимого WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

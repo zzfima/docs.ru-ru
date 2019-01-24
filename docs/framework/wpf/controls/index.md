@@ -2,17 +2,11 @@
 title: Элементы управления
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- controls [WPF], about WPF controls
+  - 'controls [WPF], about WPF controls'
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: fcef506f6be21b0c11a1c160ef6891a7ee53a5ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189671"
 ---
 # <a name="controls"></a>Элементы управления
 <a name="introduction"></a>
@@ -98,13 +92,13 @@ ms.locfileid: "50189671"
   
  Дополнительные сведения об этих базовых классах см. в разделе [модель содержимого WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
-## <a name="see-also"></a>См. также  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Категории элементов управления](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [Библиотека элементов управления](../../../../docs/framework/wpf/controls/control-library.md)  
- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [Включение команды](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Пошаговые руководства: создание пользовательской анимированной кнопки](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>См. также
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Категории элементов управления](../../../../docs/framework/wpf/controls/controls-by-category.md)
+- [Библиотека элементов управления](../../../../docs/framework/wpf/controls/control-library.md)
+- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)
+- [Включение команды](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)
+- [Пошаговые руководства: Создание пользовательской анимированной кнопки](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)
+- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)

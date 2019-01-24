@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585621"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Основные операции запроса (Visual Basic)
 Этот раздел содержит краткое введение в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений в Visual Basic и некоторых типичных операций, выполняемых в запросе. Дополнительные сведения см. в следующих разделах:  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  Этот код можно выполнить с помощью списка студентов, созданный в [как: создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
+>  Этот код можно выполнить с помощью списка студентов, созданный в [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` Ключевое слово эквивалентно `INNER JOIN` в SQL. Он объединяет две коллекции, на основе сопоставления значений ключа между элементами двух коллекций. Запрос возвращает все или часть элементов коллекции с совпадающими значениями ключей. Например следующий код дублирует действие предыдущего неявного объединения.  
   
@@ -116,9 +116,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- Если вы запустите этот код, используя список учащихся, созданные в [как: создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), выходные данные `For Each` инструкция является:  
+ Если вы запустите этот код, используя список учащихся, созданные в [как: Создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), выходные данные `For Each` инструкция является:  
   
- Год: "junior"  
+ Год: "Junior"  
   
  Такер, Майкл  
   
@@ -128,7 +128,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Гладких, Андрей  
   
- Год: старший  
+ Год: Старший  
   
  Omelchenko Svetlana  
   
@@ -140,7 +140,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Александр Шабалин  
   
- Год: обучения  
+ Год: Обучения  
   
  Mortensen Свен  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Дополнительные сведения о `Group By`, см. в разделе [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Запросы](../../../../visual-basic/language-reference/queries/index.md)
+- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

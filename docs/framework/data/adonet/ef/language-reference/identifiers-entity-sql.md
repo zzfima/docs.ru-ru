@@ -2,12 +2,12 @@
 title: Идентификаторы (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 19c28eb4c883cc0d1cf18cba1751115277848208
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686807"
 ---
 # <a name="identifiers-entity-sql"></a>Идентификаторы (Entity SQL)
 В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] идентификаторы используются для представления псевдонимов выражений запросов, ссылок на переменные, свойств объектов, функций и т. д. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] имеются два вида идентификаторов: простые идентификаторы и заключенные в кавычки идентификаторы.  
@@ -120,7 +120,7 @@ SELECT 1 AS X, 2 AS X …
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## <a name="see-also"></a>См. также  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Набор символов ввода](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+## <a name="see-also"></a>См. также
+- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Набор символов ввода](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

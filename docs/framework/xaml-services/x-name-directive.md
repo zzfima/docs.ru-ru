@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696468"
 ---
 # <a name="xname-directive"></a>Директива x:Name
 Однозначно определяет элементы, определенные в XAML, в области имен XAML. Области видимости имен XAML и их уникальность моделей могут применяться к экземпляры объектов, при платформы предоставляют интерфейсы API или реализации поведений, которые обращаются к графа объекта XAML во время выполнения.  
@@ -66,7 +66,7 @@ ms.locfileid: "48583940"
 ## <a name="silverlight-usage-notes"></a>Примечания об использовании Silverlight  
  `x:Name` для Silverlight описывается отдельно. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [Деревья в WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [Деревья в WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

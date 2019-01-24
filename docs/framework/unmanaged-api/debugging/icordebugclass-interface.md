@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass интерфейс1
+title: Интерфейс1 ICorDebugClass
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bec35babec96da5ca5d527b19f853b4ce1c384e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710231"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass интерфейс1
+# <a name="icordebugclass-interface1"></a>Интерфейс1 ICorDebugClass
 Представляет тип, который может быть базовым или сложным (иными словами, пользовательским). Если тип универсальный, `ICorDebugClass` представляет универсальный тип, у которого отсутствуют экземпляры.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Возвращает модуль, в котором определен этот класс.|  
 |[Метод GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|Получает значение указанного статического поля.|  
-|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Возвращает `TypeDef` токен метаданных для этого класса.|  
+|[Метод GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Получает `TypeDef` маркер метаданных для данного класса.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICorDebugClass` Интерфейс представляет универсальный тип, у которого отсутствуют экземпляры. Интерфейс ICorDebugType представляет экземпляр универсального типа. Например `Hashtable<K, V>` будут представлены в `ICorDebugClass`, тогда как `Hashtable<Int32, String>` будут представлены в `ICorDebugType`.  
+ `ICorDebugClass` Интерфейс представляет универсального типа без экземпляров. Интерфейс ICorDebugType представляет экземпляры универсального типа. Например `Hashtable<K, V>` будут представлены в `ICorDebugClass`, тогда как `Hashtable<Int32, String>` будут представлены в `ICorDebugType`.  
   
- Неуниверсальные типы представлены как `ICorDebugClass` и `ICorDebugType`. Последний интерфейс впервые появился в .NET Framework версии 2.0 для создания экземпляров типов.  
+ Неуниверсальные типы представлены оба `ICorDebugClass` и `ICorDebugType`. Последний интерфейс появился в .NET Framework версии 2.0 для создания экземпляров типов.  
   
 > [!NOTE]
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594646"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Перечисление CorThreadSafetyOptions
 Задает флаги для выбора параметров безопасности потока.  
@@ -38,18 +38,18 @@ typedef enum CorThreadSafetyOptions {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`MDThreadSatetyDefault`|Значение по умолчанию. Эквивалентно `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Указывает, что не сможет задать блокировку чтения и записи.|  
-|`MDThreadSatetyOn`|Указывает, можно задать блокировку чтения и записи.|  
+|`MDThreadSatetyOff`|Указывает, что нельзя установить блокировку потоков чтения/записи.|  
+|`MDThreadSatetyOn`|Указывает, что блокировки потоков чтения/записи может быть задано.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

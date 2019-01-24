@@ -1,19 +1,19 @@
 ---
-title: Инструкция по Анимации толщины границы с помощью ключевых кадров
+title: Как выполнить Анимация толщины границы с помощью ключевых кадров
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: a601fd6779a4d912166366652435aff9ae37613f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d30e414dd83e596da6415cc455c599820a22f3e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689959"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Инструкция по Анимации толщины границы с помощью ключевых кадров
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Как выполнить Анимация толщины границы с помощью ключевых кадров
 В этом примере демонстрируется анимация <xref:System.Windows.Controls.Control.BorderThickness%2A> свойство <xref:System.Windows.Controls.Border>.  
   
 ## <a name="example"></a>Пример  
@@ -29,10 +29,10 @@ ms.locfileid: "43421414"
   
  Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Анимирование значения BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Анимирование значения BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)

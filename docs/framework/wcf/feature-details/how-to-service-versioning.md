@@ -1,15 +1,15 @@
 ---
-title: Как управлять версиями службы
+title: 'Как выполнить: Управление версиями службы'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5f79382eb121472ffa32d969cfaeee0e83d3375d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700602"
 ---
-# <a name="how-to-service-versioning"></a>Как управлять версиями службы
+# <a name="how-to-service-versioning"></a>Как выполнить: Управление версиями службы
 В этом разделе описаны основные шаги, которые необходимо выполнить для создания конфигурации маршрутизации сообщений к разным версиям одной и той же службы. В этом примере сообщения направляются в две разные версии службы калькулятора: `roundingCalc` (v1) и `regularCalc` (v2). Обе реализации поддерживают одинаковые операции, однако старая версия службы `roundingCalc`, прежде чем вернуть результаты вычислений, округляет их до ближайшего целого числа. Клиентское приложение должно указать необходимость использования более новой версии службы `regularCalc`.  
   
 > [!WARNING]
@@ -324,5 +324,5 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Службы маршрутизации](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>См. также
+- [Службы маршрутизации](../../../../docs/framework/wcf/samples/routing-services.md)

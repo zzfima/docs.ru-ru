@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679765"
 ---
 # <a name="frequently-asked-questions"></a>Вопросы и ответы
 В следующих разделах даны ответы на некоторые вопросы, которые могут возникнуть при реализации [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -20,14 +20,14 @@ ms.locfileid: "33365492"
 ## <a name="cannot-connect"></a>Не удается подключиться  
  В. Не удается соединиться с базой данных.  
   
- О. Убедитесь в строке подключения указано правильно и что экземпляр SQL Server запущена. Обратите внимание, что для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется включенный протокол именованных каналов. Дополнительные сведения см. в разделе [обучения с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ О. Убедитесь в том, что строки подключения указано правильно и что экземпляр SQL Server запущена. Обратите внимание, что для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется включенный протокол именованных каналов. Дополнительные сведения см. в разделе [обучения с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Потеряны изменения, внесенные в базу данных  
  В. В базу данных были внесены изменения, однако при повторном запуске приложения их там не оказалось.  
   
  О. Проверьте, что для сохранения результатов в базе данных был вызван метод <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
-## <a name="database-connection-open-how-long"></a>Как долго сохраняется открытым соединение с базой данных?  
+## <a name="database-connection-open-how-long"></a>Соединение с базой данных: как долго сохранять открытым?  
  В. Как долго соединение с базой данных будет оставаться открытым?  
   
  О. Как правило, подключение остается открытым до тех пор, пока не будут использованы результаты запроса. Если планируется выделить время для обработки и кэширования всех результатов, к запросу следует применить <xref:System.Linq.Enumerable.ToList%2A>. В типичных сценариях, где каждый объект обрабатывается только один раз, потоковая модель является предпочтительной в `DataReader` и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -100,19 +100,19 @@ ms.locfileid: "33365492"
  Дополнительные сведения см. в разделе [Настройка операций за счет хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
   
 ## <a name="serialization-errors"></a>Ошибки сериализации  
- В. При попытке сериализации возникает следующая ошибка: «тип «System.Data.Linq.ChangeTracker+StandardChangeTracker»... не помечен как сериализуемый.»  
+ В. При попытке сериализации, возникает следующая ошибка: «Тип 'System.Data.Linq.ChangeTracker+StandardChangeTracker'... не помечен как сериализуемый».  
   
  О. Формирование кода в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает сериализацию <xref:System.Runtime.Serialization.DataContractSerializer>. Оно не поддерживает <xref:System.Xml.Serialization.XmlSerializer> или <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Дополнительные сведения см. в разделе [Сериализация](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
 ## <a name="multiple-dbml-files"></a>Несколько DBML-файлов  
  В. При работе с несколькими DBML-файлами, использующими общие таблицы, возникает ошибка компилятора.  
   
- О. Задать **контекстное пространство имен** и **пространство имен сущностей** свойства из [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] в разные значения в каждом DBML-файле. Это способ исключает конфликты имен/пространств имен.  
+ О. Задайте **пространство имен контекста** и **пространство имен сущностей** свойства из [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] разные значения в каждом DBML-файле. Это способ исключает конфликты имен/пространств имен.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Предупреждение явного задания значений, созданных базой данных, в Insert или Update  
  В. В базе данных имеется таблица со столбцом `DateCreated`, в качестве значения по умолчанию которой указана функция SQL `Getdate()`. При попытке вставить новую запись с помощью [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возвращается значение `NULL`. Хотя ожидается заданное по умолчанию значение базы данных.  
   
- О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматически обрабатывает данную ситуацию для столбцов identity (автоувеличение), rowguidcol (формируемые базой данных идентификаторы GUID) и timestamp. В других случаях необходимо вручную задать <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` и <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> свойства.  
+ О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматически обрабатывает данную ситуацию для столбцов identity (автоувеличение), rowguidcol (формируемые базой данных идентификаторы GUID) и timestamp. В других случаях нужно вручную задать <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` и <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> свойства.  
   
 ## <a name="multiple-dataloadoptions"></a>Несколько параметров DataLoadOptions  
  В. Можно ли задать дополнительные параметры загрузки, не переопределяя исходные?  
@@ -163,14 +163,14 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Проверьте значение по умолчанию <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), чтобы определить, является ли оно правильным для приложения.  
   
     > [!CAUTION]
-    >  Если вы используете [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] в Visual Studio изменения могут быть перезаписаны.  
+    >  Если вы используете [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] в Visual Studio, изменения могут быть перезаписаны.  
   
 ## <a name="aptca"></a>APTCA  
  В. Помечена ли сборка System.Data.Linq для использования кодом с частичным доверием?  
   
  О. Да, сборка System.Data.Linq.dll входит в число сборок [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], отмеченных атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Без данной отметки сборки в [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] предназначены для использования только полностью доверенным кодом.  
   
- Основной сценарий в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] разрешающий частично доверенный вызывающий код, предусматривает Включение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сборке доступны из веб-приложений, где *доверия* конфигурации используется значение Medium.  
+ Основной сценарий в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] разрешающий частично доверенный вызывающий код, предусматривает Включение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сборки должен быть предоставлен доступ из веб-приложений, где *доверия* конфигурации является Medium.  
   
 ## <a name="mapping-data-from-multiple-tables"></a>Сопоставление данных из нескольких таблиц  
  В. Данные в сущность поступают из нескольких таблиц. Как их сопоставить?  
@@ -178,7 +178,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  О. В базе данных можно создать представление и сопоставить с ним сущность. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает одинаковый SQL-код для представлений и таблиц.  
   
 > [!NOTE]
->  В данном сценарии использование представлений имеет ограничения. Способ работает с максимальной безопасностью, если операции, выполняемые в <xref:System.Data.Linq.Table%601>, поддерживаются базовым представлением. Операции, которые предполагается использовать, известны только вам. Например, большинство приложений доступно только для чтения, а другая значительная часть выполняет `Create` / `Update` / `Delete` операции только с помощью хранимых процедур в представлениях.  
+>  В данном сценарии использование представлений имеет ограничения. Способ работает с максимальной безопасностью, если операции, выполняемые в <xref:System.Data.Linq.Table%601>, поддерживаются базовым представлением. Операции, которые предполагается использовать, известны только вам. Например, большинство приложений доступны только для чтения, и другой значительная часть выполняет `Create` / `Update` / `Delete` операции только с помощью хранимых процедур в представлениях.  
   
 ## <a name="connection-pooling"></a>Объединение подключений в пул  
  В. Существует ли конструкция, которая поможет в организации пула объектов <xref:System.Data.Linq.DataContext>?  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>Не выполняется обновление второго DataContext  
  В. Для хранения значения в базе данных использовался один экземпляр <xref:System.Data.Linq.DataContext>. Однако второй <xref:System.Data.Linq.DataContext> в той же базе данных не отражает обновленные значения. Второй экземпляр <xref:System.Data.Linq.DataContext>, вероятно, возвращает кэшированные значения.  
   
- О. Это сделано намеренно. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по-прежнему возвращает те же экземпляры и значения, которые отображались в первом экземпляре. При выполнении обновлений используется оптимистическая блокировка. Для проверки текущего состояния базы данных используются исходные данные, которые подтверждают неизменность ее состояния. Если состояние изменилось, возникает конфликт, который должен быть устранен приложением. Одним вариантом является сброс исходного состояния до текущего состояния базы данных и повторная попытка обновления. Дополнительные сведения см. в разделе [как: управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ О. Это сделано намеренно. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по-прежнему возвращает те же экземпляры и значения, которые отображались в первом экземпляре. При выполнении обновлений используется оптимистическая блокировка. Для проверки текущего состояния базы данных используются исходные данные, которые подтверждают неизменность ее состояния. Если состояние изменилось, возникает конфликт, который должен быть устранен приложением. Одним вариантом является сброс исходного состояния до текущего состояния базы данных и повторная попытка обновления. Дополнительные сведения см. в разделе [Как Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Кроме того, <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> можно задать значение «false», которое отключает кэширование и отслеживание изменений. После этого самые последние значения можно будет извлекать при каждом запросе.  
   
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  О. Режим только для чтения отключает для контекста возможность отслеживания изменений.  
   
-## <a name="see-also"></a>См. также  
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>См. также
+- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

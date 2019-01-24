@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: создание часовых поясов с правилами коррекции'
+title: Как выполнить Создание часовых поясов с правилами коррекции
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721179"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Практическое: создание часовых поясов с правилами коррекции
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Как выполнить Создание часовых поясов с правилами коррекции
 
 Точные сведения о часовом поясе, которые требуются для приложения может отсутствовать в конкретной системе по следующим причинам:
 
@@ -34,7 +34,7 @@ ms.locfileid: "46004118"
 > [!IMPORTANT]
 > Пользовательский часовой пояс, созданных вызывающими <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод не добавляются в реестр. Вместо этого они может осуществляться только через ссылку на объект, возвращаемый <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> вызова метода.
 
-В этом разделе показано, как создание часовых поясов с правилами коррекции. Чтобы создать часовой пояс, который не поддерживает правил коррекции летнего времени, см. в разделе [как: создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+В этом разделе показано, как создание часовых поясов с правилами коррекции. Чтобы создать часовой пояс, который не поддерживает правил коррекции летнего времени, см. в разделе [как: Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Для создания часовых поясов с правилами коррекции
 
@@ -95,6 +95,6 @@ ms.locfileid: "46004118"
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
-* [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
-* [Практическое руководство. Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
+- [Практическое руководство. Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

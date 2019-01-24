@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678789"
 ---
 # <a name="from-clause-visual-basic"></a>Предложение From (Visual Basic)
 Указывает один или несколько переменных диапазона и набор для запроса.  
@@ -31,9 +31,9 @@ From element [ As type ] In collection [ _ ]
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательно. Объект *переменная диапазона* используется для итерации по элементам коллекции. Переменная диапазона используется для обращения к каждому элементу `collection` как запрос проходит по `collection`. Должен быть перечислимым типом.|  
-|`type`|Необязательный. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
-|`collection`|Обязательно. Относится к коллекции, должны запрашиваться. Должен быть перечислимым типом.|  
+|`element`|Обязательный. Объект *переменная диапазона* используется для итерации по элементам коллекции. Переменная диапазона используется для обращения к каждому элементу `collection` как запрос проходит по `collection`. Должен быть перечислимым типом.|  
+|`type`|Необязательный параметр. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательный. Относится к коллекции, должны запрашиваться. Должен быть перечислимым типом.|  
   
 ## <a name="remarks"></a>Примечания  
  `From` Предложение используется для определения источника данных для запроса и переменные, которые используются для ссылки на элемент в исходной коллекции. Эти переменные называются *переменные диапазона*. `From` Предложение является обязательным для запроса, за исключением случаев `Aggregate` предложение используется для определения запросов, что возвращает только агрегированные результаты. Дополнительные сведения см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
@@ -69,20 +69,20 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Предложение Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Предложение Take](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>См. также
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Предложение Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md)
+- [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Предложение Take](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)

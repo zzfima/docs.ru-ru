@@ -2,12 +2,12 @@
 title: Активация TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677833"
 ---
 # <a name="tcp-activation"></a>Активация TCP
 Этот образец демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -146,7 +146,7 @@ Press <ENTER> to terminate client.
   
      Кроме того необходимо установить компоненты не HTTP Активация WCF:  
   
-    1.  Из **запустить** меню, выберите **панели управления**.  
+    1.  В меню **Пуск** выберите **Панель управления**.  
   
     2.  Выберите **программы и компоненты**.  
   
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда должна вводиться как одна строка текста.  
   
-## <a name="see-also"></a>См. также  
- [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>См. также
+- [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

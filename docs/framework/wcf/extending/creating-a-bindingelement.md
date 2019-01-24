@@ -2,12 +2,12 @@
 title: Создание элемента привязки BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684883"
 ---
 # <a name="creating-a-bindingelement"></a>Создание элемента привязки BindingElement
 Привязки и элементы привязки (объекты, которые расширяют <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, соответственно) — место, где модели приложения Windows Communication Foundation (WCF) связан с фабриками каналов и прослушиватели каналов. Если привязок нет, использования настраиваемых каналов требуется программирование на уровне канала как описано в разделе [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе рассматриваются минимальные требования для включения канала в WCF, разработка <xref:System.ServiceModel.Channels.BindingElement> для канала и разрешение использования приложения, как описано в шаге 4 [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "49454464"
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> имеет аналогичную реализацию для создания прослушивателя `ChunkingChannelListener` и передаче его прослушивателю внутреннего канала.  
   
- Другой пример использования транспортного канала [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример обеспечивает следующее переопределение.  
+ Другой пример использования транспортного канала [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример обеспечивает следующее переопределение.  
   
  В этом примере в качестве элемента привязки выступает элемент `UdpTransportBindingElement`, являющийся производным элемента <xref:System.ServiceModel.Channels.TransportBindingElement>. Он переопределяет следующие методы для создания фабрик, связанных с каналом.  
   
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  После создания элемента привязки для канала, вернуться к [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md) тему на предмет того, требуется ли добавить поддержку файла конфигурации элемент привязки, если и как добавить поддержку публикации метаданных, и возможность и способ создания пользовательской привязки, использующей элемент привязки.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

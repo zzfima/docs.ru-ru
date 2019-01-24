@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599352"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > элемент для \<configuration >
 
@@ -39,7 +39,7 @@ ms.locfileid: "47193360"
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
@@ -54,7 +54,7 @@ ms.locfileid: "47193360"
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) элемент упрощает управление сборки компонентов, позволяя файлы конфигурации в файлах конфигурации приложения, чтобы включить сборку хорошо известного расположения, а не дублировать параметры конфигурации сборки.
 
 > [!NOTE]
-> **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
+>  **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
 
 ## <a name="example"></a>Пример
 
@@ -70,4 +70,4 @@ ms.locfileid: "47193360"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

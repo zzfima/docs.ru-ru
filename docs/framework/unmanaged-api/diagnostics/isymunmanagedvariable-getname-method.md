@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9abbfa14777c5a5f5a77fa91db0fbafee095ba9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6323b7d94ca32646d3aa63af6d3efc4de95e67fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534531"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>Метод ISymUnmanagedVariable::GetName
-Получает имя этой переменной.  
+Возвращает имя этой переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ HRESULT GetName(
  [in] Длина буфера, `pcchName` указывает параметр.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, должны содержать имя, включая нулем.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имени, включая завершающимся нулевым значением.  
   
  `szName`  
- [out] Буфер, в которой хранится имя.  
+ [out] Буфер, в котором хранится имя.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

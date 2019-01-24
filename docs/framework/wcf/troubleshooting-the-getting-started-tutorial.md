@@ -2,12 +2,12 @@
 title: Устранение неполадок, связанных с руководством по началу работы
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 43128743ba16aefc8669ace85070a16d80145a71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5b8cd04ef4d98e522e255e1b7529e848351b2e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695664"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Устранение неполадок, связанных с руководством по началу работы
 В этом разделе рассматриваются наиболее распространенные проблемы, которые возникают при работе с учебником «Приступая к работе», и описываются способы их решения.  
@@ -30,19 +30,19 @@ ms.locfileid: "43519425"
  **Добавить существующий элемент** диалоговое окно отображает только файлы со следующими расширениями по умолчанию: .cs, .resx, с расширением Settings, XSD-файл, WSDL-файлы. Можно указать, что вы хотите увидеть все типы файлов, выбрав **все файлы (\*.\*)**  в раскрывающемся списке в правом нижнем углу **добавить существующий элемент** диалоговое окно.  
 
 
-**Компиляция клиентского приложения: 'CalculatorClient' не содержит определение для "\<имя_метода >" и метод расширения "\<имя метода >" принимающий первый аргумент типа 'CalculatorClient' найден (поживаете? отсутствует в с помощью директивы или ссылка на сборку?)**  
+**Компиляция клиентского приложения: 'CalculatorClient' не содержит определение для "\<имя метода >" и метод расширения "\<имя метода >" принимающий первый аргумент типа 'CalculatorClient' может быть найден (возможно, отсутствует using директива или ссылка на сборку?)**  
 
 Только методы, отмеченные атрибутом `ServiceOperationAttribute`, доступны для внешнего использования. Если вы пропустили `ServiceOperationAttribute` атрибут из одного из методов в `ICalculator` интерфейса, вы получаете это сообщение об ошибке при компиляции клиентского приложения, которое вызывает операции, при отсутствии этого атрибута.  
 
-**Компиляция клиентского приложения: имя типа или пространства имен 'CalculatorClient' не найден (возможно, отсутствует using директива или ссылка на сборку?)**
+**Компиляция клиентского приложения: Имя типа или пространства имен 'CalculatorClient' не найден (возможно, отсутствует using директива или ссылка на сборку?)**
 
  Эта ошибка возникает, если в проект клиента не добавлен файл Proxy.cs или Proxy.vb.  
 
-**Под управлением клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException: не удалось подключиться к `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Код ошибки TCP 10061: не удалось подключиться, так как конечный компьютер отверг.**
+**Под управлением клиента: необработанное исключение: System.ServiceModel.EndpointNotFoundException: Не удалось подключиться к `http://localhost:8000/ServiceModelSamples/Service/CalculatorService`. Код ошибки TCP 10061: Не удалось установить соединение, так как конечный компьютер отверг.**
 
 Эта ошибка возникает в случае запуска клиентского приложения без запуска службы.  
   
-**Необработанное исключение: System.ServiceModel.Security.SecurityNegotiationException: согласования безопасности SOAP с `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` для целевого объекта `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` не удалось**  
+**Необработанное исключение: System.ServiceModel.Security.SecurityNegotiationException: Согласования безопасности SOAP с `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` для целевого объекта `http://localhost:8000/ServiceModelSamples/Service/CalculatorService` не удалось**  
 
 Эта ошибка происходит на присоединенном к домену компьютере, который не подключен к сети. Подключите компьютер к сети или отключите безопасность для клиента и для службы. Для службы замените код, создающий WSHttpBinding, на следующий.  
   
@@ -57,7 +57,7 @@ selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.
 <security mode="Node" />  
 ```  
 
-## <a name="see-also"></a>См. также  
- [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Примеры устранения неполадок WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- [Устранение неполадок с установкой](../../../docs/framework/wcf/troubleshooting-setup-issues.md)
+## <a name="see-also"></a>См. также
+- [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Примеры устранения неполадок WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)
+- [Устранение неполадок с установкой](../../../docs/framework/wcf/troubleshooting-setup-issues.md)

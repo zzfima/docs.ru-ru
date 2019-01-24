@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 513d68f49e4182979b492fa67e65860aee96e09a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699419"
 ---
 # <a name="federation-and-issued-tokens"></a>Федерация и выданные маркеры
 С помощью Windows Communication Foundation (WCF), можно создать клиентов, которые безопасно обмениваться данными со службами, реализующими спецификации WS-Federation и WS-Trust. В этих спецификациях XML, протокол SOAP и язык WSDL используются для предоставления механизмов, позволяющих производить проверку подлинности и авторизацию в различных областях доверия.  
@@ -41,7 +41,7 @@ ms.locfileid: "43788108"
  [Практическое руководство. Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Порядок создания локального издателя маркеров безопасности.  
   
- [Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Практическое руководство. Отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Порядок отключения безопасных сеансов в `WSFederationHttpBinding`. Отключение безопасных сеансов необходимо при создании веб-фермы, требующей сеансы для каждого клиента.  
   
 ## <a name="reference"></a>Ссылка  
@@ -61,7 +61,7 @@ ms.locfileid: "43788108"
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>См. также  
- [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Пользовательские маркеры](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>См. также
+- [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Пользовательские маркеры](../../../../docs/framework/wcf/extending/custom-tokens.md)
+- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

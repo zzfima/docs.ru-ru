@@ -2,14 +2,8 @@
 title: Объекты (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- objects [Visual Basic]
+  - 'objects [Visual Basic]'
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 9e0b133147fa01b15104b9050cd9067079300e3e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486848"
 ---
 # <a name="objects-visual-basic"></a>Объекты (Visual Basic)
 В этом разделе приводятся ссылки на другие разделы, содержащие описание объектов времени выполнения Visual Basic и таблицы процедур, свойств и событий их элементов.  
@@ -45,6 +39,6 @@ ms.locfileid: "43486848"
 |[Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Предлагает свойства для создания экземпляров каждой веб-службы, на которую ссылается текущий проект, а также для доступа к этим экземплярам.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Предоставляет методы и свойства для анализа структурированных текстовых файлов.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../../visual-basic/index.md)
+## <a name="see-also"></a>См. также
+- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../../visual-basic/index.md)

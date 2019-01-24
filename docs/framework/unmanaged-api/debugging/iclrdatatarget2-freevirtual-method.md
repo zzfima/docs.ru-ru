@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7351dfb046653e4f3e20e0dc8a4bba8653ec36e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 02bba59a1c4445b3e432d5e44f2bccc4b72ce1da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711659"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>Метод ICLRDataTarget2::FreeVirtual
-Вызывается службами доступа к данным среды выполнения (CLR) для освобождения памяти, который ранее был выделен в адресное пространство целевого процесса.  
+Вызывается службами доступа к данным среды выполнения (CLR) для освобождения памяти, который ранее был выделен в адресном пространстве целевого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,28 +39,28 @@ HRESULT FreeVirtual(
   
 #### <a name="parameters"></a>Параметры  
  `addr`  
- [in] Объект `CLRDATA_ADDRESS` значение, которое определяет начальный адрес освобождаемой памяти.  
+ [in] Объект `CLRDATA_ADDRESS` значение, указывающее начальный адрес освобождаемой памяти.  
   
  `size`  
- [in] Размер в байтах для освобождения памяти.  
+ [in] Размер в байтах освобождаемой памяти.  
   
  `typeFlags`  
- [in] Флаги, управляющие освобождении памяти. В разделе Win32 `VirtualFree` функции.  
+ [in] Флаги, управляющие освобождение памяти. См. в разделе Win32 `VirtualFree` функции.  
   
 ## <a name="remarks"></a>Примечания  
- `FreeVirtual` Метод служит логической программой-оболочкой для функции Win32 `VirtualFree` функции.  
+ `FreeVirtual` Метод служит в качестве логической программой-оболочкой для Win32 `VirtualFree` функции.  
   
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [Метод AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [Метод AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)

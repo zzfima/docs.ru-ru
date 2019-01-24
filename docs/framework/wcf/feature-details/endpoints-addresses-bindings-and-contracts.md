@@ -1,20 +1,20 @@
 ---
-title: 'Конечные точки: адреса, привязки и контракты'
+title: 'Конечные точки: Адреса, привязки и контракты'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721793"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Конечные точки: адреса, привязки и контракты
-Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциональным возможностям службой WCF.  
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Конечные точки: Адреса, привязки и контракты
+Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциональным возможностям службы WCF.  
   
  Каждая конечная точка состоит из четырех свойств:  
   
@@ -26,12 +26,12 @@ ms.locfileid: "33493752"
   
 -   набор поведений, задающих сведения о локальной реализации конечной точки.  
   
- В этом разделе описывается структура конечной точки и объясняется, каким образом она представлена в объектной модели WCF.  
+ В этом разделе рассматривается структура этой конечной точки и объясняется, каким образом она представлена в объектной модели WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Структура конечной точки  
  Каждая конечная точка состоит из следующего.  
   
--   Адрес: адрес однозначно определяет конечную точку и указывает потенциальным потребителям на место расположения службы. Он представлен в объектной модели WCF <xref:System.ServiceModel.EndpointAddress> класса. Класс <xref:System.ServiceModel.EndpointAddress> содержит следующее.  
+-   Адрес: Адрес, уникально идентифицирующего конечную точку и указывает потенциальным потребителям службы, в котором он находится. Он представлен в объектной модели WCF <xref:System.ServiceModel.EndpointAddress> класса. Класс <xref:System.ServiceModel.EndpointAddress> содержит следующее.  
   
     -   Свойство <xref:System.ServiceModel.EndpointAddress.Uri%2A>, представляющее адрес службы.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33493752"
   
      Дополнительные сведения см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   Привязка. Привязка задает способ связи клиента с конечной точкой. В том числе следующее:  
+-   Привязка: Привязка задает способ связи клиента с конечной точкой. В том числе следующее:  
   
     -   используемый транспортный протокол (например, TCP или HTTP);  
   
@@ -47,9 +47,9 @@ ms.locfileid: "33493752"
   
     -   необходимые требования безопасности (например, безопасность сообщений SSL или SOAP).  
   
-     Дополнительные сведения см. в разделе [Общие сведения о привязках WCF](../../../../docs/framework/wcf/bindings-overview.md). Привязка представлен в объектной модели WCF абстрактный базовый класс <xref:System.ServiceModel.Channels.Binding>. В большинстве сценариев пользователи могут использовать только одну из предусмотренных системой привязок. Дополнительные сведения см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Дополнительные сведения см. в разделе [Общие сведения о привязках WCF](../../../../docs/framework/wcf/bindings-overview.md). Привязка представлено в объектной модели WCF с абстрактный базовый класс <xref:System.ServiceModel.Channels.Binding>. В большинстве сценариев пользователи могут использовать только одну из предусмотренных системой привязок. Дополнительные сведения см. в разделе [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
--   Контракты. Контракты показывают, какие функциональные возможности дает клиенту конечная точка. В контракте задается следующее:  
+-   Контракты: Контракты показывают, какие функциональные возможности, конечная точка предоставляет клиенту. В контракте задается следующее:  
   
     -   операции, которые могут быть вызваны клиентом;  
   
@@ -59,18 +59,18 @@ ms.locfileid: "33493752"
   
     -   тип обработки или ответного сообщения, который может ожидать клиент.  
   
-     Дополнительные сведения об определении контракта см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).  
+     Дополнительные сведения об определении контракта см. в разделе [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Поведения. Поведения конечной точки можно использовать для настройки локального поведения конечной точки службы. Поведения конечной точки выполняют это путем участия в процессе построения WCFruntime. Примером поведения является свойство <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, позволяющее указывать отличный от адреса SOAP или WSDL адрес прослушивания. Дополнительные сведения см. в разделе [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Поведения. Поведения конечных точек можно использовать для настройки локального поведения конечной точки службы. Поведения конечной точки выполняют это путем участия в процессе построения WCFruntime. Примером поведения является свойство <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, позволяющее указывать отличный от адреса SOAP или WSDL адрес прослушивания. Дополнительные сведения см. в разделе [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Определение конечных точек  
- Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации. Дополнительные сведения см. в разделе [как: создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) и [как: создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+ Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации. Дополнительные сведения см. в разделе [Как Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) и [как: Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  В данном разделе объясняется назначение привязок, конечных точек и адресов; показано, как конфигурировать привязку и конечную точку, и демонстрируется, как использовать поведение `ClientVia` и свойство `ListenUri`.  
   
  [Адреса](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Описывает, как конечные точки, рассматриваются в WCF.  
+ Описывает, как конечные точки адресуются в WCF.  
   
  [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Описывается, как привязки используются для указания транспорта, кодировки и данных протокола, требуемых для связи клиентов и служб.  
@@ -78,15 +78,15 @@ ms.locfileid: "33493752"
  [Контракты](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Описывается, как контакты определяют методы службы.  
   
- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Практическое руководство. Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Описывается, как создать конечную точку службы в конфигурации.  
   
- [Практическое руководство. Создание конечной точки службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Практическое руководство. Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Описывается, как создать конечную точку службы в коде.  
   
- [Практическое руководство. Использование программы Svcutil.exe для проверки скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
- Описывает, как для обнаружения ошибок в реализациях службы и конфигурации без размещения службы с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ [Практическое руководство. Использовать Svcutil.exe для проверки скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ Описывает, как для обнаружения ошибок в реализациях службы и конфигурациях, не размещая службу при помощи [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-## <a name="see-also"></a>См. также  
- [Настройка служб](../../../../docs/framework/wcf/configuring-services.md)  
- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a>См. также
+- [Настройка служб](../../../../docs/framework/wcf/configuring-services.md)
+- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)

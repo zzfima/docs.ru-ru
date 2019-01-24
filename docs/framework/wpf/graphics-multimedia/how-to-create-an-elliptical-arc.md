@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание эллиптической дуги
+title: Как выполнить Создание эллиптической дуги
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: 7ca7d06aa25f8dfae648d8c54c8b95cc277ffbf9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4f4461f778e2c86adb3932edf8435ca75b3b5e98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679569"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>Практическое руководство. Создание эллиптической дуги
+# <a name="how-to-create-an-elliptical-arc"></a>Как выполнить Создание эллиптической дуги
 В этом примере показано, как для рисования эллиптической дуги. Создание эллиптической дуги, использовать <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.ArcSegment> классы.  
   
 ## <a name="example"></a>Пример  
@@ -35,6 +35,6 @@ ms.locfileid: "44087441"
   
  Данный пример является частью большого примера. Полный пример см. в разделе [примеры геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>См. также  
- [Создание кривой Безье второго порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>См. также
+- [Создание кривой Безье второго порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+- [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

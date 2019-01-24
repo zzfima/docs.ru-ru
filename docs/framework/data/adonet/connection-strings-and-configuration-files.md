@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707483"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Строки подключения и файлы конфигурации
 Внедрение строк соединения в код приложения может привести к появлению уязвимых мест в системе безопасности и проблем с обслуживанием. Незашифрованные строки подключения, скомпилированные в исходный код приложения, можно просматривать с помощью средства [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Кроме того, после изменения строки соединения необходимо перекомпилировать приложение. По этим причинам рекомендуется хранить строки соединения в файле конфигурации приложения.  
@@ -80,7 +80,7 @@ ms.locfileid: "43865830"
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Полное имя поставщика. Сопоставляется с атрибутом **providerName**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Строка подключения. Сопоставляется с атрибутом **connectionString**.|  
   
-### <a name="example-listing-all-connection-strings"></a>Пример. Список всех строк соединения  
+### <a name="example-listing-all-connection-strings"></a>Пример Список всех строк соединения  
  В данном примере выполняется итерация в коллекции `ConnectionStringSettings` и отображение свойств <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> и <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> в окне консоли.  
   
 > [!NOTE]
@@ -89,13 +89,13 @@ ms.locfileid: "43865830"
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Пример. Извлечение строки соединения по имени  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Пример Извлечение строки соединения по имени  
  Данный пример демонстрирует способ получения строки соединения из файла конфигурации путем указания ее имени. Код создает объект <xref:System.Configuration.ConnectionStringSettings>, сопоставляя указанный входной параметр с именем <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>. Если совпадающее имя не найдено, функция возвращает значение `null` (`Nothing` в Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Пример. Извлечение строки соединения по имени поставщика  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Пример Извлечение строки соединения по имени поставщика  
  В этом примере демонстрируется способ получения строки подключения путем указания неизменяемого имени поставщика в формате *System.Data.ProviderName*. В коде выполняется итерация по <xref:System.Configuration.ConnectionStringSettingsCollection> и происходит возврат строки соединения для первого найденного <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>. Если имя поставщика не найдено, функция возвращает значение `null` (`Nothing` в Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,12 +167,12 @@ ms.locfileid: "43865830"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Дополнительные сведения о защите приложений ASP.NET см. в разделе [NIB. Защита веб-узлов ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) и [ASP.NET 2.0 Security Practices at a Glance](https://go.microsoft.com/fwlink/?LinkId=59997) в центре разработчиков ASP.NET.  
+ Дополнительные сведения о защите приложений ASP.NET, см. в разделе [NIB: Безопасность ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) и [по безопасности ASP.NET 2.0 с первого взгляда](https://go.microsoft.com/fwlink/?LinkId=59997) в центре разработчиков ASP.NET.  
   
-## <a name="see-also"></a>См. также  
- [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Использование классов конфигурации](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Настройка приложений](../../../../docs/framework/configure-apps/index.md)  
- [Администрирование веб-сайта ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Использование классов конфигурации](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Настройка приложений](../../../../docs/framework/configure-apps/index.md)
+- [Администрирование веб-сайта ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Руководство по программированию (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 04e98c6aaa038bea03dd118521311adf40e3e2be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675110"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Руководство по программированию (LINQ to XML) (Visual Basic)
 Этот раздел содержит теоретические и практические сведения о программировании при помощи [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -34,6 +34,6 @@ ms.locfileid: "42929819"
 |[Безопасность LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Описывает вопросы безопасности, связанные с LINQ to XML, и содержит некоторые инструкции по управлению рисками для безопасности.|  
 |[Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Содержит образцы XML-документов, которые используются во многих примерах, приведенных в этой документации.|  
   
-## <a name="see-also"></a>См. также  
- [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

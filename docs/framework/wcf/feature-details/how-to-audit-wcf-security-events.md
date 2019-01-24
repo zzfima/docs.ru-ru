@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Аудит событий безопасности Windows Communication Foundation
+title: Как выполнить Аудит событий безопасности Windows Communication Foundation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566831"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Практическое руководство. Аудит событий безопасности Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Как выполнить Аудит событий безопасности Windows Communication Foundation
 Windows Communication Foundation (WCF) позволяет регистрировать события безопасности в журнале событий Windows, который можно просмотреть с помощью средства просмотра событий Windows. В этом разделе описано, как настроить приложение, чтобы события безопасности регистрировались в журнале. Дополнительные сведения об аудите WCF см. в разделе [аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Аудит событий безопасности в коде  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF) позволяет регистриров
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Если для свойства <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> задать значение `true`, все неудачные попытки создания аудита безопасности будут подавляться (если задано значение `false`, будет создаваться исключение). Тем не менее если включен следующий Windows **параметр локальной безопасности** свойство, сбой создания событий вызовет Windows немедленное завершение работы:  
   
- **Аудит: Немедленное отключение системы, если невозможно внести в журнал аудита безопасности**  
+ **Аудит: Завершение работы системы, если невозможно внести в журнал аудита безопасности**  
   
  Чтобы задать свойства, откройте **локальные параметры безопасности** диалоговое окно. В разделе **параметры безопасности**, нажмите кнопку **локальные политики**. Нажмите кнопку **параметры безопасности**.  
   
  Если <xref:System.ServiceModel.AuditLogLocation> свойству <xref:System.ServiceModel.AuditLogLocation.Security> и **аудит доступа к объектам** не задано в **Локальная политика безопасности**, события аудита не записываются в журнал безопасности. Обратите внимание, что ошибка не возвращается, а события аудита не регистрируются в журнале безопасности.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

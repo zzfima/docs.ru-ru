@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Рисование линий с наконечниками
+title: Как выполнить Рисование линий с наконечниками
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: be492f2317d4677776cc9f89f546c935d271019b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713144"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>Практическое руководство. Рисование линий с наконечниками
-В одном из нескольких фигур, называемых наконечниками можно нарисовать начала и конца строки. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает несколько отрезков, например циклический, ромб, квадрат и стрелки.  
+# <a name="how-to-draw-a-line-with-line-caps"></a>Как выполнить Рисование линий с наконечниками
+Можно нарисовать начала и конца строки в одну из нескольких фигур, называемых наконечниками. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает несколько отрезков, например циклический, квадрат, ромб и стрелки с наконечником.  
   
 ## <a name="example"></a>Пример  
- Можно указать отрезков в начале строки (начальный наконечник), в конец строки (конец) или дефисы пунктирная линия (тире cap).  
+ Можно указать отрезков в начале строки (начала штриха), в конец строки (конечного элемента) или дефисы пунктирной линии (штриховой наконечник).  
   
  В следующем примере рисуется линию со стрелкой на одном конце и кружком на другом конце. На рисунке показаны результирующие строки.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "33523225"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Создайте форму Windows Form и обработки формы <xref:System.Windows.Forms.Control.Paint> событий. Вставьте код в примере <xref:System.Windows.Forms.Control.Paint> обработчик события передачи `e` как <xref:System.Windows.Forms.PaintEventArgs>.  
+-   Создайте форму Windows и обработки формы <xref:System.Windows.Forms.Control.Paint> событий. Вставьте код в примере <xref:System.Windows.Forms.Control.Paint> обработчик событий передачи `e` как <xref:System.Windows.Forms.PaintEventArgs>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
+- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

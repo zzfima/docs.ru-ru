@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690050"
 ---
 # <a name="xclass-directive"></a>Директива x:Class
 Настраивает компиляции разметки XAML для объединения разделяемых классов разметки и кода. Разделяемый класс кода определяется в отдельном файле кода в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] языка, тогда как разделяемый класс разметки обычно создается путем создания кода во время компиляции XAML.  
@@ -32,8 +32,8 @@ ms.locfileid: "43856196"
   
 |||  
 |-|-|  
-|`namespace`|Необязательный. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] пространство имен, содержащее разделяемый класс, определяемый `classname`. Если `namespace` указан, запятую (,) отделяет `namespace` и `classname`. См. заметки.|  
-|`classname`|Обязательно. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] имя разделяемого класса, который соединяет загрузки XAML и фоновый код для этого XAML.|  
+|`namespace`|Необязательный параметр. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] пространство имен, содержащее разделяемый класс, определяемый `classname`. Если `namespace` указан, запятую (,) отделяет `namespace` и `classname`. См. заметки.|  
+|`classname`|Обязательный. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] имя разделяемого класса, который соединяет загрузки XAML и фоновый код для этого XAML.|  
   
 ## <a name="dependencies"></a>Зависимости  
  `x:Class` можно указать только в корневом элементе XAML производства. `x:Class` является недопустимым для любого объекта, имеющую заданного родителя в рабочей среде XAML. Дополнительные сведения см. в разделе [ \[MS-XAML\] разделе 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -60,8 +60,8 @@ ms.locfileid: "43856196"
 ## <a name="silverlight-usage-notes"></a>Примечания об использовании Silverlight  
  `x:Class` для Silverlight описывается отдельно. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>См. также  
- [Директива x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Директива x:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>См. также
+- [Директива x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Директива x:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

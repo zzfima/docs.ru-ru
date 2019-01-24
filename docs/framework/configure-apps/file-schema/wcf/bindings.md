@@ -1,16 +1,16 @@
 ---
-title: '&lt;Привязки&gt;'
+title: '&lt;bindings&gt;'
 ms.date: 03/30/2017
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 76ebd7c317bf5f0aa1ec02d4014235df232314f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b7ef15f768e3eb5484bbc75eeaf988fd36fc155b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690232"
 ---
-# <a name="ltbindingsgt"></a>&lt;Привязки&gt;
-В этом разделе содержится коллекция стандартных и пользовательских привязок. Каждый элемент коллекции представляет собой элемент `binding`, который может быть идентифицирован по своему уникальному имени `name`. Службы используют привязки, связывая их с помощью параметра `name`. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="ltbindingsgt"></a>&lt;bindings&gt;
+В этом разделе содержится коллекция стандартных и пользовательских привязок. Каждый элемент коллекции представляет собой элемент `binding`, который может быть идентифицирован по своему уникальному имени `name`. Службы используют привязки, связывая их с помощью параметра `name`. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="system-provided-binding"></a>Привязка, предоставляемая системой  
  Привязки, предоставляемые системой, скрывают сложность стека обмена сообщениями WCF. Приложениям, использующим предоставляемые системой привязки, не требуется полный контроль над стеком. Атрибутами в каждой привязке, предоставляемой системой, являются атрибуты, наиболее подходящие для области применения привязки.  
@@ -19,7 +19,7 @@ ms.locfileid: "32747825"
   
  К привязке, предоставляемой системой, невозможно добавить элементы или атрибуты. Чтобы получить такую возможность, необходимо реализовать пользовательскую привязку в соответствии с инструкциями в разделе «Пользовательская привязка». Можно определить пользовательскую привязку, которая полностью повторяет предоставляемую системой привязку и добавляет несколько параметров, контроль над которыми нужен пользовательскому приложению.  
   
- Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Список привязок, предоставляемых системой, см. в разделе [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-binding"></a>Пользовательская привязка  
  Пользовательские привязки предоставляют полный контроль над стеком обмена сообщениями WCF. Отдельная привязка определяет стек обмена сообщениями, задавая элементы конфигурации для элементов стека в том порядке, в котором они присутствуют в стеке. Каждый элемент определяет и задает параметры одного элемента стека. В каждой пользовательской привязке должен быть один и только один элемент `transport`. Без этого элемента стек обмена сообщениями является неполным.  
@@ -36,13 +36,13 @@ ms.locfileid: "32747825"
   
 5.  Transport  
   
- Пользовательские привязки идентифицируются по атрибуту `name`. Дополнительные сведения о пользовательских привязок см. в разделе [пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Пользовательские привязки идентифицируются по атрибуту `name`. Дополнительные сведения о пользовательских привязках см. в разделе [пользовательских привязок](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

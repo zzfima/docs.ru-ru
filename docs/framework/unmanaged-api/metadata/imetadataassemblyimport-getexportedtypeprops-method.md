@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544644"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>Метод IMetaDataAssemblyImport::GetExportedTypeProps
-Возвращает набор свойств экспортируемого типа с заданной подписью метаданных.  
+Получает набор свойств экспортируемого типа с заданной подписью метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ HRESULT GetExportedTypeProps (
   
 #### <a name="parameters"></a>Параметры  
  `mdct`  
- [in] `mdExportedType` Токен метаданных, представляющий экспортируемого типа.  
+ [in] `mdExportedType` Маркер метаданных, представляющий экспортированный тип.  
   
  `szName`  
  [out] Имя экспортируемого типа.  
@@ -52,7 +52,7 @@ HRESULT GetExportedTypeProps (
  [in] Размер в расширенные символы из `szName`.  
   
  `pchName`  
- [out] Число расширенных символов, фактически извлеченных в `szName`  
+ [out] Число расширенных символов, фактически возвращенных в `szName`  
   
  `ptkImplementation`  
  [out] `mdFile`, `mdAssemblyRef`, Или `mdExportedType` токен метаданных, который содержит или разрешает доступ к свойствам экспортируемого типа.  
@@ -61,16 +61,16 @@ HRESULT GetExportedTypeProps (
  [out] Указатель на `mdTypeDef` токен, представляющий тип в файле.  
   
  `pdwExportedTypeFlags`  
- [out] Указатель флаги, описывающие метаданные, применяемые к экспортируемого типа. Значение флагов может быть один или несколько [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значения.  
+ [out] Указатель на флаги, описывающие метаданные, применяемые к экспортированный тип. Флаги значение может быть один или несколько [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

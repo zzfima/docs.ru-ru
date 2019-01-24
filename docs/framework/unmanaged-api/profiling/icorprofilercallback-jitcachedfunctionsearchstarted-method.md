@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9036746fcf0150875ab534fdb774ed3633cf96ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698359"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>Метод ICorProfilerCallback::JITCachedFunctionSearchStarted
-Уведомляет профилировщик о начале поиска для функции, скомпилированной ранее с помощью генератором образов в машинном коде (NGen.exe).  
+Уведомляет профилировщик о начале поиска для функции, который был скомпилирован с помощью генератором машинных образов (NGen.exe).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +40,25 @@ HRESULT JITCachedFunctionSearchStarted(
  [in] Идентификатор функции, для которой выполняется поиск.  
   
  `pbUseCachedFunction`  
- [out] `true` Если ядро выполнения должен использовать кэшированная версия функции (если доступно); в противном случае `false`. Если значение равно `false`, ядро выполнения JIT-компиляцию функции, вместо того чтобы использовать версию, которая не является JIT-компиляции.  
+ [out] `true` Если ядро выполнения следует использовать кэшированную версию функции, (при наличии); в противном случае `false`. Если значение равно `false`, ядро выполнения JIT-компиляцию функции, вместо того чтобы использовать версию, которая не является JIT-компиляции.  
   
 ## <a name="remarks"></a>Примечания  
- В .NET Framework версии 2.0 `JITCachedFunctionSearchStarted` и [метод ICorProfilerCallback::JITCachedFunctionSearchFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) обратные вызовы не будут совершаться для всех функций в обычных образов NGen. Образы NGen, оптимизированные под профиль создаст обратные вызовы для всех функций в образе. Однако из-за дополнительных служебных данных профилировщик должен запрашивать оптимизированные образы NGen, только в том случае, если он будет использовать эти обратные вызовы для принудительного функцией скомпилированных just-in-time (JIT). В противном случае профилировщик должен использовать пассивную стратегию для сбора сведений о функции.  
+ В .NET Framework версии 2.0 `JITCachedFunctionSearchStarted` и [метод ICorProfilerCallback::JITCachedFunctionSearchFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) обратные вызовы не будут совершаться для всех функций в обычных образов NGen. Только образы NGen, оптимизированные для профиля будут создавать обратные вызовы для всех функций в образе. Тем не менее из-за дополнительных издержек, профилировщик должен запрашивать оптимизированные образы NGen, только в том случае, если планируется использовать эти обратные вызовы для принудительного функции скомпилированного just-in-time (JIT). В противном случае профилировщик должен использовать пассивную стратегию для сбора сведений о функции.  
   
- Профилировщики должны поддерживать ситуации, когда несколько потоков профилируемого приложения вызывают тот же метод одновременно. Например, поток A вызывает `JITCachedFunctionSearchStarted` и профилировщик отвечает, устанавливая *pbUseCachedFunction*значение FALSE, чтобы принудительно JIT-компиляции. Затем вызывает потоком [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) и [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ Профилировщики должны поддерживать ситуации, где несколько потоков профилируемого приложения вызывают тот же метод одновременно. Например, поток A вызывает `JITCachedFunctionSearchStarted` и профилировщик отвечает, задав *pbUseCachedFunction*значение false, чтобы принудительно JIT-компиляции. Поток, затем вызывает [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) и [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- Теперь поток вызывает метод B `JITCachedFunctionSearchStarted` для той же функции. Несмотря на то, что профилировщик объявил его намерение JIT-компиляцию функции, профилировщик получает обратный вызов, поскольку поток B отправляет обратный вызов перед профилировщик ответил на вызов потоком `JITCachedFunctionSearchStarted`. Порядок, в котором потоки выполняют вызовы зависит от того, как они запланированы.  
+ Теперь поток B вызывает `JITCachedFunctionSearchStarted` для той же функции. Несмотря на то, что профилировщик заявила о своем намерении выполнить JIT-компиляцию функции, профилировщик получает обратный вызов, так как поток B отправляет обратный вызов, прежде чем профилировщик ответил на вызов потока A `JITCachedFunctionSearchStarted`. Порядок, в котором потоки выполняют вызовы зависит от того, как запланировано потоков.  
   
- Когда профилировщик получает дублирующиеся обратные вызовы, его значение должно быть ссылается `pbUseCachedFunction` то же значение для всех обратных вызовов. То есть, когда `JITCachedFunctionSearchStarted` вызывается несколько раз с одинаковым `functionId` значение, профилировщик должен ответить же каждый раз.  
+ Когда профилировщик получает обратных вызовов, его необходимо задать значение ссылается `pbUseCachedFunction` то же значение для всех обратных вызовов. То есть, когда `JITCachedFunctionSearchStarted` вызывается несколько раз с тем же `functionId` значение, профилировщик должен вернуть же каждый раз.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

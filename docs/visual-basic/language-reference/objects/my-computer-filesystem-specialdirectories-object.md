@@ -5,20 +5,20 @@ helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: 5556a71fbe6f4ca90fb07966fb5fa0203eb8aaee
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6ea3b5b77ee9ab4f8dfcf7054ae14096d72cc348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672816"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>Объект My.Computer.FileSystem.SpecialDirectories
 Включает свойства для доступа к часто используемым каталогам.  
   
 ## <a name="remarks"></a>Примечания  
- Сведения о методах и свойствах `My.Computer.FileSystem.SpecialDirectories` объекта, см. в разделе <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
+ Сведения о методах и свойствах объекта `My.Computer.FileSystem.SpecialDirectories` см. в разделе <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
   
- Дополнительные сведения см. в разделе [как: получения содержимого набора каталоге Мои документы](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ Дополнительные сведения см. в разделе [Как Извлечение содержимого каталога Мои документы](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
@@ -27,6 +27,6 @@ ms.locfileid: "43863177"
   
  **Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Объект My.Computer.FileSystem](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
- [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>См. также
+- [Объект My.Computer.FileSystem](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+- [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

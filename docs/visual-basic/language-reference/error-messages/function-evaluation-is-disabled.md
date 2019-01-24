@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6231d48f3f90d8e436dc80bf4670886c1d030387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718277"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Вычисление функции отключено, поскольку истекло время, выделенное на вычисление предыдущей функции
-Вычисление функции отключено, поскольку истекло время ожидания вычисление предыдущей функции. Для повторного выполнения функции сделайте еще один шаг или перезапустите отладку.  
+Вычисление функции отключено, так как истекло время ожидания вычисление предыдущей функции. Чтобы снова включить вычисление функции, еще один шаг или перезапустите отладку.  
   
- В отладчике Visual Studio выражение задает вызов процедуры, но другое вычисление превышено время ожидания.  
+ В отладчике Visual Studio выражение задает вызов процедуры, но другое вычисление обнаружил превышение времени ожидания.  
   
- Среди возможных причин время ожидания при вызове процедурой бесконечный цикл или *бесконечный цикл*. Дополнительные сведения см. в разделе [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md).  
+ Среди возможных причин вызов процедуры истечения времени ожидания бесконечного цикла или *бесконечный цикл*. Дополнительные сведения см. в разделе [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
  Является особым случаем бесконечного цикла *рекурсии*. Дополнительные сведения см. в разделе [рекурсивные процедуры](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).  
   
@@ -27,10 +27,10 @@ ms.locfileid: "33587664"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  По возможности определите было вычисление предыдущей функции и причину истечения времени ожидания. В противном случае эта ошибка может возникнуть еще раз.  
+1.  По возможности определите, какой параметр имел вычисление предыдущей функции и что вызвало его истечения времени ожидания. В противном случае эта ошибка может возникнуть еще раз.  
   
-2.  Отладчик сделайте еще один шаг, или завершите и перезапустите отладку.  
+2.  Опять же, завести отладчик или завершите и перезапустите отладку.  
   
-## <a name="see-also"></a>См. также  
- [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
- [Навигация по коду с помощью отладчика](/visualstudio/debugger/navigating-through-code-with-the-debugger)
+## <a name="see-also"></a>См. также
+- [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Навигация по коду с помощью отладчика](/visualstudio/debugger/navigating-through-code-with-the-debugger)

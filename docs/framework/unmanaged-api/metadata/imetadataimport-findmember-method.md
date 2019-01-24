@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 267a36fbbdf48472bc35581ce98af5cd7a9cef9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550374"
 ---
 # <a name="imetadataimportfindmember-method"></a>Метод IMetaDataImport::FindMember
-Возвращает указатель на MemberDef токен для поля или метода, который заключается в указанном <xref:System.Type> и имеет имя и метаданные указанной подписи.  
+Возвращает указатель на MemberDef токен для поля или метода, который заключен заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +41,7 @@ HRESULT FindMember (
   
 #### <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен TypeDef для класса или интерфейса, включающий элемент для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или глобальной функции.  
+ [in] Токен TypeDef для класса или интерфейса, который окружает элемент для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или глобальной функции.  
   
  `szName`  
  [in] Имя элемента для поиска.  
@@ -55,24 +56,24 @@ HRESULT FindMember (
  [out] Указатель на токен MemberDef сопоставления.  
   
 ## <a name="remarks"></a>Примечания  
- Для определения члена с помощью его включающего класса или интерфейса (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`). Может существовать несколько членов с тем же именем в классе или интерфейсе. В этом случае передайте сигнатуру члена, чтобы найти уникальное соответствие.  
+ Для определения члена с помощью его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`). Может существовать несколько членов с одинаковыми именами в классе или интерфейсе. В этом случае следует передайте сигнатуре члена, чтобы найти уникальное соответствие.  
   
- Подпись, передаваемый `FindMember` должны были созданы в текущей области, поскольку подписи привязаны к определенным областям. Подпись можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить во время выполнения вне контекста текущей области и использовать ее как входных данных, вводимых в `FindMember`.  
+ Подпись передается `FindMember` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области. Подписи можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить выполнения вне контекста текущей области и использовать ее как входных данных, вводимых в `FindMember`.  
   
- `FindMember` находит только те элементы, которые были определены непосредственно в классе или интерфейсе; унаследованные члены не найдена.  
+ `FindMember` находит только те элементы, которые были определены непосредственно в классе или интерфейсе; унаследованные члены не найден.  
   
 > [!NOTE]
->  `FindMember` — Это вспомогательный метод. Он вызывает [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); Если этот вызов не удается найти соответствие, `FindMember` вызывает [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
+>  `FindMember` — Это вспомогательный метод. Он вызывает [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); Если этот вызов не удается найти соответствие, `FindMember` затем вызывает [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

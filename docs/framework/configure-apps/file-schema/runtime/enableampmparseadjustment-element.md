@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679101"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; элемент
 Определяет методы анализа даты и времени использования скорректированной набор правил для анализа строк даты, которые содержат день, месяц, час и указатель AM/PM.  
@@ -76,11 +76,11 @@ ms.locfileid: "53611078"
   
  В следующей таблице показаны различия в <xref:System.DateTime> значения при <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> метод используется для анализа строки ««4/10 6 AM» с `<EnableAmPmParseAdjustment>` элемента `enabled` свойству присвоено значение «0» или «1». Предполагается, что сегодняшняя дата 5 января 2017 г. и отображает дату, как если бы он отформатирован с помощью строки формата «G» для указанного языка и региональных параметров.  
   
-|Имя языка и региональных параметров|включены = «0»|включены = «1»|  
+|Имя языка и региональных параметров|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|1/5/2017 4:00:00 AM|4/10/2017 06:00:00: 00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>См. также  
-- [\<Среда выполнения > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>См. также
+- [\<Среда выполнения > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

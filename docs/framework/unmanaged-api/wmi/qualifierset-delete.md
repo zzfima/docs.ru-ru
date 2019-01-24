@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 860295a3d10acd67f5fb7665a7213dc90e4a4829
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713179"
 ---
 # <a name="qualifiersetdelete-function"></a>Функция QualifierSet_Delete
 Удаляет указанный квалификатор по имени.  
@@ -55,7 +55,7 @@ HRESULT QualifierSet_Delete (
 
 |Константа  |Значение  |Описание:  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` Недопустимый параметр. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр `wszName`. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этот квалификатор является недопустимым. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Не удалось найти заданного квалификатора. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
@@ -68,11 +68,11 @@ HRESULT QualifierSet_Delete (
 Из-за правила распространения квалификатор определенного квалификатор может были унаследованную от другого объекта и просто переопределен в текущем классе или экземпляре. В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор унаследованные исходное значение. В этом случае, функция возвращает код состояния `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

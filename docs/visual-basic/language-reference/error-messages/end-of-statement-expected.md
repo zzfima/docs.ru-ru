@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565024"
 ---
 # <a name="end-of-statement-expected"></a>Ожидается окончание оператора
 Оператор является синтаксически завершенным, однако дополнительный программный элемент элементом, выполненной инструкции. Признак конца строки является обязательным в конце каждой инструкции.
@@ -27,6 +27,6 @@ ms.locfileid: "50198267"
   
 2.  Вставьте знак завершения строки после элемента, выполняемой инструкции.
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696442"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>Перечисление COR_PRF_MODULE_FLAGS
 Указывает свойства модуля.  
@@ -46,24 +46,24 @@ typedef enum
 |Член|Описание|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|Модуль был загружен с диска.|  
-|COR_PRF_MODULE_NGEN|Модуль, созданных генератором образов в машинном коде (Ngen.exe).|  
+|COR_PRF_MODULE_NGEN|Модуль был создан с генератором машинных образов (Ngen.exe).|  
 |COR_PRF_MODULE_DYNAMIC|Модуль был создан с методов в <xref:System.Reflection.Emit?displayProperty=nameWithType> пространства имен.|  
-|COR_PRF_MODULE_COLLECTIBLE|Время жизни module осуществляется сборщиком мусора.|  
-|COR_PRF_MODULE_RESOURCE|Модуль содержит без метаданных и используются исключительно как ресурс. Управляемый эквивалент этот бит — <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> метод.|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Структура полей модуля в памяти является плоским, не сопоставлен. Если модуль этот бит задан, профилировщики, считывающие сведения непосредственно из заголовок переносимого исполняемого (PE) файла, необходимо будет соблюдать осторожность при интерпретации относительные виртуальные адреса (RVA) в заголовке.|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|В метаданных для сборки этот модуль установлен флаг содержимого типа среды выполнения Windows. Это справедливо для всех модулей метаданных Windows (.winmd).|  
+|COR_PRF_MODULE_COLLECTIBLE|Время существования модуля осуществляется сборщиком мусора.|  
+|COR_PRF_MODULE_RESOURCE|Модуль содержит без метаданных и используются исключительно в качестве ресурса. Является управляемым эквивалентом этот бит <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> метод.|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Макет модуля в памяти является плоским, не сопоставлен. Если модуль имеет этот бит установлен, средства профилирования, которые можно прочитать сведения непосредственно из заголовок переносимого исполняемого (PE) файла будет Будьте внимательны при интерпретации относительные виртуальные адреса (RVA) в заголовке.|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Среда выполнения Windows тип содержимого флага в метаданных для этого модуля сборки. Это происходит для всех модулей метаданных Windows (.winmd).|  
   
 ## <a name="remarks"></a>Примечания  
- Биты в COR_PRF_MODULE_FLAGS возвращаются профилировщику в `pdwModuleFlags` выходной параметр [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) метод. Возможны некоторые сочетания двух или более флагов, но не все комбинации возможны.  
+ Биты из COR_PRF_MODULE_FLAGS возвращаются к профилировщику в `pdwModuleFlags` выходного параметра [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) метод. Возможны некоторые сочетания из двух или более флагов, но не все комбинации.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

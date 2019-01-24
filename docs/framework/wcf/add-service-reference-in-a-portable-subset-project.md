@@ -2,12 +2,12 @@
 title: Добавление ссылки на службу в проект переносного вложенного набора
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681018"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Добавление ссылки на службу в проект переносного вложенного набора
 Проекты переносимого подмножества позволяют программистам, создающим сборки .NET поддерживать одно дерево исходного кода и система сборки, продолжая поддерживать несколько реализаций .NET (рабочий стол, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества ссылаться только на переносимые библиотеки .NET, которые являются сборкой .NET framework, который может использоваться в любой реализации .NET.  
@@ -43,6 +43,6 @@ ms.locfileid: "49121146"
   
 14. Свойство <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> не поддерживается в проектах переносимого подмножества.  
   
-## <a name="see-also"></a>См. также  
- [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a>См. также
+- [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

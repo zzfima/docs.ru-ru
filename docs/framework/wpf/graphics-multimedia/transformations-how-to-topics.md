@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697040"
 ---
 # <a name="transformations-how-to-topics"></a>Разделы руководства, посвященные преобразованиям
-В этом разделе описываются способы применить различные преобразования к объектам.  
+В подразделах этого раздела описывается, как будут применяться различные преобразования к объектам.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Применение преобразования к элементу при возникновении события](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
@@ -30,8 +30,8 @@ ms.locfileid: "33562379"
  [Перемещение элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [Использование MatrixTransform для создания пользовательских преобразований](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Transform>  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Transform>
+- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Макет](../../../../docs/framework/wpf/advanced/layout.md)

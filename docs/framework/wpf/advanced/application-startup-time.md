@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527332"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
 Время, необходимое для запуска WPF-приложения, может сильно варьироваться. В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).  
@@ -24,9 +24,9 @@ ms.locfileid: "33541954"
  Горячий запуск происходит, когда большинство страниц для основных компонентов среды CLR уже загружены в память, что экономит дорогостоящее время доступа к диску. Вот почему при повторном запуске управляемое приложение запускается быстрее.  
   
 ## <a name="implement-a-splash-screen"></a>Реализация экрана-заставки  
- В случаях когда между запуском приложения и отображением первого графического интерфейса происходит значительная неизбежная задержка, можно оптимизировать воспринимаемое время запуска с помощью *экрана-заставки*. В этом случае изображение появляется практически сразу после того, как пользователь запустит приложение. Когда приложение будет готово к отображению первого пользовательского интерфейса, экран-заставка исчезнет. Начиная с версии [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], можно использовать <xref:System.Windows.SplashScreen> класса для реализации экрана-заставки. Дополнительные сведения см. в разделе [Практическое руководство. Добавление в WPF-приложение экрана-заставки](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ В случаях когда между запуском приложения и отображением первого графического интерфейса происходит значительная неизбежная задержка, можно оптимизировать воспринимаемое время запуска с помощью *экрана-заставки*. В этом случае изображение появляется практически сразу после того, как пользователь запустит приложение. Когда приложение будет готово к отображению первого пользовательского интерфейса, экран-заставка исчезнет. Начиная с версии [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], можно использовать <xref:System.Windows.SplashScreen> класс для реализации экрана-заставки. Дополнительные сведения см. в разделе [Практическое руководство. Добавление в WPF-приложение экрана-заставки](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Кроме того, используя собственные графические средства Win32, вы можете реализовать свой собственный экран заставки. Отображение реализации перед <xref:System.Windows.Application.Run%2A> вызывается метод.  
+ Кроме того, используя собственные графические средства Win32, вы можете реализовать свой собственный экран заставки. Отобразите реализацию перед <xref:System.Windows.Application.Run%2A> вызывается метод.  
   
 ## <a name="analyze-the-startup-code"></a>Анализ кода запуска  
  Определите причину задержки холодного запуска. Она может быть связана с дисковым вводом-выводом, но необязательно. В целом использование внешних ресурсов, таких как сеть, веб-службы или диск, следует минимизировать.  
@@ -107,9 +107,9 @@ ms.locfileid: "33541954"
  Используйте <xref:System.Resources.NeutralResourcesLanguageAttribute> для указания нейтрального языка и региональных параметров для <xref:System.Resources.ResourceManager>. Этот подход позволяет избежать неудачного поиска сборок.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Использование класса BinaryFormatter для сериализации  
- Если необходимо использовать сериализацию, используйте <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> вместо класса <xref:System.Xml.Serialization.XmlSerializer> класса. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Класс реализован в библиотеке базовых классов (BCL) сборки mscorlib.dll. <xref:System.Xml.Serialization.XmlSerializer> Реализован в сборке System.Xml.dll, который может быть дополнительной библиотеки DLL для загрузки.  
+ Если необходимо использовать сериализацию, используйте <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> вместо класса <xref:System.Xml.Serialization.XmlSerializer> класса. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Класс реализован в библиотеке базовых классов (BCL) в сборке mscorlib.dll. <xref:System.Xml.Serialization.XmlSerializer> Реализуется в сборке System.Xml.dll, что может быть загрузку дополнительного DLL.  
   
- Если необходимо использовать <xref:System.Xml.Serialization.XmlSerializer> класса, повышения производительности можно достичь, если можно создать предварительную сборку сериализации.  
+ Если необходимо использовать <xref:System.Xml.Serialization.XmlSerializer> класс, вы может повысить производительность, можно создать предварительную сборку сериализации.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Настройка технологии ClickOnce на проверку обновлений после запуска  
  Если приложение использует [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], запретите подключение к сети при запуске, настроив [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] на проверку наличия обновлений на сайте развертывания после запуска приложения.  
@@ -120,13 +120,13 @@ ms.locfileid: "33541954"
  Первым WPF-приложением, которое загружается после перезагрузки, является служба PresentationFontCache. Служба кэширует системные шрифты, делает их более доступными и повышает общую производительность. Поскольку с запуском службы, а также с некоторыми управляемыми средами связаны временные задержки, службу можно настроить на автоматический запуск при перезагрузке системы.  
   
 ## <a name="set-data-binding-programmatically"></a>Настройка программной привязки данных  
- Вместо использования XAML для установки <xref:System.Windows.FrameworkElement.DataContext%2A> декларативно для главного окна, рассмотрите возможность установки его программными средствами в <xref:System.Windows.Application.OnActivated%2A> метод.  
+ Вместо использования XAML для задания <xref:System.Windows.FrameworkElement.DataContext%2A> декларативно для главного окна, рассмотрите возможность установки его в обработчике <xref:System.Windows.Application.OnActivated%2A> метод.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Добавление в WPF-приложение экрана-заставки](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (генератор образов в машинном коде)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<Элемент generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Добавление в WPF-приложение экрана-заставки](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (генератор образов в машинном коде)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<Элемент generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

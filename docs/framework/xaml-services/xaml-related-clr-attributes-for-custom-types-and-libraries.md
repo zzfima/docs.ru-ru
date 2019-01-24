@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530116"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описаны наиболее распространенные атрибуты среды выполнения (CLR) языка, определенных службами XAML платформы .NET Framework. Здесь также описываются другие атрибуты CLR, которые определены в .NET Framework, которые используются связанные с XAML для приложения к сборкам и типам. Присвоение атрибутов сборки, типы или члены этих атрибутов CLR предоставляет о системе типов XAML, связанные с типами. Информация предоставляется потребителю XAML, использующий служб XAML .NET Framework для обработки в потоке узлов XAML напрямую или через выделенные средства чтения XAML и записи XAML.  
@@ -22,9 +22,9 @@ ms.locfileid: "47424445"
 ### <a name="ambientattribute"></a>AmbientAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.AmbientAttribute>  
   
- **Применяется к:** класса, свойства, или `get` члены метода доступа, которые поддерживают присоединяемого свойства.  
+ **Область применения:** Класс, свойства, или `get` члены метода доступа, которые поддерживают присоединяемого свойства.  
   
- **Аргументы:** None  
+ **Аргументы:** Нет  
   
  <xref:System.Windows.Markup.AmbientAttribute> Указывает, что свойство или все свойства, принимающие тип с атрибутом, должны интерпретироваться в рамках концепции внешнего свойства в XAML. Концепция окружения относится к тому, как обработчики XAML определяют владельцев типов членов. Внешнее свойство является свойством, где значение должно быть доступным в контексте средства синтаксического анализа при создании графа объекта, но поиск типичного члена типа откладывается для немедленного создания набора узлов XAML.  
   
@@ -33,18 +33,18 @@ ms.locfileid: "47424445"
 ### <a name="constructorargumentattribute"></a>ConstructorArgumentAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** строка, указывающая имя свойства, которое соответствует один аргумент конструктора.  
+ **Аргументы:** Строковое значение, указывающее имя свойства, которое соответствует аргументу один конструктор.  
   
  <xref:System.Windows.Markup.ConstructorArgumentAttribute> Указывает, что объект может быть инициализирован с помощью синтаксиса конструктора не по умолчанию, и что свойство с указанным именем предоставляет информацию о конструкции. Эта информация предназначена главным образом для сериализации XAML. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** строка, указывающая имя члена типа с атрибутом.  
+ **Аргументы:** Строка, указывающая имя члена типа с атрибутом.  
   
  <xref:System.Windows.Markup.ContentPropertyAttribute> Указывает, что свойство, как с именем с помощью аргумента должна использоваться в качестве свойства содержимого XAML для этого типа. Определение свойства содержимого XAML наследует все производные типы, которые можно назначить типу. Определение в определенном производном типе можно переопределить, применив <xref:System.Windows.Markup.ContentPropertyAttribute> на конкретный производный тип.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "47424445"
 ### <a name="contentwrapperattribute"></a>ContentWrapperAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
- **Применяется к:** класса, в частности типы коллекций.  
+ **Область применения:** Класс, в частности типы коллекций.  
   
- **Аргументы:** объект <xref:System.Type> , указывающий тип для использования в качестве типов оболочки содержимого для внешнего содержимого.  
+ **Аргументы:** Объект <xref:System.Type> , указывающий тип для использования в качестве типов оболочки содержимого для внешнего содержимого.  
   
  <xref:System.Windows.Markup.ContentWrapperAttribute> Указывает один или несколько типов на для типа связанной коллекции, который будет использоваться как оболочка для внешнего содержимого. Внешнее содержимое относится к случаям, когда ограничения системы для типа свойства содержимого не выполняется сбор всех возможных вариантов содержимого, поддерживающих использование XAML для типа-владельца. Например, XAML поддержка содержимого определенного типа может включать строки в строго типизированный универсальной <xref:System.Collections.ObjectModel.Collection%601>. Оболочки содержимого полезны для миграции существующих соглашения разметки в XAML в концепцию присваиваемых значений для коллекций, например перенос содержимого моделей, относящихся к тексту.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "47424445"
 ### <a name="dependsonattribute"></a>DependsOnAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
- **Применяется к:** свойство  
+ **Область применения:** Свойство.  
   
- **Аргументы:** строка, указывающая имя члена другого типа с атрибутом.  
+ **Аргументы:** Строка, указывающая имя члена другого типа с атрибутом.  
   
  <xref:System.Windows.Markup.DependsOnAttribute> Указывает, что свойство с атрибутом зависит от значения другого свойства. Применение этого атрибута к определению свойства гарантирует, что зависимые свойства сначала обрабатываются в записи объектов XAML. Случаи использования <xref:System.Windows.Markup.DependsOnAttribute> указывает на исключительные случаи свойств типов, где требуется соблюдать определенный порядок синтаксического анализа для создания допустимого объекта.  
   
@@ -77,18 +77,18 @@ ms.locfileid: "47424445"
 ### <a name="markupextensionreturntypeattribute"></a>MarkupExtensionReturnTypeAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
- **Применяется к:** класс, который должен быть <xref:System.Windows.Markup.MarkupExtension> производный тип.  
+ **Область применения:** Класс, который должен быть <xref:System.Windows.Markup.MarkupExtension> производный тип.  
   
- **Аргументы:** объект <xref:System.Type> , указывающий наиболее точный тип, ожидать в качестве `ProvideValue` результат с атрибутами <xref:System.Windows.Markup.MarkupExtension>.  
+ **Аргументы:** Объект <xref:System.Type> , указывающий наиболее точный тип, ожидать в качестве `ProvideValue` результат с атрибутами <xref:System.Windows.Markup.MarkupExtension>.  
   
  Дополнительные сведения см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** поддерживает две формы однозначного соответствия примитивов:  
+ **Аргументы:** Поддерживает два вида однозначного соответствия примитивов:  
   
 -   Строковое значение, указывающее имя свойства типа с атрибутом.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47424445"
 ### <a name="runtimenamepropertyattribute"></a>RuntimeNamePropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** строка, указывающая имя свойства времени выполнения имя типа с атрибутом.  
+ **Аргументы:** Строка, указывающая имя свойства времени выполнения имя типа с атрибутом.  
   
  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> сообщает о свойстве типа атрибута, который сопоставляется с XAML [директива x: Name](../../../docs/framework/xaml-services/x-name-directive.md). Свойство должно быть типа <xref:System.String> и должны быть чтения/записи.  
   
@@ -110,18 +110,18 @@ ms.locfileid: "47424445"
 ### <a name="trimsurroundingwhitespaceattribute"></a>TrimSurroundingWhitespaceAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
- **Применяется к:** типы  
+ **Область применения:** Типы  
   
- **Аргументы:** None.  
+ **Аргументы:** Отсутствует.  
   
  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> применяется к определенным типам, которые могут отображаться как дочерние элементы внутри существенного содержимого пустого пространства (содержимого, хранящихся в коллекции, в которой <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> главным образом используется для сохранения пути, но доступен в системе типов XAML в пути загрузки с помощью проверки <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Справочная документация по:**  <xref:System.ComponentModel.TypeConverterAttribute>  
   
- **Применяется к:** класса, свойства или метода (единственным допустимым XAML случай метод `get` метод доступа, который поддерживает присоединяемым членом).  
+ **Область применения:** Класс, свойства или метода (только XAML допустимый метод случай `get` метод доступа, который поддерживает присоединяемым членом).  
   
- **Аргументы:** <xref:System.Type> из <xref:System.ComponentModel.TypeConverter>.  
+ **Аргументы:** <xref:System.Type> выражения <xref:System.ComponentModel.TypeConverter>.  
   
  <xref:System.ComponentModel.TypeConverterAttribute> в XAML контекста ссылается на пользовательский <xref:System.ComponentModel.TypeConverter>. Это <xref:System.ComponentModel.TypeConverter> предоставляет поведение преобразования типов для пользовательских типов и членов этого типа.  
   
@@ -138,72 +138,72 @@ ms.locfileid: "47424445"
 ### <a name="uidpropertyattribute"></a>UidPropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.UidPropertyAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** строка, указывающая соответствующего свойства по имени.  
+ **Аргументы:** Строка, указывающая соответствующего свойства по имени.  
   
  Указывает свойство CLR класса, который является псевдонимом [x: Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md).  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** логическое значение. Если используется для назначение атрибута, это всегда указывается как `true`.  
+ **Аргументы:** Логическое значение. Если используется для назначение атрибута, это всегда указывается как `true`.  
   
  Указывает, строится ли этот тип сверху вниз в ходе создания графа объекта XAML. Это сложное понятие, которое, вероятно, тесно связано с определением модели программирования. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
- **Применяется к:** класса, свойства или метода (единственным допустимым XAML случай метод `get` метод доступа, который поддерживает присоединяемым членом).  
+ **Область применения:** Класс, свойства или метода (только XAML допустимый метод случай `get` метод доступа, который поддерживает присоединяемым членом).  
   
- **Аргументы:** объект <xref:System.Type> , указывающий класс поддержки значение сериализатора для использования при сериализации все свойства типа с атрибутом, или конкретные атрибуты свойства.  
+ **Аргументы:** Объект <xref:System.Type> , указывающий класс поддержки значение сериализатора для использования при сериализации все свойства типа с атрибутом, или конкретные атрибуты свойства.  
   
  <xref:System.Windows.Markup.ValueSerializer> Указывает класс сериализации значений, требует больше состояний и контекстов, чем <xref:System.ComponentModel.TypeConverter> does. <xref:System.Windows.Markup.ValueSerializer> можно связать с присоединяемым членом путем применения <xref:System.Windows.Markup.ValueSerializerAttribute> атрибут к статическому `get` метод доступа для присоединяемого члена. Сериализация значений применима также для перечисления, интерфейсы и структуры, но не для делегатов.  
   
 ### <a name="whitespacesignificantcollectionattribute"></a>WhitespaceSignificantCollectionAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
- **Применяется к:** класса, в частности типы коллекций, которые предполагается разместить смешанное содержимое, где пустое пространство вокруг элементов объекта может оказаться довольно существенной представление пользовательского интерфейса.  
+ **Область применения:** Класс, в частности типы коллекций, которые предполагается разместить смешанное содержимое, где пустое пространство вокруг элементов объекта может оказаться довольно существенной представление пользовательского интерфейса.  
   
- **Аргументы:** None.  
+ **Аргументы:** Отсутствует.  
   
  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Указывает, что тип коллекции должен обрабатываться как значительные пробела, обработчиком XAML, который влияет на создание узлов значений потока узлов XAML в коллекции. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
   
- **Применяется к:** класс, свойство.  
+ **Область применения:** Класс свойств.  
   
- **Аргументы:** однозначного соответствия примитивов поддерживает две формы типов в виде строк или типов как <xref:System.Type>. См. раздел <xref:System.Windows.Markup.XamlDeferLoadAttribute>.  
+ **Аргументы:** Однозначного соответствия примитивов поддерживает две формы типов в виде строк или типов как <xref:System.Type>. См. раздел <xref:System.Windows.Markup.XamlDeferLoadAttribute>.  
   
  Указывает, что классу или свойству имеет использование отложенной загрузки для XAML (например, поведение шаблона) и сообщает о классе, включающем задержку и его типа назначения/содержимого.  
   
 ### <a name="xamlsetmarkupextensionattribute"></a>XamlSetMarkupExtensionAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** имена обратного вызова.  
+ **Аргументы:** Имя функции обратного вызова.  
   
  Указывает, что класс может использовать расширение разметки для предоставления значения для одного или нескольких из его свойств и ссылается на обработчик, который модуль записи XAML следует вызывать перед выполнением операции установки расширения разметки для любого свойства класса.  
   
 ### <a name="xamlsettypeconverterattribute"></a>XamlSetTypeConverterAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** имена обратного вызова.  
+ **Аргументы:** Имя функции обратного вызова.  
   
  Указывает, что класс может использовать преобразователь типов для предоставления значения для одного или нескольких из его свойств и ссылается на обработчик, который модуль записи XAML следует вызывать перед выполнением операции установки преобразователя типа для любого свойства класса.  
   
 ### <a name="xmllangpropertyattribute"></a>XmlLangPropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
- **Применяется к:** класса  
+ **Область применения:** Класс  
   
- **Аргументы:** строка, указывающая имя свойства псевдонима к `xml:lang` типа с атрибутом.  
+ **Аргументы:** Строка, указывающая имя свойства псевдонима к `xml:lang` типа с атрибутом.  
   
  <xref:System.Windows.Markup.XmlLangPropertyAttribute> сообщает о свойстве типа атрибута, который сопоставляется XML `lang` директива. Свойство не обязательно типа <xref:System.String>, но должен назначаться из строки (этого можно добиться путем связывания преобразователь типов с типом свойства, или к отдельному свойству). Свойство должно быть чтение и запись.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47424445"
   
 -   Строковое значение, указывающее идентификатор пространства имен XAML, которое может включить пространство имен XAML из предыдущего аргумента.  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Указывает, что пространство имен XAML может быть включено в другое пространство имен XAML. Как правило, включающего пространство имен XAML указывается в определенном ранее <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Этот прием можно использовать для управления версиями словарь XAML в библиотеке и чтобы сделать его совместимым с ранее определенные разметки с более старому словарю.  
+ <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> Указывает, что пространство имен XAML может быть включено в другое пространство имен XAML. Как правило, поглощающее пространство имен XAML указывается в определенном ранее <xref:System.Windows.Markup.XmlnsDefinitionAttribute>. Этот прием можно использовать для управления версиями словарь XAML в библиотеке и чтобы сделать его совместимым с ранее определенные разметки с более старому словарю.  
   
 ### <a name="xmlnsdefinitionattribute"></a>XmlnsDefinitionAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
@@ -268,6 +268,6 @@ ms.locfileid: "47424445"
 > [!NOTE]
 >  Службы XAML .NET framework также определяет атрибут связанные с XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Этот атрибут является атрибутом уровня сборки для поддержки системы проекта, и он не неважен для пользовательских типов XAML.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Attribute>  
- [Определение пользовательских типов для использования со службами XAML .NET Framework](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Attribute>
+- [Определение пользовательских типов для использования со службами XAML .NET Framework](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

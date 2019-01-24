@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c815b256ebdab82a57f921a5df016a1552f6d052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c5861f598a653f433ffaa611d6f1be3ba6f69a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585608"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>Метод ISymUnmanagedDocument::GetCheckSumAlgorithmId
-Возвращает идентификатор алгоритма подсчета контрольной суммы или возвращает идентификатор GUID из нулей, если контрольная сумма отсутствует.  
+Возвращает идентификатор алгоритма контрольной суммы, или возвращает идентификатор GUID изо всех нулей, если контрольная сумма отсутствует.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +36,10 @@ HRESULT GetCheckSumAlgorithmId(
   
 #### <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на переменную, которая получает идентификатор алгоритма подсчета контрольной суммы.  
+ [out] Указатель на переменную, которая получает идентификатор алгоритма контрольной суммы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -2,15 +2,15 @@
 title: Общие атрибуты (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690908"
 ---
 # <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
-В этом разделе описаны атрибуты, наиболее часто используемые в программах Visual Basic.  
+В этом разделе описаны атрибуты, которые чаще всего используются в программах Visual Basic.  
   
 -   [Глобальные атрибуты](#Global)  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33644164"
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Глобальные атрибуты отображаются в исходном коде после любых верхнего уровня `Imports` инструкций и перед любыми объявлениями типа, модуль или пространство имен. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальных атрибутов обычно помещаются в файле AssemblyInfo.vb (файл создается автоматически при создании проекта в Visual Studio).  
+ Глобальные атрибуты отображаются в исходном коде после любых верхнего уровня `Imports` инструкций и перед всеми объявлениями типов, модуля или пространства имен. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальные атрибуты обычно помещаются в файл AssemblyInfo.vb (файл создается автоматически при создании проекта в Visual Studio).  
   
  Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Они делятся на следующие категории:  
   
@@ -220,26 +220,26 @@ End Class
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
   
- Дополнительные сведения о информационные атрибуты вызывающего объекта см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Дополнительные сведения о информационные атрибуты вызывающего объекта, см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
 ##  <a name="VB"></a> Атрибуты Visual Basic  
  В следующей таблице перечислены атрибуты, относящиеся к Visual Basic.  
   
 |Атрибут|Цель|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на то, что класс должен быть предоставлен как COM-объектом.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля должен осуществляться, используя только квалификацию, необходимую для модуля.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает размер строки фиксированной длины в структуре для использования с файлом входных и выходных данных функции.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает размер массив фиксированной длины в структуре для использования с файлом входных и выходных данных функции.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на то, что класс должен представляться как COM-объекта.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет получать доступ к, используя только квалификацию, необходимую для модуля членам модуля.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Размер строки фиксированной длины в структуре для использования с файлом входные и выходные данные функции.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает размер массив фиксированной длины в структуре для использования с файлом входные и выходные данные функции.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Использование `COMClassAttribute` для упрощения процесса создания COM-компонентов в Visual Basic. COM-объекты существенно отличаются от сборок .NET Framework и без `COMClassAttribute`, необходимо выполнить ряд действий для создания COM-объекта из Visual Basic. Для классов, помеченных атрибутом `COMClassAttribute`, компилятор автоматически выполняет большую часть этих операций.  
+ Использование `COMClassAttribute` для упрощения процесса создания COM-компонентов с помощью Visual Basic. COM-объекты существенно отличаются от сборок платформы .NET Framework, а также без `COMClassAttribute`, необходимо выполнить ряд действий для создания COM-объекта из Visual Basic. Для классов, помеченных с помощью `COMClassAttribute`, компилятор выполняет большую часть этих действий автоматически.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
  Используйте `HideModuleNameAttribute` чтобы разрешить доступ, используя только квалификацию, необходимую для модуля к членам модуля.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- Используйте `VBFixedStringAttribute` для принудительного Visual Basic для создания строки фиксированной длины. Строки имеют переменный размер по умолчанию, и этот атрибут полезен при хранении строк к файлам. Это демонстрируется в следующем коде:  
+ Используйте `VBFixedStringAttribute` для принудительного Visual Basic для создания строки фиксированной длины. Строки имеют переменную длину по умолчанию, и этот атрибут полезен при хранении строк к файлам. Следующий код демонстрирует это:  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Используйте `VBFixedArrayAttribute` Чтобы объявить массивы фиксированного размера. Как и строки в Visual Basic массивы имеют переменный размер по умолчанию. Этот атрибут полезен при сериализации или записи данных в файлы.  
+ Используйте `VBFixedArrayAttribute` Чтобы объявить массивы фиксированного размера. Например, Visual Basic строки массивы имеют переменную длину по умолчанию. Этот атрибут полезен при сериализации или запись данных в файлы.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Атрибуты](../../../../standard/attributes/index.md)  
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))
+## <a name="see-also"></a>См. также
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Атрибуты](../../../../standard/attributes/index.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))

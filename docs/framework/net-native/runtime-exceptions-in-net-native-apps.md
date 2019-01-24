@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696871"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Исключения среды выполнения в собственных приложениях .NET
 Очень важно выполнять тестирование сборок выпуска приложения универсальной платформы Windows на их целевых платформах, поскольку конфигурации отладки и выпуска совершенно различны. По умолчанию конфигурация отладки использует для компиляции приложения среду выполнения .NET Core, но конфигурация выпуска использует для компиляции приложения в машинный код среду выполнения .NET Native.  
   
 > [!IMPORTANT]
->  Сведения о работе с исключениями [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md), которые могут возникнуть при тестировании версий для выпуска приложения, см. в разделе "Шаг 4. Устранение проблем с отсутствующими метаданными вручную" в статье [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md), а также в разделах [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) и [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+>  Сведения о работе с [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), и [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) исключения, которые могут вас возникает при тестировании версий для выпуска приложения, см. в разделе «шаг 4: Вручную разрешите отсутствующие метаданные: в [Приступая к работе](../../../docs/framework/net-native/getting-started-with-net-native.md) раздела, а также [отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) и [директив среды выполнения (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Отладочные и выпускные сборки  
  Когда отладочная сборка выполняется в среде выполнения .NET Core, она не компилируется в машинный код. Это делает все службы, обычно предоставляемые средой выполнения, доступными вашему приложению.  
@@ -59,6 +59,6 @@ Additional information: Value does not fall within the expected range.
   
  Чтобы получить полный стек, запустите отладочную сборку.  
   
-## <a name="see-also"></a>См. также  
- [Отладка универсальных приложений .NET Native Windows](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
- [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>См. также
+- [Отладка универсальных приложений .NET Native Windows](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)

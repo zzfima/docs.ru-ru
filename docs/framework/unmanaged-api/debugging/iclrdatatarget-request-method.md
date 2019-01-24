@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596908"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Метод ICLRDataTarget::Request
-Вызывается службами доступа к данным среды выполнения (CLR) для запроса операции, как определяются реализацией.  
+Вызывается службами доступа к данным среды выполнения (CLR) для запроса операции, как определено в реализации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,24 +52,24 @@ HRESULT Request (
  [in] Буфер, содержащий запрос.  
   
  `outBufferSize`  
- [in] Размер выходного буфера, используемого для ответа.  
+ [in] Размер выходного буфера, который используется для ответа.  
   
  `outBuffer`  
  [out] Буфер, содержащий ответ.  
   
 ## <a name="remarks"></a>Примечания  
- `Request` Метод облегчает процесс добавления незаданных настраиваемых операций. То есть этот метод обеспечивает расширяемость, не требуя пересмотра определения интерфейса.  
+ `Request` Метод облегчает процесс добавления неуказанных пользовательских операций. То есть этот метод обеспечивает расширяемость без необходимости версии определения интерфейса.  
   
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

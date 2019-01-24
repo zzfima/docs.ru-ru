@@ -1,15 +1,15 @@
 ---
-title: 'Как: запись данных объекта в XML-файл (Visual Basic)'
+title: Как выполнить Запись данных объекта в XML-файл (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715833"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Как: запись данных объекта в XML-файл (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Как выполнить Запись данных объекта в XML-файл (Visual Basic)
 Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, оно должно иметь доступ к каталогу для создания файлов (`Create`). Если файл уже существует, то приложению достаточно иметь лишь доступ для записи файлов (`Write`), т. е. меньшие привилегии. Безопаснее создавать файл во время развертывания, если это возможно, а также предоставлять доступ `Read` к отдельному файлу вместо доступа `Create` к папке.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.StreamWriter>  
- [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (Visual Basic))  
- [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IO.StreamWriter>
+- [Практическое руководство. Чтение данных объекта из XML-файл (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

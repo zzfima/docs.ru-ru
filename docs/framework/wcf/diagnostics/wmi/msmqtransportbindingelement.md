@@ -2,12 +2,12 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 33cd9c427ed5ad04eaf9e9889f60f091f335d1e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d37ee4527226d9347e24fc2ee8007a263c71f198
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564881"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -32,21 +32,21 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ### <a name="maxpoolsize"></a>MaxPoolSize  
  Тип данных: sint32  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Максимальный размер пула, содержащего внутренние объекты сообщений MSMQ.  
   
 ### <a name="queuetransferprotocol"></a>QueueTransferProtocol  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Значение перечисления, в котором указывается поставленный в очередь транспорт канала связи, используемый данной привязкой.  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Возвращает логическое значение, указывающее, следует ли преобразовывать адреса очередей с помощью Active Directory.  
   
@@ -56,5 +56,5 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

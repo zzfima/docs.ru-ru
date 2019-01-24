@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566747"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
 После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения службы, см. в разделе [Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
@@ -59,12 +59,12 @@ ms.locfileid: "50183741"
   
  Однако можно также самому создать объект службы, а затем создать основное приложение службы, используя этот объект. Для этого необходимо задать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> значение <xref:System.ServiceModel.InstanceContextMode.Single> - в противном случае при открытии основного приложения службы возникает исключение.  
   
- Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType>. Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>, если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию, не имеющий параметров).  
+ Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> . Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> , если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию, не имеющий параметров).  
   
  Обратите внимание на то, что когда объект передается этот конструктор, некоторые функции, относящиеся к Windows Communication Foundation (WCF) поведения при создании экземпляров работают по-разному. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр хорошо известного объекта. Аналогичным образом игнорируются все другие механизмы освобождения экземпляров. Класс <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Другие поведения службы, конечной точки, контракта и операции  
- Поведения службы, такие как атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> , действуют во всей службе. Например, если для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>, необходимо самостоятельно обрабатывать вопросы синхронизации потоков внутри каждой операции службы. Поведения конечной точки действуют на уровне конечной точки; многие из предоставляемых системой поведений конечных точек предназначены для функциональных возможностей клиентов. Поведения контракта действуют на уровне контракта, а поведения операции изменяют доставку операции.  
+ Поведения службы, такие как атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> , действуют во всей службе. Например, если для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> , необходимо самостоятельно обрабатывать вопросы синхронизации потоков внутри каждой операции службы. Поведения конечной точки действуют на уровне конечной точки; многие из предоставляемых системой поведений конечных точек предназначены для функциональных возможностей клиентов. Поведения контракта действуют на уровне контракта, а поведения операции изменяют доставку операции.  
   
  Многие из этих поведений реализованы атрибутами, и их можно использовать так же, как и атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> - применяя их к определенной реализации класса службы или операции. Другие поведения, такие как объекты <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и <xref:System.ServiceModel.Description.ServiceDebugBehavior> , обычно применяются с помощью файла конфигурации приложения, хотя их можно также использовать программно.  
   
@@ -120,6 +120,6 @@ ms.locfileid: "50183741"
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Задает уровень, на котором операция службы принимает заголовок транзакции.  
   
-## <a name="see-also"></a>См. также  
- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
- [Практическое руководство. Управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>См. также
+- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
+- [Практическое руководство. Управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

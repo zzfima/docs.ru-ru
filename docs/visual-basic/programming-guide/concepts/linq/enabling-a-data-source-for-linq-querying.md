@@ -2,12 +2,12 @@
 title: Включение источника данных для LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676501"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Включение источника данных для запросов LINQ
 
@@ -29,7 +29,7 @@ ms.locfileid: "48582831"
  Существует два способа включения поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к данным, находящимся в памяти. Если данные имеют тип, который реализует <xref:System.Collections.Generic.IEnumerable%601>, можно выполнить запрос данных с помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к объектам. Если добавление перечисления к типу с помощью реализации интерфейса <xref:System.Collections.Generic.IEnumerable%601> не имеет смысла, можно определить методы стандартных операторов запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в типе или создать методы стандартных операторов запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые расширяют тип. Пользовательские реализации стандартных операторов запроса должны использовать отложенное выполнение для возврата результатов.
 
 ### <a name="remote-data"></a>Удаленные данные
- Лучшим вариантом для поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к удаленному источнику данных является реализация интерфейса <xref:System.Linq.IQueryable%601>. Однако это отличается от расширения поставщика, например [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для источника данных. Модели поставщика для расширения существующих [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] технологий, таких как [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]для других типов источников данных, доступных в Visual Studio 2008.
+ Лучшим вариантом для поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к удаленному источнику данных является реализация интерфейса <xref:System.Linq.IQueryable%601>. Однако это отличается от расширения поставщика, например [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для источника данных. В Visual Studio 2008 отсутствуют модели поставщика для расширения существующих технологий [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], таких как [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], до других типов источников данных.
 
 ## <a name="iqueryable-linq-providers"></a>Поставщики IQueryable LINQ
  Поставщики [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], реализующие <xref:System.Linq.IQueryable%601>, могут существенно различаться по сложности. В этом разделе рассматриваются различные уровни сложности.

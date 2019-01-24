@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Защита службы с использованием сертификата X.509
+title: Как выполнить Защита службы с сертификатом X.509
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686495"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Практическое руководство. Защита службы с использованием сертификата X.509
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Как выполнить Защита службы с сертификатом X.509
 Защита службы с использованием сертификата X.509 является базовый метод, используемый в большинстве привязок в Windows Communication Foundation (WCF). В этом разделе описывается порядок настройки резидентной службы с сертификатом X.509.  
   
  Предварительным условием является наличие действительного сертификата, который можно использовать для проверки подлинности сервера. Сертификат должен быть выдан серверу доверенным центром сертификации. Если сертификат недействителен, ни один клиент, пытающийся воспользоваться службой, не будет доверять этой службе, следовательно, соединение установлено не будет. Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "50196899"
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  Необязательный. Чтобы извлекать метаданные из службы, создайте новый объект <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и присвойте свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> значение `true`.  
+7.  Необязательный параметр. Чтобы извлекать метаданные из службы, создайте новый объект <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и присвойте свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> значение `true`.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
@@ -82,5 +82,5 @@ ms.locfileid: "50196899"
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>См. также  
- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>См. также
+- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

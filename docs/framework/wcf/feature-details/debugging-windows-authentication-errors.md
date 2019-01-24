@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595140"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Когда на уровне SSPI происходят ошибки безопасности, они регистрируются в Windows Communication Foundation (WCF). В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -36,7 +36,7 @@ ms.locfileid: "43513251"
   
  В заголовке таблицы приведены возможные типы учетных записей, используемые сервером. В левом столбце приведены возможные типы учетных записей, используемые клиентом.  
   
-||Локальный пользователь|Локальная система|Пользователь домена|Компьютер домена|  
+||Локальный пользователь|локальная система;|Пользователь домена|Компьютер домена|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Локальный пользователь|NTLM|NTLM|NTLM|NTLM|  
 |локальная система;|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
@@ -45,13 +45,13 @@ ms.locfileid: "43513251"
   
  Здесь четыре типа учетных записей включают:  
   
--   локальный пользователь: профиль пользователя, относящийся только к конкретному компьютеру. Пример: `MachineName\Administrator` или `MachineName\ProfileName`.  
+-   Локальный пользователь: Профиль пользователя только для компьютера. Пример: `MachineName\Administrator` или `MachineName\ProfileName`.  
   
--   локальная система: встроенная учетная запись SYSTEM на входящем в состав домена компьютере;  
+-   Локальная система: Встроенная учетная запись системы на компьютере, который не присоединен к домену.  
   
--   пользователь домена: учетная запись пользователя в домене Windows. Например, `DomainName\ProfileName`.  
+-   Пользователь домена: Учетная запись пользователя в домене Windows. Например, `DomainName\ProfileName`.  
   
--   компьютер домена: процесс с удостоверением компьютера, выполняющийся на компьютере, который входит в состав домена Windows. Например, `MachineName\Network Service`.  
+-   Компьютер домена: Процесс с удостоверением компьютера, на компьютере, присоединенных к домену Windows. Например, `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Получение учетных данных службы происходит при вызове метода <xref:System.ServiceModel.ICommunicationObject.Open%2A> класса <xref:System.ServiceModel.ServiceHost>. Чтение учетных данных клиента происходит всякий раз, когда клиент отправляет сообщение.  
@@ -144,10 +144,10 @@ ms.locfileid: "43513251"
 #### <a name="developing-and-deploying-with-different-identities"></a>Разработка и развертывание с использованием различных удостоверений  
  В случае разработки приложения на одном компьютере и его развертывания на другом компьютере с использованием для проверки подлинности на каждом из компьютеров учетных записей различных типов работа приложения может различаться. Предположим, приложение разрабатывается на компьютере под управлением Windows XP Professional Edition с использованием режима проверки подлинности `SSPI Negotiated`. Если для проверки подлинности используется учетная запись локального пользователя, будет использоваться протокол NTLM. После разработки приложения служба развертывается на компьютере под управлением Windows Server 2003, где она выполняется от имени учетной записи домена. В этом случае клиент не сможет пройти проверку подлинности на стороне службы, поскольку будут использоваться протокол Kerberos и контроллер домена.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

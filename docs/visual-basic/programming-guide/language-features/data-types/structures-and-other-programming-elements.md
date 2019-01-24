@@ -8,18 +8,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679595"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Структуры и другие элементы программирования (Visual Basic)
-Структуры можно использовать в сочетании с массивов, объектов и процедуры, а также друг с другом. При взаимодействии применяется тот же синтаксис, который используется этими элементами по отдельности.  
+Структуры можно использовать в сочетании с массивы, объекты и процедуры, а также друг с другом. При взаимодействии применяется тот же синтаксис, который используется эти элементы по отдельности.  
   
 > [!NOTE]
->  Не удалось инициализировать любого из элементов структуры в объявлении структуры. Можно назначить значения только к элементам, объявленным типом структуры переменной.  
+>  Вы не можете инициализировать любого из элементов структуры в объявлении структуры. Можно назначить значения только элементы переменной, который был объявлен как тип структуры.  
   
 ## <a name="structures-and-arrays"></a>Структуры и массивы  
  Структура может содержать массив как один или несколько его элементов. Это показано в следующем примере.  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Доступ к значениям массива внутри структуры так же, как вы и доступ к свойствам объекта. Это показано в следующем примере.  
+ Доступ к значениям массива в структуре так же, доступе к свойству объекта. Это показано в следующем примере.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -47,7 +47,7 @@ mySystem.diskDrives(0) = "1.44 MB"
 Dim allSystems(100) As systemInfo  
 ```  
   
- Вы выполните те же правила для доступа к компонентам этой архитектуры данных. Это показано в следующем примере.  
+ Вы выполните те же правила, доступ к компонентам этой архитектуры данных. Это показано в следующем примере.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -69,7 +69,7 @@ End Structure
  В таком объявлении следует использовать определенный класс объекта вместо `Object`.  
   
 ## <a name="structures-and-procedures"></a>Структуры и процедуры  
- Структуру можно передать в качестве аргумента процедуры. Это показано в следующем примере.  
+ Можно передать структуру в качестве аргумента процедуры. Это показано в следующем примере.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,7 +81,7 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- В предыдущем примере передается структура *по ссылке*, который позволяет процедуре изменять элементы, чтобы изменения вступили в силу в вызывающем коде. Если вы хотите защитить структуру от таких изменений, ее необходимо передавайте по значению.  
+ В предыдущем примере передается структура *по ссылке*, что позволяет изменять его элементы, чтобы изменения вступили в силу в вызывающем коде процедуры. Если вы хотите защитить структуру от таких изменений, ее необходимо передайте по значению.  
   
  Можно также вернуть структуру из `Function` процедуры. Это показано в следующем примере.  
   
@@ -118,18 +118,18 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Эту технологию можно также использовать для включения структуры, определенной в одном модуле в структуру, определенную в другом модуле.  
+ Этот метод может использоваться для инкапсуляции структуре, определенной в одном модуле в структуре, определенной в другом модуле.  
   
  Структуры могут содержать другие структуры в произвольном порядке.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Переменные структуры](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Переменные структуры](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

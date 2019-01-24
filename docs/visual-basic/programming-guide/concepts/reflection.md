@@ -2,11 +2,12 @@
 title: Отражение (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: f47f78ff9989fc44ad46b66a447061c3fa84a86e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59910edda8e2dfc4ec8e697b1d5b9a0f47ff9dbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690115"
 ---
 # <a name="reflection-visual-basic"></a>Отражение (Visual Basic)
 Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](../../../standard/attributes/index.md).  
@@ -60,6 +61,6 @@ System.Console.WriteLine(info)
   
 -   [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)  
- [Сборки в среде CLR](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a>См. также
+- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)
+- [Сборки в среде CLR](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

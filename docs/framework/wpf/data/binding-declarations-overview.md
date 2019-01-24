@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: a8652648e1ac9da96a027f9aa56f0eee40cbaf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704021"
 ---
 # <a name="binding-declarations-overview"></a>Общие сведения об объявлении привязок
 В этом разделе описываются различные способы объявления привязок.  
@@ -36,13 +36,13 @@ ms.locfileid: "33557216"
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Использование расширения разметки  
- <xref:System.Windows.Data.Binding> является расширением разметки. Если для объявления привязки вы используете расширение привязки, то объявление состоит из ряда предложений, следующих за ключевым словом `Binding` и разделенных запятыми (,). Предложения в объявлении привязки могут следовать в любом порядке, и существует множество различных комбинаций. Эти предложения представляют *имя*=*значение* пары where *имя* имя <xref:System.Windows.Data.Binding> свойство и *значение* — значение настраиваемого свойства.  
+ <xref:System.Windows.Data.Binding> является расширением разметки. Если для объявления привязки вы используете расширение привязки, то объявление состоит из ряда предложений, следующих за ключевым словом `Binding` и разделенных запятыми (,). Предложения в объявлении привязки могут следовать в любом порядке, и существует множество различных комбинаций. Эти предложения имеют *имя*=*значение* где *имя* имя <xref:System.Windows.Data.Binding> свойство и *значение* — значение настраиваемого свойства.  
   
- При создании строк объявления привязки в разметке они должны быть присоединены к конкретному свойству зависимостей целевого объекта. Следующий пример показывает, как привязать <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> свойства с помощью расширения привязки, указав <xref:System.Windows.Data.Binding.Source%2A> и <xref:System.Windows.Data.Binding.Path%2A> свойства.  
+ При создании строк объявления привязки в разметке они должны быть присоединены к конкретному свойству зависимостей целевого объекта. В следующем примере показано, как привязать <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> свойства с помощью расширения привязки, указав <xref:System.Windows.Data.Binding.Source%2A> и <xref:System.Windows.Data.Binding.Path%2A> свойства.  
   
  [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Большинство свойств можно указать <xref:System.Windows.Data.Binding> таким способом. Дополнительные сведения о расширении привязки, а также список <xref:System.Windows.Data.Binding> свойства, которые нельзя задать с помощью расширения привязки в разделе [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Обзор.  
+ Можно задать большую часть свойств <xref:System.Windows.Data.Binding> таким способом. Дополнительные сведения о расширении привязки, а также список <xref:System.Windows.Data.Binding> свойства, которые нельзя задать с помощью расширения привязки, см. в разделе [расширения разметки привязки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Обзор.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Синтаксис объектных элементов  
@@ -52,32 +52,32 @@ ms.locfileid: "33557216"
   
  [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- В примере выполняется привязка <xref:System.Windows.Controls.TextBlock.Foreground%2A> , объявляя привязки с помощью синтаксиса расширения. В объявлении привязки для <xref:System.Windows.Controls.TextBlock.Text%2A> свойство использует синтаксис элемента объекта.  
+ В примере выполняется привязка <xref:System.Windows.Controls.TextBlock.Foreground%2A> свойство посредством объявления привязки с помощью синтаксиса расширения. Объявление привязки для <xref:System.Windows.Controls.TextBlock.Text%2A> свойство использует синтаксис объектных элементов.  
   
  Дополнительные сведения о различных терминах см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>Классы MultiBinding и PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML. Таким образом, необходимо использовать синтаксис элемента объекта, если вы объявляете <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML.  
+ <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML. Таким образом, необходимо использовать синтаксис объектных элементов, если вы объявляете <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Создание привязки в коде  
- Другим способом задания привязки является установка свойств непосредственно на <xref:System.Windows.Data.Binding> объекта в коде. В следующем примере показано, как создать <xref:System.Windows.Data.Binding> объекта и указать свойства в коде.  В этом примере `TheConverter` — это объект, реализующий <xref:System.Windows.Data.IValueConverter> интерфейса.  
+ Еще один способ указать привязку — задать свойства непосредственно на <xref:System.Windows.Data.Binding> объект в коде. В следующем примере показано, как создать <xref:System.Windows.Data.Binding> и укажите свойства в коде.  В этом примере `TheConverter` — это объект, реализующий <xref:System.Windows.Data.IValueConverter> интерфейс.  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Если объект выполняется привязка <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> можно вызвать `SetBinding` метод объекта напрямую, а не с помощью <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Пример см. в разделе [Создание привязки в коде](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Если вы выполняете привязку объекта <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> можно вызвать `SetBinding` метод объекта напрямую вместо использования <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Пример см. в разделе [Создание привязки в коде](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Синтаксис пути привязки  
- Используйте <xref:System.Windows.Data.Binding.Path%2A> свойство, чтобы указать исходное значение, которое вы хотите привязать к:  
+ Используйте <xref:System.Windows.Data.Binding.Path%2A> свойство, чтобы указать исходное значение, которое вы хотите выполнить привязку к:  
   
--   В самом простом случае <xref:System.Windows.Data.Binding.Path%2A> значение свойства является именем свойства исходного объекта, используемого для привязки, такие как `Path=PropertyName`.  
+-   В самом простом случае <xref:System.Windows.Data.Binding.Path%2A> значением свойства является имя свойства исходного объекта, используемого для привязки, такие как `Path=PropertyName`.  
   
--   Вложенные свойства могут задаваться с использованием того же синтаксиса как в C#. Например, предложение `Path=ShoppingCart.Order` задает привязку к подсвойству `Order` объекта или свойства `ShoppingCart`.  
+-   Вложенные свойства можно указать, аналогичный синтаксис, как показано на C#. Например, предложение `Path=ShoppingCart.Order` задает привязку к подсвойству `Order` объекта или свойства `ShoppingCart`.  
   
--   Для привязки присоединенного свойства заключите его в скобки. Например, для привязки к вложенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, синтаксис `Path=(DockPanel.Dock)`.  
+-   Для привязки присоединенного свойства заключите его в скобки. Например, для привязки к присоединенному свойству <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, используется следующий синтаксис `Path=(DockPanel.Dock)`.  
   
 -   Индексаторы свойства можно указать в квадратных скобках после имени свойства, для которого применяется индексатор. Например, предложение `Path=ShoppingCart[0]` задает привязку к индексу, который соответствует способу, который внутренняя индексация свойства использует для обработки символьной строки "0". Также поддерживаются вложенные индексаторы.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33557216"
   
 -   Внутри индексаторов ([]) знак крышки (^) задает экранирование следующего символа.  
   
--   Если задать <xref:System.Windows.Data.Binding.Path%2A> в XAML, также необходимо экранировать (с помощью сущностей XML) некоторые символы, которые являются особыми для определения языка XML:  
+-   Если задать <xref:System.Windows.Data.Binding.Path%2A> в XAML, также необходимо экранировать (с помощью сущностей XML) определенные символы, которые являются специальными для определения языка XML:  
   
     -   Используйте `&` в качестве escape-символа для символа &.  
   
@@ -117,16 +117,16 @@ ms.locfileid: "33557216"
   
 -   Создается преобразователь по умолчанию, который пытается выполнить преобразование типов между значением источника привязки и значением целевого объекта привязки. Если преобразование не удается выполнить, преобразователь по умолчанию возвращает значение `null`.  
   
--   Если вы не установите <xref:System.Windows.Data.Binding.ConverterCulture%2A>, использует механизм привязки `Language` свойства целевого объекта привязки. В языке XAML это свойство по умолчанию имеет значение "en-US" или наследует свое значение от корневого элемента (или любого элемента) страницы, если оно было задано явным образом.  
+-   Если вы не установите <xref:System.Windows.Data.Binding.ConverterCulture%2A>, обработчик привязки использует `Language` свойство целевого объекта привязки. В языке XAML это свойство по умолчанию имеет значение "en-US" или наследует свое значение от корневого элемента (или любого элемента) страницы, если оно было задано явным образом.  
   
--   При условии, что привязка уже имеет контекст данных (например, контекст данных, наследуемый от родительского элемента), а объект или коллекция, возвращаемые этим контекстом, подходят для привязки без необходимости дополнительного изменения пути, объявление привязки может вообще не иметь предложений: `{Binding}`. Таким способом привязка часто задается для стилей данных, где привязка воздействует на коллекцию. Дополнительные сведения см. в подразделе "Использование всего объекта в качестве источника привязки" раздела [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Условии, что привязка уже имеет контекст данных (например, наследуемым контекстом данных ожидается от родительского элемента), а объект или коллекция возвращаемые этим контекстом для привязки без необходимости дальнейшего изменения пути, объявление привязки можно вообще не иметь предложений: `{Binding}` Это часто способ привязка задается для стилей данных, где привязка воздействует на коллекцию. Дополнительные сведения см. в подразделе "Использование всего объекта в качестве источника привязки" раздела [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
--   Значение по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> может быть односторонним и двусторонним в свойство зависимостей, к которому осуществляется привязка. Режим привязки всегда можно объявить явным образом, чтобы обеспечить требуемое поведение привязки. В целом редактируемого свойства элемента управления такие как <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> и <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, по умолчанию имеют двухсторонние привязки, в то время как большинство других свойств по умолчанию имеют односторонние привязки.  
+-   Значение по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> различается для односторонней и двусторонней в зависимости от свойства зависимостей, к которому осуществляется привязка. Режим привязки всегда можно объявить явным образом, чтобы обеспечить требуемое поведение привязки. В свойствах общее, доступного для редактирования пользователями элемента управления такие как <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> и <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, по умолчанию имеют двухсторонние привязки, а для большинства других свойств по умолчанию имеют односторонние привязки.  
   
--   Значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение зависит от используемого <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> и <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> в зависимости от того, в свойство привязанного зависимостей. Значение по умолчанию для большинства свойств зависимостей — <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, а свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> имеет значение по умолчанию <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
+-   Значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение зависит от используемого <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> и <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> в зависимости от связанного свойства зависимостей также. Значение по умолчанию для большинства свойств зависимостей — <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, а свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> имеет значение по умолчанию <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Синтаксис PropertyPath в XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Синтаксис PropertyPath в XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

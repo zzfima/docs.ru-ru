@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog
+title: Как выполнить Открытие файлов с помощью компонента OpenFileDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: d7e1ebb319576aa7a38d55d8cb9f3652626966b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87e7640da76205341b9e95310314800ac9dbfe30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678815"
 ---
-# <a name="how-to-open-files-using-the-openfiledialog-component"></a>Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog
-<xref:System.Windows.Forms.OpenFileDialog> Компонент позволяет пользователям просматривать папки на компьютере или на любом компьютере в сети и выбрать один или несколько файлов для открытия. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне.  
+# <a name="how-to-open-files-using-the-openfiledialog-component"></a>Как выполнить Открытие файлов с помощью компонента OpenFileDialog
+<xref:System.Windows.Forms.OpenFileDialog> Компонента позволяет пользователям просматривать папки текущего компьютера или любого компьютера в сети и выбрать один или несколько файлов для открытия. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне.  
   
  После выбора открываемого файла существует два подхода к открытию файла. Если вы предпочитаете работать с потоками файлов, можно создать экземпляр <xref:System.IO.StreamReader> класса. Кроме того, можно использовать <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод, чтобы открыть выбранный файл.  
   
- В первом примере включает в себя <xref:System.Security.Permissions.FileIOPermission> проверка разрешений (как описано в «Примечание по безопасности» ниже), но также предоставляет доступ к имени файла. Этот метод можно использовать из зоны локального компьютера, интрасети и Интернета. Второй метод также выполняет <xref:System.Security.Permissions.FileIOPermission> проверку разрешений, но лучше всего подходит для приложений в зоне интрасети или Интернету.  
+ В первом примере включает в себя <xref:System.Security.Permissions.FileIOPermission> проверку разрешений (как описано в «Примечание по безопасности» ниже), но вы получаете доступ к имени файла. Этот метод можно использовать из зоны локального компьютера, интрасети и Интернета. Второй метод также выполняет <xref:System.Security.Permissions.FileIOPermission> проверку разрешений, но лучше всего подходит для приложений в зоне интрасети или Интернету.  
   
 ### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a>Открытие файла как потока с помощью компонента OpenFileDialog  
   
 1.  Выведите на экран диалоговое окно **Открыть файл** и вызовите метод для открытия файла, выбранного пользователем.  
   
-     Один подход заключается в использовании <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод, чтобы открыть диалоговое окно открытия файла и использовать экземпляр <xref:System.IO.StreamReader> класс, чтобы открыть файл.  
+     Одним из подходов является использование <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод, чтобы отобразить диалоговое окно открытия файла и использовать экземпляр <xref:System.IO.StreamReader> класс, чтобы открыть файл.  
   
-     В приведенном ниже используется <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы открыть экземпляр <xref:System.Windows.Forms.OpenFileDialog> компонента. Если файл выбран и пользователь нажимает кнопку **ОК**, открывается файл, выбранный в диалоговом окне. В этом случае содержимое отображается в окне сообщения, чтобы показать, что файловый поток считан.  
+     В примере ниже используется <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы открыть экземпляр <xref:System.Windows.Forms.OpenFileDialog> компонента. Если файл выбран и пользователь нажимает кнопку **ОК**, открывается файл, выбранный в диалоговом окне. В этом случае содержимое отображается в окне сообщения, чтобы показать, что файловый поток считан.  
   
     > [!IMPORTANT]
-    >  Чтобы получить или задать <xref:System.Windows.Forms.FileDialog.FileName%2A> свойства, сборка требует уровня прав доступа предоставляемых по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство, сборке требуется уровень привилегий предоставляются по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-     В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> управления и <xref:System.Windows.Forms.OpenFileDialog> компонента.  
+     В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> управления и <xref:System.Windows.Forms.OpenFileDialog> компонента.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -88,18 +88,18 @@ ms.locfileid: "33542279"
     ```  
   
     > [!NOTE]
-    >  Дополнительные сведения о чтении из файлового потока см. в разделе <xref:System.IO.FileStream.BeginRead%2A> и <xref:System.IO.FileStream.Read%2A>.  
+    >  Дополнительные сведения о чтении из файловых потоков, см. в разделе <xref:System.IO.FileStream.BeginRead%2A> и <xref:System.IO.FileStream.Read%2A>.  
   
 ### <a name="to-open-a-file-as-a-file-using-the-openfiledialog-component"></a>Открытие файла как файла с помощью компонента OpenFileDialog  
   
-1.  Используйте <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод, чтобы отобразить диалоговое окно и <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод для открытия файла.  
+1.  Используйте <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод, чтобы отобразить диалоговое окно и <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод, чтобы открыть файл.  
   
-     <xref:System.Windows.Forms.OpenFileDialog> Компонента <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод возвращает количество байтов, составляющих файл. Эти байты образуют поток для считывания. В следующем примере <xref:System.Windows.Forms.OpenFileDialog> экземпляр компонента с фильтром по «курсор»`.cur`. Если выбран файл `.cur`, в качестве курсора формы задается выбранный курсор.  
+     <xref:System.Windows.Forms.OpenFileDialog> Компонента <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод возвращает байты, из которых состоит файл. Эти байты образуют поток для считывания. В следующем примере <xref:System.Windows.Forms.OpenFileDialog> создается экземпляр компонента с фильтром по «курсор»`.cur`. Если выбран файл `.cur`, в качестве курсора формы задается выбранный курсор.  
   
     > [!IMPORTANT]
-    >  Для вызова <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод, сборка требует уровня прав доступа предоставляемых по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Для вызова <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод, сборке требуется уровень привилегий предоставляются по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-     В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> элемента управления.  
+     В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> элемента управления.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -173,6 +173,6 @@ ms.locfileid: "33542279"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.OpenFileDialog>  
- [Компонент OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.OpenFileDialog>
+- [Компонент OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

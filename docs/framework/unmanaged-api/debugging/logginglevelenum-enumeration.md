@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675286"
 ---
 # <a name="logginglevelenum-enumeration"></a>Перечисление LoggingLevelEnum
 Указывает уровень важности описательного сообщения, записанного в журнале событий при регистрации события управляемым потоком.  
@@ -48,34 +48,34 @@ typedef enum LoggingLevelEnum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`LTraceLevel0`|Сообщение находится на уровне трассировки 0.|  
+|`LTraceLevel0`|Сообщение является уровень трассировки 0.|  
 |`LTraceLevel1`|Сообщение является уровень трассировки 1.|  
 |`LTraceLevel2`|Сообщение является уровень трассировки 2.|  
-|`LTraceLevel3`|Сообщение является 3 уровень трассировки.|  
-|`LTraceLevel4`|Сообщение является 4 уровень трассировки.|  
-|`LStatusLevel0`|Сообщение находится на уровне состояния 0.|  
-|`LStatusLevel1`|Сообщение находится на уровне состояния 1.|  
-|`LStatusLevel2`|Сообщение находится на уровне состояния 2.|  
-|`LStatusLevel3`|Сообщение — это состояние, уровень 3.|  
-|`LStatusLevel4`|Сообщение находится на уровне состояния 4.|  
-|`LWarningLevel`|Сообщение находится на уровне предупреждения.|  
+|`LTraceLevel3`|Сообщение является уровень трассировки 3.|  
+|`LTraceLevel4`|Сообщение является уровень трассировки 4.|  
+|`LStatusLevel0`|Сообщение является уровнем состояние 0.|  
+|`LStatusLevel1`|Сообщение является уровнем состояние 1.|  
+|`LStatusLevel2`|Сообщение является уровнем состояние 2.|  
+|`LStatusLevel3`|Сообщение является уровнем состояние 3.|  
+|`LStatusLevel4`|Сообщение является уровнем состояние 4.|  
+|`LWarningLevel`|Сообщение является уровень предупреждений.|  
 |`LErrorLevel`|Сообщение находится на уровне ошибки.|  
 |`LPanicLevel`|Сообщение находится на уровне тревоги.|  
   
 ## <a name="remarks"></a>Примечания  
- Общеязыковая среда выполнения (CLR) вызывает [ICorDebugManagedCallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) метод для уведомления отладчик, что управляемый поток выполнил событие. Среда CLR передает значение `LoggingLevelEnum` перечисления, чтобы указать уровень серьезности сообщения, которое управляемый поток будет записано в журнал событий.  
+ Общеязыковая среда выполнения (CLR) вызывает [ICorDebugManagedCallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) метод для уведомления отладчик о том, что управляемый поток выполнил событие. Среда CLR передает значение `LoggingLevelEnum` перечисление, чтобы указать уровень серьезности сообщения, которое написал управляемый поток в журнале событий.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.EventLog>  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.EventLog>
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

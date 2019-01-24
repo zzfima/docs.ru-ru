@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
+title: Как выполнить Сортировка столбцов GridView при нажатии на заголовок
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694091"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
-В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> просмотра режим и сортировка данных содержимого при щелчке заголовка столбца.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Как выполнить Сортировка столбцов GridView при нажатии на заголовок
+В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> Просмотр режима и их содержимого, когда пользователь щелкает заголовок столбца для сортировки.  
   
 ## <a name="example"></a>Пример  
  В следующем примере определяется <xref:System.Windows.Controls.GridView> с тремя столбцами, которые привязаны к <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, и <xref:System.DateTime.Day%2A>, свойства <xref:System.DateTime> структуры.  
@@ -37,7 +37,7 @@ ms.locfileid: "33554902"
 </GridView>  
 ```  
   
- В следующем примере показано элементов данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов. <xref:System.Collections.ArrayList> Определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.  
+ В следующем примере показано элементы данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов. <xref:System.Collections.ArrayList> Определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

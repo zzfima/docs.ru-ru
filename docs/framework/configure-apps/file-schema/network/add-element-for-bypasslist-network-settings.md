@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680785"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Добавление&gt; элемент для bypasslist (параметры сети)
 Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.  
   
  \<configuration>  
-\<System.NET >  
-\<defaultProxy >  
-\<bypasslist >  
+\<system.net>  
+\<defaultProxy>  
+\<bypasslist>  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -80,6 +80,6 @@ ms.locfileid: "50235730"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

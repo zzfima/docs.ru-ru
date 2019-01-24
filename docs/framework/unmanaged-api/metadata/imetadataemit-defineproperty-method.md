@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543085"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Метод IMetaDataEmit::DefineProperty
-Создает определение свойства для указанного типа с указанным `get` и `set` метод доступа и получает маркер для этого определения свойства.  
+Создает определение свойства для указанного типа с заданным `get` и `set` метод доступа и получает маркер для этого определения свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ HRESULT DefineProperty (
  [in] Число байт в `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] Тип значения по умолчанию этого свойства.  
+ [in] Тип значения свойства по умолчанию.  
   
  `pValue`  
  [in] Значение по умолчанию для свойства.  
@@ -78,20 +78,20 @@ HRESULT DefineProperty (
  [in] Метод, который возвращает значение свойства.  
   
  `rmdOtherMethods[]`  
- [in] Массив из других методов, связанное со свойством. Массива с `mdTokenNil`.  
+ [in] Массив, другие методы, связанные со свойством. Массива с `mdTokenNil`.  
   
  `pmdProp`  
  [out] `mdProperty` Маркер, назначенный.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
