@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521443"
 ---
-# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="93e51-102">Метод IMetaDataImport::GetPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="93e51-102">IMetaDataImport::GetPinvokeMap Method</span></span>
-<span data-ttu-id="93e51-103">Возвращает токен ModuleRef, представляющий целевую сборку вызова PInvoke.</span><span class="sxs-lookup"><span data-stu-id="93e51-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
+# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="cd156-102">Метод IMetaDataImport::GetPinvokeMap</span><span class="sxs-lookup"><span data-stu-id="cd156-102">IMetaDataImport::GetPinvokeMap Method</span></span>
+<span data-ttu-id="cd156-103">Возвращает токен ModuleRef, представляющий целевую сборку вызова PInvoke.</span><span class="sxs-lookup"><span data-stu-id="cd156-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93e51-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="93e51-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd156-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd156-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPinvokeMap (  
@@ -40,34 +40,34 @@ HRESULT GetPinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="93e51-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="93e51-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cd156-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cd156-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="93e51-106">[in] Маркер FieldDef или MethodDef, чтобы получить метаданные сопоставления PInvoke для.</span><span class="sxs-lookup"><span data-stu-id="93e51-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
+ <span data-ttu-id="cd156-106">[in] Токен FieldDef или MethodDef, чтобы получить метаданные сопоставления PInvoke для.</span><span class="sxs-lookup"><span data-stu-id="cd156-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
   
  `pdwMappingFlags`  
- <span data-ttu-id="93e51-107">[out] Указатель флаги, используемые для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="93e51-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="93e51-108">Это значение является битовой [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="93e51-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="cd156-107">[out] Указатель на флаги, используемые для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="cd156-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="cd156-108">Это значение является битовой [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="cd156-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="93e51-109">[out] Имя целевой неуправляемые библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="93e51-109">[out] The name of the unmanaged target DLL.</span></span>  
+ <span data-ttu-id="cd156-109">[out] Имя целевой неуправляемой библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="cd156-109">[out] The name of the unmanaged target DLL.</span></span>  
   
  `cchImportName`  
- <span data-ttu-id="93e51-110">[in] Размер в расширенных символах с `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="93e51-110">[in] The size in wide characters of `szImportName`.</span></span>  
+ <span data-ttu-id="cd156-110">[in] Размер в расширенных символах `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="cd156-110">[in] The size in wide characters of `szImportName`.</span></span>  
   
  `pchImportName`  
- <span data-ttu-id="93e51-111">[out] Число расширенных символов, возвращаемых в `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="93e51-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
+ <span data-ttu-id="cd156-111">[out] Число расширенных символов, возвращаемых в `szImportName`.</span><span class="sxs-lookup"><span data-stu-id="cd156-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
   
  `pmrImportDLL`  
- <span data-ttu-id="93e51-112">[out] Указатель на токен ModuleRef, представляющий неуправляемый целевой объект библиотеки.</span><span class="sxs-lookup"><span data-stu-id="93e51-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
+ <span data-ttu-id="cd156-112">[out] Указатель на токен ModuleRef, представляющий неуправляемый целевой объект библиотеки.</span><span class="sxs-lookup"><span data-stu-id="cd156-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93e51-113">Требования</span><span class="sxs-lookup"><span data-stu-id="93e51-113">Requirements</span></span>  
- <span data-ttu-id="93e51-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93e51-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd156-113">Требования</span><span class="sxs-lookup"><span data-stu-id="cd156-113">Requirements</span></span>  
+ <span data-ttu-id="cd156-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd156-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93e51-115">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="93e51-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cd156-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cd156-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="93e51-116">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="93e51-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cd156-116">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cd156-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="93e51-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93e51-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cd156-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd156-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93e51-118">См. также</span><span class="sxs-lookup"><span data-stu-id="93e51-118">See Also</span></span>  
- [<span data-ttu-id="93e51-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="93e51-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="93e51-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="93e51-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cd156-118">См. также</span><span class="sxs-lookup"><span data-stu-id="cd156-118">See also</span></span>
+- [<span data-ttu-id="cd156-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="cd156-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="cd156-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="cd156-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

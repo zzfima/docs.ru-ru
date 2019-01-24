@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519753"
 ---
-# <a name="assemblyinfo-structure"></a><span data-ttu-id="b66c9-102">Структура ASSEMBLY_INFO</span><span class="sxs-lookup"><span data-stu-id="b66c9-102">ASSEMBLY_INFO Structure</span></span>
-<span data-ttu-id="b66c9-103">Содержит сведения о сборке, которая зарегистрирована в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="b66c9-103">Contains information about an assembly that is registered in the global assembly cache.</span></span>  
+# <a name="assemblyinfo-structure"></a><span data-ttu-id="a9b28-102">Структура ASSEMBLY_INFO</span><span class="sxs-lookup"><span data-stu-id="a9b28-102">ASSEMBLY_INFO Structure</span></span>
+<span data-ttu-id="a9b28-103">Содержит сведения о сборке, зарегистрированный в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="a9b28-103">Contains information about an assembly that is registered in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b66c9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b66c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9b28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a9b28-104">Syntax</span></span>  
   
 ```  
 typedef struct _ASSEMBLY_INFO {  
@@ -38,23 +38,23 @@ typedef struct _ASSEMBLY_INFO {
 } ASSEMBLY_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b66c9-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b66c9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a9b28-105">Участники</span><span class="sxs-lookup"><span data-stu-id="a9b28-105">Members</span></span>  
   
-|<span data-ttu-id="b66c9-106">Член</span><span class="sxs-lookup"><span data-stu-id="b66c9-106">Member</span></span>|<span data-ttu-id="b66c9-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b66c9-107">Description</span></span>|  
+|<span data-ttu-id="a9b28-106">Член</span><span class="sxs-lookup"><span data-stu-id="a9b28-106">Member</span></span>|<span data-ttu-id="a9b28-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="a9b28-107">Description</span></span>|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|<span data-ttu-id="b66c9-108">Размер в байтах структуры.</span><span class="sxs-lookup"><span data-stu-id="b66c9-108">The size, in bytes, of the structure.</span></span> <span data-ttu-id="b66c9-109">Это поле зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="b66c9-109">This field is reserved for future extensibility.</span></span>|  
-|`dwAssemblyFlags`|<span data-ttu-id="b66c9-110">Флаги, указывающие установки сведений о сборке.</span><span class="sxs-lookup"><span data-stu-id="b66c9-110">Flags that indicate installation details about the assembly.</span></span> <span data-ttu-id="b66c9-111">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="b66c9-111">The following values are supported:</span></span><br /><br /> <span data-ttu-id="b66c9-112">-ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка установлена.</span><span class="sxs-lookup"><span data-stu-id="b66c9-112">-   The ASSEMBLYINFO_FLAG_INSTALLED value, which indicates that the assembly is installed.</span></span> <span data-ttu-id="b66c9-113">Текущую версию платформы .NET Framework, всегда устанавливает `dwAssemblyFlags` это значение.</span><span class="sxs-lookup"><span data-stu-id="b66c9-113">The current version of the .NET Framework always sets `dwAssemblyFlags` to this value.</span></span><br /><span data-ttu-id="b66c9-114">-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентной полезных данных.</span><span class="sxs-lookup"><span data-stu-id="b66c9-114">-   The ASSEMBLYINFO_FLAG_PAYLOADRESIDENT value, which indicates that the assembly is a payload resident.</span></span> <span data-ttu-id="b66c9-115">Текущую версию платформы .NET Framework никогда не задает `dwAssemblyFlags` это значение.</span><span class="sxs-lookup"><span data-stu-id="b66c9-115">The current version of the .NET Framework never sets `dwAssemblyFlags` to this value.</span></span>|  
-|`uliAssemblySizeInKB`|<span data-ttu-id="b66c9-116">Общий размер в килобайтах, файлов, содержащих сборки.</span><span class="sxs-lookup"><span data-stu-id="b66c9-116">The total size, in kilobytes, of the files that the assembly contains.</span></span>|  
-|`pszCurrentAssemblyPathBuf`|<span data-ttu-id="b66c9-117">Указатель на буфер строки, содержащий текущий путь к файлу манифеста.</span><span class="sxs-lookup"><span data-stu-id="b66c9-117">A pointer to a string buffer that holds the current path to the manifest file.</span></span> <span data-ttu-id="b66c9-118">Путь должен заканчиваться символом null.</span><span class="sxs-lookup"><span data-stu-id="b66c9-118">The path must end with a null character.</span></span>|  
-|`cchBuf`|<span data-ttu-id="b66c9-119">Число расширенных символов, включая завершающий символ null, `pszCurrentAssemblyPathBuf` содержит.</span><span class="sxs-lookup"><span data-stu-id="b66c9-119">The number of wide characters, including the null terminator, that `pszCurrentAssemblyPathBuf` contains.</span></span>|  
+|`cbAssemblyInfo`|<span data-ttu-id="a9b28-108">Размер в байтах, структуры.</span><span class="sxs-lookup"><span data-stu-id="a9b28-108">The size, in bytes, of the structure.</span></span> <span data-ttu-id="a9b28-109">Это поле зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="a9b28-109">This field is reserved for future extensibility.</span></span>|  
+|`dwAssemblyFlags`|<span data-ttu-id="a9b28-110">Флаги, указывающие сведения об установке о сборке.</span><span class="sxs-lookup"><span data-stu-id="a9b28-110">Flags that indicate installation details about the assembly.</span></span> <span data-ttu-id="a9b28-111">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="a9b28-111">The following values are supported:</span></span><br /><br /> <span data-ttu-id="a9b28-112">-ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка устанавливается.</span><span class="sxs-lookup"><span data-stu-id="a9b28-112">-   The ASSEMBLYINFO_FLAG_INSTALLED value, which indicates that the assembly is installed.</span></span> <span data-ttu-id="a9b28-113">Текущая версия .NET Framework всегда задает `dwAssemblyFlags` этому значению.</span><span class="sxs-lookup"><span data-stu-id="a9b28-113">The current version of the .NET Framework always sets `dwAssemblyFlags` to this value.</span></span><br /><span data-ttu-id="a9b28-114">-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентного полезных данных.</span><span class="sxs-lookup"><span data-stu-id="a9b28-114">-   The ASSEMBLYINFO_FLAG_PAYLOADRESIDENT value, which indicates that the assembly is a payload resident.</span></span> <span data-ttu-id="a9b28-115">Текущая версия .NET Framework никогда не задает `dwAssemblyFlags` этому значению.</span><span class="sxs-lookup"><span data-stu-id="a9b28-115">The current version of the .NET Framework never sets `dwAssemblyFlags` to this value.</span></span>|  
+|`uliAssemblySizeInKB`|<span data-ttu-id="a9b28-116">Общий размер в килобайтах, файлов, содержащих сборки.</span><span class="sxs-lookup"><span data-stu-id="a9b28-116">The total size, in kilobytes, of the files that the assembly contains.</span></span>|  
+|`pszCurrentAssemblyPathBuf`|<span data-ttu-id="a9b28-117">Указатель на буфер строки, содержащий текущий путь к файлу манифеста.</span><span class="sxs-lookup"><span data-stu-id="a9b28-117">A pointer to a string buffer that holds the current path to the manifest file.</span></span> <span data-ttu-id="a9b28-118">Путь должен заканчиваться символом null.</span><span class="sxs-lookup"><span data-stu-id="a9b28-118">The path must end with a null character.</span></span>|  
+|`cchBuf`|<span data-ttu-id="a9b28-119">Число расширенных символов, включая завершающий символ null, который `pszCurrentAssemblyPathBuf` содержит.</span><span class="sxs-lookup"><span data-stu-id="a9b28-119">The number of wide characters, including the null terminator, that `pszCurrentAssemblyPathBuf` contains.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b66c9-120">Требования</span><span class="sxs-lookup"><span data-stu-id="b66c9-120">Requirements</span></span>  
- <span data-ttu-id="b66c9-121">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b66c9-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9b28-120">Требования</span><span class="sxs-lookup"><span data-stu-id="a9b28-120">Requirements</span></span>  
+ <span data-ttu-id="a9b28-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9b28-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b66c9-122">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b66c9-122">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="a9b28-122">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a9b28-122">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b66c9-123">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b66c9-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9b28-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9b28-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b66c9-124">См. также</span><span class="sxs-lookup"><span data-stu-id="b66c9-124">See Also</span></span>  
- [<span data-ttu-id="b66c9-125">Структуры Fusion</span><span class="sxs-lookup"><span data-stu-id="b66c9-125">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [<span data-ttu-id="b66c9-126">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="b66c9-126">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a><span data-ttu-id="a9b28-124">См. также</span><span class="sxs-lookup"><span data-stu-id="a9b28-124">See also</span></span>
+- [<span data-ttu-id="a9b28-125">Структуры Fusion</span><span class="sxs-lookup"><span data-stu-id="a9b28-125">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [<span data-ttu-id="a9b28-126">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="a9b28-126">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

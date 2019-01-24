@@ -2,25 +2,25 @@
 title: Задача 3. Создание области элементов и сетки свойств
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558427"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="2527b-102">Задача 3. Создание области элементов и сетки свойств</span><span class="sxs-lookup"><span data-stu-id="2527b-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
-<span data-ttu-id="2527b-103">В этой задаче вы создадите **элементов** и **PropertyGrid** областей и добавить их в размещаемый повторно [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2527b-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="70b44-102">Задача 3. Создание области элементов и сетки свойств</span><span class="sxs-lookup"><span data-stu-id="70b44-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
+<span data-ttu-id="70b44-103">В этой задаче вы создадите **элементов** и **PropertyGrid** областей и добавлять их в повторно размещенном [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="70b44-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  
   
- <span data-ttu-id="2527b-104">Для ссылки, код, который должен быть в файле MainWindow.xaml.cs после завершения трех задач в [повторное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) ряда разделов, приведенный в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="2527b-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>  
+ <span data-ttu-id="70b44-104">Для ссылки, код, который должен содержаться в файле MainWindow.xaml.cs после выполнения трех задач в [повторное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) ряд разделов указан в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="70b44-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>  
   
-### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="2527b-105">Создание области элементов и ее добавление к сетке.</span><span class="sxs-lookup"><span data-stu-id="2527b-105">To create the Toolbox and add it to the grid</span></span>  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="70b44-105">Создание области элементов и ее добавление к сетке.</span><span class="sxs-lookup"><span data-stu-id="70b44-105">To create the Toolbox and add it to the grid</span></span>  
   
-1.  <span data-ttu-id="2527b-106">Откройте проект HostingApplication, полученный с помощью процедуры, описанной в [задача 2: размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span><span class="sxs-lookup"><span data-stu-id="2527b-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span></span>  
+1.  <span data-ttu-id="70b44-106">Откройте проект HostingApplication, полученный с помощью процедуры, описанной в [задаче 2: Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span><span class="sxs-lookup"><span data-stu-id="70b44-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).</span></span>  
   
-2.  <span data-ttu-id="2527b-107">В **обозревателе решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="2527b-107">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
+2.  <span data-ttu-id="70b44-107">В **обозревателе решений** панели, щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="70b44-107">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-3.  <span data-ttu-id="2527b-108">Добавить `GetToolboxControl` метод `MainWindow` класс, который создает <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавляет новую **элементов** категории для **элементов**и назначает <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> типы действий для этой категории.</span><span class="sxs-lookup"><span data-stu-id="2527b-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>  
+3.  <span data-ttu-id="70b44-108">Добавить `GetToolboxControl` метод `MainWindow` класс, который создает <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавляет новую **элементов** категорию, чтобы **элементов**и назначает <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> типы действий к этой категории.</span><span class="sxs-lookup"><span data-stu-id="70b44-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "33519754"
     }  
     ```  
   
-4.  <span data-ttu-id="2527b-109">Добавьте закрытый `AddToolbox` метод `MainWindow` класс, который помещает **элементов** в левом столбце сетки.</span><span class="sxs-lookup"><span data-stu-id="2527b-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>  
+4.  <span data-ttu-id="70b44-109">Добавьте закрытый `AddToolbox` метод `MainWindow` класс, который помещает **элементов** в левом столбце сетки.</span><span class="sxs-lookup"><span data-stu-id="70b44-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ ms.locfileid: "33519754"
     }  
     ```  
   
-5.  <span data-ttu-id="2527b-110">Добавьте вызов метода `AddToolBox` в конструктор класса `MainWindow()`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="2527b-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
+5.  <span data-ttu-id="70b44-110">Добавьте вызов метода `AddToolBox` в конструктор класса `MainWindow()`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="70b44-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ ms.locfileid: "33519754"
     }  
     ```  
   
-6.  <span data-ttu-id="2527b-111">Нажмите клавишу F5, чтобы построить и выполнить решение.</span><span class="sxs-lookup"><span data-stu-id="2527b-111">Press F5 to build and run your solution.</span></span> <span data-ttu-id="2527b-112">**Элементов** содержащий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> действия должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="2527b-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>  
+6.  <span data-ttu-id="70b44-111">Нажмите клавишу F5, чтобы построить и выполнить решение.</span><span class="sxs-lookup"><span data-stu-id="70b44-111">Press F5 to build and run your solution.</span></span> <span data-ttu-id="70b44-112">**Элементов** содержащий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> действия должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="70b44-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>  
   
-### <a name="to-create-the-propertygrid"></a><span data-ttu-id="2527b-113">Создание области PropertyGrid</span><span class="sxs-lookup"><span data-stu-id="2527b-113">To create the PropertyGrid</span></span>  
+### <a name="to-create-the-propertygrid"></a><span data-ttu-id="70b44-113">Создание области PropertyGrid</span><span class="sxs-lookup"><span data-stu-id="70b44-113">To create the PropertyGrid</span></span>  
   
-1.  <span data-ttu-id="2527b-114">В **обозревателе решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="2527b-114">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
+1.  <span data-ttu-id="70b44-114">В **обозревателе решений** панели, щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="70b44-114">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-2.  <span data-ttu-id="2527b-115">Добавить `AddPropertyInspector` метод `MainWindow` класса, чтобы поместить **PropertyGrid** панели в правом столбце в таблице.</span><span class="sxs-lookup"><span data-stu-id="2527b-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid.</span></span>  
+2.  <span data-ttu-id="70b44-115">Добавить `AddPropertyInspector` метод `MainWindow` класса для размещения **PropertyGrid** области в самом правом столбце сетки.</span><span class="sxs-lookup"><span data-stu-id="70b44-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid.</span></span>  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ ms.locfileid: "33519754"
     }  
     ```  
   
-3.  <span data-ttu-id="2527b-116">Добавьте вызов метода `AddPropertyInspector` в конструктор класса `MainWindow()`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="2527b-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
+3.  <span data-ttu-id="70b44-116">Добавьте вызов метода `AddPropertyInspector` в конструктор класса `MainWindow()`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="70b44-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
     public MainWindow()  
@@ -103,10 +103,10 @@ ms.locfileid: "33519754"
     }  
     ```  
   
-4.  <span data-ttu-id="2527b-117">Нажмите клавишу F5 для построения и выполнения решения.</span><span class="sxs-lookup"><span data-stu-id="2527b-117">Press F5 to build and run the solution.</span></span> <span data-ttu-id="2527b-118">**Элементов**, визуальной разработки рабочего процесса, и **PropertyGrid** области должны отображаться, а при перетаскивании <xref:System.Activities.Statements.Assign> действия или <xref:System.Activities.Statements.Sequence> действия на полотно конструктора Сетка свойств должна обновиться в зависимости от выделенного действия.</span><span class="sxs-lookup"><span data-stu-id="2527b-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>  
+4.  <span data-ttu-id="70b44-117">Нажмите клавишу F5 для построения и выполнения решения.</span><span class="sxs-lookup"><span data-stu-id="70b44-117">Press F5 to build and run the solution.</span></span> <span data-ttu-id="70b44-118">**Элементов**, визуальной разработки рабочего процесса, и **PropertyGrid** области должны отображаться, а при перетаскивании <xref:System.Activities.Statements.Assign> действия или <xref:System.Activities.Statements.Sequence> действия на холст конструктора Сетка свойств должна обновиться в зависимости от выделенного действия.</span><span class="sxs-lookup"><span data-stu-id="70b44-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2527b-119">Пример</span><span class="sxs-lookup"><span data-stu-id="2527b-119">Example</span></span>  
- <span data-ttu-id="2527b-120">Теперь файл MainWindow.xaml.cs должен содержать следующий код.</span><span class="sxs-lookup"><span data-stu-id="2527b-120">The MainWindow.xaml.cs file should now contain the following code.</span></span>  
+## <a name="example"></a><span data-ttu-id="70b44-119">Пример</span><span class="sxs-lookup"><span data-stu-id="70b44-119">Example</span></span>  
+ <span data-ttu-id="70b44-120">Теперь файл MainWindow.xaml.cs должен содержать следующий код.</span><span class="sxs-lookup"><span data-stu-id="70b44-120">The MainWindow.xaml.cs file should now contain the following code.</span></span>  
   
 ```  
 using System;  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2527b-121">См. также</span><span class="sxs-lookup"><span data-stu-id="2527b-121">See Also</span></span>  
- [<span data-ttu-id="2527b-122">Отдельное размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="2527b-122">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="2527b-123">Задача 1. Создание приложения Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="2527b-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [<span data-ttu-id="2527b-124">Задача 2. Размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="2527b-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a><span data-ttu-id="70b44-121">См. также</span><span class="sxs-lookup"><span data-stu-id="70b44-121">See also</span></span>
+- [<span data-ttu-id="70b44-122">Отдельное размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="70b44-122">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [<span data-ttu-id="70b44-123">Упражнение 1. Создание нового приложения Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="70b44-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [<span data-ttu-id="70b44-124">Задача 2. Размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="70b44-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

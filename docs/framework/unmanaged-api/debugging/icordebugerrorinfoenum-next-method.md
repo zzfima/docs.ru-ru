@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a431c82450ddcc563a1d3d92bb61a64d723a007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49b93c220c8745b63d1463b2236f253112b1a545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543897"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="d45e9-102">Метод ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="d45e9-102">ICorDebugErrorInfoEnum::Next Method</span></span>
-<span data-ttu-id="d45e9-103">`ICorDebugErrorInfoEnum::Next` устарел.</span><span class="sxs-lookup"><span data-stu-id="d45e9-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="d45e9-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="d45e9-104">Do not call this method.</span></span>  
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="d3508-102">Метод ICorDebugErrorInfoEnum::Next</span><span class="sxs-lookup"><span data-stu-id="d3508-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+<span data-ttu-id="d3508-103">`ICorDebugErrorInfoEnum::Next` устарел.</span><span class="sxs-lookup"><span data-stu-id="d3508-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="d3508-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="d3508-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d45e9-105">См. также</span><span class="sxs-lookup"><span data-stu-id="d45e9-105">See Also</span></span>  
- [<span data-ttu-id="d45e9-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="d45e9-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="d3508-105">См. также</span><span class="sxs-lookup"><span data-stu-id="d3508-105">See also</span></span>
+- [<span data-ttu-id="d3508-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="d3508-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bec505df1db4ccbba862e81d9407d11245d449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adb06ec558f2d5f823d2040422a82e8b20d926a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537898"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="91fc7-102">Интерфейс1 ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="91fc7-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
-<span data-ttu-id="91fc7-103">`ICorDebugEditAndContinueSnapshot` устарел.</span><span class="sxs-lookup"><span data-stu-id="91fc7-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="91fc7-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="91fc7-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="ebedc-102">Интерфейс1 ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="ebedc-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
+<span data-ttu-id="ebedc-103">`ICorDebugEditAndContinueSnapshot` устарел.</span><span class="sxs-lookup"><span data-stu-id="ebedc-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="ebedc-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="ebedc-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91fc7-105">См. также</span><span class="sxs-lookup"><span data-stu-id="91fc7-105">See Also</span></span>  
- [<span data-ttu-id="91fc7-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="91fc7-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ebedc-105">См. также</span><span class="sxs-lookup"><span data-stu-id="ebedc-105">See also</span></span>
+- [<span data-ttu-id="ebedc-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="ebedc-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

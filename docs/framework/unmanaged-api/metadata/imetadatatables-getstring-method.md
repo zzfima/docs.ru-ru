@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ed3501930b94eae59cf38355f8255ecf4165bcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537989"
 ---
-# <a name="imetadatatablesgetstring-method"></a><span data-ttu-id="dd04f-102">Метод IMetaDataTables::GetString</span><span class="sxs-lookup"><span data-stu-id="dd04f-102">IMetaDataTables::GetString Method</span></span>
-<span data-ttu-id="dd04f-103">Возвращает строку с указанным индексом из столбца таблицы в текущей области ссылки.</span><span class="sxs-lookup"><span data-stu-id="dd04f-103">Gets the string at the specified index from the table column in the current reference scope.</span></span>  
+# <a name="imetadatatablesgetstring-method"></a><span data-ttu-id="15c7a-102">Метод IMetaDataTables::GetString</span><span class="sxs-lookup"><span data-stu-id="15c7a-102">IMetaDataTables::GetString Method</span></span>
+<span data-ttu-id="15c7a-103">Получает строку по указанному индексу из столбца таблицы в текущей области ссылки.</span><span class="sxs-lookup"><span data-stu-id="15c7a-103">Gets the string at the specified index from the table column in the current reference scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd04f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dd04f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15c7a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="15c7a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetString (   
@@ -36,22 +36,22 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dd04f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="dd04f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="15c7a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="15c7a-105">Parameters</span></span>  
  `ixString`  
- <span data-ttu-id="dd04f-106">[in] Индекс, с которого начинается поиск следующего значения.</span><span class="sxs-lookup"><span data-stu-id="dd04f-106">[in] The index at which to start to search for the next value.</span></span>  
+ <span data-ttu-id="15c7a-106">[in] Индекс, с которого начинается поиск следующего значения.</span><span class="sxs-lookup"><span data-stu-id="15c7a-106">[in] The index at which to start to search for the next value.</span></span>  
   
  `ppString`  
- <span data-ttu-id="dd04f-107">[out] Указатель на указатель на значение возвращаемой строки.</span><span class="sxs-lookup"><span data-stu-id="dd04f-107">[out] A pointer to a pointer to the returned string value.</span></span>  
+ <span data-ttu-id="15c7a-107">[out] Указатель на указатель на значение возвращаемой строки.</span><span class="sxs-lookup"><span data-stu-id="15c7a-107">[out] A pointer to a pointer to the returned string value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd04f-108">Требования</span><span class="sxs-lookup"><span data-stu-id="dd04f-108">Requirements</span></span>  
- <span data-ttu-id="dd04f-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd04f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15c7a-108">Требования</span><span class="sxs-lookup"><span data-stu-id="15c7a-108">Requirements</span></span>  
+ <span data-ttu-id="15c7a-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15c7a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd04f-110">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dd04f-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="15c7a-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="15c7a-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dd04f-111">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dd04f-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="15c7a-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="15c7a-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dd04f-112">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd04f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15c7a-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15c7a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd04f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="dd04f-113">See Also</span></span>  
- [<span data-ttu-id="dd04f-114">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="dd04f-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="dd04f-115">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="dd04f-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="15c7a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="15c7a-113">See also</span></span>
+- [<span data-ttu-id="15c7a-114">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="15c7a-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="15c7a-115">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="15c7a-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

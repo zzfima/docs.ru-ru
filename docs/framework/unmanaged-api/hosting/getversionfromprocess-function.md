@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518141"
 ---
-# <a name="getversionfromprocess-function"></a><span data-ttu-id="acae8-102">Функция GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="acae8-102">GetVersionFromProcess Function</span></span>
-<span data-ttu-id="acae8-103">Получает номер версии среды common language runtime (CLR), связанный с заданным дескриптором процесса.</span><span class="sxs-lookup"><span data-stu-id="acae8-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
+# <a name="getversionfromprocess-function"></a><span data-ttu-id="8fe74-102">Функция GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="8fe74-102">GetVersionFromProcess Function</span></span>
+<span data-ttu-id="8fe74-103">Получает номер версии общей языковой среды выполнения (CLR), связанный с указанным дескриптором процесса.</span><span class="sxs-lookup"><span data-stu-id="8fe74-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
   
- <span data-ttu-id="acae8-104">Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="acae8-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="8fe74-104">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8fe74-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="acae8-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="acae8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fe74-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8fe74-105">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionFromProcess (  
@@ -40,39 +40,39 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="acae8-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="acae8-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8fe74-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="8fe74-106">Parameters</span></span>  
  `hProcess`  
- <span data-ttu-id="acae8-107">[in] Дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="acae8-107">[in] A handle to a process.</span></span>  
+ <span data-ttu-id="8fe74-107">[in] Дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="8fe74-107">[in] A handle to a process.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="acae8-108">[out] Буфер, содержащий строку номера версии при успешном выполнении метода.</span><span class="sxs-lookup"><span data-stu-id="acae8-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
+ <span data-ttu-id="8fe74-108">[out] Буфер, содержащий строку номера версии после успешного завершения метода.</span><span class="sxs-lookup"><span data-stu-id="8fe74-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="acae8-109">[in] Длина буфера версии.</span><span class="sxs-lookup"><span data-stu-id="acae8-109">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="8fe74-109">[in] Длина буфера версии.</span><span class="sxs-lookup"><span data-stu-id="8fe74-109">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="acae8-110">[out] Указатель на длину строку номера версии.</span><span class="sxs-lookup"><span data-stu-id="acae8-110">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="8fe74-110">[out] Указатель на длину строку номера версии.</span><span class="sxs-lookup"><span data-stu-id="8fe74-110">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="acae8-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="acae8-111">Return Value</span></span>  
- <span data-ttu-id="acae8-112">Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.</span><span class="sxs-lookup"><span data-stu-id="acae8-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8fe74-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8fe74-111">Return Value</span></span>  
+ <span data-ttu-id="8fe74-112">Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.</span><span class="sxs-lookup"><span data-stu-id="8fe74-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="acae8-113">Код возврата</span><span class="sxs-lookup"><span data-stu-id="acae8-113">Return code</span></span>|<span data-ttu-id="acae8-114">Описание</span><span class="sxs-lookup"><span data-stu-id="acae8-114">Description</span></span>|  
+|<span data-ttu-id="8fe74-113">Код возврата</span><span class="sxs-lookup"><span data-stu-id="8fe74-113">Return code</span></span>|<span data-ttu-id="8fe74-114">Описание:</span><span class="sxs-lookup"><span data-stu-id="8fe74-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="acae8-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="acae8-115">S_OK</span></span>|<span data-ttu-id="acae8-116">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="acae8-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="acae8-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="acae8-117">E_INVALIDARG</span></span>|<span data-ttu-id="acae8-118">`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.</span><span class="sxs-lookup"><span data-stu-id="acae8-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="acae8-119">- или -</span><span class="sxs-lookup"><span data-stu-id="acae8-119">-or-</span></span><br /><br /> <span data-ttu-id="acae8-120">`hProcess` не является допустимым дескриптором для обработки.</span><span class="sxs-lookup"><span data-stu-id="acae8-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="acae8-121">- или -</span><span class="sxs-lookup"><span data-stu-id="acae8-121">-or-</span></span><br /><br /> <span data-ttu-id="acae8-122">Среда CLR не загружена.</span><span class="sxs-lookup"><span data-stu-id="acae8-122">The CLR is not loaded.</span></span>|  
-|<span data-ttu-id="acae8-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="acae8-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="acae8-124">`cchBuffer` значение null или меньше, чем длина строки версии.</span><span class="sxs-lookup"><span data-stu-id="acae8-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
-|<span data-ttu-id="acae8-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="acae8-125">E_NOTIMPL</span></span>|<span data-ttu-id="acae8-126">Этот метод недоступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="acae8-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
+|<span data-ttu-id="8fe74-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="8fe74-115">S_OK</span></span>|<span data-ttu-id="8fe74-116">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="8fe74-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="8fe74-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="8fe74-117">E_INVALIDARG</span></span>|<span data-ttu-id="8fe74-118">`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.</span><span class="sxs-lookup"><span data-stu-id="8fe74-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="8fe74-119">- или -</span><span class="sxs-lookup"><span data-stu-id="8fe74-119">-or-</span></span><br /><br /> <span data-ttu-id="8fe74-120">`hProcess` не является допустимым дескриптором к процессу.</span><span class="sxs-lookup"><span data-stu-id="8fe74-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="8fe74-121">- или -</span><span class="sxs-lookup"><span data-stu-id="8fe74-121">-or-</span></span><br /><br /> <span data-ttu-id="8fe74-122">Среда CLR не загружается.</span><span class="sxs-lookup"><span data-stu-id="8fe74-122">The CLR is not loaded.</span></span>|  
+|<span data-ttu-id="8fe74-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="8fe74-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="8fe74-124">`cchBuffer` равно null или меньше, чем длина строки версии.</span><span class="sxs-lookup"><span data-stu-id="8fe74-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
+|<span data-ttu-id="8fe74-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="8fe74-125">E_NOTIMPL</span></span>|<span data-ttu-id="8fe74-126">Этот метод не доступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="8fe74-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="acae8-127">Требования</span><span class="sxs-lookup"><span data-stu-id="acae8-127">Requirements</span></span>  
- <span data-ttu-id="acae8-128">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="acae8-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8fe74-127">Требования</span><span class="sxs-lookup"><span data-stu-id="8fe74-127">Requirements</span></span>  
+ <span data-ttu-id="8fe74-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8fe74-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="acae8-129">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="acae8-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8fe74-129">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8fe74-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="acae8-130">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="acae8-130">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="8fe74-130">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8fe74-130">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="acae8-131">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="acae8-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8fe74-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fe74-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acae8-132">См. также</span><span class="sxs-lookup"><span data-stu-id="acae8-132">See Also</span></span>  
- [<span data-ttu-id="acae8-133">Функция GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="acae8-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [<span data-ttu-id="acae8-134">Функция GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="acae8-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [<span data-ttu-id="acae8-135">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="acae8-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="8fe74-132">См. также</span><span class="sxs-lookup"><span data-stu-id="8fe74-132">See also</span></span>
+- [<span data-ttu-id="8fe74-133">Функция GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="8fe74-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="8fe74-134">Функция GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="8fe74-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="8fe74-135">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="8fe74-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

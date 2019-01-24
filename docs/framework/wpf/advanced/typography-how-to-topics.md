@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543582"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="67103-102">Разделы руководства, посвященные разметке текста</span><span class="sxs-lookup"><span data-stu-id="67103-102">Typography How-to Topics</span></span>
-<span data-ttu-id="67103-103">В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка форматированного представления текста в приложениях.</span><span class="sxs-lookup"><span data-stu-id="67103-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="07a03-102">Разделы руководства, посвященные разметке текста</span><span class="sxs-lookup"><span data-stu-id="07a03-102">Typography How-to Topics</span></span>
+<span data-ttu-id="07a03-103">В этом разделе описываются способы использования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка представление форматированного текста в приложениях.</span><span class="sxs-lookup"><span data-stu-id="07a03-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="67103-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="67103-104">In This Section</span></span>  
- [<span data-ttu-id="67103-105">Создание оформления текста</span><span class="sxs-lookup"><span data-stu-id="67103-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="67103-106">Определение того, подчеркнута ли ссылка</span><span class="sxs-lookup"><span data-stu-id="67103-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="67103-107">Применение преобразования к тексту</span><span class="sxs-lookup"><span data-stu-id="67103-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="67103-108">Применение анимаций к тексту</span><span class="sxs-lookup"><span data-stu-id="67103-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="67103-109">Создание текста с тенью</span><span class="sxs-lookup"><span data-stu-id="67103-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="67103-110">Создание контурного текста</span><span class="sxs-lookup"><span data-stu-id="67103-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [<span data-ttu-id="67103-111">Рисование текста для фона элемента управления</span><span class="sxs-lookup"><span data-stu-id="67103-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="67103-112">Рисование текста в визуальном элементе</span><span class="sxs-lookup"><span data-stu-id="67103-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="67103-113">Использование специальных символов в XAML</span><span class="sxs-lookup"><span data-stu-id="67103-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="07a03-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="07a03-104">In This Section</span></span>  
+ [<span data-ttu-id="07a03-105">Создание оформления текста</span><span class="sxs-lookup"><span data-stu-id="07a03-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="07a03-106">Определение того, подчеркнута ли ссылка</span><span class="sxs-lookup"><span data-stu-id="07a03-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="07a03-107">Применение преобразования к тексту</span><span class="sxs-lookup"><span data-stu-id="07a03-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="07a03-108">Применение анимаций к тексту</span><span class="sxs-lookup"><span data-stu-id="07a03-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="07a03-109">Создание текста с тенью</span><span class="sxs-lookup"><span data-stu-id="07a03-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="07a03-110">Создание контурного текста</span><span class="sxs-lookup"><span data-stu-id="07a03-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [<span data-ttu-id="07a03-111">Рисование текста для фона элемента управления</span><span class="sxs-lookup"><span data-stu-id="07a03-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="07a03-112">Рисование текста в визуальном элементе</span><span class="sxs-lookup"><span data-stu-id="07a03-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="07a03-113">Использование специальных символов в XAML</span><span class="sxs-lookup"><span data-stu-id="07a03-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="67103-114">См. также</span><span class="sxs-lookup"><span data-stu-id="67103-114">See Also</span></span>  
- <xref:System.Windows.Documents.Typography>  
- [<span data-ttu-id="67103-115">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="67103-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="67103-116">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="67103-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a><span data-ttu-id="07a03-114">См. также</span><span class="sxs-lookup"><span data-stu-id="07a03-114">See also</span></span>
+- <xref:System.Windows.Documents.Typography>
+- [<span data-ttu-id="07a03-115">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="07a03-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="07a03-116">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="07a03-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

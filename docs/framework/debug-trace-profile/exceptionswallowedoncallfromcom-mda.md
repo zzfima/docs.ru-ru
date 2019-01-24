@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4c1cbf075ef96073061679b6d062075490f5e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554677"
 ---
-# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="9df9e-102">exceptionSwallowedOnCallFromCom MDA</span><span class="sxs-lookup"><span data-stu-id="9df9e-102">exceptionSwallowedOnCallFromCom MDA</span></span>
-<span data-ttu-id="9df9e-103">Помощник отладки управляемого кода (MDA) `exceptionSwallowedOnCallFromCOM` активируется при возникновении исключения из кода среды CLR, вызываемого из COM посредством метода, который не имеет неуправляемого типа возвращаемого значения HRESULT.</span><span class="sxs-lookup"><span data-stu-id="9df9e-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
+# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="4e46b-102">exceptionSwallowedOnCallFromCom MDA</span><span class="sxs-lookup"><span data-stu-id="4e46b-102">exceptionSwallowedOnCallFromCom MDA</span></span>
+<span data-ttu-id="4e46b-103">Помощник отладки управляемого кода (MDA) `exceptionSwallowedOnCallFromCOM` активируется при возникновении исключения из кода среды CLR, вызываемого из COM посредством метода, который не имеет неуправляемого типа возвращаемого значения HRESULT.</span><span class="sxs-lookup"><span data-stu-id="4e46b-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="9df9e-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="9df9e-104">Symptoms</span></span>  
- <span data-ttu-id="9df9e-105">Вызов управляемого компонента из COM возвращает значение FALSE или 0.</span><span class="sxs-lookup"><span data-stu-id="9df9e-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="9df9e-106">Кроме того, если метод имеет тип возвращаемого значения void, указание на возникновение исключения во время выполнения метода может отсутствовать.</span><span class="sxs-lookup"><span data-stu-id="9df9e-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="9df9e-107">В этом случае исключение будет перехвачено без предупреждения и возвращено вызывающему объекту COM.</span><span class="sxs-lookup"><span data-stu-id="9df9e-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="4e46b-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="4e46b-104">Symptoms</span></span>  
+ <span data-ttu-id="4e46b-105">Вызов управляемого компонента из COM возвращает значение FALSE или 0.</span><span class="sxs-lookup"><span data-stu-id="4e46b-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="4e46b-106">Кроме того, если метод имеет тип возвращаемого значения void, указание на возникновение исключения во время выполнения метода может отсутствовать.</span><span class="sxs-lookup"><span data-stu-id="4e46b-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="4e46b-107">В этом случае исключение будет перехвачено без предупреждения и возвращено вызывающему объекту COM.</span><span class="sxs-lookup"><span data-stu-id="4e46b-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="9df9e-108">Причина</span><span class="sxs-lookup"><span data-stu-id="9df9e-108">Cause</span></span>  
- <span data-ttu-id="9df9e-109">Возникло исключение, однако не существует приемлемого способа сообщить об этом.</span><span class="sxs-lookup"><span data-stu-id="9df9e-109">An exception was thrown, but there is no valid way to report it.</span></span>  
+## <a name="cause"></a><span data-ttu-id="4e46b-108">Причина</span><span class="sxs-lookup"><span data-stu-id="4e46b-108">Cause</span></span>  
+ <span data-ttu-id="4e46b-109">Возникло исключение, однако не существует приемлемого способа сообщить об этом.</span><span class="sxs-lookup"><span data-stu-id="4e46b-109">An exception was thrown, but there is no valid way to report it.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="9df9e-110">Решение</span><span class="sxs-lookup"><span data-stu-id="9df9e-110">Resolution</span></span>  
- <span data-ttu-id="9df9e-111">Сведения приведены исключительно для справки и необязательно указывают на наличие ошибки.</span><span class="sxs-lookup"><span data-stu-id="9df9e-111">Informational only, not necessarily indicative of a bug.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="4e46b-110">Решение</span><span class="sxs-lookup"><span data-stu-id="4e46b-110">Resolution</span></span>  
+ <span data-ttu-id="4e46b-111">Сведения приведены исключительно для справки и необязательно указывают на наличие ошибки.</span><span class="sxs-lookup"><span data-stu-id="4e46b-111">Informational only, not necessarily indicative of a bug.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="9df9e-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="9df9e-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="9df9e-113">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="9df9e-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="9df9e-114">Он только выводит данные об исключениях, перехваченных без предупреждения.</span><span class="sxs-lookup"><span data-stu-id="9df9e-114">It only reports data about silently caught exceptions.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4e46b-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="4e46b-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4e46b-113">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="4e46b-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="4e46b-114">Он только выводит данные об исключениях, перехваченных без предупреждения.</span><span class="sxs-lookup"><span data-stu-id="4e46b-114">It only reports data about silently caught exceptions.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="9df9e-115">Вывод</span><span class="sxs-lookup"><span data-stu-id="9df9e-115">Output</span></span>  
- <span data-ttu-id="9df9e-116">Информационное сообщение с именем метода, именем типа и указанием на исключение.</span><span class="sxs-lookup"><span data-stu-id="9df9e-116">Informational message containing the method name, type name, and exception message.</span></span>  
+## <a name="output"></a><span data-ttu-id="4e46b-115">Вывод</span><span class="sxs-lookup"><span data-stu-id="4e46b-115">Output</span></span>  
+ <span data-ttu-id="4e46b-116">Информационное сообщение с именем метода, именем типа и указанием на исключение.</span><span class="sxs-lookup"><span data-stu-id="4e46b-116">Informational message containing the method name, type name, and exception message.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="9df9e-117">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="9df9e-117">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="4e46b-117">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="4e46b-117">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,7 @@ ms.locfileid: "33390612"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9df9e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="9df9e-118">See Also</span></span>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="9df9e-119">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="9df9e-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="9df9e-120">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="9df9e-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a><span data-ttu-id="4e46b-118">См. также</span><span class="sxs-lookup"><span data-stu-id="4e46b-118">See also</span></span>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [<span data-ttu-id="4e46b-119">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="4e46b-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="4e46b-120">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="4e46b-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

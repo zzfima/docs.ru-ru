@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8e1886a3e33b533eb525f5b35480a8a7d326da0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f3c5e89057ef4c88d7c5e78120aca9841d731eda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524719"
 ---
-# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="8a431-102">Метод ICorProfilerInfo2::GetAppDomainStaticAddress</span><span class="sxs-lookup"><span data-stu-id="8a431-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
-<span data-ttu-id="8a431-103">Получает адрес поля статического домена указанное приложение, которое находится в области указанного домена приложения.</span><span class="sxs-lookup"><span data-stu-id="8a431-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
+# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="ce593-102">Метод ICorProfilerInfo2::GetAppDomainStaticAddress</span><span class="sxs-lookup"><span data-stu-id="ce593-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
+<span data-ttu-id="ce593-103">Возвращает адрес указанного приложения статического поля домена, в рамках указанного домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ce593-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a431-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a431-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce593-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ce593-104">Syntax</span></span>  
   
 ```  
 RESULT GetAppDomainStaticAddress(  
@@ -37,37 +37,37 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8a431-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8a431-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ce593-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ce593-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="8a431-106">[in] Идентификатор класса для класса, содержащего поля статического домена запрошенное приложение.</span><span class="sxs-lookup"><span data-stu-id="8a431-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
+ <span data-ttu-id="ce593-106">[in] Идентификатор класса в класс, содержащий запрошенное приложение статического поля домена.</span><span class="sxs-lookup"><span data-stu-id="ce593-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="8a431-107">[in] Токен метаданных для запрошенного приложения статического поля домена.</span><span class="sxs-lookup"><span data-stu-id="8a431-107">[in] The metadata token for the requested application domain-static field.</span></span>  
+ <span data-ttu-id="ce593-107">[in] Маркер метаданных для запрошенного приложения статического поля домена.</span><span class="sxs-lookup"><span data-stu-id="ce593-107">[in] The metadata token for the requested application domain-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="8a431-108">[in] Идентификатор домена приложения, который является областью для запрошенного статического поля.</span><span class="sxs-lookup"><span data-stu-id="8a431-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="ce593-108">[in] Идентификатор домена приложения, который является областью для запрошенного статического поля.</span><span class="sxs-lookup"><span data-stu-id="ce593-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="8a431-109">[out] Указатель на адрес статического поля в пределах указанного домена приложения.</span><span class="sxs-lookup"><span data-stu-id="8a431-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
+ <span data-ttu-id="ce593-109">[out] Указатель на адрес статического поля, которое находится в пределах указанного домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ce593-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8a431-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="8a431-110">Remarks</span></span>  
- <span data-ttu-id="8a431-111">`GetAppDomainStaticAddress` Метод может возвращать одно из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="8a431-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ce593-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="ce593-110">Remarks</span></span>  
+ <span data-ttu-id="ce593-111">`GetAppDomainStaticAddress` Метод может возвращать одно из следующих:</span><span class="sxs-lookup"><span data-stu-id="ce593-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="8a431-112">CORPROF_E_DATAINCOMPLETE HRESULT, если заданного статического поля не был назначен адрес в указанном контексте.</span><span class="sxs-lookup"><span data-stu-id="8a431-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+-   <span data-ttu-id="ce593-112">HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.</span><span class="sxs-lookup"><span data-stu-id="ce593-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="8a431-113">Адреса объектов, которые могут находиться в куче сборщика мусора.</span><span class="sxs-lookup"><span data-stu-id="8a431-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="8a431-114">Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора профилировщики не следует предполагать, что они являются допустимыми.</span><span class="sxs-lookup"><span data-stu-id="8a431-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+-   <span data-ttu-id="ce593-113">Адреса объектов, которые могут быть в куче сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="ce593-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="ce593-114">Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.</span><span class="sxs-lookup"><span data-stu-id="ce593-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="8a431-115">До завершения конструктора класса `GetAppDomainStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, хотя некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="8a431-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="ce593-115">До завершения конструктора класса `GetAppDomainStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="ce593-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a431-116">Требования</span><span class="sxs-lookup"><span data-stu-id="8a431-116">Requirements</span></span>  
- <span data-ttu-id="8a431-117">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a431-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce593-116">Требования</span><span class="sxs-lookup"><span data-stu-id="ce593-116">Requirements</span></span>  
+ <span data-ttu-id="ce593-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce593-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a431-118">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8a431-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ce593-118">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ce593-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8a431-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a431-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce593-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce593-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8a431-120">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a431-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ce593-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce593-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a431-121">См. также</span><span class="sxs-lookup"><span data-stu-id="8a431-121">See Also</span></span>  
- [<span data-ttu-id="8a431-122">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="8a431-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="8a431-123">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="8a431-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ce593-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ce593-121">See also</span></span>
+- [<span data-ttu-id="ce593-122">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="ce593-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ce593-123">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="ce593-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

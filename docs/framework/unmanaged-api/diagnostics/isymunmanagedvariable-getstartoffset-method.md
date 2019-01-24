@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b25d072ab96b822e79c6f87f535096550e4bb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543215"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="71000-102">Метод ISymUnmanagedVariable::GetStartOffset</span><span class="sxs-lookup"><span data-stu-id="71000-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
-<span data-ttu-id="71000-103">Возвращает начальное смещение переменной в его родительском элементе.</span><span class="sxs-lookup"><span data-stu-id="71000-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="71000-104">В случае локальной переменной в области, начальное смещение попадают в границах смещений, заданных для данной области.</span><span class="sxs-lookup"><span data-stu-id="71000-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="3746b-102">Метод ISymUnmanagedVariable::GetStartOffset</span><span class="sxs-lookup"><span data-stu-id="3746b-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
+<span data-ttu-id="3746b-103">Возвращает начальное смещение переменной внутри родительского.</span><span class="sxs-lookup"><span data-stu-id="3746b-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="3746b-104">Если это локальной переменной в области, начальное смещение выходит в границах смещений, определенных для данной области.</span><span class="sxs-lookup"><span data-stu-id="3746b-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71000-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="71000-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3746b-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3746b-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="71000-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="71000-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3746b-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="3746b-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="71000-107">[out] Указатель на `ULONG32` , который получает начальное смещение.</span><span class="sxs-lookup"><span data-stu-id="71000-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
+ <span data-ttu-id="3746b-107">[out] Указатель на `ULONG32` , который получает начальное смещение.</span><span class="sxs-lookup"><span data-stu-id="3746b-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="71000-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="71000-108">Return Value</span></span>  
- <span data-ttu-id="71000-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="71000-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3746b-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3746b-108">Return Value</span></span>  
+ <span data-ttu-id="3746b-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="3746b-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71000-110">Требования</span><span class="sxs-lookup"><span data-stu-id="71000-110">Requirements</span></span>  
- <span data-ttu-id="71000-111">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="71000-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3746b-110">Требования</span><span class="sxs-lookup"><span data-stu-id="3746b-110">Requirements</span></span>  
+ <span data-ttu-id="3746b-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3746b-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71000-112">См. также</span><span class="sxs-lookup"><span data-stu-id="71000-112">See Also</span></span>  
- [<span data-ttu-id="71000-113">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="71000-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [<span data-ttu-id="71000-114">Метод GetEndOffset</span><span class="sxs-lookup"><span data-stu-id="71000-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+## <a name="see-also"></a><span data-ttu-id="3746b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3746b-112">See also</span></span>
+- [<span data-ttu-id="3746b-113">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="3746b-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="3746b-114">Метод GetEndOffset</span><span class="sxs-lookup"><span data-stu-id="3746b-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

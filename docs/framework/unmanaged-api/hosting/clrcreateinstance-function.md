@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab16d78b210c2824bf6172f80d1b15e3533a05b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535662"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="37547-102">Функция CLRCreateInstance</span><span class="sxs-lookup"><span data-stu-id="37547-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="37547-103">Предоставляет один из трех интерфейсов: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), или [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="37547-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="39328-102">Функция CLRCreateInstance</span><span class="sxs-lookup"><span data-stu-id="39328-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="39328-103">Предоставляет один из трех интерфейсов: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), или [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="39328-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37547-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="37547-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39328-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39328-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRCreateInstance(  
@@ -37,34 +37,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="37547-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="37547-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="39328-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="39328-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="37547-106">[in] Один из трех классов идентификаторов: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy или CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="37547-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="39328-106">[in] Один из трех классов идентификаторов: Аргументами CLSID_CLRMetaHost CLSID_CLRMetaHostPolicy и CLSID_CLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="39328-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="37547-107">[in] Один из трех идентификаторов интерфейса (IID): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy или IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="37547-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="39328-107">[in] Один из трех идентификаторы интерфейса (IID): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy или IID_ICLRDebugging.</span><span class="sxs-lookup"><span data-stu-id="39328-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="37547-108">[out] Один из трех интерфейсов: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), или [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="37547-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="39328-108">[out] Один из трех интерфейсов: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), или [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span><span class="sxs-lookup"><span data-stu-id="39328-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="37547-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="37547-109">Return Value</span></span>  
- <span data-ttu-id="37547-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="37547-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="39328-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="39328-109">Return Value</span></span>  
+ <span data-ttu-id="39328-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="39328-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="37547-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="37547-111">HRESULT</span></span>|<span data-ttu-id="37547-112">Описание</span><span class="sxs-lookup"><span data-stu-id="37547-112">Description</span></span>|  
+|<span data-ttu-id="39328-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="39328-111">HRESULT</span></span>|<span data-ttu-id="39328-112">Описание</span><span class="sxs-lookup"><span data-stu-id="39328-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="37547-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="37547-113">S_OK</span></span>|<span data-ttu-id="37547-114">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="37547-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="37547-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="37547-115">E_POINTER</span></span>|<span data-ttu-id="37547-116">Параметр `ppInterface` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="37547-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="39328-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="39328-113">S_OK</span></span>|<span data-ttu-id="39328-114">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="39328-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="39328-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="39328-115">E_POINTER</span></span>|<span data-ttu-id="39328-116">Параметр `ppInterface` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="39328-116">`ppInterface` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="37547-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="37547-117">Remarks</span></span>  
- <span data-ttu-id="37547-118">В следующей таблице показаны поддерживаемые сочетания для `clsid` и `riid`.</span><span class="sxs-lookup"><span data-stu-id="37547-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39328-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="39328-117">Remarks</span></span>  
+ <span data-ttu-id="39328-118">В следующей таблице показаны поддерживаемые сочетания для `clsid` и `riid`.</span><span class="sxs-lookup"><span data-stu-id="39328-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="37547-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="37547-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="37547-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="37547-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="37547-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="37547-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="37547-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="37547-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="37547-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="37547-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="37547-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="37547-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="39328-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="39328-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="39328-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="39328-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="39328-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="39328-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="39328-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="39328-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="39328-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="39328-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="39328-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="39328-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="37547-125">Следующий код показывает, как использовать `CLRCreateInstance` для получения всех трех интерфейсов:</span><span class="sxs-lookup"><span data-stu-id="37547-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="39328-125">Ниже показано, как использовать `CLRCreateInstance` получить все три интерфейса:</span><span class="sxs-lookup"><span data-stu-id="39328-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```  
 #include <metahost.h>  
@@ -82,14 +82,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="37547-126">Требования</span><span class="sxs-lookup"><span data-stu-id="37547-126">Requirements</span></span>  
- <span data-ttu-id="37547-127">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37547-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39328-126">Требования</span><span class="sxs-lookup"><span data-stu-id="39328-126">Requirements</span></span>  
+ <span data-ttu-id="39328-127">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39328-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37547-128">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="37547-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="39328-128">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="39328-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="37547-129">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37547-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="39328-129">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="39328-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="37547-130">**Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37547-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="39328-130">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39328-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37547-131">См. также</span><span class="sxs-lookup"><span data-stu-id="37547-131">See Also</span></span>  
- [<span data-ttu-id="37547-132">Размещение</span><span class="sxs-lookup"><span data-stu-id="37547-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="39328-131">См. также</span><span class="sxs-lookup"><span data-stu-id="39328-131">See also</span></span>
+- [<span data-ttu-id="39328-132">Размещение</span><span class="sxs-lookup"><span data-stu-id="39328-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
