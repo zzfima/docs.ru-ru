@@ -8,32 +8,32 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: fdd23324a521ac697b7ffcd4ba134e9d3c1f8e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26fcf259e9c56ffe17c7d7f5a80428ffbbb27c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712461"
 ---
 # <a name="contextmenustrip-control-overview"></a>Общие сведения об элементе управления ContextMenuStrip
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip> Управления заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления; Однако <xref:System.Windows.Forms.ContextMenu> Если выбрать элемент управления можно сохранить для обратной совместимости и использования в будущем.  
+>  <xref:System.Windows.Forms.ContextMenuStrip> Управления заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления; Однако <xref:System.Windows.Forms.ContextMenu> элемент управления можно сохранить для обратной совместимости и использования в будущем, если выбран.  
   
- Контекстные меню, также называемый контекстные меню отображаются в положении указателя по щелчку правой кнопкой мыши. Ярлык *меню* предоставляют параметры для клиентской области или элемент управления в положении указателя мыши.  
+ Контекстные меню, также называется контекстные меню, появляются в позиции указателя мыши, когда пользователь щелкает правой кнопкой мыши. Ярлык *меню* предоставляют параметры для клиентской области или элемент управления в положении указателя мыши.  
   
- <xref:System.Windows.Forms.ContextMenuStrip> Элемент управления предназначен для эффективной работы с новым <xref:System.Windows.Forms.ToolStrip> и связанных элементов управления, но вы можете связать <xref:System.Windows.Forms.ContextMenuStrip> с другими элементами управления легко.  
+ <xref:System.Windows.Forms.ContextMenuStrip> Элемент управления предназначен для эффективной работы с новым <xref:System.Windows.Forms.ToolStrip> и связанных элементов управления, но вы можете связать <xref:System.Windows.Forms.ContextMenuStrip> с другими элементами управления так же легко.  
   
  В следующей таблице показаны важные <xref:System.Windows.Forms.ContextMenuStrip> сопутствующих классов.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет отдельные пункты, отображаемые на <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Представляет элемент управления, который позволяет пользователю выбрать один элемент из списка, который отображается, когда пользователь нажимает кнопку <xref:System.Windows.Forms.ToolStripDropDownButton> или пункта меню верхнего уровня.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовые функциональные возможности для элементов управления, производных от <xref:System.Windows.Forms.ToolStripItem> , отображения элементов раскрывающегося списка при нажатии.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Представляет элемент управления, который позволяет пользователю выбрать один элемент из списка, который отображается, когда пользователь щелкает <xref:System.Windows.Forms.ToolStripDropDownButton> или пункта меню более высокого уровня.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовую функциональность для элементов управления, производных от <xref:System.Windows.Forms.ToolStripItem> , отображения элементов раскрывающегося списка при нажатии.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ContextMenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.ToolStripDropDown>
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ContextMenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- <xref:System.Windows.Forms.ToolStripDropDown>

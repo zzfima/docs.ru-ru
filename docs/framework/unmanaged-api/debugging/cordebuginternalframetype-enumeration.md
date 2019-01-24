@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736537"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Перечисление CorDebugInternalFrameType
-Указывает тип кадра стека. Это перечисление используется методом [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) метод.  
+Указывает тип кадра стека. Это перечисление используется с [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,28 +47,28 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Значение Null. `ICorDebugInternalFrame::GetFrameType` Метод никогда не возвращает это значение.|  
-|`STUBFRAME_M2U`|Кадр управляемый в неуправляемый заглушки.|  
-|`STUBFRAME_U2M`|Кадр неуправляемый в управляемый заглушки.|  
+|`STUBFRAME_M2U`|Кадр управляемого к неуправляемому заглушки.|  
+|`STUBFRAME_U2M`|Заглушки неуправляемого в управляемый фрейм.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Переход между доменами приложений.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Вызов облегченного метода.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Вызов упрощенного метода.|  
 |`STUBFRAME_FUNC_EVAL`|Начало вычисления функции.|  
 |`STUBFRAME_INTERNALCALL`|Внутренний вызов в среду.|  
 |`STUBFRAME_CLASS_INIT`|Начало инициализации класса.|  
 |`STUBFRAME_EXCEPTION`|Исключение, создается исключение.|  
-|`STUBFRAME_SECURITY`|Кадр, используемый для управления доступом для кода.|  
+|`STUBFRAME_SECURITY`|Фрейм, используемый для управления доступом для кода.|  
 |`STUBFRAME_JIT_COMPILATION`|Среда выполнения выполняет JIT-компиляцию метода.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

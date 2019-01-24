@@ -1,5 +1,5 @@
 ---
-title: 'Как: управлять таблицы&#39;группы строк s свойства RowGroups'
+title: Как выполнить Управлять таблицы&#39;s группы строк с помощью свойства RowGroups
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: 8cdf3b74fa5bf5a566c541ba035a1c7da7dd6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 233ae0e76d175f4ce20a573aa2aa29d39106562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700468"
 ---
-# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Как: управлять таблицы&#39;группы строк s свойства RowGroups
-В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.  
+# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Как выполнить Управлять таблицы&#39;s группы строк с помощью свойства RowGroups
+В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы пользователя с помощью <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> метод для добавления столбцов в таблице <xref:System.Windows.Documents.Table.RowGroups%2A> коллекции.  
+ В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> метод для добавления столбцов в таблицу <xref:System.Windows.Documents.Table.RowGroups%2A> коллекции.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример вставляет новый <xref:System.Windows.Documents.TableRowGroup>.  Вставить новый столбец по индексу 0, сделав его новый первую строку в таблице.  
+ В следующем примере вставляется новый <xref:System.Windows.Documents.TableRowGroup>.  Новый столбец вставляется в позиции индекса 0, делая новый первой строки в таблице.  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableRowGroupCollection> Коллекция использует стандартную индексацию с нуля.  
@@ -36,25 +36,25 @@ ms.locfileid: "33545169"
  [!code-vb[TableSnippets2#_Table_RowGroups_Insert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_insert)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере добавляется несколько строк в конкретную <xref:System.Windows.Documents.TableRowGroup> (указанную индексом) в таблице.  
+ В следующем примере добавляется несколько строк с определенным <xref:System.Windows.Documents.TableRowGroup> (указанного по индексу) в таблице.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddRows](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addrows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример получает доступ к некоторым произвольным свойствам строк в первой группе строк в таблице.  
+ Следующий пример обращается к некоторые произвольные свойства для строк в первой группе строк в таблице.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере добавляется несколько ячеек в конкретную <xref:System.Windows.Documents.TableRow> (указанную индексом) в таблице.  
+ В следующем примере добавляется несколько ячеек с определенным <xref:System.Windows.Documents.TableRow> (указанного по индексу) в таблице.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример доступ к некоторым произвольным методам и свойствам ячеек в первой строке в первой строке группы.  
+ Получить доступ к следующим, некоторые произвольные методы и свойства для ячеек в первой строке в первой группе строк.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_manipcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
@@ -78,12 +78,12 @@ ms.locfileid: "33545169"
  [!code-vb[TableSnippets2#_Table_RowGroups_DelIndex](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delindex)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет все группы строк из коллекции групп строк таблицы.  
+ Следующий пример удаляет все группы строк из коллекции группы строк таблицы.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_clear)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство: Управление элементами потокового содержимого через свойство внутристрочных элементов](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Управление FlowDocument с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Управление элементами потокового содержимого через свойство Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Управление FlowDocument с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)

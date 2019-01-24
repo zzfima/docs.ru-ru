@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640450"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя Windows Presentation Foundation (WPF) предоставляет широкий набор служб безопасности, предусмотрена также возможность средства безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
@@ -208,12 +208,12 @@ ms.locfileid: "49121406"
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] объединяет и расширяет возможности безопасности [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] в рамках усилий, направленных на обеспечение безопасности.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности в Microsoft Internet Explorer 6 в Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [Понимание принципов и работа в защищенный режим Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP с пакетом обновления 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Руководство по безопасности Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)  
- [Безопасность](../../../docs/framework/wpf/security-wpf.md)  
- [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Стратегия безопасности WPF — проектирование безопасности](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о безопасности в Microsoft Internet Explorer 6 в Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [Понимание принципов и работа в защищенный режим Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP с пакетом обновления 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Руководство по безопасности Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
+- [Безопасность](../../../docs/framework/wpf/security-wpf.md)
+- [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [Стратегия безопасности WPF — проектирование безопасности](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

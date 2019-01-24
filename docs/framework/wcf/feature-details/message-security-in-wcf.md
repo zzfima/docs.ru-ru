@@ -2,12 +2,12 @@
 title: Безопасность сообщений в WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731352"
 ---
 # <a name="message-security-in-wcf"></a>Безопасность сообщений в WCF
 Windows Communication Foundation (WCF) имеется два основных режима для обеспечения безопасности (`Transport` и `Message`) и третий режим (`TransportWithMessageCredential`), сочетает в себе два. В данном разделе рассматривается безопасность сообщения и причины для ее использования.  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) имеется два основных р
   
 -   Требуется реализация механизмов безопасности на уровне XML и поддержка спецификации WS-Security. Это может повлиять на взаимодействие.  
   
-## <a name="see-also"></a>См. также  
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices, Глава 3: безопасности на уровне реализации транспорта и сообщений](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>См. также
+- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Практическое руководство. Использование средств защиты транспорта и учетных данных сообщения](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, Глава 3: Реализация безопасности транспорта и сообщений слой](https://go.microsoft.com/fwlink/?LinkId=88897)

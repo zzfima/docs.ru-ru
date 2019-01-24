@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 538e596c3a705020150f52c9e55605a49434ce8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83bd2f3b0c1d58528624ac730756fb3bcdf4ba47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744847"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>Метод ICLRMetaHost::GetVersionFromFile
-Получает сборки исходной версии платформы .NET Framework компиляции (хранятся в метаданных), по его пути файла. Этот метод заменяет [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) функции.  
+Получает сборки .NET Framework компиляции оригинального (хранится в метаданных), по его пути файла. Этот метод заменяет [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,12 +42,12 @@ HRESULT GetVersionFromFile (
  [in] Путь к файлу завершения сборки.  
   
  `pwzbuffer`  
- [out] Версии платформы .NET Framework компиляции, хранятся в метаданных в формате «v*A*. *B*[. *X*]». *Объект*, *B*, и *X* — десятичные числа, соответствуют основной номер версии, дополнительный номер версии и номер сборки. Длина этой строки ограничена MAX_PATH.  
+ [out] Версия .NET Framework компиляции, хранятся в метаданных, в формате «v*объект*. *B*[. *X*]». *Объект*, *B*, и *X* — десятичные числа, соответствующие основной номер версии, дополнительный номер версии и номер сборки. Длина этой строки ограничена MAX_PATH.  
   
 > [!NOTE]
->  Этот выход совпадает имя каталога для версии платформы .NET Framework, она появится в разделе C:\Windows\Microsoft.NET\Framework.  
+>  Эти выходные данные совпадает с именем каталога для версии .NET Framework, как оно отображается в разделе C:\Windows\Microsoft.NET\Framework.  
   
- Примеры значений: «v1.0.3705», «v1.1.4322», «v2.0.50727» и «v4.0. *X*», где *X* зависит от номера установленного построения. Обратите внимание, что префикс «v» является обязательным.  
+ Пример значения: «v1.0.3705», «v1.1.4322», «v2.0.50727» и «v4.0. *X*«, где *X* зависит от номера установленного построения. Обратите внимание, что префикс «v» является обязательным.  
   
  `pcchBuffer`  
  [in, out] Размер `pwzbuffer` для предотвращения переполнения буфера.  
@@ -59,17 +59,17 @@ HRESULT GetVersionFromFile (
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|`pwzbuffer` или `pcchBuffer` равно null.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Размер буфера слишком мал.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Буфер слишком мал.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MetaHost.h  
+ **Заголовок.** MetaHost.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

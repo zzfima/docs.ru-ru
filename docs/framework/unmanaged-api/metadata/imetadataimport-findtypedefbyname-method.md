@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b4aad1cf1d3eb2dec249686f2897e6f393ab7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578829"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>Метод IMetaDataImport::FindTypeDefByName
-Возвращает указатель на TypeDef токен метаданных для <xref:System.Type> с указанным именем.  
+Возвращает указатель на метаданных TypeDef токен для <xref:System.Type> с указанным именем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +39,23 @@ HRESULT FindTypeDefByName
   
 #### <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] Имя типа, для которого нужно получить токен TypeDef.  
+ [in] Имя типа, для которого необходимо получить токен TypeDef.  
   
  `tkEnclosingClass`  
- [in] Токен TypeDef или TypeRef, представляющий включающего класса. Если искомый тип не является вложенным классом, это значение равно NULL.  
+ [in] Определение типа или TypeRef токен, представляющий включающего класса. Если искомый тип не является вложенным классом, это значение равно NULL.  
   
  `ptd`  
- [out] Указатель на соответствующий маркер TypeDef.  
+ [out] Указатель на соответствующий токен TypeDef.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

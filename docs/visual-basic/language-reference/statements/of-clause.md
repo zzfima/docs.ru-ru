@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698245"
 ---
 # <a name="of-clause-visual-basic"></a>Предложение Of (Visual Basic)
 Представляет `Of` предложение, которое идентифицирует *параметр типа* на *универсального* класса, структуры, интерфейса, делегата или процедуры. Сведения об универсальных типах см. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>С помощью ключевого слова  
- Следующий пример кода использует `Of` ключевое слово, чтобы определить структуру класса, который принимает два параметра типа. Он *ограничивает* `keyType` по <xref:System.IComparable> интерфейс, который означает код-потребитель необходимо указать аргумент типа, который реализует <xref:System.IComparable>. Это необходимо, чтобы `add` процедура может вызывать <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> метод. Дополнительные сведения об ограничениях см. в разделе [список типов](../../../visual-basic/language-reference/statements/type-list.md).  
+ В следующем примере кода используется `Of` ключевое слово для определения структуры, класса, который принимает два параметра типа. Он *ограничивает* `keyType` по <xref:System.IComparable> интерфейс, который означает, что код-потребитель должен предоставить аргумент типа, который реализует <xref:System.IComparable>. Это необходимо, чтобы `add` процедура может вызывать <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> метод. Дополнительные сведения об ограничениях см. в разделе [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Если выполнить предыдущий определение класса, можно создать различные `dictionary` классы из него. Типы, которые вводятся `entryType` и `keyType` определить класс содержит тип и тип ключа, связываемого с каждой записи. Из-за ограничений, необходимо указать `keyType` тип, реализующий <xref:System.IComparable>.  
+ Если выполнить предыдущий определение класса, можно создать различные `dictionary` классы из него. Типы, которые вводятся `entryType` и `keyType` определить, содержит класс тип записи и какой тип ключа, который связывает, с каждой записи. Из-за ограничения, необходимо указать `keyType` тип, реализующий <xref:System.IComparable>.  
   
- В следующем примере кода создается объект, который содержит `String` записей и связывает `Integer` ключа с каждой из них. `Integer` реализует <xref:System.IComparable> и поэтому удовлетворяет ограничению на `keyType`.  
+ В следующем примере кода создается объект, содержащий `String` записи и связывает `Integer` ключа с каждой из них. `Integer` реализует <xref:System.IComparable> и таким образом удовлетворяющую на `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
@@ -64,9 +64,9 @@ Dim d As New dictionary(Of String, Integer)
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IComparable>  
- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IComparable>
+- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

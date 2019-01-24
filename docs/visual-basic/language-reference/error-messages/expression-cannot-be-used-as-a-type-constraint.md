@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;выражение&gt; &#39; не может использоваться в качестве ограничения типа'
+title: '&#39;&lt;выражение&gt; &#39; нельзя использовать в качестве ограничения типа'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742137"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;выражение&gt; &#39; не может использоваться в качестве ограничения типа
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;выражение&gt; &#39; нельзя использовать в качестве ограничения типа
 Список ограничений включает выражение, которое не представляет допустимое ограничение для параметра типа.  
   
  Список ограничений назначает требования на тип аргумента, передаваемого параметру типа. Вы можете указать приведенные ниже требования в любой комбинации.  
@@ -41,10 +41,10 @@ ms.locfileid: "33588178"
   
 -   Если выражение не соответствует требованиям предыдущего списка, удалите его из списка ограничений.  
   
--   Если выражение ссылается на интерфейс или класс, убедитесь, что у компилятора есть доступ к этому интерфейсу или классу. Возможно, вам потребуется проверить его имя и добавить ссылку в проект. Дополнительные сведения см. в разделе «Ссылки на проекты» в [ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   Если выражение ссылается на интерфейс или класс, убедитесь, что у компилятора есть доступ к этому интерфейсу или классу. Возможно, вам потребуется проверить его имя и добавить ссылку в проект. Дополнительные сведения см. в разделе «Ссылки на проекты» в [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>См. также  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Типы значений и ссылочные типы](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- 
+## <a name="see-also"></a>См. также
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+

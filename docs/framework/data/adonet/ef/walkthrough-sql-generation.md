@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Создание SQL
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733445"
 ---
 # <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание SQL
 В этом разделе показано, как происходит создание кода SQL в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.  
@@ -199,5 +199,5 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
   
  В конце второго этапа создается окончательная инструкция SQL.  
   
-## <a name="see-also"></a>См. также  
- [Создание кода SQL в образце поставщика](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>См. также
+- [Создание кода SQL в образце поставщика](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

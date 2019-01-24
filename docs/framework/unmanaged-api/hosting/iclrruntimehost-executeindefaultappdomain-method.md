@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dcddb5766894a30f1ccb2552a09abe7153c6eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498259"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>Метод ICLRRuntimeHost::ExecuteInDefaultAppDomain
-Вызывает указанный метод заданного типа в заданной управляемой сборке.  
+Вызывает указанный метод заданного типа в указанной управляемой сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ HRESULT ExecuteInDefaultAppDomain (
   
 #### <a name="parameters"></a>Параметры  
  `pwzAssemblyPath`  
- [in] Путь к <xref:System.Reflection.Assembly> , определяющий <xref:System.Type> — метод которого должен быть вызван.  
+ [in] Путь к <xref:System.Reflection.Assembly> , определяющий <xref:System.Type> метод которого должен вызываться.  
   
  `pwzTypeName`  
  [in] Имя <xref:System.Type> , определяющий вызываемый метод.  
@@ -53,7 +53,7 @@ HRESULT ExecuteInDefaultAppDomain (
  [in] Параметр строки для передачи в метод.  
   
  `pReturnValue`  
- [out] Целочисленное значение, возвращаемое вызываемым методом.  
+ [out] Целочисленное значение, возвращенное вызванным методом.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -63,26 +63,26 @@ HRESULT ExecuteInDefaultAppDomain (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, список отзыва Сертификатов больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, список отзыва Сертификатов больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Вызываемый метод должен иметь следующую сигнатуру:  
+ Вызванный метод должен иметь следующую сигнатуру:  
   
 ```  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- где `pwzMethodName` представляет имя вызываемого метода и `pwzArgument` представляет строковое значение, передаваемый как параметр этого метода. Если значение HRESULT равно S_OK, `pReturnValue` присвоено целочисленное значение, возвращаемое вызываемым методом. В противном случае `pReturnValue` не задано.  
+ где `pwzMethodName` представляет имя вызываемого метода, и `pwzArgument` представляет строковое значение, передаваемое как параметр этому методу. Если HRESULT имеет значение S_OK, `pReturnValue` присваивается целочисленное значение, возвращенное вызванным методом. В противном случае `pReturnValue` не задано.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

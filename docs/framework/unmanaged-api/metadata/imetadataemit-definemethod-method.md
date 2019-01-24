@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719837"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Метод IMetaDataEmit::DefineMethod
 Создает определение для метода или глобальной функции с указанной сигнатурой и возвращает маркер для этого определения метода.  
@@ -75,7 +75,7 @@ HRESULT DefineMethod (
 ## <a name="slots-in-the-v-table"></a>Слоты в таблице V  
  Среда выполнения использует определения методов для настройки ячеек виртуальной таблицы. В случае, когда один или несколько слотов должны быть пропущена, например для сохранения четности в структуре COM-интерфейса пустой метод определен должна занимать одну ячейку или ячейки в v таблице. Задайте `dwMethodFlags` для `mdRTSpecialName` значение [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) перечисления и укажите имя как:  
   
- _VtblGap\<*SequenceNumber*>\<\_*числоЯчеек*>
+ _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
  где *SequenceNumber* регистрационный номер транзакции метода и *числоЯчеек* Число слотов для пропуска в таблице v. Если *числоЯчеек* — этот параметр опущен, используется значение 1. Эти пустые методы не вызываются в управляемом и неуправляемом коде, и любая попытка их вызова из управляемый или неуправляемый код, создает исключение. Единственное их назначение — занять место в v таблице, то среда выполнения создает для COM-интеграции.  
   
@@ -104,14 +104,14 @@ HRESULT DefineMethod (
 |`dwImplFlags`|Задайте `miCil` и `miManaged`.|Задайте `miNative` и `miUnmanaged`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

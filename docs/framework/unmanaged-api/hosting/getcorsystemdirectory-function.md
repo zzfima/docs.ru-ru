@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739502"
 ---
 # <a name="getcorsystemdirectory-function"></a>Функция GetCORSystemDirectory
-Возвращает каталог установки среды common language runtime (CLR), который загружается процесс. Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».  
+Возвращает каталог установки среда CLR (CLR), который загружается процесс. Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».  
   
- Эта функция устарела. Он заменен [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) метода [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция является устаревшей. Он заменен [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) метода [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,10 +41,10 @@ HRESULT GetCORSystemDirectory (
   
 #### <a name="parameters"></a>Параметры  
  `pbuffer`  
- [out] Буфер, в котором среда выполнения возвращает строка, содержащая полное имя каталога установки для среды выполнения, который загружается в процесс. Если среда выполнения еще не был загружен в процесс, функция возвращает сведения каталога, соответствующего последнюю версию среды выполнения, установленную на компьютере.  
+ [out] Буфер, в котором среда выполнения возвращает строку, содержащую полное имя каталога установки для среды выполнения, который загружается в процесс. Если среда выполнения еще не был загружен в процесс, функция возвращает данные каталога, соответствующего для последней версии среды выполнения, установленную на компьютере.  
   
  `cchBuffer`  
- [in] Размер в байтах для `pbuffer`.  
+ [in] Размер в байтах из `pbuffer`.  
   
  `dwLength`  
  [out] Число символов, возвращаемых в `pbuffer`.  
@@ -52,16 +52,16 @@ HRESULT GetCORSystemDirectory (
 ## <a name="remarks"></a>Примечания  
   
 > [!CAUTION]
->  Не используйте эту функцию в процессы, работающие в среде CLR версии 4. Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки для этой версии.  
+>  Не используйте эту функцию в процессах, работающих под управлением версии 4 среды CLR. Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки этой версии.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

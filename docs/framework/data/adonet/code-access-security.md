@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688110"
 ---
 # <a name="code-access-security-and-adonet"></a>Управление доступом для кода и ADO.NET
 Платформа .NET Framework предлагает безопасность на основе ролей, а также управление доступом для кода (CAS). Оба средства реализуются при помощи общей инфраструктуры, предоставленной средой CLR. В области неуправляемого кода большинство приложений выполняются с правами доступа пользователя или участника. В результате, когда вредоносное программное обеспечение или программы с ошибками запускаются пользователем с повышенными правами доступа, компьютерные системы могут повреждаться, а личные данные - похищаться.  
@@ -194,8 +194,8 @@ Failed, as expected: Request failed.
   
  Платформа .NET Framework также поддерживает обратную совместимость с существующими COM-компонентами, предоставляя доступ через COM-взаимодействие. COM-компоненты можно встраивать в приложение .NET Framework, используя средства COM-взаимодействия для импорта соответствующих типов COM. Типы COM готовы к использованию сразу после импорта. COM-взаимодействие также позволяет клиентам COM получать доступ к управляемому коду путем экспорта метаданных сборки в библиотеку типов и регистрации управляемого компонента в виде COM-компонента. Дополнительные сведения см. в разделе [расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Безопасность PAVE в машинном коде и коде .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Безопасность на основе ролей](../../../../docs/standard/security/role-based-security.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Безопасность PAVE в машинном коде и коде .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Безопасность на основе ролей](../../../../docs/standard/security/role-based-security.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

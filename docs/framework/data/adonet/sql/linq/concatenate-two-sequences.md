@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: c0a6dde667c4f858d8177dc80a726619f463f3a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 831905ca5a712bcb80d5bab1aef61a81d2ade1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734288"
 ---
 # <a name="concatenate-two-sequences"></a>Сцепление двух последовательностей
 Для объединения двух последовательностей используется оператор <xref:System.Linq.Queryable.Concat%2A>.  
@@ -31,6 +31,6 @@ ms.locfileid: "33354057"
  [!code-csharp[DLinqQueryExamples#40](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#40)]
  [!code-vb[DLinqQueryExamples#40](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#40)]  
   
-## <a name="see-also"></a>См. также  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>См. также
+- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

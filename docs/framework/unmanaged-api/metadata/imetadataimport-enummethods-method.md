@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732821"
 ---
 # <a name="imetadataimportenummethods-method"></a>Метод IMetaDataImport::EnumMethods
 Перечисляет токены MethodDef, представляющие методы указанного типа.  
@@ -53,7 +53,7 @@ HRESULT EnumMethods (
  [in] Максимальный размер MethodDef `rMethods` массива.  
   
  `pcTokens`  
- [out] Число токены MethodDef, возвращаемых в `rMethods`.  
+ [out] Количество токены MethodDef, возвращаемых в `rMethods`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -63,14 +63,14 @@ HRESULT EnumMethods (
 |`S_FALSE`|Существуют маркеры MethodDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

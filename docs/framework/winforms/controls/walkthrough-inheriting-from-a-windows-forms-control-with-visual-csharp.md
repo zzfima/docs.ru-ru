@@ -1,5 +1,5 @@
 ---
-title: Пример. Наследование элементов управления форм Windows Forms с помощью Visual C#
+title: Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual C#
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 392f0e98c3401ca5ae5e01fefbf35462462b3a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531256"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Пример. Наследование элементов управления форм Windows Forms с помощью Visual C# #
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual C# #
 С помощью [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] можно создавать эффективные настраиваемые элементы управления путем *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартных форм Windows <xref:System.Windows.Forms.Button> управления и предоставляет настраиваемое свойство `ButtonValue`.  
   
 > [!NOTE]
@@ -141,8 +141,8 @@ ms.locfileid: "45595728"
   
      В `label1` появится цифра 5, показывающая, что свойство `ButtonValue` унаследованного элемента управления передано `label1` с помощью метода `valueButton1_Click`. Таким образом, ваш элемент управления `ValueButton` наследует функциональные возможности стандартной кнопки Windows Forms и при этом предоставляет дополнительное настраиваемое свойство.  
   
-## <a name="see-also"></a>См. также  
- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Примеры создания компонентов](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Пошаговое руководство. Создание составного элемента управления с помощью C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="see-also"></a>См. также
+- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [Примеры создания компонентов](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

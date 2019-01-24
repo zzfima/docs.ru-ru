@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647690"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>Метод ICLRMetadataLocator::GetMetadata
 Вызывается службами доступа к данным среды выполнения (CLR) для получения метаданных изображения.  
@@ -49,7 +49,7 @@ HRESULT GetMetadata(
  [in] Строка, указывающая путь к файлу изображения.  
   
  `imageTimestamp`  
- [in] Отметка времени файла изображения.  
+ [in] Метка времени файла изображения.  
   
  `imageSize`  
  [in] Размер файла изображения.  
@@ -64,25 +64,25 @@ HRESULT GetMetadata(
  [in] Зарезервировано для будущего использования.  
   
  `bufferSize`  
- [in] Размер буфера, в который следует поместить в метаданные.  
+ [in] Размер буфера для размещения метаданных.  
   
  `buffer`  
- [out] Буфер, в который следует поместить в метаданные.  
+ [out] Буфер, в котором следует разместить метаданные.  
   
  `dataSize`  
- [out] Размер метаданных, которое возвращается.  
+ [out] Размер метаданных, который возвращается.  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRMetadataLocator](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRMetadataLocator](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

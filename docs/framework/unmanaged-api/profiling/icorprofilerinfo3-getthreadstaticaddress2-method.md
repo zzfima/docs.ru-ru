@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727096"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Метод ICorProfilerInfo3::GetThreadStaticAddress2
 Возвращает адрес указанного поля статического потока, которое находится в области действия заданного потока и домена приложения.  
@@ -40,10 +40,10 @@ HRESULT GetThreadStaticAddress2(
   
 #### <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, содержащего запрошенного поля статического потока.  
+ [in] Идентификатор класса, содержащего запрошенный статическое поле потока.  
   
  `fieldToken`  
- [in] Токен метаданных для запрошенного поля статического потока.  
+ [in] Маркер метаданных для запрошенного статического поля потока.  
   
  `appDomainId`  
  [in] Идентификатор домена приложения.  
@@ -52,29 +52,29 @@ HRESULT GetThreadStaticAddress2(
  [in] Идентификатор потока, который является областью для запрошенного статического поля.  
   
  `ppAddress`  
- [out] Указатель на адрес статического поля, которое находится в указанном потоке.  
+ [out] Указатель на адрес статического поля, которое находится в пределах указанного потока.  
   
 ## <a name="remarks"></a>Примечания  
- `GetThreadStaticAddress2` Метод может возвращать одно из следующих действий:  
+ `GetThreadStaticAddress2` Метод может возвращать одно из следующих:  
   
--   CORPROF_E_DATAINCOMPLETE HRESULT, если заданного статического поля не был назначен адрес в указанном контексте.  
+-   HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
   
--   Адреса объектов, которые могут находиться в куче сборщика мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора профилировщики не следует предполагать, что они являются допустимыми.  
+-   Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.  
   
- До завершения конструктора класса `GetThreadStaticAddress2` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, хотя некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
+ До завершения конструктора класса `GetThreadStaticAddress2` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
   
- [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) аналогичен методу `GetThreadStaticAddress2` метода, но не принимает аргумент домена приложения.  
+ [ICorProfilerInfo2::GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) метод аналогичен методу `GetThreadStaticAddress2` метод, но не принимает аргумент домена приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)

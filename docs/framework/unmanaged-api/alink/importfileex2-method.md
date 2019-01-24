@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be6332c76b3dae9c02e1a939286b70438ee14cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff4fe6f73370a28bf4f874b697616c08e7b40a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736670"
 ---
 # <a name="importfileex2-method"></a>Метод ImportFileEx2
-Импортирует сборок и несвязанных модулей. Этот метод аналогичен [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), но работает, даже если в импортируемом файле не существует на диске.  
+Импортирует сборок и несвязанных модулей. Этот метод аналогичен [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), но работает, даже если импортируемого файла не существует на диске.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,33 +46,33 @@ HRESULT ImportFileEx2(
  Имя файла для импорта.  
   
  `pszTargetName`  
- Необязательное имя конечного файла.  
+ Необязательное имя целевого файла.  
   
  `pAssemblyScopeIn`  
- Необязательный Импорт области [imetadataassemblyimport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс.  
+ Необязательный Импорт области [интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс.  
   
  `fSmartImport`  
- Значение TRUE, если используется ImportTypes, в противном случае импорт должно выполняться вручную.  
+ Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
   
  `dwOpenFlags`  
- Флаги для передачи вдоль [метод OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Флаги, передаваемые по [метод OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
  Получает уникальный идентификатор сборки или файла.  
   
  `ppAssemblyScope`  
- Получает области импорта сборки [imetadataassemblyimport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс. Может иметь значение NULL, если файл не является сборкой.  
+ Получает области импорта сборки [интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс. Может иметь значение NULL, если файл не является сборкой.  
   
  `pdwCountOfScopes`  
  Получает число файлов и/или импортированные области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

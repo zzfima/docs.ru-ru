@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744197"
 ---
 # <a name="assemblymetadata-structure"></a>Структура ASSEMBLYMETADATA
-Содержит сведения о ссылочной сборки, включая его версии, уровне поддержки языковых стандартов, процессоры и операционные системы.  
+Содержит сведения о сборке, на которую указывает ссылка, включая ее версию и уровень поддержки языковых стандартов, процессоры и операционные системы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,29 +45,29 @@ typedef struct {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`usMajorVersion`|Основной номер версии сборки. Это значение не может быть нулевым. Если все биты `usMajorVersion` настраиваются, основной номер версии не указан.|  
-|`usMinorVersion`|Дополнительный номер версии сборки. Это значение не может быть нулевым. Если все биты `usMinorVersion` настраиваются, дополнительный номер версии не указан.|  
-|`usBuildNumber`|Номер построения сборки. Это значение не может быть нулевым. Если все биты `usBuildNumber` настраиваются, номер сборки не указан.|  
-|`usRevisionNumber`|Номер редакции сборки. Это значение не может быть нулевым. Если все биты `usRevisionNumber` настраиваются, номер редакции не определен.|  
-|`szLocale`|Список имен языкового стандарта существующую спецификацию RFC1766, разделенных точкой с запятой, указав языковые стандарты, поддерживаемые сборкой, на которую указывает ссылка. Значение null указывает на независимость от языкового стандарта. **Примечание:** в .NET Framework версии 1.0, нельзя указать несколько языковых стандартов.|  
-|`cbLocale`|Размер в расширенных символах с `szLocale`.|  
-|`rdwProcessor`|Массив идентификаторов, определенный в заголовке Winnt.h, для типов процессоров, поддерживаемых сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от процессора.|  
+|`usMajorVersion`|Основной номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMajorVersion` задаются, основной номер версии не указан.|  
+|`usMinorVersion`|Дополнительный номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMinorVersion` задаются, дополнительный номер версии не указан.|  
+|`usBuildNumber`|Номер построения сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usBuildNumber` задаются, номер сборки не указан.|  
+|`usRevisionNumber`|Номер редакции сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usRevisionNumber` задаются, не указан номер редакции.|  
+|`szLocale`|Список имен языковых стандартов, выполняет существующую спецификацию RFC1766, разделенных точкой с запятой, указав языки, поддерживаемые сборкой, на которую указывает ссылка. Значение null указывает на независимость от языкового стандарта. **Примечание.**  В .NET Framework версии 1.0, нельзя указать более одного языкового стандарта.|  
+|`cbLocale`|Размер в расширенных символах `szLocale`.|  
+|`rdwProcessor`|Массив идентификаторов, как определено в заголовке Winnt.h, для типов процессоров, поддерживаемых сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от процессора.|  
 |`ulProcessor`|Длина `rdwProcessor` массива.|  
 |`rOS`|Массив [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) экземпляров, задающих операционные системы, поддерживаемые сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от операционной системы.|  
 |`ulOS`|Длина `rOS` массива.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [Структура OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>См. также
+- [Структуры метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [Структура OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

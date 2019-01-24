@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707847"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Метод ICorRuntimeHost::MapFile
 Сопоставляет указанный файл в память. Этот метод устарел.  
@@ -41,16 +41,16 @@ HRESULT MapFile(
  [in] Дескриптор файла для сопоставления.  
   
  `hMapAddress`  
- [out] Начальный адрес памяти, с которого начинается файл сопоставления.  
+ [out] Начальный адрес памяти, с которого начинается файла сопоставления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версия платформы .NET framework:** 1.0, 1.1  
+ **Версии платформы .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

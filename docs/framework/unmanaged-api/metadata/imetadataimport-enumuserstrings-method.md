@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730247"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>Метод IMetaDataImport::EnumUserStrings
 Перечисляет токены String, представляющие жестко заданные строки в текущей области метаданных.  
@@ -43,13 +43,13 @@ HRESULT EnumUserStrings (
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
  `rStrings`  
- [out] Массив, используемый для хранения строки токенов.  
+ [out] Массив, используемый для хранения токенов строк.  
   
  `cMax`  
  [in] Максимальный размер массива `rStrings`.  
   
  `pcStrings`  
- [out] Число маркеров строки возвращаются в `rStrings`.  
+ [out] Число токенов строк, возвращаемых в `rStrings`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -59,17 +59,17 @@ HRESULT EnumUserStrings (
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcStrings` равно нулю.|  
   
 ## <a name="remarks"></a>Примечания  
- Маркеры строки создаются путем [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) метод. Этот метод предназначен для использования обозревателя метаданных, а не с помощью компилятора.  
+ Токены строки, создаваемые [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) метод. Этот метод предназначен для использования в обозревателе метаданных, а не с помощью компилятора.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

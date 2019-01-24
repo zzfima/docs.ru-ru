@@ -1,15 +1,15 @@
 ---
-title: 'Как: выполнение деревьев выражений (Visual Basic)'
+title: Как выполнить Выполнение деревьев выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 5fbd9ea2842a87a941a1b572acadc93b0a7d2e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde681905cded0e4043f52c5f2a29cee74b91209
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729357"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Как: выполнение деревьев выражений (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>Как выполнить Выполнение деревьев выражений (Visual Basic)
 В этом разделе показано, как выполнить дерево выражения. В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.  
   
  Можно выполнять только деревья выражений, представляющие лямбда-выражения. Деревья выражений, представляющие лямбда-выражения, имеют тип <xref:System.Linq.Expressions.LambdaExpression> или <xref:System.Linq.Expressions.Expression%601>. Для выполнения таких деревьев выражений вызовите метод <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>, чтобы создать исполняемый делегат, а затем вызовите делегат.  
@@ -48,6 +48,6 @@ MsgBox(result)
   
 -   Включите пространство имен System.Linq.Expressions.  
   
-## <a name="see-also"></a>См. также  
- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))  
- [Как: изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a>См. также
+- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
+- [Практическое руководство. Изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

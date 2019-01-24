@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQuery&gt; (WCF)'
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 6b41721dcc0c489377c59bfccdd0b1a617f551b0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498272"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>&lt;cancelRequestedQuery&gt; (WCF)
 
@@ -15,13 +15,13 @@ ms.locfileid: "54149076"
   
 Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Отслеживание >  
 \<профили >  
 \<trackingProfile >  
 \<рабочий процесс >  
-\<cancelRequestedQueries >  
-\<cancelRequestedQuery >  
+\<cancelRequestedQueries>  
+\<cancelRequestedQuery>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54149076"
 
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`activityName`|Строка, задающая имя действия, которое запрашивает отмену.|  
 |`childActivityName`|Строка, указывающая имя дочернего действия, для которого была запрошена отмена.|  
@@ -61,7 +61,7 @@ ms.locfileid: "54149076"
 |-------------|-----------------|  
 |[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания запросов по отмене дочернего действия родительским действием.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

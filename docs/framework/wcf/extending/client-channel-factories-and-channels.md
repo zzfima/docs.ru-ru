@@ -1,15 +1,15 @@
 ---
-title: 'Клиент: фабрики каналов и каналы'
+title: 'Клиент: Фабрики каналов и каналы'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720318"
 ---
-# <a name="client-channel-factories-and-channels"></a>Клиент: фабрики каналов и каналы
+# <a name="client-channel-factories-and-channels"></a>Клиент: Фабрики каналов и каналы
 В этом разделе рассматривается создание фабрик каналов и каналов.  
   
 ## <a name="channel-factories-and-channels"></a>Фабрики каналов и каналы  
@@ -30,7 +30,7 @@ ms.locfileid: "50182441"
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием. 
   
- Следующее обсуждение построено на базе [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+ Следующее обсуждение построено на базе [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
 ### <a name="creating-a-channel-factory"></a>Создание фабрики каналов  
  Фабрика`UdpChannelFactory` наследуется от класса <xref:System.ServiceModel.Channels.ChannelFactoryBase>. В образце переопределяется метод <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> для обеспечения доступа к версии сообщения кодировщика сообщений. Также переопределяется метод <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> для уничтожения созданного экземпляра класса <xref:System.ServiceModel.Channels.BufferManager> при переходе конечного автомата в другое состояние.  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>См. также
+- [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md)

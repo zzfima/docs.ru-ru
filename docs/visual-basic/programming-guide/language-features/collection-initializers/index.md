@@ -2,16 +2,10 @@
 title: Инициализаторы коллекций (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-- vb.CollectionInitializer
+  - vb.CollectionInitializer
 helpviewer_keywords:
-- collection initializers [Visual Basic]
+  - 'collection initializers [Visual Basic]'
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991627"
 ---
 # <a name="collection-initializers-visual-basic"></a>Инициализаторы коллекций (Visual Basic)
 *Инициализаторы набора* предлагают сокращенный синтаксис для создания коллекций и заполнения их начальным набором значений. Инициализаторы набора полезны при создании коллекции из набора известных значений и ее последующей проверки. Это может быть список команд меню или категорий, исходный набор числовых значений, статический список строк, например названий дней или месяцев либо географических расположений (список штатов), и многое другое.  
@@ -54,7 +48,7 @@ ms.locfileid: "45991627"
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- Если метод `Add` коллекции имеет параметры, сопоставимые с конструктором объекта `Customer`, значения параметров для метода `Add` можно вложить в инициализаторы набора, как описывается в следующем разделе. Если у коллекции такого метода `Add` нет, его можно создать как метод расширения. Пример создания метода `Add` как метода расширения для коллекции см. в разделе [Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Пример создания настраиваемой коллекции, которую можно использовать с инициализатором набора, см. в разделе [Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
+ Если метод `Add` коллекции имеет параметры, сопоставимые с конструктором объекта `Customer`, значения параметров для метода `Add` можно вложить в инициализаторы набора, как описывается в следующем разделе. Если у коллекции такого метода `Add` нет, его можно создать как метод расширения. Пример создания `Add` метода как метода расширения для коллекции, см. в разделе [как: Создание метода Add, расширение используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Пример создания настраиваемой коллекции, которая может использоваться с инициализатором набора, см. в разделе [как: Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
 ## <a name="nesting-collection-initializers"></a>Инициализаторы набора с вложениями  
  В инициализатор набора можно вкладывать значения, чтобы указать конкретную перегрузку метода `Add` для создаваемой коллекции. Значения, передаваемые методу `Add`, должны быть разделены запятыми и заключены в фигурные скобки (`{}`) так же, как в литерале массива или инициализаторе набора.  
@@ -73,18 +67,18 @@ ms.locfileid: "45991627"
   
 |Заголовок|Описание|  
 |---|---|  
-|[Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|  
+|[Практическое руководство. Создание метода Add, расширение используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|  
 |[Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Описывает, как активировать использование инициализатора набора, включив метод `Add` в класс коллекции, реализующий `IEnumerable`.|  
   
 ## <a name="see-also"></a>См. также
 
-- [Коллекции](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [Автоматически реализуемые свойства](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic)  
-- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+- [Коллекции](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Автоматически реализуемые свойства](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Практическое руководство. Инициализация переменной массива в Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
 - [Практическое руководство. Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

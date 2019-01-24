@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598398"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>Метод IMetaDataImport::GetTypeSpecFromToken
 Возвращает двоичную подпись метаданных для спецификации типа, представленного указанным токеном.  
@@ -39,7 +39,7 @@ HRESULT GetTypeSpecFromToken (
   
 #### <a name="parameters"></a>Параметры  
  `typespec`  
- [in] Токен TypeSpec, связанного с подписью, запрошенные метаданные.  
+ [in] Токен TypeSpec, связанного с подписью, запрошенных метаданных.  
   
  `ppvSig`  
  [out] Указатель на двоичную подпись метаданных.  
@@ -48,17 +48,17 @@ HRESULT GetTypeSpecFromToken (
  [out] Размер в байтах, подписи метаданных.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее успешное выполнение или сбой. Сбои можно протестировать с помощью макроса FAILED.  
+ Значение HRESULT, указывающее успешное или неуспешное. Сбои можно протестировать с помощью макроса FAILED.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

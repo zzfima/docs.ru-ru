@@ -2,17 +2,17 @@
 title: WSDL и политика
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741435"
 ---
 # <a name="wsdl-and-policy"></a>WSDL и политика
-В этом разделе рассматриваются Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy и WS-PolicyAttachment особенности реализации, а также дополнительные утверждения WS-Policy и расширения WSDL 1.1, впервые представленные в WCF.  
+В этом разделе рассматриваются Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy и WS-PolicyAttachment детали реализации, а также дополнительные утверждения WS-Policy и расширения WSDL 1.1, представленные WCF.  
   
- WCF реализует спецификации WS-Policy и WS-PolicyAttachment, переданные W3C с ограничениями и пояснениями, описанные в этом документе.  
+ WCF реализует спецификации WS-Policy и WS-PolicyAttachment, переданные W3C с ограничениями и пояснениями, представленными в этом документе.  
   
  В этом документе используются префиксы и пространства имен, приведенные в следующей таблице.  
   
@@ -28,19 +28,19 @@ ms.locfileid: "33501099"
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Расширения WCF WSDL1.1  
- WCF использует следующие расширения WSDL1.1 для описания требований сеанса контракта.  
+ WCF использует следующие расширения wsdl1.1 для описания требований сеанса контракта.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs: Boolean, показывает, что эта операция инициирует сеанс WCF; значение по умолчанию — `false`.  
+ xs: Boolean, указывает, что эта операция инициирует сеанс WCF; значение по умолчанию — `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs: Boolean, показывает, что эта операция завершает сеанс WCF. значение по умолчанию — `false`.  
+ xs: Boolean, указывает, что эта операция завершает сеанс WCF. значение по умолчанию — `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, показывает, что этот контракт требует установления сеанса.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>Универсальные коды ресурса (URI) транспорта привязки SOAP 1.x HTTP  
- WCF использует следующие URI для указания транспортов, которые используются элементами расширения привязок WSDL 1.1, SOAP 1.1 и SOAP 1.2.  
+ WCF использует следующие URI для указания транспортов, используемый для элементами расширения привязок WSDL 1.1, SOAP 1.1 и SOAP 1.2.  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -50,7 +50,7 @@ ms.locfileid: "33501099"
 |Именованные каналы|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Утверждения политики, реализуемые WCF  
- Помимо утверждений политики, представленных в спецификациях веб-служб (WS-*) и указано в других разделах данного документа, WCF реализует следующие утверждения политики.  
+ Помимо утверждений политики, представленных в спецификациях веб-служб (WS-*) и WCF уже упоминалось, в других разделах этого документа, реализует следующие утверждения политики.  
   
 |Утверждение политики|Субъект политики|Описание|  
 |----------------------|--------------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "33501099"
 |mssp:MustNotSendCancel|Вложенный|Задает требование о том, что сообщения запроса маркера безопасности (RST) [WS-Trust] с использованием привязки Cancel [WS-Trust, WS-SC] не должны отправляться издателю заданного SecurityContextToken. Если присутствует это утверждение, такие сообщения запроса не должны отправляться издателю. Если это утверждение отсутствует, такие сообщения запроса могут отправляться издателю.|  
 |mssp:RequireClientCertificate|Вложенный|Этот необязательный элемент задает требование о том, что сертификат клиента должен предоставляться как часть протокола TLSNEGO. Если это утверждение присутствует, сертификат клиента должен быть предоставлен. Если это утверждение отсутствует, сертификат клиента предоставляться не должен. Это утверждение не должно использоваться за пределами mssp:SslContextToken.|  
   
-## <a name="see-also"></a>См. также  
- [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Практическое руководство. Экспорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Практическое руководство. Импорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>См. также
+- [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Практическое руководство. Экспорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Практическое руководство. Импорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

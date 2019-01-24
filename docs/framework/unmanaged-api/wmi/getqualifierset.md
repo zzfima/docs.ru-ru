@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632183"
 ---
 # <a name="getqualifierset-function"></a>Функция GetQualifierSet
 Получает набор квалификатор для экземпляра или определения класса.
@@ -53,7 +53,7 @@ HRESULT GetQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
@@ -68,11 +68,11 @@ HRESULT GetQualifierSet (
 [IWbemQualifierSet указатель](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) позволяет вызывающему объекту добавить, изменить или удалить эти квалификаторы. Таких добавлена, измененные или удаленные квалификаторы применяются ко всей определения класса или экземпляра.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

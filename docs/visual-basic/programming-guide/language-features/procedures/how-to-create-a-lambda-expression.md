@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание лямбда-выражения (Visual Basic)
+title: Как выполнить Создать лямбда-выражения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492427"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Практическое руководство. Создание лямбда-выражения (Visual Basic)
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Как выполнить Создать лямбда-выражения (Visual Basic)
 Объект *лямбда-выражение* функцию или подпрограмму, которая не имеет имени. Лямбда-выражение может использоваться везде, где допустим тип делегата.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Чтобы создать функцию однострочное лямбда-выражения  
@@ -104,12 +104,12 @@ ms.locfileid: "39244902"
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable>  
- [Лямбда-выражения](./lambda-expressions.md)  
- [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) (Практическое руководство. Передача процедур другой процедуре в Visual Basic)  
- [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+## <a name="see-also"></a>См. также
+- <xref:System.Linq.Enumerable>
+- [Лямбда-выражения](./lambda-expressions.md)
+- [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Практическое руководство. Передача процедур другой процедуре в Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)

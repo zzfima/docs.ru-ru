@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722729"
 ---
 # <a name="getalinkmessagedll-function"></a>Функция GetALinkMessageDll
-Находит и загружает библиотеку DLL сообщений. Возвращает 0, если сообщение DLL невозможно найти или загрузить. Сообщений DLL должна быть либо в подкаталоге, имя которого совпадает с Идентификатором языка, либо в текущем каталоге.  
+Находит и загружает сообщения библиотеки DLL. Возвращает 0, если Библиотека сообщений не может быть расположен или загружен. Сообщение DLL должно быть либо в подкаталоге, имя которого совпадает с Идентификатором языка, либо в текущем каталоге.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,5 +38,5 @@ HINSTANCE WINAPI GetALinkMessageDll();
   
  **Библиотека**: alink.dll  
   
-## <a name="see-also"></a>См. также  
- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>См. также
+- [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

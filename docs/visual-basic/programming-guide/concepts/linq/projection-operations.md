@@ -1,22 +1,22 @@
 ---
-title: Операции проецирования (Visual Basic)
+title: Операции проекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f4d1f7531ee69ebdbfb4ccd283f9f5dcb2f000af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d92405d9f3da69df4fa3964468599d6549480cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740970"
 ---
-# <a name="projection-operations-visual-basic"></a>Операции проецирования (Visual Basic)
+# <a name="projection-operations-visual-basic"></a>Операции проекции (Visual Basic)
 Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Вы можете проецировать свойство и выполнять над ним математические функции. Также можно проецировать исходный объект, не изменяя его.  
   
  Методы стандартных операторов запросов, которые выполняют проецирование, перечислены в следующем разделе.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Выбрать|Проецирует значения, основанные на функции преобразования.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -49,7 +49,7 @@ MsgBox(sb.ToString())
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- В следующем примере используется несколько `From` предложений для проецирования каждого слово из каждой строки в список строк.  
+ В следующем примере используется несколько `From` предложений для проецирования каждого слова из каждой строки в список строк.  
   
 ```vb  
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}  
@@ -170,11 +170,11 @@ Sub SelectVsSelectMany()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>  
- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md)  
- [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md) (Практическое руководство. Объединение данных с помощью соединений)  
- [Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
- [Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
- [Как: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Linq>
+- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md)
+- [Практическое руководство. Объединение данных с соединениями](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

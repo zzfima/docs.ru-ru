@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Анимация точки с помощью ключевых кадров
+title: Как выполнить Анимация точки с помощью ключевых кадров
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: c2fd8c6c6fd84bbfd6d56f573588d7204249f31d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9d976bca77629b85226da3d4e018a35cb522afef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738343"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Практическое руководство. Анимация точки с помощью ключевых кадров
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Как выполнить Анимация точки с помощью ключевых кадров
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Point>.  
   
 ## <a name="example"></a>Пример  
@@ -36,9 +36,9 @@ ms.locfileid: "43857405"
   
  Для обеспечения согласованности с другими примерами анимации версии кода этого примера используют <xref:System.Windows.Media.Animation.Storyboard> объекта для применения <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Тем не менее, при применении в коде одной анимации, проще использовать <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метода вместо использования <xref:System.Windows.Media.Animation.Storyboard>. Пример см. в разделе [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Media.EllipseGeometry>  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Media.EllipseGeometry>
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

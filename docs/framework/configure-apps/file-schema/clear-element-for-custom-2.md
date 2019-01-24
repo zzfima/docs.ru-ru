@@ -1,5 +1,5 @@
 ---
-title: '&lt;Очистить&gt; элемент NameValueSectionHandler и DictionarySectionHandler'
+title: '&lt;Очистить&gt; элемент для NameValueSectionHandler и DictionarySectionHandler'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55925ee5e9c5a17f14bd199125dbaacbadb9d928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720945"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Очистить > элемент NameValueSectionHandler и DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Очистить > элемент для NameValueSectionHandler и DictionarySectionHandler
 
 Удаляет все ранее определенные параметры в разделе.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;[**\<параметра sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;**\<Очистить >**
 
 ## <a name="syntax"></a>Синтаксис
@@ -36,9 +36,9 @@ ms.locfileid: "33358239"
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ------------|
-| [**\<sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
+| [**\<параметра sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -46,13 +46,13 @@ ms.locfileid: "33358239"
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать  **\<снимите >** элемента, который требуется удалить все параметры из приложения, которые были определены на высоком уровне в иерархии файлов конфигурации.
+Можно использовать  **\<снимите >** элемент нужно удалить все параметры из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.
 
 ## <a name="example"></a>Пример
 
-В этом примере определяется в файле конфигурации компьютера и файл конфигурации приложения и показано, как использовать  **\<снимите >** элемент в файле конфигурации приложения для очистки разделов, ранее определенные в файл конфигурации компьютера.
+В этом примере определяются в файле конфигурации компьютера и файл конфигурации приложения и показано, как использовать  **\<снимите >** элемент в файле конфигурации приложения для очистки разделов, определенных ранее в файл конфигурации компьютера.
 
-В коде следующего файла конфигурации компьютера объявляется раздел  **\<mySection >**:
+В коде следующего файла конфигурации компьютера объявляет разделе  **\<mySection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ ms.locfileid: "33358239"
 </configuration>
 ```
 
-В коде следующего файла конфигурации приложения удаляет все параметры из  **\<mySection >**. Приложение не может получить какие-либо параметры, которые были объявлены в в  **\<mySection >** раздела в файле конфигурации компьютера.
+В коде следующего файла конфигурации приложения удаляет все параметры из  **\<mySection >**. Приложение не может получить какие-либо параметры, которые были объявлены в в  **\<mySection >** раздел файла конфигурации компьютера.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ ms.locfileid: "33358239"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файле конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые находятся не на уровне папки приложения.
+Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

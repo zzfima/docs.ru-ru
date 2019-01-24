@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление кнопок в элемент управления ToolBar
+title: Как выполнить Добавление кнопок в элемент управления ToolBar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711555"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Как выполнить Добавление кнопок в элемент управления ToolBar
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Неотъемлемой частью <xref:System.Windows.Forms.ToolBar> элемент управления является кнопок, добавьте к нему. Они используются для обеспечения быстрого доступа к командам меню или, кроме того, их можно разместить в другой области пользовательского интерфейса приложения для представления пользователям, которые недоступны в структуре меню команд.  
+ Неотъемлемой частью <xref:System.Windows.Forms.ToolBar> элемент управления — кнопки, добавьте к нему. Их можно использовать для обеспечения быстрого доступа к командам меню или в качестве альтернативы могут быть размещены в другой области пользовательского интерфейса приложения для представления пользователям, которые не доступны в структуре меню команд.  
   
- В приведенных ниже примерах предполагается, что <xref:System.Windows.Forms.ToolBar> управления был добавлен в форму Windows Forms (`Form1`).  
+ В приведенных ниже примерах предполагается, что <xref:System.Windows.Forms.ToolBar> элемент управления добавлен в форму Windows (`Form1`).  
   
 ### <a name="to-add-buttons-programmatically"></a>Добавление кнопок программными средствами  
   
-1.  В процедуре создайте кнопки панели инструментов, добавив их в <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> коллекции.  
+1.  В процедуре создания кнопки панели инструментов, добавив их в <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> коллекции.  
   
-2.  Определите параметры свойств отдельных кнопок, передав индекс кнопки с помощью <xref:System.Windows.Forms.ToolBar.Buttons%2A> свойство.  
+2.  Задайте значения свойств отдельных кнопок, передав индекс кнопки с помощью <xref:System.Windows.Forms.ToolBar.Buttons%2A> свойство.  
   
-     В приведенном ниже примере предполагается наличие формы с <xref:System.Windows.Forms.ToolBar> управления уже добавлен.  
+     В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.ToolBar> управления уже добавлен.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Коллекция является коллекция отсчитываемый от нуля, поэтому код должен продолжаться соответствующим образом.  
+    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Коллекция является коллекция (с нуля), поэтому код должен продолжаться соответствующим образом.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527106"
        }  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolBar>  
- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Практическое руководство. Активация событий меню для кнопок элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolBar>
+- [Практическое руководство. Определение значка для кнопки панели инструментов](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

@@ -2,17 +2,17 @@
 title: '&lt;Параметр&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a68fdecaba6ad4e64e4d3a4161d9fef6c099d60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690739"
 ---
 # <a name="ltparametergt"></a>&lt;Параметр&gt;
 Указывает общий параметр, если объявленный тип является общим типом.  
   
- \<System.Runtime.Serialization >  
+ \<system.runtime.serialization>  
 \<dataContractSerializer >  
 \<declaredTypes > элемент  
 \<Добавить > элемент для \<declaredTypes >  
@@ -48,7 +48,7 @@ ms.locfileid: "54148296"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Указывает известный тип, который может возвращаться полем или свойством объявленного типа.|  
   
@@ -59,8 +59,8 @@ ms.locfileid: "54148296"
   
  У данного элемента конфигурации не может одновременно быть оба атрибута. Если заданы оба атрибута, возникает исключение <xref:System.Configuration.ConfigurationErrorsException>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

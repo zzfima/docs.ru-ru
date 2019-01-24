@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms
+title: Как выполнить Задайте формат для элемента управления NumericUpDown в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: 1cb8f8b7d2f86125736c08cd9eadf4eee30063bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5574faf858c32752cfa99b6bf339ddf06cb6b345
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631013"
 ---
-# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms
-Можно настроить способ отображения значения в Windows Forms <xref:System.Windows.Forms.NumericUpDown> элемента управления. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Свойство определяет, сколько номеров отображаются после десятичной запятой; значение по умолчанию — 0. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Свойство определяет, будет ли вставляться разделитель между каждой из трех цифр; значение по умолчанию — `false`. Элемент управления может отображать значения в шестнадцатеричном формате вместо десятичного формата, если <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> свойству `true`; значение по умолчанию — `false`.  
+# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Как выполнить Задайте формат для элемента управления NumericUpDown в Windows Forms
+Можно настроить способ отображения значения в Windows Forms <xref:System.Windows.Forms.NumericUpDown> элемента управления. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Свойство определяет, сколько номеров появляются после десятичной запятой значение по умолчанию — 0. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Ли между каждой из трех цифр вставляется разделитель определяет значение по умолчанию — `false`. Элемент управления может отображать значения в шестнадцатеричном формате вместо десятичного формата, если <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> свойству `true`; по умолчанию используется `false`.  
   
 ### <a name="to-format-the-numeric-value"></a>Чтобы отформатировать числовое значение  
   
@@ -55,9 +55,9 @@ ms.locfileid: "33533963"
     ```  
   
     > [!NOTE]
-    >  Даже если значение отображается в форме в шестнадцатеричном виде, все тесты, выполните на <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство будет тестироваться его десятичное значение.  
+    >  Даже если значение отображается в форме как шестнадцатеричное значение, все тесты, выполните на <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство будет тестироваться его десятичное значение.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.NumericUpDown>  
- [Элемент управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [Общие сведения об элементе управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.NumericUpDown>
+- [Элемент управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
+- [Общие сведения об элементе управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

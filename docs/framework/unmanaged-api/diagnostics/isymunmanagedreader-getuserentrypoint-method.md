@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8519577bb2b9d3ff8fa2138ba007d04d9fde159
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730156"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Метод ISymUnmanagedReader::GetUserEntryPoint
-Возвращает метод, заданный в качестве точки входа пользователя для модуля, если таковые имеются. Например этот метод может быть основного метода пользователя, а не созданные компилятором заглушки перед основным методом.  
+Возвращает метод, который был указан в качестве точки входа пользователя для модуля, если таковые имеются. Например этот метод может быть основной метод пользователя, а не созданные компилятором заглушки перед основным методом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ HRESULT GetUserEntryPoint (
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

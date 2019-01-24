@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739984"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument
-Возвращает наименьшую начальную или наибольшую конечную строку метода в определенном документе.  
+Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ HRESULT GetSourceExtentInDocument(
  [out] Указатель на `ULONG32` , получающий начальной строки.  
   
  `pendLine`  
- [out] Указатель на `ULONG32` , получающий конца строки.  
+ [out] Указатель на `ULONG32` , получающий конечную строку.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

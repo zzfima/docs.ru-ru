@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: d678d632fda625420b6f66a5522229fc2ec71317
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 680c63548482c413a7ceff24a4f38eed589f4682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745276"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>Функция SaveToHistory (WPF Справочник по неуправляемым API)
 Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.  
@@ -35,15 +35,15 @@ HRESULT SaveToHistory(
 ## <a name="requirements"></a>Требования  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. в разделе [системные требования .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **БИБЛИОТЕКА DLL:**  
   
- В платформе .NET Framework 3.0 и 3.5: PresentationHostDLL.dll  
+ В .NET Framework 3.0 и 3.5: PresentationHostDLL.dll  
   
  В .NET Framework 4 и более поздних версий: PresentationHost_v0400.dll  
   
- **Версия платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>См. также
+- [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

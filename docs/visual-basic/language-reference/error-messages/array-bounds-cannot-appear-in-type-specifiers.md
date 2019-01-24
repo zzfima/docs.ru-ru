@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: 45787db51de562f2266c587fd2bb15ef29ebefbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31aea5a98233c8f262a77ba5c99eea389bc33ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715443"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>В спецификаторах типов не могут задаваться границы массива
 Размеры массива не могут объявляться как часть спецификатора типа данных.  
@@ -21,17 +21,17 @@ ms.locfileid: "33583687"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Укажите размер массива сразу после имени переменной, вместо размера массива после типа, как показано в следующем примере.  
+-   Укажите размер массива сразу после имени переменной, вместо размер массива после типа, как показано в следующем примере.  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
--   Определить массив и инициализируйте его с требуемое число элементов, как показано в следующем примере.  
+-   Определить массив и инициализировать его с требуемое число элементов, как показано в следующем примере.  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>См. также
+- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)

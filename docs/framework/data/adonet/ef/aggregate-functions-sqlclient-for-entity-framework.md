@@ -2,12 +2,12 @@
 title: Статистические функции (SqlClient для Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 55a10b82ffc189f5cf4118cb225a96963226256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724191"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
@@ -224,8 +224,8 @@ Collection(T), где T — один из следующих типов: `Int32`
 ## <a name="see-also"></a>См. также
 
 Дополнительные сведения об агрегатных функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.  
-  
-**SQL Server 2005**: [агрегатные функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
-**SQL Server 2008 и более поздних**: [агрегатные функции (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
-[Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
-[Статистические канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+
+**SQL Server 2005**: [Агрегатные функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**SQL Server 2008 и более поздних**:  [Агрегатные функции (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+- [Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Статистические канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

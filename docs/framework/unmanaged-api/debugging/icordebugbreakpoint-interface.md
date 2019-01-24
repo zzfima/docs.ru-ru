@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpoint интерфейс1
+title: Интерфейс1 ICorDebugBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpoint
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 220cd1a41ed69325b557e6498a511865b78817ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a222f578daed0ab81e2136e00d6f9b032acd95fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744938"
 ---
-# <a name="icordebugbreakpoint-interface1"></a>ICorDebugBreakpoint интерфейс1
+# <a name="icordebugbreakpoint-interface1"></a>Интерфейс1 ICorDebugBreakpoint
 Представляет точку останова в функции или контрольную точку значение.  
   
 ## <a name="methods"></a>Методы  
@@ -31,24 +31,24 @@ ms.locfileid: "33404519"
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Задает активное состояние `ICorDebugBreakpoint`.|  
-|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Возвращает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.|  
+|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Получает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.|  
   
 ## <a name="remarks"></a>Примечания  
- Точки останова напрямую не поддерживают условные выражения. При необходимости такие функциональные возможности, отладчик должен реализовать его на основе `ICorDebugBreakpoint`.  
+ Точки останова непосредственно не поддерживают условные выражения. Если требуется такая функция, отладчик должен реализовать его поверх имени `ICorDebugBreakpoint`.  
   
- Icordebugfunctionbreakpoint-интерфейс расширяет `ICorDebugBreakpoint` для поддержки точек останова в функциях.  
+ Расширяет интерфейс ICorDebugFunctionBreakpoint `ICorDebugBreakpoint` для поддержки точек останова в функциях.  
   
 > [!NOTE]
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730039"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>Метод ISymUnmanagedDocumentWriter::SetCheckSum
 Задает сведения о контрольной сумме.  
@@ -41,7 +41,7 @@ HRESULT SetCheckSum(
  [in] Идентификатор GUID, представляющий идентификатор алгоритма.  
   
  `checkSumSize`  
- [in] Объект `ULONG32` указывает размер в байтах для `checkSum` буфера.  
+ [in] Объект `ULONG32` указывает размер в байтах из `checkSum` буфера.  
   
  `checkSum`  
  [in] Буфер, в которой хранятся сведения о контрольной сумме.  
@@ -50,7 +50,7 @@ HRESULT SetCheckSum(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

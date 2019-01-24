@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737667"
 ---
 # <a name="sub-statement-visual-basic"></a>Оператор Sub (Visual Basic)
 Объявляет имя, параметры и код, которые определяют `Sub` процедуры.  
@@ -54,15 +54,15 @@ End Sub
   
 -   `attributelist`  
   
-     Необязательный. См. в разделе [список атрибутов](attribute-list.md).  
+     Необязательный параметр. См. в разделе [список атрибутов](attribute-list.md).  
   
 -   `Partial`  
   
-     Необязательный. Указывает определение разделяемого метода. См. в разделе [разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
+     Необязательный параметр. Указывает определение разделяемого метода. См. в разделе [разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
   
 -   `accessmodifier`  
   
-     Необязательный. Ниже указаны доступные значения.  
+     Необязательный параметр. Ниже указаны доступные значения.  
   
     -   [Public](../modifiers/public.md)  
   
@@ -74,13 +74,13 @@ End Sub
   
     - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Частный защищенный](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     См. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
-     Необязательный. Ниже указаны доступные значения.  
+     Необязательный параметр. Ниже указаны доступные значения.  
   
     -   [Перегрузки](../modifiers/overloads.md)  
   
@@ -98,31 +98,31 @@ End Sub
   
 -   `Shared`  
   
-     Необязательный. См. в разделе [общих](../modifiers/shared.md).  
+     Необязательный параметр. См. в разделе [общих](../modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательный. См. в разделе [Shadows](../modifiers/shadows.md).  
+     Необязательный параметр. См. в разделе [Shadows](../modifiers/shadows.md).  
   
 -   `Async`  
   
-     Необязательный. См. в разделе [Async](../modifiers/async.md).  
+     Необязательный параметр. См. в разделе [Async](../modifiers/async.md).  
   
 -   `name`  
   
-     Обязательно. Имя процедуры. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Чтобы создать процедуру конструктора для класса, задайте имя `Sub` процедура `New` ключевое слово. Дополнительные сведения см. в разделе [время жизни объекта: как объекты и уничтожение](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Обязательный. Имя процедуры. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Чтобы создать процедуру конструктора для класса, задайте имя `Sub` процедура `New` ключевое слово. Дополнительные сведения см. в разделе [время жизни объекта: Как создаются и удаляются объекты](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
-     Необязательный. Список параметров типа для универсальной процедуры. См. в разделе [введите список](type-list.md).  
+     Необязательный параметр. Список параметров типа для универсальной процедуры. См. в разделе [введите список](type-list.md).  
   
 -   `parameterlist`  
   
-     Необязательный. Список имен локальных переменных, представляющих параметры этой процедуры. См. в разделе [список параметров](parameter-list.md).  
+     Необязательный параметр. Список имен локальных переменных, представляющих параметры этой процедуры. См. в разделе [список параметров](parameter-list.md).  
   
 -   `Implements`  
   
-     Необязательный. Указывает, что эта процедура реализует один или несколько `Sub` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. См. в разделе [реализует оператор](implements-statement.md).  
+     Необязательный параметр. Указывает, что эта процедура реализует один или несколько `Sub` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. См. в разделе [реализует оператор](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -134,14 +134,14 @@ End Sub
   
      `interface.definedname`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
-    |`interface`|Обязательно. Имя интерфейса, реализуемого этой процедуры содержащей класса или структуры.|  
-    |`definedname`|Обязательно. Имя, под которым процедура определена в `interface`.|  
+    |`interface`|Обязательный. Имя интерфейса, реализуемого этой процедуры содержащей класса или структуры.|  
+    |`definedname`|Обязательный. Имя, под которым процедура определена в `interface`.|  
   
 -   `Handles`  
   
-     Необязательный. Указывает, что эта процедура может обрабатывать один или несколько определенных событий. См. в разделе [обрабатывает](handles-clause.md).  
+     Необязательный параметр. Указывает, что эта процедура может обрабатывать один или несколько определенных событий. См. в разделе [обрабатывает](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -155,12 +155,12 @@ End Sub
   
     |Отделение|Описание:|  
     |---|---|  
-    |`eventvariable`|Обязательно. Объектной переменной, объявленной с типом данных класса или структуры, который вызывает событие.|  
-    |`event`|Обязательно. Имя события, которое обрабатывает эту процедуру.|  
+    |`eventvariable`|Обязательный. Объектной переменной, объявленной с типом данных класса или структуры, который вызывает событие.|  
+    |`event`|Обязательный. Имя события, которое обрабатывает эту процедуру.|  
   
 -   `statements`  
   
-     Необязательный. Блок операторов для выполнения в рамках этой процедуры.  
+     Необязательный параметр. Блок операторов для выполнения в рамках этой процедуры.  
   
 -   `End Sub`  
   
@@ -220,20 +220,20 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return`, которая возвращает целое число. Таким образом, объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое, как показано в следующей инструкции: `Dim result As Integer = Await delayTask`.  
+ В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return` , которая возвращает целое число. Таким образом, объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое, как показано в следующей инструкции: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Процедура является примером `Async Sub` процедуры. Так как `DoSomethingAsync` — `Async` функции, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показано в следующей инструкции: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Процедура должна быть определена с помощью `Async` модификатор из-за `Await` выражение.  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Implements](implements-statement.md)  
- [Оператор Function](function-statement.md)  
- [Список параметров](parameter-list.md)  
- [Оператор Dim](dim-statement.md)  
- [Оператор Call](call-statement.md)  
- [Of](of-clause.md)  
- [Массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>См. также
+- [Оператор Implements](implements-statement.md)
+- [Оператор Function](function-statement.md)
+- [Список параметров](parameter-list.md)
+- [Оператор Dim](dim-statement.md)
+- [Оператор Call](call-statement.md)
+- [Of](of-clause.md)
+- [Массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

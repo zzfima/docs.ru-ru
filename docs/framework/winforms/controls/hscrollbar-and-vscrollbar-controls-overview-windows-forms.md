@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 02adffef32dcd58eedc11309ae272b72818a563f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683207"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управления используются для обеспечения удобного просмотра длинных списков элементов или большого объема информации с либо горизонтальной или вертикальной прокрутки окна приложения либо элемента управления. Полосы прокрутки — это распространенный элемент интерфейса Windows, поэтому <xref:System.Windows.Forms.ScrollBar> управления часто используется с элементами управления, которые не являются производными от <xref:System.Windows.Forms.ScrollableControl> класса. Аналогично, многие разработчики решили внедрить <xref:System.Windows.Forms.ScrollBar> управления собственных пользовательских элементов управления.  
@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управ�
   
  Когда пользователь нажимает одну стрелки стрелками или нажимает одну из кнопок полосы прокрутки, <xref:System.Windows.Forms.ScrollBar.Value%2A> изменения свойств в соответствии с значением <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> свойство.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.HScrollBar>  
- <xref:System.Windows.Forms.VScrollBar>  
- [Дополнения к Windows Forms для платформы .NET Framework 2.0](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.HScrollBar>
+- <xref:System.Windows.Forms.VScrollBar>
+- [Дополнения к Windows Forms для платформы .NET Framework 2.0](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)
+- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

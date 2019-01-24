@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5605f7b2ad9ba42a340906559838de22ac79f789
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572998"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalRegisterMemoryValue
-Возвращает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в расположении памяти, а указанный регистр, соответственно, для данного кадра машинного кода.  
+Получает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в расположении в памяти и указанный регистр, соответственно, для данного кадра машинного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +41,28 @@ HRESULT GetLocalRegisterMemoryValue (
   
 #### <a name="parameters"></a>Параметры  
  `highWordReg`  
- [in] Значение, указывающее регистр, содержащего и слово высокой значения перечисления «CorDebugRegister».  
+ [in] Значение, указывающее регистр, содержащий старшее слово значение перечисления «CorDebugRegister».  
   
  `lowWordAddress`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее расположение памяти, содержащего и слово низкого значения.  
+ [in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий значение младшее слово.  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которой ссылается `pvSigBlob` параметра.  
+ [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
   
  `pvSigBlob`  
  [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющий возвращенного значения, хранящиеся в указанном расположении регистр и памяти.  
+ [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанном расположении регистра и памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

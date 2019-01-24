@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321038a148c27086ca499e2f448eb50cb93525ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735010"
 ---
 # <a name="importtypes-method"></a>Метод ImportTypes
-Инициирует импорт типов из каждой области, импортированной посредством [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Инициирует импорт типов из каждой области, импортировать с помощью [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,18 +53,18 @@ HRESULT ImportTypes(
  Получает дескриптор перечислителя для типов в этой области.  
   
  `ppImportScope`  
- При необходимости получает [IMetaDataImport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) интерфейс.  
+ При необходимости получает [интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) интерфейс.  
   
  `pdwCountOfTypes`  
  При необходимости получает число типов в указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

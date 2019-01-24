@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e482a6952ee1266950dc181fbc85e5d6ef398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722648"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Метод IMetaDataAssemblyImport::EnumManifestResources
 Получает указатель на перечислитель для ресурсов, на которые ссылается манифест текущей сборки.  
@@ -40,7 +40,7 @@ HRESULT EnumManifestResources (
   
 #### <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должен быть значением null значения при `EnumManifestResources` метод вызывается в первый раз.  
+ [in, out] Указатель на перечислитель. Это должно быть значение null значение, если `EnumManifestResources` метод вызывается в первый раз.  
   
  `rManifestResources`  
  [out] Массив, используемый для хранения `mdManifestResource` токены метаданных.  
@@ -49,23 +49,23 @@ HRESULT EnumManifestResources (
  [in] Максимальное число `mdManifestResource` маркеры, которые могут быть помещены в `rManifestResources`.  
   
  `pcTokens`  
- [out] Число `mdManifestResource` токены непосредственно в `rManifestResources`.  
+ [out] Число `mdManifestResource` маркеры непосредственно в `rManifestResources`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumManifestResources` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` присваивается нулевое значение.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

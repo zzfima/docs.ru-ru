@@ -1,21 +1,21 @@
 ---
-title: Рефакторинг с использованием чистой функции (Visual Basic)
+title: Рефакторинг с использованием чистых функций (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3adaede7bce206d6018f1eb624d9ce04f53c04b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728285"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>Рефакторинг с использованием чистой функции (Visual Basic)
-Следующий пример выполняет рефакторинг предыдущего примера [рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), чтобы использовать чистая функция в этом примере кода, чтобы найти текст абзаца перемещается чисто статический метод `ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>Рефакторинг с использованием чистых функций (Visual Basic)
+Следующий пример выполняет рефакторинг предыдущему примеру, [рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), с использованием чистых функций в этом примере кода для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
   
 ## <a name="example"></a>Пример  
  В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Оптимизированный код поясняется в комментариях кода ниже.  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа в этом примере, см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -172,7 +172,7 @@ StyleName:Code >Hello World<
   
 -   [Проецирование XML в другую форму (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>См. также
+- [Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

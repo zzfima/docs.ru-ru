@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 550934723a5599573be578ce5746ab7520b59dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705973"
 ---
 # <a name="externalsource-directive"></a>Директива #ExternalSource
 Указывает сопоставление между определенными строками исходного кода и текста, внешним по отношению к источнику.  
@@ -50,5 +50,5 @@ ms.locfileid: "43861795"
   
  Директивы внешнего источника не влияют на компиляцию и не могут быть вложенными. Они предназначены для внутреннего использования только приложением.  
   
-## <a name="see-also"></a>См. также  
- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>См. также
+- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

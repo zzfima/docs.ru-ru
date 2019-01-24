@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 751cbcc3a3b70f0937a8fe84c0fad5d8771a32ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718160"
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
@@ -27,9 +27,9 @@ ms.locfileid: "33558204"
   
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>Классы с произвольным содержимым  
- Некоторые элементы управления могут содержать объекты любого типа, например, строка <xref:System.DateTime> объекта, или <xref:System.Windows.UIElement> который является контейнером для дополнительных элементов. Например <xref:System.Windows.Controls.Button> могут содержать изображения и текст; или <xref:System.Windows.Controls.CheckBox> может содержать значение <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
+ Некоторые элементы управления могут содержать объекты любого типа, например строку, <xref:System.DateTime> объекта, или <xref:System.Windows.UIElement> являющийся контейнером для дополнительных элементов. Например <xref:System.Windows.Controls.Button> может содержать изображение и некоторый текст; или <xref:System.Windows.Controls.CheckBox> может содержать значение <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется четыре класса, которые могут иметь произвольное содержимое. В следующей таблице перечислены классы, производные от <xref:System.Windows.Controls.Control>.  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется четыре класса, которые могут иметь произвольное содержимое. В следующей таблице перечислены классы, которые наследуют от <xref:System.Windows.Controls.Control>.  
   
 |Класс с произвольным содержимым|Content|  
 |-------------------------------------------|-------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "33558204"
  ![Button, GroupBox, Listbox, TreeViewItem](../../../../docs/framework/wpf/controls/media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Элементы управления, содержащие один произвольный объект  
- <xref:System.Windows.Controls.ContentControl> Класса содержит один элемент произвольного содержимого. Свойство содержимого является <xref:System.Windows.Controls.ContentControl.Content%2A>. Следующие элементы управления наследуют от <xref:System.Windows.Controls.ContentControl> и используют его модель содержимого:  
+ <xref:System.Windows.Controls.ContentControl> Класса содержит один элемент произвольного содержимого. Его свойство содержимого — <xref:System.Windows.Controls.ContentControl.Content%2A>. Следующие элементы управления наследуют <xref:System.Windows.Controls.ContentControl> и используют его модель содержимого:  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -85,17 +85,17 @@ ms.locfileid: "33558204"
   
 -   <xref:System.Windows.Window>  
   
- На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
+ На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> присваивается строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
  ![Четыре кнопки](../../../../docs/framework/wpf/controls/media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
 Четыре кнопки с различными типами содержимого  
   
- Пример настройки <xref:System.Windows.Controls.ContentControl.Content%2A> свойство, в разделе <xref:System.Windows.Controls.ContentControl>.  
+ Например, как задать <xref:System.Windows.Controls.ContentControl.Content%2A> свойство, см. в разделе <xref:System.Windows.Controls.ContentControl>.  
   
 ### <a name="controls-that-contain-a-header-and-a-single-arbitrary-object"></a>Элементы управления, содержащие заголовок и один произвольный объект  
- <xref:System.Windows.Controls.HeaderedContentControl> Класс наследует от <xref:System.Windows.Controls.ContentControl> и отображает содержимое с заголовком. Он наследует свойство содержимого <xref:System.Windows.Controls.ContentControl.Content%2A>, из <xref:System.Windows.Controls.ContentControl> и определяет <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> свойство, которое относится к типу <xref:System.Object>; таким образом, могут иметь любой объект.  
+ <xref:System.Windows.Controls.HeaderedContentControl> Класс наследует от <xref:System.Windows.Controls.ContentControl> и отображает содержимое с заголовком. Он наследует свойство content <xref:System.Windows.Controls.ContentControl.Content%2A>, из <xref:System.Windows.Controls.ContentControl> и определяет <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> свойство, имеющее тип <xref:System.Object>; таким образом, оба могут быть произвольными объектами.  
   
- Следующие элементы управления наследуют от <xref:System.Windows.Controls.HeaderedContentControl> и используют его модель содержимого:  
+ Следующие элементы управления наследуют <xref:System.Windows.Controls.HeaderedContentControl> и используют его модель содержимого:  
   
 -   <xref:System.Windows.Controls.Expander>  
   
@@ -103,17 +103,17 @@ ms.locfileid: "33558204"
   
 -   <xref:System.Windows.Controls.TabItem>  
   
- На следующем рисунке показано два <xref:System.Windows.Controls.TabItem> объектов. Первый <xref:System.Windows.Controls.TabItem> имеет <xref:System.Windows.UIElement> объектов <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Равно <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Равно <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.Label>. Второй <xref:System.Windows.Controls.TabItem> имеет строку <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.TextBlock> в <xref:System.Windows.Controls.ContentControl.Content%2A>.  
+ На следующем рисунке показаны два <xref:System.Windows.Controls.TabItem> объектов. Первый <xref:System.Windows.Controls.TabItem> имеет <xref:System.Windows.UIElement> объектов как <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.Label>. Второй <xref:System.Windows.Controls.TabItem> имеет строку в <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.TextBlock> в <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![Элемент управления TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
+ ![TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
 Элемент управления TabControl, который использует различные типы в свойстве Header  
   
- Пример создания <xref:System.Windows.Controls.TabItem> объектов, в разделе <xref:System.Windows.Controls.HeaderedContentControl>.  
+ Пример создания <xref:System.Windows.Controls.TabItem> объектов, см. в разделе <xref:System.Windows.Controls.HeaderedContentControl>.  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>Элементы управления, содержащие коллекцию произвольных объектов  
- <xref:System.Windows.Controls.ItemsControl> Класс наследует от <xref:System.Windows.Controls.Control> и может содержать несколько элементов, таких как строки, объектов или других элементов. Его свойства содержимого – <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> и <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> обычно используется для заполнения <xref:System.Windows.Controls.ItemsControl> сбора данных. Если не хотите использовать коллекцию для заполнения <xref:System.Windows.Controls.ItemsControl>, можно добавить элементы с помощью <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство.  
+ <xref:System.Windows.Controls.ItemsControl> Класс наследует от <xref:System.Windows.Controls.Control> и может содержать несколько элементов, таких как строки, объекты или другие элементы. Его свойства содержимого — <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> и <xref:System.Windows.Controls.ItemsControl.Items%2A>. <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> обычно используется для заполнения <xref:System.Windows.Controls.ItemsControl> со сбором данных. Если вы не хотите использовать коллекцию для заполнения <xref:System.Windows.Controls.ItemsControl>, можно добавить элементы с помощью <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство.  
   
- Следующие элементы управления наследуют от <xref:System.Windows.Controls.ItemsControl> и используют его модель содержимого:  
+ Следующие элементы управления наследуют <xref:System.Windows.Controls.ItemsControl> и используют его модель содержимого:  
   
 -   <xref:System.Windows.Controls.Menu>  
   
@@ -137,7 +137,7 @@ ms.locfileid: "33558204"
   
 -   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
- На следующем рисунке показана <xref:System.Windows.Controls.ListBox> , содержащий эти типы элементов:  
+ На следующем рисунке показано <xref:System.Windows.Controls.ListBox> , содержащий следующие типы элементов:  
   
 -   Строка.  
   
@@ -151,9 +151,9 @@ ms.locfileid: "33558204"
 Элемент управления ListBox, содержащий несколько типов объектов  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Элементы управления, содержащие заголовок и коллекцию произвольных объектов  
- <xref:System.Windows.Controls.HeaderedItemsControl> Класс наследует от <xref:System.Windows.Controls.ItemsControl> и может содержать несколько элементов, такие как строки, объекты, или другие элементы и заголовок. Он наследует <xref:System.Windows.Controls.ItemsControl> свойства, содержимого <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, и <xref:System.Windows.Controls.ItemsControl.Items%2A>, и он определяет <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> свойство, которое может быть любой объект.  
+ <xref:System.Windows.Controls.HeaderedItemsControl> Класс наследует от <xref:System.Windows.Controls.ItemsControl> и может содержать несколько элементов, таких как строки, объекты, или другие элементы и заголовок. Он наследует <xref:System.Windows.Controls.ItemsControl> свойства, содержимого <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, и <xref:System.Windows.Controls.ItemsControl.Items%2A>, и он определяет <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> свойство, которое может быть произвольный объект.  
   
- Следующие элементы управления наследуют от <xref:System.Windows.Controls.HeaderedItemsControl> и используют его модель содержимого:  
+ Следующие элементы управления наследуют <xref:System.Windows.Controls.HeaderedItemsControl> и используют его модель содержимого:  
   
 -   <xref:System.Windows.Controls.MenuItem>  
   
@@ -163,7 +163,7 @@ ms.locfileid: "33558204"
   
 <a name="classes_that_contain_a_collection_of_uielement_objects"></a>   
 ## <a name="classes-that-contain-a-collection-of-uielement-objects"></a>Классы, содержащие коллекцию объектов UIElement  
- <xref:System.Windows.Controls.Panel> Класс размещает и размещает дочерние <xref:System.Windows.UIElement> объектов. Свойство содержимого является <xref:System.Windows.Controls.Panel.Children%2A>.  
+ <xref:System.Windows.Controls.Panel> Класс размещение и упорядочивание дочерних <xref:System.Windows.UIElement> объектов. Его свойство содержимого — <xref:System.Windows.Controls.Panel.Children%2A>.  
   
  Следующие классы наследуют от <xref:System.Windows.Controls.Panel> класса и используют его модель содержимого:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33558204"
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Классы, влияющие на внешний вид объекта UIElement  
- <xref:System.Windows.Controls.Decorator> Класс применяется визуальные эффекты или вокруг один дочерний <xref:System.Windows.UIElement>. Свойство содержимого является <xref:System.Windows.Controls.Decorator.Child%2A>. Следующие классы наследуют от <xref:System.Windows.Controls.Decorator> и используют его модель содержимого:  
+ <xref:System.Windows.Controls.Decorator> Класс применяет визуальные эффекты или вокруг один дочерний элемент <xref:System.Windows.UIElement>. Его свойство содержимого — <xref:System.Windows.Controls.Decorator.Child%2A>. Следующие классы наследуют от <xref:System.Windows.Controls.Decorator> и используют его модель содержимого:  
   
 -   <xref:System.Windows.Documents.AdornerDecorator>  
   
@@ -213,14 +213,14 @@ ms.locfileid: "33558204"
   
 -   <xref:System.Windows.Controls.Viewbox>  
   
- На следующем рисунке показана <xref:System.Windows.Controls.TextBox> с (снабжен) <xref:System.Windows.Controls.Border> вокруг нее.  
+ На следующем рисунке показано <xref:System.Windows.Controls.TextBox> с (снабжен) <xref:System.Windows.Controls.Border> вокруг него.  
   
  ![TextBox с черной границей](../../../../docs/framework/wpf/controls/media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
 Элемент управления TextBlock с границей вокруг него  
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>Классы, предоставляющие визуальную обратную связь об объекте UIElement  
- <xref:System.Windows.Documents.Adorner> Класс предоставляет визуальные подсказки для пользователя. Например, использовать <xref:System.Windows.Documents.Adorner> добавить в элементы функциональные обработчики или предоставить сведения о состоянии управления. <xref:System.Windows.Documents.Adorner> Класс предоставляет платформу, чтобы при создании собственных графических элементов. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет никаких реализованных декоративных элементов. Дополнительные сведения см. в разделе [Общие сведения о декоративных элементах](../../../../docs/framework/wpf/controls/adorners-overview.md).  
+ <xref:System.Windows.Documents.Adorner> Предоставляет пользователю визуальные подсказки. Например, использовать <xref:System.Windows.Documents.Adorner> для добавления функциональных обработчиков к элементам или предоставления сведения о состоянии об элементе управления. <xref:System.Windows.Documents.Adorner> Класс предоставляет платформу, которые можно создавать собственные декоративные элементы. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет никаких реализованных декоративных элементов. Дополнительные сведения см. в разделе [Общие сведения о декоративных элементах](../../../../docs/framework/wpf/controls/adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Классы, позволяющие пользователям вводить текст  
@@ -234,9 +234,9 @@ ms.locfileid: "33558204"
   
 <a name="classes_that_display_text"></a>   
 ## <a name="classes-that-display-your-text"></a>Классы, отображающие пользовательский текст  
- Некоторые классы могут использоваться для отображения простого или форматированного текста. Можно использовать <xref:System.Windows.Controls.TextBlock> для отображения небольших объемов текста. Если вы хотите отображать большие объемы текста, используйте <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, или <xref:System.Windows.Controls.FlowDocumentScrollViewer> элементов управления.  
+ Некоторые классы могут использоваться для отображения простого или форматированного текста. Можно использовать <xref:System.Windows.Controls.TextBlock> для отображения текста небольшого объема. Если вы хотите отображать большие объемы текста, используйте <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, или <xref:System.Windows.Controls.FlowDocumentScrollViewer> элементов управления.  
   
- <xref:System.Windows.Controls.TextBlock> Имеет два свойства содержимого: <xref:System.Windows.Controls.TextBlock.Text%2A> и <xref:System.Windows.Controls.TextBlock.Inlines%2A>. Если вы хотите отображать текст, использующий последовательное форматирование <xref:System.Windows.Controls.TextBlock.Text%2A> свойство часто является оптимальным решением. Если вы планируете использовать разное форматирование текста, используйте <xref:System.Windows.Controls.TextBlock.Inlines%2A> свойство. <xref:System.Windows.Controls.TextBlock.Inlines%2A> Свойство — это коллекция <xref:System.Windows.Documents.Inline> объектами, указывающих способ форматирования текста.  
+ <xref:System.Windows.Controls.TextBlock> Имеет два свойства содержимого: <xref:System.Windows.Controls.TextBlock.Text%2A> и <xref:System.Windows.Controls.TextBlock.Inlines%2A>. Если вы хотите отображать текст с единообразным форматированием <xref:System.Windows.Controls.TextBlock.Text%2A> свойство является оптимальным решением. Если вы планируете использовать разное форматирование текста, используйте <xref:System.Windows.Controls.TextBlock.Inlines%2A> свойство. <xref:System.Windows.Controls.TextBlock.Inlines%2A> Свойство — это коллекция <xref:System.Windows.Documents.Inline> объекты, которые определяют способ форматирования текста.  
   
  В следующей таблице перечислены свойства содержимого для <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, и <xref:System.Windows.Controls.FlowDocumentScrollViewer> классы.  
   
@@ -246,11 +246,11 @@ ms.locfileid: "33558204"
 |<xref:System.Windows.Controls.FlowDocumentReader>|Document|<xref:System.Windows.Documents.FlowDocument>|  
 |<xref:System.Windows.Controls.FlowDocumentScrollViewer>|Document|<xref:System.Windows.Documents.FlowDocument>|  
   
- <xref:System.Windows.Documents.FlowDocument> Реализует <xref:System.Windows.Documents.IDocumentPaginatorSource> интерфейс; таким образом, может потребоваться все три класса <xref:System.Windows.Documents.FlowDocument> как содержимое.  
+ <xref:System.Windows.Documents.FlowDocument> Реализует <xref:System.Windows.Documents.IDocumentPaginatorSource> интерфейс; таким образом, все три класса могут принимать <xref:System.Windows.Documents.FlowDocument> как содержимое.  
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Классы, выполняющие форматирование пользовательского текста  
- <xref:System.Windows.Documents.TextElement> и его связанные классы позволяют форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматирование текста в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объектов <xref:System.Windows.Documents.Block> элементы и <xref:System.Windows.Documents.Inline> элементы. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например абзаца или список. <xref:System.Windows.Documents.Inline> Элемент представляет часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы указать форматирование для текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет свою собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> и связанные с ним классы позволяют вам форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматируют текст в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объекты являются <xref:System.Windows.Documents.Block> элементов и <xref:System.Windows.Documents.Inline> элементов. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например, абзац или список. <xref:System.Windows.Documents.Inline> Элемент представляет собой часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы задают форматирование текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
   
-## <a name="see-also"></a>См. также  
- [Дополнительно](../../../../docs/framework/wpf/advanced/index.md)
+## <a name="see-also"></a>См. также
+- [Дополнительно](../../../../docs/framework/wpf/advanced/index.md)

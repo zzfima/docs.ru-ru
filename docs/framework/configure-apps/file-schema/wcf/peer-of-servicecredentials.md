@@ -2,17 +2,17 @@
 title: '&lt;peer&gt;’ для &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: df2570a94e7d0c11228d0a72c938d871503d17ac
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 132c001de02e223375453c91832f461b96b57dfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741273"
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt;’ для &lt;serviceCredentials&gt;
 Задает текущие учетные данные для однорангового узла.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
@@ -37,7 +37,7 @@ ms.locfileid: "54152051"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для служб одноранговых сетей. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
@@ -49,13 +49,13 @@ ms.locfileid: "54152051"
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
- <xref:System.ServiceModel.Security.PeerCredential>  
- [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Проверка подлинности сообщений однорангового канала](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Нестандартной проверки подлинности одноранговых каналов](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
+- <xref:System.ServiceModel.Security.PeerCredential>
+- [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Проверка подлинности сообщений однорангового канала](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [Нестандартной проверки подлинности одноранговых каналов](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

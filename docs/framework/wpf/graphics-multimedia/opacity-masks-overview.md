@@ -6,26 +6,26 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 680d7441301b425c088d549f9e0e0d2b976cc69f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da8ffb77391129814e64613e17ea9f4d10cdca98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746212"
 ---
 # <a name="opacity-masks-overview"></a>Общие сведения о масках непрозрачности
-Маски непрозрачности позволяют делать части элемента или визуального элемента прозрачными или частично прозрачными. Создание маски непрозрачности, применить <xref:System.Windows.Media.Brush> для <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или <xref:System.Windows.Media.Visual>.  Кисть сопоставляется с элементом или визуальным элементом, а значение непрозрачности каждого пикселя кисти используется для определения результирующей непрозрачности каждого соответствующего пикселя элемента или визуального элемента.  
+Маски непрозрачности позволяют делать части элемента или визуального элемента прозрачными или частично прозрачными. Для создания маски непрозрачности, применить <xref:System.Windows.Media.Brush> для <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или <xref:System.Windows.Media.Visual>.  Кисть сопоставляется с элементом или визуальным элементом, а значение непрозрачности каждого пикселя кисти используется для определения результирующей непрозрачности каждого соответствующего пикселя элемента или визуального элемента.  
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Этот обзор предполагает, что вы знакомы с <xref:System.Windows.Media.Brush> объектов. Общие сведения об использовании кистей см. в разделе [Общие сведения о закрашивании сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Сведения о <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.DrawingBrush>, в разделе [Рисование с помощью изображения, рисунки и визуальные элементы](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ В этом обзоре предполагается, что вы знакомы с <xref:System.Windows.Media.Brush> объектов. Общие сведения об использовании кистей см. в разделе [Общие сведения о закрашивании сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Сведения о <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.DrawingBrush>, см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="opacitymasks"></a>   
 ## <a name="creating-visual-effects-with-opacity-masks"></a>Создание визуальных эффектов с помощью маски непрозрачности  
  Маска непрозрачности работает путем сопоставления своего содержимого с элементом или визуальным элементом. Затем используются альфа-канал каждой из точек кисти для определения результирующей непрозрачности элемента или визуального элемента соответствующих точек. Фактический цвет кисти игнорируется. Если данная часть кисти является прозрачной, соответствующая часть элемента или визуального элемента тоже становится прозрачной. Если данная часть кисти является непрозрачной, непрозрачность соответствующей части элемента или визуального элемента не меняется. Непрозрачность, заданная маской непрозрачности, объединяется со всеми параметрами непрозрачности, заданными в элементе или визуальном элементе. Например, если элемент является непрозрачным на 25 процентов и применяется маска непрозрачности с диапазоном от полной непрозрачности до полной прозрачности, в результате получится элемент с диапазоном от коэффициента непрозрачности 25 процентов до полной прозрачности.  
   
 > [!NOTE]
->  Хотя примеры в этом обзоре демонстрируют использование масок непрозрачности на элементах изображения, маски непрозрачности может применяться к любому элементу или <xref:System.Windows.Media.Visual>, в том числе панелей и элементов управления.  
+>  Хотя примеры в этом обзоре демонстрируют использование масок непрозрачности на элементах изображения, маска непрозрачности может применяться к любому элементу или <xref:System.Windows.Media.Visual>, в том числе панелей и элементов управления.  
   
  Маски непрозрачности используются для создания интересных визуальных эффектов, таких как изображения или кнопки, которые исчезают из виду, для добавления текстур элементов или для объединения градиентов с целью создания стеклянных поверхностей. На следующем рисунке показано использование маски непрозрачности. Клетчатый фон используется для отображения прозрачных частей маски.  
   
@@ -34,30 +34,30 @@ ms.locfileid: "33566237"
   
 <a name="creatingopacitymasks"></a>   
 ## <a name="creating-an-opacity-mask"></a>Создание маски непрозрачности  
- Создание маски непрозрачности, создайте <xref:System.Windows.Media.Brush> и примените его к <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или визуального элемента. Можно использовать любой тип <xref:System.Windows.Media.Brush> как маски непрозрачности.  
+ Для создания маски непрозрачности, необходимо создать <xref:System.Windows.Media.Brush> и применить его к <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или визуального элемента. Можно использовать любой тип <xref:System.Windows.Media.Brush> как маски непрозрачности.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Используются, чтобы сделать элемент или visual исчезания из представления.  
+-   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Используется для создания элемента или визуального исчезания.  
   
      На следующем рисунке показана <xref:System.Windows.Media.LinearGradientBrush> используется в качестве маски непрозрачности.  
   
      ![Объект с маской непрозрачности LinearGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Пример применения маски непрозрачности LinearGradientBrush  
   
--   <xref:System.Windows.Media.ImageBrush>: Используется для создания текстуры и эффектов гладких или оборванных краев.  
+-   <xref:System.Windows.Media.ImageBrush>: Используется для создания текстуры и эффектов edge мягких или оборванных.  
   
      На следующем рисунке показана <xref:System.Windows.Media.ImageBrush> используется в качестве маски непрозрачности.  
   
      ![Объект с маской непрозрачности ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Пример применения маски непрозрачности LinearGradientBrush  
   
--   <xref:System.Windows.Media.DrawingBrush>: Используется для создания сложных масок непрозрачности из шаблонов фигур, изображений и градиентов.  
+-   <xref:System.Windows.Media.DrawingBrush>: Используется для создания сложных масок непрозрачности из шаблонов фигур, рисунков и градиентов.  
   
      На следующем рисунке показана <xref:System.Windows.Media.DrawingBrush> используется в качестве маски непрозрачности.  
   
      ![Объект с маской непрозрачности DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
 Пример применения маски непрозрачности DrawingBrush  
   
- Градиентные кисти (<xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>) особенно хорошо подходят для использования в качестве маски непрозрачности. Поскольку <xref:System.Windows.Media.SolidColorBrush> заполняет область одинаковым цветом, они делают низкой непрозрачности маскирует; с помощью <xref:System.Windows.Media.SolidColorBrush> эквивалентно установке свойства элемента или визуального элемента <xref:System.Windows.UIElement.OpacityMask%2A> свойство.  
+ Градиентные кисти (<xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>) особенно хорошо подходят для использования в качестве маски непрозрачности. Так как <xref:System.Windows.Media.SolidColorBrush> заполняет область одинаковым цветом, они делают непрозрачности маскирует; с помощью <xref:System.Windows.Media.SolidColorBrush> эквивалентно установке свойства элемента или визуального элемента <xref:System.Windows.UIElement.OpacityMask%2A> свойство.  
   
 <a name="creatingopacitymaskswithgradients"></a>   
 ## <a name="using-a-gradient-as-an-opacity-mask"></a>Использование градиента в качестве маски непрозрачности  
@@ -67,9 +67,9 @@ ms.locfileid: "33566237"
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Задание ограничений градиента для маски непрозрачности  
- В предыдущем примере системные цвета <xref:System.Windows.Media.Colors.Black%2A> используется как начальный цвет градиента. Поскольку все цвета в <xref:System.Windows.Media.Colors> класса, за исключением <xref:System.Windows.Media.Colors.Transparent%2A>, являются полностью непрозрачными, они могут использоваться чтобы просто определить начальный цвет для маски непрозрачности градиента.  
+ В предыдущем примере, определенный системой цвет <xref:System.Windows.Media.Colors.Black%2A> используется в качестве начального цвета градиента. Так как все цвета в <xref:System.Windows.Media.Colors> класса, за исключением <xref:System.Windows.Media.Colors.Transparent%2A>, являются полностью непрозрачными, они могут использоваться для простого определения начального цвета для градиентной маски непрозрачности.  
   
- Для дополнительный контроль над альфа-значений при определении маски непрозрачности можно указать альфа-канал цветов с помощью [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] шестнадцатеричного формата в разметке или с помощью <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> метод.  
+ Для дополнительного контроля над альфа-значения, при определении маски непрозрачности можно указать альфа-канал цветов с помощью [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] шестнадцатеричного формата в разметке или с помощью <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> метод.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Задание непрозрачности цвета в XAML  
@@ -88,13 +88,13 @@ ms.locfileid: "33566237"
  ![Объект с маской непрозрачности ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
 Пример использования маски непрозрачности  
   
- Чтобы использовать изображение в качестве маски непрозрачности, используйте <xref:System.Windows.Media.ImageBrush> для включения изображения. При создании изображения для использования в качестве маски непрозрачности сохраните рисунок в формате, поддерживающем несколько уровней прозрачности, например [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. В следующем примере показан код, используемый для создания предыдущей иллюстрации.  
+ Чтобы использовать изображение в качестве маски непрозрачности, используйте <xref:System.Windows.Media.ImageBrush> для размещения изображения. При создании изображения для использования в качестве маски непрозрачности сохраните рисунок в формате, поддерживающем несколько уровней прозрачности, например [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. В следующем примере показан код, используемый для создания предыдущей иллюстрации.  
   
  [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
 ### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Использование мозаичного изображения в качестве маски непрозрачности  
- В следующем примере используется тот же образ с другим <xref:System.Windows.Media.ImageBrush>, но возможности заполнения кисти используются для создания мозаичных элементов изображения 50 пикселей в квадрате.  
+ В следующем примере используется тот же образ с другим <xref:System.Windows.Media.ImageBrush>, но возможности заполнения этой кисти используются для создания мозаичных элементов изображения 50 пикселей в квадрате.  
   
  [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
@@ -105,16 +105,16 @@ ms.locfileid: "33566237"
  ![Объект с маской непрозрачности DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
 Пример применения маски непрозрачности DrawingBrush  
   
- Для использования рисунка в качестве маски непрозрачности, используйте <xref:System.Windows.Media.DrawingBrush> для хранения рисунка. В следующем примере показан код, используемый для создания предыдущей иллюстрации.  
+ Чтобы использовать рисунок в качестве маски непрозрачности, используйте <xref:System.Windows.Media.DrawingBrush> для размещения изображения. В следующем примере показан код, используемый для создания предыдущей иллюстрации.  
   
  [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
 ### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Использование мозаичного рисунка в качестве маски непрозрачности  
- Как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> можно сделать для мозаичного заполнения его рисования. В следующем примере кисть рисунка используется для создания мозаичной маски непрозрачности.  
+ Как и <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> можно сделать для мозаичного отображения ее рисунка. В следующем примере кисть рисунка используется для создания мозаичной маски непрозрачности.  
   
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
-## <a name="see-also"></a>См. также  
- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+## <a name="see-also"></a>См. также
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

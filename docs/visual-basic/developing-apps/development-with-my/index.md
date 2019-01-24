@@ -2,19 +2,13 @@
 title: Разработка с использованием My (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-- My.MyWpfExtension.Windows
+  - My.MyWpfExtension.Windows
 helpviewer_keywords:
-- My object
-- My namespace
-- My feature
-- Visual Basic, programming in
+  - My object
+  - My namespace
+  - My feature
+  - 'Visual Basic, programming in'
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: f13e7348eb1c63e8256a48da7a8f5a8e357c72ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584428"
 ---
 # <a name="development-with-my-visual-basic"></a>Разработка с использованием My (Visual Basic)
 Visual Basic предоставляет новые функции для быстрой разработки приложений, которые повышают производительность, упрощают работу и предоставляют богатые возможности. Одна из этих функций, называемая `My`, предоставляет доступ к информации и экземплярам объектов по умолчанию, относящихся к приложению и среде выполнения. Эта информация организована в формате, который обнаруживается через IntelliSense и логически разделен в соответствии с использованием.  
@@ -36,15 +30,15 @@ Visual Basic предоставляет новые функции для быс�
  Описывает объекты `My.Resources` и `My.Settings`, которые предоставляют доступ к ресурсам и параметрам приложения.  
   
  [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Описывает модель приложения Visual Basic, запуск или завершение.  
+ Описывает модель приложения Visual Basic запуск/завершение.  
   
  [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Предоставляет подробные сведения о том, какие функции `My` доступны в разных типах проектов.  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

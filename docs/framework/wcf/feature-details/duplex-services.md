@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717928"
 ---
 # <a name="duplex-services"></a>Дуплексные службы
 Дуплексный контракт службы - это шаблон обмена сообщениями, в котором обе конечные точки могут отправлять сообщения друг другу независимо друг от друга. Следовательно, дуплексная служба может отправлять сообщения обратно конечной точке клиента, обеспечивая поведение, аналогичное событийному. Дуплексная связь имеет место, когда клиент подключается к службе и предоставляет службе канал, по которому служба может отправлять сообщения обратно клиенту. Обратите внимание, что событийное поведение дуплексных служб используется только в сеансе.  
@@ -32,7 +32,7 @@ ms.locfileid: "34037367"
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- Клиент WCF, формируемый для дуплексного контракта требуется <xref:System.ServiceModel.InstanceContext> при создании класса. Этот класс <xref:System.ServiceModel.InstanceContext> используется в качестве сайта для объекта, реализующего интерфейс обратного вызова и обрабатывающего сообщения, которые отправляются службой обратно. Класс <xref:System.ServiceModel.InstanceContext> создается с экземпляром класса `CallbackHandler`. Этот объект обрабатывает сообщения, отправляемые службой клиенту в интерфейсе обратного вызова.  
+ Клиент WCF, создаваемый для дуплексного контракта требуется <xref:System.ServiceModel.InstanceContext> предоставления при создании класса. Этот класс <xref:System.ServiceModel.InstanceContext> используется в качестве сайта для объекта, реализующего интерфейс обратного вызова и обрабатывающего сообщения, которые отправляются службой обратно. Класс <xref:System.ServiceModel.InstanceContext> создается с экземпляром класса `CallbackHandler`. Этот объект обрабатывает сообщения, отправляемые службой клиенту в интерфейсе обратного вызова.  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
@@ -53,7 +53,7 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- В следующем примере кода показано, как указать клиента адрес конечной точки программными средствами.
+ В следующем примере кода показано, как указать его адрес конечной точки программным способом.
   
 ```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
@@ -89,7 +89,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 > [!WARNING]
 >  Дуплексная модель не выполняет автоматического обнаружения закрытия службой или клиентом своего канала. Поэтому в случае неожиданного завершения работы клиента по умолчанию служба не будет уведомлена. Клиенты и службы могут реализовать собственный протокол для уведомления друг друга по усмотрению.  
   
-## <a name="see-also"></a>См. также  
- [Дуплекс](../../../../docs/framework/wcf/samples/duplex.md)  
- [Указание поведения клиента во время выполнения](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Практическое руководство. Создание фабрики каналов и ее использование для создания каналов и управления ими](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+## <a name="see-also"></a>См. также
+- [Дуплекс](../../../../docs/framework/wcf/samples/duplex.md)
+- [Указание поведения клиента во время выполнения](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Практическое руководство. Создание фабрики каналов и использовать его для создания каналов и управления ими](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

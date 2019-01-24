@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742319"
 ---
 # <a name="getpropertyhandle-function"></a>Функция GetPropertyHandle
 Возвращает уникальный маркер, определяющий свойство.
@@ -61,7 +61,7 @@ HRESULT GetPropertyHandle (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Свойство с указанным именем не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -77,11 +77,11 @@ HRESULT GetPropertyHandle (
 Дескрипторы может быть извлечен для свойства всех типов данных, отличных от `CIM_OBJECT` и `CIM_ARRAY`. Возвращаемые дескрипторы работы для всех экземпляров класса.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

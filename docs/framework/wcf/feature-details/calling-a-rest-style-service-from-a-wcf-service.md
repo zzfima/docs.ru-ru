@@ -2,12 +2,12 @@
 title: Вызов службы в стиле REST из службы WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596791"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Вызов службы в стиле REST из службы WCF
 При вызове REST-службы из обычной (на основе SOAP) службы WCF контекст операции в методе службы (со сведениями о входящем запросе) переопределяет контекст, который должен использоваться исходящим запросом. В результате запросы HTTP GET превращаются в запросы HTTP POST. Чтобы заставить службу WCF использовать правильный контекст для вызова REST-службы, создайте новый объект <xref:System.ServiceModel.OperationContextScope> и вызовите REST-службу из области контекста операции. В этом разделе описано создание простого примера, иллюстрирующего данный способ.  
@@ -233,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Создание базовой веб-службы HTTP WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Создание веб-службы HTTP Basic WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

@@ -11,17 +11,17 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e662270fc8db3fb85e058e8d4f3346f58f79bb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64289ee7fbdc440a87df6c8e506317f23e780912
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722859"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Метод ICorProfilerInfo7::GetInMemorySymbolsLength
 [Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]  
   
- Возвращает длину потока в памяти символа.  
+ Возвращает длину потока символов в памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,30 +34,30 @@ HRESULT GetInMemorySymbolsLength(
   
 #### <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, содержащего потока в памяти.  
+ [in] Идентификатор модуля, содержащего поток в памяти.  
   
  pCountSymbolBytes  
- [out] Указатель на `DWORD` значение, которое при возврате из метода содержит длину потока в байтах.  
+ [out] Указатель на `DWORD` значение, возвращаемое методом, содержит длину потока в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Метод возвращает `S_OK` Если длина потока памяти может определяться, даже если оно равно нулю (0).  
+ Этот метод возвращает `S_OK` Если длина потока памяти можно определить, даже если оно равно нулю (0).  
   
- Метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC` метод создан с помощью <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Этот метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC` Если метод был создан с помощью <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Примечания  
- Если модуль содержит символы в памяти, длина потока помещается в `pCountSymbolBytes`. Если модуль не содержит символов в памяти `*pCountSymbolBytes = 0`.  
+ Если модуль содержит символы в памяти, длину потока помещается в `pCountSymbolBytes`. Если модуль не содержит символы в памяти, `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
 >  Текущая реализация не поддерживает Reflection.Emit. Если модуль был создан с помощью Reflection.Emit, метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5eccafd3a7fb75f0458fa50b1c557f4b3ddb7c27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720487"
 ---
 # <a name="richtextbox-how-to-topics"></a>Разделы руководства по RichTextBox
 В этом разделе содержатся примеры, демонстрирующие способы выполнения типичных задач с помощью <xref:System.Windows.Controls.RichTextBox> элемента управления.  
@@ -22,9 +22,9 @@ ms.locfileid: "43864333"
  [Изменение выделения в RichTextBox программными средствами](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [Сохранение, загрузка и печать содержимого RichTextBox](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [Расположение пользовательского контекстного меню в RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Практическое: замена узла содержимого по умолчанию для элемента управления RichTextBox](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Практическое руководство. Замена узла содержимого по умолчанию для элемента управления RichTextBox](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.TextBox>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.TextBox>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

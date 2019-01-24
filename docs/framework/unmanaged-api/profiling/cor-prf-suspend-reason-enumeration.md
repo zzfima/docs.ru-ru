@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742465"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>Перечисление COR_PRF_SUSPEND_REASON
 Указывает причину приостановки среды выполнения.  
@@ -45,25 +45,25 @@ typedef enum {
 |Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Среда выполнения приостановлена по неизвестной причине.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Среда выполнения приостановлена для обслуживания запросов на сбор мусора.<br /><br /> Коллекция связанных с обратные вызовы сборки мусора пройти между [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) и [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) обратные вызовы.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Среда выполнения приостановлена, чтобы `AppDomain` можно завершить работу.<br /><br /> Приостановленная среда выполнения, среда выполнения определяет потоки в `AppDomain` именно выполняется завершение работы и задайте их выполнения, когда они снова. Существуют не `AppDomain`-конкретных обратных вызовов во время этой приостановки.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Среда выполнения приостановлена, чтобы возможности пошагового выполнения.<br /><br /> Пошаговое выполнение кода гарантируется только когда компилятор just-in-time (JIT) активна с пошагового выполнения кода включено. Разделять обратные вызовы, пошагового выполнения кода `ICorProfilerCallback::RuntimeSuspendFinished` и `ICorProfilerCallback::RuntimeResumeStarted` обратные вызовы. **Примечание:** CLR JIT не пошаговое выполнение функций в платформе .NET Framework версии 2.0, поэтому это значение не используется в версии 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Среда выполнения приостановлена, чтобы завершить работу. Его необходимо приостановить все потоки для завершения операции.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Среда выполнения приостановлена для обслуживания запросов на сбор мусора.<br /><br /> Обратные вызовы с коллекцией мусора происходят между [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) и [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) обратные вызовы.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|В приостановленном состоянии, чтобы `AppDomain` можно завершить работу.<br /><br /> Приостановленная среда выполнения, среда выполнения будет определить, какие потоки находятся в `AppDomain` то есть завершите работу и установить их выполнения при возобновлении. Существуют не `AppDomain`-конкретных обратных вызовов во время этой приостановки.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Среда выполнения приостановлена, таким образом, возможности пошагового выполнения.<br /><br /> Пошаговое выполнение кода гарантируется только когда компилятор just-in-time (JIT) является активным с пошагового включена. Код пошагового выполнения обратные вызовы происходят между `ICorProfilerCallback::RuntimeSuspendFinished` и `ICorProfilerCallback::RuntimeResumeStarted` обратные вызовы. **Примечание.**  JIT-Компилятор среды CLR не пошаговое выполнение функций в платформе .NET Framework версии 2.0, поэтому это значение не используется в версии 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Среда выполнения приостановлена, таким образом, чтобы завершить работу. Его необходимо приостановить все потоки для завершения операции.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Среда выполнения приостановлена в процессе отладки.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Среда выполнения приостановлена для подготовки для сборки мусора.|  
 |`COR_PRF_SUSPEND_FOR_REJIT`|Среда выполнения приостановлена для перекомпиляции JIT.|  
   
 ## <a name="remarks"></a>Примечания  
- Все потоки среды выполнения, которые находятся в неуправляемом коде могут продолжать выполняться, пока они пытаются заново ввести среды выполнения, после чего они также будут приостановлены среду выполнения. Это справедливо и для новых потоков, выполняющих вход в среду выполнения. Все потоки в среде выполнения либо приостановлен немедленно, если они находятся в коде, прерываемых запрос на приостановку по достижении такого кода.  
+ Все потоки среды выполнения, которые находятся в неуправляемом коде могут продолжать выполняться, пока они попытаются повторно войти в среду выполнения, после чего они также будут приостановлены среду выполнения. Это также относится к новых потоков, выполняющих вход в среду выполнения. Все потоки в среде выполнения либо приостановлен немедленно, если они находятся в такого кода, либо запрос на приостановку по достижении такого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

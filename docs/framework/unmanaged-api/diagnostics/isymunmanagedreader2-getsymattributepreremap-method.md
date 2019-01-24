@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 326f970f53293b74bbf8c5e77830f3f6ce1b73ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519688"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>Метод ISymUnmanagedReader2::GetSymAttributePreRemap
-Получает пользовательский атрибут на основе его имени. В отличие от настраиваемых атрибутов метаданных эти атрибуты хранятся в хранилище символов.  
+Получает настраиваемый атрибут, в зависимости от его имени. В отличие от настраиваемых атрибутов метаданных эти атрибуты хранятся в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,16 +50,16 @@ HRESULT GetSymAttributePreRemap(
  [in] Объект `ULONG32` указывает размер `buffer` массива.  
   
  `pcBuffer`  
- [out] Указатель на `ULONG32` , получающий размер буфера, который должен содержать атрибут байт.  
+ [out] Указатель на `ULONG32` , получающий размер буфера должен содержать атрибут байты.  
   
  `buffer`  
- [out] Указатель на буфер, в который помещаются байты атрибута.  
+ [out] Указатель на буфер, куда помещаются байты атрибута.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

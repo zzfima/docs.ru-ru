@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596011"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Явные и неявные преобразования (Visual Basic)
 *Неявное преобразование* не требует специального синтаксиса в исходном коде. В следующем примере Visual Basic неявно преобразует значение `k` значение с плавающей запятой одиночной точности, перед назначением его `q`.  
@@ -117,7 +117,7 @@ End If
  Дополнительные сведения и пример см. в разделе [преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
   
 ### <a name="types-defining-ctype"></a>Типы, определение CType  
- Вы можете определить `CType` для класса или структуры, которые вы определили. Это позволяет преобразовывать значения из типа класса или структуры. Дополнительные сведения и пример см. в разделе [как: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Вы можете определить `CType` для класса или структуры, которые вы определили. Это позволяет преобразовывать значения из типа класса или структуры. Дополнительные сведения и пример см. в разделе [как: Определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
 >  Значения, используемые с ключевым словом преобразование должно быть допустимым для целевого типа данных, или произошла ошибка. Например, если при попытке преобразовать `Long` для `Integer`, значение `Long` должно быть в допустимом диапазоне для `Integer` тип данных.  
@@ -125,15 +125,15 @@ End If
 > [!CAUTION]
 >  Указание `CType` для преобразования из одного типа класса в другой вызовет ошибку во время выполнения, если исходный тип не является производным от типа назначения. Такой сбой вызывает <xref:System.InvalidCastException> исключение.  
   
- Тем не менее если один из типов структуры или класса, вы определили, а также если вы определили `CType` для структуры или класса, преобразование может быть успешным, если он удовлетворяет требованиям вашего `CType`. См. в разделе [как: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Тем не менее если один из типов структуры или класса, вы определили, а также если вы определили `CType` для структуры или класса, преобразование может быть успешным, если он удовлетворяет требованиям вашего `CType`. См. практическое руководство по [ Определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
  Выполнение явного преобразования также называется *приведения* выражение к классу данных типа или объекта.  
   
-## <a name="see-also"></a>См. также  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Практическое: преобразование объекта в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>См. также
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Практическое руководство. Преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

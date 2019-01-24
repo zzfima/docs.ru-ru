@@ -2,12 +2,12 @@
 title: Обслуживание пар "имя значение" (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d0f0306ef354eb55bb32d28332590c02425b112a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705960"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Обслуживание пар "имя значение" (Visual Basic)
 Множеству приложений приходится сохранять данные, которые лучше всего хранить в виде пар «имя-значение». Эти данные могут представлять сведения о конфигурации или глобальные параметры. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит несколько методов, которые облегчают хранение пар «имя-значение». Можно либо оставить информацию в виде атрибутов, либо в виде набора дочерних элементов.  
@@ -118,7 +118,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
- [Изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>
+- [Изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

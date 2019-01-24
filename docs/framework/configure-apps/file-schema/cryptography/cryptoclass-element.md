@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501286"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; элемент
 Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
@@ -77,8 +77,8 @@ ms.locfileid: "53145758"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>См. также
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

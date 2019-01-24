@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706330"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Метод ISymUnmanagedDocument::GetURL
 Возвращает универсальный код ресурса URL-адрес для этого документа.  
@@ -38,10 +38,10 @@ HRESULT GetURL(
   
 #### <a name="parameters"></a>Параметры  
  `cchUrl`  
- [in] Размер (в символах) для `szURL` буфера.  
+ [in] Размер в символах, из `szURL` буфера.  
   
  `pcchUrl`  
- [out] Указатель на переменную, которая получает размер URL-адрес, включая нулем.  
+ [out] Указатель на переменную, которая принимает размер URL-адрес, включая завершающимся нулевым значением.  
   
  `szUrl`  
  [out] Буфер, содержащий URL-адрес.  
@@ -49,5 +49,5 @@ HRESULT GetURL(
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

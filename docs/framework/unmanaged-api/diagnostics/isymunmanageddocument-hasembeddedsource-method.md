@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629518"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Метод ISymUnmanagedDocument::HasEmbeddedSource
-Возвращает `true` Если документ имеет источник, внедренный в символы отладки; в противном случае возвращает `false`.  
+Возвращает `true` , содержит ли документ источника, внедренный в символы отладки; в противном случае возвращает `false`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +36,10 @@ HRESULT HasEmbeddedSource(
   
 #### <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на переменную, которая указывает, содержит ли документ источник, внедренный в символы отладки.  
+ [out] Указатель на переменную, которая указывает, имеет ли документ источника, внедренный в символы отладки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

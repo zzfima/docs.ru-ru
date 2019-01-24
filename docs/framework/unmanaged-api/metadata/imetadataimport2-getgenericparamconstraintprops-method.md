@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617724"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Метод IMetaDataImport2::GetGenericParamConstraintProps
-Возвращает метаданные, связанные с ограничением параметра универсального типа, представленного маркером указанное ограничение.  
+Получает метаданные, связанные с ограничением параметра универсального типа, представленного маркером указанное ограничение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +39,23 @@ HRESULT GetGenericParamConstraintProps (
   
 #### <a name="parameters"></a>Параметры  
  `gpc`  
- [in] Токен для ограничения универсального параметра, для которого необходимо возвратить метаданные.  
+ [in] Токен, ограничение универсального параметра, для которого необходимо вернуть метаданные.  
   
  `ptGenericParam`  
  [out] Указатель на токен, представляющий универсальный параметр, который ограничен.  
   
  `ptkConstraintType`  
- [out] Указатель на маркер TypeDef, TypeRef или TypeSpec, который представляет ограничение на `ptGenericParam`.  
+ [out] Указатель на токен TypeDef, TypeRef или TypeSpec, который представляет ограничение на `ptGenericParam`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

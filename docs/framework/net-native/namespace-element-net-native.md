@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89c9edf47edcb5089e094529b8e8108271518d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590582"
 ---
 # <a name="ltnamespacegt-element-net-native"></a>Элемент &lt;Namespace&gt; (машинный код .NET)
 Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.  
@@ -19,7 +19,7 @@ ms.locfileid: "33391694"
 ```xml  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
-           Browse="policy_type" />  
+           Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
            DataContractSerializer="policy_setting"  
@@ -35,7 +35,7 @@ ms.locfileid: "33391694"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание|  
+|Атрибут|Тип атрибута|Описание:|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Указывает имя пространства имен.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -71,7 +71,7 @@ ms.locfileid: "33391694"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения. Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения среды выполнения ко всем типам в указанной сборке.|  
@@ -83,7 +83,7 @@ ms.locfileid: "33391694"
   
  Если это дочерний элемент элемента [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), то элемент `<Namespace>` переопределяет политику отражения среды выполнения, определенную элементом [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
   
-## <a name="see-also"></a>См. также  
- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>См. также
+- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

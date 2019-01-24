@@ -2,12 +2,12 @@
 title: UriTemplate и UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722612"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. Windows Communication Foundation (WCF) появились два новых класса, позволяющие разработчикам контролировать свои URI. <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу механизма диспетчеризации на основе URI в WCF. Эти классы также могут использоваться на свои собственные, позволяя разработчикам воспользоваться преимуществами шаблонов и URI механизм сопоставления без реализации службы WCF.  
@@ -87,13 +87,13 @@ ms.locfileid: "47198414"
   
 - «shoe / {Катание} /\*"  
   
-- «обуви/яхту? x = 2»  
+- "shoe/boat?x=2"  
   
 - «shoe / {Катание}? x = {испытательной}»  
   
 - "shoe/{boat}?x={bed}&y=band"  
   
-- «? x = {shoe}»  
+- "?x={shoe}"  
   
 - "shoe?x=3&y={var}  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47198414"
 - /{shoe}{boat} - переменные должны разделяться литералом.  
   
 ### <a name="matching-and-compound-path-segments"></a>Совпадающие и составные сегменты пути  
- Составные сегменты пути позволяют определять UriTemplate, который имеет несколько переменных в одном сегменте пути. Например, в следующую строку шаблона: «адреса / {штат}. {city}» две переменные (штату и городу) определяются в одном сегменте. Этот шаблон будет соответствовать URL-адрес, например `http://example.com/Washington.Redmond` , но он также будет соответствовать URL-адрес как `http://example.com/Washington.Redmond.Microsoft`. В последнем случае переменной состояния будет содержать «Вашингтон», а переменная города будет содержать «Redmond.Microsoft»». В данном случае любой текст (за исключением символа «/») будет соответствовать переменной {город}. Если требуется шаблон, который не будет соответствовать «дополнительному» тексту, поместите переменную в отдельный сегмент шаблона, например: «адреса / {state} / {city}.  
+ Составные сегменты пути позволяют определять UriTemplate, который имеет несколько переменных в одном сегменте пути. Например в следующую строку шаблона: «Адреса / {state}. {city}» две переменные (штату и городу) определяются в одном сегменте. Этот шаблон будет соответствовать URL-адрес, например `http://example.com/Washington.Redmond` , но он также будет соответствовать URL-адрес как `http://example.com/Washington.Redmond.Microsoft`. В последнем случае переменной состояния будет содержать «Вашингтон», а переменная города будет содержать «Redmond.Microsoft»». В данном случае любой текст (за исключением символа «/») будет соответствовать переменной {город}. Если требуется шаблон, который не будет соответствовать «дополнительному» тексту, поместите переменную в отдельный сегмент шаблона, например: «Адреса / {state} / {city}.  
   
 ### <a name="named-wildcard-segments"></a>Именованные сегменты с подстановочным знаком  
  Сегмент именованный подстановочный знак — это любой переменный сегмент, имя переменной которого начинается с подстановочного знака "\*". Следующая строка шаблона содержит именованный сегмент с подстановочным знаком, имеющий имя «shoe».  
@@ -328,9 +328,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 > Буквы "á" и "Á" считаются разными символами, если они используются в пути универсального кода ресурса (URI) или в литерале сегмента пути <xref:System.UriTemplate> (но буквы "a" и "A" считаются одинаковыми). Буквы "á" и "Á" считаются одинаковыми символами, если они используются в <xref:System.UriTemplate> {имя_переменной} или строке запроса (а буквы "a" и "A" также считаются одинаковыми).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Таблица UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Диспетчер таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Таблица UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Диспетчер таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

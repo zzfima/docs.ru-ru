@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742751"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
 В этом разделе рассматриваются поддержка очередей в Windows Communication Foundation (WCF). WCF обеспечивает поддержку организации очереди, используя очереди сообщений (ранее известный как MSMQ) как транспорт и включает следующие сценарии:  
@@ -22,7 +22,7 @@ ms.locfileid: "43858373"
   
 -   Операции при отсутствии подключения к сети. Операции отправки, получения и обработки могут прерваться во время передачи данных по сетям с высокой задержкой или сетям с ограниченным доступом, например в случае с мобильными устройствами. В очереди выполнение этих операций продолжится даже при отключении конечных точек. При повторном подключении сообщения из очереди пересылаются в принимающее приложение.  
   
- Чтобы использовать возможность очередей в приложении WCF, можно использовать один из стандартных привязок, или можно создать пользовательскую привязку, если один из стандартных привязок не удовлетворяет вашим требованиям. Дополнительные сведения о соответствующих стандартных привязках и способах выбора, см. в разделе [как: обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Чтобы использовать возможность очередей в приложении WCF, можно использовать один из стандартных привязок, или можно создать пользовательскую привязку, если один из стандартных привязок не удовлетворяет вашим требованиям. Дополнительные сведения о соответствующих стандартных привязках и способах выбора, см. в разделе [как: Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ ms.locfileid: "43858373"
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Обзор поддержки очереди WCF.  
   
- [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Содержит сведения об использовании <xref:System.ServiceModel.NetMsmqBinding> класс для обмена данными между клиентом WCF и службы WCF.  
   
- [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложений с очередями сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Содержит сведения об использовании <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для обмена данными между приложениями WCF и MSMQ.  
   
  [Группирование сообщений в очереди в рамках сеанса](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ ms.locfileid: "43858373"
  [Рекомендации по взаимодействию с использованием очередей](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Описывает рекомендации по использованию WCF взаимодействие с использованием очереди.  
   
-## <a name="see-also"></a>См. также  
- [Очереди сообщений](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>См. также
+- [Очереди сообщений](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

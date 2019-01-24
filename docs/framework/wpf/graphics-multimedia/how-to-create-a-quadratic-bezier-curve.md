@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание кривой Безье второго порядка
+title: Как выполнить Создание кривой Безье второго порядка
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8481a7e0e6d682a335b22ea6cdf73a23a9f155af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a5d424f3fda3957bf54d7073d41d9fe2dabb1736
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650097"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a>Практическое руководство. Создание кривой Безье второго порядка
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Как выполнить Создание кривой Безье второго порядка
 В этом примере демонстрируется создание кривой Безье второго порядка.  Создание кривой Безье второго порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.QuadraticBezierSegment> классы.  
   
 ## <a name="example"></a>Пример  
@@ -35,6 +35,6 @@ ms.locfileid: "44085836"
   
  Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>См. также  
- [Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>См. также
+- [Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)
+- [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

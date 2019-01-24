@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709147"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock
-Возвращает управляемый поток, который владеет блокировкой монитора на этот объект.  
+Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,10 +38,10 @@ HRESULT GetThreadOwningMonitorLock (
   
 #### <a name="parameters"></a>Параметры  
  `ppThread`  
- [out] Управляемый поток владеет блокировкой монитора на этот объект.  
+ [out] Управляемый поток, которому принадлежит блокировка монитора для этого объекта.  
   
  `pAcquisitionCount`  
- [out] Количество раз, этот поток будет необходимо снять блокировку перед возвратом монитором.  
+ [out] Количество раз, этот поток необходимо снять блокировку, прежде чем он возвращается монитором.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -58,23 +58,23 @@ HRESULT GetThreadOwningMonitorLock (
   
 -   Метод возвращает значение S_OK.  
   
--   Объект потока действителен до завершения потока.  
+-   Поток выходит из объекта потока остается действительным.  
   
- Если нет управляемого потока, владеющего блокировкой монитора на этот объект `ppThread` и `pAcquisitionCount` не изменяются, и метод возвращает значение S_FALSE.  
+ Если не управляемый поток владеет блокировкой монитора на этот объект `ppThread` и `pAcquisitionCount` ничем не отличаются, и метод возвращает значение S_FALSE.  
   
- Если `ppThread` или `pAcquisitionCount` не является допустимым указателем, результат будет неопределенным.  
+ Если `ppThread` или `pAcquisitionCount` не является допустимым указателем, результат не определен.  
   
- При возникновении ошибки таким образом, что он не может определить, какие при его наличии, поток владеет блокировкой монитора на этот объект, метод возвращает значение HRESULT, указывающее на сбой.  
+ При возникновении ошибки таким образом, что не удается определить, который, если таковые имеются, поток владеет блокировкой монитора на этот объект, метод возвращает значение HRESULT, указывающее на сбой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716782"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Перечисление CorValidatorModuleType
 Указывает тип модуля.  
@@ -47,20 +47,20 @@ typedef enum
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|Модуль является недопустимым типом.|  
 |`ValidatorModuleTypeMin`|Минимальное значение `CorValidatorModuleType` перечисления.|  
-|`ValidatorModuleTypePE`|Модуль является переносимого исполняемого (PE) файла.|  
+|`ValidatorModuleTypePE`|Модуль — это файл переносимого исполняемого (PE).|  
 |`ValidatorModuleTypeObj`|Модуль является OBJ-файле.|  
-|`ValidatorModuleTypeEnc`|Модуль является сеансом отладчика edit-and-continue.|  
-|`ValidatorModuleTypeIncr`|Модуль является одним из пошагово строить.|  
+|`ValidatorModuleTypeEnc`|Модуль является сеанс отладчика, изменить и продолжить.|  
+|`ValidatorModuleTypeIncr`|Модуль — это приложения, пошаговое построение.|  
 |`ValidatorModuleTypeMax`|Максимальное значение `CorValidatorModuleType` перечисления.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

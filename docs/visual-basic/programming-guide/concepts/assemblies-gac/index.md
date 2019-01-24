@@ -2,17 +2,11 @@
 title: Сборки и глобальный кэш сборок (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644255"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Сборки и глобальный кэш сборок (Visual Basic)
 Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
   
- Сборки могут содержать один или несколько модулей. Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку. Дополнительные сведения о модулях см. в статье [How to: Build a Multifile Assembly](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md) (Практическое руководство. Создание многофайловой сборки).  
+ Сборки могут содержать один или несколько модулей. Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку. Дополнительные сведения о модулях см. в разделе [как: Создание многофайловой сборки](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Сборки имеют следующие свойства.  
   
@@ -48,12 +42,12 @@ ms.locfileid: "33644255"
 > [!NOTE]
 >  Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** из меню **Сборка**.  
   
-## <a name="see-also"></a>См. также  
- [Сборки в среде CLR](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Дружественные сборки (Visual Basic)](friend-assemblies.md)  
- [Как: совместное использование сборки с другими приложениями (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [Как: загрузка и выгрузка сборок (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [Как: определить, является ли файл сборкой (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Как: Создание и использование сборок с помощью командной строки (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md) (Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (Visual Basic))
+## <a name="see-also"></a>См. также
+- [Сборки в среде CLR](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Дружественные сборки (Visual Basic)](friend-assemblies.md)
+- [Практическое руководство. Совместное использование сборки с другими приложениями (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [Практическое руководство. Загрузка и выгрузка сборок (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [Практическое руководство. Определить, является ли файл сборкой (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Пошаговое руководство: Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

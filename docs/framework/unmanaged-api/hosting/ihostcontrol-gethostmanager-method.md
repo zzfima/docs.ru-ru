@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742033"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>Метод IHostControl::GetHostManager
-Возвращает указатель на интерфейс для реализации интерфейса с заданным `IID`.  
+Получает указатель интерфейса для реализации интерфейса с указанным `IID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ HRESULT GetHostManager (
   
 #### <a name="parameters"></a>Параметры  
  `riid`  
- [in] `IID` Интерфейса, который запрашивает общеязыковой среды выполнения (CLR).  
+ [in] `IID` Интерфейса, запрашивая общеязыковой среды выполнения (CLR).  
   
  `ppObject`  
- [out] Указатель интерфейса, реализуемого узла или значение null, если узел не поддерживает этот интерфейс.  
+ [out] Указатель на интерфейс, реализуемый основным приложением, или значение null, если узел не поддерживает этот интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|`GetHostManager` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не загружена в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
+|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|Запрошенный `IID` является недопустимым.|  
-|E_NOINTERFACE|Требуемый интерфейс не поддерживается.|  
+|E_NOINTERFACE|Запрошенный интерфейс не поддерживается.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR запрашивает узлу возможность определить, поддерживает ли один или несколько из следующих интерфейсов:  
+ Среда CLR запрос на узел, чтобы определить, поддерживает ли один или несколько из следующих интерфейсов:  
   
 -   [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
@@ -77,18 +77,18 @@ HRESULT GetHostManager (
   
 -   [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- Если узел поддерживает указанный интерфейс, он задает `ppObject` на свою реализацию этого интерфейса. В противном случае он устанавливает `ppObject` значение null.  
+ Если узел поддерживает указанный интерфейс, он задает `ppObject` к его реализации этого интерфейса. В противном случае он устанавливает `ppObject` значение null.  
   
- Среда CLR не вызывает `Release` на узле диспетчеров, даже в том случае, если выполняется завершение работы.  
+ Среда CLR не вызывает `Release` на диспетчеры узлов, даже в том случае, если вы завершаете работу.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

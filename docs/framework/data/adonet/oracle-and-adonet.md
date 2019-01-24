@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 9a60499674f0192bb7589f227bffb6f907f682d9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661846"
 ---
 # <a name="oracle-and-adonet"></a>Oracle и ADO.NET
 > [!NOTE]
@@ -77,6 +77,6 @@ csc /r:System.Data.OracleClient.dll
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Описывает универсальные классы, позволяющие создавать независимый от поставщика код в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,15 +2,15 @@
 title: Активация UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715521"
 ---
 # <a name="udp-activation"></a>Активация UDP
-Этот образец основан на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Он расширяет [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца для поддержки активации процесса с помощью службы активации процессов Windows (WAS).  
+Этот образец основан на [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Он расширяет [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца для поддержки активации процесса с помощью службы активации процессов Windows (WAS).  
   
  Образец состоит из трех основных частей:  
   
@@ -103,13 +103,13 @@ ms.locfileid: "46562356"
 ## <a name="sample-usage"></a>Использование примера  
  После компиляции создаются четыре различных двоичных файла.  
   
--   Client.exe: код клиента. Файл App.config компилируется в файл конфигурации клиента Client.exe.config.  
+-   Client.exe: Код клиента. Файл App.config компилируется в файл конфигурации клиента Client.exe.config.  
   
 -   UDPActivation.dll: библиотека, содержащая все основные реализации UDP.  
   
--   Service.dll: код службы. Он копируется в каталог \bin виртуального приложения ServiceModelSamples. Файл службы имеет имя Service.svc, а файл конфигурации - Web.config. После компиляции они копируются в следующее местоположение: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+-   Service.dll: Код службы. Он копируется в каталог \bin виртуального приложения ServiceModelSamples. Файл службы имеет имя Service.svc, а файл конфигурации - Web.config. После компиляции они копируются в следующее местоположение: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator: программа активатора UDP.  
+-   WasNetActivator: Программа активатора UDP.  
   
 -   Убедитесь, что все обязательные элементы правильно установлены. Следующие шаги показывают, как запустить образец:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "46562356"
   
     -   Служба активации Windows (WAS).  
   
-    -   Службы IIS: W3SVC.  
+    -   Internet Information Services (IIS): W3SVC.  
   
 2.  Затем запустите активатор WasNetActivator.exe. В разделе **активации** вкладку, единственный протокол, **UDP**, выбранного в раскрывающемся списке. Нажмите кнопку **запустить** кнопки для запуска активатора.  
   

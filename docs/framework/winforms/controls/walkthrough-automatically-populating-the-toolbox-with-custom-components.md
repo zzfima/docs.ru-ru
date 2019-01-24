@@ -1,19 +1,19 @@
 ---
-title: Пример. Автоматическое заполнение панели элементов пользовательскими компонентами
+title: Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730273"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Пример. Автоматическое заполнение панели элементов пользовательскими компонентами
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами
 Если компоненты определяются в проекте в настоящее время в открытом решении, они автоматически будут отображаться в **элементов**, не выполняя никаких действий от вас требуется. Можно также вручную заполнять **элементов** компонентами с помощью [выберите элементов элементов-диалоговое окно (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), но **элементов** принимает учетную запись элементов в своем решении выходные данные сборки со следующими характеристиками:  
   
 -   Реализует <xref:System.ComponentModel.IComponent>;  
@@ -80,7 +80,7 @@ ms.locfileid: "44041565"
   
 1.  Выгрузите проект из решения.  
   
-     Дополнительные сведения о выгрузке проектов см. в разделе [NIB: Практическое: выгрузка и перезагрузка проектов](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Если вам будет предложено сохранить, выберите **Да**.  
+     Дополнительные сведения о выгрузке проектов см. в разделе [NIB: Практическое: Выгрузите и перезагрузите проекты](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Если вам будет предложено сохранить, выберите **Да**.  
   
 2.  Добавьте новый **приложения Windows** проекта к решению. Откройте форму в **конструктор**.  
   
@@ -93,8 +93,8 @@ ms.locfileid: "44041565"
 ## <a name="next-steps"></a>Следующие шаги  
  В этом пошаговом руководстве показано, что **элементов** компонентов проекта, но **элементов** учетная запись также принимает элементов управления. Поэкспериментируйте с собственные пользовательские элементы управления, добавляя и удаляя управления проекты из решения.  
   
-## <a name="see-also"></a>См. также  
- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Практическое руководство. Управление вкладками панели элементов](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [Практическое руководство. Управление вкладками панели элементов](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
+- [Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

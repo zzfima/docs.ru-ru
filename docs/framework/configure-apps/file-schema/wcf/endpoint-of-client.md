@@ -2,19 +2,19 @@
 title: '&lt;endpoint&gt; для &lt;client&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598309"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; для &lt;client&gt;
 Задает свойства контракта, привязки и адреса конечной точки канала, которая используется клиентами для подключения к конечным точкам службы на сервере.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<Клиент >  
-\<Конечная точка >  
+\<endpoint>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54147009"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Клиент >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Раздел конфигурации, определяющий список конечных точек, к которым может подключаться клиент.|  
   
@@ -71,11 +71,11 @@ ms.locfileid: "54147009"
 </endpoint>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [Клиенты](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Клиенты](../../../../../docs/framework/wcf/feature-details/clients.md)

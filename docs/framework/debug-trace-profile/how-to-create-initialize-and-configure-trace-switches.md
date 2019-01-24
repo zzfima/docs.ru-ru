@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание, инициализация и настройка переключателей трассировки
+title: Как выполнить Создание, инициализация и настройка переключателей трассировки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739619"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Практическое руководство. Создание, инициализация и настройка переключателей трассировки
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Как выполнить Создание, инициализация и настройка переключателей трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки.  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ ms.locfileid: "33392935"
   
 2.  Если в проекте отсутствует файл конфигурации (app.config или Web.config), выберите **Добавить новый элемент** в меню **Проект**.  
   
-    -   **Visual Basic:** в диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
+    -   **Visual Basic:** В **Добавление нового элемента** диалоговом окне выберите **файла конфигурации приложения**.  
   
          Файл конфигурации приложения создается и открывается. Это документ XML с корневым элементом `<configuration>.`  
   
-    -   **Visual C#:** в диалоговом окне **Добавление нового элемента** выберите элемент **XML-файл**. Укажите имя этого файла: **app.config**. В редакторе XML после объявления XML добавьте следующий XML-код:  
+    -   **Visual C#:** В **Добавление нового элемента** диалоговом окне выберите **XML-файл**. Укажите имя этого файла: **app.config**. В редакторе XML после объявления XML добавьте следующий XML-код:  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ ms.locfileid: "33392935"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Схема параметров трассировки и отладки](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>См. также
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Схема параметров трассировки и отладки](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

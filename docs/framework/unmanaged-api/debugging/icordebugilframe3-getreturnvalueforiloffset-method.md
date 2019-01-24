@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315bd78f660e093ecbf65224bd09a9b4f44300b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5d0b92dccceab48fcf0780a29d7bac38d591455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714975"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>Метод ICorDebugILFrame3::GetReturnValueForILOffset
-Возвращает объект «ICorDebugValue», инкапсулирующий возвращаемое значение функции.  
+Возвращает объект «ICorDebugValue», который инкапсулирует возвращаемое значение функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,39 +39,39 @@ HRESULT GetReturnValueForILOffset(
  Смещение на промежуточном Языке. См. раздел примeчаний.  
   
  `ppReturnValue`  
- Указатель на адрес объекта интерфейса «ICorDebugValue» с информацией о возвращаемое значение вызова функции.  
+ Указатель на адрес объекта интерфейса «ICorDebugValue», предоставляющий сведения о возвращаемом значении вызова функции.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод используется вместе с [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) метод для получения возвращаемого значения метода. Это особенно полезно в случае методы, возвращаемые значения учитываются, как показано в следующих двух примерах кода. В первом примере вызывается <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> метода, но игнорирует возвращаемое значение метода.  
+ Этот метод используется вместе с [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) способ получения возвращаемого значения метода. Это особенно полезно при использовании методов, учитываются, возвращаемые значения, как показано в следующих двух примерах кода. В первом примере вызывается <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> метод, но игнорирует возвращаемое значение метода.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
   
- Во втором примере показан гораздо более распространенной проблемой для отладки. Поскольку метод используется в качестве аргумента в вызове метода, возвращаемого значения доступно только в том случае, если отладчик пошаговое выполнение вызываемого метода. Во многих случаях особенно в том случае, если вызываемый метод определен во внешней библиотеке, это невозможно.  
+ Во втором примере показано гораздо более общие проблемы при отладке. Поскольку метод используется в качестве аргумента в вызове метода, его возвращаемое значение доступно только в том случае, когда отладчик проходит через вызываемый метод. Во многих случаях особенно в том случае, если вызываемый метод определен во внешней библиотеке, которая не поддерживается.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- Если передать [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) метод в IL смещение к место вызова функции возвращает один или несколько собственные смещения. Затем отладчик можно установить точки останова на этих смещениях машинного кода в функцию. Если отладчик обнаруживает одной из точек останова, затем можно передать одинаковое смещение IL, который передан в этот метод для получения возвращаемого значения. Отладчик должен выполнить очистку все точки останова, которые оно задано.  
+ Если передать [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) метод смещения на сайт вызова функции промежуточном языке, он возвращает один или несколько смещений в машинном коде. Отладчик может установить точки останова на этих естественных смещениях функции. Когда отладчик достигает одной из точек останова, затем можно передать то же смещение IL, которое было передано в этот метод для получения возвращаемого значения. Затем он должен очистить все точки останова, он задан.  
   
 > [!WARNING]
->  [Метод ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) и `ICorDebugILFrame3::GetReturnValueForILOffset` методы позволяют получить сведения о возвращаемых значениях только для ссылочных типов. Получение сведений о возвращаемое значение от типов значений (то есть, все типы, производные от <xref:System.ValueType>) не поддерживается.  
+>  [Метод ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) и `ICorDebugILFrame3::GetReturnValueForILOffset` методы позволяют получить сведения о возвращаемом значении только для ссылочных типов. Получение сведений о возвращаемое значение из типов значений (то есть всех типов, производных от <xref:System.ValueType>) не поддерживается.  
   
- Смещение на промежуточном Языке, определяемое `ILOffset` параметр должен быть в месте вызова функции и отлаживаемого кода должна быть остановлена в точку останова в исходное смещение, возвращенных [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) метод для того же смещение на промежуточном Языке. Если отлаживаемый процесс не остановлен в правильном расположении для указанного смещение на промежуточном Языке, произойдет сбой API.  
+ Смещение на промежуточном Языке, определяемое `ILOffset` должно находиться на сайт вызова функции, а отлаживаемый объект должен быть остановлен на точку останова в исходное смещение, возвращенный [ICorDebugCode3::GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) метод для то же смещение IL. Если отлаживаемый объект не останавливается на правильное расположение для заданного смещения IL, API завершится ошибкой.  
   
- Если вызов функции не возвращает значение, произойдет сбой API.  
+ Если вызов функции не возвращает значение, API завершится ошибкой.  
   
- `ICorDebugILFrame3::GetReturnValueForILOffset` Метод доступен только для x86 86 и AMD64 систем.  
+ `ICorDebugILFrame3::GetReturnValueForILOffset` Метод доступен только на x86 и системах AMD64.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)  
- [Интерфейс ICorDebugILFrame3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+## <a name="see-also"></a>См. также
+- [Метод GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
+- [Интерфейс ICorDebugILFrame3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)

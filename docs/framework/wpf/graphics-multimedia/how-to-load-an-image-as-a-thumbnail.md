@@ -1,5 +1,5 @@
 ---
-title: Как загрузить изображение в виде эскиза
+title: Как выполнить Загрузка изображения в виде эскиза
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,14 @@ helpviewer_keywords:
 - images [WPF], loading as thumbnails
 - thumbnails [WPF], loading images as
 ms.assetid: 02e055a0-54df-499a-b8b6-ab6ff7535cff
-ms.openlocfilehash: 349a602a10b89931701e24334bf5ac5536f26400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d92a489f19f8c7160bed5ec83535bdc33cfe561b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735993"
 ---
-# <a name="how-to-load-an-image-as-a-thumbnail"></a>Как загрузить изображение в виде эскиза
+# <a name="how-to-load-an-image-as-a-thumbnail"></a>Как выполнить Загрузка изображения в виде эскиза
 Следующие примеры показывают, как загрузить <xref:System.Windows.Controls.Image> виде эскиза для экономии памяти приложения.  
   
 ## <a name="example"></a>Пример  
@@ -29,5 +30,5 @@ ms.lasthandoff: 05/04/2018
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

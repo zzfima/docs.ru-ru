@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Анимация объекта вдоль пути (матричная анимация)
+title: Как выполнить Анимация объекта вдоль пути (матричная анимация)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738304"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Практическое руководство. Анимация объекта вдоль пути (матричная анимация)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Как выполнить Анимация объекта вдоль пути (матричная анимация)
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> класс для анимации объекта вдоль пути, который определяется <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Пример  
@@ -34,7 +34,7 @@ ms.locfileid: "43469990"
   
  Полный пример см. в разделе [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028). Дополнительные сведения о геометрических путях см. в разделе [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Практические руководства, посвященные анимации по контуру](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Практические руководства, посвященные анимации по контуру](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
