@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка порта с использованием SSL-сертификата
+title: Как выполнить Настройка порта с помощью SSL-сертификата
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521725"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Как выполнить Настройка порта с помощью SSL-сертификата
 При создании резидентной службы Windows Communication Foundation (WCF) с <xref:System.ServiceModel.WSHttpBinding> класса, использующим безопасность транспорта, необходимо также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
@@ -55,9 +55,9 @@ ms.locfileid: "49308443"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Возвращение отпечатка сертификата  
   
-1.  С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
+1.  С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. Дополнительные сведения см. в разделе [Как Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [Как Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Скопируйте отпечаток сертификата в текстовый редактор, например "Блокнот".  
   
@@ -129,5 +129,5 @@ ms.locfileid: "49308443"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>См. также  
-* [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>См. также
+- [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue интерфейс1
+title: Интерфейс1 ICorDebugBoxValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b546d65e2c3cf498c80e19cc7236a6e424515577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 549f3f782d544c967838206804640b577da2f877
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699016"
 ---
-# <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue интерфейс1
-Подкласс ICorDebugHeapValue «», представляющий упакованное значение объектов класса.  
+# <a name="icordebugboxvalue-interface1"></a>Интерфейс1 ICorDebugBoxValue
+Подкласс «ICorDebugHeapValue», представляющий упакованное значение объектов класса.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Получает указатель интерфейса на упакованный экземпляр «ICorDebugObjectValue».|  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33405930"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Общие сведения о ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714390"
 ---
 # <a name="adonet-overview"></a>Общие сведения о ADO.NET
 ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC. Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
@@ -20,7 +20,7 @@ ADO.NET предоставляет согласованный доступ к т
   
  ADO.NET предоставляет самый прямой способ доступа к данным в .NET Framework. Для более высокого уровня абстракции, который позволяет приложениям работать с концептуальной моделью, а не базовой моделью хранения, см. в разделе [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Заявление о конфиденциальности**: сборок сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не различия между личных данных и не личными данными пользователя.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные. Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
+ **Заявление о конфиденциальности**: Сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не делают различия между пользовательскими личными данными и не личными данными.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные. Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Архитектура ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -46,7 +46,7 @@ ADO.NET предоставляет согласованный доступ к т
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Представляет новые для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] функции.  
+ Представляет новые для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] возможности.  
   
  [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Описывает приемы безопасного программирования при использовании ADO.NET.  
@@ -57,7 +57,7 @@ ADO.NET предоставляет согласованный доступ к т
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Описывает, как выполнять соединение с источником данных, получать и изменять данные. К этому относятся `DataReaders` и `DataAdapters`.  
   
-## <a name="see-also"></a>См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

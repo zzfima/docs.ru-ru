@@ -1,15 +1,15 @@
 ---
-title: 'Как: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)'
+title: Как выполнить Поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 417ff63408ea640bbbd5cc4863193e769a2ec444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714793"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Как: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Как выполнить Поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)
 Выражения XPath позволяют находить узлы в конкретном пространстве имен. Для указания пространств имен в выражениях XPath используются префиксы пространств имен. Для синтаксического анализа выражения XPath, содержащего префиксы пространств имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>. В этом примере используется <xref:System.Xml.XmlNamespaceManager>.  
   
  Выражение XPath:  
@@ -80,5 +80,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>См. также
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

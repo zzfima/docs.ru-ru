@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668981"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Возврат или пропуск элементов последовательности
 Для возвращения заданного числа элементов последовательности и пропуска оставшихся используется оператор <xref:System.Linq.Queryable.Take%2A>.  
@@ -18,9 +18,9 @@ ms.locfileid: "33359882"
  Для пропуска заданного числа элементов последовательности и возвращения оставшихся используется оператор <xref:System.Linq.Queryable.Skip%2A>.  
   
 > [!NOTE]
->  На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи «Пропустить и принимать исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи «"Skip и делаются исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с помощью SQL `NOT EXISTS` предложения. Это преобразование имеет следующие ограничения.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с помощью SQL `NOT EXISTS` предложение. Это преобразование имеет следующие ограничения.  
   
 -   Необходимо задать значение аргумента. Не поддерживаются множественные наборы, даже упорядоченные.  
   
@@ -78,6 +78,6 @@ ORDER BY [t0].[CustomerID]
   
  Методы <xref:System.Linq.Queryable.Take%2A> и <xref:System.Linq.Queryable.Skip%2A> правильно определяются для неотрицательных постоянных целочисленных аргументов, соответствующих спецификации SQL.  
   
-## <a name="see-also"></a>См. также  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>См. также
+- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

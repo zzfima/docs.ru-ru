@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649314"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Типы перечислений в контрактах данных
 Перечисления могут быть выражены в модели контракта данных. В этом разделе представлено несколько примеров, иллюстрирующих использование модели программирования.  
@@ -30,7 +30,7 @@ ms.locfileid: "33494521"
  Свойства <xref:System.Runtime.Serialization.DataContractAttribute> (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> и <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) можно использовать в контрактах данных перечисления как обычно.  
   
 ### <a name="enumeration-member-values"></a>Значения членов перечисления  
- Как правило, контракт данных содержит имена членов перечисления, а не числовые значения. Однако при использовании модели контракта данных, если получающей стороной является клиент WCF, экспортированный схема сохраняет числовые значения. Обратите внимание, что это не так, при использовании [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Как правило, контракт данных содержит имена членов перечисления, а не числовые значения. Тем не менее при использовании модели контракта данных, если получающей стороной является клиент WCF, экспортированной схеме сохраняет числовые значения. Обратите внимание, что это не так при использовании [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  В предыдущем примере, если `condition` задано значение `Used` и данные сериализуются в формат XML, получается XML-код `<condition>Used</condition>`, а не `<condition>1</condition>`. Поэтому следующий контракт данных эквивалентен контракту данных `CarConditionEnum`.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33494521"
   
 1.  Попытайтесь найти член перечисления (с примененным атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute>), который сопоставляется числовому значению. Если удается найти этот член, отправьте список, содержащий только этот член.  
   
-2.  Попытайтесь представить числовое значение в виде суммы так, чтобы имелись члены перечисления (каждый с примененным атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute>), сопоставляемые каждой части этой суммы. Отправьте список всех этих членов. Обратите внимание, что *жадный алгоритм* используется для нахождения такой суммы и нет никакой гарантии, что такие сумма будет найдена, даже если он имеется. Чтобы избежать этой проблемы, нужно убедиться, что числовые значения членов перечисления представляют собой степени двух.  
+2.  Попытайтесь представить числовое значение в виде суммы так, чтобы имелись члены перечисления (каждый с примененным атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute>), сопоставляемые каждой части этой суммы. Отправьте список всех этих членов. Обратите внимание, что *жадный алгоритм* используется для нахождения такой суммы, и таким образом, нет никакой гарантии, что такая Сумма находится в том случае, даже если он имеется. Чтобы избежать этой проблемы, нужно убедиться, что числовые значения членов перечисления представляют собой степени двух.  
   
 3.  Если не удается выполнить предыдущие два шага и числовое значение ненулевое, создайте исключение <xref:System.Runtime.Serialization.SerializationException>. Если числовое значение равно нулю, отправьте пустой список.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "33494521"
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

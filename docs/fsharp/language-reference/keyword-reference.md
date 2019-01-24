@@ -2,12 +2,12 @@
 title: Справочные сведения о ключевых словах
 description: Ссылки на сведения обо всех F# ключевые слова языка.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579848"
 ---
 # <a name="keyword-reference"></a>Справочные сведения о ключевых словах
 
@@ -20,7 +20,7 @@ ms.locfileid: "53611754"
 |Ключевое слово|Ссылка|Описание:|
 |-------|----|-----------|
 |`abstract`|[Члены](members/index.md)<br /><br />[Абстрактные классы](abstract-classes.md)|Указывает метод, который либо не имеет реализации в типе, в котором он объявлен, или является виртуальным и имеет реализацию по умолчанию.|
-|`and`|[`let` Привязки](functions/let-bindings.md)<br /><br />[Члены](members/index.md)<br /><br />[Ограничения](generics/constraints.md)|Используется в взаимно рекурсивных привязок, в объявления свойств, а также с помощью нескольких ограничений универсальных параметров.|
+|`and`|[`let` Привязки](functions/let-bindings.md)<br /><br />[Записи](records.md)<br /><br />[Члены](members/index.md)<br /><br />[Ограничения](generics/constraints.md)|Используется в взаимно рекурсивные привязки и записи, в объявления свойств, а также с помощью нескольких ограничений универсальных параметров.|
 |`as`|[Классы](classes.md)<br /><br />[Соответствие шаблону](Pattern-Matching.md)|Используются для предоставления имени объекта текущего объекта класса. Также используется для предоставления имени для всего шаблона в рамках соответствия шаблону.|
 |`assert`|[Утверждения](assertions.md)|Используется для проверки кода во время отладки.|
 |`base`|[Классы](classes.md)<br /><br />[Наследование](inheritance.md)|Используется в качестве имени объекта базового класса.|

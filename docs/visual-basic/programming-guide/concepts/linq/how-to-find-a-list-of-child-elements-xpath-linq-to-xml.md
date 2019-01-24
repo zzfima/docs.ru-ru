@@ -1,15 +1,15 @@
 ---
-title: 'Практическое: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)'
+title: Как выполнить Поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 9b852e2a1129dfc9c54357b6c20769e16a992d80
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 4ff9e5f1dc1d1b6c9ac1674434bcb2bc4c57ffde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625116"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Практическое: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Как выполнить Поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)
 В этом разделе проводится сравнение оси дочерних элементов XPath с осью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>.  
   
  Выражение XPath: `./*`.  
@@ -17,7 +17,7 @@ ms.locfileid: "39296173"
 ## <a name="example"></a>Пример  
  В этом примере осуществляется поиск всех дочерних элементов элемента `Address`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -52,5 +52,5 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>См. также
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594061"
 ---
 # <a name="ivalidatorvalidate-method"></a>Метод IValidator::Validate
-Проверяет заданный переносимый исполняемый (PE) или файл Microsoft промежуточного языка MSIL.  
+Проверяет указанный переносимого исполняемого (PE) или файл Microsoft промежуточного языка MSIL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,34 +47,34 @@ HRESULT Validate (
  [in] Указатель на `IVEHandler` экземпляр, который обрабатывает ошибки проверки.  
   
  `pAppDomain`  
- [in] Указатель на домен приложения, в которой загружается указанный файл.  
+ [in] Указатель на область приложений, в котором загружается файл.  
   
  `ulFlags`  
- [in] Побитовое сочетание [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) значений, указывающее, проверки, которые необходимо выполнить.  
+ [in] Побитовое сочетание [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) значений, указывающее, проверки, которые должны выполняться.  
   
  `ulMaxError`  
- [in] Максимальное число ошибок, чтобы перед выходом из проверки.  
+ [in] Максимальное количество ошибок, чтобы разрешить перед выходом из проверки.  
   
  `token`  
  [in] Не используется.  
   
  `fileName`  
- [in] Строка, указывающая имя файла, который необходимо проверить.  
+ [in] Строка, указывающая имя файла для проверки.  
   
  `pe`  
- [in] Указатель на буфер памяти, в которой хранится файл.  
+ [in] Указатель на буфер памяти, в которой будет храниться файл.  
   
  `ulSize`  
- [in] Размер в байтах файла, который необходимо проверить.  
+ [in] Размер в байтах файла для проверки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** IValidator.idl, IValidator.h  
+ **Заголовок.** IValidator.idl в файле IValidator.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

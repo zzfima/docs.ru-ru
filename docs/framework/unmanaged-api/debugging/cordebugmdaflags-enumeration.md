@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620404"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>Перечисление CorDebugMDAFlags
 Указывает состояние потока, по которому был вызван помощник по отладке управляемого кода.  
@@ -36,21 +36,21 @@ typedef enum CorDebugMDAFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`MDA_FLAG_SLIP`|Поток, на котором был запущен MDA перенесена, так как был запущен MDA.|  
   
 ## <a name="remarks"></a>Примечания  
- Если стек вызова больше не описывает, где изначально был вызван MDA, поток рассматривается как имеющий *спящий режим*. Это необычное обстоятельство при выполнении недопустимой операции при выходе из потока.  
+ Если стек вызовов больше не описывает, где изначально был вызван MDA, поток считается *спящий режим*. Это необычное обстоятельство при выполнении недопустимой операции при выходе из потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

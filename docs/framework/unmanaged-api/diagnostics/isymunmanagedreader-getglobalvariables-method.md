@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6574c4d30b963ce571343d1a584bfccb48ffd195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61dd9f8a668904bb9b9e0b6b4d1d84d1ed07045d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737888"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>Метод ISymUnmanagedReader::GetGlobalVariables
 Возвращает все глобальные переменные.  
@@ -42,7 +42,7 @@ HRESULT GetGlobalVariables(
  [in] Размер буфера, на который указывает `pcVars`.  
   
  `pcVars`  
- [out] Указатель на `ULONG32` , получающий размер буфера, должны содержать переменные.  
+ [out] Указатель на `ULONG32` , принимает размер буфера, требуемого для содержат переменные.  
   
  `pVars`  
  [out] Буфер, содержащий переменные.  
@@ -51,7 +51,7 @@ HRESULT GetGlobalVariables(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

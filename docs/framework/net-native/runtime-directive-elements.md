@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638370"
 ---
 # <a name="runtime-directive-elements"></a>Элементы директив среды выполнения
 Формат файла директив (rd.xml) среды выполнения поддерживает следующие элементы директивы среды выполнения. Иерархическое представление см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -68,5 +68,5 @@ ms.locfileid: "54084814"
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Применяет политику среды выполнения к типу, представленному аргументом <xref:System.Type>, переданным методу.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>См. также
+- [Справочник по конфигурационному файлу rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

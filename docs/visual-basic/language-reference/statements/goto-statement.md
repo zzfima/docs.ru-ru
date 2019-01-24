@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582530"
 ---
 # <a name="goto-statement"></a>Оператор GoTo
 Осуществляет безусловный переход на указанную строку в процедуре.  
@@ -31,10 +31,10 @@ GoTo line
   
 ## <a name="part"></a>Отделение  
  `line`  
- Обязательно. Метка строки.  
+ Обязательный. Метка строки.  
   
 ## <a name="remarks"></a>Примечания  
- `GoTo` Оператор может выполнять переход только к строкам в процедуре, в котором он находится. Строка должна содержать строку, метка `GoTo` могут ссылаться на. Дополнительные сведения см. в разделе [как: метка инструкций](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ `GoTo` Оператор может выполнять переход только к строкам в процедуре, в котором он находится. Строка должна содержать строку, метка `GoTo` могут ссылаться на. Дополнительные сведения см. в разделе [Как Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
 >  `GoTo` операторы могут затруднить кода чтение и обслуживание. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
@@ -62,12 +62,12 @@ GoTo line
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>См. также
+- [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

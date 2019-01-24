@@ -2,12 +2,12 @@
 title: Написание безопасного динамического кода SQL в SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745614"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
 Внедрение кода SQL - это процесс, посредством которого пользователь-злоумышленник вводит инструкции языка Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без проверки, и если в приложении не приняты меры против выполнения внедренного кода, то появляется возможность осуществлять злонамеренные действия для повреждения или уничтожения данных.  
@@ -35,7 +35,7 @@ ms.locfileid: "43857918"
   
 -   В многоуровневых средах все данные должны проверяться перед передачей в доверенную зону.  
   
--   Не допускайте использования в полях следующих строк, из которых могут состоять имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
+-   Не допускайте использование в полях следующих строк, из которых могут быть созданы имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
   
 -   Используйте объекты <xref:System.Data.SqlClient.SqlParameter> с хранимыми процедурами и командами для обеспечения контроля типов и проверки длины.  
   
@@ -62,15 +62,15 @@ ms.locfileid: "43857918"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](/sql/relational-databases/security/sql-injection) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

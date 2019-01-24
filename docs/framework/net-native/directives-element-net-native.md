@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 497ec1a432352e3b9f50bd94e03e95e98edcfd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725651"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>Элемент &lt;Directives&gt; (машинный код .NET)
 Корневой элемент в любом файле директив среды выполнения для машинного кода .NET.  
@@ -42,6 +42,6 @@ ms.locfileid: "47176790"
   
  Элемент `<Directives>` может содержать ноль или один элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) и ноль, один или более элементов [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>См. также
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

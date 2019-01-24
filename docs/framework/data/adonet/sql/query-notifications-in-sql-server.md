@@ -2,12 +2,12 @@
 title: Уведомления запросов в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636694"
 ---
 # <a name="query-notifications-in-sql-server"></a>Уведомления запросов в SQL Server
 С помощью уведомлений о запросах на основе инфраструктуры компонента Service Broker приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -61,6 +61,6 @@ ms.locfileid: "45749415"
  <xref:System.Web.Caching.SqlCacheDependency>  
  Описывает класс <xref:System.Web.Caching.SqlCacheDependency> и все его члены.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Хранение нескольких значений в переменной (Visual Basic)
+title: Как выполнить Хранение нескольких значений в переменной (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671503"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Практическое руководство. Хранение нескольких значений в переменной (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Как выполнить Хранение нескольких значений в переменной (Visual Basic)
 Переменная содержит более одного значения, если при ее объявлении необходимо иметь *составной тип данных*.  
   
  [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) содержать структуры, массивы и классы. Переменная составные типы данных могут содержать как простые типы данных и других составных типов. Классы и структуры могут содержать код, а также данные.  
@@ -41,11 +41,11 @@ ms.locfileid: "43517967"
   
 5.  Выполните `As` ключевое слово с именем соответствующего составного типа.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

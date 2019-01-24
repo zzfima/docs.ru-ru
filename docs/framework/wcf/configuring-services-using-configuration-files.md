@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717406"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF) с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данные поведение службы точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
@@ -262,8 +262,8 @@ ms.locfileid: "54029675"
   
  Если коллекция дочерних поведений содержит поведение, которое уже определено в коллекции родительских поведений, то дочернее поведение переопределяет родительское. Таким образом, если коллекция родительских поведений бы `<serviceMetadata httpGetEnabled="False" />` , а коллекция дочерних поведений `<serviceMetadata httpGetEnabled="True" />`, то дочернее поведение переопределит в коллекции поведений родительское поведение и параметр httpGetEnabled примет значение «true».  
   
-## <a name="see-also"></a>См. также  
- [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)  
- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<Привязка >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)
+- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<Привязка >](../../../docs/framework/misc/binding.md)

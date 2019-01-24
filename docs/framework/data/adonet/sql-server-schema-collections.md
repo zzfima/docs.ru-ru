@@ -2,12 +2,12 @@
 title: Коллекции схемы SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635043"
 ---
 # <a name="sql-server-schema-collections"></a>Коллекции схемы SQL Server
 Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы определить список поддерживаемых коллекций схем, вызовите **GetSchema** метода без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
@@ -84,7 +84,7 @@ ms.locfileid: "49123869"
   
 ## <a name="procedure-parameters"></a>ProcedureParameters  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Имя каталога процедуры, для которой это является параметром.|  
 |SPECIFIC_SCHEMA|String|Схема, содержащая процедуру, частью которой является этот параметр.|  
@@ -121,7 +121,7 @@ ms.locfileid: "49123869"
   
 ## <a name="columns"></a>Столбцы  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -156,7 +156,7 @@ ms.locfileid: "49123869"
   
  Для коллекции схем AllColumns установлены те же ограничения и результирующая схема DataTable, что и для коллекции схем Columns. Единственное отличие заключается в том, что коллекция схем AllColumns включает столбцы, представляющие наборы столбцов, которые не входят в коллекцию схем Columns. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -183,7 +183,7 @@ ms.locfileid: "49123869"
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008, для поддержки разреженных столбцов была добавлена коллекция схем ColumnSetColumns. Коллекция схем ColumnSetColumns не поддерживается в предыдущих версиях .NET Framework и SQL Server. Коллекция схем ColumnSetColumns возвращает схему для всех столбцов в наборе столбцов. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
@@ -228,7 +228,7 @@ ms.locfileid: "49123869"
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|String|Каталог представления.|  
 |VIEW_SCHEMA|String|Схема, которая содержит представление.|  
@@ -255,6 +255,6 @@ ms.locfileid: "49123869"
 |Create_Date|DateTime|Дата создания или регистрации сборки.|  
 |Permission_set_desc|String|Удобное в использовании имя набора разрешений и (или) уровня безопасности для сборки.|  
   
-## <a name="see-also"></a>См. также  
- [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

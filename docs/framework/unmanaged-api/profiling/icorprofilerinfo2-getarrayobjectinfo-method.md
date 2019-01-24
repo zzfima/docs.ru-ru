@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6e6f4f6bdfba8deecb3661d88a881759da043ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0444b6a5fd1bb286df573b1bba7d35b0d2d14a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498847"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Метод ICorProfilerInfo2::GetArrayObjectInfo
 Получает подробные сведения об объекте массива.  
@@ -40,7 +40,7 @@ HRESULT GetArrayObjectInfo(
   
 #### <a name="parameters"></a>Параметры  
  `objectId`  
- [in] Идентификатор объекта действительный массив.  
+ [in] Идентификатор объекта допустимым массивом.  
   
  `cDimensions`  
  [in] Ранг (число измерений) массива.  
@@ -49,23 +49,23 @@ HRESULT GetArrayObjectInfo(
  [out] Массив, содержащий целые числа, каждый из которых представляет размер измерения массива.  
   
  `pDimensionLowerBounds`  
- [out] Массив, содержащий целые числа, каждый из которых представляет нижнюю границу размерности массива.  
+ [out] Массив, содержащий целые числа, каждый из которых представляет нижняя граница измерения массива.  
   
  `ppData`  
- [out] Указатель на адрес необработанный буфер для массива, в которой располагается в соответствии с соглашением C++.  
+ [out] Указатель на адрес необработанного буфера для массива, который располагается в соответствии с соглашением C++.  
   
 ## <a name="remarks"></a>Примечания  
- `pDimensionSizes` И `pDimensionLowerBounds` являются параллельными массивами, поэтому элементы, расположенной на один и тот же индекс в каждом массиве, характеристики той же сущности.  
+ `pDimensionSizes` И `pDimensionLowerBounds` являются параллельными массивами, поэтому характеристики одной сущности, элементы, расположенный в один и тот же индекс в каждом массиве.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

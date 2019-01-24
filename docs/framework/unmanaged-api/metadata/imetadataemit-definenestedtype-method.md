@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603915"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Метод IMetaDataEmit::DefineNestedType
-Создает подпись метаданных определения типа, возвращает `mdTypeDef` токен для этого типа и указывает, что определенный тип является членом типа, на который указывает `tdEncloser` параметра.  
+Создает подпись метаданных определения типа, возвращает `mdTypeDef` маркеров для этого типа и указывает, что определенный тип является членом типа, который ссылается `tdEncloser` параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,32 +42,32 @@ HRESULT DefineNestedType (
   
 #### <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] Имя типа в Юникоде.  
+ [in] Имя типа в формате Юникод.  
   
  `dwTypeDefFlags`  
  [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значения.  
   
  `tkExtends`  
- [in] Токен базового класса. Это может быть вызвано `mdTypeDef` или `mdTypeRef` токена.  
+ [in] Токен базового класса. Это может быть либо `mdTypeDef` или `mdTypeRef` токена.  
   
  `rtkImplements`[]  
- [in] Массив маркеров, указанных интерфейсов, реализуемых данного класса или интерфейса.  
+ [in] Массив токенов, которые указывают интерфейсы, реализуемые этот класс или интерфейс.  
   
  `tdEncloser`  
- [in] Токен включающего типа. Последний элемент массива должен быть `mdTokenNil`.  
+ [in] Токен данного включающего типа. Последний элемент массива должен быть `mdTokenNil`.  
   
  `ptd`  
  [out] `mdTypeDef` Маркер, назначенный.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

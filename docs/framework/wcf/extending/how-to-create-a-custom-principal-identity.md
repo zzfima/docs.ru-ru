@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание пользовательского идентификатора участника
+title: Как выполнить Создание пользовательского идентификатора участника
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: e3ecee7be32cef7fc5371e56cfc32e2d0ef7ae6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f957419bcb12b0dbe735240df3cd38fa7d16e76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739684"
 ---
-# <a name="how-to-create-a-custom-principal-identity"></a>Практическое руководство. Создание пользовательского идентификатора участника
+# <a name="how-to-create-a-custom-principal-identity"></a>Как выполнить Создание пользовательского идентификатора участника
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> является декларативным средством управления доступом к методам службы. При использовании данного атрибута перечисление <xref:System.ServiceModel.Description.PrincipalPermissionMode> указывает режим выполнения проверки авторизации. Если данный режим установлен как <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>, пользователь может указать пользовательский класс <xref:System.Security.Principal.IPrincipal>, возвращаемый свойством <xref:System.Threading.Thread.CurrentPrincipal%2A>. В данном разделе описан сценарий, в котором <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> используется совместно с пользовательской политикой авторизации и пользовательским участником.  
   
- Дополнительные сведения об использовании <xref:System.Security.Permissions.PrincipalPermissionAttribute>, в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Дополнительные сведения об использовании <xref:System.Security.Permissions.PrincipalPermissionAttribute>, см. в разделе [как: Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[PrincipalPermissionMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#8)]
@@ -49,9 +49,9 @@ ms.locfileid: "33488043"
   
 -   <xref:System.IdentityModel.Policy>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
- <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.PrincipalPermissionMode>
+- <xref:System.ServiceModel.Description.PrincipalPermissionMode>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

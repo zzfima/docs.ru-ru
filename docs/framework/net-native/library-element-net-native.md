@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743793"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>Элемент &lt;Library&gt; (машинный код .NET)
 Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.  
@@ -40,7 +40,7 @@ ms.locfileid: "34311979"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
@@ -58,7 +58,7 @@ ms.locfileid: "34311979"
   
  Элемент `<Library>` используется как контейнер для определения программных элементов, метаданные которых требуются во время выполнения. Этот элемент не выражают политики. Во время компиляции средства компилятора осуществляют поиск только в библиотеке, назначенной с помощью элемента `<Library>`, на наличие программных элементов, определенных его дочерними элементами. Напротив, средства компилятора проверяют все библиотеки, в том числе основные библиотеки .NET Framework, на наличие программных элементов, которые определяются дочерними элементами элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md).  
   
- Директивы `<Library>` могут использоваться условно. Если имя `<Library>` начинается и заканчивается звездочкой (\*), `<Library>` директива действует только в том случае, если приложение ссылается сборку, указанную между звездочками. Например, следующие директивы среды выполнения применяются только к сборке Utillities.dll, на которую ссылается приложение.  
+ Директивы `<Library>` могут использоваться условно. Если имя `<Library>` начинается и заканчивается звездочкой (\*), `<Library>` директива действует только в том случае, если ссылку на его сборку, указанную между звездочками. Например, следующие директивы среды выполнения применяются только к сборке Utillities.dll, на которую ссылается приложение.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,8 +68,8 @@ ms.locfileid: "34311979"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [\<Приложения > элемент](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>См. также
+- [\<Приложение > элемент](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

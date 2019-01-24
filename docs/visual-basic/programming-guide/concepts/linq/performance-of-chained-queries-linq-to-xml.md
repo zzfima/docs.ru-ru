@@ -2,12 +2,12 @@
 title: Производительность связанных запросов (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: d390fc0e45967cd98697320eb6f61a51cb1c19da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a4893a000bc80fa703e7d47aa5d73f02b95a8ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601874"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Производительность связанных запросов (LINQ to XML) (Visual Basic)
 Одним из наиболее важных преимуществ LINQ (и LINQ to XML) является возможность эффективного выполнения цепочек запросов наряду с одиночными большими и более сложными запросами.  
@@ -44,5 +44,5 @@ Next
   
  Таким образом, работа итерации по запросу `query2` прямо пропорциональна количеству элементов в источнике первого запроса, то есть имеет линейную зависимость.  
   
-## <a name="see-also"></a>См. также  
- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

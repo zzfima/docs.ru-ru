@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 103444e0b4b17b6384473eac714fba025cee9a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63b597c6d15310c78397b9aac7b618c52df743ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711925"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount
-Возвращает количество сведений для поиска символов.  
+Возвращает счетчик для поиска символьной информации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ HRESULT GetSymbolSearchInfoCount(
   
 #### <a name="parameters"></a>Параметры  
  `pcSearchInfo`  
- [out] указатель на `ULONG32` , получающий размер буфера, необходимый для хранения сведений для поиска.  
+ [], out] указатель на `ULONG32` , принимает размер буфера, требуемого для хранения сведений для поиска.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
+title: Пошаговое руководство. Реализация формы, в который выполняется фоновая операция
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543530"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в который выполняется фоновая операция
 Если у вас есть операция будет выполняться долго для завершения, и не требуется пользовательский интерфейс (UI) перестает отвечать на запросы или «зависания», можно использовать <xref:System.ComponentModel.BackgroundWorker> класс для выполнения операции в другом потоке.  
   
  В этом пошаговом руководстве показано, как использовать <xref:System.ComponentModel.BackgroundWorker> класса для выполнения длительных вычислений «в фоновом режиме», а пользовательский интерфейс продолжает отвечать.  По завершении работы будет создано приложение, вычисляющее числа Фибоначчи в асинхронном режиме. Несмотря на то что вычисление крупных чисел Фибоначчи может занимать много времени, основной поток пользовательского интерфейса в результате этой задержки прерываться не будет, а форма в ходе вычисления останется рабочей.  
@@ -37,7 +37,7 @@ ms.locfileid: "44253134"
   
 -   Добавление отчетов о ходе выполнения и поддержка отмены  
   
- Полный код, используемый в этом примере, см. в разделе [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Полный код, используемый в этом примере, см. в разделе [как: Реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -57,7 +57,7 @@ ms.locfileid: "44253134"
   
 5.  Переименуйте первый <xref:System.Windows.Forms.Button> управления `startAsyncButton` и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Start Async`. Переименуйте второй <xref:System.Windows.Forms.Button> управления `cancelAsyncButton`и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Cancel Async`. Задайте его <xref:System.Windows.Forms.Control.Enabled%2A> свойства `false`.  
   
-6.  Создайте обработчик событий для обоих <xref:System.Windows.Forms.Button> элементов управления <xref:System.Windows.Forms.Control.Click> события. Дополнительные сведения см. в разделе [Практическое руководство. Создание обработчика событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Создайте обработчик событий для обоих <xref:System.Windows.Forms.Button> элементов управления <xref:System.Windows.Forms.Control.Click> события. Дополнительные сведения см. в разделе [как: Создание обработчиков событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Перетащите <xref:System.Windows.Forms.Label> управления из **элементов** на форму и переименуйте его `resultLabel`.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "44253134"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Реализация обработчиков асинхронных событий  
   
-1.  В **свойства** окне с <xref:System.ComponentModel.BackgroundWorker> компонент все еще выбран, щелкните **события** кнопки. Дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий. Дополнительные сведения о том, как использовать обработчики событий, см. в разделе [Практическое руководство. Создание обработчиков событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  В **свойства** окне с <xref:System.ComponentModel.BackgroundWorker> компонент все еще выбран, щелкните **события** кнопки. Дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий. Дополнительные сведения об использовании обработчиков событий см. в разделе [как: Создание обработчиков событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Создайте в форме новый метод с именем `ComputeFibonacci`. Этот метод выполняет фактическую работу и делает это в фоновом режиме. Данный код демонстрирует рекурсивную реализацию алгоритма Фибоначчи — она довольно неэффективна и занимает в разы больше времени при работе с большими числами. Он приводится в иллюстративных целях, чтобы показать, что операция может значительно замедлить работу вашего приложения.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "44253134"
   
 -   Используйте несколько <xref:System.ComponentModel.BackgroundWorker> объектов для нескольких одновременных операций.  
   
--   Отладка многопоточных приложений (см. раздел [Практическое руководство. Использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window)).  
+-   Отладка многопоточных приложений, см. в разделе [как: Использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window).  
   
 -   Реализация собственного компонента, поддерживающего модель асинхронного программирования. Дополнительные сведения см. в разделе [Обзор асинхронной модели на основе событий](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
@@ -169,6 +169,6 @@ ms.locfileid: "44253134"
 - [Управляемая поточность](../../../../docs/standard/threading/index.md)
 - [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [Пример. Фоновое выполнение операции](walkthrough-running-an-operation-in-the-background.md)
+- [Практическое руководство. Реализация формы, в который выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Пошаговое руководство: Выполнение операции в фоновом режиме](walkthrough-running-an-operation-in-the-background.md)
 - [Компонент BackgroundWorker](backgroundworker-component.md)

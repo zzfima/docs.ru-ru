@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aca83a66520531074f376a47a7f2994cda237f9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eab43bce4dbd4ea8f88a9137ce5574252dae8a61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743859"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Метод ICorDebugRegisterSet2::GetRegisters
-Получает значение каждого регистра (для платформы, на котором в данный момент выполняется код), указанное данной битовой маской.  
+Получает значение каждого из регистров (для платформы, на котором в настоящее время выполняется код), указанный данной битовой маской.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,35 +40,35 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Параметры  
  `maskCount`  
- [in] Размер в байтах для `mask` массива.  
+ [in] Размер в байтах из `mask` массива.  
   
  `mask`  
- [in] Массив байтов, из которых каждый бит соответствует регистру. Если бит равен 1, будет получен соответствующего регистра.  
+ [in] Массив байтов, каждый бит соответствует регистру. Если бит равен 1, соответствующий регистр будет извлечено.  
   
  `regCount`  
- [in] Количество значений регистра требуется получить.  
+ [in] Количество значений регистров требуется получить.  
   
  `regBuffer`  
  [out] Массив `CORDB_REGISTER` объектов, каждый из которых получает значение регистра.  
   
 ## <a name="remarks"></a>Примечания  
- `GetRegisters` Метод возвращает массив значений из регистров, указанных маской. Массив не содержит значения, регистров, маска которых не задано. Таким образом, размер `regBuffer` массива должен быть равен количеству 1 в маске. Если значение `regCount` слишком мал для число регистрами, указанными в маске значения регистры с более будут отброшены из набора. Если `regCount` слишком велико, неиспользуемые `regBuffer` элементы будут изменены.  
+ `GetRegisters` Метод возвращает массив значений из регистров, которые определяются маски. Массив не содержит значения, регистров, маска не задано. Таким образом, размер `regBuffer` массива должно быть равно количеству 1 в маске. Если значение `regCount` слишком мал для количество регистрами, указанными в маске, значения регистры с более будет усечен из набора. Если `regCount` слишком велик, неиспользуемые `regBuffer` элементы будут изменены.  
   
- Если недоступный регистр указывается маской, для данного регистра возвращается неопределенное значение.  
+ Если маска указывает недоступный регистр, для этого регистра возвращается неопределенное значение.  
   
- `ICorDebugRegisterSet2::GetRegisters` Метод необходим для платформ, имеющих более 64 регистров. Например IA64 имеет 128 регистров общего назначения и 128 регистров с плавающей запятой, поэтому необходимо больше 64 бита в битовой маске.  
+ `ICorDebugRegisterSet2::GetRegisters` Метод необходим для платформ, которые имеют более 64 регистров. Например IA64 имеет 128 регистров общего назначения и 128 регистров с плавающей запятой, поэтому вам потребуется больше 64 бита в битовой маске.  
   
- Если у вас более 64 регистров, как в случае на платформах, например x86, `GetRegisters` метод фактически переводит байты в `mask` массив байтов, в `ULONG64` , а затем вызывает [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) метод, который принимает `ULONG64` маски.  
+ Если у вас более чем 64 регистры, как в случае на платформах, например x86, `GetRegisters` метод фактически переводит байты в `mask` массив байтов, в `ULONG64` , а затем вызывает [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) метод, который принимает `ULONG64` маски.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
