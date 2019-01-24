@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f8b896d50bb659897291d7bf85e836482611a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c62ad58cd7ad1bd752d5958a5630dc7a019131e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645448"
 ---
-# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="57078-102">Метод ISymUnmanagedWriter::DefineLocalVariable</span><span class="sxs-lookup"><span data-stu-id="57078-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
-<span data-ttu-id="57078-103">Определяет одну переменную в текущей лексической области видимости.</span><span class="sxs-lookup"><span data-stu-id="57078-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="57078-104">Этот метод может вызываться несколько раз для переменной с тем же именем, имеющей несколько корневых в пределах области.</span><span class="sxs-lookup"><span data-stu-id="57078-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="57078-105">В этом случае, однако значения `startOffset` и `endOffset` параметров не должны перекрываться.</span><span class="sxs-lookup"><span data-stu-id="57078-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
+# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="7e316-102">Метод ISymUnmanagedWriter::DefineLocalVariable</span><span class="sxs-lookup"><span data-stu-id="7e316-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
+<span data-ttu-id="7e316-103">Определяет одну переменную в текущей лексической области видимости.</span><span class="sxs-lookup"><span data-stu-id="7e316-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="7e316-104">Этот метод может вызываться несколько раз для переменной с тем же именем, имеющей несколько корневых в пределах области.</span><span class="sxs-lookup"><span data-stu-id="7e316-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="7e316-105">В данном случае, однако значения `startOffset` и `endOffset` параметров не должны перекрываться.</span><span class="sxs-lookup"><span data-stu-id="7e316-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57078-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="57078-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e316-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7e316-106">Syntax</span></span>  
   
 ```  
 HRESULT DefineLocalVariable(  
@@ -43,44 +43,44 @@ HRESULT DefineLocalVariable(
     [in] ULONG32      endOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="57078-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="57078-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7e316-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="7e316-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="57078-108">[in] Указатель на `WCHAR` , определяющий имя локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="57078-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
+ <span data-ttu-id="7e316-108">[in] Указатель на `WCHAR` , определяющий имя локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="7e316-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="57078-109">[in] Атрибуты локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="57078-109">[in] The local variable attributes.</span></span>  
+ <span data-ttu-id="7e316-109">[in] Атрибуты локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="7e316-109">[in] The local variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="57078-110">[in] Объект `ULONG32` указывает размер в байтах для `signature` буфера.</span><span class="sxs-lookup"><span data-stu-id="57078-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="7e316-110">[in] Объект `ULONG32` указывает размер в байтах из `signature` буфера.</span><span class="sxs-lookup"><span data-stu-id="7e316-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="57078-111">[in] Подпись локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="57078-111">[in] The local variable signature.</span></span>  
+ <span data-ttu-id="7e316-111">[in] Подпись локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="7e316-111">[in] The local variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="57078-112">[in] Тип адреса.</span><span class="sxs-lookup"><span data-stu-id="57078-112">[in] The address type.</span></span>  
+ <span data-ttu-id="7e316-112">[in] Тип адреса.</span><span class="sxs-lookup"><span data-stu-id="7e316-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="57078-113">[in] Первый адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="57078-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="7e316-113">[in] Первый адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="7e316-113">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="57078-114">[in] Второй адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="57078-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="7e316-114">[in] Второй адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="7e316-114">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="57078-115">[in] Третий адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="57078-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="7e316-115">[in] Третий адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="7e316-115">[in] The third address for the parameter specification.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="57078-116">[in] Начальное смещение для переменной.</span><span class="sxs-lookup"><span data-stu-id="57078-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="57078-117">Этот параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="57078-117">This parameter is optional.</span></span> <span data-ttu-id="57078-118">Если задано значение 0, этот параметр пропускается и переменная определяется для всей области.</span><span class="sxs-lookup"><span data-stu-id="57078-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="57078-119">Если ненулевое значение, переменная находится в границах смещений текущей области.</span><span class="sxs-lookup"><span data-stu-id="57078-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="7e316-116">[in] Начальное смещение для переменной.</span><span class="sxs-lookup"><span data-stu-id="7e316-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="7e316-117">Этот параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="7e316-117">This parameter is optional.</span></span> <span data-ttu-id="7e316-118">Если задано значение 0, этот параметр игнорируется, и переменная определяется для всей области.</span><span class="sxs-lookup"><span data-stu-id="7e316-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="7e316-119">Если ненулевое значение, переменная находится в границах смещений текущей области.</span><span class="sxs-lookup"><span data-stu-id="7e316-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="57078-120">[in] Конечное смещение для переменной.</span><span class="sxs-lookup"><span data-stu-id="57078-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="57078-121">Этот параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="57078-121">This parameter is optional.</span></span> <span data-ttu-id="57078-122">Если задано значение 0, этот параметр пропускается и переменная определяется для всей области.</span><span class="sxs-lookup"><span data-stu-id="57078-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="57078-123">Если ненулевое значение, переменная находится в границах смещений текущей области.</span><span class="sxs-lookup"><span data-stu-id="57078-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="7e316-120">[in] Конечное смещение для переменной.</span><span class="sxs-lookup"><span data-stu-id="7e316-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="7e316-121">Этот параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="7e316-121">This parameter is optional.</span></span> <span data-ttu-id="7e316-122">Если задано значение 0, этот параметр игнорируется, и переменная определяется для всей области.</span><span class="sxs-lookup"><span data-stu-id="7e316-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="7e316-123">Если ненулевое значение, переменная находится в границах смещений текущей области.</span><span class="sxs-lookup"><span data-stu-id="7e316-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="57078-124">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="57078-124">Return Value</span></span>  
- <span data-ttu-id="57078-125">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="57078-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7e316-124">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7e316-124">Return Value</span></span>  
+ <span data-ttu-id="7e316-125">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="7e316-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57078-126">Требования</span><span class="sxs-lookup"><span data-stu-id="57078-126">Requirements</span></span>  
- <span data-ttu-id="57078-127">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57078-127">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e316-126">Требования</span><span class="sxs-lookup"><span data-stu-id="7e316-126">Requirements</span></span>  
+ <span data-ttu-id="7e316-127">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7e316-127">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57078-128">См. также</span><span class="sxs-lookup"><span data-stu-id="57078-128">See Also</span></span>  
- [<span data-ttu-id="57078-129">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="57078-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="57078-130">Метод DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="57078-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)  
- [<span data-ttu-id="57078-131">Метод DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="57078-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+## <a name="see-also"></a><span data-ttu-id="7e316-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7e316-128">See also</span></span>
+- [<span data-ttu-id="7e316-129">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="7e316-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="7e316-130">Метод DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="7e316-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="7e316-131">Метод DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="7e316-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)

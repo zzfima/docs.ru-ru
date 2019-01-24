@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653870"
 ---
-# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="7e3ca-102">Перечисление StackOverflowType</span><span class="sxs-lookup"><span data-stu-id="7e3ca-102">StackOverflowType Enumeration</span></span>
-<span data-ttu-id="7e3ca-103">Содержит значения, которые указывают на основную причину события переполнения стека.</span><span class="sxs-lookup"><span data-stu-id="7e3ca-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
+# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="8d69d-102">Перечисление StackOverflowType</span><span class="sxs-lookup"><span data-stu-id="8d69d-102">StackOverflowType Enumeration</span></span>
+<span data-ttu-id="8d69d-103">Содержит значения, указывающие на основную причину события переполнения стека.</span><span class="sxs-lookup"><span data-stu-id="8d69d-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e3ca-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7e3ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d69d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8d69d-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -36,25 +36,25 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7e3ca-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7e3ca-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8d69d-105">Участники</span><span class="sxs-lookup"><span data-stu-id="8d69d-105">Members</span></span>  
   
-|<span data-ttu-id="7e3ca-106">Член</span><span class="sxs-lookup"><span data-stu-id="7e3ca-106">Member</span></span>|<span data-ttu-id="7e3ca-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7e3ca-107">Description</span></span>|  
+|<span data-ttu-id="8d69d-106">Член</span><span class="sxs-lookup"><span data-stu-id="8d69d-106">Member</span></span>|<span data-ttu-id="8d69d-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="8d69d-107">Description</span></span>|  
 |------------|-----------------|  
-|`SO_ClrEngine`|<span data-ttu-id="7e3ca-108">Переполнение стека было вызвано подсистемой выполнения.</span><span class="sxs-lookup"><span data-stu-id="7e3ca-108">The stack overflow was caused by the execution engine.</span></span>|  
-|`SO_Managed`|<span data-ttu-id="7e3ca-109">Переполнение стека было вызвано управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="7e3ca-109">The stack overflow was caused by managed code.</span></span>|  
-|`SO_Other`|<span data-ttu-id="7e3ca-110">Переполнение стека было вызвано неуправляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="7e3ca-110">The stack overflow was caused by unmanaged code.</span></span>|  
+|`SO_ClrEngine`|<span data-ttu-id="8d69d-108">Переполнение стека было вызвано подсистему выполнения.</span><span class="sxs-lookup"><span data-stu-id="8d69d-108">The stack overflow was caused by the execution engine.</span></span>|  
+|`SO_Managed`|<span data-ttu-id="8d69d-109">Переполнение стека было вызвано управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="8d69d-109">The stack overflow was caused by managed code.</span></span>|  
+|`SO_Other`|<span data-ttu-id="8d69d-110">Переполнение стека было вызвано неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="8d69d-110">The stack overflow was caused by unmanaged code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7e3ca-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="7e3ca-111">Remarks</span></span>  
- <span data-ttu-id="7e3ca-112">Эти сведения передаются в узел посредством вызова [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="7e3ca-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d69d-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="8d69d-111">Remarks</span></span>  
+ <span data-ttu-id="8d69d-112">Эти сведения передаются на узел посредством вызова [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="8d69d-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e3ca-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7e3ca-113">Requirements</span></span>  
- <span data-ttu-id="7e3ca-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e3ca-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d69d-113">Требования</span><span class="sxs-lookup"><span data-stu-id="8d69d-113">Requirements</span></span>  
+ <span data-ttu-id="8d69d-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d69d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e3ca-115">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7e3ca-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8d69d-115">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8d69d-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7e3ca-116">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7e3ca-116">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="8d69d-116">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8d69d-116">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7e3ca-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e3ca-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d69d-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d69d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e3ca-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7e3ca-118">See Also</span></span>  
- [<span data-ttu-id="7e3ca-119">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="7e3ca-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8d69d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8d69d-118">See also</span></span>
+- [<span data-ttu-id="8d69d-119">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="8d69d-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a217a835e258052ace5b59a70cbc0fa31691d78e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64634f961064feb3d2db11d421fea920f1e2d16b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669059"
 ---
-# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="f4122-102">Метод IMetaDataTables::GetUserStringHeapSize</span><span class="sxs-lookup"><span data-stu-id="f4122-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
-<span data-ttu-id="f4122-103">Возвращает размер в байтах, кучи пользовательских строк.</span><span class="sxs-lookup"><span data-stu-id="f4122-103">Gets the size, in bytes, of the user string heap.</span></span>  
+# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="c406d-102">Метод IMetaDataTables::GetUserStringHeapSize</span><span class="sxs-lookup"><span data-stu-id="c406d-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
+<span data-ttu-id="c406d-103">Возвращает размер в байтах, кучи строк пользователя.</span><span class="sxs-lookup"><span data-stu-id="c406d-103">Gets the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4122-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f4122-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c406d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c406d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetUserStringHeapSize (  
@@ -35,19 +35,19 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f4122-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f4122-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c406d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c406d-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="f4122-106">[out] Указатель на размер в байтах кучи пользовательских строк.</span><span class="sxs-lookup"><span data-stu-id="f4122-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
+ <span data-ttu-id="c406d-106">[out] Указатель на размер в байтах кучи пользовательских строк.</span><span class="sxs-lookup"><span data-stu-id="c406d-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4122-107">Требования</span><span class="sxs-lookup"><span data-stu-id="f4122-107">Requirements</span></span>  
- <span data-ttu-id="f4122-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4122-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c406d-107">Требования</span><span class="sxs-lookup"><span data-stu-id="c406d-107">Requirements</span></span>  
+ <span data-ttu-id="c406d-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c406d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4122-109">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f4122-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c406d-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c406d-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f4122-110">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f4122-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c406d-110">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c406d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f4122-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4122-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c406d-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c406d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4122-112">См. также</span><span class="sxs-lookup"><span data-stu-id="f4122-112">See Also</span></span>  
- [<span data-ttu-id="f4122-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="f4122-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="f4122-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="f4122-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c406d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="c406d-112">See also</span></span>
+- [<span data-ttu-id="c406d-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="c406d-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c406d-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="c406d-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

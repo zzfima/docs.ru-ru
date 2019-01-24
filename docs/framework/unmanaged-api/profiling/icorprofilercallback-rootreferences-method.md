@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631369"
 ---
-# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="a0123-102">Метод ICorProfilerCallback::RootReferences</span><span class="sxs-lookup"><span data-stu-id="a0123-102">ICorProfilerCallback::RootReferences Method</span></span>
-<span data-ttu-id="a0123-103">Уведомляет профилировщик с информацией о корневых ссылках после сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="a0123-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
+# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="9ce8f-102">Метод ICorProfilerCallback::RootReferences</span><span class="sxs-lookup"><span data-stu-id="9ce8f-102">ICorProfilerCallback::RootReferences Method</span></span>
+<span data-ttu-id="9ce8f-103">Уведомляет профилировщик о корневыми ссылками после сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0123-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a0123-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ce8f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ce8f-104">Syntax</span></span>  
   
 ```  
 HRESULT RootReferences(  
@@ -35,28 +35,28 @@ HRESULT RootReferences(
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a0123-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a0123-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9ce8f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ce8f-105">Parameters</span></span>  
  `cRootRefs`  
- <span data-ttu-id="a0123-106">[in] Число ссылок в `rootRefIds` массива.</span><span class="sxs-lookup"><span data-stu-id="a0123-106">[in] The number of references in the `rootRefIds` array.</span></span>  
+ <span data-ttu-id="9ce8f-106">[in] Число ссылок в `rootRefIds` массива.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-106">[in] The number of references in the `rootRefIds` array.</span></span>  
   
  `rootRefIds`  
- <span data-ttu-id="a0123-107">[in] Массив идентификаторов объектов, которые ссылаются на статический объект или объект в стеке.</span><span class="sxs-lookup"><span data-stu-id="a0123-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
+ <span data-ttu-id="9ce8f-107">[in] Массив идентификаторов объектов, которые ссылаются на статический объект или объект в стеке.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a0123-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="a0123-108">Remarks</span></span>  
- <span data-ttu-id="a0123-109">Оба `RootReferences` и [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) вызывается для уведомления профилировщика.</span><span class="sxs-lookup"><span data-stu-id="a0123-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="a0123-110">Обычно профилировщик реализует один из них, но не одновременно, так как сведения передаются в `RootReferences2` является надмножеством переданный `RootReferences`.</span><span class="sxs-lookup"><span data-stu-id="a0123-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ce8f-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="9ce8f-108">Remarks</span></span>  
+ <span data-ttu-id="9ce8f-109">Оба `RootReferences` и [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) вызываемые для уведомления профилировщика.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="9ce8f-110">Обычно профилировщик реализует одно из них, но не оба одновременно, так как данные, передаваемые `RootReferences2` является надмножеством информации, переданной в `RootReferences`.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
   
- <span data-ttu-id="a0123-111">Существует возможность `rootRefIds` массива содержит пустой объект.</span><span class="sxs-lookup"><span data-stu-id="a0123-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="a0123-112">Например все ссылки на объекты, объявленные в стеке, считаются корней сборщиком мусора и будут отображаться.</span><span class="sxs-lookup"><span data-stu-id="a0123-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
+ <span data-ttu-id="9ce8f-111">Существует возможность `rootRefIds` массив должен содержать пустой объект.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="9ce8f-112">Например все ссылки на объекты, объявленные в стеке, рассматриваются как корни сборщиком мусора и всегда будет считаться.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
   
- <span data-ttu-id="a0123-113">Идентификаторы объектов, возвращенных `RootReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов со старых адресов на новые адреса.</span><span class="sxs-lookup"><span data-stu-id="a0123-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="a0123-114">Таким образом, профилировщик должен не пытаться проверять объекты во время `RootReferences` вызова.</span><span class="sxs-lookup"><span data-stu-id="a0123-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="a0123-115">Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) — вызывается, все объекты были перемещены в новые расположения и можно безопасно проверить.</span><span class="sxs-lookup"><span data-stu-id="a0123-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
+ <span data-ttu-id="9ce8f-113">Идентификаторы объектов, возвращенных `RootReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов из старого адреса в новые адреса.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="9ce8f-114">Таким образом, профилировщики не должны пытаться проверять объекты во время `RootReferences` вызова.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="9ce8f-115">Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) является именем, все объекты были перемещены в новые расположения и можно безопасно проверить.</span><span class="sxs-lookup"><span data-stu-id="9ce8f-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0123-116">Требования</span><span class="sxs-lookup"><span data-stu-id="a0123-116">Requirements</span></span>  
- <span data-ttu-id="a0123-117">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0123-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ce8f-116">Требования</span><span class="sxs-lookup"><span data-stu-id="9ce8f-116">Requirements</span></span>  
+ <span data-ttu-id="9ce8f-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ce8f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0123-118">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a0123-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9ce8f-118">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9ce8f-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a0123-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0123-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9ce8f-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ce8f-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0123-120">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0123-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9ce8f-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ce8f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0123-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a0123-121">See Also</span></span>  
- [<span data-ttu-id="a0123-122">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="a0123-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9ce8f-121">См. также</span><span class="sxs-lookup"><span data-stu-id="9ce8f-121">See also</span></span>
+- [<span data-ttu-id="9ce8f-122">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="9ce8f-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
