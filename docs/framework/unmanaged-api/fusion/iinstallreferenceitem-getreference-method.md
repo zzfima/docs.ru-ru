@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c64b98f3b5ab0445b076b0d3bacfaa398e26f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537677"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>Метод IInstallReferenceItem::GetReference
 Возвращает указатель на [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) структуры, представленный этим [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) объекта.  
@@ -39,7 +39,7 @@ HRESULT GetReference (
   
 #### <a name="parameters"></a>Параметры  
  `ppRefData`  
- [out] Возвращенный `FUSION_INSTALL_REFERENCE` указателя.  
+ [out] Возвращенный `FUSION_INSTALL_REFERENCE` указатель.  
   
  `dwFlags`  
  [in] Зарезервировано для будущего расширения. `dwFlags` должно быть 0 (ноль).  
@@ -48,12 +48,12 @@ HRESULT GetReference (
  [in] Зарезервировано для будущего расширения. `pvReserved` должен быть пустой ссылкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Fusion.h  
+ **Заголовок.** Fusion.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [Структура FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Структура FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

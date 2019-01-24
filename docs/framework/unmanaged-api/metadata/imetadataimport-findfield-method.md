@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527605"
 ---
 # <a name="imetadataimportfindfield-method"></a>Метод IMetaDataImport::FindField
-Возвращает указатель на FieldDef токен для поля, которое заключено в указанном <xref:System.Type> и имеет имя и метаданные указанной подписи.  
+Возвращает указатель на FieldDef токен для поля, которое заключено заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ HRESULT FindField (
   
 #### <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен TypeDef для класса или интерфейса, содержащего поля для поиска. Если это значение равно `mdTokenNil`, поиск выполняется в глобальной переменной.  
+ [in] Токен TypeDef для класса или интерфейса, который содержит поле для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной.  
   
  `szName`  
  [in] Имя поля для поиска.  
@@ -53,24 +53,24 @@ HRESULT FindField (
  [in] Размер в байтах `pvSigBlob`.  
   
  `pmb`  
- [out] Указатель на токен FieldDef сопоставления.  
+ [out] Указатель на соответствующий токен FieldDef.  
   
 ## <a name="remarks"></a>Примечания  
- Укажите поля, используя его включающего класса или интерфейса (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`).  
+ Укажите поле, используя его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`).  
   
- Подпись, передаваемый `FindField` должны были созданы в текущей области, поскольку подписи привязаны к определенным областям. Подпись можно внедрить токен, который определяет включающего класса или типа значения. (Маркер — это индекс в локальной таблице TypeDef). Не удается построить во время выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindField`.  
+ Подпись передается `FindField` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области. Подписи можно внедрить токен, который определяет включающего класса или типа значения. (Маркер — это индекс в локальной таблице TypeDef). Не удается построить выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindField`.  
   
- `FindField` находит только поля, которые были определены непосредственно в классе или интерфейсе; наследуемые поля не найден.  
+ `FindField` находит только те поля, которые были определены непосредственно в классе или интерфейсе; не удается найти унаследованные поля.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

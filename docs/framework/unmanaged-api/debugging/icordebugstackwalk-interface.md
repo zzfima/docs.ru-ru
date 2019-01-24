@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612e0f84302d5bee6479264ef2dbba4c7152657e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb58040394d99ae0c5a10672946fa5a6ead5e751
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533420"
 ---
 # <a name="icordebugstackwalk-interface"></a>Интерфейс ICorDebugStackWalk
 Обеспечивает методы для получения управляемых методов или кадров в стеке потока.  
@@ -31,7 +31,7 @@ ms.locfileid: "33422550"
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Возвращает контекст для текущего кадра в `ICorDebugStackWalk` объекта.|  
-|[Метод SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Наборы `ICorDebugStackWalk` текущего контекста объекта действительный контекст для потока.|  
+|[Метод SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Наборы `ICorDebugStackWalk` текущего контекста объекта для допустимого контекста потока.|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Перемещает `ICorDebugStackWalk` объекта следующий кадр.|  
 |[Метод GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Получает текущий кадр `ICorDebugStackWalk` объекта.|  
   
@@ -41,14 +41,14 @@ ms.locfileid: "33422550"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

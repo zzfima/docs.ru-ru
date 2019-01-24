@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543582"
 ---
 # <a name="typography-how-to-topics"></a>Разделы руководства, посвященные разметке текста
-В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка форматированного представления текста в приложениях.  
+В этом разделе описываются способы использования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка представление форматированного текста в приложениях.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Создание оформления текста](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "33546319"
  [Рисование текста в визуальном элементе](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [Использование специальных символов в XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Documents.Typography>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Documents.Typography>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

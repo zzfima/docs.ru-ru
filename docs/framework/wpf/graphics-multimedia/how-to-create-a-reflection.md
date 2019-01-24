@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание отражения
+title: Как выполнить Создание отражения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0fae98966481003c7906f5cbb34afaea666d583d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559038"
 ---
-# <a name="how-to-create-a-reflection"></a>Практическое руководство. Создание отражения
+# <a name="how-to-create-a-reflection"></a>Как выполнить Создание отражения
 В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> для создания отражения. Так как <xref:System.Windows.Media.VisualBrush> можно отображать существующие визуальные, эту возможность можно использовать для создания интересных визуальных эффектов, например отражения и увеличения.  
   
 ## <a name="example"></a>Пример  
@@ -31,6 +31,6 @@ ms.locfileid: "48838395"
   
  Полный образец, который включает примеры, демонстрирующие увеличение частей экрана и создание отражений, см. в разделе [пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.VisualBrush>  
- [Заливка с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.VisualBrush>
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

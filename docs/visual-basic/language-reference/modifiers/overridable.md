@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7002589b303c41b26b611588f339fa70dd19f959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537599"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-Указывает, что свойство или процедура могут быть переопределены одноименную свойство или процедура в производном классе.  
+Указывает, что свойство или процедура могут быть переопределены с одинаковыми именами свойство или процедура в производном классе.  
   
 ## <a name="remarks"></a>Примечания  
- `Overridable` Модификатор разрешает свойства или метода в классе для переопределения в производном классе. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) модификатор не позволяет переопределять свойства или метода в производном классе.  Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
+ `Overridable` Модификатор допустимое свойство или метод в класс, который будет переопределен в производном классе. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) модификатор не позволяет переопределять свойства или метода в производном классе.  Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
   
- Если `Overridable` или `NotOverridable` модификатор не указан, значение по умолчанию зависит от того, является ли метод или свойство переопределяет свойство базового класса или метода. Если метод или свойство переопределяет свойство базового класса или метода, значение по умолчанию — `Overridable`; в противном случае он является `NotOverridable`.  
+ Если `Overridable` или `NotOverridable` модификатора не указано, значение по умолчанию зависит от того, является ли свойство или метод переопределяет свойство базового класса или метода. Если в метод или свойство переопределяет свойство базового класса или метода, значение по умолчанию — `Overridable`; в противном случае это `NotOverridable`.  
   
- Можно скрывать или переопределить, чтобы переопределить наследуемый элемент, но существуют значительные различия между двумя способами. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Можно скрывать или переопределять переопределить наследуемый элемент, но существуют значительные различия между двумя подходами. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Элемент, который может быть переопределен, иногда называют *виртуальных* элемента. Если он может быть переопределен, но не должен быть, она иногда называется *конкретных* элемента.  
+ Элемент, который может быть переопределен иногда называется *виртуального* элемент. Если его можно переопределить, но не быть, она иногда называется *конкретные* элемент.  
   
  `Overridable` можно использовать только в операторе объявления свойства или процедуры.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "33603773"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Модификаторы](../../../visual-basic/language-reference/modifiers/index.md)  
- [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)  
- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>См. также
+- [Модификаторы](../../../visual-basic/language-reference/modifiers/index.md)
+- [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

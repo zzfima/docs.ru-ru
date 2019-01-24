@@ -2,15 +2,15 @@
 title: Литералы NULL и вывод типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529113"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Литералы NULL и вывод типов (Entity SQL)
-Литералы NULL совместимы с любым типом в системе типов языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Однако для типа литерала null был определен правильно [!INCLUDE[esql](../../../../../../includes/esql-md.md)] накладывает некоторые ограничения на использование литерала null.  
+Литералы NULL совместимы с любым типом в системе типов языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Тем не менее, для типа литерала null был определен правильно [!INCLUDE[esql](../../../../../../includes/esql-md.md)] накладывает некоторые ограничения на использования литерала null.  
   
 ## <a name="typed-nulls"></a>Типизированные значения NULL  
  Типизированные значения NULL могут использоваться где угодно. Для типизированных значений NULL не требуется логический вывод типа, поскольку тип уже известен. Например, с помощью следующей конструкции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно создать значение NULL типа Int16:  
@@ -40,5 +40,5 @@ ms.locfileid: "32764220"
   
  Ни в каких других ситуациях свободные литералы NULL использоваться не могут. Например, их нельзя использовать в качестве аргументов конструктора строки.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

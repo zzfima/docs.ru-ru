@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация проверки для пользовательских объектов
+title: Как выполнить Реализация логики проверки для пользовательских объектов
 ms.date: 08/02/2018
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: dbeddb5eb6996d5758717ddd2d4d5af0b6f57f3c
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: e2b77ef65c92ae596c5620c9122dcf3db0bf9462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33555968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525993"
 ---
-# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Практическое руководство. Реализация проверки для пользовательских объектов
+# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Как выполнить Реализация логики проверки для пользовательских объектов
 В этом примере показано, как реализация логики проверки для пользовательского объекта, а затем привязать к нему.  
   
 ## <a name="example"></a>Пример  
@@ -32,7 +32,7 @@ ms.locfileid: "33555968"
   
  Кроме того, вместо использования <xref:System.Windows.Controls.DataErrorValidationRule>, можно задать <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> свойства `true`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.ExceptionValidationRule>  
- [Реализация проверки привязки](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.ExceptionValidationRule>
+- [Реализация проверки привязки](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

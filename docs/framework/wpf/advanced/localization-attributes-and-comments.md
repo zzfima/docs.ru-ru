@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523725"
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
 Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации. Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
@@ -84,7 +84,7 @@ ms.locfileid: "33547271"
   
  Эти атрибуты можно указать в любом порядке через пробел. В случае указания дублированных атрибутов последний атрибут переопределяет предыдущие. Например, Localization.Attributes = "Unmodifiable Modifiable" устанавливает параметр Modifiability в значение Modifiable, так как это последнее значение.  
   
- Параметры Modifiability (изменяемость) и Readability (читаемость) понятны без объяснений. Атрибут Category (категория) предоставляет стандартные категории, которые помогают локализатору при переводе текста. Такие категории, как Text, Label и Title, предоставляют локализатору сведения о том, как следует переводить текст. Существуют также специальные категории: None, Inherit, Ignore и NeverLocalize.  
+ Параметры Modifiability (изменяемость) и Readability (читаемость) понятны без объяснений. Атрибут Category (категория) предоставляет стандартные категории, которые помогают локализатору при переводе текста. Такие категории, как Text, Label и Title, предоставляют локализатору сведения о том, как следует переводить текст. Кроме того, существуют также специальные категории: Нет, наследуют, игнорировать и NeverLocalize.  
   
  В следующей таблице показаны значения специальных категорий.  
   
@@ -99,8 +99,8 @@ ms.locfileid: "33547271"
 ## <a name="localization-comments"></a>Комментарии локализации  
  Localization.Comments содержит произвольные строки, касающиеся целевого значения. Разработчики приложения могут добавлять сведения для предоставления подсказок локализаторов о том, как следует переводить текст приложений. Форматом комментариев может быть любая строка, заключенная в круглые скобки "()". Используйте символ "\\" для создания escape-символов.  
   
-## <a name="see-also"></a>См. также  
- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Использование сетки для автоматической разметки](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a>См. также
+- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Использование сетки для автоматической разметки](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

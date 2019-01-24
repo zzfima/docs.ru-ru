@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524888"
 ---
 # <a name="securing-services"></a>Защита служб
 Безопасность службы Windows Communication Foundation (WCF) состоит из двух основных требований: безопасность передачи и авторизации. (Третье требование, аудит событий безопасности, описанной в [аудит](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций WCF, два основных требования легко реализуются.  
@@ -41,10 +41,10 @@ ms.locfileid: "50195233"
  Чтобы защитить приложение, работающее только в домене Windows, можно использовать параметры безопасности по умолчанию привязки <xref:System.ServiceModel.WSHttpBinding> или <xref:System.ServiceModel.NetTcpBinding> . По умолчанию любой пользователь в том же домене Windows доступ к службам WCF. Поскольку такие пользователи зарегистрированы в сети, они являются доверенными. Сообщения между службой и клиентом шифруются в целях конфиденциальности и подписываются в целях целостности. Дополнительные сведения о том, как создать службу, которая использует безопасность Windows, см. в разделе [как: Защита службы с учетными данными Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>Авторизация с использованием класса PrincipalPermissionAttribute  
- Если необходимо ограничить доступ к ресурсам на компьютере, проще всего использовать класс <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Этот атрибут позволяет ограничить вызов операций службы, требуя, чтобы пользователь находился в заданной группе Windows или имел заданную роль Windows или был особым пользователем. Дополнительные сведения см. в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Если необходимо ограничить доступ к ресурсам на компьютере, проще всего использовать класс <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Этот атрибут позволяет ограничить вызов операций службы, требуя, чтобы пользователь находился в заданной группе Windows или имел заданную роль Windows или был особым пользователем. Дополнительные сведения см. в разделе [Как Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ### <a name="impersonation"></a>Олицетворение  
- Для управления доступом к ресурсам можно также использовать другой механизм, называемый олицетворением. По умолчанию служба, размещенная в IIS, работает под идентификатором учетной записи ASPNET. Учетная запись ASPNET может иметь доступ только к ресурсам, использовать которые она имеет право. Однако для папки можно задать ACL, чтобы исключить учетную запись службы ASPNET, но разрешить доступ к папке некоторым другим идентификаторам. Тогда встает вопрос, как разрешить этим пользователям доступ к папке, если для учетной записи ASPNET такой доступ не разрешен? Ответ - воспользоваться олицетворением, с помощью которого службе разрешается использовать учетные данные клиента для доступа к конкретному ресурсу. Другим примером служит доступ к базе данных SQL Server, обращаться к которой имеют право только определенные пользователи. Дополнительные сведения об использовании олицетворения см. в разделе [как: олицетворение клиента в службе](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) и [делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Для управления доступом к ресурсам можно также использовать другой механизм, называемый олицетворением. По умолчанию служба, размещенная в IIS, работает под идентификатором учетной записи ASPNET. Учетная запись ASPNET может иметь доступ только к ресурсам, использовать которые она имеет право. Однако для папки можно задать ACL, чтобы исключить учетную запись службы ASPNET, но разрешить доступ к папке некоторым другим идентификаторам. Тогда встает вопрос, как разрешить этим пользователям доступ к папке, если для учетной записи ASPNET такой доступ не разрешен? Ответ - воспользоваться олицетворением, с помощью которого службе разрешается использовать учетные данные клиента для доступа к конкретному ресурсу. Другим примером служит доступ к базе данных SQL Server, обращаться к которой имеют право только определенные пользователи. Дополнительные сведения об использовании олицетворения см. в разделе [как: Олицетворение клиента в службе](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) и [делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Безопасность в Интернете  
  Для обеспечения безопасности в Интернете необходимо выполнение тех же требований, что и для обеспечения безопасности в интрасети. Служба должна представить свои учетные данные, чтобы подтвердить свою подлинность, а клиенты должны подтвердить свою идентификацию службе. Проверив идентификацию клиента, служба может управлять доступом этого клиента к ресурсам. Однако из-за разнородности Интернета представляемые учетные данные отличаются от учетных данных, используемых в домене Windows. Контроллер Kerberos осуществляет проверку подлинности пользователей в домене, используя билеты для учетных данных, а в Интернете службы и клиенты полагаются на один из нескольких других способов представления учетных данных. Целью данной статьи, однако является представить общий подход, позволяющий создать службу WCF, доступной в Интернете.  
@@ -85,34 +85,34 @@ ms.locfileid: "50195233"
   
  В случае создания службы, которая требует проверки подлинности клиента, выбор типа учетных данных клиента зависит от выбранных транспорта и режима. Например, при использовании транспорта HTTP и выборе транспортного режима возможны несколько вариантов выбора - Basic, Digest и другие. (Дополнительные сведения об этих типы учетных данных, см. в разделе [Understanding HTTP Authentication](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).)  
   
- В случае создания службы в домене Windows, которая будет доступна только другим пользователям сети, проще всего использовать тип учетных данных клиента Windows. Однако может также потребоваться обеспечить службу сертификатом. Это показано в разделе [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ В случае создания службы в домене Windows, которая будет доступна только другим пользователям сети, проще всего использовать тип учетных данных клиента Windows. Однако может также потребоваться обеспечить службу сертификатом. Это показано в [как: Укажите значения учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="credential-values"></a>Значения учетных данных  
  *Значение учетных данных* - это фактические учетные данные, используемые службой. После задания типа учетных данных может также потребоваться настроить службу с фактическими учетными данными. Если выбран тип Windows (и служба будет работать в домене Windows), фактическое значение учетных данных не задается.  
   
 ## <a name="identity"></a>идентификации  
- В WCF термин *удостоверений* имеет разные значения для сервера и клиента. Вкратце, при запуске службы идентификация назначается контексту безопасности после проверки подлинности. Чтобы просмотреть фактическую идентификацию, проверьте свойства <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> и <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> класса <xref:System.ServiceModel.ServiceSecurityContext> . Дополнительные сведения см. в разделе [как: анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
+ В WCF термин *удостоверений* имеет разные значения для сервера и клиента. Вкратце, при запуске службы идентификация назначается контексту безопасности после проверки подлинности. Чтобы просмотреть фактическую идентификацию, проверьте свойства <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> и <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> класса <xref:System.ServiceModel.ServiceSecurityContext> . Дополнительные сведения см. в разделе [Как Анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
   
  В отличие от этого, на клиенте идентификация используется для проверки службы. Во время разработки разработчик клиента может настроить [ \<удостоверений >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемента значение, полученное от службы. Во время выполнения клиент проверяет значение элемента, сравнивая его с фактической идентификацией службы. В случае отрицательного результата проверки клиент завершает взаимодействие. Значением может быть имя участника-пользователя, если служба работает под удостоверением конкретного пользователя, или имя участника-службы, если служба работает под учетной записью компьютера. Дополнительные сведения см. в разделе [службы идентификации и проверки подлинности](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). Учетными данными может быть также сертификат или поле в сертификате, которое идентифицирует этот сертификат.  
   
 ## <a name="protection-levels"></a>Уровни защиты  
  Свойство `ProtectionLevel` встречается в нескольких классах атрибутов (например, в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> ). Уровень защиты - это значение, которое определяет для сообщений (или частей сообщений), поддерживающих службу, подписываются ли они, подписываются и шифруются или отправляются без подписи и шифровки. Дополнительные сведения о свойстве см. в разделе [уровень защиты понимание](../../../docs/framework/wcf/understanding-protection-level.md)и примеры программирования см. в разделе [как: Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Дополнительные сведения о проектировании контракта службы с `ProtectionLevel` в контексте, см. в разделе [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Безопасность](../../../docs/framework/wcf/feature-details/security.md)  
- [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Практическое руководство. Задание режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Практическое руководство. Олицетворение клиента в рамках службы](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Практическое руководство. Анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Безопасность](../../../docs/framework/wcf/feature-details/security.md)
+- [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Практическое руководство. Защита службы с помощью учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Практическое руководство. Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Практическое руководство. Олицетворение клиента в службе](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Практическое руководство. Анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

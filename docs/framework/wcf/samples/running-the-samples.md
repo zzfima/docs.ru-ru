@@ -2,12 +2,12 @@
 title: Выполнение примеров Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535886"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры Windows Communication Foundation (WCF) может выполняться в одном или нескольких компьютерах конфигурации. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  
@@ -25,7 +25,7 @@ ms.locfileid: "48836919"
   
 3.  Запустите Client.exe из \client\bin\\, из языковой папке. Действия клиента отображаются в окне консоли клиента.  
   
-4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48836919"
   
 -   Если служба размещается в службах IIS в целях безопасности, удалите определение виртуального каталога и разрешения, предоставленные на шагах установки, по завершении работы с примерами.  
   
-## <a name="see-also"></a>См. также  
- [Построение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Выполнение примеров в рабочей группе и на различных компьютерах](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>См. также
+- [Построение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Выполнение примеров в рабочей группе и на различных компьютерах](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
+- [Советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

@@ -1,5 +1,5 @@
 ---
-title: Выражение рекурсивно вызывает содержащееся свойство &#39; &lt;propertyname&gt;&#39;
+title: Выражение рекурсивно вызывает содержащее его свойство &#39; &lt;propertyname&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553078"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Выражение рекурсивно вызывает содержащееся свойство &#39; &lt;propertyname&gt;&#39;
-Оператор в `Set` процедура определения свойства сохраняет значение в имени свойства.  
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Выражение рекурсивно вызывает содержащее его свойство &#39; &lt;propertyname&gt;&#39;
+Оператор в `Set` процедуры определения свойства сохраняет значение в имени свойства.  
   
- Рекомендуемый подход для хранения значения свойства является определение `Private` переменных в контейнере свойства и использование его в `Get` и `Set` процедуры. `Set` Процедура затем будет хранить входящее значение в этом `Private` переменной.  
+ Рекомендуемый подход для хранения значений свойства является определение `Private` переменных в контейнере свойства и его использования в языках `Get` и `Set` процедуры. `Set` Процедура затем будет хранить входящее значение в этом `Private` переменной.  
   
- `Get` Процедура действует как `Function` процедуру, чтобы он мог присвоить значение имени свойства и вернуть управление путем добавления `End Get` инструкции. Рекомендуемый подход, то, чтобы включить `Private` переменной в качестве значения при [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ `Get` Процедура действует как `Function` процедуры, поэтому можно присвоить значение имени свойства и вернуть управление путем добавления `End Get` инструкции. Тем не менее рекомендуется включать `Private` переменной в качестве значения [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- `Set` Процедура действует как `Sub` процедуры, которая не возвращает значение. Таким образом, имя процедуры или свойства не имеет особого смысла в `Set` процедура и в ней нельзя хранить значение.  
+ `Set` Процедура действует как `Sub` процедуры, которая не возвращает значение. Таким образом, имя процедуры или свойства не имеет специального значения в пределах `Set` процедура и в ней нельзя хранить значение.  
   
- В следующем примере демонстрируется подход, который может вызвать эту ошибку, следуют рекомендуемый подход.  
+ В следующем примере показано подход, который может вызывать эту ошибку, следуют рекомендуемый подход.  
   
 ```  
 Public Class illustrateProperties  
@@ -55,15 +55,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Настройка предупреждений в Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений и обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Идентификатор ошибки:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Перепишите определение свойства для использования рекомендуемый подход, как показано в предыдущем примере.  
+-   Перепишите определение свойства использовать рекомендуемый подход, как показано в предыдущем примере.  
   
-## <a name="see-also"></a>См. также  
- [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>См. также
+- [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)

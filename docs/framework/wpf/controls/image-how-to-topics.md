@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: 7d944eb2c09314be5b2e1c5c6ff69beec4888a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530792"
 ---
 # <a name="image-how-to-topics"></a>Разделы пошагового руководства, посвященные изображениям
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Image> элемента.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.Image> элемент.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Использование элемента изображения](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
@@ -30,6 +30,6 @@ ms.locfileid: "33555553"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

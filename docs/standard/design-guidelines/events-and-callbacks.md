@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525486"
 ---
 # <a name="events-and-callbacks"></a>События и обратные вызовы
 Обратные вызовы являются точки расширения, обеспечивающие framework выполнить обратный вызов пользовательского кода в делегате. Обычно эти делегаты передаются платформы, в качестве параметра метода.  
@@ -45,5 +45,5 @@ ms.locfileid: "53154428"
   
 ## <a name="see-also"></a>См. также
 
-- [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

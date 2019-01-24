@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fe35757d895fef3c6267c671f3a91fc50df620a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f1e12e59eefece1aa3a2a2294b34f5cee7c700c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543111"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>Метод ICorProfilerObjectEnum::Skip
 Перемещает курсор этого перечислителя из текущей позиции, пропуская указанное число элементов.  
@@ -37,19 +37,19 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Параметры  
  `celt`  
- [in] Число элементов.  
+ [in] Число элементов, которые нужно пропустить.  
   
 ## <a name="remarks"></a>Примечания  
  Новое положение курсора данного перечислителя: (текущая позиция) + `celt` .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

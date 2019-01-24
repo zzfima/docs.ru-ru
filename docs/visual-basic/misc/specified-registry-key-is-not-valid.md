@@ -2,12 +2,12 @@
 title: Указанный раздел реестра является недопустимым, так как он содержит подряд две или более обратные косые черты
 ms.date: 07/20/2015
 ms.assetid: 0d78b6f7-5759-45b4-8c37-c6902ada76ff
-ms.openlocfilehash: d718ca87d78b6e24c457f95046f39045205ac155
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cde978a4cd3a2ae18c6b5b6b44a812fb086a64bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533381"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>Указанный раздел реестра является недопустимым, так как он содержит подряд две или более обратные косые черты
 Раздел реестра, указанный с помощью пути, содержит две или более обратные косые черты, идущие подряд. Это может быть результатом объединения нескольких строк для формирования пути и случайного включения нескольких обратных косых черт.  
@@ -16,6 +16,6 @@ ms.locfileid: "33639452"
   
 -   Проверьте указанный раздел реестра и определите, где и почему вставляются дополнительные обратные косые черты.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

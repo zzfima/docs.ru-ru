@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b408654f367bc846dc878fb8412eb3e896dd192a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9794a44bfb0bd1b4739689359832ba8500c6e2ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539614"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>Метод ICorDebugNativeFrame::GetLocalRegisterValue
-Возвращает значение аргумента или локальной переменной, которая хранится в регистре, заданном для данного кадра машинного кода.  
+Получает значение аргумента или локальной переменной, которая хранится в регистре, заданном для данного кадра машинного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,28 +40,28 @@ HRESULT GetLocalRegisterValue (
   
 #### <a name="parameters"></a>Параметры  
  `reg`  
- [in] Значение «CorDebugRegister» перечисления, которое указывает регистр, содержащий значение.  
+ [in] Значение, указывающее регистр, содержащий значение перечисления «CorDebugRegister».  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которой ссылается `pvSigBlob` параметра.  
+ [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
   
  `pvSigBlob`  
  [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющий возвращенного значения, хранящиеся в указанном регистре.  
+ [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанном регистре.  
   
 ## <a name="remarks"></a>Примечания  
- `GetLocalRegisterValue` Метод может использоваться в фрейм машинного кода или just-in-time (JIT)-компиляции кадра.  
+ `GetLocalRegisterValue` Метод может использоваться в кадре машинного кода или just-in-time (JIT)-компиляции кадра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fa1081afc77c8116d8858c187401555409b4dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88362d33c05c25e7a86e474adf37f2ccd0474ff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530766"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>Метод ICorProfilerCallback::JITCompilationStarted
-Уведомляет профилировщик о начале just-in-time (JIT) компилятор для компиляции функции.  
+Уведомляет профилировщик, что компилятор just-in-time (JIT) начал компиляцию функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,27 +37,27 @@ HRESULT JITCompilationStarted(
   
 #### <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Идентификатор функции, для которого запускается компиляции.  
+ [in] Идентификатор функции, для которого выполняется запуск компиляции.  
   
  `fIsSafeToBlock`  
- [in] Значение, указывающее профилировщику ли блокировка будет влиять на работу среды выполнения. Значение равно `true` Если блокировок может вызвать среды выполнения для ожидания вызывающего потока для возврата из этого обратного вызова; в противном случае `false`.  
+ [in] Значение, указывающее профилировщику ли блокировка повлияет на работу среды выполнения. Значение равно `true` Если блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; в противном случае `false`.  
   
  Несмотря на то что значение `true` не представляет угрозы для среды выполнения, он может исказить результаты профилирования.  
   
 ## <a name="remarks"></a>Примечания  
- Можно получить более чем одну пару `JITCompilationStarted` и [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) вызывает для каждой функции из-за способа среда выполнения обрабатывает класс конструкторы. Например среда выполнения начинает JIT-компиляции метода типа, но конструктор класса для класса B должна быть запущена. Таким образом, среда выполнения JIT-компиляцию конструктора для класса B и запускает его. Пока конструктор работает, он вызывает метод A, вследствие чего метода для JIT-компиляции еще раз. В этом сценарии первая JIT-компиляция метода A прерывается. Тем не менее обе попытки JIT-компиляции метода A выводятся с событиями JIT-компиляции. Если профилировщик будет заменить код на промежуточном языке (MSIL) для метода типа путем вызова [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) метод, необходимо сделать для обоих `JITCompilationStarted` события, но он может использовать того же блока MSIL для обоих.  
+ Возможно, для получения более чем одну пару `JITCompilationStarted` и [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) вызывает для каждой функции из-за способа выполнения конструкторы класса дескрипторов. Например среда выполнения начинает JIT-компиляцию метода, но конструктор класса для класса B нужно выполнить. Таким образом, среда выполнения JIT-компиляцию конструктора для класса B и запускает его. Во время работы конструктора, он делает вызов метода А, который вызывает метод A, который нужно JIT-компиляции, чтобы снова. В этом случае первый JIT-компиляцию метода A прерывается. Тем не менее обе попытки JIT-компиляцию метода A выводятся с событиями JIT-компиляции. Если профилировщик будет заменить код на промежуточном языке (MSIL) для метода типа путем вызова [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) метод, она должна будет работать для обоих `JITCompilationStarted` события, но он может использовать того же блока MSIL для обоих ресурсов.  
   
- Профилировщики должны поддерживать последовательность обратных вызовов JIT в случаях, где два потока одновременно осуществляют обратные вызовы. Например, поток A вызывает `JITCompilationStarted`. Тем не менее, прежде чем поток A вызывает метод `JITCompilationFinished`, поток B вызывает метод [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) с Идентификатором функция потоком `JITCompilationStarted` обратного вызова. Кажется, что идентификатор функции должно находиться допустимым из-за вызова `JITCompilationFinished` еще не получил профилировщиком. Однако в случае такого рода, идентификатор функции является допустимым.  
+ Профилировщики должны поддерживать последовательность обратных вызовов JIT в случаях, где два потока одновременно осуществляют обратных вызовов. Например, поток A вызывает `JITCompilationStarted`. Тем не менее, прежде чем поток A вызывает `JITCompilationFinished`, поток B вызывает [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) с Идентификатором потока A, который функция `JITCompilationStarted` обратного вызова. Может показаться, что идентификатор функции должно находиться допустимым так как вызов `JITCompilationFinished` еще не получил профилировщиком. Тем не менее в случае такого рода, идентификатор функции является допустимым.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Метод JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Метод JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

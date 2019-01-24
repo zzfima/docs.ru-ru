@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание политики издателя
+title: Как выполнить Создание политики издателя
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530529"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
+# <a name="how-to-create-a-publisher-policy"></a>Как выполнить Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
   
  Существует три действия, связанные с созданием политики издателя:  
@@ -91,7 +91,7 @@ ms.locfileid: "48838478"
   
 1.  Введите следующую команду в командной строке:  
   
-     **Gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Следующая команда добавляет `policy.1.0.myAssembly.dll` в глобальном кэше сборок.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48838478"
     > [!IMPORTANT]
     >  Сборку в глобальный кэш сборок невозможно, если исходный файл политики издателя находится в том же каталоге, что и сборка.  
   
-## <a name="see-also"></a>См. также  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
- [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>См. также
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Настройка приложений](../../../docs/framework/configure-apps/index.md)
+- [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559848"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Метод ICorDebugValue::GetAddress
 Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.  
@@ -37,19 +37,19 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Параметры  
  `pAddress`  
- [out] Указатель на `CORDB_ADDRESS` объект, указывающий адрес, этот объект значения.  
+ [out] Указатель на `CORDB_ADDRESS` , указывающий адрес этого объекта значение.  
   
 ## <a name="remarks"></a>Примечания  
- Если значение недоступно, возвращается 0 (ноль). Это может произойти, если значение хотя бы частично находится в регистрах или хранится в дескрипторе сборщика мусора (`GCHandle`).  
+ Если значение недоступно, возвращается 0 (ноль). Это может произойти, если значение хотя бы частично в регистрах или хранится в дескрипторе сборщика мусора (`GCHandle`).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

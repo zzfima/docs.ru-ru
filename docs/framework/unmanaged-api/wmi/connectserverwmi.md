@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567013"
 ---
 # <a name="connectserverwmi-function"></a>Функция ConnectServerWmi
 Создает подключение через DCOM к пространству имен WMI на указанном компьютере.  
@@ -56,14 +56,14 @@ HRESULT ConnectServerWmi (
  
 `lSecurityFlags` [in] Флаги для передачи `ConnectServerWmi` метод. Значение ноль (0) для этого параметра приводит к вызов `ConnectServerWmi` возвращение только после того, как установлено подключение к серверу. В итоге приложение не отвечает на неопределенное время, является ли сервер работает. Другими допустимыми значениями являются:
 
-| Константа  | Значение  | Описание  |
+| Константа  | Значение  | Описание:  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | Зарезервировано для внутреннего использования. Не используется. |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Возвращает за две минуты или меньше. |
 
 `strAuthority` [in] Имя домена пользователя. Возможны следующие значения:
 
-| Значение | Описание |
+| Значение | Описание: |
 |---------|---------|
 | пустая | Используется проверка подлинности NTLM, и используется NTLM домен текущего пользователя. Если `strUser` указывает домен (рекомендуемое расположение), не следует указывать здесь. Функция возвращает `WBEM_E_INVALID_PARAMETER` при выборе домена в обоих параметрах. |
 | Kerberos —*имя участника* | Используется проверка подлинности Kerberos, и этот параметр содержит имя участника Kerberos. |
@@ -102,11 +102,11 @@ HRESULT ConnectServerWmi (
 
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

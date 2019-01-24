@@ -2,12 +2,12 @@
 title: Руководство по взаимодействию по протоколам веб-служб
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521391"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 Windows Communication Foundation (WCF) реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. Этот раздел содержит список протоколов веб-служб, реализуемых WCF. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
   
 -   [Basic Security Profile 1.0 рабочий черновик](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>См. также  
- [Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL и политика](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Протокол надежного обмена сообщениями версии 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Протокол надежного обмена сообщениями версии 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Протоколы транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Протокол обмена контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>См. также
+- [Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL и политика](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Протокол надежного обмена сообщениями версии 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Протокол надежного обмена сообщениями версии 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Протоколы транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Протокол обмена контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525213"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel> элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.  
@@ -174,7 +174,7 @@ ms.locfileid: "47196633"
   
  На этом рисунке видна разница в поведении отрисовки.  
   
- ![Снимок экрана: сравнение StackPanel и снимок экрана DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![Снимок экрана: Сравнение StackPanel и снимок экрана DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>Определение и использование StackPanel  
  Следующий пример демонстрирует, как использовать <xref:System.Windows.Controls.StackPanel> для создания набора вертикально расположенных кнопок. Для горизонтального расположения задайте <xref:System.Windows.Controls.StackPanel.Orientation%2A> свойства <xref:System.Windows.Controls.Orientation.Horizontal>.  
@@ -252,13 +252,13 @@ ms.locfileid: "47196633"
   
  Дополнительные сведения о создании приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с локализуемыми [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] см. в разделе [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Пример коллекции макетов WPF](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
- [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [Общие сведения о свойствах Alignment, Margin, Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Создание пользовательского содержимого пример](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>См. также
+- [Пошаговое руководство: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
+- [Пример коллекции макетов WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+- [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Общие сведения о свойствах Alignment, Margin, Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Создание пользовательского содержимого пример](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

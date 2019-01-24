@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование класса отрисовки элемента управления
+title: Как выполнить Использование класса отрисовки элемента управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: e5b82c3317d2d162fbd5a182166a9e0061fd770e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4453e04f6fe36ad2b0de7696da68d55264cd47b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534674"
 ---
-# <a name="how-to-use-a-control-rendering-class"></a>Практическое руководство. Использование класса отрисовки элемента управления
-В этом примере демонстрируется использование <xref:System.Windows.Forms.ComboBoxRenderer> класса для отображения стрелку раскрывающегося списка поля со списком поле элемента управления. Пример состоит из <xref:System.Windows.Forms.Control.OnPaint%2A> метод простого пользовательского элемента управления. <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Свойство используется для определения, включены ли визуальные стили в клиентской области окна приложения. Если визуальные стили включены, то <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> метода сделает стрелку раскрывающегося списка с применением визуальных стилей; в противном случае <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> метода сделает стрелку раскрывающегося списка в классическом стиле Windows.  
+# <a name="how-to-use-a-control-rendering-class"></a>Как выполнить Использование класса отрисовки элемента управления
+В этом примере демонстрируется использование <xref:System.Windows.Forms.ComboBoxRenderer> класс для отображения стрелку раскрывающегося списка, поле со списком элемента управления поля. Пример состоит из <xref:System.Windows.Forms.Control.OnPaint%2A> метод простого пользовательского элемента управления. <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Свойство используется для определения, включены ли стили оформления в клиентской области окон приложений. Если визуальные стили включены, то <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> метод визуализирует стрелку раскрывающегося списка с использованием стилей оформления; в противном случае <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> метод визуализирует стрелку раскрывающегося списка в классическом стиле Windows.  
   
 ## <a name="example"></a>Пример  
  [!code-cpp[System.Windows.Forms_ControlRenderer#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/cpp/form1.cpp#10)]
@@ -28,11 +28,11 @@ ms.locfileid: "33534109"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Пользовательский элемент управления на основе <xref:System.Windows.Forms.Control> класса.  
+-   Пользовательские элементы управления, производные от <xref:System.Windows.Forms.Control> класса.  
   
 -   Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.  
   
 -   Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
   
-## <a name="see-also"></a>См. также  
- [Отрисовка элементов управления с применением визуальных стилей](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+## <a name="see-also"></a>См. также
+- [Отрисовка элементов управления с применением визуальных стилей](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)

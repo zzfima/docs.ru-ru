@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562782"
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе представлен обзор функций <xref:System.Windows.Media.FormattedText> объекта. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -85,7 +85,7 @@ ms.locfileid: "43804949"
  ![Сфера, следующая по геометрическому пути текста](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Сфера, следующая по геометрическому пути текста  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Дополнительные сведения см. в разделе [Как Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Можно создать другие интересные сферы применения форматированного текста после преобразования в <xref:System.Windows.Media.PathGeometry> объекта. Например, можно обрезать видео для отображения внутри текста.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "43804949"
 |DT_WORDBREAK|Нет|Не требуется. Перенос слов выполняется автоматически с <xref:System.Windows.Media.FormattedText> объектов. Его нельзя отключить.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Используйте <xref:System.Windows.Media.FormattedText.Trimming%2A> свойством со значением <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.FormattedText>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Создание контурного текста](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Практическое руководство. Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.FormattedText>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Создание контурного текста](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [Практическое руководство. Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

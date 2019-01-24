@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание параметров приложения
+title: Как выполнить Создание параметров приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558960"
 ---
-# <a name="how-to-create-application-settings"></a>Практическое руководство. Создание параметров приложения
+# <a name="how-to-create-application-settings"></a>Как выполнить Создание параметров приложения
 С помощью управляемого кода можно создавать параметры приложения и привязывать их к свойствам формы или ее элементов управления, чтобы эти параметры загружались и сохранялись автоматически во время выполнения.  
   
  В представленной ниже процедуре вручную создается класс-оболочка, производный от класса <xref:System.Configuration.ApplicationSettingsBase>. К этому классу добавляется открытое свойство для каждого параметра приложения, который требуется предоставить.  
   
- Эту процедуру можно также выполнить с помощью минимального объема кода в конструкторе Visual Studio.  Также см. в разделе [как: Создание параметров приложения с помощью конструктора](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Эту процедуру можно также выполнить с помощью минимального объема кода в конструкторе Visual Studio.  Также см. раздел [Как Создание параметров приложения с помощью конструктора](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Создание параметров приложения программными средствами  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48581879"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Поставщик параметров по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, сохраняет сведения в файлах конфигурации в виде обычного текста. В результате безопасность зависит от уровня разрешений на доступ к файлу, предоставляемого операционной системой текущему пользователю. Поэтому при хранении информации в файлах конфигурации необходимо соблюдать осторожность. Например, параметры приложения часто используются для хранения строк подключений, которые указывают на хранилище данных приложения. Однако в целях безопасности в таких строках не должны содержаться пароли. Подробнее о строках подключения см. в разделе <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Практическое руководство. Проверка параметров приложения](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Практическое руководство. Проверка параметров приложения](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

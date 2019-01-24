@@ -2,22 +2,22 @@
 title: '&lt;add&gt; для &lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 0932ef9afacb6278c4857dcfd6ba545595ff8f9d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8b7a4730af6690616058a91cf23bb39734d81abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541720"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;add&gt; для &lt;defaultPorts&gt;
 Конечная точка связи по умолчанию, которую прослушивает клиентское приложение.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
-\<useRequestHeadersForMetadataAddress >  
-\<defaultPorts >  
+\<useRequestHeadersForMetadataAddress>  
+\<defaultPorts>  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,5 +50,5 @@ ms.locfileid: "54147724"
 |-------------|-----------------|  
 |[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Коллекция портов по умолчанию со списком конечных точек связи по умолчанию, которые прослушивает клиентское приложение.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.DefaultPortElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.DefaultPortElement>

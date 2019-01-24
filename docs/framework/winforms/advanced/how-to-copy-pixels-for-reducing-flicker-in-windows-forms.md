@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
+title: Как выполнить Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559454"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
-При создании простых анимированных могут появиться мерцание или другие нежелательные визуальные эффекты. Ограничить эту проблему можно использовать процесс «bitblt» на рисунок. BitBlt является «перемещение набора битов» данных о цвете из исходного прямоугольника пикселей в прямоугольник назначения пикселей.  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Как выполнить Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
+При анимации простой график, могут появиться мерцание или другие нежелательные визуальные эффекты. Чтобы ограничить эту проблему рекомендуется использовать процесс «bitblt» на рисунок. BitBlt является «битов перемещение» данных о цвете из исходного прямоугольника из пикселей в конечный прямоугольник пикселей.  
   
- С помощью Windows Forms bitblt достигается использованием <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод <xref:System.Drawing.Graphics> класса. В параметрах метода указания источника и назначения (в виде точек), размер копируемой области и графический объект, используемый для рисования новую фигуру.  
+ С помощью Windows Forms, bitblt осуществляется с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод <xref:System.Drawing.Graphics> класса. В параметры метода указать источник и назначения (в виде точек), размер области для копирования и объект graphics, используемый для рисования новой фигуры.  
   
- В следующем примере рисование фигуры на форме в его <xref:System.Windows.Forms.Control.Paint> обработчика событий. Затем <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод используется для копирования фигуры.  
+ В приведенном ниже примере фигуры рисуется в форме в его <xref:System.Windows.Forms.Control.Paint> обработчик событий. Затем <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод используется для копирования фигуры.  
   
 > [!NOTE]
->  Свойства формы <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true` сделает графическим интерфейсом кода в <xref:System.Windows.Forms.Control.Paint> событие быть двойная буферизация. Пока это не будет иметь выигрыш в производительности ощутимого при использовании в приведенном ниже коде, ее стоит помнить при работе с кодом более сложных манипуляций с графикой.  
+>  Свойства формы <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true` будет выполнять код с графическим интерфейсом в <xref:System.Windows.Forms.Control.Paint> событие быть двойной буферизацией. Хотя это не приведет к любой ощутимого производительность при использовании приведенный ниже код, то это следует учитывать при работе с кодом более сложных манипуляций с графикой.  
   
 ## <a name="example"></a>Пример  
   
@@ -60,11 +60,11 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Приведенный выше код выполняется в форме <xref:System.Windows.Forms.Control.Paint> обработчик событий, чтобы графики сохраняются при обновлении формы. Таким образом, не вызывать методы, связанные с графикой в <xref:System.Windows.Forms.Form.Load> обработчика событий, так как не будет перерисовываться будет Если формы был изменен или скрыта другой формой.  
+ Приведенный выше код выполняется в форме <xref:System.Windows.Forms.Control.Paint> обработчик событий, чтобы изображение остается при перерисовке формы. Таким образом, не следует вызывать методы, связанные с графики в <xref:System.Windows.Forms.Form.Load> обработчик событий, так как не будет перерисовываться будет Если скрыта другой формой или изменении размера формы.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Drawing.CopyPixelOperation>  
- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Drawing.CopyPixelOperation>
+- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
+- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

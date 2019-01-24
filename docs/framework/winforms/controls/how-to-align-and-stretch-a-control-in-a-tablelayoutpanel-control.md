@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel
+title: Как выполнить Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 06e152058337955164bd526e20e023d759340f01
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 91464108a6ac4600c14a06b4a7dcea200d7f0254
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535935"
 ---
-# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Как выполнить Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
 Вы можете выравнивание и Растягивание элементов управления в <xref:System.Windows.Forms.TableLayoutPanel> с <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> свойства.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "43504157"
   
 ### <a name="to-align-and-stretch-a-control"></a>Выравнивание и Растягивание элемента управления  
   
-1.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
   
 2.  Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в левый верхний угол объекта <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. <xref:System.Windows.Forms.Button> Элемент управления выравнивается по центру ячейки.  
   
@@ -39,5 +39,5 @@ ms.locfileid: "43504157"
   
 8.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства <xref:System.Windows.Forms.AnchorStyles.None>. <xref:System.Windows.Forms.Button> Управления перемещается по центру ячейки.  
   
-## <a name="see-also"></a>См. также  
- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

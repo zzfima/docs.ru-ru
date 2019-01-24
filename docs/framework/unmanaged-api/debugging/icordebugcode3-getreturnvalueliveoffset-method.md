@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c75db784a404298b86ed42692573a509ea56cf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: df50a4f5b0bdd0c1e70d7c47fe115f4a28b9bbc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526448"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>Метод ICorDebugCode3::GetReturnValueLiveOffset
-Для заданного смещения IL возвращает собственные смещения, где разместить точку останова, чтобы отладчик можно получить возвращаемое значение из функции.  
+Для указанного смещения на промежуточном Языке получает смещения в машинном коде, где должны размещаться точку останова, чтобы отладчик мог получить возвращаемое значение из функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,42 +42,42 @@ HRESULT GetReturnValueLiveOffset(
   
 #### <a name="parameters"></a>Параметры  
  `ILoffset`  
- Смещение на промежуточном Языке. Он должен быть место вызова функции или функции вызов завершится ошибкой.  
+ Смещение на промежуточном Языке. Он должен находиться на сайт вызова функции или вызов функции завершится ошибкой.  
   
  `bufferSize`  
- Число байтов, доступных для хранения `pOffsets`.  
+ Число байтов для хранения `pOffsets`.  
   
  `pFetched`  
- Указатель на число фактически извлеченных смещений. Обычно его значение равно 1, но одной инструкции IL можно сопоставить с несколькими `CALL` инструкции ассемблера.  
+ Указатель на количество фактически возвращенных смещений. Как правило, его значение равно 1, но одна инструкция IL может сопоставляться нескольким `CALL` инструкции ассемблера.  
   
  `pOffsets`  
- Массив из машинного кода. Как правило `pOffsets` содержит один смещение, несмотря на то, что можно сопоставить несколько карты к нескольким одной инструкции IL `CALL` инструкции ассемблера.  
+ Массив смещений в машинном коде. Как правило `pOffsets` содержит одно смещение, несмотря на то, что одна инструкция IL может сопоставляться несколькими к нескольким `CALL` инструкции ассемблера.  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод используется вместе с [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) метод для получения возвращаемого значения метода, который возвращает ссылочный тип. Передача IL смещение к место вызова функции в этот метод возвращает один или несколько собственные смещения. Затем отладчик можно установить точки останова на этих смещениях машинного кода в функцию. Если отладчик обнаруживает одной из точек останова, затем можно передать одинаковое смещение IL, который передан в этот метод, чтобы [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) метод для получения возвращаемого значения. Отладчик должен выполнить очистку все точки останова, которые оно задано.  
+ Этот метод используется вместе с [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) способ получения возвращаемого значения метода, который возвращает ссылочный тип. Передача смещения на сайт вызова функции в этот метод IL возвращает один или несколько смещений в машинном коде. Отладчик может установить точки останова на этих естественных смещениях функции. Когда отладчик достигает одной из точек останова, затем можно передать то же смещение IL, которое было передано в этот метод, чтобы [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) способ получения возвращаемого значения. Затем он должен очистить все точки останова, он задан.  
   
 > [!WARNING]
->  `ICorDebugCode3::GetReturnValueLiveOffset` И [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) методы позволяют получить сведения о возвращаемых значениях только для ссылочных типов. Получение сведений о возвращаемое значение от типов значений (то есть, все типы, производные от <xref:System.ValueType>) не поддерживается.  
+>  `ICorDebugCode3::GetReturnValueLiveOffset` И [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) методы позволяют получить сведения о возвращаемом значении только для ссылочных типов. Получение сведений о возвращаемое значение из типов значений (то есть всех типов, производных от <xref:System.ValueType>) не поддерживается.  
   
  Функция возвращает `HRESULT` значений, приведенных в следующей таблице.  
   
-|Значение `HRESULT`|Описание|  
+|Значение`HRESULT` |Описание:|  
 |---------------------|-----------------|  
 |`S_OK`|Выполнено.|  
-|`CORDBG_E_INVALID_OPCODE`|Данного сайта смещении IL не инструкцию вызова или возвращаемого функцией `void`.|  
-|`CORDBG_E_UNSUPPORTED`|С указанным смещением IL-код — это правильный вызов, но тип возвращаемого значения не поддерживается для получения возвращаемого значения.|  
+|`CORDBG_E_INVALID_OPCODE`|Заданное смещение сайта IL не является инструкцией вызова, или функция возвращает `void`.|  
+|`CORDBG_E_UNSUPPORTED`|Заданное смещение IL является правильным вызовом, но возвращаемый тип не поддерживается для получения возвращаемого значения.|  
   
- `ICorDebugCode3::GetReturnValueLiveOffset` Метод доступен только для x86 86 и AMD64 систем.  
+ `ICorDebugCode3::GetReturnValueLiveOffset` Метод доступен только на x86 и системах AMD64.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)  
- [Интерфейс ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+## <a name="see-also"></a>См. также
+- [Метод GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [Интерфейс ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

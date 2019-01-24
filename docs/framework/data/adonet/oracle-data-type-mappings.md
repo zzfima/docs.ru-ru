@@ -2,12 +2,12 @@
 title: Mappings1 тип данных Oracle
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 9057a19abb1abc22924b5542f06e21a57a36ed94
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e8dce0891489b8dbe127e2d327dd2e6f5e9935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544319"
 ---
 # <a name="oracle-data-type-mappings"></a>Сопоставления типов данных Oracle
 В следующей таблице представлены типы данных Oracle и их сопоставления объекту <xref:System.Data.OracleClient.OracleDataReader>.  
@@ -68,6 +68,6 @@ ms.locfileid: "43856339"
   
  **InputOutput**, **вывода**, и **ReturnValue** **ParameterDirection** значения, используемые свойством <xref:System.Data.OracleClient.OracleParameter.Value%2A> свойство <xref:System.Data.OracleClient.OracleParameter> являются типами данных .NET Framework, если входное значение имеет тип данных Oracle (например, <xref:System.Data.OracleClient.OracleNumber> или <xref:System.Data.OracleClient.OracleString>). Это относится к **REF CURSOR**, **BFILE**, или **LOB** типов данных.  
   
-## <a name="see-also"></a>См. также  
- [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

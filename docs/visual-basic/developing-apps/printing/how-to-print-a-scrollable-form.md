@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Печать прокручиваемой формы (Visual Basic)
+title: Как выполнить Печать прокручиваемой формы (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6cec75eae8046befeb37da39e0b788f045ff4149
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552506"
 ---
-# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Практическое руководство. Печать прокручиваемой формы (Visual Basic)
+# <a name="how-to-print-a-scrollable-form-visual-basic"></a>Как выполнить Печать прокручиваемой формы (Visual Basic)
 Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы без использования компонента <xref:System.Drawing.Printing.PrintDocument> . По умолчанию печатается только видимая часть формы; если пользователь изменил размер формы во время выполнения, изображение может быть напечатано неправильно. В следующей процедуре описана печать всей клиентской области прокручиваемой формы, даже если был изменен размер формы.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-the-complete-client-area-of-a-scrollable-form"></a>Печать всей клиентской области прокручиваемой формы  
   
@@ -34,9 +34,9 @@ ms.locfileid: "44182041"
     > [!NOTE]
     >  В некоторых операционных системах текст или графика, нарисованная с использованием метода <xref:System.Drawing.Graphics> , могут быть напечатаны неправильно. В этом случае нельзя выполнить печать с использованием параметра `Scrollable` .  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [Компонент PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Практическое руководство. Печать клиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Практическое руководство. Печать клиентской и неклиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [Компонент PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [Практическое руководство. Печать клиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Практическое руководство. Печать клиентской и неклиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)

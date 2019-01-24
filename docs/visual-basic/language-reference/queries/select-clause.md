@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519012"
 ---
 # <a name="select-clause-visual-basic"></a>Предложение Select (Visual Basic)
 Определяет результат запроса.  
@@ -26,10 +26,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Части  
  `var1`  
- Необязательный. Псевдоним, который может использоваться для ссылки на результаты выражения столбца.  
+ Необязательный параметр. Псевдоним, который может использоваться для ссылки на результаты выражения столбца.  
   
  `fieldName1`  
- Обязательно. Имя поля для возврата в результатах запроса.  
+ Обязательный. Имя поля для возврата в результатах запроса.  
   
 ## <a name="remarks"></a>Примечания  
  Можно использовать `Select` предложение для определения результатов, возвращаемых из запроса. Это позволяет определить элементы нового анонимного типа, который создается по запросу, или целевые члены именованного типа, возвращаемые запросом. `Select` Предложение не является обязательным для запроса. Если нет `Select` указано предложение, запрос будет возвращать тип, основанный на всех участниках переменные диапазона, определенные для текущей области. Дополнительные сведения см. в статье [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Когда запрос создает именованный тип, возвращается результат типа <xref:System.Collections.Generic.IEnumerable%601> где `T` созданный тип.  
@@ -51,10 +51,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>См. также
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

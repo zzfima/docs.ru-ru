@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms
+title: Как выполнить Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: 83ef2e108695988bbb0329d9f01e1317d9308f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a4083d54ea85ff7a2e18f7e448f2b967317ac25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544527"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms
-Процесс добавления элемента в форму Windows Forms <xref:System.Windows.Forms.ListView> управления состоит в определение элемента и назначение ему свойств. Добавление или удаление элементов списка может выполняться в любое время.  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Как выполнить Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms
+Процесс добавления элемента в формы Windows <xref:System.Windows.Forms.ListView> элемент управления состоит в первую очередь определение элемента и назначение ему свойств. Добавление или удаление элементов списка можно сделать в любое время.  
   
-### <a name="to-add-items-programmatically"></a>Чтобы добавить элементы программными средствами  
+### <a name="to-add-items-programmatically"></a>Чтобы программно добавить элементы  
   
 1.  Используйте <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> метод <xref:System.Windows.Forms.ListView.Items%2A> свойство.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33525659"
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ListView>  
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ListView>
+- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

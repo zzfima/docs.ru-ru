@@ -16,45 +16,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546284"
 ---
 # <a name="iidentityauthority-interface"></a>Интерфейс IIdentityAuthority
-Управляет ключами идентификации для объектов кода.  
+Управляет идентификационные ключи для объектов кода.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|`IIdentityAuthority::AreDefinitionsEqual`|Возвращает значение, указывающее, являются ли два заданных [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) они равны.|  
-|`IIdentityAuthority::AreReferencesEqual`|Возвращает значение, указывающее, являются ли два заданных [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) они равны.|  
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|Возвращает значение, указывающее, равны ли два указанные строковые представления идентификации определения.|  
-|`IIdentityAuthority::AreTextualReferencesEqual`|Возвращает значение, указывающее, равны ли два указанные строковые представления идентификации ссылки.|  
+|`IIdentityAuthority::AreDefinitionsEqual`|Получает значение, указывающее, являются ли два заданных [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) они равны.|  
+|`IIdentityAuthority::AreReferencesEqual`|Получает значение, указывающее, являются ли два заданных [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) они равны.|  
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|Получает значение, указывающее, равны ли два представления идентификации определение указанной строки.|  
+|`IIdentityAuthority::AreTextualReferencesEqual`|Получает значение, указывающее, равны ли два указанные строковые представления идентификации ссылки.|  
 |`IIdentityAuthority::CreateDefinition`|Возвращает указатель на новый `IDefinitionIdentity` экземпляр, представляющий объект кода в текущей области.|  
 |`IIdentityAuthority::CreateReference`|Возвращает указатель на новый `IReferenceIdentity` экземпляр, представляющий объект кода в текущей области.|  
-|`IIdentityAuthority::DefinitionToText`|Возвращает версию форматируемой строки указанного `IDefinitionIdentity`.|  
+|`IIdentityAuthority::DefinitionToText`|Получает форматированное строковое представление указанного `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DefinitionToTextBuffer`|Заполняет буфер указанного расширенный символ строковую версию указанного `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DoesDefinitionMatchReference`|Возвращает значение, указывающее, является ли указанный `IDefinitionIdentity` и `IReferenceIdentity` экземпляры ссылаются на один и тот же объект кода.|  
-|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Возвращает значение, указывающее, ссылаются ли указанные строки на один и тот же объект кода.|  
+|`IIdentityAuthority::DoesDefinitionMatchReference`|Получает значение, указывающее ли указанный `IDefinitionIdentity` и `IReferenceIdentity` ссылаются экземпляра на один и тот же объект кода.|  
+|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Получает значение, указывающее, ссылаются ли указанные строки на один и тот же объект кода.|  
 |`IIdentityAuthority::GenerateDefinitionKey`|Возвращает указатель на только что созданный строковый ключ для указанного `IDefinitionIdentity`.|  
 |`IIdentityAuthority::GenerateReferenceKey`|Возвращает указатель на только что созданный строковый ключ для указанного `IReferenceIdentity`.|  
 |`IIdentityAuthority::HashDefinition`|Возвращает хэш-значение для указанного `IDefinitionIdentity`.|  
 |`IIdentityAuthority::HashReference`|Возвращает хэш-значение для указанного `IreferenceIdentity`.|  
-|`IIdentityAuthority::ReferenceToText`|Возвращает версию форматируемой строки указанного `IReferenceIdentity`.|  
+|`IIdentityAuthority::ReferenceToText`|Получает форматированное строковое представление указанного `IReferenceIdentity`.|  
 |`IIdentityAuthority::ReferenceToTextBuffer`|Заполняет буфер указанного расширенный символ строковую версию указанного `IReferenceIdentity`.|  
-|`IIdentityAuthority::TextToDefinition`|Возвращает указатель интерфейса `IDefinitionIdentity` экземпляра, созданный из указанного форматированную строку.|  
-|`IIdentityAuthority::TextToReference`|Возвращает указатель интерфейса `IReferenceIdentity` экземпляра, созданный из указанного форматированную строку.|  
+|`IIdentityAuthority::TextToDefinition`|Получает указатель интерфейса на `IDefinitionIdentity` экземпляр, созданный из указанного форматированную строку.|  
+|`IIdentityAuthority::TextToReference`|Получает указатель интерфейса на `IReferenceIdentity` экземпляр, созданный из указанного форматированную строку.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Isolation.h  
+ **Заголовок.** Isolation.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

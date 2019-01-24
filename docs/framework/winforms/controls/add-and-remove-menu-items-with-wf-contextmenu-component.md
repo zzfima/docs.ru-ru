@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
+title: Как выполнить Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 7cc11eaf4a671c76933c2705b41a4df6c35c0536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac554f080cdabc7034ca839c3a9086e927429f7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520039"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Как выполнить Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
 Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
   
- Windows Forms <xref:System.Windows.Forms.ContextMenu> компонент предоставляет меню часто используемых команд, которые относятся к выбранному объекту. Элементы добавляются в контекстное меню, добавив <xref:System.Windows.Forms.MenuItem> объектов <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекции.  
+ Windows Forms <xref:System.Windows.Forms.ContextMenu> компонент предоставляет меню часто используемых команд, относящихся к выбранному объекту. Элементы добавляются в контекстное меню, добавив <xref:System.Windows.Forms.MenuItem> объектов <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекции.  
   
- Элементы контекстного меню можно удалить без возможности восстановления; Однако во время выполнения может быть более удобным использовать для скрытия или отключение элементов.  
+ Элементы контекстного меню можно удалить без возможности восстановления; Тем не менее во время выполнения он может быть более подходящим для скрытия или отключение элементов.  
   
 > [!IMPORTANT]
->  Несмотря на то что <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> заменить и добавить функциональные возможности в <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> элементы управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбрать.  
+>  Несмотря на то что <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> элементы управления из предыдущих версий <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбран.  
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>Чтобы удалить элементы из контекстного меню  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33524733"
   
      - или -  
   
-2.  Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов меню.  
+2.  Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов в меню.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
@@ -74,7 +74,7 @@ ms.locfileid: "33524733"
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ContextMenu>  
- [Компонент ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ContextMenu>
+- [Компонент ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)
+- [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)

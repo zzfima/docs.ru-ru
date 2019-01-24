@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521261"
 ---
 # <a name="assemblyflags-enumeration"></a>Перечисление AssemblyFlags
-Содержит значения, описывающие функции времени выполнения сборки.  
+Содержит значения, описывающие возможности времени выполнения сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +40,26 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Указывает, что определения экспортируемого типа неявные внутри файлов, которые составляют сборку. В .NET Framework версий 1.0 и 1.1 это значение всегда является предполагается заданы.|  
-|`afImplicitResources`|Указывает, что определения ресурсов неявное внутри файлов, которые составляют сборку. В .NET Framework 1.0 и 1.1 это значение всегда предполагается требуется задать.|  
-|`afNonSideBySideAppDomain`|Указывает, что сборка не может выполняться с другими своими версиями, если они выполняются в том же домене приложения.|  
-|`afNonSideBySideProcess`|Указывает, что сборка не может выполняться с другими своими версиями, если они выполняются в одном процессе.|  
-|`afNonSideBySideMachine`|Указывает, что сборка не может выполняться с другими своими версиями, если они выполняются на том же компьютере.|  
+|`afImplicitExportedTypes`|Указывает, что экспортированный тип определения являются неявными внутри файлов, составляющих сборку. В .NET Framework версий 1.0 и 1.1 это значение всегда считается задать.|  
+|`afImplicitResources`|Указывает, что определения ресурсов являются неявными внутри файлов, составляющих сборку. В .NET Framework 1.0 и 1.1 это значение всегда считается задать.|  
+|`afNonSideBySideAppDomain`|Указывает, что сборка не может выполняться с другими версиями, если они выполняются в одном домене приложения.|  
+|`afNonSideBySideProcess`|Указывает, что сборка не может выполняться с другими версиями, если они выполняются в одном процессе.|  
+|`afNonSideBySideMachine`|Указывает, что сборка не может выполняться с другими версиями, если они выполняются на одном компьютере.|  
   
 ## <a name="remarks"></a>Примечания  
- Значения между 0x0010 и 0x0070, включительно, используются для описания функций обеспечения совместимости side-by-side по ссылке сборки. Если ни одно из этих значений задаются сборки предполагается side-by-side-совместимыми.  
+ Значения между 0x0010 и 0x0070, включительно, используются для описания функции обеспечения совместимости side-by-side по ссылке сборки. Если ни одно из этих значений, предполагается, что сборки side-by-side-совместимыми.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MsCorEE.h  
+ **Заголовок.** MsCorEE.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

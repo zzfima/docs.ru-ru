@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e0ef9baa6405a8c49674afb4208b502085dc8554
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b998240b6ecf692b00e16c2ad311c804edc0d7e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518225"
 ---
 # <a name="net-performance-tips"></a>Советы по производительности .NET
 Под *производительностью* обычно понимается скорость выполнения программы. В некоторых случаях ее можно увеличить, следуя определенным основным правилам написания исходного кода. В некоторых программах важно тщательно проверить код и с помощью профилировщиков убедиться, что он выполняется максимально быстро. В других случаях такая оптимизация не требуется, поскольку код выполняется достаточно быстро в своем первоначальном виде. В этой статье описываются основные причины снижения производительности и приводятся рекомендации по ее повышению, а также ссылки на разделы с дополнительной информацией. Дополнительные сведения о планировании и измерении производительности см. в разделе [Производительность](../../../docs/framework/performance/index.md)  
@@ -23,16 +23,16 @@ ms.locfileid: "50195870"
  Не рекомендуется использовать типы значений в тех случаях, где они многократно упаковываются, например в классах неуниверсальных коллекций, таких как <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Чтобы избежать упаковки типов значений, используйте универсальные коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Операции упаковки и распаковки являются весьма затратными процессами с точки зрения вычислений. При упаковке типа значений создается полностью новый объект. Это может занимать почти в 20 раз больше времени, чем простое присваивание ссылки. Процесс приведения при распаковке также занимает в 4 раза больше времени, чем присваивание. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Строки  
- При сцеплении большого числа строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=nameWithType> вместо [оператора + (C#)](~/docs/csharp/language-reference/operators/addition-operator.md) или [операторов сцепления (Visual Basic)](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Дополнительные сведения см. в разделах [Практическое руководство. Сцепка нескольких строк](../../csharp/how-to/concatenate-multiple-strings.md) и [Операторы объединения в Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ При сцеплении большого числа строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=nameWithType> вместо [оператора + (C#)](~/docs/csharp/language-reference/operators/addition-operator.md) или [операторов сцепления (Visual Basic)](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Дополнительные сведения см. в разделе [Как Объединить несколько строк](../../csharp/how-to/concatenate-multiple-strings.md) и [операторы объединения в Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Деструкторы  
- Пустые деструкторы использовать не следует. Если класс содержит деструктор, то в очереди метода Finalize создается запись. При вызове деструктора вызывается сборщик мусора, выполняющий обработку очереди. Если деструктор пустой, это приводит только к ненужному снижению производительности. Дополнительные сведения см. в разделах [Деструкторы](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) и [Время существования: создание и уничтожение объектов](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Пустые деструкторы использовать не следует. Если класс содержит деструктор, то в очереди метода Finalize создается запись. При вызове деструктора вызывается сборщик мусора, выполняющий обработку очереди. Если деструктор пустой, это приводит только к ненужному снижению производительности. Дополнительные сведения см. в разделе [деструкторы](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) и [время жизни объекта: Как создаются и удаляются объекты](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Другие ресурсы  
   
--   [Повышение производительности управляемого кода](https://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [Повышение производительности управляемого кода: Определение значения объектов](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Повышение производительности управляемых приложений: учебник для начинающих](https://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [Написание высокой производительности управляемого приложения: Основные сведения](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
 -   [Общие сведения о сборке мусора и советы по повышению производительности](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "50195870"
 
 -   [Блоге Вэнса Моррисона](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>См. также  
- [Производительность](../../../docs/framework/performance/index.md)  
- [Основные понятия программирования](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
- [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)  
- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+- [Производительность](../../../docs/framework/performance/index.md)
+- [Основные понятия программирования](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)
+- [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)
+- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)

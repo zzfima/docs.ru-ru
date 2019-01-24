@@ -2,12 +2,12 @@
 title: Асинхронные операции
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538665"
 ---
 # <a name="asynchronous-operations"></a>Асинхронные операции
 Для завершения некоторых операций базы данных, например для выполнения команд, требуется значительное время. В таком случае однопотоковые приложения должны блокировать другие операции и ждать окончания команды перед тем, как они смогут продолжить свои собственные операции. В противоположность этому, так как поток переднего плана может назначать долговременные операции фоновому потоку, он остается активным во время всей операции. Приложение Windows, например, делегирующее долговременную операцию фоновому потоку, позволяет потоку пользовательского интерфейса реагировать при выполнении операции.  
@@ -29,7 +29,7 @@ ms.locfileid: "43463082"
  [Выполнение опросов в консольных приложениях](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Предоставляет пример, демонстрирующий использование ждущего режима для ожидания завершения выполнения асинхронной команды из приложения командной строки. Эта техника также действительна в библиотеке классов или в другом приложении без пользовательского интерфейса.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Асинхронный вызов синхронных методов](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Асинхронный вызов синхронных методов](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

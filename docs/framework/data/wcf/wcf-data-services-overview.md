@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566662"
 ---
 # <a name="wcf-data-services-overview"></a>Общие сведения о службах данных WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает создание и использование служб данных в Интернете или интрасети с помощью [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] позволяет предоставлять данные в качестве ресурсов, которые можно обращаться по URI. Это позволяет обращаться к данным и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE. В этом разделе приведены общие сведения о шаблонах и методиках, определенных службами [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], а также о функциях, предоставляемых службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для использования [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в приложениях на базе .NET Framework.  
@@ -25,7 +25,7 @@ ms.locfileid: "43523141"
 ## <a name="interoperable-data-access"></a>Доступ к данным с возможностью взаимодействия  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] основана на стандартных протоколах Интернета, для обеспечения взаимодействия с приложениями, не использующими .NET Framework службы данных. Так, как можно использовать стандартный URI для адресации данных, приложение может получить доступ и изменение данных с помощью семантики передачи репрезентативного состояния (REST), в частности стандартных HTTP-команд GET, PUT, POST и DELETE. Это позволяет обращаться к службам из любого клиента, поддерживающего синтаксический анализ и доступ к данным, передаваемым по стандартным протоколам HTTP.  
   
- Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] определяют набор расширений для протокола публикации Atom (AtomPub). Они поддерживают запросы и ответы HTTP в нескольких форматах данных, что позволяет использовать различные клиентские приложения и платформы. Канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] может представлять данные в формате Atom, формате нотации объектов JavaScript (JSON) и в виде простого XML. Atom является форматом по умолчанию. Формат канала указывается в заголовке HTTP-запроса. Дополнительные сведения см. в разделе [OData: формат Atom](https://go.microsoft.com/fwlink/?LinkID=185794) и [OData: формат JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
+ Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] определяют набор расширений для протокола публикации Atom (AtomPub). Они поддерживают запросы и ответы HTTP в нескольких форматах данных, что позволяет использовать различные клиентские приложения и платформы. Канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] может представлять данные в формате Atom, формате нотации объектов JavaScript (JSON) и в виде простого XML. Atom является форматом по умолчанию. Формат канала указывается в заголовке HTTP-запроса. Дополнительные сведения см. в разделе [OData: Формат Atom](https://go.microsoft.com/fwlink/?LinkID=185794) и [OData: Формат JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
   
  При публикации данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] полагается на другие имеющиеся службы Интернета для таких операций, как кэширование и проверка подлинности. Чтобы выполнить это, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] интегрируется с существующими ведущими приложениями и службами, например ASP.NET, Windows Communication Foundation (WCF) и Internet Information Services (IIS).  
   
@@ -55,10 +55,10 @@ ms.locfileid: "43523141"
   
  ![Диаграмма архитектуры служб данных WCF](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
   
-## <a name="see-also"></a>См. также  
- [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Доступ к службе данных (службы данных WCF)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Передача состояния представления (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)
+## <a name="see-also"></a>См. также
+- [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Доступ к службе данных (службы данных WCF)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Передача состояния представления (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 524a54443b8f2365252f11282ca29fc492bef351
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa31f0f618990d4e57520a1098ec80b722e1cbe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543674"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Обработка XML-файла (Visual Basic)
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (Сведения о том, как для маркировки кода, см. в разделе [теги для комментариев XML](../../../visual-basic/language-reference/xmldoc/index.md).) Строка идентификатора однозначно определяет конструкцию. Программы обработки XML-файле можно использовать строку идентификатора для идентификации соответствующего [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] элементу метаданных или отражения.  
@@ -41,6 +41,6 @@ ms.locfileid: "43398577"
   
  [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>См. также
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

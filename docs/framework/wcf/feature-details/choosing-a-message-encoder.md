@@ -2,12 +2,12 @@
 title: Выбор кодировщика сообщений
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538431"
 ---
 # <a name="choosing-a-message-encoder"></a>Выбор кодировщика сообщений
 В этом разделе описываются критерии выбора одного из кодировщиков сообщений, которые включены в Windows Communication Foundation (WCF): двоичный файл, текст и механизм оптимизации передачи сообщений (MTOM).  
@@ -41,7 +41,7 @@ ms.locfileid: "44248934"
 |Поддержка сторонних инструментов|Возможная поддержка включает разработку и диагностику. Сторонние разработчики делают большие вложения в библиотеки и наборы инструментов для обработки сообщений, кодированных в формат POX.|Текстовый (POX)|  
 |Взаимодействие|Под этим фактором понимается способность кодировщика WCF для взаимодействия со службами не WCF.|Текста<br /><br /> MTOM (частично)|  
   
-Примечание. При использовании двоичного кодировщика использование параметра IgnoreWhitespace при создании XmlReader не оказывает никакого влияния.  Например, если в операции службы выполняются следующие действия.  
+Примечание. При использовании двоичного кодировщика использование параметра IgnoreWhitespace при создании XMLReader не повлияет.  Например, если в операции службы выполняются следующие действия.  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ public void OperationContract(XElement input)
   
 ## <a name="see-also"></a>См. также
 
-[Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)

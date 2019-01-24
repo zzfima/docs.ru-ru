@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
+title: Как выполнить Условная компиляция с Trace и Debug
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45e62fed53999636e23693ad7e61fedf21bc5423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523562"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Как выполнить Условная компиляция с Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
   
  Методы трассировки и отладки имеют связанные условные атрибуты. Например, если условный атрибут трассировки имеет значение **true**, все операторы трассировки включаются в сборку (компилированные файлы .exe или .dll); если условный атрибут **Trace** имеет значение **false**, операторы трассировки не включаются.  
   
- Для сборки можно включить условный атрибут **Trace** или **Debug**, оба эти атрибута одновременно или ни один из них. Следовательно, существует четыре типа сборки: **Debug**, **Trace**, обе или ни одной. Некоторые сборки выпуска для продуктивного развертывания могут не содержать ни одну из них, однако большинство сборок отладки содержат обе.  
+ Для сборки можно включить условный атрибут **Trace** или **Debug**, оба эти атрибута одновременно или ни один из них. Таким образом существует четыре типа сборки: **Отладка**, **трассировки**, оба или ни одной. Некоторые сборки выпуска для продуктивного развертывания могут не содержать ни одну из них, однако большинство сборок отладки содержат обе.  
   
  Можно задать параметры компилятора для вашего приложения несколькими способами.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "33390579"
 > [!NOTE]
 >  Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:**), чтобы определить символы условной компиляции.  
   
-## <a name="see-also"></a>См. также  
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [Практическое руководство. Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+## <a name="see-also"></a>См. также
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Практическое руководство. Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

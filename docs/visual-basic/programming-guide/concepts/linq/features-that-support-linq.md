@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519401"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Возможности Visual Basic, поддерживающие LINQ
 Имя [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] относится к технологии в Visual Basic, что для поддержки синтаксиса запроса, так и для других языковых конструкций на языке. С помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], нет необходимости изучать новый язык для запросов к внешнему источнику данных. Выполнять запросы к данным в реляционных базах данных, хранилища XML или объектов с помощью Visual Basic. Такая интеграция возможностей запроса в язык позволяет проверки во время компиляции для синтаксических ошибок и безопасность типов. Такая интеграция также гарантирует, что вы уже известна большая часть нужно знать для написания насыщенных и разнообразных запросов в Visual Basic.  
   
- В следующих разделах языковых конструкций, которые поддерживают LINQ достаточно подробно, чтобы можно было приступить к работе в режиме чтения вступительная документация, примеры кода и образцов приложений. Можно также щелкнуть ссылки на содержатся более подробные пояснения как возможности языка, объединяются в целях включить запросы LINQ. Лучше всего запустить [Пошаговое руководство: написание запросов в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ В следующих разделах языковых конструкций, которые поддерживают LINQ достаточно подробно, чтобы можно было приступить к работе в режиме чтения вступительная документация, примеры кода и образцов приложений. Можно также щелкнуть ссылки на содержатся более подробные пояснения как возможности языка, объединяются в целях включить запросы LINQ. Лучше всего запустить [Пошаговое руководство: Написание запросов в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Выражения запросов  
  Выражения запросов в Visual Basic может выражаться в декларативный синтаксис, похожий на SQL или XQuery. Во время компиляции синтаксис запроса преобразуется в вызовы методов к реализации поставщика LINQ методы стандартных операторов запросов расширения. Приложения управляют стандартных операторов запроса находятся в области действия, указав соответствующее пространство имен с `Imports` инструкции. Синтаксис выражения запроса Visual Basic выглядит следующим образом:  
@@ -44,7 +44,7 @@ ms.locfileid: "39199151"
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Анонимные типы  
  Анонимные типы обеспечивают удобный способ временной группировки набора свойств в элемент, который требуется включить в результат запроса. Это позволяет выбрать любое сочетание доступных полей в запросе, в любом порядке, без определения именованного типа данных для элемента.  
@@ -66,7 +66,7 @@ ms.locfileid: "39199151"
   
  [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
- Дополнительные сведения см. в статье [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Дополнительные сведения см. в разделе [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Лямбда-выражения  
  Лямбда-выражения является функцией без имени, которая вычисляет и возвращает одиночное значение. В отличие от именованных функций лямбда-выражение может быть определен и выполнена в то же время. В следующем примере отображается 4.  
@@ -93,9 +93,9 @@ ms.locfileid: "39199151"
   
  Дополнительные сведения см. в разделе [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>См. также  
- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>См. также
+- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

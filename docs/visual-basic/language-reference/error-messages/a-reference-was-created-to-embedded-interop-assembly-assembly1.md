@@ -1,5 +1,5 @@
 ---
-title: Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;assembly2&gt;&#39;
+title: Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;сборка1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;сборка2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 43a441b6b99988ae1b47969dde9c4bc815820767
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe04742e0a3be5e1d19ab4017e55f2293988a671
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560026"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;assembly2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;сборка1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;сборка2&gt;&#39;
 Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>". Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.  
   
  Была добавлена ссылка на сборку (сборка1), для которой свойству `Embed Interop Types` присвоено значение `True`. Это указывает компилятору на необходимость внедрить сведения о типе взаимодействия из этой сборки. Тем не менее компилятор не может внедрить такие сведения из этой сборки, поскольку другая сборка, на которую задаются ссылки (сборка2), также ссылается на эту сборку (сборка1) и содержит свойство `Embed Interop Types` со значением `False`.  
@@ -31,6 +31,6 @@ ms.locfileid: "33588136"
   
 -   Чтобы устранить это предупреждение, можно присвоить свойству `Embed Interop Types` сборки сборка1 значение `False`. В этом случае сведения о типе взаимодействия предоставляется основной сборки взаимодействия (PIA).  
   
-## <a name="see-also"></a>См. также  
- [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)  
- [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)
+## <a name="see-also"></a>См. также
+- [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
+- [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)

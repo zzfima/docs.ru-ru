@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556172"
 ---
 # <a name="embedresource-method"></a>Метод EmbedResource
-Объявляет внедренный ресурс. Этот метод фактически не внедрять ресурса.  
+Объявляет внедренного ресурса. Этот метод фактически не внедряет ресурс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ HRESULT EmbedResource(
  Идентификатор сборки.  
   
  `FileToken`  
- Маркер файла или сборки идентификатор файла, содержащего ресурс.  
+ Файл токена или идентификатор сборки файла, содержащего ресурс.  
   
  `pszResourceName`  
  Имя ресурса.  
@@ -53,15 +53,15 @@ HRESULT EmbedResource(
  Смещение ресурса от RVA.  
   
  `dwFlags`  
- Специальных возможностей, таких как флаги `mrPublic` и `mrPrivate`. Эти флаги могут быть переданы [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Специальные возможности, такие как флаги `mrPublic` и `mrPrivate`. Эти флаги может передаваться в [метод DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

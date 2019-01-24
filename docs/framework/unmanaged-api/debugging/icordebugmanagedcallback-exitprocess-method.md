@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540550"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>Метод ICorDebugManagedCallback::ExitProcess
 Уведомляет отладчик о том, что процесс завершен.  
@@ -37,23 +37,23 @@ HRESULT ExitProcess (
   
 #### <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляет собой процесс.  
+ [in] Указатель на объект ICorDebugProcess, представляющий процесс.  
   
 ## <a name="remarks"></a>Примечания  
- Не удается продолжить выполнение после `ExitProcess` событий. Это событие вызывается асинхронно с другими событиями во время процесса появляется нужно остановить. Это может произойти, если при остановке, обычно вследствие внешних завершает процесс.  
+ Не удается продолжить выполнение после `ExitProcess` событий. Это событие вызывается асинхронно с другими событиями во время появится нужный процесс нужно остановить. Это может произойти, если процесс прерывается во время остановки, обычно вследствие внешних.  
   
- Если обратный вызов управляемого уже обрабатывает общеязыковой среды выполнения (CLR), это событие будет отложено до после возвращения из этого обратного вызова.  
+ Если среда CLR (CLR), который уже обслуживается управляемом обратном вызове, это событие будет отложено до после возвращения ответного вызова.  
   
- `ExitProcess` Событие является только событие выхода или выгрузки, которое гарантированно вызывается при завершении работы.  
+ `ExitProcess` Это единственное событие завершения и выгрузки, гарантированно вызывается при завершении работы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

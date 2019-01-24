@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74827fac102ee6045965f4ba9d74dd3b1aa0af86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c3d71c75527daa9a9c130d5aaa0d6838816c276
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559428"
 ---
 # <a name="igchostgetthreadstats-method"></a>Метод IGCHost::GetThreadStats
-Получает статистику отдельного потока для сборки мусора.  
+Получает статистику по потокам для сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ HRESULT GetThreadStats (
   
 #### <a name="parameters"></a>Параметры  
  `pFiberCookie`  
- [in] Указатель Многослойный файл cookie, указывающее поток, для которого требуется извлечь статистику.  
+ [in] Указатель на Многослойный файл cookie, указывающее поток, для которого требуется извлечь статистику.  
   
  `pStats`  
- [in, out] Указатель на [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) структуру, содержащую статистику сборки мусора для заданного потока.  
+ [in, out] Указатель на [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) структуру, содержащую статистику сбора мусора для указанного потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** GCHost.idl, GCHost.h  
+ **Заголовок.** GCHost.idl GCHost.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

@@ -6,11 +6,12 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 82a7114027451d1342e6dc0846799933ce44d968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534463"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 Компилятор принимает только синтаксис, включенный в указанной версии языка Visual Basic.  
@@ -23,12 +24,16 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="arguments"></a>Аргументы  
  `version`  
- Обязательно. Языковая версия для использования во время компиляции. Допустимые значения: `9`, `9.0`, `10`, и `10.0`.  
+ Обязательный. Версия языка для использования во время компиляции. Принимаются значения `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` и `latest`.
+
+ Любой из целых чисел может также быть указан с помощью `.0` номер версии, например, `11.0`.
+
+ Можно просмотреть список всех возможных значений, указав `-langversion:?` в командной строке.  
   
 ## <a name="remarks"></a>Примечания  
- `-langversion` Параметр указывает, какой синтаксис принимает компилятор. Например если указать, что языковая версия является 9.0, компилятор создает ошибки синтаксиса, допустим только в версии 10.0 и более поздних версиях.  
+ `-langversion` Параметр указывает, какой синтаксис принимает компилятор. Например если указать, что языковой версии является 9.0, компилятор выдает ошибки для синтаксис, который является допустимым только в версии 10.0 и более поздних версий.  
   
- Этот параметр можно использовать при разработке приложений, нацеленных на разные версии платформы .NET Framework. Например если вы используете .NET Framework 3.5, можно позволяет этот параметр не следует использовать синтаксис из версии языка 10.0.  
+ Этот параметр можно использовать при разработке приложения, ориентированные на разные версии платформы .NET Framework. Например если вы ориентируетесь на .NET Framework 3.5, можно выполнить этот параметр, чтобы убедиться, что вы не используйте синтаксис с языковой версии 10.0.  
   
  Можно задать `-langversion` непосредственно только с помощью командной строки. Дополнительные сведения см. в разделе [Указание конкретной версии или профиля .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
@@ -39,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Настройка конкретной версии платформы .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+## <a name="see-also"></a>См. также
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Настройка конкретной версии платформы .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

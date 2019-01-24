@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552246"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Перечисление CorDebugStepReason
 Указывает результат отдельного шага.  
@@ -42,25 +42,25 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Пошаговое выполнение завершено нормально в той же функции.|  
+|`STEP_NORMAL`|Пошаговое выполнение завершено нормально в ту же функцию.|  
 |`STEP_RETURN`|Шаг с заходом продолжена нормально после возвращения функции.|  
 |`STEP_CALL`|Шаг с заходом продолжена нормально в начале вновь вызванной функции.|  
-|`STEP_EXCEPTION_FILTER`|Возникло исключение и управление было передано фильтра исключений.|  
-|`STEP_EXCEPTION_HANDLER`|Возникло исключение и управление было передано обработчику исключений.|  
-|`STEP_INTERCEPT`|Элемент управления был передан перехватчик.|  
+|`STEP_EXCEPTION_FILTER`|Возникло исключение и передан элемент управления фильтра исключений.|  
+|`STEP_EXCEPTION_HANDLER`|Возникло исключение, и элемент управления был передан в обработчик исключений.|  
+|`STEP_INTERCEPT`|Управление было передано перехватчику.|  
 |`STEP_EXIT`|Выход потока до выполнения шага.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Метод StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

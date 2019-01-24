@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 25cc1a1e4c6e7e7d3f695c06eade8be546ee6c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531971"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
 В следующих разделах приводятся рекомендации по созданию надежных приложений с помощью Windows Communication Foundation (WCF). Дополнительные сведения о безопасности см. в разделах [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) и [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "50205260"
  WS-SecurityPolicy позволяет службам публиковать информацию о своих удостоверениях в метаданных. Когда идентификационные данные извлекаются через `svcutil` или с помощью других методов, таких как <xref:System.ServiceModel.Description.WsdlImporter>, эти данные преобразуются в параметры удостоверения для адресов конечных точек служб WCF. Клиенты, которые не подтверждают правильность и допустимость данных удостоверений службы, эффективно выполняют обход проверки подлинности службы. Вредоносная служба может использовать такие клиенты для перенаправления учетных данных и реализации других атак типа "злоумышленник в середине", изменяя заявленное в WSDL удостоверение.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Используйте сертификаты X509 вместо протокола NTLM  
- WCF предоставляет два механизма проверки подлинности одноранговых элементов: сертификаты X509 (используемые одноранговым каналом) и проверку подлинности Windows, при которой согласование SSPI понижается с протокола Kerberos до протокола NTLM.  Проверка подлинности на основании сертификатов с использованием размеров ключа от 1024 битов имеет преимущества по сравнению с проверкой подлинности по протоколу NTLM по следующим причинам:  
+ WCF предоставляет два механизма проверки подлинности peer-to-peer: X509 (используемые одноранговым каналом) сертификаты и проверку подлинности Windows, где согласование SSPI понижается с протокола Kerberos на NTLM.  Проверка подлинности на основании сертификатов с использованием размеров ключа от 1024 битов имеет преимущества по сравнению с проверкой подлинности по протоколу NTLM по следующим причинам:  
   
 -   возможность взаимной проверки подлинности,  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50205260"
  Убедитесь в надежности источника метаданных и в том, что метаданные не были злонамеренно искажены. Метаданные, полученные по протоколу HTTP, передаются открытым текстом и могут быть подделаны. Если в службе используются свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, для загрузки данных по протоколу HTTPS используйте URL-адрес, предоставленный разработчиком службы.  
   
 ## <a name="publish-metadata-using-security"></a>Публикуйте метаданные с использованием безопасности  
- Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. Дополнительные сведения см. в разделе [Публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [Практическое руководство. Публикация метаданных для службы с использованием кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Для предотвращения злонамеренного искажения метаданных, опубликованных службой, обеспечьте защиту конечной точки обмена метаданными с помощью безопасности на уровне транспорта или сообщений. Дополнительные сведения см. в разделе [публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) и [как: Публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Разрешите использование локального издателя  
  Если для данной привязки указаны адрес издателя и привязка, локальный издатель не применяется в конечных точках, использующих эту привязку. Клиенты, которые предполагают всегда использовать локальный издатель, должны убедиться, что они не используют такую привязку или что привязка изменена таким образом, что адрес издателя пуст.  
@@ -56,7 +56,7 @@ ms.locfileid: "50205260"
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>Задайте параметру SecurityBindingElement.IncludeTimestamp значение True в пользовательских привязках  
  При создании пользовательской привязки следует задать параметру <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> значение `true`. В противном случае, если параметр <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> имеет значение `false`, а клиент использует асимметричный маркер на основе ключа, например, сертификат Х509, сообщение не будет подписано.  
   
-## <a name="see-also"></a>См. также  
- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+## <a name="see-also"></a>См. также
+- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

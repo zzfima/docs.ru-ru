@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552363"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Метод IMetaDataImport::GetEventProps
-Возвращает сведения о метаданных для события, представленного указанным токеном события, включая объявляющий тип, добавления и методы удаления для делегатов и всевозможные флаги и другие связанные с ними данные.  
+Получает сведения о метаданных для события, представленного указанным токеном события, включая объявляющий тип, добавления и методы удаления для делегатов и все флаги и связанные с ним данные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,28 +55,28 @@ HRESULT GetEventProps (
  [out] Указатель на токен TypeDef, представляющий класс, объявляющий событие.  
   
  `szEvent`  
- [out] Имя события, на который указывает `ev`.  
+ [out] Имя события, который ссылается `ev`.  
   
  `pchEvent`  
- [in] Запрошенная длина в расширенных символах с `szEvent`.  
+ [in] Длина запрошенной в расширенных символах `szEvent`.  
   
  `pdwEventFlags`  
- [out] Возвращаемая длина в расширенных символах с `szEvent`.  
+ [out] Возвращаемая длина в расширенных символах `szEvent`.  
   
  `ptkEventType`  
- [out] Указатель на объект TypeRef или TypeDef метаданных токен, представляющий <xref:System.Delegate> тип события.  
+ [out] Указатель на TypeRef или TypeDef метаданных маркер, представляющий <xref:System.Delegate> тип события.  
   
  `pmdAddOn`  
- [out] Указатель на токен метаданных, представляющий метод, который добавляет обработчик для события.  
+ [out] Указатель на токен метаданных, представляющий метод, который добавляет обработчики для события.  
   
  `pmdRemoveOn`  
- [out] Указатель на токен метаданных, представляющий метод, который удаляет обработчик для события.  
+ [out] Указатель на токен метаданных, представляющий метод, который удаляет обработчики для события.  
   
  `pmdFire`  
  [out] Указатель на токен метаданных, представляющий метод, который вызывает событие.  
   
  `rmdOtherMethod`  
- [out] Массив указателей токена в другие методы, связанные с событием.  
+ [out] Массив токенов указатели на другие методы, связанные с событием.  
   
  `cMax`  
  [in] Максимальный размер массива `rmdOtherMethod`.  
@@ -85,14 +85,14 @@ HRESULT GetEventProps (
  [out] Число маркеров, возвращаемых в `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

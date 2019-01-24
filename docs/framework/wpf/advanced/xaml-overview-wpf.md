@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: ec7072e7af15bdff373962f776abf0aad89361bb
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563760"
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -137,7 +137,7 @@ ms.locfileid: "39220780"
   
 -   **Опущен элемент свойства StackPanel.Children:** <xref:System.Windows.Controls.StackPanel> является производным от <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> Определяет <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойства содержимого XAML его.  
   
--   **Опущен объектный элемент UIElementCollection:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойство принимает тип <xref:System.Windows.Controls.UIElementCollection>, который реализует <xref:System.Collections.IList>. Тег элемента коллекции можно опустить, на основании правил XAML, касающихся обработки коллекций, такие как <xref:System.Collections.IList>. (В этом случае <xref:System.Windows.Controls.UIElementCollection> фактически не может быть создан, так как он не предоставляет конструктор по умолчанию, и вот почему <xref:System.Windows.Controls.UIElementCollection> показан закомментированным объектного элемента).  
+-   **Опущен объектный элемент UIElementCollection:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Свойство принимает тип <xref:System.Windows.Controls.UIElementCollection>, который реализует <xref:System.Collections.IList>. Тег элемента коллекции можно опустить, на основании правил XAML, касающихся обработки коллекций, такие как <xref:System.Collections.IList>. (В этом случае <xref:System.Windows.Controls.UIElementCollection> фактически не может быть создан, так как он не предоставляет конструктор по умолчанию, и вот почему <xref:System.Windows.Controls.UIElementCollection> показан закомментированным объектного элемента).  
   
 ```xaml  
 <StackPanel>  
@@ -175,7 +175,7 @@ ms.locfileid: "39220780"
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- Список всех расширений разметки для XAML, реализованных в WPF, см. в разделе [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Список расширений разметки, определенных в сборке System.Xaml и более доступных для реализаций XAML платформы .NET Framework, см. в разделе [Возможности пространства имен языка XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Дополнительные сведения о понятиях расширений разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Список всех расширений разметки для XAML, реализованных в WPF, см. в разделе [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Список ссылок на расширения разметки, которые определены в сборке System.Xaml и более доступных для реализаций .NET Framework XAML, см. в разделе [пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Дополнительные сведения о понятиях расширений разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Преобразователи типов  
@@ -212,17 +212,17 @@ ms.locfileid: "39220780"
 ### <a name="the-x-prefix"></a>Префикс x:  
  В предыдущем примере корневого элемента префикс `x:` использовался для сопоставления пространства имен XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], которое является выделенным пространством имен XAML, поддерживающим конструкции языка XAML. Префикс `x:` используется для сопоставления данного пространства имен XAML в шаблонах для проектов, в примерах и в документации по всему этому [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Пространство имен XAML для языка XAML содержит несколько конструкций программирования, которые очень часто используются в XAML. Ниже приведен список наиболее распространенных конструкций программирования с префиксом `x:`, которые могут вам потребоваться.  
   
--   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
+-   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): Задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
   
--   [x:Class](../../../../docs/framework/xaml-services/x-class-directive.md). Задает пространство имен [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и имя класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
+-   [x: Class](../../../../docs/framework/xaml-services/x-class-directive.md): Указывает [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространство имен и имя класса для класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
   
--   [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Задает имя объекта во время выполнения для экземпляра, который существует в коде во время выполнения после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
+-   [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md): Задает имя объекта времени выполнения для экземпляра, который существует в коде во время выполнения, после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
   
--   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md). Позволяет использовать ссылку, возвращающую статическое значение, в остальном не являющееся свойством, совместимым с XAML.  
+-   [x: Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md): Позволяет использовать ссылку, возвращающую статическое значение, которое не может быть свойством, совместимым с XAML.  
   
--   [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
+-   [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): Создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
   
- Существуют дополнительные конструкции программирования в пространстве имен XAML/с префиксом `x:`, которые применяются не так часто. Дополнительные сведения см. в разделе [Возможности пространства имен языка XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Существуют дополнительные конструкции программирования в пространстве имен XAML/с префиксом `x:`, которые применяются не так часто. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>Пользовательские префиксы и пользовательские типы в XAML  
@@ -319,7 +319,7 @@ ms.locfileid: "39220780"
 ## <a name="whats-next"></a>Дальнейшие действия  
  Этот раздел содержит основные сведения о терминологии и понятиях синтаксиса XAML применительно к WPF. Дополнительные сведения об используемых здесь терминах см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- Если вы еще не сделали это, выполните упражнения из раздела руководства [Пошаговое руководство: создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). При создании приложения, ориентированного на разметку и описанного в руководстве, упражнения помогут лучше осознать многие понятия, описанные в этом разделе.  
+ Если вы еще не сделали это, выполните упражнения из раздела руководства [Пошаговое руководство: Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). При создании приложения, ориентированного на разметку и описанного в руководстве, упражнения помогут лучше осознать многие понятия, описанные в этом разделе.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует конкретную модель приложения, основанный на <xref:System.Windows.Application> класса. Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
   
@@ -327,10 +327,10 @@ ms.locfileid: "39220780"
   
  В разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) представлены дополнительные сведения о разнообразии свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и описано понятие свойств зависимостей.  
   
-## <a name="see-also"></a>См. также  
- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Возможности пространства имен языка XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>См. также
+- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

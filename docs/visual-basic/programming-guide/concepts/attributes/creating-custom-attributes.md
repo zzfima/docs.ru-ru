@@ -2,12 +2,12 @@
 title: Создание настраиваемых атрибутов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc60e20d163c6aec231152940f548fcb58442f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526357"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Создание настраиваемых атрибутов (Visual Basic)
 Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных. Предположим, что требуется пометить тип тегом с именем программиста, который его разработал. Вы можете определить класс настраиваемых атрибутов `Author`:  
@@ -62,11 +62,11 @@ End Class
 > [!NOTE]
 >  Если класс атрибутов содержит свойство, это свойство должно быть доступно для чтения и записи.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection>  
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)  
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))  
- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Reflection>
+- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))
+- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

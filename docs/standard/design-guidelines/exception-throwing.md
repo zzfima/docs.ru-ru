@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
-ms.openlocfilehash: 016a42ee7a772a3268e823e75b6239467e13b315
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562886"
 ---
 # <a name="exception-throwing"></a>Создание исключений
 Исключения рекомендации, приведенные в этом разделе требуется хорошее определение значение сбой при выполнении. Сбой при выполнении происходит всякий раз, когда член не может это было целью (что член названия). Например если `OpenFile` метод не может возвращать дескриптор открытого файла вызывающей стороне, он будет считаться ошибкой выполнения.  
@@ -66,5 +66,5 @@ ms.locfileid: "53148046"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md)

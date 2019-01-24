@@ -2,12 +2,12 @@
 title: Хранилище экземпляров рабочих процессов SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538301"
 ---
 # <a name="sql-workflow-instance-store"></a>Хранилище экземпляров рабочих процессов SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] поставляется вместе с хранилищем экземпляров рабочего процесса SQL, благодаря чему рабочие процессы могут сохранять сведения о состоянии экземпляров рабочих процессов в базах данных SQL Server 2005 или SQL Server 2008. Эта функция чаще всего реализуется в виде класса <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, являющегося производным от абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> платформы сохраняемости. Компонент хранилища экземпляров рабочего процесса SQL состоит из поставщика сохраняемости SQL, являющегося конкретной реализацией API сохраняемости, используемой ведущим приложением для отправки команд сохраняемости в хранилище.  
@@ -24,7 +24,7 @@ ms.locfileid: "49453022"
   
 -   [Свойства хранилища экземпляров рабочих процессов SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Практическое руководство. Включение сохраняемости для рабочих процессов и их служб в SQL](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Практическое руководство. Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Активация экземпляров](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
@@ -36,5 +36,5 @@ ms.locfileid: "49453022"
   
 -   [База данных сохраняемости SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>См. также  
- [Образцы сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>См. также
+- [Образцы сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735)

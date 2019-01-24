@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 1223dee7e307c032bd14be154b58972e51287c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518479"
 ---
 # <a name="group-elements-in-a-sequence"></a>Группировка элементов последовательности
 Оператор <xref:System.Linq.Enumerable.GroupBy%2A> группирует элементы последовательности. В следующем примере используется база данных Northwind.  
   
 > [!NOTE]
->  Иногда значения NULL в столбцах в запросах <xref:System.Linq.Enumerable.GroupBy%2A> могут вызывать исключение <xref:System.InvalidOperationException>. Дополнительные сведения см. раздел «GroupBy InvalidOperationException» [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  Иногда значения NULL в столбцах в запросах <xref:System.Linq.Enumerable.GroupBy%2A> могут вызывать исключение <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе «GroupBy InvalidOperationException» [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример разделяет `Products` по `CategoryID`.  
@@ -72,6 +72,6 @@ ms.locfileid: "33364507"
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>См. также  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>См. также
+- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

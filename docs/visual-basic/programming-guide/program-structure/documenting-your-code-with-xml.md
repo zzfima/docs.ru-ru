@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: b99c37f30d595e114bb4625a2881a9f0b463f5e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d3658076b994ae0f7aedb64e8d45f7d6b366018c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552298"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Документирование кода с помощью XML (Visual Basic)
 В Visual Basic можно документировать код с помощью XML  
@@ -46,6 +46,6 @@ ms.locfileid: "43524411"
   
 -   [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
   
-## <a name="see-also"></a>См. также  
- [Разработка приложений в Visual Basic](../../../visual-basic/developing-apps/index.md)  
- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+- [Разработка приложений в Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)

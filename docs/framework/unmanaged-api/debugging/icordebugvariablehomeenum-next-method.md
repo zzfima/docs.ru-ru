@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugVariableHomeEnum::Next
+title: ICorDebugVariableHomeEnum::Next Method
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5ab18d6c2ae8bbf47a3bcd7cb892530be4f8f4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d383d4bf0f3d203c331ff00981885cbc6c0c35d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519207"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>Метод ICorDebugVariableHomeEnum::Next
+# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum::Next Method
 Возвращает заданное число [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) экземпляров, которые содержат сведения о локальных переменных и аргументов в функции.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,10 +42,10 @@ HRESULT Next(
  [in] Количество объектов, которые должны быть получены.  
   
  `homes`  
- Массив указателей, каждый из которых указывает на [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) объект, предоставляющий сведения о локальной переменной или аргумента функции.  
+ Массив указателей, каждый из которых указывает [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) объект, предоставляющий сведения о локальной переменной или аргумента функции.  
   
  `pceltFetched`  
- [out] Количество экземпляров, фактически извлеченных в объекты.  
+ [out] Количество экземпляров, фактически возвращенных в объектах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
@@ -53,20 +53,20 @@ HRESULT Next(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|Метод завершился успешно.|  
-|`S_FALSE`|Получить фактическое количество экземпляров, как отражено в `pceltFetched`, меньше, чем количество экземпляров, запрошенных.|  
+|`S_FALSE`|Извлечь фактическое число экземпляров, как показано в `pceltFetched`, меньше, чем количество запрошенных экземпляров.|  
   
 ## <a name="remarks"></a>Примечания  
- [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) метод позволяет получить более `celt` объектов, начиная с текущей позиции перечислителя. При возвращении метода `pceltFetched` содержит фактическое число объектов, полученных.  
+ [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) метод позволяет получить максимум `celt` объектов, начиная с текущей позиции перечислителя. При возвращении метода `pceltFetched` содержит фактическое число объектами, возвращаемыми.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
- [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

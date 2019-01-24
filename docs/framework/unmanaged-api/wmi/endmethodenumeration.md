@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a098afe1702e9559a2784ea0716a0a61216e9fd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535220"
 ---
 # <a name="endmethodenumeration-function"></a>Функция EndMethodEnumeration
 Завершает работу вызовом последовательности перечисления [функция BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -51,7 +51,7 @@ HRESULT EndMethodEnumeration (
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Произошла внутренняя ошибка. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Внутренняя ошибка. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
@@ -61,11 +61,11 @@ HRESULT EndMethodEnumeration (
 Вызывающий объект начинается в последовательности перечисления с помощью [функция BeginMethodEnumeration](beginmethodenumeration.md), а затем вызывает [NextMethod функция](nextmethod.md )до выполнения метода `WBEM_S_NO_MORE_DATA`. Вызывающий объект (необязательно) завершает последовательность путем вызова `EndMethodEnumeration`. Вызывающая сторона может завершить перечисление раньше путем вызова `EndMethodEnumeration` в любое время.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

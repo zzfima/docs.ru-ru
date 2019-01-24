@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 70ec49fd4643c67c6ad08fdda9166eeb8a64d254
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528736"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Определяет, имеет ли выражение запроса значение null.  
@@ -57,13 +57,13 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Вызывает ошибку.|  
   
 ## <a name="example"></a>Пример  
- Следующие [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запроса оператор IS NOT NULL определяет, отличается ли выражение запроса значение null. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+ Следующие [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запросе используется оператор IS NOT NULL, чтобы определить, если выражение запроса не равно null. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру из статьи [Практическое руководство. Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>См. также
+- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

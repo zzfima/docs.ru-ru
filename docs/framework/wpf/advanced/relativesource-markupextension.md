@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 6ede7bc8a6c2a45630c48417c7ab90eb8decdc39
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559390"
 ---
 # <a name="relativesource-markupextension"></a>Расширение разметки RelativeSource
 Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые будут использоваться в [расширения разметки привязки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> определенного в XAML.  
@@ -105,11 +105,11 @@ ms.locfileid: "54029441"
   
  `RelativeSource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Data.Binding>  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Data.Binding>
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

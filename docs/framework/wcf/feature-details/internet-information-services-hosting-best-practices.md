@@ -2,12 +2,12 @@
 title: Рекомендации по размещению в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 931ba4162ed34ab391bd0ba2de2cb5a0e16ede6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521872"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Рекомендации по размещению в службах IIS
 В этом разделе описаны некоторые рекомендации для размещения служб Windows Communication Foundation (WCF).  
@@ -81,6 +81,6 @@ ms.locfileid: "50187574"
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры размещения служб](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>См. также
+- [Примеры размещения служб](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

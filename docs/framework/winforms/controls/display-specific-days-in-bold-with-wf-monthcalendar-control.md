@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms
+title: Как выполнить Отображение определенных дней полужирным шрифтом с Windows Forms в элементе управления MonthCalendar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 0ee89fb4cfb6ddbf975eb0e85e7dd1bab30f08d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547791"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления может отображать дни полужирным шрифтом, как существительные даты или на периодической основе. Это может сделать для привлечения внимания к определенные даты, например праздников и выходных дней.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Как выполнить Отображение определенных дней полужирным шрифтом с Windows Forms в элементе управления MonthCalendar
+Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления может отображать дней полужирным шрифтом, либо как даты в единственном числе, либо на периодической основе. Это может сделать для привлечения внимания к особые даты, такие как праздники и выходные.  
   
- Эта функция трех свойств. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Свойство содержит отдельные даты. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Свойство содержит даты, которые отображаются полужирным шрифтом каждый год. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Свойство содержит даты, которые отображаются полужирным шрифтом каждый месяц. Каждое из этих свойств содержит массив <xref:System.DateTime> объектов. Чтобы добавить или удалить дату из одного из этих списков, необходимо добавить или удалить <xref:System.DateTime> объекта.  
+ Три свойства определяют эту функцию. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Свойство содержит отдельные даты. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Свойство содержит даты, которые отображаются полужирным шрифтом каждый год. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Свойство содержит даты, которые отображаются полужирным шрифтом каждый месяц. Каждое из этих свойств содержит массив <xref:System.DateTime> объектов. Чтобы добавить или удалить дату из одного из этих списков, необходимо добавить или удалить <xref:System.DateTime> объекта.  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a>Выделяются полужирным шрифтом даты  
+### <a name="to-make-a-date-appear-in-bold-type"></a>Полужирным шрифтом даты  
   
 1.  Создание <xref:System.DateTime> объектов.  
   
@@ -61,7 +61,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
   
      – или –  
   
-     Выделите дат полужирным за один раз, создав массив <xref:System.DateTime> объекты и присвоение одного из свойств.  
+     Выделите дат полужирным за один раз, создав массив <xref:System.DateTime> объектов и присваивается одно из свойств.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -78,9 +78,9 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### <a name="to-make-a-date-appear-in-the-regular-font"></a>Для отображения даты обычным шрифтом  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a>Отображается обычным шрифтом даты  
   
-1.  Один выделенный полужирным шрифтом даты отображаются обычным шрифтом, вызвав <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, или <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> метод.  
+1.  Один выделенный полужирным шрифтом даты отображается обычным шрифтом, вызвав <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, или <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> метод.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -99,7 +99,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
   
      – или –  
   
-     Удалите все выделенные полужирным шрифтом даты из одной из трех списков путем вызова <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, или <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> метод.  
+     Удалите все выделенные полужирным шрифтом даты из одной из трех списков, вызвав <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, или <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> метод.  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -127,8 +127,8 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- [Практическое руководство. Отображение более чем одного месяца в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>См. также
+- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+- [Практическое руководство. Выбор диапазона дат в элементе управления Windows Forms MonthCalendar](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Практическое руководство. Изменение внешнего вида управления Windows Forms MonthCalendar](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
+- [Практическое руководство. Отображение более чем одного месяца в элементе управления Windows Forms MonthCalendar](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

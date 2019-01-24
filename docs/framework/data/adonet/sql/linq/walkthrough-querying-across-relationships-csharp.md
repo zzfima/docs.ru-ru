@@ -2,22 +2,22 @@
 title: Пошаговое руководство. Запросы по связям (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563669"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Пошаговое руководство. Запросы по связям (C#)
-В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей внешних ключей в базе данных.  
+В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей по внешнему ключу в базе данных.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Это пошаговое руководство было написано с использованием параметров разработки Visual C#.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Необходимо выполнить [Пошаговое руководство: простая модель объекта и запрос (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). В основе данного пошагового руководства лежит руководство, описываемое в данном разделе; кроме того, в компьютере должен быть файл northwnd.mdf в папке c:\linqtest5.  
+ Необходимо выполнить [Пошаговое руководство: Простая модель объектов и запросов (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). В основе данного пошагового руководства лежит руководство, описываемое в данном разделе; кроме того, в компьютере должен быть файл northwnd.mdf в папке c:\linqtest5.  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из трех основных задач.  
@@ -86,7 +86,7 @@ ms.locfileid: "33364422"
 4.  Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Далее пошагового руководства ([Пошаговое руководство: управление данными (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
+ Следующего пошагового руководства ([Пошаговое руководство: Обработка данных (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
   
-## <a name="see-also"></a>См. также  
- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>См. также
+- [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

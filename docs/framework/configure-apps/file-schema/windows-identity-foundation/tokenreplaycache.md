@@ -3,20 +3,20 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e89afc5764dbdb86e87d2307425299dff57c686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525175"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Регистрирует кэш повторного использования токенов службы или коллекцию обработчиков токенов безопасности.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<кэширует >  
-\<tokenReplayCache >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<caches>  
+\<tokenReplayCache>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47206225"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши, используемые службы или коллекцию обработчиков токенов безопасности.|  
   
@@ -62,6 +62,6 @@ ms.locfileid: "47206225"
 </caches>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

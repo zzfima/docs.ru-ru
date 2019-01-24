@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение внешнего вида компонента ColorDialog в Windows Forms
+title: Как выполнить Изменение внешнего вида компонента ColorDialog в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530301"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Практическое руководство. Изменение внешнего вида компонента ColorDialog в Windows Forms
-Можно настроить внешний вид Windows Forms <xref:System.Windows.Forms.ColorDialog> компонент с номером его свойства. Диалоговое окно имеет две части — один из них базовые цвета, а второй позволяет пользователю определять собственные цвета.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Как выполнить Изменение внешнего вида компонента ColorDialog в Windows Forms
+Можно настроить внешний вид форм Windows <xref:System.Windows.Forms.ColorDialog> компонент с номером из его свойств. Диалоговое окно состоит из двух разделов — один из них основных цветов, а второй пользователь может определить собственные цвета.  
   
- Большинство свойств ограничивают набор цветов, пользователь может выбрать в диалоговом окне. Если <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> свойству `true`, пользователь может определять собственные цвета. <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Свойство `true` Если диалоговое окно развертывается для определения пользовательских цветов; в противном случае пользователь должен нажать кнопку «Определить цвет». Когда <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> свойству `true`, диалоговое окно отображает все доступные цвета в наборе основных цветов. Если <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> свойству `true`, пользователь может выбрать сглаженный цвет; для выбора доступны только сплошными цветами.  
+ Большинство свойств ограничивают набор цветов, пользователь может выбрать в диалоговом окне. Если <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> свойству `true`, пользователь может определить собственные цвета. <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Свойство `true` Если диалоговое окно будет расширен, чтобы определить собственные цвета; в противном случае пользователь должен нажать кнопку «Определить цвет». Когда <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> свойству `true`, диалоговое окно отображает все доступные цвета в наборе основных цветов. Если <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> свойству `true`, пользователь может выбрать сглаживания цвета; для выбора доступны только сплошные цвета.  
   
- Если <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> свойству `true`, в диалоговом окне отображается кнопка справки. Когда пользователь нажимает кнопку "Справка" <xref:System.Windows.Forms.ColorDialog> компонента <xref:System.Windows.Forms.CommonDialog.HelpRequest> события.  
+ Если <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> свойству `true`, кнопка справки отображается в диалоговом окне. Когда пользователь нажимает кнопку "Справка" <xref:System.Windows.Forms.ColorDialog> компонента <xref:System.Windows.Forms.CommonDialog.HelpRequest> события.  
   
-### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Чтобы настроить внешний вид диалогового окна "цвета"  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Чтобы настроить внешний вид диалогового окна «цвет»  
   
-1.  Задать <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, и <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> нужные значения для свойств.  
+1.  Задайте <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, и <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> свойства требуемыми значениями.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -49,7 +49,7 @@ ms.locfileid: "33530251"
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ColorDialog>  
- [Компонент ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- [Общие сведения о компоненте ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ColorDialog>
+- [Компонент ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+- [Общие сведения о компоненте ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519129"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Метод ICLRMetaHost::RequestRuntimeLoadedNotification
-Предоставляет функции обратного вызова, которое гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущена. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
+Предоставляет функцию обратного вызова, которая гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущен. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,9 +49,9 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>Примечания  
  Функция обратного вызова работает следующим образом:  
   
--   Обратный вызов выполняется только в том случае, когда среда выполнения загружается в первый раз.  
+-   Функция обратного вызова вызывается только в том случае, когда среда выполнения загружается в первый раз.  
   
--   Функция обратного вызова не вызывается для реентерабельным загружает ту же среду выполнения.  
+-   Функция обратного вызова не вызывается для реентерабельных загрузок ту же среду выполнения.  
   
 -   Для загрузки среды выполнения не допускающий повторные входы сериализуются вызовы функции обратного вызова.  
   
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Если узел пытается загрузить или вызывать другой среды выполнения реентерабельным способом `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` параметры, которые указаны в функции обратного вызова необходимо использовать функцию следующим образом:  
+ Если основное приложение намеревается загрузить или вызывать другой среды выполнения должен быть загружен в виде реентерабельным, `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` параметры, предоставляемые в обратном вызове, необходимо использовать функцию следующим образом:  
   
 -   `pfnCallbackThreadSet` должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
   
--   `pfnCallbackThreadUnset` должен быть вызван, когда поток больше не вызывает загрузку среды выполнения (и до возврата из предыдущего обратного вызова).  
+-   `pfnCallbackThreadUnset` должен вызываться, когда поток больше не вызывает загрузку среды выполнения (и перед возвратом из начальной обратного вызова).  
   
--   `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` являются допускает повторные входы.  
+-   `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` оба являются не допускающий повторные входы.  
   
 > [!NOTE]
->  Хост-приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` за пределами области `pCallbackFunction` параметра.  
+>  Ведущие приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` выходит за рамки `pCallbackFunction` параметра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MetaHost.h  
+ **Заголовок.** MetaHost.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

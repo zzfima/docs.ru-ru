@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b915a1e310d8375f70a09a9cd1f0e3051bda7895
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564959"
 ---
 # <a name="ltdatetimeserializationgt-element"></a>Элемент &lt;dateTimeSerialization&gt;
 Определяет режим сериализации объектов <xref:System.DateTime>.  
@@ -52,10 +52,10 @@ ms.locfileid: "47079475"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.DateTime>  
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Элемент \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [\<Добавить > элемент для \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)  
+- <xref:System.DateTime>
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Элемент \<schemaImporterExtensions>](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<Добавить > элемент для \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [Элемент \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

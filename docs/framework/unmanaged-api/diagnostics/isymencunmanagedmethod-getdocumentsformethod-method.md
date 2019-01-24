@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562678"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>Метод ISymENCUnmanagedMethod::GetDocumentsForMethod
 Возвращает документы, которые этот метод имеет строки.  
@@ -41,7 +41,7 @@ HRESULT GetDocumentsForMethod(
  [in] Размер буфера, на который указывает `pcDocs`.  
   
  `pcDocs`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для хранения документов.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения документов.  
   
  `documents`  
  [in] Буфер, содержащий документы.  
@@ -50,7 +50,7 @@ HRESULT GetDocumentsForMethod(
  Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

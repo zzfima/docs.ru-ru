@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отслеживание наведения указателя мыши на элемент ToolStripItem
+title: Как выполнить Обнаружить, когда указатель мыши находится над ToolStripItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], detecting mouse movement
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ToolStripItem class [Windows Forms], detecting mouse movement
 - mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
-ms.openlocfilehash: 15a7562efd9a86a029754610ffd9e77c372d1ac2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20fbc91773f431fc68f606f8aa9f24f4c0cc06bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539601"
 ---
-# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Практическое руководство. Отслеживание наведения указателя мыши на элемент ToolStripItem
-Используйте следующую процедуру, чтобы обнаружить, когда указатель мыши находится над <xref:System.Windows.Forms.ToolStripItem>.  
+# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Как выполнить Обнаружить, когда указатель мыши находится над ToolStripItem
+Используйте следующую процедуру, чтобы определить, когда указатель мыши находится над <xref:System.Windows.Forms.ToolStripItem>.  
   
-### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a>Чтобы обнаружить, когда указатель находится над ToolStripItem  
+### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a>Чтобы определить, когда указатель наведен на элемент ToolStripItem  
   
--   Используйте <xref:System.Windows.Forms.ToolStripItem.Selected%2A> свойство для элементов, в котором <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> — `true`.  
+-   Используйте <xref:System.Windows.Forms.ToolStripItem.Selected%2A> свойства для элементов, в котором <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> является `true`.  
   
      Это избавит вас от необходимости синхронизации <xref:System.Windows.Forms.ToolStripItem.MouseEnter> и <xref:System.Windows.Forms.ToolStripItem.MouseLeave> события.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolStripItem>  
- <xref:System.Windows.Forms.ToolStripItem.Selected%2A>  
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolStripItem>
+- <xref:System.Windows.Forms.ToolStripItem.Selected%2A>
+- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

@@ -1,15 +1,15 @@
 ---
-title: Как использовать фильтры
+title: 'Как выполнить: использовать фильтры'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530993"
 ---
-# <a name="how-to-use-filters"></a>Как использовать фильтры
+# <a name="how-to-use-filters"></a>Как выполнить: использовать фильтры
 В этом разделе описаны основные шаги по созданию конфигурации маршрутизации с несколькими фильтрами. В этом примере сообщения направляются в две реализации службы калькулятора: regularCalc и roundingCalc. Обе реализации поддерживают одинаковые операции, однако одна служба, прежде чем вернуть результаты вычислений, округляет их до ближайшего целого числа. Клиентское приложение должно иметь возможность указывать, нужно ли использовать версию службы, выполняющую округление. Если предпочитаемая служба не указана, сообщения равномерно распределяются между двумя службами. Операции, предоставляемые обеими службами:  
   
 -   Add  
@@ -325,5 +325,5 @@ ms.locfileid: "48840762"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Службы маршрутизации](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>См. также
+- [Службы маршрутизации](../../../../docs/framework/wcf/samples/routing-services.md)

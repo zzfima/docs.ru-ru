@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 2a7dd80d141ff5945bcce71fead1bb5bc24ad737
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552397"
 ---
 # <a name="string-basics-in-visual-basic"></a>Основы работы со строками в Visual Basic
 Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе представлены основные понятия строк в Visual Basic.  
@@ -71,8 +71,8 @@ World]]></xml>.Value
   
  В отличие от других встроенных типов данных `String` — это ссылочный тип. Если переменная ссылочного типа передается в качестве аргумента функции или подпрограмме, вместо фактического значения строки передается ссылка на адрес в памяти, где хранятся данные. Поэтому в предыдущем примере имя переменной остается таким же, но оно указывает на другой экземпляр класса `String`, который содержит новое значение.  
   
-## <a name="see-also"></a>См. также  
- [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Тип данных Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Базовые операции со строками в .NET Framework](../../../../standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a>См. также
+- [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Тип данных Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Базовые операции со строками в .NET Framework](../../../../standard/base-types/basic-string-operations.md)

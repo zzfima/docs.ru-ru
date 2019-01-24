@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70cec58f232d7ab8e02cbe346d393fb25dc4e5c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 867635d8c25c7b862d70c00ad16119df7cecd776
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548499"
 ---
 # <a name="icordebugcontrollercancommitchanges-method"></a>Метод ICorDebugController::CanCommitChanges
-`CanCommitChanges` устарел. Не вызывайте этот метод.  
+`CanCommitChanges` устарел. Этот метод не вызывается.  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

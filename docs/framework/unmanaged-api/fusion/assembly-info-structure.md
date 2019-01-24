@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519753"
 ---
 # <a name="assemblyinfo-structure"></a>Структура ASSEMBLY_INFO
-Содержит сведения о сборке, которая зарегистрирована в глобальном кэше сборок.  
+Содержит сведения о сборке, зарегистрированный в глобальном кэше сборок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +40,21 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|Размер в байтах структуры. Это поле зарезервировано для будущего расширения.|  
-|`dwAssemblyFlags`|Флаги, указывающие установки сведений о сборке. Поддерживаются следующие значения:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка установлена. Текущую версию платформы .NET Framework, всегда устанавливает `dwAssemblyFlags` это значение.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентной полезных данных. Текущую версию платформы .NET Framework никогда не задает `dwAssemblyFlags` это значение.|  
+|`cbAssemblyInfo`|Размер в байтах, структуры. Это поле зарезервировано для будущего расширения.|  
+|`dwAssemblyFlags`|Флаги, указывающие сведения об установке о сборке. Поддерживаются следующие значения:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка устанавливается. Текущая версия .NET Framework всегда задает `dwAssemblyFlags` этому значению.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентного полезных данных. Текущая версия .NET Framework никогда не задает `dwAssemblyFlags` этому значению.|  
 |`uliAssemblySizeInKB`|Общий размер в килобайтах, файлов, содержащих сборки.|  
 |`pszCurrentAssemblyPathBuf`|Указатель на буфер строки, содержащий текущий путь к файлу манифеста. Путь должен заканчиваться символом null.|  
-|`cchBuf`|Число расширенных символов, включая завершающий символ null, `pszCurrentAssemblyPathBuf` содержит.|  
+|`cchBuf`|Число расширенных символов, включая завершающий символ null, который `pszCurrentAssemblyPathBuf` содержит.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Fusion.h  
+ **Заголовок.** Fusion.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>См. также
+- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
