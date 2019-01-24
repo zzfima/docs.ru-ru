@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms
+title: Как выполнить Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: c28d969f9d4976c7432e7293afb13e7f340f7e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab9ba7ca16cf0c886601e3c8fea579e70b2f30d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596778"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="35b41-102">Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="35b41-102">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="35b41-103">Ввод данных можно сделать более удобным при приложение по умолчанию заполняет значения для только что добавленных строк.</span><span class="sxs-lookup"><span data-stu-id="35b41-103">You can make data entry more convenient when the application fills in default values for newly added rows.</span></span> <span data-ttu-id="35b41-104">С <xref:System.Windows.Forms.DataGridView> класса, можно заполнить по умолчанию значения с <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.</span><span class="sxs-lookup"><span data-stu-id="35b41-104">With the <xref:System.Windows.Forms.DataGridView> class, you can fill in default values with the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span> <span data-ttu-id="35b41-105">Это событие возникает, когда пользователь вводит строку для новых записей.</span><span class="sxs-lookup"><span data-stu-id="35b41-105">This event is raised when the user enters the row for new records.</span></span> <span data-ttu-id="35b41-106">С помощью обработчика этого события, можно заполнить требуемые ячейки со значениями по своему выбору.</span><span class="sxs-lookup"><span data-stu-id="35b41-106">When your code handles this event, you can populate desired cells with values of your choosing.</span></span>  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8b557-102">Как выполнить Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8b557-102">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="8b557-103">Ввод данных можно сделать более удобным при приложение по умолчанию заполняет значения для только что добавленных строк.</span><span class="sxs-lookup"><span data-stu-id="8b557-103">You can make data entry more convenient when the application fills in default values for newly added rows.</span></span> <span data-ttu-id="8b557-104">С помощью <xref:System.Windows.Forms.DataGridView> класса, можно заполнять в используемом по умолчанию значения с <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.</span><span class="sxs-lookup"><span data-stu-id="8b557-104">With the <xref:System.Windows.Forms.DataGridView> class, you can fill in default values with the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span> <span data-ttu-id="8b557-105">Это событие возникает, когда пользователь вводит строку для новых записей.</span><span class="sxs-lookup"><span data-stu-id="8b557-105">This event is raised when the user enters the row for new records.</span></span> <span data-ttu-id="8b557-106">Когда ваш код обрабатывает это событие, можно заполнить требуемые ячейки со значениями по своему выбору.</span><span class="sxs-lookup"><span data-stu-id="8b557-106">When your code handles this event, you can populate desired cells with values of your choosing.</span></span>  
   
- <span data-ttu-id="35b41-107">В следующем примере кода демонстрируется задание значений по умолчанию для новых строк с помощью <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.</span><span class="sxs-lookup"><span data-stu-id="35b41-107">The following code example demonstrates how to specify default values for new rows using the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span>  
+ <span data-ttu-id="8b557-107">В следующем примере кода демонстрируется указание значений по умолчанию для новых строк с помощью <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.</span><span class="sxs-lookup"><span data-stu-id="8b557-107">The following code example demonstrates how to specify default values for new rows using the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="35b41-108">Пример</span><span class="sxs-lookup"><span data-stu-id="35b41-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8b557-108">Пример</span><span class="sxs-lookup"><span data-stu-id="8b557-108">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#120)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="35b41-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="35b41-109">Compiling the Code</span></span>  
- <span data-ttu-id="35b41-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="35b41-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8b557-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="8b557-109">Compiling the Code</span></span>  
+ <span data-ttu-id="8b557-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="8b557-110">This example requires:</span></span>  
   
--   <span data-ttu-id="35b41-111">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="35b41-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="8b557-111">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="8b557-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="35b41-112">Объект `NewCustomerId` функции для создания уникальных `CustomerID` значения.</span><span class="sxs-lookup"><span data-stu-id="35b41-112">A `NewCustomerId` function for generating unique `CustomerID` values.</span></span>  
+-   <span data-ttu-id="8b557-112">Объект `NewCustomerId` функция для создания уникальных `CustomerID` значения.</span><span class="sxs-lookup"><span data-stu-id="8b557-112">A `NewCustomerId` function for generating unique `CustomerID` values.</span></span>  
   
--   <span data-ttu-id="35b41-113">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="35b41-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="8b557-113">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8b557-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35b41-114">См. также</span><span class="sxs-lookup"><span data-stu-id="35b41-114">See Also</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- [<span data-ttu-id="35b41-115">Ввод данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="35b41-115">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="35b41-116">Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="35b41-116">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="8b557-114">См. также</span><span class="sxs-lookup"><span data-stu-id="8b557-114">See also</span></span>
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
+- [<span data-ttu-id="8b557-115">Ввод данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8b557-115">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="8b557-116">Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8b557-116">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

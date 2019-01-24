@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4929d9aaf7de9af72ec5ba93f5d7e35c712ac6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40bbde940538d7b06aa74ab55986da2dca3ec225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599508"
 ---
-# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="aa501-102">Метод ICorProfilerCallback::ThreadDestroyed</span><span class="sxs-lookup"><span data-stu-id="aa501-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
-<span data-ttu-id="aa501-103">Уведомляет профилировщик о том, что поток был удален.</span><span class="sxs-lookup"><span data-stu-id="aa501-103">Notifies the profiler that a thread has been destroyed.</span></span>  
+# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="b4de7-102">Метод ICorProfilerCallback::ThreadDestroyed</span><span class="sxs-lookup"><span data-stu-id="b4de7-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
+<span data-ttu-id="b4de7-103">Уведомляет профилировщик, что поток был удален.</span><span class="sxs-lookup"><span data-stu-id="b4de7-103">Notifies the profiler that a thread has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa501-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aa501-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4de7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b4de7-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="aa501-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="aa501-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b4de7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b4de7-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="aa501-106">[in] Идентификатор потока, который был удален.</span><span class="sxs-lookup"><span data-stu-id="aa501-106">[in] The ID of the thread that has been destroyed.</span></span>  
+ <span data-ttu-id="b4de7-106">[in] Идентификатор потока, который был удален.</span><span class="sxs-lookup"><span data-stu-id="b4de7-106">[in] The ID of the thread that has been destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aa501-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="aa501-107">Remarks</span></span>  
- <span data-ttu-id="aa501-108">`threadId` Значение больше не является допустимым во время данного вызова.</span><span class="sxs-lookup"><span data-stu-id="aa501-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4de7-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="b4de7-107">Remarks</span></span>  
+ <span data-ttu-id="b4de7-108">`threadId` Значение больше не является допустимым во время этого вызова.</span><span class="sxs-lookup"><span data-stu-id="b4de7-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa501-109">Требования</span><span class="sxs-lookup"><span data-stu-id="aa501-109">Requirements</span></span>  
- <span data-ttu-id="aa501-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa501-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4de7-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b4de7-109">Requirements</span></span>  
+ <span data-ttu-id="b4de7-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4de7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa501-111">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="aa501-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b4de7-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b4de7-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="aa501-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aa501-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b4de7-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b4de7-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aa501-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa501-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b4de7-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4de7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa501-114">См. также</span><span class="sxs-lookup"><span data-stu-id="aa501-114">See Also</span></span>  
- [<span data-ttu-id="aa501-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="aa501-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="aa501-116">Метод ThreadCreated</span><span class="sxs-lookup"><span data-stu-id="aa501-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+## <a name="see-also"></a><span data-ttu-id="b4de7-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b4de7-114">See also</span></span>
+- [<span data-ttu-id="b4de7-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="b4de7-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b4de7-116">Метод ThreadCreated</span><span class="sxs-lookup"><span data-stu-id="b4de7-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604279"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="55561-102">Метод ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="55561-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="55561-103">Заданной позиции в документе возвращает массив пар начального и конечного смещения, соответствующих диапазонам на языке MSIL занимаемым данной позицией в этом методе.</span><span class="sxs-lookup"><span data-stu-id="55561-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="55561-104">Массив является массивом целых чисел и имеет формат [начала, окончания, начало, завершение].</span><span class="sxs-lookup"><span data-stu-id="55561-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="55561-105">Число пар диапазона является длина массива, деленному на 2.</span><span class="sxs-lookup"><span data-stu-id="55561-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="48dee-102">Метод ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="48dee-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="48dee-103">Возвращает массив пар начального и конечного смещения, соответствующих диапазонам на языке MSIL, занимаемым позиция в этом методе обозначение позиции в документе.</span><span class="sxs-lookup"><span data-stu-id="48dee-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="48dee-104">Массив представляет собой массив целых чисел и имеет формат [начало, конец, начало, конец].</span><span class="sxs-lookup"><span data-stu-id="48dee-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="48dee-105">Число пар "диапазон" — Длина массива, поделенную на 2.</span><span class="sxs-lookup"><span data-stu-id="48dee-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55561-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="55561-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48dee-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="48dee-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRanges(  
@@ -40,30 +40,30 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="55561-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="55561-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="48dee-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="48dee-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="55561-108">[in] Документ, для которого запрашивается смещение.</span><span class="sxs-lookup"><span data-stu-id="55561-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="48dee-108">[in] Документ, для которого запрашивается смещение.</span><span class="sxs-lookup"><span data-stu-id="48dee-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="55561-109">[in] Строка документа, соответствующая этим диапазонам.</span><span class="sxs-lookup"><span data-stu-id="55561-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="48dee-109">[in] Строка документа, соответствующая этим диапазонам.</span><span class="sxs-lookup"><span data-stu-id="48dee-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="55561-110">[in] Столбец документа, соответствующий этим диапазонам.</span><span class="sxs-lookup"><span data-stu-id="55561-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="48dee-110">[in] Столбец документа, соответствующая этим диапазонам.</span><span class="sxs-lookup"><span data-stu-id="48dee-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="55561-111">[in] Размер массива `ranges`.</span><span class="sxs-lookup"><span data-stu-id="55561-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="48dee-111">[in] Размер массива `ranges`.</span><span class="sxs-lookup"><span data-stu-id="48dee-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="55561-112">[out] Указатель на `ULONG32` , получающий размер буфера, должны содержать диапазоны.</span><span class="sxs-lookup"><span data-stu-id="55561-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="48dee-112">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для диапазонов.</span><span class="sxs-lookup"><span data-stu-id="48dee-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="55561-113">[out] Указатель на буфер, получающий диапазоны.</span><span class="sxs-lookup"><span data-stu-id="55561-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="48dee-113">[out] Указатель на буфер, получающий диапазоны.</span><span class="sxs-lookup"><span data-stu-id="48dee-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="55561-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="55561-114">Return Value</span></span>  
- <span data-ttu-id="55561-115">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="55561-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="48dee-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="48dee-114">Return Value</span></span>  
+ <span data-ttu-id="48dee-115">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="48dee-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55561-116">Требования</span><span class="sxs-lookup"><span data-stu-id="55561-116">Requirements</span></span>  
- <span data-ttu-id="55561-117">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="55561-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48dee-116">Требования</span><span class="sxs-lookup"><span data-stu-id="48dee-116">Requirements</span></span>  
+ <span data-ttu-id="48dee-117">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="48dee-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55561-118">См. также</span><span class="sxs-lookup"><span data-stu-id="55561-118">See Also</span></span>  
- [<span data-ttu-id="55561-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="55561-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="48dee-118">См. также</span><span class="sxs-lookup"><span data-stu-id="48dee-118">See also</span></span>
+- [<span data-ttu-id="48dee-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="48dee-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

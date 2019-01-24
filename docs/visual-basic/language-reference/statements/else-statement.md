@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: 86608811d42134a27af27fc3d2dd2c6f3bfbbe98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce3f75fc1d5492f7f7124628becf1844cebc4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491302"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="542b0-102">Оператор Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="542b0-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="542b0-103">Вводит группу операторов, запускать или компиляции не условного группу инструкций после запуска или компиляции.</span><span class="sxs-lookup"><span data-stu-id="542b0-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="90720-102">Оператор Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90720-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="90720-103">Вводит группу операторов, запускать или компиляции без условного группы инструкций после запуска или компиляции.</span><span class="sxs-lookup"><span data-stu-id="90720-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="542b0-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="542b0-104">Remarks</span></span>  
- <span data-ttu-id="542b0-105">Ключевое слово `Else` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="542b0-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="90720-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="90720-104">Remarks</span></span>  
+ <span data-ttu-id="90720-105">Ключевое слово `Else` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="90720-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="542b0-106">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="542b0-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="90720-106">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="90720-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="542b0-107">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="542b0-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="90720-107">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="90720-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="542b0-108">#If... Then... #Else-директива</span><span class="sxs-lookup"><span data-stu-id="542b0-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="90720-108">#If... Then... #Else-директива</span><span class="sxs-lookup"><span data-stu-id="90720-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="542b0-109">См. также</span><span class="sxs-lookup"><span data-stu-id="542b0-109">See Also</span></span>  
- [<span data-ttu-id="542b0-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="542b0-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="90720-109">См. также</span><span class="sxs-lookup"><span data-stu-id="90720-109">See also</span></span>
+- [<span data-ttu-id="90720-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="90720-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
