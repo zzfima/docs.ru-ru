@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 543dfa8900fb14b30f6e70cdd0b4d281cc52708d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0efebfaa9c922ea7b72a7c4314801eb2c35dda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595530"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Недостаточно памяти (Ошибка компилятора Visual Basic)
 Требовалось больше памяти, чем было доступно.  
@@ -25,13 +25,13 @@ ms.locfileid: "33598872"
   
 -   Исключить ненужные элементы управления и формы для меньшей загруженности за один раз  
   
--   Уменьшите число `Public` переменных.  
+-   Уменьшить количество `Public` переменные.  
   
 -   Проверьте наличие свободного места.  
   
--   Увеличьте доступный объем ОЗУ, установив дополнительную память или повторное выделение памяти.  
+-   Увеличьте доступный объем ОЗУ, установка дополнительной памяти или повторное выделение памяти.  
   
 -   Убедитесь, что память освобождается, когда он больше не нужен.  
   
-## <a name="see-also"></a>См. также  
- [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>См. также
+- [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -2,12 +2,12 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d5dc5c9b9bf2313d18c9fadb1a2adb87c1b11b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610790"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
@@ -33,28 +33,28 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
  Тип данных: TcpConnectionPoolSettings  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Настройки пула подключений.  
   
 ### <a name="listenbacklog"></a>ListenBacklog  
  Тип данных: sint32  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Максимально допустимое количество ожидающих запросов на подключение в очереди.  
   
 ### <a name="portsharingenabled"></a>PortSharingEnabled  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Логическое значение, определяющее, включено ли совместное использование порта TCP для этого подключения.  
   
 ### <a name="teredoenabled"></a>TeredoEnabled  
  Тип данных: boolean  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Логическое значение, указывающее, используется ли Teredo (технология адресации клиентов, защищенных брандмауэром).  
   
@@ -64,5 +64,5 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

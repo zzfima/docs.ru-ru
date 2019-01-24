@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598819"
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
 Содержит последовательности точек неподписанный код 16-разрядное (2-байтовое) этого диапазона, в диапазоне от 0 до 65535. Каждый *кодовую точку*, или код символа, представляющего отдельный символ Юникода. Строки могут содержать от 0 до двух миллиардов (2 ^ 31) символов Юникода.  
@@ -78,11 +78,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Тип Framework.** Соответствующий тип в .NET Framework — <xref:System.String?displayProperty=nameWithType> класса.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.String?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>См. также
+- <xref:System.String?displayProperty=nameWithType>
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

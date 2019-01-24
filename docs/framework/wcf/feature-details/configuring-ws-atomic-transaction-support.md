@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592436"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Настройка поддержки транзакций WS-Atomic
 В этой теме описывается, как можно настроить поддержку WS-AtomicTransaction (WS-AT) с помощью программы конфигурации WS-AT.  
@@ -54,7 +54,7 @@ ms.locfileid: "43525886"
 ### <a name="creating-and-exporting-certificates"></a>Создание и экспорт сертификатов  
  Для этой процедуры требуется оснастка диспетчера сертификатов MMC. Чтобы открыть эту оснастку, выберите меню «Пуск - Выполнить», введите «mmc» в поле ввода и нажмите кнопку «ОК». Затем в **Консоль1** окно, перейдите к **файл/Добавить-удалить** оснастку, щелкните "Добавить" и выберите **сертификаты** из **изолированных Оснастки** списка. Наконец, выберите **учетная запись компьютера** для управления и нажмите кнопку **ОК**. **Сертификаты** в консоли оснастки появится узел.  
   
- Чтобы установить доверенные отношения, необходимо уже иметь в наличии необходимые сертификаты. Чтобы узнать, как создать и установить новые сертификаты до следующие действия, см. в разделе [как: Создание и настройка временных сертификатов клиента в WCF во время разработки](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ Чтобы установить доверенные отношения, необходимо уже иметь в наличии необходимые сертификаты. Чтобы узнать, как создать и установить новые сертификаты до следующие действия, см. в разделе [как: Создание и настройка временных сертификатов в WCF во время разработки](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  На компьютере A, использующем оснастку диспетчера сертификатов MMC, импортируйте существующий сертификат (certA) в хранилище LocalMachine\MY (Личный узел) и LocalMachine\ROOT (узел доверенного корневого центра сертификации). Чтобы импортировать сертификат для определенного узла, щелкните правой кнопкой мыши узел и выберите **все задачи/Импорт**.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "43525886"
   
 -   31: подробно  
   
-## <a name="see-also"></a>См. также  
- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [Оснастка консоли MMC для конфигурации WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>См. также
+- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Оснастка консоли MMC для конфигурации WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590150"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Метод ICLRDataTarget::ReadVirtual
 Считывает данные из указанного адреса виртуальной памяти в указанный буфер.  
@@ -40,7 +41,7 @@ HRESULT ReadVirtual (
   
 #### <a name="parameters"></a>Параметры  
  `address`  
- [in] CLRDATA_ADDRESS, в которой хранятся адресов виртуальной памяти.  
+ [in] CLRDATA_ADDRESS, который хранит адрес виртуальной памяти.  
   
  `buffer`  
  [out] Указатель на буфер, получающий данные.  
@@ -49,16 +50,16 @@ HRESULT ReadVirtual (
  [in] Длина буфера.  
   
  `bytesRead`  
- [out] Указатель на число возвращенных байтов.  
+ [out] Указатель на число возвращаемых байтов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ClrData.idl, ClrData.h  
+ **Заголовок.** ClrData.idl, ClrData.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

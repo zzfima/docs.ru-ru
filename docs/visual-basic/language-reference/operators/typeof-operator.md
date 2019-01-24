@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596739"
 ---
 # <a name="typeof-operator-visual-basic"></a>Оператор TypeOf (Visual Basic)
 Сравнивает переменную ссылки на объект с типом данных.  
@@ -37,10 +37,10 @@ result = TypeOf objectexpression IsNot typename
  Возвращено. Значение `Boolean`.  
   
  `objectexpression`  
- Обязательно. Любое выражение, результатом которого является тип ссылки.  
+ Обязательный. Любое выражение, результатом которого является тип ссылки.  
   
  `typename`  
- Обязательно. Любое имя типа данных.  
+ Обязательный. Любое имя типа данных.  
   
 ## <a name="remarks"></a>Примечания  
  Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`. Совместимость зависит от категории типа `typename`. В следующей таблице показано, как определяется совместимость.  
@@ -62,10 +62,10 @@ result = TypeOf objectexpression IsNot typename
   
  Переменная `refInteger` имеет тип времени выполнения `Integer`. Она совместима с `Integer`, но не с `Double`. Переменная `refForm` имеет тип времени выполнения <xref:System.Windows.Forms.Form>. Она совместима с <xref:System.Windows.Forms.Form>, так как это ее тип, с <xref:System.Windows.Forms.Control>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.Windows.Forms.Control>, и с <xref:System.ComponentModel.IComponent>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.ComponentModel.Component>, который реализует <xref:System.ComponentModel.IComponent>. Однако `refForm` несовместима с <xref:System.Windows.Forms.Label>.  
   
-## <a name="see-also"></a>См. также  
- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)  
- [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>См. также
+- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)
+- [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

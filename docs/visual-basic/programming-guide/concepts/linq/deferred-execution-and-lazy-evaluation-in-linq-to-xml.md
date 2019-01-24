@@ -2,12 +2,12 @@
 title: Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: eade2fe987ecbc399c2e2a8a65e74e3beab5e123
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc1676070488a75186def3327a84ec8b5ea5415f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492444"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)
 Операции по обработке запросов и осей часто реализуются с использованием отложенного выполнения. В этом разделе разъясняются требования и достоинства отложенного выполнения, а также содержатся некоторые соображения относительно реализации.  
@@ -31,7 +31,7 @@ ms.locfileid: "33643128"
   
 -   [Пример отложенного выполнения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник: Отложенного выполнения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)  
- [Основные понятия и терминология (функциональное преобразование) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
- [Операции статистической обработки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+## <a name="see-also"></a>См. также
+- [Учебник. Отложенное выполнение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Основные понятия и терминология (функциональное преобразование) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [Операции агрегирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: f554007bd8c9e69f6a8dc475c122d3fbdfc43a4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b32ee4c7745fda482561311dc116e0e38b49ab7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599158"
 ---
 # <a name="formulate-projections"></a>Формулировка проекций
-В следующем примере показано как `select` инструкции на языке C# и `Select` инструкции в Visual Basic можно объединить с другими возможностями для создания проекций запросов.  
+В следующих примерах показывается как `select` инструкции в C# и `Select` в Visual Basic можно объединить с другими возможностями для создания проекций запросов.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) для возвращения последовательности контактных имен для `Customers`.  
@@ -28,19 +28,19 @@ ms.locfileid: "33364952"
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *анонимные типы* для возвращения последовательности имен и телефонных номеров для сотрудников. `FirstName` И `LastName` поля объединяются в одно поле (`Name`) и `HomePhone` присваивается имя `Phone` в результирующей последовательности.  
+ В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *анонимные типы* для возвращения последовательности имен и телефонных номеров для сотрудников. `FirstName` И `LastName` поля объединяются в одно поле (`Name`) и `HomePhone` поле переименовывается в `Phone` в результирующей последовательности.  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *анонимные типы* для возвращения последовательности всех `ProductID`и вычисляемого значения с именем `HalfPrice`. В качестве значения устанавливается `UnitPrice`, разделенная на 2.  
+ В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *анонимные типы* для возвращения последовательности всех `ProductID`s и вычисляемого значения с именем `HalfPrice`. В качестве значения устанавливается `UnitPrice`, разделенная на 2.  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *условного оператора* для возвращения последовательности названия продукта и доступности продуктов.  
+ В следующем примере используется `Select` предложение в Visual Basic (`select` предложение в C#) и *условный оператор* для возвращения последовательности названия продукта и доступности продуктов.  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
@@ -52,7 +52,7 @@ ms.locfileid: "33364952"
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Select` и `Where` в Visual Basic (`select` и `where` в C#) для возврата *отфильтрованной последовательности* контактных имен для клиентов из Лондона.  
+ В следующем примере используется `Select` и `Where` в Visual Basic (`select` и `where` в C#) для возврата *отфильтрованной последовательности* контактных имен для клиентов в Лондоне.  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
@@ -75,5 +75,5 @@ ms.locfileid: "33364952"
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
-## <a name="see-also"></a>См. также  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>См. также
+- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b458739db024bdbe8cf0fb5a12a5d5f508d332da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616854"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Метод IHostThreadPoolManager::QueueUserWorkItem
-Помещает в очередь для выполнения функции и указывает объект, содержащий данные для использования этой функцией. Функция выполняется, когда поток становится доступной.  
+Помещает в очередь для выполнения функции и указывает объект, содержащий данные, используемые этой функцией. Функция выполняется, когда поток не станет доступным.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ HRESULT QueueUserWorkItem (
  [in] Объект, содержащий данные для использования с `Function`.  
   
  `Flags`  
- [in] Один из флагов значений, определенных для Win32 `QueueUserWorkItem` метод, который управляет выполнением.  
+ [in] Один из флагов значения, как это определено для Win32 `QueueUserWorkItem` метод, который управляет выполнением.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -55,22 +55,22 @@ HRESULT QueueUserWorkItem (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- `QueueUserWorkItem` ставит в очередь рабочий элемент в рабочем потоке пула потоков. Его сигнатура и типы параметров идентичны соответствующей функции Win32, которая имеет то же имя. Дополнительные сведения см. в документации по платформе Windows.  
+ `QueueUserWorkItem` ставит в очередь рабочий элемент в рабочий поток в пуле потоков. Его сигнатура и типы параметров идентичны соответствующей функции Win32, которая имеет то же имя. Дополнительные сведения см. в документации платформы Windows.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
- <xref:System.Threading.ThreadPool>  
- [Интерфейс IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
+- <xref:System.Threading.ThreadPool>
+- [Интерфейс IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

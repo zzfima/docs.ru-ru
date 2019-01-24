@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602433"
 ---
 # <a name="imetadataimportenumparams-method"></a>Метод IMetaDataImport::EnumParams
 Перечисляет токены ParamDef, представляющие параметры метода, на который ссылается указанный токен MethodDef.  
@@ -44,16 +44,16 @@ HRESULT EnumParams (
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
  `mb`  
- [in] Токен MethodDef, представляющие метод с параметрами для перечисления.  
+ [in] Токен MethodDef, представляющий метод с параметрами для перечисления.  
   
  `rParams`  
- [out] Массив, используемый для хранения токены ParamDef.  
+ [out] Массив, используемый для хранения токенов ParamDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rParams`.  
   
  `pcTokens`  
- [out] Число токены ParamDef, возвращаемых в `rParams`.  
+ [out] Количество возвращаемых в токены ParamDef `rParams`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -63,14 +63,14 @@ HRESULT EnumParams (
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491289"
 ---
 # <a name="cormethodimpl-enumeration"></a>Перечисление CorMethodImpl
 Содержит значения, описывающие возможности реализации метода.  
@@ -56,31 +56,31 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Флаги, описывающие тип кода.|  
-|`miIL`|Указывает, что реализация метода промежуточного языка Майкрософт (MSIL).|  
+|`miIL`|Указывает, что метод реализуется на промежуточном языке Майкрософт (MSIL).|  
 |`miNative`|Указывает, что для метода используется стандартная реализация.|  
-|`miOPTIL`|Указывает, что реализация метода OPTIL.|  
-|`miRuntime`|Указывает, что реализация метода обеспечивается средой CLR.|  
-|`miManagedMask`|Флаги, указывающие, является ли код является управляемым или неуправляемым.|  
+|`miOPTIL`|Указывает, что метод реализуется OPTIL.|  
+|`miRuntime`|Указывает, что реализация метода предоставляется средой CLR.|  
+|`miManagedMask`|Флаги, указывающие ли управляемый или неуправляемый код.|  
 |`miUnmanaged`|Указывает, что реализация метода является неуправляемым.|  
-|`miManaged`|Указывает, что метод реализуется как управляемый.|  
-|`miForwardRef`|Указывает, что метод был определен. Этот флаг используется главным образом в сценариях слияния.|  
-|`miPreserveSig`|Указывает, что подпись метода не может быть изменена для преобразования HRESULT.|  
+|`miManaged`|Указывает, что реализация метода является управляемым.|  
+|`miForwardRef`|Указывает, что этот метод определен. Этот флаг используется в основном в сценариях слияния.|  
+|`miPreserveSig`|Указывает, что сигнатура метода не может быть изменена для преобразования HRESULT.|  
 |`miInternalCall`|Зарезервировано для внутреннего использования средой CLR.|  
-|`miSynchronized`|Указывает, что метод является однопотоковым выполнение основной части.|  
+|`miSynchronized`|Указывает, что метод является однопоточным выполнение основной части.|  
 |`miNoInlining`|Указывает, что метод нельзя выполнять как встроенный.|  
-|`miAggressiveInlining`|Указывает, что метод должен быть встроенным по возможности.|  
+|`miAggressiveInlining`|Указывает, что метод должен выполняться как встроенный, если это возможно.|  
 |`miNoOptimization`|Указывает, что метод не должен быть оптимизирован.|  
 |`miMaxMethodImplVal`|Максимальное допустимое значение для `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

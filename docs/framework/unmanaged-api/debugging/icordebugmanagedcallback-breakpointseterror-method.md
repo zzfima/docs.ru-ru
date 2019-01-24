@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc437f63621c451c0af796513d4646fe0668c00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586377"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>Метод ICorDebugManagedCallback::BreakpointSetError
-Уведомляет отладчик, общеязыковая среда выполнения не удалось точно привязать точку останова, который был установлен до функции just-in-time (JIT) компиляции.  
+Уведомляет отладчик о том, что среда CLR не удалось точно привязать точку останова, который был задан до функции just-in-time (JIT) компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,28 +40,28 @@ HRESULT BreakpointSetError (
   
 #### <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который содержит несвязанные точку останова.  
+ [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит непривязанные точки останова.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, который содержит несвязанные точку останова.  
+ [in] Указатель на ICorDebugThread объект, представляющий поток, который содержит непривязанные точки останова.  
   
  `pBreakpoint`  
- [in] Указатель на объект ICorDebugBreakpoint, представляющий непривязанные точки останова.  
+ [in] Указатель на ICorDebugBreakpoint объект, представляющий непривязанные точки останова.  
   
  `dwError`  
  [in] Целое число, указывающее на ошибку.  
   
 ## <a name="remarks"></a>Примечания  
- Данной точки останова, никогда не сработает. Отладчик должен отключить и повторно привязать его.  
+ Никогда не будет достигнута данной точки останова. Отладчик должен отключить и повторно привязать его.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

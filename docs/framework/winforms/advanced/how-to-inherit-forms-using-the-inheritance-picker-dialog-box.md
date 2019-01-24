@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования
+title: Как выполнить Наследование форм с помощью диалогового окна выбора наследования
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601835"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Как выполнить Наследование форм с помощью диалогового окна выбора наследования
 Самым простым способом наследования формы или другого объекта является использование диалогового окна **Выбор компонентов для наследования**. С его помощью можно использовать преимущества кода или пользовательского интерфейса, уже созданного в других решениях.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ ms.locfileid: "48837301"
      Информацию о том, как изменить внешний вид базовой формы, см. в разделе [Влияние изменения внешнего вида базовой формы](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  При сочетании наследуемых элементов управления и компонентов со стандартными в Windows Forms могут возникать конфликты с z-порядком. Их можно устранить, изменив z-порядок. Для этого в меню **Формат** наведите указатель на пункт **Порядок** и выберите пункт **На передний план** или **На задний план**. Подробнее о z-порядке элементов управления см. в разделе [Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  При сочетании наследуемых элементов управления и компонентов со стандартными в Windows Forms могут возникать конфликты с z-порядком. Их можно устранить, изменив z-порядок. Для этого в меню **Формат** наведите указатель на пункт **Порядок** и выберите пункт **На передний план** или **На задний план**. Дополнительные сведения о z порядке элементов управления, см. в разделе [как: Многоуровневое расположение объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>См. также  
- [Оператор Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Влияние изменения внешнего вида базовой формы](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Визуальное наследование в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>См. также
+- [Оператор Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Влияние изменения внешнего вида базовой формы](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Визуальное наследование в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

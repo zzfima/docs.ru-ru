@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
-ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587138"
 ---
 # <a name="guidelines-for-collections"></a>Рекомендации по использованию коллекций
 Можно рассматривать как коллекцию любого типа, разработанные специально для того, для использования группы объектов, с некоторыми общими характеристиками. Это почти всегда требуется для таких типов, для реализации <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поэтому в этом разделе мы учитываем только типы, реализовав один или оба этих интерфейса, как коллекции.  
@@ -130,5 +130,5 @@ ms.locfileid: "53145586"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила использования](../../../docs/standard/design-guidelines/usage-guidelines.md)

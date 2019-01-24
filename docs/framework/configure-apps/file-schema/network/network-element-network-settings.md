@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 8e5f44c5e915f63dbcc34ccd985d69c7e5551fb8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7270cee07bea50aa50dc191ac957132e2794c0bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599268"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;сети&gt; (сетевые параметры)
 Настройка сетевых параметров для внешнего сервера транспортного протокола SMTP (Simple Mail).  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
 \<SMTP >  
 \<сети >  
@@ -44,7 +44,7 @@ ms.locfileid: "53144485"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`clientDomain`|Указывает имя домена клиента для использования в запросом протокола SMTP для подключения к почтовому SMTP-серверу. Значение по умолчанию — localhost имя локального компьютера, отправляющего запрос.|  
 |`defaultCredentials`|Указывает, следует ли использовать учетные данные пользователя по умолчанию для доступа к почтовому серверу SMTP для SMTP-транзакций. Значение по умолчанию — `false`.|  
@@ -60,7 +60,7 @@ ms.locfileid: "53144485"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).|  
   
@@ -109,8 +109,8 @@ ms.locfileid: "53144485"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

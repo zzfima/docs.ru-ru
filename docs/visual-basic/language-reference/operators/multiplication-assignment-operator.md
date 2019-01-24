@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 3863e6c7416057507e8ae569804ed4a1be6a5b50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3aa1d563b9657d4e80425b8c2d29e069ca2ef06a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601887"
 ---
 # <a name="-operator-visual-basic"></a>Оператор *= (Visual Basic)
 Умножает значение переменной или свойства на значение выражения и присваивает результат переменной или свойству.  
@@ -28,28 +28,28 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательно. Числовая переменная или свойство.  
+ Обязательный. Любой числовой переменной или свойства.  
   
  `expression`  
- Обязательно. Произвольное числовое выражение.  
+ Обязательный. Произвольное числовое выражение.  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, на левой стороне `*=` оператор может быть простой скалярной переменной, свойством или элемент массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Элемент, на левой стороне `*=` оператор может быть простой скалярной переменной, свойства или элемента массива. Не может быть переменной или свойству [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- `*=` Оператор сначала Умножает значение выражения (справа от оператора) значение переменной или свойства (в левой части оператора). Затем оператор присваивает результат этой операции переменной или свойству.  
+ `*=` Оператор сначала Умножает значение выражения (в области справа от оператора) на значение переменной или свойства (в левой части оператора). Оператор затем присваивает результат этой операции переменной или свойству.  
   
 ## <a name="overloading"></a>Перегрузка  
- [* Оператор](../../../visual-basic/language-reference/operators/multiplication-operator.md) может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `*` оператор влияет на поведение `*=` оператор. Если ваш код использует `*=` для класса или структуры, перегружающей `*`, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [* Оператор](../../../visual-basic/language-reference/operators/multiplication-operator.md) может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `*` оператор влияет на поведение `*=` оператор. Если код использует `*=` для класса или структуры, перегружающей `*`, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `*=` оператор для умножения одного `Integer` переменных в секунду и назначить результат первой переменной.  
+ В следующем примере используется `*=` чтобы перемножить один `Integer` переменных в секунду и назначает полученное значение первой переменной.  
   
  [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор *](../../../visual-basic/language-reference/operators/multiplication-operator.md)  
- [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>См. также
+- [Оператор *](../../../visual-basic/language-reference/operators/multiplication-operator.md)
+- [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)

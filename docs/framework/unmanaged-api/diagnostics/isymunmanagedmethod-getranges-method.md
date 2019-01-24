@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604279"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Метод ISymUnmanagedMethod::GetRanges
-Заданной позиции в документе возвращает массив пар начального и конечного смещения, соответствующих диапазонам на языке MSIL занимаемым данной позицией в этом методе. Массив является массивом целых чисел и имеет формат [начала, окончания, начало, завершение]. Число пар диапазона является длина массива, деленному на 2.  
+Возвращает массив пар начального и конечного смещения, соответствующих диапазонам на языке MSIL, занимаемым позиция в этом методе обозначение позиции в документе. Массив представляет собой массив целых чисел и имеет формат [начало, конец, начало, конец]. Число пар "диапазон" — Длина массива, поделенную на 2.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,13 +48,13 @@ HRESULT GetRanges(
  [in] Строка документа, соответствующая этим диапазонам.  
   
  `column`  
- [in] Столбец документа, соответствующий этим диапазонам.  
+ [in] Столбец документа, соответствующая этим диапазонам.  
   
  `cRanges`  
  [in] Размер массива `ranges`.  
   
  `pcRanges`  
- [out] Указатель на `ULONG32` , получающий размер буфера, должны содержать диапазоны.  
+ [out] Указатель на `ULONG32` , получающий размер буфера, необходимый для диапазонов.  
   
  `ranges`  
  [out] Указатель на буфер, получающий диапазоны.  
@@ -63,7 +63,7 @@ HRESULT GetRanges(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -2,12 +2,12 @@
 title: Как выполнить Извлечение данных и реализация совместимой службы
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608499"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Как выполнить Извлечение данных и реализация совместимой службы
 Часто разработку и реализацию служб выполняют разные люди. В средах, в которых приложения с возможностью взаимодействия имеют большое значение, контракты можно разработать или описать на языке WSDL, и разработчик должен реализовать службу, соответствующую предоставляемому контракту. Можно также перенести существующую службу в Windows Communication Foundation (WCF), но сохранить формат подключения. Кроме того, дуплексные контракты требуют, чтобы вызывающие стороны также реализовывали контракт обратного вызова.  
@@ -24,7 +24,7 @@ ms.locfileid: "53148930"
   
 3.  Если в языке WSDL не указано ответное действие для всех операций, свойству <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> созданных контрактов операций может быть присвоено значение подстановочного знака (*). Удалите этот параметр свойства. В противном случае при реализации метаданных контракта службы метаданные невозможно будет экспортировать для этих операций.  
   
-4.  Реализуйте интерфейс для класса и разместите службу. Например, см. в разделе [как: Реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или см. в разделе простая реализация ниже в разделе "Пример".  
+4.  Реализуйте интерфейс для класса и разместите службу. Пример см. в статье [Практическое руководство. Реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или см. в разделе простая реализация ниже в разделе "Пример".  
   
 5.  Файл, который в конфигурации клиента [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) приводит к возникновению ошибки, изменить [ \<клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) раздел конфигурации для [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации. (Пример созданного файла конфигурации клиентского приложения см. в следующем разделе "Пример".)  
   
@@ -59,5 +59,5 @@ ms.locfileid: "53148930"
 
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
-## <a name="see-also"></a>См. также  
- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>См. также
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

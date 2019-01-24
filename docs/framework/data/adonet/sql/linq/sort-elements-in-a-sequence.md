@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596427"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Сортировка элементов последовательности
 Для сортировки последовательности по одному или нескольким ключам используется оператор <xref:System.Linq.Enumerable.OrderBy%2A>.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предназначен для поддержки упорядочения по простым примитивным типам, таких как `string`, `int`, и т. д. В этой технологии не поддерживается упорядочение для сложных многозначных классов, таких как анонимные типы. В ней также не поддерживаются типы данных `byte`.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предназначен для поддержки упорядочения по простым примитивным типам, например `string`, `int`, и т. д. В этой технологии не поддерживается упорядочение для сложных многозначных классов, таких как анонимные типы. В ней также не поддерживаются типы данных `byte`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняется сортировка сотрудников (`Employees`) по дате приема на работу.  
@@ -88,6 +88,6 @@ ms.locfileid: "33361962"
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>См. также  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>См. также
+- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

@@ -2,15 +2,9 @@
 title: Основы разработки приложений Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582584"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -47,7 +41,7 @@ ms.locfileid: "48582584"
 |Кому|См.|  
 |--------|---------|  
 |Создайте новое приложение Windows Forms с помощью Visual Studio|[Пошаговое руководство: Создание формы простой Windows](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Создание графических объектов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
@@ -66,9 +60,9 @@ ms.locfileid: "48582584"
   
 |Кому|См.|  
 |--------|---------|  
-|Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Работа с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источников данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Использование окна "Источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|Работа с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источников данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Использование окна "Источники данных"|[Пошаговое руководство: Отображение данных на форме Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Развертывание приложений на клиентских компьютерах  
  После написания приложения, его необходимо отправить пользователям, чтобы их можно установить и запустить его на своих клиентских компьютерах. С помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] технологии, можно развернуть приложения в Visual Studio с помощью нескольких щелчков и предоставлять пользователям URL-адрес приложения в Интернете. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] управляет всеми элементами и зависимостями в приложении и гарантирует, что приложение правильно установлен на клиентском компьютере.  
@@ -81,7 +75,7 @@ ms.locfileid: "48582584"
   
 |Кому|См.|  
 |--------|---------|  
-|Развертывание ресурсов с использованием [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Развертывание ресурсов с использованием [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Обновление [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] развертывания|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
 |Управление безопасностью с помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
@@ -97,6 +91,6 @@ ms.locfileid: "48582584"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Общие сведения о Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Общие сведения о Windows Forms](../../../framework/winforms/windows-forms-overview.md)
 - [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)

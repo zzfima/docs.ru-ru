@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка совпадения двух объектов (Visual Basic)
+title: Как выполнить Проверка совпадения двух объектов же (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: 005c91e6f4ec556a7e1bf255b47c8276a5d3d185
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4130dfbe70682e28b6bb15db633ede2790e20aa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595556"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Практическое руководство. Проверка совпадения двух объектов (Visual Basic)
-Если у вас есть две переменные, которые ссылаются на объекты, можно использовать любой `Is` или `IsNot` оператор, или оба, чтобы определить, ссылаются ли они на один экземпляр.  
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Как выполнить Проверка совпадения двух объектов же (Visual Basic)
+Если у вас есть две переменные, которые ссылаются на объекты, можно использовать либо `Is` или `IsNot` оператора, или оба, чтобы определить, ссылаются ли они на один экземпляр.  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>Чтобы проверить ли два объекта совпадают  
+### <a name="to-test-whether-two-objects-are-the-same"></a>Для проверки совпадения двух объектов  
   
 -   Используйте [оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md) или [оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) с двумя переменными в качестве операндов.  
   
      [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
- Может потребоваться выполнить определенные действия в зависимости от того, ссылаются ли два объекта на тот же экземпляр. Предыдущий пример сравнивает управления `c` с активным элементом управления в форме `f`. Если нет активный элемент управления, или если имеется один, но он не является тем же экземпляром `c`, то `If` случае инструкция завершается ошибкой, а процедура возвращает без дополнительной обработки.  
+ Может потребоваться выполнить определенные действия в зависимости от того, ссылаются ли два объекта на тот же экземпляр. В предыдущем примере сравнивается управления `c` с активным элементом управления в форме `f`. Если отсутствует активный элемент управления отсутствует, или нет, но он является не тем же экземпляром `c`, а затем `If` инструкция завершается ошибкой и процедура возвращает без дальнейшей обработки.  
   
- Использование `Is` или `IsNot` в зависимости от предпочтений пользователя. Один может оказаться легче другого в заданном выражении.  
+ Использование `Is` или `IsNot` в зависимости от предпочтений пользователя. Одной может быть более удобным для чтения, чем-то в заданном выражении.  
   
-## <a name="see-also"></a>См. также  
- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+## <a name="see-also"></a>См. также
+- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

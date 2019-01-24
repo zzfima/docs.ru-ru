@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492966"
 ---
 # <a name="handles-clause-visual-basic"></a>Предложение Handles (Visual Basic)
 Заявляет, что процедура обрабатывает указанное событие.  
@@ -54,10 +54,10 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
-## <a name="see-also"></a>См. также  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Оператор RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [События](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>См. также
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Оператор RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [События](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613666"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -16,7 +16,7 @@ ms.locfileid: "48266646"
  Подмножество функций WCF доступно из приложения Магазина Windows. Дополнительную информацию см. в следующих разделах.  
   
 > [!IMPORTANT]
->  Используйте API-синдикации WinRT вместо методов, доступных через службу WCF. Дополнительные сведения см. [API синдикации WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+>  Используйте API-синдикации WinRT вместо методов, доступных через службу WCF. Дополнительные сведения см. в разделе [API синдикации WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
 >  Использование диалогового окна «Добавление ссылки на службу» для добавления ссылки на веб-службу в компонент среды выполнения Windows не поддерживается.  
@@ -55,7 +55,7 @@ ms.locfileid: "48266646"
  Поддерживается текстовое и двоичное кодирование. Поддерживаются все режимы передачи WCF. Дополнительные сведения см. в разделе [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Добавление ссылки на службу  
- Для вызова службы WCF из приложения Магазина Windows пользуйтесь функцией «Добавить ссылку на службу» среды Visual Studio 2012. Можно заметить небольшие изменения в работе функции «Добавить ссылку на службу» при работе с приложением Магазина Windows. Во-первых, не создается файл конфигурации. Приложения Магазина Windows не используют файлы конфигурации, поэтому их необходимо настраивать в коде. Код конфигурации можно найти в файле References.cs, который создается функцией «Добавить ссылку на службу». Чтобы просмотреть этот файл, не забудьте выбрать «Показать все файлы» в обозревателе решений. Файл будет расположен под пунктом «Ссылки на службу», а затем в узлах Reference.svcmap в рамках проекта. Все операции, созданные для служб WCF внутри приложения Магазина Windows, будут асинхронными, использующими асинхронную технологию на основе событий. Дополнительные сведения см. в разделе [асинхронную модель на основе задач](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Для вызова службы WCF из приложения Магазина Windows пользуйтесь функцией «Добавить ссылку на службу» среды Visual Studio 2012. Можно заметить небольшие изменения в работе функции «Добавить ссылку на службу» при работе с приложением Магазина Windows. Во-первых, не создается файл конфигурации. Приложения Магазина Windows не используют файлы конфигурации, поэтому их необходимо настраивать в коде. Код конфигурации можно найти в файле References.cs, который создается функцией «Добавить ссылку на службу». Чтобы просмотреть этот файл, не забудьте выбрать «Показать все файлы» в обозревателе решений. Файл будет расположен под пунктом «Ссылки на службу», а затем в узлах Reference.svcmap в рамках проекта. Все операции, созданные для служб WCF внутри приложения Магазина Windows, будут асинхронными, использующими асинхронную технологию на основе событий. Дополнительные сведения см. в разделе [Асинхронная модель на основе задач](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Поскольку конфигурация создается в коде, любые изменения, внесенные в файл Reference.cs, будут перезаписываться при каждом обновлении ссылки на службу. Чтобы исправить эту ситуацию, код конфигурации создается внутри разделяемого метода, который вы можно реализовать в клиентском прокси-классе. Разделяемый метод определяется следующим образом:  
   
@@ -174,10 +174,10 @@ void async SomeMethod()
   
  Обратите внимание на использование ключевого слова async при асинхронном вызове, а также ключевого слова await при вызове асинхронного метода.  
   
-## <a name="see-also"></a>См. также  
- [WCF в блоге о приложениях Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [Клиенты Windows Store WCF и безопасность](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Приложения Windows Store и Межкомпьютерные вызовы](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Вызов службы WCF, развернутой в Azure из приложения Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Привязки](../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a>См. также
+- [WCF в блоге о приложениях Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Клиенты Windows Store WCF и безопасность](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Приложения Windows Store и Межкомпьютерные вызовы](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Вызов службы WCF, развернутой в Azure из приложения Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Привязки](../../../../docs/framework/wcf/bindings.md)

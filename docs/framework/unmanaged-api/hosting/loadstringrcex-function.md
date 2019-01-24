@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597948"
 ---
 # <a name="loadstringrcex-function"></a>Функция LoadStringRCEx
 Преобразовывает значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,27 +43,27 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Параметры  
  `lcid`  
- [in] Идентификатор языка и региональных параметров. Передайте значение -1 `lcid` для использования с языком по умолчанию.  
+ [in] Идентификатор языка и региональных параметров. Передайте значение -1 `lcid` использовать культуры по умолчанию.  
   
  `iResourceID`  
  [in] Значение HRESULT.  
   
  `szBuffer`  
- [out] Буфер, содержащий сообщение об ошибке после успешного завершения.  
+ [out] Буфер, который содержит сообщение об ошибке после успешного завершения.  
   
  `iMax`  
  [in] Размер буфера сообщений ошибок.  
   
  `bQuiet`  
- [in] Не обрабатывается.  
+ [in] Игнорируется.  
   
  `pcwchUsed`  
  [out] Указатель на длину сообщение об ошибке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, кроме следующих значений.  
+ Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|`szBuffer` имеет значение null, или `iMax` равно нулю (0).|  
@@ -72,15 +72,15 @@ HRESULT LoadStringRCEx (
  Если метод завершается успешно, `szBuffer` содержит пустую строку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [Функция LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [Функция LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

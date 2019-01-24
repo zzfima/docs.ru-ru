@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605480"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Метод IMetaDataEmit::DefineTypeDef
 Создает определение типа для типа среды выполнения и получает маркер метаданных для этого определения типа.  
@@ -41,7 +41,7 @@ HRESULT DefineTypeDef (
   
 #### <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] Имя типа в Юникоде.  
+ [in] Имя типа в формате Юникод.  
   
  `dwTypeDefFlags`  
  [in] `TypeDef` атрибуты. Это битовая маска `CoreTypeAttr` значения.  
@@ -50,27 +50,27 @@ HRESULT DefineTypeDef (
  [in] Токен базового класса. Он должен быть либо `mdTypeDef` или `mdTypeRef` токена.  
   
  `rtkImplements`  
- [in] Массив маркеров, указав интерфейсов, реализуемых данного класса или интерфейса.  
+ [in] Массив токенов, указав интерфейсы, реализуемые этот класс или интерфейс.  
   
  `ptd`  
  [out] `mdTypeDef` Маркер, назначенный.  
   
 ## <a name="remarks"></a>Примечания  
- Флаг в `dwTypeDefFlags` указывает, является ли тип, который создается общий тип системы ссылочным типом (класс или интерфейс) или общий тип системный тип значения.  
+ Флаг в `dwTypeDefFlags` указывает, является ли тип, который создается общий тип системы ссылочным типом (класс или интерфейс) или общие системные типы значений типа.  
   
- В зависимости от параметров, указанные, этот метод в качестве побочного эффекта, могут также создавать `mdInterfaceImpl` записей для каждого интерфейса, реализуемый этим типом или унаследован. Однако этот метод не возвращает любое из этих `mdInterfaceImpl` маркеры. Если клиент хочет позднее добавить или изменить `mdInterfaceImpl` токенов, он должен использовать `IMetaDataImport` интерфейса для их перебора. Если требуется использовать семантику COM `[default]` интерфейса, необходимо предоставить интерфейс по умолчанию как первый элемент в `rtkImplements`; задать класса настраиваемого атрибута покажет, что класс имеет интерфейс по умолчанию (который всегда считается Сначала `mdInterfaceImpl` маркер, объявленным для класса).  
+ В зависимости от параметров, содержащихся, этот метод в качестве побочного эффекта, может также создавать `mdInterfaceImpl` записей для каждого интерфейса, реализуемый этим типом или унаследован. Тем не менее, этот метод не возвращает любое из этих `mdInterfaceImpl` маркеры. Если клиент хочет позже добавить или изменить `mdInterfaceImpl` маркеров, он должен использовать `IMetaDataImport` интерфейс для их перебора. Если вы хотите использовать семантику COM `[default]` интерфейс, должны предоставлять интерфейс по умолчанию, как первый элемент в `rtkImplements`; задать класса настраиваемого атрибута укажет, что класс имеет интерфейс по умолчанию (который всегда предполагается, что Сначала `mdInterfaceImpl` маркер, объявленным для класса).  
   
  Каждый элемент `rtkImplements` массива содержит `mdTypeDef` или `mdTypeRef` токена. Последним элементом в массиве должен быть `mdTokenNil`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
