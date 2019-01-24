@@ -1,18 +1,12 @@
 ---
-title: Начало работы — руководство по C#
-description: Здесь вы найдете простые и краткие руководства, которые помогут вам быстро познакомиться с базовыми понятиями языка C# и начать писать приложения .NET Core.
+title: "Начало работы\_— руководство по\_C#"
+description: "Здесь вы найдете простые и краткие руководства, которые помогут вам быстро познакомиться с базовыми понятиями языка\_C# и начать писать приложения .NET\_Core."
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837897"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
 
@@ -64,4 +58,4 @@ ms.locfileid: "48837897"
 
 ## <a name="see-also"></a>См. также
 
-* [Начало работы с Visual C# и Visual Basic в Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Начало работы с Visual C# и Visual Basic в Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

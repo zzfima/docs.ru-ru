@@ -1,14 +1,8 @@
 ---
 title: Средства интерфейса командной строки (CLI) .NET Core
-description: Обзор средств и возможностей интерфейса командной строки (CLI)NET Core.
+description: "Обзор средств и возможностей интерфейса командной строки (CLI)NET\_Core."
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170204"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Средства интерфейса командной строки (CLI) .NET Core
 
@@ -146,5 +140,5 @@ dotnet /build_output/my_app.dll
 
 ## <a name="see-also"></a>См. также
 
-* [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)  
-* [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)  
+- [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)
+- [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)

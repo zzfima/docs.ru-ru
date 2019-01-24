@@ -1,17 +1,11 @@
 ---
-title: Руководство по программированию на C#. Делегаты
+title: 'Руководство по программированию на C#. Делегаты'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240441"
 ---
 # <a name="delegates-c-programming-guide"></a>Делегаты (Руководство по программированию на C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который представляет ссылки на методы с определенным списком параметров и типом возвращаемого значения. При создании экземпляра делегата этот экземпляр можно связать с любым методом с совместимой сигнатурой и типом возвращаемого значения. Метод можно вызвать (активировать) с помощью экземпляра делегата.  
@@ -70,6 +64,6 @@ ms.locfileid: "53240441"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Delegate>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Delegate>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [События](../../../csharp/programming-guide/events/index.md)

@@ -1,16 +1,11 @@
 ---
-title: Сборка .NET Core из исходного кода
-description: Узнайте, как выполнять сборку .NET Core и интерфейса командной строки .NET Core из исходного кода.
+title: "Сборка .NET\_Core из исходного кода"
+description: "Узнайте, как выполнять сборку .NET\_Core и интерфейса командной строки .NET\_Core из исходного кода."
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170071"
 ---
+
 # <a name="build-net-core-from-source"></a>Сборка .NET Core из исходного кода
 
 Возможность сборки .NET Core из своего исходного кода важна по многим причинам: это упрощает перенос кода .NET Core на новые платформы, позволяет вносить в продукт дополнения и исправления, а также создавать пользовательские версии .NET.
@@ -101,6 +96,6 @@ ms.locfileid: "53170071"
 
 ## <a name="see-also"></a>См. также
 
-* [Общеязыковая среда выполнения .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [Руководство разработчика по интерфейсу командной строки .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [Упаковка дистрибутивов .NET Core](./distribution-packaging.md)
+- [Общеязыковая среда выполнения .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Руководство разработчика по интерфейсу командной строки .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [Упаковка дистрибутивов .NET Core](./distribution-packaging.md)

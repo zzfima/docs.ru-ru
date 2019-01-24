@@ -1,16 +1,11 @@
 ---
 title: Управление версиями среды выполнения пакета SDK для .NET Core
-description: В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.
+description: 'В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.'
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334812"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>Общие сведения об управлении версиями в .NET Core
 
 Под термином .NET Core понимается среда выполнения .NET Core и пакет SDK для .NET Core, который содержит средства, необходимые вам для разработки приложений. Пакеты SDK для .NET Core предназначены для работы с любыми предыдущими версиями среды выполнения .NET Core. В этой статье приводятся сведения о нумерации версий среды выполнения и пакетов SDK. Описание номеров версий .NET Standard можно найти в статье с вводными сведениями о [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -106,8 +101,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>См. также
 
-* [Целевые платформы](../../standard/frameworks.md)  
-* [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md)  
-* [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support)  
-* [Привязка версий .NET Core 2+](https://github.com/dotnet/designs/issues/3)  
-* [Образы Docker для .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Целевые платформы](../../standard/frameworks.md)
+- [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md)
+- [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support)
+- [Привязка версий .NET Core 2+](https://github.com/dotnet/designs/issues/3)
+- [Образы Docker для .NET Core](https://hub.docker.com/r/microsoft/dotnet/)

@@ -2,21 +2,15 @@
 title: Развертывание .NET Framework и приложений
 ms.date: 03/30/2017
 helpviewer_keywords:
-- deploying applications [.NET Framework], packaging
-- deploying applications [.NET Framework]
-- deploying applications [.NET Framework], features
-- deploying applications [.NET Framework], distribution
-- .NET Framework, deploying
-- .NET Framework application deployment
+  - 'deploying applications [.NET Framework], packaging'
+  - 'deploying applications [.NET Framework]'
+  - 'deploying applications [.NET Framework], features'
+  - 'deploying applications [.NET Framework], distribution'
+  - '.NET Framework, deploying'
+  - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453233"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
 Эта статья поможет приступить к развертыванию платформы .NET Framework с приложением. Большая часть информации предназначена для разработчиков, изготовителей оборудования и администраторов предприятия. Пользователям, которые хотят установить .NET Framework на своих компьютерах, следует прочитать статью [Установка .NET Framework](~/docs/framework/install/index.md).  
@@ -153,7 +147,7 @@ ms.locfileid: "49453233"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|  
 |[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|  
@@ -164,7 +158,7 @@ ms.locfileid: "49453233"
 |[Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|  
 |[Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Описывается модель "звезда", которую платформа .NET Framework использует для упаковки и развертывания ресурсов; рассматриваются соглашения об именовании ресурсов, процесс перехода на резервные ресурсы и альтернативные способы упаковки.|  
 |[Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)|Описывается поставка и установка приложений взаимодействия, которые обычно включают клиентскую сборку .NET Framework, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов.|  
-|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|  
+|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 - [Руководство по разработке](../../../docs/framework/development-guide.md)

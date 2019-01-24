@@ -1,19 +1,13 @@
 ---
-title: Руководство по программированию на C#. Индексаторы
+title: 'Руководство по программированию на C#. Индексаторы'
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
-- cs.indexers
+  - cs.indexers
 helpviewer_keywords:
-- indexers [C#]
-- C# language, indexers
+  - 'indexers [C#]'
+  - 'C# language, indexers'
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236587"
 ---
 # <a name="indexers-c-programming-guide"></a>Индексаторы (Руководство по программированию в C#)
 
@@ -34,7 +28,7 @@ ms.locfileid: "53236587"
 
 Обратите внимание, что `=>` представляет тело выражения, а ключевое слово `get` не используется. 
 
-Начиная с версии C# 7.0, методы доступа get и set можно реализовывать в виде членов с телом в виде выражения. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Пример:
+Начиная с версии C# 7.0, методы доступа get и set можно реализовывать в виде членов с телом в виде выражения. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Например:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -70,5 +64,5 @@ ms.locfileid: "53236587"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
