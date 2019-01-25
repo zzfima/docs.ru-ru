@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735043"
 ---
 # <a name="lockclrversion-function"></a>Функция LockClrVersion
-Предоставляет узлу возможность определить, какая версия среды common language runtime (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  
+Позволяет основному приложению определить, какую версию общеязыковой среды выполнения (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,24 +41,24 @@ HRESULT LockClrVersion (
   
 #### <a name="parameters"></a>Параметры  
  `hostCallback`  
- [in] Функция, вызываемая при инициализации среды CLR.  
+ [in] Функция, которая вызывается средой CLR при инициализации.  
   
  `pBeginHostSetup`  
- [in] Функция, вызываемая узлом сообщать среде CLR, инициализация выполняется запуск.  
+ [in] Функция, которая вызывается узлом для сообщать среде CLR, инициализация выполняется запуск.  
   
  `pEndHostSetup`  
- [in] Функция, вызываемая узлом сообщать среде CLR, инициализация завершена.  
+ [in] Функция, которая вызывается узлом для сообщать среде CLR, инициализация завершена.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, кроме следующих значений.  
+ Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|Один или несколько аргументов имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
- Узел вызывает метод `LockClrVersion` перед инициализацией среды CLR. `LockClrVersion` принимает три параметра, все из которых являются обратными вызовами типа [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Этот тип определяется следующим образом.  
+ Узел вызывает метод `LockClrVersion` перед инициализацией среды CLR. `LockClrVersion` принимает три параметра, все из которых являются обратные вызовы типа [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Этот тип определяется следующим образом.  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -68,11 +68,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 1.  Узел вызывает метод [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) или одну из функций инициализации среды выполнения. Кроме того узел может инициализировать среду выполнения, с помощью активации COM-объекта.  
   
-2.  Среда выполнения вызывает функции, указанной `hostCallback` параметра.  
+2.  Среда выполнения вызывает функцию, указанную аргументом `hostCallback` параметра.  
   
-3.  Функции, указанной `hostCallback` затем вызывает следующую последовательность вызовов:  
+3.  Функцию, указанную аргументом `hostCallback` затем выполняет следующую последовательность вызовов:  
   
-    -   Функции, указанной `pBeginHostSetup` параметра.  
+    -   Функцию, указанную аргументом `pBeginHostSetup` параметра.  
   
     -   `CorBindToRuntimeEx` (или другую функцию инициализации среды выполнения).  
   
@@ -80,18 +80,18 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   Функции, указанной `pEndHostSetup` параметра.  
+    -   Функцию, указанную аргументом `pEndHostSetup` параметра.  
   
  Все вызовы из `pBeginHostSetup` для `pEndHostSetup` должно находиться на одном потоке или нити с использованием одного логического стека. Этот поток может отличаться от потока, на котором `hostCallback` вызывается.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

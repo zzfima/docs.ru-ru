@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Рисование прямоугольника
+title: Как выполнить Рисование прямоугольника
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674681"
 ---
-# <a name="how-to-draw-a-rectangle"></a>Практическое руководство. Рисование прямоугольника
+# <a name="how-to-draw-a-rectangle"></a>Как выполнить Рисование прямоугольника
 В этом примере показано, как рисование прямоугольника с помощью <xref:System.Windows.Shapes.Rectangle> элемент.  
   
  Чтобы нарисовать прямоугольник, создайте <xref:System.Windows.Shapes.Rectangle> элемент и указать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>. Чтобы рисовать внутри прямоугольника, задайте его <xref:System.Windows.Shapes.Shape.Fill%2A>. Чтобы предоставить контур прямоугольника, используйте его <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> свойства.  
@@ -29,8 +29,8 @@ ms.locfileid: "43506158"
   
  Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Shapes.Rectangle>  
- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Shapes.Rectangle>
+- [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)

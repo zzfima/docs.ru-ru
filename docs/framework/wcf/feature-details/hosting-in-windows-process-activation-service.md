@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731274"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Размещение в службе активации процессов Windows
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
   
- Дополнительные сведения о создании службы WCF, которая выполняется в среде размещения WAS, см. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Дополнительные сведения о создании службы WCF, которая выполняется в среде размещения WAS, см. в разделе [как: Размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Модель процессов WAS предоставляет несколько возможностей, благодаря которым размещение приложений можно осуществлять более надежным и управляемым способом и при этом более эффективно использовать ресурсы.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48839434"
 |Сценарий|Привязки узла|Путь к приложению|Базовые URI приложения|  
 |--------------|-------------------|----------------------|---------------------------|  
 |Только HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP и отличные от HTTP|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
+|HTTP и отличные от HTTP|http: *: 80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Только отличные от HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
   
  Можно также обращаться к службам и ресурсам внутри приложения. Обратиться к ресурсам приложения внутри приложения можно с помощью базового пути к приложению. Например, предположим, что узел на компьютере с именем contoso.com имеет привязки узла для протоколов HTTP и Net.TCP. Также предположим, что узел содержит одно приложение, расположенное в /Billing и предоставляющее службу в GetOrders.svc. Тогда, если бы служба GetOrders.svc предоставляла конечную точку с относительным адресом SecureEndpoint, конечная точка службы предоставлялась бы в двух следующих URI:  
@@ -51,9 +51,9 @@ ms.locfileid: "48839434"
 ## <a name="the-was-runtime"></a>Среда выполнения WAS  
  Приложения организуются в узлы для адресации и управления. В среде выполнения приложения также группируются в пулы приложений. В пуле приложения можно разместить большое количество различных приложений из многих узлов. Все приложения внутри пула приложений имеют общий набор характеристик среды выполнения. Например, они все выполняются в среде CLR (common language runtime) одной и той же версии и имеют одно и то же удостоверение процесса. Каждый пул приложений соответствует экземпляру рабочего процесса (w3wp.exe). Каждое управляемое приложение, выполняемое внутри общего пула приложений, изолировано от других приложений с помощью AppDomain среды CLR.  
   
-## <a name="see-also"></a>См. также  
- [Архитектура активации WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [Настройка WAS для использования с WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Практическое руководство. Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
- [Практическое руководство. Размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>См. также
+- [Архитектура активации WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [Настройка WAS для использования с WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Практическое руководство. Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Практическое руководство. Размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

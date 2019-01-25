@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"
+title: Как выполнить Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639188"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"
-Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), который определяет односторонний контракт и контракт типа запрос ответ и не использующей дуплексный обмен данными.  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Как выполнить Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
+Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), определяющий односторонний контракт и контракт типа запрос ответ и не использует дуплексном обмене данными.  
   
 ### <a name="to-define-the-service"></a>Определение службы  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33494326"
   
 ### <a name="to-access-the-service"></a>Доступ к службе  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создать класс клиента для службы, с помощью следующей командной строки с помощью адрес конечной точки обмена метаданными: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем образце кода.  
+1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с помощью адрес конечной точки обмена метаданными, чтобы создать класс клиента для службы, используя следующую команду: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем примере кода.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Односторонние службы](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>См. также
+- [Односторонние службы](../../../../docs/framework/wcf/feature-details/one-way-services.md)

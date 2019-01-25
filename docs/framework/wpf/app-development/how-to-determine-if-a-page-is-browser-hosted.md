@@ -1,5 +1,5 @@
 ---
-title: 'Как: определить страница в браузере'
+title: Как выполнить Определить страницу в браузере
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: 6eb83429cb4f9dac5f3561b41997d24bcaa2c62f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa2aa36e4f887c4fa02314f7834e2a46268c8ff9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661299"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Как: определить страница в браузере
-В этом примере показано, как определить <xref:System.Windows.Controls.Page> размещается в браузере.  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Как выполнить Определить страницу в браузере
+В этом примере показано, как определить, если <xref:System.Windows.Controls.Page> размещается в браузере.  
   
 ## <a name="example"></a>Пример  
- Объект <xref:System.Windows.Controls.Page> может размещаться независимо и, следовательно, может быть загружена в несколько различных типов узлов, включая <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, или в браузере. Это может произойти, если имеется библиотечная сборка, содержащий одну или несколько страниц, на который ссылаются несколько автономных и для просмотра ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) размещения приложений.  
+ Объект <xref:System.Windows.Controls.Page> может размещаться независимо и, следовательно, может быть загружена в несколько различных типов узлов, включая <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, или другой браузер. Это может произойти, если у вас есть библиотечная сборка, содержащий одну или несколько страниц, на который ссылаются несколько автономных и отображаемых в обозревателе ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) размещения приложений.  
   
- В следующем примере демонстрируется использование <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> ли <xref:System.Windows.Controls.Page> размещается в браузере.  
+ Следующий пример демонстрирует, как использовать <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> на предмет <xref:System.Windows.Controls.Page> размещается в браузере.  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.Frame>  
- <xref:System.Windows.Controls.Page>
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.Frame>
+- <xref:System.Windows.Controls.Page>

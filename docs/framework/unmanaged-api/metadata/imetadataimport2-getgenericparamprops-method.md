@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714273"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Метод IMetaDataImport2::GetGenericParamProps
-Возвращает метаданные, связанные с универсальным параметром, представленного указанным токеном.  
+Получает метаданные, связанные с универсального параметра, представленного указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ HRESULT GetGenericParamProps (
   
 #### <a name="parameters"></a>Параметры  
  `gp`  
- [in] Токен, представляющий универсальный параметр, для которого возвращаются метаданные.  
+ [in] Токен, представляющий универсальный параметр, для которого необходимо вернуть метаданные.  
   
  `pulParamSeq`  
  [out] Порядковый номер `Type` параметра в родительский конструктор или метод.  
@@ -53,7 +53,7 @@ HRESULT GetGenericParamProps (
  [out] Значение [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) перечисление, описывающее `Type` универсального параметра.  
   
  `ptOwner`  
- [out] Токен TypeDef или MethodDef, представляющий владельца параметра.  
+ [out] TypeDef или MethodDef токен, представляющий владельца параметра.  
   
  `reserved`  
  [out] Зарезервировано для будущего расширения.  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in] Размер `wzName` буфера.  
   
  `pchName`  
- [out] Возвращаемый размер имя в расширенных символов.  
+ [out] Возвращаемый размер имени, в расширенных символах.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640606"
 ---
 # <a name="structure-variables-visual-basic"></a>Переменные структуры (Visual Basic)
-После создания структуры можно объявить переменные уровня модуля и процедуры для определенного типа. Например можно создать структуру, которая записывает сведения о системе компьютера. В следующем примере это показано.  
+После создания структуры, можно объявить переменные уровня модуля и процедуры для определенного типа. Например можно создать структуру, которая записывает сведения о системе компьютера. В следующем примере это показано.  
   
 ```  
 Public Structure systemInfo  
@@ -31,10 +32,10 @@ Dim mySystem, yourSystem As systemInfo
 ```  
   
 > [!NOTE]
->  В классы и модули, структуры объявляются с помощью [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) по умолчанию для общего доступа. Если структура должна быть закрытой, убедитесь в том, объявите его с помощью [закрытый](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово.  
+>  В классы и модули, структуры объявляются с помощью [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) по умолчанию для общего доступа. Если структура должна быть частными, убедитесь, что необходимо объявить ее с [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово.  
   
 ## <a name="access-to-structure-values"></a>Доступ к значениям структуры  
- Для назначения и извлечения значений из переменных структуры элементов, используйте тот же синтаксис, как используются для задания и получения свойств объекта. Поместите оператор доступа к членам (`.`) между именем переменной структуры и имя элемента. Следующий пример получает доступ к элементам переменных, ранее объявленных как тип `systemInfo`.  
+ Для присвоения и извлечения значений из элементов структуры переменной, используется тот же синтаксис, как используются для задания и получения свойств объекта. Поместите оператор доступа к членам (`.`) между именем переменной структуры и имя элемента. Следующий пример получает доступ к элементам переменных, ранее объявленных как тип `systemInfo`.  
   
 ```  
 mySystem.cPU = "486"  
@@ -42,23 +43,23 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
 ```  
   
-## <a name="assigning-structure-variables"></a>Присваивание переменных структуры  
- Также можно присвоить одну переменную в другой, если оба имеют одинаковый тип структуры. Соответствующие элементы в других это копирует все элементы из одной структуры. Это показано в следующем объявлении.  
+## <a name="assigning-structure-variables"></a>Назначение переменных структуры  
+ Можно также присвоить одну переменную в другой, если оба имеют один и тот же тип структуры. Это копирует все элементы из одной структуры в соответствующие элементы в другой. Это показано в следующем объявлении.  
   
 ```  
 yourSystem = mySystem  
 ```  
   
- Если элемент структуры является ссылочным типом, например `String`, `Object`, или копируются в массив, указатель на данные. В предыдущем примере если `systemInfo` бы были включены переменной объекта, а затем копируется указатель из предыдущего примера `mySystem` для `yourSystem`, и изменение данных объекта через одну структуру будет действовать, если доступ осуществляется через другую структуру.  
+ Если элемент структуры является ссылочным типом, такие как `String`, `Object`, или массив, указатель на данные, копируется. В предыдущем примере если `systemInfo` бы были включены в объектной переменной, а затем копируется указатель из предыдущего примера `mySystem` для `yourSystem`, и изменение данных объекта через одну структуру будет действовать при обращении к через другую структуру.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Структуры и другие элементы программирования](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Структуры и другие элементы программирования](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
+- [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

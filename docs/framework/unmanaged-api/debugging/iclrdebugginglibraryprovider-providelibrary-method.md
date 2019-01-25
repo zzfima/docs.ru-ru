@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9cac9e00c8cb6a13e2acc62b5f314b7bc0cf9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629133"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Метод ICLRDebuggingLibraryProvider::ProvideLibrary
-Возвращает поставщика библиотеки интерфейс обратного вызова, который позволяет среде (CLR) от версии библиотеки отладки находить и загружать по требованию.  
+Получает поставщика библиотеки интерфейс обратного вызова, который позволяет среде выполнения (CLR) версии библиотеки отладки находить и загружать по требованию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,10 +42,10 @@ HRESULT ProvideLibrary(
  [in] Имя запрашиваемого модуля.  
   
  `dwTimestamp`  
- [in] Отметка времени даты, сохраненным в заголовке COFF файл PE-файлов.  
+ [in] Отметку даты и времени в заголовке COFF файл PE-файлов.  
   
  `pLibraryProvider`  
- [in] `SizeOfImage` Поля, сохраненным в заголовке COFF необязательный файл PE-файлов.  
+ [in] `SizeOfImage` Поля в заголовке COFF необязательный файл PE-файлов.  
   
  `hModule`  
  [out] Дескриптор запрошенного модуля.  
@@ -60,24 +60,24 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Исключения  
   
 ## <a name="remarks"></a>Примечания  
- `ProvideLibrary` позволяет отладчику предоставляют модули, которые необходимы для отладки конкретных файлы среды CLR, такие как mscordbi.dll и mscordacwks.dll. Дескрипторы модулей должны оставаться действительными до вызова [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) метод указывает, что их можно освободить, после чего он вызывающим для освобождения дескрипторов.  
+ `ProvideLibrary` позволяет отладчику содержит модули, которые необходимы для отладки определенные файлы среды CLR, такие как mscordbi.dll и mscordacwks.dll. Дескрипторы модулей должны оставаться действительными до вызова [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) метод указывает, что их можно освободить, после чего это обязанность вызывающего для освобождения дескрипторов.  
   
  Отладчик может использовать любые доступные средства поиска или получения модуля отладки.  
   
 > [!IMPORTANT]
->  Эта функция позволяет API вызывающему предоставлять модули, содержащие исполняемые и потенциально вредоносный код. По соображениям безопасности не следует использовать код, вызывающий `ProvideLibrary` для распределения любого кода, что он не желает выполняться самостоятельно.  
+>  Эта функция позволяет API вызывающего объекта предоставить модули, содержащие исполняемый файл и потенциально вредоносный код. По соображениям безопасности вызывающего объекта не следует использовать `ProvideLibrary` для распределения любого кода, что он не желает выполняться самостоятельно.  
 >   
->  Если обнаружено серьезную проблему безопасности в уже выпущенной библиотеке, например mscordbi.dll или mscordacwks.dll, оболочка может быть исправлена для распознавания плохих версий файлов. Оболочки можно выполнять запросы к обновленной версии файлов и отвергать плохие версии, если они предоставляются в ответ на запрос. Это может произойти только в том случае, если пользователь исправления до новой версии оболочки. Неисправленные версии останутся незащищенными.  
+>  Если обнаружена серьезная угроза безопасности в уже выпущенной библиотеке, например mscordbi.dll или mscordacwks.dll, оболочка может быть исправлена для распознавания плохих версий файлов. Оболочки можно выполнять запросы к исправленных версий файлов и отвергать плохие версии, если они указаны в ответ на любой запрос. Это может произойти только в том случае, если пользователь обновить до новой версии оболочки. Неисправленные версии будет оставаться уязвимыми.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

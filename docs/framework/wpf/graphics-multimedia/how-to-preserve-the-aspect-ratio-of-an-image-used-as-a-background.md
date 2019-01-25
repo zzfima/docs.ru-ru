@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Сохранение пропорций изображения, используемого в качестве фона
+title: Как выполнить Сохранение пропорций изображения, используемого в качестве фона
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698327"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Практическое руководство. Сохранение пропорций изображения, используемого в качестве фона
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Как выполнить Сохранение пропорций изображения, используемого в качестве фона
 В этом примере показано, как использовать <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство <xref:System.Windows.Media.ImageBrush> чтобы сохранить пропорции изображения.  
   
  По умолчанию, при использовании <xref:System.Windows.Media.ImageBrush> для закраски области, содержимое этого объекта растягивается для полного заполнения области вывода. Если выходная область и изображение имеют разные пропорции, изображение искажается при таком растягивании.  
@@ -39,6 +39,6 @@ ms.locfileid: "43863090"
   
  Данный пример кода является частью большего примера, предоставляемый для <xref:System.Windows.Media.ImageBrush> класса. Полный пример см. в разделе [пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.TileBrush>  
- [Заливка с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.TileBrush>
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

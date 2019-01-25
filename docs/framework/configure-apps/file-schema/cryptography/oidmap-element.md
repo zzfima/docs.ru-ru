@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 19983e4d17ac2843385685a6b8b247d16f4cc081
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700472"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; элемент
 Содержит сопоставления идентификатора объекта ASN.1 с классами.  
@@ -23,7 +23,7 @@ ms.locfileid: "53143172"
  \<configuration>  
 \<mscorlib >  
 \<cryptographySettings >  
-\<oidMap >  
+\<oidMap>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ ms.locfileid: "53143172"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Сопоставление идентификатора объекта ASN.1 с понятным именем.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
@@ -75,9 +75,9 @@ ms.locfileid: "53143172"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>См. также
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

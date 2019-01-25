@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494812"
 ---
 # <a name="getfileversion-function"></a>Функция GetFileVersion
-Возвращает общий язык среды выполнения (CLR) сведения о версии указанного файла, используя указанный буфер.  
+Получает информация среды CLR (CLR) версии указанного файла, используя указанный буфер.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ HRESULT GetFileVersion (
  [in] Путь к файлу, который необходимо проверить.  
   
  `szBuffer`  
- [in, out] Буфер, выделенный для сведения о версии, который возвращается.  
+ [in, out] Буфер, выделенный для сведений о версии, который возвращается.  
   
  `cchBuffer`  
  [in] Размер в расширенные символы из `szBuffer`.  
@@ -53,11 +53,11 @@ HRESULT GetFileVersion (
  [out] Размер в байтах, возвращаемого `szBuffer`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

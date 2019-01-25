@@ -1,20 +1,20 @@
 ---
-title: Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST
+title: Как выполнить Создание службы, принимающей произвольные данные с использованием модели программирования WCF REST
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667002"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Как создать службу, принимающую произвольные данные с использованием модели программирования WCF REST
-Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это условие выполняется, когда операция службы должна возвращать данные в формате, не поддерживается byWCF. В этом разделе рассматривается использование модели программирования WCF REST для создания службы, получающей произвольные данные.  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Как выполнить Создание службы, принимающей произвольные данные с использованием модели программирования WCF REST
+Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемых byWCF. В этом разделе рассматривается использование модели программирования WCF REST для создания службы, получающей произвольные данные.  
   
 ### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
   
-1.  Определите контракт службы. Операция, получающая произвольные данные, должна иметь параметр <xref:System.IO.Stream>. Это должен быть единственный параметр, передаваемый в теле запроса. Описанная в этом примере операция также принимает параметр filename. Этот параметр передается в URL-адресе запроса. Чтобы указать, что параметр передается в URL-адресе, можно задать шаблон <xref:System.UriTemplate> в атрибуте <xref:System.ServiceModel.Web.WebInvokeAttribute>. В этом случае URI, который используется для вызова этого метода, оканчивается на «UploadFile/Some-Filename». Часть URI-шаблон «{filename}» указывает, что параметр операции filename передается в URI, используемый для вызова операции.  
+1.  Определите контракт службы. Операция, получающая произвольные данные, должна иметь параметр <xref:System.IO.Stream>. Это должен быть единственный параметр, передаваемый в теле запроса. Описанная в этом примере операция также принимает параметр filename. Этот параметр передается в URL-адресе запроса. Чтобы указать, что параметр передается в URL-адресе, можно задать шаблон <xref:System.UriTemplate> в атрибуте <xref:System.ServiceModel.Web.WebInvokeAttribute>. В этом случае URI, используемый для вызова этого метода, оканчивается на «UploadFile/Some-Filename». Часть шаблона URI «{filename}» указывает, что параметр операции filename передается в URI, который используется для вызова операции.  
   
     ```csharp  
      [ServiceContract]  
@@ -193,7 +193,7 @@ namespace ReceiveRawData
   
 -   При компиляции этого кода задайте ссылки на файлы System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>См. также  
- [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>См. также
+- [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

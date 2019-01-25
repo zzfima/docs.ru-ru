@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679401"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
-Вы используете <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известные при добавлении папок в папке <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определены в идентификаторах в [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Использовании <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известную папку при добавлении папок в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определены в файле KnownFolders.h в [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  В некоторых случаях известная папка, добавленная <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> не будет отображаться в **Избранные ссылки** области. Например если указанная известная папка отсутствует на компьютере, на котором выполняется приложение, известная папка не отображается.  
+>  В некоторых случаях известную папку добавляемого <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> не будет отображаться в **Избранные ссылки** области. Например если указанная известная папка отсутствует на компьютере, на котором выполняется приложение, известную папку не указывается.  
   
 ## <a name="list-of-guids"></a>Список идентификаторов GUID  
- В следующей таблице перечислены [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известные папки и связанные с ними <xref:System.Guid>.  
+ В следующей таблице перечислены [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известных папок и связанные с ними <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -70,10 +70,10 @@ ms.locfileid: "33541568"
  Контакты  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Панель управления  
+ Панели управления  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
- Файлы Cookie  
+ Файлы cookie  
  2B0F765D-C0E9-4171-908E-08A611B84FF6  
   
  Рабочий стол  
@@ -130,7 +130,7 @@ ms.locfileid: "33541568"
  PhotoAlbums  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- Рисунки  
+ Изображения  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
  Списки воспроизведения  
@@ -226,7 +226,7 @@ ms.locfileid: "33541568"
  С сохраненными играми  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -238,7 +238,7 @@ ms.locfileid: "33541568"
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- SendTo  
+ Отправить  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
  SidebarDefaultParts  
@@ -247,7 +247,7 @@ ms.locfileid: "33541568"
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Пуск  
+ Меню "Пуск"  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Запуск  
@@ -286,6 +286,6 @@ ms.locfileid: "33541568"
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно файла](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

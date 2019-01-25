@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616775"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Перечисление CorErrorIfEmitOutOfOrder
 Содержит значения флагов, указывающие условия, при которых должно создаваться сообщение об ошибке при беспорядочном выводе метаданных.  
@@ -45,23 +45,23 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Указывает поведение по умолчанию, которое не выдает сообщений об ошибках.|  
-|`MDErrorOutOfOrderNone`|Указывает, что компилятор не должен создавать сообщения об ошибках.|  
-|`MDErrorOutOfOrderAll`|Указывает, что компилятор должен создать сообщение об ошибке, когда поле, свойство, событие, метод или параметр выпускаются в произвольном порядке.|  
-|`MDMethodOutOfOrder`|Указывает, что когда метод выдается вне очереди, компилятор должен создать сообщение об ошибке.|  
-|`MDFieldOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при поле выпускаются в произвольном порядке.|  
+|`MDErrorOutOfOrderDefault`|Указывает поведение по умолчанию, которое не создает сообщения об ошибках.|  
+|`MDErrorOutOfOrderNone`|Указывает, что компилятору не создавать сообщения об ошибках.|  
+|`MDErrorOutOfOrderAll`|Указывает, что компилятор должен создать сообщение об ошибке, когда поле, свойство, событие, метод или параметр выдается в неправильном порядке.|  
+|`MDMethodOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, когда метод выдается в неправильном порядке.|  
+|`MDFieldOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении поля по порядку.|  
 |`MDParamOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении параметра в неправильном порядке.|  
-|`MDPropertyOutOfOrder`|Указывает, что когда свойство выдается вне очереди, компилятор должен создать сообщение об ошибке.|  
-|`MDEventOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении события по порядку.|  
+|`MDPropertyOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении свойства в неправильном порядке.|  
+|`MDEventOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении неупорядоченных событий.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

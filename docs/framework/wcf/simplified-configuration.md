@@ -2,12 +2,12 @@
 title: Упрощенная конфигурация
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498363"
 ---
 # <a name="simplified-configuration"></a>Упрощенная конфигурация
 Настройка служб Windows Communication Foundation (WCF) может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб WCF, они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  
@@ -113,10 +113,10 @@ ms.locfileid: "48838963"
 > [!IMPORTANT]
 >  Эта функция относится только к конфигурации службы WCF, а не к конфигурации клиента. В большинстве случаев конфигурация клиента WCF создается с помощью средства, например svcutil.exe, или путем добавления ссылки на службу из Visual Studio. Если пользователь вручную настраивает клиент WCF необходимо добавить \<клиента > элемент в конфигурацию и указать все конечные точки, которые должны вызываться.  
   
-## <a name="see-also"></a>См. также  
- [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Настройка привязок, предоставляемых системой](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+## <a name="see-also"></a>См. также
+- [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Настройка привязок, предоставляемых системой](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
+- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Применение нескольких преобразований к объекту
+title: Как выполнить Применение нескольких преобразований к объекту
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: dc9b7c052d9deb4d1167c813a6ce652c99983a9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649457"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Практическое руководство. Применение нескольких преобразований к объекту
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Как выполнить Применение нескольких преобразований к объекту
 В этом примере показано, как использовать <xref:System.Windows.Media.TransformGroup> для группировки двух или более <xref:System.Windows.Media.Transform> объектов в один составной <xref:System.Windows.Media.Transform>.  
   
 ## <a name="example"></a>Пример  
@@ -28,8 +28,8 @@ ms.locfileid: "48873126"
  [!code-csharp[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/MultipleTransformsExample.cs#multipletransformscodeexamplewholepage)]
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.UIElement.RenderTransform%2A>  
- <xref:System.Windows.Media.TransformGroup>  
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.UIElement.RenderTransform%2A>
+- <xref:System.Windows.Media.TransformGroup>
+- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)

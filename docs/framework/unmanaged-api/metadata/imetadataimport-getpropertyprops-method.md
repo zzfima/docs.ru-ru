@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672062"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Метод IMetaDataImport::GetPropertyProps
 Получает метаданные для свойства, представленного указанным токеном.  
@@ -52,62 +52,62 @@ HRESULT GetPropertyProps (
   
 #### <a name="parameters"></a>Параметры  
  `prop`  
- [in] Токен, представляющий свойства для возврата метаданных.  
+ [in] Токен, который представляет свойство для возврата метаданных.  
   
  `pClass`  
- [out] Указатель на токен TypeDef, который представляет тип, который реализует свойство.  
+ [out] Указатель на токен TypeDef, представляющий тип, реализующий свойства.  
   
  `szProperty`  
  [out] Буфер для хранения имени свойства.  
   
  `cchProperty`  
- [in] Размер в расширенных символах с `szProperty`.  
+ [in] Размер в расширенных символах `szProperty`.  
   
  `pchProperty`  
  [out] Число расширенных символов, возвращаемых в `szProperty`.  
   
  `pdwPropFlags`  
- [out] Указатель на любой флаги атрибутов, примененных к свойству. Это значение является битовой [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) перечисления.  
+ [out] Указатель на любой флаги атрибутов, примененным к свойству. Это значение является битовой [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) перечисления.  
   
  `ppvSig`  
  [out] Указатель на подпись метаданных свойства.  
   
  `pbSig`  
- [out] Число байтов, возвращенных в `ppvSig`.  
+ [out] Число байтов, возвращаемых в `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Флаг, указывающий тип константы, значение свойства по умолчанию. Это значение является из CorElementType перечисление.  
+ [out] Флаг, указывающий тип константы, которая является значением по умолчанию свойства. Это значение равно из CorElementType перечисления.  
   
  `ppDefaultValue`  
- [out] Указатель на байты, сохранить значения по умолчанию для этого свойства.  
+ [out] Указатель на байты, которые хранят значение по умолчанию для этого свойства.  
   
  `pcchDefaultValue`  
- [out] Размер в расширенных символах с `ppDefaultValue`, если `pdwCPlusTypeFlag` не является соответствующим; в противном случае это значение не применимо. В этом случае длина `ppDefaultValue` выводится из типа, который задается параметром `pdwCPlusTypeFlag`.  
+ [out] Размер в расширенных символах `ppDefaultValue`, если `pdwCPlusTypeFlag` является соответствующим; в противном случае это значение неприменимо. В этом случае длина `ppDefaultValue` выводится из типа, который задается параметром `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
  [out] Указатель на токен MethodDef, представляющий метод доступа set для свойства.  
   
  `pmdGetter`  
- [out] Указатель на токен MethodDef, представляющий метод доступа get для свойства.  
+ [out] Указатель на токен MethodDef, представляющий метод доступа get свойства.  
   
  `rmdOtherMethod`  
  [out] Массив токены MethodDef, представляющие другие методы, связанные со свойством.  
   
  `cMax`  
- [in] Максимальный размер массива `rmdOtherMethod`. Если не указать массив недостаточно велик для хранения всех методов, они пропускаются без предупреждения.  
+ [in] Максимальный размер массива `rmdOtherMethod`. Если вы не укажете массив недостаточно велик для хранения всех методов, они пропускаются без предупреждения.  
   
  `pcOtherMethod`  
- [out] Число токены MethodDef, возвращаемых в `rmdOtherMethod`.  
+ [out] Количество токены MethodDef, возвращаемых в `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

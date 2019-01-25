@@ -1,22 +1,22 @@
 ---
-title: Как получить доступ к службе из приложения рабочего процесса
+title: 'Как выполнить: получить доступ к службе из приложения рабочего процесса'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653701"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Как получить доступ к службе из приложения рабочего процесса
-В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Он зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, можно использовать те же методы для вызова любой службы Windows Communication Foundation (WCF) из приложения рабочего процесса.
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Как выполнить: получить доступ к службе из приложения рабочего процесса
+В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Он зависит от выполнения [как: Создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, можно использовать те же методы для вызова любой службы Windows Communication Foundation (WCF) из приложения рабочего процесса.
 
 ### <a name="create-a-workflow-console-application-project"></a>Создание проекта консольного приложения рабочего процесса
 
 1.  Запустите Visual Studio 2012.
 
-2.  Загрузите проект MyWFService, созданный в [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела.
+2.  Загрузите проект MyWFService, созданный в [как: Создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела.
 
 3.  Щелкните правой кнопкой мыши **MyWFService** решение в **обозревателе решений** и выберите **добавить**, **новый проект**. Выберите **рабочего процесса** в **установленные шаблоны** и **консольное приложение рабочего процесса** в списке типов проектов. Назовите проект MyWFClient и используйте расположение по умолчанию, как показано на следующем рисунке.
 

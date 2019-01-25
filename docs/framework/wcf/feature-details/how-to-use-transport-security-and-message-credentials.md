@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
+title: Как выполнить Использование средств защиты транспорта и учетных данных сообщения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731872"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Как выполнить Использование средств защиты транспорта и учетных данных сообщения
 Защита службы с помощью учетных данных транспорта и сообщений использует лучшие возможности режимов безопасности транспорта и сообщений в Windows Communication Foundation (WCF). В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. Дополнительные сведения о задании режима безопасности см. в разделе [как: Настройка режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.  
@@ -25,7 +25,7 @@ ms.locfileid: "50187612"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Использование привязки WSHttpBinding с сертификатом для обеспечения безопасности транспорта (в коде)  
   
-1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. Дополнительные сведения см. в разделе [как: Настройка порта SSL-сертификат](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. Дополнительные сведения см. в разделе [Как Настройка порта SSL-сертификат](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и задайте для свойства <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "50187612"
     </bindings>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Задание режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Защита служб](../../../../docs/framework/wcf/securing-services.md)  
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Настройка режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Защита служб](../../../../docs/framework/wcf/securing-services.md)
+- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

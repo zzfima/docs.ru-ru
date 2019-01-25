@@ -9,15 +9,15 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 072a816f189a772543fbbd63e7202441469c0177
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 220d6e06ef692655bd6db000fa98b4eb2fc69ba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683850"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Указывает компилятору на отправку отчетов об ошибках, если переменная не объявлена до их использования.  
+Указывает компилятору для сообщения об ошибках, если переменные не объявлены, прежде чем они используются.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,10 +27,10 @@ ms.locfileid: "33653602"
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Необязательный. Укажите `-optionexplicit+` явного объявления переменных. `-optionexplicit+` Параметр используется по умолчанию и совпадает со значением `-optionexplicit`. `-optionexplicit-` Режим обеспечивает неявное объявление переменных.  
+ Необязательный параметр. Укажите `-optionexplicit+` требуется явное объявление переменных. `-optionexplicit+` — Это значение по умолчанию, так же, как `-optionexplicit`. `-optionexplicit-` Позволяет неявное объявление переменных.  
   
 ## <a name="remarks"></a>Примечания  
- Если файл исходного кода содержит [оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), переопределяет инструкцию `-optionexplicit` параметр компилятора командной строки.  
+ Если файл исходного кода содержит [оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md), то оператор переопределяет `-optionexplicit` параметр компилятора командной строки.  
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Чтобы задать - optionexplicit в Интегрированной среде разработки Visual Studio  
   
@@ -45,11 +45,11 @@ ms.locfileid: "33653602"
   
  [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>См. также
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение пользовательских действий в ответ на изменение состояния ячеек элемента управления DataGridView в Windows Forms
+title: Как выполнить Выполнение пользовательских действий на основе изменений в ячейке элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 3de58c1dd87d890f089366e6e85041f2983acc64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 125da277c2db44f01e6cad8cea08fbd927234f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686859"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Практическое руководство. Выполнение пользовательских действий в ответ на изменение состояния ячеек элемента управления DataGridView в Windows Forms
-<xref:System.Windows.Forms.DataGridView> Управления имеет ряд событий, которые можно использовать для обнаружения изменений в состояние <xref:System.Windows.Forms.DataGridView> ячеек. Два наиболее часто используемых являются <xref:System.Windows.Forms.DataGridView.CellValueChanged> и <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Как выполнить Выполнение пользовательских действий на основе изменений в ячейке элемента управления DataGridView в Windows Forms
+<xref:System.Windows.Forms.DataGridView> Элемент управления имеет ряд событий, которые можно использовать для обнаружения изменений в состоянии <xref:System.Windows.Forms.DataGridView> ячеек. Два из наиболее часто используемым <xref:System.Windows.Forms.DataGridView.CellValueChanged> и <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>Для обнаружения изменений в значения ячеек элемента управления DataGridView  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>Для обнаружения изменений значений ячеек элемента управления DataGridView  
   
--   Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellValueChanged> события.  
+-   Создайте обработчик для <xref:System.Windows.Forms.DataGridView.CellValueChanged> событий.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>Для обнаружения изменений в состоянии ячеек элемента управления DataGridView  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>Для обнаружения изменений в состояния ячеек элемента управления DataGridView  
   
--   Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.  
+-   Создайте обработчик для <xref:System.Windows.Forms.DataGridView.CellStateChanged> событий.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
@@ -36,13 +36,13 @@ ms.locfileid: "33535149"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`; Для C# обработчик событий должен быть подключен с соответствующими событиями.  
+-   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`; Для C#, обработчики событий должны быть подключены к соответствующие события.  
   
 -   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>  
- [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [Пример. Проверка данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
+- [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Пошаговое руководство: Проверка данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление или сокрытие столбцов элемента управления DataGridView в Windows Forms
+title: Как выполнить Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 6541ffff1149e5df13c43ee392ffa8b221c8407d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653948"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Удаление или сокрытие столбцов элемента управления DataGridView в Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Как выполнить Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Можно программно удалить или скрыть столбцы в Windows Forms <xref:System.Windows.Forms.DataGrid> управления с помощью свойств и методов <xref:System.Windows.Forms.GridColumnStylesCollection> и <xref:System.Windows.Forms.DataGridColumnStyle> объектов (которые являются членами <xref:System.Windows.Forms.DataGridTableStyle> класса).  
+ Можно программно удалить или скрыть столбцы в Windows Forms <xref:System.Windows.Forms.DataGrid> элемента управления с помощью свойств и методов <xref:System.Windows.Forms.GridColumnStylesCollection> и <xref:System.Windows.Forms.DataGridColumnStyle> объектов (которые являются членами <xref:System.Windows.Forms.DataGridTableStyle> класса).  
   
- Удаленные или скрытые столбцы по-прежнему существует в источнике данных привязывается к сетке и по-прежнему может осуществляться программными средствами. Они просто не отражаются в элементе управления datagrid.  
+ Удаленные или скрытые столбцы по-прежнему существуют в источнике данных привязывается к сетке и по-прежнему может осуществляться программными средствами. Они просто больше не отображается в элементе управления datagrid.  
   
 > [!NOTE]
->  Если приложение не осуществляет доступ к определенным столбцам данных и нежелательно, чтобы они отображались в элементе управления datagrid, затем необязательно, возможно включить их в источнике данных, в первую очередь.  
+>  Если приложение не осуществляет доступ к определенным столбцам данных, и нежелательно, чтобы они отображались в сетке данных, то это скорее всего, не обязательно включать их в источнике данных, в первую очередь.  
   
-### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Удаление столбца из элемента управления DataGrid программным способом  
+### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Чтобы программно удалить столбец из элемента управления DataGrid  
   
-1.  В области объявлений формы объявите новый экземпляр <xref:System.Windows.Forms.DataGridTableStyle> класса.  
+1.  В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
   
-2.  Задать <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> свойство к таблице в источнике данных, которую требуется применить стиль. В следующем примере используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойства, которое предполагается, что уже задан.  
+2.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> свойство к таблице в источнике данных, который вы хотите применить стиль. В следующем примере используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
   
-3.  Добавьте новое <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц сетки данных.  
+3.  Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
   
-4.  Вызовите <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, указав индекс столбца для удаления.  
+4.  Вызовите <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DataGrid>в <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, указав индекс столбца для удаления.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -77,15 +77,15 @@ ms.locfileid: "33534558"
     }  
     ```  
   
-### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Чтобы скрыть столбец в элементе управления DataGrid программным способом  
+### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Чтобы скрыть столбец в сетке данных программными средствами  
   
-1.  В области объявлений формы объявите новый экземпляр <xref:System.Windows.Forms.DataGridTableStyle> класса.  
+1.  В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
   
-2.  Задать <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle> к таблице в источнике данных, которую требуется применить стиль. Следующий пример кода использует <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойства, которое предполагается, что уже задан.  
+2.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle> в таблицу в источнике данных, который вы хотите применить стиль. В следующем примере кода используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
   
-3.  Добавьте новое <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц сетки данных.  
+3.  Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
   
-4.  Скрыть столбец, установив его `Width` значение 0, указав индекс столбца, чтобы скрыть.  
+4.  Скрыть столбец, задав его `Width` значение 0, указывающее индекс столбца для столбца.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,6 +124,6 @@ ms.locfileid: "33534558"
     }  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

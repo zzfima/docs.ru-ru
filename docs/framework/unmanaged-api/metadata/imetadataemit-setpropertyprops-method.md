@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 997e43e6a8be1ac2859e7338751272f3074be11d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523134"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Метод IMetaDataEmit::SetPropertyProps
-Задает функции сохранения в метаданных для свойства, определенные во время предыдущего вызова для [метод DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Задает хранится в метаданных для свойства, определенные с помощью предыдущего вызова функции [метод DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ HRESULT SetPropertyProps (
   
 #### <a name="parameters"></a>Параметры  
  `pr`  
- [in] Маркер для изменения свойства  
+ [in] Токен для свойства, которые необходимо изменить  
   
  `dwPropFlags`  
  [in] Флаги свойства.  
   
  `dwCPlusTypeFlag`  
- [in] Тип значения по умолчанию этого свойства.  
+ [in] Тип значения свойства по умолчанию.  
   
  `pValue`  
  [in] Значение по умолчанию для свойства.  
@@ -65,17 +65,17 @@ HRESULT SetPropertyProps (
  [in] Метод, который возвращает значение свойства.  
   
  `rmdOtherMethods[]`  
- [in] Массив из других методов, связанное со свойством. Этот массив `mdTokenNil` токена.  
+ [in] Массив, другие методы, связанные со свойством. Этот массив `mdTokenNil` токена.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

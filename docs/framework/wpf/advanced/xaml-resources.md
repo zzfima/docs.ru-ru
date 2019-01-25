@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718667"
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. Примерами ресурсов являются кисти и стили. В этом обзоре описывается использование ресурсов в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Можно также создать и доступ к ресурсам с помощью кода или попеременно между кодом и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения см. в разделе [ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -153,12 +153,12 @@ ms.locfileid: "53126407"
   
  <xref:System.Windows.DataTemplate> также имеет неявный ключ. Неявным ключом для <xref:System.Windows.DataTemplate> является <xref:System.Windows.DataTemplate.DataType%2A> значение свойства. <xref:System.Windows.DataTemplate.DataType%2A> также можно указать как имя типа, а не явным образом с помощью [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Дополнительные сведения см. в разделе [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.ResourceDictionary>  
- [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Определение и создание ссылки на ресурс](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.ResourceDictionary>
+- [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [Определение и создание ссылки на ресурс](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
+- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)
+- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

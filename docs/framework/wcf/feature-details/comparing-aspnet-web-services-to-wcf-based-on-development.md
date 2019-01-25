@@ -2,12 +2,12 @@
 title: Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496797"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 Windows Communication Foundation (WCF) имеет режим совместимости ASP.NET для включения приложений WCF позволяет программировать и настройка веб-служб ASP.NET и имитировать их поведение. В следующих разделах сравниваются веб-служб ASP.NET и WCF на основе о том, что необходимо для разработки приложений с использованием обеих технологий.  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>Глобализация  
  Язык конфигурации ASP.NET позволяет задавать язык и региональные параметры для отдельных служб. WCF не поддерживает этот параметр конфигурации, за исключением в режиме совместимости ASP.NET. Для локализации службы WCF, которая не использует режим совместимости с ASP.NET, скомпилируйте тип службы в сборки для конкретных языка и региональных параметров и иметь отдельные конечные точки для конкретного языка и региональных параметров для каждой сборки, зависящие от культуры.  
   
-## <a name="see-also"></a>См. также  
- [Сравнение веб-служб ASP.NET с веб-службами на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>См. также
+- [Сравнение веб-служб ASP.NET с веб-службами на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

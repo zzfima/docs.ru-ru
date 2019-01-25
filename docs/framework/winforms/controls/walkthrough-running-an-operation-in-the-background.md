@@ -1,5 +1,5 @@
 ---
-title: Пример. Фоновое выполнение операции
+title: Пошаговое руководство. Выполнение операции в фоновом режиме
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 24c5a58d0064756b60596907178578f98b557d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540225"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Пример. Фоновое выполнение операции
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Пошаговое руководство. Выполнение операции в фоновом режиме
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
   
- Полный код, используемый в этом примере, см. в разделе [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Полный код, используемый в этом примере, см. в разделе [как: Выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -32,16 +32,16 @@ ms.locfileid: "44084696"
   
 1.  Форма будет открыта в конструкторе Windows Forms, перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** форму, а затем задайте `Name` и <xref:System.Windows.Forms.Control.Text%2A> свойства кнопок согласно следующей таблице.  
   
-    |Кнопка|Имя|Text|  
+    |Кнопка|name|Текста|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
+    |`button1`|`startBtn`|**Запуск**|  
     |`button2`|`cancelBtn`|**Отмена**|  
   
 2.  Откройте **элементов**, нажмите кнопку **компоненты** вкладке, а затем перетащите <xref:System.ComponentModel.BackgroundWorker> в форму компонент.  
   
      `backgroundWorker1` Компонент появится в **область компонентов**.  
   
-3.  В **свойства** окне <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> свойства `true`.  
+3.  В окне **Свойства** присвойте свойству <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> значение `true`.  
   
 4.  В **свойства** щелкните **события** кнопку, а затем дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "44084696"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   Реализация формы, в которой отображается ход выполнения асинхронной операции. Дополнительные сведения см. в разделе [как: реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Реализация формы, в которой отображается ход выполнения асинхронной операции. Дополнительные сведения см. в разделе [Как Реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 -   Реализуйте класс, поддерживающий асинхронную модель для компонентов. Дополнительные сведения см. в разделе [реализации асинхронной модели на основе событий](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.BackgroundWorker>  
- <xref:System.ComponentModel.DoWorkEventArgs>  
- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Практическое руководство. Фоновое выполнение операции](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Компонент BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ComponentModel.BackgroundWorker>
+- <xref:System.ComponentModel.DoWorkEventArgs>
+- [Практическое руководство. Реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Практическое руководство. Выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Компонент BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

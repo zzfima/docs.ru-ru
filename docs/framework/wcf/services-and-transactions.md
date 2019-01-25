@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 2e37a42b3767d279da0d742ba9958ceb6628aab1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736407"
 ---
 # <a name="services-and-transactions"></a>Службы и транзакции
 Приложения Windows Communication Foundation (WCF) могут инициировать транзакцию из клиента и координировать ее в пределах операции службы. Клиенты могут инициировать транзакцию, вызвать несколько операций службы и обеспечить, чтобы операции службы либо фиксировались, либо откатывались как единый блок.  
@@ -88,7 +88,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Поддержка транзакций в System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [Модели транзакций](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [Поток транзакций WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a>См. также
+- [Поддержка транзакций в System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [Модели транзакций](../../../docs/framework/wcf/feature-details/transaction-models.md)
+- [Поток транзакций WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

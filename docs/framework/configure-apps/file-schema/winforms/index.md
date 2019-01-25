@@ -4,12 +4,12 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18d8e1e24af73c9521b3a5bb45f1c86fc52ff1e9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649483"
 ---
 # <a name="windows-forms-configuration-section"></a>Раздел конфигурации Windows Forms
 Параметры конфигурации Windows Forms позволяют приложению Windows Forms хранить и извлекать сведения о настроенных параметрах приложения, таких как поддержка нескольких мониторов, поддержка высокого разрешения (DPI) и другие предопределенные параметры конфигурации.
@@ -42,7 +42,7 @@ ms.locfileid: "32755556"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-Элемент  |Описание |
+Элемент  |Описание: |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями Windows Forms. |
 
@@ -54,5 +54,5 @@ ms.locfileid: "32755556"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файлов конфигурации для .NET Framework](../index.md)   
-[Поддержка высокого DPI в Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [Схема файла конфигурации](../index.md)
+- [Поддержка высокого DPI в Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

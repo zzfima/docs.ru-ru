@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491471"
 ---
 # <a name="corparamattr-enumeration"></a>Перечисление CorParamAttr
 Содержит значения, описывающие метаданные параметра метода.  
@@ -46,10 +46,10 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`pdIn`|Указывает, что этот параметр передается в вызов метода.|  
-|`pdOut`|Указывает, что передается параметр из метода возврата.|  
+|`pdOut`|Указывает, что этот параметр передается методом возвращаемого значения.|  
 |`pdOptional`|Указывает, что параметр является необязательным.|  
 |`pdReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
 |`pdHasDefault`|Указывает, что параметр имеет значение по умолчанию.|  
@@ -57,11 +57,11 @@ typedef enum CorParamAttr {
 |`pdUnused`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

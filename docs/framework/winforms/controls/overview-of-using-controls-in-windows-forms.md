@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533092"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Общие сведения об использовании элементов управления в формах Windows Forms
-В этом разделе описываются основные элементы приложения Windows Forms и предоставляет простой пример, использующий элементы управления и обработка событий в приложении Windows Forms.  
+В этом разделе описываются основные элементы в приложении Windows Forms и предоставляет простой пример, в котором используются элементы управления и обрабатывает события в приложении Windows Forms.  
   
-## <a name="simple-windows-forms-applications"></a>Приложения простой Windows Forms  
- Как минимум приложение Windows Forms состоит из следующих элементов:  
+## <a name="simple-windows-forms-applications"></a>Простой Windows Forms в приложения  
+ Как минимум это приложение Windows Forms состоит из следующих элементов:  
   
--   Один или несколько классов, которые являются производными от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+-   Один или несколько классов, производных от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> метод и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы в приложение.  
+-   Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы для приложения.  
   
- В следующем примере кода показаны основные элементы приложения Windows Forms.  
+ В следующем примере кода показаны основные элементы в приложении Windows Forms.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Использование элементов управления в приложении Windows Forms  
- В следующем примере кода показано простое приложение, которое показано, как приложения Windows Forms с помощью элементов управления и обработки событий. Пример состоит из трех кнопок в форме. Каждая кнопка изменяет цвет фона при щелчке.  
+## <a name="using-controls-in-a-windows-forms-application"></a>С помощью элементов управления в приложении Windows Forms  
+ В следующем примере кода показано простое приложение, которое показано, как приложения Windows Forms с помощью элементов управления и обработки событий. Пример состоит из трех кнопок в форме; каждой кнопки изменяет цвет фона при щелчке.  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>См. также
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

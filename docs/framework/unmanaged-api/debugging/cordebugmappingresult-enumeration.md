@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691831"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Перечисление CorDebugMappingResult
 Предоставляет сведения о том, как было получено значение указателя инструкций.  
@@ -41,26 +41,26 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Машинный код находится в прологе, поэтому значение IP равно 0.|  
-|`MAPPING_EPILOG`|Машинный код находится в эпилоге, поэтому значение IP-адрес последней инструкции метода.|  
-|`MAPPING_NO_INFO`|Нет сведений о сопоставлении для метода, поэтому значение IP равно 0.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Хотя сведения о сопоставлении для метода, текущий адрес не может быть сопоставлен код на промежуточном языке (MSIL). IP-адрес равен 0.|  
-|`MAPPING_EXACT`|Метод сопоставляет ровно код MSIL, либо была выполнена интерпретация кадра, поэтому значение IP-адреса является точным.|  
+|`MAPPING_PROLOG`|Машинный код находится в прологе, поэтому значение IP-адреса равно 0.|  
+|`MAPPING_EPILOG`|Машинный код находится в эпилоге, поэтому значение IP-адреса — адрес последней инструкции метода.|  
+|`MAPPING_NO_INFO`|Нет сведений о сопоставлении для метода, поэтому значение IP-адреса — 0.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Несмотря на то, что есть сведения о сопоставлении для метода, текущий адрес не может быть сопоставлен код на промежуточном языке (MSIL). IP-адреса значение 0.|  
+|`MAPPING_EXACT`|Метод сопоставляет ровно кода MSIL, либо была выполнена интерпретация кадра, поэтому значение IP-адреса является точным.|  
 |`MAPPING_APPROXIMATE`|Метод успешно сопоставлен, но значение IP-адреса может быть приблизительным.|  
   
 ## <a name="remarks"></a>Примечания  
- Можно использовать [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) метод получения значения указателя инструкций.  
+ Можно использовать [ICorDebugILFrame::GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) метод для получения значения указателя инструкций.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

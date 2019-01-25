@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5025b75106b2cb0853047a09ca263f795d99633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689933"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>Указатель функции LPTHREAD_START_ROUTINE
-Указывает на функцию, которая уведомляет основное приложение начала выполнения потока.  
+Указывает на функцию, которая уведомляет основное приложение, который запущен поток для выполнения.  
   
- Указатель на функцию рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Этот указатель функции был объявлен устаревшим в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 #### <a name="parameters"></a>Параметры  
  `lpThreadParameter`  
- [in] Указатель на код, в которой было начато.  
+ [in] Указатель на код, который начато выполнение.  
   
 ## <a name="remarks"></a>Примечания  
- Функция, к которому `LPTHREAD_START_ROUTINE` точек — функция обратного вызова и должны быть реализованы разработчиком ведущего приложения.  
+ Функция, которая `LPTHREAD_START_ROUTINE` точки — это функция обратного вызова и должны быть реализованы модулем записи ведущего приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** MSCorWks.dll  
+ **Библиотека:** "Mscorwks.dll"  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

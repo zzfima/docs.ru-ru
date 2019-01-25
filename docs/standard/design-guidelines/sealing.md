@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646663"
 ---
 # <a name="sealing"></a>Запечатывание
 Одной из особенностей платформ объектно ориентированного — что разработчики могут расширять и настраивать их способами, непредвиденным, проектировщики этой инфраструктуры. Это power и опасность расширяемой архитектуры. При создании вашей платформы, это так, поэтому очень важно тщательно разрабатывать приложения для расширения его при необходимости, а также ограничить расширяемости, когда это представляет опасность.  
@@ -49,6 +49,6 @@ ms.locfileid: "53127697"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
-- [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
+- [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Незапечатанные классы](../../../docs/standard/design-guidelines/unsealed-classes.md)

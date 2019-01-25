@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732444"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>Метод ICorDebugModule::GetFunctionFromRVA
 Этот метод не реализован в текущей версии платформы .NET Framework.  
@@ -37,8 +37,8 @@ HRESULT GetFunctionFromRVA(
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>См. также  
-    
- 
+## <a name="see-also"></a>См. также
+
+

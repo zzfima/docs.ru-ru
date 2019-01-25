@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494448"
 ---
 # <a name="choosing-a-transport"></a>Выбор транспортов
 В этом разделе описываются критерии выбора одного из трех основных транспортов, которые включены в Windows Communication Foundation (WCF): HTTP, TCP и именованные каналы. WCF также включает транспорт очереди сообщений (MSMQ), но в этом документе не описываются очереди сообщений.  
@@ -45,12 +45,12 @@ ms.locfileid: "50199672"
  Когда при обмене данными между различными приложениями WCF на одном компьютере, и вы хотите запретить любое взаимодействие с другого компьютера, затем используйте транспорт именованных каналов. При этом действует еще одно ограничение: процессы, выполняемые с удаленного рабочего стола Windows, могут ограничиваться тем же сеансом удаленного рабочего стола Windows, если они не обладают привилегиями более высокого уровня.  
   
 > [!WARNING]
->  При использовании транспорта именованного канала с резервированием URL-адрес слабым шаблоном на нескольких узлах, размещенных в IIS, может возникнуть следующая ошибка: произошла ошибка в службе активации «NetPipeActivator» протокола «net.pipe» при попытке прослушивания узла «2», Таким образом протокол для узла временно отключен. См. сообщение об исключении для получения дополнительных сведений. URL-адрес: WeakWildcard:net.pipe:/\<имя компьютера > / Состояние: исключение ConflictingRegistration: имя процесса: идентификатор процесса SMSvcHost: 1076\  
+>  При использовании транспорта именованного канала с резервированием URL-адрес слабым шаблоном на нескольких узлах, размещенных в IIS, может возникнуть следующая ошибка: Произошла ошибка в службе активации «NetPipeActivator» протокола «net.pipe» при попытке прослушивания узла «2», поэтому протокол для узла временно отключен. См. сообщение об исключении для получения дополнительных сведений. URL-адрес: WeakWildcard:net.pipe:/\<имя компьютера > / Состояние: Исключение ConflictingRegistration:  Имя процесса: SMSvcHost Process ID: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Факторы, определяющие выбор транспорта  
  В следующей таблице описаны стандартные факторы, которые необходимо учитывать при выборе транспорта. Необходимо также рассмотреть все дополнительные атрибуты и транспорты, применимые к приложению. Определите важные для приложения атрибуты и транспорты, которые успешно связываются с каждым из атрибутов, затем выберите транспорты, которые лучше всего подходят к составленному набору атрибутов.  
   
-|Атрибут|Описание|Поддерживаемые транспорты|  
+|Атрибут|Описание:|Поддерживаемые транспорты|  
 |---------------|-----------------|------------------------|  
 |Диагностика|Диагностика позволяет автоматически выявлять проблемы с подключением транспорта. Все транспорты поддерживают возможность обратной отправки информации о сбоях подключения. Тем не менее WCF не поддерживает средства диагностики для исследования неполадок в сети.|Нет|  
 |Размещение|Все конечные точки WCF должны размещаться внутри приложения. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более ранние версии поддерживают размещение приложений, использующих только HTTP-транспорт. На [!INCLUDE[wv](../../../../includes/wv-md.md)], добавляется для размещения всех транспортов WCF, включая протокол TCP и именованные каналы поддержки. Дополнительные сведения см. в разделе [размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) и [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
@@ -61,16 +61,16 @@ ms.locfileid: "50199672"
 |Пропускная способность|Этот показатель измеряет объем данных, которые можно передать и обработать за указанный промежуток времени. Выбор транспорта влияет на пропускную способность операций службы, как и на задержку. Чтобы обеспечить максимальную пропускную способность транспорта, необходимо свести к минимуму нагрузку передаваемого содержимого и максимально сократить время ожидания завершения обмена сообщениями. При использовании транспорта TCP и транспорта именованных каналов к телу сообщения добавляется незначительная нагрузка, более того, эти транспорты поддерживают собственную дуплексную форму, благодаря чему сокращается время ожидания ответных сообщений.|TCP, именованный канал|  
 |Инструментарий|Инструментарий представляет поддержку сторонних приложений для протокола, с помощью которого осуществляются разработка, диагностика, размещение и другие операции с приложением. Очень выгодным вложением станет создание средств и программного обеспечения для работы с протоколом HTTP.|HTTP|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Создание пользовательских привязок](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Создание пользовательских привязок](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

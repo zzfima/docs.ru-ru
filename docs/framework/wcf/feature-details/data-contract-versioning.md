@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646923"
 ---
 # <a name="data-contract-versioning"></a>Управление версиями контракта данных
-По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами. В данном разделе описано, как создавать версии контрактов данных. В этом разделе описываются механизмы создания версий контрактов данных. Полный обзор и руководство по управлению версиями, см. в разделе [рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами. В данном разделе описано, как создавать версии контрактов данных. В этом разделе описываются механизмы создания версий контрактов данных. Полный обзор и руководство по управлению версиями, см. в разделе [рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Сравнение критических и некритических изменений  
  Изменения в контрактах данных могут быть критическими и некритическими. Когда изменение контракта данных не является критическим, приложение, использующее старую версию контракта, может взаимодействовать с приложением, использующим новую версию, и приложение, использующее новую версию контракта, может взаимодействовать с приложением, использующим старую версию. Напротив, критическое изменение исключает взаимодействие в одном или обоих направлениях.  
@@ -115,17 +115,17 @@ ms.locfileid: "43520202"
  Большинство изменений коллекций являются некритическими, так как в модели контракта данных большинство типов коллекции взаимозаменяемы. Однако преобразование стандартной коллекции в настраиваемую или наоборот является критическим изменением. Итак, изменение параметров настройки коллекции является весьма важным. Сюда относится изменение ее имени контракта данных и пространства имен, имени повторяющегося элемента, имени ключевого элемента и имени элемента значения. Дополнительные сведения о настройке коллекции см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Конечно, изменение контракта данных содержимого коллекции (например, переход со списка целых чисел на список строк) является важным изменением.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Советы и рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

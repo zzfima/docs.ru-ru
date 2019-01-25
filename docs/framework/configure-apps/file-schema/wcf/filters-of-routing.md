@@ -2,12 +2,12 @@
 title: '&lt;filters&gt; для &lt;routing&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 4a6a079264c54ac481c3a8996b74ac924c33bdc7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 468c10bc06b60f80ce93cf413c02582fe3861f70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704437"
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;filters&gt; для &lt;routing&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "54150894"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<Фильтр >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Содержит фильтр маршрутизации, который определяет тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> будет использоваться при вычислении входящих сообщений. |
 
@@ -54,4 +54,4 @@ ms.locfileid: "54150894"
 
 ## <a name="see-also"></a>См. также
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

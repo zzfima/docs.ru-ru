@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объявление константы (Visual Basic)
+title: Как выполнить Объявление константы (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678841"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Как выполнить Объявление константы (Visual Basic)
 Использовании `Const` инструкцию, чтобы объявление константы и присвойте ему значение. Объявляя константу, понятное имя назначается значение. После объявления константа не может изменить или присвоить новое значение.  
   
  Вы объявите константу в процедуре или в раздел объявлений модуля, класса или структуры. Класс или структура на уровне константы являются `Private` по умолчанию, но также может быть объявлено как `Public`, `Friend`, `Protected`, или `Protected Friend` для соответствующего уровня доступа к коду.  
@@ -65,14 +65,25 @@ ms.locfileid: "43394318"
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Типы данных констант и литералов](constant-and-literal-data-types.md)  
- [Общие сведения о константах](constants-overview.md) [как: объявление константы](how-to-declare-a-constant.md) [константы, определенные пользователем](user-defined-constants.md) [типы данных констант и литералов](constant-and-literal-data-types.md) [как: группы Значений связанных констант](how-to-group-related-constant-values-together.md) [Общие сведения о перечислениях](enumerations-overview.md) [как: объявление перечислений](how-to-declare-enumerations.md) [как: ссылка на член перечисления](how-to-refer-to-an-enumeration-member.md) [Перечисления и уточнение имен](enumerations-and-name-qualification.md) [как: перебор элементов перечисления](how-to-iterate-through-an-enumeration.md) [как: определение строки, связанной со значением из перечисления](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Когда следует использовать перечисление](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>См. также
+- [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Типы данных констант и литералов](constant-and-literal-data-types.md)
+- [Общие сведения о константах](constants-overview.md)
+- [Практическое руководство. Объявление константы](how-to-declare-a-constant.md)
+- [Константы, определенные пользователем](user-defined-constants.md)
+- [Типы данных констант и литералов](constant-and-literal-data-types.md)
+- [Практическое руководство. Группы значений связанных констант](how-to-group-related-constant-values-together.md)
+- [Общие сведения о перечислениях](enumerations-overview.md)
+- [Практическое руководство. Объявление перечислений](how-to-declare-enumerations.md)
+- [Практическое руководство. Ссылка на член перечисления](how-to-refer-to-an-enumeration-member.md)
+- [Перечисления и уточнение имен](enumerations-and-name-qualification.md)
+- [Практическое руководство. Перебор элементов перечисления](how-to-iterate-through-an-enumeration.md)
+- [Практическое руководство. Определение строки, связанной со значением из перечисления](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Когда следует использовать перечисление](when-to-use-an-enumeration.md)
 
- [Общие сведения о перечислениях](enumerations-overview.md)  
- [Общие сведения о константах](constants-overview.md)  
- [Практическое: объявление перечисления](how-to-declare-enumerations.md)  
- [Перечисления и уточнение имен](enumerations-and-name-qualification.md)  
- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Общие сведения о перечислениях](enumerations-overview.md)
+- [Общие сведения о константах](constants-overview.md)
+- [Практическое руководство. Объявления перечисления](how-to-declare-enumerations.md)
+- [Перечисления и уточнение имен](enumerations-and-name-qualification.md)
+- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

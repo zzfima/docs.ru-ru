@@ -2,12 +2,12 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 153d9bf27ee68dcda26c59837443ea49314b2f40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610714"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  
@@ -30,7 +30,7 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 ### <a name="serializationformat"></a>SerializationFormat  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Формат, используемый привязкой для сериализации сообщений.  
   
@@ -40,5 +40,5 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

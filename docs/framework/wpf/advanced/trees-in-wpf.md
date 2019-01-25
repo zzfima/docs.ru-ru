@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690414"
 ---
 # <a name="trees-in-wpf"></a>Деревья в WPF
 Во многих технологиях элементы и компоненты организованы в форме древовидной структуры, и разработчики могут напрямую управлять узлами объекта в дереве, чтобы повлиять на визуализацию или поведение приложения. В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] часто используется несколько метафор древовидных структур, чтобы определить отношения между программными элементами. Для большей части WPF разработчики могут создать приложение в коде или определить части приложения в XAML и при этом концептуально думать о метафоре дерева объектов, но для этого им потребуется вызвать определенный интерфейс API или использовать конкретную разметку, а не интерфейс API управления деревом некоторых общих объектов, какой можно использовать в XML DOM. WPF предоставляет два вспомогательных класса, которые обеспечивают представление метафоры дерева <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>. Термины "логическое дерево" и "визуальное дерево" также используются в документации WPF, поскольку эти же деревья помогают понять поведение определенных ключевых функций WPF. В этом разделе определены понятия визуального дерева и логического дерева, обсуждается, как эти деревья связаны с общим понятием дерева объектов, и представлены классы <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ ms.locfileid: "46004488"
   
  В то же время поиск ресурсов также можно расширить за пределы логического дерева. Для разметки приложения поиск ресурсов можно затем продолжить в словарях ресурсов на уровне приложений, поддержке тем и значениях системы, на которые ссылаются как на статические свойства или ключи. Сами темы также могут ссылаться на системные значения вне логического дерева тем, если ссылки на ресурсы являются динамическими. Дополнительные сведения о словарях ресурсов и логике поиска см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Инициализация для объектных элементов, которые не находятся в дереве объектов](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Инициализация для объектных элементов, которые не находятся в дереве объектов](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

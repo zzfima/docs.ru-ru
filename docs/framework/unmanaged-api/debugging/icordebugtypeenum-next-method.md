@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf70d8665d3984c379da9d9058cd97315def7b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677684"
 ---
 # <a name="icordebugtypeenumnext-method"></a>Метод ICorDebugTypeEnum::Next
-Возвращает число экземпляров «ICorDebugType», заданных параметром `celt` из перечисления, начиная с текущей позиции.  
+Возвращает число экземпляров «ICorDebugType», определяемое `celt` из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] Количество `ICorDebugType` извлекаемых экземпляров.  
   
  `values`  
- [out] Массив указателей, каждый из которых указывает на `ICorDebugType` объекта.  
+ [out] Массив указателей, каждый из которых указывает `ICorDebugType` объекта.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugType` фактически возвращаемых экземпляров. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на число `ICorDebugType` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

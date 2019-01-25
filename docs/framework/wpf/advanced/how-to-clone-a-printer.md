@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Клонирование принтера
+title: Как выполнить Клонирование принтера
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: 8f3a9c3b4d9f4bcbe3a6ffcff9868aa7b19b8f28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677229"
 ---
-# <a name="how-to-clone-a-printer"></a>Практическое руководство. Клонирование принтера
-Большинство компаний в определенный момент купит нескольких принтеров той же модели. Как правило они все вместе устанавливаются с практически одинаковыми параметрами. Установка каждого принтера может занять много времени и подвержены ошибкам. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Пространства имен и <xref:System.Printing.PrintServer.InstallPrintQueue%2A> класс, который предоставляется через Microsoft .NET Framework дает возможность мгновенно установить любое число дополнительных очередей печати, которые будут скопированы из существующей очереди печати.  
+# <a name="how-to-clone-a-printer"></a>Как выполнить Клонирование принтера
+Большинство компаний рано или поздно купит нескольких принтеров той же модели. Как правило они все устанавливаются с практически одинаковыми параметрами. Установка каждого принтера может занимать много времени и подвержено ошибкам. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Пространства имен и <xref:System.Printing.PrintServer.InstallPrintQueue%2A> класс, который предоставляется через Microsoft .NET Framework дает возможность мгновенно установить любое число дополнительных очередей печати, которые копируются из существующей очереди печати.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере вторая очередь печати клонируется из существующей очереди печати. Второй отличающимся от первого только в его имя, расположение, порт и состояние общего доступа. Ниже приведены основные действия по созданию.  
+ В следующем примере второй очереди печати клонируется из существующей очереди печати. Второй отличающимся от первого только в его имя, расположение, порт и состояние общего доступа. Ниже приведены основные действия для этого.  
   
-1.  Создание <xref:System.Printing.PrintQueue> объекта для существующего принтера, который требуется создать точную копию.  
+1.  Создание <xref:System.Printing.PrintQueue> объект для существующего принтера, который нужно клонировать.  
   
-2.  Создание <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> из <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> из <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Каждой записи в этом словаре является объектом одного из типов, производных от <xref:System.Printing.IndexedProperties.PrintProperty>. Существует два способа задать значение записи в этом словаре.  
+2.  Создание <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> из <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> из <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Каждой записи в этом словаре является объектом одного из типов, производных от <xref:System.Printing.IndexedProperties.PrintProperty>. Существует два способа установки значения объекта, содержащегося в данном словаре.  
   
-    -   Использование словаря **удалить** и <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> методов, чтобы удалить запись, а затем снова добавьте его с требуемым значением.  
+    -   Использование словаря **удалить** и <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> методов, чтобы удалить запись, а затем добавьте его повторно с требуемым значением.  
   
     -   Использование словаря <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> метод.  
   
@@ -36,17 +36,17 @@ ms.locfileid: "33544207"
   
 3.  Создание <xref:System.Printing.IndexedProperties.PrintBooleanProperty> и задайте его <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> для «IsShared» и его <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> для `true`.  
   
-4.  Используйте <xref:System.Printing.IndexedProperties.PrintBooleanProperty> объект, который будет значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «IsShared».  
+4.  Используйте <xref:System.Printing.IndexedProperties.PrintBooleanProperty> объект значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «IsShared».  
   
 5.  Создание <xref:System.Printing.IndexedProperties.PrintStringProperty> и задайте его <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> для «ShareName» и его <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> — соответствующую <xref:System.String>.  
   
-6.  Используйте <xref:System.Printing.IndexedProperties.PrintStringProperty> объект, который будет значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «ShareName».  
+6.  Используйте <xref:System.Printing.IndexedProperties.PrintStringProperty> объект значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «Ресурс».  
   
-7.  Создайте другой <xref:System.Printing.IndexedProperties.PrintStringProperty> и задайте его <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> для «Местоположение» и его <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> — соответствующую <xref:System.String>.  
+7.  Создайте другой <xref:System.Printing.IndexedProperties.PrintStringProperty> и задайте его <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> «Расположение» и его <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> — соответствующую <xref:System.String>.  
   
-8.  Используйте второй <xref:System.Printing.IndexedProperties.PrintStringProperty> объект, который будет значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «Местоположение».  
+8.  Используйте второй <xref:System.Printing.IndexedProperties.PrintStringProperty> объект значение <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>в записи «Местоположение».  
   
-9. Создайте массив <xref:System.String>s. Каждый элемент — это имя порта на сервере.  
+9. Создайте массив <xref:System.String>s. Каждый элемент является имя порта на сервере.  
   
 10. Используйте <xref:System.Printing.PrintServer.InstallPrintQueue%2A> для установки нового принтера с новыми значениями.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "33544207"
  [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
  [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Collections.DictionaryEntry>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Collections.DictionaryEntry>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)

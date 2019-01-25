@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Развертывание приложения интеграции COM+
+title: Как выполнить Развертывание приложения интеграции COM +
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0dcaa7d12c7e35170dee155612f824ed22ab8b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672803"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>Практическое руководство. Развертывание приложения интеграции COM+
+# <a name="how-to-deploy-a-com-integration-application"></a>Как выполнить Развертывание приложения интеграции COM +
 Написанное приложение интеграции COM+ может понадобиться развернуть на другом компьютере. В этом разделе описывается перенос приложения COM+ с одного компьютера на другой.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Перенос размещенного в COM+ приложения интеграции  
@@ -38,7 +38,7 @@ ms.locfileid: "48873090"
   
 5.  Скопируйте файл .SVC (имя_компонента.svc) и файл Web.config из виртуального корневого каталога на компьютере A в только что созданный виртуальный корневой каталог на компьютере B.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об интеграции с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- [Практическое руководство. Настройка параметров службы COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- [Практическое руководство. Использование программы командной строки настройки модели служб COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об интеграции с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [Практическое руководство. Настройка параметров службы COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Практическое руководство. Используйте средство настройки модели служб COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

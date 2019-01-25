@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509965"
 ---
 # <a name="user-drawn-controls"></a>Элементы управления, разработанные пользователем
-Платформа .NET Framework предоставляет возможность легко разрабатывать собственные элементы управления. Можно создать пользовательский элемент управления, который представляет собой набор стандартных элементов управления, связанных с помощью кода, или можно разработать собственный элемент управления с самого начала копирования. Можно даже использовать наследование для создания элемента управления, который наследует от существующего элемента управления и добавить его функциональные возможности. Независимо от подхода, .NET Framework обеспечивает возможность создания пользовательского интерфейса для любого элемента управления, создаваемые вами.  
+.NET Framework дает возможность легко разрабатывать собственные элементы управления. Вы можете создать пользовательский элемент управления, который представляет собой набор стандартных элементов управления, связанных с помощью кода, или можно разработать собственный элемент управления с нуля вверх. Можно даже использовать наследование создать элемент управления, который наследует от существующего элемента управления и добавить его функциональные возможности. Какой бы подход, вы используете, платформа .NET Framework предоставляет функциональные возможности для создания пользовательского интерфейса для любого элемента управления, которые можно создать.  
   
- Рисование элемента управления сопровождается выполнением кода в элементе управления <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Единственным аргументом <xref:System.Windows.Forms.Control.OnPaint%2A> метод <xref:System.Windows.Forms.PaintEventArgs> объект, предоставляющий все сведения и функциональные возможности, необходимые для визуализации элемента управления. <xref:System.Windows.Forms.PaintEventArgs> Предоставляет два объекта-участника, которые будут использоваться при отрисовке элемента управления в виде свойств:  
+ Рисование элемента управления достигается путем выполнения кода в элементе управления <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Единственным аргументом <xref:System.Windows.Forms.Control.OnPaint%2A> метод <xref:System.Windows.Forms.PaintEventArgs> объект, предоставляющий все сведения и функциональные возможности, необходимые для подготовки к просмотру элемента управления. <xref:System.Windows.Forms.PaintEventArgs> Предоставляет два объекта-участника, которые будут использоваться при подготовке к просмотру элемента управления в виде свойств:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Объект - прямоугольник, представляющий элемент управления, которая будет нарисована. Это может быть весь элемент управления или элемента управления в зависимости от того, как отображается элемент управления.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Объект - прямоугольник, представляющий часть элемента управления, который будет заменен. Это может быть весь элемент управления или части элемента управления в зависимости от того, как элемент управления отображается.  
   
 -   <xref:System.Drawing.Graphics> объект - инкапсулирует несколько графических объектов и методов, которые предоставляют функциональные возможности, необходимые для рисования элемента управления.  
   
- Дополнительные сведения о <xref:System.Drawing.Graphics> объекта и способах ее использования см. в разделе [как: Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Дополнительные сведения о <xref:System.Drawing.Graphics> объекта и как его использовать, см. в разделе [как: Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Событие каждый раз, когда элемент управления рисуется или обновляется на экране и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> объект представляет прямоугольник, в котором рисования будет иметь место. Если весь элемент управления должен быть обновлен, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> будет представлять размер всего элемента управления. Если только часть элемента управления необходимо обновить, однако <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> будет представлять только область, которая должна быть перерисованы. Пример в этом случае может быть, если элемент управления частично закрыт другим элементом управления или формы в пользовательском интерфейсе.  
+ <xref:System.Windows.Forms.Control.OnPaint%2A> Событие каждый раз, когда рисуется элемент управления или обновляется на экране и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> представляет прямоугольник, в котором рисования, будет иметь место. Если весь элемент управления необходимо обновить, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> будет представлять размер всего элемента управления. Если только часть элемента управления должен быть обновлен, однако <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> объект будет представлять только область, которая должна быть перерисована. Примером такого случая может быть, если элемент управления частично закрыт другим элементом управления или формы в пользовательском интерфейсе.  
   
- При наследовании от <xref:System.Windows.Forms.Control> , необходимо переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод и предоставить код отрисовки графики в пределах. Если вы хотите предоставить пользовательский элемент управления или элемент управления пользовательского интерфейса, это можно также сделать путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Ниже показан пример:  
+ При наследовании от <xref:System.Windows.Forms.Control> , необходимо переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод и предоставить код отрисовки графики в пределах. Если вы хотите предоставить пользовательский графический интерфейс для пользовательского элемента управления или наследуемого элемента управления, это можно также сделать путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Ниже приведен пример:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -60,9 +60,9 @@ protected override void OnPaint(PaintEventArgs e)
 }  
 ```  
   
- В предыдущем примере показано, как для отображения элемента управления с очень простым графическим представлением. Он вызывает <xref:System.Windows.Forms.Control.OnPaint%2A> метод базового класса, он создает <xref:System.Drawing.Pen> для рисования объектов, и наконец определяется рисуется эллипс в прямоугольнике <xref:System.Windows.Forms.Control.Location%2A> и <xref:System.Windows.Forms.Control.Size%2A> элемента управления. Несмотря на то, что большая часть кода отрисовки будет намного более сложным, в этом примере показано использование функции <xref:System.Drawing.Graphics> объект, содержащийся в <xref:System.Windows.Forms.PaintEventArgs> объекта. Обратите внимание, что если наследуются от класса, который уже имеет графическое представление, например <xref:System.Windows.Forms.UserControl> или <xref:System.Windows.Forms.Button>и необходимо включить это представление в отрисовку, не следует вызывать базовый класс <xref:System.Windows.Forms.Control.OnPaint%2A> метод.  
+ Предыдущий пример демонстрирует отрисовки элемента управления с очень простой графическое представление. Он вызывает <xref:System.Windows.Forms.Control.OnPaint%2A> метод базового класса, он создает <xref:System.Drawing.Pen> объекта для рисования, и наконец рисуется эллипс в прямоугольнике, определяется <xref:System.Windows.Forms.Control.Location%2A> и <xref:System.Windows.Forms.Control.Size%2A> элемента управления. Несмотря на то, что большая часть кода отрисовки будет намного более сложным, в этом примере демонстрируется использование <xref:System.Drawing.Graphics> объект, содержащийся в <xref:System.Windows.Forms.PaintEventArgs> объекта. Обратите внимание, что если вы наследуете от класса, который уже имеет графическое представление, например <xref:System.Windows.Forms.UserControl> или <xref:System.Windows.Forms.Button>и не хотите включить это представление в рендеринг, не следует вызывать базовый класс <xref:System.Windows.Forms.Control.OnPaint%2A> метод.  
   
- Код в <xref:System.Windows.Forms.Control.OnPaint%2A> метод элемента управления будет выполняться при первом рисовании элемента управления, и при его обновлении. Чтобы убедиться, что элемент управления перерисовывается при каждом изменении его размера, конструктор элемента управления добавьте следующую строку:  
+ Код в <xref:System.Windows.Forms.Control.OnPaint%2A> метод вашего элемента управления будет выполняться при первом рисовании элемента управления, и каждый раз, когда произойдет его обновление. Чтобы убедиться, что элемент управления перерисовывается при каждом изменении его размера, добавьте следующую строку в конструктор элемента управления:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,14 +73,14 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
->  Используйте <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> свойство для реализации нестандартной управления.  
+>  Используйте <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> свойство для реализации непрямоугольных управления.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Control.Region%2A>  
- <xref:System.Windows.Forms.ControlStyles>  
- <xref:System.Drawing.Graphics>  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Windows.Forms.PaintEventArgs>  
- [Практическое руководство. Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Составные элементы управления](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Control.Region%2A>
+- <xref:System.Windows.Forms.ControlStyles>
+- <xref:System.Drawing.Graphics>
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Windows.Forms.PaintEventArgs>
+- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Составные элементы управления](../../../../docs/framework/winforms/controls/constituent-controls.md)
+- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

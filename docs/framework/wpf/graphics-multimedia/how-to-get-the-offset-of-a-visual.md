@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Получение смещения визуального объекта
+title: Как выполнить Получение смещения визуального объекта
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: 97f4de9e2e40840962e4233b1de25843a4b885b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad45dee5b72594f30b141e3affbb26706af645aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645396"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Практическое руководство. Получение смещения визуального объекта
-Этих примерах показано, как получить значение смещения относительно его родительского, любой предков или потомков визуального объекта.  
+# <a name="how-to-get-the-offset-of-a-visual"></a>Как выполнить Получение смещения визуального объекта
+Эти примеры демонстрируют получение значение смещения визуального объекта относительно своего родительского элемента, или любой предков или потомков.  
   
 ## <a name="example"></a>Пример  
  В следующем примере разметки показан <xref:System.Windows.Controls.TextBlock> , определенный с <xref:System.Windows.FrameworkElement.Margin%2A> значение 4.  
@@ -32,17 +32,17 @@ ms.locfileid: "33561853"
   
  Смещение учитывает <xref:System.Windows.FrameworkElement.Margin%2A> значение. В этом случае <xref:System.Windows.Vector.X%2A> равен 4, и <xref:System.Windows.Vector.Y%2A> — 4.  
   
- Возвращаемое значение смещения задается относительно родительского элемента <xref:System.Windows.Media.Visual>. Если вы хотите вернуть значение смещения, который не зависит от родительского элемента <xref:System.Windows.Media.Visual>, используйте <xref:System.Windows.Media.Visual.TransformToAncestor%2A> метод.  
+ Возвращаемое значение смещения является относительно родительского элемента из <xref:System.Windows.Media.Visual>. Если вы хотите вернуть значение смещения, не является относительно родительского элемента из <xref:System.Windows.Media.Visual>, используйте <xref:System.Windows.Media.Visual.TransformToAncestor%2A> метод.  
   
 ## <a name="getting-the-offset-relative-to-an-ancestor"></a>Получение смещения относительно предка  
  В следующем примере разметки показан <xref:System.Windows.Controls.TextBlock> , вложенный в двух <xref:System.Windows.Controls.StackPanel> объектов.  
   
  [!code-xaml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
   
- На следующем рисунке показаны результаты разметки.  
+ Ниже показаны результаты разметки.  
   
  ![Значения смещения объектов](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset_01")  
-Вложенные в двух StackPanels TextBlock  
+TextBlock, вложенные в двух элементы управления StackPanel  
   
  В следующем примере кода показано, как использовать <xref:System.Windows.Media.Visual.TransformToAncestor%2A> метод для извлечения смещение <xref:System.Windows.Controls.TextBlock> относительно содержащего <xref:System.Windows.Window>. Значения смещения содержатся в возвращаемом <xref:System.Windows.Media.GeneralTransform> значение.  
   
@@ -51,21 +51,21 @@ ms.locfileid: "33561853"
   
  Смещение учитывает <xref:System.Windows.FrameworkElement.Margin%2A> значения для всех объектов класса <xref:System.Windows.Window>. В этом случае <xref:System.Windows.Vector.X%2A> равно 28 (16 + 8 + 4), и <xref:System.Windows.Vector.Y%2A> равно 28.  
   
- Возвращаемое значение смещения задается относительно предка <xref:System.Windows.Media.Visual>. Если вы хотите вернуть значение смещения относительно потомка <xref:System.Windows.Media.Visual>, используйте <xref:System.Windows.Media.Visual.TransformToDescendant%2A> метод.  
+ Возвращаемое значение смещения задается относительно предком <xref:System.Windows.Media.Visual>. Если вы хотите вернуть значение смещения относительно потомка <xref:System.Windows.Media.Visual>, используйте <xref:System.Windows.Media.Visual.TransformToDescendant%2A> метод.  
   
 ## <a name="getting-the-offset-relative-to-a-descendant"></a>Получение смещения относительно потомка  
  В следующем примере разметки показан <xref:System.Windows.Controls.TextBlock> содержится в <xref:System.Windows.Controls.StackPanel> объекта.  
   
  [!code-xaml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
   
- В следующем примере кода показано, как использовать <xref:System.Windows.Media.Visual.TransformToDescendant%2A> метод для извлечения смещение <xref:System.Windows.Controls.StackPanel> относительно его дочерними <xref:System.Windows.Controls.TextBlock>. Значения смещения содержатся в возвращаемом <xref:System.Windows.Media.GeneralTransform> значение.  
+ В следующем примере кода показано, как использовать <xref:System.Windows.Media.Visual.TransformToDescendant%2A> метод для извлечения смещение <xref:System.Windows.Controls.StackPanel> относительно его дочерних <xref:System.Windows.Controls.TextBlock>. Значения смещения содержатся в возвращаемом <xref:System.Windows.Media.GeneralTransform> значение.  
   
  [!code-csharp[VisualSnippets#VisualSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet9)]
  [!code-vb[VisualSnippets#VisualSnippet9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet9)]  
   
- Смещение учитывает <xref:System.Windows.FrameworkElement.Margin%2A> значения для всех объектов. В этом случае <xref:System.Windows.Vector.X%2A> равно -4, и <xref:System.Windows.Vector.Y%2A> -4. Значения смещения являются отрицательными, поскольку родительский объект имеет отрицательное значение смещения относительно его дочерний объект.  
+ Смещение учитывает <xref:System.Windows.FrameworkElement.Margin%2A> значения для всех объектов. В этом случае <xref:System.Windows.Vector.X%2A> равно -4, и <xref:System.Windows.Vector.Y%2A> равно -4. Значения смещения являются отрицательными, поскольку родительский объект имеет отрицательное значение смещения по отношению к его дочернего объекта.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

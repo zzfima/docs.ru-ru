@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af5979b113f81c01c9c68d6cccdfa10811265a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c6887d390ded1846e201711c9278663b9ff2888
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520280"
 ---
 # <a name="corexemain-function"></a>Функция _CorExeMain
-Инициализирует общеязыковой среды выполнения (CLR), находит управляемую точку входа в заголовке CLR исполняемой сборки и начинает выполнение.  
+Инициализирует общеязыковой среды выполнения (CLR), размещает управляемую точку входа в заголовке среды CLR исполняемой сборки и начинает выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,22 +36,22 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция вызывается загрузчиком в процессах, созданных из управляемых сборок исполняемый файл. DLL-сборки, загрузчик вызывает [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) вместо этого функцию.  
+ Эта функция вызывается загрузчиком в процессы, созданные из управляемых сборок исполняемого файла. DLL-сборки, загрузчик вызывает [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) вместо этого функцию.  
   
  Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в файле образа.  
   
- В Windows 98, Windows ME, Windows NT и Windows 2000 `_CorExeMain` функция косвенно через адресную привязку в загрузчик операционной системы. Во всех других версиях Windows он вызывается загрузчиком операционной системы.  
+ В Windows 98, Windows ME, Windows NT и Windows 2000 `_CorExeMain` функция вызывается косвенно через адресную привязку в загрузчик операционной системы. Во всех других версиях Windows он вызывается загрузчиком операционной системы.  
   
- Дополнительные сведения см. в разделе «Примечания» в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
+ Дополнительные сведения см. в разделе "Примечания" в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

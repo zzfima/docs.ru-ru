@@ -2,12 +2,12 @@
 title: Защита сведений о подключении
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662222"
 ---
 # <a name="protecting-connection-information"></a>Защита сведений о подключении
 Защита доступа к источникам данным - одна из важнейших целей защиты приложения. Строка соединения представляет собой потенциальную уязвимость, если она не защищена. Сохранение сведений о соединении в виде простого текста или сохранение их в памяти представляет угрозу безопасности всей системы. Строки соединения, внедренные в исходный код можно считать с помощью [Ildasm.exe (дизассемблер IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для просмотра промежуточного языка Майкрософт (MSIL) в скомпилированной сборке.  
@@ -39,8 +39,8 @@ ms.locfileid: "43513481"
 ## <a name="encrypt-configuration-files"></a>Шифрование файлов конфигурации  
  Строки соединения можно сохранить в файлах конфигурации, что исключает необходимость внедрять их в код приложения. Файлы конфигурации представляют собой стандартные XML-файлы, для которых в платформе .NET Framework определен типовой набор элементов. Строки подключения в файлах конфигурации обычно хранятся в  **\<connectionStrings >** элемент в **app.config** для приложения Windows, или  **Web.config** файл для приложения ASP.NET. Дополнительные сведения об основах хранения, извлечения и шифрования строк подключения в файлах конфигурации, см. в разделе [строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Шифрование данных конфигурации с помощью защищенной конфигурации](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [Безопасность PAVE в машинном коде и коде .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Шифрование данных конфигурации с помощью защищенной конфигурации](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
+- [Безопасность PAVE в машинном коде и коде .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
