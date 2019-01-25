@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595322"
 ---
 # <a name="data-transfer-and-serialization"></a>Передача данных и сериализация
-В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными. Как разработчик службы или клиента необходимо также понять, как Windows Communication Foundation (WCF) обрабатывает и сериализации данных для создания приложений, которые эффективны и простые в обслуживании.  
+В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными. Как разработчик службы или клиента необходимо понимать как Windows Communication Foundation (WCF) обрабатывает и сериализации данных для создания приложений, которые эффективны и простые в обслуживании.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33489210"
  Вопросы, которые необходимо учитывать при решении задач сериализации и передачи данных.  
   
  [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Содержит описание представления обзор архитектуры передачи данных в WCF.  
+ Содержит описание представления проекта в целом передачи данных в WCF.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel>  
@@ -60,6 +60,6 @@ ms.locfileid: "33489210"
 ## <a name="related-sections"></a>Связанные разделы  
  [Расширение кодировщиков и сериализаторов](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Управление версиями служб](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>См. также
+- [Советы и рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Управление версиями служб](../../../../docs/framework/wcf/service-versioning.md)

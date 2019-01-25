@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527111"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Метод IMetaDataImport::EnumCustomAttributes
 Перечисляет токены определений настраиваемых атрибутов, связанных с указанным типом или членом.  
@@ -42,13 +42,13 @@ HRESULT EnumCustomAttributes (
   
 #### <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на возвращаемый перечислитель.  
+ [in, out] Указатель на возвращенном перечислителе.  
   
  `tk`  
- [in] Токен для области перечисления или нулевое значение для всех настраиваемых атрибутов.  
+ [in] Маркер в рамках перечисление, или ноль для всех настраиваемых атрибутов.  
   
  `tkType`  
- [in] Токен для конструктора типа атрибутов, которые необходимо перечислить или `null` для всех типов.  
+ [in] Маркер для конструктора типа атрибутов, которые необходимо перечислить или `null` для всех типов.  
   
  `rCustomAttributes`  
  [out] Массив настраиваемых атрибутов маркеров.  
@@ -64,17 +64,17 @@ HRESULT EnumCustomAttributes (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumCustomAttributes` успешно возвращен.|  
-|`S_FALSE`|Нет никаких пользовательских атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
+|`S_FALSE`|Нет никаких настраиваемых атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

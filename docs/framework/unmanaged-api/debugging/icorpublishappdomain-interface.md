@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c010208075f0f6cb0ad0e24e05984bf6dc15aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653779"
 ---
 # <a name="icorpublishappdomain-interface"></a>Интерфейс ICorPublishAppDomain
 Представляет и предоставляет информацию о домене приложения.  
@@ -30,18 +30,18 @@ ms.locfileid: "33423576"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetID](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для этого `ICorPublishAppDomain`.|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Возвращает имя домена приложения, упоминаемой в этом `ICorPublishAppDomain`.|  
+|[Метод GetID](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для данного `ICorPublishAppDomain`.|  
+|[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Возвращает имя домена приложения, который ссылается этот `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorPub.idl, CorPub.h  
+ **Заголовок.** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Кокласс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Кокласс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

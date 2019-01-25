@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614638"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
 В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
@@ -38,7 +38,7 @@ ms.locfileid: "43786431"
 |<xref:System.Windows.Forms.Control.KeyPress>|Это событие возникает если в результате нажатия клавиши или клавиш получается символ. Например, пользователь нажимает клавиши SHIFT и строчную "a", в результате получается символ заглавной буквы "A".|<xref:System.Windows.Forms.Control.KeyPress> возникает после <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>Обработчик <xref:System.Windows.Forms.Control.KeyPress> получает:</li><li>Параметр <xref:System.Windows.Forms.KeyPressEventArgs>, который содержит код символа нажатой клавиши. Этот код является уникальным для каждой комбинации клавиш символа и модификатора.<br /><br />     Например клавиша "A" создаст <br /><br /> <ul><li>код символа 65, если она нажата при нажатой клавише "SHIFT"</li><li>Или клавиша CAPS LOCK вернет код 97, если она нажата сама по себе,</li><li>И код 1, если она нажата совместно с клавишей CTRL.</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|Это событие возникает, когда пользователь отпускает физическую клавишу.|Обработчик <xref:System.Windows.Forms.Control.KeyUp> получает:<br /><br /> <ul><li>Параметр <xref:System.Windows.Forms.KeyEventArgs>,<br /><br /> <ul><li>который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (указывающее на физическую клавишу клавиатуры).</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (SHIFT, CTRL или ALT).</li><li>Свойство <xref:System.Globalization.SortKey.KeyData%2A> (которое объединяет код клавиши и модификатор).</li></ul></li></ul>|  
   
-## <a name="see-also"></a>См. также  
- [Ввод с клавиатуры в приложении Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Принцип работы ввода с клавиатуры](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>См. также
+- [Ввод с клавиатуры в приложении Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Принцип работы ввода с клавиатуры](../../../docs/framework/winforms/how-keyboard-input-works.md)
+- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

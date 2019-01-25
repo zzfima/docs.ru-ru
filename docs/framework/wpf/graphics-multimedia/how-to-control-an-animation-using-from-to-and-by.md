@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Управление анимацией с помощью свойств From, To, и By
+title: Как выполнить Управление анимацией с помощью From, To и By
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530315"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Практическое руководство. Управление анимацией с помощью свойств From, To, и By
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Как выполнить Управление анимацией с помощью From, To и By
 «From/To/By» или «простая анимация» создает переход между двумя целевыми значениями (см. в разделе [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) введение в различные виды анимации). Чтобы задать целевые значения для простой анимации, используйте его <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.  В следующей таблице перечислены как <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства могут быть использованы вместе или отдельно, чтобы определить целевой объект анимации значения.  
   
 |Заданные свойства|Результирующее поведение|  
 |--------------------------|------------------------|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|Анимация выполняется от значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство к базовому значению анимируемого свойства или предыдущей анимации выходного значения, в зависимости от того, как настроена предыдущая анимация.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>.|Анимация выполняется от значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> присваивается значение, заданное параметром <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>.|Анимация выполняется от значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства к значению, указанному на сумму <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Анимация выполняется от значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> присваивается значение, заданное параметром <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|Анимация выполняется от значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства к значению, указанному на сумму <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Анимация продвигается от базового значения анимируемого свойства или значение к значению, заданному в выходных данных предыдущей анимации <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|Анимация выполняется от базового значения анимируемого свойства или предыдущей анимации выходного значения к сумме этого значения и значения, указанного в <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "43858809"
 ## <a name="example"></a>Пример  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>См. также
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)

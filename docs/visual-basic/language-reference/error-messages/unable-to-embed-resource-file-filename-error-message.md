@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: a3c09049511846b249f6de7469852f86960a34e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e693cf4f1c7c23784a7e5be1a9b6ecbe0ced9b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737313"
 ---
 # <a name="unable-to-embed-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Не удается внедрить файл ресурсов &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке внедрения файла машинного ресурса COM+ прямо в сборку.  
@@ -21,11 +21,11 @@ ms.locfileid: "33596646"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Просмотрите сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). содержатся дополнительные пояснения и рекомендации.  
+1.  Изучите приведенное сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). для пояснения и рекомендации.  
   
 2.  Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
  [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)

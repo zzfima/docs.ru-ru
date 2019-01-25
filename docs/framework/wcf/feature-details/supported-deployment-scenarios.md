@@ -2,12 +2,12 @@
 title: Поддерживаемые сценарии развертывания
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614488"
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 Подмножество функций Windows Communication Foundation (WCF), поддерживается для использования в частично доверенных приложениях предназначен для соответствия требованиям некоторых, но не все сценарии использования WCF. На сервере, соответствующий требованиям WCF к сети Интернет поставщиков услуг совместного размещения работающих приложений независимых поставщиков в [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] набор по соображениям безопасности разрешений среднего уровня доверия. На клиенте поддержка частичного доверия WCF разработан в соответствии с требованиями развертывания технологий, таких как [развертывания ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) или [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]технология приложения браузера XAML, которая допускает беспрепятственное и безопасное Развертывание классических приложений с ненадежных узлов.  
@@ -32,15 +32,15 @@ ms.locfileid: "44183383"
   
  Службы рабочего процесса требуют наличия разрешений полного доверия, их невозможно использовать в частично доверенных приложениях.  
   
- Дополнительные сведения см. в разделе [как: использование среднего уровня доверия в ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
+ Дополнительные сведения см. в разделе [Как Использование среднего уровня доверия в ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Частичное доверие на клиенте  
- Необходимо предпринять определенные дополнительные меры безопасности при загрузке и запуске кода с ненадежных веб-сайтов Интернета. Оба [развертывания ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) и [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]элемента XAML приложение браузера (XBAP) технология обеспечивать используют частичное доверие для предоставления ограниченных разрешений (в зоне Интернета) ненадежному коду.  
+ Необходимо предпринять определенные дополнительные меры безопасности при загрузке и запуске кода с ненадежных веб-сайтов Интернета. Технология [развертывания ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) и технология приложения браузера XAML [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)](XBAP) используют частичное доверие для предоставления ограниченных разрешений (в зоне Интернета) ненадежному коду.  
   
  WCF можно использовать для взаимодействия с удаленными серверами из частично доверенных приложений, развернутых с использованием [развертывания ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) или XBAP. Набор разрешений зоны Интернета включает <xref:System.Net.WebPermission> для исходного узла, которое позволяет этим приложениям взаимодействовать с исходным сервером с помощью любой из поддерживаемых привязок WCF, описанные в [Partial Trust Feature Compatibility ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>См. также  
- [Управление доступом для кода](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Обзор размещенных в веб-браузере приложений Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [Средний уровень доверия ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>См. также
+- [Управление доступом для кода](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Обзор размещенных в веб-браузере приложений Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Средний уровень доверия ASP.NET](https://go.microsoft.com/fwlink/?LinkId=69328)

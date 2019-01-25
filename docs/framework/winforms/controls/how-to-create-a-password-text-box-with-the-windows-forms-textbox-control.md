@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms
+title: Как выполнить Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: 41bfb2bc1a1ead5bb289264c44145b88721efe49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523994"
 ---
-# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms
-Поле пароля — это текстовое поле Windows Forms, выводит заполнителем, когда пользователь вводит строку.  
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Как выполнить Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms
+Поле пароля представляет собой текстовое поле Windows Forms, который отображает заполнителем, пока пользователь вводит строку.  
   
 ### <a name="to-create-a-password-text-box"></a>Чтобы создать текстовое поле пароля  
   
-1.  Задать <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойства <xref:System.Windows.Forms.TextBox> элемента управления к определенному символу.  
+1.  Задайте <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойство <xref:System.Windows.Forms.TextBox> элемента управления к определенному символу.  
   
-     <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Свойство определяет знак, используемый в текстовом поле. К примеру, если вы хотите звездочки, отображается в поле "пароль", указать * для <xref:System.Windows.Forms.TextBox.PasswordChar%2A> в окне свойств. То какие бы знаки пользователь вводит в текстовое поле, отображается звездочка.  
+     <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Свойство определяет знак, используемый в текстовом поле. Например, вы звездочки, отображаемый в поле "пароль", укажите * для <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойства в окне «Свойства». Затем независимо от того, какой символ, который пользователь вводит в текстовое поле, отображается звездочка.  
   
-2.  (Необязательно) Задать <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> свойства. Это свойство определяет, сколько символов можно ввести в текстовом поле. В случае превышения максимального система издает звуковой сигнал и текстовое поле не принимает любые дополнительные символы. Обратите внимание, что вы можете делать это в качестве максимальной длины пароля не может быть использована злоумышленниками, пытающимися подобрать пароль.  
+2.  (Необязательно) Задайте <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> свойство. Свойство определяет, сколько символов можно ввести в текстовом поле. При превышении максимальную длину, система выдает звукового сигнала, и текстовое поле не принимает любые дополнительные символы. Обратите внимание на то, что вы не можете это сделать, как максимальная длина пароля может быть использована злоумышленниками, пытающимися угадать пароль.  
   
-     В следующем примере кода показано, как инициализировать текстовое поле, будет принимать строку до 14 символов и должны отображаться звездочки вместо строки. `InitializeMyControl` Процедура не выполняется автоматически; он должен быть вызван.  
+     В следующем примере кода показано, как инициализировать текстовое поле, которое будет принимать строку длиной до 14 знаков и отображать звездочками вместо строки. `InitializeMyControl` Процедуры не выполняется автоматически; его необходимо вызывать.  
   
     > [!IMPORTANT]
-    >  С помощью <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойство текстового поля может помочь обеспечить пользователям не может определить пароль пользователя, наблюдая за его вводом. Эта мера безопасности не влияет на процесс сохранения или передачи пароля, может произойти из-за логики приложения. Поскольку введенный текст не зашифрован каким-либо образом, необходимо рассматривать его как и другие конфиденциальные данные. Несмотря на то, что он не отображается таким образом, пароль по-прежнему обрабатывается как обычный текст (если не реализовано дополнительные меры безопасности).  
+    >  С помощью <xref:System.Windows.Forms.TextBox.PasswordChar%2A> для текстового поля может помочь убедиться, что другие люди не смогут определить пароль пользователя, наблюдая за его вводом. Такая мера предосторожности не влияет на сохранения или передачи пароля, может произойти из-за логики приложения. Поскольку введенный текст никоим образом не зашифрован, необходимо рассматривать его так же, как и другие конфиденциальные данные. Несмотря на то, что он не отображается таким образом, пароль по-прежнему обрабатывается как обычной текстовой строки (Если вы реализовали дополнительные меры безопасности).  
   
     ```vb  
     Private Sub InitializeMyControl()  
@@ -71,12 +71,12 @@ ms.locfileid: "33534304"
        }  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.TextBox>  
- [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Практическое руководство. Добавление кавычек в строку](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.TextBox>
+- [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создать только для чтения текстовое поле](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Добавление кавычек в строку](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

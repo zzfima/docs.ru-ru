@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617256"
 ---
 # <a name="corprfcodeinfo-structure"></a>Структура COR_PRF_CODE_INFO
 Представляет один непрерывный блок машинного кода, хранящийся в памяти.  
@@ -43,13 +43,13 @@ typedef struct _COR_PRF_CODE_INFO {
 |`size`|Размер блока.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl  
+ **Заголовок.** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>См. также
+- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

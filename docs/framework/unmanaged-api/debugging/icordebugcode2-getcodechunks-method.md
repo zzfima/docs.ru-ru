@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfcd45b15ddc1491b12de0fa42901b6d3f7fe9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572504"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>Метод ICorDebugCode2::GetCodeChunks
-Возвращает фрагменты кода, состоящий из этого объекта кода.  
+Возвращает фрагменты кода, который представляет собой этого кода объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,22 +43,22 @@ HRESULT GetCodeChunks (
  [in] Размер `chunks` массива.  
   
  `pcnumChunks`  
- [out] Число блоков, возвращаемых в `chunks` массива.  
+ [out] Число блоков данных, возвращаемых в `chunks` массива.  
   
  `chunks`  
- [out] Массив структур «CodeChunkInfo», каждая из которых представляет одинарный блок кода. Если значение `cbufSize` равно 0, этот параметр может иметь значение null.  
+ [out] Массив структур «CodeChunkInfo», каждый из которых представляет отдельный блок кода. Если значение `cbufSize` равно 0, этот параметр может иметь значение null.  
   
 ## <a name="remarks"></a>Примечания  
- Блоки кода никогда не перекрываются, и располагаются в порядке, в котором они будут были объединения [ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). Объект кода промежуточного языка MSIL Microsoft в .NET Framework версии 2.0 содержит из одного блока кода.  
+ Блоки кода никогда не перекрываются, и они будет учитываться порядок, в котором они будут были объединения [ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md). Объект кода промежуточного языка MSIL Microsoft в .NET Framework версии 2.0 будет состоять из одного блока кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

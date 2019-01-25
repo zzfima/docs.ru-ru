@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Воспроизведение звука в Windows Forms
+title: Как выполнить Воспроизведение звука в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607255"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Практическое руководство. Воспроизведение звука в Windows Forms
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Как выполнить Воспроизведение звука в Windows Forms
 В этом примере воспроизводится звук по заданному пути во время выполнения.  
   
 ## <a name="example"></a>Пример  
@@ -59,12 +59,12 @@ private void playSimpleSound()
   
 -   Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
   
--   Путь содержит только двоеточие «:» (<xref:System.NotSupportedException> класса).  
+-   Путь содержит только двоеточие, «:» (<xref:System.NotSupportedException> класса).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем `Form1.vb` может вовсе не быть исходным файлом Visual Basic. Следует проверять все входные данные перед использованием их в приложении.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Media.SoundPlayer>  
- [Практическое руководство. Асинхронная загрузка звука в Windows Forms](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>См. также
+- <xref:System.Media.SoundPlayer>
+- [Практическое руководство. Загрузка звука асинхронно в форме Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

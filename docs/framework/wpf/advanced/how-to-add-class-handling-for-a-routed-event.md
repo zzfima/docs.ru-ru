@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление обработки классов для перенаправленных событий
+title: Как выполнить Добавление обработки классов для перенаправленных событий
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 85c3491c9035d807b4c654659a8641121bb5709f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10ef6354a426bc43731ca3711a533f26a4bd27b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619520"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>Практическое руководство. Добавление обработки классов для перенаправленных событий
-Перенаправленные события могут быть обработаны с помощью обработчики класса или экземпляров на любом узле данного маршрута. Обработчики класса вызываются первыми, а также может использоваться для подавления событий обработчиков экземпляров или введения вариантов поведения других событий для события, которые принадлежат базовых классов путем реализации класса. В этом примере показано два тесно связанные методы реализации обработчиков классов.  
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Как выполнить Добавление обработки классов для перенаправленных событий
+Перенаправленные события могут быть обработаны с помощью обработчики классов или экземпляров на заданного узла в маршруте. Обработчики классов вызываются первыми, а также может использоваться реализациями класса для подавления событий обработчиков экземпляров или введения вариантов поведения других событий для события, которые принадлежат базовых классов. В этом примере показаны два тесно связанные методы для реализации обработчиков класса.  
   
 ## <a name="example"></a>Пример  
- В этом примере пользовательский класс на основе <xref:System.Windows.Controls.Canvas> панель. Основной замысел приложения состоит в том, что пользовательский класс представляет поведение его дочерних элементов, включая Перехват нажатия любой кнопок мыши и пометкой их обработать, прежде чем будет вызван класс дочернего элемента или обработчиков экземпляров на нем.  
+ В этом примере пользовательский класс, основанный на <xref:System.Windows.Controls.Canvas> панели. Основной замысел приложения является то, что пользовательский класс представляет поведение его дочерних элементов, включая перехват, нажатии любой кнопки мыши и маркировки, их обработки, прежде чем будет вызван дочернего элемента класса или любого обработчика экземпляров на нем.  
   
- <xref:System.Windows.UIElement> Класс предоставляет виртуальный метод, который обеспечивает обработку класса <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> событие путем простого переопределения события. Это самый простой способ реализации обработки классов, если виртуальный метод доступен в любом месте иерархии класса. В следующем коде показано <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> реализацию в «MyEditContainer», который является производным от <xref:System.Windows.Controls.Canvas>. Реализация помечает событие как обработанное в аргументах и затем добавляет часть кода для предоставления исходному элементу основное видимое изменение.  
+ <xref:System.Windows.UIElement> Класс предоставляет виртуальный метод, позволяющий обработки класса в <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> событие, просто переопределив метод события. Это самый простой способ реализовать обработку класса, если виртуальный метод доступен где-то в иерархии класса. В следующем коде показан <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> реализацию в «MyEditContainer», который является производным от <xref:System.Windows.Controls.Canvas>. Реализация помечает событие как обработанное в аргументах, а затем добавляет часть кода для предоставления основное видимое изменение исходного элемента.  
   
  [!code-csharp[ClassHandling#OnStarClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
  [!code-vb[ClassHandling#OnStarClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
@@ -32,8 +32,8 @@ ms.locfileid: "33545367"
  [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.EventManager>  
- [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.EventManager>
+- [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
+- [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)
+- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

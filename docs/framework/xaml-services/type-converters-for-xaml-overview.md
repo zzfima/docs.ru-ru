@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659154"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Общие сведения о преобразователях типов для XAML
 Преобразователи типов предоставляют логику для средства записи объекта, преобразующую строку в разметке XAML в конкретные объекты в графе объектов. В службах XAML .NET Framework преобразователь типов должен быть классом, производным от <xref:System.ComponentModel.TypeConverter>. Некоторые преобразователи также поддерживают путь сохранения XAML и могут использоваться для сериализации объекта в виде строки в разметке сериализации. В этом разделе описывается, как и когда вызываются преобразователи типов в XAML, а также представлены рекомендации по реализации переопределений методов класса <xref:System.ComponentModel.TypeConverter>.  
@@ -83,7 +83,7 @@ ms.locfileid: "43519157"
   
  Если параметр `destinationType` не относится к типу <xref:System.String>, можно выбрать собственную обработку преобразователя. Как правило, вы возвращаетесь к базовой обработке реализации, которая с помощью <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> вызывает определенное исключение.  
   
- Можно вызывать исключение, если преобразователь типов должен иметь доступ к службе XAML из средства записи объектов служб XAML .NET Framework, но вызов <xref:System.IServiceProvider.GetService%2A>, который выполняется в контексте, не возвращает эту службу.  
+ Можно вызывать исключение, если преобразователь типов должен иметь доступ к службе XAML из средства записи объектов служб XAML .NET Framework, но вызов <xref:System.IServiceProvider.GetService%2A> , который выполняется в контексте, не возвращает эту службу.  
   
 ### <a name="implementing-canconvertfrom"></a>Реализация CanConvertFrom  
  Ваша реализация <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> должна возвращать `true` для `sourceType` типа <xref:System.String> , а в противном случае обращаться к базовой реализации. Не вызывайте исключения из <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>.  
@@ -105,9 +105,9 @@ ms.locfileid: "43519157"
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Преобразователи значений в потоке узлов XAML  
- При работе с потоком узлов XAML действие преобразователя типов еще не выполнено (или результат не достигнут). В пути загрузки строка атрибута, которой со временем потребуется преобразовать для загрузки, остается текстовым значением в пределах начального и конечного элемента. Преобразователь типов, который потребуется для этой операции, можно определить с помощью свойства <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType>. Однако для получения допустимого значения из <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> необходим контекст схемы XAML, который может получить доступ к такой информации через базовый член, или тип объектного значения, используемого этим членом. Для вызова преобразования типов также необходим контекст схемы XAML, так как для этого требуется сопоставление типов и создание экземпляра преобразователя.  
+ При работе с потоком узлов XAML действие преобразователя типов еще не выполнено (или результат не достигнут). В пути загрузки строка атрибута, которой со временем потребуется преобразовать для загрузки, остается текстовым значением в пределах начального и конечного элемента. Преобразователь типов, который потребуется для этой операции, можно определить с помощью свойства <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> . Однако для получения допустимого значения из <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> необходим контекст схемы XAML, который может получить доступ к такой информации через базовый член, или тип объектного значения, используемого этим членом. Для вызова преобразования типов также необходим контекст схемы XAML, так как для этого требуется сопоставление типов и создание экземпляра преобразователя.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.TypeConverterAttribute>  
- [Преобразователи типов или расширения разметки для XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ComponentModel.TypeConverterAttribute>
+- [Преобразователи типов или расширения разметки для XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

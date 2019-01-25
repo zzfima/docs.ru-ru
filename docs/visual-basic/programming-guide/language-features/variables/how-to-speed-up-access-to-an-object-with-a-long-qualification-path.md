@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)
+title: Как выполнить Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: d52d13feb0f85065c0623b5937f558b841c036dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 827d7d1574e85a30ec2724f7739f6c3a08dbd975
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519728"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)
-При частом обращении к объект, который требуется указать путь квалификации несколько методов и свойств, можно ускорить код, не повторяя классификационный путь.  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Как выполнить Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)
+Если вы обращаетесь чаще всего объекта, который требует классификационным путем несколько методов и свойств, можно ускорить код, не повторяя путь квалификации.  
   
- Повторение классификационного пути можно избежать двумя способами. Объект может быть присвоен переменной, или можно использовать его в `With`... `End With` блок.  
+ Существует два способа, можно избежать повторение классификационного пути. Объект может быть присвоен переменной, или можно использовать его в `With`... `End With` блок.  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Для ускорения доступа к объекту сильно полное путем присвоения переменной  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Чтобы ускорить доступ к сильно уточненный объект, присвоив его переменной  
   
-1.  Объявите переменную типа объекта, к которому часто осуществляется доступ. Укажите классификационный путь в части инициализации объявления.  
+1.  Объявите переменную типа объекта, который вы обращаетесь к часто. Укажите путь квалификации в части инициализации объявления.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
@@ -36,15 +36,15 @@ ms.locfileid: "33650203"
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Для ускорения доступа к сильно уточненное с помощью With... End With-блок  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Чтобы ускорить доступ к сильно уточненный объект с помощью аргумента With... Блок End With  
   
-1.  Поместите классификационный пусть `With` инструкции.  
+1.  Поместить путь квалификации в `With` инструкции.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Доступ к членам объекта внутри `With` блокировать перед `End With` инструкции.  
+2.  Доступ к членам объекта внутри `With` блокируется, прежде чем `End With` инструкции.  
   
     ```  
         .Text = "Test"  
@@ -53,6 +53,6 @@ ms.locfileid: "33650203"
     End With  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Оператор With...End With](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>См. также
+- [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Оператор With...End With](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

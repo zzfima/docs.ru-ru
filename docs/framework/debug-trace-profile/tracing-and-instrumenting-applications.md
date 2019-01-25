@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547820"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Трассировка и оборудование приложений
 Трассировка — это способ мониторинга выполнения приложения во время его выполнения. Вы можете добавить инструментирование трассировки и отладки в свое приложения .NET Framework при его разработке; кроме того, вы можете использовать это инструментирование при разработке приложения и после его развертывания. С помощью классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> можно записывать сведения об ошибках и выполнении приложения в журналы, текстовые файлы или на другие устройства для последующего анализа.  
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  В каждом из этих примеров в окне вывода будет отображаться сообщение "Hello World!" при запуске приложения в отладчике.  
   
- Это позволяет отлаживать приложения и оптимизировать их производительность на основе их поведения в среде тестирования. Возможна отладка приложения при отладочном построении с включенным условным атрибутом <xref:System.Diagnostics.Debug>, что позволяет получать все выходные данные отладки. Когда приложение будет готово к выпуску, можно скомпилировать построение выпуска, не включая условный атрибут <xref:System.Diagnostics.Debug>, чтобы код отладки не включался компилятором в конечный исполняемый файл. Дополнительные сведения см. в разделе [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Дополнительные сведения о различных конфигурациях сборок для приложения см. в разделе [Компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+ Это позволяет отлаживать приложения и оптимизировать их производительность на основе их поведения в среде тестирования. Возможна отладка приложения при отладочном построении с включенным условным атрибутом <xref:System.Diagnostics.Debug>, что позволяет получать все выходные данные отладки. Когда приложение будет готово к выпуску, можно скомпилировать построение выпуска, не включая условный атрибут <xref:System.Diagnostics.Debug>, чтобы код отладки не включался компилятором в конечный исполняемый файл. Дополнительные сведения см. в разделе [Как Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Дополнительные сведения о различных конфигурациях сборок для приложения см. в разделе [Компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
- С помощью методов класса <xref:System.Diagnostics.Trace> можно отслеживать выполнение кода в установленном приложении. Поместив в свой код [переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md), можно управлять тем, выполняется ли трассировка и насколько полной она является. Это позволяет наблюдать за состоянием приложения в рабочей среде. Это особенно важно в бизнес-приложении, использующем множественные компоненты, выполняющиеся на нескольких компьютерах. Вы можете управлять порядком использования переключателей после развертывания с помощью файла конфигурации. Дополнительные сведения см. в разделе [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ С помощью методов класса <xref:System.Diagnostics.Trace> можно отслеживать выполнение кода в установленном приложении. Поместив в свой код [переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md), можно управлять тем, выполняется ли трассировка и насколько полной она является. Это позволяет наблюдать за состоянием приложения в рабочей среде. Это особенно важно в бизнес-приложении, использующем множественные компоненты, выполняющиеся на нескольких компьютерах. Вы можете управлять порядком использования переключателей после развертывания с помощью файла конфигурации. Дополнительные сведения см. в разделе [Как Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
- При разработке приложения, для которого предполагается использовать трассировку, в код приложения обычно включают сообщения трассировки и отладки. Когда все будет готово для развертывания приложения, можно скомпилировать сборку выпуска без включения условного атрибута **Debug**. Тем не менее можно включить условный атрибут **Trace**, чтобы компилятор включил код трассировки в исполняемый файл. Дополнительные сведения см. в разделе [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+ При разработке приложения, для которого предполагается использовать трассировку, в код приложения обычно включают сообщения трассировки и отладки. Когда все будет готово для развертывания приложения, можно скомпилировать сборку выпуска без включения условного атрибута **Debug**. Тем не менее можно включить условный атрибут **Trace**, чтобы компилятор включил код трассировки в исполняемый файл. Дополнительные сведения см. в разделе [Как Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
 ### <a name="phases-of-code-tracing"></a>Этапы трассировки кода  
  Существует три этапа трассировки кода.  
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1.  Обдумайте, какие выходные данные трассировки вы хотите получить на месте после развертывания приложения.  
   
-2.  Создайте набора переключателей. Дополнительные сведения см. в разделе [Практическое руководство. Конфигурация переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2.  Создайте набора переключателей. Дополнительные сведения см. в разделе [Как Настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
 3.  Добавьте операторы трассировки в код приложения.  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Операторы трассировки помогают избежать сложностей проверки исходного кода, его изменения, перекомпиляции, а также попыток воспроизвести ошибку времени выполнения в среде отладки. Помните, что можно инструментировать приложение не только для отображения ошибок, но также для наблюдения за производительностью.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Стратегическое размещение операторов трассировки  
- Необходимо уделить особое внимание размещению операторов трассировки для использования во время выполнения. Вы должны учесть, какие сведения трассировки скорее всего потребуются в развертываемом приложении, чтобы в полной мере охватить все вероятные сценарии трассировки. Поскольку приложения, использующие трассировку, могут быть самыми разными, не существует общих принципов стратегического размещения трассировки. Дополнительные сведения о размещении операторов трассировки см. в разделе [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+ Необходимо уделить особое внимание размещению операторов трассировки для использования во время выполнения. Вы должны учесть, какие сведения трассировки скорее всего потребуются в развертываемом приложении, чтобы в полной мере охватить все вероятные сценарии трассировки. Поскольку приложения, использующие трассировку, могут быть самыми разными, не существует общих принципов стратегического размещения трассировки. Дополнительные сведения о размещении операторов трассировки см. в разделе [как: Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Выходные данные трассировки  
  Выходные данные трассировки собираются объектами, которые называются *прослушивателями*. Прослушиватель — это объект, который принимает выходные данные трассировки и записывает их в устройство вывода (обычно это окно, журнал или текстовый файл). При создании прослушиватель трассировки, как правило, добавляется к коллекции <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, что позволяет ему получать все выходные данные трассировки.  
@@ -136,20 +136,20 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 > [!NOTE]
 >  В [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] методы **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** и **Debug.WriteLineIf** заменили метод **Debug.Print**, который был доступен в более ранних версиях Visual Basic.  
   
- Методы **Write** и **WriteLine** всегда записывают указанный текст. Методам **Assert**, **WriteIf** и **WriteLineIf** требуется логический аргумент, управляющий записью заданного текста. Заданный текст записывается этими методами только в том случае, если выражение имеет значение **true** (для методов **WriteIf** и **WriteLineIf**) или **false** (для метода **Assert**). Метод **Fail** всегда записывает указанный текст. Дополнительные сведения см. в разделе [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) и в справочнике по .NET Framework.  
+ Методы **Write** и **WriteLine** всегда записывают указанный текст. Методам **Assert**, **WriteIf** и **WriteLineIf** требуется логический аргумент, управляющий записью заданного текста. Заданный текст записывается этими методами только в том случае, если выражение имеет значение **true** (для методов **WriteIf** и **WriteLineIf**) или **false** (для метода **Assert**). Метод **Fail** всегда записывает указанный текст. Дополнительные сведения см. в разделе [Как Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) и справочнике по .NET Framework.  
   
 ## <a name="security-concerns"></a>Проблемы безопасности  
- Если не отключить трассировку и отладку перед развертыванием приложения ASP.NET, то приложение может отображать сведения о себе, которые могут использоваться вредоносными программами. Дополнительные сведения см. в разделах [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [Компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio) и [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Отладка также настраивается через службы IIS.  
+ Если не отключить трассировку и отладку перед развертыванием приложения ASP.NET, то приложение может отображать сведения о себе, которые могут использоваться вредоносными программами. Дополнительные сведения см. в разделе [Как Выполните компиляцию по условию с Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio), и [как: Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Отладка также настраивается через службы IIS.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- [Контракты для кода](../../../docs/framework/debug-trace-profile/code-contracts.md)  
- [Типы проектов C#, F# и Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
- [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- [Контракты для кода](../../../docs/framework/debug-trace-profile/code-contracts.md)
+- [Типы проектов C#, F# и Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)

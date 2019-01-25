@@ -1,15 +1,15 @@
 ---
-title: 'Пошаговое руководство: Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)'
+title: Пошаговое руководство. Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722781"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство. Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)
 Если в приложение, имеющее ссылки на COM-объекты, внедрены данные о типе, можно исключить необходимость использования основной сборки взаимодействия (PIA). Кроме того внедренные данные о типах позволяют создать приложение, не зависящее от версии. Это означает, что в программе можно использовать типы из нескольких версий библиотеки COM, т. е. необходимость использования конкретной основной сборки взаимодействия для каждой версии библиотеки COM отпадает. Это стандартный сценарий для приложений, использующих объекты из библиотек Microsoft Office. Внедрение данных о типе позволяет одной сборке программы работать с разными версиями приложения Microsoft Office на разных компьютерах без необходимости повторного развертывания программы или основной сборки взаимодействия для каждой версии приложения Microsoft Office.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -95,7 +95,7 @@ ms.locfileid: "46002974"
   
 8.  Сохраните проект.  
   
-9. Нажмите сочетание клавиш CTRL+F5, чтобы собрать и запустить проект. Убедитесь, что книга Excel была создана в расположении, указанном в примере кода: C:\SampleFolder\SampleWorkbook.xls.  
+9. Нажмите сочетание клавиш CTRL+F5, чтобы собрать и запустить проект. Убедитесь, что это книга Excel был создан в расположении, указанном в примере кода: C:\SampleFolder\SampleWorkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> Публикация приложения на компьютере, на котором установлены разные версии Microsoft Office  
   
@@ -107,9 +107,9 @@ ms.locfileid: "46002974"
   
 4.  После завершения установки запустите установленную программу.  
   
-5.  Убедитесь, что книга Excel была создана в расположении, указанном в примере кода: C:\SampleFolder\SampleWorkbook.xls.  
+5.  Убедитесь, что это книга Excel был создан в расположении, указанном в примере кода: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

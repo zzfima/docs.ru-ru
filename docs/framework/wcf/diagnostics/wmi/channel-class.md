@@ -2,12 +2,12 @@
 title: Класс Channel
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668396"
 ---
 # <a name="channel-class"></a>Класс Channel
 Канал  
@@ -34,35 +34,35 @@ class Channel
 ### <a name="localaddress"></a>LocalAddress  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Локальная конечная точка канала.  
   
 ### <a name="ref"></a>ref  
- Тип данных: Endpoint  
+ Тип данных: Конечная точка  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Ссылка на конечную точку, к которой подключается канал.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Удаленный адрес, связанный с каналом.  
   
 ### <a name="sessionid"></a>SessionId  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Идентификатор текущего сеанса, если он существует.  
   
 ### <a name="type"></a>Тип  
  Тип данных: string  
   
- Тип доступа: только для чтения  
+ Тип доступа: Только чтение  
   
  Тип канала.  
   
@@ -72,5 +72,5 @@ class Channel
 |---------|-----------------------------------|  
 |Пространство имен|Определено в root\ServiceModel.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.ChannelBase>

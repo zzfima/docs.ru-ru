@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Подключение команды к элементу управления, не поддерживающему команды
+title: Как выполнить Подключение команды к элементу управления без поддержки команд
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: e6ef78cd7e1578745f0bde5c0e9e799bb5e641a9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 5f963c871ed9b600586c32403a288eadd6e9daec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725380"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Практическое руководство. Подключение команды к элементу управления, не поддерживающему команды
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Как выполнить Подключение команды к элементу управления без поддержки команд
 В следующем примере показано, как подключить <xref:System.Windows.Input.RoutedCommand> к <xref:System.Windows.Controls.Control> без встроенной поддержки команды.  Полный пример подключения команд к нескольким источникам см. в примере [Создание примера настраиваемой команды RoutedCommand](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="example"></a>Пример  
@@ -46,6 +46,6 @@ ms.locfileid: "34805611"
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Подключение команды к элементу управления с поддержкой команд](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Подключение команды к элементу управления с поддержкой команд](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

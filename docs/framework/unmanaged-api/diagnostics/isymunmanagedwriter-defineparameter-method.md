@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643394"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Метод ISymUnmanagedWriter::DefineParameter
-Определяет отдельный параметр в текущем методе. Тип параметра берется из позицией параметра (последовательности) в сигнатуре метода.  
+Определяет один параметр в текущем методе. Тип параметра берутся из (последовательность) позиция параметра в подписи метода.  
   
- Если параметры определены в метаданных для данного метода, у вас определять их с помощью этого метода. Средства чтения символов необходимо проверить обычные метаданные для параметров перед проверкой хранилища символов.  
+ Если параметры определены в метаданных для данного метода, у вас нет определять их с помощью этого метода. Средства чтения символов необходимо проверить обычные метаданные для параметров перед проверкой в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ HRESULT DefineParameter(
  [in] Атрибуты параметра.  
   
  `sequence`  
- [in] Сигнатура параметра.  
+ [in] Подпись параметра.  
   
  `addrKind`  
  [in] Тип адреса.  
@@ -68,7 +68,7 @@ HRESULT DefineParameter(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

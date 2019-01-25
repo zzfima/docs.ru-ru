@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523250"
 ---
 # <a name="corcallingconvention-enumeration"></a>Перечисление CorCallingConvention
 Содержит значения, описывающие типы соглашений о вызовах, выполняемых в управляемом коде.  
@@ -54,26 +54,26 @@ typedef enum CorCallingConvention
   
 |Член|Описание|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Указывает значение по умолчанию, соглашение о вызовах.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Указывает, что метод принимает переменное число параметров.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Указывает соглашение о вызовах по умолчанию.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Указывает, что этот метод принимает переменное количество параметров.|  
 |`IMAGE_CEE_CS_CALLCONV_FIELD`|Указывает, что вызов к полю.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Указывает, что вызов локального метода.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Указывает, что вызов предназначен для локального метода.|  
 |`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Указывает, что вызов к свойству.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Указывает, что вызов является неуправляемым.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Указывает на создание экземпляров универсального метода.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Указывает метод, который принимает переменное число параметров вызова PInvoke 64-разрядной.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Показывает создание экземпляра универсального метода.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Указывает метод, который принимает переменное количество параметров вызова PInvoke 64-разрядной.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Описывает недопустимое 4-разрядное значение.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|Указывает, что соглашение о вызове описывается четырьмя младшими битами.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Указывает, что старшие биты описывают `this` параметра.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Указывает, что `this` параметр четко описаны в сигнатуре.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Указывает, что `this` параметра явно описан в сигнатуре.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Указывает сигнатуру универсального метода с явной количество аргументов типа. Это предшествует обычное число параметров.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f37be8e3d2e92147e9f13954ab64396062ade2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51cd834b92dd595b5b3e7f668ef252462f4287de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695287"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Функция GetRequestedRuntimeInfo
-Получает сведения о версии и каталоге о общеязыковой среды выполнения (CLR), запрошенный приложением.  
+Возвращает сведения о версии и каталоге об общеязыковой среды выполнения (CLR), запрошенный приложением.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,19 +52,19 @@ HRESULT GetRequestedRuntimeInfo (
  [in] Имя приложения.  
   
  `pwszVersion`  
- [in] Строка, задающая номер версии среды выполнения.  
+ [in] Строка, указывающая номер версии среды выполнения.  
   
  `pConfigurationFile`  
- [in] Имя файла конфигурации, который связан с `pExe`.  
+ [in] Имя файла конфигурации, связанный с `pExe`.  
   
  `startupFlags`  
- [in] Один или несколько [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) значений перечисления.  
+ [in] Один или несколько из [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) значений перечисления.  
   
  `runtimeInfoFlags`  
- [in] Один или несколько [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) значений перечисления.  
+ [in] Один или несколько из [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) значений перечисления.  
   
  `pDirectory`  
- [out] Буфер, содержащий путь к каталогу для выполнения после успешного завершения.  
+ [out] Буфер, содержащий путь к каталогу в среду выполнения, после успешного завершения.  
   
  `dwDirectory`  
  [in] Длина буфера каталога.  
@@ -73,7 +73,7 @@ HRESULT GetRequestedRuntimeInfo (
  [out] Указатель на длину строки пути каталога.  
   
  `pVersion`  
- [out] Буфер, содержащий номер версии среды выполнения после успешного завершения.  
+ [out] Буфер, который содержит номер версии среды выполнения после успешного завершения.  
   
  `cchBuffer`  
  [in] Длина буфера строки версии.  
@@ -82,31 +82,31 @@ HRESULT GetRequestedRuntimeInfo (
  [out] Указатель на длину строки версии.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
+ Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|ERROR_INSUFFICIENT_BUFFER|Размер буфера каталога недостаточно велик для хранения путь к каталогу.<br /><br /> -или-<br /><br /> Размер буфера версии недостаточен для хранения строки версии.|  
+|ERROR_INSUFFICIENT_BUFFER|Размер буфера каталога не достаточно большую для сохранения пути к каталогу.<br /><br /> -или-<br /><br /> Версии буфера недостаточен для хранения строки версии.|  
   
 ## <a name="remarks"></a>Примечания  
  `GetRequestedRuntimeInfo` Метод возвращает во время выполнения сведения о версии, загруженной в процесс, который не обязательно является последней версией, установленной на компьютере.  
   
  В .NET Framework версии 2.0, можно получить сведения о последней установленной версии с помощью `GetRequestedRuntimeInfo` метод следующим образом:  
   
--   Укажите `pExe`, `pwszVersion`, и `pConfigurationFile` параметров как null.  
+-   Укажите `pExe`, `pwszVersion`, и `pConfigurationFile` параметры как значения null.  
   
--   Укажите флаг RUNTIME_INFO_UPGRADE_VERSION в `RUNTIME_INFO_FLAGS` перечисления для `runtimeInfoFlags` параметра.  
+-   Задайте флаг RUNTIME_INFO_UPGRADE_VERSION в `RUNTIME_INFO_FLAGS` перечислений для `runtimeInfoFlags` параметра.  
   
  `GetRequestedRuntimeInfo` Метод не возвращает последнюю версию среды CLR в следующих случаях:  
   
--   Существует файл конфигурации приложения, который указывает, загружает определенную версию среды CLR. Обратите внимание, что платформа .NET Framework используется файл конфигурации, даже если указано значение null для `pConfigurationFile` параметра.  
+-   Существует файл конфигурации приложения, который указывает, загружает определенную версию среды CLR. Обратите внимание на то, что платформа .NET Framework будет использовать файл конфигурации, даже если указать значение null для `pConfigurationFile` параметра.  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) был вызван метод, указав более ранней версии CLR.  
+-   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) был вызван метод, указав более ранней версии среды CLR.  
   
--   В настоящее время выполняется приложение, скомпилированное для более ранней версии CLR.  
+-   Приложение, скомпилированное для более ранней версии среды CLR в данный момент выполняется.  
   
- Для `runtimeInfoFlags` параметр, можно указать только один из архитектуры константы `RUNTIME_INFO_FLAGS` перечисления одновременно:  
+ Для `runtimeInfoFlags` параметр, можно указать только один из констант архитектура `RUNTIME_INFO_FLAGS` перечисления за раз:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,15 +115,15 @@ HRESULT GetRequestedRuntimeInfo (
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Функция GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [Функция GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Функция GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [Функция GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

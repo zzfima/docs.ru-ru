@@ -3,12 +3,12 @@ title: Рекомендации по миграции приложения, со
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696195"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5
 ## <a name="applies-to"></a>Применение  
@@ -30,7 +30,7 @@ ms.locfileid: "48582519"
   
  В следующей таблице описываются основные пространства имен платформы WIF 4.5 и виды содержащихся в них классов. Дополнительные сведения о сопоставлении пространств имен между версиями WIF 3.5 и WIF 4.5, а также об исключенных из WIF 4.5 пространствах имен и классах см. в разделе [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
   
-|Пространство имен WIF 4.5|Описание|  
+|Пространство имен WIF 4.5|Описание:|  
 |-----------------------|-----------------|  
 |<xref:System.IdentityModel?displayProperty=nameWithType>|Содержит классы, представляющие преобразования файлов cookie, службы маркеров безопасности, а также средства чтения словарей XML. Содержит классы из следующих пространств имен WIF 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` и `Microsoft.IdentityModel.Threading`.|  
 |<xref:System.Security.Claims?displayProperty=nameWithType>|Содержит классы, представляющие утверждения, удостоверения на основе утверждений, субъекты на основе утверждений, а также другие артефакты модели на основе утверждений. Содержит классы из пространства имен `Microsoft.IdentityModel.Claims`.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48582519"
 ### <a name="visual-studio-tooling-changes"></a>Изменения в средствах Visual Studio  
  В пакете SDK WIF 3.5 была представлена автономная служебная программа федерации FedUtil.exe (FedUtil), с помощью которой можно было передавать функции управления удостоверениями в приложениях с поддержкой WIF службе маркеров безопасности (STS). Это средство добавляло в файл конфигурации приложения параметры WIF, которые позволяли получать маркеры безопасности от одной или нескольких служб маркеров безопасности, и было представлено в Visual Studio кнопкой **Добавить ссылку на службу STS**. Служебная программа FedUtil не входит в состав WIF 4.5. Вместо нее платформа WIF 4.5 поддерживает новое расширение Visual Studio с именем Identity and Access Tool для Visual Studio 2012, которое позволяет добавлять в файл конфигурации приложения параметры WIF, необходимые для передачи функций управления удостоверениями службе маркеров безопасности. Средство Identity and Access Tool также реализует локальную службу маркеров безопасности, которую можно использовать для тестирования приложений с поддержкой WIF. Во многих случаях этот компонент избавляет от необходимости создавать настраиваемые службы маркеров безопасности, которые зачастую требовались в версии WIF 3.5 для тестирования разрабатываемых решений. По этой причине в Visual Studio 2012 больше не поддерживаются шаблоны службы маркеров безопасности, однако в версии WIF 4.5 по-прежнему доступны классы, обеспечивающие разработку служб маркеров безопасности.  
   
- Средство Identity and Access Tool можно установить с помощью диспетчера расширений и обновлений Visual Studio, а также скачать со следующей страницы в коллекции исходных кодов: [Средство Identity and Access Tool для Visual Studio 2012 в коллекции исходных кодов](https://go.microsoft.com/fwlink/?LinkID=245849). Ниже описываются изменения в средствах Visual Studio:  
+ Средство Identity and Access Tool можно установить из диспетчера расширений и обновлений в Visual Studio или его можно загрузить со следующей страницы в коллекции кода: [IDENTITY and Access Tool для Visual Studio 2012 в коллекции исходных кодов](https://go.microsoft.com/fwlink/?LinkID=245849). Ниже описываются изменения в средствах Visual Studio:  
   
 -   Исключена функция "Добавить ссылку на службу STS". Вместо нее используется средство Identity and Access Tool.  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  Поскольку многие классы в WIF 3.5 и WIF 4.5 имеют одинаковые имена, для проведения различий между ними при совместном использовании версий WIF 3.5 и WIF 4.5 необходимо использовать полные имена классов или псевдонимы пространств имен.  
   
-## <a name="see-also"></a>См. также  
- [Схема конфигурации WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Новые возможности Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>См. также
+- [Схема конфигурации WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Новые возможности Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

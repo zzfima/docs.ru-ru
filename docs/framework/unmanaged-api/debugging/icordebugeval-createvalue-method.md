@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0af820b590271e16cbfb443c193fd0afb4ed3358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604128"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>Метод ICorDebugEval::CreateValue
-Создает значение заданного типа с начальным значением, равным нулю или null.  
+Создает значение указанного типа, с начальным значением, равным нулю или null.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) вместо него.  
+ Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,31 +41,30 @@ HRESULT CreateValue (
   
 #### <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) перечисления, которое указывает тип значения.  
+ [in] Значение [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) перечисление, указывающее тип значения.  
   
  `pElementClass`  
- [in] Указатель на [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) объекта, указывающее класс значения, если тип не является типом-примитивом.  
+ [in] Указатель на [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) , указывающий класс значения, если тип не является типом-примитивом.  
   
  `ppValue`  
  [out] Указатель на адрес объекта «ICorDebugValue», который представляет значение.  
   
 ## <a name="remarks"></a>Примечания  
- `CreateValue` Создает `ICorDebugValue` объект заданного типа с единственной целью его использования при вычислении функции. Этот объект значения можно использовать для передачи пользовательских констант в качестве параметров.  
+ `CreateValue` Создает `ICorDebugValue` объект заданного типа исключительно с целью его использования при вычислении функции. Этот объект значения можно использовать для передачи пользовательских констант в качестве параметров.  
   
- Если тип значения является типом-примитивом, его начальное значение равно нулю или иметь значение null. Используйте [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) требуется задать значение простого типа.  
+ Если тип значения является типом-примитивом, его начальное значение равно нулю или иметь значение null. Используйте [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) для задания значения типа-примитива.  
   
- Если значение `elementType` — ELEMENT_TYPE_CLASS, вы получаете «ICorDebugReferenceValue» (возвращается в `ppValue`) представляет ссылку на объект null. Этот объект можно использовать для передачи значения null вычисление функции, который имеет параметры ссылки на объект. Не удается задать `ICorDebugValue` к любому другому объекту; он всегда возвращает значение null.  
+ Если значение `elementType` является ELEMENT_TYPE_CLASS, вы получаете «ICorDebugReferenceValue» (возвращается в `ppValue`) представляет ссылку на объект null. Этот объект можно использовать для передачи значения null, имеющий параметры ссылки на объект вычисление функции. Невозможно задать `ICorDebugValue` на любое другое; он всегда имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>См. также  
-    
- [Метод CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)  
- ICorDebugValue
+## <a name="see-also"></a>См. также
+
+- [Метод CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) ICorDebugValue

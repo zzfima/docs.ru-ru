@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar
+title: Как выполнить Триггер событий меню для кнопок панели инструментов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609594"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Как выполнить Триггер событий меню для кнопок панели инструментов
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Если в форме Windows Forms <xref:System.Windows.Forms.ToolBar> элемента управления с помощью кнопки панели инструментов, необходимо знать, какую кнопку пользователь нажимает кнопку.  
+ Если ваши функции формы Windows <xref:System.Windows.Forms.ToolBar> элемента управления с кнопками панели инструментов, необходимо знать, какую кнопку пользователь нажимает кнопку.  
   
- На <xref:System.Windows.Forms.ToolBar.ButtonClick> событие <xref:System.Windows.Forms.ToolBar> управления, то можно вычислить <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> свойство <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класса. В следующем примере отображается окно сообщения, указывающее, какая кнопка была нажата. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.MessageBox>.  
+ На <xref:System.Windows.Forms.ToolBar.ButtonClick> событие <xref:System.Windows.Forms.ToolBar> элемента управления, вы можете оценить <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> свойство <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класса. В следующем примере отображается окно сообщения, указывающее, какая кнопка была нажата. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.MessageBox>.  
   
- В этом примере предполагается <xref:System.Windows.Forms.ToolBar> элемент управления добавлен на форму Windows.  
+ В приведенном ниже примере предполагается, что <xref:System.Windows.Forms.ToolBar> элемент управления добавлен в форму Windows.  
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Обработка события Click на панели инструментов  
   
@@ -134,8 +134,8 @@ ms.locfileid: "33535201"
        }  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolBar>  
- [Практическое руководство. Добавление кнопок в элемент управления ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolBar>
+- [Практическое руководство. Добавление кнопок в элемент управления ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
+- [Практическое руководство. Определение значка для кнопки панели инструментов](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

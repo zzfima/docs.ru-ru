@@ -9,15 +9,15 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: 28e121e73ad4bd8ab70aed5f651418eb309b0c03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cce6e09cd2dbb02a07487ade781b03406fcad96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580282"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Загрузка кода XAML и свойства зависимостей
-Текущая реализация процессора [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], по сути, учитывает свойство зависимостей. При загрузке двоичных файлов [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и обработке атрибутов, которые являются свойствами зависимостей, процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует методы системы свойств для свойств зависимостей. При этом выполняется обход оболочек свойств. При реализации пользовательских свойств зависимостей необходимо учитывать такое поведение и следует избегать размещения любого другого кода в оболочке свойства Кроме методов системы свойств <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A>.  
+Текущая реализация процессора [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], по сути, учитывает свойство зависимостей. При загрузке двоичных файлов [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и обработке атрибутов, которые являются свойствами зависимостей, процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует методы системы свойств для свойств зависимостей. При этом выполняется обход оболочек свойств. При реализации пользовательских свойств зависимостей, вы должны учитывать такое поведение и избегать размещения любой другой код в оболочке свойства, отличные от методов системы свойств <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
   
 <a name="prerequisites"></a>   
@@ -26,25 +26,25 @@ ms.locfileid: "33547730"
   
 <a name="implementation"></a>   
 ## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>Реализация загрузчика XAML WPF и производительность  
- В целях реализации требуется значительно меньше затрат определить свойство как свойство зависимостей и доступа в системе свойств <xref:System.Windows.DependencyObject.SetValue%2A> метод, чтобы задать его, а не с помощью оболочки свойства и задания значения. Причина этого заключается в том, что процессору [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] требуется вывести всю объектную модель вспомогательного кода, основываясь только на сведениях о типе и связях между членами, которые определены структурой разметки и различными строками.  
+ В целях реализации требуется значительно меньше затрат для определения свойства как свойства зависимости и доступа к системе свойств <xref:System.Windows.DependencyObject.SetValue%2A> метод, чтобы задать его, а не с помощью оболочки свойства и метода задания значения. Причина этого заключается в том, что процессору [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] требуется вывести всю объектную модель вспомогательного кода, основываясь только на сведениях о типе и связях между членами, которые определены структурой разметки и различными строками.  
   
- Тип осуществляется посредством сочетания элементов xmlns и атрибутов сборки, однако для идентификации членов, определения членов которой может установить в качестве атрибута, и разрешения, какие типы поддерживают значения свойств бы в противном случае требуется расширенное отражение с помощью <xref:System.Reflection.PropertyInfo>. Так как свойства зависимостей для заданного типа доступны в виде таблицы хранилища с помощью системы свойств, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализация его [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессор использует эту таблицу и выводит все свойства заданного *ABC* может быть задано более эффективно, вызвав <xref:System.Windows.DependencyObject.SetValue%2A> в содержащем <xref:System.Windows.DependencyObject> производный тип, используя идентификатор свойства зависимостей *ABCProperty*.  
+ Поиск типа осуществляется посредством сочетания элементов xmlns и атрибутов сборки, однако для идентификации членов, определения членов которой можно установить в качестве атрибута, и разрешение типов, поддерживаемых значениями свойств обычно требуется расширенное отражение с помощью <xref:System.Reflection.PropertyInfo>. Так как свойства зависимостей данного типа доступны в виде таблицы хранилища с помощью системы свойств, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализацию его [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора использует эту таблицу и выводит, что любое данное свойство *ABC* может быть эффективнее задано путем вызова <xref:System.Windows.DependencyObject.SetValue%2A> в содержащем <xref:System.Windows.DependencyObject> производный тип, с помощью идентификатора свойства зависимости *ABCProperty*.  
   
 <a name="implications"></a>   
 ## <a name="implications-for-custom-dependency-properties"></a>Последствия использования пользовательских свойств зависимостей  
  Так как текущая реализация процессора [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] при установке свойства полностью обходит оболочки, не следует помещать дополнительную логику в определения метода set оболочки для пользовательского свойства зависимости. Если поместить такую логику в определение метода set, она не будет выполняться, если свойство задается в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], а не в коде.  
   
- Аналогичным образом, другие аспекты [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора, которые получают значения свойств из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] обработки также используйте <xref:System.Windows.DependencyObject.GetValue%2A> вместо использования оболочки. Поэтому следует избегать любых дополнительных реализаций в `get` определения за пределами <xref:System.Windows.DependencyObject.GetValue%2A> вызова.  
+ Аналогичным образом, другие аспекты [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора, которые получают значения свойств из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] обработки также используйте <xref:System.Windows.DependencyObject.GetValue%2A> вместо оболочки. Таким образом, следует также избегать любых дополнительных реализаций в `get` определение за пределы <xref:System.Windows.DependencyObject.GetValue%2A> вызова.  
   
  В приведенном ниже примере показано рекомендуемое определение свойства зависимости с оболочками, где идентификатор свойства хранится в виде поля с атрибутами `public` `static` `readonly`, а определения методов `get` и `set` не содержат никакого кода, кроме необходимых методов системы свойств, определяющих резервное свойство зависимости.  
   
  [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
  [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

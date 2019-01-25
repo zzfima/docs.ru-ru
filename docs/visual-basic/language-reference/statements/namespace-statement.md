@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612155"
 ---
 # <a name="namespace-statement"></a>Оператор Namespace
 Объявляет имя пространства имен и вызывает исходный код ниже объявления для компиляции в этом пространстве имен.  
@@ -32,13 +32,13 @@ End Namespace
   
 ## <a name="parts"></a>Части  
  Global  
- Необязательный. Можно задать пространство имен из корневого пространства имен проекта. См. в разделе [пространств имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Необязательный параметр. Можно задать пространство имен из корневого пространства имен проекта. См. в разделе [пространств имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Обязательно. Уникальное имя, идентифицирующее пространство имен. Должен быть допустимым идентификатором Visual Basic. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Обязательный. Уникальное имя, идентифицирующее пространство имен. Должен быть допустимым идентификатором Visual Basic. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Необязательный. Элементы, которые составляют пространства имен. Они включают, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
+ Необязательный параметр. Элементы, которые составляют пространства имен. Они включают, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
   
  `End Namespace`  
  Завершает `Namespace` блока.  
@@ -102,7 +102,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>См. также
+- [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

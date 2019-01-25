@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552634"
 ---
 # <a name="guide-to-the-documentation"></a>Руководство по работе с документацией
 Представляет собой руководство по документации по Windows Communication Foundation (WCF). Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.  
@@ -44,7 +44,7 @@ ms.locfileid: "43520978"
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Использование Windows Communication Foundation в сочетании с другими технологиями  
   
--   Чтобы создать службу, которая взаимодействует с клиентами ASP.NET, см. в разделе [как: Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
+-   Чтобы создать службу, которая взаимодействует с клиентами ASP.NET, см. в разделе [как: Настройка службы WCF для взаимодействия с клиентами службы веб-ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
 -   Интеграция с [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] удаленного взаимодействия приведено в [перенос приложений удаленного взаимодействия .NET на платформу WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
@@ -52,17 +52,17 @@ ms.locfileid: "43520978"
   
 -   Чтобы интегрировать существующее приложение COM с WCF службой или клиентом, см. в разделе [интеграция с приложениями COM](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md).  
   
--   Чтобы интегрировать существующие приложения MSMQ с WCF службой или клиентом, см. в разделе [как: обмен сообщениями в очереди, с конечными точками WCF](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) и [как: обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+-   Чтобы интегрировать существующие приложения MSMQ с WCF службой или клиентом, см. в разделе [как: Обмен сообщениями с конечными точками WCF в очереди](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) и [как: Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 -   Чтобы использовать Internet Information Services (IIS) для размещения службы, см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
--   Использование WCF для использования службы Web Services Extensions (WSE) 3.0, см. в разделе [как: доступ к службе WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
+-   Использование WCF для использования службы Web Services Extensions (WSE) 3.0, см. в разделе [как: Доступ к WSE 3.0 служба](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Протоколы WS-*, поддерживаемые Windows Communication Foundation  
  Чтобы просмотреть список протоколов, поддерживаемых в привязках, предоставляемых системой, см. в разделе [Web Services протоколов, поддерживаемых System-Provided Bindings взаимодействие](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Список предоставляемых системой привязок см. в разделе [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
-## <a name="see-also"></a>См. также  
- [Примеры Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)  
- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)  
- [Правила и рекомендации](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>См. также
+- [Примеры Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)
+- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)
+- [Правила и рекомендации](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)

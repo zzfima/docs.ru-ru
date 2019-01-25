@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Применение атрибутов к элементам управления Windows Forms
+title: Как выполнить Применение атрибутов в элементах управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735160"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов к элементам управления Windows Forms
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Как выполнить Применение атрибутов в элементах управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и правильно выполнять во время выполнения, необходимо правильно применять атрибуты к классам и членам.  
   
 ## <a name="example"></a>Пример  
@@ -77,9 +77,9 @@ ms.locfileid: "45592970"
   
 -   Форма, содержащая `AttributesDemoControl` необходима ссылка на `AttributesDemoControl` сборки для сборки.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [Практическое: сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>См. также
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

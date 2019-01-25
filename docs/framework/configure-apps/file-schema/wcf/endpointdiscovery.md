@@ -2,21 +2,21 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556448"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Указывает различные параметры обнаружения для конечной точки, такие как возможность обнаружения, области и любые пользовательские модули для ее метаданных.  
   
-\<система. ServiceModel >  
+\<system.ServiceModel>  
 \<варианты поведения >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<поведение >  
-\<endpointDiscovery >  
+\<endpointDiscovery>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -104,5 +104,5 @@ ms.locfileid: "54150920"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
-ms.openlocfilehash: d1b9d8bc1f5f6f83a50dbd798894f94937320d2b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646582"
 ---
 # <a name="operator-overloads"></a>Перегрузки операторов
 Перегрузки операторов позволяют типы framework отображаться так, как если бы они были примитивы встроенный язык.  
@@ -114,5 +114,5 @@ ms.locfileid: "53152140"
   
 ## <a name="see-also"></a>См. также
 
-- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  
+- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

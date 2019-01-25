@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718797"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
 Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Определить характеристики переменной, ее расположение и содержимое.  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>Характеристики объявленных переменных  
  *Время существования* переменной представляет собой период времени, во время которого он доступен для использования. В общем случае переменная существует до тех пор, пока продолжает существовать элемент, объявляющий его (например, процедура или класс). Если переменная не требуется прекратиться после окончания времени существования содержащего ее элемента, вы не обязательно должны делать ничего особенного в объявлении. Если переменная должна существовать дольше, чем содержащий ее элемент, можно включить `Static` или `Shared` ключевого слова в ее `Dim` инструкции. Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- *Область* переменной представляет собой набор весь код, к ней можно обратиться без указания полного имени. Область переменной определяется котором она была объявлена. Код, расположенный в определенном регионе может использовать переменные, определенные в этом регионе, не определяя их имена. Дополнительные сведения см. в разделе [область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ *Область* переменной представляет собой набор весь код, к ней можно обратиться без указания полного имени. Область переменной определяется котором она была объявлена. Код, расположенный в определенном регионе может использовать переменные, определенные в этом регионе, не определяя их имена. Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
  Переменной *уровень доступа* указывает объем кода, которая имеет разрешение на доступ к нему. Это определяется параметром модификатор доступа (такие как [открытый](../../../../visual-basic/language-reference/modifiers/public.md) или [частного](../../../../visual-basic/language-reference/modifiers/private.md)), используемом в `Dim` инструкции. Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Создание переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Практическое руководство. Запись данных в переменную и их извлечение из переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Создание новой переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Практическое руководство. Перемещение данных в действие и из переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

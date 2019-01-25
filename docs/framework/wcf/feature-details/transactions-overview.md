@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548486"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Общие сведения о транзакциях Windows Communication Foundation
 Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения. Транзакция является коллекцией операций с перечисленными ниже свойствами.  
@@ -24,9 +24,9 @@ ms.locfileid: "33498560"
   
 -   Устойчивость. Данное свойство обозначает, что при однократной фиксации обновления в управляемых ресурсах (такие как запись базы данных) станут устойчивыми к сбоям.  
   
- Windows Communication Foundation (WCF) предоставляет широкий набор функций, которые позволяют создавать распределенные транзакции в приложении веб-службы.  
+ Windows Communication Foundation (WCF) предоставляет широкий набор функций, которые позволяют создавать распределенные транзакции в веб-приложения службы.  
   
- WCF реализует поддержку для протокола WS-AtomicTransaction (WS-AT), который позволяет приложениям WCF передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб-службы, созданные с использованием сторонней технологии. WCF также реализует поддержку для протокола OLE Transactions, который можно использовать в сценариях, где не требуется функциональность взаимодействия приложений для включения потока транзакций.  
+ В WCF реализована поддержка протокола WS-AtomicTransaction (WS-AT), которая позволяет приложениям WCF передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб-службы, созданные с использованием технологии сторонних. WCF также реализует поддержку для протокола OLE Transactions, который может использоваться в сценариях, где не требуется функциональность взаимодействия приложений для включения потока транзакций.  
   
  Для настройки привязок можно использовать файл конфигурации приложения, позволяющий включать или отключать передачу транзакций, а также задавать необходимый протокол транзакций для привязки. Кроме того, можно задать время ожидания транзакций на уровне службы с помощью файла конфигурации. Дополнительные сведения см. в разделе [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
@@ -40,6 +40,6 @@ ms.locfileid: "33498560"
   
  Дополнительные сведения см. в разделе [атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a>См. также
+- [Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+- [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

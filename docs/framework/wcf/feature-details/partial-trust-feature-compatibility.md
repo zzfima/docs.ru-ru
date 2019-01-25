@@ -2,12 +2,12 @@
 title: Совместимость возможностей частичного доверия
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564734"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 Windows Communication Foundation (WCF) поддерживает ограниченный набор функциональности при работе в среде с частичным доверием. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
 -   Проверить, что при развертывании приложения в качестве приложения с полным доверием, которое не может изменяться пользователям, параметры управления доступом для кода разрешают выполнение приложения в среде с частичным доверием. Если это так, поведение не выполняется и исключение не создается. Чтобы обеспечить это, см. в разделе **levelfinal** использование параметра [Caspol.exe (средство политики безопасности доступа кода)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Пример общего поведения, см. в разделе [как: Lock Down Endpoints на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Пример общего поведения, см. в разделе [как: Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Конфигурация  
  За одним исключением, частично доверенный код может загружать только разделы конфигурации WCF в локальной `app.config` файл. Для загрузки разделов конфигурации WCF, которые ссылаются на разделы WCF в файле machine.config или в корневом файле web.config требуется разрешение ConfigurationPermission(Unrestricted). Без этого разрешения ссылок на WCF разделов конфигурации (поведения, привязки) за пределами файла локальной конфигурации приводят к возникновению исключения при загрузке конфигурации.  
@@ -159,10 +159,10 @@ Windows Communication Foundation (WCF) поддерживает ограниче
 ## <a name="unlisted-features"></a>Отсутствующие функции  
  Лучший способ обнаружить недоступный фрагмент информации или действия при выполнении в среде с частичным доверием - попытка обращения к ресурсу или выполнение действия внутри блока `try` с последующим перехватом ( `catch` ) сбоя. Во избежание переполнения файлов трассировки дублирующимися ошибками, WCF отключает трассировку ресурсов и действий после первого сбоя безопасности. Существует одна трассировка исключения для каждой неудачной попытки доступа к ресурсам, которая создается при первой попытке доступа к ресурсам или при первой попытке выполнения действия.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Поддерживаемые сценарии развертывания](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Рекомендации по частичному доверию](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Поддерживаемые сценарии развертывания](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [Рекомендации по частичному доверию](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

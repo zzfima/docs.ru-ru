@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Тестирование поведения элемента UserControl во время выполнения
+title: Как выполнить Тестирование во время выполнения поведения элемента UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506372"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Практическое руководство. Тестирование поведения элемента UserControl во время выполнения
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Как выполнить Тестирование во время выполнения поведения элемента UserControl
 При разработке <xref:System.Windows.Forms.UserControl>, необходимо проверить его поведение во время выполнения. Можно создать проект отдельные приложения на основе Windows и разместить элемент управления в тестовую форму, но эта процедура неудобно. Быстрый и удобный способ — использовать **тестовом контейнере элементов управления** , предоставляемые Visual Studio. Тестовый контейнер запускается непосредственно из проект библиотеки элементов управления Windows.  
   
 > [!IMPORTANT]
@@ -66,9 +66,9 @@ ms.locfileid: "43512213"
   
 6.  Используйте **выберите пользовательский элемент управления** <xref:System.Windows.Forms.ComboBox> для переключения между двумя элементами управления из **TestContainerExample** проекта.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.UserControl>  
- [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Пошаговое руководство. Создание составного элемента управления с помощью C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Конструктор пользовательских элементов управления](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.UserControl>
+- [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Конструктор пользовательских элементов управления](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

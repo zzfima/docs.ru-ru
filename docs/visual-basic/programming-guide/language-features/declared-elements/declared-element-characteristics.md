@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582269"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Характеристики объявленных элементов (Visual Basic)
 Объект *характеристика* объявленного элемента является аспектом элемента, определяющее, каким образом код может взаимодействовать с ним. Каждый объявленный элемент имеет один или несколько из следующих характеристик, связанный с ним:  
@@ -27,9 +27,9 @@ ms.locfileid: "44076928"
   
 -   *Время существования* — период времени выполнения, в течение которого элемент доступен для использования. Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Область* — набор весь код, который можно ссылаться на элемент без указания полного имени. Дополнительные сведения см. в разделе [как: управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Область* — набор весь код, который можно ссылаться на элемент без указания полного имени. Дополнительные сведения см. в разделе [Как Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Уровень доступа* — разрешение коду на использование этого элемента. Дополнительные сведения см. в разделе [как: Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Уровень доступа* — разрешение коду на использование этого элемента. Дополнительные сведения см. в разделе [Как Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Характеристики элементов  
  Следующая таблица показывает объявленные элементы и характеристики, которые применяются для каждого из них.  
@@ -53,12 +53,12 @@ ms.locfileid: "44076928"
   
  <sup>1</sup> области иногда называется *видимость*.  
   
-## <a name="see-also"></a>См. также  
- [Объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>См. также
+- [Объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

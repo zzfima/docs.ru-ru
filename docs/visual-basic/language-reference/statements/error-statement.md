@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654819"
 ---
 # <a name="error-statement"></a>Оператор Error
 Имитирует возникновение ошибки.  
@@ -28,7 +28,7 @@ Error errornumber
   
 ## <a name="parts"></a>Части  
  `errornumber`  
- Обязательно. Может быть любой допустимый номер ошибки.  
+ Обязательный. Может быть любой допустимый номер ошибки.  
   
 ## <a name="remarks"></a>Примечания  
  `Error` Инструкция поддерживается для обеспечения обратной совместимости. В новом коде, особенно в том случае, при создании объектов, используйте `Err` объекта `Raise` метод для создания ошибки времени выполнения.  
@@ -60,12 +60,12 @@ Error 11   ' Simulate the "Division by zero" error.
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Оператор Resume](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [Сообщения об ошибках](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Оператор Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [Сообщения об ошибках](../../../visual-basic/language-reference/error-messages/index.md)

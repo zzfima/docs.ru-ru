@@ -2,15 +2,15 @@
 title: Диагностика транзакционных приложений
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550283"
 ---
 # <a name="diagnosing-transactional-applications"></a>Диагностика транзакционных приложений
-В этом разделе описывается использование функции управления Windows Communication Foundation (WCF) и диагностики для устранения неполадок транзакционного приложения.  
+В этом разделе описывается использование Windows Communication Foundation (WCF) и управлению с помощью функции диагностики для устранения неполадок транзакционного приложения.  
   
 ## <a name="performance-counters"></a>Счетчики производительности  
  WCF предоставляет стандартный набор счетчиков производительности для измерения производительности транзакционного приложения. Дополнительные сведения см. в разделе [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
@@ -93,7 +93,7 @@ ms.locfileid: "33497004"
   
 -   Трассировка WS-AtomicTransaction  
   
-     Трассировку WS-AtomicTransaction можно включить с помощью [программы конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Такая трассировка позволяет контролировать состояние транзакций и участников внутри системы. Чтобы включить также и трассировку модели службы, можно задать для ключа реестра `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` допустимое значение перечисления <xref:System.Diagnostics.SourceLevels>. Вы можете включить ведение журнала так же, как другие приложения WCF сообщений.  
+     WS-AtomicTransaction трассировку можно включить с помощью [служебную программу настройки WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Такая трассировка позволяет контролировать состояние транзакций и участников внутри системы. Чтобы включить также и трассировку модели службы, можно задать для ключа реестра `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` допустимое значение перечисления <xref:System.Diagnostics.SourceLevels>. Вы можете включить ведение журнала так же, как другие приложения WCF сообщений.  
   
 -   Трассировка `System.Transactions`  
   
@@ -118,9 +118,9 @@ ms.locfileid: "33497004"
     </configuration>  
     ```  
   
-     Это также позволяет трассировки WCF, как WCF также использует <xref:System.Transactions> инфраструктуры.  
+     Это также позволяет трассировки WCF, а также использует WCF <xref:System.Transactions> инфраструктуры.  
   
-## <a name="see-also"></a>См. также  
- [Администрирование и диагностика](../../../../docs/framework/wcf/diagnostics/index.md)  
- [Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>См. также
+- [Администрирование и диагностика](../../../../docs/framework/wcf/diagnostics/index.md)
+- [Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

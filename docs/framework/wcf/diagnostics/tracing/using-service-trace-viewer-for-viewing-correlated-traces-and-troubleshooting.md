@@ -2,12 +2,12 @@
 title: Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594815"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 В этом разделе описываются формат данных трассировки, способ просмотра этих данных, а также подходы, в которых используется программа Service Trace Viewer для устранения неполадок приложения.  
@@ -119,7 +119,7 @@ ms.locfileid: "50188798"
   
 -   Обработано действие Add.  
   
--   Установлен безопасный сеанс (это ПРОИЗОШЛО по первому запросу) и обработаны три ответных сообщения инфраструктуры безопасности: RST, RSTR, SCT (Process message 1, 2, 3).  
+-   Настройте безопасный сеанс (это ПРОИЗОШЛО по первому запросу) и инфраструктура безопасности обработанных три ответных сообщений: RST, RSTR, SCT (Process message 1, 2, 3).  
   
 -   Обработаны запросы "Вычесть", "Умножить" и "Разделить".  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50188798"
  Если дважды щелкнуть действие Process action Add на левой панели, мы видим, что графическое представление действий клиента WCF, связанных с добавить. Первое действие слева - корневое действие (0000), являющееся действием по умолчанию. WCF выполняет перенаправление из внешнего действия. Если оно не определено, WCF выполняет перенаправление из 0000. В данном случае второе действие, Process Action Add, выполняет перенаправление из действия 0. Затем следует действие Setup Secure Session.  
   
  ![С помощью средства просмотра трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Графическое представление действий клиента WCF: Ambient Activity (здесь 0), Process action и Set Up Secure Session  
+Графическое представление действий клиента WCF: Окружающее Activity (здесь 0), Process action и Set Up Secure Session  
   
  На верхней правой панели отображаются все трассировки, связанные с действием Process Action Add. В частности, передано сообщение запроса ("Передано сообщение по каналу") и в том же действии принят ответ ("Получено сообщение по каналу"). Это показано на следующей диаграмме. Для ясности действие Set up Secure Session на диаграмме свернуто.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "50188798"
  ![С помощью средства просмотра трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Чтобы начать поиск неполадок, можно также выбрать красную или желтую трассировку сообщений и дважды щелкнуть ее для отслеживания первопричины  
   
-## <a name="see-also"></a>См. также  
- [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>См. также
+- [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

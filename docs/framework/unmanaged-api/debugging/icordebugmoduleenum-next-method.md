@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7624a22e5d65ae94797779a0b8cfa70f226450ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f71901acf8227d018bf288b6cd0265f053e6a3a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510836"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Метод ICorDebugModuleEnum::Next
-Возвращает число экземпляров «ICorDebugModule», заданных параметром `celt` из перечисления, начиная с текущей позиции.  
+Возвращает число экземпляров «ICorDebugModule», определяемое `celt` из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,19 +43,19 @@ HRESULT Next (
  [in] Количество `ICorDebugModule` извлекаемых экземпляров.  
   
  `modules`  
- [out] Массив указателей, каждый из которых указывает на `ICorDebugModule` объекта.  
+ [out] Массив указателей, каждый из которых указывает `ICorDebugModule` объекта.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugModule` фактически возвращаемых экземпляров. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на число `ICorDebugModule` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

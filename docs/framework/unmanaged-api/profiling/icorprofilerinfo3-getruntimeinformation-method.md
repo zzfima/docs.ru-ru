@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587519"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>Метод ICorProfilerInfo3::GetRuntimeInformation
-Предоставляет сведения о среде (CLR) профилируемым версии.  
+Предоставляет сведения о среда CLR (CLR) профилируемым версии.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,10 +45,10 @@ HRESULT GetRuntimeInformation(
   
 #### <a name="parameters"></a>Параметры  
  `pClrInstanceId`  
- [out] Представителю идентификатор запущенного экземпляра среды CLR в процессе. Это то же самое, как `ClrInstanceID` , события трассировки событий Windows (ETW) при запуске отчетов.  
+ [out] Идентификатор представителем работающего экземпляра среды CLR в процессе. Так же, как это `ClrInstanceID` сообщает, трассировка событий для события при запуске Windows (ETW).  
   
  `pRuntimeType`  
- [out] Тип среды выполнения. Этот параметр возвращает `COR_PRF_DESKTOP_CLR` для рабочего стола версии среды CLR, или `COR_PRF_CORE_CLR` для основной версии среды CLR, который используется в Silverlight.  
+ [out] Тип среды выполнения. Этот параметр возвращает `COR_PRF_DESKTOP_CLR` для настольной версии среды CLR, или `COR_PRF_CORE_CLR` для основную версию среды CLR, используемую в Silverlight.  
   
  `pMajorVersion`  
  [out] Основной номер версии среды CLR.  
@@ -60,30 +60,30 @@ HRESULT GetRuntimeInformation(
  [out] Номер версии сборки среды CLR.  
   
  `pQFEVersion`  
- [out] Номер версии среды CLR, который связан с обновлением программного обеспечения.  
+ [out] Номер версии среды CLR, связанный с обновлением программного обеспечения.  
   
  `cchVersionString`  
  [in] Длина в символах, буфера, `szVersionString` указывает.  
   
  `pcchVersionString`  
- [out] Длина в символах для `szVersionString`.  
+ [out] Длина в символах, из `szVersionString`.  
   
  `szVersionString`  
- [out] Строка версии CLR.  
+ [out] Строка версии среды CLR.  
   
 ## <a name="remarks"></a>Примечания  
- Можно передать значение null для любого параметра. Тем не менее `pcchVersionString` не может иметь значение null, если не `szVersionString` также имеет значение null.  
+ Можно передать значение null для любого параметра. Тем не менее `pcchVersionString` не может иметь значение null Если `szVersionString` также имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)

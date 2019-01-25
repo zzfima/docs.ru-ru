@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
+title: Как выполнить Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4da793b8836b2bbb5cadbfbe6f2652e965d1c444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524160"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Как выполнить Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
 Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Выравнивание дочернего элемента управления в ячейке TableLayoutPanel  
@@ -30,27 +30,27 @@ ms.locfileid: "43749083"
   
 3.  Создайте элемент управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>. Элемент <xref:System.Windows.Forms.Button> расположен в левом верхнем углу ячейки.  
   
-4.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left`. Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.  
+4.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Left`. Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.  
   
     > [!NOTE]
     >  Такое поведение отличается от поведения других контейнерных элементов управления. Когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение<xref:System.Windows.Forms.Control.Anchor%2A>, дочерние элементы управления других контейнерных элементов управления не перемещаются, а расстояние между закрепленным элементом управления и границей родительского контейнера фиксируется.  
   
-5.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Left`. Элемент управления <xref:System.Windows.Forms.Button> займет левый верхний угол ячейки.  
+5.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Top, Left`. Элемент управления <xref:System.Windows.Forms.Button> займет левый верхний угол ячейки.  
   
 6.  Повторите шаг 5 со значением из `Top, Right` для перемещения <xref:System.Windows.Forms.Button> элемента управления в правом верхнем углу ячейки. Повторите процедуру, используя значения `Bottom, Left` и `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Растяжение дочернего элемента управления в ячейке TableLayoutPanel  
   
-1.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left, Right`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по ширине ячейки.  
+1.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Left, Right`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по ширине ячейки.  
   
     > [!NOTE]
     >  Такое поведение отличается от поведения других контейнерных элементов управления. В других контейнерных элементов управления, дочерний элемент управления не изменяются, когда <xref:System.Windows.Forms.Control.Anchor%2A> свойству `Left, Right` или `Top, Bottom`.  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по высоте ячейки.  
+2.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Top, Bottom`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по высоте ячейки.  
   
-3.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom, Left, Right`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.  
+3.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `Top, Bottom, Left, Right`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.  
   
-4.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `None`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он расположится по центру ячейки.  
+4.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> на `None`. Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он расположится по центру ячейки.  
   
 5.  Измените значение свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> на <xref:System.Windows.Forms.DockStyle.Left>. Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки. Ширина элемента управления <xref:System.Windows.Forms.Button> сохранится, а высота изменится для заполнения ячейки по вертикали.  
   
@@ -82,8 +82,8 @@ ms.locfileid: "43749083"
   
 -   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

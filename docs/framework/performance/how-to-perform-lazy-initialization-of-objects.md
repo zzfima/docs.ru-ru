@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610868"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Как выполнить Неактивная инициализация объектов
 Класс <xref:System.Lazy%601?displayProperty=nameWithType> упрощает выполнение отложенной инициализации и создание экземпляров объектов. Если объекты не требуются, то при отложенной инициализации их можно не создавать или отложить их инициализацию до первого обращения к ним. Дополнительные сведения см. в статье [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md).  
@@ -76,6 +76,6 @@ End Sub
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
- [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
+- [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)

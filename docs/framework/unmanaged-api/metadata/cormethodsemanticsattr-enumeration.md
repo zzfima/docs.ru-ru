@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564085"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Перечисление CorMethodSemanticsAttr
 Содержит значения, описывающие связь между методом и соответствующим свойством или событием.  
@@ -43,21 +43,21 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`msSetter`|Указывает, что метод является `set` метод доступа для свойства.|  
-|`msGetter`|Указывает, что метод является `get` метод доступа для свойства.|  
-|`msOther`|Указывает, что метод имеет связь с свойство или событие, отличные от определенных здесь.|  
-|`msAddOn`|Указывает, что метод добавляет методы обработчика для события.|  
+|`msSetter`|Указывает, что метод вызывается `set` метод доступа для свойства.|  
+|`msGetter`|Указывает, что метод вызывается `get` метод доступа для свойства.|  
+|`msOther`|Указывает, что метод имеет отношение к свойство или событие, отличные от определенных здесь.|  
+|`msAddOn`|Указывает, что этот метод добавляет методы обработчика для события.|  
 |`msRemoveOn`|Указывает, что метод удаляет методы обработчика для события.|  
 |`msFire`|Указывает, что метод вызывает событие.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

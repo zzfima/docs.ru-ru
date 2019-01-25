@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 31ff9211034438e225494b916045acd07c37810f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532767"
 ---
 # <a name="interface-statement-visual-basic"></a>Оператор Interface (Visual Basic)
 Объявляет имя интерфейса и представляет определения членов, которые входят в интерфейс.  
@@ -37,90 +37,90 @@ End Interface
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательный. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Protected Private](../../language-reference/modifiers/private-protected.md)<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|Обязательно. Имя этого интерфейса. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательный. Указывает, что это универсальный интерфейс.|  
-|`typelist`|Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этого интерфейса. Кроме того, каждый параметр типа можно объявить как вариант с использованием `In` и `Out` универсальных модификаторов. В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательный. Указывает, что этот интерфейс наследует атрибуты и члены другого интерфейса или интерфейсов. В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|Является обязательным, если используется `Inherits` инструкции. Имена интерфейсов, из которых производится данный интерфейс.|  
-|`modifiers`|Необязательный. Соответствующие модификаторы для определяемого члена интерфейса.|  
-|`Property`|Необязательный. Определяет свойство, которое является членом интерфейса.|  
-|`Function`|Необязательный. Определяет `Function` процедуру, которая является членом интерфейса.|  
-|`Sub`|Необязательный. Определяет `Sub` процедуру, которая является членом интерфейса.|  
-|`Event`|Необязательный. Определяет событие, которое является членом интерфейса.|  
-|`Interface`|Необязательный. Определяет интерфейс, вложенный в этот интерфейс. Определение вложенного интерфейса должен завершать `End Interface` инструкции.|  
-|`Class`|Необязательный. Определяет класс, который является членом интерфейса. Определение члена класса должен завершать `End Class` инструкции.|  
-|`Structure`|Необязательный. Определяет структуру, которая является членом интерфейса. Определение члена структуры должен завершать `End Structure` инструкции.|  
-|`membername`|Требуется для каждого свойства, процедуры, события, интерфейса, класса или структуры, определенных как члена интерфейса. Имя элемента.|  
+|`attributelist`|Необязательный параметр. См. в разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный параметр. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Частный защищенный](../../language-reference/modifiers/private-protected.md)<br /><br /> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный параметр. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|Обязательный. Имя этого интерфейса. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Необязательный параметр. Указывает, что это универсальный интерфейс.|  
+|`typelist`|Требуется при использовании [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этого интерфейса. При необходимости каждого параметра типа можно объявить как вариант с помощью `In` и `Out` универсального модификаторы. См. в разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Необязательный параметр. Указывает, что этот интерфейс наследует атрибуты и членами другого интерфейса или интерфейсов. См. в разделе [оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`interfacenames`|Требуется при использовании `Inherits` инструкции. Имена интерфейсов, от которых наследует этот интерфейс.|  
+|`modifiers`|Необязательный параметр. Соответствующие модификаторы для определяемого члена интерфейса.|  
+|`Property`|Необязательный параметр. Определяет свойство, которое является членом интерфейса.|  
+|`Function`|Необязательный параметр. Определяет `Function` процедуру, которая является членом интерфейса.|  
+|`Sub`|Необязательный параметр. Определяет `Sub` процедуру, которая является членом интерфейса.|  
+|`Event`|Необязательный параметр. Определяет событие, которое является членом интерфейса.|  
+|`Interface`|Необязательный параметр. Определяет интерфейс, вложенный в этот интерфейс. Определение вложенного интерфейса должен завершать `End Interface` инструкции.|  
+|`Class`|Необязательный параметр. Определяет класс, который является членом интерфейса. Определение члена класса должен завершать `End Class` инструкции.|  
+|`Structure`|Необязательный параметр. Определяет структуру, которая является членом интерфейса. Определение члена структуры должен завершать `End Structure` инструкции.|  
+|`membername`|Требуется для каждого свойства, процедуры, события, интерфейс, класс или структура, определенная в качестве члена интерфейса. Имя элемента.|  
 |`End Interface`|Завершает `Interface` определения.|  
   
 ## <a name="remarks"></a>Примечания  
  *Интерфейс* определяет набор элементов, таких как можно реализовать свойства и процедуры, которые классы и структуры. Интерфейс определяет только сигнатуры членов, а не их внутреннюю работоспособность.  
   
- Класс или структура реализует интерфейс путем предоставления кода для каждого члена, определенного в интерфейсе. Наконец когда приложение создает экземпляр этого класса или структуры, объект существует и выполняется в памяти. Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) и [интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Класс или структура реализует интерфейс, указав код для каждого члена, определенные в интерфейсе. Наконец когда приложение создает экземпляр этого класса или структуры, объект существует и выполняется в памяти. Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) и [интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Можно использовать `Interface` только на уровне пространства имен или модуля. Это означает *контекст объявления* для интерфейса должен быть исходным файлом, пространства имен, класса, структуры, модуля или интерфейса и не может быть процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Можно использовать `Interface` только на уровне пространства имен или модуля. Это означает, что *контекст объявления* интерфейс должен быть исходный файл, пространство имен, класс, структура, модуль или интерфейс, и не может быть процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- По умолчанию для интерфейсов [Friend](../../../visual-basic/language-reference/modifiers/friend.md) доступа. Вы можете настроить уровни доступа с помощью модификаторов доступа. Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Интерфейсы по умолчанию для [Friend](../../../visual-basic/language-reference/modifiers/friend.md) доступа. Вы можете настроить уровни доступа с помощью модификаторов доступа. Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Правила  
   
--   **Вложенные интерфейсы.** Можно определить один интерфейс внутри другого. Внешний интерфейс вызывается *содержит интерфейс*, и внутренний интерфейс вызывается *вложенного интерфейса*.  
+-   **Вложенные интерфейсы.** Можно определить один интерфейс внутри другого. Внешний интерфейс вызывается *содержит интерфейс*, а внутренний интерфейс называется *вложенного интерфейса*.  
   
--   **Объявление члена.** При объявлении свойства или процедуры, как член интерфейса, вы определяете только *подписи* свойства или процедуры. Это включает тип элемента (свойство или процедура), его параметры и типы параметров и тип возвращаемого им значения. По этой причине определение члена использует только одну строку кода и завершающий таких инструкциях, как `End Function` или `End Property` не допускаются в интерфейсе.  
+-   **Объявление члена.** При объявлении свойства или процедуры как член интерфейса, определяется только *подпись* свойства или процедуры. Это включает в себя тип элемента (свойство или процедура), его параметры и типы параметров и типом возвращаемого значения. По этой причине определение члена использует только одну строку кода и завершающий операторы, например `End Function` или `End Property` не допускаются в интерфейсе.  
   
-     Напротив при определении перечисления или структуры, вложенного класса или интерфейса, необходимо включить их члены данных.  
+     Напротив при определении перечисления или структуры, вложенного класса или интерфейса, бывает необходимо включить их члены данных.  
   
--   **Модификаторы членов.** Нельзя использовать модификаторы доступа при определении модуля членов, а также задавать [Shared](../../../visual-basic/language-reference/modifiers/shared.md) или любую процедуру модификаторов, за исключением [перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md). Можно объявить любой член с [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), и можно использовать [по умолчанию](../../../visual-basic/language-reference/modifiers/default.md) при определении свойства, а также [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) или [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+-   **Модификаторы члена.** Модификаторы доступа нельзя использовать при определении элементы модуля, а также задавать [Shared](../../../visual-basic/language-reference/modifiers/shared.md) или любую процедуру модификаторов, за исключением [перегружает](../../../visual-basic/language-reference/modifiers/overloads.md). Можно объявить любой член с [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), и вы можете использовать [по умолчанию](../../../visual-basic/language-reference/modifiers/default.md) при определении свойства, а также [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) или [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **Наследование.** Если интерфейс использует [инструкцию наследует](../../../visual-basic/language-reference/statements/inherits-statement.md), можно указать один или несколько базовых интерфейсов. Можно наследовать от двух интерфейсов, даже если каждый из них определяют член с тем же именем. При этом код реализации должен использовать уточнение имени, чтобы указать, какие члены, он реализует.  
+-   **Наследование.** Если интерфейс использует [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), можно указать один или несколько базовых интерфейсов. Может наследовать от двух интерфейсов, даже если каждый из них определяет член с тем же именем. Если сделать это, код реализации необходимо использовать уточнение имен, чтобы указать, какие члены, он реализует.  
   
-     Интерфейс не может наследовать от другого интерфейса с более строгим уровнем доступа. Например `Public` интерфейс не может наследовать от `Friend` интерфейса.  
+     Интерфейс не может наследовать от другого интерфейса с более строгий уровень доступа. Например `Public` интерфейс не может наследовать от `Friend` интерфейс.  
   
-     Интерфейс не может наследовать от интерфейса, вложенного в него.  
+     Интерфейс не может наследовать от вложенного в него интерфейс.  
   
--   **Реализация.** Когда класс использует [реализует](../../../visual-basic/language-reference/statements/implements-clause.md) инструкции для реализации этого интерфейса, он должен реализовывать каждый член, объявленный в интерфейсе. Кроме того каждая сигнатура в коде реализации должна совпадать соответствующей сигнатурой, объявленной в этом интерфейсе. Однако имя члена в коде реализации не должно совпадать с именем члена, определенный в интерфейсе.  
+-   **Реализация.** Когда класс использует [реализует](../../../visual-basic/language-reference/statements/implements-clause.md) инструкцию, чтобы реализовать этот интерфейс, он должен реализовать каждый член, определенных в этом интерфейсе. Кроме того каждая сигнатура в коде реализации должен точно соответствовать соответствующую подпись, определенными в этом интерфейсе. Однако имя члена в коде реализации не совпадает с именем члена, как определено в интерфейсе.  
   
-     Если класс реализует процедуру, он не может определять процедуру как `Shared`.  
+     Когда класс реализует процедуру, он не может определять в процедуру в качестве `Shared`.  
   
--   **Свойство по умолчанию.** Интерфейс можно указать только одно свойство в качестве его *свойство по умолчанию*, который можно ссылаться без использования имени свойства. Задать это свойство, объявив ее с [по умолчанию](../../../visual-basic/language-reference/modifiers/default.md) модификатор.  
+-   **Свойство по умолчанию.** Интерфейс можно указать не более одного свойства, как его *свойство по умолчанию*, который можно ссылаться без использования имени свойства. Укажите такое свойство, объявив ее с [по умолчанию](../../../visual-basic/language-reference/modifiers/default.md) модификатор.  
   
-     Обратите внимание, что это означает, что интерфейс можно определить свойство по умолчанию только в том случае, если он ничего не наследует.  
+     Обратите внимание на то, что это означает, что интерфейс можно определить свойство по умолчанию, только в том случае, если он ничего не наследует.  
   
 ## <a name="behavior"></a>Поведение  
   
--   **Уровень доступа.** Все члены интерфейса неявно имеют [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа. Нельзя использовать модификаторы доступа при определении элемента. Однако класс, реализующий интерфейс можно объявить уровень доступа для каждого реализуемого члена.  
+-   **Уровень доступа.** Все члены интерфейса неявно имеют [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа. Невозможно использовать модификаторы доступа при определении члена. Тем не менее класс, реализующий интерфейс можно объявить уровень доступа для каждой реализации члена.  
   
-     Если присвоить экземпляр класса переменной, уровень доступа к его членам может зависеть от является ли тип данных переменной базового интерфейса или реализации класса. Это показано в следующем примере.  
+     Если присвоить экземпляр класса переменной, уровень доступа к членам может основываться на является ли тип данных переменной базового интерфейса или реализующего класса. Это показано в следующем примере.  
   
      [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
-     Если доступ к членам класса через `varAsInterface`, все они имеют общий доступ. Тем не менее если доступ к членам через `varAsClass`, `Sub` процедура `doSomething` имеет доступ к закрытому.  
+     Если доступ к членам класса через `varAsInterface`, все они имеют общий доступ. Тем не менее если выполняется обращение к членам через `varAsClass`, `Sub` процедуры `doSomething` закрытым.  
   
--   **Область действия.** Интерфейс — область действия пространства имен, класса, структуры или модуля.  
+-   **Область.** Область действия его пространства имен, класса, структуры или модуля — интерфейс.  
   
      Область для каждого члена интерфейса является весь интерфейс.  
   
--   **Время существования.** Интерфейс сам не имеет время существования, а также выполнять его члены. Если класс реализует интерфейс и объект создается как экземпляр класса, объект имеет время существования в приложении, в котором он выполняется. Дополнительные сведения см. в разделе «Lifetime» в [оператор Class](../../../visual-basic/language-reference/statements/class-statement.md).  
+-   **Время существования.** Интерфейс сам не имеет время существования, так же как и его члены. Если класс реализует интерфейс и объект создается как экземпляр класса, объект имеет время существования приложения, в котором он выполняется. Дополнительные сведения см. в разделе «Время жизни» в [оператор Class](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Interface` инструкцию, чтобы определить интерфейс с именем `thisInterface`, который должен быть реализован с `Property` инструкции и `Function` инструкции.  
+ В следующем примере используется `Interface` инструкцию, чтобы определить интерфейс с именем `thisInterface`, который должен быть реализован с помощью `Property` инструкции и `Function` инструкции.  
   
  [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
- Обратите внимание, что `Property` и `Function` инструкции не добавляют блоки, заканчивая `End Property` и `End Function` в интерфейсе. Интерфейс определяет только подписи своих членов. Полный `Property` и `Function` отображаются блоки в класс, реализующий `thisInterface`.  
+ Обратите внимание, что `Property` и `Function` инструкций не возникнут новые блоки, заканчивая `End Property` и `End Function` в интерфейсе. Интерфейс определяет только подписи его члены. Полный `Property` и `Function` блоки отображаются в класс, реализующий `thisInterface`.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Расхождение в универсальных интерфейсах](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Расхождение в универсальных интерфейсах](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

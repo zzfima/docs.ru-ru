@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547497"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
 В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти возможности включают в себя повышение качества и производительности отрисовки текста, типографическую поддержку [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], расширенный международный текст, улучшенную поддержку шрифтов и новые текстовые API.  
@@ -167,12 +167,12 @@ ms.locfileid: "43528088"
   
  Дополнительные сведения о создании пользовательского макета текста см. в разделе [Дополнительное форматирование текста](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.FormattedText>  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [Общие сведения о технологии ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Дополнительное форматирование текста](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Типография Майкрософт](https://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.FormattedText>
+- <xref:System.Windows.Media.TextFormatting.TextFormatter>
+- [Общие сведения о технологии ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [Дополнительное форматирование текста](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
+- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Типография Майкрософт](https://www.microsoft.com/typography/default.mspx)

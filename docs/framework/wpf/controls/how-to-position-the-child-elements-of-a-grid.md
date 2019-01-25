@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Размещение дочерних элементов Grid
+title: Как выполнить Размещение дочерних элементов сетки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538681"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Практическое руководство. Размещение дочерних элементов Grid
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Как выполнить Размещение дочерних элементов сетки
 В этом примере показано, как использовать команду get и задайте методы, определенные на <xref:System.Windows.Controls.Grid> для размещения дочерних элементов.  
   
 ## <a name="example"></a>Пример  
@@ -30,6 +30,6 @@ ms.locfileid: "50187001"
  
  ![Снимок экрана показан пользовательский интерфейс WPF с двумя столбцами, справа от оператора имеет 3 x 3 сетку и слева находятся кнопки для перемещения между столбцами и строками сетки цветным прямоугольником](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.Grid>  
- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.Grid>
+- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)

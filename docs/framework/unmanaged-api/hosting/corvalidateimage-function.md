@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730780"
 ---
 # <a name="corvalidateimage-function"></a>Функция _CorValidateImage
-Проверяет образы управляемого модуля и уведомляет загрузчик операционной системы после их загрузки.  
+Проверяет образы управляемого модуля и уведомляет загрузчик операционной системы, после они были загружены.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ STDAPI _CorValidateImage (
   
 #### <a name="parameters"></a>Параметры  
  `ImageBase`  
- [in] Указатель начальной позиции образа для проверки, как управляемый код. Изображение уже должны быть загружены в память.  
+ [in] Указатель на начальное расположение образа для проверки, как управляемый код. Изображение уже должен быть загружен в память.  
   
  `FileName`  
  [in] Имя файла изображения.  
@@ -51,36 +51,36 @@ STDAPI _CorValidateImage (
 |`STATUS_SUCCESS`|Образ является допустимым. Это значение имеет HRESULT 0x00000000L.|  
   
 ## <a name="remarks"></a>Примечания  
- В Windows XP и более поздних версиях загрузчик операционной системы выполняет поиск управляемых модулей путем анализа бит каталога дескриптора модели COM в заголовке общего формата (COFF) объекта файла. Установленный бит обозначает управляемый модуль. При обнаружении управляемый модуль, он загружает MsCorEE.dll и вызывает метод `_CorValidateImage`, который выполняет следующие действия:  
+ В Windows XP и более поздних версий загрузчик операционной системы ищет управляемые модули, проверяя бит каталога дескриптора модели COM в заголовке формате COFF файл общего объекта. Установленный бит обозначает управляемый модуль. При обнаружении управляемый модуль, он загружает библиотеку MsCorEE.dll и вызывает метод `_CorValidateImage`, который выполняет следующие действия:  
   
 -   Подтверждает, что образ является допустимым управляемым модулем.  
   
--   Заменяет точку входа в образе на точку входа в общеязыковой среде выполнения (CLR).  
+-   Заменяет точку входа в образе на точку входа в системе common language runtime (CLR).  
   
 -   Для 64-разрядных версиях Windows изменяет образ, находящийся в памяти, путем преобразования его из формата PE32 в формат PE32 +.  
   
--   Возврат загрузчик при загрузке образов управляемого модуля.  
+-   Возвращает загрузчику при загрузке образов управляемого модуля.  
   
- Для исполняемых образов загрузчик операционной системы затем вызывает [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) функции, независимо от точки входа, указанной в исполняемом файле. Библиотека DLL сборки образов, загрузчик вызывает [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) функции.  
+ Для исполняемых образов загрузчик операционной системы затем вызывает [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) функции, независимо от точки входа, указанной в исполняемом файле. Библиотеки DLL сборки образов, загрузчик вызывает [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) функции.  
   
  `_CorExeMain` или `_CorDllMain` выполняет следующие действия:  
   
 -   Инициализирует среду CLR.  
   
--   Находит управляемую точку входа в заголовке CLR сборки.  
+-   Находит управляемую точку входа в заголовке среды CLR сборки.  
   
 -   Начинает выполнение.  
   
- Вызовы загрузчика [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) работать при управлении образов модуля будут выгружены. Однако эта функция не выполняет никаких действий; он просто возвращает.  
+ Вызовы загрузчика [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) функционировать, когда управляемые образы модулей будут выгружены. Тем не менее эта функция не выполняет никаких действий; он просто возвращает.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

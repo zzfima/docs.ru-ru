@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576360"
 ---
 # <a name="-operator-visual-basic"></a>Оператор + (Visual Basic)
 Складывает два числа и возвращает положительное значение числового выражения. Может также использоваться для сцепления двух строковых выражений.  
@@ -32,7 +32,7 @@ expression1 + expression2
   
 |Термин|Определение|  
 |---|---|  
-|`expression1`|Обязательно. Числовым или строковым выражением.|  
+|`expression1`|Обязательный. Числовым или строковым выражением.|  
 |`expression2`|Требуется, если `+` оператор вычисляет отрицательное значение. Числовым или строковым выражением.|  
   
 ## <a name="result"></a>Результат  
@@ -83,7 +83,7 @@ expression1 + expression2
 >  При использовании `+` оператора, может не появиться возможность определить, произойдет ли объединение строк или сложение операция. Используйте `&` для объединения оператор устранения неоднозначности и выполнять код.  
   
 ## <a name="overloading"></a>Перегрузка  
- `+` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `+` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `+` оператора для сложения чисел. Если оба операнда являются числовыми, Visual Basic вычисляет арифметический результат. Арифметический результат возвращает сумму двух операндов.  
@@ -108,11 +108,11 @@ expression1 + expression2
   
  Чтобы избежать неоднозначности, следует использовать `&` оператор вместо `+` для объединения.  
   
-## <a name="see-also"></a>См. также  
- [Оператор &](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [Операторы объединения](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>См. также
+- [Оператор &](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [Операторы объединения](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

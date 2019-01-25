@@ -2,12 +2,12 @@
 title: Распределенные транзакции
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660337"
 ---
 # <a name="distributed-transactions"></a>Распределенные транзакции
 Транзакция - это набор связанных задач, который, помимо всего прочего, завершается успешно (фиксация) или с ошибкой (отмена) как единое целое. Объект *распределенную транзакцию* — это транзакция, затрагивающая несколько ресурсов. Для фиксации распределенной транзакции все участники должны гарантировать, что любое изменение данных будет постоянным. Изменения должны сохраняться даже в случае фатального сбоя системы или других непредвиденных событий. Если хоть один из участников не сможет предоставить такую гарантию, вся транзакция завершится с ошибкой и будет выполнен откат любых изменений данных внутри области транзакции.  
@@ -47,7 +47,7 @@ ms.locfileid: "43486331"
 ## <a name="configuring-distributed-transactions"></a>Настройка распределенных транзакций  
  Для использования распределенных транзакций возможна необходимость включения в сети MS DTC. Если включен межсетевой экран Windows, необходимо разрешить службе MS DTC использовать сеть или открыть порт MS DTC.  
   
-## <a name="see-also"></a>См. также  
- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

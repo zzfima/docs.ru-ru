@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: 727bcc53750081ae2d957527332ed3199c7d8e8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 285a35012c4417e4ee39bf8c72e85bd6102d3e23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594451"
 ---
 # <a name="system-information-and-windows-forms"></a>Информация о системе и Windows Forms
-Иногда бывает необходимо собрать сведения о компьютере, на котором приложение выполняется на для принятия решений в коде. Например возможно, функция, которая применяется только при подключении к конкретному сетевому домену; в этом случае необходим способ для определения домена и отключить функцию, если домен не существует.  
+Иногда бывает необходимо собрать сведения о компьютере, на котором приложение выполняется на для принятия решений в коде. Например возможно, функция, которая применяется только при подключении к конкретному сетевому домену; в этом случае требуется способ определения домена и отключить функцию, если домен не существует.  
   
  Можно использовать в приложениях Windows Forms <xref:System.Windows.Forms.SystemInformation> класс, чтобы определить количество сведения о компьютере во время выполнения. В следующем примере показано использование <xref:System.Windows.Forms.SystemInformation> класса для извлечения <xref:System.Windows.Forms.SystemInformation.UserName%2A> и <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
   
@@ -38,10 +38,10 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
 + Domain)  
 ```  
   
- Все члены <xref:System.Windows.Forms.SystemInformation> класса доступны только для чтения; невозможно изменить параметры пользователя. Существует более 100 членов класса, возвращение сведений в любом из числа мониторов, подключенного к компьютеру (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) для интервала между значками в проводнике Windows (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> и <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  
+ Все члены <xref:System.Windows.Forms.SystemInformation> , доступны только для чтения; невозможно изменить параметры пользователя. Существует более 100 членов класса, возвращение сведений обо всем из число мониторов, подключенные к компьютеру (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) для интервала между значками в проводнике Windows (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> и <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  
   
  Некоторые из наиболее полезными членами <xref:System.Windows.Forms.SystemInformation> класс включать <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, и <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.SystemInformation>  
- [Управление питанием в Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.SystemInformation>
+- [Управление питанием в Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)

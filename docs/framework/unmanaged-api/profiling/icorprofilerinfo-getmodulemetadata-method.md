@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607479"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Метод ICorProfilerInfo::GetModuleMetaData
-Получает экземпляр интерфейса метаданных, сопоставляемый с указанным модулем.  
+Получает экземпляр интерфейса метаданных, который сопоставляется указанного модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +39,30 @@ HRESULT GetModuleMetaData(
   
 #### <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, с которым сопоставлен экземпляр интерфейса.  
+ [in] Идентификатор модуля, с которым будет сопоставлен экземпляр интерфейса.  
   
  `dwOpenFlags`  
  [in] Значение [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) перечисления, указывающее режим для открытия файлов манифеста. Только `ofRead`, `ofWrite` и `ofNoTransform` bits являются допустимыми.  
   
  `riid`  
- [in] Ссылка идентификатор (GUID) интерфейс метаданных, экземпляр которого будут извлечены. В разделе [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) список интерфейсов.  
+ [in] Ссылка на идентификатор (GUID) интерфейс метаданных, экземпляр которого будут извлекаться. См. в разделе [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) список интерфейсов.  
   
  `ppOut`  
- [out] Указатель на адрес объекта интерфейса экземпляра метаданных.  
+ [out] Указатель на адрес метаданных экземпляра интерфейса.  
   
 ## <a name="remarks"></a>Примечания  
- Существует возможность запросить метаданные для открытия в режиме чтения и записи, но это приведет к замедлению выполнения программы, поскольку изменения метаданных не может быть оптимизирован, как компилятор.  
+ Существует возможность запросить метаданные для открытия в режиме чтения/записи, но это приведет к замедлению выполнения программы, поскольку изменения метаданных не могут быть оптимизированы, как от компилятора.  
   
- Некоторые модули (например, модули ресурсов) имеют без метаданных. В таких случаях `GetModuleMetaData` возвратит значение HRESULT S_FALSE и null в *`ppOut`.  
+ Некоторые модули (например, модули ресурсов) имеют без метаданных. В таком случае `GetModuleMetaData` возвратит значение HRESULT S_FALSE, и значение null в *`ppOut`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576019"
 ---
 # <a name="corfieldattr-enumeration"></a>Перечисление CorFieldAttr
 Содержит значения, описывающие метаданные поля.  
@@ -60,34 +60,34 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Указывает сведения о специальных возможностях.|  
-|`fdPrivateScope`|Указывает, что поле не может ссылаться.|  
+|`fdPrivateScope`|Указывает, что это поле нельзя ссылаться.|  
 |`fdPrivate`|Указывает, что поле доступно только для родительского типа.|  
-|`fdFamANDAssem`|Указывает, что это поле доступно для производных классов в его сборке.|  
+|`fdFamANDAssem`|Указывает, что поле доступно для производных классов в его сборке.|  
 |`fdAssembly`|Указывает, что поле доступно для всех типов в его сборке.|  
 |`fdFamily`|Указывает, что поле доступно только для его типа и производных классов.|  
-|`fdFamORAssem`|Указывает, что это поле доступно для производных классов и всех типов в его сборке.|  
-|`fdPublic`|Указывает, что поле доступно для всех типов с областью видимости данной области.|  
+|`fdFamORAssem`|Указывает, что поле доступно для производных классов и всеми типами в его сборке.|  
+|`fdPublic`|Указывает, что поле доступно для всех типов с областью видимости этой области.|  
 |`fdStatic`|Указывает, что поле является членом его типа, а не членом экземпляра.|  
-|`fdInitOnly`|Указывает, что поле нельзя изменить после его инициализации.|  
+|`fdInitOnly`|Указывает, что поле нельзя изменить после инициализации.|  
 |`fdLiteral`|Указывает, что значение поля является константой во время компиляции.|  
 |`fdNotSerialized`|Указывает, что поле не сериализуется, если его тип является удаленным.|  
-|`fdSpecialName`|Указывает, что поле является специальным и указывает его имя как.|  
-|`fdPinvokeImpl`|Указывает, что реализация поля перенаправляется посредством PInvoke.|  
+|`fdSpecialName`|Указывает, что поле является специальным, и указывает его имя как.|  
+|`fdPinvokeImpl`|Указывает, что реализация поля перенаправляется через PInvoke.|  
 |`fdReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
-|`fdRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должны проверить кодировку имени.|  
+|`fdRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должна проверять кодировку имени.|  
 |`fdHasFieldMarshal`|Указывает, что поле содержит сведения о маршалинге.|  
 |`fdHasDefault`|Указывает, что поле имеет значение по умолчанию.|  
 |`fdHasFieldRVA`|Указывает, что поле имеет относительный виртуальный адрес.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

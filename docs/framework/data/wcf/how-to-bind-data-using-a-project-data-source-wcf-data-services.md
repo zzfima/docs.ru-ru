@@ -1,5 +1,5 @@
 ---
-title: Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)
+title: Как выполнить Привязать данные с помощью источника данных проекта (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540758"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Как выполнить Привязать данные с помощью источника данных проекта (службы данных WCF)
 
 Можно создать источники данных, основанные на созданных объектов данных в клиентском приложении службы WCF Data Services. При добавлении ссылки на службу данных с помощью **Add Service Reference** диалоговое окно, источник данных проекта создается вместе с сформированных клиентских классов данных. Для каждого набора сущностей, предоставляемого службой данных, создается один источник данных. Можно создавать формы, отображающие данные из службы путем перетаскивания этих элементов источника данных из **источников данных** на окно конструктора. Эти элементы становятся элементами управления, привязанными к источнику данных. Во время выполнения, этот источник данных привязывается к экземпляру <xref:System.Data.Services.Client.DataServiceCollection%601> класс, который заполняется объектами, которые возвращаются запросом к службе данных. Дополнительные сведения см. в разделе [привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216533"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Использование источника данных проекта в окне WPF
 
-1.  В Visual Studio в проекте WPF, добавьте ссылку на службу данных Northwind. Дополнительные сведения см. в разделе [как: Добавление ссылки на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  В Visual Studio в проекте WPF, добавьте ссылку на службу данных Northwind. Дополнительные сведения см. в разделе [Как Добавьте ссылку на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  В **источников данных** окне разверните `Customers` узел в **NorthwindEntities** источника данных проекта.
 

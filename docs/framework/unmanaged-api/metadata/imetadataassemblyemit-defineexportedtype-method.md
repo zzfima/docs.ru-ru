@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624353"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Метод IMetaDataAssemblyEmit::DefineExportedType
 Создает структуру `ExportedType`, содержащую метаданные для указанного экспортированного типа, и возвращает связанный токен метаданных.  
@@ -41,39 +41,39 @@ HRESULT DefineExportedType (
   
 #### <a name="parameters"></a>Параметры  
  `szName`  
- [in] Имя типа должны быть экспортированы. Версии 1.1 среды common language runtime имя экспортируемого типа должно точно соответствовать имени в `TypeDef` для типа.  
+ [in] Имя типа должны быть экспортированы. Для версии 1.1 среда CLR, имя экспортируемого типа должен точно соответствовать имени, заданному в `TypeDef` для типа.  
   
  `tkImplementation`  
- [in] Токен, указав, где реализуется экспортируемого типа. Ниже приведены допустимые значения и их связанные значения.  
+ [in] Токен, указав, где реализуется экспортированный тип. Ниже приведены допустимые значения и их связанные значения.  
   
 -   `mdFile` Тип реализуется в другой файл в этой сборке.  
   
 -   `mdAssemblyRef` Тип реализуется в другой сборке.  
   
--   `mdExportedTYpe` Тип, вложенный в другой тип.  
+-   `mdExportedTYpe` Тип является вложенным в другой тип.  
   
 -   `mdFileNil` Тип находится в тот же файл манифеста и не является вложенным типом.  
   
  `tkTypeDef`  
- [in] Токен метаданных, указывающий тип для экспорта. Это значение, введенное в `TypeDef` таблице в файле, который реализует тип элемента и используется только в том случае, если этот файл находится в этой сборке.  
+ [in] Токен метаданных, указывающий тип для экспорта. Это значение вводится в `TypeDef` таблицы в файл, который реализует тип элемента и используется только в том случае, если этот файл находится в этой сборке.  
   
  `dwExportedTypeFlags`  
- [in] Побитовое сочетание [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значений перечисления, определяющих параметры свойств для экспортируемого типа.  
+ [in] Побитовое сочетание [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значений перечисления, определяющих значения свойств для экспортируемого типа.  
   
  `pmdct`  
- [out] Указатель на токен возвращенные метаданные, указывающее экспортируемого типа.  
+ [out] Указатель на токен метаданных, возвращаемых, указывающее экспортированный тип.  
   
 ## <a name="remarks"></a>Примечания  
- `ExportedType` Структуру метаданных должны быть определены для каждого типа, представленного этой сборке и реализуемую в модуле, отличном от того, содержащем манифест.  
+ `ExportedType` Структура метаданных должны быть определены для каждого типа, представленного этой сборки и который реализуется в модуле, отличном от того, содержащем манифест.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

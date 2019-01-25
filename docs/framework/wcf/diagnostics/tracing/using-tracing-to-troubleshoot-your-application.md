@@ -2,12 +2,12 @@
 title: Использование трассировки для устранения неполадок приложения
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6aa4c91014987d0d671e1fb3727cceeafa5bdd6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562873"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Использование трассировки для устранения неполадок приложения
 Содержит разделы, посвященные использованию трассировки для устранения неполадок приложений.  
@@ -20,18 +20,18 @@ ms.locfileid: "33809161"
  Описание использования средства просмотра трассировки службы для просмотра, определения взаимосвязей и анализа данных трассировки.  
   
  [Значимые трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Список основных трассировок, создаваемых в WCF.  
+ Список основных трассировок, создаваемых WCF.  
   
  [Отладка в клиенте](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  Позволяет отлаживать приложение на клиентах.  
   
  [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Описание трассировки, используется для сценариев E2E WCF, например, синхронный wsHttp запросов ответов и асинхронных запросов одностороннего TCP.  
+ Описание трассировок, используемых в сценариях E2E WCF, например, -ответах wsHttp синхронных и асинхронных односторонних TCP-запросах.  
   
  [Создание трассировки пользовательского кода](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Описание способа программной выдачи трассировок в пользовательском коде, что позволяет заранее создавать данные инструментирования для их последующего использования в диагностических целях совместно с трассировками WCF.  
   
-## <a name="see-also"></a>См. также  
- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Сквозная трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>См. также
+- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Сквозная трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
