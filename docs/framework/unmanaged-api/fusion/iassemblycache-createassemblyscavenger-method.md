@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fe1857e0eb22ee75cda6f612fbc0e1c699a3bde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 29ccbe5ef89440c9f8c953ce47b4e351f6ca329b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493132"
 ---
-# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="3e8a2-102">Метод IAssemblyCache::CreateAssemblyScavenger</span><span class="sxs-lookup"><span data-stu-id="3e8a2-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
-<span data-ttu-id="3e8a2-103">Зарезервировано для внутреннего использования технологией fusion.</span><span class="sxs-lookup"><span data-stu-id="3e8a2-103">Reserved for internal use by the fusion technology.</span></span>  
+# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="a4f76-102">Метод IAssemblyCache::CreateAssemblyScavenger</span><span class="sxs-lookup"><span data-stu-id="a4f76-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
+<span data-ttu-id="a4f76-103">Зарезервировано для внутреннего использования технологией fusion.</span><span class="sxs-lookup"><span data-stu-id="a4f76-103">Reserved for internal use by the fusion technology.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e8a2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3e8a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4f76-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a4f76-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyScavenger (  
@@ -35,16 +35,16 @@ HRESULT CreateAssemblyScavenger (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3e8a2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3e8a2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a4f76-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a4f76-105">Parameters</span></span>  
  `ppUnkReserved`  
- <span data-ttu-id="3e8a2-106">[out] Возвращенный `IUnknown` указателя.</span><span class="sxs-lookup"><span data-stu-id="3e8a2-106">[out] The returned `IUnknown` pointer.</span></span>  
+ <span data-ttu-id="a4f76-106">[out] Возвращенный `IUnknown` указатель.</span><span class="sxs-lookup"><span data-stu-id="a4f76-106">[out] The returned `IUnknown` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e8a2-107">Требования</span><span class="sxs-lookup"><span data-stu-id="3e8a2-107">Requirements</span></span>  
- <span data-ttu-id="3e8a2-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e8a2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4f76-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a4f76-107">Requirements</span></span>  
+ <span data-ttu-id="a4f76-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4f76-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e8a2-109">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="3e8a2-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="a4f76-109">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a4f76-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="3e8a2-110">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e8a2-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a4f76-110">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4f76-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e8a2-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3e8a2-111">See Also</span></span>  
- [<span data-ttu-id="3e8a2-112">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="3e8a2-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a4f76-111">См. также</span><span class="sxs-lookup"><span data-stu-id="a4f76-111">See also</span></span>
+- [<span data-ttu-id="a4f76-112">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="a4f76-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

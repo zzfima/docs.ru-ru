@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491471"
 ---
-# <a name="corparamattr-enumeration"></a><span data-ttu-id="eb0ed-102">Перечисление CorParamAttr</span><span class="sxs-lookup"><span data-stu-id="eb0ed-102">CorParamAttr Enumeration</span></span>
-<span data-ttu-id="eb0ed-103">Содержит значения, описывающие метаданные параметра метода.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-103">Contains values that describe the metadata of a method parameter.</span></span>  
+# <a name="corparamattr-enumeration"></a><span data-ttu-id="4be7b-102">Перечисление CorParamAttr</span><span class="sxs-lookup"><span data-stu-id="4be7b-102">CorParamAttr Enumeration</span></span>
+<span data-ttu-id="4be7b-103">Содержит значения, описывающие метаданные параметра метода.</span><span class="sxs-lookup"><span data-stu-id="4be7b-103">Contains values that describe the metadata of a method parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb0ed-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eb0ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4be7b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4be7b-104">Syntax</span></span>  
   
 ```  
 typedef enum CorParamAttr {  
@@ -44,24 +44,24 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="eb0ed-105">Участники</span><span class="sxs-lookup"><span data-stu-id="eb0ed-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4be7b-105">Участники</span><span class="sxs-lookup"><span data-stu-id="4be7b-105">Members</span></span>  
   
-|<span data-ttu-id="eb0ed-106">Член</span><span class="sxs-lookup"><span data-stu-id="eb0ed-106">Member</span></span>|<span data-ttu-id="eb0ed-107">Описание</span><span class="sxs-lookup"><span data-stu-id="eb0ed-107">Description</span></span>|  
+|<span data-ttu-id="4be7b-106">Член</span><span class="sxs-lookup"><span data-stu-id="4be7b-106">Member</span></span>|<span data-ttu-id="4be7b-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="4be7b-107">Description</span></span>|  
 |------------|-----------------|  
-|`pdIn`|<span data-ttu-id="eb0ed-108">Указывает, что этот параметр передается в вызов метода.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-108">Specifies that the parameter is passed into the method call.</span></span>|  
-|`pdOut`|<span data-ttu-id="eb0ed-109">Указывает, что передается параметр из метода возврата.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-109">Specifies that the parameter is passed from the method return.</span></span>|  
-|`pdOptional`|<span data-ttu-id="eb0ed-110">Указывает, что параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-110">Specifies that the parameter is optional.</span></span>|  
-|`pdReservedMask`|<span data-ttu-id="eb0ed-111">Зарезервировано для внутреннего использования средой CLR.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-111">Reserved for internal use by the common language runtime.</span></span>|  
-|`pdHasDefault`|<span data-ttu-id="eb0ed-112">Указывает, что параметр имеет значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-112">Specifies that the parameter has a default value.</span></span>|  
-|`pdHasFieldMarshal`|<span data-ttu-id="eb0ed-113">Указывает, что параметр содержит сведения о маршалинге.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-113">Specifies that the parameter has marshaling information.</span></span>|  
-|`pdUnused`|<span data-ttu-id="eb0ed-114">Не используется.</span><span class="sxs-lookup"><span data-stu-id="eb0ed-114">Unused.</span></span>|  
+|`pdIn`|<span data-ttu-id="4be7b-108">Указывает, что этот параметр передается в вызов метода.</span><span class="sxs-lookup"><span data-stu-id="4be7b-108">Specifies that the parameter is passed into the method call.</span></span>|  
+|`pdOut`|<span data-ttu-id="4be7b-109">Указывает, что этот параметр передается методом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="4be7b-109">Specifies that the parameter is passed from the method return.</span></span>|  
+|`pdOptional`|<span data-ttu-id="4be7b-110">Указывает, что параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="4be7b-110">Specifies that the parameter is optional.</span></span>|  
+|`pdReservedMask`|<span data-ttu-id="4be7b-111">Зарезервировано для внутреннего использования средой CLR.</span><span class="sxs-lookup"><span data-stu-id="4be7b-111">Reserved for internal use by the common language runtime.</span></span>|  
+|`pdHasDefault`|<span data-ttu-id="4be7b-112">Указывает, что параметр имеет значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4be7b-112">Specifies that the parameter has a default value.</span></span>|  
+|`pdHasFieldMarshal`|<span data-ttu-id="4be7b-113">Указывает, что параметр содержит сведения о маршалинге.</span><span class="sxs-lookup"><span data-stu-id="4be7b-113">Specifies that the parameter has marshaling information.</span></span>|  
+|`pdUnused`|<span data-ttu-id="4be7b-114">Не используется.</span><span class="sxs-lookup"><span data-stu-id="4be7b-114">Unused.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eb0ed-115">Требования</span><span class="sxs-lookup"><span data-stu-id="eb0ed-115">Requirements</span></span>  
- <span data-ttu-id="eb0ed-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb0ed-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4be7b-115">Требования</span><span class="sxs-lookup"><span data-stu-id="4be7b-115">Requirements</span></span>  
+ <span data-ttu-id="4be7b-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4be7b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb0ed-117">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="eb0ed-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="4be7b-117">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4be7b-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="eb0ed-118">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb0ed-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4be7b-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4be7b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb0ed-119">См. также</span><span class="sxs-lookup"><span data-stu-id="eb0ed-119">See Also</span></span>  
- [<span data-ttu-id="eb0ed-120">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="eb0ed-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="4be7b-119">См. также</span><span class="sxs-lookup"><span data-stu-id="4be7b-119">See also</span></span>
+- [<span data-ttu-id="4be7b-120">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="4be7b-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

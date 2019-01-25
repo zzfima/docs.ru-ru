@@ -1,21 +1,21 @@
 ---
-title: 'Как: Создание текстовых файлов из XML-кода (Visual Basic)'
+title: Как выполнить Создание текстовых файлов из XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 6b9e816fc61a583e8ea07045127b895480c03147
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd3c8b0f9faf0b465d9b0f6a5c17ceef62ddb285
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687728"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="2edfa-102">Как: Создание текстовых файлов из XML-кода (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2edfa-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
-<span data-ttu-id="2edfa-103">В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.</span><span class="sxs-lookup"><span data-stu-id="2edfa-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="03954-102">Как выполнить Создание текстовых файлов из XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03954-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="03954-103">В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.</span><span class="sxs-lookup"><span data-stu-id="03954-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2edfa-104">Пример</span><span class="sxs-lookup"><span data-stu-id="2edfa-104">Example</span></span>  
- <span data-ttu-id="2edfa-105">Версия Visual Basic использует процедурный код для статистической обработки коллекции строк в одну строку.</span><span class="sxs-lookup"><span data-stu-id="2edfa-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
+## <a name="example"></a><span data-ttu-id="03954-104">Пример</span><span class="sxs-lookup"><span data-stu-id="03954-104">Example</span></span>  
+ <span data-ttu-id="03954-105">Версии Visual Basic использует процедурный код для статистической обработки коллекции строк в одну строку.</span><span class="sxs-lookup"><span data-stu-id="03954-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- <span data-ttu-id="2edfa-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2edfa-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="03954-106">В этом примере используется следующий XML-документ: [Пример XML-файла: Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="03954-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -42,7 +42,7 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="2edfa-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="2edfa-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="03954-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="03954-107">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -51,5 +51,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2edfa-108">См. также</span><span class="sxs-lookup"><span data-stu-id="2edfa-108">See Also</span></span>  
- [<span data-ttu-id="2edfa-109">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2edfa-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="03954-108">См. также</span><span class="sxs-lookup"><span data-stu-id="03954-108">See also</span></span>
+- [<span data-ttu-id="03954-109">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03954-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

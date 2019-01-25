@@ -8,61 +8,61 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672271"
 ---
-# <a name="as-clause-visual-basic"></a><span data-ttu-id="a6a3a-102">Предложение As (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6a3a-102">As Clause (Visual Basic)</span></span>
-<span data-ttu-id="a6a3a-103">Представляет `As` предложение, которое определяет тип данных в операторе объявления или список ограничений для параметра универсального типа.</span><span class="sxs-lookup"><span data-stu-id="a6a3a-103">Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.</span></span>  
+# <a name="as-clause-visual-basic"></a><span data-ttu-id="2490a-102">Предложение As (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2490a-102">As Clause (Visual Basic)</span></span>
+<span data-ttu-id="2490a-103">Представляет `As` предложение, которое определяет тип данных в операторе объявления или список ограничений для параметра универсального типа.</span><span class="sxs-lookup"><span data-stu-id="2490a-103">Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a6a3a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="a6a3a-104">Remarks</span></span>  
- <span data-ttu-id="a6a3a-105">Ключевое слово `As` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="a6a3a-105">The `As` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2490a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="2490a-104">Remarks</span></span>  
+ <span data-ttu-id="2490a-105">Ключевое слово `As` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="2490a-105">The `As` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="a6a3a-106">Предложение Aggregate</span><span class="sxs-lookup"><span data-stu-id="a6a3a-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="2490a-106">Предложение Aggregate</span><span class="sxs-lookup"><span data-stu-id="2490a-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
- [<span data-ttu-id="a6a3a-107">Оператор Class</span><span class="sxs-lookup"><span data-stu-id="a6a3a-107">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="2490a-107">Оператор Class</span><span class="sxs-lookup"><span data-stu-id="2490a-107">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [<span data-ttu-id="a6a3a-108">Оператор Const</span><span class="sxs-lookup"><span data-stu-id="a6a3a-108">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="2490a-108">Оператор Const</span><span class="sxs-lookup"><span data-stu-id="2490a-108">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [<span data-ttu-id="a6a3a-109">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="a6a3a-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="2490a-109">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="2490a-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [<span data-ttu-id="a6a3a-110">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="a6a3a-110">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="2490a-110">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="2490a-110">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [<span data-ttu-id="a6a3a-111">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="a6a3a-111">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="2490a-111">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="2490a-111">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [<span data-ttu-id="a6a3a-112">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="a6a3a-112">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="2490a-112">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="2490a-112">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [<span data-ttu-id="a6a3a-113">Оператор Event</span><span class="sxs-lookup"><span data-stu-id="a6a3a-113">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="2490a-113">Оператор Event</span><span class="sxs-lookup"><span data-stu-id="2490a-113">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [<span data-ttu-id="a6a3a-114">Для... Next-операторы</span><span class="sxs-lookup"><span data-stu-id="a6a3a-114">For...Next Statements</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="2490a-114">Для... Следующие инструкции</span><span class="sxs-lookup"><span data-stu-id="2490a-114">For...Next Statements</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [<span data-ttu-id="a6a3a-115">Для каждого... Next-операторы</span><span class="sxs-lookup"><span data-stu-id="a6a3a-115">For Each...Next Statements</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="2490a-115">Для каждого... Следующие инструкции</span><span class="sxs-lookup"><span data-stu-id="2490a-115">For Each...Next Statements</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [<span data-ttu-id="a6a3a-116">Предложение From</span><span class="sxs-lookup"><span data-stu-id="a6a3a-116">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="2490a-116">Предложение From</span><span class="sxs-lookup"><span data-stu-id="2490a-116">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [<span data-ttu-id="a6a3a-117">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="a6a3a-117">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="2490a-117">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="2490a-117">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="a6a3a-118">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="a6a3a-118">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="2490a-118">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="2490a-118">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [<span data-ttu-id="a6a3a-119">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="a6a3a-119">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="2490a-119">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="2490a-119">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [<span data-ttu-id="a6a3a-120">Оператор Statement</span><span class="sxs-lookup"><span data-stu-id="a6a3a-120">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="2490a-120">Оператор Statement</span><span class="sxs-lookup"><span data-stu-id="2490a-120">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [<span data-ttu-id="a6a3a-121">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="a6a3a-121">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="2490a-121">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="2490a-121">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="a6a3a-122">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="a6a3a-122">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="2490a-122">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="2490a-122">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [<span data-ttu-id="a6a3a-123">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="a6a3a-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="2490a-123">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="2490a-123">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [<span data-ttu-id="a6a3a-124">Конструкция TRY... CATCH... Finally-операторы</span><span class="sxs-lookup"><span data-stu-id="a6a3a-124">Try...Catch...Finally Statements</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="2490a-124">Try... CATCH... Операторы finally</span><span class="sxs-lookup"><span data-stu-id="2490a-124">Try...Catch...Finally Statements</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a6a3a-125">См. также</span><span class="sxs-lookup"><span data-stu-id="a6a3a-125">See Also</span></span>  
- [<span data-ttu-id="a6a3a-126">Практическое руководство. Создание переменной</span><span class="sxs-lookup"><span data-stu-id="a6a3a-126">How to: Create a New Variable</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [<span data-ttu-id="a6a3a-127">Типы данных</span><span class="sxs-lookup"><span data-stu-id="a6a3a-127">Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [<span data-ttu-id="a6a3a-128">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="a6a3a-128">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [<span data-ttu-id="a6a3a-129">Список типов</span><span class="sxs-lookup"><span data-stu-id="a6a3a-129">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
- [<span data-ttu-id="a6a3a-130">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a6a3a-130">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [<span data-ttu-id="a6a3a-131">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="a6a3a-131">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="2490a-125">См. также</span><span class="sxs-lookup"><span data-stu-id="2490a-125">See also</span></span>
+- [<span data-ttu-id="2490a-126">Практическое руководство. Создание новой переменной</span><span class="sxs-lookup"><span data-stu-id="2490a-126">How to: Create a New Variable</span></span>](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [<span data-ttu-id="2490a-127">Типы данных</span><span class="sxs-lookup"><span data-stu-id="2490a-127">Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [<span data-ttu-id="2490a-128">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="2490a-128">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="2490a-129">Список типов</span><span class="sxs-lookup"><span data-stu-id="2490a-129">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
+- [<span data-ttu-id="2490a-130">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2490a-130">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="2490a-131">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="2490a-131">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

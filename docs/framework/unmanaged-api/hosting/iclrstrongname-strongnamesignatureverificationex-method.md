@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da9b0fd4fd7c7eadf09f0b76a17e60b1840fdf48
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ad25603f5acd32aa21192f86364976eb93d23540
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717549"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="db3d5-102">Метод ICLRStrongName::StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="db3d5-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
-<span data-ttu-id="db3d5-103">Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени.</span><span class="sxs-lookup"><span data-stu-id="db3d5-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="1eb2e-102">Метод ICLRStrongName::StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="1eb2e-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
+<span data-ttu-id="1eb2e-103">Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db3d5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="db3d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1eb2e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1eb2e-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -37,31 +37,31 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db3d5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="db3d5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1eb2e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1eb2e-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="db3d5-106">[in] Путь к переносимого исполняемого файла (.exe или .dll) для сборки, которую требуется проверить.</span><span class="sxs-lookup"><span data-stu-id="db3d5-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="1eb2e-106">[in] Путь к переносимого исполняемого файла (.exe или .dll) для сборки, которую требуется проверить.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="db3d5-107">[in] `true` будет выполнить проверку подлинности, даже если это необходимо переопределить параметры реестра, в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="db3d5-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="1eb2e-107">[in] `true` будет выполнить проверку подлинности, даже если это необходимо переопределить параметры реестра, в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="db3d5-108">[out] `true` при подписи строгого имени проверенного; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="db3d5-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="db3d5-109">`pfWasVerified` задается значение `false` Если проверка пройдена успешно из-за параметров реестра.</span><span class="sxs-lookup"><span data-stu-id="db3d5-109">`pfWasVerified` is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="1eb2e-108">[out] `true` при подписи строгого имени проверенного; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="1eb2e-109">`pfWasVerified` задается значение `false` Если проверка пройдена успешно из-за параметров реестра.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-109">`pfWasVerified` is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db3d5-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="db3d5-110">Return Value</span></span>  
- <span data-ttu-id="db3d5-111">`S_OK` Если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="db3d5-111">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1eb2e-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="1eb2e-110">Return Value</span></span>  
+ <span data-ttu-id="1eb2e-111">`S_OK` Если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="1eb2e-111">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db3d5-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="db3d5-112">Remarks</span></span>  
- <span data-ttu-id="db3d5-113">[ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) метод предоставляет возможность, аналогичную [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="db3d5-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="db3d5-114">Однако второй входной параметр и параметр вывода для [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) относятся к типу `BOOLEAN` вместо `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="db3d5-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1eb2e-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="1eb2e-112">Remarks</span></span>  
+ <span data-ttu-id="1eb2e-113">[ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) метод предоставляет возможность, аналогичную [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="1eb2e-114">Однако второй входной параметр и параметр вывода для [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) относятся к типу `BOOLEAN` вместо `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="1eb2e-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db3d5-115">Требования</span><span class="sxs-lookup"><span data-stu-id="db3d5-115">Requirements</span></span>  
- <span data-ttu-id="db3d5-116">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db3d5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1eb2e-115">Требования</span><span class="sxs-lookup"><span data-stu-id="1eb2e-115">Requirements</span></span>  
+ <span data-ttu-id="1eb2e-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1eb2e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db3d5-117">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="db3d5-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1eb2e-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1eb2e-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="db3d5-118">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db3d5-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1eb2e-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1eb2e-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="db3d5-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db3d5-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1eb2e-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1eb2e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db3d5-120">См. также</span><span class="sxs-lookup"><span data-stu-id="db3d5-120">See Also</span></span>  
- [<span data-ttu-id="db3d5-121">Метод StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="db3d5-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [<span data-ttu-id="db3d5-122">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="db3d5-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1eb2e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="1eb2e-120">See also</span></span>
+- [<span data-ttu-id="1eb2e-121">Метод StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="1eb2e-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="1eb2e-122">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="1eb2e-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

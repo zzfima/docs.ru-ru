@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671230"
 ---
-# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="c4c9a-102">Перечисление CorDebugNGenPolicy</span><span class="sxs-lookup"><span data-stu-id="c4c9a-102">CorDebugNGenPolicy Enumeration</span></span>
-<span data-ttu-id="c4c9a-103">Предоставляет значение, который определяет, загружает ли отладчик образы в машинном коде (NGen) из кэша образов в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="c4c9a-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
+# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="0ea12-102">Перечисление CorDebugNGenPolicy</span><span class="sxs-lookup"><span data-stu-id="0ea12-102">CorDebugNGenPolicy Enumeration</span></span>
+<span data-ttu-id="0ea12-103">Предоставляет значение, который определяет, загружает ли отладчик образы в машинном коде (NGen) из кэша образов в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="0ea12-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4c9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c4c9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ea12-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0ea12-104">Syntax</span></span>  
   
 ```cpp
 enum CorDebugNGENPolicy {  
@@ -36,23 +36,23 @@ enum CorDebugNGENPolicy {
 } CorDebugNGENPolicy;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c4c9a-105">Участники</span><span class="sxs-lookup"><span data-stu-id="c4c9a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0ea12-105">Участники</span><span class="sxs-lookup"><span data-stu-id="0ea12-105">Members</span></span>  
   
-|<span data-ttu-id="c4c9a-106">Имя члена</span><span class="sxs-lookup"><span data-stu-id="c4c9a-106">Member name</span></span>|<span data-ttu-id="c4c9a-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c4c9a-107">Description</span></span>|  
+|<span data-ttu-id="0ea12-106">Имя члена</span><span class="sxs-lookup"><span data-stu-id="0ea12-106">Member name</span></span>|<span data-ttu-id="0ea12-107">Описание</span><span class="sxs-lookup"><span data-stu-id="0ea12-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|<span data-ttu-id="c4c9a-108">В [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] отключена приложения, использование образов из локального кэша машинных образов.</span><span class="sxs-lookup"><span data-stu-id="c4c9a-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="c4c9a-109">В приложении рабочего стола этот параметр не оказывает влияния.</span><span class="sxs-lookup"><span data-stu-id="c4c9a-109">In a desktop app, this setting has no effect.</span></span>|  
+|`DISABLE_LOCAL_NIC`|<span data-ttu-id="0ea12-108">В [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] приложению, использование образов из локального кэша машинных образов отключен.</span><span class="sxs-lookup"><span data-stu-id="0ea12-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="0ea12-109">В настольном приложении этот параметр не влияет.</span><span class="sxs-lookup"><span data-stu-id="0ea12-109">In a desktop app, this setting has no effect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4c9a-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="c4c9a-110">Remarks</span></span>  
- <span data-ttu-id="c4c9a-111">`CorDebugNGENPolicy` Перечисление используется методом [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="c4c9a-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="c4c9a-112">Отключение использования образы из локального кэша машинных образов предоставляет для более согласованной отладки за счет того, что отладчик загружает отлаживаемых JIT-компиляции вместо изображения оптимизированные машинные образы.</span><span class="sxs-lookup"><span data-stu-id="c4c9a-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ea12-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="0ea12-110">Remarks</span></span>  
+ <span data-ttu-id="0ea12-111">`CorDebugNGENPolicy` Перечисление, используемое [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="0ea12-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="0ea12-112">Отключение использования образов из локального кэша машинных образов предоставляет для согласованности, гарантируя, что отладчик загружает отлаживаемых изображений, JIT-компиляции, вместо оптимизированные машинные образы.</span><span class="sxs-lookup"><span data-stu-id="0ea12-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4c9a-113">Требования</span><span class="sxs-lookup"><span data-stu-id="c4c9a-113">Requirements</span></span>  
- <span data-ttu-id="c4c9a-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4c9a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ea12-113">Требования</span><span class="sxs-lookup"><span data-stu-id="0ea12-113">Requirements</span></span>  
+ <span data-ttu-id="0ea12-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ea12-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4c9a-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4c9a-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0ea12-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0ea12-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c4c9a-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4c9a-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0ea12-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ea12-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c4c9a-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4c9a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0ea12-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ea12-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4c9a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c4c9a-118">See Also</span></span>  
- [<span data-ttu-id="c4c9a-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="c4c9a-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="0ea12-118">См. также</span><span class="sxs-lookup"><span data-stu-id="0ea12-118">See also</span></span>
+- [<span data-ttu-id="0ea12-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="0ea12-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
