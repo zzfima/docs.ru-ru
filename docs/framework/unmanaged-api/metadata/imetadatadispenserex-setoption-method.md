@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59d0b040a45b4d56234028778ccc78afd84d098f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524407"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Метод IMetaDataDispenserEx::SetOption
-Устанавливает для указанного параметра заданное значение для текущей области метаданных. Параметр определяет способ обработки вызовов текущей области метаданных.  
+Задает указанному параметру заданное значение для текущей области метаданных. Параметр определяет, как обрабатываются вызовы к текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,36 +41,36 @@ HRESULT SetOption (
  [in] Указатель на идентификатор GUID, который указывает параметр должен иметь значение.  
   
  `pValue`  
- [in] Значение, используемое для задания параметра. Тип этого значения должен быть разновидностью указанного параметра.  
+ [in] Значение, используемое для задания параметра. Тип этого значения должен быть вариант указанного параметра типа.  
   
 ## <a name="remarks"></a>Примечания  
- В следующей таблице перечислены доступные идентификаторы GUID, `optionId` может указывать параметр и соответствующие допустимые значения для `pValue` параметра.  
+ В следующей таблице перечислены доступные идентификаторы GUID, `optionId` может указывать параметр и его соответствующий допустимых значений для `pValue` параметра.  
   
-|GUID|Описание|`pValue` Параметр|  
+|Идентификатор GUID|Описание|`pValue` Параметр|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|Определяет, какие элементы проверяются на наличие дубликатов. Каждый раз при вызове [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) метод, который создает новый элемент, вы можете запросить метод для проверки, является ли элемент уже существует в текущей области. Например, можно проверить наличие `mdMethodDef` элементы; в этом случае при вызове [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), она проверяет, что метод уже существует в текущей области. Эта проверка используется ключ, который однозначно определяет данный метод: родительский тип, имя и подпись.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) перечисления.|  
-|MetaDataRefToDefCheck|Элементы управления, которые ссылки на элементы, преобразуемые в определения. По умолчанию ядро метаданных будет оптимизировать код, преобразование ссылочного элемента его определение, если указанный элемент, фактически определенных в текущей области.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) перечисления.|  
-|MetaDataNotificationForTokenMovement|Задает, какой токен, происходящее при слиянии метаданных создает обратные вызовы. Используйте [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) метод, чтобы установить вашей [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) интерфейса.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorNotificationForTokenMovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md) перечисления.|  
-|MetaDataSetENC|Управляет поведением edit and continue (ENC). Одновременно можно задать только один режим работы.|Должен быть разновидностью UI4 и должен содержать значение [CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md) перечисления. Значение не является битовой маской.|  
-|MetaDataErrorIfEmitOutOfOrder|Элементы управления, какие ошибки создается out порядок создания обратных вызовов. Выдача метаданных по порядку не является неустранимой; Однако если вы предоставлять метаданные в порядке их предпочитаемую ядром метаданных, метаданные является более компактным и таким образом можно повысить эффективность поиска. Используйте `IMetaDataEmit::SetHandler` метод, чтобы установить вашей [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) интерфейса.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md) перечисления.|  
-|MetaDataImportOption|Определяет, какие типы элементов, которые были удалены в процессе ENC извлекаются при помощи перечислителя.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [перечисление CorImportOptions](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md) перечисления.|  
-|MetaDataThreadSafetyOptions|Управляет ли ядро метаданных получает модулей чтения/записи блокировки, обеспечивая безопасность потоков. По умолчанию в ядре предполагается, что доступа является однопоточным вызывающим объектом, поэтому блокировки не создаются. Клиенты отвечают за обслуживание надлежащего выполнения синхронизации потока при использовании API метаданных.|Должен быть разновидностью UI4 и должен содержать значение [CorThreadSafetyOptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md) перечисления. Значение не является битовой маской.|  
-|MetaDataGenerateTCEAdapters|Определяет, должна ли программа импорта библиотек типов создавать адаптеры тесно связанных событий (TCE) для контейнеров точек подключения COM.|Должен быть разновидностью типа BOOL. Если `pValue` равно `true`, программа импорта библиотек типов создает адаптеры TCE.|  
-|MetaDataTypeLibImportNamespace|Задает другие пространства имен для библиотеки типов, импортируемой.|Необходимо значение null или является разновидностью типа BSTR. Если `pValue` имеет значение null, текущее пространство имен имеет значение null; в противном случае, текущего пространства имен имеет значение в строку, которая хранится в разновидности типа BSTR.|  
-|MetaDataLinkerOptions|Определяет, должен ли компоновщик создать сборку или файл модуля .NET Framework.|Должен быть разновидностью UI4 и должен состоять из комбинации значений [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md) перечисления.|  
-|MetaDataRuntimeVersion|Указывает версию среды CLR, для которого был создан этот образ. Версия сохраняется в виде строки, например «v1.0.3705».|Должно быть значение null, значение VT_EMPTY или разновидностью BSTR. Если `pValue` является null, для версии среды выполнения устанавливается значение null. Если `pValue` равно VT_EMPTY, версия устанавливается в значение по умолчанию, которое выводится из версии Mscorwks.dll, в течение которого выполняется код метаданных. В противном случае — версия среды выполнения имеет значение в строку, которая хранится в разновидности типа BSTR.|  
-|MetaDataMergerOptions|Задает параметры для слияния метаданных.|Должен быть разновидностью UI4 и должен состоять из комбинации значений `MergeFlags` перечисления, который описан в файле CorHdr.h.|  
-|MetaDataPreserveLocalRefs|Отключение оптимизации локальных ссылок в определения.|Должен состоять из комбинации значений [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) перечисления.|  
+|MetaDataCheckDuplicatesFor|Определяет, какие элементы проверяются на наличие дубликатов. Каждый раз при вызове [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) метод, который создает новый элемент, вы можете задавать способ проверить, существует ли уже элемент в текущей области. Например, можно проверить существование `mdMethodDef` элементов; в этом случае при вызове [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), он проверит, что метод уже существует в текущей области. Эта проверка используется ключ, который однозначно определяет данный метод: родительский тип, имя и подпись.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) перечисления.|  
+|MetaDataRefToDefCheck|Определяет, какие товары преобразуются в определения. По умолчанию подсистема метаданных будет оптимизировать код путем преобразования к его определению ссылочного элемента, если указанный элемент определен в текущей области.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) перечисления.|  
+|MetaDataNotificationForTokenMovement|Элементы управления, токена, происходящее во время слияния метаданных создавать обратные вызовы. Используйте [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) метод, чтобы установить ваш [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) интерфейс.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorNotificationForTokenMovement](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md) перечисления.|  
+|MetaDataSetENC|Управляет поведением изменить и продолжить "(ENC). Одновременно можно задать только один режим работы.|Должен быть разновидностью UI4 и должно содержать значение [CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md) перечисления. Значение не является битовой маской.|  
+|MetaDataErrorIfEmitOutOfOrder|Элементы управления, какие ошибки генерируется out порядке создавать обратные вызовы. Выдача метаданных по порядку не является неустранимой; Тем не менее если вы выпустить метаданных в порядке, который имеет больший приоритет, подсистемой метаданных, метаданных является более компактным и таким образом можно повысить эффективность поиска. Используйте `IMetaDataEmit::SetHandler` метод, чтобы установить ваш [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) интерфейс.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorErrorIfEmitOutOfOrder](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md) перечисления.|  
+|MetaDataImportOption|Определяет, какие виды элементов, которые были удалены во время ENC извлекаются путем перечислитель.|Должен быть разновидностью UI4 и должен содержать сочетание значений [перечисление CorImportOptions](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md) перечисления.|  
+|MetaDataThreadSafetyOptions|Управляет ли подсистема метаданных получает потоков чтения/записи блокировок, обеспечивая безопасность потоков. По умолчанию в ядре предполагается, что доступ является однопоточным вызывающим объектом, поэтому блокировки не создаются. Клиенты отвечают за обеспечение надлежащего выполнения синхронизации потока, при использовании API метаданных.|Должен быть разновидностью UI4 и должно содержать значение [CorThreadSafetyOptions](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md) перечисления. Значение не является битовой маской.|  
+|MetaDataGenerateTCEAdapters|Определяет, должна ли программа импорта библиотек типов создавать адаптеры тесно связанных событий (TCE) для контейнеров точек подключения COM.|Должен быть разновидностью типа BOOL. Если `pValue` присваивается `true`, программа импорта библиотек типов создает адаптеры TCE.|  
+|MetaDataTypeLibImportNamespace|Задает пространство имен не по умолчанию для библиотеки типов, импортируемой.|Должен быть либо значение null, либо вариант типа BSTR. Если `pValue` имеет значение null, текущее пространство имен имеет значение null; в противном случае, текущее пространство имен задается строка, которая хранится в разновидности типа BSTR.|  
+|MetaDataLinkerOptions|Определяет, должен ли компоновщик создать сборку или файл модуля .NET Framework.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorLinkerOptions](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md) перечисления.|  
+|MetaDataRuntimeVersion|Указывает версию среды CLR, относительно которой построена этот образ. Версия сохраняется в виде строки, например «v1.0.3705».|Должно быть значение null, значение VT_EMPTY или разновидностью BSTR. Если `pValue` имеет значение null, для версии среды выполнения устанавливается значение null. Если `pValue` — VT_EMPTY, версия будет присвоено значение по умолчанию, которое извлекается из версии "Mscorwks.dll", в течение которого выполняется код метаданных. В противном случае — ту версию среды выполнения присваивается строка, которая хранится в разновидности типа BSTR.|  
+|MetaDataMergerOptions|Задает параметры для слияния метаданных.|Должен быть разновидностью UI4 и должен содержать сочетание значений `MergeFlags` перечисления, который описан в файле CorHdr.h.|  
+|MetaDataPreserveLocalRefs|Отключение оптимизации локальные ссылки в определения.|Должен содержать сочетание значений [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) перечисления.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

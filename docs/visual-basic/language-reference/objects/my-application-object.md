@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 6eaf0c580c86b60db76cc6630f210b7c1474c681
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9c4073260fa0f43339c6f139b6dce92964c27db2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507410"
 ---
 # <a name="myapplication-object"></a>Объект My.Application
 Предоставляет свойства, методы и события, связанные с текущим приложением.  
@@ -28,8 +28,8 @@ ms.locfileid: "44084247"
   
  **Класс:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (базовый класс <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> включает элементы, доступные в консольных приложениях и его базовый класс <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> предоставляет элементы, которые доступны во всех проектах)  
   
- **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>См. также  
- [Объект My.Application.Info](../../../visual-basic/language-reference/objects/my-application-info-object.md)  
- [Объект My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md)
+## <a name="see-also"></a>См. также
+- [Объект My.Application.Info](../../../visual-basic/language-reference/objects/my-application-info-object.md)
+- [Объект My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md)

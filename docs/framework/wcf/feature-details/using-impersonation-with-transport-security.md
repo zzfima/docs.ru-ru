@@ -2,12 +2,12 @@
 title: Использование олицетворения при обеспечении безопасности транспорта
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 41670f36d459af49359cfc4add57cb59a49940d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532712"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Использование олицетворения при обеспечении безопасности транспорта
 *Олицетворение* — это способность серверного приложения принимать идентификацию клиента. Обычно службы используют олицетворение при проверке доступа к ресурсам. Серверное приложение выполняется с использованием учетной записи службы, но когда сервер принимает клиентское подключение, он олицетворяет клиента для выполнения проверки доступа с использованием учетных данных клиента. Безопасность транспорта - это механизм, используемый как для передачи учетных данных, так и для обеспечения безопасности связи с использованием этих учетных данных. Здесь описывается использование безопасности транспорта в Windows Communication Foundation (WCF) с возможностью олицетворения. Дополнительные сведения об олицетворении с использованием безопасности сообщений см. в разделе [делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -15,7 +15,7 @@ ms.locfileid: "50187914"
 ## <a name="five-impersonation-levels"></a>Пять уровней олицетворения  
  В безопасности транспорта используется пять уровней олицетворения, как описано в приведенной ниже таблице.  
   
-|Уровень олицетворения|Описание|  
+|Уровень олицетворения|Описание:|  
 |-------------------------|-----------------|  
 |Нет|Серверное приложение не пытается олицетворить клиент.|  
 |Anonymous|Серверное приложение может выполнять проверки доступа с использованием учетных данных клиента, но не получает никакой информации об идентификации клиента. Использовать этот уровень олицетворения имеет смысл только при обмене данными на компьютере, например по именованным каналам. Если уровень `Anonymous` используется при удаленном подключении, он повышается до уровня олицетворения "Identify".|  
@@ -54,8 +54,8 @@ ms.locfileid: "50187914"
   
  Дополнительные сведения о транспорте HTTP см. в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
-## <a name="see-also"></a>См. также  
- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Основные сведения о проверке подлинности HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a>См. также
+- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Практическое руководство. Олицетворение клиента в службе](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Основные сведения о проверке подлинности HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a0d796b9c507665ff3ba67153df4691f078e5c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543845"
 ---
 # <a name="corpubpublish-coclass"></a>Кокласс CorpubPublish
 Предоставляет интерфейсы для публикации сведений о доменах приложений и процессах.  
@@ -40,25 +40,25 @@ coclass CorpubPublish {
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
-|[Интерфейс ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Предоставляет методы для публикации сведений о процессах и доменах приложений в этих процессов.|  
-|[Интерфейс ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Представляет и предоставляет сведения о домен приложения в процессе.|  
+|[Интерфейс ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Предоставляет методы для публикации информации о процессах и домены приложений в этих процессах.|  
+|[Интерфейс ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Представляет и предоставляет сведения о домене приложения в процессе.|  
 |[Интерфейс ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Предоставляет методы, выполняющие перебор коллекции доменов приложений, которые в настоящее время существует внутри процесса.|  
 |[Интерфейс ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Представляет процесс, который выполняется на компьютере.|  
 |[Интерфейс ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Предоставляет методы, выполняющие перебор коллекции процессов, запущенных на компьютере.|  
   
 ## <a name="remarks"></a>Примечания  
- Типичный сценарий публикации подразумевает разработчик, которому необходимо произвести отладку управляемого кода, запущенного на компьютере в домене приложения. Среда размещения может выполняться несколько доменов приложений внутри процесса. Разработчик хотел бы использовать графический пользовательский интерфейс или другими средствами, чтобы получить список всех процессов, запущенных на компьютере и выбирать процессы. Список должен включать всех доменов приложений внутри процессов, запущенных в управляемом коде. Разработчик можно определить домен определенное приложение и подключить отладчик к этому домену.  
+ Типичный сценарий публикации включает в себя разработчик, которому необходимо произвести отладку управляемого кода, на котором выполняется на компьютере в домене приложения. Среда размещения может выполняться несколько доменов приложений внутри процесса. Разработчик хотел использовать графический пользовательский интерфейс или другими средствами, чтобы получить список всех процессов, запущенных на компьютере, а затем выбрать определенный процесс. Список должен включать все домены приложений в процессы, работающие в управляемом коде. Разработчик можно определить домен определенное приложение и подключить отладчик к этому домену.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorPub.idl  
+ **Заголовок.** CorPub.idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET framework:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

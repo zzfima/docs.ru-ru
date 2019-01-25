@@ -2,12 +2,12 @@
 title: Предоставление разрешений уровня строки в SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553780"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Предоставление разрешений уровня строки в SQL Server
 В некоторых случаях требуется более точное управление доступом к данным, чем простое предоставление, отзыв или отклонение предоставленных разрешений. Например, в приложении базы данных больницы может требоваться ограничение доступа отдельных врачей, чтобы они имели доступ к сведениям только о своих пациентах. Подобные требования существуют во многих областях, включая финансовые, юридические, правительственные и военные приложения. SQL Server 2016 помогает реализовать эти сценарии, предоставляя функциональность [безопасности на уровне строк](https://msdn.microsoft.com/library/dn765131.aspx) , которая упрощает и централизует логику доступа на уровне строк в политике безопасности. В более ранних версиях SQL Server аналогичная функциональность достигается путем использования представлений для внедрения фильтрации на уровне строк.  
@@ -59,11 +59,11 @@ ms.locfileid: "53127294"
   
 -   Предоставьте ролям базы данных право доступа EXECUTE для хранимых процедур. Пользователи смогут иметь доступ к данным только через предоставленные хранимые процедуры.  
   
-## <a name="see-also"></a>См. также  
- [Безопасность на уровне строк](https://msdn.microsoft.com/library/dn765131.aspx)  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Безопасность на уровне строк](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

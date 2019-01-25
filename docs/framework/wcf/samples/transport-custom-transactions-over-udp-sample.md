@@ -1,16 +1,16 @@
 ---
-title: 'Транспорт: пример пользовательских транзакций по протоколу UDP'
+title: 'Транспорт: Пользовательские транзакции по UDP-пример'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552217"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: пример пользовательских транзакций по протоколу UDP
-Этот образец основан на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример в Windows Communication Foundation (WCF)[расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+# <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: Пользовательские транзакции по UDP-пример
+Этот образец основан на [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример в Windows Communication Foundation (WCF)[расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Изменения кода в примере транспорта UDP  
  Чтобы продемонстрировать поток транзакций, в этом примере изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`. Кроме того, в контракт операции `System.Guid` добавлен параметр `Add`. Этот параметр используется для передачи службе идентификатора транзакции клиента.  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец использует пакеты UDP для обмена сообщениями между клиентом и службой. [Транспорт: пример пользовательского транспорта](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует тот же механизм для передачи сообщений, но при поточных транзакций, он автоматически вставляется в пакет UDP вместе с закодированным сообщением.  
+ [Транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец использует пакеты UDP для обмена сообщениями между клиентом и службой. [Транспорта: Пример пользовательского транспорта](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует тот же механизм для передачи сообщений, но при поточных транзакций, он автоматически вставляется в пакет UDP вместе с закодированным сообщением.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Текущий образец следует выполнять так же, как [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Для его запуска запустите службу с UdpTestService.exe. В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий. Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и нажмите кнопку **Запуск от имени администратора**.  
+2.  Текущий образец следует выполнять так же, как [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Для его запуска запустите службу с UdpTestService.exe. В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий. Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и нажмите кнопку **Запуск от имени администратора**.  
   
 3.  Получатся следующие результаты.  
   
@@ -262,5 +262,5 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>См. также  
- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>См. также
+- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

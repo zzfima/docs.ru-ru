@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 92c8c2ac7b95e97b37c907e3837bc90dac384b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558947"
 ---
 # <a name="ltvaluegt-visual-basic"></a>&lt;значение&gt; (Visual Basic)
 Указывает описание свойства.  
@@ -35,5 +35,5 @@ ms.locfileid: "43855937"
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>См. также
+- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

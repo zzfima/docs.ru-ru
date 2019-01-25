@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523406"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Типы, поддерживаемые сериализатором контракта данных
-Windows Communication Foundation (WCF) использует <xref:System.Runtime.Serialization.DataContractSerializer> качестве модуля сериализации по умолчанию для преобразования данных в формат XML и преобразовать обратно в данных XML. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  
+Windows Communication Foundation (WCF) использует <xref:System.Runtime.Serialization.DataContractSerializer> как модуля сериализации по умолчанию для преобразования данных в XML и преобразовать XML обратно в данные. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  
   
 -   Все открытые типы, имеющие конструктор без параметров.  
   
--   Типы контрактов данных. К этим типам применен атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Как правило, создавать новые пользовательские типы, представляющие бизнес-объекты, следует в виде типов контрактов данных. Дополнительные сведения см. в разделе [использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) и [сериализуемые типы](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+-   Типы контрактов данных. К этим типам применен атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Как правило, создавать новые пользовательские типы, представляющие бизнес-объекты, следует в виде типов контрактов данных. Дополнительные сведения см. в разделе [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md) и [сериализуемых типов](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
 -   Типы коллекций. Эти типы представляют списки данных. Это могут быть обычные массивы типов или типы коллекций, например, <xref:System.Collections.ArrayList> и <xref:System.Collections.Generic.Dictionary%602>. Для настройки сериализации таких типов можно использовать атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , однако это не является обязательным. Дополнительные сведения см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) использует <xref:System.Runtime
 -   Другие типы-примитивы. Следующие типы не являются примитивами в .NET Framework, но обрабатываются как примитивы в сериализованной форме XML: <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>, <xref:System.Xml.XmlQualifiedName>и массив <xref:System.Byte>.  
   
     > [!NOTE]
-    >  В отличие от других типов-примитивов тип <xref:System.DateTimeOffset> не является по умолчанию известным типом. Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
+    >  В отличие от других типов-примитивов тип <xref:System.DateTimeOffset> не является по умолчанию известным типом. Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
 -   Типы, помеченные с помощью атрибута <xref:System.SerializableAttribute> . В эту категорию попадают многие типы из библиотеки базовых классов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> обеспечивает полную поддержку этой модели программирования сериализации, используемой в удаленном взаимодействии .NET Framework в <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, включая поддержку интерфейса <xref:System.Runtime.Serialization.ISerializable> .  
   
@@ -38,13 +38,13 @@ Windows Communication Foundation (WCF) использует <xref:System.Runtime
   
 -   Для сериализации или десериализации типа, реализующего интерфейс <xref:System.Runtime.Serialization.ISerializable> , в коде с частичным доверием с использованием <xref:System.Runtime.Serialization.DataContractSerializer> требуются разрешения <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> и <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> .  
   
--   При выполнении кода WCF [частичного доверия](../../../../docs/framework/wcf/feature-details/partial-trust.md) режиме, для сериализации и десериализации `readonly` поля (оба `public` и `private`) не поддерживается. Это объясняется тем, что созданный код на промежуточном языке является непроверяемым и поэтому требует повышенного уровня разрешений.  
+-   При выполнении кода WCF [частичного доверия](../../../../docs/framework/wcf/feature-details/partial-trust.md) режим сериализация и десериализация `readonly` поля (оба `public` и `private`) не поддерживается. Это объясняется тем, что созданный код на промежуточном языке является непроверяемым и поэтому требует повышенного уровня разрешений.  
   
 -   Оба типа <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Xml.Serialization.XmlSerializer> поддерживаются в среде с частичным доверием. При этом использование <xref:System.Runtime.Serialization.DataContractSerializer> зависит от следующих условий.  
   
     -   Все сериализуемые типы `[DataContract]` должны быть открытыми.  
   
-    -   Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация `readonly` поля не поддерживается при выполнении в частично доверенного приложения WCF.  
+    -   Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация `readonly` поля не поддерживается при выполнении WCF в приложении с частичным доверием.  
   
     -   Сериализатор `[Serializable]`/`ISerializable]` не поддерживается в среде с частичным доверием.  
   
@@ -63,13 +63,13 @@ Windows Communication Foundation (WCF) использует <xref:System.Runtime
   
 -   Поддерживаются структуры и классы.  
   
--   Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не поддерживает модель программирования, используемую в <xref:System.Xml.Serialization.XmlSerializer> и веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . В частности, не поддерживаются такие атрибуты, как <xref:System.Xml.Serialization.XmlElementAttribute> и <xref:System.Xml.Serialization.XmlAttributeAttribute>. Чтобы обеспечить поддержку этой модели программирования, необходимо переключить WCF для использования <xref:System.Xml.Serialization.XmlSerializer> вместо <xref:System.Runtime.Serialization.DataContractSerializer>.  
+-   Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не поддерживает модель программирования, используемую в <xref:System.Xml.Serialization.XmlSerializer> и веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . В частности, не поддерживаются такие атрибуты, как <xref:System.Xml.Serialization.XmlElementAttribute> и <xref:System.Xml.Serialization.XmlAttributeAttribute>. Чтобы включить поддержку этой модели программирования, необходимо переключить WCF для использования <xref:System.Xml.Serialization.XmlSerializer> вместо <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 -   Тип <xref:System.DBNull> обрабатывается особым образом. Это одноэлементный тип, и при десериализации десериализатор соблюдает одноэлементное ограничение и указывает все ссылки `DBNull` на одноэлементный экземпляр. Поскольку тип `DBNull` сериализуется, ему требуется разрешение <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   
-## <a name="see-also"></a>См. также  
- [Типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Сериализуемые типы](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+## <a name="see-also"></a>См. также
+- [Типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
+- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Сериализуемые типы](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [Типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
+- [Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

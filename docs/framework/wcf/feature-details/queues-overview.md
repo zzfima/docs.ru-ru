@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600431"
 ---
 # <a name="queues-overview"></a>Общие сведения об очередях
 В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей. Последующих подразделах содержатся подробные сведения о том, как описанные здесь принципы очередей представлены в Windows Communication Foundation (WCF).  
@@ -73,14 +73,14 @@ ms.locfileid: "46562139"
 ## <a name="poison-message-queue-programming"></a>Программирование очереди подозрительных сообщений  
  После попадания сообщения в целевую очередь может несколько раз произойти сбой в обработке сообщения службой. Например, приложение, которое выполняет чтение сообщения из очереди в рамках транзакции и обновляет базу данных, может обнаружить, что база данных временно отключена. В этом случае происходит откат транзакции, создание новой транзакции и повторное прочтение сообщения из очереди. Вторая попытка может завершиться успешно или с ошибкой. В некоторых случаях в зависимости от причины ошибки может несколько раз произойти сбой при попытке доставки сообщения в приложение. В этом случае сообщение считается «подозрительным». Такие сообщения перемещаются в очередь подозрительных сообщений, которая может быть прочитана приложением для обработки подозрительных сообщений.  
   
-## <a name="see-also"></a>См. также  
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Сеансы и очереди](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Очереди недоставленных сообщений](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Примеры привязок интеграции с очередью сообщений](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>См. также
+- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Сеансы и очереди](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Очереди недоставленных сообщений](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Примеры привязок интеграции с очередью сообщений](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

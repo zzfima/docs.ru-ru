@@ -2,12 +2,12 @@
 title: Транзакции и параллельность
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494058"
 ---
 # <a name="transactions-and-concurrency"></a>Транзакции и параллельность
 Транзакция состоит из одной команды или группы команд, которые выполняются как пакет. Транзакции позволяют объединить несколько операций в одну единицу работы. Если в какой-либо точке транзакции возникает ошибка, может быть выполнен откат всех обновлений к их состоянию до начала транзакции.  
@@ -34,10 +34,10 @@ ms.locfileid: "43777461"
  [Оптимистическая блокировка](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Описывается оптимистичный и пессимистичный параллелизм и проверка на выявление нарушений параллелизма.  
   
-## <a name="see-also"></a>См. также  
- [Основные сведения о транзакциях](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Основные сведения о транзакциях](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

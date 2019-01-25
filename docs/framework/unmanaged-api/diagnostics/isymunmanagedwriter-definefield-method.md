@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603668"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Метод ISymUnmanagedWriter::DefineField
-Определяет одну переменную вне метода. Этот метод является, используемых для некоторых полей в классах, битовые поля и т. д.  
+Определяет одну переменную, не внутри метода. Этот метод является, используемых для некоторых полей в классах, битовые поля и т. д.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,10 +53,10 @@ HRESULT DefineField(
  [in] Атрибуты поля.  
   
  `cSig`  
- [in] Объект `ULONG32` , размер, в символах, буфера, необходимый для хранения сигнатура поля.  
+ [in] Объект `ULONG32` то есть размер в символах, буфера, требуемого для хранения подпись поля.  
   
  `signature`  
- [in] Массив подписей полей.  
+ [in] Массив полей подписи.  
   
  `addrKind`  
  [in] Тип адреса.  
@@ -74,7 +74,7 @@ HRESULT DefineField(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

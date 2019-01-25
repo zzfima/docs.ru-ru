@@ -3,17 +3,17 @@ title: '&lt;system.identityModel&gt;'
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0a29b572b71cd714f41eafe35096450e27ea33f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491276"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 Предоставляет конфигурацию для включения параметров Windows Identity Foundation (WIF) в приложениях.  
   
- \<system.identityModel >  
+ \<system.identityModel>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50199400"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`<configuration>`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
@@ -75,5 +75,5 @@ ms.locfileid: "50199400"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

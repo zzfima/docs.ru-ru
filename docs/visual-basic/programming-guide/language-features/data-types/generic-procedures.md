@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574317"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 Объект *универсальной процедуры*, называемой *универсальный метод*, — это процедура, определенная с помощью по крайней мере один тип параметра. Это позволяет настроить типы данных к его требованиям при каждом вызове процедуры вызывающему коду.  
@@ -64,11 +64,11 @@ End Sub
   
  Предыдущие вызовы `MsgBox` отображения «0», «1» и «-1"соответственно.  
   
-## <a name="see-also"></a>См. также  
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Практическое руководство. Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [Список типов](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Список параметров](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>См. также
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Практическое руководство. Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [Список типов](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Список параметров](../../../../visual-basic/language-reference/statements/parameter-list.md)

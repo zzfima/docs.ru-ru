@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90ad74a3b9dd26d0a6e390a777e862f4274f86d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3746717bdf62c59103374f74bbabdb3a7ae1ad61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554031"
 ---
 # <a name="icordebugassembly2-interface1"></a>Интерфейс1 ICorDebugAssembly2
 Представляет сборку. Этот интерфейс является расширением интерфейса ICorDebugAssembly.  
@@ -30,7 +30,7 @@ ms.locfileid: "33403846"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод IsFullyTrusted](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Возвращает значение, указывающее, является ли сборки было предоставлено полное доверие система безопасности среды выполнения.|  
+|[Метод IsFullyTrusted](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Получает значение, указывающее ли были предоставлены сборке полное доверие системой безопасности среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -38,13 +38,13 @@ ms.locfileid: "33403846"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

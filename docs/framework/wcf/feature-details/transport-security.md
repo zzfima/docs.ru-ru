@@ -2,12 +2,12 @@
 title: Безопасность транспорта
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559935"
 ---
 # <a name="transport-security"></a>Безопасность транспорта
 Безопасность транспорта в Windows Communication Foundation (WCF), зависит от выбранной привязки. Транспорт, реализуемый привязкой, определяет фактический механизм безопасности. В подразделах данного раздела описываются реализуемые механизмы и их параметры.  
@@ -25,7 +25,7 @@ ms.locfileid: "50192503"
  [Использование олицетворения при обеспечении безопасности транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Рассматриваются пять уровней олицетворения, возможных благодаря режиму безопасности транспорта.  
   
- [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Пошаговое руководство по основам настройки порта компьютера с помощью сертификата X.509 для безопасности транспорта SSL.  
   
 ## <a name="reference"></a>Ссылка  
@@ -38,5 +38,5 @@ ms.locfileid: "50192503"
 ## <a name="related-sections"></a>Связанные разделы  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>См. также  
- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>См. также
+- [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Масштабирование элемента
+title: Как выполнить Масштабирование элемента
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504318"
 ---
-# <a name="how-to-scale-an-element"></a>Практическое руководство. Масштабирование элемента
+# <a name="how-to-scale-an-element"></a>Как выполнить Масштабирование элемента
 В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> для масштабирования элемента.  
   
  Используйте <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства для изменения размеров элемента с определенным коэффициентом. Например <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> значение 1,5 увеличивает элемент на 150 процентов от его исходной ширины. Объект <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> значение 0,5 уменьшает элемент на 50 процентов.  
@@ -37,8 +37,8 @@ ms.locfileid: "45609126"
   
  Полный пример см. в разделе [Примеры двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

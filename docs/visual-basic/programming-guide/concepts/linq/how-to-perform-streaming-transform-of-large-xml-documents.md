@@ -1,20 +1,20 @@
 ---
-title: 'Практическое: выполнение потокового преобразования крупных XML-документов (Visual Basic)'
+title: Как выполнить Выполнение потокового преобразования крупных XML-документов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 50534cc7692386b217dec46082acf65e244ebb48
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 29213be5c70337dfe82c54b7b818df210aa1ab24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538743"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Практическое: выполнение потокового преобразования крупных XML-документов (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Как выполнить Выполнение потокового преобразования крупных XML-документов (Visual Basic)
 Иногда необходимо преобразовывать большие XML-файлы, при этом приложение должно быть написано так, чтобы используемый им объем памяти был прогнозируемым. Если вставить в XML-дерево очень большой XML-файл, то объем используемой памяти будет пропорциональным размеру файла (то есть чрезмерным). Поэтому следует вместо этого использовать потоки.  
   
  Использование потоков лучше всего уместно в ситуациях, когда требуется обработать исходный документ только один раз, и элементы можно обрабатывать в порядке их следования в документе. Некоторые стандартные операторы запросов, например <xref:System.Linq.Enumerable.OrderBy%2A>, проходят через источник, собирают все данные, сортируют их и выдают первый элемент последовательности. Отметим, что при использовании оператора запроса, который материализует свой источник перед тем, как выдать первый элемент, приложение снова будет использовать большой объем памяти.  
   
- Даже если вы используете метод, описанный в [как: Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), при попытке сборки дерева XML, содержащего преобразованный документ, объем используемой памяти будет слишком большим.  
+ Даже при использовании приема, описанного в разделе [Как  Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), при попытке сборки дерева XML, содержащего преобразованный документ, объем используемой памяти будет слишком большим.  
   
  Существует два основных подхода. Один подход заключается в использовании возможностей отложенной обработки объекта <xref:System.Xml.Linq.XStreamingElement>. Другой подход состоит в создании <xref:System.Xml.XmlWriter> и использовании возможностей [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для записи элементов в модуле <xref:System.Xml.XmlWriter>. В этом разделе рассказывается об обоих подходах.  
   
@@ -439,5 +439,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>См. также
+- [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
