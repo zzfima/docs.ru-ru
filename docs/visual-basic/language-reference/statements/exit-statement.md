@@ -12,12 +12,12 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 05a65dd84a00478f52c8cd7d8b46341644512718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63bcc5d5205681917ba30bdb73bc496307a6322a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672517"
 ---
 # <a name="exit-statement-visual-basic"></a>Оператор Exit (Visual Basic)
 Выходит из процедуры или блока и немедленно передает управление оператору после вызова процедуры или определения блока.  
@@ -30,63 +30,63 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
   
 ## <a name="statements"></a>Операторы  
  `Exit Do`  
- Немедленно завершает работу `Do` цикл, в котором он содержится. Выполнение продолжается с оператору, следующему `Loop` инструкции. `Exit Do` можно использовать только внутри `Do` цикла. При использовании внутри вложенной `Do` циклы, `Exit Do` выходит из самого внутреннего цикла и передает управление верхнего уровня вложенности.  
+ Немедленно завершает работу `Do` цикл, в котором он содержится. Выполнение продолжается с оператор, следующий `Loop` инструкции. `Exit Do` можно использовать только внутри `Do` цикла. При использовании внутри вложенной `Do` циклы, `Exit Do` выходит из самого внутреннего цикла и передает управление повысить уровень вложенности.  
   
  `Exit For`  
- Немедленно завершает работу `For` цикл, в котором он содержится. Выполнение продолжается с оператору, следующему `Next` инструкции. `Exit For` можно использовать только внутри `For`... `Next` или `For Each`... `Next` цикла. При использовании внутри вложенной `For` циклы, `Exit For` выходит из самого внутреннего цикла и передает управление верхнего уровня вложенности.  
+ Немедленно завершает работу `For` цикл, в котором он содержится. Выполнение продолжается с оператор, следующий `Next` инструкции. `Exit For` можно использовать только внутри `For`... `Next` или `For Each`... `Next` цикла. При использовании внутри вложенной `For` циклы, `Exit For` выходит из самого внутреннего цикла и передает управление повысить уровень вложенности.  
   
  `Exit Function`  
- Немедленно завершает работу `Function` процедуры, в котором он отображается. Выполнение продолжается с оператора, следующего за оператором, вызвавшим `Function` процедуры. `Exit Function` можно использовать только внутри `Function` процедуры.  
+ Немедленно завершает работу `Function` процедуры, в котором он находится. Выполнение продолжается с оператора, следующего за оператором, вызвавшим `Function` процедуры. `Exit Function` можно использовать только внутри `Function` процедуры.  
   
- Чтобы задать возвращаемое значение, можно назначить значение имени функции в строке перед `Exit Function` инструкции. Чтобы назначить возвращаемое значение и выхода из функции в одной инструкции, вместо этого можно использовать [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ Чтобы задать возвращаемое значение, можно присвоить значение имени функции в строке перед `Exit Function` инструкции. Чтобы назначить возвращаемое значение и выхода из функции в одной инструкции, можно использовать [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
  `Exit Property`  
- Немедленно завершает работу `Property` процедуры, в котором он отображается. Выполнение продолжается с оператора, который называется `Property` процедуры, то есть с помощью инструкции запроса и установки значения свойства. `Exit Property` может использоваться только внутри свойства `Get` или `Set` процедуры.  
+ Немедленно завершает работу `Property` процедуры, в котором он находится. Выполнение продолжается с оператора, который вызывается `Property` процедуры, то есть с помощью инструкции запроса и установки значения свойства. `Exit Property` можно использовать только внутри свойства `Get` или `Set` процедуры.  
   
- Чтобы указать значение, возвращаемое в `Get` процедуры, можно присвоить значение имени функции в строке перед `Exit Property` инструкции. Чтобы назначить возвращаемое значение и выйти `Get` процедура в одной инструкции можно использовать `Return` инструкции.  
+ Чтобы указать возвращаемое значение в `Get` процедуры, можно присвоить значение имени функции в строке перед `Exit Property` инструкции. Чтобы назначить возвращаемое значение и выхода `Get` процедуры в одной инструкции, можно вместо этого использовать `Return` инструкции.  
   
  В `Set` процедуре `Exit Property` оператор эквивалентен `Return` инструкции.  
   
  `Exit Select`  
- Немедленно завершает работу `Select Case` блока, в котором находится этот элемент. Выполнение продолжается с оператору, следующему `End Select` инструкции. `Exit Select` можно использовать только внутри `Select Case` инструкции.  
+ Немедленно завершает работу `Select Case` блока, в котором находится этот элемент. Выполнение продолжается с оператор, следующий `End Select` инструкции. `Exit Select` можно использовать только внутри `Select Case` инструкции.  
   
  `Exit Sub`  
- Немедленно завершает работу `Sub` процедуры, в котором он отображается. Выполнение продолжается с оператора, следующего за оператором, вызвавшим `Sub` процедуры. `Exit Sub` можно использовать только внутри `Sub` процедуры.  
+ Немедленно завершает работу `Sub` процедуры, в котором он находится. Выполнение продолжается с оператора, следующего за оператором, вызвавшим `Sub` процедуры. `Exit Sub` можно использовать только внутри `Sub` процедуры.  
   
  В `Sub` процедуре `Exit Sub` оператор эквивалентен `Return` инструкции.  
   
  `Exit Try`  
- Немедленно завершает работу `Try` или `Catch` блока, в котором находится этот элемент. Выполнение продолжается с `Finally` блокировать при наличии такового или с оператору, следующему `End Try` инструкции, которые в противном случае. `Exit Try` можно использовать только внутри `Try` или `Catch` блока, а не внутри `Finally` блока.  
+ Немедленно завершает работу `Try` или `Catch` блока, в котором находится этот элемент. Выполнение продолжается с `Finally` блокировать, если таковой имеется, или оператор, следующий `End Try` инструкции, которые в противном случае. `Exit Try` можно использовать только внутри `Try` или `Catch` блока, а не внутри `Finally` блока.  
   
  `Exit While`  
- Немедленно завершает работу `While` цикл, в котором он содержится. Выполнение продолжается с оператору, следующему `End While` инструкции. `Exit While` можно использовать только внутри `While` цикла. При использовании внутри вложенной `While` циклы, `Exit While` передает управление в цикл, находящийся на один уровень выше цикла где `Exit While` происходит.  
+ Немедленно завершает работу `While` цикл, в котором он содержится. Выполнение продолжается с оператор, следующий `End While` инструкции. `Exit While` можно использовать только внутри `While` цикла. При использовании внутри вложенной `While` циклы, `Exit While` передает управление в цикл, находящийся на один уровень выше цикла где `Exit While` происходит.  
   
 ## <a name="remarks"></a>Примечания  
- Не следует путать `Exit` инструкции с `End` инструкции. `Exit` не определяет конец оператора.  
+ Не следует путать `Exit` инструкции с `End` инструкций. `Exit` не определяет конец оператора.  
   
 ## <a name="example"></a>Пример  
- В следующем примере условия цикла останавливающее цикл при `index` переменной больше 100. `If` Инструкции в цикле, однако вызывает `Exit Do` инструкции для остановки цикла, когда переменная индекса превышает 10.  
+ В следующем примере, останавливающее цикл в условие цикла при `index` переменной превышает 100. `If` Оператора цикла, однако вызывает `Exit Do` инструкции для остановки цикла, когда переменная индекса превышает 10.  
   
  [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращаемое значение присваивается имени функции `myFunction`, а затем использует `Exit Function` для возврата из функции.  
+ В следующем примере присваивается значение имени функции `myFunction`, а затем использует `Exit Function` для возврата из функции.  
   
  [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) назначить возвращаемое значение и выхода из функции.  
+ В следующем примере используется [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) присвойте возвращаемое значение и выхода из функции.  
   
  [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Continue](../../../visual-basic/language-reference/statements/continue-statement.md)  
- [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)  
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md)  
- [Оператор Stop](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>См. также
+- [Оператор Continue](../../../visual-basic/language-reference/statements/continue-statement.md)
+- [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)
+- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md)
+- [Оператор Stop](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

@@ -2,12 +2,12 @@
 title: Устранение неполадок с установкой
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532556"
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
 В этом разделе описывается устранение неполадок Windows Communication Foundation (WCF) неполадки установки.  
@@ -38,15 +38,15 @@ ms.locfileid: "48840551"
   
 4.  В журнале событий или в файле журнала трассировки установки может быть зарегистрировано исключение, например одно из приведенных ниже.  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: Неожиданный результат 3, ожидается E:\WINDOWS\system32\wbem\mofcomp.exe с «E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof»  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Неожиданный результат 3 выполнение E:\WINDOWS\system32\wbem\mofcomp.exe с «Foundation\ServiceModel.mof E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows связи»  
   
      или  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Инициализатор типа 'System.Management.ManagementPath' выдал исключение. ---> System.Runtime.InteropServices.COMException (0x80040154): Сбой при получении фабрики класса COM для компонента с CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} в результате следующей ошибки: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Инициализатор типа 'System.Management.ManagementPath' выдал исключение. ---> System.Runtime.InteropServices.COMException (0x80040154): При получении фабрики класса COM для компонента с CLSID {cf4cc405-e2c5-4ddd-b3ce-5e7582d8c9fa в результате} сбой из-за следующей ошибки: 80040154.  
   
      или  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Невозможно загрузить файл или сборку 'C:\WINDOWS\system32\wbem\mofcomp.exe' или один из зависимых от них компонентов. Не удается найти указанный файл.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Не удалось загрузить файл или сборку 'C:\WINDOWS\system32\wbem\mofcomp.exe' или одну из ее зависимостей. Не удается найти указанный файл.  
   
      Имя файла: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -73,5 +73,5 @@ ms.locfileid: "48840551"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по настройке](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>См. также
+- [Инструкции по настройке](../../../docs/framework/wcf/samples/set-up-instructions.md)

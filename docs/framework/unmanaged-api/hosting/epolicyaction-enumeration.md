@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14908ae641c8539659e6014deb2c5f35a6d1cfbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655716"
 ---
 # <a name="epolicyaction-enumeration"></a>Перечисление EPolicyAction
 Описывает действия политики, основное приложение может задать для операций, описанных [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) и сбоев, описанных [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -45,33 +45,33 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`eAbortThread`|Указывает, общеязыковой среды выполнения (CLR) следует прервать надлежащим образом поток. Прерывание надлежащим образом предполагает попытки выполнить все `finally` блокирует любой `catch` , связанных с прерывания потока и методы завершения.|  
-|`eDisableRuntime`|Указывает, что среда CLR должна перейти в отключенное состояние. Дальнейшая управляемый код может выполняться в соответствующий процесс и потоки блокируются попадающие в CLR.|  
-|`eExitProcess`|Указывает, что среда CLR следует выполнять надлежащего выхода из процесса, включая выполнение методов завершения и очистки и ведение журнала операций.|  
-|`eFastExitProcess`|Указывает, что среда CLR должна выхода из процесса немедленно, без выполнения методов завершения или очистки и ведение журнала операций. При этом отладчику отправляется уведомление отладчика.|  
-|`eNoAction`|Указывает, что никакие действия не выполнены.|  
+|`eAbortThread`|Указывает, что среда CLR (CLR) следует прервать поток корректно. Корректное прерывание включает пытается запустить все `finally` блокирует любой `catch` , связанных с прерывания потоков и методы завершения.|  
+|`eDisableRuntime`|Указывает, что среда CLR следует перейти в отключенное состояние. Дальнейшая управляемый код может выполняться в соответствующий процесс, а потоки блокируются из входа в среду CLR.|  
+|`eExitProcess`|Указывает, что среда CLR следует выполнять надлежащего выхода из процесса, включая выполнение методов завершения и очистки и операции ведения журнала.|  
+|`eFastExitProcess`|Указывает, что среда CLR следует выйти из процесса немедленно, без выполнения методов завершения или очистки и операции ведения журнала. При этом отладчику отправляется уведомление отладчика.|  
+|`eNoAction`|Указывает, что следует принимать никаких действий.|  
 |`eRudeAbortThread`|Указывает, что среда CLR выполнение грубое прерывание потока. Только те `catch` и `finally` блоки, отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются.|  
-|`eRudeExitProcess`|Указывает, что среда CLR должна выхода из процесса без выполнения методов завершения или ведение журнала операций.|  
-|`eRudeUnloadAppDomain`|Указывает выполнение с CLR грубые выгрузку <xref:System.AppDomain>. Методы завершения только отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются. Аналогичным образом, все потоки с этим <xref:System.AppDomain> их стека получать `ThreadAbortException`, но только те, которые `catch` и `finally` блоки, отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются.|  
-|`eThrowException`|Указывает, что соответствующий условию, например о нехватке памяти, переполнение буфера и т. д. должны быть исключение.|  
-|`eUnloadAppDomain`|Указывает, что <xref:System.AppDomain> должна быть выгружена. Среда CLR пытается запустить методы завершения.|  
+|`eRudeExitProcess`|Указывает, что среда CLR следует выйти из процесса без выполнения методов завершения или ведение журнала операций.|  
+|`eRudeUnloadAppDomain`|Указывает выполнение с CLR грубые выгрузки из <xref:System.AppDomain>. Только методы завершения, отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются. Аналогичным образом, все потоки с этим <xref:System.AppDomain> в их stack получать `ThreadAbortException`, а только те `catch` и `finally` блоки, отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются.|  
+|`eThrowException`|Указывает, что должно вызываться исключение, соответствующие условию, например-памяти, переполнение буфера и т. д.|  
+|`eUnloadAppDomain`|Указывает, что <xref:System.AppDomain> должна быть выгружена. Среда CLR пытается выполнять методы завершения.|  
   
 ## <a name="remarks"></a>Примечания  
- Основное приложение задает действия в рамках политики путем вызова методов [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) интерфейса. Сведения о принудительном и надлежащих см. в разделе [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) перечисления.  
+ Основное приложение задает действия политики, вызывая методы класса [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) интерфейс. Сведения о ненадлежащих и надлежащих, см. в разделе [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) перечисления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисление EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [Интерфейс ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [Интерфейс IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисление EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [Интерфейс ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [Интерфейс IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

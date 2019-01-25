@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641152"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Этот тип проекта доступен в Visual Studio 2012 и нацелена на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -52,7 +52,7 @@ ms.locfileid: "48580093"
  Если проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит локализованные ресурсы, то для их развертывания используется модель "звезда" так же, как и для библиотеки в настольном приложении. Для использования основного файла ресурсов и любых локализованных файлов ресурсов в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] следует добавить ссылку на основную сборку. Во время компиляции Visual Studio извлекает ресурсы из основного файла ресурсов и всех локализованных файлов ресурсов в отдельные файлы RESW. Затем Visual Studio компилирует файлы RESW в единый файл PRI, к которому [!INCLUDE[wrt](../../../includes/wrt-md.md)] обращается во время выполнения.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Пример: нелокализованная [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Пример Нелокализованное [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  В следующем простом примере нелокализованная [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] использует ресурсы для хранения имен столбцов и определения числа символов, которые следует зарезервировать для табличных данных. В этом примере используется файл с именем LibResources.resx для хранения строковых ресурсов, перечисленных в следующей таблице.
 
 |Имя ресурса|Значение ресурса|
@@ -81,7 +81,7 @@ ms.locfileid: "48580093"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Пример: локализованная [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Пример Локализованные [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Следующий пример локализованной [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит ресурсы французского (Франция) и английского (США) языков и региональных параметров. Английского языка (США) является языком по умолчанию приложения; его ресурсы показаны в таблице в [выше](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Файл ресурсов для французского (Франция) языка и региональных параметров называется LibResources.fr-FR.resx и состоит из строковых ресурсов, перечисленных в представленной ниже таблице. Исходный код для класса `UILibrary` такой же, как и в предыдущем разделе.
 
 |Имя ресурса|Значение ресурса|
@@ -106,6 +106,6 @@ ms.locfileid: "48580093"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Resources.ResourceManager>  
-- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
 - [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

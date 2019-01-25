@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638435"
 ---
 # <a name="declaration-expected"></a>Ожидается объявление
-Недекларативный оператор, например оператор присваивания или цикла, находится вне процедуры. Вне процедур могут находиться только объявления.  
+Недекларативный оператор, например оператор присваивания или цикла, находится вне процедуры. Только объявления разрешены вне процедур.  
   
  Кроме того, программный элемент объявлен без ключевого слова объявления таких как `Dim` или `Const`.  
   
@@ -23,12 +23,12 @@ ms.locfileid: "33583894"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Переместите недекларативный оператор в текст процедуры.  
+-   Переместите оператор недекларативный в тело процедуры.  
   
 -   В начале объявления соответствующее ключевое слово объявления.  
   
--   Убедитесь, что ключевым словом объявления его имя указано верно.  
+-   Убедитесь, что ключевое слово объявления является его имя указано верно.  
   
-## <a name="see-also"></a>См. также  
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>См. также
+- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)

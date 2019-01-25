@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667941"
 ---
 # <a name="cortypeattr-enumeration"></a>Перечисление CorTypeAttr
 Содержит значения, указывающие тип метаданных.  
@@ -77,21 +77,21 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Используется для сведения о видимости типа.|  
-|`tdNotPublic`|Указывает, что тип не является открытой области.|  
+|`tdNotPublic`|Указывает, что тип не открытую область видимости.|  
 |`tdPublic`|Указывает, что тип находится в общей области.|  
 |`tdNestedPublic`|Указывает, что тип является вложенным с открытой областью видимости.|  
 |`tdNestedPrivate`|Указывает, что тип является вложенным с закрытой областью видимости.|  
 |`tdNestedFamily`|Указывает, что тип является вложенным с областью видимости.|  
 |`tdNestedAssembly`|Указывает, что тип является вложенным с видимостью сборки.|  
 |`tdNestedFamANDAssem`|Указывает, что тип является вложенным с областью видимости семейство и сборка.|  
-|`tdNestedFamORAssem`|Указывает, что тип является вложенным с областью видимости сборки или семейства.|  
-|`tdLayoutMask`|Возвращает сведения о структуре для типа.|  
+|`tdNestedFamORAssem`|Указывает, что тип является вложенным с областью видимости семейство или сборка.|  
+|`tdLayoutMask`|Получает сведения о структуре для типа.|  
 |`tdAutoLayout`|Указывает, что поля этого типа располагаются автоматически.|  
 |`tdSequentialLayout`|Указывает, что поля этого типа располагаются последовательно.|  
-|`tdExplicitLayout`|Указывает, что структура полей задается явно.|  
+|`tdExplicitLayout`|Указывает, что этот макет поля задается явно.|  
 |`tdClassSemanticsMask`|Получает семантическую информацию о типе.|  
 |`tdClass`|Указывает, что данный тип является классом.|  
 |`tdInterface`|Указывает, что данный тип является интерфейсом.|  
@@ -101,24 +101,24 @@ typedef enum CorTypeAttr {
 |`tdImport`|Указывает, что тип импортирован.|  
 |`tdSerializable`|Указывает, что тип является сериализуемым.|  
 |`tdWindowsRuntime`|Указывает, что этот тип является [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типа.|  
-|`tdStringFormatMask`|Возвращает сведения о кодировке и в формате строки.|  
+|`tdStringFormatMask`|Получает сведения о способ кодирования и форматирования строк.|  
 |`tdAnsiClass`|Указывает, что данный тип интерпретирует LPTSTR как ANSI.|  
 |`tdUnicodeClass`|Указывает, что данный тип интерпретирует LPTSTR как Юникод.|  
 |`tdAutoClass`|Указывает, что данный тип интерпретирует LPTSTR автоматически.|  
-|`tdCustomFormatClass`|Указывает, что тип имеет нестандартной кодировкой, заданной параметром `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Используйте эту маску для получения нестандартной кодировки для взаимодействия с машинным кодом. Смысл значений этих двух бит не определено.|  
-|`tdBeforeFieldInit`|Указывает, что тип нужно инициализировать перед первой попытки получить доступ к статическому полю.|  
-|`tdForwarder`|Указывает, что тип экспортирован, а метод передачи типа.|  
-|`tdReservedMask`|Этот флаг и приведенные ниже флаги используются средой CLR.|  
-|`tdRTSpecialName`|Указывает, что среда кодировка имен должна контролироваться.|  
-|`tdHasSecurity`|Указывает, что тип имеет безопасности, связанные с ним.|  
+|`tdCustomFormatClass`|Указывает, что тип имеет нестандартной кодировкой, определяемом параметрами `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Эта маска используется для получения нестандартной кодировки для взаимодействия с машинным кодом. Смысл значений этих двух бит не определено.|  
+|`tdBeforeFieldInit`|Указывает, что тип должен быть инициализирован перед первая попытка получить доступ к статическому полю.|  
+|`tdForwarder`|Указывает, что тип экспортирован и метод передачи типа.|  
+|`tdReservedMask`|Этот флаг и приведенные ниже флаги используются внутри среда CLR.|  
+|`tdRTSpecialName`|Указывает, что среда CLR должна проверять кодировку имени.|  
+|`tdHasSecurity`|Указывает, что тип имеет безопасности, связанные с ней.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: 2f066835c5f864538f281d4c58772e0e60c132f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ddb12eb473ce53e60835acb8f1076655f78fafd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574382"
 ---
 # <a name="-optimize"></a>-Оптимизация
 Включает или отключает оптимизацию компилятора.  
@@ -27,18 +27,18 @@ ms.locfileid: "33649949"
   
 |Термин|Определение|  
 |---|---|  
-|`+` &#124; `-`|Необязательный. `-optimize-` Отключает оптимизацию компилятора. `-optimize+` Включает оптимизацию. По умолчанию оптимизация отключена.|  
+|`+` &#124; `-`|Необязательный параметр. `-optimize-` Отключает оптимизацию компилятора. `-optimize+` Включает оптимизацию. По умолчанию оптимизация отключена.|  
   
 ## <a name="remarks"></a>Примечания  
- Оптимизации компилятора делают код более быстрым, коротким и эффективным. Тем не менее, поскольку оптимизации привести изменения порядка строк кода `-optimize+` может осложнить процесс отладки.  
+ Оптимизации компилятора делают код более быстрым, коротким и эффективным. Тем не менее, так как оптимизации изменения порядка строк кода в выходном файле `-optimize+` может осложнить процесс отладки.  
   
- Все модули, созданные с помощью `-target:module` для сборки должны использовать одинаковые `-optimize` параметры сборки. Дополнительные сведения см. в разделе [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Все модули, созданные с помощью `-target:module` для сборки, должны использовать одинаковые `-optimize` параметры сборки. Дополнительные сведения см. в разделе [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- Можно объединять `-optimize` и `-debug` параметры.  
+ Вы можете объединить `-optimize` и `-debug` параметры.  
   
 |Чтобы задать - оптимизации в среде разработки Visual Studio|  
 |---|  
-|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.<br />     <br />2.  Откройте вкладку **Компиляция**.<br />3.  Нажмите кнопку **Дополнительно** .<br />4.  Изменить **включить оптимизацию** флажок.|  
+|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.<br />     <br />2.  Откройте вкладку **Компиляция**.<br />3.  Нажмите кнопку **Дополнительно** .<br />4.  Изменить **включить оптимизацию** "флажок".|  
   
 ## <a name="example"></a>Пример  
  Следующий код компилирует `T2.vb` и включает оптимизацию.  
@@ -47,8 +47,8 @@ ms.locfileid: "33649949"
 vbc t2.vb -optimize  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+## <a name="see-also"></a>См. также
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

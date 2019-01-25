@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 769077ddbe42d4d774d359de75417bdca6bcaeb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687249"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -22,7 +22,7 @@ ms.locfileid: "33520007"
  Эти интерфейсы позволяют пользовательским компонентам сохранять свои параметры, когда они размещаются в приложении. Благодаря ключам параметров компоненты могут раздельно хранить параметры для нескольких экземпляров компонента.  
   
 ## <a name="defining-settings"></a>Определение параметров  
- Архитектура параметров приложения используется внутри [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и Windows Forms, и содержит ряд базовых классов, которые являются общими для обеих сред. Наиболее важным является <xref:System.Configuration.SettingsBase>, который предоставляет доступ к параметрам через коллекции и содержит методы низкого уровня для загрузки и сохранения параметров. Каждая среда реализует свой собственный класс, производный от <xref:System.Configuration.SettingsBase> для предоставления дополнительных функциональных возможностей параметров для этой среды. В приложении Windows Forms все параметры приложения должен быть определен класс, производный от <xref:System.Configuration.ApplicationSettingsBase> класс, который добавляет следующие функции к базовому классу:  
+ Архитектура параметров приложения используется внутри [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и Windows Forms, и содержит ряд базовых классов, которые являются общими для обеих сред. Наиболее важным является <xref:System.Configuration.SettingsBase>, который предоставляет доступ к параметрам через коллекцию и предоставляет низкоуровневые методы для загрузки и сохранения параметров. Каждая среда реализует свой собственный класс, производный от <xref:System.Configuration.SettingsBase> для обеспечения дополнительных функциональных возможностей параметров для этой среды. В приложении Windows Forms все параметры приложения должны быть определены в классе, производном от <xref:System.Configuration.ApplicationSettingsBase> класс, который добавляет следующие функции базовому классу:  
   
 -   Операции загрузки и сохранения более высокого уровня  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33520007"
   
 -   Проверка параметров, либо до их изменения, либо до их сохранения  
   
- Параметры можно описать с помощью нескольких атрибутов, определенных в <xref:System.Configuration> пространству имен; они описаны в [атрибуты параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). При определении параметра необходимо установить его с любой <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>, которое описывает, является ли параметр применяется ко всему приложению, или только для текущего пользователя.  
+ Параметры можно описать с помощью нескольких атрибутов, определенных в <xref:System.Configuration> пространству имен; они описаны в [атрибуты параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). При определении параметра его необходимо применить с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>, которая описывает, применяется ли параметр ко всему приложению, или просто для текущего пользователя.  
   
  В следующем примере кода определяется пользовательский класс параметров с одним параметром `BackgroundColor`.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33520007"
  [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Сохраняемость параметров  
- <xref:System.Configuration.ApplicationSettingsBase> Класса не сам сохранения или загрузки параметров; это выполняет поставщик параметров, класс, производный от <xref:System.Configuration.SettingsProvider>. Если производный класс <xref:System.Configuration.ApplicationSettingsBase> не указывает поставщик параметров посредством <xref:System.Configuration.SettingsProviderAttribute>, то поставщик по умолчанию <xref:System.Configuration.LocalFileSettingsProvider>, используется.  
+ <xref:System.Configuration.ApplicationSettingsBase> Класс не сохраняемость или загрузку параметров; это выполняет поставщик параметров, а класс, производный от <xref:System.Configuration.SettingsProvider>. Если класс, производный от <xref:System.Configuration.ApplicationSettingsBase> не указывает поставщика параметров посредством <xref:System.Configuration.SettingsProviderAttribute>, а затем поставщика по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, используется.  
   
  Система конфигурации, которая была первоначально выпущена с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], поддерживает предоставление статических данных конфигурации приложения через файл machine.config локального компьютера или в файле `app.`exe.config, развертываемого вместе с приложением. <xref:System.Configuration.LocalFileSettingsProvider> Класс расширяет эту встроенную поддержку одним из следующих способов:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "33520007"
 ### <a name="settings-bindings"></a>Привязки параметров  
  Параметры приложения используют архитектуру привязки данных Windows Forms для обеспечения двустороннего обмена обновлениями параметров между объектом параметров и компонентами. Если для создания параметров приложения и их назначения свойствам компонентов используется Visual Studio, эти привязки создаются автоматически.  
   
- Параметр приложения можно привязать только для компонента, поддерживающего <xref:System.Windows.Forms.IBindableComponent> интерфейса. Кроме того, компонент должен реализовывать событие изменения для конкретного связанного свойства или уведомлять параметры приложений об изменении свойства с помощью <xref:System.ComponentModel.INotifyPropertyChanged> интерфейса. Если компонент не реализует <xref:System.Windows.Forms.IBindableComponent> и связывании через Visual Studio, связанные свойства будут установлены в первый раз, но не будут обновлены. Если компонент реализует <xref:System.Windows.Forms.IBindableComponent> , но уведомления об изменении не поддержки свойств, привязка не будет обновлять файл параметров при изменении свойства.  
+ Параметр приложения можно привязать только к компонента, поддерживающего <xref:System.Windows.Forms.IBindableComponent> интерфейс. Кроме того, компонент должен реализовывать событие изменения для конкретного связанного свойства или уведомлять параметры приложений об изменении свойства с помощью <xref:System.ComponentModel.INotifyPropertyChanged> интерфейс. Если компонент не реализует <xref:System.Windows.Forms.IBindableComponent> и привязка выполняется с помощью Visual Studio, то свойства привязки будут установлены в первый раз, но не будут обновляться. Если компонент реализует <xref:System.Windows.Forms.IBindableComponent> , но уведомления об изменении не поддержки свойств, привязка не будет обновлять файл параметров, при изменении свойства.  
   
  Некоторые компоненты Windows Forms, такие как <xref:System.Windows.Forms.ToolStripItem>, не поддерживают привязку параметров.  
   
@@ -102,14 +102,14 @@ ms.locfileid: "33520007"
   
 1.  Использует отражение для проверки всех свойств, определенных для вашего <xref:System.Configuration.ApplicationSettingsBase> производного класса, поиск, примененные с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Сериализует свойство на диск. Сначала пытается вызвать <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> или <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> на тип связанного <xref:System.ComponentModel.TypeConverter>. Если это не удается, использует XML-сериализацию.  
+2.  Сериализует свойство на диск. Сначала пытается вызвать <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> или <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> на тип, связанного с <xref:System.ComponentModel.TypeConverter>. Если это не удается, использует XML-сериализацию.  
   
 3.  Распределяет параметры по файлам на основе атрибута параметра.  
   
- При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> пометить настраиваемой или двоичной сериализации с помощью параметра <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде см. в разделе [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> чтобы отметить параметр для настраиваемой или двоичной сериализации с помощью <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде, см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Расположение файлов параметров  
- Расположение файлов `app`.exe.config и *user*.config зависит от способа установки приложения. Для приложения на основе Windows Forms, копируется на локальный компьютер `app`. exe.config будет находиться в том же каталоге в качестве базового каталога основной исполняемый файл приложения, и *пользователя*.config будет располагаться в местоположении, заданном свойством <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> свойство. Для приложения, установленного с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], оба этих файла будут находиться в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Local Settings.  
+ Расположение файлов `app`.exe.config и *user*.config зависит от способа установки приложения. Для приложения на базе Windows Forms, скопировать на локальном компьютере `app`. exe.config будет находиться в той же папке, что базовый каталог основного исполняемого файла приложения, и *пользователя*.config будет находиться в расположение которого задается <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> свойство. Для приложения, установленного с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], оба этих файла будут находиться в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Local Settings.  
   
  Место хранения этих файлов будет другим, если пользователь включил перемещаемые профили, что позволит ему определять разные настройки Windows и приложения в случае использования им других компьютеров в домене. В этом случае для приложений [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] и не [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] их файлы `app`.exe.config и *user*.config будут находиться в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Application Data.  
   
@@ -121,20 +121,20 @@ ms.locfileid: "33520007"
  При использовании параметров приложения в приложении[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] файл `user`.config хранится в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Размер файла `user`.config приложения не может превышать квоту каталога данных, заданную в [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Дополнительные сведения см. в разделе [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings).  
   
 ## <a name="custom-settings-providers"></a>Поставщики пользовательских настроек  
- В архитектура параметров приложения имеется слабую связь между параметрами приложения класс-оболочку, производный от <xref:System.Configuration.ApplicationSettingsBase>, и соответствующие параметры поставщика и поставщиков, производный от <xref:System.Configuration.SettingsProvider>. Эта связь определяется только при <xref:System.Configuration.SettingsProviderAttribute> применен к классу-оболочке или его отдельных свойств. Если поставщик параметров не явно указано, поставщик по умолчанию <xref:System.Configuration.LocalFileSettingsProvider>, используется. В результате такая архитектура позволяет создавать и использовать поставщиков настраиваемых параметров.  
+ В архитектуре параметров приложений, есть слабую связь между параметрами приложения класс-оболочку, производный от <xref:System.Configuration.ApplicationSettingsBase>, и связанный поставщик параметров или поставщиков, производный от <xref:System.Configuration.SettingsProvider>. Эта связь определяется только <xref:System.Configuration.SettingsProviderAttribute> применен к классу-оболочке или его отдельным свойствам. Если параметры, поставщик явно не указано, поставщик по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, используется. В результате такая архитектура позволяет создавать и использовать поставщиков настраиваемых параметров.  
   
- Предположим, что требуется разработать и использовать `SqlSettingsProvider`, то есть поставщика, который будет хранить все данные параметров в базе данных Microsoft SQL Server. Ваш <xref:System.Configuration.SettingsProvider>-эту информацию в производном классе получает его `Initialize` методу в качестве параметра типа <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. После этого следует реализовать <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> метод для получения параметров из хранилища данных и <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> их сохранения. Поставщик может использовать <xref:System.Configuration.SettingsPropertyCollection> передаваемое <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> чтобы определить имя свойства, тип и область, а также любых других атрибутов параметров, определенных для этого свойства.  
+ Предположим, что требуется разработать и использовать `SqlSettingsProvider`, то есть поставщика, который будет хранить все данные параметров в базе данных Microsoft SQL Server. Ваш <xref:System.Configuration.SettingsProvider>-получит эти сведения в производном классе его `Initialize` методу в качестве параметра типа <xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>. Затем вы реализуете <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> метод для получения параметров из хранилища данных, и <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> для их сохранения. Поставщик может использовать <xref:System.Configuration.SettingsPropertyCollection> передаваемое <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> чтобы определить имя свойства, тип и область, а также любые другие атрибуты параметров, определенных для этого свойства.  
   
- Вашему поставщику будет необходимо реализовать одно свойство и один метод, реализация которых может оказаться сложной. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Свойство представляет собой абстрактный свойство <xref:System.Configuration.SettingsProvider>; оно для возврата следующие:  
+ Вашему поставщику будет необходимо реализовать одно свойство и один метод, реализация которых может оказаться сложной. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Свойство является абстрактным свойством класса <xref:System.Configuration.SettingsProvider>; оно для возврата следующее:  
   
  [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
  [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  Ваш производный класс также должен реализовать метод `Initialize`, который не принимает аргументы и не возвращает значения. Этот метод не определяется <xref:System.Configuration.SettingsProvider>.  
   
- Наконец, необходимо реализовать <xref:System.Configuration.IApplicationSettingsProvider> для поставщика, чтобы обеспечивать поддержку обновления параметров, возврата параметров к значениям по умолчанию и обновления параметров с одной версий приложения до другой.  
+ Наконец, необходимо реализовать <xref:System.Configuration.IApplicationSettingsProvider> на поставщика, чтобы обеспечить поддержку обновления параметров, Возврат параметров по умолчанию и обновление параметров из одной версии приложения в другой.  
   
- После реализации и компиляции поставщика необходимо указать, что класс параметров должен использовать этого поставщика вместо значения по умолчанию. Для этого через <xref:System.Configuration.SettingsProviderAttribute>. Если применяется ко всему классу параметров, поставщик используется для каждого параметра, который определяется в классе; Если применяется к отдельным параметрам, архитектура параметров приложения использует этот поставщик только для этих параметров, а <xref:System.Configuration.LocalFileSettingsProvider> для остальных. В следующем примере кода показано, как указать классу параметров, что необходимо использовать пользовательского поставщика.  
+ После реализации и компиляции поставщика необходимо указать, что класс параметров должен использовать этого поставщика вместо значения по умолчанию. Для этого через <xref:System.Configuration.SettingsProviderAttribute>. Если применяется ко всему классу параметров поставщик используется для каждого параметра, который определяется в классе; Если применяется к отдельным параметрам архитектура параметров приложения использует этого поставщика только для этих параметров и использует <xref:System.Configuration.LocalFileSettingsProvider> для остальных. В следующем примере кода показано, как указать классу параметров, что необходимо использовать пользовательского поставщика.  
   
  [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
  [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
@@ -144,13 +144,13 @@ ms.locfileid: "33520007"
 > [!IMPORTANT]
 >  Следует убедиться, что поставщик является потокобезопасным и позволяет выполнять запись в файлы конфигурации только одному потоку за раз.  
   
- Поставщик не поддерживает все параметры, определенные атрибуты в <xref:System.Configuration?displayProperty=nameWithType> пространства имен, хотя необходимо по меньшей мере поддерживать <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute>, а также должна поддерживать <xref:System.Configuration.DefaultSettingValueAttribute>. Для тех атрибутов, которые он не поддерживает, поставщик должен завершаться ошибкой без уведомления. Он не должен создавать исключение. Если класс параметров использует Недопустимое сочетание атрибутов, тем не менее, такие как применение <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute> на тот же параметр — поставщик должен вызывать исключение и прекращение операции.  
+ Поставщик должен поддерживать все атрибуты, определенные в параметры <xref:System.Configuration?displayProperty=nameWithType> пространства имен, хотя необходимо по меньшей мере поддерживать <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute>и также должен поддерживать <xref:System.Configuration.DefaultSettingValueAttribute>. Для тех атрибутов, которые он не поддерживает, поставщик должен завершаться ошибкой без уведомления. Он не должен создавать исключение. Если класс параметров использует Недопустимое сочетание атрибутов, тем не менее, такие как применение <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute> тот же параметр — ваш поставщик должен исключение и прервать операцию.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Параметры приложения для пользовательских элементов управления](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
- [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings)  
- [Схема параметров приложения](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings)
+- [Схема параметров приложения](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)

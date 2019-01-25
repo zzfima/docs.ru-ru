@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683694"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
 В этом примере показано, как преобразовать простой регулярных выражений для работы с <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
@@ -20,11 +20,11 @@ ms.locfileid: "43803815"
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Свойство <xref:System.Windows.Forms.MaskedTextBox> элемент управления указывает маски ввода для использования. Маска должна быть строкой, состоящей из одного или нескольких элементов маски из следующей таблицы.  
   
-|Элемент маски|Описание|Элемент регулярного выражения|  
+|Элемент маски|Описание:|Элемент регулярного выражения|  
 |---------------------|-----------------|--------------------------------|  
 |0|Любой цифре от 0 до 9. Требуется объект.|\\d|  
 |9|Цифра или пробел. Необязательный.|[\d]?|  
-|#|Цифра или пробел. Необязательный. Если эта позиция указывается в маске, он будет отображаться как пробел. Плюс (+) и минус (-) допускаются знаки.|[\d+-]?|  
+|#|Цифра или пробел. Необязательный. Если эта позиция указывается в маске, он будет отображаться как пробел. Плюс (+) и минус (-) допускаются знаки.|[ \d+-]?|  
 |L|Буквой ASCII. Требуется объект.|[a-zA-Z]|  
 |?|Буквой ASCII. Необязательный.|[a-zA-Z]?|  
 |&|Символ. Требуется объект.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
@@ -55,8 +55,8 @@ ms.locfileid: "43803815"
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Номер телефона в США, код города необязательно. Если пользователь не хочет вводить дополнительные символы, она можно ввести пробелы или наведите указатель мыши непосредственно в позиции в маске, представленную первым 0.|  
 |`$\d{6}.00`|`$999,999.00`|Значение валюты в диапазоне от 0 до 999999. Валюты, разделителя и десятичные символы будут заменяться во время выполнения их их эквиваленты для данного языка и региональных параметров.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [Элемент управления MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Элемент управления MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

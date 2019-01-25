@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595582"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
 *Универсальный тип* является одиночным элементом программирования, который используется для выполнения одинаковой функциональности для различных типов данных. При определении универсальных классов или процедур не нужно определять отдельную версию для каждого типа данных, для которых может потребоваться выполнение этой функциональности.  
@@ -59,7 +59,7 @@ ms.locfileid: "48266601"
   
  Теперь можно использовать `stringQ` для работы исключительно со значениями `String` . Так как `stringQ` предназначен конкретно для `String` , а не является универсальным для значений `Object` , вам не потребуется позднее связывание или преобразование типа. Это экономит время выполнения и сокращает число ошибок во время выполнения.  
   
- Дополнительные сведения об использовании универсального типа см. в разделе [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Дополнительные сведения об использовании универсального типа см. в разделе [как: Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Пример универсального класса  
  В следующем примере показано определение каркаса универсального класса.  
@@ -74,10 +74,10 @@ ms.locfileid: "48266601"
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Более полный пример, см. в разделе [как: определить класс, можно указать одинаковые функциональные возможности для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Более полный пример, см. в разделе [как: Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Допустимые элементы программирования  
- Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет несколько универсальных классов, структур и интерфейсов, которые представляют собой часто используемые универсальные элементы. <xref:System.Collections.Generic?displayProperty=nameWithType> Пространство имен предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента, проверьте, если он уже находится в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет несколько универсальных классов, структур и интерфейсов, которые представляют собой часто используемые универсальные элементы. Пространство имен <xref:System.Collections.Generic?displayProperty=nameWithType> предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента посмотрите, не существует ли он уже в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Процедуры не являются типами, но можно определять и использовать универсальные процедуры. См. раздел [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -149,14 +149,14 @@ ms.locfileid: "48266601"
   
 ## <a name="see-also"></a>См. также
 
-- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
-- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
-- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
-- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
-- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)  
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)
 - [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

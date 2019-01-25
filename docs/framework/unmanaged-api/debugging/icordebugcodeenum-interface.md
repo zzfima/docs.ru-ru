@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugCodeEnum
+title: ICorDebugCodeEnum Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCodeEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1af5184881c7d357e084e40ac79e2ebd349c4cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c503defaee9137cb95e01181831a470a99eb0b1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722547"
 ---
-# <a name="icordebugcodeenum-interface1"></a>Интерфейс1 ICorDebugCodeEnum
+# <a name="icordebugcodeenum-interface1"></a>ICorDebugCodeEnum Interface1
 Реализует методы «ICorDebugEnum» и выполняет перечисление массивов «ICorDebugCode».  
   
 ## <a name="methods"></a>Методы  
@@ -38,13 +38,13 @@ ms.locfileid: "33413189"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

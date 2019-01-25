@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692419"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Проверка попадания на визуальном уровне
 В этом разделе приведены общие сведения о функции проверки попадания, предоставляемой на визуальном уровне. Поддержка проверки попадания позволяет определить, попадает ли геометрический объект или точка в отображаемое содержимое <xref:System.Windows.Media.Visual>, что позволяет реализовать определенное поведение пользовательского интерфейса, например выделение прямоугольником для выбора нескольких объектов.  
@@ -24,13 +24,13 @@ ms.locfileid: "45988586"
 ## <a name="hit-testing-scenarios"></a>Сценарии проверки попадания  
  <xref:System.Windows.UIElement> Класс предоставляет <xref:System.Windows.UIElement.InputHitTest%2A> метод, который позволяет проверить попадание для элемента с использованием заданного значения координат. Во многих случаях <xref:System.Windows.UIElement.InputHitTest%2A> метод предоставляет нужные функции для реализации проверки попадания элементов. Однако существует несколько сценариев, в которых может потребоваться реализация проверки попадания на визуальном уровне.  
   
--   Проверка попадания отличных<xref:System.Windows.UIElement> объектов: это применимо, если вы выполняется проверка попадания отличных<xref:System.Windows.UIElement> объекты, такие как <xref:System.Windows.Media.DrawingVisual> или графические объекты.  
+-   Проверка попадания отличных<xref:System.Windows.UIElement> объектов: Это применимо, если вы выполняется проверка попадания отличных<xref:System.Windows.UIElement> объекты, такие как <xref:System.Windows.Media.DrawingVisual> или графические объекты.  
   
--   Проверка попадания с использованием геометрического объекта: это применимо, если нужно проверить попадание с использованием геометрического объекта, а не значения координат точки.  
+-   Проверка попадания с использованием геометрического объекта: Это применимо, если требуется проверка попадания с использованием геометрический объект, а не значения координат точки.  
   
--   Проверка попадания для нескольких объектов: это применимо, когда нужно проверить попадание для нескольких объектов, например перекрывающихся объектов. Можно получить результаты для всех визуальных объектов, пересекающих геометрический объект или точку, а не только для первого из них.  
+-   Попадания для нескольких объектов: Это применимо, когда вам нужно проверить попадание для нескольких объектов, например перекрывающихся объектов. Можно получить результаты для всех визуальных объектов, пересекающих геометрический объект или точку, а не только для первого из них.  
   
--   Пропуск <xref:System.Windows.UIElement> политику проверки попадания: это применимо, когда нужно игнорировать <xref:System.Windows.UIElement> политику, которая учитывает такие факторы как отключен ли элемент или недоступные для проверки нажатия.  
+-   Пропуск <xref:System.Windows.UIElement> попадания политики: Это применимо, когда нужно игнорировать <xref:System.Windows.UIElement> политику, которая учитывает такие факторы как отключен ли элемент или недоступные для проверки нажатия.  
   
 > [!NOTE]
 >  Пример полного кода, иллюстрирующего проверку попадания на визуальном уровне, см. в разделе [Пример проверки попадания с помощью DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) и [Пример взаимодействия проверки попадания с Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -138,13 +138,13 @@ Z-порядок для визуального дерева
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [Проверка нажатия с использованием примера DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [Попадания с помощью примера взаимодействия Win32](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [Проверка попадания геометрического объекта в визуальный объект](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Проверка попадания с использованием контейнера узла Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [Проверка нажатия с использованием примера DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Попадания с помощью примера взаимодействия Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Проверка попадания геометрического объекта в визуальный объект](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Проверка попадания с использованием контейнера узла Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

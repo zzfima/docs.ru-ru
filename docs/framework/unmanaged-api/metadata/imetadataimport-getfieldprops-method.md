@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671867"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Метод IMetaDataImport::GetFieldProps
 Возвращает метаданные, связанные с полем, на которое ссылается указанный токен FieldDef.  
@@ -47,10 +47,10 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Параметры  
  `mb`  
- [in] Представляющий поле, чтобы получить связанные метаданные для токен FieldDef.  
+ [in] Токен FieldDef, который представляет связанные метаданные для поля.  
   
  `pClass`  
- [out] Указатель на токен TypeDef, представляющий тип класса, к которому принадлежит поле.  
+ [out] Указатель на токен TypeDef, представляющий тип класса, которой принадлежит это поле.  
   
  `szField`  
  [out] Имя поля.  
@@ -62,10 +62,10 @@ HRESULT GetFieldProps (
  [out] Фактический размер возвращенного буфера.  
   
  `pdwAttr`  
- [out] Флаги, связанные с поля метаданных.  
+ [out] Флаги, связанные с метаданными поля.  
   
  `ppvSigBlob`  
- [in] Указатель на значение двоичного метаданных с описанием поля.  
+ [in] Указатель на значение двоичных метаданных, описывающий поле.  
   
  `pcbSigBlob`  
  [out] Размер в байтах `ppvSigBlob`.  
@@ -77,17 +77,17 @@ HRESULT GetFieldProps (
  [out] Постоянное значение для поля.  
   
  `pcchValue`  
- [out] Размер в символах для `ppValue`, или нуль, если строка не существует.  
+ [out] Размер в символы `ppValue`, или нуль, если строка не существует.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

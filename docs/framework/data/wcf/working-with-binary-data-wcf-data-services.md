@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570594"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Работа с двоичными данными (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиентская библиотека позволяет получать и обновлять двоичные данные из [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в одном из следующих способов:  
@@ -25,7 +25,7 @@ ms.locfileid: "43515559"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] реализуют потоки двоичных данных по протоколу HTTP, как определено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В этом механизме двоичные данные обрабатываются как медиаресурс, который отделен от, но связанных с сущностью, которая называется медиассылкой. Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Пример с пошаговыми инструкциями того, как создать клиентское приложение Windows Presentation Foundation (WPF), загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных службы поставщика серии-часть 2: доступ к Stream ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkId=201637). Чтобы загрузить образец кода для потоковой службы данных в записи блога, см. в разделе [Photo образец потоковой службы данных](https://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
+>  Пример с пошаговыми инструкциями того, как создать клиентское приложение Windows Presentation Foundation (WPF), загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных службы поставщика серии-часть 2. Доступ к Stream ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkId=201637). Чтобы загрузить образец кода для потоковой службы данных в записи блога, см. в разделе [Photo образец потоковой службы данных](https://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
   
 ## <a name="entity-metadata"></a>Метаданные сущности  
  Сущность со связанным потоком медиаисточника указывается в метаданных службы данных с помощью атрибута `HasStream`, применяемого к типу сущности, который является ссылкой на данные. В следующем примере `PhotoInfo` сущность является ссылкой на носитель со связанным ресурсом мультимедиа, обозначается `HasStream` атрибута.  
@@ -38,7 +38,7 @@ ms.locfileid: "43515559"
  Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет методы доступа к потокам двоичных данных из службы данных на основе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. При загрузке медиаресурса можно использовать URI-идентификатор медиаресурса или получить двоичный поток, непосредственно содержащий данные медиаресурса. Можно также загрузить данные медиаресурса в виде двоичного потока.  
   
 > [!TIP]
->  Пример с пошаговыми инструкциями того, как создать клиентское приложение Windows Presentation Foundation (WPF), загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных службы поставщика серии-часть 2: доступ к Stream ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkId=201637). Чтобы загрузить образец кода для потоковой службы данных в записи блога, см. в разделе [Photo образец потоковой службы данных](https://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
+>  Пример с пошаговыми инструкциями того, как создать клиентское приложение Windows Presentation Foundation (WPF), загружающего двоичные файлы изображений из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы, которая хранит изображения, см. в публикации [данных службы поставщика серии-часть 2. Доступ к Stream ресурсов мультимедиа от клиента](https://go.microsoft.com/fwlink/?LinkId=201637). Чтобы загрузить образец кода для потоковой службы данных в записи блога, см. в разделе [Photo образец потоковой службы данных](https://go.microsoft.com/fwlink/?LinkId=198988) в коллекции кода MSDN.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Получение URI-идентификатора двоичного потока  
  При получении определенных типов медиаресурсов, таких как изображения и другие медиафайлы, часто бывает проще использовать URI-идентификатор приложения, чем обрабатывать непосредственно источник двоичных данных. Чтобы получить URI-идентификатор потока ресурса, связанный с определенной ссылкой на данные, следует вызвать метод <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> для экземпляра <xref:System.Data.Services.Client.DataServiceContext>, который отслеживает сущность. В этом примере показан порядок вызова метода <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>, получающего URI-идентификатор потока медиаресурса, который используется для создания нового изображения на стороне клиента.  
@@ -66,6 +66,6 @@ ms.locfileid: "43515559"
 > [!NOTE]
 >  При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> поток не отправляется в службу данных, пока не будет вызван метод <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
-## <a name="see-also"></a>См. также  
- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>См. также
+- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

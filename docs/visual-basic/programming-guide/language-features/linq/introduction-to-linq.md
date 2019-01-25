@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524057"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
 Добавляет возможности запросов в Visual Basic Language-Integrated Query (LINQ) и предоставляет простые и мощные возможности при работе с любыми видами данных. Вместо отправки запроса к базе данных должны быть обработаны или работы с отдельный синтаксис запросов для каждого типа данных, которую нужно найти, LINQ представляет запросы как часть языка Visual Basic. Синтаксис запросов не зависит от типа данных.  
@@ -38,7 +38,7 @@ ms.locfileid: "43509056"
   
  Visual Basic включает в себя следующие поставщики LINQ.  
   
-|Поставщик|Описание|  
+|Поставщик|Описание:|  
 |---|---|  
 |LINQ to Objects|Поставщик LINQ to Objects позволяет направлять запросы к коллекциям и массивам, которые находятся в памяти. Если объект поддерживает интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поставщик LINQ to Objects позволяет направлять к нему запросы.<br /><br /> Вы можете включить поставщик LINQ to Objects, импортировав <xref:System.Linq> пространство имен, которое импортируется по умолчанию для всех проектов Visual Basic.<br /><br /> Дополнительные сведения о поставщике LINQ to Objects, см. в разделе [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> Visual Basic упрощает работу с LINQ to SQL включением реляционный конструктор объектов (O/R Designer). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. Реляционный конструктор объектов также предоставляет функциональные возможности сопоставления сохраненных процедур и функций <xref:System.Data.Linq.DataContext> объект, который управляет связью с базой данных и сохраняет состояние проверок на оптимистический параллелизм.<br /><br /> Дополнительные сведения о поставщике LINQ to SQL, см. в разделе [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Дополнительные сведения о реляционном конструкторе объектов см. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
@@ -82,7 +82,7 @@ ms.locfileid: "43509056"
 
 ### <a name="select-clause"></a>Select - предложение
 
-Необязательный. Объект [ `Select` предложение](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итераций для запроса. Пример:
+Необязательный параметр. Объект [ `Select` предложение](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итераций для запроса. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
 
@@ -90,7 +90,7 @@ ms.locfileid: "43509056"
 
 ### <a name="where-clause"></a>Предложение Where
 
-Необязательный. Объект [ `Where` предложение](../../../../visual-basic/language-reference/queries/where-clause.md) определяет условие фильтрации для запроса. Пример:
+Необязательный параметр. Объект [ `Where` предложение](../../../../visual-basic/language-reference/queries/where-clause.md) определяет условие фильтрации для запроса. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
 
@@ -102,19 +102,19 @@ ms.locfileid: "43509056"
 
 ### <a name="join-clause"></a>Join - предложение
 
-Необязательный. Объект [ `Join` предложение](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну коллекцию. Пример:
+Необязательный параметр. Объект [ `Join` предложение](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну коллекцию. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
 
 ### <a name="group-by-clause"></a>Group By - предложение
 
-Необязательный. Объект [ `Group By` предложение](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Пример:
+Необязательный параметр. Объект [ `Group By` предложение](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
 
 ### <a name="group-join-clause"></a>Group Join - предложение
 
-Необязательный. Объект [ `Group Join` предложение](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Пример:
+Необязательный параметр. Объект [ `Group Join` предложение](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
 
@@ -130,37 +130,37 @@ ms.locfileid: "43509056"
 
 ### <a name="let-clause"></a>Let - предложение
 
-Необязательный. Объект [ `Let` предложение](../../../../visual-basic/language-reference/queries/let-clause.md) вычисляет значение и присваивает его новой переменной в запросе. Пример:
+Необязательный параметр. Объект [ `Let` предложение](../../../../visual-basic/language-reference/queries/let-clause.md) вычисляет значение и присваивает его новой переменной в запросе. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
 
 ### <a name="distinct-clause"></a>Distinct - предложение
 
-Необязательный. Объект `Distinct` предложение ограничивает значения текущей переменной итерации, чтобы исключить повторяющиеся значения в результатах запроса. Пример:
+Необязательный параметр. Объект `Distinct` предложение ограничивает значения текущей переменной итерации, чтобы исключить повторяющиеся значения в результатах запроса. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
 
 ### <a name="skip-clause"></a>Skip - предложение
 
-Необязательный. Объект [ `Skip` предложение](../../../../visual-basic/language-reference/queries/skip-clause.md) пропускает указанное число элементов в коллекции и возвращает остальные элементы. Пример:
+Необязательный параметр. Объект [ `Skip` предложение](../../../../visual-basic/language-reference/queries/skip-clause.md) пропускает указанное число элементов в коллекции и возвращает остальные элементы. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
 
 ### <a name="skip-while-clause"></a>Skip While - предложение
 
-Необязательный. Объект [ `Skip While` предложение](../../../../visual-basic/language-reference/queries/skip-while-clause.md) пропускает элементы в коллекции, до тех пор, пока заданное условие имеет `true` и затем возвращает оставшиеся элементы. Пример:
+Необязательный параметр. Объект [ `Skip While` предложение](../../../../visual-basic/language-reference/queries/skip-while-clause.md) пропускает элементы в коллекции, до тех пор, пока заданное условие имеет `true` и затем возвращает оставшиеся элементы. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
 
 ### <a name="take-clause"></a>Take - предложение
 
-Необязательный. Объект [ `Take` предложение](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число идущих подряд элементов с начала коллекции. Пример:
+Необязательный параметр. Объект [ `Take` предложение](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число идущих подряд элементов с начала коллекции. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
 
 ### <a name="take-while-clause"></a>Take While - предложение
 
-Необязательный. Объект [ `Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекции до тех пор, пока заданное условие имеет `true` и пропускает остальные элементы. Пример:
+Необязательный параметр. Объект [ `Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекции до тех пор, пока заданное условие имеет `true` и пропускает остальные элементы. Пример:
 
 [!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
   
@@ -177,7 +177,7 @@ ms.locfileid: "43509056"
   
  При наличии допустимое соединение с базой данных SQL Server, вы можете добавить **LINQ to SQL Classes** шаблона элемента в проект. Это позволит отобразить реляционный конструктор объектов (O/R-конструктор). O/R-конструктор дает возможность перетаскивать элементы, которые вы хотите получить доступ к в коде из **обозревателя серверов**/**обозреватель баз данных** в область конструктора. Файл LINQ to SQL добавляет в проект объект <xref:System.Data.Linq.DataContext>. Этот объект включает свойства и коллекции для таблиц и представлений, к которым нужно получить доступ, а также необходимые методы для хранимых процедур. После сохранения изменений в файле LINQ to SQL (DBML) можно получить доступ к этим объектам в коде, обратившись к определенному O/R-конструктором объекту <xref:System.Data.Linq.DataContext>. Объекту <xref:System.Data.Linq.DataContext> для проекта присваивается имя, которое определяется именем файла LINQ to SQL. Например, файл LINQ to SQL с именем Northwind.dbml создаст объект <xref:System.Data.Linq.DataContext> с именем `NorthwindDataContext`.  
   
- Примеры с пошаговыми инструкциями см. в разделе [как: запрос к базе данных](how-to-query-a-database-by-using-linq.md) и [как: вызов хранимой процедуры](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Примеры с пошаговыми инструкциями см. в разделе [как: Запрос к базе данных](how-to-query-a-database-by-using-linq.md) и [как: Вызовите хранимую процедуру](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Возможности Visual Basic, поддерживающие LINQ  
  Visual Basic включает и другие возможности, упрощающие использование LINQ и сократить объем кода, который необходимо написать для выполнения запросов LINQ. В число этих требований входят следующие:  
@@ -213,7 +213,7 @@ ms.locfileid: "43509056"
   
 ## <a name="related-resources"></a>Связанные ресурсы  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |---|---|  
 |[XML](../../language-features/xml/index.md)|Описание возможностей XML в Visual Basic, который может запрашиваться и, которые позволяют включать XML как объекты данных первого класса в коде Visual Basic.|  
 |[Запросы](../../../language-reference/queries/index.md)|Содержит справочные сведения о предложениях запросов, которые доступны в Visual Basic.|  
@@ -224,32 +224,32 @@ ms.locfileid: "43509056"
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Как и пошаговые руководства
- [How to: Query a Database](how-to-query-a-database-by-using-linq.md) (Практическое руководство. Выполнение запросов к базе данных)  
+ [Практическое руководство. Запрос к базе данных](how-to-query-a-database-by-using-linq.md)  
   
- [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md) (Практическое руководство. Вызов хранимой процедуры)  
+ [Практическое руководство. Вызов хранимой процедуры](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [How to: Modify Data in a Database](how-to-modify-data-in-a-database-by-using-linq.md) (Практическое руководство. Изменение данных в базе данных)  
+ [Практическое руководство. Изменение данных в базе данных](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [How to: Combine Data with Joins](how-to-combine-data-with-linq-by-using-joins.md) (Практическое руководство. Объединение данных с помощью соединений)  
+ [Практическое руководство. Объединение данных с соединениями](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [How to: Sort Query Results](how-to-sort-query-results-by-using-linq.md) (Практическое руководство. Сортировка результатов запроса)  
+ [Практическое руководство. Сортировка результатов запроса](how-to-sort-query-results-by-using-linq.md)  
   
- [How to: Filter Query Results](how-to-filter-query-results-by-using-linq.md) (Практическое руководство. Фильтрование результатов запроса)  
+ [Практическое руководство. Фильтрование результатов запроса](how-to-filter-query-results-by-using-linq.md)  
   
- [How to: Count, Sum, or Average Data](how-to-count-sum-or-average-data-by-using-linq.md) (Практическое руководство. Выполнение функций Count, Sum и Average)  
+ [Практическое руководство. Число, суммы или среднего значения данных](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [How to: Find the Minimum or Maximum Value in a Query Result](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md) (Практическое руководство. Нахождение минимального или максимального значения в результатах запроса)  
+ [Практическое руководство. Поиск минимального или максимального значения в результатах запроса](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [Практическое руководство. Назначение хранимых процедур для выполнения обновления, вставки и удаления (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [Практическое руководство. Назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Главы в популярных книгах  
  [Глава 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) в [программирования Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>См. также
 
-- [Встроенный язык запросов LINQ](../../concepts/linq/index.md)  
-- [Общие сведения о LINQ to XML в Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Общие сведения о LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [Встроенный язык запросов LINQ](../../concepts/linq/index.md)
+- [Общие сведения о LINQ to XML в Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Общие сведения о LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

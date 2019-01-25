@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695729"
 ---
 # <a name="beginenumeration-function"></a>Функция BeginEnumeration
 Сбрасывает перечислитель на начало перечисления.  
@@ -52,7 +52,7 @@ HRESULT BeginEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Комбинация флагов в `lEnumFlags` недопустим или указан недопустимый аргумент был указан. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Второй вызов `BeginEnumeration` была сделана без промежуточных вызовов к [ `EndEnumeration` ](endenumeration.md). |
@@ -67,14 +67,14 @@ HRESULT BeginEnumeration (
 
 **Группа 1**
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Включают свойства, которые составляют только ключ. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Включают свойства, которые являются только ссылки на объекты. |
 
 **Группа 2**
 
-Константа  |Значение  |Описание  |
+Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Ограничения перечисления только системные свойства. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Включает локальные и распространенных свойств, но исключает системные свойства из перечисления. |
@@ -91,18 +91,18 @@ HRESULT BeginEnumeration (
 
 Для экземпляров:
 
-Константа  |Значение  |Описание  |
+Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ограничения перечисления для свойства, которые определены или являются изменения в самом классе. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ограничения перечисления для свойства, наследуемые от базовых классов. |
 
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

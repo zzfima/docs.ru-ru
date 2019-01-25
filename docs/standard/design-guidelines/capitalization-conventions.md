@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670177"
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Рекомендации в этой главе размещать простой метод с помощью варианта, когда применяется последовательно, делать идентификаторы для типов, членов и параметров, удобном для чтения.  
@@ -54,7 +54,7 @@ ms.locfileid: "53131096"
 |Тип|Pascal|`public class StreamReader { ... }`|  
 |Интерфейс|Pascal|`public interface IEnumerable { ... }`|  
 |Метод|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Свойство|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Свойство.|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
 |событие|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Поле|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Значение перечисления|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
@@ -106,5 +106,5 @@ ms.locfileid: "53131096"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

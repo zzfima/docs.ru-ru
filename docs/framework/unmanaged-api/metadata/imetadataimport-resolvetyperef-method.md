@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 106ef520f64233323cbb3f26cb3efdee152559b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c69c67c5c9d996bd746d82ea86caf4a396c0b10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625241"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Метод IMetaDataImport::ResolveTypeRef
 Разрешает <xref:System.Type> ссылку, представленный указанный токен TypeRef.  
@@ -43,32 +43,32 @@ HRESULT ResolveTypeRef (
  [in] Токен метаданных TypeRef для возврата сведений о типе, на которую указывает ссылка.  
   
  `riid`  
- [in] Идентификатор IID интерфейса, чтобы вернуться в `ppIScope`. Как правило это будет IID_IMetaDataImport.  
+ [in] Идентификатор IID интерфейса, возвращаемый в `ppIScope`. Как правило это будет IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] Интерфейс для области модуля, в которой определен тип, на который указывает ссылка.  
+ [out] Интерфейс для области модуля, в котором определен тип, на который указывает ссылка.  
   
  `ptd`  
- [out] Указатель на маркер TypeDef, который представляет ссылочного типа.  
+ [out] Указатель на токен TypeDef, представляющий ссылочного типа.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  Не используйте этот метод, если загружено несколько доменов приложений. Метод не влияют на границы домена приложения. Если несколько версий сборки загружаются, и они содержат того же типа с тем же пространством имен, метод возвращает области модуля найденную первого типа.  
+>  Не используйте этот метод, если загружено несколько доменов приложений. Метод не учитывает границы домена приложения. Если несколько версий сборки загружаются, и они содержат один и тот же тип того же пространства имен, метод возвращает области модуля, найденную первого типа.  
   
- `ResolveTypeRef` Метод выполняет поиск определения типа в других модулях. Если найден в определении типа `ResolveTypeRef` возвращает интерфейс для области модуля, а также токен TypeDef для типа.  
+ `ResolveTypeRef` Поиска методов для определения типа в других модулях. Если определение типа обнаруживается, `ResolveTypeRef` возвращает интерфейс для области модуля, а также маркер TypeDef для типа.  
   
- Если ссылка на тип разрешения имеет разрешение области AssemblyRef, `ResolveTypeRef` метод ищет совпадение только в области метаданных, которые уже открыт с помощью вызовов [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)метода или [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) метод. Это вызвано `ResolveTypeRef` не удается определить из области AssemblyRef, где на диске или в глобальном кэше сборок хранится сборка.  
+ Если необходимо разрешить ссылку на тип получит разрешение область AssemblyRef, `ResolveTypeRef` метод осуществляет поиск совпадения только в области метаданных, которые уже было открыто с вызовами либо [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)метод или [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) метод. Это обусловлено `ResolveTypeRef` не может определить только в области AssemblyRef, где на диске или в глобальном кэше сборок сборки хранятся.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

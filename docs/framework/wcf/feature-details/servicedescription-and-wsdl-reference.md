@@ -2,22 +2,22 @@
 title: ServiceDescription и справочная информация о WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544332"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription и справочная информация о WSDL
-В этом разделе описывается, как Windows Communication Foundation (WCF) сопоставляет документы на языке описания веб-служб (WSDL) в и из <xref:System.ServiceModel.Description.ServiceDescription> экземпляров.  
+Здесь описывается, как Windows Communication Foundation (WCF) сопоставляет документы на языке описания служб (WSDL) и из <xref:System.ServiceModel.Description.ServiceDescription> экземпляров.  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>Сопоставление ServiceDescription с WSDL 1.1  
- WCF можно использовать для экспорта WSDL-документов из <xref:System.ServiceModel.Description.ServiceDescription> экземпляра службы. При публикации конечных точек метаданных документы WSDL формируются для службы автоматически.  
+ WCF позволяет экспортировать документы WSDL из <xref:System.ServiceModel.Description.ServiceDescription> экземпляра службы. При публикации конечных точек метаданных документы WSDL формируются для службы автоматически.  
   
  Также можно импортировать экземпляры <xref:System.ServiceModel.Description.ServiceEndpoint>, экземпляры <xref:System.ServiceModel.Description.ContractDescription> и экземпляры <xref:System.ServiceModel.Channels.Binding> из документов WSDL, используя для этого тип `WsdlImporter`.  
   
- WSDL-документов, экспортированного с WCF, импортировать все определения схемы XML, используемые из внешних документов схем XML. Для каждого целевого пространства имен, используемого в типах данных в службе, экспортируется отдельный документ схемы XML. Аналогично, для каждого целевого пространства имен, используемого в контрактах служб, экспортируется отдельный документ WSDL.  
+ Документы WSDL, экспортированный с WCF, Импорт определений схемы XML, используемый из внешних документов схем XML. Для каждого целевого пространства имен, используемого в типах данных в службе, экспортируется отдельный документ схемы XML. Аналогично, для каждого целевого пространства имен, используемого в контрактах служб, экспортируется отдельный документ WSDL.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  Экземпляр <xref:System.ServiceModel.Description.ServiceDescription> сопоставляется с элементом `wsdl:service`. Экземпляр <xref:System.ServiceModel.Description.ServiceDescription> содержит коллекцию экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint>, каждый из которых сопоставляется с отдельным элементом `wsdl:port`.  
@@ -36,13 +36,13 @@ ms.locfileid: "33507370"
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
 |`Name`|`wsdl:port` /@name Значение для конечной точки и `wsdl:binding` /@name значение для привязки конечной точки.|  
-|`Address`|Адрес для определения `wsdl:port` для конечной точки.<br /><br /> Формат адреса определяется транспортом для конечной точки. Например для WCF поддерживаемых транспортов это может быть адрес SOAP или ссылка на конечную точку.|  
-|`Binding`|Определение `wsdl:binding` для конечной точки.<br /><br /> В отличие от `wsdl:binding` определения привязок в WCF не привязаны к любой один контракт.|  
+|`Address`|Адрес для определения `wsdl:port` для конечной точки.<br /><br /> Формат адреса определяется транспортом для конечной точки. Например для WCF-поддерживаемых транспортов он может быть адрес SOAP или ссылка на конечную точку.|  
+|`Binding`|Определение `wsdl:binding` для конечной точки.<br /><br /> В отличие от `wsdl:binding` определения привязок в WCF не привязаны к либо одним контрактом.|  
 |`Contract`|Определение `wsdl:portType` для конечной точки.|  
 |`Behaviors`|Поведения конечной точки, реализующие интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension>, могут изменять элемент `wsdl:port` для конечной точки.|  
   
 ### <a name="bindings"></a>Привязки  
- Экземпляр привязки `ServiceEndpoint` сопоставляется с определением `wsdl:binding`. В отличие от `wsdl:binding` определений, которые должны быть связаны с конкретным `wsdl:portType` определения привязок WCF не зависят от какого-либо контракта.  
+ Экземпляр привязки `ServiceEndpoint` сопоставляется с определением `wsdl:binding`. В отличие от `wsdl:binding` определений, которые должны быть связаны с конкретным `wsdl:portType` определения, привязки WCF не зависят от любой контракт.  
   
  Привязка состоит из коллекции элементов привязки. Каждый элемент описывает некоторый аспект взаимодействия конечной точки с клиентами. Кроме того, каждая привязка имеет свойство <xref:System.ServiceModel.Channels.MessageVersion>, которое указывает версию конверта (<xref:System.ServiceModel.EnvelopeVersion>) и версию адресации (<xref:System.ServiceModel.Channels.AddressingVersion>) для конечной точки.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33507370"
  Свойство `AddressingVersion` привязки сопоставляется с версией адресации, используемой в элементе `wsd:port`. WCF поддерживает SOAP 1.1 и SOAP 1.2 адреса и WS-Addressing 08/2004 и ссылки на конечные точки WS-Addressing 1.0.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- Свойство `EnvelopeVersion` привязки сопоставляется с версией адресации протокола SOAP, используемой в элементе `wsdl:binding`. WCF поддерживает привязки протоколов SOAP 1.1 и SOAP 1.2.  
+ Свойство `EnvelopeVersion` привязки сопоставляется с версией адресации протокола SOAP, используемой в элементе `wsdl:binding`. WCF поддерживает привязки SOAP 1.1 и SOAP 1.2.  
   
 ### <a name="contracts"></a>Контракты  
  Экземпляр <xref:System.ServiceModel.Description.ContractDescription> для экземпляра `ServiceEndpoint` сопоставляется с элементом `wsdl:portType`. В экземпляре `ContractDescription` описываются все операции для данного контракта.  
@@ -75,7 +75,7 @@ ms.locfileid: "33507370"
 |`Operations`|Определения `wsdl:operation` для контракта.|  
   
 ### <a name="operations"></a>Операции  
- <xref:System.ServiceModel.Description.OperationDescription> Экземпляр сопоставляется с `wsdl:portType` / `wsdl:operation`. Экземпляр `OperationDescription` содержит коллекцию экземпляров `MessageDescription`, которые описывают сообщения для операции.  
+ <xref:System.ServiceModel.Description.OperationDescription> Экземпляр сопоставляется `wsdl:portType` / `wsdl:operation`. Экземпляр `OperationDescription` содержит коллекцию экземпляров `MessageDescription`, которые описывают сообщения для операции.  
   
  Два поведения операции играют большую роль в том, как `OperationDescription` сопоставляется с документом WSDL: `DataContractSerializerOperationBehavior` и `XmlSerializerOperationBehavior`.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "33507370"
   
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
-|`XmlSerializerFormatAttribute`|`Style` Свойство для этого атрибута сопоставляется `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style значение для операции.<br /><br /> `Use` Свойство для этого атрибута сопоставляется `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use значения для всех сообщений в операции.|  
+|`XmlSerializerFormatAttribute`|`Style` Свойство для этого атрибута сопоставляется `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style значение для операции.<br /><br /> `Use` Свойство для этого атрибута сопоставляется `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use значения для всех сообщений во время выполнения операции.|  
   
 ### <a name="messages"></a>Сообщения  
- Объект `MessageDescription` экземпляр сопоставляется с `wsdl:message` , на который ссылается `wsdl:portType` / `wsdl:operation` / `wsdl:input` или `wsdl:portType` / `wsdl:operation` / `wsdl:output`сообщения в операции. Экземпляр `MessageDescription` имеет тело и заголовки.  
+ Объект `MessageDescription` экземпляр сопоставляется `wsdl:message` , на который ссылается `wsdl:portType` / `wsdl:operation` / `wsdl:input` или `wsdl:portType` / `wsdl:operation` / `wsdl:output`сообщения в операции. Экземпляр `MessageDescription` имеет тело и заголовки.  
   
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
@@ -116,17 +116,17 @@ ms.locfileid: "33507370"
 |`ContractDescription.Name`, `OperationContract.Name`|При экспорте используются для формирования `wsdl:message` /@name значение.|  
   
 #### <a name="message-body"></a>Текст сообщения  
- Объект `MessageBodyDescription` экземпляр сопоставляется с `wsdl:message` / `wsdl:part` определения для текста сообщения. Тело сообщения может быть заключено в оболочку или передаваться в режиме "bare".  
+ Объект `MessageBodyDescription` экземпляр сопоставляется `wsdl:message` / `wsdl:part` определения для текста сообщения. Тело сообщения может быть заключено в оболочку или передаваться в режиме "bare".  
   
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
-|`WrapperName`|Если стиль-не RPC, а затем `WrapperName` сопоставляется с именем элемента ссылается `wsdl:message` / `wsdl:part` с @name значение «параметры».|  
-|`WrapperNamespace`|Если стиль-не RPC, а затем `WrapperNamespace` сопоставляется с пространством имен элемента для `wsdl:message` / `wsdl:part` с @name значение «параметры».|  
+|`WrapperName`|Если стиль-не RPC, а затем `WrapperName` сопоставляется с именем элемента, ссылается `wsdl:message` / `wsdl:part` с @name равно «parameters».|  
+|`WrapperNamespace`|Если стиль-не RPC, а затем `WrapperNamespace` сопоставляется с пространством имен элемента для `wsdl:message` / `wsdl:part` с @name равно «parameters».|  
 |`Parts`|Части сообщения для данного тела сообщения.|  
-|`ReturnValue`|Дочерний элемент элемента программы-оболочки, если имеется элемент-оболочка (стиль упакованным документом или стиль RPC), в противном случае — первый `wsdl:message` / `wsdl:part` в сообщении.|  
+|`ReturnValue`|Дочерний элемент элемента-оболочки, если имеется элемент-оболочка (стиль упакованным документом или стиль RPC), в противном случае первый `wsdl:message` / `wsdl:part` в сообщении.|  
   
 #### <a name="message-parts"></a>Части сообщения  
- Объект `MessagePartDescription` экземпляр сопоставляется с `wsdl:message` / `wsdl:part` и тип схемы XML, или элемент, который указывает часть сообщения.  
+ Объект `MessagePartDescription` экземпляр сопоставляется `wsdl:message` / `wsdl:part` и тип схемы XML, или элемента, который указывает часть сообщения.  
   
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
@@ -140,7 +140,7 @@ ms.locfileid: "33507370"
  Экземпляр `MessageHeaderDescription` представляет собой часть сообщения, которая также сопоставляется с привязкой `soap:header` для части сообщения.  
   
 ### <a name="faults"></a>Ошибки  
- Объект `FaultDescription` экземпляр сопоставляется с `wsdl:portType` / `wsdl:operation` / `wsdl:fault` определения и связанный с ним `wsdl:message` определения. Элемент `wsdl:message` добавляется в то же целевое пространство имен, что и связанный с ним тип порта WSDL. Элемент `wsdl:message` имеет одну часть сообщения с именем "detail", которая указывает на элемент схемы XML, соответствующий значению свойства `DefaultType` для экземпляра `FaultDescription`.  
+ Объект `FaultDescription` экземпляр сопоставляется `wsdl:portType` / `wsdl:operation` / `wsdl:fault` определения и связанный с ним `wsdl:message` определения. Элемент `wsdl:message` добавляется в то же целевое пространство имен, что и связанный с ним тип порта WSDL. Элемент `wsdl:message` имеет одну часть сообщения с именем "detail", которая указывает на элемент схемы XML, соответствующий значению свойства `DefaultType` для экземпляра `FaultDescription`.  
   
 |Свойства|Сопоставление с WSDL|  
 |----------------|------------------|  
@@ -151,5 +151,5 @@ ms.locfileid: "33507370"
 |`DetailType`|Тип схемы XML элемента, на который указывает часть "detail" сообщения.|  
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Используются для получения `wsdl:message` /@name значение для сообщения об ошибке.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description>

@@ -1,5 +1,5 @@
 ---
-title: 'Как: управлять таблицы&#39;s столбцов с помощью свойства столбцов'
+title: Как выполнить Управлять таблицы&#39;s столбцов с помощью свойства Columns
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: 916764c621738ddc651580f1232e1f579a17e6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f560e85888b5617f545082d47d124163d492ec00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655823"
 ---
-# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Как: управлять таблицы&#39;s столбцов с помощью свойства столбцов
+# <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Как выполнить Управлять таблицы&#39;s столбцов с помощью свойства Columns
 В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над столбцами таблицы с помощью <xref:System.Windows.Documents.Table.Columns%2A> свойство.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableColumnCollection.Add%2A> метод для добавления столбцов в таблице <xref:System.Windows.Documents.Table.Columns%2A> коллекции.  
+ В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableColumnCollection.Add%2A> метод для добавления столбцов в таблицу <xref:System.Windows.Documents.Table.Columns%2A> коллекции.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_add)]
  [!code-vb[TableSnippets2#_Table_Columns_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_add)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример вставляет новый <xref:System.Windows.Documents.TableColumn>.  Новый столбец вставляется в позиции индекса 0, что делает его первым столбцом в таблице.  
+ В следующем примере вставляется новый <xref:System.Windows.Documents.TableColumn>.  Новый столбец вставляется в позиции индекса 0, делая его первым столбцом в таблице.  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableColumnCollection> Коллекция использует стандартную индексацию с нуля.  
@@ -36,13 +36,13 @@ ms.locfileid: "33545302"
  [!code-vb[TableSnippets2#_Table_Columns_Insert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_insert)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример получает доступ к некоторым произвольным свойствам столбцов в <xref:System.Windows.Documents.TableColumnCollection> коллекции, ссылающиеся на определенных столбцов с помощью индекса.  
+ Следующий пример обращается к некоторые произвольные свойства для столбцов в <xref:System.Windows.Documents.TableColumnCollection> коллекции, ссылающийся на определенных столбцов по индексу.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_manip)]
  [!code-vb[TableSnippets2#_Table_Columns_Manip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_manip)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается количество столбцов, в настоящее время размещены в таблице.  
+ Следующий пример возвращает количество столбцов, в настоящий момент размещенные в таблице.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Count](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_count)]
  [!code-vb[TableSnippets2#_Table_Columns_Count](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_count)]  
@@ -65,10 +65,10 @@ ms.locfileid: "33545302"
  [!code-csharp[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_clear)]
  [!code-vb[TableSnippets2#_Table_Columns_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_clear)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Определение таблицы с помощью XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [Создание таблицы программным способом](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Управление FlowDocument с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [Определение таблицы с помощью XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)
+- [Создание таблицы программным способом](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)
+- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Управление FlowDocument с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 062d6276ab91705a4554da2afa8459a26453906f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703618"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Указывает, что один или несколько элементов не имеют ограничений доступа.  
+Указывает, что один или несколько объявленных программных элементов не имеют ограничений доступа.  
   
 ## <a name="remarks"></a>Примечания  
- При публикации компонента или набора компонентов, таких как библиотеки классов, обычно требуется, элементов программирования, должна быть доступна из любого кода, взаимодействующего со сборкой. Чтобы предоставить такой неограниченный доступ для элемента, его можно объявить с `Public`.  
+ При публикации компонента или набора компонентов, таких как библиотеки классов, вам бы хотелось элементы программирования могут оказаться недоступными из любого кода, который взаимодействует со сборкой. Чтобы предоставить такой неограниченный доступ для элемента, его можно объявить с `Public`.  
   
- Общий доступ является обычным уровнем для элемента программирования, при необходимости ограничить доступ к нему. Обратите внимание, что уровень доступа элемент объявлен внутри интерфейса, модуля, класса или структуры по умолчанию используется значение `Public` Если иное не объявлено.  
+ Общий доступ при обычном уровне для элемента программирования необходимо ограничить доступ к нему. Обратите внимание, что уровень доступа для элемента, объявленные в интерфейсе, модуля, класса или структуры по умолчанию используется `Public` Если иное не объявлено.  
   
 ## <a name="rules"></a>Правила  
   
--   **Контекст объявления.** Можно использовать `Public` только на уровне модуля, интерфейсом или пространством имен. Это означает, что контекст объявления для `Public` элемент должен быть исходный файл, пространство имен, интерфейса, модуля, класса или структуры и не может быть процедурой.  
+-   **Контекст объявления.** Можно использовать `Public` только на уровне модуля, интерфейса или пространства имен. Это означает, что контекст объявления для `Public` элемент должен быть исходный файл, пространство имен, интерфейс, модуля, класса или структуры и не может быть процедурой.  
   
 ## <a name="behavior"></a>Поведение  
   
--   **Уровень доступа.** Весь код, можно получить доступ, модуля, класса или структуры можно получить доступ к его `Public` элементов.  
+-   **Уровень доступа.** Весь код, который можно получить доступ к модуля, класса или структуры можно получить доступ к его `Public` элементов.  
   
--   **Доступ по умолчанию.** Локальные переменные внутри процедуры по умолчанию для общего доступа и нельзя использовать модификаторы доступа на них.  
+-   **Доступ по умолчанию.** Локальные переменные внутри процедуры по умолчанию общий доступ и невозможно использовать модификаторы доступа на них.  
   
--   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа, см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Модификатор `Public` можно использовать в следующих контекстах:  
   
@@ -65,13 +65,13 @@ ms.locfileid: "34235922"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
- [Protected Private](private-protected.md)   
- [Protected Friend](protected-friend.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>См. также
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

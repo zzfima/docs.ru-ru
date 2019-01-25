@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
-ms.openlocfilehash: 1d119b48f0524b3e997aa2cb9ea2cbbd855afdf0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708991"
 ---
 # <a name="property-design"></a>Разработка свойств
 Несмотря на то, что свойства с технической точки зрения очень похожи на методы, между ними есть различия с точки зрения сценарии их использования. Они должны рассматриваться как интеллектуальные поля. Они имеют синтаксис вызова полей и гибкость методов.  
@@ -89,5 +89,5 @@ ms.locfileid: "53131460"
   
 ## <a name="see-also"></a>См. также
 
-- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  
+- [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

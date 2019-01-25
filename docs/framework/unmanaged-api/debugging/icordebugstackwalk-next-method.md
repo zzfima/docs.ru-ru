@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553234"
 ---
 # <a name="icordebugstackwalknext-method"></a>Метод ICorDebugStackWalk::Next
 Перемещает [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта следующий кадр.  
@@ -38,7 +38,7 @@ HRESULT Next();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Среда выполнения успешно развернута на следующий кадр (см. примечания).|  
+|S_OK|Среда выполнения успешно развернута на следующий кадр (см. в разделе "Примечания").|  
 |E_FAIL|`ICorDebugStackWalk` Не удалось перевести объект.|  
 |CORDBG_S_AT_END_OF_STACK|В результате разворачивания достигнут конец стека.|  
 |CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
@@ -46,18 +46,18 @@ HRESULT Next();
 ## <a name="exceptions"></a>Исключения  
   
 ## <a name="remarks"></a>Примечания  
- `Next` Усовершенствованные метод `ICorDebugStackWalk` объекта вызывающий кадр только в том случае, если среда выполнения может развернуть текущий кадр. В противном случае этот объект перемещается на следующий кадр, который среда выполнения может развернуть.  
+ `Next` Метод перемещает `ICorDebugStackWalk` объекта вызывающий кадр только в том случае, если среда выполнения может развернуть текущего кадра. В противном случае этот объект перемещается к следующему кадру, который среда выполнения может развернуть.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

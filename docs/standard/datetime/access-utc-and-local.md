@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: доступ к предварительно определенным объектам UTC и местным временем объектам зоны'
+title: Как выполнить Доступ к предварительно определенным объектам UTC и местным временем объектам зоны
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658030"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Практическое: доступ к предварительно определенным объектам UTC и местным временем объектам зоны
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Как выполнить Доступ к предварительно определенным объектам UTC и местным временем объектам зоны
 
 <xref:System.TimeZoneInfo> Класс предоставляет два свойства <xref:System.TimeZoneInfo.Utc%2A> и <xref:System.TimeZoneInfo.Local%2A>, обеспечивающие доступ к объектам предопределенный часовой пояс. В этом разделе рассматривается порядок работы с объектами <xref:System.TimeZoneInfo>, возвращаемыми этими свойствами.
 
@@ -57,6 +57,6 @@ ms.locfileid: "44086917"
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
-* [Поиск часового пояса, заданного в локальной системе](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-* [Практическое руководство. Создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Поиск часового пояса, заданного в локальной системе](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [Практическое руководство. Создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)

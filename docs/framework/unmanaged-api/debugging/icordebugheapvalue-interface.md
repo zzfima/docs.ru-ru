@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue интерфейс1
+title: Интерфейс1 ICorDebugHeapValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c510912412f2344dfd92d6ab2c41c35c1f237ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622862"
 ---
-# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue интерфейс1
-Подкласс «ICorDebugValue», который представляет объект, собранных сборщиком мусора среды CLR.  
+# <a name="icordebugheapvalue-interface1"></a>Интерфейс1 ICorDebugHeapValue
+Подкласс «ICorDebugValue», который представляет объект, собранных сборщиком мусора среды выполнения (CLR).  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateRelocBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Не реализовано.|  
-|[Метод IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Возвращает значение, указывающее, является ли объект, представленный это `ICorDebugHeapValue` является допустимым или удален сборщиком мусора. Этот метод является устаревшим в .NET Framework версии 2.0.|  
+|[Метод IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Получает значение, указывающее, является ли объект, представленный это `ICorDebugHeapValue` является допустимым, или он был удален сборщиком мусора. Этот метод был объявлен устаревшим в .NET Framework версии 2.0.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -39,16 +39,16 @@ ms.locfileid: "33415705"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
-    
-    
-    
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+
+
+
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

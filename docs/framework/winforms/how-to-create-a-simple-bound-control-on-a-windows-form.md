@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
+title: Как выполнить Создание элемента управления простой привязкой в форме Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643576"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Как выполнить Создание элемента управления простой привязкой в форме Windows
 С помощью *простая привязка*, одному элементу данных, таких как значение столбца из таблицы набора данных, можно отобразить в элементе управления. Вы можете простую привязку любого свойства элемента управления к значению данных.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ ms.locfileid: "46321357"
     > [!NOTE]
     >  Так как элементы управления с простой привязкой отображают только один элемент данных, очень характерно для включения логика перемещения в форму Windows с помощью элементов управления с простой привязкой.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Binding>  
- [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Binding>
+- [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

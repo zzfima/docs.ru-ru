@@ -2,12 +2,12 @@
 title: Создание асинхронных действий в WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650932"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Создание асинхронных действий в WF
 Класс <xref:System.Activities.AsyncCodeActivity> предоставляет авторам действий базовый класс, обеспечивающий реализацию логики асинхронного выполнения в производных от него действиях. Это особенно полезно для пользовательских действий, которые должны выполнять работу асинхронно, не останавливая поток расписания рабочих процессов и не блокируя другие действия, которые могут выполняться параллельно. В данном разделе приводятся общие сведения о процессе создания пользовательских асинхронных действий с использованием <xref:System.Activities.AsyncCodeActivity>.  
@@ -46,7 +46,7 @@ ms.locfileid: "48266563"
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Планирование действий или дочерних действий с помощью AsyncCodeActivity  
  Производные от <xref:System.Activities.AsyncCodeActivity> настраиваемых действий предоставляют метод для асинхронного выполнения работы в отношении к потоку рабочего процесса, но не предоставляют возможности планирования действий или дочерних действий. Однако асинхронное поведение можно встроить в планирование дочерних действий посредством композиции. Асинхронное действие можно создать, а затем сочетать с действием, производным от <xref:System.Activities.Activity> или <xref:System.Activities.NativeActivity>, предоставив асинхронное поведение и планирование действий или дочерних действий. Например, можно создать действие, производное от <xref:System.Activities.Activity>, у которого в качестве его реализации будет <xref:System.Activities.Statements.Sequence>, содержащий асинхронное действие, а также другие действия, реализующие логику этого действия. Дополнительные примеры составления действий с помощью <xref:System.Activities.Activity> и <xref:System.Activities.NativeActivity>, см. в разделе [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) и [параметры разработки действий](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

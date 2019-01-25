@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073622c22b957975ed799cf5b3bc3826473114b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497542"
 ---
 # <a name="stack-etw-event"></a>События стека (трассировка событий Windows)
 Событие стека должно использоваться вместе с другими событиями для создания трассировок стека после вызова события. Оно регистрируется при включенном поставщике среды выполнения. Это очень часто случающееся событие, так как оно сопровождает создание другого события времени выполнения. По этой причине рекомендуется использовать его с осторожностью.  
@@ -31,7 +31,7 @@ ms.locfileid: "33396358"
   
  В таблице ниже представлены данные события.  
   
-|Имя поля|Тип данных|Описание|  
+|Имя поля|Тип данных|Описание:|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:Uint16|Уникальный идентификатор среды выполнения.|  
 |Reserved1|win:UInt8|Зарезервировано.|  
@@ -39,5 +39,5 @@ ms.locfileid: "33396358"
 |FrameCount|win:UInt32|Число кадров в трассировке стека.|  
 |Стек|win:Pointer|Столбцы указателей инструкций.|  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>См. также
+- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

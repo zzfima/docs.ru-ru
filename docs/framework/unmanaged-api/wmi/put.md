@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625774"
 ---
 # <a name="put-function"></a>Функция PUT
 Задает новое значение для именованного свойства.
@@ -72,7 +72,7 @@ HRESULT Put (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Тип свойства не распознан. Это значение возвращается в том случае, если при создании экземпляров класса класс уже существует. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Для экземпляров: Указывает, что `pVal` указывает `VARIANT` неверного типа для свойства. <br/> Для определения классов: свойство уже существует в родительском классе, и новый тип COM отличается от старого COM-типом. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Для экземпляров: Указывает, что `pVal` указывает `VARIANT` неверного типа для свойства. <br/> Для определения класса: Свойство уже существует в родительском классе, и новый тип COM отличается от старого COM-типом. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным. |
   
 ## <a name="remarks"></a>Примечания
@@ -94,11 +94,11 @@ HRESULT Put (
 Например, см. в разделе [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) метод.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

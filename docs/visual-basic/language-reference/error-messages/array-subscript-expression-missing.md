@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-ms.openlocfilehash: d98dc6db14e908444ce1f3242470c792051288fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f05416b467851af7b47919d05b2b91ab95ad6e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638409"
 ---
 # <a name="array-subscript-expression-missing"></a>Отсутствует выражение с индексами для массива
-Инициализация массива пропущен один или несколько индексов, определяющих границы массива. Например, инструкция может содержать выражение `myArray (5,5,,10)`, который пропущен третий индекс.  
+Инициализация массива пропущен один или несколько индексов, которые определяют границы массива. Например, инструкция может содержать выражение `myArray (5,5,,10)`, который пропущен третий индекс.  
   
  **Идентификатор ошибки:** BC30306  
   
@@ -23,5 +23,5 @@ ms.locfileid: "33583868"
   
 -   Укажите недостающий индекс.  
   
-## <a name="see-also"></a>См. также  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>См. также
+- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)

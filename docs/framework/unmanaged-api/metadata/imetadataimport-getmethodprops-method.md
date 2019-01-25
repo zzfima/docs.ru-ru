@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740012"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Метод IMetaDataImport::GetMethodProps
 Возвращает метаданные, связанные с методом, на который ссылается указанный токен MethodDef.  
@@ -49,16 +49,16 @@ HRESULT GetMethodProps (
  [in] Токен MethodDef, который представляет метод для возврата метаданных для.  
   
  `pClass`  
- [out] Указатель на маркер TypeDef, который представляет тип, реализующий метод.  
+ [out] Указатель на токен TypeDef, представляющий тип, реализующий метод.  
   
  `szMethod`  
- [out] Указатель на буфер, имеет имя метода.  
+ [out] Указатель на буфер, который имеет имя метода.  
   
  `cchMethod`  
  [in] Запрошенный размер `szMethod`.  
   
  `pchMethod`  
- [out] Указатель на размер в расширенных символах с `szMethod`, или в случае усечения фактическое число расширенных символов в имени метода.  
+ [out] Указатель на размер в расширенных символах `szMethod`, или в случае усечения фактическое число расширенных символов в имени метода.  
   
  `pdwAttr`  
  [out] Указатель на любой флаги, связанные с методом.  
@@ -76,14 +76,14 @@ HRESULT GetMethodProps (
  [out] Указатель на любой флаги реализации метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

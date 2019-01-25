@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0651609e6d2597336ee42ceae752df7e561cd252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692656"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>Метод ICorProfilerInfo2::GetClassFromTokenAndTypeArgs
-Возвращает `ClassID` типа, используя указанный токен метаданных и `ClassID` значения любого типа аргументов.  
+Получает `ClassID` типа, используя указанный токен метаданных и `ClassID` значения любого типа аргументов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
  [in] `mdTypeDef` Токен метаданных, который ссылается на тип.  
   
  `cTypeArgs`  
- [in] Число параметров типа для заданного типа. Это значение должно быть нулем для неуниверсальных типов.  
+ [in] Число параметров типа для заданного типа. Это значение должно быть ноль для неуниверсальных типов.  
   
  `typeArgs`  
  [in] Массив `ClassID` значений, каждое из которых является аргументом типа. Значение `typeArgs` может иметь значение NULL, если `cTypeArgs` присваивается нулевое значение.  
@@ -55,21 +55,21 @@ HRESULT GetClassFromTokenAndTypeArgs(
  [out] Указатель на `ClassID` указанного типа.  
   
 ## <a name="remarks"></a>Примечания  
- Вызов `GetClassFromTokenAndTypeArgs` метод с `mdTypeRef` вместо `mdTypeDef` токен метаданных может привести к непредсказуемым результатам, вызывающие объекты должны устранить `mdTypeRef` для `mdTypeDef` во время передачи.  
+ Вызов `GetClassFromTokenAndTypeArgs` метод с `mdTypeRef` вместо `mdTypeDef` токен метаданных может привести к непредсказуемым результатам; нужно будет разрешить вызывающим объектам `mdTypeRef` для `mdTypeDef` при передаче.  
   
- Если тип еще не загружено, вызов метода `GetClassFromTokenAndTypeArgs` активируют загрузки, которая является опасной операцией во множестве контекстов. Например вызов этого метода во время загрузки модулей или других типов может привести к бесконечному циклу, как среда выполнения пытается циклически загрузить объекты.  
+ Если тип еще не загружено, вызов метода `GetClassFromTokenAndTypeArgs` активируют загрузки, которая является опасной операцией во многих контекстах. Например вызов этого метода во время загрузки модулей или других типов может привести к бесконечный цикл, как среда выполнения пытается циклически загружать объекты.  
   
- Как правило, использование `GetClassFromTokenAndTypeArgs` не рекомендуется. Если профилировщик интересуют события для конкретного типа, они сохраняют `ModuleID` и `mdTypeDef` указанного типа, используйте [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) для проверки ли данный `ClassID` , представляет требуемый тип.  
+ Как правило, использование `GetClassFromTokenAndTypeArgs` не рекомендуется. Если профилировщик интересуют события для определенного типа, их следует хранить `ModuleID` и `mdTypeDef` указанного типа, используйте [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) проверяемый ли заданный `ClassID` , — это требуемый тип.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

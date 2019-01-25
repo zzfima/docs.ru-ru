@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1960a9c547892119d1bc0fb7efb51dfa5498a9c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499305"
 ---
 # <a name="contracts"></a>Контракты
 В этом разделе показано, как определить и реализовать контракты службы Windows Communication Foundation (WCF). Контракт службы указывает, какую информацию конечная точка передает во внешний мир. На более конкретном уровне, это выписка о наборе специальных сообщений, объединенных в такие базовые шаблоны обмена сообщениями (MEP), как запрос/ответ, односторонний обмен и дуплексный обмен. Если контракт службы является логически связанным набором обмена сообщениями, операция службы - это обмен одним сообщением. Например, операция `Hello` явно должна явно принять одно сообщение (к примеру, вызывающая сторона может объявить приветствие) и может вернуть или не вернуть сообщение (в зависимости от характера операции).  
@@ -65,7 +65,7 @@ ms.locfileid: "43503246"
   
  Этот аддитивный процесс предъявления требований важно помнить при проектировании, реализации, настройке и размещении приложения службы Windows Communication Foundation (WCF). Например, в контракте может указываться, что ему требуется для поддержки сеанса. В этом случае необходимо настроить привязку для поддержки этого требования контракта, иначе реализация службы работать не будет. Если же служба требует встроенной проверки подлинности Windows и размещается в службах IIS, в веб-приложении, где находится служба, то должна быть включена встроенная проверка подлинности Windows и отключена поддержка анонимных обращений. Дополнительные сведения о функциях и влиянии различных типов ведущих служб приложения, см. в разделе [размещения](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
-## <a name="see-also"></a>См. также  
- [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Разработка контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Реализация контрактов служб](../../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>См. также
+- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Разработка контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Реализация контрактов служб](../../../../docs/framework/wcf/implementing-service-contracts.md)

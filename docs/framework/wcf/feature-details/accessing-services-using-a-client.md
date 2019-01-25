@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583211"
 ---
 # <a name="accessing-services-using-a-client"></a>Обращение к службам с использованием клиента
 Клиентские приложения необходимо создать, настроить и использовать объекты клиента или каналов WCF для взаимодействия со службами. [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) разделе представлен обзор объектов и шаги по созданию базовых объектов клиента и канала и их использованию.  
@@ -70,7 +70,7 @@ ms.locfileid: "53130992"
   
  Большие порции данных могут замедлить обработку клиента, независимо от шаблона обмена сообщениями. Чтобы понять, как обрабатывать эти проблемы, см. в разделе [большие наборы данных и потоковая передача](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Если ваше приложение должно выполнять больше работы, при завершении операции, необходимо создать пару асинхронных методов интерфейса контракта службы, реализующий клиента WCF. Для этого проще всего использовать `/async` переключиться [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Например, см. в разделе [как: Асинхронный вызов операций службы](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Если ваше приложение должно выполнять больше работы, при завершении операции, необходимо создать пару асинхронных методов интерфейса контракта службы, реализующий клиента WCF. Для этого проще всего использовать `/async` переключиться [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Пример см. в статье [Практическое руководство. Асинхронный вызов операций службы](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Дополнительные сведения о увеличение производительности клиента, см. в разделе [клиентские приложения среднего уровня](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
@@ -93,11 +93,11 @@ ms.locfileid: "53130992"
   
  Приложения, использующие неявный подход, вызывают инициализаторы интерфейса пользователя, но если пользователь приложения не сможет ответить в отведенный период времени привязки для отправки, то при возвращении пользовательского интерфейса создается исключение.  
   
-## <a name="see-also"></a>См. также  
- [Дуплексные службы](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [Инструкции: Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Инструкции: Службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Инструкции: Доступ к WSE 3.0 служба](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Инструкции: Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [Инструкции: Асинхронный вызов операций службы](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Клиентские приложения среднего уровня](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+## <a name="see-also"></a>См. также
+- [Дуплексные службы](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Доступ к WSE 3.0 служба](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Практическое руководство. Асинхронный вызов операций службы](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Клиентские приложения среднего уровня](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

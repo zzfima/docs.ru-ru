@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7b21179faec0b6f37b8084c9ee8a0bfd327193e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ef6583587b960d74c83350b061be3c2e36fd4f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722690"
 ---
 # <a name="iceegentruncatesection-method"></a>Метод ICeeGen::TruncateSection
 Усекает заданный раздел кода указанной длины.  
@@ -43,19 +43,19 @@ HRESULT TruncateSection (
  [in] Раздел для усечения.  
   
  `len`  
- [in] Длина в байтах, с помощью которого для усечения в разделе.  
+ [in] Длина в байтах, по которому для усечения в разделе.  
   
 ## <a name="remarks"></a>Примечания  
- Вызовите `TruncateSection` только при наличии особых требований к разделам, не обрабатываются другими способами.  
+ Вызовите `TruncateSection` только при наличии особых требований к разделам, которые не обрабатываются другими способами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

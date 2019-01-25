@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49100ee2ba9ac3f86bff8c646c185f26b5c96f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620309"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Разрешение вопросов, связанных с созданием элементов управления и компонентов
 В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
@@ -27,14 +27,14 @@ ms.locfileid: "47078419"
   
 -   Событие в производном элементе управления или компоненте вызывается дважды  
   
--   Ошибка времени разработки: "Не удалось создать компонент *имя компонента*"  
+-   Ошибка во время разработки. «Не удалось создать компонент "*имя компонента*"»  
   
 -   STAThreadAttribute  
   
 -   Значок компонента не отображается на панели элементов  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Не удается добавить элемент управления на панель элементов  
- Если вы хотите добавить на **панель элементов** настраиваемый элемент управления, созданный в другом проекте, или сторонний элемент управления, это необходимо сделать вручную. Если ваш элемент управления или компонент уже находится в текущем проекте, он отобразится на **панели элементов** автоматически. Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+ Если вы хотите добавить на **панель элементов** настраиваемый элемент управления, созданный в другом проекте, или сторонний элемент управления, это необходимо сделать вручную. Если ваш элемент управления или компонент уже находится в текущем проекте, он отобразится на **панели элементов** автоматически. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Добавление элемента управления на панель элементов  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47078419"
          Элемент управления будет добавлен на **панель элементов**.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Не удается выполнить отладку пользовательского элемента управления или компонента Windows Forms  
- Если элемент управления является производным от <xref:System.Windows.Forms.UserControl> класса, можно отлаживать его поведение во время выполнения с использованием тестового контейнера. Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Если элемент управления является производным от <xref:System.Windows.Forms.UserControl> класса, можно отлаживать его поведение во время выполнения с использованием тестового контейнера. Дополнительные сведения см. в разделе [Как Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Другие настраиваемые элементы управления и компоненты не являются автономными проектами и должны размещаться в приложении, таком как проект Windows Forms. Для выполнения отладки элемент управления или компонент необходимо добавить в проект Windows Forms.  
   
@@ -93,25 +93,25 @@ ms.locfileid: "47078419"
   
      После этого отладку элемента управления или компонента можно выполнить в обычном режиме.  
   
- Дополнительные сведения об отладке см. в разделах [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) и [Пошаговое руководство: отладка пользовательского управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Дополнительные сведения об отладке см. в разделе [отладки в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) и [Пошаговое руководство: Отладка пользовательских Windows Forms элементы управления во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Событие в производном элементе управления или компоненте вызывается дважды  
  Это может быть связано с дублированием предложения `Handles`. Дополнительные сведения см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Ошибка времени разработки: "Не удалось создать компонент 'имя компонента'"  
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Ошибка во время разработки. «Не удалось создать компонент 'Имя компонента'»  
  Компонент или элемент управления должен предоставлять конструктор по умолчанию без параметров. Если в среде разработки создается экземпляр компонента или элемента управления, он не пытается предоставить какие-либо параметры для перегрузок конструктора, принимающих параметры.  
   
 ## <a name="stathreadattribute"></a>STAThreadAttribute  
  <xref:System.STAThreadAttribute> Информирует общеязыковой среды выполнения (CLR) о том, что Windows Forms использует модель однопотокового подразделения. Если не применить этот атрибут к методу `Main` приложения Windows Forms, может возникнуть непредусмотренное поведение. Например, фоновые изображения может отображаться для элементов управления, например <xref:System.Windows.Forms.ListView>. Некоторым элементам управления этот атрибут может требоваться также для правильного выполнения операций автозаполнения и перетаскивания.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Значок компонента не отображается на панели элементов  
- При использовании <xref:System.Drawing.ToolboxBitmapAttribute> для сопоставления значка с настраиваемым, растровое изображение не отображается в панели элементов для автоматически созданных компонентов. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ При использовании <xref:System.Drawing.ToolboxBitmapAttribute> для сопоставления значка с настраиваемым, растровое изображение не отображается в панели элементов для автоматически созданных компонентов. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Как Предоставление точечного рисунка панели элементов для элемента управления](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
-## <a name="see-also"></a>См. также  
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- [Создание компонентов](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+## <a name="see-also"></a>См. также
+- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Создание компонентов](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)
+- [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

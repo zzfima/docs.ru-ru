@@ -1,22 +1,22 @@
 ---
-title: 'Как: изменение деревьев выражений (Visual Basic)'
+title: Как выполнить Изменение деревьев выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 92a0fb37e2a383c68beb2e4a56deb16f89a9bd28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603539"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Как: изменение деревьев выражений (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Как выполнить Изменение деревьев выражений (Visual Basic)
 В этом разделе показано, как изменить дерево выражения. Деревья выражений являются неизменяемыми, что означает невозможность их изменения напрямую. Чтобы изменить дерево выражения, необходимо создать копию существующего дерева выражения, а затем внести необходимые изменения. Для прохода по существующему дереву выражения и копирования каждого пройденного узла можно использовать класс <xref:System.Linq.Expressions.ExpressionVisitor>.  
   
 ### <a name="to-modify-an-expression-tree"></a>Изменение дерева выражения  
   
 1.  Создайте новый проект **консольного приложения**.  
   
-2.  Добавить `Imports` инструкции в файл для `System.Linq.Expressions` пространства имен.  
+2.  Добавить `Imports` инструкции к файлу для `System.Linq.Expressions` пространства имен.  
   
 3.  Добавьте в проект класс `AndAlsoModifier`.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "33643881"
   
      Этот класс наследует класс <xref:System.Linq.Expressions.ExpressionVisitor> и специально предназначен для изменения выражений, которые представляют условные операции `AND`. Он изменяет эти операции с условного `AND` на условное `OR`. Для этого класс переопределяет метод <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> базового типа, потому что условные выражения `AND` представлены как двоичные выражения. Если выражение, переданное в метод `VisitBinary`, представляет условную операцию `AND`, код создает новое выражение, которое содержит условный оператор `OR` вместо условного оператора `AND`. Если выражение, передаваемое в `VisitBinary`, не представляет условную операцию `AND`, метод передает выполнение реализации базового класса. Методы базового класса создают узлы, которые похожи на переданные деревья выражений, однако поддеревья этих деревьев заменены на деревья выражений, которые были рекурсивно созданы при обходе.  
   
-4.  Добавить `Imports` инструкции в файл для `System.Linq.Expressions` пространства имен.  
+4.  Добавить `Imports` инструкции к файлу для `System.Linq.Expressions` пространства имен.  
   
-5.  Добавьте код для `Main` метод в файле Module1.vb создания дерева выражений и передать его методу, он будет изменен.  
+5.  Добавьте код для `Main` метод в файл Module1.vb для создания дерева выражений и передать его методу, изменим это.  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -70,6 +70,6 @@ ms.locfileid: "33643881"
   
 6.  Скомпилируйте и запустите приложение.  
   
-## <a name="see-also"></a>См. также  
- [Как: выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))

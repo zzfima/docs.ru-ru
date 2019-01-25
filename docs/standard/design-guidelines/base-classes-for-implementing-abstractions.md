@@ -7,12 +7,12 @@ helpviewer_keywords:
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
-ms.openlocfilehash: 411596f342930c9387dc6523d25805bddad18687
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565817"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Базовые классы для реализации абстракций
 Строго говоря класс становится базового класса, если другой класс является производным от него. Тем не менее, в этом разделе базовый класс — это класс, который предназначен главным образом для предоставления общих абстракции или для других классов, чтобы повторно использовать некоторые наследование по умолчанию реализация хотя. Базовые классы обычно располагаются в середине иерархии наследования, между абстракции в корне иерархии и несколько пользовательских реализаций в нижней.  
@@ -35,5 +35,5 @@ ms.locfileid: "53148679"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587467"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Передача аргументов по позиции и по имени (Visual Basic)
 При вызове `Sub` или `Function` процедуру, вы можете передавать аргументы *по позиции* — в порядке, в котором они появляются в определении процедуры, или их можно передать *по имени*, без учета.  
@@ -94,12 +94,12 @@ ms.locfileid: "53151318"
   
 Невозможно передать массив параметров по имени. Это потому, что при вызове процедуры, вы предоставляете неопределенное число разделенных запятыми аргументов для массива параметров, а компилятор не может связать более одного аргумента с одним именем.  
   
-## <a name="see-also"></a>См. также  
- [Процедуры](./index.md)  
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
- [Инструкции: Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)  
- [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)  
- [Необязательные параметры](./optional-parameters.md)  
- [Массивы параметров](./parameter-arrays.md)  
- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>См. также
+- [Процедуры](./index.md)
+- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
+- [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)
+- [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)
+- [Необязательные параметры](./optional-parameters.md)
+- [Массивы параметров](./parameter-arrays.md)
+- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

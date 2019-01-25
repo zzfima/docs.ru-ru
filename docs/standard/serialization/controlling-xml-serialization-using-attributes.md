@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686170"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Управление сериализацией XML с использованием атрибутов
 
-Атрибуты можно использовать для управления сериализацией XML объекта или для создания альтернативного потока XML из того же набора классов. Дополнительные сведения о создании альтернативного потока XML см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Атрибуты можно использовать для управления сериализацией XML объекта или для создания альтернативного потока XML из того же набора классов. Дополнительные сведения о создании альтернативного потока XML см. в разделе [как: Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
 > Если сгенерированные XML должны удовлетворять раздела 5 документа консорциума World Wide Web (W3C) [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), используйте атрибуты, указанные в [атрибуты, элемент управления в кодировке SOAP Сериализация](attributes-that-control-encoded-soap-serialization.md).
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>Управление сериализацией массивов
 
-Атрибуты <xref:System.Xml.Serialization.XmlArrayAttribute> и <xref:System.Xml.Serialization.XmlArrayItemAttribute> предназначены для управления сериализацией массивов. С помощью этих атрибутов можно управлять именем элемента, пространством имен и типом данных схемы XML (XSD) (согласно документу "Схема XML, часть 2: типы данных" консорциума World Wide Web (www.w3.org)). Также можно указать типы, которые можно включить в массив.
+Атрибуты <xref:System.Xml.Serialization.XmlArrayAttribute> и <xref:System.Xml.Serialization.XmlArrayItemAttribute> предназначены для управления сериализацией массивов. С помощью этих атрибутов можно управлять именем элемента, пространство имен и тип данных схемы XML (XSD) (как определено в документе консорциума World Wide Web Consortium [www.w3.org] под названием «XML Schema Part 2: Типы данных»). Также можно указать типы, которые можно включить в массив.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> определяет свойства включающего элемента XML, который создается при сериализации массива. Например, по умолчанию при сериализации массива ниже будет создан элемент XML с именем `Employees`. Элемент `Employees` будет содержать серию элементов, названную в соответствии с типом массива `Employee`.
 
@@ -317,10 +317,10 @@ public class Group {
 
 ## <a name="see-also"></a>См. также
 
-- [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)  
-- [Атрибуты управления сериализацией с кодировкой SOAP](attributes-that-control-encoded-soap-serialization.md)  
-- [Введение в сериализацию XML](introducing-xml-serialization.md)  
-- [Примеры сериализации XML](examples-of-xml-serialization.md)  
-- [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)  
-- [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)  
+- [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
+- [Атрибуты управления сериализацией с кодировкой SOAP](attributes-that-control-encoded-soap-serialization.md)
+- [Введение в сериализацию XML](introducing-xml-serialization.md)
+- [Примеры сериализации XML](examples-of-xml-serialization.md)
+- [Практическое руководство. Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
+- [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

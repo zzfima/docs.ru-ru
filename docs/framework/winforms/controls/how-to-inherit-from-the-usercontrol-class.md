@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Наследование класса UserControl.
+title: Как выполнить Наследование класса UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 5a826b9fc68bebfa32049a38899ddffaacd25607
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 4c3f3d6775f3fdf511e59b360d6c356e2d4fabee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532101"
 ---
-# <a name="how-to-inherit-from-the-usercontrol-class"></a>Практическое руководство. Наследование класса UserControl.
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>Как выполнить Наследование класса UserControl
 Чтобы объединить функциональные возможности одного или нескольких элементов управления Windows Forms с пользовательским кодом, можно создать *пользовательский элемент управления*. В пользовательских элементах управления объединяются быстрая разработка, стандартные функции элементов управления Windows Forms и универсальность пользовательских методов и свойств. При создании пользовательских элементов управления используется визуальный конструктор, в котором можно размещать стандартные элементы управления Windows Forms. Все эти элементы управления сохраняют все унаследованные функции, а также внешний вид и поведение (оформление) стандартных элементов управления. Однако после того, как эти элементы управления будут встроены в пользовательский элемент управления, получить к ним доступ через код станет невозможно. Пользовательский элемент управления имеет собственное оформление и обрабатывает все основные функции, связанные с элементами управления.  
   
 > [!NOTE]
@@ -28,16 +28,16 @@ ms.locfileid: "44260139"
   
 2.  Перетащите элементы управления со вкладки **Windows Forms** на **панели элементов** в конструктор.  
   
-3.  Расположите и оформите их так, как они должны будут отображаться в окончательном пользовательском элементе управления. Если вы хотите разрешить разработчикам доступ к элементам управления, составляющим пользовательский элемент управления, объявите их как открытые или выборочно предоставьте свойства таких элементов управления. Дополнительные сведения см. в разделе [Практическое руководство. Обеспечение доступа к свойствам составных элементов управления](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).  
+3.  Расположите и оформите их так, как они должны будут отображаться в окончательном пользовательском элементе управления. Если вы хотите разрешить разработчикам доступ к элементам управления, составляющим пользовательский элемент управления, объявите их как открытые или выборочно предоставьте свойства таких элементов управления. Дополнительные сведения см. в разделе [как: Обеспечение доступа к свойствам составных элементов управления](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md).  
   
 4.  Реализуйте необходимые пользовательские методы или свойства, которые будут входить в ваш элемент управления.  
   
-5.  Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**. Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+5.  Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**. Дополнительные сведения см. в разделе [Как Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-## <a name="see-also"></a>См. также  
- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Практическое руководство. Наследование класса Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Практическое руководство. Наследование существующих элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- [Практическое руководство. Создание элементов управления для форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+## <a name="see-also"></a>См. также
+- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Практическое руководство. Наследовать от класса Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование Windows существующих элементов управления формы](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Автор элементы управления для форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)

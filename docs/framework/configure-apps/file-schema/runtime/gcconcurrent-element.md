@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612002"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; элемент
 Указывает, выполняет ли среда CLR сборку мусора в отдельном потоке.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<gcConcurrent >  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53612391"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>См. также
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Основы сборки мусора](../../../../../docs/standard/garbage-collection/fundamentals.md)

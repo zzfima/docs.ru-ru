@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Хранение и повторное использование запросов
+title: Как выполнить хранить и повторно использовать запросы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a2d16cd5dce033c563783a0882f3de73194cf2d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630776"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Практическое руководство. Хранение и повторное использование запросов
+# <a name="how-to-store-and-reuse-queries"></a>Как выполнить хранить и повторно использовать запросы
 При наличии приложения, которое неоднократно выполняет схожие по структуре запросы, можно существенно увеличить производительность, если скомпилировать запрос один раз и затем выполнить его несколько раз с различными параметрами. Например, приложению может потребоваться получение всех клиентов из определенного города; название города указывается пользователем в форме во время выполнения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает использование *скомпилированных запросов* для этой цели.  
   
 > [!NOTE]
@@ -28,12 +28,12 @@ ms.locfileid: "33360142"
  [!code-vb[DLinqQuerying#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#7)]  
   
 ## <a name="example"></a>Пример  
- В настоящее время невозможно сохранить (в статических переменных) запросы, которые возвращают *анонимного типа*, так как у типа нет имени, использовать как универсальный аргумент. В следующем примере демонстрируется, как можно решить эту проблему, создавая тип, представляющий результат, а затем используя его как универсальный аргумент.  
+ В настоящее время невозможно сохранить (в статических переменных) запросы, которые возвращают *анонимного типа*, так как у типа нет имени для предоставления как универсальный аргумент. В следующем примере демонстрируется, как можно решить эту проблему, создавая тип, представляющий результат, а затем используя его как универсальный аргумент.  
   
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.Linq.CompiledQuery>  
- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.Linq.CompiledQuery>
+- [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

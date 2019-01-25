@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: afba7e742c665712ec41d62e8248e81d3b0d74cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3810dd4d956c5cd8ef74cfd4da695f660e539820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744691"
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
 Спецификация языка Visual Basic — это полномочный источник ответы на все вопросы о Visual Basic грамматике и синтаксисе. Она содержит подробные сведения о языке, включая многие моменты, не охваченных в справочной документации Visual Basic.  
@@ -22,8 +22,8 @@ ms.locfileid: "53153323"
 
 Найденные в спецификации проблемы следует публиковать в репозитории [dotnet/vblang](https://github.com/dotnet/vblang/issues). Если же вам интересно исправить какие-то из найденных вами ошибок, вы можете отправить [запрос на вытягивание](https://github.com/dotnet/vblang/pulls) в тот же репозиторий.
 
-## <a name="see-also"></a>См. также  
- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a>См. также
+- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
 >[Вперед](../../../../_vblang/spec/introduction.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d660deb69e694a70a140b6d00c355442e3c5094
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558911"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Метод IMetaDataImport2::EnumMethodSpecs
-Возвращает перечислитель для массива маркеров MethodSpec, связанных с указанным MethodDef или MemberRef токен.  
+Получает перечислитель для массива MethodSpec токенов, связанных с указанным MethodDef или MemberRef маркер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,33 +44,33 @@ HRESULT EnumMethodSpecs (
  [in, out] Указатель на перечислитель для `rMethodSpecs`.  
   
  `tk`  
- [in] Токен MemberRef или MethodDef, представляющий метод, маркеры которого MethodSpec для перечисления. Если значение `tk` равно 0 (ноль), будут перечислены все маркеры MethodSpec в области.  
+ [in] Токен MemberRef или MethodDef, представляющий метод, маркеры которого MethodSpec будут перечислены. Если значение `tk` равно 0 (ноль), будут перечислены все маркеры MethodSpec в области.  
   
  `rMethodSpecs`  
  [out] Массив MethodSpec маркеры для перечисления.  
   
  `cMax`  
- [in] Максимальное количество маркеров для размещения в `rMethodSpecs`.  
+ [in] Максимальное число маркеров для размещения в `rMethodSpecs`.  
   
  `pcMethodSpecs`  
  [out] Возвращенное число маркеров помещаются в `rMethodSpecs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodSpecs` успешно возвращен.|  
 |`S_FALSE`|`phEnum` не имеет члена элементов. В этом случае `pcMethodSpecs` имеет значение 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

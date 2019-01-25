@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43a3b4ea9d953d9dbb7a98c8481185ddc7e4d674
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701954"
 ---
 # <a name="ltassertgt-element"></a>&lt;Assert&gt; элемент
 Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<Assert >  
+\<system.diagnostics>  
+\<assert>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ ms.locfileid: "53154246"
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`true`|Отображает окно сообщения. Это значение по умолчанию.|  
 |`false`|Не отображает окно сообщения.|  
@@ -71,6 +71,6 @@ ms.locfileid: "53154246"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.Debug>  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.Debug>
+- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

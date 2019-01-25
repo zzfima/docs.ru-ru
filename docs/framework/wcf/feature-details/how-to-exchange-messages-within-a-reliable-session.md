@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Обмен сообщениями в рамках надежного сеанса
+title: Как выполнить Обмен сообщениями в рамках надежного сеанса
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720058"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Практическое руководство. Обмен сообщениями в рамках надежного сеанса
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Как выполнить Обмен сообщениями в рамках надежного сеанса
 
 В этом разделе описываются действия, необходимые, чтобы разрешить надежные сеансы с помощью одной из привязок, предоставляемых системой, которая поддерживает такие сеансы, но не по умолчанию. Включение надежного сеанса императивно с помощью кода или декларативно в файле конфигурации. Эта процедура использует файлы конфигурации клиента и службы для разрешения надежного сеанса и обеспечивается доставка сообщений в том же порядке, в котором они были отправлены.
 
@@ -79,4 +79,4 @@ ms.locfileid: "50195740"
 
 ## <a name="see-also"></a>См. также
 
-[Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

@@ -2,12 +2,12 @@
 title: Конечные точки служб и адресация очереди
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613926"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Конечные точки служб и адресация очереди
 В этом разделе рассматриваются принципы обращения клиентов к службам, выполняющим чтение из очередей, и сопоставления конечных точек служб с очередями. Напоминаем ниже приведена схема классического Windows Communication Foundation (WCF) в очереди развертывания приложения.  
@@ -40,9 +40,9 @@ ms.locfileid: "47196308"
   
 -   \<*Имя очереди*> — имя очереди. Имя очереди также может относиться к вложенной очереди. Таким образом \< *имя очереди*> = \< *name-of-queue*> [; *имя вложенной очереди*].  
   
- Пример 1. Для адресации к частной очереди PurchaseOrders, размещенной на компьютере abc.adatum.com, универсальный код ресурса (URI) будет таким: net.msmq://abc.adatum.com/private/PurchaseOrders.  
+ Пример 1. Чтобы устранить частной очереди PurchaseOrders, размещенной на компьютере ABC.adatum.com, URI будет net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
- Пример 2. Для адресации к общей очереди AccountsPayable, размещенной на компьютере def.adatum.com, универсальный код ресурса (URI) будет таким: net.msmq://def.adatum.com/AccountsPayable.  
+ Example2: Для адресации к общей очереди AccountsPayable, размещенной на компьютере DEF.adatum.com, URI будет net.msmq://def.adatum.com/AccountsPayable.  
   
  Адрес очереди используется прослушивателем как код URI прослушивания, из которого выполняется чтение сообщений. Другими словами, адрес очереди подобен порту прослушивания сокета TCP.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47196308"
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Чтение сообщений из очереди недоставленных сообщений или из очереди подозрительных сообщений  
  Для чтения сообщений из очереди подозрительных сообщений, являющейся вложенной очередью целевой очереди, откройте `ServiceHost`, указав адрес вложенной очереди.  
   
- Пример. Служба, считывающая из очереди подозрительных сообщений частной очереди PurchaseOrders с локального компьютера обращается по адресу net.msmq://localhost/private/PurchaseOrders;poison.  
+ Пример Это служба, которая считывает из очереди подозрительных сообщений частной очереди PurchaseOrders с локального компьютера позволит устранить net.msmq://localhost/private/PurchaseOrders;poison.  
   
  Для чтения сообщений из системной очереди недоставленных транзакционных сообщений код URI должен иметь следующий вид: net.msmq://localhost/system$;DeadXact.  
   
@@ -100,9 +100,9 @@ ms.locfileid: "47196308"
   
  Обратите внимание, что можно использовать только прямые имена форматов, а также открытые и закрытые имена форматов (требуется интеграция Active Directory) при получении сообщений из очереди с помощью `MsmqIntegrationBinding`. Впрочем, рекомендуется использовать прямые имена форматов. Например, в системе [!INCLUDE[wv](../../../../includes/wv-md.md)] использование любых других имен форматов приводит к ошибке, поскольку система пытается открыть вложенную очередь, что возможно только с использованием прямых имен форматов.  
   
- При адресации к SRMP с помощью `MsmqIntegrationBinding` не требуется добавлять /msmq/ к прямому имени формата для отправки с помощью служб IIS. Например: при адресации очереди протокола abc, с помощью SRMP вместо DIRECT =http://adatum.com/msmq/private$/ abc следует использовать DIRECT =http://adatum.com/private$/ abc.  
+ При адресации к SRMP с помощью `MsmqIntegrationBinding` не требуется добавлять /msmq/ к прямому имени формата для отправки с помощью служб IIS. Пример: При адресации очереди протокола abc, с помощью SRMP вместо DIRECT =http://adatum.com/msmq/private$/ abc следует использовать DIRECT =http://adatum.com/private$/ abc.  
   
  Обратите внимание, что нельзя использовать адресацию net.msmq:// вместе с `MsmqIntegrationBinding`. Так как `MsmqIntegrationBinding` поддерживает произвольный MSMQ формат имени адресацию, можно использовать службы WCF, использующей эту привязку для использования многоадресной рассылки и распространения списка функций в MSMQ. Единственное исключение: необходимо указать `CustomDeadLetterQueue` при использовании `MsmqIntegrationBinding`. Требуемая форма: net.msmq://, как и при указании с помощью `NetMsmqBinding`.  
   
-## <a name="see-also"></a>См. также  
- [Размещение веб-узлов в приложении, использующем очереди](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>См. также
+- [Размещение веб-узлов в приложении, использующем очереди](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

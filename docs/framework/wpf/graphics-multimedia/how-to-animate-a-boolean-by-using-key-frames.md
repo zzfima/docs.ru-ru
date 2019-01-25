@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Анимация логического типа с помощью ключевых кадров
+title: Как выполнить Анимация логического типа с помощью ключевых кадров
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3752378d280708ffd40eaac160589af4674467e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689108"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Практическое руководство. Анимация логического типа с помощью ключевых кадров
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Как выполнить Анимация логического типа с помощью ключевых кадров
 В этом примере показано, как анимировать значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
@@ -28,9 +28,9 @@ ms.locfileid: "43521078"
   
  Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
- <xref:System.Windows.UIElement.IsEnabled%2A>  
- <xref:System.Windows.Controls.Button>  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
+- <xref:System.Windows.UIElement.IsEnabled%2A>
+- <xref:System.Windows.Controls.Button>
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

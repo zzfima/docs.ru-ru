@@ -2,12 +2,12 @@
 title: Внутренние особенности размещения службы рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: dd03508397b77f4446a5b708c69333336d97193c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c3293fe7f835ed0d5b3b62404a1f3f2e20b73fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708497"
 ---
 # <a name="workflow-service-host-internals"></a>Внутренние особенности размещения службы рабочего процесса
 Объект <xref:System.ServiceModel.WorkflowServiceHost> предоставляет возможность размещения служб рабочего процесса. Он отвечает за прослушивание входящих сообщений и перенаправление их соответствующему экземпляру службы рабочего процесса, управляет выгрузкой и сохранением бездействующих рабочих процессов, а также выполняет другие функции. В этом разделе описано, как объект WorkflowServiceHost обрабатывает входящие сообщения.  
@@ -26,7 +26,7 @@ ms.locfileid: "48036043"
   
  ![Передача сообщений функции узла службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- На схеме изображены три различные конечные точки: конечная точка приложения, конечная точка управления рабочим процессом и конечная точка размещения рабочего процесса. Конечная точка приложения получает сообщения, связанные с конкретным экземпляром рабочего процесса. Конечная точка управления рабочим процессом прослушивает команды управления. Конечная точка размещения рабочего процесса прослушивает сообщения, при поступлении которых объект <xref:System.ServiceModel.WorkflowServiceHost> загружает и выполняет рабочие процессы, не относящиеся к службе. Как показано на схеме, все сообщения обрабатываются средой выполнения WCF.  Регулирование экземпляра службы рабочих процессов осуществляется с помощью свойства <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Это свойство ограничивает количество одновременно функционирующих экземпляров службы рабочих процессов. После превышения этого ограничения все дополнительные запросы на создание новых экземпляров службы рабочего процесса или на активацию постоянных экземпляров службы заносятся в очередь. Поставленные в очередь запросы обрабатываются в последовательном порядке без учета того, являются ли они запросами к новому экземпляру или к работающему, постоянному экземпляру. Загруженные сведения о политике узла определяют, что происходит с необработанными исключениями, а также задают порядок выгрузки и сохранения бездействующих служб Workflow Services. Дополнительные сведения об этих темах см. в разделе [как: Настройка рабочего процесса необработанное поведение исключения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) и [как: Настройка простоя поведения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Экземпляры рабочих процессов сохраняются в соответствии с политиками узла размещения и повторно загружаются при необходимости. Дополнительные сведения о сохранении рабочих процессов см. в разделе: [как: Настройка сохраняемости с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), и [сохранение рабочих процессов ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ На схеме изображены три различные конечные точки: конечная точка приложения, конечная точка управления рабочим процессом и конечная точка размещения рабочего процесса. Конечная точка приложения получает сообщения, связанные с конкретным экземпляром рабочего процесса. Конечная точка управления рабочим процессом прослушивает команды управления. Конечная точка размещения рабочего процесса прослушивает сообщения, при поступлении которых объект <xref:System.ServiceModel.WorkflowServiceHost> загружает и выполняет рабочие процессы, не относящиеся к службе. Как показано на схеме, все сообщения обрабатываются средой выполнения WCF.  Регулирование экземпляра службы рабочих процессов осуществляется с помощью свойства <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Это свойство ограничивает количество одновременно функционирующих экземпляров службы рабочих процессов. После превышения этого ограничения все дополнительные запросы на создание новых экземпляров службы рабочего процесса или на активацию постоянных экземпляров службы заносятся в очередь. Поставленные в очередь запросы обрабатываются в последовательном порядке без учета того, являются ли они запросами к новому экземпляру или к работающему, постоянному экземпляру. Загруженные сведения о политике узла определяют, что происходит с необработанными исключениями, а также задают порядок выгрузки и сохранения бездействующих служб Workflow Services. Дополнительные сведения об этих темах см. в разделе [как: Настройка рабочего процесса поведение необработанного исключения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) и [как: Настроить неактивное поведение с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Экземпляры рабочих процессов сохраняются в соответствии с политиками узла размещения и повторно загружаются при необходимости. Дополнительные сведения см. в разделе сохраняемости рабочего процесса: [Практическое руководство. Настроить сохраняемость с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), и [сохранение рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  На следующем рисунке показано, что происходит при вызове метода WorkflowServiceHost.Open.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48036043"
   
 ## <a name="see-also"></a>См. также
 
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
-- [Размещение служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
-- [Конечная точка элемента управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
-- [Практическое руководство. Настройка поведения необработанного исключения рабочего процесса при помощи WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
-- [Создание службы долго выполняющегося рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Размещение служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
+- [Конечная точка элемента управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
+- [Практическое руководство. Настройка рабочего процесса поведение необработанного исключения с помощью WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
+- [Создание службы долго выполняющегося рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Сохраняемость рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

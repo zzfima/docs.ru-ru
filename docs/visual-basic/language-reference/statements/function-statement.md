@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565908"
 ---
 # <a name="function-statement-visual-basic"></a>Оператор Function (Visual Basic)
 Объявляет имя, параметры и код, которые определяют `Function` процедуры.  
@@ -53,11 +53,11 @@ End Function
   
 -   `attributelist`  
   
-     Необязательный. См. в разделе [список атрибутов](attribute-list.md).  
+     Необязательный параметр. См. в разделе [список атрибутов](attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Необязательный. Ниже указаны доступные значения.  
+     Необязательный параметр. Ниже указаны доступные значения.  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -69,13 +69,13 @@ End Function
   
     -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Частный защищенный](../../language-reference/modifiers/private-protected.md)  
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     См. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
-     Необязательный. Ниже указаны доступные значения.  
+     Необязательный параметр. Ниже указаны доступные значения.  
   
     -   [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,31 +93,31 @@ End Function
   
 -   `Shared`  
   
-     Необязательный. См. в разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный параметр. См. в разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательный. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Необязательный параметр. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Async`  
   
-     Необязательный. См. в разделе [Async](../../../visual-basic/language-reference/modifiers/async.md).  
+     Необязательный параметр. См. в разделе [Async](../../../visual-basic/language-reference/modifiers/async.md).  
   
 -   `Iterator`  
   
-     Необязательный. См. в разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Необязательный параметр. См. в разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Обязательно. Имя процедуры. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательный. Имя процедуры. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `typeparamlist`  
   
-     Необязательный. Список параметров типа для универсальной процедуры. См. в разделе [введите список](type-list.md).  
+     Необязательный параметр. Список параметров типа для универсальной процедуры. См. в разделе [введите список](type-list.md).  
   
 -   `parameterlist`  
   
-     Необязательный. Список имен локальных переменных, представляющих параметры этой процедуры. См. в разделе [список параметров](parameter-list.md).  
+     Необязательный параметр. Список имен локальных переменных, представляющих параметры этой процедуры. См. в разделе [список параметров](parameter-list.md).  
   
 -   `returntype`  
   
@@ -125,7 +125,7 @@ End Function
   
 -   `Implements`  
   
-     Необязательный. Указывает, что эта процедура реализует один или несколько `Function` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. См. в разделе [реализует оператор](implements-statement.md).  
+     Необязательный параметр. Указывает, что эта процедура реализует один или несколько `Function` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. См. в разделе [реализует оператор](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -137,14 +137,14 @@ End Function
   
      `interface.definedname`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
-    |`interface`|Обязательно. Имя интерфейса, реализуемого этой процедуры содержащей класса или структуры.|  
-    |`definedname`|Обязательно. Имя, под которым процедура определена в `interface`.|  
+    |`interface`|Обязательный. Имя интерфейса, реализуемого этой процедуры содержащей класса или структуры.|  
+    |`definedname`|Обязательный. Имя, под которым процедура определена в `interface`.|  
   
 -   `Handles`  
   
-     Необязательный. Указывает, что эта процедура может обрабатывать один или несколько определенных событий. См. в разделе [обрабатывает](handles-clause.md).  
+     Необязательный параметр. Указывает, что эта процедура может обрабатывать один или несколько определенных событий. См. в разделе [обрабатывает](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -158,12 +158,12 @@ End Function
   
     |Отделение|Описание:|  
     |---|---|  
-    |`eventvariable`|Обязательно. Объектной переменной, объявленной с типом данных класса или структуры, который вызывает событие.|  
-    |`event`|Обязательно. Имя события, которое обрабатывает эту процедуру.|  
+    |`eventvariable`|Обязательный. Объектной переменной, объявленной с типом данных класса или структуры, который вызывает событие.|  
+    |`event`|Обязательный. Имя события, которое обрабатывает эту процедуру.|  
   
 -   `statements`  
   
-     Необязательный. Блок операторов, выполняемый в рамках этой процедуры.  
+     Необязательный параметр. Блок операторов, выполняемый в рамках этой процедуры.  
   
 -   `End Function`  
   
@@ -248,21 +248,21 @@ End Function
  [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return`, которая возвращает целое число. Поэтому объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое. Это показано в этом операторе: `Dim result As Integer = Await delayTask`.  
+ В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return` , которая возвращает целое число. Поэтому объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое. Это показано в этом операторе: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Процедура является примером `Async Sub` процедуры. Так как `DoSomethingAsync` — `Async` функции, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показано в следующей инструкции: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Процедура должна быть определена с помощью `Async` модификатор из-за `Await` выражение.  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор Sub](sub-statement.md)  
- [Процедуры функций](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Список параметров](parameter-list.md)  
- [Оператор Dim](dim-statement.md)  
- [Оператор Call](call-statement.md)  
- [Of](of-clause.md)  
- [Массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Выражение функции](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>См. также
+- [Оператор Sub](sub-statement.md)
+- [Процедуры функций](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [Список параметров](parameter-list.md)
+- [Оператор Dim](dim-statement.md)
+- [Оператор Call](call-statement.md)
+- [Of](of-clause.md)
+- [Массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Рекомендации по устранению неполадок](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Выражение функции](../../../visual-basic/language-reference/operators/function-expression.md)

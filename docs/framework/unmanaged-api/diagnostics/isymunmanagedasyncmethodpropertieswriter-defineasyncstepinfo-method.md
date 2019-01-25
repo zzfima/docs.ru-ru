@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ebd4bb1d674a27785ccbe5460a65fed764638ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555574"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>Метод ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo
-Определите группу async await операций в текущем методе.  
+Определить группу async await операций в текущем методе.  
   
- Смещение каждого yield соответствует инструкции return await, идентификации потенциальных yield. Каждый `breakpointMethod` / `breakpointOffset` пары показывает, где будет возобновлена асинхронную операцию, (который может быть в другом методе.  
+ Смещение каждого yield соответствует инструкции return оператором await, определение потенциальных yield. Каждый `breakpointMethod` / `breakpointOffset` пары сообщает, где будет возобновлена асинхронной операции, (который может быть в другом методе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -24,7 +24,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`count`||  
 |`yieldOffsets`||  
@@ -35,7 +35,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
  Возвращает `HRESULT`.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

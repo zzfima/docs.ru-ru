@@ -2,12 +2,12 @@
 title: Поставщик членства и ролей
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9dde928beb348dcb41c6b908c8e5d2a04243172c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671477"
 ---
 # <a name="membership-and-role-provider"></a>Поставщик членства и ролей
 В образце поставщиков членства и ролей показано, как создать службу, которая может с помощью поставщиков членства и ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] выполнять проверку подлинности и авторизацию клиентов.  

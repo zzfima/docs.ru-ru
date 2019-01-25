@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: bd2ecfb93cfcdb7cf9c115f9a44ac47dd74c4b53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ab9d0bf3feeea70ddbc094183406a6fd646c1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690518"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML-литерал документа (Visual Basic)
 Объект литерал, представляющий <xref:System.Xml.Linq.XDocument> объекта.  
@@ -32,16 +32,16 @@ rootElement
   
 |Термин|Определение|  
 |---|---|  
-|`encoding`|Необязательный. Использует литеральный текст определения кодировки документа.|  
-|`standalone`|Необязательный. Литеральный текст. Должен быть «yes» или «no».|  
-|`piCommentList`|Необязательный. Список инструкций по обработке XML и XML-комментариев. Имеет следующий формат:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Каждый `piComment` может принимать одно из следующих действий:<br /><br /> -   [Литерал инструкции обработки XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Обязательно. Корневой элемент документа. Имеет одно из следующих:<br /><br /> <ul><li>[Элемент XML-литерала](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Встроенные выражения формы `<%=` `elementExp` `%>`. `elementExp` Возвращает одно из следующих действий:<br /><br /> <ul><li>Объект <xref:System.Xml.Linq.XElement>.</li><li>Коллекция, содержащая один <xref:System.Xml.Linq.XElement> объектов и любое количество <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов.</li></ul></li></ul><br /> Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|Необязательный параметр. Использует литеральный текст, определения кодировки документа.|  
+|`standalone`|Необязательный параметр. Литеральный текст. Должен быть «yes» или «no».|  
+|`piCommentList`|Необязательный параметр. Список инструкции по обработке XML и XML-комментариев. Имеет следующий формат:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Каждый `piComment` может принимать одно из следующих:<br /><br /> -   [Литерал инструкции обработки XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|Обязательный. Корневой элемент документа. Одно из следующих имеет следующий формат:<br /><br /> <ul><li>[XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Внедренные выражения вида `<%=` `elementExp` `%>`. `elementExp` Возвращает одно из следующих:<br /><br /> <ul><li>Объект <xref:System.Xml.Linq.XElement>.</li><li>Коллекция, содержащая один <xref:System.Xml.Linq.XElement> объекта и любое количество <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов.</li></ul></li></ul><br /> Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="remarks"></a>Примечания  
- Литерал XML-документа определяется по XML-декларация в начале литерала. Несмотря на то, что каждый XML-литерала документа должен иметь ровно один корневой элемент XML, он может иметь любое количество инструкций по обработке XML и XML-комментариев.  
+ Литерала XML-документа определяется с помощью объявления XML в начале литерала. Несмотря на то, что каждый XML-литерала документа должен иметь ровно один корневой элемент XML, он может иметь любое количество инструкций по обработке XML и XML-комментариев.  
   
  Литерал XML-документа не может присутствовать в XML-элемента.  
   
@@ -51,18 +51,18 @@ rootElement
  Компилятор Visual Basic преобразует XML-литерала документа в вызовы <xref:System.Xml.Linq.XDocument.%23ctor%2A> и <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> конструкторы.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается XML-документ с XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
+ В следующем примере создается документ XML с XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
   
  [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Xml.Linq.XProcessingInstruction>  
- <xref:System.Xml.Linq.XComment>  
- <xref:System.Xml.Linq.XDocument>  
- [XML-литерал инструкции обработки](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)  
- [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)  
- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Xml.Linq.XProcessingInstruction>
+- <xref:System.Xml.Linq.XComment>
+- <xref:System.Xml.Linq.XDocument>
+- [XML-литерал инструкции обработки](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
+- [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
+- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)

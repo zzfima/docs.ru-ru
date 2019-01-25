@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684818"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Представляет ответ на ошибку во время выполнения или включает параметр компилятора.  
+Представляет ответ на ошибку времени выполнения или включает параметр компилятора.  
   
  В запросах определяет ключи для соединяемых коллекций.  
   
@@ -34,5 +34,5 @@ ms.locfileid: "33640597"
   
  [Оператор Option Strict](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>См. также
+- [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)
