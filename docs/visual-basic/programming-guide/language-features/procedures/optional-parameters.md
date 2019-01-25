@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552233"
 ---
 # <a name="optional-parameters-visual-basic"></a>Необязательные параметры (Visual Basic)
-Некоторые аргументы процедуры можно задать как необязательные, тем самым указывая, что их можно не задавать при вызове процедуры. *Необязательные параметры* обозначаются `Optional` ключевого слова в определении процедуры. Действуют следующие правила.  
+Некоторые аргументы процедуры можно задать как необязательные, тем самым указывая, что их можно не задавать при вызове процедуры. *Необязательные параметры* обозначаются `Optional` ключевое слово в определении процедуры. Действуют следующие правила.  
   
 -   Для каждого необязательного параметра в определении процедуры должно быть указано значение по умолчанию.  
   
@@ -59,12 +59,12 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>Необязательные параметры и перегрузка  
  Другой способ определения процедуры с необязательными параметрами состоит в использовании перегрузки. Если имеется один необязательный параметр, то можно определить две перегруженные версии процедуры, одна принимает параметр, а другая — нет. Такой подход становится более сложным с увеличением числа необязательных параметров. Однако, его преимущество заключается в том, что он позволяет точно знать, все ли необязательные аргументы заданы в вызывающей программе.  
   
-## <a name="see-also"></a>См. также  
- [Процедуры](./index.md)  
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
- [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)  
- [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)  
- [Массивы параметров](./parameter-arrays.md)  
- [Перегрузка процедур](./procedure-overloading.md)  
- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>См. также
+- [Процедуры](./index.md)
+- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
+- [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)
+- [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
+- [Массивы параметров](./parameter-arrays.md)
+- [Перегрузка процедур](./procedure-overloading.md)
+- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

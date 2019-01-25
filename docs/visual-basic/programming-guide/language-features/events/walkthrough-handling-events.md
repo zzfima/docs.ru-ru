@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553741"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Пошаговое руководство. Обработка событий (Visual Basic)
 Это второе из двух разделов, которые демонстрируют, как работать с событиями. Первый раздел [Пошаговое руководство: Объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), показано, как объявлять и создавать события. Чтобы показать, как обрабатывать события при их возникновении в этом разделе используется форма и класс из предыдущего примера.  
@@ -116,6 +116,6 @@ ms.locfileid: "53153388"
 > [!NOTE]
 >  Можно объявить столько `WithEvents` переменные, как вам требуется. но массивы `WithEvents` переменные не поддерживаются.  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Объявление и вызов событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- [События](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>См. также
+- [Пошаговое руководство: Объявление и вызов событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [События](../../../../visual-basic/programming-guide/language-features/events/index.md)

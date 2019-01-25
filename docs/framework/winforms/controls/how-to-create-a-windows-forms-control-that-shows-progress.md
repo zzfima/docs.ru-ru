@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
+title: Как выполнить Создание элемента управления Windows Forms, показывающего прогресс
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c474419d1b60d8dbc937e77251b877efca2709b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594724"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Как выполнить Создание элемента управления Windows Forms, показывающего прогресс
 В следующем примере кода показан пользовательский элемент управления `FlashTrackBar`, который позволяет показывать пользователю уровень или ход выполнения приложения. Ход выполнения отображается с помощью градиента.  
   
  Элемент управления `FlashTrackBar` иллюстрирует следующие концепции.  
@@ -34,7 +34,7 @@ ms.locfileid: "43502352"
   
  В приведенной ниже таблице показаны пользовательские свойства, которые определяет `FlashTrackBar`.  
   
-|Свойство.|Описание|  
+|Свойство.|Описание:|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Указывает, может ли пользователь изменить значение полосы прокрутки флеш-памяти, щелкнув его и перетащив.|  
 |`EndColor`|Определяет конечный цвет полосы прокрутки.|  
@@ -49,7 +49,7 @@ ms.locfileid: "43502352"
   
  В следующей таблице показаны дополнительные элементы, определяемые событием изменения свойства `FlashTrackBar:` и методом, который вызывает это событие.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`ValueChanged`|Событие, которое возникает при изменении свойства `Value` полосы ползунка.|  
 |`OnValueChanged`|Метод, который вызывает событие `ValueChanged`.|  
@@ -92,6 +92,6 @@ ms.locfileid: "43502352"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>См. также  
- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>См. также
+- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

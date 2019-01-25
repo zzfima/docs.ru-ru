@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d688818e24084dbb3db81f418e37d724e9f48512
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666258"
 ---
 # <a name="overriding-the-onpaint-method"></a>Переопределение метода OnPaint
 Основные шаги для переопределения любого события, определенные в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] идентичны и обобщены в следующем списке.  
@@ -26,7 +26,7 @@ ms.locfileid: "48838524"
   
  <xref:System.Windows.Forms.Control.Paint> Событий описано здесь подробно, так как каждый элемент управления Windows Forms необходимо переопределить <xref:System.Windows.Forms.Control.Paint> событие, он наследует от <xref:System.Windows.Forms.Control>. Базовый <xref:System.Windows.Forms.Control> класс не знает, как производный элемент управления должен быть нарисован и не обеспечивает логику рисования в <xref:System.Windows.Forms.Control.OnPaint%2A> метод. <xref:System.Windows.Forms.Control.OnPaint%2A> Метод <xref:System.Windows.Forms.Control> просто отправляет <xref:System.Windows.Forms.Control.Paint> событий для приемников зарегистрированных событий.  
   
- Если вы работали с образцом в [как: разработка простого элемента управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), вы видели пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Следующий фрагмент кода взят из этого примера.  
+ Если вы работали с образцом в [как: Разработка простого элемента управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), вы видели пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Следующий фрагмент кода взят из этого примера.  
   
 ```vb  
 Public Class FirstControl  
@@ -86,7 +86,7 @@ public class PaintEventArgs : EventArgs {
   
  Элемент управления вызывает его <xref:System.Windows.Forms.Control.OnPaint%2A> метод всякий раз, когда ему необходимо изменить его визуального отображения. Этот метод в свою очередь вызывает <xref:System.Windows.Forms.Control.Paint> событий.  
   
-## <a name="see-also"></a>См. также  
- [События](../../../../docs/standard/events/index.md)  
- [Отрисовка элементов управления Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- [Определение событий](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+## <a name="see-also"></a>См. также
+- [События](../../../../docs/standard/events/index.md)
+- [Отрисовка элементов управления Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)
+- [Определение событий](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

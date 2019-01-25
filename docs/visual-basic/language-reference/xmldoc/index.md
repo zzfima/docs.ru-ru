@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 3b2dec4224006d35fb9add11e170b9dcbeeafcf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3ee69999b37f3cef631a1801a800c5710ad895ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600483"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Рекомендуется использовать XML-теги для комментариев документации (Visual Basic)
 Компилятор Visual Basic может обработать комментарии документации в коде в XML-файл. Дополнительные средства можно использовать для обработки XML-файла в документации.  
@@ -39,7 +39,7 @@ ms.locfileid: "45649976"
 > [!NOTE]
 >  В текст комментария документации угловые скобки, используйте `&lt;` и `&gt;`. Например, строка `"&lt;text in angle brackets&gt;"` будет отображаться как `<text in angle brackets>`.  
   
-## <a name="see-also"></a>См. также  
- [Документирование кода с помощью XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a>См. также
+- [Документирование кода с помощью XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

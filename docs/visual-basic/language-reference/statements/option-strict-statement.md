@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ed95d0a0c6fc9ba41bba2c4e16d4ed3b721ae4e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580802"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Ограничивает неявное преобразование типов данных расширяющими преобразованиями, запрещает позднее связывание и неявную типизацию, которые приводят к `Object` типа.  
@@ -31,8 +31,8 @@ Option Strict { On | Off }
   
 |Термин|Определение|  
 |---|---|  
-|`On`|Необязательный. Позволяет `Option Strict` проверки.|  
-|`Off`|Необязательный. Отключает `Option Strict` проверки.|  
+|`On`|Необязательный параметр. Позволяет `Option Strict` проверки.|  
+|`Off`|Необязательный параметр. Отключает `Option Strict` проверки.|  
   
 ## <a name="remarks"></a>Примечания  
  Когда `Option Strict On` или `Option Strict` появится в файле, следующие условия вызывают ошибку времени компиляции:  
@@ -153,14 +153,14 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>См. также
 
-- [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
-- [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
-- [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
-- [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
-- [Практическое руководство. Доступ к членам объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
-- [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
-- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
-- [Позднее связывание в решениях Office](/visualstudio/vsto/late-binding-in-office-solutions)  
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+- [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Практическое руководство. Доступ к членам объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Позднее связывание в решениях Office](/visualstudio/vsto/late-binding-in-office-solutions)
+- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

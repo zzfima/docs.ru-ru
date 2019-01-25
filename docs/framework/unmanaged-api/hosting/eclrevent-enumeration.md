@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d79b0c1fed0178f8463174fe981f250d6f6fb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d66e010340d186eed2222ae2ba8cfb24b8e8d7b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658576"
 ---
 # <a name="eclrevent-enumeration"></a>Перечисление EClrEvent
-Описывает распространенные события языка среды CLR, для которых узел может регистрировать обратные вызовы.  
+Описывает распространенные события среды выполнения (CLR) языка, для которых узел может регистрировать обратные вызовы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +41,28 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Задает неустранимую ошибку среды CLR.|  
-|`Event_DomainUnload`|Задает, выгрузкой конкретной <xref:System.AppDomain>.|  
+|`Event_ClrDisabled`|Указывает Неустранимая ошибка среды CLR.|  
+|`Event_DomainUnload`|Указывает, выгрузку конкретной <xref:System.AppDomain>.|  
 |`Event_MDAFired`|Указывает, что сообщение управляемого помощника по отладке (MDA) был создан.|  
 |`Event_StackOverflow`|Указывает, что произошла ошибка переполнения стека.|  
   
 ## <a name="remarks"></a>Примечания  
- Узел может регистрировать обратные вызовы для любых типов событий, описываемого `EClrEvent` путем вызова методов [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) интерфейса. Узел получает указатель на этот интерфейс путем вызова [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод.  
+ Узел может регистрировать обратные вызовы для любых типов событий, описываемого `EClrEvent` , вызывая методы класса [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) интерфейс. Узел получает указатель на этот интерфейс вызовом [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) метод.  
   
- `Event_CLRDisabled` И `Event_DomainUnload` события может вызываться несколько раз и из разных потоков, чтобы сообщить о выгрузке или отключении среды CLR.  
+ `Event_CLRDisabled` И `Event_DomainUnload` события могут вызываться несколько раз и из разных потоков, чтобы сообщить о выгрузке или отключении среды CLR.  
   
- `Event_MDAFired` Событие вызывает создание [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) экземпляр, содержащий сведения о сообщении MDA. Дополнительные сведения о помощниках MDA см. в разделе [Диагностика ошибок посредством управляемых помощников по отладке](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ `Event_MDAFired` Событие инициирует создание [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) экземпляр, содержащий сведения о сообщении по отладке управляемого кода. Дополнительные сведения о помощниках MDA, см. в разделе [Диагностика ошибок посредством управляемых помощников по отладке](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

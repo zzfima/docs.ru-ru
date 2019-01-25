@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: f6cf397b1e76313ab399d5e39a43ae0263df619c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518622"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Массив, объявленный как переменная управления циклом, не может быть объявлен с исходным размером
-Объект `For Each` цикл использует массив в качестве его *элемент* переменной итерации, но инициализирует этот массив.  
+Объект `For Each` цикле используется массив в качестве его *элемент* переменной итерации, но инициализирует этот массив.  
   
- Следующие инструкции показывают, как эта ошибка может быть создано.  
+ Следующие инструкции показывают, как эта ошибка может возникать.  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -25,7 +25,7 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- Первый `For Each` инструкция является правильный способ доступа к элементам `arrayList`. Второй `For Each` инструкция создает эту ошибку.  
+ Первый `For Each` инструкция — это правильный способ доступа к элементам массива `arrayList`. Второй `For Each` инструкция создает эту ошибку.  
   
  **Идентификатор ошибки:** BC32039  
   
@@ -33,7 +33,7 @@ For Each listElement(1) As Integer In arrayList
   
 -   Удалите инициализацию из объявления *элемент* переменной итерации.  
   
-## <a name="see-also"></a>См. также  
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Коллекции](../../../standard/collections/index.md)
+## <a name="see-also"></a>См. также
+- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Коллекции](../../../standard/collections/index.md)

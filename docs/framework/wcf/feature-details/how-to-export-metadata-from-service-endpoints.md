@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Экспорт метаданных из конечных точек службы
+title: Как выполнить Экспорт метаданных из конечных точек службы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530000"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Практическое руководство. Экспорт метаданных из конечных точек службы
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Как выполнить Экспорт метаданных из конечных точек службы
 В этом разделе объясняется, как экспортировать метаданные из конечных точек службы.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Экспорт метаданных из конечных точек службы  
@@ -55,7 +55,7 @@ ms.locfileid: "33491547"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  При компиляции файла Program.cs необходимо сослаться на System.ServiceModel.dll.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

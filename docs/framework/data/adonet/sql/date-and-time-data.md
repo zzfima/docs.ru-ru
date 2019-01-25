@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584549"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -88,7 +88,7 @@ ms.locfileid: "43514007"
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных, см. в разделе [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Возвращает или задает максимальное количество разрядов, используемых для представления значения. Этот параметр пропускается для типов данных даты и времени.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Возвращает или задает число десятичных разрядов, до которых разрешается промежуток времени для `Time`, `DateTime2`, и `DateTimeOffset`. Значение по умолчанию — 0, означающее, что фактический масштаб выводится из значения и отправляется на сервер.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Пропускается для типов данных даты и времени.|  
@@ -239,8 +239,8 @@ command.Parameters.AddWithValue( _
 |[Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.|  
 |[Типы данных (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Описываются системные типы данных в SQL Server 2008.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

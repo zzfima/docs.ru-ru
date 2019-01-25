@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540667"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#. 
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>См. также
 
-- [Видеозапись презентации по данному разделу](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [Производительность](../../../docs/framework/performance/index.md)  
-- [Советы по повышению производительности .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Средство анализа производительности Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Поиск ограничений приложений с Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 учебники по PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Видеозапись презентации по данному разделу](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Производительность](../../../docs/framework/performance/index.md)
+- [Советы по повышению производительности .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Средство анализа производительности Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Поиск ограничений приложений с Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 учебники по PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Пакет SDK для .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [репозиторий DotNet/roslyn на GitHub](https://github.com/dotnet/roslyn)

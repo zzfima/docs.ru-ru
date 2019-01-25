@@ -2,17 +2,17 @@
 title: '&lt;security&gt; для &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 870694eae832dd603e511d0b6817c07b08c50614
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9e6a0e864dcb83a529a5ac457e2fcffe0435376f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150270"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701174"
 ---
 # <a name="ltsecuritygt-of-ltbasichttpbindinggt"></a>&lt;security&gt; для &lt;basicHttpBinding&gt;
 Определяет возможности безопасности [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 \<basicHttpBinding >  
 \<Привязка >  
@@ -65,14 +65,14 @@ ms.locfileid: "54150270"
 ## <a name="remarks"></a>Примечания  
  По умолчанию сообщение SOAP не защищено и проверка подлинности клиента не выполняется. Данный элемент позволяет настроить дополнительные параметры безопасности для элемента `basicHttpBinding`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

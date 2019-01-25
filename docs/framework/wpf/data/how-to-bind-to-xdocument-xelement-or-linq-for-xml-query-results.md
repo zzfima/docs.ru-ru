@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка к XDocument, XElement или LINQ для результатов запросов XML
+title: Как выполнить Привязка к XDocument, XElement или LINQ для результатов запросов XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 83254bcb0b2aef53a53874a67e8ae169ad242d57
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0d68eb40b60481709ff2852a643908025e2e43ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512337"
 ---
-# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Практическое руководство. Привязка к XDocument, XElement или LINQ для результатов запросов XML
+# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Как выполнить Привязка к XDocument, XElement или LINQ для результатов запросов XML
 В этом примере показано, как привязать данные XML <xref:System.Windows.Controls.ItemsControl> с помощью <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="example"></a>Пример  
@@ -39,8 +39,8 @@ ms.locfileid: "43499943"
  [!code-csharp[XLinqExample#BindToResults](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
  [!code-vb[XLinqExample#BindToResults](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Общие сведения о привязке данных WPF с помощью LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
- [Привязка данных WPF с использованием примера LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)  
- [Динамические свойства LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)
+## <a name="see-also"></a>См. также
+- [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Общие сведения о привязке данных WPF с помощью LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
+- [Привязка данных WPF с использованием примера LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
+- [Динамические свойства LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)

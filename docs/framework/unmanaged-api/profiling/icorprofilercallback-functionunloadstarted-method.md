@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e28aef4916d06218953236e3b29e19c68822bd6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 351fa8d1ec144a1861ef152ba6b02d9bbfb78df0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501676"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>Метод ICorProfilerCallback::FunctionUnloadStarted
-Уведомляет профилировщик о том, что среда выполнения начала выгрузку функции.  
+Уведомляет профилировщик о том, что среда начала выгрузку функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,19 +36,19 @@ HRESULT FunctionUnloadStarted(
   
 #### <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Идентификатор функции, выгружается.  
+ [in] Идентификатор функции, которая вызывается при выгрузке.  
   
 ## <a name="remarks"></a>Примечания  
- Значение `functionId` параметр больше не является допустимым, после возврата этого метода в вызывающий объект.  
+ Значение `functionId` параметр больше не является допустимым, после этого метод возвращает вызывающему объекту.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

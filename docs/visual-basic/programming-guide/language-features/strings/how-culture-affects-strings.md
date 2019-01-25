@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543452"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Влияние языка и региональных параметров на строки в Visual Basic
 Эта страница справки описывается, как Visual Basic использует язык и региональные параметры для выполнения преобразования строк и сравнения.  
@@ -36,7 +36,7 @@ ms.locfileid: "39332604"
  Дополнительные сведения см. в разделах <xref:Microsoft.VisualBasic.Conversion.Str%2A> и <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>С помощью определенного языка и региональных параметров  
- Представьте себе, что вы разрабатываете приложение, которое отправляет дату (представлен в виде строки) на веб-службу. В этом случае приложение должно использовать определенные язык и региональные параметры для преобразования строк. Чтобы проиллюстрировать, почему, рассмотрим использование даты <xref:System.DateTime.ToString> метода: Если приложение использует этот метод для форматирования даты 4 июля 2005 г., он возвращает «7/4/2005 12:00:00 AM» при запуске с английского языка США (en US), но возвращает " 04.07.2005 00:00:00 "при запуске с культурой немецкий (de-DE).  
+ Представьте себе, что вы разрабатываете приложение, которое отправляет дату (представлен в виде строки) на веб-службу. В этом случае приложение должно использовать определенные язык и региональные параметры для преобразования строк. Чтобы проиллюстрировать, почему, рассмотрим использование даты <xref:System.DateTime.ToString> метод: Если приложение использует этот метод для форматирования даты 4 июля 2005 г., возвращается значение «7/4/2005 12:00:00 AM» при запуске с английского языка США (en US), но возвращает «04.07.2005 00:00:00 "при запуске с культурой немецкий (de-DE).  
   
  Если вам нужно выполнить преобразование строк в формате конкретного языка и региональных параметров, следует использовать `CultureInfo` класс, который встроен в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Вы можете создать новую `CultureInfo` объект для определенного языка и региональных параметров, передав имя культуры <xref:System.Globalization.CultureInfo.%23ctor%2A> конструктор. Имена поддерживаемых языка и региональных параметров, перечислены в <xref:System.Globalization.CultureInfo> класс страницы справки.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39332604"
 ### <a name="security-considerations"></a>Вопросы безопасности  
  Если приложение принимает решения относительно безопасности, на основе результата сравнения или операциями изменения регистра, то следует использовать операцию <xref:System.String.Compare%2A?displayProperty=nameWithType> и передайте `Ordinal` или `OrdinalIgnoreCase` для `comparisonType` аргумент.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Globalization.CultureInfo>  
- [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Globalization.CultureInfo>
+- [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

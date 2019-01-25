@@ -2,17 +2,17 @@
 title: '&lt;serviceCertificate&gt; для &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: dfaf02eeaf6de781af70c21321a042de5eff74a5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6718804005d21cfdb75c27e417cb106aa05d79ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556328"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCertificate&gt; для &lt;serviceCredentials&gt;
 Задает сертификат X.509, который будет использоваться для проверки подлинности службы при подключении к клиентам с использованием режима безопасности сообщений.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
@@ -54,10 +54,10 @@ ms.locfileid: "54146034"
   
  Дополнительные сведения об использовании элемента см. в разделе [как: Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>  
- [Практическое руководство. Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
+- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
+- [Практическое руководство. Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
+title: Как выполнить Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539900"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Как выполнить Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
 Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице. В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.  
   
  Чтобы вы могли представить это отношение, приведем пример родительской и дочерней таблицы.  
@@ -49,7 +49,7 @@ ms.locfileid: "33535588"
   
 ### <a name="to-create-the-user-interface"></a>Создание пользовательского интерфейса  
   
-1.  Из **элементов**, перетащите <xref:System.Windows.Forms.ComboBox> в форму элемент управления.  
+1.  Из **элементов**, перетащите <xref:System.Windows.Forms.ComboBox> на форму.  
   
      Этот элемент управления будет отображать столбец из родительской таблицы.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "33535588"
   
 8.  Свяжите элементы управления, кроме <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.BindingNavigator>, с полями сведений из элемента <xref:System.Windows.Forms.BindingSource> дочерней таблицы (например, `OrdersBindingSource`), которые необходимо отобразить.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.BindingSource>  
- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.BindingSource>
+- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

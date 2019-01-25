@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d787e3eae59218c46a95c327a0f93502c3833d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4ebf93c103b74be458ba51577a5195795029176
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520407"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>Метод ICorProfilerInfo2::GetContextStaticAddress
-Возвращает адрес для указанного поля статического контекста, который находится в области заданного контекста.  
+Возвращает адрес для указанного поля статического контекста, в рамках заданного контекста.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,35 +39,35 @@ HRESULT GetContextStaticAddress(
   
 #### <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, содержащего запрошенного статического поля контекста.  
+ [in] Идентификатор класса, содержащего запрошенного контекстно статические поля.  
   
  `fieldToken`  
- [in] Токен метаданных для запрошенного статического поля контекста.  
+ [in] Маркер метаданных для запрошенного статического поля контекста.  
   
  `contextId`  
- [in] Идентификатор контекста, область для запрошенного статического поля контекста.  
+ [in] Идентификатор контекста, который является областью для запрошенного статического поля контекста.  
   
  `ppAddress`  
- [out] Указатель на адрес статического поля, которое находится в указанном контексте.  
+ [out] Указатель на адрес статического поля, в заданном контексте.  
   
 ## <a name="remarks"></a>Примечания  
- `GetContextStaticAddress` Метод может возвращать одно из следующих действий:  
+ `GetContextStaticAddress` Метод может возвращать одно из следующих:  
   
--   CORPROF_E_DATAINCOMPLETE HRESULT, если заданного статического поля не был назначен адрес в указанном контексте.  
+-   HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
   
--   Адреса объектов, которые могут находиться в куче сборщика мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора профилировщики не следует предполагать, что они являются допустимыми.  
+-   Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.  
   
- До завершения конструктора класса `GetContextStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, хотя некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
+ До завершения конструктора класса `GetContextStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576191"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Метод IMetaDataAssemblyImport::FindExportedTypeByName
 Получает указатель на экспортируемый тип по его имени и включающий тип.  
@@ -42,23 +42,23 @@ HRESULT FindExportedTypeByName (
  [in] Имя экспортируемого типа.  
   
  `mdtExportedType`  
- [in] Токен метаданных для экспортируемого типа включающего класса. Это значение равно `mdExportedTypeNil` при экспорте запрошенный тип не является вложенным типом.  
+ [in] Маркер метаданных для экспортируемого типа включающего класса. Это значение равно `mdExportedTypeNil` при экспорте в запрошенный тип не является вложенным типом.  
   
  `ptkExportedType`  
- [out] Указатель на `mdExportedType` токен, представляющий экспортируемого типа.  
+ [out] Указатель на `mdExportedType` токен, представляющий экспортированный тип.  
   
 ## <a name="remarks"></a>Примечания  
- `FindExportedTypeByName` Метод использует стандартных правил, применяемых средой CLR для разрешения ссылок.  
+ `FindExportedTypeByName` Метод использует стандартные правила, чтобы позволить среда CLR для разрешения ссылок на.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

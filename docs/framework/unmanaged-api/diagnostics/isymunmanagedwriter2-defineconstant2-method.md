@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6f9f198fc1115aed7b531515ab07ddc35d36ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e843acc82d52e2c7a772f4799e7bb0af8ecff10d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545729"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Метод ISymUnmanagedWriter2::DefineConstant2
-Определяет имя для постоянного значения.  
+Определяет имя для значения константы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ HRESULT DefineConstant2(
   
 #### <a name="parameters"></a>Параметры  
  `name`  
- [in] Имя константы.  
+ [in] Постоянное имя.  
   
  `value`  
  [in] Значение константы.  
@@ -50,8 +50,8 @@ HRESULT DefineConstant2(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [Метод DefineConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Метод DefineConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

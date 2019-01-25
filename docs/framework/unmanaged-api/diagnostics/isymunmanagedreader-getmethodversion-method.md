@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d850363940ff53135fc66ec057ee67822fa40d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555847"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Метод ISymUnmanagedReader::GetMethodVersion
-Получает версию метода. Версия метода начинается с 1 и увеличивается каждый раз, когда метод компилируется. Перекомпиляция может происходить без изменений в метод.  
+Получает версию метода. Версия метода начинается с 1 и увеличивается каждый раз, когда метод компилируется. Перекомпиляция может происходить без изменения в метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT GetMethodVersion (
   
 #### <a name="parameters"></a>Параметры  
  `pMethod`  
- [in] Метод, для которого требуется получить версию.  
+ [in] Метод, для которого необходимо получить версию.  
   
  `version`  
  [out] Указатель на переменную, которая получает версию метода.  
@@ -46,7 +46,7 @@ HRESULT GetMethodVersion (
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

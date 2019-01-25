@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5498874661f36ee4e96e6d2d58e3076bb8abbcce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699939"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
   
  \<configuration>  
  \<Среда выполнения >  
-\<AppContextSwitchOverrides >  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53611494"
   
 ### <a name="value-attribute"></a>значение атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |«имя = значение»|Имя коммутатора предопределенные вместе с его значением (`true` или `false`). Несколько пар имя значение параметра разделяются точками с запятой («;»). Список имен предопределенных коммутатора, поддерживаемые платформой .NET Framework см. в разделе "Примечания".|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53611494"
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Управляет ли тест для проверки на равенство сравнивает <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> свойство одного объекта с <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> свойство значения второго объекта. Дополнительные сведения см. в разделе [неправильная реализация MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Отключает сертификатов проверки идентификатор (OID) расширенного использования ключа (EKU) объектов. Расширение расширенного использования ключа (EKU) — это коллекция идентификаторов объекта (OID), которые указывают приложения, использующие ключ.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Отключение TLS 1.0 браузера воспользоваться от SSL/TLS (BEAST) по устранению рисков, отключив использование SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
-|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Элементы управления ли <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> классы могут использовать протокол SSL 3.0. Дополнительные сведения см. в разделе [устранение рисков: Протоколы TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
+|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Элементы управления ли <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> классы могут использовать протокол SSL 3.0. Дополнительные сведения см. в разделе [устранение рисков: протоколами TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Отключает версии SystemDefault TLS, возврат к Tls12, Tls11, Tls по умолчанию.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Отключает оповещения на стороне сервера SslStream TLS.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Элементы управления ли [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) сериализует некоторые управляющие символы, основанные на стандартах ECMAScript версий 6 и 8. Дополнительные сведения см. в разделе [устранение рисков: Сериализация управляющих символов с помощью DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
@@ -161,7 +161,7 @@ ms.locfileid: "53611494"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.AppContext?displayProperty=nameWithType>  
-- [\<Среда выполнения > элемент](runtime-element.md)  
+## <a name="see-also"></a>См. также
+- <xref:System.AppContext?displayProperty=nameWithType>
+- [\<Среда выполнения > элемент](runtime-element.md)
 - [Элемент \<configuration>](../configuration-element.md)

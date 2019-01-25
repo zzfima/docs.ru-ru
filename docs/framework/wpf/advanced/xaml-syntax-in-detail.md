@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 33e811369d7f1d419eb593b430ab939279d3713b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510199"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF, в частности, так и для других платформ, использующих XAML или основные понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -315,10 +315,10 @@ ms.locfileid: "54030299"
   
  Но так же, как *typeName*. *имя пользователя* формы для атрибутов, *Имя_базового_типа*. *имя пользователя* находится в плохом стиле в разметке, и ее следует избегать.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverters и XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [TypeConverters и XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)
+- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

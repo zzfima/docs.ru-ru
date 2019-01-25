@@ -2,12 +2,12 @@
 title: Устойчивый контекст экземпляра
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527499"
 ---
 # <a name="durable-instance-context"></a>Устойчивый контекст экземпляра
 В этом примере показано, как настроить среду выполнения Windows Communication Foundation (WCF) для включения устойчивых контекстов экземпляров. В качестве резервного хранилища в этом примере используется SQL Server 2005, а именно SQL Server 2005 Express. Этот сервер также предоставляет возможность доступа к пользовательским механизмам хранения.  
@@ -358,7 +358,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- Эта инструкция создает экземпляр типа `OperationInvoker` и присваивает его свойству `Invoker` создаваемого объекта `DispatchOperation`. Класс `OperationInvoker` является оболочкой для средства вызова операции по умолчанию, созданного для `DispatchOperation`. Этот класс реализует интерфейс `IOperationInvoker`. В реализации метода `Invoke` фактический метод вызова делегируется внутреннему средству вызова операции. Однако перед возвратом результатов диспетчер хранилища в `InstanceContext` используется для сохранения экземпляра службы.  
+ Эта инструкция создает экземпляр типа `OperationInvoker` и присваивает его свойству `Invoker` создаваемого объекта `DispatchOperation`. Класс `OperationInvoker` является оболочкой для средства вызова операции по умолчанию, созданного для `DispatchOperation`. Этот класс реализует интерфейс `IOperationInvoker` . В реализации метода `Invoke` фактический метод вызова делегируется внутреннему средству вызова операции. Однако перед возвратом результатов диспетчер хранилища в `InstanceContext` используется для сохранения экземпляра службы.  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  

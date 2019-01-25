@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512987"
 ---
 # <a name="property-statement"></a>Property Statement
 Объявляет имя свойства и процедуры свойства, используемые для хранения и извлечения значения свойства.  
@@ -44,11 +44,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Необязательный. Список атрибутов, применяемых к этому свойству или `Get` или `Set` процедуры. См. в разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Необязательный параметр. Список атрибутов, применяемых к этому свойству или `Get` или `Set` процедуры. См. в разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Необязательный. Указывает, что это свойство является свойством по умолчанию для класса или структуры, в котором она определена. Свойства по умолчанию, должен принимать параметры и их можно задавать и получать без указания имени свойства. При объявлении свойства в виде `Default`, нельзя использовать `Private` в свойстве или любой из его процедур.  
+     Необязательный параметр. Указывает, что это свойство является свойством по умолчанию для класса или структуры, в котором она определена. Свойства по умолчанию, должен принимать параметры и их можно задавать и получать без указания имени свойства. При объявлении свойства в виде `Default`, нельзя использовать `Private` в свойстве или любой из его процедур.  
   
 -   `accessmodifier`  
   
@@ -64,13 +64,13 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     - [Protected Friend](../../language-reference/modifiers/protected-friend.md) 
 
-    - [Частный защищенный](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     См. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `propertymodifiers`  
   
-     Необязательный. Ниже указаны доступные значения.  
+     Необязательный параметр. Ниже указаны доступные значения.  
   
     -   [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -88,31 +88,31 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Необязательный. См. в разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный параметр. См. в разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательный. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Необязательный параметр. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Необязательный. См. в разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Необязательный параметр. См. в разделе [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
-     Необязательный. См. в разделе [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+     Необязательный параметр. См. в разделе [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
 -   `Iterator`  
   
-     Необязательный. См. в разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Необязательный параметр. См. в разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Обязательно. Имя свойства. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательный. Имя свойства. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
-     Необязательный. Список имена локальных переменных, представляющих параметры этого свойства и возможные дополнительные параметры `Set` процедуры. См. в разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Необязательный параметр. Список имена локальных переменных, представляющих параметры этого свойства и возможные дополнительные параметры `Set` процедуры. См. в разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
@@ -120,7 +120,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     Необязательный. Указывает, что это свойство реализует один или несколько свойств, каждая из которых определена в интерфейс, реализуемый этого свойства классом или структурой. См. в разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Необязательный параметр. Указывает, что это свойство реализует один или несколько свойств, каждая из которых определена в интерфейс, реализуемый этого свойства классом или структурой. См. в разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
@@ -134,16 +134,16 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Отделение|Описание|  
     |---|---|  
-    |`interface`|Обязательно. Имя интерфейса, реализуемого этим свойством, содержащей, класс или структура.|  
-    |`definedname`|Обязательно. Имя, по которому это свойство определено в `interface`.|  
+    |`interface`|Обязательный. Имя интерфейса, реализуемого этим свойством, содержащей, класс или структура.|  
+    |`definedname`|Обязательный. Имя, по которому это свойство определено в `interface`.|  
   
 -   `Get`  
   
-     Необязательный. Требуется, если свойство помечено `WriteOnly`. Запускает `Get` свойство процедуру, которая используется для возврата значения свойства.  
+     Необязательный параметр. Требуется, если свойство помечено `WriteOnly`. Запускает `Get` свойство процедуру, которая используется для возврата значения свойства.  
   
 -   `statements`  
   
-     Необязательный. Блок операторов для выполнения в рамках `Get` или `Set` процедуры.  
+     Необязательный параметр. Блок операторов для выполнения в рамках `Get` или `Set` процедуры.  
   
 -   `End Get`  
   
@@ -151,7 +151,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     Необязательный. Требуется, если свойство помечено `ReadOnly`. Запускает `Set` свойство процедуру, которая используется для хранения значения свойства.  
+     Необязательный параметр. Требуется, если свойство помечено `ReadOnly`. Запускает `Set` свойство процедуру, которая используется для хранения значения свойства.  
   
 -   `End Set`  
   
@@ -207,10 +207,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Default](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="see-also"></a>См. также
+- [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Default](../../../visual-basic/language-reference/modifiers/default.md)
