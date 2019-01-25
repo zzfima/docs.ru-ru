@@ -2,22 +2,22 @@
 title: Атрибуты ServiceModel и справочная информация ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726631"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Атрибуты ServiceModel и справочная информация ServiceDescription
-*Дерево описания* иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класса), которые вместе описывают каждый аспект службы. Windows Communication Foundation (WCF) использует дерево описания для сборки допустимой среды выполнения службы, для публикации языка описания веб-служб (WSDL), язык определения схемы XML (XSD) и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключения и использования службы, а также для создания кода и конфигурации файла представления описание значений из дерева.  
+*Дерево описания* — это иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класс), которые вместе описывают каждый аспект службы. Windows Communication Foundation (WCF) использует дерево описания для построения допустимой среды выполнения службы, чтобы опубликовать Web Services Description Language (WSDL), язык определения схемы XML (XSD) и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключиться и использовать службу и для создания различных кода и конфигурации файла представлений значений дерева описания.  
   
- В этом разделе описывается получение свойств, относящихся к контракту, из контракта службы, а также их реализация и добавление в дерево описания. В некоторых случаях значения атрибутов преобразуются в свойства поведения, затем поведение вставляется в дерево описания. Дополнительные сведения о преобразование значений дерево описания в метаданные, см. в разделе [Справочник WSDL и ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ В этом разделе описывается получение свойств, относящихся к контракту, из контракта службы, а также их реализация и добавление в дерево описания. В некоторых случаях значения атрибутов преобразуются в свойства поведения, затем поведение вставляется в дерево описания. Дополнительные сведения о том, как преобразования значений дерева описания в метаданные, см. в разделе [ServiceDescription и справочная WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Сопоставление операций дереву описания  
- В приложениях WCF контракты службы моделируются интерфейсами (или классы), использующими атрибуты для отметки интерфейса или класса и его методов как группирования операций. При открытии класса <xref:System.ServiceModel.ServiceHost> все контракты и реализации службы отражаются и объединяются с информацией о конфигурации в дереве описания.  
+ В приложениях WCF контракты службы моделируются интерфейсами (или классы), использующими атрибуты для отметки интерфейса или класса и его методов, как группа operations. При открытии класса <xref:System.ServiceModel.ServiceHost> все контракты и реализации службы отражаются и объединяются с информацией о конфигурации в дереве описания.  
   
- Существует два типа моделей операции: *параметр* модели и *контракт сообщения* модели. В модели параметров используются управляемые методы, не имеющие типа параметра или возвращаемого значения, помеченного классом <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. В этой модели разработчики управляют сериализацией параметров и возвращаемых значений, но WCF формирует значения, которые используются для заполнения дерева описания службы и ее контракта.  
+ Существует два типа моделей операции: *параметр* модели и *контракт сообщения* модели. В модели параметров используются управляемые методы, не имеющие типа параметра или возвращаемого значения, помеченного классом <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. В этой модели разработчики управляют сериализацией параметров и возвращаемых значений, но WCF создает значения, которые используются для заполнения дерева описания службы и ее контракта.  
   
  Привязки, указанные в файлах конфигурации, загружаются непосредственно в свойство <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType>.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33505974"
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription>, добавленные к <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> всех операций.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об уровнях защиты см. в разделе [уровень защиты основные сведения о](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Значение ServiceKnownTypesAttribute|Изменяемое значение дерева описания|  
@@ -48,7 +48,7 @@ ms.locfileid: "33505974"
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об уровнях защиты см. в разделе [уровень защиты основные сведения о](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> для исходящего или входящего сообщения, в зависимости от контракта/контракта обратного вызова.|  
   
 |Значение FaultContractAttribute|Изменяемое значение дерева описания|  
@@ -111,7 +111,7 @@ ms.locfileid: "33505974"
 |-------------------------------------|-------------------------------------|  
 |name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> для соответствующей части в <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- Дополнительные сведения о преобразование значений дерево описания в метаданные, см. в разделе [Справочник WSDL и ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Дополнительные сведения о том, как преобразования значений дерева описания в метаданные, см. в разделе [ServiceDescription и справочная WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
-## <a name="see-also"></a>См. также  
- [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a>См. также
+- [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600119"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
 
@@ -47,7 +47,7 @@ ms.locfileid: "44227718"
 
 ## <a name="the-datetime-structure"></a>Структура DateTime
 
-Значение <xref:System.DateTime> определяет конкретную дату и время. Он включает в себя <xref:System.DateTime.Kind%2A> свойства, которое предоставляет ограниченные сведения о часовом поясе, к которому эти дата и время принадлежит. <xref:System.DateTimeKind> Значение, возвращенное <xref:System.DateTime.Kind%2A> свойство указывает ли <xref:System.DateTime> значение представляет местное время (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), время в формате UTC (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), или неопределенное время (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Значение <xref:System.DateTime> определяет конкретную дату и время. Он включает в себя <xref:System.DateTime.Kind%2A> свойства, которое предоставляет ограниченные сведения о часовом поясе, к которому эти дата и время принадлежит. Значение <xref:System.DateTimeKind> , возвращаемое свойством <xref:System.DateTime.Kind%2A> , указывает, представляет ли значение <xref:System.DateTime> местное время (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), время в формате UTC (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) или неопределенное время (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 Структура <xref:System.DateTime> подходит для приложений, которые:
 
@@ -122,4 +122,4 @@ ms.locfileid: "44227718"
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)

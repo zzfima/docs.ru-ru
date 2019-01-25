@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717970"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities: рекомендации и известные проблемы
 Этот раздел содержит сведения об известных проблемах, относящихся к запросам [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
@@ -25,7 +25,7 @@ ms.locfileid: "32765468"
   
 -   [Обращение к нескалярным переменным не поддерживается](#RefNonScalarClosures)  
   
--   [Вложенные запросы могут не работать с SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Вложенные запросы может произойти сбой с SQL Server 2000](#NestedQueriesSQL2000)  
   
 -   [Проецирование анонимного типа](#ProjectToAnonymousType)  
   
@@ -79,5 +79,5 @@ ms.locfileid: "32765468"
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>См. также
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

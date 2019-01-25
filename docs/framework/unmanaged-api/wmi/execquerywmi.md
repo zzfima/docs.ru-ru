@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc22edf51cbd726b69dff3da2f0540b2c3864f2e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718199"
 ---
 # <a name="execquerywmi-function"></a>Функция ExecQueryWmi
 Выполняет запрос для получения объектов.  
@@ -57,7 +57,7 @@ HRESULT ExecQueryWmi (
 `lFlags`   
 [in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде: 
 
-| Константа | Значение  | Описание  |
+| Константа | Значение  | Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор, функция извлекает измененные квалификаторы, хранящиеся в локализованных имен языкового стандарта текущего соединения. <br/> В противном случае набор, функция получает только квалификаторы, хранящихся в пространство имен немедленно. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Этот флаг приводит к Полусинхронный вызов. |
@@ -96,7 +96,7 @@ HRESULT ExecQueryWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Пользователь не имеет разрешения на просмотр одного или нескольких классов, которые функция может вернуть. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
@@ -121,11 +121,11 @@ HRESULT ExecQueryWmi (
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664529"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalMemoryValue
-Возвращает значение аргумента или локальной переменной, которая сохраняется в заданном расположении памяти для данного кадра машинного кода.  
+Получает значение аргумента или локальной переменной, которая хранится в заданном расположении памяти для данного кадра машинного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +40,25 @@ HRESULT GetLocalMemoryValue (
   
 #### <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее расположение памяти, содержащий значение.  
+ [in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий значение.  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которой ссылается `pvSigBlob` параметра.  
+ [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
   
  `pvSigBlob`  
  [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющий возвращенного значения, хранящиеся в заданном расположении памяти.  
+ [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанной области памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- 
+## <a name="see-also"></a>См. также
+

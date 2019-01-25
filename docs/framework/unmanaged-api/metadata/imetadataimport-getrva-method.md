@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1232e8c574f263f709a9b66c7b1b3d06cca5e4da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629131"
 ---
 # <a name="imetadataimportgetrva-method"></a>Метод IMetaDataImport::GetRVA
-Получает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленного указанным токеном.  
+Возвращает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленного указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +39,23 @@ HRESULT GetRVA (
   
 #### <a name="parameters"></a>Параметры  
  `tk`  
- [in] MethodDef или FieldDef токен метаданных, представляющий RVA для возвращаемого объекта кода. Если токен FieldDef, поле должно быть глобальной переменной.  
+ [in] MethodDef или FieldDef токен метаданных, представляющий возвращаемого RVA для объекта кода. Если токен FieldDef, поле должно быть глобальной переменной.  
   
  `pulCodeRVA`  
- [out] Указатель относительного виртуального адреса объекта кода, представленного маркером.  
+ [out] Указатель на относительный виртуальный адрес объекта кода, представленного маркером.  
   
  `pdwImplFlags`  
- [out] Указатель флаги реализации метода. Это значение является битовой [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) перечисления. Значение `pdwImplFlags` действителен только тогда, когда `tk` токен MethodDef.  
+ [out] Указатель на флаги реализации метода. Это значение является битовой [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) перечисления. Значение `pdwImplFlags` действителен только если `tk` является токеном MethodDef.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

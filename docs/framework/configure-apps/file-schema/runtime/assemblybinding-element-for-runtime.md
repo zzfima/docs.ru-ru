@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713997"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;
 Содержит сведения о перенаправлении версии сборки и о расположениях сборок.  
@@ -44,7 +44,7 @@ ms.locfileid: "53612040"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Инкапсулирует политику привязки и расположение сборки. Используйте один  **\<dependentAssembly >** тег для каждой сборки.|  
 |[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Задает вложенные папки, в которых среда CLR выполняет поиск при загрузке сборки.|  
@@ -92,7 +92,7 @@ ms.locfileid: "53612040"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>См. также
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

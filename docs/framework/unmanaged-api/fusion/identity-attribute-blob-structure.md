@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654676"
 ---
 # <a name="identityattributeblob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
-Содержит сведения об одном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  
+Содержит сведения об отдельном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +40,22 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`ofsNamespace`|Первое смещение в буфере символов. Пространство имен атрибута, а ряд символов null не следует это смещение. Таким образом он не используется.|  
-|`ofsName`|Второе смещение в буфере символов. Это расположение отмечает начало имени атрибута.|  
-|`ofsValue`|Третье смещение в буфере символов. Это расположение соответствует началу значения атрибута.|  
+|`ofsNamespace`|Первое смещение в буфере символов. Это смещение не соблюдается, пространство имен атрибута, но ряд символов null. Таким образом он не используется.|  
+|`ofsName`|Второй смещение в буфере символов. Это расположение отмечает начало имени атрибута.|  
+|`ofsValue`|Третий смещение в буфере символов. Это расположение отмечает начало значения атрибута.|  
   
 ## <a name="sample"></a>Пример  
  В следующем примере показано несколько основных шагов, которые в конечном итоге привести заполненного `IDENTITY_ATTRIBUTE_BLOB` структуры:  
   
 1.  Получить [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) для сборки.  
   
-2.  Вызовите `IReferenceIdentity::EnumAttributes` метода и получить [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2.  Вызовите `IReferenceIdentity::EnumAttributes` метод и получить [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Создать буфер символов и приведите его как `IDENTITY_ATTRIBUTE_BLOB` структуры.  
+3.  Создание буфера символов и приведите его как `IDENTITY_ATTRIBUTE_BLOB` структуры.  
   
-4.  Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейса. Этот метод копирует атрибуты `Namespace`, `Name`, и `Value` в буфере символов. Три смещения в эти строки будут доступны в `IDENTITY_ATTRIBUTE_BLOB` структуры.  
+4.  Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейс. Этот метод копирует атрибуты `Namespace`, `Name`, и `Value` в буфере символов. Три смещения в эти строки будут доступны в `IDENTITY_ATTRIBUTE_BLOB` структуры.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -233,17 +233,17 @@ Exit:
   
  PublicKeyToken = b77a5c561934e089  
   
- Версии = 2.0.0.0  
+ Версия = 2.0.0.0  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Isolation.h  
+ **Заголовок.** Isolation.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [Интерфейс IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [Структура IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Интерфейс IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Структура IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

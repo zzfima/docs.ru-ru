@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 58e09caeb477d6b1df7f3be17e0a8ee05be3551e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23ec659535b71ee9af189f5c4fec0dec2bb1cd8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719434"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Переменная &#39; &lt;variablename&gt; &#39; скрывает переменную во внешнем блоке
-Переменная, заключенном в блоке имеет имя, совпадающее с именем другой локальной переменной.  
+Содержится в блоке, переменная имеет имя, совпадающее с именем другой локальной переменной.  
   
  **Идентификатор ошибки:** BC30616  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Переименуйте переменную, содержащуюся в блоке, чтобы это не то же, что локальные переменные. Пример:  
+-   Переименуйте переменную в закрытом блоке, так как это не так же, как локальные переменные. Пример:  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,10 +30,10 @@ ms.locfileid: "33595096"
     End If  
     ```  
   
--   Распространенной причиной этой ошибки является использование класса `Catch e As Exception` внутри обработчика событий. Если это так, имя `Catch` переменная блока `ex` вместо `e`.  
+-   Распространенной причиной этой ошибки является использование `Catch e As Exception` внутри обработчика событий. Если это так, имя `Catch` переменная блока `ex` вместо `e`.  
   
--   Другой распространенной причиной этой ошибки может быть попытка доступа к локальной переменной, объявленной в `Try` блок в отдельном `Catch` блока. Чтобы исправить эту ошибку, объявите переменную за пределами `Try...Catch...Finally` структуры.  
+-   Другой распространенной причиной этой ошибки является попытка получить доступ к локальной переменной, объявленной в `Try` блокировать в отдельном `Catch` блока. Чтобы исправить эту ошибку, объявите переменную за пределами `Try...Catch...Finally` структуры.  
   
-## <a name="see-also"></a>См. также  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Объявление переменных](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>См. также
+- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Объявление переменных](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

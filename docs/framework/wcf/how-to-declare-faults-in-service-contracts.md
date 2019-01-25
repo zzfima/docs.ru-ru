@@ -1,27 +1,27 @@
 ---
-title: Практическое руководство. Объявление сбоев в контрактах служб
+title: Как выполнить Объявление сбоев в контрактах служб
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727954"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Практическое руководство. Объявление сбоев в контрактах служб
-В управляемом коде исключения создаются в случае возникновения ошибки. В приложениях Windows Communication Foundation (WCF) Однако контракты служб указывают, какие сведения об ошибке возвращаются клиенту объявляются ошибки SOAP в контракте службы. Общие сведения о связи между исключений и ошибок в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+# <a name="how-to-declare-faults-in-service-contracts"></a>Как выполнить Объявление сбоев в контрактах служб
+В управляемом коде исключения создаются в случае возникновения ошибки. В приложениях Windows Communication Foundation (WCF) Однако контракты службы укажите, какие сведения об ошибке возвращается клиентам объявляются ошибки SOAP в контракте службы. Общие сведения о связи между исключениями и ошибками, см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Создайте контракт службы, в котором определяется ошибка SOAP  
   
-1.  Создайте контракт службы, который содержит как минимум одну операцию. Пример см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
+1.  Создайте контракт службы, который содержит как минимум одну операцию. Пример см. в статье [Практическое руководство. Определите контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
   
-2.  Выберите операцию, которая задает условие ошибки, о которой предполагается уведомить клиентов. Чтобы решить, какие состояния ошибки justify, возвращая ошибок SOAP клиентам, в разделе [указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+2.  Выберите операцию, которая задает условие ошибки, о которой предполагается уведомить клиентов. Чтобы решить, какие ошибки соответствуют возврату ошибок SOAP клиентам, см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
-3.  Примените атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> к выбранной операции и передайте в конструктор сериализуемый тип ошибки. Дополнительные сведения о создании и использовании сериализуемых типов см. в разделе [указание входящий трафик передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). В следующем примере показано, как указать, что операция `SampleMethod` может возвращать `GreetingFault`.  
+3.  Примените атрибут <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> к выбранной операции и передайте в конструктор сериализуемый тип ошибки. Дополнительные сведения о создании и использовании сериализуемых типов см. в разделе [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). В следующем примере показано, как указать, что операция `SampleMethod` может возвращать `GreetingFault`.  
   
      [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
      [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
@@ -44,6 +44,6 @@ ms.locfileid: "33500240"
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

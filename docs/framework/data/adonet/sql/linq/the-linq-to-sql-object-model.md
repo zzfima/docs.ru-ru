@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: c716847c60611a6e8a2911d4b9ae2f1683d2cdd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503746"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Модель объектов LINQ to SQL
-В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], в модель данных реляционной базы данных сопоставляется объектной модели, выраженной в языке программирования разработчика. После этого операции с данными выполняются в соответствии с объектной моделью.  
+В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], в модель данных реляционной базы данных сопоставляется объектной модели, выраженной на языке программирования разработчика. После этого операции с данными выполняются в соответствии с объектной моделью.  
   
  В данном сценарии команды базы данных (например, `INSERT`) не выполняются в базе данных. Вместо этого изменение значений и выполнение методов происходит в рамках объектной модели. Если необходимо отправить запрос к базе данных или передать изменения, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует требования в корректные команды SQL и отправляет эти команды в базу данных.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33365388"
   
  В базе данных могут быть сохранены только экземпляры классов, объявленные как таблицы (то есть классы сущностей).  
   
- Дополнительные сведения см. в разделе области атрибута таблицы [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Дополнительные сведения см. в разделе атрибут Table [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-class-members-and-database-columns"></a>Столбцы членов класса и базы данных LINQ to SQL  
  Кроме связывания классов с таблицами, можно назначить поля или свойства для представления столбцов базы данных. Для этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute>, как показано в следующем примере.  
@@ -51,10 +51,10 @@ ms.locfileid: "33365388"
   
  В базе данных сохраняются или из нее извлекаются только те поля и свойства, которые сопоставлены столбцам. Поля и свойства, не объявленные в качестве столбцов, считаются временными частями логики приложения.  
   
- Атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute> имеет целый ряд свойств, которые можно использовать для настройки членов, представляющих столбцы (например, назначение члена, представляющего столбец первичного ключа). Дополнительные сведения см. в разделе разделе атрибут столбца [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute> имеет целый ряд свойств, которые можно использовать для настройки членов, представляющих столбцы (например, назначение члена, представляющего столбец первичного ключа). Дополнительные сведения см. в разделе атрибут столбца [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>Связи и отношения внешнего ключа баз данных LINQ to SQL  
- В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], представляющие связи баз данных (например, внешнего ключа на связи первичного ключа), применив <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута. В следующем сегменте кода `Order` класс содержит `Customer` свойство, имеющее <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута. Это свойство и его атрибут предоставляют класс `Order` с отношением для класса `Customer`.  
+ В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], вы представления связей базы данных (например, внешнего ключа связи первичного ключа), применив <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута. В следующем фрагменте кода `Order` класс содержит `Customer` свойство, имеющее <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута. Это свойство и его атрибут предоставляют класс `Order` с отношением для класса `Customer`.  
   
  В следующем примере кода представлено свойство `Customer` из класса `Order`.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "33365388"
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Дополнительные сведения см. в разделе разделе атрибут Association [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Дополнительные сведения см. в разделе атрибут Association [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Хранимые процедуры методов и баз данных LINQ to SQL.  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает хранимые процедуры и пользовательские функции. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], сопоставляются эти абстракции, определенные в базе данных с клиентскими объектами так, что они будут доступны в режиме строгой типизации из клиентского кода. Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных. Для определения этих методов можно использовать IntelliSense.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает хранимые процедуры и пользовательские функции. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], сопоставить эти абстракции, определенные базой данных с клиентскими объектами так, что они будут доступны в режиме строгой типизации из клиентского кода. Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных. Для определения этих методов можно использовать IntelliSense.  
   
  В качестве набора результатов, возвращенного вызовом сопоставленной процедуры, выступает строго типизированная коллекция.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "33365388"
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Дополнительные сведения см. в разделах атрибут функции, хранимые процедуры атрибут и атрибут параметра из [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) и [хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ Дополнительные сведения см. в разделах атрибут функции, хранимые процедуры атрибут и атрибут параметра [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) и [хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>См. также
+- [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

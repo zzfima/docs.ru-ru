@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: b390c345beee74d505d23196133ed7f82cfd8ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d6b4f066d2bac03092e0418eded34cc604810e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551986"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
-<xref:System.Windows.Controls.FlowDocumentReader> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого. Она поддерживает несколько режимов просмотра.  
+<xref:System.Windows.Controls.FlowDocumentReader> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого. Он поддерживает нескольких режимов просмотра.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

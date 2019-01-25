@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707730"
 ---
 # <a name="exceptions-and-performance"></a>Исключения и производительность
 Одна из распространенных проблем, связанных с исключениями том, что если они используются для кода, который регулярно завершается с ошибкой, реализация будет неприемлемо. Это обоснованное предположение. Если член создает исключение, ее производительность может быть порядков медленнее. Тем не менее можно добиться высокой производительности, предназначенных исключительно для исключения рекомендации, которые запрещено использовать коды ошибок. Два шаблона, описанные в этом разделе предлагают способы сделать это.  
@@ -74,5 +74,5 @@ public struct DateTime {
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md)

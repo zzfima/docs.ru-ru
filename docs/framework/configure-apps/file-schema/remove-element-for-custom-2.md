@@ -1,5 +1,5 @@
 ---
-title: '&lt;Удалить&gt; элемент NameValueSectionHandler и DictionarySectionHandler'
+title: '&lt;Удалить&gt; элемент для NameValueSectionHandler и DictionarySectionHandler'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535584"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Удалите > элемент NameValueSectionHandler и DictionarySectionHandler
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Удалить > элемент для NameValueSectionHandler и DictionarySectionHandler
 
 Удаляет ранее определенный параметр.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалите >**
+&nbsp;&nbsp;[**\<параметра sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,15 +32,15 @@ ms.locfileid: "32742917"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание |
+|           | Описание: |
 | --------- | ----------- |
-| **key**   | Обязательный атрибут.<br><br>Задает имя удаляемого параметра. |
+| **key**   | Обязательный атрибут.<br><br>Указывает имя параметра для удаления. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
 | Элемент | Описание |
 | ------- | ------------|
-| [**\<sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
+| [**\<параметра sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -48,13 +48,13 @@ ms.locfileid: "32742917"
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать  **\<удалить >** элемента для удаления параметров приложения, которые были определены на высоком уровне в иерархии файлов конфигурации.
+Можно использовать  **\<удалить >** элемент для удаления параметров из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.
 
 ## <a name="example"></a>Пример
 
 В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления параметров, определенных ранее в файле конфигурации компьютера.
 
-В коде следующего файла конфигурации компьютера объявляется раздел  **\<mySection >** и добавляются два параметра `key1` и `key2`, к нему:
+В коде следующего файла конфигурации компьютера объявляет разделе  **\<mySection >** и добавляет два параметра `key1` и `key2`, к нему:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "32742917"
 </configuration>
 ```
 
-В коде следующего файла конфигурации приложения удаляет `key2` из  **\<mySection >**:
+В коде следующего файла конфигурации приложения удаляет `key2` Azure с помощью  **\<mySection >**:
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ ms.locfileid: "32742917"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файле конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые находятся не на уровне папки приложения.
+Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

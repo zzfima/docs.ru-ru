@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 5250edc5ddfc0d381227f619752a8f3826ee2a44
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 045d5649ae7f59087eacd035d7be09d0024b6fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725666"
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;NetPeerTcpBinding&gt;
 Определяет привязку для обмена TCP-сообщениями через одноранговый канал.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 \<netPeerTcpBinding >  
   
@@ -59,13 +59,13 @@ ms.locfileid: "54149258"
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Указывает распознаватель одноранговых узлов, используемый данной привязкой для разрешения идентификаторов сетки одноранговых узлов в IP-адреса конечных точек узлов этой сетки.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Определяет параметры безопасности сообщения. Это элемент типа <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
@@ -100,12 +100,12 @@ ms.locfileid: "54149258"
 </configuration>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.NetPeerTcpBinding>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [Привязка NetPeerTcpBinding](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
- [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.NetPeerTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Привязка NetPeerTcpBinding](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

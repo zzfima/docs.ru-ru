@@ -5,15 +5,15 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618913"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Устранение неполадок, связанных с переменными, в Visual Basic
-Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при работе с переменными в Visual Basic.  
+Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с переменными в Visual Basic.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>Не удается получить доступ к членам объекта  
  Если ваш код пытается получить доступ к свойству или методу объекта, могут возникнуть две следующие ошибки.  
@@ -29,10 +29,10 @@ ms.locfileid: "33655699"
  В этом примере `p` может использовать только члены класса <xref:System.Object> без свойства `Left` . С другой стороны, `q` был объявлен с типом <xref:System.Windows.Forms.Label>, поэтому он может использовать все методы и свойства класса <xref:System.Windows.Forms.Label> в пространстве имен <xref:System.Windows.Forms> .  
   
 ### <a name="correct-approach"></a>Правильный подход  
- Чтобы иметь возможность доступа ко всем членам объекта определенного класса, объявите переменную объекта с типом этого класса, если это возможно. В противном случае, например если вы не знаете тип объекта во время компиляции, необходимо задать `Option Strict` значение `Off` и объявить переменную с типом [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). В этом случае переменной могут быть присвоены объекты любого типа, а вы должны выполнить действия, чтобы убедиться, что текущий назначенный объект имеет допустимый тип. Можно использовать [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) обнаружения.  
+ Чтобы иметь возможность доступа ко всем членам объекта определенного класса, объявите переменную объекта с типом этого класса, если это возможно. В противном случае, например если вы не знаете тип объекта во время компиляции, необходимо задать `Option Strict` значение `Off` и объявить переменную с типом [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). В этом случае переменной могут быть присвоены объекты любого типа, а вы должны выполнить действия, чтобы убедиться, что текущий назначенный объект имеет допустимый тип. Можно использовать [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) для этого определения.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Другие компоненты не могут получить доступ к переменной  
- Имена Visual Basic не *без учета регистра*. Если два имени отличаются только регистром букв, компилятор интерпретирует их как одно и то же. Например, он считает, что `ABC` и `abc` являются одним и тем же объявленным элементом.  
+ Visual Basic, называются *без учета регистра*. Если два имени отличаются только регистром букв, компилятор интерпретирует их как одно и то же. Например, он считает, что `ABC` и `abc` являются одним и тем же объявленным элементом.  
   
  Однако среда CLR использует привязку *с учетом регистра* . Таким образом, при создании сборки или DLL и предоставлении к ней доступа другим сборкам, в именах регистр учитываться не будет. Например, если определен класс с элементом `ABC`и другие сборки используют класс с помощью среды CLR, они должны ссылаться на элемент как на `ABC`. Если впоследствии вы перекомпилируете класс и измените имя элемента на `abc`, другие сборки, использующие класс, больше не смогут обращаться к этому элементу. Таким образом, при выпуске обновленной версии сборки нельзя изменять регистр имен открытых элементов.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "33655699"
 ### <a name="correct-approach"></a>Правильный подход  
  Избегайте использования переменных с одинаковыми именами, но разными областями действия. При работе с другими сборками или проектами избегайте использования любых имен, определенных в их внешних компонентах, насколько это возможно. При наличии нескольких переменных с одним и тем же именем необходимо уточнить каждую ссылку на такую переменную. Для получения дополнительной информации см. [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>См. также  
- [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Объявление объектной переменной](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Практическое руководство. Доступ к членам объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Практическое руководство. Определение типа, на который указывает объектная переменная](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>См. также
+- [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Объявление объектной переменной](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Практическое руководство. Доступ к членам объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Практическое руководство. Определить, какой тип, переменная объекта ссылается на](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

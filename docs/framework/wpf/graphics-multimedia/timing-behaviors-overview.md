@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715586"
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
 В этом разделе описан характер поведения анимаций и других <xref:System.Windows.Media.Animation.Timeline> объектов.  
@@ -25,7 +25,7 @@ ms.locfileid: "43858142"
   
  Классы, которые унаследованы от класса временной шкалы, предоставляют дополнительные функции, такие как анимация и воспроизведение мультимедиа. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие <xref:System.Windows.Media.Animation.Timeline> типов.  
   
-|Тип временной шкалы|Описание|  
+|Тип временной шкалы|Описание:|  
 |-------------------|-----------------|  
 |<xref:System.Windows.Media.Animation.AnimationTimeline>|Абстрактный базовый класс для <xref:System.Windows.Media.Animation.Timeline> объекты, которые формируют выходные значения для анимации свойств.|  
 |<xref:System.Windows.Media.MediaTimeline>|Формирует выходные данные из файла мультимедиа.|  
@@ -38,7 +38,7 @@ ms.locfileid: "43858142"
 ## <a name="properties-that-control-the-length-of-a-timeline"></a>Свойства, которые управляют длиной временной шкалы  
  Объект <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и длину временной шкалы можно описать различными способами. В следующей таблице приведены несколько терминов для описания длины временной шкалы.  
   
-|Термин|Описание|Свойства||||  
+|Термин|Описание:|Свойства||||  
 |----------|-----------------|----------------|-|-|-|  
 |Простая длительность|Длительность, необходимая для одной итерации временной шкалы вперед.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Одно повторение|Время, необходимое для временной шкалы для воспроизведения вперед, после и, если <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> свойство имеет значение true, обратная однократного воспроизведения.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
@@ -118,13 +118,13 @@ ms.locfileid: "43858142"
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Указывает соотношение скорости относительно его родительского элемента, скорость течения времени для <xref:System.Windows.Media.Animation.Timeline>. Значения больше единицы увеличения скорости выполнения <xref:System.Windows.Media.Animation.Timeline> и его дочерние <xref:System.Windows.Media.Animation.Timeline> объектов; значения между 0 и 1 — скорость уменьшается. Значение 1 указывает, что <xref:System.Windows.Media.Animation.Timeline> продвижения по тому же тарифу, как его родительский элемент. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Контейнера временной шкалы влияет на все его дочерние <xref:System.Windows.Media.Animation.Timeline> объекты.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Например, см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Например, см. в разделе [как: ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Общие сведения о временных событиях](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>См. также
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Общие сведения о временных событиях](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)

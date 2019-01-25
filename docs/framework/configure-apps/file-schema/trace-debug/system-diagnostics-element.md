@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 54c20e56fa1729cb534821e263e316c26e01cde6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687324"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System.Diagnostics&gt; элемент
 Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48029442"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.|  
 |[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Задает размер глобальной памяти, совместно используемой счетчиками производительности.|  
@@ -49,7 +49,7 @@ ms.locfileid: "48029442"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48029442"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

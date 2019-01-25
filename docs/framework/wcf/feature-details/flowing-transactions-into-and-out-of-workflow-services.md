@@ -2,12 +2,12 @@
 title: Направление транзакций в службы рабочего процесса и из них
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708640"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Направление транзакций в службы рабочего процесса и из них
 Службы и клиенты рабочих процессов могут использоваться в транзакциях.  Чтобы сделать операцию службы частью внешней транзакции, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Все вызовы, выполненные действием <xref:System.ServiceModel.Activities.Send> или <xref:System.ServiceModel.Activities.SendReply> в области <xref:System.ServiceModel.Activities.TransactedReceiveScope>, также будут выполнены во внешней транзакции. Клиентское приложение рабочего процесса может создавать внешнюю транзакцию с помощью действия <xref:System.Activities.Statements.TransactionScope> и вызывать операции службы с помощью внешних транзакций. В данном разделе описывается создание службы рабочего процесса и клиента рабочего процесса, которые участвуют в транзакции.  
@@ -118,7 +118,7 @@ ms.locfileid: "48036056"
     |Действие|Значение|  
     |--------------|-----------|  
     |Первое действие WriteLine|«Service: Receive Completed»|  
-    |Второе действие WriteLine|"Service: Received = " + requestMessage|  
+    |Второе действие WriteLine|«Service: Получено = «+ requestMessage|  
   
      После этого рабочий процесс должен выглядеть так:  
   
@@ -133,9 +133,9 @@ ms.locfileid: "48036056"
     |Свойство.|Значение|  
     |--------------|-----------|  
     |Кому|replyMessage|  
-    |Значение|"Service: Sending reply."|  
+    |Значение|«Service: Отправки ответа.»|  
   
-11. Перетащите действие <xref:System.Activities.Statements.WriteLine>, поместите его после действия <xref:System.Activities.Statements.Assign> и задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Service: Begin reply".  
+11. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действия после <xref:System.Activities.Statements.Assign> действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Service: BEGIN reply».  
   
      После этого рабочий процесс должен выглядеть так:  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48036056"
   
      ![Параметры сообщения ответа](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действия после `SendReplyToReceive` действие и набор имеет <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «Service: ответ, отправленный.»  
+13. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действия после `SendReplyToReceive` действие и набор имеет <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Service: Ответ.»  
   
-14. Перетащите действие <xref:System.Activities.Statements.WriteLine> в нижнюю область рабочего процесса и задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Service: Workflow ends, press ENTER to exit".  
+14. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действий в нижней части рабочего процесса и задайте его <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Service: Рабочий процесс завершается, нажмите клавишу ВВОД для выхода.»  
   
      Завершенный рабочий процесс службы должен выглядеть следующим образом:  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48036056"
   
 6.  Перетащите действие `PrintTransactionInfo` в <xref:System.Activities.Statements.Sequence>.  
   
-7.  Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Client: Beginning Send». После этого рабочий процесс должен выглядеть так:  
+7.  Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «клиента: Начало отправки». После этого рабочий процесс должен выглядеть так:  
   
      ![Добавление действий](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -199,9 +199,9 @@ ms.locfileid: "48036056"
   
      ![Задание параметров сообщения ReceiveForSend](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
   
-12. Перетащите действие <xref:System.Activities.Statements.WriteLine>, поместите его между действиями <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply>, а также задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Client: Send complete".  
+12. Перетаскивание <xref:System.Activities.Statements.WriteLine> действия между <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply> действий и задайте его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «клиента: Отправка выполнена.»  
   
-13. Перетащите действие <xref:System.Activities.Statements.WriteLine>, поместите его после действия <xref:System.ServiceModel.Activities.ReceiveReply> и задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Client side: Reply received = " + replyMessage.  
+13. Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после <xref:System.ServiceModel.Activities.ReceiveReply> действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «на стороне клиента: Получен ответ = «+ replyMessage  
   
 14. Перетащите действие `PrintTransactionInfo` и поместите его после действия <xref:System.Activities.Statements.WriteLine>.  
   
@@ -312,7 +312,7 @@ ms.locfileid: "48036056"
         }  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Общие сведения о транзакциях Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

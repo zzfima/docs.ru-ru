@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561872"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Метод ISymUnmanagedMethod::GetSourceStartEnd
-Возвращает начальную и конечную позицию документа источника этого метода. Массив отсчитывается от начала, а вторая позиция массива написан.  
+Получает начальное и конечное положение документа для источника этого метода. Массив отсчитывается от начала, а вторая позиция массива является конечным.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,13 +48,13 @@ HRESULT GetSourceStartEnd(
  [in] Начальный и конечный столбцы соответствующих исходных документов.  
   
  `pRetVal`  
- [out] `true` если позиции определены; в противном случае — `false`.  
+ [out] `true` будто positions, определен; в противном случае — `false`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

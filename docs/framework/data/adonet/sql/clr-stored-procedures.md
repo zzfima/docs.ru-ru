@@ -2,12 +2,12 @@
 title: Хранимые процедуры CLR
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: 1f8aa6fb9243706d07caa4527af0c4c880aa70a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1a37ac1257594913c6d06cb08df2882e8773da8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554638"
 ---
 # <a name="clr-stored-procedures"></a>Хранимые процедуры CLR
 Хранимыми процедурами являются процедуры, которые нельзя использовать в скалярных выражениях. Они могут возвращать клиенту табличные результаты и сообщения, вызывать инструкции языка описания данных DDL и языка обработки данных DML, а также возвращать выходные параметры.  
@@ -25,6 +25,6 @@ Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)
 
 1. [Хранимые процедуры CLR](https://go.microsoft.com/fwlink/?LinkId=115400)  
   
-## <a name="see-also"></a>См. также  
- [Создание объектов SQL Server 2005 в управляемом коде](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Создание объектов SQL Server 2005 в управляемом коде](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

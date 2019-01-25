@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624267"
 ---
 # <a name="corfileflags-enumeration"></a>Перечисление CorFileFlags
-Содержит значения, описывающие тип файла, определенного в вызове [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Содержит значения, описывающие тип файла, определенного в вызове к [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,14 +42,14 @@ typedef enum CorFileFlags {
 |Член|Описание|  
 |------------|-----------------|  
 |`ffContainsMetaData`|Указывает, что файл не является файлом ресурсов.|  
-|`ffContainsNoMetaData`|Указывает, что файл, возможно, файл ресурсов содержит метаданные.|  
+|`ffContainsNoMetaData`|Указывает, что файл, возможно, файл ресурсов не содержит метаданных.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

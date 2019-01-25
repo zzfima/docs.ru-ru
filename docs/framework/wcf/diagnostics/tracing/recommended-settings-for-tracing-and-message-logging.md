@@ -2,12 +2,12 @@
 title: Рекомендуемые параметры для трассировки и ведения журналов сообщений
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 44cdf90572cc52d5daf95368a644759be0ad1ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585215"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Рекомендуемые параметры для трассировки и ведения журналов сообщений
 Этот раздел содержит описание рекомендуемых параметров трассировки и регистрации сообщений для различных операционных сред.  
@@ -100,7 +100,7 @@ ms.locfileid: "33486741"
  Для изменения параметров конфигурации во время работы можно использовать инструментарий WMI (выполняется путем включения атрибута `wmiProviderEnabled` в конфигурации, как показано в предыдущем примере конфигурации). Например, для изменения во время работы уровней источника трассировки с Warning на Information можно использовать инструментарий WMI в CIM Studio. Следует помнить о том, что такой способ отладки может значительно снизить производительность. Дополнительные сведения об использовании WMI см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) раздела.  
   
 ## <a name="enable-correlated-events-in-aspnet-tracing"></a>Использование корреляции событий в трассировке ASP.NET  
- События ASP.NET не получают корреляционный идентификатор (ActivityID), если не включена функция трассировки событий ASP.NET. Чтобы просматривать корреляционные события, необходимо включить события ASP.NET трассировку следующую команду в окне командной строки, которая вызывается последовательно выбрав пункты **запустить**, **запуска** и тип **cmd** ,  
+ События ASP.NET не получают корреляционный идентификатор (ActivityID), если не включена функция трассировки событий ASP.NET. Чтобы просматривать корреляционные события, необходимо включить ASP.NET события трассировки при помощи следующую команду в командной консоли, которая вызывается, перейдя к **запустить**, **запуска** и тип **cmd** ,  
   
 ```  
 logman start mytrace -pf logman.providers -o test.etl –ets  
@@ -112,5 +112,5 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование инструментария управления Windows для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+## <a name="see-also"></a>См. также
+- [Использование инструментария управления Windows для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

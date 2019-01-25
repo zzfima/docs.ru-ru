@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора
+title: Как выполнить Добавление кнопок в элемент управления ToolBar с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: b96f112c83d2296356e3eb566a24315bcefeff1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e18a2f9b8c22538bc545388af56ee929bc94d70c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538912"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Как выполнить Добавление кнопок в элемент управления ToolBar с помощью конструктора
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
  Неотъемлемой частью <xref:System.Windows.Forms.ToolBar> элемент управления — кнопки, добавьте к нему. Их можно использовать для обеспечения быстрого доступа к командам меню или в качестве альтернативы могут быть размещены в другой области пользовательского интерфейса приложения для представления пользователям, которые не доступны в структуре меню команд.  
   
- Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ToolBar> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ToolBar> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -36,7 +36,7 @@ ms.locfileid: "44253173"
   
 4.  Настройте свойства отдельных кнопок в **свойства** окно, которое появляется в области в правой части редактора. В следующей таблице показаны некоторые важные свойства.  
   
-    |Свойство.|Описание|  
+    |Свойство.|Описание:|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Задает меню, отображаемое кнопкой с раскрывающимся списком. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству должно быть присвоено <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Это свойство принимает экземпляр <xref:System.Windows.Forms.ContextMenu> класс как ссылка.|  
     |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Задает, является ли кнопка-переключатель в нейтральном положении. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству должно быть присвоено <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|  
@@ -47,9 +47,9 @@ ms.locfileid: "44253173"
   
 5.  Нажмите кнопку **ОК** чтобы закрыть диалоговое окно и создать панели, вы указали.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolBar>  
- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Практическое руководство. Активация событий меню для кнопок элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolBar>
+- [Практическое руководство. Определение значка для кнопки панели инструментов](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

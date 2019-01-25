@@ -2,12 +2,12 @@
 title: Расширяемость синдикации
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705888"
 ---
 # <a name="syndication-extensibility"></a>Расширяемость синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводный контент по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
@@ -24,7 +24,7 @@ API синдикации предназначен для обеспечения 
   
  Эти классы тесно сопоставлены с конструкциями, определенными в спецификации Atom 1.0, хотя некоторые имена различаются.  
   
- Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, добавляют в RSS-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации Windows Communication Foundation (WCF) предоставляет следующие способы работы с пользовательскими атрибутами и расширениями, использования слабо типизированного доступа и создания нового производного класса.  
+ Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, добавляют в RSS-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации Windows Communication Foundation (WCF) предоставляет следующие способы работы с настраиваемыми атрибутами и расширениями, использования слабо типизированного доступа и создания нового производного класса.  
   
 ## <a name="loosely-typed-access"></a>Слабо типизированный доступ  
  Чтобы добавить расширения путем создания нового производного класса, требуется написать дополнительный код. Другим вариантом является слабо типизированный доступ к расширениям. Все типы, определенные в абстрактной модели данных синдикации, содержат свойства `AttributeExtensions` и `ElementExtensions` (с одним исключением - <xref:System.ServiceModel.Syndication.SyndicationContent> имеет свойство `AttributeExtensions`, но не имеет свойства `ElementExtensions`). Эти свойства представляют собой коллекции расширений, не обрабатываемых методами `TryParseAttribute` и `TryParseElement` соответственно. Доступ к этим необработанным расширениям можно получить, вызвав метод <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> для свойства `ElementExtensions` классов <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> и <xref:System.ServiceModel.Syndication.SyndicationCategory>. Этот набор методов находит все расширения с указанными именем и пространством имен, индивидуально десериализует их в экземпляры `TExtension` и возвращает в виде коллекции объектов `TExtension`.  
@@ -44,6 +44,6 @@ API синдикации предназначен для обеспечения 
   
 -   Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> класса MyExtensionFeed, чтобы он присваивал значение MyExtensionItem, а не значение по умолчанию <xref:System.ServiceModel.Syndication.SyndicationItem>. В классах <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> определен ряд методов, которые могут создавать объекты <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory> и <xref:System.ServiceModel.Syndication.SyndicationPerson> (например, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> и <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Любой из этих методов может быть переопределен для создания пользовательского производного класса.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ab0d482366b037f92a55f00dd33df8a312e84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6711d0e0423534744de1ee4b8a734ed2f8eab24d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514287"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Метод ICorProfilerInfo2::GetStaticFieldInfo
-Возвращает значение, указывающее тип статического объекта, применяемого для указанного поля.  
+Получает значение, указывающее тип статического объекта, применяемого к указанному полю.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,22 +44,22 @@ HRESULT GetStaticFieldInfo (
  [in] Токен метаданных для статического поля.  
   
  `pFieldInfo`  
- [out] Указатель на значение [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) перечисления, указывающее, является ли указанное поле статическим, и если таким образом, тип статического объекта, относящееся к полю.  
+ [out] Указатель на значение [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) перечисления, указывающее является ли указанное поле является статическим, и если таким образом, тип статического объекта, применяет к полю.  
   
 ## <a name="remarks"></a>Примечания  
- Эти сведения можно использовать для определения функции, которую необходимо вызвать для получения адреса статического поля.  
+ Эти сведения можно использовать, чтобы определить, какую функцию вызвать, чтобы получить адрес статического поля.  
   
- Профилировщик кода следует выполнять проверку метаданных для статического поля гарантировать, что фактически адреса. Статические литералы (константы) существуют только в метаданных и не имеют адреса.  
+ Профилировщик кода по-прежнему следует проверить метаданные для статического поля, чтобы убедиться, что он действительно имеет адрес. Статические литералы (то есть константы) существуют только в метаданных и не имеют адреса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

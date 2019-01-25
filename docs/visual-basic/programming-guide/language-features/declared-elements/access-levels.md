@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 433d5dfd4bb3af9b6fbd0dfc951bb0448eb7efcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704658"
 ---
 # <a name="access-levels-in-visual-basic"></a>Уровни доступа в Visual Basic
 *Уровень доступа* объявленного элемента указывает объем возможность доступа к нему, то есть какой код имеет разрешение на его чтение и запись в него. Это определяется не только как объявления элемента, но также от уровня доступа контейнера элемента. Код, который не может получить доступ к элемент не может получить доступ к любой из содержащихся в нем элементов, даже если они объявлены как `Public`. Например `Public` переменных в `Private` внутри класса, который содержит структуру, но не из структуры может быть организован и за пределами этого класса.  
@@ -113,14 +113,14 @@ Private Protected internalValue As Integer
 |`Private`|Контекст объявления:<br /><br /> Код в типе, который объявляет закрытый элемент, включая код вложенных типов, может обращаться к элементу|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Члены структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные-члены<br /><br /> Константы<br /><br /> Перечисления<br /><br /> События<br /><br /> Во внешних объявлениях<br /><br /> Делегаты|Module<br /><br /> Класс<br /><br /> Структура|
 |`Private Protected`|Код в класс, объявляющий закрытый защищенный элемент, или код в производном классе, в той же сборке, что и класс bas.|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные-члены<br /><br /> Константы<br /><br /> Перечисления<br /><br /> События<br /><br /> Во внешних объявлениях<br /><br /> Делегаты|Класс|
   
-## <a name="see-also"></a>См. также  
- [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Практическое руководство. Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
- [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>См. также
+- [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Практическое руководство. Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
+- [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

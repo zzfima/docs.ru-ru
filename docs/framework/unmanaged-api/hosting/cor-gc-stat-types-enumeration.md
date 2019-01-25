@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710330"
 ---
 # <a name="corgcstattypes-enumeration"></a>Перечисление COR_GC_STAT_TYPES
-Указывает статистику, записываемую для сборки мусора.  
+Указывает статистические данные для записи для сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,22 +36,22 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Это перечисление указывает, какая именно статистика в [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) структуры должны задаваться [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод.  
+ Это перечисление определяет, какая именно статистика в [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) структуры должны задаваться в [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод.  
   
 ## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_GC_COUNTS`|Записи количество сборок мусора, выполненных для каждого поколения.|  
-|`COR_GC_MEMORYUSAGE`|Записи об использовании и сборке мусора коллекции размер статистику памяти.|  
+|`COR_GC_COUNTS`|Записи число сборов мусора, выполненных для каждого поколения.|  
+|`COR_GC_MEMORYUSAGE`|Записи об использовании и сборка мусора коллекции размер статистика памяти.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** GCHost.idl, GCHost.h  
+ **Заголовок.** GCHost.idl GCHost.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структура COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Структура COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

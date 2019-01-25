@@ -2,12 +2,12 @@
 title: Интерпретация кодов ошибок, возвращаемых wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510030"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Интерпретация кодов ошибок, возвращаемых wsatConfig.exe
 В данном разделе перечисляются все коды ошибок, создаваемые программой настройки WS-AtomicTransaction (wsatConfig.exe), и описываются действия, которые рекомендуется выполнить в каждом случае.  
@@ -44,7 +44,7 @@ ms.locfileid: "33507369"
 |28|Недопустимый параметр командной строки `-network`.|Исправьте параметр командной строки `-network`, чтобы правильно задать значения "включить" или "отключить".|  
 |29|Недопустимый параметр командной строки `-maxTimeout`.|Исправьте параметр командной строки `-maxTimeout`, как указано.|  
 |30|Недопустимый параметр командной строки `-timeout`.|Исправьте параметр командной строки `-timeout`, как указано.|  
-|31|Недопустимый параметр командной строки `-traceLevel`.|Исправьте параметр командной строки `-traceLevel`, чтобы задать допустимое значение из списка ниже:<br /><br /> -Отключение<br />-Ошибка<br />Критический<br />-Предупреждение<br />— Сведения<br />-Verbose<br />-Все|  
+|31|Недопустимый параметр командной строки `-traceLevel`.|Исправьте параметр командной строки `-traceLevel`, чтобы задать допустимое значение из списка ниже:<br /><br /> -Off<br />-Ошибка<br />Критический<br />-Warning<br />-Сведения<br />-Verbose<br />— Все|  
 |32|Недопустимый параметр командной строки `-traceActivity`.|Исправьте параметр командной строки `-traceActivity`, задав значение enable или disable.|  
 |33|Недопустимый параметр командной строки `-traceProp`.|Исправьте параметр командной строки `-traceProp`, задав значение enable или disable.|  
 |34|Недопустимый параметр командной строки `-tracePII`.|Исправьте параметр командной строки `-tracePII`, задав значение enable или disable.|  
@@ -67,5 +67,5 @@ ms.locfileid: "33507369"
 |55|При попытке запустить сеанс трассировки ETW произошла непредвиденная ошибка.|Обратитесь в Майкрософт.|  
 |56|При попытке запустить сеанс трассировки ETW произошла непредвиденная ошибка.|Обратитесь в Майкрософт.|  
   
-## <a name="see-also"></a>См. также  
- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>См. также
+- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

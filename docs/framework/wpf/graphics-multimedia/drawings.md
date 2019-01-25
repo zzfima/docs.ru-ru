@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70367d199ece207589d67ee38cb71f0cdda5b11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684122"
 ---
 # <a name="drawings"></a>Объекты рисования
-<xref:System.Windows.Media.Drawing> объекты используются для эффективного рисования фигур, изображений или текста. Объекты рисования используются при рисовании с помощью <xref:System.Windows.Media.DrawingBrush> или программирования с помощью <xref:System.Windows.Media.Visual> объектов.  
+<xref:System.Windows.Media.Drawing> объекты используются для эффективного рисования фигур, изображений и текста. Рисунки, используемые при рисовании с помощью <xref:System.Windows.Media.DrawingBrush> или программирования с помощью <xref:System.Windows.Media.Visual> объектов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
   [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Drawing>  
- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Drawing>
+- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)

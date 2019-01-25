@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737901"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Общие типы данных (справочник по неуправляемым интерфейсам API)
 В этом разделе перечислены простые типы данных, которые используются неуправляемыми API для платформы .NET Framework, определенными инструкциями C/C++ `typedef`. Эти типы данных, как правило, являются псевдонимами примитивных типов данных языка программирования C/C++. Как правило, значения этих типов данных непрозрачны, т. е. возвращаются конкретной функцией или методом таким образом, что могут быть переданы в другие функции или методы без изменений.  
@@ -37,5 +37,5 @@ ms.locfileid: "54415277"
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Идентификатор [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Идентификатор управляемого потока.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 - [Справочник по неуправляемым API](../../../docs/framework/unmanaged-api/index.md)

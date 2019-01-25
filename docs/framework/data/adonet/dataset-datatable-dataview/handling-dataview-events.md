@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 2f30a578c5233e8b86a165dd220efd45348c5042
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d2e493737adb0a56a55cf497095c648463ee5ee7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552350"
 ---
 # <a name="handling-dataview-events"></a>Обработка событий DataView
 Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление. К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи. **ListChanged** событий также уведомляет вас, когда список строк, которые вы просматриваете значительно изменен из-за применения нового порядка сортировки или фильтра.  
@@ -51,8 +51,8 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.DataView>  
- <xref:System.ComponentModel.ListChangedEventHandler>  
- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.DataView>
+- <xref:System.ComponentModel.ListChangedEventHandler>
+- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

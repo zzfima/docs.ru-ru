@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726446"
 ---
 # <a name="printing-how-to-topics"></a>Разделы руководства по печати
 В подразделах этого раздела демонстрируется использование печати и функции управления печатью состав [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] а также новый [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] способ печати.  
@@ -31,7 +31,7 @@ ms.locfileid: "48837119"
  [Перечисление подмножества очередей печати](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Инструкции по созданию списка принтеров, имеющих определенные характеристики.  
   
- [Не в СБОРКЕ: Практическое: расширение схемы печати и создания новых классов системы печати](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [НЕ В СБОРКЕ. Как выполнить Расширение схемы печати и создания новых классов системы печати](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Подробное обсуждение того, как управляемый код программиста можно расширить схему печати устройств специальной печати или принтеров с новыми или редко функциями.  
   
  [Получение свойств объекта системы печати без отражения](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ ms.locfileid: "48837119"
  [Проверка и слияние PrintTickets](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Инструкции по проверке, что билет на печать допустим и что он не запрашивает все, что принтер не поддерживается.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>См. также
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521781"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Метод ICorDebugRemote::CreateProcessEx
-Запускает процесс на удаленном компьютере в отладчике.  
+Запускает процесс на удаленном компьютере в режиме отладки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,13 +49,13 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Параметры  
  `pRemoteTarget`  
- [in] Указатель на [интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Используется для определения удаленного компьютера, на котором будет запускаться процесс.  
+ [in] Указатель на [интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Используется для определения удаленного компьютера, на котором будет запущен процесс.  
   
  `lpApplicationName`  
- [in] Указатель на строку символом null, указывающее модуль должен быть исполнен запущенного процесса. Модуль выполняется в контексте безопасности вызывающего процесса.  
+ [in] Указатель на заканчивающуюся нулем строку, которая задает имя этого модуля, который будет выполнен задачей запуск процесса. Модуль выполняется в контексте безопасности вызывающего процесса.  
   
  `lpCommandLine`  
- [in] Указатель символом null строку, которая определяет командную строку для выполнения запущенного процесса.  
+ [in] Указатель на заканчивающуюся нулем строку, который определяет командную строку, который будет выполнен задачей запуск процесса.  
   
  `lpProcessAttributes`  
  [in] Не используется для удаленной отладки.  
@@ -73,7 +73,7 @@ HRESULT CreateProcessEx (
  [in] Указатель на блок среды для нового процесса.  
   
  `lpCurrentDirectory`  
- [in] Указатель на завершающуюся значением null строка, указывающая полный путь к текущему каталогу для процесса. Если этот параметр имеет значение null, новый процесс будет диск и каталог как вызывающий процесс.  
+ [in] Указатель на заканчивающуюся нулем строку, которая указывает полный путь к текущему каталогу процесса. Если этот параметр имеет значение null, новый процесс будет иметь диск и каталог как вызывающий процесс.  
   
  `lpStartupInfo`  
  [in] Не используется для удаленной отладки.  
@@ -89,7 +89,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Успешный запуск процесса на удаленном компьютере и возвращаемый «ICorDebugProcess интерфейс» для отладки.  
+ Успешно запущено в процессе на удаленном компьютере и возвращаемый «ICorDebugProcess интерфейс» для отладки.  
   
  E_FAIL (или другие коды возврата E_)  
  Не удалось запустить процесс на удаленном компьютере и возврата «Интерфейс ICorDebugProcess» отладки.  
@@ -98,16 +98,16 @@ HRESULT CreateProcessEx (
  Отладка в смешанном режиме не поддерживается в Silverlight.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl  
+ **Заголовок.** CorDebug.idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 4.5, 4, 3.5 с пакетом обновления 1  
+ **Версии платформы .NET framework:** 4.5, 4, 3.5 С ПАКЕТОМ ОБНОВЛЕНИЯ 1  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

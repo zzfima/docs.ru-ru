@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537183"
 ---
 # <a name="ltparametergt-element-net-native"></a>Элемент &lt;Parameter&gt; (машинный код .NET)
 Применяет политику отражения к типу аргумента, переданного методу.  
@@ -35,7 +35,7 @@ ms.locfileid: "33395249"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание|  
+|Атрибут|Тип атрибута|Описание:|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Имя параметра. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -51,13 +51,13 @@ ms.locfileid: "33395249"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*parameter_name*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -66,15 +66,15 @@ ms.locfileid: "33395249"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<Parameter>` является дочерним по отношению к элементу [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) и используется для применения политики к конкретному параметру метода. Конкретный параметр метода указывается по имени, а не по типу. По крайней мере один атрибут, который представляет тип политики, такие как `Activate` или `Dynamic`, должен присутствовать.  
   
-## <a name="see-also"></a>См. также  
- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>См. также
+- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

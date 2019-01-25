@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+title: Пошаговое руководство. Упорядочение Windows Forms элементы управления в WPF
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 31afacd6bb387a4df9eb8d36d2dc224ead63cc68
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5947168fabfe8ec22203029d9ec89b9719728413
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697625"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение Windows Forms элементы управления в WPF
 В этом пошаговом руководстве показано, как использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] функции макета для размещения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в гибридном приложении.  
   
  В данном пошаговом руководстве представлены следующие задачи.  
@@ -54,7 +54,7 @@ ms.locfileid: "48842441"
   
 ## <a name="prerequisites"></a>Предварительные требования  
 
-Требуется Visual Studio для выполнения этого пошагового руководства.
+Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
   
 ## <a name="creating-the-project"></a>Создание проекта  
   
@@ -251,18 +251,18 @@ ms.locfileid: "48842441"
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
 
-3.  Добавьте вызов `InitializeFlowLayoutPanel` в конструкторе.
+3.  Добавьте вызов метода `InitializeFlowLayoutPanel` в конструкторе.
 
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
 4.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент заполняет <xref:System.Windows.Controls.DockPanel>, и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает его дочерние элементы в используемом по умолчанию <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Элементы управления упорядочение Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Элементы управления упорядочение Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Основные сведения о транзакциях
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620517"
 ---
 # <a name="transaction-fundamentals"></a>Основные сведения о транзакциях
 Транзакции позволяют объединить несколько задач в один логический блок. Например, пусть приложение выполняет две задачи. Сначала оно создает новую таблицу в базе данных. Затем оно вызывает специализированный объект для сбора, форматирования и вставки данных в новую таблицу. Эти две задачи являются связанными и даже взаимозависимыми: создание новой таблицы требуется, только если ее можно заполнить данными. Выполнение обеих задач в пределах области единой транзакции приводит к образованию связи между ними. Если выполнение второй задачи заканчивается сбоем, выполняется откат первой задачи в состояние до момента создания новой таблицы.  
@@ -24,5 +24,5 @@ ms.locfileid: "44177206"
   
  Транзакции с помощью ADO.NET, можно создавать <xref:System.EnterpriseServices>, или транзакционную программную модель, предоставляемые <xref:System.Transactions> пространства имен. [Функциональные возможности, предоставляемые пространством имен System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) разделе обсуждаются возможности, которые можно использовать для записи транзакционного приложения с использованием <xref:System.Transactions> пространства имен.  
   
-## <a name="see-also"></a>См. также  
- [Функциональные возможности, предоставляемые пространством имен System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+## <a name="see-also"></a>См. также
+- [Функциональные возможности, предоставляемые пространством имен System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

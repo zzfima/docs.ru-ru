@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513728"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Пошаговое руководство. Кэширование данных приложения WPF
 Кэширование позволяет хранить данные в памяти для быстрого доступа. Еще раз доступ к данным приложения могут получать данные из кэша вместо их извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.
@@ -71,7 +71,7 @@ ms.locfileid: "49087353"
 
 5.  В **имя** текстовое поле, введите имя для проекта. Например, можно ввести **WPFCaching**.
 
-6.  Выберите **создать каталог для решения** "флажок".
+6.  Установите флажок **Создать каталог для решения**.
 
 7.  Нажмите кнопку **ОК**.
 

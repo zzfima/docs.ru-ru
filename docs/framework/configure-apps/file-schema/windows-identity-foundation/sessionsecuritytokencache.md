@@ -3,20 +3,20 @@ title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 024375cb114bb080c576ea033e5588526350ecdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510095"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 Регистрирует кэш токенов сеансов службы или коллекцию обработчиков токенов безопасности.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<кэширует >  
-\<sessionSecurityTokenCache >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<caches>  
+\<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,5 +61,5 @@ ms.locfileid: "47401381"
 </caches>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

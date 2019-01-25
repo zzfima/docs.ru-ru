@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534424"
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
 Обычно при создании приложений Windows Communication Foundation (WCF), разработчики особое внимание структур данных и вопросам сериализации и не обязательно вынужденными обращаться с этой структурой сообщений, в которых передаются данные. Для таких приложений создание контрактов данных для параметров или возвращаемых значений представляет собой достаточно простую задачу. (Дополнительные сведения см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  Если требуется получать объект сообщения как свойство `Result`, чтобы возвращаемые значения были свойствами этого объекта, используйте параметр команды `/messageContract`. При этом формируется сигнатура, которая возвращает ответное сообщение как свойство `Result` объекта <xref:System.EventArgs>. Все внутренние возвращаемые значения тогда будут свойствами объекта ответного сообщения.  
   
-## <a name="see-also"></a>См. также  
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>См. также
+- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md)

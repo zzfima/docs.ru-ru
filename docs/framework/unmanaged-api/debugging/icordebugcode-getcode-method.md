@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728769"
 ---
 # <a name="icordebugcodegetcode-method"></a>Метод ICorDebugCode::GetCode
-Возвращает весь код для заданной функции, отформатированной для дизассемблирования. Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо него.  
+Получает весь код для указанной функции, отформатированных для Дизассемблированный код. Этот метод был объявлен устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,26 +48,26 @@ HRESULT GetCode (
  [in] Смещение конца функции.  
   
  `cBufferAlloc`  
- [in] Размер `buffer` массива, в которой будет возвращаться код.  
+ [in] Размер `buffer` массива, в который будет возвращаться код.  
   
  `buffer`  
- [out] Массив, в который будет возвращаться код.  
+ [out] Массив, в которую будет возвращаться код.  
   
  `pcBufferSize`  
- [out] Число байтов, возвращенных.  
+ [out] Число возвращаемых байтов.  
   
 ## <a name="remarks"></a>Примечания  
  Если код функции поделен на несколько блоков, они объединяются в порядке возрастания смещения машинного кода. Границы инструкций не проверяются.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>См. также  
- [Метод GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>См. также
+- [Метод GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

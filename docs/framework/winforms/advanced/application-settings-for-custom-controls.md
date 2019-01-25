@@ -5,33 +5,33 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 46300f679471874ac5046d0a1077d8abca57f2c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526747"
 ---
 # <a name="application-settings-for-custom-controls"></a>Параметры приложения для пользовательских элементов управления
-Необходимо выполнить определенные задачи, чтобы предоставить пользовательским элементам управления возможность сохранять параметры приложения, когда элементы управления размещаются в сторонних приложениях.  
+Необходимо выполнить определенные задачи, чтобы предоставить возможность сохранения параметров приложения элементы управления расположены в сторонних приложениях пользовательских элементов управления.  
   
- Большая часть документации о параметры приложения записывается в предположении, что вы создаете автономное приложение. Тем не менее, при создании элемента управления, который другие разработчики будут размещать в своих приложениях, потребуются некоторые дополнительные действия для элемента управления для сохранения его параметры должным образом.  
+ Большая часть документации о параметры приложения записывается в предположении, что вы создаете изолированное приложение. Тем не менее, если вы создаете элемент управления, который будет размещаться другим разработчикам в своих приложениях, необходимо выполнить ряд дополнительных действий для элемента управления для сохранения его параметры должным образом.  
   
 ## <a name="application-settings-and-custom-controls"></a>Параметры приложения и пользовательские элементы управления  
- Элемент управления правильно сохранял свои параметры, он должен инкапсулировать процесс путем создания собственного выделенного приложений параметры класс-оболочку, производный от <xref:System.Configuration.ApplicationSettingsBase>. Кроме того, необходимо реализовать класс основного элемента управления <xref:System.Configuration.IPersistComponentSettings>. Интерфейс содержит несколько свойств, а также два метода <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> и <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. При добавлении элемента управления в форме с помощью **конструктор Windows Forms** Windows Forms в Visual Studio вызывает <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> автоматически при инициализации элемента управления, необходимо вызвать <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> самостоятельно в `Dispose` метод элемента управления.  
+ Элемент управления правильно сохранял свои параметры, он должен инкапсулировать процесс, создав свой собственный выделенный приложений параметры оболочки класс, производный от <xref:System.Configuration.ApplicationSettingsBase>. Кроме того, необходимо реализовать класс основной элемент управления <xref:System.Configuration.IPersistComponentSettings>. Интерфейс содержит несколько свойств, а также два метода <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> и <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>. Если добавить элемент управления в форме с помощью **конструктор Windows Forms** в Visual Studio, Windows Forms будет вызывать <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> автоматически при инициализации элемента управления; необходимо вызвать <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> самостоятельно в `Dispose` метод вашего элемента управления.  
   
- Кроме того чтобы параметры приложения для пользовательских элементов управления для правильной работы в среде разработки, такой как Visual Studio следует реализовать следующие:  
+ Кроме того чтобы параметры приложения для пользовательских элементов управления для правильной работы в средах разработки, таких как Visual Studio следует реализовать следующие:  
   
-1.  Пользовательский класс параметров приложения с конструктором, который принимает <xref:System.ComponentModel.IComponent> как один параметр. Этот класс используется для сохранения и загрузки всех параметров приложения. При создании нового экземпляра этого класса, необходимо передайте пользовательский элемент управления с помощью конструктора.  
+1.  Пользовательский класс параметров приложения с помощью конструктора, принимающего <xref:System.ComponentModel.IComponent> в качестве единственного параметра. Этот класс используется для сохранения и загрузки всех параметров приложения. При создании нового экземпляра этого класса, передайте пользовательский элемент управления с помощью конструктора.  
   
-2.  Создайте этот пользовательский класс параметров после создания элемента управления и помещен в форму, например в форме <xref:System.Windows.Forms.Form.Load> обработчика событий.  
+2.  Создайте этот пользовательский класс параметров после создан и помещен в форму, например в форме элемент управления <xref:System.Windows.Forms.Form.Load> обработчик событий.  
   
  Инструкции по созданию пользовательского класса параметров см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
-## <a name="settings-keys-and-shared-settings"></a>Ключи параметров и общие параметры  
- Некоторые элементы управления могут использоваться несколько раз в пределах той же форме. В большинстве случаев, может потребоваться, эти элементы управления для сохранения своих собственных отдельных параметров. С <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> свойство <xref:System.Configuration.IPersistComponentSettings>, можно указать уникальную строку, которая действует для однозначного определения нескольких версий элемента управления в форме.  
+## <a name="settings-keys-and-shared-settings"></a>Параметры ключей и общими настройками  
+ Некоторые элементы управления можно использовать несколько раз в пределах той же форме. В большинстве случаев, требуется эти элементы управления, чтобы сохранить свои собственные отдельные параметры. С помощью <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> свойство <xref:System.Configuration.IPersistComponentSettings>, можно указать уникальная строка, которая используется для однозначного определения нескольких версий элемента управления в форме.  
   
- Самый простой способ реализации <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> заключается в использовании <xref:System.Windows.Forms.Control.Name%2A> свойства элемента управления для <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. При загрузке или сохранении параметров элемента управления, передается значение <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> на <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> свойство <xref:System.Configuration.ApplicationSettingsBase> класса. Параметры приложения используют этот уникальный ключ для сохранения параметров пользователя в XML. В следующем коде показано, как `<userSettings>` раздел может выполнять поиск экземпляра пользовательского элемента управления с именем `CustomControl1` , сохраняет параметр в его `Text` свойство.  
+ Самый простой способ реализации <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> заключается в использовании <xref:System.Windows.Forms.Control.Name%2A> свойство элемента управления для <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>. При загрузке или сохранении параметры элемента управления, передается значение <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> в <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> свойство <xref:System.Configuration.ApplicationSettingsBase> класса. Параметры приложения используют этот уникальный ключ для сохранения параметров пользователя в XML. В следующем примере кода как `<userSettings>` раздел может иметь для экземпляра пользовательского элемента управления с именем `CustomControl1` , сохраняет параметр в его `Text` свойство.  
   
 ```xml  
 <userSettings>  
@@ -43,9 +43,9 @@ ms.locfileid: "33518568"
 </userSettings>  
 ```  
   
- Элемент управления, который нужно вводить значение для любых экземпляров <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> будут совместно использовать те же параметры.  
+ Все экземпляры элемента управления, который не нужно вводить значение для <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> будут совместно использовать те же параметры.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

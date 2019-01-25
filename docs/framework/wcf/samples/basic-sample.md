@@ -2,12 +2,12 @@
 title: Базовый образец
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7a9a6134313ed75fd0f9b9f929a3a3715a0af133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706830"
 ---
 # <a name="basic-sample"></a>Базовый образец
 В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу. Этот образец состоит из двух проектов: службы и клиента.

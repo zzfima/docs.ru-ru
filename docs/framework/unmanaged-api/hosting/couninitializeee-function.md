@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ef5faff6682ed6c043e81212f2cb27d4cfbd813d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601861"
 ---
 # <a name="couninitializeee-function"></a>Функция CoUninitializeEE
 `CoUninitializeEE` является устаревшим и не добавляет новых функций.  
@@ -35,8 +35,8 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Исполняющий механизм среды выполнения не может быть выгружен из процесса. Завершение работы ядра выполнения следует вызвать [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
+ Ядро выполнения среды выполнения не может быть выгружена из процесса. Чтобы завершить работу ядра выполнения следует вызвать [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
-## <a name="see-also"></a>См. также  
- [Функция CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Функция CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

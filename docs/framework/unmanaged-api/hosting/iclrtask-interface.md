@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba53e4af114773a347d15b7308dc4c3567154e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533719"
 ---
 # <a name="iclrtask-interface"></a>Интерфейс ICLRTask
-Предоставляет методы, позволяющие основному приложению отправлять запросы среды common language runtime (CLR), или для предоставления уведомления в среду CLR о соответствующей задаче.  
+Предоставляет методы, позволяющие основному приложению отправлять запросы общеязыковой среды выполнения (CLR), или для предоставления уведомления в среду CLR о соответствующей задаче.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Метод Abort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Запрашивает прерывание задачи среды CLR, текущий `ICLRTask` представляет экземпляр.|  
-|[Метод ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Сообщает среде CLR, которая задачу, связанную с текущим `ICLRTask` экземпляра заканчивается и пытается корректно задача завершается.|  
+|[Метод Abort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Запрашивает прерывание задачи среды CLR, текущий `ICLRTask` представленное экземпляром.|  
+|[Метод ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Уведомляет среды CLR, которая задачу, связанную с текущим `ICLRTask` экземпляра завершается и пытается корректно завершить работу задачи.|  
 |[Метод GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Возвращает статистические сведения об использовании ресурсов памяти задачей, представленный текущим `ICLRTask` экземпляра.|  
 |[Метод LocksHeld](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Возвращает число блокировок, произведенных в задаче.|  
-|[Метод NeedsPriorityScheduling](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Возвращает значение, указывающее, является ли узел следует назначить высокий приоритет повторное планирование задач, представленных текущим `ICLRTask` экземпляра.|  
-|[Метод Reset](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Информирует среду CLR, завершит задачу узла и позволяет повторно использовать текущий CLR `ICLRTask` экземпляра для представления другой задачи.|  
-|[Метод RudeAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Среда CLR прервать задачу, представленную текущим `ICLRTask` экземпляра немедленно, без обеспечения выполнения методов завершения.|  
-|[Метод SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Задает уникальный идентификатор для задачи, представленный текущим `ICLRTask` экземпляра, используемые для отладки.|  
+|[Метод NeedsPriorityScheduling](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Получает значение, указывающее, является ли узел следует присваивать высокий приоритет повторного планирования задач, представленный текущим `ICLRTask` экземпляра.|  
+|[Метод Reset](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Информирует среду CLR, что узел завершения задачи и обеспечивает работу CLR для повторного использования текущего `ICLRTask` экземпляра для представления другой задачи.|  
+|[Метод RudeAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Вынуждает среду CLR прервать задачу, представленную текущим `ICLRTask` экземпляра немедленно, не гарантирует выполнения методов завершения.|  
+|[Метод SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Задает уникальный идентификатор для задачи, представленный текущим `ICLRTask` экземпляр, для использования при отладке.|  
 |[Метод SwitchIn](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Уведомляет CLR, задача, представленная текущим `ICLRTask` экземпляр находится в рабочем состоянии.|  
 |[Метод SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Уведомляет CLR, задача, представленная текущим `ICLRTask` экземпляр больше не находится в рабочем состоянии.|  
-|[Метод YieldTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Запрашивает CLR убедитесь процессорного времени для других задач. Среда CLR не дает никаких гарантий, что задача будет помещена в состоянии, где она может возвращать время обработки.|  
+|[Метод YieldTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|Запрашивает CLR марки процессорного времени для других задач. Среда CLR не дает никакой гарантии, что задача будет помещен в состоянии, где может дать время обработки.|  
   
 ## <a name="remarks"></a>Примечания  
- `ICLRTask` Является представлением задачу для среды CLR. В любой момент во время выполнения кода задачу можно описать как запущен или ожидание выполнения. Узел вызывает метод `ICLRTask::SwitchIn` метод для уведомления среды CLR, задача, текущий `ICLRTask` представляет экземпляр находится в рабочем состоянии. После вызова `ICLRTask::SwitchIn`, узел можно запланировать задачу на любом потоке операционной системы, за исключением того, в случаях, где среда выполнения требует сходство потоков, в соответствии с вызовы [IHostTaskManager::BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) и [IHostTaskManager::EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) методы. Некоторое время спустя операционной системы может понадобиться удалить задачу из потока и поместите его в состоянии без выполнения. Например это может произойти всякий раз, когда задача блокируется примитивы синхронизации, и, ожидает завершения операций ввода-вывода. Узел вызывает метод [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) для уведомления среды CLR, задача, представленная текущим `ICLRTask` экземпляр больше не находится в рабочем состоянии.  
+ `ICLRTask` Является представлением задачу для среды CLR. В любой момент во время выполнения кода задачу можно описать как беготни или ожидания для выполнения. Узел вызывает метод `ICLRTask::SwitchIn` метод для уведомления среды CLR, задачи, текущий `ICLRTask` представляет экземпляр находится в рабочем состоянии. После вызова `ICLRTask::SwitchIn`, узел может запланировать задачу в любом потоке операционной системы, за исключением в случаях, где среда выполнения требует сходства потоков, как указано при вызове [IHostTaskManager::BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) и [IHostTaskManager::EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) методы. Некоторое время спустя операционной системы может потребоваться удалить задачу из потока и поместите его в состоянии без выполнения. Например это может произойти всякий раз, когда задача блокируется на примитивах синхронизации и, ожидает завершения операций ввода-вывода. Узел вызывает метод [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) для уведомления среды CLR, задача, представленная текущим `ICLRTask` экземпляр больше не находится в рабочем состоянии.  
   
- Обычно, задача прерывается в конце выполнения кода. В этот момент узел вызывает метод `ICLRTask::ExitTask` для уничтожения связанного `ICLRTask`. Однако задачи можно также будет перезапущен с помощью вызова `ICLRTask::Reset`, что позволяет `ICLRTask` экземпляра можно использовать повторно. Этот подход позволяет избежать издержек по несколько раз, создания и удаления экземпляров.  
+ Обычно, задача прерывается в конце выполнения кода. В этот момент узел вызывает метод `ICLRTask::ExitTask` для уничтожения связанного `ICLRTask`. Тем не менее, задачи можно также будет перезапущен с помощью вызова `ICLRTask::Reset`, что позволяет `ICLRTask` экземпляр можно использовать повторно. Этот способ исключает затраты на многократное Создание и уничтожение экземпляров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [Интерфейс IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Интерфейс ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [Интерфейс IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Интерфейс ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

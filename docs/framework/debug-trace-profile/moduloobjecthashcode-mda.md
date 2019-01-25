@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3c51dcb5e19f5fac5485a317d1d26884106cf51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739671"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 Помощник по отладке управляемого кода (MDA) `moduloObjectHashcode` изменяет поведение класса <xref:System.Object> для выполнения операции деления по модулю с хэш-кодом, возвращаемым методом <xref:System.Object.GetHashCode%2A>. Модуль по умолчанию для этого помощника по отладке управляемого кода равен 1, поэтому <xref:System.Object.GetHashCode%2A> возвращает 0 для всех объектов.  
@@ -60,7 +60,7 @@ ms.locfileid: "33392948"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.Object.Equals%2A?displayProperty=nameWithType>
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

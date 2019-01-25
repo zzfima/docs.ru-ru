@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка цифровых подписей XML-документов
+title: Как выполнить Проверка цифровых подписей XML-документов
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670164"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Практическое руководство. Проверка цифровых подписей XML-документов
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Как выполнить Проверка цифровых подписей XML-документов
 Классы в пространстве имен <xref:System.Security.Cryptography.Xml> можно использовать для проверки XML-данных, подписанных цифровой подписью. Цифровые подписи XML (XMLDSIG) позволяют убедиться, что данные не были изменены после подписания. Дополнительные сведения о стандарте XMLDSIG см. в спецификации консорциума World Wide Web (W3C) в <https://www.w3.org/TR/xmldsig-core/>.
   
  В примере кода в этой процедуре показан способ проверки цифровой подписи XML, содержащейся в элементе <`Signature`>.  Пример извлекает открытый ключ RSA из контейнера ключей и затем использует этот ключ для проверки подписи.  
   
- Сведения о создании цифровой подписи, которые могут быть проверены с помощью этой методики, см. в разделе [Практическое: Подписание XML-документов с помощью цифровых подписей](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Сведения о создании цифровой подписи, которые могут быть проверены с помощью этой методики, см. в разделе [как: Подписание XML-документов с помощью цифровых подписей](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Проверка цифровой подписи XML-документа  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48840366"
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Пример  
- В этом примере предполагается, что файл с именем `"test.xml"` существует в том же каталоге, что и скомпилированная программа.  `"test.xml"` Файл должен быть подписан с помощью методики, описанные в [Практическое: Подписание XML-документов с помощью цифровых подписей](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ В этом примере предполагается, что файл с именем `"test.xml"` существует в том же каталоге, что и скомпилированная программа.  `"test.xml"` Файл должен быть подписан с помощью методики, описанные в [как: Подписание XML-документов с помощью цифровых подписей](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ ms.locfileid: "48840366"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [Практическое руководство. Подписание XML-документов с помощью цифровых подписей](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

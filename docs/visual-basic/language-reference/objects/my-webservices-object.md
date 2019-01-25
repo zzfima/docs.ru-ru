@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 7ae99bec5797591e53c6c77f5d9f88589352104c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676345"
 ---
 # <a name="mywebservices-object"></a>Объект My.WebServices
 Предоставляет свойства для создания и доступа к один экземпляр каждой веб-службы XML ссылается текущий проект.  
@@ -62,7 +62,7 @@ ms.locfileid: "43862400"
 |Служба Windows|**Да**|  
 |Веб-сайт|Нет|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
- <xref:System.ArgumentException>  
- [Доступ к веб-службам приложения](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
+- <xref:System.ArgumentException>
+- [Доступ к веб-службам приложения](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

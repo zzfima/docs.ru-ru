@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529808"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Метод ICorDebugCodeEnum::Next
-Получает заданное число экземпляров «ICorDebugCode» из перечисления, начиная с текущей позиции.  
+Получает указанное число экземпляров «ICorDebugCode» из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,20 +43,20 @@ HRESULT Next (
  [in] Количество `ICorDebugCode` извлекаемых экземпляров.  
   
  `values`  
- [out] Массив указателей, каждый из которых указывает на `ICorDebugCode` объекта.  
+ [out] Массив указателей, каждый из которых указывает `ICorDebugCode` объекта.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugCode` фактически возвращаемых экземпляров. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на число `ICorDebugCode` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
-    
- 
+## <a name="see-also"></a>См. также
+
+

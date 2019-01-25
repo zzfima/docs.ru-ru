@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 063ddd0bfa1734d43f90b4680166c21b80f5cc05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17673fb3684747f42556caef4ea54db050eef56e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696190"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>Метод IHostMemoryManager::VirtualFree
-Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualFree` освобождает, разблокирует или освобождает и разблокирует диапазон страниц в пределах виртуального адресного пространства вызывающего процесса.  
+Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualFree` освобождает, разблокирует или освобождает и разблокирует диапазон страниц в пространстве виртуальных адресов вызывающего процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +39,10 @@ HRESULT VirtualFree (
   
 #### <a name="parameters"></a>Параметры  
  `lpAddress`  
- [in] Указатель на базовый адрес для освобождения страниц виртуальной памяти.  
+ [in] Указатель на базовый адрес страниц виртуальной памяти, который требуется освободить.  
   
  `dwSize`  
- [in] Размер в байтах, области, чтобы освободить.  
+ [in] Размер в байтах, области, который требуется освободить.  
   
  `dwFreeType`  
  [in] Тип операции освобождения.  
@@ -55,24 +55,24 @@ HRESULT VirtualFree (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|Была предпринята попытка освободить память, выделенная не через узел.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|ЗНАЧЕНИЕ HOST_E_INVALIDOPERATION|Для освобождения памяти, который не был выделен через узел была предпринята.|  
   
 ## <a name="remarks"></a>Примечания  
- `VirtualFree` Освобождает страницы виртуальной памяти, связанные с `lpAddress` параметр по предыдущим вызовом [IHostMemoryManager::VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) функции. Пытается освободить память, выделенная через узел не должен возвращать значение HOST_E_INVALIDOPERATION.  
+ `VirtualFree` Освобождает страницы виртуальной памяти, связанные с `lpAddress` параметры с помощью предыдущего вызова [IHostMemoryManager::VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) функции. Пытается освободить память, выделенную через узел не должен возвращать значение HOST_E_INVALIDOPERATION.  
   
- Семантика идентична реализация Win32 `VirtualFree`. Дополнительные сведения см. в документации по платформе Windows.  
+ Семантика идентична семантике реализация Win32 `VirtualFree`. Дополнительные сведения см. в документации платформы Windows.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [Интерфейс IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [Интерфейс IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

@@ -2,12 +2,12 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631274"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые сценарии безопасности. Например [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI и Kerberos, и поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. При выполнении WCF под Windows XP Home Edition, поддерживаются другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS.  
@@ -28,9 +28,9 @@ ms.locfileid: "48845688"
   
 -   Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
   
- Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [как: создание токена контекста безопасности для Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
+ Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Как Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
- Кроме того, в конфигурации, маркер включается путем создания <`customBinding`>, добавив <`security`> и задав `authenticationMode` атрибут SecureConversation и `requireSecurityContextCancellation` атрибут `true`.  
+ Аналогично, маркер включается в конфигурации путем создания привязки <`customBinding`>, последующего добавления элемента <`security`>, присвоения атрибуту `authenticationMode` значения SecureConversation и присвоения атрибуту `requireSecurityContextCancellation` значения `true`.  
   
 > [!NOTE]
 >  Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в ОС [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "48845688"
  FIPS-совместимый алгоритм шифрования AES не работает в дуплексных обратных вызовах при олицетворении на уровне идентификации.  
   
 ### <a name="cngksp-certificates"></a>Сертификаты CNG/KSP  
- *Интерфейс API криптографии: Следующего поколения (CNG)* является долгосрочной заменой CryptoAPI. Этот API доступен в неуправляемом коде на [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] и более поздних версиях Windows.  
+ *Интерфейс API криптографии: Next Generation (CNG)* является долгосрочной заменой CryptoAPI. Этот API доступен в неуправляемом коде на [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] и более поздних версиях Windows.  
   
  .NET framework 4.6.1 и более ранних версий не поддерживают эти сертификаты, потому что они используют устаревшие CryptoAPI для обработки сертификатов CNG/KSP. Использование сертификатов с помощью .NET Framework 4.6.1 и более ранних версий вызовет исключение.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48845688"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующую комбинацию параметров, так как они могут помешать выполняться проверка подлинности клиента:  
   
--   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
+-   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Для этого в файле Web.config атрибуту `impersonate` элемента <`identity`> присвоено значение `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48845688"
   
  Для устранения этой проблемы необходимо изменить привязку непосредственно в клиенте после выполнения импорта.  
   
-## <a name="see-also"></a>См. также  
- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>См. также
+- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

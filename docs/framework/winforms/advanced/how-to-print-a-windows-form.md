@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Печать формы Windows Forms
+title: Как выполнить Печать формы Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 42940654a0754ac3616ca7983af07d20607f480f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e672f40797a90111daefed0be74c941d4cc37b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628140"
 ---
-# <a name="how-to-print-a-windows-form"></a>Практическое руководство. Печать формы Windows Forms
-В рамках процесса разработки обычно требуется распечатать копию формы Windows Forms. В следующем примере кода показано, как напечатать копию текущей формы с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод.  
+# <a name="how-to-print-a-windows-form"></a>Как выполнить Печать формы Windows Forms
+Как часть процесса разработки обычно требуется распечатать копию в форму Windows. В следующем примере кода показано, как распечатать копию текущей формы с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
@@ -30,14 +30,14 @@ ms.locfileid: "33522273"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   У вас разрешения на доступ к принтеру.  
+-   У вас нет разрешения на доступ к принтеру.  
   
--   Нет не установлен принтер.  
+-   Нет нет установленных принтеров.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Чтобы запустить этот пример кода, необходимо иметь разрешение на доступ к принтеру, используемому на компьютере.  
+ Чтобы запустить этот пример кода, необходимо разрешение на доступ к принтеру, используемые с компьютера.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Практическое руководство. Прорисовка изображений с использованием GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- [Практическое руководство. Печать графических изображений в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Практическое руководство. Вывод изображений с использованием GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [Практическое руководство. Печать графических изображений в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b4edc1bbf1448fc86df76ed9f790a924a563647b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700316"
 ---
 # <a name="copying-dataset-contents"></a>Копирование содержимого набора данных
 Можно создать копию <xref:System.Data.DataSet> таким образом, можно работать с данными, не затрагивая исходные данные или работать с подмножеством данных из **набора данных**. При копировании **набора данных**, вы можете:  
@@ -94,8 +94,8 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e60c3b06453e0f447249bddf5d4da5c240576577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533693"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>Метод ICLRRuntimeInfo::IsLoadable
-Указывает, возможна ли загрузка среды выполнения, связанных с этим интерфейсом в текущий процесс, принимая во внимание других сред выполнения, которые уже могли быть загружены в процесс.  
+Указывает ли среда выполнения, связанных с этим интерфейсом могут быть загружены в текущий процесс, с учетом других сред выполнения, которые уже могут быть загружены в процесс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT IsLoadable(
   
 #### <a name="parameters"></a>Параметры  
  `pbLoadable`  
- [out] `true` Если эта среда выполнения может быть загружена в текущем процессе; в противном случае — `false`.  
+ [out] `true` Если эта среда выполнения может быть загружена в текущем процессе; в противном случае `false`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -47,20 +47,20 @@ HRESULT IsLoadable(
 |E_POINTER|Параметр `pbLoadable` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
- Если в процесс уже загружена другая среда выполнения, среда выполнения, связанных с этим интерфейсом можно загрузить для выполнения в процессе side-by-side `pbLoadable` возвращает `true`. Если две среды выполнения не может выполнять side-by-side в процессе, `pbLoadable` возвращает `false`. Например среда CLR версии 4 можно запустить side-by-side, в том же процессе, в среде CLR версии 2.0 или среда CLR версии 1.1. Тем не менее среда CLR версии 1.1 и среда CLR версии 2.0 не может выполняться side-by-side внутри процесса.  
+ Если в процесс уже загружена другая среда выполнения и среды выполнения, связанных с этим интерфейсом, которые могут быть загружены для выполнения-process side-by-side, `pbLoadable` возвращает `true`. Если две среды выполнения не может выполняться side-by-side в процессе, `pbLoadable` возвращает `false`. Например среда CLR (CLR) версии 4 можно запустить side-by-side, в том же процессе, в среде CLR версии 2.0 или среда CLR версии 1.1. Однако среда CLR версии 1.1 и среда CLR версии 2.0 не могут выполняться side-by-side в процессе.  
   
- Если нет сред выполнения, загружаются в процесс, этот метод всегда возвращает `true`.  
+ Если нет сред выполнения загружаются в процесс, этот метод всегда возвращает `true`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MetaHost.h  
+ **Заголовок.** MetaHost.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

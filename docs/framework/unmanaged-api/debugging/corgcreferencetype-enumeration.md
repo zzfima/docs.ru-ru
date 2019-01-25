@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822425b958422ba364a1f10903c7c312ba43fab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 54ac36f6d0dba92742ea7a7acfadc194930ccd74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516451"
 ---
 # <a name="corgcreferencetype-enumeration"></a>Перечисление CorGCReferenceType
 Идентифицирует источник объекта, в котором должна быть выполнена сборка мусора.  
@@ -55,32 +55,32 @@ typedef enum {
 |`CorHandleStrong`|Дескриптор строгой ссылки из таблицы дескрипторов объектов.|  
 |`CorHandleStrongPinning`|Дескриптор закрепленная строгая ссылка из таблицы дескрипторов объектов.|  
 |`CorHandleWeakShort`|Дескриптор слабая ссылка из таблицы дескрипторов объектов.|  
-|`CorHandleWeakRefCount`|Дескриптор слабое объект с подсчетом ссылок из таблицы дескрипторов объектов.|  
-|`CorHandleStrongRefCount`|Дескриптор объект с подсчетом ссылок из таблицы дескрипторов объектов.|  
+|`CorHandleWeakRefCount`|Дескриптор объекта слабые подсчетом ссылок из таблицы дескрипторов объектов.|  
+|`CorHandleStrongRefCount`|Дескриптор в объект с подсчетом ссылок из таблицы дескрипторов объектов.|  
 |`CorHandleStrongDependent`|Дескриптор зависимого объекта из таблицы дескрипторов объектов.|  
 |`CorHandleStrongAsyncPinned`|Асинхронный закрепленный объект из таблицы дескрипторов объектов.|  
 |`CorHandleStrongSizedByref`|Строгая ссылка, хранящая приблизительный размер общего закрытия всех объектов и корневых объектов во время сборки мусора.|  
 |`CorReferenceStack`|Ссылка из управляемого стека.|  
 |`CorReferenceFinalizer`|Ссылка из очереди метода завершения.|  
-|CorHandleStrongOnly|Возвращать только строгих ссылок из таблицы дескрипторов. Это значение используется [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
-|`CorHandleWeakOnly`|Возвращать только слабые ссылки из таблицы дескрипторов. Это значение используется [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
-|`CorHandleAll`|Возврат всех ссылок из таблицы дескрипторов. Это значение используется [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
+|CorHandleStrongOnly|Возвращать только строгих ссылок из таблицы дескрипторов. Это значение используется по [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
+|`CorHandleWeakOnly`|Возвращать только слабые ссылки из таблицы дескрипторов. Это значение используется по [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
+|`CorHandleAll`|Возврат всех ссылок из таблицы дескрипторов. Это значение используется по [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) только метод.|  
   
 ## <a name="remarks"></a>Примечания  
  `CorGCReferenceType` Перечисление используется следующим образом:  
   
--   В качестве значения `type` поле [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) структуры, он указывает на источник ссылки или дескриптора.  
+-   Для параметра `type` поле [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) структуры, он указывает на источник ссылки или дескриптора.  
   
--   Как `types` аргумент [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) метода, задает типы маркеров для включения в перечислении.  
+-   Как `types` аргумент [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) метод, он указывает типы обработчиков, чтобы включить в перечисление.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

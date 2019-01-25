@@ -2,12 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 0024cb1bf4ac7c27d64edcd695b4782dfbcd16af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695897"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
 Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.  
@@ -21,13 +21,13 @@ ms.locfileid: "50183221"
  Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки. Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
+ Вы можете скачать полный проект Windows Presentation Foundation (WPF) из [пример асинхронности: Настройка приложения тонкую](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) и затем выполните следующие действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который вы распаковали и затем откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
   
 4.  В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.  
   
@@ -139,13 +139,13 @@ ms.locfileid: "50183221"
  Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`. В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
+ Вы можете скачать полный проект Windows Presentation Foundation (WPF) из [пример асинхронности: Настройка приложения тонкую](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) и затем выполните следующие действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который вы распаковали и затем откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
   
 4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "50183221"
 ##  <a name="BKMK_CompleteExamples"></a> Полные примеры  
  Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Вы можете загрузить проекты со страницы [пример асинхронности: По настройке приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Пример отмены задачи  
  Ниже приведен полный файл MainWindow.xaml.vb для примера отмены одной задачи.  
@@ -454,9 +454,9 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.CancellationTokenSource>  
- <xref:System.Threading.CancellationToken>  
- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)
+## <a name="see-also"></a>См. также
+- <xref:System.Threading.CancellationTokenSource>
+- <xref:System.Threading.CancellationToken>
+- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))
+- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727278"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Метод ICorProfilerInfo2::DoStackSnapshot
 Пошаговое описание управляемые фреймы в стеке для указанного потока и отправляет сведения профилировщику посредством обратного вызова.  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  Порядок, в котором выполняется обход стека является обратной по отношению как кадры были переданы в стек: последнего конечные (отправить в последней) во-первых, основной (первый переданный) фрейма.  
   
- Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [Profiler, анализ стека в .NET Framework 2.0: основы и за его пределами](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [Profiler, анализ стека в .NET Framework 2.0: Основы и за его пределами](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Обход стека может быть синхронным или асинхронным, как описано в следующих разделах.  
   
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  Есть также риск взаимоблокировки при вызове метода `DoStackSnapshot` из потока, который создал ваш профилировщик, таким образом, чтобы вы для прохода по стеку анализируемого потока. Первый раз вы создали поток входит в определенных `ICorProfilerInfo*` методы (включая `DoStackSnapshot`), среда CLR будет выполнять на уровне потока, инициализации среды CLR в этом потоке. Если профилировщик приостановил анализируемый поток, стек которого вы пытаетесь получить пошаговые инструкции, и если этот целевой поток является владельцем блокировки, необходимой для выполнения инициализации каждого потока, произойдет взаимоблокировка. Чтобы избежать этой взаимоблокировки, выполните исходный вызов в `DoStackSnapshot` из вашего потока, созданного профилировщика для обхода предназначены потока отдельно, но не приостанавливаете анализируемый поток сначала. Исходный вызов гарантирует, что инициализация отдельных потоков может быть завершена без взаимоблокировки. Если `DoStackSnapshot` выполняется успешно, а также отчеты по крайней мере один кадр после этой точки, будут иметь безопасный для этого потока, созданный профилировщиком приостановить любой целевой поток и вызов `DoStackSnapshot` для анализа стека данного целевого потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

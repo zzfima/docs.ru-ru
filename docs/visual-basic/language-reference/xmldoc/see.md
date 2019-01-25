@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: afc67d744a04f404a275077ecac42556c963d472
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44248882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722021"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;см. в разделе&gt; (Visual Basic)
 Указывает ссылку на другой член.  
@@ -23,7 +23,7 @@ ms.locfileid: "44248882"
   
 #### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, что данный элемент кода существует и передает `member` имени элемента в выходных данных XML. `member` необходимо заключать в двойные кавычки (" ").  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и передает `member` в имя элемента в выходных XML-данных. `member` необходимо заключать в двойные кавычки (" ").  
   
 ## <a name="remarks"></a>Примечания  
  Используйте `<see>` тег, чтобы указать ссылку из текста. Используйте [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) для указания текста, который может отображаться в разделе «См. также».  
@@ -35,5 +35,5 @@ ms.locfileid: "44248882"
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>См. также
+- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

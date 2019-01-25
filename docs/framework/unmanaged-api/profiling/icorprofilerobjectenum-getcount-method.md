@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5f23950eea94cde0655d364ad0c6701e04a7c1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a363021700eacea1d4af80ca6371de5c587afda1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622210"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Метод ICorProfilerObjectEnum::GetCount
-Возвращает общее количество закрепленные объекты в коллекции.  
+Возвращает общее количество зафиксированных объектов в коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +37,18 @@ HRESULT GetCount (
   
 #### <a name="parameters"></a>Параметры  
  `pcelt`  
- [out] Указатель на число закрепленные объекты в коллекции.  
+ [out] Указатель на число зафиксированных объектов в коллекции.  
   
- Этот метод всегда возвращает нуль в платформе .NET Framework версии 3.5 пакетом обновления 1 (SP1) и более поздних версиях.  
+ Этот метод всегда возвращает ноль в .NET Framework версии 3.5 пакетом обновления 1 (SP1) и более поздних версий.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

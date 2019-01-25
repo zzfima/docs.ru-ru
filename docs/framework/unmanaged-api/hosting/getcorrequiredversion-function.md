@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92ee0570a1a9bcc48cea744d5cc707750742d51a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534086"
 ---
 # <a name="getcorrequiredversion-function"></a>Функция GetCORRequiredVersion
-Возвращает номером необходимые версии среды выполнения (CLR).  
+Получает номер необходимые версии среды выполнения (CLR).  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +40,22 @@ HRESULT GetCORRequiredVersion (
   
 #### <a name="parameters"></a>Параметры  
  `pbuffer`  
- [out] Буфер, содержащий строку, номер версии.  
+ [out] Буфер, содержащий строку, которая указывает номер версии.  
   
  `cchBuffer`  
  [in] Размер в байтах буфера.  
   
  `dwLength`  
- [out] Число байтов, возвращенных в буфере.  
+ [out] Число возвращаемых байтов в буфере.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -1,18 +1,18 @@
 ---
-title: Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
+title: Пошаговое руководство. Создание пользовательских клиента и учетные данные службы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 7035eb0b57a8dd6f6e75b27f227d7dc924a98454
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681746"
 ---
-# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Пошаговое руководство. Создание пользовательских клиента и учетные данные службы
 В этом разделе показано, как реализовать пользовательские учетные данные клиента и службы, и как использовать пользовательские учетные данные из кода приложения.  
   
 ## <a name="credentials-extensibility-classes"></a>Классы расширяемости учетных данных  
@@ -42,11 +42,11 @@ ms.locfileid: "43528742"
 ## <a name="first-in-a-series"></a>Дальнейшие шаги  
  Создание пользовательского класса учетных данных является только первый шаг, поскольку причиной настройки учетных данных для изменения поведения WCF в отношении учетных данных, сериализации маркеров безопасности или проверки подлинности. В других подразделах этого раздела описывается создание пользовательских сериализаторов и структур проверки подлинности. В этом отношении создание пользовательского класса учетных данных - первый подраздел серии. Следующие действия (создание пользовательских сериализаторов и структур проверки подлинности) можно предпринимать только после создания пользовательских учетных данных. Содержание данного подраздела продолжают следующие подразделы:  
   
--   [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [Практическое: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+-   [Практическое руководство. Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
 ## <a name="procedures"></a>Процедуры  
   
@@ -54,14 +54,14 @@ ms.locfileid: "43528742"
   
 1.  Определите новый класс, производный от класса <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-2.  Необязательный. Добавьте новые методы или свойства для новых типов учетных данных. Если новые типы учетных данных не добавляются, пропустите этот шаг. В следующем примере добавляется свойство `CreditCardNumber`.  
+2.  Необязательный параметр. Добавьте новые методы или свойства для новых типов учетных данных. Если новые типы учетных данных не добавляются, пропустите этот шаг. В следующем примере добавляется свойство `CreditCardNumber`.  
   
-3.  Переопределите метод <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Этот метод автоматически вызывается инфраструктурой безопасности WCF, при использовании пользовательских учетных данных клиента. Он отвечает за создание и возвращение экземпляра реализации класса <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
+3.  Переопределите метод <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Этот метод автоматически вызывается инфраструктурой безопасности WCF, при использовании пользовательских учетных данных клиента. Он отвечает за создание и возвращение экземпляра реализации класса <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
     > [!IMPORTANT]
     >  Важно отметить, что метод <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> переопределен, чтобы создать пользовательский диспетчер маркеров безопасности. Чтобы создать фактический маркер безопасности, диспетчер маркеров безопасности, производный от <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, должен возвратить пользовательский поставщик маркеров безопасности, производный от <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. Если не следовать этому шаблону при создании маркеров безопасности, приложение может работать неправильно, если объекты <xref:System.ServiceModel.ChannelFactory> кэшируются (кэширование применяется по умолчанию в клиентских прокси WCF). В этом случае также возможна атака с несанкционированным получением прав. Объект пользовательских учетных данных кэшируется в составе <xref:System.ServiceModel.ChannelFactory>. Однако пользовательский объект <xref:System.IdentityModel.Selectors.SecurityTokenManager> создается при каждом вызове, что снижает угрозу безопасности при условии, что в <xref:System.IdentityModel.Selectors.SecurityTokenManager> предусмотрена логика создания маркеров.  
   
-4.  Переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A>.  
+4.  Переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> .  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
@@ -70,11 +70,11 @@ ms.locfileid: "43528742"
   
 1.  Определите новый производный класс на основе класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создание пользовательского средства аутентификации токена безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркерах безопасности и сериализаторах пользовательских токенов безопасности, см. в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркерах безопасности и сериализаторах пользовательских токенов безопасности, см. в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -98,13 +98,13 @@ ms.locfileid: "43528742"
   
 1.  Определите новый производный класс на основе класса <xref:System.ServiceModel.Configuration.ClientCredentialsElement>.  
   
-2.  Необязательный. Добавьте свойства для всех дополнительных параметров конфигурации, к которым требуется предоставить доступ через конфигурацию приложения. В приведенном ниже примере добавляется одно свойство с именем `CreditCardNumber`.  
+2.  Необязательный параметр. Добавьте свойства для всех дополнительных параметров конфигурации, к которым требуется предоставить доступ через конфигурацию приложения. В приведенном ниже примере добавляется одно свойство с именем `CreditCardNumber`.  
   
 3.  Переопределите свойство <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> так, чтобы оно возвращало тип пользовательского класса учетных данных клиента, создаваемый элементом конфигурации.  
   
-4.  Переопределите метод <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A>. Этот метод отвечает за создание и возвращение экземпляра пользовательского класса учетных данных на основании параметров, загруженных и файла конфигурации. Вызовите из этого метода базовый метод <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29>, чтобы извлечь предоставляемые системой параметры учетных данных, загруженные в экземпляр пользовательских учетных данных клиента.  
+4.  Переопределите метод <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> . Этот метод отвечает за создание и возвращение экземпляра пользовательского класса учетных данных на основании параметров, загруженных и файла конфигурации. Вызовите из этого метода базовый метод <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29>, чтобы извлечь предоставляемые системой параметры учетных данных, загруженные в экземпляр пользовательских учетных данных клиента.  
   
-5.  Необязательный. Если вы добавляли дополнительные свойства на шаге 2, необходимо переопределить свойство <xref:System.Configuration.ConfigurationElement.Properties%2A> для регистрации дополнительных параметров конфигурации, чтобы они распознавались инфраструктурой конфигураций. Объедините добавленные свойства со свойствами базового класса, чтобы разрешить настройку предоставляемых системой параметров посредством данного элемента конфигурации пользовательских учетных данных клиента.  
+5.  Необязательный параметр. Если вы добавляли дополнительные свойства на шаге 2, необходимо переопределить свойство <xref:System.Configuration.ConfigurationElement.Properties%2A> для регистрации дополнительных параметров конфигурации, чтобы они распознавались инфраструктурой конфигураций. Объедините добавленные свойства со свойствами базового класса, чтобы разрешить настройку предоставляемых системой параметров посредством данного элемента конфигурации пользовательских учетных данных клиента.  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
@@ -145,11 +145,11 @@ ms.locfileid: "43528742"
   
 1.  Определите новый производный класс на основе класса <xref:System.ServiceModel.Description.ServiceCredentials>.  
   
-2.  Необязательный. Добавьте новые свойства, чтобы предоставить интерфейсы API для добавляемых новых значений учетных данных. Если новые значения учетных данных не добавляются, пропустите этот шаг. В следующем примере добавляется свойство `AdditionalCertificate`.  
+2.  Необязательный параметр. Добавьте новые свойства, чтобы предоставить интерфейсы API для добавляемых новых значений учетных данных. Если новые значения учетных данных не добавляются, пропустите этот шаг. В следующем примере добавляется свойство `AdditionalCertificate`.  
   
-3.  Переопределите метод <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A>. Этот метод автоматически вызывается инфраструктурой WCF, при использовании пользовательских учетных данных клиента. Он отвечает за создание и возвращение экземпляра реализации класса <xref:System.IdentityModel.Selectors.SecurityTokenManager> (рассматривается в следующей процедуре).  
+3.  Переопределите метод <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Этот метод автоматически вызывается инфраструктурой WCF, при использовании пользовательских учетных данных клиента. Он отвечает за создание и возвращение экземпляра реализации класса <xref:System.IdentityModel.Selectors.SecurityTokenManager> (рассматривается в следующей процедуре).  
   
-4.  Необязательный. Переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A>. Это необходимо только при добавлении новых свойств или внутренних полей в реализацию пользовательских учетных данных клиента.  
+4.  Необязательный параметр. Переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> . Это необходимо только при добавлении новых свойств или внутренних полей в реализацию пользовательских учетных данных клиента.  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
@@ -158,11 +158,11 @@ ms.locfileid: "43528742"
   
 1.  Определите новый класс, производный от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.  
   
-2.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenProvider> требуется создать пользовательскую реализацию класса. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создание пользовательского средства аутентификации токена безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) раздела.  
+3.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>, если <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> требуется создать пользовательскую реализацию класса. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создайте структуру пользовательского маркера проверки подлинности безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) раздела.  
   
-4.  Необязательный. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркерах безопасности и сериализаторах пользовательских токенов безопасности, см. в разделе [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>, если требуется создать пользовательскую реализацию класса <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>. Дополнительные сведения о пользовательских маркерах безопасности и сериализаторах пользовательских токенов безопасности, см. в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
@@ -180,13 +180,13 @@ ms.locfileid: "43528742"
   
  Добавьте поддержку конфигурации, выполнив действия, описанные ранее в процедурах «`To create a configuration handler for custom client credentials`» и «`To register and use a custom client credentials configuration handler in the application configuration`». Единственное отличие состоит в использовании в качестве базового класса для обработчика конфигурации класса <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> вместо класса <xref:System.ServiceModel.Configuration.ClientCredentialsElement>. После этого элемент пользовательских учетных данных службы можно использовать везде, где используется предоставляемый системой элемент `<serviceCredentials>`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.Security.SecurityCredentialsManager>  
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Практическое руководство. Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.Security.SecurityCredentialsManager>
+- <xref:System.IdentityModel.Selectors.SecurityTokenManager>
+- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
+- [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

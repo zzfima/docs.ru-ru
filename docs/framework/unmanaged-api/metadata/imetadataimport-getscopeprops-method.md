@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24ece9bb614957e02c81d3a0f0a0eefe59f3febc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7c41e05ecf4e33f7ca711befdd90275452439df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718862"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Метод IMetaDataImport::GetScopeProps
 Возвращает имя и при необходимости идентификатор версии сборки или модуля в текущей области метаданных.  
@@ -43,26 +43,26 @@ HRESULT GetScopeProps (
  [out] Буфер для имени сборки или модуля.  
   
  `cchName`  
- [in] Размер в расширенных символах с `szName`.  
+ [in] Размер в расширенных символах `szName`.  
   
  `pchName`  
  [out] Число расширенных символов, возвращаемых в `szName`.  
   
  `pmvid`  
- [out, optional] Указатель на идентификатор GUID, который уникально идентифицирует версию сборки или модуля.  
+ [out, optional] Указатель на GUID, который уникально идентифицирует версию сборки или модуля.  
   
 ## <a name="remarks"></a>Примечания  
  [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) метод используется для установки этих свойств.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

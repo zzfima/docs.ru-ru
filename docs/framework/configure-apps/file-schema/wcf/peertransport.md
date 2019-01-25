@@ -2,17 +2,17 @@
 title: '&lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 76c100c0ec793d6dc4e7e5385f9dcf4521d0039e
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c8ca9f37b799087337f7dff6be48744f4f9dea6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703631"
 ---
 # <a name="ltpeertransportgt"></a>&lt;peerTransport&gt;
 Определяет одноранговый транспорт для пользовательской привязки.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
@@ -57,14 +57,14 @@ ms.locfileid: "54151947"
 ## <a name="remarks"></a>Примечания  
  Данный транспорт нельзя использовать с контрактами, имеющими операции запроса-ответа.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.PeerTransportElement>  
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.PeerTransportElement>
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

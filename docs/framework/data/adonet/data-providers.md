@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627269"
 ---
 # <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework
 Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] используется для установления соединения с базой данных, выполнения команд и получения результатов. Эти результаты обрабатываются непосредственно, помещаются в <xref:System.Data.DataSet> , чтобы по мере необходимости они были доступны для пользователей вместе с данными из нескольких источников, либо распределяются между уровнями. Источники данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] являются упрощенными и создают минимальный уровень между источником данных и кодом, увеличивая тем самым производительность без ущерба для функциональных возможностей.  
   
  В следующей таблице приведен список поставщиков данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-|Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Описание|  
+|Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Описание:|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server|Предоставляет доступ к данным для Microsoft SQL Server. Использует пространство имен <xref:System.Data.SqlClient> .|  
 |Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB|Для источников данных OLE DB. Использует пространство имен <xref:System.Data.OleDb> .|  
 |Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]для ODBC|Для источников данных ODBC. Использует пространство имен <xref:System.Data.Odbc> .|  
 |Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle|Для источников данных Oracle. Источник данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle поддерживает клиентское программное обеспечение версии 8.1.7 и старше и использует пространство имен <xref:System.Data.OracleClient> .|  
 |EntityClient - поставщик|Предоставляет доступ к данным для приложений модели EDM (Entity Data Model). Использует пространство имен <xref:System.Data.EntityClient> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server Compact 4.0.|Предоставляет доступ к данным для Microsoft SQL Server Compact 4.0. Использует [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) пространства имен.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server Compact 4.0.|Предоставляет доступ к данным для Microsoft SQL Server Compact 4.0. Использует пространство имен [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Основные объекты поставщиков данных .NET Framework  
  В следующей таблице приведены четыре основных объекта, из которых состоит поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -123,7 +123,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
->  Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC требует MDAC 2.6 или более поздней версии, рекомендуется MDAC 2.8 с пакетом обновления 1 (SP1). Вы можете скачать компоненты MDAC 2.8 SP1 из [Центр разработчиков хранилищ и доступа к данным](https://go.microsoft.com/fwlink/?linkid=4173).  
+>  Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC требует MDAC 2.6 или более поздней версии, рекомендуется MDAC 2.8 с пакетом обновления 1 (SP1). Компоненты MDAC 2.8 с пакетом обновления 1 (SP1) можно скачать на веб-сайте [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173)(центр разработчиков средств доступа к данным и их хранения).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Поставщик данных .NET Framework для Oracle  
  Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle (OracleClient) обеспечивает доступ к источникам данных Oracle через клиентское ПО Oracle для связи. Поставщик данных поддерживает клиентское ПО Oracle версии 8.1.7 или более поздней версии. Поставщик данных поддерживает как локальные, так и распределенные транзакции. Дополнительные сведения см. в разделе [транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
@@ -132,7 +132,7 @@ using System.Data.Odbc;
   
  Поставщик данных[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для классов Oracle находится в пространстве имен <xref:System.Data.OracleClient> и содержится в сборке `System.Data.OracleClient.dll` . При компиляции приложения, использующего этот источник данных, необходимо ссылаться как на `System.Data.dll` , так и на `System.Data.OracleClient.dll` .  
   
- Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.OracleClient`.  
+ Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.OracleClient` .  
   
 ```vb  
 Imports System.Data  
@@ -155,9 +155,9 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] "Поставщик данных для Oracle|Рекомендуется для приложений среднего уровня и одноуровневых приложений, использующих источники данных Oracle.|  
   
 ## <a name="entityclient-provider"></a>EntityClient - поставщик  
- Поставщик EntityClient используется для доступа к данным на основе модели EDM (Entity Data Model). В отличие от других поставщиков данных .NET этот поставщик не взаимодействует с источником данных непосредственно. Вместо этого для взаимодействия с соответствующим поставщиком данных используется язык Entity SQL. Дополнительные сведения см. в разделе [EntityClient и Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Поставщик EntityClient используется для доступа к данным на основе модели EDM (Entity Data Model). В отличие от других поставщиков данных .NET этот поставщик не взаимодействует с источником данных непосредственно. Вместо этого для взаимодействия с соответствующим поставщиком данных используется язык Entity SQL. Дополнительные сведения см. в разделе [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

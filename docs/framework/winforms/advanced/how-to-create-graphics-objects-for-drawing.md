@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание объектов Graphics для рисования
+title: Как выполнить Создание объектов Graphics для рисования
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497036"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание объектов Graphics для рисования
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Как выполнить Создание объектов Graphics для рисования
 Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
   
  Работа с графикой состоит из двух этапов:  
@@ -165,13 +165,13 @@ ms.locfileid: "50185200"
   
     |Для отрисовки|См.|  
     |---------------|---------|  
-    |Прямых линий|[Практическое руководство. Рисование линии в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |Прямых линий|[Практическое руководство. Нарисовать линию в форме Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
     |Фигур|[Практическое руководство. Рисование контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Текста|[Практическое руководство. Рисование текста в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Изображений|[Практическое руководство. Вывод изображений с использованием GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |Текста|[Практическое руководство. Рисование текста в форме Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |Изображений|[Практическое руководство. Вывод изображений с использованием GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>См. также  
- [Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Практическое руководство. Вывод изображений с использованием GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+## <a name="see-also"></a>См. также
+- [Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Практическое руководство. Вывод изображений с использованием GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

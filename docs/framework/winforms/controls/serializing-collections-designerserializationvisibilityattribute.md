@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533550"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute
 Пользовательские элементы управления, иногда будет предоставлять коллекции как свойство. В этом пошаговом руководстве демонстрируется использование <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> класс для управления способом сериализации коллекции во время разработки. Применение <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> значение для свойства коллекции гарантирует, что будет сериализовано свойство.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: сериализации коллекций из стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -38,7 +38,7 @@ ms.locfileid: "43788085"
   
 1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [как: переименовать идентификаторы](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [Как Переименуйте идентификаторы](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойства `10`.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "43788085"
     |--------------|---------------|  
     |**Multiline**|`true`|  
     |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Полосы прокрутки**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  В **редактор кода**, объявите поле строкового массива с именем `stringsValue` в `SerializationDemoControl`.  
@@ -84,7 +84,7 @@ ms.locfileid: "43788085"
   
 1.  Добавьте в решение проект приложения Windows. Задайте для проекта имя `SerializationDemoControlTest`.  
   
-2.  В **элементов**, найдите вкладку с именем **компоненты SerializationDemoControlLib**. На этой вкладке вы найдете `SerializationDemoControl`. Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+2.  В **элементов**, найдите вкладку с именем **компоненты SerializationDemoControlLib**. На этой вкладке вы найдете `SerializationDemoControl`. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 3.  Место `SerializationDemoControl` в форме.  
   
@@ -135,10 +135,10 @@ ms.locfileid: "43788085"
   
 -   [Общие сведения о сериализации конструктора](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [Общие сведения о сериализации конструктора](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [Практическое: сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [Общие сведения о сериализации конструктора](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

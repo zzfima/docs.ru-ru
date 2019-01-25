@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52f104228db0b9e7f664ee7c1de393aa696c71a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cec3fd0c3b20c70b6ddf3e875c481e829dd5eb28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695495"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
 Помощник по отладке (MDA) управляемого кода `notMarshalable` активируется, когда среда CLR обнаруживает указатель интерфейса СОМ без допустимого зарегистрированного прокси или заглушки или неправильную реализацию интерфейса `IMarshal` при попытке выполнить маршалинг интерфейса по контекстам.  
@@ -48,7 +48,7 @@ ms.locfileid: "33386734"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

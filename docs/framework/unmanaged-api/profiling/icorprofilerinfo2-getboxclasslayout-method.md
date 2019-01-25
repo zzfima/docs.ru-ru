@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9d775d5c386abeb100604250008ebf1bf377e8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550816"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Метод ICorProfilerInfo2::GetBoxClassLayout
 Получает сведения о расположении заданного типа значения при его упаковке.  
@@ -40,20 +40,20 @@ HRESULT GetBoxClassLayout(
  [in] Идентификатор класса, который описывает тип значения, который упаковывается.  
   
  `pBufferOffset`  
- [out] Целое число, — это смещение относительно указатель идентификатор упакованный объект типа значения.  
+ [out] Целое число, является смещение относительно указателя на идентификатор упакованный объект типа значения.  
   
 ## <a name="remarks"></a>Примечания  
- `pBufferOffset` Значение представляет собой местоположение типа значения в поле. После `pBufferOffset` применяется для упакованного объекта макет класса тип значения можно использовать для интерпретации значения объекта.  
+ `pBufferOffset` Значение — это расположение в поле типа значения. После `pBufferOffset` применяется макета класса типа значения в объект в рамке, могут использоваться для интерпретации значения объекта.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

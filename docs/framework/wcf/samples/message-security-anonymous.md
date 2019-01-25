@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 2e8b17b22a55556615f2df7ab97295657da8a981
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9ac411cd13869b70edc46724219776ec411a23dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680758"
 ---
 # <a name="message-security-anonymous"></a>Безопасность сообщений с возможностью анонимного доступа
 Образец Anonymous безопасности сообщения показано, как реализовать приложение, Windows Communication Foundation (WCF), использующей безопасность уровня сообщений без проверки подлинности клиента, но с требованием проверки подлинности сервера с использованием сертификата X.509 сервера сертификат. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. Этот образец основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) образца. Этот образец содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в службах IIS. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".

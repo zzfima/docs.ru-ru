@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681070"
 ---
 # <a name="implements-statement"></a>Оператор Implements
 Указывает один или несколько интерфейсов, или члены интерфейса, которые должны быть реализованы в классе или определение структуры, в котором он находится.  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Части  
  `interfacename`  
- Обязательно. Интерфейс, свойства, процедуры и события должны реализовываться соответствующими членами в классе или структуре.  
+ Обязательный. Интерфейс, свойства, процедуры и события должны реализовываться соответствующими членами в классе или структуре.  
   
  `interfacemember`  
- Обязательно. Член интерфейса, который реализуется.  
+ Обязательный. Член интерфейса, который реализуется.  
   
 ## <a name="remarks"></a>Примечания  
  Интерфейс является коллекцией прототипов, представляющих члены (свойства, процедуры и события) инкапсулирует интерфейс. Интерфейсы содержат только объявления членов. классы и структуры реализуют эти члены. Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>См. также
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

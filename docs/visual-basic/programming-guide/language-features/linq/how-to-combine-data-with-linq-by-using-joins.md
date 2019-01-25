@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
+title: Как выполнить Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553702"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Как выполнить Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
 Visual Basic предоставляет `Join` и `Group Join` для объединения содержимого нескольких коллекций на основе общих значений между коллекциями предложения запроса. Эти значения называются *ключ* значения. Разработчикам, знакомым с понятиями реляционной базы данных будет распознавать `Join` предложение INNER JOIN и `Group Join` предложение as, фактически, ЛЕВОЕ ВНЕШНЕЕ соединение.  
   
  В примерах в этом разделе показано несколько способов объединения данных с помощью `Join` и `Group Join` предложения запроса.  
@@ -79,12 +79,12 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 2.  Нажмите клавишу F5 для запуска примеров.  
   
-## <a name="see-also"></a>См. также  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Предложение Join](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Предложение Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Предложение From](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Предложения Where](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
- [Преобразования данных с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>См. также
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Предложение Join](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Предложение Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Предложение From](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложения Where](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Запросы](../../../../visual-basic/language-reference/queries/index.md)
+- [Преобразования данных с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

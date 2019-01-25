@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721149"
 ---
 # <a name="setsecurity-function"></a>Функция SetSecurity
-Извлекает маркер олицетворения, связанный с текущим потоком.   
+Получает маркер олицетворения, связанный с текущим потоком.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,23 +39,23 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Параметры
 
-`pNeedToReset` [out] Когда функция возвращает значение, содержит указатель на `boolean` , указывающее, должно ли сбросить токен путем вызова [ResetSecurity](resetsecurity.md) функции.  
+`pNeedToReset` [out] При возврате функции, содержит указатель на `boolean` , указывающее, следует ли сбросить маркер путем вызова [ResetSecurity](resetsecurity.md) функции.  
 
 `token`  
-[out] Когда функция возвращает значение, содержит указатель на дескриптор токена олицетворения, связанный с текущим потоком. Его значение может быть `null` существует ли токен, не связанный с текущим потоком. 
+[out] При возврате функции, содержит указатель на дескриптор токена олицетворения, связанный с текущим потоком. Его значение может быть `null` имеется ли токен, не связанный с текущим потоком. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).
 
-Если функция завершается с ошибкой, возвращается код ошибки ненулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
+Если функция завершается с ошибкой, возвращается код ошибки. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Как: сортировка элементов (Visual Basic)'
+title: Как выполнить Сортировка элементов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 868f3eb448393e5c06a37ab68431620638e9dc35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746225"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Как: сортировка элементов (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Как выполнить Сортировка элементов (Visual Basic)
 В этом примере показано, как создавать запросы с сортировкой результатов.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Числовые данные (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные пространства имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла: Числовые данные в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -74,6 +74,6 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сортировка данных](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Сортировка данных](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

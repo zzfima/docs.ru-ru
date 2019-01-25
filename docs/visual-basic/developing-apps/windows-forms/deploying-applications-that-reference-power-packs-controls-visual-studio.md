@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-ms.openlocfilehash: bd235bc0b4a7f9978333931ae1dce012c0950374
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 3fd46a6e8aad61d2f8ce5a230c856470f913d0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551778"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>Развертывание приложений, ссылающихся на элементы управления пакетов Power Packs (Visual Studio)
 Если вы хотите развернуть приложение, которое ссылается на элементы управления пакетов Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, или <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), элементы управления должны устанавливаться на конечном компьютере.  
@@ -28,6 +28,6 @@ ms.locfileid: "39198232"
   
  В качестве альтернативы начальному загрузчику можно предварительно развернуть элементы управления пакетов Power Packs с помощью системы электронного распространения таких как Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Установка необходимых компонентов для приложения ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Элементы управления Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Установка необходимых компонентов для приложения ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Элементы управления Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

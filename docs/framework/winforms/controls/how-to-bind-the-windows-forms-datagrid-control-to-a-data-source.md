@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных
+title: Как выполнить Привязка элемента управления DataGrid в Windows Forms к источнику данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 62f61eb2d294baf007b0b3f749f3cf6b7f4857c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8c0c2865d219eecb88ddd176d99f80521c9ab3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664217"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Как выполнить Привязка элемента управления DataGrid в Windows Forms к источнику данных
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms <xref:System.Windows.Forms.DataGrid> управления разработан специально для отображения сведений из источника данных. Привязка элемента управления во время выполнения путем вызова <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод. Несмотря на то, что может отображать данные из различных источников данных, типичных причин являются наборы данных и представления данных.  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> управления разработан специально для отображения сведений из источника данных. Привязка элемента управления во время выполнения путем вызова <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод. Несмотря на то, что можно отобразить данные из различных источников данных, наиболее обычные параметры являются наборы данных и представления данных.  
   
-### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Чтобы выполнить привязку данных элемента управления DataGrid программным способом  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Для привязки данных элемента управления DataGrid программным способом  
   
 1.  Напишите код для заполнения набора данных.  
   
-     Если источником данных является набор данных или представление данных, основанное на таблице набора данных, добавьте код в форму для заполнения набора данных.  
+     Если источником данных является набор данных или представление данных, на основе таблицы набора данных, добавьте код в форму для заполнения набора данных.  
   
-     Точный код, который вы используете зависит от того, где поступают в набор данных. Если набор данных заполняется непосредственно из базы данных, обычно вызывается `Fill` метод адаптера данных, как показано в следующем примере, который заполняет набор данных с именем `DsCategories1`:  
+     Использовании программы зависит от того, где данные поступают в набор. Если набор данных заполняется непосредственно из базы данных, обычно вызывается `Fill` метод адаптера данных, как показано в следующем примере, который заполняет набор данных с именем `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "33530306"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Если набор данных заполняется из веб-служб XML, вы обычно создается экземпляр службы в коде и затем вызовите один из его методов для возврата набора данных. Затем набор данных из XML-веб-службы, объединяется с набором данных локальный. В следующем примере показано, как можно создать экземпляр XML-веб-службы с именем `CategoriesService`, вызовите его `GetCategories` метод и слияния, результирующий набор данных с локальным набором данных вызывается `DsCategories1`:  
+     Если набор данных заполняется из XML-веб-службы, вы обычно создается экземпляр службы в коде, а затем вызовите один из его методов для возврата набора данных. Затем объедините dataset из XML-веб-службы в локальный набор данных. В следующем примере показано, как можно создать экземпляр XML-веб-службы с именем `CategoriesService`, вызовите его `GetCategories` метод и слияния, результирующий набор данных в локальный набор данных называется `DsCategories1`:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,12 +68,12 @@ ms.locfileid: "33530306"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Вызовите <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод, передав ему источник данных и элемент данных. Если необходимо явным образом передать данные-член, необходимо передайте пустую строку.  
+2.  Вызовите <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод, передав ему в источнике данных и элемент данных. Если вам не нужно явным образом передать данные-член, передайте пустую строку.  
   
     > [!NOTE]
-    >  При привязке сетки впервые, можно задать элемент управления <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойства. Тем не менее нельзя восстановить эти свойства, как только они были заданы. Таким образом, рекомендуется всегда использовать <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метода.  
+    >  При привязке сетки в первый раз, можно задать элемент управления <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойства. Тем не менее нельзя восстановить эти свойства, как только они были заданы. Таким образом, рекомендуется всегда использовать <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод.  
   
-     В следующем примере показано, как программным образом выполнить привязку к таблице Customers в набор данных с именем `DsCustomers1`:  
+     В следующем примере показано, как программным способом можно привязать к таблице Customers в набор данных с именем `DsCustomers1`:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
@@ -101,10 +101,10 @@ ms.locfileid: "33530306"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (Необязательно) Добавьте требуемые стили таблиц и столбцов в сетке. Если стили таблиц отсутствуют, появится таблица с минимальным форматированием и при этом все столбцы видимым.  
+3.  (Необязательно) Добавьте соответствующую таблицу стилей и столбцов в сетку. Если стили таблиц отсутствуют, вы увидите таблицу с минимальным форматированием и со всеми столбцами видимым.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об элементе управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Привязка данных Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения об элементе управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
+- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Привязка данных Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)

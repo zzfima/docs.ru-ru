@@ -2,12 +2,12 @@
 title: Обработка ошибок в действии блок-схемы с помощью TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: df3d93087744ce0fba597f5c9f1d2da4b71a50dd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507503"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Обработка ошибок в действии блок-схемы с помощью TryCatch
 В этом образце показано использование действия <xref:System.Activities.Statements.TryCatch> в рамках действия сложного потока управления.
@@ -18,7 +18,7 @@ ms.locfileid: "48845649"
 
 |Параметры|Описание|
 |----------------|-----------------|
-|promoCode|Промокод. Тип данных: String<br /><br /> Возможные значения с описанием в скобках.<br /><br /> -Одним (один)<br />-MNK (женат, детей нет.)<br />-MWK (женат детей).|
+|promoCode|Промокод. Тип: String<br /><br /> Возможные значения с описанием в скобках.<br /><br /> -Одним (один)<br />-MNK (женат, детей нет.)<br />-MWK (женат детей).|
 |numKids|Число детей. Тип: int|
 
  Действие `CreateFlowchartWithFaults` использует действие <xref:System.Activities.Statements.FlowSwitch%601>, которое производит переключения на аргументе `promoCode` и вычисляет скидку с использованием следующей формулы.
@@ -27,7 +27,7 @@ ms.locfileid: "48845649"
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
-|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Примечание:** потенциально может создать этот расчет <xref:System.DivideByZeroException>. Поэтому вычисление скидки упаковано в действие <xref:System.Activities.Statements.TryCatch>, которое кэширует исключение <xref:System.DivideByZeroException> и устанавливает скидку в нуль.|
+|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Примечание:**  Это вычисление может вызвать исключение <xref:System.DivideByZeroException>. Поэтому вычисление скидки упаковано в действие <xref:System.Activities.Statements.TryCatch>, которое кэширует исключение <xref:System.DivideByZeroException> и устанавливает скидку в нуль.|
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
@@ -46,6 +46,6 @@ ms.locfileid: "48845649"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## <a name="see-also"></a>См. также  
- [Рабочие процессы с блок-схемой](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
- [Исключения](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+## <a name="see-also"></a>См. также
+- [Рабочие процессы с блок-схемой](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+- [Исключения](../../../../docs/framework/windows-workflow-foundation/exceptions.md)

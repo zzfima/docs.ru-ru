@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21f7e9fa0e567063c49caa390ace09c43454b092
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 040c51723a2505a1320d2ecde38c9ed1cd19d254
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734926"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>Метод ICorProfilerCallback2::GarbageCollectionFinished
-Уведомляет профилировщик о сборки мусора и всех обратных вызовов, выданные для него.  
+Уведомляет профилировщик, что для завершения сборки мусора, так и для всех обратных вызовов, выданные для него.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,17 +34,17 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Безопасно для профилировщика для проверки объектов в их конечных расположениях при `GarbageCollectionFinished` вызывается метод.  
+ Безопасно для профилировщика для проверки объектов в соответствующих расположениях при `GarbageCollectionFinished` вызывается метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

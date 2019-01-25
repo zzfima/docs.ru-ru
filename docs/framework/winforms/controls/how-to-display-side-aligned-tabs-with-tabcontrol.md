@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение расположенных сбоку вкладок с помощью TabControl
+title: Как выполнить Отображение сбоку вкладок с помощью TabControl
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650587"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Практическое руководство. Отображение расположенных сбоку вкладок с помощью TabControl
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Как выполнить Отображение сбоку вкладок с помощью TabControl
 Свойство <xref:System.Windows.Forms.TabControl.Alignment%2A> элемента <xref:System.Windows.Forms.TabControl> поддерживает вертикальное отображение вкладок (вдоль левой или правой границы элемента управления), в отличие от горизонтального отображения (поперек верхней или нижней области элемента управления). Вертикальное отображение по умолчанию бывает неудобным для пользователя, так как свойство <xref:System.Windows.Forms.TabPage.Text%2A> объекта <xref:System.Windows.Forms.TabPage> не отображается на вкладке при включении стилей оформления. Также не предусмотрена возможность прямого управления направлением текста на вкладке. Для улучшения взаимодействия с пользователем можно использовать рисование владельцем на <xref:System.Windows.Forms.TabControl>.  
   
  Ниже описан порядок визуализации вкладок с выравниванием по правому краю, в которых текст располагается слева направо, с помощью функции "рисование владельцем".  
@@ -40,5 +40,5 @@ ms.locfileid: "33532465"
      [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- [Элемент управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Элемент управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)

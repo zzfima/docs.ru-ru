@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711279"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  
@@ -126,9 +126,9 @@ ms.locfileid: "46696805"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue и приоритет значения  
  <xref:System.Windows.DependencyObject.ClearValue%2A> Метод предоставляет соответствующие средства для очистки любого применяемого локально значения из свойства зависимости, которое задается в элементе. Однако, при вызове <xref:System.Windows.DependencyObject.ClearValue%2A> не гарантирует, что новое действительное значение по умолчанию, заданное в метаданных во время регистрации свойства. Все остальные участники в приоритете значений будут по-прежнему активны. Только локально заданное значение удаляется из последовательности приоритетов. Например, если вы вызываете <xref:System.Windows.DependencyObject.ClearValue%2A> по свойству, где этот также задано тематическим стилем, а затем тематическое значение будет применено как новое значение, а не по умолчанию на основе метаданных. Если вы хотите извлечь все элементы значения свойства из процесса и значение по умолчанию зарегистрированные метаданные, можно получить значение по умолчанию точно, путем запроса метаданных свойства зависимостей, а затем можно использовать локально значение по умолчанию свойство с вызовом <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

@@ -2,12 +2,12 @@
 title: Фильтрация данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d3f44d0b6478103a10fb731988aeebc005cde82e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527839"
 ---
 # <a name="filtering-data-visual-basic"></a>Фильтрация данных (Visual Basic)
 Фильтрация — это операция по ограничению значений в результирующем наборе только элементами, соответствующими указанному условию. Это также называется выборкой.  
@@ -20,7 +20,7 @@ ms.locfileid: "33644346"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание:|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |OfType|Выбирает значения в зависимости от возможности приведения их к указанному типу.|Неприменимо.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|Выбирает значения, основанные на функции предиката.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
@@ -49,11 +49,11 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>  
- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Предложения Where](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [How to: Filter Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md) (Практическое руководство. Фильтрование результатов запроса)  
- [Как: запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- [Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- [Как: сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Linq>
+- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Предложения Where](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Практическое руководство. Фильтрование результатов запроса](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Практическое руководство. Запрос файлов с указанными атрибутами или именем (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

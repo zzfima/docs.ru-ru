@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac3c6698e4ca127257b7682f1f55acd663375280
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1492c9eac9d647c2b71c47cf758265152783d991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673887"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Метод ICorPublishAppDomainEnum::Next
-Возвращает заданное число доменов приложений, которые в настоящий момент находятся в процессе, начиная с текущей позиции.  
+Получает указанное число доменов приложений, которые в настоящее время существуют в процессе, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,16 +46,16 @@ HRESULT Next (
  [out] Получить указатель на массив [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) объектов, каждый из которых представляет домен приложения.  
   
  `pceltFetched`  
- [out] Указатель на число фактически извлеченных доменов приложений. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на количество фактически возвращенных доменов приложений. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorPub.idl, CorPub.h  
+ **Заголовок.** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

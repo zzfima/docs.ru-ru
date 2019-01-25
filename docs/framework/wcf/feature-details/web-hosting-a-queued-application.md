@@ -2,12 +2,12 @@
 title: Размещение веб-узлов в приложении, использующем очереди
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700212"
 ---
 # <a name="web-hosting-a-queued-application"></a>Размещение веб-узлов в приложении, использующем очереди
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как net.msmq и msmq.formatname, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
@@ -41,6 +41,6 @@ ms.locfileid: "53131356"
 ### <a name="subqueue-and-system-queue-caveat"></a>Вложенная очередь и недостаток системных очередей  
  Приложение, размещенное WAS не может быть активировано посредством сообщений из системных очередей, таких как общесистемная очередь недоставленных сообщений или вложенных очередей, таких как вложенные очереди подозрительных сообщений. Это ограничение для данной версии продукта.  
   
-## <a name="see-also"></a>См. также  
- [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>См. также
+- [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 595bc20b51ef81d7dea61620040ceb50c9418f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589973"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Метод IMetaDataTables::GetNextString
-Возвращает индекс следующей строки в текущем столбце таблицы.  
+Получает индекс следующей строки в текущем столбце таблицы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +38,20 @@ HRESULT GetNextString (
   
 #### <a name="parameters"></a>Параметры  
  `ixString`  
- [in] Значение индекса из столбца строки таблицы.  
+ [in] Значение индекса из строкового столбца таблицы.  
   
  `pNext`  
  [out] Указатель на индекс следующей строки в столбце.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
