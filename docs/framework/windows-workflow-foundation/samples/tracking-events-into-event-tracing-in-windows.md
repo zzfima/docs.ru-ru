@@ -2,12 +2,12 @@
 title: Отслеживание событий в системе трассировки событий Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 70c75be09528b31572bdf0dc322af5bcd7e3ca5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592865"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Отслеживание событий в системе трассировки событий Windows
 В этом примере показано, как включить Windows Workflow Foundation (WF) в службе рабочего процесса отслеживание и создания событий отслеживания, для отслеживания событий для Windows (ETW). Для создания записей отслеживания рабочих процессов в ETW в этом образце используется участник отслеживания трассировки событий Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -149,5 +149,5 @@ ms.locfileid: "48837288"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>См. также  
- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>См. также
+- [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
