@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5b6cab555144c25c5984d74d19d5e81aa1a196d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513191"
 ---
-# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="8452e-102">Метод ICorProfilerFunctionControl::SetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="8452e-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
-<span data-ttu-id="8452e-103">Заменяет тело метода на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="8452e-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
+# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="0c3a9-102">Метод ICorProfilerFunctionControl::SetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="0c3a9-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
+<span data-ttu-id="0c3a9-103">Заменяет тело метода на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8452e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8452e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c3a9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0c3a9-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILFunctionBody(  
@@ -35,31 +35,31 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8452e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8452e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0c3a9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0c3a9-105">Parameters</span></span>  
  `cbNewILMethodHeader`  
- <span data-ttu-id="8452e-106">[in] Общий размер нового кода CIL, включая заголовок и все структуры после тела.</span><span class="sxs-lookup"><span data-stu-id="8452e-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
+ <span data-ttu-id="0c3a9-106">[in] Общий размер нового кода CIL, включая заголовок и все структуры после тела.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="8452e-107">[in] Указатель на новый заголовок на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="8452e-107">[in] A pointer to the new CIL header.</span></span>  
+ <span data-ttu-id="0c3a9-107">[in] Указатель на новый заголовок на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-107">[in] A pointer to the new CIL header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8452e-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8452e-108">Return Value</span></span>  
- <span data-ttu-id="8452e-109">Этот метод возвращает следующие специфичные результаты HRESULT.</span><span class="sxs-lookup"><span data-stu-id="8452e-109">This method returns the following specific HRESULTs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0c3a9-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0c3a9-108">Return Value</span></span>  
+ <span data-ttu-id="0c3a9-109">Этот метод возвращает следующие специфичные результаты HRESULT.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-109">This method returns the following specific HRESULTs.</span></span>  
   
-|<span data-ttu-id="8452e-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8452e-110">HRESULT</span></span>|<span data-ttu-id="8452e-111">Описание</span><span class="sxs-lookup"><span data-stu-id="8452e-111">Description</span></span>|  
+|<span data-ttu-id="0c3a9-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0c3a9-110">HRESULT</span></span>|<span data-ttu-id="0c3a9-111">Описание</span><span class="sxs-lookup"><span data-stu-id="0c3a9-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8452e-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="8452e-112">S_OK</span></span>|<span data-ttu-id="8452e-113">Замена выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="8452e-113">The replacement was successful.</span></span>|  
+|<span data-ttu-id="0c3a9-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="0c3a9-112">S_OK</span></span>|<span data-ttu-id="0c3a9-113">Замена выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-113">The replacement was successful.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8452e-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="8452e-114">Remarks</span></span>  
- <span data-ttu-id="8452e-115">В отличие от [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) метода `SetILFunctionBody` метод управляет памятью, требуемой для нового тела на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="8452e-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="8452e-116">Это означает, что предоставленное профилировщиком тело на языке CIL не имеет выделенной с помощью [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) интерфейс или в пределах определенного диапазона.</span><span class="sxs-lookup"><span data-stu-id="8452e-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="8452e-117">Его можно разместить в любой куче.</span><span class="sxs-lookup"><span data-stu-id="8452e-117">It can be allocated on any heap.</span></span> <span data-ttu-id="8452e-118">Профилировщик может освободить память, используемая для тела на языке CIL после `SetILFunctionBody` возвращает.</span><span class="sxs-lookup"><span data-stu-id="8452e-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c3a9-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="0c3a9-114">Remarks</span></span>  
+ <span data-ttu-id="0c3a9-115">В отличие от [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) метод, `SetILFunctionBody` метод управляет памятью, требуемой для нового тела на языке CIL.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="0c3a9-116">Это означает, что предоставленное профилировщиком тело на языке CIL не имеет для распределения с помощью [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) интерфейса или в пределах определенного диапазона.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="0c3a9-117">Его можно разместить в любой куче.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-117">It can be allocated on any heap.</span></span> <span data-ttu-id="0c3a9-118">Профилировщик может освободить память, используемая для его тела на языке CIL после `SetILFunctionBody` возвращает.</span><span class="sxs-lookup"><span data-stu-id="0c3a9-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8452e-119">Требования</span><span class="sxs-lookup"><span data-stu-id="8452e-119">Requirements</span></span>  
- <span data-ttu-id="8452e-120">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8452e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c3a9-119">Требования</span><span class="sxs-lookup"><span data-stu-id="0c3a9-119">Requirements</span></span>  
+ <span data-ttu-id="0c3a9-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c3a9-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8452e-121">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8452e-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0c3a9-121">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0c3a9-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8452e-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8452e-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0c3a9-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0c3a9-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8452e-123">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8452e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0c3a9-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c3a9-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8452e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="8452e-124">See Also</span></span>  
- [<span data-ttu-id="8452e-125">Интерфейс ICorProfilerFunctionControl</span><span class="sxs-lookup"><span data-stu-id="8452e-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0c3a9-124">См. также</span><span class="sxs-lookup"><span data-stu-id="0c3a9-124">See also</span></span>
+- [<span data-ttu-id="0c3a9-125">Интерфейс ICorProfilerFunctionControl</span><span class="sxs-lookup"><span data-stu-id="0c3a9-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bae646b0b1cdd451e01d55ed5b218f3660bb5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac0b6ac09db452eb06c633027e9596bda6627005
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509393"
 ---
-# <a name="getcachepath-function"></a><span data-ttu-id="62ad1-102">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="62ad1-102">GetCachePath Function</span></span>
-<span data-ttu-id="62ad1-103">Возвращает путь к кэшированной сборки, используя указанные флаги.</span><span class="sxs-lookup"><span data-stu-id="62ad1-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
+# <a name="getcachepath-function"></a><span data-ttu-id="b371e-102">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="b371e-102">GetCachePath Function</span></span>
+<span data-ttu-id="b371e-103">Получает путь к кэшированную сборку, используя указанные флаги.</span><span class="sxs-lookup"><span data-stu-id="b371e-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62ad1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="62ad1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b371e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b371e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachePath (  
@@ -38,23 +38,23 @@ HRESULT GetCachePath (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62ad1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="62ad1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b371e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b371e-105">Parameters</span></span>  
  `dwCacheFlags`  
- <span data-ttu-id="62ad1-106">[in] [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) значение, указывающее источник кэшированной сборки.</span><span class="sxs-lookup"><span data-stu-id="62ad1-106">[in] An [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
+ <span data-ttu-id="b371e-106">[in] [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) значение, указывающее источник кэшированную сборку.</span><span class="sxs-lookup"><span data-stu-id="b371e-106">[in] An [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
   
  `pwzCachePath`  
- <span data-ttu-id="62ad1-107">[out] Возвращенный указатель пути.</span><span class="sxs-lookup"><span data-stu-id="62ad1-107">[out] The returned pointer to the path.</span></span>  
+ <span data-ttu-id="b371e-107">[out] Возвращаемый указатель на путь.</span><span class="sxs-lookup"><span data-stu-id="b371e-107">[out] The returned pointer to the path.</span></span>  
   
  `pcchPath`  
- <span data-ttu-id="62ad1-108">[in, out] Запрошенный максимальную длину `pwzCachePath`и при возврате фактическую длину `pwzCachePath`.</span><span class="sxs-lookup"><span data-stu-id="62ad1-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
+ <span data-ttu-id="b371e-108">[in, out] Запрошенный максимальную длину `pwzCachePath`и по возвращении фактическую длину `pwzCachePath`.</span><span class="sxs-lookup"><span data-stu-id="b371e-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62ad1-109">Требования</span><span class="sxs-lookup"><span data-stu-id="62ad1-109">Requirements</span></span>  
- <span data-ttu-id="62ad1-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62ad1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b371e-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b371e-109">Requirements</span></span>  
+ <span data-ttu-id="b371e-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b371e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62ad1-111">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="62ad1-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b371e-111">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b371e-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="62ad1-112">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62ad1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b371e-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b371e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62ad1-113">См. также</span><span class="sxs-lookup"><span data-stu-id="62ad1-113">See Also</span></span>  
- [<span data-ttu-id="62ad1-114">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="62ad1-114">ASM_CACHE_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- [<span data-ttu-id="62ad1-115">Глобальные статические функции Fusion</span><span class="sxs-lookup"><span data-stu-id="62ad1-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="b371e-113">См. также</span><span class="sxs-lookup"><span data-stu-id="b371e-113">See also</span></span>
+- [<span data-ttu-id="b371e-114">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="b371e-114">ASM_CACHE_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+- [<span data-ttu-id="b371e-115">Глобальные статические функции Fusion</span><span class="sxs-lookup"><span data-stu-id="b371e-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
