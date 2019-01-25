@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670320"
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="9594f-102">Разделы руководства, посвященные изображениям</span><span class="sxs-lookup"><span data-stu-id="9594f-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="9594f-103">В подразделах этого раздела описывается использование <xref:System.Windows.Media.Drawing> объектов для рисования фигур, изображений или текста.</span><span class="sxs-lookup"><span data-stu-id="9594f-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="d20d9-102">Разделы руководства, посвященные изображениям</span><span class="sxs-lookup"><span data-stu-id="d20d9-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="d20d9-103">В этом разделе описываются способы использования <xref:System.Windows.Media.Drawing> объектов для рисования фигур, изображений и текста.</span><span class="sxs-lookup"><span data-stu-id="d20d9-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9594f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9594f-104">In This Section</span></span>  
- [<span data-ttu-id="9594f-105">Применение объекта GuidelineSet к рисунку</span><span class="sxs-lookup"><span data-stu-id="9594f-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="9594f-106">Создание составного рисунка</span><span class="sxs-lookup"><span data-stu-id="9594f-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="9594f-107">Создание объекта GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="9594f-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="9594f-108">Рисование изображения с помощью объекта ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="9594f-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="9594f-109">Воспроизведение мультимедиа с помощью объекта VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="9594f-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="9594f-110">Использование рисунка в качестве источника изображения</span><span class="sxs-lookup"><span data-stu-id="9594f-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d20d9-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d20d9-104">In This Section</span></span>  
+ [<span data-ttu-id="d20d9-105">Применение объекта GuidelineSet к рисунку</span><span class="sxs-lookup"><span data-stu-id="d20d9-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="d20d9-106">Создание составного рисунка</span><span class="sxs-lookup"><span data-stu-id="d20d9-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="d20d9-107">Создание объекта GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="d20d9-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="d20d9-108">Рисование изображения с помощью объекта ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="d20d9-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="d20d9-109">Воспроизведение мультимедиа с помощью объекта VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="d20d9-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="d20d9-110">Использование рисунка в качестве источника изображения</span><span class="sxs-lookup"><span data-stu-id="d20d9-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9594f-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9594f-111">See Also</span></span>  
- <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="9594f-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="9594f-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="9594f-113">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="9594f-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="9594f-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="9594f-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="d20d9-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d20d9-111">See also</span></span>
+- <xref:System.Windows.Media.Drawing>
+- [<span data-ttu-id="d20d9-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="d20d9-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="d20d9-113">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="d20d9-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="d20d9-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="d20d9-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
