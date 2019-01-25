@@ -9,15 +9,15 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671984"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
-<xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемую область, в случае, если содержимое может прокручиваться по горизонтали или вертикали.  
+<xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
@@ -28,6 +28,6 @@ ms.locfileid: "33556072"
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Макет](../../../../docs/framework/wpf/advanced/layout.md)

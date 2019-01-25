@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6aaa334c83aff18886c0c2db4462d6baaa4cd70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687418"
 ---
 # <a name="corprfjitcache-enumeration"></a>Перечисление COR_PRF_JIT_CACHE
 Указывает результат кэшированной функции поиска.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` имеет значение 0, поэтому `COR_PRF_JIT_CACHE` нельзя использовать в качестве логического суррогата.  
+>  `COR_PRF_CACHED_FUNCTION_FOUND` имеет нулевое значение, поэтому `COR_PRF_JIT_CACHE` нельзя использовать в качестве логического суррогат.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,19 +40,19 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_FUNCTION_FOUND`|Найденное функции.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Функция поиска не найдена.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Поиск не удалось найти функцию.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

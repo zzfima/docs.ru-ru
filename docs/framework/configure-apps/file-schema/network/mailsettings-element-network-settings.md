@@ -8,25 +8,25 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 5c7b4d8fae2774fe8e52718fbce91e4bc193c124
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 954755c7576e0ca4dd7946926c77e1e7e18055e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713958"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; (сетевые параметры)
 Настраивает параметры отправки сообщений.  
 
 \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
 <mailSettings>
-  <smtp> … </smtp>  
+  <smtp>...</smtp>  
 </mailSettings>
 ```  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50198436"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Служит для настройки параметров простой протокол транспорта почты.|  
   
@@ -67,6 +67,6 @@ ms.locfileid: "50198436"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.Mail.SmtpClient>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Mail.SmtpClient>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

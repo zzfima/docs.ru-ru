@@ -1,15 +1,15 @@
 ---
-title: 'Практическое: Создание подписанных дружественных сборок (Visual Basic)'
+title: Как выполнить Создание подписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667306"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Практическое: Создание подписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Как выполнить Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
@@ -84,12 +84,12 @@ ms.locfileid: "50188447"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Практическое: создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
- [Создание и использование сборок со строгими именами](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Создание и использование сборок со строгими именами](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
