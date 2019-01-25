@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bac5578caaf5682c12509b41da77b3d7cca76312
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b13968e999fb737c954fc41ed2ec220e7894b73b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634097"
 ---
 # <a name="icordebugilcode-interface"></a>Интерфейс ICorDebugILCode
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -26,19 +26,19 @@ ms.locfileid: "33415237"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|Возвращает указатель на список предложений обработки исключений, определенных для этого промежуточного языка.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

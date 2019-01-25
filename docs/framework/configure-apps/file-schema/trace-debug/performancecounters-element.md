@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701928"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; элемент
 Задает размер глобальной памяти, совместно используемой счетчиками производительности.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<performanceCounters >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,7 +44,7 @@ ms.locfileid: "48032469"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`Configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
@@ -56,8 +56,8 @@ ms.locfileid: "48032469"
   
  Размер отдельной общей памяти, значение DWORD FileMappingSize в реестре раздела HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<имя категории >* \Performance указывается ссылка на Во-первых следует значение, указанное для глобальной общей памяти в файле конфигурации. Если значение FileMappingSize не существует, то размер отдельной общей памяти задается равным одной четвертой (1/4) глобальные настройки в файле конфигурации.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701915"
 ---
 # <a name="application-settings-schema"></a>Схема параметров приложения
 
@@ -24,7 +24,7 @@ ms.locfileid: "49123342"
 
 Параметры приложения определяет следующие элементы как часть файлов конфигурации, используемые в нем.
 
-| Элемент                    | Описание                                                                           |
+| Элемент                    | Описание:                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | Содержит все  **\<параметр >** теги, относящиеся к приложению.                         |
 | **\<userSettings >**        | Содержит все  **\<параметр >** теги, относящиеся к текущему пользователю.                        |
@@ -43,10 +43,10 @@ ms.locfileid: "49123342"
 
 Этот элемент определяет параметр. Он имеет следующие атрибуты.
 
-| Атрибут        | Описание |
+| Атрибут        | Описание: |
 | ---------------- | ----------- |
-| **name**         | Обязательно. Уникальный идентификатор параметра. Параметры, созданные с помощью Visual Studio сохраняются с именем `ProjectName.Properties.Settings`. |
-| **serializedAs** | Обязательно. Формат, используемый для сериализации значение к тексту. Допустимые значения:<br><br>- `string`. Значение сериализуется как строки с помощью <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Значение сериализуется с помощью XML-сериализации.<br>- `binary`. Значение сериализуется как двоичные кодировке текста, с использованием двоичной сериализации.<br />- `custom`. Поставщик параметров имеет распознает этот параметр и сериализует и десериализует его. |
+| **name**         | Обязательный. Уникальный идентификатор параметра. Параметры, созданные с помощью Visual Studio сохраняются с именем `ProjectName.Properties.Settings`. |
+| **serializedAs** | Обязательный. Формат, используемый для сериализации значение к тексту. Допустимые значения:<br><br>- `string`. Значение сериализуется как строки с помощью <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Значение сериализуется с помощью XML-сериализации.<br>- `binary`. Значение сериализуется как двоичные кодировке текста, с использованием двоичной сериализации.<br />- `custom`. Поставщик параметров имеет распознает этот параметр и сериализует и десериализует его. |
 
 ## <a name="value-element"></a>\<Значение > элемент
 
@@ -92,5 +92,5 @@ ms.locfileid: "49123342"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о параметрах приложений](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Архитектура параметров приложения](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Общие сведения о параметрах приложений](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Архитектура параметров приложения](~/docs/framework/winforms/advanced/application-settings-architecture.md)

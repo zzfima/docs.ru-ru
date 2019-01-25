@@ -2,21 +2,21 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660584"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Заставляет канал передавать сообщения через транспорт MSMQ, если он включен в пользовательскую привязку.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<msmqIntegration >  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,13 +71,13 @@ ms.locfileid: "54147919"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Задает параметры безопасности транспорта для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Задает параметры безопасности транспорта для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
@@ -86,15 +86,15 @@ ms.locfileid: "54147919"
   
  Данный элемент привязки используется стандартной привязкой очереди сообщений в качестве элемента привязки по умолчанию (`netMsmqBinding`).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

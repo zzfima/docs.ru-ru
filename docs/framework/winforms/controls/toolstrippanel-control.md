@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86940b97ed373dc90f82520104b9b85019873cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745263"
 ---
 # <a name="toolstrippanel-control"></a>Элемент управления ToolStripPanel
 Элемент управления `ToolStripPanel` обеспечивает совместное использование горизонтального или вертикального пространства в области инструментов при прикреплении и размещении элементов управления <xref:System.Windows.Forms.ToolStrip> в том случае, когда четыре панели и центральная панель <xref:System.Windows.Forms.ToolStripContainer> не нужны.  
@@ -27,12 +27,12 @@ ms.locfileid: "33535432"
  [Практическое руководство. Соединение нескольких ToolStripPanel](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
  Демонстрируется добавление элементов управления <xref:System.Windows.Forms.ToolStrip> в `ToolStripPanel`.  
   
- [Практическое руководство. Использование элементов управления ToolStripPanel при создании форм MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ [Практическое руководство. Руководство.](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
  Демонстрируется гибкость, обеспечиваемая элементами управления `ToolStripPanel` в приложении с интерфейсом MDI.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ToolStripPanel>  
  Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripPanel>.  
   
-## <a name="see-also"></a>См. также  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

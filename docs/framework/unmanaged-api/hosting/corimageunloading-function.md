@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556146"
 ---
 # <a name="corimageunloading-function"></a>Функция _CorImageUnloading
-Уведомляет загрузчика при выгрузке образов управляемых модулей.  
+Уведомляет загрузчик о выгрузке образов управляемого модуля.  
   
- Эта функция не реализована. При вызове возвращает значение E_NOTIMPL.  
+ Эта функция не реализована. При вызове, он возвращает E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +38,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 #### <a name="parameters"></a>Параметры  
  `ImageBase`  
- [in] Указатель начальной позиции образа для выгрузки.  
+ [in] Указатель на начальное расположение образа для выгрузки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

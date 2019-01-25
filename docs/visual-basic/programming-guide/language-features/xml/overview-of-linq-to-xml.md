@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 65df48112834be04dc8d3b62b8b163316b06c4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13997b8588e11eb3600a6fd838e0514069d0e62a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539031"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Общие сведения о LINQ to XML в Visual Basic
 Visual Basic предоставляет поддержку для [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] через литералы XML и свойства оси XML. Это позволяет использовать знакомый и удобный синтаксис для работы с XML в коде Visual Basic. *XML-литералов* позволяют включать XML непосредственно в коде. *Свойства оси XML* позволяют осуществлять доступ дочерних узлов, узлов-потомков и атрибуты XML-литерала. Дополнительные сведения см. в разделе [Общие сведения о литералах XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) и [доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -61,8 +61,8 @@ Visual Basic предоставляет поддержку для [!INCLUDE[sqlt
   
  [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
-## <a name="see-also"></a>См. также  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- [Работа с XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a>См. также
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Работа с XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

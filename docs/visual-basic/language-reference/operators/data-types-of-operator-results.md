@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650487"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Типы данных результатов оператора (Visual Basic)
 Visual Basic определяет тип данных результата операции на основе типов данных операндов. В некоторых случаях это может быть типом данных с диапазоном больше, чем один из операндов.  
@@ -86,7 +86,7 @@ Visual Basic определяет тип данных результата оп�
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |Унарный `+`|Short|SByte|Byte|Short|UShort|Целое число|UInteger|Long|ULong|  
-|Унарный `–`|Short|SByte|Short|Short|целое число|Целое число|Long|Long|Десятичное число|  
+|Унарный `–`|Short|SByte|Short|Short|Целое число|Целое число|Long|Long|Десятичное число|  
   
 ### <a name="-and--operators"></a><\< и >> операторы  
  Следующей таблице показаны типы данных результата для двух операторов сдвига, `<<` и `>>`. Visual Basic обрабатывает каждый оператор битового сдвига как унарный оператор на левый операнд (битовый шаблон должны сдвигаться).  
@@ -104,10 +104,10 @@ Visual Basic определяет тип данных результата оп�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|целое число|Целое число|Long|Long|Десятичное число|  
-|`SByte`|SByte|SByte|Short|Short|целое число|Целое число|Long|Long|Десятичное число|  
+|`Boolean`|Short|SByte|Short|Short|Целое число|Целое число|Long|Long|Десятичное число|  
+|`SByte`|SByte|SByte|Short|Short|Целое число|Целое число|Long|Long|Десятичное число|  
 |`Byte`|Short|Short|Byte|Short|UShort|Целое число|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|целое число|Целое число|Long|Long|Десятичное число|  
+|`Short`|Short|Short|Short|Short|Целое число|Целое число|Long|Long|Десятичное число|  
 |`UShort`|Целое число|Целое число|UShort|Целое число|UShort|Целое число|UInteger|Long|ULong|  
 |`Integer`|Целое число|Целое число|Целое число|Целое число|Целое число|Целое число|Long|Long|Десятичное число|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -120,10 +120,10 @@ Visual Basic определяет тип данных результата оп�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|целое число|Целое число|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|целое число|Целое число|Long|Long|Long|  
+|`Boolean`|Short|SByte|Short|Short|Целое число|Целое число|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|Целое число|Целое число|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|Целое число|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|целое число|Целое число|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|Целое число|Целое число|Long|Long|Long|  
 |`UShort`|Целое число|Целое число|UShort|Целое число|UShort|Целое число|UInteger|Long|ULong|  
 |`Integer`|Целое число|Целое число|Целое число|Целое число|Целое число|Целое число|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -156,10 +156,10 @@ Visual Basic определяет тип данных результата оп�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boolean|SByte|Short|Short|целое число|Целое число|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|целое число|Целое число|Long|Long|Long|  
+|`Boolean`|Boolean|SByte|Short|Short|Целое число|Целое число|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|Целое число|Целое число|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|Целое число|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|целое число|Целое число|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|Целое число|Целое число|Long|Long|Long|  
 |`UShort`|Целое число|Целое число|UShort|Целое число|UShort|Целое число|UInteger|Long|ULong|  
 |`Integer`|Целое число|Целое число|Целое число|Целое число|Целое число|Целое число|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -175,14 +175,14 @@ Visual Basic определяет тип данных результата оп�
   
  `Like` Оператор определен только для сопоставления шаблонов `String` операндов. Visual Basic пытается преобразовать каждый операнд при необходимости `String` перед выполнением операции. Тип данных результата — всегда `Boolean`.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Операторы](../../../visual-basic/language-reference/operators/index.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>См. также
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Инструкции](../../../visual-basic/language-reference/operators/index.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

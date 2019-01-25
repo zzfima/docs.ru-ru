@@ -9,18 +9,18 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: 854160e8b1b049fdb2f3421b9eb24cf410f33672
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: af9ea902cba2c8be0fbee621297af3198bbec150
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620478"
 ---
 # <a name="button-styles-and-templates"></a>Стили и шаблоны элемента Button
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Button> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Button> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="button-parts"></a>Кнопка частей  
- <xref:System.Windows.Controls.Button> Управления не имеет именованных частей.  
+ <xref:System.Windows.Controls.Button> Управления не имеет частей с именами.  
   
 ## <a name="button-states"></a>Состояния кнопок  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Button> элемента управления.  
@@ -33,12 +33,12 @@ ms.locfileid: "34457168"
 |Отключено|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` и элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` и элемент управления имеет фокус.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` и элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` и элемент управления не имеет фокуса.|  
   
 ## <a name="button-controltemplate-example"></a>Пример шаблона элемента управления кнопки  
- В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button> элемента управления.  
+ В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button> элемента управления.  
   
  [!code-xaml[ControlTemplateExamples#Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
@@ -48,10 +48,10 @@ ms.locfileid: "34457168"
   
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

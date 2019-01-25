@@ -12,7 +12,7 @@ ms.locfileid: "54692276"
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatorclosed"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorClosed
 System.ServiceModel.Security.SecurityTokenAuthenticatorClosed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Средство проверки подлинности маркеров безопасности закрыто.  
   
 ## <a name="see-also"></a>См. также

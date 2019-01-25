@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712474"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Добавить&gt; элемент для &lt;sharedListeners&gt;
 Добавляет прослушиватель в коллекцию `sharedListeners`. `sharedListeners` — Это коллекция прослушивателей, что все [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) может ссылаться на.  По умолчанию, в прослушиватели `sharedListeners` коллекции не помещаются в `Listeners` коллекции. Они должны быть добавлены по имени, чтобы [ \<источника >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) или [ \<трассировки >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Невозможно получить прослушиватели `sharedListeners` коллекции в коде во время выполнения.  
   
  \<configuration>  
-&nbsp;&nbsp;\<System.Diagnostics >  
+&nbsp;&nbsp;\<system.diagnostics>  
 &nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > элемент  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Добавить >  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53151169"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -110,8 +110,8 @@ ms.locfileid: "53151169"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

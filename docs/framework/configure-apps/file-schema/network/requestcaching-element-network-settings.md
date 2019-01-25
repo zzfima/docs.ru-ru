@@ -8,31 +8,31 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: fecb3c71e0686a557b8a4b0c85b7d91a9846204f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5d74a033b14d5f1b523422d0afd360206c0cb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685017"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; (сетевые параметры)
 Определяет механизм кэширования для сетевых запросов.  
   
  \<configuration>  
-\<System.NET >  
-\<requestCaching >  
+\<system.net>  
+\<requestCaching>  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-      <requestCaching>  
-        isPrivateCache ="true|false"  
-        disableAllCaching="true|false"  
-        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-        unspecifiedMaximumAge= "d.hh.mm.ss">  
-          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-      </requestCaching>
+<requestCaching  
+  isPrivateCache ="true|false"  
+  disableAllCaching="true|false"  
+  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+  unspecifiedMaximumAge= "d.hh.mm.ss">  
+    <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
+    <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
+</requestCaching>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -40,7 +40,7 @@ ms.locfileid: "50194973"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`isPrivateCache`|Указывает, обеспечивает ли кэш изоляцию сведений различных пользователей. Значение по умолчанию — `true`. Это значение должно быть `false` для приложений среднего уровня.|  
 |`disableAllCaching`|Указывает, что кэширование отключено для всех веб-откликов и не может быть переопределен программным способом.|  
@@ -49,7 +49,7 @@ ms.locfileid: "50194973"
   
 ## <a name="policylevel-attribute"></a>policyLevel атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`Default`|Возвращает кэшированный ресурс, если ресурс является новым, длина содержимого точна и присутствуют атрибуты content-length, модификации и истечения срока действия.|  
 |`BypassCache`|Возвращает ресурс с сервера.|  
@@ -62,7 +62,7 @@ ms.locfileid: "50194973"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли HTTP-кэширования и описывает политику кэширования по умолчанию.|  
 |[\<defaultFtpCachePolicy > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.|  
@@ -86,6 +86,6 @@ ms.locfileid: "50194973"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Net.Cache?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

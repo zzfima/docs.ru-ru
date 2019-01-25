@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aff8fa88fe811d5a07ea8ffb1653e403338ba546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01d8821cdcb27ed44491db41da22309147da8a36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706739"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>Метод IHostSecurityContext::Capture
-Возвращает точную копию [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) экземпляр возвращен из вызова [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
+Возвращает точную копию [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) экземпляр, возвращаемый из вызова [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT Capture (
   
 #### <a name="parameters"></a>Параметры  
  `ppClonedContext`  
- [out] Указатель на адрес клон `IHostSecurityContext` объектов для отслеживания.  
+ [out] Указатель на адрес клон `IHostSecurityContext` объекта, которые должны отслеживаться.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -47,21 +47,21 @@ HRESULT Capture (
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
+|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Указатель интерфейса, возвращенный из `Capture` является клоном перехваченного контекста. При перемещении этих сведений по асинхронным точкам кода время существования отделяется от, указатель, по которой был выполнен вызов. Таким образом могут быть сняты исходный указатель.  
+ Указатель интерфейса, возвращенный из `Capture` является клоном захваченном контексте. Эти сведения при перемещении между точкой асинхронного кода, его времени существования, отделен от, для которого был выполнен вызов указателя. Исходный указатель таким образом могут быть сняты.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- [Интерфейс IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [Интерфейс IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

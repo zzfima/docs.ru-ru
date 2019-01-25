@@ -2,12 +2,12 @@
 title: Вопросы безопасности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612831"
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "45591958"
   
 -   Использование построителей строки соединения при динамическом создании соединений.  
   
-     Если строки соединения необходимо конструировать во время выполнения, используется класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Этот класс построителя строк соединения помогает предотвратить атаки внедрения кода путем проверки входных данных и экранирования недопустимых данных. Дополнительные сведения см. в разделе [как: сборка строки подключения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Соответствующий класс построителя используется также для создания строки подключения источника данных, который является частью [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] строку подключения. Сведения о построителях строк соединения для поставщиков ADO.NET см. в разделе [построители строк подключения](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Если строки соединения необходимо конструировать во время выполнения, используется класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Этот класс построителя строк соединения помогает предотвратить атаки внедрения кода путем проверки входных данных и экранирования недопустимых данных. Дополнительные сведения см. в разделе [Как Построить строку соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Соответствующий класс построителя используется также для создания строки подключения источника данных, который является частью [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] строку подключения. Сведения о построителях строк соединения для поставщиков ADO.NET см. в разделе [построители строк подключения](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Дополнительные сведения см. в разделе [Защита сведений о подключении](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "45591958"
   
 -   Разрешение на открытие подключения к базе данных и выполнения команд в базе данных, таких как <xref:System.Data.SqlClient.SqlClientPermission> для базы данных SQL Server.  
   
- Дополнительные сведения см. в разделе [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Для получения дополнительной информации см. [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>Не устанавливайте приложения, не заслуживающие доверия  
  Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] не требует применения каких-либо прав доступа и вызовет любой объектный код в процессе, переданный пользователем, независимо от того, надежен он или нет Убедитесь, что проверка подлинности и авторизация клиента выполняются хранилищем данных и приложением.  
@@ -161,7 +161,7 @@ ms.locfileid: "45591958"
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Не следует принимать объекты MetadataWorkspace из ненадежных источников  
  Приложения не должны принимать экземпляры объектов класса <xref:System.Data.Metadata.Edm.MetadataWorkspace> из ненадежных источников. Вместо этого необходимо явно создать и заполнить рабочую область из такого источника.  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Практическое: перехват анализа ошибок (Visual Basic)'
+title: Как выполнить Перехват анализа ошибок (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f438a247866fdea8935be2b881a77f97c152b98f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667093"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Практическое: перехват анализа ошибок (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Как выполнить Перехват анализа ошибок (Visual Basic)
 В этом разделе показано, как обнаружить код XML, имеющий неправильный формат или не прошедший проверку правильности.  
   
  Технология [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] реализуется с помощью объекта <xref:System.Xml.XmlReader>. Если средствам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] передается код XML, имеющий неправильный формат или не прошедший проверку правильности, то в базовом классе <xref:System.Xml.XmlReader> активизируется исключение. Различные методы, выполняющие синтаксический анализ XML, например <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, не перехватывают это исключение; его можно перехватить позднее в приложении.  
@@ -41,5 +41,5 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  Сведения об исключениях, которые могут возникать при использовании методов <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> и <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> см. в документации <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>См. также  
- [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>См. также
+- [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

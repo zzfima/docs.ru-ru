@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543858"
 ---
 # <a name="graphics-rendering-tiers"></a>Уровни графической отрисовки
 Уровень отрисовки определяет уровень возможностей графического оборудования и производительность для устройства, на котором выполняется приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "44086041"
 ### <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |-------------|-----------------|  
 |**Отключить аппаратное ускорение**|Указывает, следует ли включить аппаратное ускорение.|  
 |**Максимальное значение мультисэмплинга**|Определяет степень мультисэмплинга для сглаживания содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
@@ -112,7 +112,7 @@ ms.locfileid: "44086041"
 ### <a name="wpf-performance-profiling-tools"></a>Средства профилирования производительности WPF  
  В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. В следующей таблице перечислены средства профилирования производительности, включенные в средство [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite.  
   
-|Средство|Описание|  
+|Средство|Описание:|  
 |----------|-----------------|  
 |Perforator|Используется для анализа поведения отрисовки.|  
 |Visual Profiler|Служит для профилирования использования служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например обработки макета и событий, по элементам в визуальном дереве.|  
@@ -129,10 +129,10 @@ ms.locfileid: "44086041"
  ![Снимок экрана: Инструмент диагностики DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Главное окно инструмента диагностики DirectX  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.RenderCapability>  
- <xref:System.Windows.Media.RenderOptions>  
- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
- [Настройки реестра графической отрисовки](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.RenderCapability>
+- <xref:System.Windows.Media.RenderOptions>
+- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [Настройки реестра графической отрисовки](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

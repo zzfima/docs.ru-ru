@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 362ba0000c739c8fc216186514a63531e603c637
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582103"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Скомпилированные запросы (LINQ to Entities)
 Если приложение многократно выполняет похожие по структуре запросы на платформе Entity Framework, во многих случаях можно повысить производительность, скомпилировав запрос один раз, а затем выполняя его несколько раз с разными параметрами. Например, приложению может понадобиться получить всех клиентов из определенного города; имя города указывается пользователем во время выполнения с помощью формы. Для этих целей технология LINQ to Entities поддерживает использование скомпилированных запросов.  
@@ -68,7 +68,7 @@ ms.locfileid: "43502025"
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>См. также  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [Параметры слияния Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>См. также
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [Параметры слияния Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fd7c2bd4fae94d1ef5021b558a04b734803b68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88a9fa2f720db403c45d4254b17dfaf4689cd0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706908"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>Интерфейс ISymUnmanagedWriter5
 Интерфейс ISymUnmanagedWriter5.  
@@ -25,13 +25,13 @@ ms.locfileid: "33430561"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод CloseMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|Закройте раздел специальных пользовательских данных для маркера в исходный диапазон, сведения о сопоставлении. После его закрытия можно добавить нет Дополнительные сведения о сопоставлении.|  
+|[Метод CloseMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|Закройте раздел специальные пользовательские данные для маркера в исходный диапазон, сведения о сопоставлении. После его закрытия можно добавить нет Дополнительные сведения о сопоставлении.|  
 |[Метод MapTokenToSourceSpan](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|Maps маркер заданных метаданных для заданной строки исходного диапазона в указанный исходный файл.<br /><br /> Должен вызываться между вызовами [метод OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) и [метод CloseMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).|  
-|[Метод OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Откройте раздел специальные пользовательские данные для передачи сведений о сопоставлении span токен источника в. Когда метод уже открыт, или наоборот, возникает ошибка при открытии в этом разделе.|  
+|[Метод OpenMapTokensToSourceSpans](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Откройте раздел специальные пользовательские данные для отправки сопоставления диапазона маркера к источнику данных в. Когда метод уже открыт, или наоборот, является ошибкой при открытии в этом разделе.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [Интерфейс ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Интерфейс ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

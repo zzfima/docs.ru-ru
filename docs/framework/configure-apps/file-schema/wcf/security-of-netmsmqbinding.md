@@ -2,19 +2,19 @@
 title: '&lt;security&gt; для &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: ec164fa8830321f90f824f85841a379d577ab5af
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696390"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; для &lt;netMsmqBinding&gt;
 Определяет параметры безопасности для привязки MSMQ. Он указывает, включена ли поддержка транспорта или безопасности SOAP и, если поддержка включена, указывает используемые уровни защиты и режим проверки подлинности.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
-\<netMsmqBinding >  
+\<netMsmqBinding>  
 \<Привязка >  
 \<Безопасность >  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54147802"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-netmsmqbinding.md)|Определяет параметры безопасности сообщений SOAP. Это элемент типа <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>.|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netmsmqbinding.md)|Определяет параметры безопасности для транспорта MSMQ. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
@@ -53,14 +53,14 @@ ms.locfileid: "54147802"
 |-------------|-----------------|  
 |привязка|Элемент привязки [ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
- <xref:System.ServiceModel.NetMsmqSecurity>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>
+- <xref:System.ServiceModel.NetMsmqBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>
+- <xref:System.ServiceModel.NetMsmqSecurity>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

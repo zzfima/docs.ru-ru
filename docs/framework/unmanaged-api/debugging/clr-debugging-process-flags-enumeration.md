@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662248"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>Перечисление CLR_DEBUGGING_PROCESS_FLAGS
-Предоставляет значения, которые используются в [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод.  
+Предоставляет значения, используемые [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,25 +38,25 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Эта среда выполнения имеет событие catch вверх отладчика управляемого кода для отправки. Различие между событиями, связанной с подключением и catch вверх см.|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Управляемые события, которое находится в состоянии ожидания является <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> запроса.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Эта среда выполнения имеет событие catch вверх управляемого отладчика для отправки. См. в разделе "Примечания" различие между событиями наверстывания и catch вверх.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Управляемое событие, которое находится в состоянии ожидания является <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> запроса.|  
   
 ## <a name="remarks"></a>Примечания  
- Захват событий включают процесса, домена приложения, сборки, модуля и уведомления создания потока, что позволяет использовать отладчик до текущего состояния после он присоединен к процессу. Non-catch вверх событий, которые обозначаются `CLR_DEBUGGING_MANAGED_EVENT_PENDING` флаг, включают все другие события отладчика, такие как исключения и управляемых отладки уведомления помощник (кода MDA).  
+ Захват событий включают процесса, домена приложения, сборки, модуля и поток создания уведомлений, которые приносят отладчик до текущего состояния после ее присоединения к процессу. Non-catch вверх событий, которые обозначены `CLR_DEBUGGING_MANAGED_EVENT_PENDING` флаг, включают все другие события отладчика, такие как исключения и управлении отладки уведомления помощник (кода MDA).  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Флаг позволяет среде выполнения для различения неустранимое исключение и запрос на присоединение отладчика управляемого кода, может быть отменено.  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Флаг позволяет среде выполнения различать неустранимое исключение и запрос на присоединение управляемого отладчика, которое может быть отменено.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Metahost.idl, Metahost.h  
+ **Заголовок.** Metahost.IDL Metahost.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

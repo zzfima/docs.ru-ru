@@ -3,18 +3,18 @@ title: '&lt;etwTracking&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 6defccdd6a81a1c00a4b65fa9214c86e6cccbea2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684335"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
-Поведение службы, которое позволяет службе использовать с помощью отслеживания ETW <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+Поведение службы позволяет ей использовать отслеживание ETW Совместно с <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-\<система. ServiceModel >  
-\<поведения >  
+\<system.ServiceModel>  
+\<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
 \<etwTracking >  
@@ -57,7 +57,7 @@ ms.locfileid: "32756749"
 ## <a name="example"></a>Пример  
  В следующем примере конфигурации показан стандартный участник отслеживания ETW, который настраивается в файле Web.config.  
   
- Идентификатор поставщика, который используется участником отслеживания ETW для внесения записей отслеживания в ETW, определяется в  **\<диагностики >** раздела. Участник отслеживания имеет связанный с ним профиль для указания записей отслеживания, на которые он подписан. Это определяется **profileName** атрибут  **\<Добавить >** элемента. После их определения участник отслеживания добавляется к  **\<etwTracking >** поведение службы. При этом выбранные участники отслеживания добавляются в расширения экземпляра рабочего процесса, чтобы они начали получать записи отслеживания.  
+ Идентификатор поставщика, который используется участником отслеживания ETW использует для внесения записей отслеживания в ETW, определяется в  **\<диагностики >** раздел. Участник отслеживания имеет связанный с ним профиль для указания записей отслеживания, на которые он подписан. Это определяется **profileName** атрибут  **\<Добавить >** элемент. После их определения участник отслеживания добавляется  **\<etwTracking >** поведение службы. При этом выбранные участники отслеживания добавляются в расширения экземпляра рабочего процесса, чтобы они начали получать записи отслеживания.  
   
 ```xml  
 <configuration>   
@@ -84,8 +84,8 @@ ms.locfileid: "32756749"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Участники отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Участники отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

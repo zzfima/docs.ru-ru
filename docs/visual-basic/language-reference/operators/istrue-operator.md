@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 780e67cf54c0bec230d5b052b877cf97a76d3f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641126"
 ---
 # <a name="istrue-operator-visual-basic"></a>Оператор IsTrue (Visual Basic)
 Определяет, является ли выражение `True`.  
@@ -37,14 +37,14 @@ ms.locfileid: "43785196"
  Если не определены никакие преобразования в `Boolean` или `IsTrue` оператор, компилятор сообщает об ошибке.  
   
 > [!NOTE]
->  `IsTrue` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если его операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  `IsTrue` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если его операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода определяется контур структуры, содержащей определения для `IsFalse` и `IsTrue` операторы.  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Оператор OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a>См. также
+- [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Оператор OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)

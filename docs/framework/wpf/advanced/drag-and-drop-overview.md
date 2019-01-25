@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 06c74548ebe9d01a15cea72f409eaa6df9c8d6de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492577"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -123,7 +123,7 @@ ms.locfileid: "33549468"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Пример перетаскивания  
- В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полное описание действий по реализации перетаскивания см. в разделе [Пошаговое руководство. Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полное описание действий по реализации перетаскивания и вставки, см. в разделе [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -216,8 +216,8 @@ ms.locfileid: "33549468"
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Clipboard>  
- [Пошаговое руководство. Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Clipboard>
+- [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
+- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b31db6e6a8ecb3fa15f1a8690b007bdb536b97c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506554"
 ---
 # <a name="getrealprocaddress-function"></a>Функция GetRealProcAddress
-Получает адрес указанной функции, экспортированные из последней установленной версии среды common language runtime (CLR).  
+Получает адрес заданной функции, экспортируемой из последней установленной версии общеязыковой среды выполнения (CLR).  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,25 +42,25 @@ HRESULT GetRealProcAddress (
  [in] Имя функции.  
   
  `ppv`  
- [out] Расположение, получает указатель на адрес функции.  
+ [out] Расположение, которая получает указатель на адрес функции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений, определенных в CorError.h.  
+ Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений, определенных в CorError.h.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|Недопустимый параметр `ppv`.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|Функция не экспортируется из среды выполнения.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

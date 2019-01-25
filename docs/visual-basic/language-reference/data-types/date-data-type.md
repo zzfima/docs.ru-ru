@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520026"
 ---
 # <a name="date-data-type-visual-basic"></a>Тип данных Date (Visual Basic)
 Содержит 64-разрядные (8-байтные) значения IEEE, представляющие даты в диапазоне от 1 января 0001 года до 31 декабря 9999 года и время от 00:00:00 (полночь) до 23:59:9999999. Каждое приращение представляет 100 наносекунд затраченного времени с начала 1 января 1 года по григорианскому календарю. Максимальное значение представляет 100 наносекунд перед началом 1 января 10 000 года.  
@@ -74,11 +74,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.DateTime?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
- [Строки стандартных форматов даты и времени](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [Строки настраиваемых форматов даты и времени](../../../standard/base-types/custom-date-and-time-format-strings.md)  
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>См. также
+- <xref:System.DateTime?displayProperty=nameWithType>
+- [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
+- [Строки стандартных форматов даты и времени](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Строки настраиваемых форматов даты и времени](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

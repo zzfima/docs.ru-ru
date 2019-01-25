@@ -2,21 +2,21 @@
 title: '&lt;windowsstreamsecurity инициирует&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4218072f63cabe511ca9d30c77395f734d961eca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745185"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity инициирует&gt;
 Задает параметры безопасности потока Windows пользовательской привязки.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<windowsstreamsecurity инициирует >  
+\<windowsStreamSecurity>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,11 +45,11 @@ ms.locfileid: "54151128"
 ## <a name="remarks"></a>Примечания  
  Транспорты, использующие такой поточно-ориентированный протокол, как TCP и именованные каналы, поддерживают потоковые обновления транспорта. В частности, WCF обеспечивает обновления системы безопасности. Конфигурация этой безопасности транспорта инкапсулируется этот элемент конфигурации, как и с помощью [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), который можно настроить и добавить в пользовательскую привязку  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -2,12 +2,12 @@
 title: Отмена оставшихся асинхронных задач после одной из них полный (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645812"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Отмена оставшихся асинхронных задач после одной из них полный (Visual Basic)
 Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
@@ -18,13 +18,13 @@ ms.locfileid: "50191211"
 >  Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.  
   
 ## <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
+ Вы можете скачать полный проект Windows Presentation Foundation (WPF) из [пример асинхронности: Настройка приложения тонкую](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) и затем выполните следующие действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который вы распаковали и затем откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
   
 4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAfterOneTask** и выберите команду **Назначить запускаемым проектом**.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "50191211"
   
 6.  Запустите программу несколько раз, чтобы убедиться, что разные задачи завершаются первыми.  
   
- Если вы не хотите загрузить проект, можно открыть этот файл MainWindow.xaml.vb в конце этого раздела.  
+ Если вы не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.vb в конце этого раздела.  
   
 ## <a name="building-the-example"></a>Построение примера  
  В примере в этом разделе добавляется в проект, который был разработан в [Отмена асинхронной задачи или списка задач](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) для отмены списка задач. В примере используется тот же пользовательский интерфейс, хотя кнопка **Отмена** не используется явно.  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Можно загрузить проект со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Можно загрузить проект со страницы [пример асинхронности: По настройке приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))  
-- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))
+- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

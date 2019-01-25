@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd52fce8033876f0599fa0ba25fae0850c0e01f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508496"
 ---
 # <a name="strongnamekeyinstall-function"></a>Функция StrongNameKeyInstall
-Импортирует пару открытого и закрытого ключей в контейнере.  
+Импортирует пару открытого и закрытого ключей в контейнер.  
   
- Эта функция устарела. Используйте [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) метод вместо него.  
+ Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) метод вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,26 +46,26 @@ BOOLEAN StrongNameKeyInstall (
  [in] Двоичный пару ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах для `pbKeyBlob`.  
+ [in] Размер в байтах из `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` При успешном завершении; в противном случае `false`.  
+ `true` После успешного выполнения; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте [StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md) функции, чтобы удалить контейнер ключей.  
   
- Если `StrongNameKeyInstall` функция не завершена, вызовите [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
+ Если `StrongNameKeyInstall` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** WindSee [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** WindSee [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** StrongName.h  
+ **Заголовок.** StrongName.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Метод StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  
- [Метод StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  
- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>См. также
+- [Метод StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [Метод StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f2e166072d140fe00fe8ecaee318051953939d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb08bad82400523d82e4b8589acb2e74fbbd17d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603736"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Метод IMetaDataEmit::DefineUserString
 Получает маркер метаданных для заданной строки литерала.  
@@ -39,23 +39,23 @@ HRESULT DefineUserString (
   
 #### <a name="parameters"></a>Параметры  
  `szString`  
- [in] Строка пользовательского для хранения.  
+ [in] Строка пользователя для хранения.  
   
  `cchString`  
  [in] Число расширенных символов в `szString`.  
   
  `pstk`  
- [out] В назначенный лексема строки.  
+ [out] Маркер строки, назначенный.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MSCorEE.dll  
+ **Библиотека:** Используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

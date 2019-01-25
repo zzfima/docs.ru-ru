@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d2aed72a075fb5fd6fc52d38a05488367b5e4467
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745497"
 ---
 # <a name="concurrency"></a>параллелизм
 Образец Concurrency демонстрирует использование <xref:System.ServiceModel.ServiceBehaviorAttribute> с перечислением <xref:System.ServiceModel.ConcurrencyMode>, определяющим, будет ли экземпляр службы обрабатывать сообщения последовательно или параллельно. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. Этот образец определяет новый контракт, `ICalculatorConcurrency`, унаследованный от `ICalculator`, который добавляет две операции для контроля состояния параллелизма службы. Изменив параметр параллелизма, можно запустить клиент и посмотреть, как изменилось поведение.  
@@ -22,11 +22,11 @@ ms.locfileid: "50186009"
   
  Доступны три режима параллелизма.  
   
--   `Single`: все экземпляры службы обрабатывают в данный момент времени одно сообщение. Это режим параллелизма по умолчанию.  
+-   `Single`: Каждый экземпляр службы одновременно обрабатывает одно сообщение. Это режим параллелизма по умолчанию.  
   
--   `Multiple`: каждый экземпляр службы обрабатывает несколько сообщений параллельно. Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
+-   `Multiple`: Каждый экземпляр службы обрабатывает несколько сообщений параллельно. Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
   
--   `Reentrant`: каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы с повторным входом. Служба принимает такие вызовы только в ответ на собственные вызовы. Повторный вход показан в [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) образца.  
+-   `Reentrant`: Каждый экземпляр службы одновременно обрабатывает одно сообщение, но допускает повторные входящие вызовы. Служба принимает такие вызовы только в ответ на собственные вызовы. Повторный вход показан в [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) образца.  
   
  Использование параллелизма связано с режимом создания экземпляров. В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.PerCall> параллелизм не имеет значения, так как каждое сообщение обрабатывается новым экземпляром службы. В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.Single> имеет значение параллелизм <xref:System.ServiceModel.ConcurrencyMode.Single> или <xref:System.ServiceModel.ConcurrencyMode.Multiple>, в зависимости от того, обрабатывает ли один экземпляр сообщения последовательно или параллельно. В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.PerSession> могут иметь значение любые режимы параллелизма.  
   
