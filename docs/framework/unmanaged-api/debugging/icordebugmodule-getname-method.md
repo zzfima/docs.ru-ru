@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ae9bc5925634f8bba71731a0c51eb19cf9eec04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663957"
 ---
-# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="e4160-102">Метод ICorDebugModule::GetName</span><span class="sxs-lookup"><span data-stu-id="e4160-102">ICorDebugModule::GetName Method</span></span>
-<span data-ttu-id="e4160-103">Возвращает имя файла модуля.</span><span class="sxs-lookup"><span data-stu-id="e4160-103">Gets the file name of the module.</span></span>  
+# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="9087a-102">Метод ICorDebugModule::GetName</span><span class="sxs-lookup"><span data-stu-id="9087a-102">ICorDebugModule::GetName Method</span></span>
+<span data-ttu-id="9087a-103">Возвращает имя файла модуля.</span><span class="sxs-lookup"><span data-stu-id="9087a-103">Gets the file name of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4160-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e4160-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9087a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9087a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,28 +37,28 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e4160-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e4160-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9087a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9087a-105">Parameters</span></span>  
  `cchname`  
- <span data-ttu-id="e4160-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="e4160-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="9087a-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="9087a-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="e4160-107">[in] Указатель на длину возвращаемое имя.</span><span class="sxs-lookup"><span data-stu-id="e4160-107">[in] A pointer to the length of the returned name.</span></span>  
+ <span data-ttu-id="9087a-107">[in] Указатель на длину возвращаемого имени.</span><span class="sxs-lookup"><span data-stu-id="9087a-107">[in] A pointer to the length of the returned name.</span></span>  
   
  `szName`  
- <span data-ttu-id="e4160-108">[out] Массив, в котором хранится возвращаемое имя.</span><span class="sxs-lookup"><span data-stu-id="e4160-108">[out] An array that stores the returned name.</span></span>  
+ <span data-ttu-id="9087a-108">[out] Массив, в котором хранится возвращаемое имя.</span><span class="sxs-lookup"><span data-stu-id="9087a-108">[out] An array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e4160-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="e4160-109">Remarks</span></span>  
- <span data-ttu-id="e4160-110">`GetName` Метод возвращает значение HRESULT S_OK, если имя файла модуля соответствует имени на диске.</span><span class="sxs-lookup"><span data-stu-id="e4160-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="e4160-111">`GetName` Возвращает значение S_FALSE HRESULT, если оно создано, например в памяти или динамический модуль.</span><span class="sxs-lookup"><span data-stu-id="e4160-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9087a-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="9087a-109">Remarks</span></span>  
+ <span data-ttu-id="9087a-110">`GetName` Метод возвращает значение S_OK HRESULT, если имя файла модуля соответствует имени на диске.</span><span class="sxs-lookup"><span data-stu-id="9087a-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="9087a-111">`GetName` Возвращает значение HRESULT S_FALSE, если оно создано, например, модуль динамический или в памяти.</span><span class="sxs-lookup"><span data-stu-id="9087a-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e4160-112">Требования</span><span class="sxs-lookup"><span data-stu-id="e4160-112">Requirements</span></span>  
- <span data-ttu-id="e4160-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4160-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9087a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="9087a-112">Requirements</span></span>  
+ <span data-ttu-id="9087a-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9087a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e4160-114">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e4160-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9087a-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9087a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e4160-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e4160-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9087a-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9087a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e4160-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4160-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9087a-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9087a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4160-117">См. также</span><span class="sxs-lookup"><span data-stu-id="e4160-117">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="9087a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="9087a-117">See also</span></span>
+
+
