@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599053"
 ---
-# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="b9fd1-102">Метод IMetaDataAssemblyEmit::SetManifestResourceProps</span><span class="sxs-lookup"><span data-stu-id="b9fd1-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
-<span data-ttu-id="b9fd1-103">Изменяет указанную структуру метаданных `ManifestResource`.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="b24b3-102">Метод IMetaDataAssemblyEmit::SetManifestResourceProps</span><span class="sxs-lookup"><span data-stu-id="b24b3-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
+<span data-ttu-id="b24b3-103">Изменяет указанную структуру метаданных `ManifestResource`.</span><span class="sxs-lookup"><span data-stu-id="b24b3-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9fd1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b9fd1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b24b3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b24b3-104">Syntax</span></span>  
   
 ```  
 HRESULT SetManifestResourceProps (  
@@ -38,30 +38,30 @@ HRESULT SetManifestResourceProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b9fd1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b9fd1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b24b3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b24b3-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="b9fd1-106">[in] Маркер, который указывает `ManifestResource` изменение структуры метаданных.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="b24b3-106">[in] Токен, который указывает `ManifestResource` изменение структуры метаданных.</span><span class="sxs-lookup"><span data-stu-id="b24b3-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="b9fd1-107">[in] Маркер типа `File` или `AssemblyRef`, который сопоставляется с поставщиком ресурсов.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
+ <span data-ttu-id="b24b3-107">[in] Токен типа `File` или `AssemblyRef`, который сопоставляет к поставщику ресурсов.</span><span class="sxs-lookup"><span data-stu-id="b24b3-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="b9fd1-108">[in] Смещение в начало ресурса в файле.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-108">[in] The offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="b24b3-108">[in] Смещение в начало ресурса в файле.</span><span class="sxs-lookup"><span data-stu-id="b24b3-108">[in] The offset to the beginning of the resource within the file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="b9fd1-109">[in] Побитовое сочетание значения флагов, определяющих атрибуты ресурса.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
+ <span data-ttu-id="b24b3-109">[in] Побитовое сочетание значения флагов, определяющих атрибуты ресурса.</span><span class="sxs-lookup"><span data-stu-id="b24b3-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b9fd1-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="b9fd1-110">Remarks</span></span>  
- <span data-ttu-id="b9fd1-111">Для создания `ManifestResource` структуру метаданных, используйте [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="b9fd1-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b24b3-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="b24b3-110">Remarks</span></span>  
+ <span data-ttu-id="b24b3-111">Чтобы создать `ManifestResource` структура метаданных, используйте [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="b24b3-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9fd1-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b9fd1-112">Requirements</span></span>  
- <span data-ttu-id="b9fd1-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9fd1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b24b3-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b24b3-112">Requirements</span></span>  
+ <span data-ttu-id="b24b3-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b24b3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9fd1-114">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b9fd1-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b24b3-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b24b3-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b9fd1-115">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b9fd1-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b24b3-115">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b24b3-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b9fd1-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9fd1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b24b3-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b24b3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9fd1-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b9fd1-117">See Also</span></span>  
- [<span data-ttu-id="b9fd1-118">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="b9fd1-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b24b3-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b24b3-117">See also</span></span>
+- [<span data-ttu-id="b24b3-118">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="b24b3-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

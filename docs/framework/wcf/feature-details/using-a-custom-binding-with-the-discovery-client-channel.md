@@ -2,18 +2,18 @@
 title: Использование пользовательской привязки для клиентского канала обнаружения
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 7473262ec52adfd917b8ec5cd7ec1f4935a3646d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698369"
 ---
-# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="a1d34-102">Использование пользовательской привязки для клиентского канала обнаружения</span><span class="sxs-lookup"><span data-stu-id="a1d34-102">Using a Custom Binding with the Discovery Client Channel</span></span>
-<span data-ttu-id="a1d34-103">При использовании пользовательской привязки к <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> необходимо определить поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который будет создавать экземпляры <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="a1d34-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="fd3cd-102">Использование пользовательской привязки для клиентского канала обнаружения</span><span class="sxs-lookup"><span data-stu-id="fd3cd-102">Using a Custom Binding with the Discovery Client Channel</span></span>
+<span data-ttu-id="fd3cd-103">При использовании пользовательской привязки к <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> необходимо определить поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который будет создавать экземпляры <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="fd3cd-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
   
-## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="a1d34-104">Создание DiscoveryEndpointProvider</span><span class="sxs-lookup"><span data-stu-id="a1d34-104">Creating a DiscoveryEndpointProvider</span></span>  
- <span data-ttu-id="a1d34-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Отвечает за создание <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> экземпляры по требованию.</span><span class="sxs-lookup"><span data-stu-id="a1d34-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="a1d34-106">Чтобы определить поставщика конечной точки обнаружения, создайте класс из <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, переопределив метод <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, а затем вернув новую конечную точку обнаружения.</span><span class="sxs-lookup"><span data-stu-id="a1d34-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="a1d34-107">В следующем примере показан процесс создания поставщика конечной точки обнаружения.</span><span class="sxs-lookup"><span data-stu-id="a1d34-107">The following example shows how to create a discovery endpoint provider.</span></span>  
+## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="fd3cd-104">Создание DiscoveryEndpointProvider</span><span class="sxs-lookup"><span data-stu-id="fd3cd-104">Creating a DiscoveryEndpointProvider</span></span>  
+ <span data-ttu-id="fd3cd-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> Отвечает за создание <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> экземпляры по требованию.</span><span class="sxs-lookup"><span data-stu-id="fd3cd-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="fd3cd-106">Чтобы определить поставщика конечной точки обнаружения, создайте класс из <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, переопределив метод <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, а затем вернув новую конечную точку обнаружения.</span><span class="sxs-lookup"><span data-stu-id="fd3cd-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="fd3cd-107">В следующем примере показан процесс создания поставщика конечной точки обнаружения.</span><span class="sxs-lookup"><span data-stu-id="fd3cd-107">The following example shows how to create a discovery endpoint provider.</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -28,7 +28,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
 }  
 ```  
   
- <span data-ttu-id="a1d34-108">После того как поставщик конечной точки обнаружения определен, можно создать пользовательскую привязку и добавить <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, который содержит ссылки на поставщик конечной точки обнаружения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="a1d34-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
+ <span data-ttu-id="fd3cd-108">После того как поставщик конечной точки обнаружения определен, можно создать пользовательскую привязку и добавить <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, который содержит ссылки на поставщик конечной точки обнаружения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="fd3cd-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
   
 ```  
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
@@ -43,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- <span data-ttu-id="a1d34-109">Дополнительные сведения об использовании клиентского канала обнаружения см. в разделе [использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span><span class="sxs-lookup"><span data-stu-id="a1d34-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span> 
+ <span data-ttu-id="fd3cd-109">Дополнительные сведения об использовании клиентского канала обнаружения см. в разделе [использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span><span class="sxs-lookup"><span data-stu-id="fd3cd-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span> 
   
-## <a name="see-also"></a><span data-ttu-id="a1d34-110">См. также</span><span class="sxs-lookup"><span data-stu-id="a1d34-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fd3cd-110">См. также</span><span class="sxs-lookup"><span data-stu-id="fd3cd-110">See also</span></span>
 
-- [<span data-ttu-id="a1d34-111">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="a1d34-111">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
-- [<span data-ttu-id="a1d34-112">Использование клиентского канала обнаружения</span><span class="sxs-lookup"><span data-stu-id="a1d34-112">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+- [<span data-ttu-id="fd3cd-111">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="fd3cd-111">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [<span data-ttu-id="fd3cd-112">Использование клиентского канала обнаружения</span><span class="sxs-lookup"><span data-stu-id="fd3cd-112">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

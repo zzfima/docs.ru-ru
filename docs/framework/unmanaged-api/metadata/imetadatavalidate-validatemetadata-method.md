@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 113c228fd0a160ef6d8dd593891a6f9dd053a28c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4eeadadee181a8a726cb0b7a16425d68a112aae4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517725"
 ---
-# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="b843d-102">Метод IMetaDataValidate::ValidateMetaData</span><span class="sxs-lookup"><span data-stu-id="b843d-102">IMetaDataValidate::ValidateMetaData Method</span></span>
-<span data-ttu-id="b843d-103">Проверяет сигнатуры метаданных объектов в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="b843d-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
+# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="881bc-102">Метод IMetaDataValidate::ValidateMetaData</span><span class="sxs-lookup"><span data-stu-id="881bc-102">IMetaDataValidate::ValidateMetaData Method</span></span>
+<span data-ttu-id="881bc-103">Проверяет сигнатуры метаданных объектов в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="881bc-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b843d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b843d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="881bc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="881bc-104">Syntax</span></span>  
   
 ```  
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b843d-105">Требования</span><span class="sxs-lookup"><span data-stu-id="b843d-105">Requirements</span></span>  
- <span data-ttu-id="b843d-106">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b843d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="881bc-105">Требования</span><span class="sxs-lookup"><span data-stu-id="881bc-105">Requirements</span></span>  
+ <span data-ttu-id="881bc-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="881bc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b843d-107">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b843d-107">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="881bc-107">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="881bc-107">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b843d-108">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b843d-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="881bc-108">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="881bc-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b843d-109">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b843d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="881bc-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="881bc-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b843d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="b843d-110">See Also</span></span>  
- [<span data-ttu-id="b843d-111">Интерфейс IMetaDataValidate</span><span class="sxs-lookup"><span data-stu-id="b843d-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="881bc-110">См. также</span><span class="sxs-lookup"><span data-stu-id="881bc-110">See also</span></span>
+- [<span data-ttu-id="881bc-111">Интерфейс IMetaDataValidate</span><span class="sxs-lookup"><span data-stu-id="881bc-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

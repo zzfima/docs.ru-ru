@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641334"
 ---
-# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="4855d-102">Перечисление CorNativeLinkType</span><span class="sxs-lookup"><span data-stu-id="4855d-102">CorNativeLinkType Enumeration</span></span>
-<span data-ttu-id="4855d-103">Предоставляет значения, указывающие тип, связанный в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="4855d-103">Provides values that indicate the type linked in native code.</span></span>  
+# <a name="cornativelinktype-enumeration"></a><span data-ttu-id="05f02-102">Перечисление CorNativeLinkType</span><span class="sxs-lookup"><span data-stu-id="05f02-102">CorNativeLinkType Enumeration</span></span>
+<span data-ttu-id="05f02-103">Предоставляет значения, указывающие тип, связанный в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="05f02-103">Provides values that indicate the type linked in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4855d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4855d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05f02-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05f02-104">Syntax</span></span>  
   
 ```  
 typedef enum   
@@ -40,25 +40,25 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4855d-105">Участники</span><span class="sxs-lookup"><span data-stu-id="4855d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="05f02-105">Участники</span><span class="sxs-lookup"><span data-stu-id="05f02-105">Members</span></span>  
   
-|<span data-ttu-id="4855d-106">Член</span><span class="sxs-lookup"><span data-stu-id="4855d-106">Member</span></span>|<span data-ttu-id="4855d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="4855d-107">Description</span></span>|  
+|<span data-ttu-id="05f02-106">Член</span><span class="sxs-lookup"><span data-stu-id="05f02-106">Member</span></span>|<span data-ttu-id="05f02-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="05f02-107">Description</span></span>|  
 |------------|-----------------|  
-|`nltNone`|<span data-ttu-id="4855d-108">Указывает, что не указан ни один из ключевых слов.</span><span class="sxs-lookup"><span data-stu-id="4855d-108">Indicates that none of the keywords are specified.</span></span>|  
-|`nltAnsi`|<span data-ttu-id="4855d-109">Указывает, что указано ключевое слово в формате ANSI.</span><span class="sxs-lookup"><span data-stu-id="4855d-109">Indicates that an ANSI keyword is specified.</span></span>|  
-|`nltUnicode`|<span data-ttu-id="4855d-110">Указывает, что указано Unicode-ключевое слово</span><span class="sxs-lookup"><span data-stu-id="4855d-110">Indicates that a Unicode keyword is specified</span></span>|  
-|`nltAuto`|<span data-ttu-id="4855d-111">Указывает, что задано ключевое слово auto.</span><span class="sxs-lookup"><span data-stu-id="4855d-111">Indicates that an auto keyword is specified.</span></span>|  
-|`nltOle`|<span data-ttu-id="4855d-112">Указывает, что указано ключевое слово в формате OLE.</span><span class="sxs-lookup"><span data-stu-id="4855d-112">Indicates that an OLE keyword is specified.</span></span>|  
-|`nltMaxValue`|<span data-ttu-id="4855d-113">Не используется.</span><span class="sxs-lookup"><span data-stu-id="4855d-113">Not used.</span></span>|  
+|`nltNone`|<span data-ttu-id="05f02-108">Указывает, что не указан ни один из ключевых слов.</span><span class="sxs-lookup"><span data-stu-id="05f02-108">Indicates that none of the keywords are specified.</span></span>|  
+|`nltAnsi`|<span data-ttu-id="05f02-109">Указывает, что ключевое слово в формате ANSI.</span><span class="sxs-lookup"><span data-stu-id="05f02-109">Indicates that an ANSI keyword is specified.</span></span>|  
+|`nltUnicode`|<span data-ttu-id="05f02-110">Указывает, что указан Unicode-ключевое слово</span><span class="sxs-lookup"><span data-stu-id="05f02-110">Indicates that a Unicode keyword is specified</span></span>|  
+|`nltAuto`|<span data-ttu-id="05f02-111">Указывает, что ключевое слово auto.</span><span class="sxs-lookup"><span data-stu-id="05f02-111">Indicates that an auto keyword is specified.</span></span>|  
+|`nltOle`|<span data-ttu-id="05f02-112">Указывает, что ключевое слово OLE.</span><span class="sxs-lookup"><span data-stu-id="05f02-112">Indicates that an OLE keyword is specified.</span></span>|  
+|`nltMaxValue`|<span data-ttu-id="05f02-113">Не используется.</span><span class="sxs-lookup"><span data-stu-id="05f02-113">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4855d-114">Требования</span><span class="sxs-lookup"><span data-stu-id="4855d-114">Requirements</span></span>  
- <span data-ttu-id="4855d-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4855d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05f02-114">Требования</span><span class="sxs-lookup"><span data-stu-id="05f02-114">Requirements</span></span>  
+ <span data-ttu-id="05f02-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05f02-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4855d-116">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4855d-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="05f02-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05f02-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4855d-117">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4855d-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="05f02-117">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="05f02-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4855d-118">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4855d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="05f02-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05f02-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4855d-119">См. также</span><span class="sxs-lookup"><span data-stu-id="4855d-119">See Also</span></span>  
- [<span data-ttu-id="4855d-120">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="4855d-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="05f02-119">См. также</span><span class="sxs-lookup"><span data-stu-id="05f02-119">See also</span></span>
+- [<span data-ttu-id="05f02-120">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="05f02-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

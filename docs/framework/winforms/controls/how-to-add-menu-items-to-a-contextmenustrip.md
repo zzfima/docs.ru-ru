@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление элементов меню в элемент управления ContextMenuStrip
+title: Как выполнить Добавление элементов меню в элемент управления ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: d044cf92cf7ce6db3425aacf397d6c7b4f111324
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88bf56ea21c4f120b9d745e7f8a31fed485fa192
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506242"
 ---
-# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="4c043-102">Практическое руководство. Добавление элементов меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="4c043-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
-<span data-ttu-id="4c043-103">Можно добавить только один элемент меню или несколько элементов одновременно, чтобы <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="4c043-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="c1ffd-102">Как выполнить Добавление элементов меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="c1ffd-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
+<span data-ttu-id="c1ffd-103">Можно добавить только один элемент меню или несколько элементов за раз, чтобы <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="c1ffd-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="4c043-104">Чтобы добавить отдельный элемент меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="4c043-104">To add a single menu item to a ContextMenuStrip</span></span>  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="c1ffd-104">Чтобы добавить отдельный элемент меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="c1ffd-104">To add a single menu item to a ContextMenuStrip</span></span>  
   
--   <span data-ttu-id="4c043-105">Используйте <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод для добавления одного пункта меню <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="4c043-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+-   <span data-ttu-id="c1ffd-105">Используйте <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод для добавления одного пункта меню <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="c1ffd-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -31,9 +31,9 @@ ms.locfileid: "33524629"
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="4c043-106">Чтобы добавить несколько элементов меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="4c043-106">To add several menu items to a ContextMenuStrip</span></span>  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="c1ffd-106">Чтобы добавить несколько пунктов меню в элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="c1ffd-106">To add several menu items to a ContextMenuStrip</span></span>  
   
--   <span data-ttu-id="4c043-107">Используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> метод для добавления нескольких пунктов меню <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="4c043-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+-   <span data-ttu-id="c1ffd-107">Используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> метод, чтобы добавить несколько пунктов меню, чтобы <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="c1ffd-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
@@ -47,5 +47,5 @@ ms.locfileid: "33524629"
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4c043-108">См. также</span><span class="sxs-lookup"><span data-stu-id="4c043-108">See Also</span></span>  
- [<span data-ttu-id="4c043-109">Элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="4c043-109">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+## <a name="see-also"></a><span data-ttu-id="c1ffd-108">См. также</span><span class="sxs-lookup"><span data-stu-id="c1ffd-108">See also</span></span>
+- [<span data-ttu-id="c1ffd-109">Элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="c1ffd-109">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)

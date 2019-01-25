@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665855"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="09de2-102">Практические руководства, посвященные анимации пути</span><span class="sxs-lookup"><span data-stu-id="09de2-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="09de2-103">В подразделах этого раздела показано, как анимация объекта вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="09de2-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="71825-102">Практические руководства, посвященные анимации пути</span><span class="sxs-lookup"><span data-stu-id="71825-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="71825-103">В подразделах этого раздела демонстрируется анимация объекта вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="71825-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="09de2-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="09de2-104">In This Section</span></span>  
- [<span data-ttu-id="09de2-105">Анимация объекта вдоль контура (двойная анимация)</span><span class="sxs-lookup"><span data-stu-id="09de2-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="09de2-106">Анимация объекта вдоль контура (точечная анимация)</span><span class="sxs-lookup"><span data-stu-id="09de2-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="09de2-107">Анимация объекта вдоль контура (матричная анимация)</span><span class="sxs-lookup"><span data-stu-id="09de2-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="09de2-108">Анимация объектов по всему пути (матричная анимации с накоплением смещения)</span><span class="sxs-lookup"><span data-stu-id="09de2-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="09de2-109">Поворот объекта с использованием геометрического пути (матрица анимации)</span><span class="sxs-lookup"><span data-stu-id="09de2-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="09de2-110">Поворот объекта с использованием геометрического пути</span><span class="sxs-lookup"><span data-stu-id="09de2-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="71825-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="71825-104">In This Section</span></span>  
+ [<span data-ttu-id="71825-105">Анимация объекта вдоль контура (двойная анимация)</span><span class="sxs-lookup"><span data-stu-id="71825-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="71825-106">Анимация объекта вдоль контура (точечная анимация)</span><span class="sxs-lookup"><span data-stu-id="71825-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="71825-107">Анимация объекта вдоль контура (матричная анимация)</span><span class="sxs-lookup"><span data-stu-id="71825-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="71825-108">Анимация объектов по всему пути (матричная анимации с накоплением смещения)</span><span class="sxs-lookup"><span data-stu-id="71825-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="71825-109">Поворот объекта с использованием геометрического пути (матрица анимации)</span><span class="sxs-lookup"><span data-stu-id="71825-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="71825-110">Поворот объекта с использованием геометрического пути</span><span class="sxs-lookup"><span data-stu-id="71825-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="09de2-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="09de2-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="71825-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="71825-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="09de2-112">См. также</span><span class="sxs-lookup"><span data-stu-id="09de2-112">See Also</span></span>  
- [<span data-ttu-id="09de2-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="09de2-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="09de2-114">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="09de2-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="09de2-115">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="09de2-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="71825-112">См. также</span><span class="sxs-lookup"><span data-stu-id="71825-112">See also</span></span>
+- [<span data-ttu-id="71825-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="71825-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="71825-114">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="71825-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [<span data-ttu-id="71825-115">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="71825-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
