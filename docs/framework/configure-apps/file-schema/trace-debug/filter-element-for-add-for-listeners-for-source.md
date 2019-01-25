@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 044d446b97f0899b9575085a15c3faa399ce776e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624617"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="9830a-102">&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;прослушиватели&gt; для &lt;источника&gt;</span><span class="sxs-lookup"><span data-stu-id="9830a-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;source&gt;</span></span>
-<span data-ttu-id="9830a-103">Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="9830a-103">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="c1320-102">&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;прослушиватели&gt; для &lt;источника&gt;</span><span class="sxs-lookup"><span data-stu-id="c1320-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="c1320-103">Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="c1320-103">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="9830a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9830a-104">\<configuration></span></span>  
-<span data-ttu-id="9830a-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="9830a-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="9830a-106">\<источники ></span><span class="sxs-lookup"><span data-stu-id="9830a-106">\<sources></span></span>  
-<span data-ttu-id="9830a-107">\<Источник ></span><span class="sxs-lookup"><span data-stu-id="9830a-107">\<source></span></span>  
-<span data-ttu-id="9830a-108">\<прослушиватели ></span><span class="sxs-lookup"><span data-stu-id="9830a-108">\<listeners></span></span>  
-<span data-ttu-id="9830a-109">\<add></span><span class="sxs-lookup"><span data-stu-id="9830a-109">\<add></span></span>  
-<span data-ttu-id="9830a-110">\<Фильтр ></span><span class="sxs-lookup"><span data-stu-id="9830a-110">\<filter></span></span>  
+ <span data-ttu-id="c1320-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c1320-104">\<configuration></span></span>  
+<span data-ttu-id="c1320-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="c1320-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="c1320-106">\<источники ></span><span class="sxs-lookup"><span data-stu-id="c1320-106">\<sources></span></span>  
+<span data-ttu-id="c1320-107">\<Источник ></span><span class="sxs-lookup"><span data-stu-id="c1320-107">\<source></span></span>  
+<span data-ttu-id="c1320-108">\<прослушиватели ></span><span class="sxs-lookup"><span data-stu-id="c1320-108">\<listeners></span></span>  
+<span data-ttu-id="c1320-109">\<add></span><span class="sxs-lookup"><span data-stu-id="c1320-109">\<add></span></span>  
+<span data-ttu-id="c1320-110">\<Фильтр ></span><span class="sxs-lookup"><span data-stu-id="c1320-110">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9830a-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9830a-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1320-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c1320-111">Syntax</span></span>  
   
 ```xml  
 <filter   
@@ -37,37 +37,37 @@ ms.locfileid: "48033432"
   initializeData="data" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9830a-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9830a-112">Attributes and Elements</span></span>  
- <span data-ttu-id="9830a-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9830a-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c1320-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="c1320-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="c1320-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="c1320-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9830a-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9830a-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c1320-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c1320-114">Attributes</span></span>  
   
-|<span data-ttu-id="9830a-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9830a-115">Attribute</span></span>|<span data-ttu-id="9830a-116">Описание</span><span class="sxs-lookup"><span data-stu-id="9830a-116">Description</span></span>|  
+|<span data-ttu-id="c1320-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="c1320-115">Attribute</span></span>|<span data-ttu-id="c1320-116">Описание</span><span class="sxs-lookup"><span data-stu-id="c1320-116">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="9830a-117">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9830a-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="9830a-118">Указывает тип фильтра, который должен быть производным от <xref:System.Diagnostics.TraceFilter> класса.</span><span class="sxs-lookup"><span data-stu-id="9830a-118">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="9830a-119">Можно использовать имя с указанием пространства имен типа, который соответствует типу <xref:System.Type.FullName%2A> свойство, или можно использовать полное имя, включая сведения о сборке, которая соответствует <xref:System.Type.AssemblyQualifiedName%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="9830a-119">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="9830a-120">Сведения о полных имен типов, см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="9830a-120">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|`initializeData`|<span data-ttu-id="9830a-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9830a-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="9830a-122">Строка, передаваемая в конструктор для заданного класса фильтра.</span><span class="sxs-lookup"><span data-stu-id="9830a-122">The string passed to the constructor for the specified filter class.</span></span>|  
+|`type`|<span data-ttu-id="c1320-117">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="c1320-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="c1320-118">Указывает тип фильтра, который должен быть производным от <xref:System.Diagnostics.TraceFilter> класса.</span><span class="sxs-lookup"><span data-stu-id="c1320-118">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="c1320-119">Можно использовать имя с указанием пространства имен типа, который соответствует типу <xref:System.Type.FullName%2A> свойство, или можно использовать полное имя, включая сведения о сборке, которая соответствует <xref:System.Type.AssemblyQualifiedName%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="c1320-119">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="c1320-120">Сведения о полных имен типов, см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="c1320-120">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="c1320-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="c1320-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="c1320-122">Строка, передаваемая в конструктор для заданного класса фильтра.</span><span class="sxs-lookup"><span data-stu-id="c1320-122">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9830a-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9830a-123">Child Elements</span></span>  
- <span data-ttu-id="9830a-124">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="9830a-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c1320-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c1320-123">Child Elements</span></span>  
+ <span data-ttu-id="c1320-124">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="c1320-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9830a-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9830a-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c1320-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="c1320-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="9830a-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="9830a-126">Element</span></span>|<span data-ttu-id="9830a-127">Описание</span><span class="sxs-lookup"><span data-stu-id="9830a-127">Description</span></span>|  
+|<span data-ttu-id="c1320-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="c1320-126">Element</span></span>|<span data-ttu-id="c1320-127">Описание</span><span class="sxs-lookup"><span data-stu-id="c1320-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="9830a-128">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9830a-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="9830a-129">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="9830a-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="9830a-130">Содержит источники трассировки, которые инициируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="9830a-130">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="9830a-131">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="9830a-131">Specifies a trace source that initiates tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="9830a-132">Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="9830a-132">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="9830a-133">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.</span><span class="sxs-lookup"><span data-stu-id="9830a-133">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`add`|<span data-ttu-id="9830a-134">Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="9830a-134">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|`configuration`|<span data-ttu-id="c1320-128">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c1320-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="c1320-129">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="c1320-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="c1320-130">Содержит источники трассировки, которые инициируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="c1320-130">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="c1320-131">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="c1320-131">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="c1320-132">Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="c1320-132">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="c1320-133">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.</span><span class="sxs-lookup"><span data-stu-id="c1320-133">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="c1320-134">Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="c1320-134">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9830a-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="9830a-135">Remarks</span></span>  
- <span data-ttu-id="9830a-136">`<filter>` Элемент должен быть включен в `<add>` элемент прослушиватель трассировки источника, который указывает тип прослушивателя, не только имя прослушивателя, определенное в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span><span class="sxs-lookup"><span data-stu-id="9830a-136">The `<filter>` element must be contained in an `<add>` element for a trace source listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="9830a-137">Если прослушиватель определен в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), фильтр для этого прослушивателя, должен быть определен в этом элементе.</span><span class="sxs-lookup"><span data-stu-id="9830a-137">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1320-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="c1320-135">Remarks</span></span>  
+ <span data-ttu-id="c1320-136">`<filter>` Элемент должен быть включен в `<add>` элемент прослушиватель трассировки источника, который указывает тип прослушивателя, не только имя прослушивателя, определенное в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span><span class="sxs-lookup"><span data-stu-id="c1320-136">The `<filter>` element must be contained in an `<add>` element for a trace source listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="c1320-137">Если прослушиватель определен в [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), фильтр для этого прослушивателя, должен быть определен в этом элементе.</span><span class="sxs-lookup"><span data-stu-id="c1320-137">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- <span data-ttu-id="9830a-138">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="9830a-138">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="c1320-138">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="c1320-138">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9830a-139">Пример</span><span class="sxs-lookup"><span data-stu-id="9830a-139">Example</span></span>  
- <span data-ttu-id="9830a-140">В следующем примере показано, как использовать `<filter>` элемент, чтобы добавить фильтр к прослушивателю `console` в `Listeners` коллекции для источника трассировки `myTraceSource`, указывающие уровень фильтра событий как `Error`.</span><span class="sxs-lookup"><span data-stu-id="9830a-140">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for the trace source `myTraceSource`, specifying the filter event level as `Error`.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1320-139">Пример</span><span class="sxs-lookup"><span data-stu-id="c1320-139">Example</span></span>  
+ <span data-ttu-id="c1320-140">В следующем примере показано, как использовать `<filter>` элемент, чтобы добавить фильтр к прослушивателю `console` в `Listeners` коллекции для источника трассировки `myTraceSource`, указывающие уровень фильтра событий как `Error`.</span><span class="sxs-lookup"><span data-stu-id="c1320-140">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for the trace source `myTraceSource`, specifying the filter event level as `Error`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -92,9 +92,9 @@ ms.locfileid: "48033432"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9830a-141">См. также</span><span class="sxs-lookup"><span data-stu-id="9830a-141">See Also</span></span>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [<span data-ttu-id="9830a-142">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="9830a-142">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="c1320-141">См. также</span><span class="sxs-lookup"><span data-stu-id="c1320-141">See also</span></span>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [<span data-ttu-id="c1320-142">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="c1320-142">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

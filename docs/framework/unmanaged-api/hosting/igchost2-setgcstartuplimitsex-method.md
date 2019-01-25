@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f92667191cad163998d233e1110365de65c0340c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f61f6ed5712f3c98f06f5fa76657f3fa7b70fe84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666336"
 ---
-# <a name="igchost2setgcstartuplimitsex-method"></a><span data-ttu-id="80b94-102">Метод IGCHost2::SetGCStartupLimitsEx</span><span class="sxs-lookup"><span data-stu-id="80b94-102">IGCHost2::SetGCStartupLimitsEx Method</span></span>
-<span data-ttu-id="80b94-103">Задает размер сегмента и максимальный размер для поколения 0.</span><span class="sxs-lookup"><span data-stu-id="80b94-103">Sets the segment size and the maximum size for generation 0.</span></span>  
+# <a name="igchost2setgcstartuplimitsex-method"></a><span data-ttu-id="4a038-102">Метод IGCHost2::SetGCStartupLimitsEx</span><span class="sxs-lookup"><span data-stu-id="4a038-102">IGCHost2::SetGCStartupLimitsEx Method</span></span>
+<span data-ttu-id="4a038-103">Задает размер сегмента и максимальный размер для поколения 0.</span><span class="sxs-lookup"><span data-stu-id="4a038-103">Sets the segment size and the maximum size for generation 0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80b94-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80b94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a038-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4a038-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimitsEx (  
@@ -36,24 +36,24 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="80b94-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80b94-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4a038-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4a038-105">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="80b94-106">[in] Размер сегментов, используемых сборщик мусора.</span><span class="sxs-lookup"><span data-stu-id="80b94-106">[in] The size of the segment used by the garbage collection system.</span></span>  
+ <span data-ttu-id="4a038-106">[in] Размер сегмента, используемой системой сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="4a038-106">[in] The size of the segment used by the garbage collection system.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="80b94-107">[in] Максимальный размер для поколения 0.</span><span class="sxs-lookup"><span data-stu-id="80b94-107">[in] The maximum size for generation 0.</span></span>  
+ <span data-ttu-id="4a038-107">[in] Максимальный размер поколения 0.</span><span class="sxs-lookup"><span data-stu-id="4a038-107">[in] The maximum size for generation 0.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="80b94-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="80b94-108">Remarks</span></span>  
- <span data-ttu-id="80b94-109">Значения, `SetGCStartupLimitsEx` наборы можно указать только в том случае, перед запуском узла.</span><span class="sxs-lookup"><span data-stu-id="80b94-109">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="80b94-110">Эти значения невозможно изменить позже.</span><span class="sxs-lookup"><span data-stu-id="80b94-110">These values cannot be changed later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a038-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="4a038-108">Remarks</span></span>  
+ <span data-ttu-id="4a038-109">Значения, `SetGCStartupLimitsEx` множества могут быть заданы только в том случае, перед запуском узла.</span><span class="sxs-lookup"><span data-stu-id="4a038-109">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="4a038-110">Эти значения нельзя изменить позже.</span><span class="sxs-lookup"><span data-stu-id="4a038-110">These values cannot be changed later.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80b94-111">Требования</span><span class="sxs-lookup"><span data-stu-id="80b94-111">Requirements</span></span>  
- <span data-ttu-id="80b94-112">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80b94-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a038-111">Требования</span><span class="sxs-lookup"><span data-stu-id="4a038-111">Requirements</span></span>  
+ <span data-ttu-id="4a038-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a038-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80b94-113">**Заголовок:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="80b94-113">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="4a038-113">**Заголовок.** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="4a038-113">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="80b94-114">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80b94-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4a038-114">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4a038-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="80b94-115">**Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80b94-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="4a038-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a038-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80b94-116">См. также</span><span class="sxs-lookup"><span data-stu-id="80b94-116">See Also</span></span>  
- [<span data-ttu-id="80b94-117">Интерфейс IGCHost2</span><span class="sxs-lookup"><span data-stu-id="80b94-117">IGCHost2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4a038-116">См. также</span><span class="sxs-lookup"><span data-stu-id="4a038-116">See also</span></span>
+- [<span data-ttu-id="4a038-117">Интерфейс IGCHost2</span><span class="sxs-lookup"><span data-stu-id="4a038-117">IGCHost2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

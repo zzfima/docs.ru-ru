@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5b3e962bd68d78d9a61e41b1e6049dc35acc50c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623083"
 ---
-# <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="80db8-102">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="80db8-102">illegalPrepareConstrainedRegion MDA</span></span>
-<span data-ttu-id="80db8-103">Помощник по отладке управляемого кода (MDA) `illegalPrepareConstrainedRegion` запускается, если сразу же после вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> не следует инструкция `try` обработчика исключений.</span><span class="sxs-lookup"><span data-stu-id="80db8-103">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="80db8-104">Это ограничение используется на уровне MSIL, поэтому между вызовом и `try` можно размещать текст, не приводящий к созданию кода, например комментарии.</span><span class="sxs-lookup"><span data-stu-id="80db8-104">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  
+# <a name="illegalprepareconstrainedregion-mda"></a><span data-ttu-id="eef07-102">illegalPrepareConstrainedRegion MDA</span><span class="sxs-lookup"><span data-stu-id="eef07-102">illegalPrepareConstrainedRegion MDA</span></span>
+<span data-ttu-id="eef07-103">Помощник по отладке управляемого кода (MDA) `illegalPrepareConstrainedRegion` запускается, если сразу же после вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> не следует инструкция `try` обработчика исключений.</span><span class="sxs-lookup"><span data-stu-id="eef07-103">The `illegalPrepareConstrainedRegion` managed debugging assistant (MDA) is activated when a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> method call does not immediately precede the `try` statement of the exception handler.</span></span> <span data-ttu-id="eef07-104">Это ограничение используется на уровне MSIL, поэтому между вызовом и `try` можно размещать текст, не приводящий к созданию кода, например комментарии.</span><span class="sxs-lookup"><span data-stu-id="eef07-104">This restriction is at the MSIL level, so it is permissible to have non-code-generating source between the call and the `try`, such as comments.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="80db8-105">Симптомы</span><span class="sxs-lookup"><span data-stu-id="80db8-105">Symptoms</span></span>  
- <span data-ttu-id="80db8-106">Область ограниченного выполнения, которая никогда не рассматривается в виде такой области, но представляет собой простой блок обработки исключений (`finally` или `catch`).</span><span class="sxs-lookup"><span data-stu-id="80db8-106">A constrained execution region (CER) that is never treated as such, but as a simple exception handling block (`finally` or `catch`).</span></span> <span data-ttu-id="80db8-107">Поэтому эта область не запускается в случае нехватки памяти или прерывания потока.</span><span class="sxs-lookup"><span data-stu-id="80db8-107">As a consequence, the region does not run in the event of an out-of-memory condition or a thread abort.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="eef07-105">Симптомы</span><span class="sxs-lookup"><span data-stu-id="eef07-105">Symptoms</span></span>  
+ <span data-ttu-id="eef07-106">Область ограниченного выполнения, которая никогда не рассматривается в виде такой области, но представляет собой простой блок обработки исключений (`finally` или `catch`).</span><span class="sxs-lookup"><span data-stu-id="eef07-106">A constrained execution region (CER) that is never treated as such, but as a simple exception handling block (`finally` or `catch`).</span></span> <span data-ttu-id="eef07-107">Поэтому эта область не запускается в случае нехватки памяти или прерывания потока.</span><span class="sxs-lookup"><span data-stu-id="eef07-107">As a consequence, the region does not run in the event of an out-of-memory condition or a thread abort.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="80db8-108">Причина</span><span class="sxs-lookup"><span data-stu-id="80db8-108">Cause</span></span>  
- <span data-ttu-id="80db8-109">Вы не следуете шаблону подготовки для области ограниченного выполнения.</span><span class="sxs-lookup"><span data-stu-id="80db8-109">The preparation pattern for a CER is not followed correctly.</span></span>  <span data-ttu-id="80db8-110">Это ошибка.</span><span class="sxs-lookup"><span data-stu-id="80db8-110">This is an error event.</span></span> <span data-ttu-id="80db8-111"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Вызов метода, используемую для обозначения обработчиков исключений, ограниченного выполнения в их `catch` / `finally` / `fault` / `filter` блоки, которые должны использоваться сразу перед `try` инструкции.</span><span class="sxs-lookup"><span data-stu-id="80db8-111">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call used to mark exception handlers as introducing a CER in their `catch`/`finally`/`fault`/`filter` blocks must be used immediately before the `try` statement.</span></span>  
+## <a name="cause"></a><span data-ttu-id="eef07-108">Причина</span><span class="sxs-lookup"><span data-stu-id="eef07-108">Cause</span></span>  
+ <span data-ttu-id="eef07-109">Вы не следуете шаблону подготовки для области ограниченного выполнения.</span><span class="sxs-lookup"><span data-stu-id="eef07-109">The preparation pattern for a CER is not followed correctly.</span></span>  <span data-ttu-id="eef07-110">Это ошибка.</span><span class="sxs-lookup"><span data-stu-id="eef07-110">This is an error event.</span></span> <span data-ttu-id="eef07-111"><xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Вызов метода, используемую для обозначения обработчиков исключений, ограниченного выполнения в их `catch` / `finally` / `fault` / `filter` блоки, которые должны использоваться сразу перед `try` инструкции.</span><span class="sxs-lookup"><span data-stu-id="eef07-111">The <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method call used to mark exception handlers as introducing a CER in their `catch`/`finally`/`fault`/`filter` blocks must be used immediately before the `try` statement.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="80db8-112">Решение</span><span class="sxs-lookup"><span data-stu-id="80db8-112">Resolution</span></span>  
- <span data-ttu-id="80db8-113">Убедитесь, что вызов метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> выполняется непосредственно перед инструкцией `try`.</span><span class="sxs-lookup"><span data-stu-id="80db8-113">Ensure that the call to <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> happens immediately before the `try` statement.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="eef07-112">Решение</span><span class="sxs-lookup"><span data-stu-id="eef07-112">Resolution</span></span>  
+ <span data-ttu-id="eef07-113">Убедитесь, что вызов метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> выполняется непосредственно перед инструкцией `try`.</span><span class="sxs-lookup"><span data-stu-id="eef07-113">Ensure that the call to <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> happens immediately before the `try` statement.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="80db8-114">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="80db8-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="80db8-115">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="80db8-115">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="eef07-114">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="eef07-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="eef07-115">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="eef07-115">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="80db8-116">Вывод</span><span class="sxs-lookup"><span data-stu-id="80db8-116">Output</span></span>  
- <span data-ttu-id="80db8-117">Помощник по отладке управляемого кода отображает имя метода, вызывающего метод <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, смещение MSIL и сообщение о том, что вызов метода выполняется не перед началом блока try.</span><span class="sxs-lookup"><span data-stu-id="80db8-117">The MDA displays the name of the method calling the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method, the MSIL offset, and a message indicating the call does not immediately precede the beginning of the try block.</span></span>  
+## <a name="output"></a><span data-ttu-id="eef07-116">Вывод</span><span class="sxs-lookup"><span data-stu-id="eef07-116">Output</span></span>  
+ <span data-ttu-id="eef07-117">Помощник по отладке управляемого кода отображает имя метода, вызывающего метод <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>, смещение MSIL и сообщение о том, что вызов метода выполняется не перед началом блока try.</span><span class="sxs-lookup"><span data-stu-id="eef07-117">The MDA displays the name of the method calling the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> method, the MSIL offset, and a message indicating the call does not immediately precede the beginning of the try block.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="80db8-118">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="80db8-118">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="eef07-118">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="eef07-118">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,8 +45,8 @@ ms.locfileid: "53131317"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="80db8-119">Пример</span><span class="sxs-lookup"><span data-stu-id="80db8-119">Example</span></span>  
- <span data-ttu-id="80db8-120">В следующем примере кода показан шаблон, который запускает этот помощник по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="80db8-120">The following code example demonstrates the pattern that causes this MDA to be activated.</span></span>  
+## <a name="example"></a><span data-ttu-id="eef07-119">Пример</span><span class="sxs-lookup"><span data-stu-id="eef07-119">Example</span></span>  
+ <span data-ttu-id="eef07-120">В следующем примере кода показан шаблон, который запускает этот помощник по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="eef07-120">The following code example demonstrates the pattern that causes this MDA to be activated.</span></span>  
   
 ```csharp
 void MethodWithInvalidPCR()  
@@ -64,8 +64,8 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="80db8-121">См. также</span><span class="sxs-lookup"><span data-stu-id="80db8-121">See Also</span></span>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>  
- [<span data-ttu-id="80db8-122">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="80db8-122">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="80db8-123">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="80db8-123">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a><span data-ttu-id="eef07-121">См. также</span><span class="sxs-lookup"><span data-stu-id="eef07-121">See also</span></span>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
+- [<span data-ttu-id="eef07-122">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="eef07-122">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="eef07-123">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="eef07-123">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
