@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646374"
 ---
 # <a name="3-d-transformations-overview"></a>Общие сведения о трехмерных преобразованиях
 В этом разделе описывается применение преобразований к трехмерным моделям в графической системе [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Преобразования позволяют разработчикам перемещать модели, изменять их размер и направление, при этом не затрагивая их базовые определяющие значения.  
@@ -67,7 +67,7 @@ ms.locfileid: "43520596"
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- Примечание. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] является правовинтовой системой, поэтому указание положительного значения угла поворота приведет к повороту против часовой стрелки вокруг оси.  
+ Примечание.[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Является правовинтовой системой, это означает, что положительного значения угла поворота приведет к повороту против часовой стрелки относительно оси.  
   
  Осе угловой поворот предполагает Поворот относительно начала координат, если значение не указано для <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>, <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>, и <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A> свойства в RotateTransform3D. Как и при масштабировании, следует помнить, что при повороте преобразуется все координатное пространство модели целиком. Если модель была создана не от начала координат или была преобразована ранее, то поворот может быть произведен относительно начала координат, а не относительно местоположения модели.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "43520596"
   
  Поскольку камеры также являются моделями, их свойства также могут быть преобразованы.  Хотя внешний вид сцены можно изменить путем преобразования местоположения камеры или расстояний на плоскости (т. е. преобразованием всей проекции сцены целиком), обратите внимание, что многие эффекты, созданные таким способом, не создадут такого же впечатления, как преобразования, примененные к расположению или положению моделей в сцене.  
   
-## <a name="see-also"></a>См. также  
- [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>См. также
+- [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d23fc48a53ee47aacfc290b52887b800ce37477f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 1bb5c6b46ff0f75082b0b7b631a197dd64156cf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672920"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Отображение идентификаторов объектов на криптографические алгоритмы
 Цифровые подписи убедитесь, что данные не подделаны отправки из одной программы в другую. Обычно цифровая подпись вычисляется путем применения математической функции к хэш данных должны быть подписаны. При форматировании хэш-значение подписываемых, некоторые алгоритмы цифровой подписи добавляют операция форматирования идентификатор объекта (OID) ASN.1. OID идентифицирует алгоритм, который использовался для вычисления хэша. Алгоритмы можно сопоставить с идентификаторами объектов расширения криптографического механизма для использования пользовательских алгоритмов. Приведенный ниже показано, как сопоставления идентификатора объекта новый хэш-алгоритма.  
@@ -42,6 +42,6 @@ ms.locfileid: "49086249"
   
  [ \<OidEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) содержит два атрибута. **OID** атрибут — номер идентификатора объекта. **Имя** атрибута является значение **имя** из атрибута [ \<nameEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Прежде чем идентификатор объекта можно сопоставить с простым именем необходимо сопоставление имени алгоритма к классу.  
   
-## <a name="see-also"></a>См. также  
- [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+- [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

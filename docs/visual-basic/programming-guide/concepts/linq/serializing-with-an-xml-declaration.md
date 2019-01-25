@@ -2,12 +2,12 @@
 title: Сериализация с использованием декларации XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: 6b7351d85dab997ba6cb0ef023972e9e4e4fca14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0d6ccfdffa76de61c36e4cdb3f68f7cf85f1e68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558479"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Сериализация с использованием декларации XML (Visual Basic)
 В этом разделе описывается, как указывать, должна ли при сериализации формироваться XML-декларация.  
@@ -61,5 +61,5 @@ Console.WriteLine(sb.ToString())
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сериализация деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>См. также
+- [Сериализация деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

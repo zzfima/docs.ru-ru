@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 796f8ea42cc5cbe13729f7b92e15bc214d62734d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631771"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Метод ICorPublishAppDomain::GetName
-Возвращает имя домена приложения, представленный этим [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Возвращает имя домена приложения, представленного этим [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,21 +46,21 @@ HRESULT GetName (
  [out] Указатель на число расширенных символов, включая символ null, возвращаются в `szName` массива.  
   
  `szName`  
- [out] Массив для хранения имени.  
+ [out] Массив, в котором для хранения имени.  
   
 ## <a name="remarks"></a>Примечания  
- Если `szName` отлично от null, `GetName` метод копирует до `cchName` символов (включая завершающий символ null) в `szName`. Если ненулевое значение возвращается в `pcchName`, фактическое число символов в имени (включая завершающий символ null) хранится в `szName` массива.  
+ Если `szName` отлично от NULL, `GetName` метод копирует до `cchName` символов (включая завершающий символ null) в `szName`. Если возвращается значение `pcchName`, фактическое число символов в имени (включая завершающий символ null) хранится в `szName` массива.  
   
- `GetName` Метод возвращает значение S_OK HRESULT независимо от того, сколько символов были скопированы.  
+ `GetName` Метод возвращает значение S_OK HRESULT, независимо от того, сколько символов были скопированы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorPub.idl, CorPub.h  
+ **Заголовок.** CorPub.idl, CorPub.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

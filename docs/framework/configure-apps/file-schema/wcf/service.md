@@ -2,17 +2,17 @@
 title: '&lt;Службы&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535012"
 ---
 # <a name="ltservicegt"></a>&lt;Службы&gt;
 Элемент `service` содержит параметры для службы Windows Communication Foundation (WCF). Он также содержит конечные точки, предоставляющие доступ к службе.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<Services >  
 \<службы >  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54145514"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Корневой элемент всех элементов конфигурации WCF.|  
   
@@ -68,6 +68,6 @@ ms.locfileid: "54145514"
 </service>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [Настройка служб](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [Настройка служб](../../../../../docs/framework/wcf/configuring-services.md)

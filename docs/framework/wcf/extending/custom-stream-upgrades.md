@@ -2,12 +2,12 @@
 title: Пользовательские обновления потоков
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611323"
 ---
 # <a name="custom-stream-upgrades"></a>Пользовательские обновления потоков
 Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером. Поток реализуется объектом <xref:System.IO.Stream>. при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала. Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  
@@ -19,18 +19,18 @@ ms.locfileid: "33806036"
 ## <a name="how-stream-upgrades-work"></a>Принципы работы обновления потока  
  Имеется четыре компонента процесса обновления потока.  
   
-1.  Обновления потока *инициатора* начинает процесс: во время выполнения он может создать запрос на обновление транспортного уровня канала к другой стороне связи.  
+1.  Обновления потока *инициатора* начинает процесс: во время выполнения она может инициировать запрос на обновление транспортного уровня канала к другой стороне связи.  
   
-2.  Обновления потока *Акцептор* выполняет обновление: во время выполнения он получает запрос на обновление от другого компьютера и по возможности принимает обновление.  
+2.  Обновления потока *Акцептор* выполняет обновление: во время выполнения он получает запрос об обновлении от другого компьютера и по возможности принимает обновление.  
   
 3.  Обновление *поставщика* создает *инициатора* на стороне клиента и *Акцептор* на сервере.  
   
-4.  Обновления потока *элемент привязки* добавляется в привязки службы и клиента и создает во время выполнения поставщик.  
+4.  Обновления потока *элемента привязки* добавляется в привязки службы и клиента, а также создает поставщик во время выполнения.  
   
  Обратите внимание, что в случае нескольких обновлений инициатор и акцептор инкапсулируют конечные автоматы для определения переходов обновления, которые являются допустимыми для каждой инициации.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Реализация обновления потока  
- Windows Communication Foundation (WCF) имеется четыре `abstract` классы, которые можно реализовать:  
+ Windows Communication Foundation (WCF) предоставляет четыре `abstract` классы, которые можно реализовать:  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33806036"
   
 4.  Поток будет обновляться после каждого вызова методов <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

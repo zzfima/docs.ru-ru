@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 79f9f6eb8ced7c292e7a7c3c6fc9acbb9a34ffcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676137"
 ---
 # <a name="data-contract-serializer"></a>Сериализатор контракта данных
-Инфраструктура Windows Communication Foundation (WCF) использует <xref:System.Runtime.Serialization.DataContractSerializer> класс как сериализатор по умолчанию. В подразделах этого раздела представлены дополнительные сведения об использовании этого класса в качестве автономного сериализатора.  
+В инфраструктуре Windows Communication Foundation (WCF) используются <xref:System.Runtime.Serialization.DataContractSerializer> класс в качестве сериализатора по умолчанию. В подразделах этого раздела представлены дополнительные сведения об использовании этого класса в качестве автономного сериализатора.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
@@ -37,6 +37,6 @@ ms.locfileid: "33488986"
   
  [Передача данных и сериализация](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>См. также
+- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

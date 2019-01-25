@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668955"
 ---
 # <a name="application-settings-attributes"></a>Атрибуты параметров приложения
 Архитектура параметров приложения предоставляет множество атрибутов, которые могут быть применены к классу-оболочке параметров приложения или его отдельным свойствам. Эти атрибуты проверяются во время выполнения с помощью инфраструктуры параметры приложения, часто поставщиком параметров, чтобы адаптировать работу с указанными потребностям настраиваемой оболочки.  
@@ -19,7 +19,7 @@ ms.locfileid: "43525116"
  В следующей таблице перечислены атрибуты, которые могут применяться к классу-оболочке параметров приложения и отдельные свойства этого класса. По определению, только одну область атрибут —**UserScopedSettingAttribute** или **ApplicationScopedSettingAttribute**— должны применяться для каждого свойства параметров.  
   
 > [!NOTE]
->  Настраиваемый поставщик параметров, производный от <xref:System.Configuration.SettingsProvider> класса, требуется только для распознавания следующие три атрибута: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, и **DefaultSettingValueAttribute**.  
+>  Настраиваемый поставщик параметров, производным от <xref:System.Configuration.SettingsProvider> класса, требуется только для распознавания следующие три атрибута: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, и **DefaultSettingValueAttribute**.  
   
 |Атрибут|целевого объекта|Описание|  
 |---------------|------------|-----------------|  
@@ -37,8 +37,8 @@ ms.locfileid: "43525116"
   
  *Класс* указывает, что атрибут может применяться только к классу-оболочке параметров приложения. *Свойство* указывает, что атрибут может быть применен только к свойствам параметров. *Оба* указывает, что атрибут может применяться на любом уровне.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Практическое руководство. Создание параметров приложения](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a>См. также
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Практическое руководство. Создание параметров приложения](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

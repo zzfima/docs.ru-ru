@@ -2,12 +2,12 @@
 title: Требования к системе для поставщика данных платформы .NET Framework для Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 60d57e30e2a1588ec6e0b9e253f371f8fbae28bc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670883"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Требования к системе для поставщика данных платформы .NET Framework для Oracle
 Поставщику данных платформы .NET Framework для Oracle требуются компоненты Microsoft Data Access Components (MDAC) версии 2.6 или более поздней версии. Рекомендуется MDAC 2.8 с пакетом обновления 2 (SP1).  
@@ -37,6 +37,6 @@ Unicode=True
 ### <a name="oraclelob-can-only-update-full-characters"></a>Объект OracleLob может обновлять только полные символы.  
  Для удобства и простоты <xref:System.Data.OracleClient.OracleLob> объект наследует от класса .NET Framework Stream и предоставляет **ReadByte** и **WriteByte** методы. Он также реализует методы, такие как **CopyTo** и **стереть**, в котором работающие с частями Oracle **LOB** объектов. Напротив, клиентское программное обеспечение Oracle предоставляет ряд интерфейсов API для работы с символьными **LOB**s (**CLOB** и **NCLOB**). Однако эти API-интерфейсы работают только с полными символами. Из-за этого отличия поставщик данных для Oracle реализует поддержку для **чтения** и **ReadByte** для работы с данными UTF-16 побайтовым способом. Тем не менее другие методы **OracleLob** объект только разрешить выполнение операций с полными символами.  
   
-## <a name="see-also"></a>См. также  
- [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b85cdee4a65e91c51fdb014bdcc4797b99214daf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aec97ef36b73b1b789c819c4bca516d13ecf1051
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631208"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>Метод ICeeGen::GetSectionDataLen
 Получает длину указанного раздела.  
@@ -40,22 +40,22 @@ HRESULT GetSectionDataLen (
   
 #### <a name="parameters"></a>Параметры  
  `section`  
- [in] Раздел данных, длина которого будут извлечены.  
+ [in] Раздел данных, длина которого будут извлекаться.  
   
  `dataLen`  
  [out] Возвращаемая длина указанного раздела.  
   
 ## <a name="remarks"></a>Примечания  
- Вызовите `GetSectionDataLen` только при наличии особых требований к разделам, не обрабатываются другими способами.  
+ Вызовите `GetSectionDataLen` только при наличии особых требований к разделам, которые не обрабатываются другими способами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

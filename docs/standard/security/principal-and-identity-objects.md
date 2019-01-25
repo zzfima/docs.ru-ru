@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604409"
 ---
 # <a name="principal-and-identity-objects"></a>Объекты Principal и Identity
 Управляемый код может получить удостоверение или роль участника с помощью <xref:System.Security.Principal.IPrincipal> объект, содержащий ссылку на <xref:System.Security.Principal.IIdentity> объекта. Может быть полезно сравнить объекты Identity и Principal с привычными понятиями, такими как учетные записи пользователей и групп. В большинстве сетевых сред учетные записи пользователей представляют пользователей или программы, а учетные записи групп — определенные категории пользователей и предоставленные им права. Аналогичным образом, объекты Identity в .NET Framework представляют собой пользователей, а роли — членства и контексты безопасности. В .NET Framework объект Principal инкапсулирует объект Identity и роль. Приложения .NET Framework предоставляют права объекту Principal на основании его идентификатора, но чаще на основании его участия в роли.  
@@ -44,9 +44,9 @@ ms.locfileid: "48025510"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание объекта WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Замена объекта Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Олицетворение и отмена изменений](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Безопасность на основе ролей](../../../docs/standard/security/role-based-security.md)  
+- [Практическое руководство. Создание объекта WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Замена объекта Principal](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Олицетворение и отмена изменений](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Безопасность на основе ролей](../../../docs/standard/security/role-based-security.md)
 - [Основные понятия безопасности](../../../docs/standard/security/key-security-concepts.md)

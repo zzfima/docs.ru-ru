@@ -2,12 +2,12 @@
 title: Управление параллелизмом с помощью класса DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664464"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Управление параллелизмом с помощью класса DependentTransaction
 Объект <xref:System.Transactions.Transaction> создается с помощью метода <xref:System.Transactions.Transaction.DependentClone%2A>. Его единственная цель — гарантировать невозможность фиксации транзакции, пока некоторые фрагменты кода (например рабочий поток) еще выполняют операции над транзакцией. Когда операции в рамках клонированной транзакции завершены и готовы к фиксации, создателю транзакции может быть передано соответствующее уведомление с помощью метода <xref:System.Transactions.DependentTransaction.Complete%2A>. Это позволяет сохранить согласованность и правильность данных.  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  Метод `ThreadMethod` выполняется в новом потоке. Клиентский код запускает новый поток, передавая зависимую транзакцию в качестве параметра `ThreadMethod`.  
   
- Поскольку зависимая транзакция создается с параметром <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, исходная транзакция может быть зафиксирована только после завершения всех операций во втором потоке и вызова метода <xref:System.Transactions.DependentTransaction.Complete%2A> зависимой транзакции. Это означает, что если заканчивается области клиента (при попытке удалить объект транзакции в конце **с помощью** инструкции) перед новый поток вызывает метод <xref:System.Transactions.DependentTransaction.Complete%2A> на зависимая транзакция блокирует код клиента до <xref:System.Transactions.DependentTransaction.Complete%2A> вызывается для зависимого. После этого может быть завершен процесс фиксации или прерывания транзакции.  
+ Поскольку зависимая транзакция создается с параметром <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, исходная транзакция может быть зафиксирована только после завершения всех операций во втором потоке и вызова метода <xref:System.Transactions.DependentTransaction.Complete%2A> зависимой транзакции. Это означает, что если завершения области клиента (при попытке удалить объект транзакции в конце **с помощью** инструкции) до вызова новым потоком метода <xref:System.Transactions.DependentTransaction.Complete%2A> зависимой транзакции, выполнение клиентского кода блокируется до <xref:System.Transactions.DependentTransaction.Complete%2A> называется зависимой. После этого может быть завершен процесс фиксации или прерывания транзакции.  
   
 ## <a name="concurrency-issues"></a>Проблемы параллелизма  
  При использовании класса <xref:System.Transactions.DependentTransaction> следует помнить о нескольких дополнительных проблемах параллелизма.  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   Если рабочий поток порождает новый рабочий поток, следует создать новый зависимый клон из существующего зависимого клона и передать его новому потоку.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>См. также
+- <xref:System.Transactions.DependentTransaction>

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544540"
 ---
 # <a name="icordebugthreadgetobject-method"></a>Метод ICorDebugThread::GetObject
-Возвращает указатель на интерфейс среды выполнения (CLR) потоку выполнения.  
+Получает указатель интерфейса среды выполнения (CLR) потоку выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT GetObject (
   
 #### <a name="parameters"></a>Параметры  
  `ppObject`  
- [out] Указатель на адрес объекта интерфейса ICorDebugValue, представляющий поток среды CLR.  
+ [out] Указатель на адрес объекта интерфейса ICorDebugValue, представляющий потока среды CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a>См. также
+- <xref:System.Threading.Thread>

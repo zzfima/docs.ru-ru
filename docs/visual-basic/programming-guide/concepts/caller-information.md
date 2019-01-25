@@ -2,12 +2,12 @@
 title: Сведения о вызывающем объекте (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619017"
 ---
 # <a name="caller-information-visual-basic"></a>Сведения о вызывающем объекте (Visual Basic)
 С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта. Эти сведения полезны для трассировки, отладки и создания средств диагностики.  
@@ -74,8 +74,8 @@ End Sub
 |Конструктора атрибута|Имя члена, к которому применяется атрибут. Если атрибут — любой элемент внутри члена (например, параметр, возвращаемое значение или параметр универсального типа), то результат — имя члена, который связан с этим элементом.|  
 |Нет содержащего члена (например, уровень сборки или атрибуты, примененные к типам)|Значение необязательного параметра по умолчанию.|  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))  
- [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+- [Атрибуты (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))
+- [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

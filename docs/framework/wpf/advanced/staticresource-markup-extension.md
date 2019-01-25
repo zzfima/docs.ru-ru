@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: 518a85c158c9a4472689d3c236b84278114cf3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d6c660dba1a351df4dafd756bcabd484b9afad6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554937"
 ---
 # <a name="staticresource-markup-extension"></a>Расширение разметки StaticResource
-Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибут свойства путем поиска ссылки на уже определенный ресурс. Поведение подстановки для этого ресурса является аналогом Уточняющий запрос во время загрузки, который будет искать ресурсы, которые были ранее загружены из разметки текущего [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы, а также других источников приложения и автоматически создаст как значение ресурса значение свойства в объектах во время выполнения.  
+Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] свойства атрибута, посмотрев на ссылку на уже заданного ресурса. Поведение подстановки для этого ресурса аналогичен во время загрузки, который будет искать ресурсы, которые были ранее загружены из разметки текущего [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] странице, а также других источников приложения и автоматически создаст значение ресурсов как значение свойства в объектах во время выполнения.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
@@ -38,18 +38,18 @@ ms.locfileid: "33547203"
   
 |||  
 |-|-|  
-|`key`|Ключ для запрашиваемого ресурса. Этот ключ был изначально присвоенный [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) Если ресурс был создан в разметке или был предоставлен в виде `key` параметра при вызове <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> Если ресурс был создан в коде.|  
+|`key`|Ключ для запрашиваемого ресурса. Этот ключ была изначально назначена по [директивы x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) Если ресурс был создан в разметке или был предоставлен в виде `key` параметра при вызове <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> Если ресурс был создан в коде.|  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  Объект `StaticResource` не должен пытаться сделать прямую ссылку на ресурс, который определен лексически далее в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файла. Попытка сделать это не поддерживается, и даже если эта ссылка не завершается ошибкой, попытка прямой ссылки повлечет за собой снижение производительности во время загрузки при внутренней хэш-таблиц, представляющих <xref:System.Windows.ResourceDictionary> производится поиск. Для получения наилучших результатов настройте композицию словарей ресурсов таким образом, можно избежать прямых ссылок. Если не удается избежать прямая ссылка, используйте [DynamicResource Markup Extension](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) вместо него.  
+>  Объект `StaticResource` не следует пытаться сделать прямую ссылку на ресурс, определенный лексически далее в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл. Попытка выполнить такую операцию не поддерживается, и даже если эта ссылка не произойдет сбой, попытка прямой ссылки повлечет снижение производительности во время загрузки при внутренней хэш-таблиц, представляющих <xref:System.Windows.ResourceDictionary> производится поиск. Для получения наилучших результатов настройте композицию словарей ресурсов таким образом, что можно избежать прямых ссылок. Если не удается избежать опережающие ссылки, используйте [расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) вместо этого.  
   
- Указанный <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> должны соответствовать существующий ресурс, определенный с [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) на некотором уровне в страницу, приложения, доступный элемент управления темы и внешние ресурсы или системных ресурсов. Поиск ресурсов происходит в указанном порядке. Дополнительные сведения о поведении подстановки ресурсов для статических и динамических ресурсов см. в разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Указанный <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> должен соответствовать имеющийся ресурс, определенный с помощью [директивы x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) на определенном уровне страницы, приложения, доступный элемент управления темы и внешним ресурсам или системных ресурсов. Поиск ресурсов происходит в указанном порядке. Дополнительные сведения о поведение подстановки ресурса для статических и динамических ресурсов, см. в разделе [ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- Ключ ресурса может быть любая строка, определенная в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md). Ключ ресурса может также быть другие типы объектов, например <xref:System.Type>. Объект <xref:System.Type> ключ — это основа для элементов управления можно стилями темы, через ключ неявный стиль. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Ключ ресурса может быть любой строкой, определенные в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md). Ключ ресурса также может быть других типов объектов, таких как <xref:System.Type>. Объект <xref:System.Type> ключ — это основа для элементов управления можно стилями темы, через ключ неявного стиля. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
- — Альтернативный декларативным образом ссылки на ресурс в виде [DynamicResource Markup Extension](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+ Декларативные альтернативные методы ссылкой на ресурс — как [расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `StaticResource`, присваивается в качестве значения <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> соответствующего класса расширения <xref:System.Windows.StaticResourceExtension>.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "33547203"
   
  Подробное определение зачастую удобно использовать для расширений, которые имеют несколько устанавливаемых свойств, а также в том случае, если некоторые свойства являются необязательными. Так как `StaticResource` имеет только одно устанавливаемое свойство, которое является обязательным, это использование не является типичным.  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализации процессора обработки для данного расширения разметки определяется <xref:System.Windows.StaticResourceExtension> класса.  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализации обработчика обработка данного расширения разметки определяется <xref:System.Windows.StaticResourceExtension> класса.  
   
  `StaticResource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>См. также  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+## <a name="see-also"></a>См. также
+- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616018"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Разрешение безопасности перенаправления привязки сборок
 Для явного перенаправления привязки сборки в файле конфигурации приложения необходимо разрешение безопасности. Это относится к перенаправлению как сборок платформы .NET Framework, так и сторонних сборок. Разрешение, задав <xref:System.Security.Permissions.SecurityPermissionFlag> флаг <xref:System.Security.Permissions.SecurityPermission>. Управляемые сборки не имеют разрешений по умолчанию.  
@@ -23,7 +23,7 @@ ms.locfileid: "47088666"
   
  В следующей таблице показаны по умолчанию параметры безопасности для **BindingRedirects** флаг.  
   
-|Зоны|Установка флага BindingRedirects|  
+|Зона|Установка флага BindingRedirects|  
 |----------|-----------------------------------|  
 |Зоны надежных узлов (локальный компьютер)|**ON**|  
 |Зона интрасети|**ON**|  
@@ -32,7 +32,7 @@ ms.locfileid: "47088666"
   
  Администратор может изменить эти параметры безопасности, чтобы разрешить или запретить конкретных сценариев на данном компьютере. Нет средств по изменению **BindingRedirects** флаг, используемый по умолчанию; Azure с помощью администратора необходимо вручную изменить файл Security.config на компьютере пользователя.  
   
-## <a name="see-also"></a>См. также  
- [Файлы политики издателя и выполнение Side-by-Side](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>См. также
+- [Файлы политики издателя и выполнение Side-by-Side](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)

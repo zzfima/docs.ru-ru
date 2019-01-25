@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619754"
 ---
 # <a name="group-join-clause-visual-basic"></a>Предложение Group Join (Visual Basic)
 Объединяет две коллекции в одну иерархическую коллекцию. Операция соединения основана на сопоставлении ключей.  
@@ -33,11 +33,11 @@ Group Join element [As type] In collection _
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательно. Переменная управления для присоединяемой коллекции.|  
-|`type`|Необязательный. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
-|`collection`|Обязательно. Коллекция для объединения с коллекцией, которая находится в левой части `Group Join` оператор. Объект `Group Join` предложения могут быть вложенными в `Join` предложение или в другом `Group Join` предложение.|  
-|`key1` `Equals` `key2`|Обязательно. Определяет ключи для соединяемых коллекций. Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций. Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей. `key1` Параметр должен быть из коллекции в левой части `Join` оператор. `key2` Параметр должен быть из коллекции в правой части `Join` оператор.<br /><br /> Ключи, используемые в условии соединения может быть выражений, содержащих более одного элемента из коллекции. Тем не менее каждое ключевое выражение может содержать только элементы из соответствующей коллекции.|  
-|`expressionList`|Обязательно. Одно или несколько выражений, определяющих способ создания групп элементов из коллекции. Чтобы определить имя элемента для результатов группирования, используйте `Group` ключевое слово (`<alias> = Group`). Вы также можете включать агрегатные функции для применения к группе.|  
+|`element`|Обязательный. Переменная управления для присоединяемой коллекции.|  
+|`type`|Необязательный параметр. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательный. Коллекция для объединения с коллекцией, которая находится в левой части `Group Join` оператор. Объект `Group Join` предложения могут быть вложенными в `Join` предложение или в другом `Group Join` предложение.|  
+|`key1` `Equals` `key2`|Обязательный. Определяет ключи для соединяемых коллекций. Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций. Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей. `key1` Параметр должен быть из коллекции в левой части `Join` оператор. `key2` Параметр должен быть из коллекции в правой части `Join` оператор.<br /><br /> Ключи, используемые в условии соединения может быть выражений, содержащих более одного элемента из коллекции. Тем не менее каждое ключевое выражение может содержать только элементы из соответствующей коллекции.|  
+|`expressionList`|Обязательный. Одно или несколько выражений, определяющих способ создания групп элементов из коллекции. Чтобы определить имя элемента для результатов группирования, используйте `Group` ключевое слово (`<alias> = Group`). Вы также можете включать агрегатные функции для применения к группе.|  
   
 ## <a name="remarks"></a>Примечания  
  `Group Join` Предложение объединяет две коллекции, на основе сопоставления значений ключа из соединяемых коллекций. Полученная в результате коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, соответствующих значению ключа из первой коллекции. Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции. Сведения об агрегатных функциях см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
@@ -55,11 +55,11 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/index.md)  
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>См. также
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Запросы](../../../visual-basic/language-reference/queries/index.md)
+- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)

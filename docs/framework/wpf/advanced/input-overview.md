@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592592"
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Подсистема предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных из широкого спектра устройств, включая мышь, клавиатура, сенсорного ввода и пера. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.
@@ -243,7 +243,7 @@ ms.locfileid: "48842792"
 
  Реализуя реагирование объектов на манипуляции, можно создать видимость инерции объекта. Тогда объекты смогут имитировать физический мир. Например, если вы достаточно сильно толкнете книгу по столу, то после того как вы ее отпустите, она продолжит движение. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет имитировать это поведение путем вызова событий манипуляции после того, как пальцы пользователя отпускают объект.
 
- Сведения о том, как создать приложение, которое дает пользователю возможность перемещать, масштабировать и поворачивать объект, см. в статье [Пошаговое руководство. Создание первого приложения для обработки касаний](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Сведения о том, как создать приложение, которое позволяет пользователю перемещать, масштабировать и поворачивать объект, см. в разделе [Пошаговое руководство: Создание первого приложения Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  <xref:System.Windows.UIElement> Определяет следующие события манипуляции.
 
@@ -288,9 +288,9 @@ ms.locfileid: "48842792"
 
 |Событие, вызываемое отменой|События мыши, возникающие для ввода, который уже произошел|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> и <xref:System.Windows.UIElement.ManipulationStarted>.|События нажатия кнопки мыши.|
+|<xref:System.Windows.UIElement.ManipulationStarting> и <xref:System.Windows.UIElement.ManipulationStarted>|События нажатия кнопки мыши.|
 |<xref:System.Windows.UIElement.ManipulationDelta>|События нажатия кнопки мыши и перемещения мыши.|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> и <xref:System.Windows.UIElement.ManipulationCompleted>.|События нажатия кнопки мыши, перемещения мыши и отпускания кнопки мыши.|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> и <xref:System.Windows.UIElement.ManipulationCompleted>|События нажатия кнопки мыши, перемещения мыши и отпускания кнопки мыши.|
 
  Обратите внимание, что при вызове метода <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> во время манипуляции по инерции, метод возвращает `false` и входных данных не вызывает события мыши.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842792"
  Доступны дополнительные ресурсы, в которых более подробно разъясняются элементы инфраструктуры [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и маршрутизация событий. Дополнительные сведения см. в следующих обзорах: [Общие сведения о командах](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md), [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) и [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>См. также
- [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md) [Общие сведения о командах](../../../../docs/framework/wpf/advanced/commanding-overview.md) [Обзор маршрутизированных событий](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [базового Общие сведения о элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)

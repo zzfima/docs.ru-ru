@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: сохранение часовых поясов во внедренном ресурсе'
+title: Как выполнить Сохранение часовых поясов во внедренном ресурсе
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592878"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Практическое: сохранение часовых поясов во внедренном ресурсе
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Как выполнить Сохранение часовых поясов во внедренном ресурсе
 
 Часовыми поясами приложения часто требует наличия определенного часового пояса. Тем не менее поскольку доступность отдельных <xref:System.TimeZoneInfo> объектов зависит от сведений, хранящихся в реестре локальной системы, даже настраиваемые доступные часовые пояса могут отсутствовать. Кроме того, сведения о пользовательских часовых поясов, созданных с помощью <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метода не сохраняется вместе с другими данными часового пояса в реестре. Чтобы убедиться, что эти часовые пояса доступны, когда они нужны, можно сохранить их можно сериализовать и последующее восстановление их десериализовать.
 
@@ -37,9 +37,9 @@ ms.locfileid: "45653360"
 
 1. Получить существующий часовой пояс или создайте новый часовой пояс.
 
-   Чтобы извлечь существующий часовой пояс, см. в разделе [как: доступ к предварительно определенным объектам UTC и местным временем объектам зоны](../../../docs/standard/datetime/access-utc-and-local.md) и [как: создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Чтобы извлечь существующий часовой пояс, см. в разделе [как: Доступ к предварительно определенным объектам UTC и местным временем объектам зоны](../../../docs/standard/datetime/access-utc-and-local.md) и [как: Создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Чтобы создать новый часовой пояс, вызовите одну из перегрузок <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод. Дополнительные сведения см. в разделе [как: создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [как: создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Чтобы создать новый часовой пояс, вызовите одну из перегрузок <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод. Дополнительные сведения см. в разделе [Как Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [как: Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Вызовите <xref:System.TimeZoneInfo.ToSerializedString%2A> метод, чтобы создать строку, которая содержит данные часового пояса.
 
@@ -85,6 +85,6 @@ ms.locfileid: "45653360"
 
 ## <a name="see-also"></a>См. также
 
-* [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
-* [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
-* [Практическое руководство. Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+- [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)
+- [Практическое руководство. Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
+title: Как выполнить Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638292"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Как выполнить Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
 В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны WCF версию службы ASP.NET AJAX. Две службы затем используется рядом друг с другом или службы WCF можно использовать для замены службы ASP.NET AJAX.
 
  Перенос существующего ASP.NET AJAX вызовы между службами WCF AJAX предоставляет следующие преимущества:
@@ -22,7 +22,7 @@ ms.locfileid: "48840918"
 
  Код, получаемый в результате применения описанных в этом разделе процедур, приведен в примере после процедур.
 
- Дополнительные сведения о предоставлении доступа к службе WCF через конечную точку с поддержкой AJAX, см. в разделе [как: использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.
+ Дополнительные сведения о предоставлении доступа к службе WCF через конечную точку с поддержкой AJAX, см. в разделе [как: Использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) раздела.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Создание и тестирование приложения веб-службы ASP.NET
 
@@ -36,7 +36,7 @@ ms.locfileid: "48840918"
 
 5.  Из **построения** меню, выберите **построить решение**.
 
-6.  Из **Отладка** меню, выберите **Запуск без отладки**.
+6.  В меню **Отладка** выберите пункт **Запуск без отладки**.
 
 7.  На созданной веб-странице выберите операцию `HelloWorld`.
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |Escape-символы|Всегда с escape-символом прямой косой черты (/); нельзя использовать недопустимые символы JSON без escape-символа, например "\n"|Значения DateTime с escape-символом прямой косой черты (/)|
 
 ## <a name="see-also"></a>См. также
- [Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

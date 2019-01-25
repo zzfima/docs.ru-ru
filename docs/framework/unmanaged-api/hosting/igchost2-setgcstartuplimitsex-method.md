@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f92667191cad163998d233e1110365de65c0340c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f61f6ed5712f3c98f06f5fa76657f3fa7b70fe84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666336"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Метод IGCHost2::SetGCStartupLimitsEx
 Задает размер сегмента и максимальный размер для поколения 0.  
@@ -38,22 +38,22 @@ HRESULT SetGCStartupLimitsEx (
   
 #### <a name="parameters"></a>Параметры  
  `SegmentSize`  
- [in] Размер сегментов, используемых сборщик мусора.  
+ [in] Размер сегмента, используемой системой сбора мусора.  
   
  `MaxGen0Size`  
- [in] Максимальный размер для поколения 0.  
+ [in] Максимальный размер поколения 0.  
   
 ## <a name="remarks"></a>Примечания  
- Значения, `SetGCStartupLimitsEx` наборы можно указать только в том случае, перед запуском узла. Эти значения невозможно изменить позже.  
+ Значения, `SetGCStartupLimitsEx` множества могут быть заданы только в том случае, перед запуском узла. Эти значения нельзя изменить позже.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** GCHost.idl, GCHost.h  
+ **Заголовок.** GCHost.idl GCHost.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IGCHost2](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IGCHost2](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

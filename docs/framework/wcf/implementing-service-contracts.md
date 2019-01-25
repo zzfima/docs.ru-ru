@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: 4e6570291571815781ce543f5991ae40ed57d1e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576503"
 ---
 # <a name="implementing-service-contracts"></a>Реализация контрактов служб
-Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Для создания службы необходимо создать класс, который реализует контракт службы Windows Communication Foundation (WCF). Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  
+Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Чтобы создать службу, напишите класс, реализующий контракт службы Windows Communication Foundation (WCF). Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  
   
 ## <a name="creating-a-service-class"></a>Создание класса службы  
  Ниже приведен пример службы, реализующей отдельно определенный контракт `IMath`.  
@@ -57,8 +57,8 @@ class MathService
   
  После реализации контракта службы необходимо создать для службы одну или более конечных точек. Дополнительные сведения см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). Дополнительные сведения о запуске службы см. в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
-## <a name="see-also"></a>См. также  
- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Практическое руководство. Создание службы с помощью класса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
- [Практическое руководство. Создание службы с помощью интерфейса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
- [Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>См. также
+- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Практическое руководство. Создание службы с помощью класса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Практическое руководство. Создание службы с помощью интерфейса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

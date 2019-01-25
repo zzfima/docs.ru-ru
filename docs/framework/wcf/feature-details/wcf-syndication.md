@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 627de6431c641e48367a97e3f80f3d05d185ab45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7fefb49cf70b9f3c55937e7be06eca212af364d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530909"
 ---
 # <a name="wcf-syndication"></a>Синдикация WCF
-Windows Communication Foundation (WCF) обеспечивает поддержку для удобной работы с веб-каналами синдикации в форматах Atom, RSS и других нестандартных форматах, что позволяет обрабатывать и создавать их, а также предоставлять к ним доступ в конечной точке службы. В подразделах этого раздела подробно описывается модель программирования синдикации.  
+Windows Communication Foundation (WCF) обеспечивает поддержку для удобной работы с каналами Atom, RSS и других нестандартных форматах, что позволяет считывать и создавать их, а также предоставлять к ним доступ в конечной точке службы. В подразделах этого раздела подробно описывается модель программирования синдикации.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- Общие сведения о поддержке синдикации WCF.  
+ Предоставляет общие сведения о поддержке синдикации в WCF.  
   
  [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  Описание классов объектной модели и расширяемости синдикации.  
@@ -40,6 +40,6 @@ Windows Communication Foundation (WCF) обеспечивает поддержк
   
 ## <a name="related-sections"></a>Связанные разделы  
   
-## <a name="see-also"></a>См. также  
- [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+## <a name="see-also"></a>См. также
+- [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)

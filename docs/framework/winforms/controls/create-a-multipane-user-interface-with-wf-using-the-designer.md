@@ -1,22 +1,22 @@
 ---
-title: Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора
+title: Как выполнить Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 9c8cab952fd9d0c58380a308dd360dcedb2ea8f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664230"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Как выполнить Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms с помощью конструктора
 В следующей процедуре вы создадите несколькими областями пользовательский интерфейс, который аналогичен используемому в Microsoft Outlook с **папку** списке **сообщений** области и **предварительнойверсии** области. Это упорядочение достигается главным образом за счет закрепления элементов управления формы.  
   
- При закреплении элемента управления, вы можете определить, какие границы родительского контейнера элемента управления он прикреплен к. Таким образом Если задать <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Right>, правый край элемента управления закрепляется по правому краю родительского элемента. Кроме того закрепленной края элемента управления изменяется в совпадали с элементом управления контейнера. Дополнительные сведения о том, как <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойство работает, см. [как: закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ При закреплении элемента управления, вы можете определить, какие границы родительского контейнера элемента управления он прикреплен к. Таким образом Если задать <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Right>, правый край элемента управления закрепляется по правому краю родительского элемента. Кроме того закрепленной края элемента управления изменяется в совпадали с элементом управления контейнера. Дополнительные сведения о том, как <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойство работает, см. [как: Закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
   
  Эта процедура предназначена для расположения <xref:System.Windows.Forms.SplitContainer> и другие элементы управления в форме, а не на добавление функциональных возможностей для имитации Microsoft Outlook.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "47071271"
   
 1.  Создайте новый проект приложения Windows (**файл** > **New** > **проекта** > **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
   
-2.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** в форму. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
+2.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** в форму. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 3.  Перетащите <xref:System.Windows.Forms.TreeView> управления из **элементов** к левой панели <xref:System.Windows.Forms.SplitContainer> элемента управления. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Left> , нажав кнопку на панели слева в редакторе значений, открывается при нажатии кнопки со стрелкой вниз.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "47071271"
   
      На этом этапе при разработке приложений, создания сложного пользовательского интерфейса. Следующим шагом является переходить к программированию самого приложения, возможно, подключив <xref:System.Windows.Forms.TreeView> управления и <xref:System.Windows.Forms.ListView> элементы управления, в каком-либо источника данных. Дополнительные сведения о подключении к данным элементы управления, см. в разделе [привязка данных и Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.SplitContainer>  
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.SplitContainer>
+- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

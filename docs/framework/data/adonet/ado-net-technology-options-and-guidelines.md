@@ -2,12 +2,12 @@
 title: Возможности технологии и рекомендации по ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2550c286485025a394cf3f8afe6c43a0472b2cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566285"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Возможности технологии и рекомендации по ADO.NET
 Платформа данных ADO.NET представляет собой стратегию многократного выпуска, целью которой является снижение объемов кодирования и обслуживания. Эта платформа позволяет разработчикам программировать на основе концептуальных моделей EDM (entity data model). Данная платформа включает платформу ADO.NET Entity Framework и связанные с нею технологии.  
@@ -28,7 +28,7 @@ ms.locfileid: "43507996"
  Entity SQL - это текстовый язык запросов, разработанный для взаимодействия с моделью EDM. Язык Entity SQL является диалектом SQL и содержит конструкции для выполнения запросов в терминах высокоуровневых понятий моделирования, таких как наследование, сложные типы и явные отношения. Разработчики также могут использовать язык Entity SQL непосредственно со службами объектов. Дополнительные сведения см. в разделе [язык Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient - это новый поставщик данных .NET Framework, используемый для взаимодействия с моделью EDM. EntityClient создан на основе шаблона поставщика данных .NET Framework и предоставляет объекты <xref:System.Data.EntityClient.EntityConnection> и <xref:System.Data.EntityClient.EntityCommand>, возвращающие объект <xref:System.Data.EntityClient.EntityDataReader>. EntityClient работает с языком Entity SQL и предоставляет возможности гибкого сопоставления поставщикам данных для конкретных хранилищ. Дополнительные сведения см. в разделе [EntityClient и Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient - это новый поставщик данных .NET Framework, используемый для взаимодействия с моделью EDM. EntityClient создан на основе шаблона поставщика данных .NET Framework и предоставляет объекты <xref:System.Data.EntityClient.EntityConnection> и <xref:System.Data.EntityClient.EntityCommand>, возвращающие объект <xref:System.Data.EntityClient.EntityDataReader>. EntityClient работает с языком Entity SQL и предоставляет возможности гибкого сопоставления поставщикам данных для конкретных хранилищ. Дополнительные сведения см. в разделе [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ### <a name="entity-data-model-tools"></a>Средства работы с моделью EDM  
  Платформа Entity Framework предоставляет программы командной строки, мастера и конструкторы, упрощающие создание приложений EDM. Элемент управления EntityDataSource поддерживает привязку данных на основе модели EDM. Программирование элемента управления EntityDataSource аналогично программированию других элементов управления для источников данных в Visual Studio. Дополнительные сведения см. в разделе [средств модели ADO.NET EDM](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527).  
@@ -37,9 +37,9 @@ ms.locfileid: "43507996"
  LINQ to SQL является реализацией объектно-реляционного сопоставления (OR/M), которое позволяет моделировать базу данных SQL Server с использованием классов .NET Framework. LINQ to SQL позволяет запрашивать базу данных с помощью LINQ, а также обновлять, вставлять и удалять данные из нее. LINQ to SQL поддерживает транзакции, представления и хранимые процедуры, предоставляя несложный способ интеграции проверки данных и правил бизнес-логики в модель данных. Реляционный конструктор объектов (конструктор O/R) можно использовать для моделирования классов сущностей и ассоциаций, основанных на объектах в базе данных. Дополнительные сведения см. в разделе [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>Службы данных WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] развертывает службы данных в Интернете или интрасети. Данные структурируются как сущности и отношения согласно спецификациям модели EDM. Данные, развертываемые в данной модели, адресуются по стандартному протоколу HTTP. Дополнительные сведения см. в разделе [служб данных WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] развертывает службы данных в Интернете или интрасети. Данные структурируются как сущности и отношения согласно спецификациям модели EDM. Данные, развертываемые в данной модели, адресуются по стандартному протоколу HTTP. Дополнительные сведения см. в разделе [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

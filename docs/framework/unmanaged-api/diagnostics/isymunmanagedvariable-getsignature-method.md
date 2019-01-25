@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b089540f23659d4f7811d921364adc73fd62803
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 517a731815286130e2451ffdafc4c67181ec0d68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647287"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>Метод ISymUnmanagedVariable::GetSignature
 Возвращает подпись переменной.  
@@ -42,16 +42,16 @@ HRESULT GetSignature(
  [in] Размер буфера, на который указывает `sig` параметра.  
   
  `pcSig`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для подписи.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, необходимый для подписи.  
   
  `sig`  
- [out] Буфер, содержит подписи.  
+ [out] Буфер, который содержит подписи.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

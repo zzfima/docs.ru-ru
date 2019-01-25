@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обнаружение установленного подключаемого модуля WPF для Firefox
+title: Как выполнить Обнаружение установленного подключаемого модуля WPF для Firefox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: ba411d662a8e5b0c4727e23c8d507e8924b6e9e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f017aec8788d9ed38476262bba457f4621217519
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677983"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Практическое руководство. Обнаружение установленного подключаемого модуля WPF для Firefox
-Windows Presentation Foundation (WPF) для Firefox подключаемый модуль включает [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , отменив XAML-файлы для выполнения в браузере Mozilla Firefox. В этом разделе содержится скрипт, написанный на языках HTML и JavaScript, который администраторы могут использовать для определения наличия подключаемого модуля WPF для Firefox.  
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Как выполнить Обнаружение установленного подключаемого модуля WPF для Firefox
+Позволяет Windows Presentation Foundation (WPF) подключаемого модуля для Firefox [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободных файлов XAML для выполнения в браузере Mozilla Firefox. В этом разделе содержится скрипт, написанный на языках HTML и JavaScript, который администраторы могут использовать, чтобы определить, установлен ли подключаемый модуль WPF для Firefox.  
   
 > [!NOTE]
->  Дополнительные сведения об установке, развертывании и обнаружении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], в разделе [установить платформу .NET Framework для разработчиков](../../../../docs/framework/install/guide-for-developers.md).  
+>  Дополнительные сведения об установке, развертывании и обнаружении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], см. в разделе [установка .NET Framework для разработчиков](../../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="example"></a>Пример  
- Когда [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] будет установлен, клиентский компьютер настроен подключаемый модуль WPF для Firefox. Следующий пример скрипта проверяет наличие подключаемого модуля WPF для Firefox и затем отображает соответствующее сообщение о состоянии.  
+ Когда [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] — установлен, клиентский компьютер настроен с помощью подключаемого модуля WPF для Firefox. В нижеприведенном примере сценария проверяет для подключаемого модуля WPF для Firefox, а затем отображает соответствующее сообщение о состоянии.  
   
 ```  
 <HTML>  
@@ -54,15 +54,15 @@ Windows Presentation Foundation (WPF) для Firefox подключаемый м
 </HTML>  
 ```  
   
- При успешном выполнении проверки подключаемого модуля WPF для Firefox отображается следующее сообщение о состоянии:  
+ При успешном выполнении проверки подключаемого модуля WPF для Firefox отображается следующее сообщение:  
   
  `The WPF plug-in for Firefox is installed.`  
   
- В противном случае отображается следующее сообщение о состоянии:  
+ В противном случае отображается следующее сообщение:  
   
  `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
-## <a name="see-also"></a>См. также  
- [Проверка наличия установленной платформы .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [Проверка наличия установленной платформы .NET Framework 3.5](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+## <a name="see-also"></a>См. также
+- [Проверка наличия установленной платформы .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [Проверка наличия установленной платформы .NET Framework 3.5](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566987"
 ---
 # <a name="execnotificationquerywmi-function"></a>Функция ExecNotificationQueryWmi
 Выполняет запрос для получения событий. Вызов возвращается немедленно, а вызывающий объект может опросить возвращенном перечислителе для событий, при их поступлении. Освобождение возвращенном перечислителе отменяет запрос.  
@@ -57,7 +57,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`   
 [in] Комбинация из следующих двух флагов, влияющих на поведение этой функции. Эти значения определены в *WbemCli.h* файл заголовка, или их можно определить как константы в коде. 
 
-| Константа | Значение  | Описание:  |
+| Константа | Значение  | Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Этот флаг приводит к Полусинхронный вызов. Если этот флаг не установлен, вызов завершается ошибкой. Это обусловлено их получения постоянно, это означает, что пользователь должен опросить возвращенном перечислителе. Блокирует этот вызов бесконечно делает, невозможно. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Функция возвращает только вперед перечислителя. Обычно перечислители только вперед, выполняются быстрее и использовать меньше памяти, чем обычные перечислители, но они не допускают вызовы [клона](clone.md). |
@@ -117,11 +117,11 @@ HRESULT ExecNotificationQueryWmi (
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

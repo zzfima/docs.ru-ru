@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655989"
 ---
 # <a name="imports-statement-xml-namespace"></a>Оператор Imports (пространство имен XML)
 Импортирует префиксы пространства имен XML для использования в XML-литералы и свойства оси XML.  
@@ -27,10 +27,10 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>Части  
  `xmlNamespacePrefix`  
- Необязательный. Строка, по котором XML элементы и атрибуты можно обращаться к `xmlNamespaceName`. Если нет `xmlNamespacePrefix` будет указано, импортируемое пространство имен XML — это пространство имен XML по умолчанию. Должен быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [имена объявленных элементов XML и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Необязательный параметр. Строка, по котором XML элементы и атрибуты можно обращаться к `xmlNamespaceName`. Если нет `xmlNamespacePrefix` будет указано, импортируемое пространство имен XML — это пространство имен XML по умолчанию. Должен быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [имена объявленных элементов XML и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
- Обязательно. Строка, идентифицирующая импортируемого пространства имен XML.  
+ Обязательный. Строка, идентифицирующая импортируемого пространства имен XML.  
   
 ## <a name="remarks"></a>Примечания  
  Можно использовать `Imports` инструкции для определения глобальных пространств имен XML, который можно использовать с XML-литералы и свойства оси XML, или в качестве параметров, переданных `GetXmlNamespace` оператор. (Дополнительные сведения об использовании `Imports` инструкцию, чтобы импортировать псевдоним, который может использоваться где имена типов используются в коде, см. в разделе [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Синтаксис объявления пространства имен XML с помощью `Imports` инструкция идентична синтаксисе, используемом в XML. Таким образом, можно скопировать объявление пространства имен из файла XML и использовать его в `Imports` инструкции.  
@@ -88,8 +88,8 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>См. также  
- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [Оператор GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>См. также
+- [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [Оператор GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650448"
 ---
 # <a name="fromtoby-animations-overview"></a>Общие сведения об анимациях From/To/By
 В этом разделе описываются способы использования анимаций From/To/By для свойств зависимостей. Анимация From/To/By создает переход между двумя целевыми значениями.  
@@ -106,7 +106,7 @@ ms.locfileid: "43502520"
 ### <a name="by"></a>На  
  Если задано только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство анимации, анимация выполняется от базового значения анимируемого свойства или из выходных данных составляющей анимации к сумме этого значения и значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство.  
   
- В следующем примере задается только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> до 300. Так как в примере указывается начальное значение, <xref:System.Windows.Media.Animation.DoubleAnimation> использует базовое значение <xref:System.Windows.FrameworkElement.Width%2A> свойства, 100, как начальное значение. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 100:400. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 100 до 400.  
+ В следующем примере задается только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> до 300. Так как в примере указывается начальное значение, <xref:System.Windows.Media.Animation.DoubleAnimation> использует базовое значение <xref:System.Windows.FrameworkElement.Width%2A> свойства, 100, как начальное значение. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 100: 400. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 100 до 400.  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
@@ -114,7 +114,7 @@ ms.locfileid: "43502520"
 ### <a name="fromby"></a>From/By  
  При задании <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства анимации, анимация выполняется от значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства, чтобы значение, которое указано на сумму <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.  
   
- В следующем примере задается <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> 50 и его <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> в значение 300. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 50 350. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 50 до 350.  
+ В следующем примере задается <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> 50 и его <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> в значение 300. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 50: 350. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 50 до 350.  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
@@ -140,12 +140,12 @@ ms.locfileid: "43502520"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также позволяет создавать собственные настраиваемые типы анимации. Дополнительные сведения см. в разделе [Общие сведения о настраиваемых анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Общие сведения об анимации с использованием пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Общие сведения о пользовательской анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Общие сведения об анимации с использованием пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [Общие сведения о пользовательской анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621202"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>Метод ISymENCUnmanagedMethod::GetFileNameFromOffset
 Получает имя файла для строки, связанной со смещением.  
@@ -46,7 +46,7 @@ HRESULT GetFileNameFromOffset(
  [in] Объект `ULONG32` указывает размер `szName` буфера.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для хранения имен файлов.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имен файлов.  
   
  `szName`  
  [out] Буфер, содержащий имена файлов.  
@@ -55,7 +55,7 @@ HRESULT GetFileNameFromOffset(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 563010efc4f3049d330ee2b38b7f59e23292e630
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659719"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Параметры типа нельзя использовать в качестве квалификаторов
-Программный элемент квалифицировался уточняющей строки, которая содержит параметр типа.  
+Программный элемент квалифицируется с помощью уточняющей строке, которая включает параметр типа.  
   
- Представляет параметр типа является обязательным для типа, которое должно быть предоставлено при создании универсального типа. Он не представляет конкретный определенный тип. Уточняющей строки должна включать только те элементы, которые определены во время компиляции.  
+ Параметр типа представляет требования для типа, который предоставляется при создании универсального типа. Он не представляет конкретный определенный тип. Строка квалификации должна включать только те элементы, которые определены во время компиляции.  
   
  Следующие операторы могут привести к этой ошибке.  
   
@@ -34,11 +34,11 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Удалите параметр типа из строки квалификации или замените его определенным типом.  
+1.  Удалите параметр типа из уточняющей строке или замените его определенного типа.  
   
-2.  Если необходимо использовать для поиска элемента программирования имен сконструированный тип, необходимо использовать дополнительную логику программы.  
+2.  Если вам нужно использовать для поиска элемента программирования имен сконструированный тип, необходимо использовать дополнительную логику программы.  
   
-## <a name="see-also"></a>См. также  
- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>См. также
+- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)

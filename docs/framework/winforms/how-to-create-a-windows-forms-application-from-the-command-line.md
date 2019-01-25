@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: Создание приложения Windows Forms из командной строки'
+title: Как выполнить Создание приложения Windows Forms из командной строки
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581991"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое: Создание приложения Windows Forms из командной строки
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: создание простой формы Windows](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как выполнить Создание приложения Windows Forms из командной строки
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Создание формы Windows простой](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -113,9 +113,9 @@ ms.locfileid: "43804812"
   
 -   Для компиляции кода следуйте инструкциям из предыдущей процедуры, описывающим, как скомпилировать и запустить приложение.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Изменение внешнего вида Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Изменение внешнего вида Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

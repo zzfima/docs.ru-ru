@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583669"
 ---
 # <a name="delegate-statement"></a>Оператор Delegate
 Используется для объявления делегата. Делегат — это ссылочный тип, который ссылается на `Shared` метод типа или метода экземпляра объекта. Любую процедуру с соответствующими типами параметров и возвращаемого значения можно использовать для создания экземпляра этого класса делегата. Процедура может затем быть вызвана через экземпляр делегата.  
@@ -28,14 +28,14 @@ ms.locfileid: "50199777"
   
 |Термин|Определение|  
 |---|---|  
-|`attrlist`|Необязательный. Список атрибутов, применяемых к этому делегату. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (»`<`«и»`>`«).|  
-|`accessmodifier`|Необязательный. Указывает, какой код может обращаться к делегату. Ниже указаны доступные значения.<br /><br /> - [Открытый](../../../visual-basic/language-reference/modifiers/public.md). Любой код, который можно получить доступ к элементу, который объявляет делегат можно получить доступ к его.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md). Только код внутри класса делегата или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md). Только код внутри той же сборки можно получить доступ к делегату.<br />- [Закрытый](../../../visual-basic/language-reference/modifiers/private.md). Только код внутри элемента, который объявляет делегат может обращаться к его.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) только код внутри класса делегата, производном классе или той же сборке может получить доступ к делегату. <br />- [Частный защищенный](../../language-reference/modifiers/private-protected.md) только код внутри класса делегата, или в производном классе в одной сборке может получить доступ к делегату. |  
-|`Shadows`|Необязательный. Указывает, что этот делегат повторно объявляет и скрывает одинаково названные элементы программирования или набор перегруженных элементов в базовом классе. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. Например если `Private` элемент скрывает элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.|  
+|`attrlist`|Необязательный параметр. Список атрибутов, применяемых к этому делегату. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (»`<`«и»`>`«).|  
+|`accessmodifier`|Необязательный параметр. Указывает, какой код может обращаться к делегату. Ниже указаны доступные значения.<br /><br /> - [Открытый](../../../visual-basic/language-reference/modifiers/public.md). Любой код, который можно получить доступ к элементу, который объявляет делегат можно получить доступ к его.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md). Только код внутри класса делегата или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md). Только код внутри той же сборки можно получить доступ к делегату.<br />- [Закрытый](../../../visual-basic/language-reference/modifiers/private.md). Только код внутри элемента, который объявляет делегат может обращаться к его.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) только код внутри класса делегата, производном классе или той же сборке может получить доступ к делегату. <br />- [Частный защищенный](../../language-reference/modifiers/private-protected.md) только код внутри класса делегата, или в производном классе в одной сборке может получить доступ к делегату. |  
+|`Shadows`|Необязательный параметр. Указывает, что этот делегат повторно объявляет и скрывает одинаково названные элементы программирования или набор перегруженных элементов в базовом классе. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. Например если `Private` элемент скрывает элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.|  
 |`Sub`|Необязательно, но либо `Sub` или `Function` должен присутствовать. Объявляет процедуру представителем `Sub` процедуру, которая не возвращает значение.|  
 |`Function`|Необязательно, но либо `Sub` или `Function` должен присутствовать. Объявляет процедуру представителем `Function` процедуры, возвращающей значение.|  
-|`name`|Обязательно. Имя типа делегата; следует стандартным правилам именования переменных.|  
-|`typeparamlist`|Необязательный. Список параметров типа для этого делегата. Несколько параметров типа разделяются запятыми. При необходимости каждого параметра типа можно объявить как вариант с помощью `In` и `Out` универсального модификаторы. Необходимо заключить [список типов](../../../visual-basic/language-reference/statements/type-list.md) в круглые скобки и введите его с `Of` ключевое слово.|  
-|`parameterlist`|Необязательный. Список параметров, которые передаются в процедуру при ее вызове. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
+|`name`|Обязательный. Имя типа делегата; следует стандартным правилам именования переменных.|  
+|`typeparamlist`|Необязательный параметр. Список параметров типа для этого делегата. Несколько параметров типа разделяются запятыми. При необходимости каждого параметра типа можно объявить как вариант с помощью `In` и `Out` универсального модификаторы. Необходимо заключить [список типов](../../../visual-basic/language-reference/statements/type-list.md) в круглые скобки и введите его с `Of` ключевое слово.|  
+|`parameterlist`|Необязательный параметр. Список параметров, которые передаются в процедуру при ее вызове. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
 |`type`|Обязательно, если `Function` процедуры. Тип данных возвращаемого значения.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -57,19 +57,19 @@ ms.locfileid: "50199777"
   
  Сигнатура функции должна соответствовать сигнатуре типа делегата. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Дополнительные сведения о делегатах см. в разделе [делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ и [делегатах](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Delegate` инструкцию, чтобы объявить делегат для работы с двумя числами и возвращает число. `DelegateTest` Метод принимает экземпляр этого типа делегата и использует его для работы с парой чисел.  
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Ковариация и контрвариантность](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>См. также
+- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Ковариация и контрвариантность](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

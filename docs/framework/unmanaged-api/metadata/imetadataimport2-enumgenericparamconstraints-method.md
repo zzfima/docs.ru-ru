@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617698"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Метод IMetaDataImport2::EnumGenericParamConstraints
-Получает перечислитель для массива ограничений параметра универсального типа, связанный с универсальным параметром, представленного указанным токеном.  
+Получает перечислитель для массива универсальный параметр ограничения, связанные с универсального параметра, представленного указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ HRESULT EnumGenericParamConstraints (
  [in, out] Указатель на перечислитель.  
   
  `tk`  
- [in]   Токен, представляющий универсальный параметр, ограничения, подлежащие перечислению.  
+ [in]   Токен, который представляет универсальный параметр, ограничения должны быть перечислены.  
   
  `rGenericParamConstraints`  
- [out] Массив ограничений для параметра универсального типа для перечисления.  
+ [out] Массив ограничений параметра универсального типа для перечисления.  
   
  `cMax`  
- [in]   Максимальное количество маркеров для размещения в `rGenericParamConstraints`.  
+ [in]   Максимальное число маркеров для размещения в `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
  [out] Указатель на число маркеров помещаются в `rGenericParamConstraints`.  
@@ -63,14 +63,14 @@ HRESULT EnumGenericParamConstraints (
 |`S_FALSE`|`phEnum` не имеет члена элементов. В этом случае `pcGenericParameterConstraints` имеет значение 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

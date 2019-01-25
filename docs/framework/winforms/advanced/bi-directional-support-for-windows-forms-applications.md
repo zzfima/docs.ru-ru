@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676852"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, которые поддерживают такие языки (справа налево), такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
@@ -23,7 +23,7 @@ Visual Studio можно использовать для создания при
  Язык и региональные параметры, в том числе язык и региональные параметры пользовательского интерфейса, определяют способы обработки приложением дат, времени, валют и других данных. Поддержка языка и региональных параметров, в том числе языка и региональных параметров пользовательского интерфейса, для языков с двунаправленным письмом соответствует поддержке для любых других языков.   См. также разделы [Классы, соответствующие определенному языку и региональным параметрам, для глобальных форм Windows Forms и Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) или [Классы, соответствующие определенному языку и региональным параметрам, для глобальных форм Windows Forms и Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Свойства RightToLeft и RightToLeftLayout  
- Базовый класс <xref:System.Windows.Forms.Control>, от которого наследуются формы, включает свойство <xref:System.Windows.Forms.Control.RightToLeft%2A>, которое можно задать, чтобы изменить порядок чтения формы и ее элементов управления. Если задать свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> формы, по умолчанию элементы управления формы будут наследовать этот параметр. Однако свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> можно также задать по отдельности для большинства элементов управления. См. также [Практическое руководство. Отображение текста справа налево в формах Windows Forms с целью глобализации](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Базовый класс <xref:System.Windows.Forms.Control>, от которого наследуются формы, включает свойство <xref:System.Windows.Forms.Control.RightToLeft%2A>, которое можно задать, чтобы изменить порядок чтения формы и ее элементов управления. Если задать свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> формы, по умолчанию элементы управления формы будут наследовать этот параметр. Однако свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> можно также задать по отдельности для большинства элементов управления. Также см. раздел [Как Отображение текста справа налево в формах Windows Forms для глобализации](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  Результат применения свойства <xref:System.Windows.Forms.Control.RightToLeft%2A> может отличаться в разных элементах управления. В некоторых элементах управления это свойство устанавливает только порядок чтения, например в элементах управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ToolTip>. В других элементах управления свойство <xref:System.Windows.Forms.Control.RightToLeft%2A> изменяет порядок чтения и макет. К ним относятся элементы управления <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.CheckBox>. Другие элементы управления требуют применения свойства <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> для зеркального отражения расположения справа налево. В следующей таблице приведены сведения о том, как свойства <xref:System.Windows.Forms.Control.RightToLeft%2A> и <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> влияют на отдельные элементы управления Windows Forms.  
   
@@ -119,5 +119,5 @@ Visual Studio можно использовать для создания при
   
 ## <a name="see-also"></a>См. также
 
-[Двухсторонний режим для веб-приложений ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[Глобализация приложений Windows Forms](globalizing-windows-forms.md)
+- [Двухсторонний режим для веб-приложений ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [Глобализация приложений Windows Forms](globalizing-windows-forms.md)

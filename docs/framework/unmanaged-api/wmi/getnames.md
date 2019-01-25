@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583565"
 ---
 # <a name="getnames-function"></a>Функция GetNames
 Получает подмножество имен или все имена свойств объекта. 
@@ -65,7 +65,7 @@ HRESULT GetNames (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы, или указано неверное сочетание флагов и параметры. |
@@ -95,7 +95,7 @@ HRESULT GetNames (
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Возвращать только имена свойств, определяющих ключи. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Возвращаемое только имена свойств, которые являются ссылками на объект. |
 
-| Группа 3 флаги |Значение  |Описание  |
+| Группа 3 флаги |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Возвращать только имена свойств, которые принадлежат к наиболее производный класс. Исключите свойства родительского класса. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Возвращать только имена свойств, принадлежащих родительских классов. |
@@ -105,11 +105,11 @@ HRESULT GetNames (
 Функция всегда выделяет новый `SAFEARRAY` при его использовании возвращается `WBEM_S_NO_ERROR`, и `pstrNames` всегда имеет значение указывать на него. Возвращаемый массив может иметь 0 элементов, если нет свойств, соответствующих заданным фильтрам. Если функция возвращает значение, отличное от `WBM_S_NO_ERROR`, новый `SAFEARRAY` структуры не возвращается.
  
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>См. также  
-[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+## <a name="see-also"></a>См. также
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

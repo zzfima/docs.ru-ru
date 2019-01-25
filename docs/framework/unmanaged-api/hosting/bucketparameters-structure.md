@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b5e4db8e385baefe3067755bbdc4555c5887ab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508305"
 ---
 # <a name="bucketparameters-structure"></a>Структура BucketParameters
 Хранит имя типа события и параметры для текущего исключения, связанного с событием.  
@@ -45,11 +45,11 @@ typedef struct _BucketParameters {
 |`pszParams`|Массив строк, каждая из которых задает параметр для текущего исключения, связанного с событием.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.idl  
+ **Заголовок.** MSCorEE.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>См. также
+- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aad2df19ec5563d8d48b0c286ab888a727c21ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657367"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>Метод ISymUnmanagedWriter::OpenScope
-Открывает новую лексическую область видимости в текущем методе. Область становится новой текущей областью и помещается в стек областей. Области должны образовывать иерархию. Перекрытие элементов с общим родителем запрещено.  
+Открывает новую лексическую область видимости в текущем методе. Область становится новой текущей областью и помещается в стек области. Области должны образовывать иерархию. Одноуровневые элементы, не разрешено перекрывать.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT OpenScope(
   
 #### <a name="parameters"></a>Параметры  
  `startOffset`  
- [in] Смещение первой инструкции в лексической области видимости, в байтах от начала метода.  
+ [in] Смещение первой инструкции в лексической области в байтах от начала метода.  
   
  `pRetVal`  
  [out] Указатель на `ULONG32` , получающий идентификатор области.  
@@ -49,7 +49,7 @@ HRESULT OpenScope(
  `ISymUnmanagedWriter::OpenScope` Возвращает непрозрачный идентификатор области, можно использовать с [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) для определения области начального и конечного смещения в дальнейшем. В этом случае смещения, переданные методам `ISymUnmanagedWriter::OpenScope` и [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) игнорируются. Идентификаторы областей действительны только в текущем методе.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

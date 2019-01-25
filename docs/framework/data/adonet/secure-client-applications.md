@@ -2,12 +2,12 @@
 title: Безопасные клиентские приложения
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599625"
 ---
 # <a name="secure-client-applications"></a>Безопасные клиентские приложения
 Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы. Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.  
@@ -36,7 +36,7 @@ ms.locfileid: "47397898"
  [Безопасность Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Рассказывается, как защищать приложения Windows Forms. Здесь также приводятся ссылки на связанные разделы.  
   
- [Windows Forms и неуправляемые приложения](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Описывает, как взаимодействовать с неуправляемыми приложениями в приложении Windows Forms.  
   
  [Развертывание ClickOnce для Windows Forms в приложения](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
@@ -59,15 +59,15 @@ ms.locfileid: "47397898"
 ## <a name="remoting"></a>Удаленное взаимодействие  
  Система удаленного взаимодействия .NET позволяет создавать широко приложения с высокой степенью распределенности независимо от того, находятся компоненты приложения на одном компьютере или разбросаны по всему миру. Она дает возможность разрабатывать клиентские приложения, которые используют объекты в других процессах на том же компьютере или на любом другом компьютере, доступном по сети. Возможности по удаленному взаимодействию платформы .NET можно также применять для обмена данными с другими доменами приложений в рамках одного процесса.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Конфигурация удаленных приложений](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|Обсуждается, как настраивать удаленно взаимодействующие приложения, чтобы избежать обычных проблем.|  
 |[Безопасность удаленного взаимодействия](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Описывает проверку подлинности и шифрование, а также другие разделы безопасности, имеющие отношение к удаленному взаимодействию.|  
 |[Безопасность и вопросы удаленного взаимодействия](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Рекомендации по стратегиям доступа к данным](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Защита приложений](/visualstudio/ide/securing-applications)  
- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Рекомендации по стратегиям доступа к данным](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Защита приложений](/visualstudio/ide/securing-applications)
+- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

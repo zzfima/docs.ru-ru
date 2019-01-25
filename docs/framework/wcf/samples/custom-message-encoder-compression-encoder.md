@@ -1,15 +1,15 @@
 ---
-title: 'Пользовательский кодировщик сообщений: кодировщик сжатия'
+title: 'Пользовательский кодировщик сообщений: Кодировщик сжатия'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583635"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Пользовательский кодировщик сообщений: кодировщик сжатия
+# <a name="custom-message-encoder-compression-encoder"></a>Пользовательский кодировщик сообщений: Кодировщик сжатия
 В этом примере показано, как реализовать пользовательский кодировщик с помощью платформы Windows Communication Foundation (WCF).  
   
 > [!IMPORTANT]
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Хотя этого может быть достаточно для большинства пользовательских сценариев, поддержка конфигурации с помощью файлов критически важно, если служба будет размещена в Интернете. Для поддержки сценариев с размещением в Интернете необходимо разработать пользовательский обработчик конфигурации, позволяющий настраивать пользовательский элемент привязки в файле.  
   
- Пользовательский обработчик для элемента привязки можно построить на основе системы конфигурации, предоставляемой [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Обработчик конфигурации для элемента привязки должен наследовать от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Свойство `BindingElementType` используется для информирования системы конфигурации о типе элемента конфигурации, который следует создать для этого раздела. Все аспекты элемента `BindingElement`, допускающие установку, должны быть представлены как свойства класса, производного от <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Класс <xref:System.Configuration.ConfigurationPropertyAttribute> помогает при сопоставлении атрибутов элемента конфигурации со свойствами и задании значений по умолчанию в случае отсутствия атрибута. После того как значения из конфигурации загружены и применены к свойствам, вызывается метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, который преобразует свойства в конкретный экземпляр элемента привязки. Метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> используется для преобразования свойств класса, производного от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, в значения, задаваемые в новом созданном элементе привязки.  
+ Пользовательский обработчик для элемента привязки можно построить на основе системы конфигурации, предоставляемой [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Обработчик конфигурации для элемента привязки должен наследовать от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Свойство `BindingElementType` используется для информирования системы конфигурации о типе элемента привязки, который следует создать для этого раздела. Все аспекты элемента `BindingElement`, допускающие установку, должны быть представлены как свойства класса, производного от <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Класс <xref:System.Configuration.ConfigurationPropertyAttribute> помогает при сопоставлении атрибутов элемента конфигурации со свойствами и задании значений по умолчанию в случае отсутствия атрибута. После того как значения из конфигурации загружены и применены к свойствам, вызывается метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, который преобразует свойства в конкретный экземпляр элемента привязки. Метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> используется для преобразования свойств класса, производного от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, в значения, задаваемые в новом созданном элементе привязки.  
   
  В следующем образце кода показана реализация класса `GZipMessageEncodingElement`.  
   
