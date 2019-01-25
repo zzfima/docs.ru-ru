@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: b5417632c50924200390d0ec01048d8df3d393ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671984"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="bbd3e-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="bbd3e-102">ScrollViewer</span></span>
-<span data-ttu-id="bbd3e-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемую область, в случае, если содержимое может прокручиваться по горизонтали или вертикали.</span><span class="sxs-lookup"><span data-stu-id="bbd3e-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="ae913-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ae913-102">ScrollViewer</span></span>
+<span data-ttu-id="ae913-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="ae913-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bbd3e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="bbd3e-104">In This Section</span></span>  
- [<span data-ttu-id="bbd3e-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="bbd3e-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="bbd3e-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="bbd3e-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ae913-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ae913-104">In This Section</span></span>  
+ [<span data-ttu-id="ae913-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ae913-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [<span data-ttu-id="ae913-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="ae913-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="bbd3e-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="bbd3e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ae913-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ae913-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="bbd3e-108">См. также</span><span class="sxs-lookup"><span data-stu-id="bbd3e-108">See Also</span></span>  
- [<span data-ttu-id="bbd3e-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="bbd3e-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="bbd3e-110">Макет</span><span class="sxs-lookup"><span data-stu-id="bbd3e-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="ae913-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ae913-108">See also</span></span>
+- [<span data-ttu-id="ae913-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="ae913-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="ae913-110">Макет</span><span class="sxs-lookup"><span data-stu-id="ae913-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
