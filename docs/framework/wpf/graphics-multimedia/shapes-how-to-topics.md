@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620231"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="3a4f0-102">Разделы практического руководства, посвященные объектам класса Shape</span><span class="sxs-lookup"><span data-stu-id="3a4f0-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="3a4f0-103">В этом разделе демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.</span><span class="sxs-lookup"><span data-stu-id="3a4f0-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="3f895-102">Разделы практического руководства, посвященные объектам класса Shape</span><span class="sxs-lookup"><span data-stu-id="3f895-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="3f895-103">В подразделах этого раздела демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.</span><span class="sxs-lookup"><span data-stu-id="3f895-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a4f0-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="3a4f0-104">In This Section</span></span>  
- [<span data-ttu-id="3a4f0-105">Рисование замкнутой фигуры с помощью элемента Polygon</span><span class="sxs-lookup"><span data-stu-id="3a4f0-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="3a4f0-106">Рисование эллипса или круга</span><span class="sxs-lookup"><span data-stu-id="3a4f0-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="3a4f0-107">Рисование линии</span><span class="sxs-lookup"><span data-stu-id="3a4f0-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="3a4f0-108">Рисование ломаной с помощью элемента Polyline</span><span class="sxs-lookup"><span data-stu-id="3a4f0-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="3a4f0-109">Рисование прямоугольника</span><span class="sxs-lookup"><span data-stu-id="3a4f0-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="3a4f0-110">Изменение завершения отрезка в конце линии или сегмента</span><span class="sxs-lookup"><span data-stu-id="3a4f0-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3f895-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="3f895-104">In This Section</span></span>  
+ [<span data-ttu-id="3f895-105">Рисование замкнутой фигуры с помощью элемента Polygon</span><span class="sxs-lookup"><span data-stu-id="3f895-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="3f895-106">Рисование эллипса или круга</span><span class="sxs-lookup"><span data-stu-id="3f895-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="3f895-107">Рисование линии</span><span class="sxs-lookup"><span data-stu-id="3f895-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="3f895-108">Рисование ломаной с помощью элемента Polyline</span><span class="sxs-lookup"><span data-stu-id="3f895-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="3f895-109">Рисование прямоугольника</span><span class="sxs-lookup"><span data-stu-id="3f895-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="3f895-110">Изменение завершения отрезка в конце линии или сегмента</span><span class="sxs-lookup"><span data-stu-id="3f895-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3a4f0-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3a4f0-111">See Also</span></span>  
- <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="3a4f0-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="3a4f0-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="3f895-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3f895-111">See also</span></span>
+- <xref:System.Windows.Shapes.Shape>
+- [<span data-ttu-id="3f895-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="3f895-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

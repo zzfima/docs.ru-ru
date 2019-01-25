@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21f7e9fa0e567063c49caa390ace09c43454b092
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 040c51723a2505a1320d2ecde38c9ed1cd19d254
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734926"
 ---
-# <a name="icorprofilercallback2garbagecollectionfinished-method"></a><span data-ttu-id="2028a-102">Метод ICorProfilerCallback2::GarbageCollectionFinished</span><span class="sxs-lookup"><span data-stu-id="2028a-102">ICorProfilerCallback2::GarbageCollectionFinished Method</span></span>
-<span data-ttu-id="2028a-103">Уведомляет профилировщик о сборки мусора и всех обратных вызовов, выданные для него.</span><span class="sxs-lookup"><span data-stu-id="2028a-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>  
+# <a name="icorprofilercallback2garbagecollectionfinished-method"></a><span data-ttu-id="92572-102">Метод ICorProfilerCallback2::GarbageCollectionFinished</span><span class="sxs-lookup"><span data-stu-id="92572-102">ICorProfilerCallback2::GarbageCollectionFinished Method</span></span>
+<span data-ttu-id="92572-103">Уведомляет профилировщик, что для завершения сборки мусора, так и для всех обратных вызовов, выданные для него.</span><span class="sxs-lookup"><span data-stu-id="92572-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2028a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2028a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92572-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="92572-104">Syntax</span></span>  
   
 ```  
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2028a-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="2028a-105">Remarks</span></span>  
- <span data-ttu-id="2028a-106">Безопасно для профилировщика для проверки объектов в их конечных расположениях при `GarbageCollectionFinished` вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="2028a-106">It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="92572-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="92572-105">Remarks</span></span>  
+ <span data-ttu-id="92572-106">Безопасно для профилировщика для проверки объектов в соответствующих расположениях при `GarbageCollectionFinished` вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="92572-106">It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2028a-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2028a-107">Requirements</span></span>  
- <span data-ttu-id="2028a-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2028a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92572-107">Требования</span><span class="sxs-lookup"><span data-stu-id="92572-107">Requirements</span></span>  
+ <span data-ttu-id="92572-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92572-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2028a-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2028a-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="92572-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="92572-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2028a-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2028a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="92572-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92572-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2028a-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2028a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="92572-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92572-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2028a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="2028a-112">See Also</span></span>  
- [<span data-ttu-id="2028a-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="2028a-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="2028a-114">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="2028a-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="92572-112">См. также</span><span class="sxs-lookup"><span data-stu-id="92572-112">See also</span></span>
+- [<span data-ttu-id="92572-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="92572-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="92572-114">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="92572-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

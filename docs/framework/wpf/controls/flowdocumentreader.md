@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: b390c345beee74d505d23196133ed7f82cfd8ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d6b4f066d2bac03092e0418eded34cc604810e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551986"
 ---
-# <a name="flowdocumentreader"></a><span data-ttu-id="f01f5-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="f01f5-102">FlowDocumentReader</span></span>
-<span data-ttu-id="f01f5-103"><xref:System.Windows.Controls.FlowDocumentReader> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого.</span><span class="sxs-lookup"><span data-stu-id="f01f5-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="f01f5-104">Она поддерживает несколько режимов просмотра.</span><span class="sxs-lookup"><span data-stu-id="f01f5-104">It supports multiple viewing modes.</span></span>  
+# <a name="flowdocumentreader"></a><span data-ttu-id="b1a93-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="b1a93-102">FlowDocumentReader</span></span>
+<span data-ttu-id="b1a93-103"><xref:System.Windows.Controls.FlowDocumentReader> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого.</span><span class="sxs-lookup"><span data-stu-id="b1a93-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="b1a93-104">Он поддерживает нескольких режимов просмотра.</span><span class="sxs-lookup"><span data-stu-id="b1a93-104">It supports multiple viewing modes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f01f5-105">См. также</span><span class="sxs-lookup"><span data-stu-id="f01f5-105">See Also</span></span>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- [<span data-ttu-id="f01f5-106">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="f01f5-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="f01f5-107">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="f01f5-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b1a93-105">См. также</span><span class="sxs-lookup"><span data-stu-id="b1a93-105">See also</span></span>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- [<span data-ttu-id="b1a93-106">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="b1a93-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="b1a93-107">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="b1a93-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

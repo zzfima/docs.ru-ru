@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание пользовательского элемента Panel
+title: Как выполнить Создание пользовательского элемента Panel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621936"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="5cb72-102">Практическое руководство. Создание пользовательского элемента Panel</span><span class="sxs-lookup"><span data-stu-id="5cb72-102">How to: Create a Custom Panel Element</span></span>
-## <a name="example"></a><span data-ttu-id="5cb72-103">Пример</span><span class="sxs-lookup"><span data-stu-id="5cb72-103">Example</span></span>  
- <span data-ttu-id="5cb72-104">В этом примере показано, как переопределить поведение по умолчанию макет <xref:System.Windows.Controls.Panel> элемент и создать пользовательский макет элементов, которые являются производными от <xref:System.Windows.Controls.Panel>.</span><span class="sxs-lookup"><span data-stu-id="5cb72-104">This example shows how to override the default layout behavior of the <xref:System.Windows.Controls.Panel> element and create custom layout elements that are derived from <xref:System.Windows.Controls.Panel>.</span></span>  
+# <a name="how-to-create-a-custom-panel-element"></a><span data-ttu-id="415ef-102">Как выполнить Создание пользовательского элемента Panel</span><span class="sxs-lookup"><span data-stu-id="415ef-102">How to: Create a Custom Panel Element</span></span>
+## <a name="example"></a><span data-ttu-id="415ef-103">Пример</span><span class="sxs-lookup"><span data-stu-id="415ef-103">Example</span></span>  
+ <span data-ttu-id="415ef-104">В этом примере показано, как переопределить поведение по умолчанию макет <xref:System.Windows.Controls.Panel> элемент и создать пользовательский макет элементов, которые являются производными от <xref:System.Windows.Controls.Panel>.</span><span class="sxs-lookup"><span data-stu-id="415ef-104">This example shows how to override the default layout behavior of the <xref:System.Windows.Controls.Panel> element and create custom layout elements that are derived from <xref:System.Windows.Controls.Panel>.</span></span>  
   
- <span data-ttu-id="5cb72-105">В примере определяется простой пользовательский <xref:System.Windows.Controls.Panel> элемент с именем `PlotPanel`, который размещает дочерние элементы в соответствии с двумя жестко координаты x и y-.</span><span class="sxs-lookup"><span data-stu-id="5cb72-105">The example defines a simple custom <xref:System.Windows.Controls.Panel> element called `PlotPanel`, which positions child elements according to two hard-coded x- and y-coordinates.</span></span> <span data-ttu-id="5cb72-106">В этом примере `x` и `y` устанавливается `50`; таким образом, все дочерние элементы располагаются в этом расположении на x и y осей.</span><span class="sxs-lookup"><span data-stu-id="5cb72-106">In this example, `x` and `y` are both set to `50`; therefore, all child elements are positioned at that location on the x and y axes.</span></span>  
+ <span data-ttu-id="415ef-105">В примере определяется простой пользовательский <xref:System.Windows.Controls.Panel> элемент с именем `PlotPanel`, который размещает дочерние элементы в соответствии с двумя жестко координаты x и y-.</span><span class="sxs-lookup"><span data-stu-id="415ef-105">The example defines a simple custom <xref:System.Windows.Controls.Panel> element called `PlotPanel`, which positions child elements according to two hard-coded x- and y-coordinates.</span></span> <span data-ttu-id="415ef-106">В этом примере `x` и `y` устанавливается `50`; таким образом, все дочерние элементы располагаются в этом расположении на x и y осей.</span><span class="sxs-lookup"><span data-stu-id="415ef-106">In this example, `x` and `y` are both set to `50`; therefore, all child elements are positioned at that location on the x and y axes.</span></span>  
   
- <span data-ttu-id="5cb72-107">Чтобы реализовать пользовательскую <xref:System.Windows.Controls.Panel> поведения, в примере используется <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы.</span><span class="sxs-lookup"><span data-stu-id="5cb72-107">To implement custom <xref:System.Windows.Controls.Panel> behaviors, the example uses the <xref:System.Windows.FrameworkElement.MeasureOverride%2A> and <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> methods.</span></span> <span data-ttu-id="5cb72-108">Каждый метод возвращает <xref:System.Windows.Size> данные, необходимые для размещения и отображения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="5cb72-108">Each method returns the <xref:System.Windows.Size> data that is necessary to position and render child elements.</span></span>  
+ <span data-ttu-id="415ef-107">Чтобы реализовать пользовательскую <xref:System.Windows.Controls.Panel> поведения, в примере используется <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы.</span><span class="sxs-lookup"><span data-stu-id="415ef-107">To implement custom <xref:System.Windows.Controls.Panel> behaviors, the example uses the <xref:System.Windows.FrameworkElement.MeasureOverride%2A> and <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> methods.</span></span> <span data-ttu-id="415ef-108">Каждый метод возвращает <xref:System.Windows.Size> данные, необходимые для размещения и отображения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="415ef-108">Each method returns the <xref:System.Windows.Size> data that is necessary to position and render child elements.</span></span>  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="5cb72-109">См. также</span><span class="sxs-lookup"><span data-stu-id="5cb72-109">See Also</span></span>  
- <xref:System.Windows.Controls.Panel>  
- [<span data-ttu-id="5cb72-110">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="5cb72-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="5cb72-111">Создание пользовательского содержимого пример</span><span class="sxs-lookup"><span data-stu-id="5cb72-111">Create a Custom Content-Wrapping Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159979)
+## <a name="see-also"></a><span data-ttu-id="415ef-109">См. также</span><span class="sxs-lookup"><span data-stu-id="415ef-109">See also</span></span>
+- <xref:System.Windows.Controls.Panel>
+- [<span data-ttu-id="415ef-110">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="415ef-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="415ef-111">Создание пользовательского содержимого пример</span><span class="sxs-lookup"><span data-stu-id="415ef-111">Create a Custom Content-Wrapping Panel Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159979)

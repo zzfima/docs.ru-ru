@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9f76f2c3b2ecf3ac5805dea8f8243f0b74ad48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dfe2bb234631a733248066e8475c135de288e63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737602"
 ---
-# <a name="icordebugmdagetname-method"></a><span data-ttu-id="56587-102">Метод ICorDebugMDA::GetName</span><span class="sxs-lookup"><span data-stu-id="56587-102">ICorDebugMDA::GetName Method</span></span>
-<span data-ttu-id="56587-103">Получает строку, содержащую имя помощник по отладке управляемого (кода MDA), представленный [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="56587-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetname-method"></a><span data-ttu-id="eabf6-102">Метод ICorDebugMDA::GetName</span><span class="sxs-lookup"><span data-stu-id="eabf6-102">ICorDebugMDA::GetName Method</span></span>
+<span data-ttu-id="eabf6-103">Получает строку, содержащую имя помощник по отладке управляемого (кода MDA), представленный [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="eabf6-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56587-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="56587-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eabf6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eabf6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -37,28 +38,28 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56587-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="56587-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="eabf6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eabf6-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="56587-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="56587-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="eabf6-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="eabf6-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="56587-107">[out] Указатель на длину имени.</span><span class="sxs-lookup"><span data-stu-id="56587-107">[out] A pointer to the length of the name.</span></span>  
+ <span data-ttu-id="eabf6-107">[out] Указатель на длину имени.</span><span class="sxs-lookup"><span data-stu-id="eabf6-107">[out] A pointer to the length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="56587-108">[out] Массив для хранения имени.</span><span class="sxs-lookup"><span data-stu-id="56587-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="eabf6-108">[out] Массив, в котором для хранения имени.</span><span class="sxs-lookup"><span data-stu-id="eabf6-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56587-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="56587-109">Remarks</span></span>  
- <span data-ttu-id="56587-110">Имена MDA являются уникальными значениями.</span><span class="sxs-lookup"><span data-stu-id="56587-110">MDA names are unique values.</span></span> <span data-ttu-id="56587-111">`GetName` Метод является альтернативой удобный производительности для получения XML-потока и извлечения имени из потока на основе схемы.</span><span class="sxs-lookup"><span data-stu-id="56587-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eabf6-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="eabf6-109">Remarks</span></span>  
+ <span data-ttu-id="eabf6-110">MDA имена являются уникальными значениями.</span><span class="sxs-lookup"><span data-stu-id="eabf6-110">MDA names are unique values.</span></span> <span data-ttu-id="eabf6-111">`GetName` Метод представляет собой альтернативу удобный производительности Получение потока XML и извлечения имени из потока на основе схемы.</span><span class="sxs-lookup"><span data-stu-id="eabf6-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56587-112">Требования</span><span class="sxs-lookup"><span data-stu-id="56587-112">Requirements</span></span>  
- <span data-ttu-id="56587-113">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56587-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eabf6-112">Требования</span><span class="sxs-lookup"><span data-stu-id="eabf6-112">Requirements</span></span>  
+ <span data-ttu-id="eabf6-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eabf6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56587-114">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56587-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eabf6-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eabf6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="56587-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56587-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eabf6-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eabf6-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="56587-116">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56587-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eabf6-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eabf6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56587-117">См. также</span><span class="sxs-lookup"><span data-stu-id="56587-117">See Also</span></span>  
- [<span data-ttu-id="56587-118">Интерфейс ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="56587-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [<span data-ttu-id="56587-119">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="56587-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="eabf6-117">См. также</span><span class="sxs-lookup"><span data-stu-id="eabf6-117">See also</span></span>
+- [<span data-ttu-id="eabf6-118">Интерфейс ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="eabf6-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="eabf6-119">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="eabf6-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

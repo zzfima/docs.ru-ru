@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fdc37676bfae8ac90fde0a7a5b11037b8357e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83cee30ed9831accb96de17768f63e7f401908f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495962"
 ---
-# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="5cd75-102">Перечисление CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="5cd75-102">CorDebugCreateProcessFlags Enumeration</span></span>
-<span data-ttu-id="5cd75-103">Предоставляет дополнительные параметры отладки, которые могут использоваться в вызове [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="5cd75-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
+# <a name="cordebugcreateprocessflags-enumeration"></a><span data-ttu-id="3e2d2-102">Перечисление CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="3e2d2-102">CorDebugCreateProcessFlags Enumeration</span></span>
+<span data-ttu-id="3e2d2-103">Предоставляет дополнительные параметры отладки, которые могут использоваться в вызове [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="3e2d2-103">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cd75-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5cd75-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e2d2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3e2d2-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCreateProcessFlags {  
@@ -34,20 +34,20 @@ typedef enum CorDebugCreateProcessFlags {
 } CorDebugCreateProcessFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5cd75-105">Участники</span><span class="sxs-lookup"><span data-stu-id="5cd75-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3e2d2-105">Участники</span><span class="sxs-lookup"><span data-stu-id="3e2d2-105">Members</span></span>  
   
-|<span data-ttu-id="5cd75-106">Член</span><span class="sxs-lookup"><span data-stu-id="5cd75-106">Member</span></span>|<span data-ttu-id="5cd75-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5cd75-107">Description</span></span>|  
+|<span data-ttu-id="3e2d2-106">Член</span><span class="sxs-lookup"><span data-stu-id="3e2d2-106">Member</span></span>|<span data-ttu-id="3e2d2-107">Описание</span><span class="sxs-lookup"><span data-stu-id="3e2d2-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="5cd75-108">Специальные параметры не заданы.</span><span class="sxs-lookup"><span data-stu-id="5cd75-108">No special options are set.</span></span>|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|<span data-ttu-id="3e2d2-108">Специальные параметры не заданы.</span><span class="sxs-lookup"><span data-stu-id="3e2d2-108">No special options are set.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5cd75-109">Требования</span><span class="sxs-lookup"><span data-stu-id="5cd75-109">Requirements</span></span>  
- <span data-ttu-id="5cd75-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5cd75-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e2d2-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3e2d2-109">Requirements</span></span>  
+ <span data-ttu-id="3e2d2-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e2d2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5cd75-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5cd75-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3e2d2-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e2d2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5cd75-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cd75-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3e2d2-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e2d2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5cd75-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cd75-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3e2d2-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e2d2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cd75-114">См. также</span><span class="sxs-lookup"><span data-stu-id="5cd75-114">See Also</span></span>  
- [<span data-ttu-id="5cd75-115">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="5cd75-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="3e2d2-114">См. также</span><span class="sxs-lookup"><span data-stu-id="3e2d2-114">See also</span></span>
+- [<span data-ttu-id="3e2d2-115">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="3e2d2-115">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
