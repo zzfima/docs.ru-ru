@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738934"
 ---
 # <a name="callfunctionshim-function"></a>Функция CallFunctionShim
-Выполняется вызов функции с указанным именем и параметрами в указанной библиотеке.  
+Вызывает функцию, которая имеет указанные имя и параметры в указанной библиотеке.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ HRESULT CallFunctionShim (
   
 #### <a name="parameters"></a>Параметры  
  `szDllName`  
- [in] Имя библиотеки, содержащего функцию.  
+ [in] Имя библиотеки, содержащей функцию.  
   
  `szFunctionName`  
  [in] Имя функции.  
@@ -55,19 +55,19 @@ HRESULT CallFunctionShim (
  [in] Второй аргумент, передаваемый в функцию.  
   
  `szVersion`  
- [in] Версия библиотеки, содержащего функцию.  
+ [in] Версия библиотеки, содержащей функцию.  
   
  `pvReserved`  
  [in] Зарезервировано для будущего использования. Передайте нулевое значение в этом параметре.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

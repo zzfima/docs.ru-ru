@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9c5ff91989fc1ad7da4e23df0e80d9d74ec7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670144"
 ---
 # <a name="corsymvarflag-enumeration"></a>Перечисление CorSymVarFlag
-Указывает, является ли переменной компилятором.  
+Указывает, является ли переменная, созданная компилятором.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +37,12 @@ typedef enum CorSymVarFlag
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Указывает, что данная переменная, созданная компилятором.|  
+|`VAR_IS_COMP_GEN`|Указывает, что заданной переменной, созданный компилятором.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

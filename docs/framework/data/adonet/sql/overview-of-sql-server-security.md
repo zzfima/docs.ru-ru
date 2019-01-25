@@ -2,12 +2,12 @@
 title: Общие сведения о безопасности SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591721"
 ---
 # <a name="overview-of-sql-server-security"></a>Общие сведения о безопасности SQL Server
 Стратегия всесторонней защиты с перекрывающимися уровнями безопасности - это лучший способ борьбы с угрозами безопасности. SQL Server предоставляет архитектуру безопасности, которая позволяет администраторам баз данных и разработчикам создавать защищенные приложения баз данных и бороться с угрозами. В каждой версии SQL Server имеются усовершенствования по сравнению с предыдущими версиями в виде добавления новых функций и возможностей. Однако система безопасности не поставляется в готовом виде. Каждое приложение уникально по своим требованиям к безопасности. Разработчики должны понимать, какое сочетание функций и возможностей является наиболее подходящим для борьбы с известными угрозами и предупреждения угроз, которые могу появиться в будущем.  
@@ -39,8 +39,8 @@ ms.locfileid: "43528661"
  [Безопасность интеграции CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  Здесь приведены ссылки на ресурсы по безопасности для интеграции со средой CLR.  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

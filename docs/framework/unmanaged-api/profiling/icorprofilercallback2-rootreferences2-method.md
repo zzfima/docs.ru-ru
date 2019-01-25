@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607544"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>Метод ICorProfilerCallback2::RootReferences2
-Уведомляет профилировщик о корневых ссылках после сборки мусора. Этот метод является расширением [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) метод.  
+Уведомляет профилировщик о корневыми ссылками, после сборки мусора. Этот метод является расширением [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,34 +46,34 @@ HRESULT RootReferences2(
  [in] Массив идентификаторов объектов, каждый из которых ссылается на статический объект или объект в стеке. Элементы в `rootKinds` массива предоставляют сведения для классификации соответствующих элементов в `rootRefIds` массива.  
   
  `rootKinds`  
- [in] Массив [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) значения, указывающие тип корне сборки мусора.  
+ [in] Массив [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) значения, указывающие тип корня сборки мусора.  
   
  `rootFlags`  
- [in] Массив [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) значения, описывающие свойства корне сборки мусора.  
+ [in] Массив [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) значения, описывающие свойства корня сборки мусора.  
   
  `rootIds`  
- [in] Массив UINT_PTR значений этой точки в целое число, содержащий дополнительные сведения о корне сборки мусора, в зависимости от значения `rootKinds` параметра.  
+ [in] Массив UINT_PTR значений, которые указывают на целое число, содержащий дополнительные сведения о корне сборки мусора, в зависимости от значения `rootKinds` параметра.  
   
- Если типом корня является стек, ИД корня соответствует функции, содержащей переменную. Если идентификатор корня равен 0, функция является неименованные внутренней среде CLR. Если типом корня является дескриптор, идентификатор корня соответствует дескриптору сборки мусора. Для других типов корня идентификатор является непрозрачным значением и его следует игнорировать.  
+ Тип корня представляет собой стек, корневой является ли идентификатор для функции, содержащую нужную переменную. Если идентификатор корня равен 0, функция является безымянной внутренней среде CLR. Если тип корневого элемента является дескриптором, идентификатор корня соответствует дескриптору сборки мусора. Для других типов корня идентификатор является непрозрачным значением и его следует игнорировать.  
   
 ## <a name="remarks"></a>Примечания  
- `rootRefIds`, `rootKinds`, `rootFlags`, И `rootIds` массивы являются параллельными массивами. То есть `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, и `rootIds[i]` относятся тот же корневой.  
+ `rootRefIds`, `rootKinds`, `rootFlags`, И `rootIds` массивы являются параллельными массивами. То есть `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, и `rootIds[i]` относятся таким же корнем.  
   
- Оба `RootReferences` и `RootReferences2` вызывается для уведомления профилировщика. Обычно профилировщик реализует один метод или другой, но не оба, так как сведения передаются в `RootReferences2` является надмножеством переданный `RootReferences`.  
+ Оба `RootReferences` и `RootReferences2` вызываемые для уведомления профилировщика. Обычно профилировщик реализует один метод или другой, но не оба, так как данные, передаваемые `RootReferences2` является надмножеством информации, переданной в `RootReferences`.  
   
- Возможно, для операций в `rootRefIds` должно быть равно нулю, что означает, что соответствующий корневой ссылки имеет значение null, а не ссылки на объект в управляемой куче.  
+ Возможно, для операций в `rootRefIds` должно быть равно нулю, что означает, что соответствующая ссылка корневой имеет значение null и не ссылается на объект в управляемой куче.  
   
- Идентификаторы объектов, возвращенных `RootReferences2` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов со старых адресов на новые адреса. В связи с этим профилировщикам не следует пытаться проверять объекты во время вызова `RootReferences2`. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) — вызывается, все объекты были перемещены в новые расположения и можно безопасно проверить.  
+ Идентификаторы объектов, возвращенных `RootReferences2` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов из старого адреса в новые адреса. В связи с этим профилировщикам не следует пытаться проверять объекты во время вызова `RootReferences2`. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) является именем, все объекты были перемещены в новые расположения и можно безопасно проверить.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

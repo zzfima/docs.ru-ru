@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 61a0684b55ae1e40f264db2af3607b07f2fb33a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612038"
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 Содержимое, которое может размещаться в [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, или <xref:System.Windows.Navigation.NavigationWindow> состоит из страниц, которые могут быть идентифицированы пакетом [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] и просматриваться с помощью гиперссылок. Структура страниц и способы навигации по ним с помощью гиперссылок называется топологией навигации. Такая топология подходит для различных типов приложений, особенно тех, в которых необходим переход по документам. В таких приложениях пользователь может перемещаться с одной страницы на другую даже при отсутствии связи между ними.  
@@ -169,7 +169,7 @@ ms.locfileid: "45970296"
   
  В других случаях для эффективной работы приложения могут иметь сложные топологии переходов, зависящие от структурной навигации. Дополнительную информацию см. в разделе [Общие сведения о топологиях навигации](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Navigation.PageFunction%601>  
- <xref:System.Windows.Navigation.NavigationService>  
- [Общие сведения о топологиях навигации](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Navigation.PageFunction%601>
+- <xref:System.Windows.Navigation.NavigationService>
+- [Общие сведения о топологиях навигации](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

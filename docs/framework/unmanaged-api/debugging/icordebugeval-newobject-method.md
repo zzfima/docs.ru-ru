@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589957"
 ---
 # <a name="icordebugevalnewobject-method"></a>Метод ICorDebugEval::NewObject
 Выделяет новый экземпляр объекта и вызывает заданный метод конструктора.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) вместо него.  
+ Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +41,7 @@ HRESULT NewObject (
   
 #### <a name="parameters"></a>Параметры  
  `pConstructor`  
- [in] Вызываемый конструктор.  
+ [in] К вызову конструктора.  
   
  `nArgs`  
  [in] Размер массива `ppArgs`.  
@@ -49,13 +50,13 @@ HRESULT NewObject (
  [in] Массив объектов ICorDebugValue, каждый из которых представляет аргумент, передаваемый в конструктор.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>См. также  
- [Метод NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+## <a name="see-also"></a>См. также
+- [Метод NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

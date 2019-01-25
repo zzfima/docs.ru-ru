@@ -1,5 +1,5 @@
 ---
-title: 'Первый оператор &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; из-за &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;'
+title: 'Первый оператор данного &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; поскольку &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: dbce2a9edcc38ff137cb7ec0c97e5c259c0a0979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566785"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>Первый оператор &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; из-за &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>Первый оператор данного &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; поскольку &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;
 Конструктор класса не вызывает явно конструктор базового класса, а вызванный неявно конструктор базового класса помечается атрибутом <xref:System.ObsoleteAttribute> , что является причиной возникновения ошибки.  
   
- Если конструктор производного класса не вызывает конструктор базового класса, Visual Basic пытается создать неявный вызов конструктора базового класса без параметров. Если в базовом классе, который может вызываться без аргументов нет доступного конструктора, Visual Basic не может создать неявный вызов. В этом случае необходимый конструктор помечается <xref:System.ObsoleteAttribute> атрибута, поэтому Visual Basic не может вызвать его.  
+ Если конструктор производного класса не вызывает конструктор базового класса, Visual Basic пытается создать неявный вызов конструктора базового класса без параметров. Если в базовом классе, которые могут вызываться без аргументов нет доступного конструктора, Visual Basic не удается создать неявный вызов. В этом случае необходимый конструктор помечается <xref:System.ObsoleteAttribute> атрибут, поэтому его нельзя вызвать Visual Basic.  
   
  Вы можете пометить любой программный элемент как неиспользуемый, применив к нему атрибут <xref:System.ObsoleteAttribute> . Если вы это сделаете, вы можете задать для свойства <xref:System.ObsoleteAttribute.IsError%2A> атрибута значение `True` или `False`. Если задать значение `True`, компилятор будет рассматривать попытку использовать элемент как ошибку. Если задать значение `False`или оставить значение по умолчанию `False`, то при попытке использовать элемент компилятор выдаст предупреждение.  
   
@@ -29,6 +29,6 @@ ms.locfileid: "33589897"
   
 2.  Включите вызов `MyBase.New()` или `MyClass.New()` в качестве первого оператора `Sub New` в производном классе.  
   
-## <a name="see-also"></a>См. также  
- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
- 
+## <a name="see-also"></a>См. также
+- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

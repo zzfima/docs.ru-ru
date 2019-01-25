@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Определение шаблона GroupBox
+title: Как выполнить Определение шаблона GroupBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-ms.openlocfilehash: a47ce896be4d1c38147584dd80b1bc841737d526
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0e1b0487629bba3550a8b6b4a31c163a7ade6a87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743729"
 ---
-# <a name="how-to-define-a-groupbox-template"></a>Практическое руководство. Определение шаблона GroupBox
+# <a name="how-to-define-a-groupbox-template"></a>Как выполнить Определение шаблона GroupBox
 В этом примере показано, как создать шаблон для <xref:System.Windows.Controls.GroupBox> элемента управления.  
   
 ## <a name="example"></a>Пример  
@@ -20,6 +20,6 @@ ms.locfileid: "44227026"
   
  [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.GroupBox>  
- [Разделы руководства, посвященные GroupBox](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Controls.GroupBox>
+- [Разделы руководства, посвященные GroupBox](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)

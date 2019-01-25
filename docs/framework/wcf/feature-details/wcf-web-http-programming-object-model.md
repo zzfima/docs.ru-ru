@@ -2,12 +2,12 @@
 title: Объектная модель программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739369"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службам через базовые HTTP-запросы, не требуя использования SOAP. WCF модель программирования WEB HTTP построена на основе существующей модели расширяемости WCF. Она определяет следующие классы.  
@@ -94,15 +94,15 @@ ms.locfileid: "43861641"
  Класс <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> использует классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> для распределения вызовов по операциям службы.  
   
 ## <a name="compatibility"></a>Совместимость  
- Модель программирования HTTP WCF WEB не использует сообщения SOAP и поэтому не поддерживает WS-* протоколы. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. См. в разделе [как: предоставление контрактов SOAP и веб-клиентам](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) пример.  
+ Модель программирования HTTP WCF WEB не использует сообщения SOAP и поэтому не поддерживает WS-* протоколы. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. См. практическое руководство по [ Предоставление контрактов SOAP и веб-клиентам](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) пример.  
   
 ## <a name="security"></a>Безопасность  
  Поскольку модель программирования HTTP WCF WEB не поддерживает WS-* протоколы, единственным способом защиты веб-службы, построенных на основе модели программирования WCF WEB HTTP является предоставление доступа к ней с помощью протокола SSL. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

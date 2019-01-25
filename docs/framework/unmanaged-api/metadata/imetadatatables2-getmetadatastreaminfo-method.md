@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 756b0ff726c31bf096a1c1b70004c3ff82fe9979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593970"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>Метод IMetaDataTables2::GetMetaDataStreamInfo
-Возвращает имя, размер и содержимое потока метаданных по указанному индексу.  
+Получает имя, размер и содержимое потока метаданных по указанному индексу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +40,7 @@ HRESULT GetMetaDataStreamInfo (
   
 #### <a name="parameters"></a>Параметры  
  `ix`  
- [in] Индекс потока запрошенные метаданные.  
+ [in] Индекс потока запрошенных метаданных.  
   
  `ppchName`  
  [out] Указатель на имя потока.  
@@ -48,17 +49,17 @@ HRESULT GetMetaDataStreamInfo (
  [out] Указатель на поток метаданных.  
   
  `pcb`  
- [out] Размер в байтах для `ppv`.  
+ [out] Размер в байтах из `ppv`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

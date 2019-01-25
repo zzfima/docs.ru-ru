@@ -1,15 +1,15 @@
 ---
-title: Статически скомпилированных запросов (LINQ to XML) (Visual Basic)
+title: Статически скомпилированные запросы (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: f6230864eb125d493d38f85adf5806c80a31c910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64f3d59df57b59743824160d0bfe9f4b30e54ad4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733900"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Статически скомпилированных запросов (LINQ to XML) (Visual Basic)
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Статически скомпилированные запросы (LINQ to XML) (Visual Basic)
 Одним из важнейших преимуществ LINQ to XML перед <xref:System.Xml.XmlDocument> с точки зрения производительности является то, что в LINQ to XML запросы компилируются статически, тогда как запросы XPath интерпретируются во время выполнения. Это встроенная функция LINQ to XML, поэтому вам не нужно будет принимать какие-либо подготовительные меры для ее использования, однако, чтобы сделать обоснованный выбор той или другой технологии, важно понимать их различие. Данное различие описано в текущем разделе.  
   
 ## <a name="statically-compiled-queries-vs-xpath"></a>Сравнение статически скомпилированных запросов и языка XPath  
@@ -89,5 +89,5 @@ reader.Close()
   
  При этом выполняется значительно больший объем работы, чем при использовании аналогичного запроса LINQ to XML. Конкретный выигрыш по производительности зависит от типа запроса, однако в общем случае запросы LINQ to XML выполняют меньше работы и поэтому более эффективны, чем операции по оценке выражений XPath с помощью <xref:System.Xml.XmlDocument>.  
   
-## <a name="see-also"></a>См. также  
- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

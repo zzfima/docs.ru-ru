@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Установка уровня сжатия JPEG
+title: Как выполнить Установка уровня сжатия JPEG
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628123"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Практическое руководство. Установка уровня сжатия JPEG
-Вам может потребоваться изменить параметры изображения при сохранении на диск, чтобы уменьшить размер файла или повысить качество изображения. Качество изображения в формате JPEG можно настроить, изменив уровень сжатия. Чтобы указать уровень сжатия при сохранении изображения в формате JPEG, необходимо создать <xref:System.Drawing.Imaging.EncoderParameters> и передать его на <xref:System.Drawing.Image.Save%2A> метод <xref:System.Drawing.Image> класса. Инициализация <xref:System.Drawing.Imaging.EncoderParameters> объекта, чтобы он включал массив, который состоит из одного <xref:System.Drawing.Imaging.EncoderParameter>. При создании <xref:System.Drawing.Imaging.EncoderParameter>, укажите <xref:System.Drawing.Imaging.Encoder.Quality> кодировщик и нужный уровень сжатия.  
+# <a name="how-to-set-jpeg-compression-level"></a>Как выполнить Установка уровня сжатия JPEG
+Вам может потребоваться изменить параметры изображения при сохранении на диск, чтобы уменьшить размер файла или повысить качество изображения. Качество изображения в формате JPEG можно настроить, изменив уровень сжатия. Чтобы указать уровень сжатия при сохранении изображения в формате JPEG, необходимо создать <xref:System.Drawing.Imaging.EncoderParameters> объект и передать его в <xref:System.Drawing.Image.Save%2A> метод <xref:System.Drawing.Image> класса. Инициализировать <xref:System.Drawing.Imaging.EncoderParameters> объекта, чтобы он включал массив, который состоит из одной <xref:System.Drawing.Imaging.EncoderParameter>. При создании <xref:System.Drawing.Imaging.EncoderParameter>, укажите <xref:System.Drawing.Imaging.Encoder.Quality> кодировщик и нужный уровень сжатия.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода создается <xref:System.Drawing.Imaging.EncoderParameter> и сохраняет три изображения JPEG. Каждое изображение JPEG сохраняется вместе с различный уровень качества, изменив `long` значение, передаваемое <xref:System.Drawing.Imaging.EncoderParameter> конструктор. Уровень качества 0 соответствует максимальному сжатию, а уровень качества 100 — минимальному сжатию.  
+ В следующем примере кода создается <xref:System.Drawing.Imaging.EncoderParameter> и сохраняет три изображения JPEG. Каждое изображение JPEG сохраняется с разным уровнем качества, изменив `long` значение, передаваемое <xref:System.Drawing.Imaging.EncoderParameter> конструктор. Уровень качества 0 соответствует максимальному сжатию, а уровень качества 100 — минимальному сжатию.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -129,7 +129,7 @@ End Function
   
 -   файл изображения с именем `TestPhoto.jpg`, расположенный в папке **C:\\**.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Определение параметров, поддерживаемых кодировщиком](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [Типы растровых изображений](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [Применение кодировщиков и декодеров изображений в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Определение параметров, поддерживаемых кодировщиком](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Типы растровых изображений](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
+- [Применение кодировщиков и декодеров изображений в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

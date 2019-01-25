@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms
+title: Как выполнить Привязка данных к элементу управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: 4064ef26ee550c02ac8825ac4c1a417472b64de6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eefc588ef8f637e91bfcad1bcc24d88bb0078fdc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744392"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Как выполнить Привязка данных к элементу управления DataGridView Windows Forms
 Элемент управления <xref:System.Windows.Forms.DataGridView> поддерживает стандартную модель привязки данных Windows Forms, допускающую привязку к разнообразным источникам данных. Однако в большинстве случаев выполняется привязка к компоненту <xref:System.Windows.Forms.BindingSource>, который управляет деталями взаимодействия с источником данных. Компонент <xref:System.Windows.Forms.BindingSource> может представлять любой источник данных Windows Forms и обеспечивает большую гибкость при выборе или изменении расположения данных. Дополнительные сведения об источниках данных, поддерживаемых элементом <xref:System.Windows.Forms.DataGridView> управления, см. в разделе [Обзор элемента управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
   
- В Visual Studio предусмотрена расширенная поддержка данной задачи.  См. также раздел [Практическое руководство. Привязка данных к элементу управления DataGridView в форме Windows Forms с помощью конструктора](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+ В Visual Studio предусмотрена расширенная поддержка данной задачи.  Также см. раздел [Как Привязка данных к Windows Forms с помощью конструктора элемента управления DataGridView](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -50,14 +50,14 @@ ms.locfileid: "48836184"
   
 -   ссылки на сборки System, System.Windows.Forms, System.Data и System.XML.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource>  
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource>
+- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
