@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658160"
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  
   
- [Обзор набора средств Visual Studio для Unity](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- Содержит общие сведения о функциях и возможностях, доступных в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
+ Содержит общие сведения о возможностях и возможностях, доступных в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Начало работы](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Описывает проектирование и обращение к службе данных с помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], как показано [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "44177064"
  Поддержка при программировании данных для разработчиков служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Блог группы служб WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
- Блог, содержащий обновления и обсуждение характеристик и функций служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Блог, содержащий обновления и обсуждение характеристик и возможностей служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Веб-сайт OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Первичный источник информации о службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -47,17 +47,17 @@ ms.locfileid: "44177064"
  [Центр разработчиков хранилищ и доступа к данным](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Центральный узел, где можно найти сведения и ресурсы для работы с данными.  
   
- [Платформа данных инструкции? Видео: Серия служб данных WCF](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Платформа данных инструкции? Видеоролики: Серии службами данных WCF](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Содержит набор видеороликов, демонстрирующих сборку и обращение к службам данных.  
   
- [Обзор: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Обзор: Службы данных WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
  Технический документ, предоставляющий более высокоуровневые сведения о преимуществах служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Использование служб Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
  Технический документ, предоставляющий дополнительные сведения и примеры создания служб данных и обращения к ним в клиентских приложениях.  
   
- [Модель связей сущностей: К унифицированному представлению данных](https://go.microsoft.com/fwlink/?LinkId=91909) , Питер ПИН Шан Чен, Массачусетский технологический институт  
+ [Модели «сущность-связь»: К унифицированному представлению данных](https://go.microsoft.com/fwlink/?LinkId=91909) , Питер ПИН Шан Чен, Массачусетский технологический институт  
  Описывает основы модели реляционных сущностей, реализованной в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Написанная в 1976 году, эта книга является одной из наиболее часто цитируемых в области компьютеров.  
   
-## <a name="see-also"></a>См. также  
- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>См. также
+- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

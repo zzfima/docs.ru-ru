@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9766c71c568c9661cf284e9c05eb2dd7634a95aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa72c136e98f80df6d2868c447e1c535ae61af06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739632"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>Метод IDebuggerThreadControl::ThreadIsBlockingForDebugger
-Уведомляет узел, что поток, передающий данный обратный вызов о блок в службах отладки.  
+Уведомляет основное приложение, что поток, который отправляет этот обратный вызов о блок в службах отладки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,16 +36,16 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ## <a name="remarks"></a>Примечания  
  `ThreadIsBlockingForDebugger` Метод всегда будет вызываться в потоке среды выполнения.  
   
- `ThreadIsBlockingForDebugger` Метод дает узлу возможность выполнения другого действия, когда поток блокируется.  
+ `ThreadIsBlockingForDebugger` Метод предоставляет узлу возможность выполнения другого действия, когда поток блокируется.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

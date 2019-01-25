@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f68565977551a54244f3caf6a0250f67005a6ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665556"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Метод ICorProfilerInfo::GetThreadInfo
-Получает текущую идентификацию потока Win32 для указанного потока.  
+Возвращает удостоверение текущего потока Win32 для указанного потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,16 +40,16 @@ HRESULT GetThreadInfo(
  [in] Идентификатор потока, для которого необходимо получить идентификатор текущего Win32  
   
  `pdwWin32ThreadId`  
- [out] Указатель на текущий поток Win32 указанного потока по идентификатору.  
+ [out] Указатель на текущий поток Win32 указанного потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

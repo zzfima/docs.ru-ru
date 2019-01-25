@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88323f50acac28f1f703a34213f46db82e67d5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44862b96d882686bef0cc37e37252d0b7b1551e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737823"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>Метод ICeeGen::GenerateCeeMemoryImage
-Создает образ в памяти в базе кода.  
+Формирует изображение в памяти для базы кода.  
   
  Этот метод является устаревшим и не должны использоваться.  
   
@@ -39,16 +39,16 @@ HRESULT GenerateCeeMemoryImage (
   
 #### <a name="parameters"></a>Параметры  
  `ppImage`  
- [out] Указатель на созданный образ.  
+ [out] Указатель на созданное изображение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

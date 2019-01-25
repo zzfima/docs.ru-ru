@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629619"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме вызовет типизированного **набора данных** ссылаться на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
@@ -53,7 +53,7 @@ ms.locfileid: "43513151"
   
  Ниже приведены значения, которые могут быть указаны для **nullValue** заметки.  
   
-|Значение nullValue|Описание|  
+|Значение nullValue|Описание:|  
 |---------------------|-----------------|  
 |*Заменяющее значение*|Задает возвращаемое значение. Возвращаемое значение должно соответствовать типу элемента. Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
 |**_throw**|Создание исключения. Это значение по умолчанию.|  
@@ -69,7 +69,7 @@ ms.locfileid: "43513151"
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Свойство**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Дочерние** метода доступа|GetChildTableNameRows|typedChildren|  
 |**Родительский** метода доступа|TableNameRow|typedParent|  
 |**Набор данных** события|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -222,9 +222,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataSet>  
- [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataSet>
+- [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

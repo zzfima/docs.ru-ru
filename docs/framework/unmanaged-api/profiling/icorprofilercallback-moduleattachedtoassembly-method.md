@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6b5281e30c48471131fa12e5106f7d0a6826e1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff819ab67b258dbc7b5cec937863753852b1fcc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629323"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>Метод ICorProfilerCallback::ModuleAttachedToAssembly
-Уведомляет профилировщик, модуль присоединяется к его родительской сборки.  
+Уведомляет профилировщик, что модуль присоединяется к ее родительской сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ HRESULT ModuleAttachedToAssembly(
   
 #### <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, который прикрепляется.  
+ [in] Идентификатор модуля, который присоединяется.  
   
  `AssemblyId`  
  [in] Идентификатор родительской сборки, к которой подключен модуль.  
   
 ## <a name="remarks"></a>Примечания  
- Модуль может быть загружен посредством таблицы адресов импорта (IAT), путем вызова `LoadLibrary`, или с помощью ссылки на метаданные. В результате загрузчик общеязыковой среды выполнения (CLR) имеет несколько путей к коду для определения сборки, в которой находятся модуля. Таким образом, возможна после того как [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) вызывается, модуль не знает, какой сборке в и получение идентификатора родительской сборки станет невозможным. `ModuleAttachedToAssembly` Метод вызывается, когда модуль присоединяется к его родительской сборки и его родительской сборки можно получить идентификатор.  
+ Модуль может быть загружен посредством таблицы адресов импорта (IAT), посредством вызова `LoadLibrary`, или с помощью ссылки на метаданные. Таким образом загрузчик распространенных языковой среды выполнения (CLR) имеет несколько путей кода для определения сборки, в котором находится модуль. Таким образом, возможна после того как [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) вызывается, модуль не знает, какие сборки в и получение идентификатора родительской сборки не поддерживается. `ModuleAttachedToAssembly` При присоединении к ее родительской сборки и ее родительской сборки, можно получить идентификатор модуля, вызывается метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

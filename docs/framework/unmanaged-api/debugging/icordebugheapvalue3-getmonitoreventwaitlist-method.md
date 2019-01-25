@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628517"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>Метод ICorDebugHeapValue3::GetMonitorEventWaitList
-Предоставляет упорядоченный список потоков, которые находятся в очереди на события, связанного с блокировкой монитора.  
+Предоставляет упорядоченный список потоков, которые поставлены в очередь на события, связанного с блокировкой монитора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,30 +45,30 @@ HRESULT GetMonitorEventWaitList (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Список не пуст.|  
-|S_FALSE|Список пуст.|  
+|S_FALSE|Этот список пуст.|  
   
 ## <a name="exceptions"></a>Исключения  
   
 ## <a name="remarks"></a>Примечания  
- Первый поток в списке является первый поток, освобождаемый при следующем вызове <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Следующий поток в списке освобождается на следующий вызов и т. д.  
+ Первый поток в списке является первый поток, который гарантированно закрывалось при следующем вызове <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Следующий поток в списке освобождается на следующий вызов и т. д.  
   
- Если список не пуст, этот метод возвращает значение S_OK. Если список пуст, метод возвращает значение S_FALSE; в этом случае перечисление действительными, несмотря на то, что он пуст.  
+ Если список не пуст, этот метод возвращает значение S_OK. Если список пуст, метод возвращает значение S_FALSE; в этом случае перечисление все еще действует, несмотря на то, что он пуст.  
   
- В любом случае интерфейс перечисления может использоваться только в течение текущего синхронизированного состояния. Тем не менее выданных от него интерфейсы потока действуют до выхода потока.  
+ В любом случае интерфейс перечисления может использоваться только в течение текущего синхронизированного состояния. Тем не менее выданных от него интерфейсы потока являются допустимыми, до выхода из потока.  
   
- Если `ppThreadEnum` не является допустимым указателем, результат будет неопределенным.  
+ Если `ppThreadEnum` не является допустимым указателем, результат не определен.  
   
- Если происходит ошибка, она не может определить, что, если таковые имеются, потоки ожидают монитора, метод возвращает значение HRESULT, указывающее на сбой.  
+ При возникновении ошибки таким образом, что не удается определить, что, если таковые имеются, потоки ожидают монитора, метод возвращает значение HRESULT, указывающее на сбой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

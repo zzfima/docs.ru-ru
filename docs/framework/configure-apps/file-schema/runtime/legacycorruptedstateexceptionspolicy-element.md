@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf2e69b307d55f778a5cb54f8cc77bc3c69a185
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 14b8940fa0c5c7ceb4a14fdd0f40867c7be9f65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737719"
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; элемент
 Указывает, допускает ли среда CLR управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<legacyCorruptedStateExceptionsPolicy >  
+\<legacyCorruptedStateExceptionsPolicy>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53613496"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a093dbb674a0d182b9a981cf39668d9ca11d0e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746199"
 ---
 # <a name="printform-component-visual-basic"></a>Компонент PrintForm (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Компонент для Visual Basic позволяет напечатать изображение формы Windows во время выполнения. Его поведение заменяет поведение метода `PrintForm` в более ранних версиях Visual Basic.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>Обзор компонента PrintForm  
  Распространенной ситуацией, связанной с формами Windows Forms, является создание формы с форматированием, которое походит на бумажную форму или отчет, а затем печать изображения формы. Также для этого можно использовать компонент <xref:System.Drawing.Printing.PrintDocument> , хотя это требует большого объема кода. Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет вывести изображение формы для печати на принтер, в окно предварительного просмотра печати или в файл без использования компонента <xref:System.Drawing.Printing.PrintDocument> .  
@@ -66,10 +66,10 @@ pf.PrintAction = PrintToPrinter
 pf.Print()  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- [Практическое руководство. Печать формы с помощью компонента PrintForm](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- [Практическое руководство. Печать клиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Практическое руководство. Печать клиентской и неклиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [Практическое руководство. Печать прокручиваемой формы](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- [Практическое руководство. Печать формы с помощью компонента PrintForm](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
+- [Практическое руководство. Печать клиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [Практическое руководство. Печать клиентской и неклиентской области формы](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [Практическое руководство. Печать прокручиваемой формы](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

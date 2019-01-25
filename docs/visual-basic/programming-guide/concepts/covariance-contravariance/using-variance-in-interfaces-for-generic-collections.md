@@ -2,19 +2,19 @@
 title: Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7265fc208b7538a2ab63822afbe63b09b0f34135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735413"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)
 Ковариантный интерфейс позволяет его методам возвращать более производные типы, чем указанные в интерфейсе. Контравариантный интерфейс позволяет его методам принимать параметры менее производных типов, чем указанные в интерфейсе.  
   
  В .NET Framework 4 несколько имеющихся интерфейсов стали ковариантными и контравариантными. В их числе <xref:System.Collections.Generic.IEnumerable%601> и <xref:System.IComparable%601>. Это позволяет повторно использовать методы, оперирующие универсальными коллекциями базовых типов, для коллекций производных типов.  
   
- Список вариативных интерфейсов в платформе .NET Framework см. в разделе [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ Список вариативных интерфейсов в .NET Framework, см. в разделе [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Преобразование универсальных коллекций  
  Следующий пример иллюстрирует преимущества поддержки ковариантности в интерфейсе <xref:System.Collections.Generic.IEnumerable%601>. Метод `PrintFullName` принимает коллекцию типа `IEnumerable(Of Person)` в качестве параметра. При этом его можно повторно использовать для коллекции типа `IEnumerable(Of Person)`, так как `Employee` наследует `Person`.  
@@ -109,5 +109,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

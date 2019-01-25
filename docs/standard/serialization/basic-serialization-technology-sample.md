@@ -2,12 +2,12 @@
 title: Образец технологии базовой сериализации
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 474eb8ded01a72182533a6d49397d7567447d64e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681707"
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
 [Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -80,20 +80,20 @@ ms.locfileid: "45619098"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO>  
-- <xref:System.IO.File>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.Stream>  
-- <xref:System.Random>  
-- <xref:System.Runtime.Serialization>  
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
-- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
-- <xref:System.Runtime.Serialization.IFormatter>  
-- <xref:System.SerializableAttribute>  
-- <xref:System.Xml.Serialization>  
-- [Базовая сериализация](../../../docs/standard/serialization/basic-serialization.md)  
-- [Двоичная сериализация](../../../docs/standard/serialization/binary-serialization.md)  
-- [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Сериализация](../../../docs/standard/serialization/index.md)  
+- <xref:System.IO>
+- <xref:System.IO.File>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.Stream>
+- <xref:System.Random>
+- <xref:System.Runtime.Serialization>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>
+- <xref:System.Runtime.Serialization.IFormatter>
+- <xref:System.SerializableAttribute>
+- <xref:System.Xml.Serialization>
+- [Базовая сериализация](../../../docs/standard/serialization/basic-serialization.md)
+- [Двоичная сериализация](../../../docs/standard/serialization/binary-serialization.md)
+- [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Сериализация](../../../docs/standard/serialization/index.md)
 - [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746639"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>Метод ICorProfilerCallback::ObjectsAllocatedByClass
 Уведомляет профилировщик о количестве экземпляров каждого заданного класса, которые были созданы после последней сборки мусора.  
@@ -44,23 +44,23 @@ HRESULT ObjectsAllocatedByClass(
  [in] Массив идентификаторов класса, где каждый идентификатор определяет класс с одним или несколькими экземплярами.  
   
  `cObjects`  
- [in] Массив целых чисел, где каждое целое число задает количество экземпляров для классом-аналогом в `classIds` массива.  
+ [in] Массив целых чисел, где каждое целое число указывает количество экземпляров для соответствующего класса в `classIds` массива.  
   
 ## <a name="remarks"></a>Примечания  
- `classIds` И `cObjects` массивы являются параллельными массивами. Например `classIds[i]` и `cObjects[i]` ссылаются на том же классе. Если с момента предыдущей сборки мусора будет создан экземпляр класса, класс пропускается. `ObjectsAllocatedByClass` Обратного вызова не будут передавать объектов, помещенных в кучу больших объектов.  
+ `classIds` И `cObjects` массивы являются параллельными массивами. Например `classIds[i]` и `cObjects[i]` ссылаться на тот же класс. Если с момента предыдущей сборки мусора был создан экземпляр класса, класс пропускается. `ObjectsAllocatedByClass` Обратный вызов не будет выдавать объектов, помещенных в кучу больших объектов.  
   
- Сообщаемые номера `ObjectsAllocatedByClass` представляют собой только оценки. Точное количество использовать [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Сообщаемое номера `ObjectsAllocatedByClass` только приблизительные. Для точного подсчета строк, используйте [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- `classIds` Массив может содержать один или несколько элементы со значением null, если соответствующий `cObjects` массив содержит типы, которые выгрузки.  
+ `classIds` Массив может содержать один или несколько записи со значением null, если соответствующий `cObjects` массив содержит типы, которые выгрузки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

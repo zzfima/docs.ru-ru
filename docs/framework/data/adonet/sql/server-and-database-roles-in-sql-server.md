@@ -2,12 +2,12 @@
 title: Роли сервера и базы данных в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643082"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Роли сервера и базы данных в SQL Server
 Во всех версиях SQL Server используется безопасность на основе ролей, что позволяет назначать разрешения роли или группе пользователей, а не отдельным пользователям. Предопределенные роли сервера и предопределенные роли базы данных имеют предопределенный набор разрешений, назначенных для них.  
@@ -56,15 +56,15 @@ ms.locfileid: "43517909"
   
  Дополнительные сведения об именах входа, пользователях и ролях SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Управление доступом и удостоверениями](https://msdn.microsoft.com/library/bb510418.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
 |[Субъекты](/sql/relational-databases/security/authentication-access/principals-database-engine) в электронной документации по SQL Server|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

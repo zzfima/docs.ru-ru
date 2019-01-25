@@ -2,17 +2,17 @@
 title: '&lt;security&gt; для &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 7a457bdcdee797195ed6bdae8cd377296f914b52
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8521f1cc7100759f57da4e02287179c1302fc6c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745003"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;security&gt; для &lt;netTcpBinding&gt;
 Определяет параметры безопасности для привязки.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 \<netTcpBinding >  
 \<Привязка >  
@@ -49,7 +49,7 @@ ms.locfileid: "54145176"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Определяет параметры безопасности для данного транспорта. Это элемент типа <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
 |[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Определяет параметры безопасности сообщения. Это элемент типа <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
@@ -67,13 +67,13 @@ ms.locfileid: "54145176"
   
  Элемент конфигурации предоставляет спецификации безопасности для `netTcpBinding`. Это безопасная, надежная и оптимизированная привязка, пригодная для обмена данными между компьютерами. По умолчанию она создает стек связи среды выполнения, поддерживающий протокол TCP для доставки сообщений и безопасность Windows для безопасности сообщений и проверки подлинности, WS-ReliableMessaging для надежности, а также кодирование двоичных сообщений.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.NetTcpSecurity>  
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.NetTcpSecurity>
+- <xref:System.ServiceModel.NetTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7595b4a69dd327e448aade1e2dcba06100e55bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638691"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>Метод ISymUnmanagedWriter::SetUserEntryPoint
-Задает пользовательский метод, являющегося точкой входа для этого модуля. Например эта точка входа может быть основным методом пользователя вместо созданных компилятором заглушек перед основным.  
+Задает пользовательский метод, который представляет собой точку входа для этого модуля. Например эта точка входа может быть основным методом пользователя вместо компилятором заглушек перед основным.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ HRESULT SetUserEntryPoint(
   
 #### <a name="parameters"></a>Параметры  
  `entryMethod`  
- [in] Токен метаданных для метода, который является входа пользователя точки.  
+ [in] Токен метаданных для метода, который является запись пользователя точкой.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

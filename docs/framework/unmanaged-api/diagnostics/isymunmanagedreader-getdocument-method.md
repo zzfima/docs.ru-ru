@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738109"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>Метод ISymUnmanagedReader::GetDocument
-Обнаружен документ. Язык документа, поставщик и тип являются необязательными.  
+Находит документ. Документ языка, поставщика и тип являются необязательными.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ HRESULT GetDocument (
  [in] Язык документа. Этот параметр является необязательным.  
   
  `languageVendor`  
- [in] Удостоверение поставщика языка документа. Этот параметр является необязательным.  
+ [in] Идентификатор поставщика языка документа. Этот параметр является необязательным.  
   
  `documentType`  
  [in] Тип документа. Этот параметр является необязательным.  
@@ -58,7 +58,7 @@ HRESULT GetDocument (
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

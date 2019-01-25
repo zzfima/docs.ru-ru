@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: bce2d98a8915e80cdecd7b67029b0c872cf70140
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a5663fff6f7351272a78947d364458c83e5b8af1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687600"
 ---
 # <a name="-noconfig"></a>-noconfig
 Указывает, что компилятор не должен ссылаться автоматически часто используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки или импорта `System` и `Microsoft.VisualBasic` пространства имен.  
@@ -35,8 +35,8 @@ ms.locfileid: "37959583"
 > [!NOTE]
 >  `-noconfig` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
-## <a name="see-also"></a>См. также  
- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)  
- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+## <a name="see-also"></a>См. также
+- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+- [@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)
+- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

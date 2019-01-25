@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632352"
 ---
 # <a name="packaging-fonts-with-applications"></a>Упаковка шрифтов с приложениями
 Этот раздел содержит общие сведения об упаковке шрифтов с вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения.  
@@ -166,16 +166,16 @@ ms.locfileid: "43391770"
   
 -   **Абсолютный URI, с помощью пакета: нотации:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не разрешают создавать <xref:System.Windows.Media.FontFamily> программным способом с помощью «pack:» как часть абсолютное [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ссылки на шрифт. Например `"pack://application:,,,/resources/#Pericles Light"` является недопустимой ссылкой на шрифт.  
   
--   **Автоматическое внедрение шрифтов:** во время разработки не поддерживается поиск шрифтов, используемых приложением, и их автоматическое внедрение в ресурсы приложения.  
+-   **Автоматическое внедрение шрифтов.** Во время разработки не поддерживается поиск шрифтов, используемых приложением, и автоматическое внедрение шрифтов в ресурсы приложения.  
   
 -   **Подмножества шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не поддерживают создание подмножеств шрифтов для нефиксированных документов.  
   
 -   Если обнаруживается неправильная ссылка, приложение прибегает к использованию доступного шрифта.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Documents.Typography>  
- <xref:System.Windows.Media.FontFamily>  
- [Microsoft Typography: Ссылки, новости и контакты](https://www.microsoft.com/typography/links/)  
- [Спецификация OpenType](https://www.microsoft.com/typography/otspec/)  
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Пакет образцов шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Documents.Typography>
+- <xref:System.Windows.Media.FontFamily>
+- [Microsoft Typography: Ссылки, новости и контакты](https://www.microsoft.com/typography/links/)
+- [Спецификация OpenType](https://www.microsoft.com/typography/otspec/)
+- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Пакет образцов шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

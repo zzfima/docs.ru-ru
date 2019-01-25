@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736998"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Использование служб данных в клиентском приложении (службы данных WCF)
 Можно получить доступ к службе, предоставляющей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, указав URI в веб-браузер. URI предоставляет адрес ресурса, и сообщения запроса отправляются по этим адресам для доступа или изменения базовых данных, представляемых ресурсом. Браузер формирует команду HTTP GET и возвращает запрошенный ресурс в виде канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Дополнительные сведения см. в разделе [доступа к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,16 +33,16 @@ ms.locfileid: "44087787"
   
 -   **HTTP MERGE** — в выполнения удаления, а затем вставки в источнике данных только для изменения данных сущности, связи с неэффективностью [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] представляют новое действие HTTP MERGE. Полезные данные сообщения запроса содержат свойства, которые необходимо изменить в адресуемом ресурсе сущности. Поскольку метод HTTP MERGE не определен в спецификации HTTP, ему может потребоваться дополнительная обработка для отправки запроса HTTP MERGE через серверы, не поддерживающие службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- Дополнительные сведения см. в разделе [OData: операции](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Дополнительные сведения см. в разделе [OData: Операции](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Форматы представления информации  
  Для запросов HTTP PUT, HTTP POST или HTTP MERGE полезные данные сообщения запроса содержат данные сущности, отправляемые службе данных. Содержимое полезных данных зависит от формата данных сообщения. Ответы HTTP на все действия, кроме DELETE, также содержат полезные данные. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает следующие форматы полезных данных для доступа и изменения данных в службе:  
   
--   **Atom** — Кодировка сообщений на основе XML, определяемые [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] как расширение протокола публикации Atom (AtomPub) для обмена данными по протоколу HTTP для веб-каналов, подкастов, вики и функций Интернета на основе XML. Дополнительные сведения см. в разделе [OData: формат Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+-   **Atom** — Кодировка сообщений на основе XML, определяемые [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] как расширение протокола публикации Atom (AtomPub) для обмена данными по протоколу HTTP для веб-каналов, подкастов, вики и функций Интернета на основе XML. Дополнительные сведения см. в разделе [OData: Формат Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Object Notation (JSON) — это формат обмена небольшого количества данных, который основан на подмножестве языка JavaScript. Дополнительные сведения см. в разделе [OData: формат JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+-   **JSON** -JavaScript Object Notation (JSON) — это формат обмена небольшого количества данных, который основан на подмножестве языка JavaScript. Дополнительные сведения см. в разделе [OData: Формат JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
- Формат сообщения полезных данных запрашивается в заголовке HTTP-запроса. Дополнительные сведения см. в разделе [OData: операции](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Формат сообщения полезных данных запрашивается в заголовке HTTP-запроса. Дополнительные сведения см. в разделе [OData: Операции](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Доступ и изменения данных с помощью клиентских библиотек  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя клиентские библиотеки, которые позволяют упростить использование [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал из .NET Framework и приложений клиента на основе Silverlight. Эти библиотеки упрощают отправку и получение сообщений HTTP. Кроме того, они преобразуют полезные данные сообщений в объекты CLR, представляющие данные сущностей. Клиентские библиотеки содержат два базовых класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>. Эти классы позволяют отправлять запросы к службе данных и работать с возвращенными данными сущностей как с объектами CLR. Дополнительные сведения см. в разделе [клиентскую библиотеку WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) и [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
@@ -51,6 +51,6 @@ ms.locfileid: "44087787"
   
  Существуют программные библиотеки, которое можно использовать для использования [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в другие виды клиентских приложений. Дополнительные сведения см. в разделе [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
-## <a name="see-also"></a>См. также  
- [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>См. также
+- [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
