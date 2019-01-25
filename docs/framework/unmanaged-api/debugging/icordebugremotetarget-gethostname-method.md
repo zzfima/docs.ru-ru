@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf35715564e58f1811618b6859a860008e9660c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655404"
 ---
-# <a name="icordebugremotetargetgethostname-method"></a><span data-ttu-id="248c1-102">Метод ICorDebugRemoteTarget::GetHostName</span><span class="sxs-lookup"><span data-stu-id="248c1-102">ICorDebugRemoteTarget::GetHostName Method</span></span>
-<span data-ttu-id="248c1-103">Возвращает полное доменное имя или IPv4-адрес удаленной отладки конечного компьютера.</span><span class="sxs-lookup"><span data-stu-id="248c1-103">Returns the fully qualified domain name or IPv4 address of the remote debugging target machine.</span></span> <span data-ttu-id="248c1-104">IPv6 не поддерживается в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="248c1-104">IPV6 is not supported at this time.</span></span>  
+# <a name="icordebugremotetargetgethostname-method"></a><span data-ttu-id="f5249-102">Метод ICorDebugRemoteTarget::GetHostName</span><span class="sxs-lookup"><span data-stu-id="f5249-102">ICorDebugRemoteTarget::GetHostName Method</span></span>
+<span data-ttu-id="f5249-103">Возвращает полное доменное имя или IPv4-адрес удаленной отладки целевой машины.</span><span class="sxs-lookup"><span data-stu-id="f5249-103">Returns the fully qualified domain name or IPv4 address of the remote debugging target machine.</span></span> <span data-ttu-id="f5249-104">IPv6 не поддерживается в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="f5249-104">IPV6 is not supported at this time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="248c1-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="248c1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5249-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f5249-105">Syntax</span></span>  
   
 ```  
 HRESULT GetHostName (  
@@ -37,35 +37,35 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="248c1-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="248c1-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f5249-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f5249-106">Parameters</span></span>  
  `cchHostName`  
- <span data-ttu-id="248c1-107">[in] Размер (в символах) для `szHostName` буфера.</span><span class="sxs-lookup"><span data-stu-id="248c1-107">[in] The size, in characters, of the `szHostName` buffer.</span></span> <span data-ttu-id="248c1-108">Если этот параметр равен 0 (нуль), `szHostName` должен иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="248c1-108">If this parameter is 0 (zero), `szHostName` must be null.</span></span>  
+ <span data-ttu-id="f5249-107">[in] Размер в символах, из `szHostName` буфера.</span><span class="sxs-lookup"><span data-stu-id="f5249-107">[in] The size, in characters, of the `szHostName` buffer.</span></span> <span data-ttu-id="f5249-108">Если этот параметр равен 0 (ноль), `szHostName` должен иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="f5249-108">If this parameter is 0 (zero), `szHostName` must be null.</span></span>  
   
  `pcchHostName`  
- <span data-ttu-id="248c1-109">[out] Число символов, включая знак завершения null, имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="248c1-109">[out] The number of characters, including a null terminator, in the host name or IP address.</span></span> <span data-ttu-id="248c1-110">Этот параметр может быть нулевым.</span><span class="sxs-lookup"><span data-stu-id="248c1-110">This parameter can be null.</span></span>  
+ <span data-ttu-id="f5249-109">[out] Число символов, включая завершающий нуль-символ, имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="f5249-109">[out] The number of characters, including a null terminator, in the host name or IP address.</span></span> <span data-ttu-id="f5249-110">Этот параметр может быть нулевым.</span><span class="sxs-lookup"><span data-stu-id="f5249-110">This parameter can be null.</span></span>  
   
  `szHostName`  
- <span data-ttu-id="248c1-111">[out] Буфер, содержащий имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="248c1-111">[out] Buffer that contains the host name or IP address.</span></span>  
+ <span data-ttu-id="f5249-111">[out] Буфер, содержащий имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="f5249-111">[out] Buffer that contains the host name or IP address.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="248c1-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="248c1-112">Return Value</span></span>  
- <span data-ttu-id="248c1-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="248c1-113">S_OK</span></span>  
- <span data-ttu-id="248c1-114">Имя узла или IP-адрес был успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="248c1-114">The host name or IP address was successfully returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f5249-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f5249-112">Return Value</span></span>  
+ <span data-ttu-id="f5249-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="f5249-113">S_OK</span></span>  
+ <span data-ttu-id="f5249-114">Имя узла или IP-адрес был успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="f5249-114">The host name or IP address was successfully returned.</span></span>  
   
- <span data-ttu-id="248c1-115">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="248c1-115">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="248c1-116">Не удалось вернуть имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="248c1-116">Unable to return the host name or IP address.</span></span>  
+ <span data-ttu-id="f5249-115">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="f5249-115">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="f5249-116">Не удалось получить имя узла или IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="f5249-116">Unable to return the host name or IP address.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="248c1-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="248c1-117">Remarks</span></span>  
- <span data-ttu-id="248c1-118">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="248c1-118">This method is implemented by the debugger writer.</span></span> <span data-ttu-id="248c1-119">Он должен соответствовать несколько вызовов парадигма: при первом вызове вызывающий объект передает значение null как `cchHostName` и `szHostName`, и `pcchHostName` возвращает размер буфера.</span><span class="sxs-lookup"><span data-stu-id="248c1-119">It must follow the multiple call paradigm: On the first call, the caller passes null to both `cchHostName` and `szHostName`, and `pcchHostName` returns the size of the required buffer .</span></span> <span data-ttu-id="248c1-120">При втором вызове переданный размер, который ранее был возвращен `cchHostName`, и переданный буфер соответствующего размера `szHostName`.</span><span class="sxs-lookup"><span data-stu-id="248c1-120">On the second call, the size that was previously returned is passed in `cchHostName`, and an appropriately sized buffer is passed in `szHostName`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5249-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="f5249-117">Remarks</span></span>  
+ <span data-ttu-id="f5249-118">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="f5249-118">This method is implemented by the debugger writer.</span></span> <span data-ttu-id="f5249-119">Он должен соответствовать несколько парадигма вызова: При первом вызове, вызывающий объект передает null в оба `cchHostName` и `szHostName`, и `pcchHostName` возвращает размер буфера.</span><span class="sxs-lookup"><span data-stu-id="f5249-119">It must follow the multiple call paradigm: On the first call, the caller passes null to both `cchHostName` and `szHostName`, and `pcchHostName` returns the size of the required buffer .</span></span> <span data-ttu-id="f5249-120">При втором вызове, переданный размер, который был ранее возвращен `cchHostName`, и переданный буфера `szHostName`.</span><span class="sxs-lookup"><span data-stu-id="f5249-120">On the second call, the size that was previously returned is passed in `cchHostName`, and an appropriately sized buffer is passed in `szHostName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="248c1-121">Требования</span><span class="sxs-lookup"><span data-stu-id="248c1-121">Requirements</span></span>  
- <span data-ttu-id="248c1-122">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="248c1-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5249-121">Требования</span><span class="sxs-lookup"><span data-stu-id="f5249-121">Requirements</span></span>  
+ <span data-ttu-id="f5249-122">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5249-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="248c1-123">**Заголовок:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="248c1-123">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="f5249-123">**Заголовок.** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="f5249-123">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="248c1-124">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="248c1-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f5249-124">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5249-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="248c1-125">**Версии платформы .NET framework:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="248c1-125">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="f5249-125">**Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="f5249-125">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="248c1-126">См. также</span><span class="sxs-lookup"><span data-stu-id="248c1-126">See Also</span></span>  
- [<span data-ttu-id="248c1-127">Интерфейс ICorDebugRemoteTarget</span><span class="sxs-lookup"><span data-stu-id="248c1-127">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="248c1-128">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="248c1-128">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f5249-126">См. также</span><span class="sxs-lookup"><span data-stu-id="f5249-126">See also</span></span>
+- [<span data-ttu-id="f5249-127">Интерфейс ICorDebugRemoteTarget</span><span class="sxs-lookup"><span data-stu-id="f5249-127">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="f5249-128">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="f5249-128">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

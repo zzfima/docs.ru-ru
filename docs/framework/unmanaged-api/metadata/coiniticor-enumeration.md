@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 224684bd76ec3318b2c7f8197263d66973ce27aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716496"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="9182b-102">Перечисление COINITICOR</span><span class="sxs-lookup"><span data-stu-id="9182b-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="9182b-103">Указывает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации общеязыковая среда выполнения.</span><span class="sxs-lookup"><span data-stu-id="9182b-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="e4fc5-102">Перечисление COINITICOR</span><span class="sxs-lookup"><span data-stu-id="e4fc5-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="e4fc5-103">Задает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации среда CLR.</span><span class="sxs-lookup"><span data-stu-id="e4fc5-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9182b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9182b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4fc5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e4fc5-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOINITCOR  
@@ -35,20 +35,20 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9182b-105">Участники</span><span class="sxs-lookup"><span data-stu-id="9182b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e4fc5-105">Участники</span><span class="sxs-lookup"><span data-stu-id="e4fc5-105">Members</span></span>  
   
-|<span data-ttu-id="9182b-106">Член</span><span class="sxs-lookup"><span data-stu-id="9182b-106">Member</span></span>|<span data-ttu-id="9182b-107">Описание</span><span class="sxs-lookup"><span data-stu-id="9182b-107">Description</span></span>|  
+|<span data-ttu-id="e4fc5-106">Член</span><span class="sxs-lookup"><span data-stu-id="e4fc5-106">Member</span></span>|<span data-ttu-id="e4fc5-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="e4fc5-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="9182b-108">Указывает режим инициализации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9182b-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="e4fc5-108">Указывает режим инициализации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e4fc5-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9182b-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9182b-109">Requirements</span></span>  
- <span data-ttu-id="9182b-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9182b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4fc5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="e4fc5-109">Requirements</span></span>  
+ <span data-ttu-id="e4fc5-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4fc5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9182b-111">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9182b-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4fc5-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e4fc5-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9182b-112">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9182b-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e4fc5-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e4fc5-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9182b-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9182b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e4fc5-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4fc5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9182b-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9182b-114">See Also</span></span>  
- [<span data-ttu-id="9182b-115">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="9182b-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e4fc5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="e4fc5-114">See also</span></span>
+- [<span data-ttu-id="e4fc5-115">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="e4fc5-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

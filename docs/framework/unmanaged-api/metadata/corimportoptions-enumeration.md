@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744614"
 ---
-# <a name="corimportoptions-enumeration"></a><span data-ttu-id="5fbe8-102">Перечисление CorImportOptions</span><span class="sxs-lookup"><span data-stu-id="5fbe8-102">CorImportOptions Enumeration</span></span>
-<span data-ttu-id="5fbe8-103">Содержит значения флага, управляющие поведением во время импорта сборки за пределы текущей области.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-103">Contains flag values that control the behavior during importation of an assembly outside the current scope.</span></span>  
+# <a name="corimportoptions-enumeration"></a><span data-ttu-id="5ff86-102">Перечисление CorImportOptions</span><span class="sxs-lookup"><span data-stu-id="5ff86-102">CorImportOptions Enumeration</span></span>
+<span data-ttu-id="5ff86-103">Содержит значения флага, управляющие поведением во время импорта сборки за пределы текущей области.</span><span class="sxs-lookup"><span data-stu-id="5ff86-103">Contains flag values that control the behavior during importation of an assembly outside the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fbe8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5fbe8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ff86-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5ff86-104">Syntax</span></span>  
   
 ```  
 typedef enum CorImportOptions {  
@@ -44,26 +44,26 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5fbe8-105">Участники</span><span class="sxs-lookup"><span data-stu-id="5fbe8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5ff86-105">Участники</span><span class="sxs-lookup"><span data-stu-id="5ff86-105">Members</span></span>  
   
-|<span data-ttu-id="5fbe8-106">Член</span><span class="sxs-lookup"><span data-stu-id="5fbe8-106">Member</span></span>|<span data-ttu-id="5fbe8-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5fbe8-107">Description</span></span>|  
+|<span data-ttu-id="5ff86-106">Член</span><span class="sxs-lookup"><span data-stu-id="5ff86-106">Member</span></span>|<span data-ttu-id="5ff86-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5ff86-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|<span data-ttu-id="5fbe8-108">Указывает поведение по умолчанию, которое является пропуск удаленных записей.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-108">Indicates the default behavior, which is to skip deleted records.</span></span>|  
-|`MDImportOptionAll`|<span data-ttu-id="5fbe8-109">Указывает, что должны быть перечислены все метаданные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-109">Indicates that all metadata should be enumerated.</span></span>|  
-|`MDImportOptionAllTypeDefs`|<span data-ttu-id="5fbe8-110">Указывает, что должны быть перечислены все определения типов, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-110">Indicates that all TypeDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllMethodDefs`|<span data-ttu-id="5fbe8-111">Указывает, что должны быть перечислены все маркеры MethodDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-111">Indicates that all MethodDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllFieldDefs`|<span data-ttu-id="5fbe8-112">Указывает, что должны быть перечислены все маркеры FieldDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-112">Indicates that all FieldDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllProperties`|<span data-ttu-id="5fbe8-113">Указывает, что должны быть перечислены все маркеры PropertyDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-113">Indicates that all PropertyDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllEvents`|<span data-ttu-id="5fbe8-114">Указывает, что должны быть перечислены все маркеры EventDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-114">Indicates that all EventDefs, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllCustomAttributes`|<span data-ttu-id="5fbe8-115">Указывает, что должны быть перечислены все настраиваемые атрибуты, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-115">Indicates that all custom attributes, including deleted ones, should be enumerated.</span></span>|  
-|`MDImportOptionAllExportedTypes`|<span data-ttu-id="5fbe8-116">Указывает, что должны быть перечислены все экспортируемые типы, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5fbe8-116">Indicates that all exported types, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionDefault`|<span data-ttu-id="5ff86-108">Указывает поведение по умолчанию, которое является пропуск удаленных записей.</span><span class="sxs-lookup"><span data-stu-id="5ff86-108">Indicates the default behavior, which is to skip deleted records.</span></span>|  
+|`MDImportOptionAll`|<span data-ttu-id="5ff86-109">Указывает, что должны быть перечислены все метаданные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-109">Indicates that all metadata should be enumerated.</span></span>|  
+|`MDImportOptionAllTypeDefs`|<span data-ttu-id="5ff86-110">Указывает, что должны быть перечислены все определения типов, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-110">Indicates that all TypeDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllMethodDefs`|<span data-ttu-id="5ff86-111">Указывает, что должны быть перечислены все маркеры MethodDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-111">Indicates that all MethodDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllFieldDefs`|<span data-ttu-id="5ff86-112">Указывает, что должны быть перечислены все маркеры FieldDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-112">Indicates that all FieldDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllProperties`|<span data-ttu-id="5ff86-113">Указывает, что должны быть перечислены все маркеры PropertyDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-113">Indicates that all PropertyDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllEvents`|<span data-ttu-id="5ff86-114">Указывает, что должны быть перечислены все маркеры EventDef, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-114">Indicates that all EventDefs, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllCustomAttributes`|<span data-ttu-id="5ff86-115">Указывает, что должны быть перечислены все настраиваемые атрибуты, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-115">Indicates that all custom attributes, including deleted ones, should be enumerated.</span></span>|  
+|`MDImportOptionAllExportedTypes`|<span data-ttu-id="5ff86-116">Указывает, что должны быть перечислены все экспортируемые типы, включая удаленные.</span><span class="sxs-lookup"><span data-stu-id="5ff86-116">Indicates that all exported types, including deleted ones, should be enumerated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5fbe8-117">Требования</span><span class="sxs-lookup"><span data-stu-id="5fbe8-117">Requirements</span></span>  
- <span data-ttu-id="5fbe8-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5fbe8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ff86-117">Требования</span><span class="sxs-lookup"><span data-stu-id="5ff86-117">Requirements</span></span>  
+ <span data-ttu-id="5ff86-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ff86-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5fbe8-119">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5fbe8-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5ff86-119">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5ff86-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5fbe8-120">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fbe8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5ff86-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ff86-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fbe8-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5fbe8-121">See Also</span></span>  
- [<span data-ttu-id="5fbe8-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="5fbe8-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5ff86-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5ff86-121">See also</span></span>
+- [<span data-ttu-id="5ff86-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="5ff86-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

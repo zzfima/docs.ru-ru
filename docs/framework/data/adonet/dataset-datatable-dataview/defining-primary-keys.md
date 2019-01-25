@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: aecd16357857dca7393eac879159c916d8cf8ac7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9e8835c50ea6c1795fc33aa46bac51cd77defc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650604"
 ---
-# <a name="defining-primary-keys"></a><span data-ttu-id="99449-102">Определение первичных ключей</span><span class="sxs-lookup"><span data-stu-id="99449-102">Defining Primary Keys</span></span>
-<span data-ttu-id="99449-103">База данных обычно содержит столбец или группу столбцов, уникально определяющих каждую строку в таблице.</span><span class="sxs-lookup"><span data-stu-id="99449-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="99449-104">Такие столбцы или группы столбцов называются первичными ключами.</span><span class="sxs-lookup"><span data-stu-id="99449-104">This identifying column or group of columns is called the primary key.</span></span>  
+# <a name="defining-primary-keys"></a><span data-ttu-id="7efa3-102">Определение первичных ключей</span><span class="sxs-lookup"><span data-stu-id="7efa3-102">Defining Primary Keys</span></span>
+<span data-ttu-id="7efa3-103">База данных обычно содержит столбец или группу столбцов, уникально определяющих каждую строку в таблице.</span><span class="sxs-lookup"><span data-stu-id="7efa3-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="7efa3-104">Такие столбцы или группы столбцов называются первичными ключами.</span><span class="sxs-lookup"><span data-stu-id="7efa3-104">This identifying column or group of columns is called the primary key.</span></span>  
   
- <span data-ttu-id="99449-105">При определении одного <xref:System.Data.DataColumn> как <xref:System.Data.DataTable.PrimaryKey%2A> для <xref:System.Data.DataTable>, в таблице автоматически присваивается <xref:System.Data.DataColumn.AllowDBNull%2A> свойство столбца **false** и <xref:System.Data.DataColumn.Unique%2A> свойства  **значение true,**.</span><span class="sxs-lookup"><span data-stu-id="99449-105">When you identify a single <xref:System.Data.DataColumn> as the <xref:System.Data.DataTable.PrimaryKey%2A> for a <xref:System.Data.DataTable>, the table automatically sets the <xref:System.Data.DataColumn.AllowDBNull%2A> property of the column to **false** and the <xref:System.Data.DataColumn.Unique%2A> property to **true**.</span></span> <span data-ttu-id="99449-106">Для нескольких столбцов первичных ключей, только **AllowDBNull** свойству автоматически присваивается **false**.</span><span class="sxs-lookup"><span data-stu-id="99449-106">For multiple-column primary keys, only the **AllowDBNull** property is automatically set to **false**.</span></span>  
+ <span data-ttu-id="7efa3-105">При определении одного <xref:System.Data.DataColumn> как <xref:System.Data.DataTable.PrimaryKey%2A> для <xref:System.Data.DataTable>, в таблице автоматически присваивается <xref:System.Data.DataColumn.AllowDBNull%2A> свойство столбца **false** и <xref:System.Data.DataColumn.Unique%2A> свойства  **значение true,**.</span><span class="sxs-lookup"><span data-stu-id="7efa3-105">When you identify a single <xref:System.Data.DataColumn> as the <xref:System.Data.DataTable.PrimaryKey%2A> for a <xref:System.Data.DataTable>, the table automatically sets the <xref:System.Data.DataColumn.AllowDBNull%2A> property of the column to **false** and the <xref:System.Data.DataColumn.Unique%2A> property to **true**.</span></span> <span data-ttu-id="7efa3-106">Для нескольких столбцов первичных ключей, только **AllowDBNull** свойству автоматически присваивается **false**.</span><span class="sxs-lookup"><span data-stu-id="7efa3-106">For multiple-column primary keys, only the **AllowDBNull** property is automatically set to **false**.</span></span>  
   
- <span data-ttu-id="99449-107">**PrimaryKey** свойство <xref:System.Data.DataTable> получает в качестве значения массив из одного или нескольких **DataColumn** объектов, как показано в следующих примерах.</span><span class="sxs-lookup"><span data-stu-id="99449-107">The **PrimaryKey** property of a <xref:System.Data.DataTable> receives as its value an array of one or more **DataColumn** objects, as shown in the following examples.</span></span> <span data-ttu-id="99449-108">В первом примере в качестве первичного ключа определяется один столбец.</span><span class="sxs-lookup"><span data-stu-id="99449-108">The first example defines a single column as the primary key.</span></span>  
+ <span data-ttu-id="7efa3-107">**PrimaryKey** свойство <xref:System.Data.DataTable> получает в качестве значения массив из одного или нескольких **DataColumn** объектов, как показано в следующих примерах.</span><span class="sxs-lookup"><span data-stu-id="7efa3-107">The **PrimaryKey** property of a <xref:System.Data.DataTable> receives as its value an array of one or more **DataColumn** objects, as shown in the following examples.</span></span> <span data-ttu-id="7efa3-108">В первом примере в качестве первичного ключа определяется один столбец.</span><span class="sxs-lookup"><span data-stu-id="7efa3-108">The first example defines a single column as the primary key.</span></span>  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -39,7 +39,7 @@ columns[0] = workTable.Columns["CustID"];
 workTable.PrimaryKey = columns;  
 ```  
   
- <span data-ttu-id="99449-109">Следующий пример определяет два столбца в качестве первичного ключа.</span><span class="sxs-lookup"><span data-stu-id="99449-109">The following example defines two columns as a primary key.</span></span>  
+ <span data-ttu-id="7efa3-109">Следующий пример определяет два столбца в качестве первичного ключа.</span><span class="sxs-lookup"><span data-stu-id="7efa3-109">The following example defines two columns as a primary key.</span></span>  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustLName"), _  
@@ -65,8 +65,8 @@ keyColumn[1] = workTable.Columns["CustFName"];
 workTable.PrimaryKey = keyColumn;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="99449-110">См. также</span><span class="sxs-lookup"><span data-stu-id="99449-110">See Also</span></span>  
- <xref:System.Data.DataTable>  
- [<span data-ttu-id="99449-111">Определение схемы DataTable</span><span class="sxs-lookup"><span data-stu-id="99449-111">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [<span data-ttu-id="99449-112">DataTables</span><span class="sxs-lookup"><span data-stu-id="99449-112">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [<span data-ttu-id="99449-113">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="99449-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7efa3-110">См. также</span><span class="sxs-lookup"><span data-stu-id="7efa3-110">See also</span></span>
+- <xref:System.Data.DataTable>
+- [<span data-ttu-id="7efa3-111">Определение схемы DataTable</span><span class="sxs-lookup"><span data-stu-id="7efa3-111">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [<span data-ttu-id="7efa3-112">DataTables</span><span class="sxs-lookup"><span data-stu-id="7efa3-112">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [<span data-ttu-id="7efa3-113">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7efa3-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

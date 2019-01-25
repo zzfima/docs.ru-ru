@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc5a40a0e26f116ce1700973a5000e8d6bbbd890
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2eb6d5a141838991d6b180acf7f30c378d4ab71f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535909"
 ---
-# <a name="iclrstrongnamestrongnamesignaturesize-method"></a><span data-ttu-id="44eaf-102">Метод ICLRStrongName::StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="44eaf-102">ICLRStrongName::StrongNameSignatureSize Method</span></span>
-<span data-ttu-id="44eaf-103">Возвращает размер подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="44eaf-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="44eaf-104">Этот метод обычно используется компиляторами, чтобы определить, какой объем места, резервируемого в файле, при создании сборки с отложенной подписью.</span><span class="sxs-lookup"><span data-stu-id="44eaf-104">This method is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="iclrstrongnamestrongnamesignaturesize-method"></a><span data-ttu-id="d8631-102">Метод ICLRStrongName::StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="d8631-102">ICLRStrongName::StrongNameSignatureSize Method</span></span>
+<span data-ttu-id="d8631-103">Возвращает размер подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="d8631-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="d8631-104">Этот метод обычно используется компиляторами, чтобы определить, какой объем места, резервируемого в файле, при создании сборки с отложенной подписью.</span><span class="sxs-lookup"><span data-stu-id="d8631-104">This method is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44eaf-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="44eaf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8631-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d8631-105">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureSize (   
@@ -37,27 +37,27 @@ HRESULT StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="44eaf-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="44eaf-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d8631-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d8631-106">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="44eaf-107">[in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="44eaf-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="d8631-107">[in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="d8631-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="44eaf-108">[in] Размер в байтах из `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="44eaf-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="d8631-108">[in] Размер в байтах из `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="d8631-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="44eaf-109">[in] Число байтов, необходимое для хранения подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="44eaf-109">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="d8631-109">[in] Число байтов, необходимое для хранения подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="d8631-109">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="44eaf-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="44eaf-110">Return Value</span></span>  
- <span data-ttu-id="44eaf-111">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="44eaf-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d8631-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d8631-110">Return Value</span></span>  
+ <span data-ttu-id="d8631-111">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="d8631-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44eaf-112">Требования</span><span class="sxs-lookup"><span data-stu-id="44eaf-112">Requirements</span></span>  
- <span data-ttu-id="44eaf-113">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44eaf-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8631-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d8631-112">Requirements</span></span>  
+ <span data-ttu-id="d8631-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8631-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44eaf-114">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="44eaf-114">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="d8631-114">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d8631-114">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="44eaf-115">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="44eaf-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d8631-115">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d8631-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="44eaf-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44eaf-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d8631-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8631-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44eaf-117">См. также</span><span class="sxs-lookup"><span data-stu-id="44eaf-117">See Also</span></span>  
- [<span data-ttu-id="44eaf-118">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="44eaf-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d8631-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d8631-117">See also</span></span>
+- [<span data-ttu-id="d8631-118">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="d8631-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

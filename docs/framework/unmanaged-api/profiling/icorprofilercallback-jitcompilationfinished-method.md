@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf447e1325b4acaa26c9bb16d7d1a736eb20a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d2e75d357b1f56df676163744015a1a3f77c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530762"
 ---
-# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="bd3db-102">Метод ICorProfilerCallback::JITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="bd3db-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
-<span data-ttu-id="bd3db-103">Уведомляет профилировщик о завершении компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="bd3db-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
+# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="efc40-102">Метод ICorProfilerCallback::JITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="efc40-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
+<span data-ttu-id="efc40-103">Уведомляет профилировщик о завершении компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="efc40-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd3db-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bd3db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efc40-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="efc40-104">Syntax</span></span>  
   
 ```  
 HRESULT JITCompilationFinished(  
@@ -36,27 +36,27 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bd3db-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bd3db-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="efc40-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="efc40-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="bd3db-106">[in] Идентификатор функции, который был скомпилирован.</span><span class="sxs-lookup"><span data-stu-id="bd3db-106">[in] The ID of the function that was compiled.</span></span>  
+ <span data-ttu-id="efc40-106">[in] Идентификатор функции, который был скомпилирован.</span><span class="sxs-lookup"><span data-stu-id="efc40-106">[in] The ID of the function that was compiled.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="bd3db-107">[in] Значение, указывающее, была ли успешной компиляции.</span><span class="sxs-lookup"><span data-stu-id="bd3db-107">[in] A value indicating whether compilation was successful.</span></span>  
+ <span data-ttu-id="efc40-107">[in] Значение, указывающее, является ли компиляция прошла успешно.</span><span class="sxs-lookup"><span data-stu-id="efc40-107">[in] A value indicating whether compilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="bd3db-108">[in] Значение, указывающее профилировщику ли блокировка будет влиять на работу среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="bd3db-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="bd3db-109">Значение равно `true` Если блокировок может вызвать среды выполнения для ожидания вызывающего потока для возврата из этого обратного вызова; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="bd3db-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
+ <span data-ttu-id="efc40-108">[in] Значение, указывающее профилировщику ли блокировка повлияет на работу среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="efc40-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="efc40-109">Значение равно `true` Если блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="efc40-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="bd3db-110">Несмотря на то что значение `true` не представляет угрозы для среды выполнения, он может исказить результаты профилирования.</span><span class="sxs-lookup"><span data-stu-id="bd3db-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
+ <span data-ttu-id="efc40-110">Несмотря на то что значение `true` не представляет угрозы для среды выполнения, он может исказить результаты профилирования.</span><span class="sxs-lookup"><span data-stu-id="efc40-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bd3db-111">Требования</span><span class="sxs-lookup"><span data-stu-id="bd3db-111">Requirements</span></span>  
- <span data-ttu-id="bd3db-112">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd3db-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efc40-111">Требования</span><span class="sxs-lookup"><span data-stu-id="efc40-111">Requirements</span></span>  
+ <span data-ttu-id="efc40-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efc40-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bd3db-113">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bd3db-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="efc40-113">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="efc40-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bd3db-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd3db-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="efc40-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efc40-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bd3db-115">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd3db-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="efc40-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efc40-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd3db-116">См. также</span><span class="sxs-lookup"><span data-stu-id="bd3db-116">See Also</span></span>  
- [<span data-ttu-id="bd3db-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="bd3db-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="bd3db-118">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="bd3db-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="efc40-116">См. также</span><span class="sxs-lookup"><span data-stu-id="efc40-116">See also</span></span>
+- [<span data-ttu-id="efc40-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="efc40-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="efc40-118">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="efc40-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

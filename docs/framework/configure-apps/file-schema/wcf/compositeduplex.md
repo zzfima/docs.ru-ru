@@ -2,62 +2,62 @@
 title: '&lt;compositeDuplex&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: e00cc6f3214dc9a040a9b6170271b1f4188d1631
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601627"
 ---
-# <a name="ltcompositeduplexgt"></a><span data-ttu-id="1e8e2-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="1e8e2-102">&lt;compositeDuplex&gt;</span></span>
-<span data-ttu-id="1e8e2-103">Определяет элемент привязки, который используется, когда клиенту необходимо предоставить службе конечную точку для отправки сообщений обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  
+# <a name="ltcompositeduplexgt"></a><span data-ttu-id="0649b-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="0649b-102">&lt;compositeDuplex&gt;</span></span>
+<span data-ttu-id="0649b-103">Определяет элемент привязки, который используется, когда клиенту необходимо предоставить службе конечную точку для отправки сообщений обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="0649b-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  
   
- <span data-ttu-id="1e8e2-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="1e8e2-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-105">\<bindings></span></span>  
-<span data-ttu-id="1e8e2-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-106">\<customBinding></span></span>  
-<span data-ttu-id="1e8e2-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-107">\<binding></span></span>  
-<span data-ttu-id="1e8e2-108">\<compositeDuplex ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-108">\<compositeDuplex></span></span>  
+ <span data-ttu-id="0649b-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="0649b-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="0649b-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="0649b-105">\<bindings></span></span>  
+<span data-ttu-id="0649b-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="0649b-106">\<customBinding></span></span>  
+<span data-ttu-id="0649b-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="0649b-107">\<binding></span></span>  
+<span data-ttu-id="0649b-108">\<compositeDuplex ></span><span class="sxs-lookup"><span data-stu-id="0649b-108">\<compositeDuplex></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e8e2-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1e8e2-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0649b-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0649b-109">Syntax</span></span>  
   
 ```xml  
 <compositeDuplex clientBaseAddress="URI" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1e8e2-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="1e8e2-110">Attributes and Elements</span></span>  
- <span data-ttu-id="1e8e2-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0649b-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0649b-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0649b-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0649b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1e8e2-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="1e8e2-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0649b-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0649b-112">Attributes</span></span>  
   
-|<span data-ttu-id="1e8e2-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="1e8e2-113">Attribute</span></span>|<span data-ttu-id="1e8e2-114">Описание</span><span class="sxs-lookup"><span data-stu-id="1e8e2-114">Description</span></span>|  
+|<span data-ttu-id="0649b-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0649b-113">Attribute</span></span>|<span data-ttu-id="0649b-114">Описание</span><span class="sxs-lookup"><span data-stu-id="0649b-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="1e8e2-115">clientBaseAddress</span><span class="sxs-lookup"><span data-stu-id="1e8e2-115">clientBaseAddress</span></span>|<span data-ttu-id="1e8e2-116">Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-116">A URI that sets the address of the back channel in duplex mode.</span></span> <span data-ttu-id="1e8e2-117">Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-117">The service uses this address to make contact and establish a connection with the client.</span></span><br /><br /> <span data-ttu-id="1e8e2-118">Если этот атрибут не установлен, адрес по умолчанию "`full qualified name+default port\TemporaryIndigoAddress\guid`" создается.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-118">If this attribute is not set, a default address "`full qualified name+default port\TemporaryIndigoAddress\guid`" is generated.</span></span> <span data-ttu-id="1e8e2-119">Значение по умолчанию — `null`.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-119">The default is `null`.</span></span>|  
+|<span data-ttu-id="0649b-115">clientBaseAddress</span><span class="sxs-lookup"><span data-stu-id="0649b-115">clientBaseAddress</span></span>|<span data-ttu-id="0649b-116">Универсальный код ресурса (URI), который задает адрес обратного канала при работе в дуплексном режиме.</span><span class="sxs-lookup"><span data-stu-id="0649b-116">A URI that sets the address of the back channel in duplex mode.</span></span> <span data-ttu-id="0649b-117">Служба использует данный адрес для осуществления контакта и создания подключения к клиенту.</span><span class="sxs-lookup"><span data-stu-id="0649b-117">The service uses this address to make contact and establish a connection with the client.</span></span><br /><br /> <span data-ttu-id="0649b-118">Если этот атрибут не установлен, адрес по умолчанию "`full qualified name+default port\TemporaryIndigoAddress\guid`" создается.</span><span class="sxs-lookup"><span data-stu-id="0649b-118">If this attribute is not set, a default address "`full qualified name+default port\TemporaryIndigoAddress\guid`" is generated.</span></span> <span data-ttu-id="0649b-119">Значение по умолчанию — `null`.</span><span class="sxs-lookup"><span data-stu-id="0649b-119">The default is `null`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1e8e2-120">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="1e8e2-120">Child Elements</span></span>  
- <span data-ttu-id="1e8e2-121">Нет</span><span class="sxs-lookup"><span data-stu-id="1e8e2-121">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0649b-120">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0649b-120">Child Elements</span></span>  
+ <span data-ttu-id="0649b-121">Нет</span><span class="sxs-lookup"><span data-stu-id="0649b-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1e8e2-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="1e8e2-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0649b-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0649b-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="1e8e2-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="1e8e2-123">Element</span></span>|<span data-ttu-id="1e8e2-124">Описание</span><span class="sxs-lookup"><span data-stu-id="1e8e2-124">Description</span></span>|  
+|<span data-ttu-id="0649b-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="0649b-123">Element</span></span>|<span data-ttu-id="0649b-124">Описание:</span><span class="sxs-lookup"><span data-stu-id="0649b-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="1e8e2-125">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-125">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="1e8e2-126">Определяет все возможности пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-126">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="0649b-125">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="0649b-125">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="0649b-126">Определяет все возможности пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="0649b-126">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1e8e2-127">Примечания</span><span class="sxs-lookup"><span data-stu-id="1e8e2-127">Remarks</span></span>  
- <span data-ttu-id="1e8e2-128">Данный элемент конфигурации используется с теми типами транспорта, которые не имеют встроенной поддержки дуплексной связи, например HTTP.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-128">This configuration element is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="1e8e2-129">Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-129">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0649b-127">Примечания</span><span class="sxs-lookup"><span data-stu-id="0649b-127">Remarks</span></span>  
+ <span data-ttu-id="0649b-128">Данный элемент конфигурации используется с теми типами транспорта, которые не имеют встроенной поддержки дуплексной связи, например HTTP.</span><span class="sxs-lookup"><span data-stu-id="0649b-128">This configuration element is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="0649b-129">Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="0649b-129">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span>  
   
- <span data-ttu-id="1e8e2-130">Для осуществления контакта и установления подключения клиент должен предоставить службе адрес.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-130">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="1e8e2-131">Этот адрес клиента предоставляется атрибутом `clientBaseAddress`.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-131">This client address is provided by the `clientBaseAddress` attribute.</span></span> <span data-ttu-id="1e8e2-132">Обратите внимание, что Windows Communication Foundation (WCF) автоматически создает атрибут ClientBaseAddress в том случае, если он не был явно задан пользователем.</span><span class="sxs-lookup"><span data-stu-id="1e8e2-132">Note that Windows Communication Foundation (WCF) auto-generates a ClientBaseAddress if one is not explicitly set by the user.</span></span>  
+ <span data-ttu-id="0649b-130">Для осуществления контакта и установления подключения клиент должен предоставить службе адрес.</span><span class="sxs-lookup"><span data-stu-id="0649b-130">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="0649b-131">Этот адрес клиента предоставляется атрибутом `clientBaseAddress`.</span><span class="sxs-lookup"><span data-stu-id="0649b-131">This client address is provided by the `clientBaseAddress` attribute.</span></span> <span data-ttu-id="0649b-132">Обратите внимание, что Windows Communication Foundation (WCF) автоматически создает атрибут ClientBaseAddress в том случае, если он не был явно задан пользователем.</span><span class="sxs-lookup"><span data-stu-id="0649b-132">Note that Windows Communication Foundation (WCF) auto-generates a ClientBaseAddress if one is not explicitly set by the user.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1e8e2-133">Пример</span><span class="sxs-lookup"><span data-stu-id="1e8e2-133">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0649b-133">Пример</span><span class="sxs-lookup"><span data-stu-id="0649b-133">Example</span></span>  
   
 ```xml  
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1e8e2-134">См. также</span><span class="sxs-lookup"><span data-stu-id="1e8e2-134">See Also</span></span>  
- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>  
- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="1e8e2-135">Привязки</span><span class="sxs-lookup"><span data-stu-id="1e8e2-135">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="1e8e2-136">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="1e8e2-136">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="1e8e2-137">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="1e8e2-137">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="1e8e2-138">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="1e8e2-138">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="0649b-134">См. также</span><span class="sxs-lookup"><span data-stu-id="0649b-134">See also</span></span>
+- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
+- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [<span data-ttu-id="0649b-135">Привязки</span><span class="sxs-lookup"><span data-stu-id="0649b-135">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="0649b-136">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="0649b-136">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="0649b-137">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="0649b-137">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="0649b-138">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="0649b-138">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
