@@ -1,23 +1,23 @@
 ---
-title: 'Как: создавать запросы с комплексной фильтрацией (Visual Basic)'
+title: Как выполнить Создание запросов со сложной фильтрацией (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9636e67b32107378a46c00338cb4c2bea20fc1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646689"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="341b5-102">Как: создавать запросы с комплексной фильтрацией (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="341b5-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
-<span data-ttu-id="341b5-103">Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="341b5-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="341b5-104">Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением.</span><span class="sxs-lookup"><span data-stu-id="341b5-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="341b5-105">В этом разделе приводится пример написания запроса с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="341b5-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a><span data-ttu-id="96763-102">Как выполнить Создание запросов со сложной фильтрацией (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96763-102">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>
+<span data-ttu-id="96763-103">Иногда возникает необходимость в написании запросов LINQ to XML с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="96763-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="96763-104">Например, может потребоваться найти все элементы, имеющие дочерние элементы с определенным именем и значением.</span><span class="sxs-lookup"><span data-stu-id="96763-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="96763-105">В этом разделе приводится пример написания запроса с комплексной фильтрацией.</span><span class="sxs-lookup"><span data-stu-id="96763-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="341b5-106">Пример</span><span class="sxs-lookup"><span data-stu-id="341b5-106">Example</span></span>  
- <span data-ttu-id="341b5-107">В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY».</span><span class="sxs-lookup"><span data-stu-id="341b5-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="341b5-108">В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `True`, если коллекция содержит элементы.</span><span class="sxs-lookup"><span data-stu-id="341b5-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
+## <a name="example"></a><span data-ttu-id="96763-106">Пример</span><span class="sxs-lookup"><span data-stu-id="96763-106">Example</span></span>  
+ <span data-ttu-id="96763-107">В этом примере показано, как найти все элементы `PurchaseOrder`, имеющие дочерний элемент `Address` с атрибутом `Type`, равным «Доставка», и дочерним элементом `State`, равным «NY».</span><span class="sxs-lookup"><span data-stu-id="96763-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="96763-108">В нем используется вложенный запрос в предложении `Where`, а оператор `Any` возвращает значение `True`, если коллекция содержит элементы.</span><span class="sxs-lookup"><span data-stu-id="96763-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `True` if the collection has any elements in it.</span></span>  
   
- <span data-ttu-id="341b5-109">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="341b5-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="96763-109">В этом примере используется следующий XML-документ: [Пример XML-файла: Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="96763-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="341b5-110">Дополнительные сведения о `Any` оператор, в разделе [операции, использующие кванторы (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="341b5-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="96763-110">Дополнительные сведения о `Any` оператора, см. в разделе [операции, использующие квантификаторы (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span><span class="sxs-lookup"><span data-stu-id="96763-110">For more information about the `Any` operator, see [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -36,16 +36,16 @@ For Each el As XElement In purchaseOrders
 Next  
 ```  
   
- <span data-ttu-id="341b5-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="341b5-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="96763-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="96763-111">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="341b5-112">Пример</span><span class="sxs-lookup"><span data-stu-id="341b5-112">Example</span></span>  
- <span data-ttu-id="341b5-113">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="341b5-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="341b5-114">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="341b5-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="96763-112">Пример</span><span class="sxs-lookup"><span data-stu-id="96763-112">Example</span></span>  
+ <span data-ttu-id="96763-113">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="96763-113">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="96763-114">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="96763-114">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="341b5-115">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="341b5-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="96763-115">В этом примере используется следующий XML-документ: [Пример XML-файла: Несколько заказов на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="96763-115">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -70,18 +70,18 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="341b5-116">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="341b5-116">This code produces the following output:</span></span>  
+ <span data-ttu-id="96763-116">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="96763-116">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="341b5-117">См. также</span><span class="sxs-lookup"><span data-stu-id="341b5-117">See Also</span></span>  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [<span data-ttu-id="341b5-118">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="341b5-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [<span data-ttu-id="341b5-119">Свойство дочерней оси XML</span><span class="sxs-lookup"><span data-stu-id="341b5-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [<span data-ttu-id="341b5-120">Свойство оси атрибута XML</span><span class="sxs-lookup"><span data-stu-id="341b5-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
- [<span data-ttu-id="341b5-121">Свойство значения XML</span><span class="sxs-lookup"><span data-stu-id="341b5-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [<span data-ttu-id="341b5-122">Операции проецирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="341b5-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
- [<span data-ttu-id="341b5-123">Операции, использующие кванторы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="341b5-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+## <a name="see-also"></a><span data-ttu-id="96763-117">См. также</span><span class="sxs-lookup"><span data-stu-id="96763-117">See also</span></span>
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [<span data-ttu-id="96763-118">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96763-118">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="96763-119">Свойство дочерней оси XML</span><span class="sxs-lookup"><span data-stu-id="96763-119">XML Child Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [<span data-ttu-id="96763-120">Свойство оси атрибута XML</span><span class="sxs-lookup"><span data-stu-id="96763-120">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="96763-121">Свойство значения XML</span><span class="sxs-lookup"><span data-stu-id="96763-121">XML Value Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [<span data-ttu-id="96763-122">Операции проекции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96763-122">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="96763-123">Операции, использующие квантификаторы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96763-123">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
