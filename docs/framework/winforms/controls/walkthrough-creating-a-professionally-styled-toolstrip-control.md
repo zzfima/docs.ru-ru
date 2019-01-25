@@ -1,5 +1,5 @@
 ---
-title: Пример. Создание профессионально оформленного элемента управления ToolStrip
+title: Пошаговое руководство. Создание профессионально оформленного элемента управления ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714897"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пример. Создание профессионально оформленного элемента управления ToolStrip
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пошаговое руководство. Создание профессионально оформленного элемента управления ToolStrip
 Можно предоставить приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид и поведение, написав собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.  
   
  В этом пошаговом руководстве демонстрируется использование <xref:System.Windows.Forms.ToolStrip> элементы управления для создания составного элемента управления, которая напоминает **редактируемую** в Microsoft® Outlook®. В этом пошаговом руководстве показаны следующие задачи:  
@@ -30,7 +30,7 @@ ms.locfileid: "43861977"
   
  Когда вы закончите, имеется элемент управления для повторного использования настраиваемых клиентских с профессиональный внешний вид элемента управления Microsoft Office® XP.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -49,7 +49,7 @@ ms.locfileid: "43861977"
   
 2.  В **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка.  
   
-     Дополнительные сведения см. в разделе [NIB: Практическое: удаление, Delete и исключить элементы](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Дополнительные сведения см. в разделе [NIB: Практическое: Удалить, удаление и исключить элементы](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Добавьте новый <xref:System.Windows.Forms.UserControl> элемент **StackViewLibrary** проекта. Назовите новый исходный файл базового объекта `StackView`.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "43861977"
     |ImageTransparentColor|`238, 238, 238`|  
     |Поля|`0, 0, 0, 0`|  
     |Заполнение|`3, 3, 3, 3`|  
-    |Text|**Mail**|  
+    |Текста|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Повторите шаг 7 для три раза <xref:System.Windows.Forms.ToolStripButton> элементов управления.  
@@ -102,7 +102,7 @@ ms.locfileid: "43861977"
   
 1.  В конструкторе Windows Forms выберите `StackView` элемента управления.  
   
-2.  В **свойства** окно, нажмите кнопку **события**.  
+2.  В окне **Свойства** выберите **События**.  
   
 3.  Дважды щелкните событие Load для создания `StackView_Load` обработчик событий.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "43861977"
   
 5.  В конструкторе Windows Forms выберите `mailStackButton` элемента управления.  
   
-6.  В **свойства** окно, нажмите кнопку **события**.  
+6.  В окне **Свойства** выберите **События**.  
   
 7.  Дважды щелкните событие Click.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "43861977"
   
 8.  Переименуйте `mailStackButton_Click` в обработчике событий `stackButton_Click`.  
   
-     Дополнительные сведения см. в разделе [как: переименовать идентификатор (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Дополнительные сведения см. в разделе [Как Переименовать идентификатор (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Вставьте следующий код в `stackButton_Click` обработчик событий.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "43861977"
 12. Повторите шаги 10 и 11 for `contactsStackButton` и `tasksStackButton` элементов управления.  
   
 ## <a name="defining-icons"></a>Определение значков  
- Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> создается из него. В рабочей среде данные растрового изображения хранятся в виде ресурса и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [как: добавление фоновых изображений в формы Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> создается из него. В рабочей среде данные растрового изображения хранятся в виде ресурса и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [Как Добавление фоновых изображений в формы Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Чтобы определить значки  
   
@@ -167,7 +167,7 @@ ms.locfileid: "43861977"
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>Тестирование элемента управления StackView  
- `StackView` Элемент управления наследуется от <xref:System.Windows.Forms.UserControl> класса. Таким образом, можно проверить элемент управления с **тестового контейнера UserControl**. Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ `StackView` Элемент управления наследуется от <xref:System.Windows.Forms.UserControl> класса. Таким образом, можно проверить элемент управления с **тестового контейнера UserControl**. Дополнительные сведения см. в разделе [Как Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-the-stackview-control"></a>Чтобы протестировать элемент управления StackView  
   
@@ -180,13 +180,13 @@ ms.locfileid: "43861977"
   
 -   Создать контекстное меню для элементов управления с <xref:System.Windows.Forms.ContextMenuStrip>. Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Создайте форму с автоматически заполненные стандартным меню. Дополнительные сведения см. в разделе [Пошаговое руководство: создание стандартных пунктов меню, в форму](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Создайте форму с автоматически заполненные стандартным меню. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание стандартных пунктов меню для формы](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Создайте форму многодокументного интерфейса (MDI) закрепленный <xref:System.Windows.Forms.ToolStrip> элементов управления. Дополнительные сведения см. в разделе [как: Создание формы MDI путем слияния меню и элементов управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Создайте форму многодокументного интерфейса (MDI) закрепленный <xref:System.Windows.Forms.ToolStrip> элементов управления. Дополнительные сведения см. в разделе [Как Создание формы MDI путем слияния меню и элементов управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Практическое руководство. Связывание с формой стандартных элементов меню](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Практическое руководство. Обеспечивают стандартные пункты меню в форму](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697352"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 Служба данных может обеспечивать доступ к данным больших двоичных объектов. Эти двоичные данные могут представлять видео- и аудиопотоки, изображения, файлы документов или двоичные данные медиаресурсов других типов. Когда сущность в модели данных включает одно или несколько двоичных свойств, служба данных возвращает двоичные данные в кодировке base-64 в записи в канале ответа. Поскольку загрузка и сериализация больших объемов двоичных данных таким способом может ухудшить производительность, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет механизм получения двоичных данных независимо от сущности, к которой он принадлежит. Это достигается отделением двоичных данных от сущности с последующим разделением их на один или несколько потоков данных.  
@@ -38,7 +38,7 @@ ms.locfileid: "45747061"
   
 5.  Включите доступ к двоичным ресурсам на сервере или в источнике данных.  
   
- Примеры в этом разделе основаны на образце потоковой службы хранения фотографий, которая подробно обсуждается в публикации [ряд потоковых поставщиков данных служб: реализация потокового поставщика (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Исходный код для этого образца службы можно найти в [Photo образец потоковой службы данных страницы](https://go.microsoft.com/fwlink/?LinkID=198988) в галерее кода MSDN.  
+ Примеры в этом разделе основаны на образце потоковой службы хранения фотографий, которая подробно обсуждается в публикации [ряд потоковых поставщиков данных служб: Реализация потокового поставщика (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Исходный код для этого образца службы можно найти в [Photo образец потоковой службы данных страницы](https://go.microsoft.com/fwlink/?LinkID=198988) в галерее кода MSDN.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Определение медиассылки в модели данных  
  Поставщик источника данных устанавливает способ, которым сущность определяется как медиассылка в модели данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "45747061"
   
  Необходимо также добавить пространство имен `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` либо в сущность, либо в корень EDMX- или CSDL-файла, определяющего модель данных.  
   
- Например, службы данных, которая использует [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщика и предоставляет доступ к медиаресурсу, см. в публикации [ряд потоковых поставщиков данных служб: реализация потокового поставщика (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
+ Например, службы данных, которая использует [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщика и предоставляет доступ к медиаресурсу, см. в публикации [ряд потоковых поставщиков данных служб: Реализация потокового поставщика (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Поставщик отражений**  
  Чтобы указать, что сущность является медиассылкой, добавьте <xref:System.Data.Services.Common.HasStreamAttribute> к классу, определяющему тип сущности в поставщике отражения.  
@@ -129,7 +129,7 @@ ms.locfileid: "45747061"
   
  Дополнительные сведения см. в разделе [управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>См. также  
- [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Работа с двоичными данными](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>См. также
+- [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [Работа с двоичными данными](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

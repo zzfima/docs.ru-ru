@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510433"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Практические руководства, посвященные анимации по полным кадрам
-В подразделах этого раздела демонстрируется использование анимации ключевого кадра для анимации более чем двух значений свойств и интерполяции элемента управления.  
+В подразделах этого раздела показано, как использовать анимации ключевого кадра для более чем двух значений свойств и управления интерполяции анимации.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Анимация объекта с помощью ключевых кадров](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "33561967"
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>См. также  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>См. также
+- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

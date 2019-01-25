@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744145"
 ---
 # <a name="net-native-and-compilation"></a>Машинный код .NET и компиляция
 Приложения Windows 8.1 и классические приложения Windows, предназначенные для платформы .NET Framework, создаются на определенном языке программирования и компилируются в промежуточный язык (IL). Перед выполнением какого-либо метода в первый раз JIT-компилятор компилирует IL-код в машинный код для локального компьютера. В противоположность этому цепочка инструментов .NET Native преобразует исходный код в машинный код во время компиляции. В этом разделе сравнивается .NET Native с другими технологиями компиляции, доступными для приложений .NET Framework, а также детально рассматривается, как цепочка инструментов .NET Native создает исходный код, что поможет вам понять, почему исключения, возникающие в коде, скомпилированном .NET Native, не возникают в JIT-скомпилированном коде.  
@@ -100,8 +100,8 @@ ms.locfileid: "53152530"
   
 -   Образы NGEN, как правило, хрупкие. Например, обновление или изменение зависимости обычно требует, чтобы сборки, которые его используют, также были пересозданы NGEN. Это особенно верно для системных сборок в библиотеке классов .NET Framework. В противоположность этому .NET Native позволяет обслуживать приложения независимо друг от друга.  
   
-## <a name="see-also"></a>См. также  
- [Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)  
- [Внутри .NET Native (видео Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+## <a name="see-also"></a>См. также
+- [Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)
+- [Внутри .NET Native (видео Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

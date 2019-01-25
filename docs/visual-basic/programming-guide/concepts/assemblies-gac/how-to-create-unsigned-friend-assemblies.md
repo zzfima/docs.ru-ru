@@ -1,15 +1,15 @@
 ---
-title: 'Практическое: создание неподписанных дружественных сборок (Visual Basic)'
+title: Как выполнить Создание неподписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698210"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Практическое: создание неподписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Как выполнить Создание неподписанных дружественных сборок (Visual Basic)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
@@ -79,14 +79,14 @@ ms.locfileid: "50188336"
   
 6.  Запустите файл friend_signed_B.exe.  
   
-     Программа выводит две строки: «Class1.Test» и «Class2.Test».  
+     Программа выводит две строки: Class1.Test и Class2.Test.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Практическое: Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Основные понятия о программировании руководство](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Основные понятия о программировании руководство](../../../../visual-basic/programming-guide/concepts/index.md)

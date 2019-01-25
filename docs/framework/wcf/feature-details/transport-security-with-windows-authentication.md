@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 3e48c397cb97cdfeb476daaf09d997e9609b3467
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652596"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Безопасность транспорта с проверкой подлинности Windows
 В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные механизмом безопасности Windows. Дополнительные сведения о программировании см. в разделе [как: Защита службы с учетными данными Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "50201495"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>См. также
+- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Практическое руководство. Защита службы с помощью учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

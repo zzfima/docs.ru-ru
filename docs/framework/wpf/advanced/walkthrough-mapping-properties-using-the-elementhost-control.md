@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623226"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost
 
@@ -62,7 +62,7 @@ ms.locfileid: "43510015"
 
 4.  Откройте `Form1` в конструкторе Windows Forms. Дважды щелкните форму, чтобы добавить обработчик событий для <xref:System.Windows.Forms.Form.Load> событий.
 
-5.  Вернитесь к конструктору Windows Forms и добавьте обработчик событий для формы <xref:System.Windows.Forms.Control.Resize> событий. Дополнительные сведения см. в разделе [как: Создание обработчика событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Вернитесь к конструктору Windows Forms и добавьте обработчик событий для формы <xref:System.Windows.Forms.Control.Resize> событий. Дополнительные сведения см. в разделе [Как Создание обработчиков событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
 
 6.  Объявите <xref:System.Windows.Forms.Integration.ElementHost> в `Form1` класса.
 
@@ -147,4 +147,4 @@ ms.locfileid: "43510015"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585553"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Перечисление CorDebugExceptionCallbackType
 Указывает тип обратного вызова, состоящее из [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) событий.  
@@ -39,21 +39,21 @@ typedef enum CorDebugExceptionCallbackType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Возникло исключение.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|В процессе очистки исключения введенного кода пользователя.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|В процессе очистки исключения ввода пользовательского кода.|  
 |`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|В процессе очистки исключения найден `catch` блока в пользовательском коде.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Исключение не обработано.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

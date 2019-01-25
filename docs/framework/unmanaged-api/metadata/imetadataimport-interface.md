@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732847"
 ---
 # <a name="imetadataimport-interface"></a>Интерфейс IMetaDataImport
 Предоставляет методы для импорта существующих метаданных из переносимого исполняемого (PE) файла или другого источника, такого как библиотека типов или отдельный двоичный файл метаданных среды выполнения, а также управления этим метаданными.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод CloseEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|Закрывает перечислитель с указанным дескриптором.|  
 |[Метод CountEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-countenum-method.md)|Возвращает число элементов в перечислителе с указанным дескриптором.|  
@@ -105,14 +105,14 @@ ms.locfileid: "33449355"
 -   методы Get предназначены специально для возврата свойств с одним значением для элемента метаданных. Если свойство ссылается на другой элемент, возвращается токен этого элемента. Любой тип ввода указателя может иметь значение NULL, свидетельствующее о том, что определенное значение не запрашивается. Для получения свойств, которые по сути являются объектами коллекции (например, коллекции интерфейсов, реализуемых классом), используются методы перечисления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

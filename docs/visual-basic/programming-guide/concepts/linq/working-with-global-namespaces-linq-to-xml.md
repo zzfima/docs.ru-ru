@@ -2,12 +2,12 @@
 title: Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: c1f34b374f956ec0a8b9658742e529d7ccb1b2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733913"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
 Одним из ключевых особенностей XML-литералов в Visual Basic является возможность объявлять пространства имен XML с помощью `Imports` инструкции. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
@@ -197,5 +197,5 @@ End Module
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>См. также
+- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

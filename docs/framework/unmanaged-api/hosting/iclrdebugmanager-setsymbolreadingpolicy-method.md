@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee21861ed3911303d4661721b65e9e147c6953a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 330501e67e3f19fbdb24c200deacad68de1b6c03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710297"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Метод ICLRDebugManager::SetSymbolReadingPolicy
-Задает политику для чтения файлов базы данных (PDB). Политика определяет, включены ли сведения о номерах строк и файлах в стеки вызовов.  
+Задает политику для чтения файлов базы данных (PDB). Политика определяет, включаются ли сведения о файлах и номера строк в стеках вызовов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ HRESULT SetSymbolReadingPolicy (
   
 #### <a name="parameters"></a>Параметры  
  `policy`  
- [in] Член [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) перечисления.  
+ [in] Является членом [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) перечисления.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -46,16 +46,16 @@ HRESULT SetSymbolReadingPolicy (
 |-------------|-----------------|  
 |S_OK|`SetSymbolReadingPolicy` успешно возвращен.|  
 |ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|E_FAIL|Неизвестная Неустранимая ошибка. После метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

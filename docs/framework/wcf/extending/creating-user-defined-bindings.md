@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548799"
 ---
 # <a name="creating-user-defined-bindings"></a>Создание пользовательских привязок
 Существует несколько способов создания привязок, не предоставленных системой.  
@@ -23,7 +23,7 @@ ms.locfileid: "50186061"
 ## <a name="the-order-of-binding-elements"></a>Порядок элементов привязки  
  Каждый элемент привязки представляет собой этап обработки при отправке или получении сообщений. Во время работы элементы привязки создают каналы и прослушиватели, необходимые для построения стеков исходящих и входящих каналов.  
   
- Существует три основных типа элементов привязки: элементы привязки протокола, элементы привязки кодирования и элементы привязки транспорта.  
+ Существует три основных типа элементов привязки: Протокол привязки элементов, для элементов привязки элементов привязки транспорта и кодирования.  
   
  Элементы привязки протокола - эти элементы представляют собой высокоуровневые этапы обработки сообщений. Каналы и прослушиватели, созданные этими элементами привязки, могут добавлять, удалять или изменять содержание сообщения. Данная привязка может иметь произвольное число элементов привязки протокола, каждый из которых наследуется от <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) включает в себя несколько элементов привязки протокола, в том числе <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> и <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -56,7 +56,7 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- Способ записи нового элемента привязки зависит от его непосредственной функциональности. Один из примеров, [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), дается подробное описание реализации одного вида элементов привязки.  
+ Способ записи нового элемента привязки зависит от его непосредственной функциональности. Один из примеров, [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), дается подробное описание реализации одного вида элементов привязки.  
   
 ## <a name="creating-a-new-binding"></a>Создание новой привязки  
  Созданный пользователем элемент привязки можно использовать двумя способами. В предыдущем разделе описан первый способ: посредством пользовательской привязки. Пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки, включающего помимо прочих элементы, созданные пользователем.  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Класс, производный от стандартной привязки  
  Вместо создания абсолютно нового класса привязки можно расширить одну из существующих привязок, предоставленных системой. Здесь так же, как в предыдущем случае, необходимо переопределить метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> и свойство <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.Binding>  
- [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Channels.Binding>
+- [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)

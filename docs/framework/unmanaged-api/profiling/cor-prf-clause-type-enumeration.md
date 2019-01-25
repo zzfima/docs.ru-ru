@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583760"
 ---
 # <a name="corprfclausetype-enumeration"></a>Перечисление COR_PRF_CLAUSE_TYPE
 Указывает тип предложения исключения, код которого был только что введен или удален.  
@@ -39,21 +39,21 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|Недопустимое предложение исключения.|  
+|`COR_PRF_CLAUSE_NONE`|Предложение исключения является недопустимым.|  
 |`COR_PRF_CLAUSE_FILTER`|Предложение исключения является выражением фильтра.|  
 |`COR_PRF_CLAUSE_CATCH`|Предложение исключения является `catch` инструкции.|  
 |`COR_PRF_CLAUSE_FINALLY`|Предложение исключения является `finally` инструкции.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

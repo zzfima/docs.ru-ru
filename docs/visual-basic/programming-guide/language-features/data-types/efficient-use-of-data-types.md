@@ -13,32 +13,32 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 6e71c4e2225bbcde3bb2bd20ae098f5600990051
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736173"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Эффективное использование типов данных (Visual Basic)
-Необъявленные переменные и переменные, объявленные типами данных назначенных `Object` тип данных. Это упрощает написание программ, но может замедлять их выполняются медленнее.  
+Необъявленные переменные и переменные, объявленные без типа данных назначаются `Object` тип данных. Это упрощает написание программ, но его можно привести к медленному выполнению.  
   
 ## <a name="strong-typing"></a>Строгая типизация  
- Задание типов данных для всех переменных называется *строгую типизацию*. Использование строгой типизации имеет несколько преимуществ.  
+ Задание типов данных для всех переменных называется *строгую типизацию*. Использование строгой типизации имеет несколько преимуществ:  
   
--   Она включает поддержку IntelliSense для переменных. Это позволяет видеть свойства и другие члены, вводимые в коде.  
+-   Она включает поддержку IntelliSense для переменных. Это позволяет видеть свойства и другие члены, при вводе в коде.  
   
--   Она использует преимущества проверки типа компилятора. Благодаря этому обнаруживаются операторы, которые могут вызвать сбой во время выполнения из-за ошибок, таких как переполнение. Он также обнаруживаются вызовы методов для объектов, которые не поддерживают.  
+-   Он использует преимущества проверки типа компилятора. Перехватывает инструкций, которые могут вызвать сбой во время выполнения из-за ошибок, таких как переполнение. Также он перехватывает вызовы методов с объектами, которые не поддерживают их.  
   
--   Это приводит к более быстрое выполнение кода.  
+-   Он приводит к более быстрого выполнения кода.  
   
-## <a name="most-efficient-data-types"></a>Наиболее эффективные типы данных  
- Для переменных, которые никогда не содержат дроби целочисленные типы данных более эффективны, чем Нецелочисленные типы. В Visual Basic `Integer` и `UInteger` являются наиболее эффективный числовых типов.  
+## <a name="most-efficient-data-types"></a>Наиболее эффективный типы данных  
+ Для переменных, которые никогда не содержат дроби целочисленных типов данных, более эффективны, чем нецелочисленных типов. В Visual Basic `Integer` и `UInteger` являются наиболее эффективный числовых типов.  
   
- Для дробных чисел `Double` является наиболее эффективный тип данных, поскольку процессоры на современных платформах выполняют операции с плавающей запятой с двойной точностью. Тем не менее операции с `Double` не выполняются так же быстро, как и для целочисленных типов, таких как `Integer`.  
+ Для дробных чисел `Double` — это наиболее эффективный тип данных, так как процессоры на современных платформах выполняют операции с плавающей запятой с двойной точностью. Тем не менее операции с `Double` не выполняются так же быстро, как и в случае с целочисленными типами, такие как `Integer`.  
   
 ## <a name="specifying-data-type"></a>Указание типа данных  
- Используйте [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для объявления переменной определенного типа. Одновременно можно указать уровень доступа с помощью [открытый](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), или [закрытый](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово как Ниже приведен пример.  
+ Используйте [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для объявления переменной определенного типа. Одновременно можно указать уровень доступа с помощью [открытый](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), или [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово, как и в Ниже приведен пример.  
   
 ```  
 Private x As Double  
@@ -48,12 +48,12 @@ Protected s As String
 ## <a name="character-conversion"></a>Преобразование символов  
  `AscW` И `ChrW` функции выполняются в Юникоде. Их следует использовать `Asc` и `Chr`, который необходимо преобразовать в Юникод и из него.  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Использование технологии IntelliSense](/visualstudio/ide/using-intellisense)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Использование технологии IntelliSense](/visualstudio/ide/using-intellisense)

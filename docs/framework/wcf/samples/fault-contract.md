@@ -2,12 +2,12 @@
 title: Контракт ошибок
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 39bb9b0ebd9feb6066c1c5e83128eb3a594d6d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653935"
 ---
 # <a name="fault-contract"></a>Контракт ошибок
 Этот образец демонстрирует передачу информации об ошибке из службы клиенту. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), с помощью некоторых дополнительный код, добавленный в службу для преобразования внутреннего исключения в ошибку. Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.  

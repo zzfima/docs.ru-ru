@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555561"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Перечисление CorUnmanagedCallingConvention
-Задает соглашение о вызовах для неуправляемого кода.  
+Задает соглашения о вызовах для неуправляемого кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,26 +46,26 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C языка соглашение о вызовах.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Стандартное соглашение о вызовах.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|«This» соглашение о вызовах.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|«Быстрый» соглашение о вызовах.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C языка соглашение о вызове.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Стандартный соглашение о вызовах.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|«This» соглашение о вызове.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|«Быстрый» о вызовах.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Не используется.|  
   
 ## <a name="remarks"></a>Примечания  
- Среда CLR не поддерживает «быстрый» соглашение о вызовах в .NET Framework версии 1.0.  
+ Среда CLR не поддерживает «быстрый» соглашение о вызове в .NET Framework версии 1.0.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorHdr.h  
+ **Заголовок.** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

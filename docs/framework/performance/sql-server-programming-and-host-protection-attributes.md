@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6300195cafeedd8823e0b10b4ee0ebf9ff8e2055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528073"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>программирование SQL Server и атрибуты защиты ведущего приложения
-Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Управление доступом для кода реализуется с применением одного из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  
+Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Требования к безопасности доступа кода применяется один из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  
   
 ## <a name="host-protection-attributes"></a>Атрибуты защиты ведущего приложения  
  Атрибуты защиты ведущего приложения определяют типы и члены, которые не соответствуют модели программирования ведущего приложения, и представляют следующие уровни угроз надежности (по возрастанию):  
@@ -53,7 +53,7 @@ ms.locfileid: "33397966"
 |`System.Windows.Forms`|Свойство <xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType>|  
   
 ## <a name="sql-server-permission-sets"></a>Наборы разрешений SQL Server  
- SQL Server позволяет пользователям задавать требования к надежности кода, развернутого в базе данных. При загрузке сборок в базу данных разработчик сборки может задать для нее один из трех наборов разрешений: SAFE, EXTERNAL-ACCESS или UNSAFE.  
+ SQL Server позволяет пользователям задавать требования к надежности кода, развернутого в базе данных. При загрузке сборок в базе данных, автор сборки можно указать один из трех наборов разрешений для этой сборки: SAFE, EXTERNAL-ACCESS или UNSAFE.  
   
 |Набор разрешений|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
@@ -75,6 +75,6 @@ ms.locfileid: "33397966"
   
  Исходя из этого, SQL Server не поддерживает использование статических переменных и статических членов данных. Для сборок с разрешениями SAFE и EXTERNAL-ACCESS SQL Server проверяет метаданные сборки во время СОЗДАНИЯ СБОРКИ и возвращает состояние сбоя, если в ней используются статические переменные и члены данных.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Permissions.HostProtectionAttribute>  
- <xref:System.Security.Permissions.HostProtectionResource>
+## <a name="see-also"></a>См. также
+- <xref:System.Security.Permissions.HostProtectionAttribute>
+- <xref:System.Security.Permissions.HostProtectionResource>

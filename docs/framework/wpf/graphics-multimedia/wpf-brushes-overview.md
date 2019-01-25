@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655963"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
 Все элементы, видимые на экране отображается, так как они нарисованы кистью. Например кисть используется для описания фона кнопки, основного цвета текста и заливки фигуры. В этом разделе понятия рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти и приводятся примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
@@ -160,14 +160,14 @@ ms.locfileid: "43521689"
   
  Дополнительные сведения о том, почему <xref:System.Windows.Media.VisualBrush> объектов не может быть зафиксировано, см. в разделе <xref:System.Windows.Media.VisualBrush> страница "тип".  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

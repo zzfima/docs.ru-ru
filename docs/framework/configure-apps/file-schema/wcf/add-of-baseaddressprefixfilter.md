@@ -2,19 +2,19 @@
 title: '&lt;add&gt; для &lt;baseAddressPrefixFilter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cc9ef6c8712ff764240c4c2f0322bd94b1aaccc8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698444"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; для &lt;baseAddressPrefixFilter&gt;
 Представляет элемент конфигурации, в котором указывается сквозной фильтр, который предоставляет механизм для выбора необходимых привязок служб Internet Information Services (IIS), при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
   
- \<система. ServiceModel >  
-\<serviceHostingEnvironment >  
-\<baseAddressPrefixFilters >  
+ \<system.ServiceModel>  
+\<ServiceHostingEnvironment>  
+\<baseAddressPrefixFilters>  
 \<add>  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,7 +43,7 @@ ms.locfileid: "54145605"
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают проходные фильтры, которые предоставляют механизм выбора необходимых привязок служб IIS при размещении приложения Windows Communication Foundation (WCF) в службах IIS.|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают проходные фильтры, которые предоставляют механизм выбора необходимых привязок служб IIS при размещении приложения Windows Communication Foundation (WCF) в службах IIS.|  
   
 ## <a name="remarks"></a>Примечания  
  Префиксный фильтр предоставляет способ для общих поставщиков услуг размещения задать, какие URI должны использоваться службой. Это дает возможность общим узлам размещать несколько приложений с разными базовыми адресами для одной схемы на одном узле.  
@@ -79,8 +79,8 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  Фильтр не поддерживает какие-либо подстановочные знаки. Кроме того, среди базовых адресов, предоставляемых IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`. Эти адреса не фильтруются.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)

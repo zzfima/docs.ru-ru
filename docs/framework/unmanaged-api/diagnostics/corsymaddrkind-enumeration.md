@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744977"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Перечисление CorSymAddrKind
 Указывает тип адреса памяти.  
@@ -51,16 +51,16 @@ typedef enum CorSymAddrKind
 |`ADDR_IL_OFFSET`|Указывает Microsoft промежуточного языка MSIL индекс локальной переменной или параметра.|  
 |`ADDR_NATIVE_RVA`|Указывает относительный виртуальный адрес в модуль.|  
 |`ADDR_NATIVE_REGISTER`|Указывает регистр ЦП.|  
-|`ADDR_NATIVE_REGREL`|Указывает, что первый адрес является регистром, а второй адрес — это смещение.|  
+|`ADDR_NATIVE_REGREL`|Указывает, что первый адрес является регистром, а второй — смещение.|  
 |`ADDR_NATIVE_OFFSET`|Указывает смещение от базового адреса.|  
 |`ADDR_NATIVE_REGREG`|Указывает, что первый адрес является нижней частью регистра, а второй — верхней.|  
-|`ADDR_NATIVE_REGSTK`|Указывает, что первый адрес является нижней частью регистра и второй — верхней, а третий — это смещение.|  
-|`ADDR_NATIVE_STKREG`|Указывает, что первый адрес является регистром, второй — смещением и третий — верхней регистра.|  
+|`ADDR_NATIVE_REGSTK`|Указывает, что первый адрес является нижней частью регистра, второй — верхней и третий — это смещение.|  
+|`ADDR_NATIVE_STKREG`|Указывает, что первый адрес является регистром, второй — это смещение и третий — верхней регистра.|  
 |`ADDR_BITFIELD`|Указывает, что первый адрес является началом поля, а второй — длина поля.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Указывает, что первый адрес является разделом и второй адрес — это смещение.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Указывает, что первый адрес является раздел, а второй — смещение.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

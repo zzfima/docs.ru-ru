@@ -2,17 +2,17 @@
 title: Вызов функций в запросах LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 4aed9fd59cceb72baac9dc12a85c52787c4b3866
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 012f55113cbea00c95c92712d640313a960ef8ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542722"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Вызов функций в запросах LINQ to Entities
 В подразделах этого раздела описывается вызов функций в запросах LINQ to Entities.  
   
- Классы <xref:System.Data.Objects.EntityFunctions> и <xref:System.Data.Objects.SqlClient.SqlFunctions> обеспечивают доступ к каноническим функциям и функциям базы данных посредством платформы Entity Framework. Дополнительные сведения см. в разделе [как: вызов канонических функций](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) и [как: вызов функции базы данных](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).  
+ Классы <xref:System.Data.Objects.EntityFunctions> и <xref:System.Data.Objects.SqlClient.SqlFunctions> обеспечивают доступ к каноническим функциям и функциям базы данных посредством платформы Entity Framework. Дополнительные сведения см. в разделе [Как Вызов канонических функций](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) и [как: Вызов функций базы данных](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).  
   
  Процесс вызова пользовательской функции состоит из трех основных шагов.  
   
@@ -35,8 +35,8 @@ ms.locfileid: "43506948"
   
  [Практическое руководство. Вызов определенных моделью функций как методов объектов](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>См. также  
- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
- [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)  
- [Обзор файла .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Практическое: определения пользовательских функций в концептуальной модели](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)
+## <a name="see-also"></a>См. также
+- [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Обзор файла .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Практическое руководство. Определения пользовательских функций в концептуальной модели](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)
