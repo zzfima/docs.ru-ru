@@ -2,15 +2,15 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: ae162c310511db160806501af895276a4a4bba5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e88c57b2a18afb7f9f7d567f355d38a78892b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648145"
 ---
-# <a name="attributeusage-visual-basic"></a><span data-ttu-id="d76fe-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d76fe-102">AttributeUsage (Visual Basic)</span></span>
-<span data-ttu-id="d76fe-103">Определяет, как можно использовать пользовательский класс атрибутов.</span><span class="sxs-lookup"><span data-stu-id="d76fe-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="d76fe-104">Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута.</span><span class="sxs-lookup"><span data-stu-id="d76fe-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="d76fe-105">При явном применении параметры по умолчанию выглядят следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d76fe-105">The default settings look like this when applied explicitly:</span></span>  
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="9fc73-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fc73-102">AttributeUsage (Visual Basic)</span></span>
+<span data-ttu-id="9fc73-103">Определяет, как можно использовать пользовательский класс атрибутов.</span><span class="sxs-lookup"><span data-stu-id="9fc73-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="9fc73-104">Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута.</span><span class="sxs-lookup"><span data-stu-id="9fc73-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="9fc73-105">При явном применении параметры по умолчанию выглядят следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9fc73-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -21,9 +21,9 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="d76fe-106">В этом примере класс `NewAttribute` можно применить к любой сущности кода с атрибутами, но только один раз к каждой сущности.</span><span class="sxs-lookup"><span data-stu-id="d76fe-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="d76fe-107">Он наследуется производными классами при применении к базовому классу.</span><span class="sxs-lookup"><span data-stu-id="d76fe-107">It is inherited by derived classes when applied to a base class.</span></span>  
+ <span data-ttu-id="9fc73-106">В этом примере класс `NewAttribute` можно применить к любой сущности кода с атрибутами, но только один раз к каждой сущности.</span><span class="sxs-lookup"><span data-stu-id="9fc73-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="9fc73-107">Он наследуется производными классами при применении к базовому классу.</span><span class="sxs-lookup"><span data-stu-id="9fc73-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- <span data-ttu-id="d76fe-108">Аргументы `AllowMultiple` и `Inherited` являются необязательными, так что этот код имеет тот же результат:</span><span class="sxs-lookup"><span data-stu-id="d76fe-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
+ <span data-ttu-id="9fc73-108">Аргументы `AllowMultiple` и `Inherited` являются необязательными, так что этот код имеет тот же результат:</span><span class="sxs-lookup"><span data-stu-id="9fc73-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -32,7 +32,7 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="d76fe-109">Первый аргумент `AttributeUsage` должен состоять из одного или нескольких элементов перечисления <xref:System.AttributeTargets>.</span><span class="sxs-lookup"><span data-stu-id="d76fe-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="d76fe-110">Несколько целевых типов можно связать с помощью оператора OR следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d76fe-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
+ <span data-ttu-id="9fc73-109">Первый аргумент `AttributeUsage` должен состоять из одного или нескольких элементов перечисления <xref:System.AttributeTargets>.</span><span class="sxs-lookup"><span data-stu-id="9fc73-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="9fc73-110">Несколько целевых типов можно связать с помощью оператора OR следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9fc73-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -45,7 +45,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- <span data-ttu-id="d76fe-111">Если аргументу `AllowMultiple` присвоено значение `true`, то результирующий атрибут можно применить несколько раз к одной сущности следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d76fe-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
+ <span data-ttu-id="9fc73-111">Если аргументу `AllowMultiple` присвоено значение `true`, то результирующий атрибут можно применить несколько раз к одной сущности следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9fc73-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -62,9 +62,9 @@ Class Class1
 End Class  
 ```  
   
- <span data-ttu-id="d76fe-112">В этом случае `MultiUseAttr` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d76fe-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="d76fe-113">Для применения нескольких атрибутов допускаются оба показанных формата.</span><span class="sxs-lookup"><span data-stu-id="d76fe-113">Both formats shown for applying multiple attributes are valid.</span></span>  
+ <span data-ttu-id="9fc73-112">В этом случае `MultiUseAttr` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="9fc73-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="9fc73-113">Для применения нескольких атрибутов допускаются оба показанных формата.</span><span class="sxs-lookup"><span data-stu-id="9fc73-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- <span data-ttu-id="d76fe-114">Если `Inherited` имеет значение `false`, то атрибут не наследуется классами, производными от класса с атрибутами.</span><span class="sxs-lookup"><span data-stu-id="d76fe-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="d76fe-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="d76fe-115">For example:</span></span>  
+ <span data-ttu-id="9fc73-114">Если `Inherited` имеет значение `false`, то атрибут не наследуется классами, производными от класса с атрибутами.</span><span class="sxs-lookup"><span data-stu-id="9fc73-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="9fc73-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="9fc73-115">For example:</span></span>  
   
 ```vb  
 Imports System  
@@ -86,15 +86,15 @@ Class DClass
 End Class  
 ```  
   
- <span data-ttu-id="d76fe-116">В этом случае `Attr1` не применяется к `DClass` путем наследования.</span><span class="sxs-lookup"><span data-stu-id="d76fe-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
+ <span data-ttu-id="9fc73-116">В этом случае `Attr1` не применяется к `DClass` путем наследования.</span><span class="sxs-lookup"><span data-stu-id="9fc73-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d76fe-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="d76fe-117">Remarks</span></span>  
- <span data-ttu-id="d76fe-118">Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу.</span><span class="sxs-lookup"><span data-stu-id="d76fe-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="d76fe-119">`AttributeUsage` является псевдонимом для <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="d76fe-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fc73-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="9fc73-117">Remarks</span></span>  
+ <span data-ttu-id="9fc73-118">Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу.</span><span class="sxs-lookup"><span data-stu-id="9fc73-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="9fc73-119">`AttributeUsage` является псевдонимом для <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="9fc73-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- <span data-ttu-id="d76fe-120">Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).</span><span class="sxs-lookup"><span data-stu-id="d76fe-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
+ <span data-ttu-id="9fc73-120">Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).</span><span class="sxs-lookup"><span data-stu-id="9fc73-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d76fe-121">Пример</span><span class="sxs-lookup"><span data-stu-id="d76fe-121">Example</span></span>  
- <span data-ttu-id="d76fe-122">В приведенном ниже примере демонстрируется действие аргументов `Inherited` и `AllowMultiple` по отношению к атрибуту `AttributeUsage`, а также способ перечисления настраиваемых атрибутов, примененных к классу.</span><span class="sxs-lookup"><span data-stu-id="d76fe-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
+## <a name="example"></a><span data-ttu-id="9fc73-121">Пример</span><span class="sxs-lookup"><span data-stu-id="9fc73-121">Example</span></span>  
+ <span data-ttu-id="9fc73-122">В приведенном ниже примере демонстрируется действие аргументов `Inherited` и `AllowMultiple` по отношению к атрибуту `AttributeUsage`, а также способ перечисления настраиваемых атрибутов, примененных к классу.</span><span class="sxs-lookup"><span data-stu-id="9fc73-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```vb  
 Imports System  
@@ -149,7 +149,7 @@ Public Class TestAttributeUsage
 End Class  
 ```  
   
-## <a name="sample-output"></a><span data-ttu-id="d76fe-123">Пример результатов выполнения</span><span class="sxs-lookup"><span data-stu-id="d76fe-123">Sample Output</span></span>  
+## <a name="sample-output"></a><span data-ttu-id="9fc73-123">Пример результатов выполнения</span><span class="sxs-lookup"><span data-stu-id="9fc73-123">Sample Output</span></span>  
   
 ```  
 Attributes on Base Class:  
@@ -161,12 +161,12 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d76fe-124">См. также</span><span class="sxs-lookup"><span data-stu-id="d76fe-124">See Also</span></span>  
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [<span data-ttu-id="d76fe-125">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d76fe-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="d76fe-126">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d76fe-126">Attributes</span></span>](../../../../standard/attributes/index.md)  
- <span data-ttu-id="d76fe-127">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="d76fe-127">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>  
- [<span data-ttu-id="d76fe-128">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d76fe-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="d76fe-129">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="d76fe-129">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>  
- <span data-ttu-id="d76fe-130">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="d76fe-130">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fc73-124">См. также</span><span class="sxs-lookup"><span data-stu-id="9fc73-124">See also</span></span>
+- <xref:System.Attribute>
+- <xref:System.Reflection>
+- [<span data-ttu-id="9fc73-125">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9fc73-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="9fc73-126">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9fc73-126">Attributes</span></span>](../../../../standard/attributes/index.md)
+- <span data-ttu-id="9fc73-127">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9fc73-127">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>
+- [<span data-ttu-id="9fc73-128">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fc73-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- <span data-ttu-id="9fc73-129">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9fc73-129">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>
+- <span data-ttu-id="9fc73-130">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9fc73-130">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>

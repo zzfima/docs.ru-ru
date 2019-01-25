@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcd7dc7c51caa94308760c0086384c8eea184ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 475ae98d2bf7ea5132c9ec4555070f8bb2999cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744015"
 ---
-# <a name="couninitiee-enumeration"></a><span data-ttu-id="46a13-102">Перечисление COUNINITIEE</span><span class="sxs-lookup"><span data-stu-id="46a13-102">COUNINITIEE Enumeration</span></span>
-<span data-ttu-id="46a13-103">Указывает константы, используемые [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) при инициализации общеязыковая среда выполнения.</span><span class="sxs-lookup"><span data-stu-id="46a13-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="couninitiee-enumeration"></a><span data-ttu-id="f913c-102">Перечисление COUNINITIEE</span><span class="sxs-lookup"><span data-stu-id="f913c-102">COUNINITIEE Enumeration</span></span>
+<span data-ttu-id="f913c-103">Задает константы, используемые [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) при инициализации среда CLR.</span><span class="sxs-lookup"><span data-stu-id="f913c-103">Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46a13-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="46a13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f913c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f913c-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOUNINITEE  
@@ -36,21 +36,21 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="46a13-105">Участники</span><span class="sxs-lookup"><span data-stu-id="46a13-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f913c-105">Участники</span><span class="sxs-lookup"><span data-stu-id="f913c-105">Members</span></span>  
   
-|<span data-ttu-id="46a13-106">Член</span><span class="sxs-lookup"><span data-stu-id="46a13-106">Member</span></span>|<span data-ttu-id="46a13-107">Описание</span><span class="sxs-lookup"><span data-stu-id="46a13-107">Description</span></span>|  
+|<span data-ttu-id="f913c-106">Член</span><span class="sxs-lookup"><span data-stu-id="f913c-106">Member</span></span>|<span data-ttu-id="f913c-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="f913c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|<span data-ttu-id="46a13-108">Указывает режим инициализации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="46a13-108">Indicates default uninitialization mode.</span></span>|  
-|`COUNINITEE_DLL`|<span data-ttu-id="46a13-109">Указывает режим отмены инициализации для выгрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="46a13-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
+|`COUNINITEE_DEFAULT`|<span data-ttu-id="f913c-108">Указывает режим инициализации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f913c-108">Indicates default uninitialization mode.</span></span>|  
+|`COUNINITEE_DLL`|<span data-ttu-id="f913c-109">Указывает режим инициализации для выгрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="f913c-109">Indicates uninitialization mode for unloading an assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="46a13-110">Требования</span><span class="sxs-lookup"><span data-stu-id="46a13-110">Requirements</span></span>  
- <span data-ttu-id="46a13-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46a13-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f913c-110">Требования</span><span class="sxs-lookup"><span data-stu-id="f913c-110">Requirements</span></span>  
+ <span data-ttu-id="f913c-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f913c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46a13-112">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="46a13-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f913c-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f913c-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="46a13-113">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="46a13-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f913c-113">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f913c-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="46a13-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46a13-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f913c-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f913c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46a13-115">См. также</span><span class="sxs-lookup"><span data-stu-id="46a13-115">See Also</span></span>  
- [<span data-ttu-id="46a13-116">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="46a13-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f913c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="f913c-115">See also</span></span>
+- [<span data-ttu-id="f913c-116">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="f913c-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

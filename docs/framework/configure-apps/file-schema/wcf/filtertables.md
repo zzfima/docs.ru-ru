@@ -2,21 +2,21 @@
 title: '&lt;filterTables&gt;'
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: 2b537619a276f32c50576561aea03b5fbbb58e7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573063"
 ---
-# <a name="ltfiltertablesgt"></a><span data-ttu-id="38f6b-102">&lt;filterTables&gt;</span><span class="sxs-lookup"><span data-stu-id="38f6b-102">&lt;filterTables&gt;</span></span>
-<span data-ttu-id="38f6b-103">Представляет раздел конфигурации, в котором определены таблицы маршрутизации, содержащие сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при совпадении с критериями фильтров).</span><span class="sxs-lookup"><span data-stu-id="38f6b-103">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
+# <a name="ltfiltertablesgt"></a><span data-ttu-id="5e025-102">&lt;filterTables&gt;</span><span class="sxs-lookup"><span data-stu-id="5e025-102">&lt;filterTables&gt;</span></span>
+<span data-ttu-id="5e025-103">Представляет раздел конфигурации, в котором определены таблицы маршрутизации, содержащие сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при совпадении с критериями фильтров).</span><span class="sxs-lookup"><span data-stu-id="5e025-103">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
   
- <span data-ttu-id="38f6b-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="38f6b-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="38f6b-105">\<Маршрутизация ></span><span class="sxs-lookup"><span data-stu-id="38f6b-105">\<routing></span></span>  
-<span data-ttu-id="38f6b-106">\<routingTables ></span><span class="sxs-lookup"><span data-stu-id="38f6b-106">\<routingTables></span></span>  
+ <span data-ttu-id="5e025-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="5e025-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="5e025-105">\<Маршрутизация ></span><span class="sxs-lookup"><span data-stu-id="5e025-105">\<routing></span></span>  
+<span data-ttu-id="5e025-106">\<routingTables></span><span class="sxs-lookup"><span data-stu-id="5e025-106">\<routingTables></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38f6b-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="38f6b-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e025-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5e025-107">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -33,24 +33,24 @@ ms.locfileid: "54147789"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="38f6b-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="38f6b-108">Attributes and Elements</span></span>  
- <span data-ttu-id="38f6b-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="38f6b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5e025-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="5e025-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="5e025-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="5e025-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="38f6b-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="38f6b-110">Attributes</span></span>  
- <span data-ttu-id="38f6b-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="38f6b-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5e025-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="5e025-110">Attributes</span></span>  
+ <span data-ttu-id="5e025-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="5e025-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="38f6b-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="38f6b-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5e025-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="5e025-112">Child Elements</span></span>  
   
-|<span data-ttu-id="38f6b-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="38f6b-113">Element</span></span>|<span data-ttu-id="38f6b-114">Описание</span><span class="sxs-lookup"><span data-stu-id="38f6b-114">Description</span></span>|  
+|<span data-ttu-id="5e025-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="5e025-113">Element</span></span>|<span data-ttu-id="5e025-114">Описание</span><span class="sxs-lookup"><span data-stu-id="5e025-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="38f6b-115">\<Фильтры></span><span class="sxs-lookup"><span data-stu-id="38f6b-115">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="38f6b-116">Таблица маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).</span><span class="sxs-lookup"><span data-stu-id="38f6b-116">A routing table that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>|  
+|[<span data-ttu-id="5e025-115">\<Фильтры></span><span class="sxs-lookup"><span data-stu-id="5e025-115">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|<span data-ttu-id="5e025-116">Таблица маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).</span><span class="sxs-lookup"><span data-stu-id="5e025-116">A routing table that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="38f6b-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="38f6b-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5e025-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="5e025-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="38f6b-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="38f6b-118">Element</span></span>|<span data-ttu-id="38f6b-119">Описание:</span><span class="sxs-lookup"><span data-stu-id="38f6b-119">Description</span></span>|  
+|<span data-ttu-id="5e025-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="5e025-118">Element</span></span>|<span data-ttu-id="5e025-119">Описание:</span><span class="sxs-lookup"><span data-stu-id="5e025-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="38f6b-120">\<Маршрутизация ></span><span class="sxs-lookup"><span data-stu-id="38f6b-120">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="38f6b-121">Раздел конфигурации, содержащий фильтры и таблицы маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="38f6b-121">A configuration section that contains routing filters and routing tables.</span></span>|  
+|[<span data-ttu-id="5e025-120">\<Маршрутизация ></span><span class="sxs-lookup"><span data-stu-id="5e025-120">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="5e025-121">Раздел конфигурации, содержащий фильтры и таблицы маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="5e025-121">A configuration section that contains routing filters and routing tables.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="38f6b-122">См. также</span><span class="sxs-lookup"><span data-stu-id="38f6b-122">See Also</span></span>  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a><span data-ttu-id="5e025-122">См. также</span><span class="sxs-lookup"><span data-stu-id="5e025-122">See also</span></span>
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>
