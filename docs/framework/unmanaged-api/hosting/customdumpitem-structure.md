@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568924"
 ---
 # <a name="customdumpitem-structure"></a>Структура CustomDumpItem
 Описывает элемент, добавляемый в пользовательский дамп отчеты об ошибках.  
@@ -41,20 +41,20 @@ struct {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) значение, указывающее тип элемента для добавления.|  
-|`pReserved`|В настоящее время не используется. Все элементы, добавленные на объединения не должен превышать размер указателя. Если `struct` — требуется, необходимо выделить его отдельно и выберите его.|  
+|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) значение, указывающее тип для добавляемого элемента.|  
+|`pReserved`|В настоящее время не используется. Все элементы, добавляемые к объединению не должен превышать размер указателя. Если `struct` — требуется, необходимо выделить его отдельно и указать его.|  
   
 ## <a name="remarks"></a>Примечания  
  [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) принимает параметр типа `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.idl  
+ **Заголовок.** MSCorEE.idl  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>См. также
+- [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

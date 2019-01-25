@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730949"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
@@ -48,7 +48,7 @@ ms.locfileid: "48847416"
   
 -   Протокол привязки: HTTP  
   
--   Данные привязки: IP-адрес, порт, заголовок узла  
+-   Сведения о привязке: IP-адрес, порт, заголовок узла  
   
  Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы. До версии [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF не поддерживает несколько адресов для схемы и, если они были заданы, вызвал <xref:System.ArgumentException> во время активации.  
   
@@ -137,6 +137,6 @@ ms.locfileid: "48847416"
   
  В некоторых сценариях конечная точка получает все сообщения, которые приходят через соответствующий транспорт, а не только те, у которых есть соответствующий заголовок `To`. Чтобы включить такой режим, можно воспользоваться классом <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
-## <a name="see-also"></a>См. также  
- [Указание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>См. также
+- [Указание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

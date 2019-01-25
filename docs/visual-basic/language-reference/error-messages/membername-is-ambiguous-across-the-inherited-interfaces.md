@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;имя пользователя&gt; &#39; является неоднозначным к наследуемому интерфейсу &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;имя_интерфейса2&gt;&#39;'
+title: '&#39;&lt;имя пользователя&gt; &#39; является неоднозначным в наследуемых интерфейсах &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;имя_интерфейса2&gt;&#39;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506302"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;имя пользователя&gt; &#39; является неоднозначным к наследуемому интерфейсу &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;имя_интерфейса2&gt;&#39;
-Этот интерфейс наследует нескольких интерфейсов два или более членов с тем же именем.  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;имя пользователя&gt; &#39; является неоднозначным в наследуемых интерфейсах &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;имя_интерфейса2&gt;&#39;
+Этот интерфейс наследует два или несколько членов с таким именем несколько интерфейсов.  
   
  **Идентификатор ошибки:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Привести значение к базовому интерфейсу, который вы хотите использовать; Например:  
+-   Приведение значения к базовому интерфейсу, который вы хотите использовать; Например:  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ ms.locfileid: "33585305"
     End Module  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

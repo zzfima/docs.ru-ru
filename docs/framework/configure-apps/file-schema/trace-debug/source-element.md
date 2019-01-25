@@ -9,18 +9,18 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 493c6ab72ff5554294279b62af49d311026d6e37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624019"
 ---
 # <a name="ltsourcegt-element"></a>&lt;источник&gt; элемент
 Содержит источник трассировки, который инициирует сообщения трассировки.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<источники >  
 \<Источник >  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47231893"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -84,6 +84,6 @@ ms.locfileid: "47231893"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Переключатели трассировки](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>См. также
+- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Переключатели трассировки](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

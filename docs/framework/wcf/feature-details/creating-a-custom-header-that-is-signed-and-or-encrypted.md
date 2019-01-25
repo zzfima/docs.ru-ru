@@ -1,15 +1,15 @@
 ---
-title: Создание пользовательского заголовка, который подписан и- или шифрования
+title: Создание пользовательского заголовка, который подписан и- шифрованные
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 4770d650cba5c182aa56d9ac7afa39e585512d4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494825"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Создание пользовательского заголовка, который подписан и- или шифрования
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Создание пользовательского заголовка, который подписан и- шифрованные
 При вызове службы, которая не является службой WCF, с помощью клиента WCF иногда приходится применять пользовательские заголовки протокола SOAP. В WCF имеется ошибка канонизации, которая не позволяет подписанным и зашифрованным пользовательским заголовкам работать со службами, не являющимися службами WCF. Проблема вызывается неверной канонизацией пространств имен XML по умолчанию. Она возникает только при вызове служб, не являющихся службами WCF, с подписанными и/или зашифрованными пользовательскими заголовками.  Когда служба получает сообщение, содержащее подписанный и/или зашифрованный пользовательский заголовок, ей не удается проверить сигнатуру. Данный обходный путь решения проблемы обходит проблему канонизации, позволяет работать со службами, которые не являются службами WCF, но не мешает работать и со службами WCF.  
   
 ## <a name="defining-the-custom-header"></a>Определение пользовательского заголовка  
@@ -56,7 +56,7 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Контракт сообщения по умолчанию](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [Контракты сообщений](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Использование контрактов сообщений](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>См. также
+- [Контракт сообщения по умолчанию](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [Контракты сообщений](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [Использование контрактов сообщений](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

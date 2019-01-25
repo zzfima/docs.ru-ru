@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
+title: Как выполнить Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: b4131504e5c5d7f2075c72c72b98153c783000d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694598"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
-В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент списка в <xref:System.Windows.Forms.ListView> элемента управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Приведенные здесь примеры предназначены для <xref:System.Windows.Forms.TreeView> управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Как выполнить Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
+В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент в <xref:System.Windows.Forms.ListView> элемента управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Приведенные ниже примеры предназначены для <xref:System.Windows.Forms.TreeView> элемента управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.  
   
 ### <a name="to-derive-a-tree-node"></a>Наследование узла дерева  
   
--   Создайте новый класс узла, производный от <xref:System.Windows.Forms.TreeNode> класс, который содержит пользовательское поле для записи пути к файлу.  
+-   Создайте новый класс узла, производный от <xref:System.Windows.Forms.TreeNode> класс, который содержит пользовательское поле для записи путь к файлу.  
   
     ```vb  
     Class myTreeNode  
@@ -100,7 +100,7 @@ ms.locfileid: "33527421"
        "\\TextFile.txt")));  
     ```  
   
-2.  Если передается узел дерева и типизируется как <xref:System.Windows.Forms.TreeNode> класса, необходимо выполнить приведение производного класса. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [неявные и явные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() оператор](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
+2.  Если передается узел дерева, и он введен как <xref:System.Windows.Forms.TreeNode> класса, а затем будет необходимо выполнить приведение к своему производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [оператор ()](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -130,6 +130,6 @@ ms.locfileid: "33527421"
        }  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

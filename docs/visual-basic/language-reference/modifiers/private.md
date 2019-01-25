@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9a1dcf159f007f1587030057885122c036b99aac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537222"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-Указывает, что один или несколько элементов доступны только внутри контекста, включая из любых вложенных типов.  
+Указывает, что один или несколько объявленных программных элементов доступны только из их объявление контекста, в том числе и из всех вложенных типов.  
   
 ## <a name="remarks"></a>Примечания  
- Если элемент программирования представляет особые возможности или содержит конфиденциальные данные, обычно требуется максимально ограничить доступ к нему. Максимальное ограничение добиться, позволяя модуля, класса или структуры, которые определяют его для доступа к нему. Чтобы ограничить доступ к элементу таким образом, можно объявить его с `Private`.  
+ Если программный элемент представляет особые возможности или содержит конфиденциальные данные, обычно требуется максимально ограничить доступ к нему. Максимальное ограничение добиться, разрешив только модуля, класса или структуры, определяющего его для доступа к нему. Чтобы ограничить доступ к элементу таким образом, его можно объявить с `Private`.  
 
 > [!NOTE]
-> Можно также использовать [защищенный закрытый](private-protected.md) модификатор доступа, благодаря чему доступен из внутри этого класса и из производных классов, которые находятся в его сборке, содержащей элемент.
+> Можно также использовать [Private Protected](private-protected.md) модификатор доступа, что делает член доступен из внутри этого класса и из производных классов, расположенных в его соответствующая сборка.
 
 ## <a name="rules"></a>Правила  
 
--   **Контекст объявления.** `Private` можно использовать только на уровне модуля. Это означает, что контекст объявления для `Private` элемент должен быть модуля, класса или структуры и не может быть исходным файлом, пространства имен, интерфейса или процедуры.  
+-   **Контекст объявления.** `Private` можно использовать только на уровне модуля. Это означает, что контекст объявления для `Private` элемент должен быть модуля, класса или структуры и не может быть исходный файл, пространство имен, интерфейса или процедуры.  
   
 ## <a name="behavior"></a>Поведение  
   
--   **Уровень доступа.** Весь код в контексте объявления можно получить доступ к его `Private` элементов. Это относится к коду вложенного типа, такие как вложенный класс или выражение присваивания в перечислении. Код вне контекста объявления можно получить доступ к его `Private` элементов.  
+-   **Уровень доступа.** Весь код в контексте объявления можно получить доступ к его `Private` элементов. Это включает в себя код вложенного типа, таких как вложенный класс или выражения присваивания в перечисление. Код вне контекста объявления можно получить доступ к его `Private` элементов.  
   
--   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа, см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Модификатор `Private` можно использовать в следующих контекстах:  
   
@@ -59,12 +59,12 @@ ms.locfileid: "34234559"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Protected Private](./private-protected.md)   
- [Protected Friend](./protected-friend.md)[доступ к уровни в Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>См. также
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)[Access levels в Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

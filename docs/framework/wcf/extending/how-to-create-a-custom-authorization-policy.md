@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание пользовательской политики авторизации
+title: Как выполнить Создание пользовательской политики авторизации
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705908"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Практическое руководство. Создание пользовательской политики авторизации
-Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>, который позже может проверяться для принятия решений по авторизации. Пользовательская политика может использоваться для преобразования утверждений из входящих маркеров в утверждения, ожидаемые приложением. Таким образом уровень приложения может изолирован от сведений различных утверждений, обслуживаемых различные типы маркеров, которые поддерживает WCF. В данном разделе показываются реализация пользовательской политики авторизации и добавление этой политики в коллекцию политик, используемых службой.  
+# <a name="how-to-create-a-custom-authorization-policy"></a>Как выполнить Создание пользовательской политики авторизации
+Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>, который позже может проверяться для принятия решений по авторизации. Пользовательская политика может использоваться для преобразования утверждений из входящих маркеров в утверждения, ожидаемые приложением. В этом случае на уровне приложения можно изолируется от сведений различных утверждений, обслуживаемых токенов различных типов, которые поддерживает WCF. В данном разделе показываются реализация пользовательской политики авторизации и добавление этой политики в коллекцию политик, используемых службой.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Реализация пользовательской политики авторизации  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33804239"
   
 1.  В этот метод передаются два параметра: экземпляр класса <xref:System.IdentityModel.Policy.EvaluationContext> и ссылка на объект.  
   
-2.  Если пользовательская политика авторизации добавляет <xref:System.IdentityModel.Claims.ClaimSet> экземпляров независимо от текущего содержимого класса <xref:System.IdentityModel.Policy.EvaluationContext>, добавьте каждый `ClaimSet` путем вызова <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> метода и возврата `true` из <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> метод. Возврат значения `true` указывает инфраструктуре авторизации, что политика авторизации выполнила свою работу и снова ее вызывать не требуется.  
+2.  Если пользовательская политика авторизации добавляет <xref:System.IdentityModel.Claims.ClaimSet> экземпляров без учета текущее содержимое <xref:System.IdentityModel.Policy.EvaluationContext>, добавьте каждый `ClaimSet` путем вызова <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> метода и верните `true` из <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> метод. Возврат значения `true` указывает инфраструктуре авторизации, что политика авторизации выполнила свою работу и снова ее вызывать не требуется.  
   
 3.  Если пользовательская политика авторизации добавляет наборы утверждений только в случае наличия определенных утверждений в классе `EvaluationContext`, выполните поиск этих утверждений, проверив экземпляры `ClaimSet`, возвращенные свойством <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>. Если утверждения присутствуют, добавьте новые наборы утверждений, вызвав метод <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>, и в случае отсутствия необходимости добавления дополнительных наборов утверждений верните значение `true`, указывающее инфраструктуре авторизации, что политика авторизации завершила свою работу. Если утверждения отсутствуют, верните значение `false`, указывающее, что в случае добавления дополнительных наборов утверждений в класс `EvaluationContext` другими политиками авторизации политика авторизации должна быть вызвана снова.  
   
@@ -45,8 +45,8 @@ ms.locfileid: "33804239"
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -75,8 +75,8 @@ ms.locfileid: "33804239"
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)

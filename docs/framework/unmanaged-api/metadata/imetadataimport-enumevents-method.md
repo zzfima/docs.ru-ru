@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514534"
 ---
 # <a name="imetadataimportenumevents-method"></a>Метод IMetaDataImport::EnumEvents
 Перечисляет токены определений событий для указанного токена TypeDef.  
@@ -44,7 +44,7 @@ HRESULT EnumEvents (
  [in, out] Указатель на перечислитель.  
   
  `td`  
- [in] Маркер TypeDef, определения событий, для перечисления.  
+ [in] Токен TypeDef, определения которых событий являются перечисляемые.  
   
  `rEvents`  
  [out] Массив возвращаемых событий.  
@@ -53,7 +53,7 @@ HRESULT EnumEvents (
  [in] Максимальный размер массива `rEvents`.  
   
  `pcEvents`  
- [out] Фактическое число событий, возвращенное в `rEvents`.  
+ [out] Фактическое число событий, возвращаемых в `rEvents`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -63,14 +63,14 @@ HRESULT EnumEvents (
 |`S_FALSE`|Нет событий для перечисления. В этом случае `pcEvents` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

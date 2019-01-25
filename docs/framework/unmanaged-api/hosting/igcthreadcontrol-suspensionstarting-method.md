@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95cbda3729c02b95557f9f700f1ea7c68aa450a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff0c95ea79978c0b58057ec06fea231f5632c941
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702656"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>Метод IGCThreadControl::SuspensionStarting
-Уведомляет узел, что среда выполнения начинает приостановку потока для сборки мусора или по другим причинам.  
+Уведомляет основное приложение, то, что среда выполнения начала приостановку потока для сборки мусора или по другим причинам.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +34,16 @@ HRESULT SuspensionStarting ( );
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Не следует перепланировать каких-либо потоков во время `SuspensionStarting` обратного вызова.  
+ Не повторного планирования во время обсуждения `SuspensionStarting` обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** MSCorEE.h  
+ **Заголовок.** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

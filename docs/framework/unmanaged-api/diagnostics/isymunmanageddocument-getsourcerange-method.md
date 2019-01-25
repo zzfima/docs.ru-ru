@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515078"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Метод ISymUnmanagedDocument::GetSourceRange
-Возвращает заданный диапазон внедренного источника в заданный буфер. Размер буфера должен быть достаточно велик для хранения источника.  
+Возвращает заданный диапазон внедренного источника в заданный буфер. Буфер должен быть достаточно большой для хранения источника.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ HRESULT GetSourceRange(
  [in] Последний столбец в текущем документе.  
   
  `cSourceBytes`  
- [in] Размер источника в байтах.  
+ [in] Размер источника, в байтах.  
   
  `pcSourceBytes`  
  [out] Указатель на переменную, которая получает размер источника.  
@@ -66,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

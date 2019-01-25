@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание стандартных задания печати в Windows Forms
+title: Как выполнить Создание заданий печати стандартный Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b580268a6af3f56f240a1c511c3d473a4a5ddc15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723346"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Практическое руководство. Создание стандартных задания печати в Windows Forms
-Основой печати в Windows Forms является <xref:System.Drawing.Printing.PrintDocument> компонента — в частности, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие. Путем написания кода для обработки <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий, можно указать печати и способ печати.  
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Как выполнить Создание заданий печати стандартный Windows Forms
+Печать в Windows Forms лежит <xref:System.Drawing.Printing.PrintDocument> компонент — в частности, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий. Путем написания кода для обработки <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий, можно указать, что нужно вывести и способ печати.  
   
-### <a name="to-create-a-print-job"></a>Чтобы создать задание печати  
+### <a name="to-create-a-print-job"></a>Чтобы создать задание на печать  
   
-1.  Добавить <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
+1.  Добавление <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
   
-2.  Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.PrintPage>.  
+2.  Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
   
-     Необходимо будет кода собственную логику печати. Кроме того нужно указать материала для печати.  
+     Как будет нужно код логики печати. Кроме того необходимо указать материала для печати.  
   
-     В следующем примере создается образец рисунка в форму красный прямоугольник в <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработчика событий в качестве материала для печати.  
+     В следующем примере кода создается образец рисунка в форму красного прямоугольника в <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработчик событий в качестве материала для печати.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -69,13 +69,13 @@ ms.locfileid: "33522337"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     Можно также написать код для <xref:System.Drawing.Printing.PrintDocument.BeginPrint> и <xref:System.Drawing.Printing.PrintDocument.EndPrint> события, например, целочисленное значение, представляющее общее число страниц для печати, уменьшается на единицу при печати каждой страницы.  
+     Можно также написать код для <xref:System.Drawing.Printing.PrintDocument.BeginPrint> и <xref:System.Drawing.Printing.PrintDocument.EndPrint> события, например, целое число, представляющее общее число страниц для печати, уменьшается на единицу при печати каждой страницы.  
   
     > [!NOTE]
-    >  Можно добавить <xref:System.Windows.Forms.PrintDialog> форму для предоставления пользователям простого и эффективного пользовательского интерфейса (UI) компонента. Установка <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство <xref:System.Windows.Forms.PrintDialog> включает компонент, можно задать свойства, относящиеся к печати документов, вы работаете с в форме. Дополнительные сведения о <xref:System.Windows.Forms.PrintDialog> компонента, в разделе [компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).  
+    >  Вы можете добавить <xref:System.Windows.Forms.PrintDialog> форму для обеспечения простого и эффективного пользовательского интерфейса (UI) для пользователей компонента. Установка <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство <xref:System.Windows.Forms.PrintDialog> включает компонент, можно задать свойства, относящиеся к печати документа при работе с в форму. Дополнительные сведения о <xref:System.Windows.Forms.PrintDialog> компонента, см. в разделе [компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).  
   
-     Дополнительные сведения об особенностях Windows Forms см. задания печати, включая способы создания заданий печати программными средствами, <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+     Дополнительные сведения об особенностях Windows Forms задания печати, включая создание задание на печать программным способом, см. в разделе <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Drawing.Printing.PrintDocument>  
- [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Drawing.Printing.PrintDocument>
+- [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

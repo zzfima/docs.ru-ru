@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14b5f2227991e38ba66889d7e966ab24e714294c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684334"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Метод ICoreClrDebugTarget::EnumRuntimes
 Перечисляет среды CLR в указанном процессе, который выполняется на удаленном компьютере.  
@@ -47,7 +47,7 @@ HRESULT EnumRuntimes (
  [out] Число сред выполнения, возвращаемых в `ppRuntimes`. Это значение может быть 0 (ноль).  
   
  `ppRuntimes`  
- [out] Массив [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) структуры, которые представляют среды выполнения, загруженных в отлаживаемый процесс удаленному целевому объекту.  
+ [out] Массив [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) структуры, которые представляют среды выполнения, загруженных в удаленном целевом процессе.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -66,13 +66,13 @@ HRESULT EnumRuntimes (
  Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
   
- **Библиотека:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1  
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

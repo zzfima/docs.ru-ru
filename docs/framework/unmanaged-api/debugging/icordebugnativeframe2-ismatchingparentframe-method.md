@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713305"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Метод ICorDebugNativeFrame2::IsMatchingParentFrame
 Определяет, является ли указанный кадр родительским для текущего кадра.  
@@ -37,7 +37,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 #### <a name="parameters"></a>Параметры  
  `pPotentialParentFrame`  
- [in] Указатель на объект frame, которую следует оценить состояние родительского.  
+ [in] Указатель на объект кадра, который необходимо оценить состояние родительского.  
   
  `pIsParent`  
  [out] `true` Если `pPotentialParentFrame` является родительским для текущего кадра; в противном случае `false`.  
@@ -47,25 +47,25 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Состояние родительского был успешно возвращен.|  
-|E_FAIL|Не удалось вернуть состояние родительского.|  
+|S_OK|Состояние родительской был успешно возвращен.|  
+|E_FAIL|Состояние родительской не могут быть возвращены.|  
 |E_INVALIDARG|`pPotentialParentFrame` или `pIsParent` равно null.|  
   
 ## <a name="exceptions"></a>Исключения  
   
 ## <a name="remarks"></a>Примечания  
- `IsMatchingParentFrame` Возвращает `true` того, является ли объект кадра, передается методу родительский объект кадра, для которого был вызван метод. Если вызвать метод для кадра, который не является дочерним для указанного кадра, возвращается ошибка.  
+ `IsMatchingParentFrame` Возвращает `true` Если передается методу объект кадра является родительским для объекта кадра, для которого был вызван метод. Если вызвать метод на кадр, который не является дочерним для указанного кадра, возвращается ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573404"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Создание ключей для шифрования и расшифровки
 Создание ключей и управление ими — это важная часть процесса шифрования. Симметричные алгоритмы требуют создания ключа и вектора инициализации (IV). Ключ следует хранить в тайне от любого, кто не должен расшифровывать ваши данные. Вектор инициализации может не быть секретным, но должен изменяться для каждого сеанса. Асимметричные алгоритмы требуют создания открытого ключа и закрытого ключа. Открытый ключ можно предоставлять кому угодно, а закрытый ключ должен быть известен только той стороне, которая будет расшифровывать данные, зашифрованные при помощи открытого ключа. В этом разделе описывается создание ключей и управление ими для симметричных и асимметричных алгоритмов.  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>См. также
 
-- [Шифрование данных](../../../docs/standard/security/encrypting-data.md)  
-- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
-- [Инструкции: Store асимметричных ключей в контейнере ключей](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Шифрование данных](../../../docs/standard/security/encrypting-data.md)
+- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Практическое руководство. Store асимметричных ключей в контейнере ключей](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

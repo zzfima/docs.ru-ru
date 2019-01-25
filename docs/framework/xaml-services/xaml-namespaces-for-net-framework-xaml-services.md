@@ -2,12 +2,12 @@
 title: Пространства имен языка XAML для служб .NET Framework XAML
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736803"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Пространства имен языка XAML для служб .NET Framework XAML
 Пространство имен XAML — это понятие, которое расширяет определение пространства имен XML. Как и к пространству имен XML, вы можете определить пространства имен XAML с помощью `xmlns` атрибут в разметке. Пространства имен XAML также представлены в потоке узлов XAML и других API служб XAML. В этом разделе определяет концепции пространства имен XAML, а также описывается, как можно определить пространства имен XAML и используются в контексте схемы XAML и другие аспекты служб XAML .NET Framework.  
@@ -63,5 +63,5 @@ ms.locfileid: "48030870"
   
  Два других API, которые важны для пространства имен XAML, обработка в службах XAML .NET Framework — это атрибуты <xref:System.Windows.Markup.XmlnsDefinitionAttribute> и <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Эти атрибуты применяются к сборкам. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> используется контекст схемы XAML для интерпретации любое объявление пространства имен XAML, которое включает в себя URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> используется средствами, которые генерируют XAML, чтобы определенного пространства имен XAML может быть сериализован с предсказуемым префиксом. Дополнительные сведения см. в разделе [XAML-Related атрибуты среды CLR для пользовательских типов и библиотек](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
-## <a name="see-also"></a>См. также  
- [Общее представление о понятиях и структурах потока узлов XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>См. также
+- [Общее представление о понятиях и структурах потока узлов XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

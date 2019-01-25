@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: cd66d08eba973a796472fcbd40a6a84edbbb62ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730741"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Арифметические операторы в Visual Basic
 Арифметические операторы используются для выполнения многих известных арифметических операций, включая вычисление числовых значений, представленных литералы, переменные, другие выражения, функции и вызовы свойства и константы. Также классифицируются с арифметическими операторами являются операторы поразрядного сдвига, которые работают на уровне отдельных битов операндов и сдвиг их битовых шаблонов влево или вправо.  
@@ -94,10 +94,10 @@ ms.locfileid: "43499267"
   
  Если задать `Option Strict Off`, однако Visual Basic позволяет неявные сужающие преобразования вступили в силу, несмотря на то, что они могут привести к потере данных или точности. По этой причине мы рекомендуем использовать `Option Strict On` при написании кода в рабочей среде. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="see-also"></a>См. также  
- [Арифметические операторы](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Операторы сдвига битов](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
- [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a>См. также
+- [Арифметические операторы](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Операторы сдвига битов](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

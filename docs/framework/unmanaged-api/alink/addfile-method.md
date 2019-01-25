@@ -1,5 +1,5 @@
 ---
-title: Метод AddFile 1
+title: Метод1 AddFile
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a350fadfa77fdad545ca7ccf2f63d28607c2ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662612"
 ---
-# <a name="addfile-method1"></a>Метод AddFile 1
+# <a name="addfile-method1"></a>Метод1 AddFile
 Добавляет файлы в сборку. Может также использоваться для создания несвязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -53,15 +53,15 @@ HRESULT AddFile(
  [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) интерфейс, который будет использоваться для выдачи метаданных, при необходимости.  
   
  `pFileToken`  
- Указатель на котором будет храниться уникальный идентификатор добавляемого файла.  
+ Указатель, где будет храниться уникальный идентификатор добавляемого файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

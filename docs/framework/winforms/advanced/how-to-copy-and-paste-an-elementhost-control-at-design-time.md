@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
+title: Как выполнить Копирование и вставка элемента управления ElementHost во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572635"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Как выполнить Копирование и вставка элемента управления ElementHost во время разработки
 Эта процедура показано, как скопировать элемент управления Windows Presentation Foundation (WPF) в Windows Forms.  
   
 > [!NOTE]
@@ -42,10 +42,10 @@ ms.locfileid: "48872930"
   
      Новый <xref:System.Windows.Forms.Integration.ElementHost> управления с именем `elementHost2` создается в форме.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- <xref:System.Windows.Forms.Integration.ElementHost>  
-- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
-- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
-- [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

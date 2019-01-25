@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание XML-литералов (Visual Basic)
+title: Как выполнить Создание XML-литералов (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560598"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
+# <a name="how-to-create-xml-literals-visual-basic"></a>Как выполнить Создание XML-литералов (Visual Basic)
 XML документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерала. В примерах в этом разделе показано, как создать элемент XML, содержит три дочерних элемента и способ создания XML-документа.  
   
  Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
@@ -52,8 +52,8 @@ XML документ, фрагмент или элемент можно созд
   
      `</books>`  
   
-## <a name="see-also"></a>См. также  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a>См. также
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

@@ -2,12 +2,12 @@
 title: Контракты маршрутизации
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 17bdd4556533b33b635f80b9aec3f16d0f256843
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 593c7a328aba82c35f5876e6e325844c829c08c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707717"
 ---
 # <a name="routing-contracts"></a>Контракты маршрутизации
 Контракты маршрутизации определяют схемы обмена сообщениями, которые может обрабатывать служба маршрутизации.  Эти контракты являются бестиповыми, с их помощью служба может получать сообщение без набора знаний о схеме сообщения или действии. Благодаря этому служба маршрутизации может перенаправлять сообщения без дополнительной настройки под особенности маршрутизируемых сообщений.  
@@ -26,6 +26,6 @@ ms.locfileid: "50191013"
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>См. также  
- [Служба маршрутизации](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>См. также
+- [Служба маршрутизации](../../../../docs/framework/wcf/feature-details/routing-service.md)
+- [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

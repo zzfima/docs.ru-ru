@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559349"
 ---
 # <a name="protected-members"></a>Защищенные члены
 Защищенные члены сами по себе не предоставляют все расширения, но они могут сделать расширяемости через подклассы более мощные. Они могут использоваться для предоставления Дополнительные параметры настройки без усложнять основной открытый интерфейс.  
@@ -35,5 +35,5 @@ ms.locfileid: "53149358"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

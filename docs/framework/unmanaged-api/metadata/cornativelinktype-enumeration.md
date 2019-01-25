@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641334"
 ---
 # <a name="cornativelinktype-enumeration"></a>Перечисление CorNativeLinkType
 Предоставляет значения, указывающие тип, связанный в машинном коде.  
@@ -42,23 +42,23 @@ typedef enum
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`nltNone`|Указывает, что не указан ни один из ключевых слов.|  
-|`nltAnsi`|Указывает, что указано ключевое слово в формате ANSI.|  
-|`nltUnicode`|Указывает, что указано Unicode-ключевое слово|  
-|`nltAuto`|Указывает, что задано ключевое слово auto.|  
-|`nltOle`|Указывает, что указано ключевое слово в формате OLE.|  
+|`nltAnsi`|Указывает, что ключевое слово в формате ANSI.|  
+|`nltUnicode`|Указывает, что указан Unicode-ключевое слово|  
+|`nltAuto`|Указывает, что ключевое слово auto.|  
+|`nltOle`|Указывает, что ключевое слово OLE.|  
 |`nltMaxValue`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>См. также
+- [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

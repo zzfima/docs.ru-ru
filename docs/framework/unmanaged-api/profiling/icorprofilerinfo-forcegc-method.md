@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c30a666dcbac553d05cc5f54d5dbb326eb6a10e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706700"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>Метод ICorProfilerInfo::ForceGC
-Принудительно начинает сборку мусора в общеязыковой среде выполнения (CLR).  
+Принудительно запускает сборку мусора в общеязыковой среде выполнения (CLR).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,16 +34,16 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `ForceGC` Метод должен вызываться только из потока, который имеет не выполнял управляемый код и не имеет обратные вызовы профилировщика его стека. Наиболее удобным реализация заключается в создании отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.  
+ `ForceGC` Метод должен вызываться только из потока, который ни никогда не выполняет управляемый код и не поддерживает обратные вызовы профилировщика в стеке. Наиболее удобным реализация заключается в создании отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

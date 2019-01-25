@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2098d5d9ce1c01f232cf2904c1fd3e990dfbe2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d809bbfa17ed9e9ae16505852740e874ca11248c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621790"
 ---
 # <a name="createassemblyenum-function"></a>Функция CreateAssemblyEnum
-Возвращает указатель на [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) экземпляр, предназначенный для перечисления объектов в сборке с указанным [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
+Возвращает указатель на [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) экземпляр, который может перечислить объекты в сборке с указанным [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,13 +42,13 @@ HRESULT CreateAssemblyEnum (
   
 #### <a name="parameters"></a>Параметры  
  `pEnum`  
- [out] Указатель на область памяти, содержащей запрошенный `IAssemblyEnum` указателя.  
+ [out] Указатель на область памяти, который содержит требуемый `IAssemblyEnum` указатель.  
   
  `pUnkReserved`  
  [in] Зарезервировано для будущего расширения. `pUnkReserved` должен быть пустой ссылкой.  
   
  `pName`  
- [in] `IAssemblyName` Запрошенной сборки. Это имя используется для фильтрации перечисления. Он может быть null для перечисления всех сборок в глобальном кэше сборок.  
+ [in] `IAssemblyName` Запрошенной сборки. Это имя используется для фильтрации перечисления. Он может иметь значение null для перечисления всех сборок в глобальном кэше сборок.  
   
  `dwFlags`  
  [in] Флаги для изменения поведения перечислителя. Этот параметр содержит ровно один бит из [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) перечисления.  
@@ -60,15 +60,15 @@ HRESULT CreateAssemblyEnum (
  `dwFlags` Параметр содержит ровно один бит из `ASM_CACHE_FLAGS` перечисления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Fusion.h  
+ **Заголовок.** Fusion.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

@@ -1,28 +1,28 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel
+title: Пошаговое руководство. Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 769a8a5b60c6b963619b79526a7d1ee59af3ba33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585423"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel
 В некоторых приложениях требуется форма, макет которой изменяется надлежащим образом при изменении размера формы или содержимого. Если необходим динамический макет и вы не хотите обрабатывать события <xref:System.Windows.Forms.Control.Layout> явно в коде, рассмотрите возможность использования панели макета.  
   
  Элементы управления <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel> предоставляют удобные способы упорядочения элементов управления в форме. Они обеспечивают автоматическую настраиваемую возможность управления относительным положением содержащихся в них дочерних элементов управления и предоставляют функции динамического макета во время выполнения и таким образом могут изменять размер и положение дочерних элементов управления по мере измерения размеров родительской формы. Панели макета могут быть вложенными в других панелях макета, что позволяет реализовывать сложные пользовательские интерфейсы.  
   
- Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свое содержимое в определенном направлении, горизонтальном или вертикальном. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться. Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+ Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает свое содержимое в определенном направлении, горизонтальном или вертикальном. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
  <xref:System.Windows.Forms.TableLayoutPanel> Упорядочивает свое содержимое в сетке, обеспечивая функциональные возможности, аналогичные HTML \<таблицы > элемента. <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления позволяет размещать элементы управления в виде сетки без необходимости точного указания положения каждого отдельного элемента управления. Его ячейки организованы в строки и столбцы, и они могут быть разного размера. Ячейки могут быть объединены между строками и столбцами. Ячейки могут содержать что-либо формы может содержать и ведут себя во многих отношениях как контейнеры.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления также предоставляет возможность пропорционального изменения размера во время выполнения, то макет можно без проблем при изменении размера формы. Это делает <xref:System.Windows.Forms.TableLayoutPanel> управления хорошо подходит для форм ввода данных и локализованных приложений. Дополнительные сведения см. в разделе [Пошаговое руководство: создание для ввода данных переменного размера формы Windows](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) и [Пошаговое руководство: создание Локализируемая форма Windows](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления также предоставляет возможность пропорционального изменения размера во время выполнения, то макет можно без проблем при изменении размера формы. Это делает <xref:System.Windows.Forms.TableLayoutPanel> управления хорошо подходит для форм ввода данных и локализованных приложений. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) и [Пошаговое руководство: Создание формы Windows локализуемые](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
   
  В общем случае не следует использовать <xref:System.Windows.Forms.TableLayoutPanel> управления как контейнер для всего макета. Используйте <xref:System.Windows.Forms.TableLayoutPanel> элементы управления для предоставления возможностей пропорционального изменения размера его части.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43773977"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [как: Создание проекта приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
 2.  Выберите форму в **Windows** **конструктора**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "43773977"
   
 #### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>Размещение элементов управления в строках и столбцах, с помощью элемента управления TableLayoutPanel  
   
-1.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму. Обратите внимание, что по умолчанию <xref:System.Windows.Forms.TableLayoutPanel> элемент управления имеет четыре ячейки.  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму. Обратите внимание, что по умолчанию <xref:System.Windows.Forms.TableLayoutPanel> элемент управления имеет четыре ячейки.  
   
 2.  Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.TableLayoutPanel> управления и поместите его в одну из ячеек. Обратите внимание, что <xref:System.Windows.Forms.Button> создается элемент управления в ячейке, вы выбрали.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "43773977"
   
 3.  Выберите первый столбец и измените значение его <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойства <xref:System.Windows.Forms.SizeType.AutoSize>. Нажмите кнопку **ОК** чтобы принять изменение. Обратите внимание, что ширина первого столбца уменьшается в соответствии с <xref:System.Windows.Forms.Button> элемента управления. Обратите внимание на то, что ширина столбца не является изменяемым размером.  
   
-4.  В **свойства** открытое окно <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> коллекции и выберите первый столбец. Измените значение его <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойства <xref:System.Windows.Forms.SizeType.Percent>. Нажмите кнопку **ОК** чтобы принять изменение. Изменение размера <xref:System.Windows.Forms.TableLayoutPanel> управления на увеличение ширины и обратите внимание на то, что расширяет ширину первого столбца. Изменение размера <xref:System.Windows.Forms.TableLayoutPanel> управления уменьшите ширину и обратите внимание на то, что кнопки в первом столбце подгоняются под размеры ячейки. Также Обратите внимание, что ширина столбца можно изменять.  
+4.  В **свойства** открытое окно <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> коллекции и выберите первый столбец. Измените значение его свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> на <xref:System.Windows.Forms.SizeType.Percent>. Нажмите кнопку **ОК** чтобы принять изменение. Изменение размера <xref:System.Windows.Forms.TableLayoutPanel> управления на увеличение ширины и обратите внимание на то, что расширяет ширину первого столбца. Изменение размера <xref:System.Windows.Forms.TableLayoutPanel> управления уменьшите ширину и обратите внимание на то, что кнопки в первом столбце подгоняются под размеры ячейки. Также Обратите внимание, что ширина столбца можно изменять.  
   
 5.  В **свойства** открытое окно <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> коллекции и выберите все перечисленные столбцы. Установите для параметра каждый <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойства <xref:System.Windows.Forms.SizeType.Percent>. Нажмите кнопку **ОК** чтобы принять изменение. Повторите процедуру, используя <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> коллекции.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "43773977"
 3.  Повторите шаг 2 для `RowSpan` свойство.  
   
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Вставка элементов управления двойным щелчком по ним в панели элементов  
- Можно заполнить вашей <xref:System.Windows.Forms.TableLayoutPanel> элемента управления, дважды щелкая элементы управления в **элементов**.  
+ Вы можете заполнять свой элемент управления <xref:System.Windows.Forms.TableLayoutPanel> , дважды щелкая элементы управления в **панели элементов**.  
   
 #### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Вставка элементов управления двойным щелчком по ним в панели элементов  
   
-1.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
   
 2.  Дважды щелкните значок элемента управления <xref:System.Windows.Forms.Button> в **панели элементов**. Обратите внимание, что отображается новый элемент управления button в <xref:System.Windows.Forms.TableLayoutPanel> первой ячейке элемента управления.  
   
@@ -136,18 +136,18 @@ ms.locfileid: "43773977"
   
 2.  Один раз <xref:System.Windows.Forms.TableLayoutPanel> заполнения элемента управления, дважды щелкните <xref:System.Windows.Forms.Button> значок в **элементов** вставляемый другой <xref:System.Windows.Forms.Button> элемента управления. Обратите внимание, что <xref:System.Windows.Forms.TableLayoutPanel> элемент управления создает новые ячейки для размещения нового элемента управления. Вставьте несколько дополнительных элементов управления и наблюдать за поведением изменения размера.  
   
-3.  Измените значение свойства <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> элемента управления <xref:System.Windows.Forms.TableLayoutPanel> на <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Дважды щелкните <xref:System.Windows.Forms.Button> значок в **элементов** вставляемый <xref:System.Windows.Forms.Button> управляет до <xref:System.Windows.Forms.TableLayoutPanel> заполнения элемента управления. Дважды щелкните <xref:System.Windows.Forms.Button> значок в **элементов** еще раз. Обратите внимание, что появляется сообщение об ошибке из **конструктор Windows Forms** информируют о том, что дополнительные строки и столбцы не могут создаваться.  
+3.  Измените значение свойства <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> на <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Дважды щелкните <xref:System.Windows.Forms.Button> значок в **элементов** вставляемый <xref:System.Windows.Forms.Button> управляет до <xref:System.Windows.Forms.TableLayoutPanel> заполнения элемента управления. Дважды щелкните <xref:System.Windows.Forms.Button> значок в **элементов** еще раз. Обратите внимание, что появляется сообщение об ошибке из **конструктор Windows Forms** информируют о том, что дополнительные строки и столбцы не могут создаваться.  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Вставка элемента управления путем рисования его контура  
- Можно вставить элемент управления в <xref:System.Windows.Forms.TableLayoutPanel> управления и задать его размер, нарисовав его контур в ячейке.  
+ Вы можете вставить элемент управления в элемент управления <xref:System.Windows.Forms.TableLayoutPanel> и задать его размер, нарисовав его контур в ячейке.  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>Вставка элемента управления путем рисования его контура  
   
-1.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
   
 2.  В **панели элементов**щелкните значок элемента управления <xref:System.Windows.Forms.Button> . Не перетаскивайте его в форму.  
   
-3.  Наведите указатель мыши на <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Обратите внимание, что указатель превратился в перекрестие с прикрепленным значком элемента управления <xref:System.Windows.Forms.Button> .  
+3.  Наведите указатель мыши на элемент управления <xref:System.Windows.Forms.TableLayoutPanel> . Обратите внимание, что указатель превратился в перекрестие с прикрепленным значком элемента управления <xref:System.Windows.Forms.Button> .  
   
 4.  Нажмите и удерживайте кнопку мыши.  
   
@@ -176,18 +176,18 @@ ms.locfileid: "43773977"
   
 -   Панели макета могут содержать другие панели макета. Попробуйте вставить элемент управления <xref:System.Windows.Forms.TableLayoutPanel> в существующий элемент управления.  
   
--   Dock <xref:System.Windows.Forms.TableLayoutPanel> родительский элемент управления. Измените размер этой формы и обратите внимание, как это отражается на макете.  
+-   Закрепите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> в родительской форме. Измените размер этой формы и обратите внимание, как это отражается на макете.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Redmond, WA: Microsoft Press, 1999 г. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [Пошаговое руководство. Создание в Windows Forms формы для ввода данных переменного размера](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [Пошаговое руководство: Создание формы локализуемые Windows](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
- [Советы по использованию элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
- [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [Практическое руководство. Закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [Практическое руководство. Привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Редмонд, штат Вашингтон: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
+- [Пошаговое руководство: Создание формы локализуемые Windows](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [Советы по использованию элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
+- [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+- [Практическое руководство. Закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [Практическое руководство. Привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
+- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с помощью свойств Padding, Margins и свойство AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

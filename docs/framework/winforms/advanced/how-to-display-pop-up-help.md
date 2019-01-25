@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение всплывающей справки
+title: Как выполнить Отображение всплывающей справки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e017e25f140d3dfd260545f28fab73905fe149fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601848"
 ---
-# <a name="how-to-display-pop-up-help"></a>Практическое руководство. Отображение всплывающей справки
+# <a name="how-to-display-pop-up-help"></a>Как выполнить Отображение всплывающей справки
 Один из способов отображения справки в Windows Forms — через **помочь** кнопки, расположенной в правой части строки заголовка, доступной через <xref:System.Windows.Forms.Form.HelpButton%2A> свойство. Этот способ вывода справки хорошо подходит при работе с диалоговыми окнами. Модальные диалоговые окна (с методом <xref:System.Windows.Forms.Form.ShowDialog%2A>) затрудняют работу внешних справочных систем, так как их нужно закрывать, чтобы перенести фокус на другое окно. Кроме того, с помощью **помочь** кнопку требует отсутствия не **свернуть** кнопку или **развернуть** кнопки в строке заголовка. Это стандартное соглашение стандартным диалоговым окном, формах обычно есть **свернуть** и **развернуть** кнопки.  
   
  Следует помнить, что компонент <xref:System.Windows.Forms.HelpProvider> можно также использовать, чтобы связать элементы управления с файлами справочной системы, даже если применяется всплывающая справка. Дополнительные сведения см. в разделе [предоставление справки в приложении Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "45658695"
   
 6.  Нажмите клавишу **помочь** в строке заголовка кнопку и щелкните элемент управления, для которого была задана строка справки.  
   
-## <a name="see-also"></a>См. также  
- [Отображение справки по элементам управления с помощью подсказок](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Интеграция справки пользователя в формы Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>См. также
+- [Отображение справки по элементам управления с помощью подсказок](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
+- [Интеграция справки пользователя в формы Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

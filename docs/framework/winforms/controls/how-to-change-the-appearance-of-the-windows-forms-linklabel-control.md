@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms
+title: Как выполнить Изменение внешнего вида элемента управления LinkLabel в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: e1bb0ecba6fd8ddf66c6debb90ef4dd94641a97e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632131"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms
-Можно изменить текст, отображаемый элементом <xref:System.Windows.Forms.LinkLabel> элемента управления в соответствии с разных целей. Например это часто можно уведомить пользователя, что текст можно щелкнуть мышью текста с подчеркиванием определенным цветом. Пользователь щелкает текста, цвет меняется на другой цвет. Чтобы контролировать это поведение, можно задать пяти различных свойств: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, и <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Как выполнить Изменение внешнего вида элемента управления LinkLabel в Windows Forms
+Можно изменить текст, отображаемый элементом <xref:System.Windows.Forms.LinkLabel> управления для различных целей. Например это распространенная практика, чтобы уведомить пользователя, что текст можно щелкнуть мышью текст, появляющийся определенным цветом и подчеркиванием. Пользователь щелкает этот текст, цвет меняется на другой цвет. Чтобы контролировать это поведение, можно задать пять различных свойств: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, и <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Чтобы изменить внешний вид элемента управления LinkLabel  
   
-1.  Задать <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> и <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> свойства, чтобы нужные цвета.  
+1.  Задайте <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> и <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> свойства, чтобы нужные цвета.  
   
-     Это можно сделать либо программными средствами или во время разработки в **свойства** окна.  
+     Это можно сделать программным образом или во время разработки в **свойства** окна.  
   
     ```vb  
     ' You can set the color using decimal values for red, green, and blue  
@@ -49,9 +49,9 @@ ms.locfileid: "33531490"
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2.  Задать <xref:System.Windows.Forms.LinkLabel.Text%2A> свойства соответствующий заголовок.  
+2.  Задайте <xref:System.Windows.Forms.LinkLabel.Text%2A> свойство соответствующий заголовок.  
   
-     Это можно сделать либо программными средствами или во время разработки в **свойства** окна.  
+     Это можно сделать программным образом или во время разработки в **свойства** окна.  
   
     ```vb  
     LinkLabel1.Text = "Click here to see more."  
@@ -67,7 +67,7 @@ ms.locfileid: "33531490"
   
 3.  Задать <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> свойства, чтобы определить, какая часть заголовка будет представлена в качестве ссылки.  
   
-     <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Представлено <xref:System.Windows.Forms.LinkArea> включающим два числа, начальной позицией знака и количество символов. Это можно сделать либо программными средствами или во время разработки в **свойства** окна.  
+     <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Представлено <xref:System.Windows.Forms.LinkArea> содержащий два числа, положение начального знака и число символов. Это можно сделать программным образом или во время разработки в **свойства** окна.  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -81,13 +81,13 @@ ms.locfileid: "33531490"
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4.  Задать <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> свойства <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, или <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
+4.  Задайте <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> свойства <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, или <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
   
-     Если задано значение <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, часть заголовка определяется <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> будет подчеркнуто только при наведении указателя на нем.  
+     Если он становится равным <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, часть заголовка, определяется <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> будет подчеркнуто только при наведении указателя на нем.  
   
-5.  В <xref:System.Windows.Forms.LinkLabel.LinkClicked> задать обработчик событий <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства `true`.  
+5.  В <xref:System.Windows.Forms.LinkLabel.LinkClicked> задать обработчик событий, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства `true`.  
   
-     При ссылке это обычно следует изменить его внешний вид, обычно по цвету. Текст изменится на цвет, определенный параметром <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> свойство.  
+     При ссылке это распространенная практика, чтобы изменить его внешний вид, обычно по цвету. Текст изменится на цвет, определенный параметром <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> свойство.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -121,11 +121,11 @@ ms.locfileid: "33531490"
        }  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
- <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
- <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  
- <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>  
- [Общие сведения об элементе управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- [Элемент управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
+- <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
+- <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
+- <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
+- [Общие сведения об элементе управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
+- [Практическое руководство. Ссылка на объект или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Элемент управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

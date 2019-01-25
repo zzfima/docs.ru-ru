@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов функции страницы
+title: Как выполнить Вызов функции страницы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: b6bae149ad56c9a0b56a6ae80cc1e62cd091f75f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cd839cc959c1e3730418d2feab80b9aef642161
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542825"
 ---
-# <a name="how-to-call-a-page-function"></a>Практическое руководство. Вызов функции страницы
-В этом примере показано, как вызвать функцию страницы из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы.  
+# <a name="how-to-call-a-page-function"></a>Как выполнить Вызов функции страницы
+В этом примере показано, как вызов функции страницы из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы.  
   
 ## <a name="example"></a>Пример  
- Можно перейти к странице функции с помощью [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], так же, как при переходе на страницу. Эти действия показаны в следующем примере.  
+ Вы можете перейти к функции страницы с помощью [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], так же как при переходе на страницу. Эти действия показаны в следующем примере.  
   
  [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  
@@ -32,5 +32,5 @@ ms.locfileid: "33545728"
  [!code-csharp[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#callapagefunctioncodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Navigation.PageFunction%601>
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Navigation.PageFunction%601>

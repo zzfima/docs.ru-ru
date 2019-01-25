@@ -2,23 +2,23 @@
 title: MessageQueueDuplicatedPipeLeak
 ms.date: 03/30/2017
 ms.assetid: 743db7f1-32cc-4a3b-8d1a-5d1cf25e439c
-ms.openlocfilehash: f965b25f2df261f650216f279af512d8452f76c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15e8320602fc17fc99aa75fc0f7451ea4c3d4d18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510524"
 ---
 # <a name="messagequeueduplicatedpipeleak"></a>MessageQueueDuplicatedPipeLeak
-Идентификатор: 166  
+ИД: 166  
   
- Важность: ошибка  
+ Уровень серьезности: Error  
   
  Категория: SMSvcHost  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие указывает, что произошла ошибка при диспетчеризации дублированного именованного канала. В данном процессе происходит утечка этого дескриптора. В событии указаны источник, исключение, имя процесса и идентификатор процесса.  
   
-## <a name="see-also"></a>См. также  
- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>См. также
+- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

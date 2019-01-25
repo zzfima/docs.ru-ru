@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51ccc7b1b50613f0d2b44a9e101314128782c412
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fd07f018bdc5bd9fd8ca6a81b4aca6d6f97a531
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647300"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>Метод ICorDebugUnmanagedCallback::DebugEvent
 Уведомляет отладчик о том, что произошло событие машинного кода.  
@@ -38,28 +38,28 @@ HRESULT DebugEvent (
   
 #### <a name="parameters"></a>Параметры  
  `pDebugEvent`  
- [in] Указатель на собственный событий.  
+ [in] Указатель на собственный события.  
   
  `fOutOfBand`  
- [in] `true`, если невозможно взаимодействие с состоянием управляемого процесса после возникновения события неуправляемым, пока отладчик вызывает [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); в противном случае `false`.  
+ [in] `true`, если взаимодействие с состоянием управляемого процесса невозможна после возникновения события неуправляемые, пока отладчик не вызовет [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
- Если отлаживаемый поток является потоком Win32, не используйте никакие элементы Win32 интерфейса отладки. Можно вызвать `ICorDebugController::Continue` только потоком Win32 и только в том случае, если продолжение после события по каналу.  
+ Если отлаживаемый поток является потоком Win32, не используйте ни с одним элементом Win32 интерфейса отладки. Вы можете вызвать `ICorDebugController::Continue` только в потоке Win32 и только в том случае, если продолжение за-внешнее событие.  
   
- `DebugEvent` Обратного вызова не действуют стандартные правила для обратных вызовов. При вызове `DebugEvent`, процесс будет находиться в необработанный, состоянии остановки отладки операционной Системой. Процесс не будут синхронизированы. Автоматически перейдет в состояние синхронизации при необходимости выполнить запрос для получения сведений об управляемом коде, что может стать причиной других вложенных `DebugEvent` обратные вызовы.  
+ `DebugEvent` Обратного вызова не соответствуют стандартным правилам для обратных вызовов. При вызове `DebugEvent`, процесс будет находиться в необработанный, состоянии остановки отладки операционной системы. Процесс не будут синхронизированы. Он автоматически войдет в синхронизированном состоянии, когда необходимо выполнить запрос сведений об управляемом коде, что может вызвать другие вложенные `DebugEvent` обратные вызовы.  
   
- Вызовите [ICorDebugProcess::ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) в процессе, чтобы пропустить событие исключения перед продолжением процесса. Вызов этого метода отправляет продолжения вместо DBG_EXCEPTION_NOT_HANDLED продолжить запроса, а также автоматически очищает по каналу точки останова и пошагово исключения. События по каналу могут поступать в любое время, даже в том случае, если останавливается отлаживаемого приложения и необработанные события по каналу уже существует.  
+ Вызовите [ICorDebugProcess::ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) на процесс, чтобы пропустить событие исключения, прежде чем продолжить процесс. Вызов этого метода отправляет продолжения вместо DBG_EXCEPTION_NOT_HANDLED на запроса на продолжение, а также автоматически очищает-резервному точки останова и одношаговые исключения. Out of band события могут поступать в любое время, даже в том случае, если отлаживаемого приложения останавливается, и необработанные события внутренней уже существует.  
   
- В платформе .NET Framework версии 2.0 отладчик должен немедленно продолжить прошлое событие точки останова по каналу. Отладчик должен использовать [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) и [ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) методы для добавления и удаления точек останова. Эти методы будут автоматически пропускать все точки останова по каналу. Таким образом, только для аппаратного точки останова, которые отправить должно быть точками останова, которые уже находятся в поток инструкций, например вызов Win32 `DebugBreak` функции. Не пытайтесь использовать `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess::GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess::SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), или любого другого элемента [API отладки](../../../../docs/framework/unmanaged-api/debugging/index.md).  
+ В .NET Framework версии 2.0 отладчик должен немедленно продолжить прошлое событие точки останова каналу. Отладчик должен использовать [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) и [ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) методы для добавления и удаления точки останова. Эти методы будут автоматически пропускать все точки останова каналу. Таким образом, точки останова только-каналу, отправить должно быть точками останова, которые уже находятся в потоке инструкций, например вызов Win32 `DebugBreak` функции. Не пытайтесь использовать `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess::GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess::SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), или другой элемент [API отладки](../../../../docs/framework/unmanaged-api/debugging/index.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)

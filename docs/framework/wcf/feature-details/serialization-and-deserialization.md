@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707582"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -79,7 +79,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
 ### <a name="round-trips"></a>Циклы обработки  
  *Цикл обработки* совершается, когда объект десериализуется и повторно сериализуется за одну операцию. Таким образом, он перемещается от XML-кода к экземпляру объекта, а затем возвращается в поток XML.  
   
- Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber`, а версия 2 добавляет член `Nickname`. Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. Дополнительные сведения см. в разделе [контракты данных обладает прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) и [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber` , а версия 2 добавляет член `Nickname` . Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. Дополнительные сведения см. в разделе [контракты данных обладает прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) и [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Проблемы безопасности и допустимости схемы в циклах обработки  
  Циклы обработки влияют на безопасность. Например, десериализация и сохранение больших объемов лишних данных могут представлять угрозу безопасности. Проблемы безопасности при повторной выдаче этих данных обусловлены невозможностью провести проверку, особенно если в процессе задействованы цифровые сигнатуры. Например, в вышеприведенном сценарии конечная точка версии 1 могла бы подписать значение `Nickname` , которое содержит вредоносные данные. Наконец, могут возникнуть проблемы с допустимостью схемы: конечная точка может всегда выдавать только данные, которые строго соответствуют ее заявленному контракту, и не поддерживать других значений. В предыдущем примере в контракте конечной точки версии 1 говорится, что точка выдает только данные `Name` и `PhoneNumber`, а при использовании проверки допустимости схемы выдача дополнительного значения `Nickname` приводит к сбою проверки.  
@@ -207,7 +207,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Основным способом десериализации объекта является вызов одной из перегрузок метода <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Существует три перегрузки, каждая из которых предназначена для считывания с помощью <xref:System.Xml.XmlDictionaryReader>, `XmlReader`или `Stream`соответственно. Обратите внимание, что перегрузка `Stream` создает текстовое средство чтения <xref:System.Xml.XmlDictionaryReader> , не защищенное никакими квотами, следовательно, его нужно использовать только для чтения надежных данных.  
   
- Также обратите внимание, что объект, возвращаемый методом `ReadObject`, должен быть приведен к соответствующему типу.  
+ Также обратите внимание, что объект, возвращаемый методом `ReadObject` , должен быть приведен к соответствующему типу.  
   
  В следующем примере кода демонстрируется создание экземпляра сериализатора <xref:System.Runtime.Serialization.DataContractSerializer> и средства чтения <xref:System.Xml.XmlDictionaryReader>, а также последующая десериализация экземпляра `Person` .  
   
@@ -223,7 +223,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  При использовании одной из простых `ReadObject` перегрузки, десериализатор ищет стандартное имя и пространство имен элемента программы-оболочки (см. предшествующий раздел «Задание по умолчанию корневого имени и пространства имен») и создает исключение, если он обнаруживает Неизвестный элемент. Предполагается, что в предыдущем примере используется программа-оболочка `<Person>` . Метод <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> вызывается, чтобы убедиться, что средство чтения размещено в элементе, именованном как ожидается.  
   
- Можно отключить такую проверку имени программы-оболочки; некоторые перегрузки метода `ReadObject` используют логический параметр `verifyObjectName`, которому по умолчанию задано значение `true`. Если параметру задано значение `false`, имя и пространство имен программы-оболочки игнорируются. Эта функция полезна при чтении XML-кода, который был создан с использованием механизма пошаговой сериализации, описанной ранее.  
+ Можно отключить такую проверку имени программы-оболочки; некоторые перегрузки метода `ReadObject` используют логический параметр `verifyObjectName`, которому по умолчанию задано значение `true` . Если параметру задано значение `false`, имя и пространство имен программы-оболочки игнорируются. Эта функция полезна при чтении XML-кода, который был создан с использованием механизма пошаговой сериализации, описанной ранее.  
   
 ## <a name="using-the-netdatacontractserializer"></a>Использование NetDataContractSerializer  
  Основное различие между сериализаторами `DataContractSerializer` и <xref:System.Runtime.Serialization.NetDataContractSerializer> заключается в том, что `DataContractSerializer` использует имена контракта данных, а `NetDataContractSerializer` выводит полную сборку [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и имена типов в сериализованном XML-коде. Это означает, что одни и те же типы должны совместно использоваться конечными точками сериализации и десериализации. Так как при использовании сериализатора `NetDataContractSerializer` всегда известны точные типы, которые должны быть десериализованы, механизм известных типов не требуется.  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Обратите также внимание, что сериализатор `NetDataContractSerializer` не выдает полное имя типа и сборки [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для каждого узла в графе объекта. Он выводит эту информацию, только если она неоднозначна. Таким образом, вывод данных осуществляется на уровне корневого объекта и для любых полиморфных случаев.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [Двоичная сериализация](../../../../docs/standard/serialization/binary-serialization.md)  
- [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [Двоичная сериализация](../../../../docs/standard/serialization/binary-serialization.md)
+- [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

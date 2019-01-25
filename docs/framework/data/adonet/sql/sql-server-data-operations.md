@@ -2,15 +2,15 @@
 title: Операции данных SQL Server Data в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 9c913bffea1be8db0fa5ba2e97714acefe681569
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702240"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Операции данных SQL Server Data в ADO.NET
-В данном разделе описываются возможности и функции SQL Server, характерные для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
+В данном разделе описываются возможности и возможности SQL Server, характерные для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Операции массового копирования в SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
@@ -25,7 +25,7 @@ ms.locfileid: "43528190"
  [Возвращающие табличное значение параметры](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  Описывается работа с возвращающими табличное значение параметрами, появившимися в SQL Server 2008.  
   
-## <a name="see-also"></a>См. также  
- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

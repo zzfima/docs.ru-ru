@@ -1,18 +1,18 @@
 ---
-title: 'Как: Добавление настраиваемых методов для запросов LINQ (Visual Basic)'
+title: Как выполнить Добавление настраиваемых методов для запросов LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645591"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Как: Добавление настраиваемых методов для запросов LINQ (Visual Basic)
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Как выполнить Добавление настраиваемых методов для запросов LINQ (Visual Basic)
 Вы можете расширить набор методов, которые можно использовать для запросов LINQ, путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Например, помимо стандартных операций вычисления среднего или максимального значения, можно создать настраиваемый метод агрегирования для вычисления одного значения на основе последовательности значений. Также можно создать метод, который работает как настраиваемый фильтр или особое преобразование данных для последовательности значений и возвращает новую последовательность. Примерами таких методов являются <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Reverse%2A>.  
   
- При расширении интерфейса <xref:System.Collections.Generic.IEnumerable%601> настраиваемые методы можно применять к любой перечислимой коллекции. Дополнительные сведения см. в статье [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ При расширении интерфейса <xref:System.Collections.Generic.IEnumerable%601> настраиваемые методы можно применять к любой перечислимой коллекции. Дополнительные сведения см. в разделе [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="adding-an-aggregate-method"></a>Использование метода агрегирования  
  Метод агрегирования вычисляет одно значение на основе набора значений. LINQ реализует несколько методов агрегирования, включая <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> и <xref:System.Linq.Enumerable.Max%2A>. Вы можете создать собственный метод агрегирования, добавив метод расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -51,7 +51,7 @@ End Module
  Этот метод расширения вызывается для любых перечислимых коллекций так же, как другие методы агрегирования из интерфейса <xref:System.Collections.Generic.IEnumerable%601>.  
   
 > [!NOTE]
->  В Visual Basic можно использовать вызов метода или стандартный синтаксис запроса для `Aggregate` или `Group By` предложения. Дополнительные сведения см. в разделе [предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+>  В Visual Basic можно использовать вызов метода или стандартный синтаксис запроса для `Aggregate` или `Group By` предложение. Дополнительные сведения см. в разделе [предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
  В следующем примере кода показано использование метода `Median` для массива типа `double`.  
   
@@ -197,6 +197,6 @@ Next
 ' e  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

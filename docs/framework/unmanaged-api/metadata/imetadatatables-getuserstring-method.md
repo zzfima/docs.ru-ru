@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d7dee3da1967f8a958ea95ab4555f279c962f51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52f3f382e022600e946a4c8f531f4eea5f3d8a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693747"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Метод IMetaDataTables::GetUserString
-Получает жестко заданная строка в столбце строки в текущей области по указанному индексу.  
+Получает жестко заданную строку по указанному индексу в строковый столбец в текущей области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +39,23 @@ HRESULT GetUserString (
   
 #### <a name="parameters"></a>Параметры  
  `ixUserString`  
- [in] Значение индекса, из которого требуется извлечь жестко заданная строка.  
+ [in] Значение индекса, из которого извлекается строка жестко.  
   
  `pcbData`  
- [out] P; ointer размер `ppData`.  
+ [out] Чистые; ointer размеру `ppData`.  
   
  `ppData`  
  [out] Указатель на указатель возвращаемой строки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

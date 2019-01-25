@@ -2,12 +2,12 @@
 title: Знакомство с интеграцией CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: df5ead7d640446a3832b485ecf82cd4a2a11b1fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714936"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Знакомство с интеграцией CLR в SQL Server
 Среда CLR является сердцем платформы Microsoft .NET Framework и предоставляет среду выполнения для всего кода .NET Framework. Код, выполняемый в среде CLR, называется управляемым кодом. Среда CLR предоставляет различные функции и услуги, требуемые для выполнения программы, включая JIT-компиляцию, распределение и управление памятью, соблюдение безопасности типов, обработку исключений, управление потоками и безопасность.  
@@ -65,7 +65,7 @@ GO
   
 -   [Отладка объектов баз данных CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
-## <a name="see-also"></a>См. также  
- [Создание объектов SQL Server 2005 в управляемом коде](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Создание объектов SQL Server 2005 в управляемом коде](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

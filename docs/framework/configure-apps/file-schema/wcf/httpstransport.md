@@ -2,21 +2,21 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 14ba18b195fc83d2518aaa39f0fdc69098611a83
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8a2c76fd6d657a4b86909469296e3b4c6b47a926
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624578"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
 \<customBinding >  
 \<Привязка >  
-\<httpsTransport >  
+\<httpsTransport>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,6 @@ ms.locfileid: "54150621"
                 requireClientCertificate="Boolean"
                 transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
                 unsafeConnectionNtlmAuthentication="Boolean"
-                ...
                 useDefaultWebProxy="Boolean" />
 ```  
   
@@ -55,7 +54,7 @@ ms.locfileid: "54150621"
 |maxBufferSize|Положительное целое число, указывающее максимальный размер буфера. Значение по умолчанию - 524 288|  
 |maxReceivedMessageSize|Положительное целое число, указывающее максимальный допустимый размер сообщения, которое можно получить. Значение по умолчанию — 65536.|  
 |proxyAddress|Универсальный код ресурса (URI), задающий адрес прокси-сервера HTTP. Если параметр `useSystemWebProxy` имеет значение `true`, данный параметр должен иметь значение `null`. Значение по умолчанию — `null`.|  
-|proxyAuthenticationScheme|Задает протокол, используемый для проверки подлинности клиентских запросов, обрабатываемых прокси-сервером HTTP. Допустимы следующие значения:<br /><br /> -None: Проверка подлинности не выполняется.<br />-Хэш-кода: Задает дайджест-проверку подлинности.<br />— Negotiate: Проводит согласование с клиентом для определения схемы проверки подлинности. Если и клиент, и сервер поддерживают Kerberos, используется именно этот протокол; в противном случае используется NTLM.<br />-Ntlm: Указывает проверку подлинности NTLM.<br />— Базовый: Задает обычную проверку подлинности.<br />-Анонимный: Задает анонимную проверку подлинности.<br />-IntegratedWindowsAuthentication: Задает проверку подлинности Windows.<br /><br /> Значение по умолчанию - Anonymous. Это атрибут типа <xref:System.Net.AuthenticationSchemes>.|  
+|proxyAuthenticationScheme|Задает протокол, используемый для проверки подлинности клиентских запросов, обрабатываемых прокси-сервером HTTP. Допустимы следующие значения:<br /><br /> -None: Проверка подлинности не выполняется.<br />-Хэш-кода: Задает дайджест-проверку подлинности.<br />— Negotiate: Проводит согласование с клиентом для определения схемы проверки подлинности. Если и клиент, и сервер поддерживают Kerberos, используется именно этот протокол; в противном случае используется NTLM.<br />-Ntlm: Указывает проверку подлинности NTLM.<br />— Базовый: Задает обычную проверку подлинности.<br />-Анонимный: Задает анонимную проверку подлинности.<br /><br /> Значение по умолчанию - Anonymous. Это атрибут типа <xref:System.Net.AuthenticationSchemes>. Обратите внимание, что `IntegratedWindowsAuthentication` не поддерживается.|  
 |realm|Строка, задающая область для использования на прокси-сервере. Значение по умолчанию - пустая строка.<br /><br /> Серверы используют области для разделения защищенных ресурсов. Каждый раздел может иметь свою собственную схему проверки подлинности и/или базу данных авторизации. Области используются только для обычной проверки подлинности и дайджест-проверки подлинности. После успешного прохождения клиентом проверки подлинности ее результаты действительны для всех ресурсов в данной области. Подробное описание областей, см. в разделе RFC 2617 по [веб-сайте IETF](https://www.ietf.org).|  
 |requireClientCertificate|Логическое значение, указывающее, требует ли сервер, чтобы клиент предоставлял сертификат клиента как часть подтверждения HTTPS. Значение по умолчанию — `false`.|  
 |transferMode|Указывает, следует ли буферизировать сообщения или передавать их потоком по запросу или ответу. Допустимы следующие значения:<br /><br /> -Buffered: Сообщения запроса и ответа буферизуются.<br />-Потоковой передачи: Сообщения запроса и ответа передаются потоком.<br />-StreamedRequest: Сообщение запроса передается потоком, а сообщение ответа буферизуется.<br />-StreamedResponse: Сообщение запроса буферизуется, а сообщение ответа передается потоком.<br /><br /> Значение по умолчанию - Buffered. Это атрибут типа <xref:System.ServiceModel.TransferMode>.|  
@@ -74,14 +73,14 @@ ms.locfileid: "54150621"
 ## <a name="remarks"></a>Примечания  
  Элемент `httpsTransport` является отправной точкой для создания пользовательской привязки, реализующей протокол транспорта HTTPS. HTTPS является основным транспортом, используемым для защиты взаимодействия. HTTPS поддерживается с Windows Communication Foundation (WCF) для взаимодействия с другими веб-службы стеков.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.HttpsTransportElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.HttpsTransportElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)
+- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

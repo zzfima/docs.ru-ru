@@ -2,17 +2,17 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26a84f035246c02898deacfb8fcb2c2101fddf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524277"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Указывает возможности отладки и справки для службы Windows Communication Foundation (WCF).  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
@@ -54,7 +54,7 @@ ms.locfileid: "54145813"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
@@ -70,9 +70,9 @@ ms.locfileid: "54145813"
   
  Необязательные атрибуты `httpHelpPageBinding` и `httpHelpPageBinding` позволяют выполнить настройку привязок, которые используются для доступа к веб-странице службы. Если они не заданы, для доступа к странице справки службы применяются привязки по умолчанию (`HttpTransportBindingElement` для HTTP и `HttpsTransportBindingElement` для HTTPS). Обратите внимание, что эти атрибуты нельзя использовать вместе со встроенными привязками WCF. Только привязки с внутренними элементами привязки, поддерживающие xref:System.ServiceModel.Channels.IReplyChannel > будет поддерживаться. Кроме этого, свойство <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> привязки должно иметь значение <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Обработка исключений и сбоев](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Поведение отладки службы](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Обработка исключений и сбоев](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Поведение отладки службы](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

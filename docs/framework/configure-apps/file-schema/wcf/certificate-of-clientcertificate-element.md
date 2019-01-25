@@ -2,22 +2,22 @@
 title: '&lt;certificate&gt; элемента &lt;clientCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 784fd818c7225a0f1d87ccde72e04471b92b5308
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 37eef7a435447d22b56e865ac72ef5d4c1ff0674
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708900"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a>&lt;certificate&gt; элемента &lt;clientCertificate&gt;
 Указывает сертификат X.509, используемый для подписания и шифрования сообщений.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
 \<serviceCredentials >  
-\<clientCertificate >  
+\<clientCertificate>  
 \<сертификат >  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -74,10 +74,10 @@ ms.locfileid: "54147152"
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>  
- <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>  
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>
+- <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление системного ресурса (Visual Basic)
+title: Как выполнить Удаление ресурса системы (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523224"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление системного ресурса (Visual Basic)
-Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, который потребляет большой объем памяти или другие компоненты также планируете использовать.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Как выполнить Удаление ресурса системы (Visual Basic)
+Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, которые используют большой объем памяти или других компонентов также требуется использовать.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Чтобы освободить подключения к базе данных, когда она завершает ваш код  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Для удаления подключения к базе данных после завершения вашего кода с ним  
   
-1.  Убедитесь, что включены соответствующие [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
+1.  Убедитесь, что вы включить соответствующую [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
   
-2.  Создание `Using` блоке с `Using` и `End Using` инструкции. Внутри блока поместите код, который реагирует на подключение к базе данных.  
+2.  Создание `Using` блоке с `Using` и `End Using` инструкций. Внутри блока поместите код, который имеет дело с подключения к базе данных.  
   
 3.  Объявите соединение и создайте его экземпляр как часть `Using` инструкции.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "33647235"
     End Sub  
     ```  
   
-     Система удаляет ресурс независимо от способа выхода из блоков, включая регистр необработанное исключение.  
+     Система удаляет ресурс независимо от того, как выйти из блоков, включая регистр необработанное исключение.  
   
-     Обратите внимание, что не удается получить доступ к `sqc` из вне `Using` заблокировать, так как его область ограничена блока.  
+     Обратите внимание, что при отсутствии доступа к `sqc` из за пределами `Using` block, так как ее область ограничена блока.  
   
-     Этот же способ можно использовать на системный ресурс, такие как дескриптор файла или оболочки COM. Вы используете `Using` заблокировать, если нужно чтобы оставить ресурс доступным для других компонентов после закрытия `Using` блока.  
+     Этот же прием можно использовать на системный ресурс, такие как дескриптор файла или оболочки COM. Использовании `Using` заблокировать, если вы хотите чтобы оставить ресурс доступным для других компонентов, после закрытия `Using` блока.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.SqlClient.SqlConnection>  
- [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [Вложенные структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Оператор Using](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Data.SqlClient.SqlConnection>
+- [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Вложенные структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Оператор Using](../../../../visual-basic/language-reference/statements/using-statement.md)

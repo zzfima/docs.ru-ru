@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565479"
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; элемент
 Указывает, следует ли пропустить проверку строгих имен для сборок с полным доверием, которые загружаются с полным доверием <xref:System.AppDomain>.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<bypassTrustedAppStrongNames >  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53613756"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`true`|Подписи строгих имен сборок с полным доверием не проверяются, когда сборки загружаются в с полным доверием <xref:System.AppDomain>. Это значение по умолчанию.|  
 |`false`|Подписи строгого имени для сборок с полным доверием проверяются при сборки загружаются в с полным доверием <xref:System.AppDomain>. Подпись строгого имени проверяется только правильность подписи; они не сравниваются с другой строгого имени для сопоставления.|  
@@ -51,7 +51,7 @@ ms.locfileid: "53613756"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
@@ -83,7 +83,7 @@ ms.locfileid: "53613756"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>См. также
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Практическое руководство. Отключение возможности обхода строгих имен](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

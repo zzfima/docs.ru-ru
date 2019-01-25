@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 671f6743915ae4b7e7f4147f9fcddb1a623916ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b7415809912b7cb56fb2d0bebae196233c45477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514589"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Метод ICorProfilerCallback::ClassLoadFinished
 Уведомляет профилировщик об окончании загрузки класса.  
@@ -40,22 +40,22 @@ HRESULT ClassLoadFinished(
  [in] Идентифицирует класс, который был загружен.  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее, успешно загрузить класс.  
+ [in] Значение HRESULT, указывающее, успешно ли загружен класс.  
   
 ## <a name="remarks"></a>Примечания  
- Значение `classId` является недопустимым для информационного запроса до `ClassLoadFinished` вызывается метод.  
+ Значение `classId` не является допустимым для информационного запроса до `ClassLoadFinished` вызывается метод.  
   
- Некоторые части при загрузке класса может быть продолжено после `ClassLoadFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает только на том, что в первой части при загрузке класса.  
+ Загрузка класса некоторых частей может по-прежнему после `ClassLoadFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает, что первая часть загрузки класса выполнено успешно.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Метод ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

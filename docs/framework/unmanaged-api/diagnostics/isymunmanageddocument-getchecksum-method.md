@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561404"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>Метод ISymUnmanagedDocument::GetCheckSum
 Возвращает контрольную сумму.  
@@ -41,7 +41,7 @@ HRESULT GetCheckSum(
  [in] Длина буфера, предоставляемые `data` параметр  
   
  `pcData`  
- [out] Размер и длина контрольной суммы, в байтах.  
+ [out] Размер и длину контрольная сумма, в байтах.  
   
  `data`  
  [out] Буфер, получающий контрольную сумму.  
@@ -49,5 +49,5 @@ HRESULT GetCheckSum(
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

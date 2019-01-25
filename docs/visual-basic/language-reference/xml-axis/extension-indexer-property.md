@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490834"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Свойство-индексатор расширения (Visual Basic)
 Обеспечивает доступ к отдельным элементам коллекции.  
@@ -29,10 +29,10 @@ object(index)
   
 |Термин|Определение|  
 |---|---|  
-|`object`|Обязательно. Запрашиваемой коллекции. То есть коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>.|  
-|(|Обязательно. Обозначает начало свойства индексатора.|  
-|`index`|Обязательно. Целочисленное выражение, задающее отсчитываемый от нуля позицию элемента коллекции.|  
-|)|Обязательно. Обозначает конец свойства индексатора.|  
+|`object`|Обязательный. Запрашиваемой коллекции. То есть коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>.|  
+|(|Обязательный. Обозначает начало свойства индексатора.|  
+|`index`|Обязательный. Целочисленное выражение, задающее отсчитываемый от нуля позицию элемента коллекции.|  
+|)|Обязательный. Обозначает конец свойства индексатора.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект из указанного расположения в коллекции, или `Nothing` Если индекс вне допустимого диапазона.  
@@ -55,9 +55,9 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement>  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Xml.Linq.XElement>
+- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

@@ -3,21 +3,21 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9f88d3cec5e1cb95ce5e12b203e32b706d407a2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556630"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Регистрирует Сопоставитель токенов издателей, используемый обработчиками в коллекцию обработчиков токенов. Сопоставитель токенов издателей используется для разрешения токена подписывания на входящих токенов и сообщений.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<securityTokenHandlers >  
-\<securityTokenHandlerConfiguration >  
-\<issuerTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<issuerTokenResolver>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47216335"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Указывает тип Сопоставитель токенов издателей. Должен быть либо <xref:System.IdentityModel.Tokens.IssuerTokenResolver> класс или тип, который является производным от <xref:System.IdentityModel.Tokens.IssuerTokenResolver> класса. Обязательно.|  
+|type|Указывает тип Сопоставитель токенов издателей. Должен быть либо <xref:System.IdentityModel.Tokens.IssuerTokenResolver> класс или тип, который является производным от <xref:System.IdentityModel.Tokens.IssuerTokenResolver> класса. Обязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -50,7 +50,7 @@ ms.locfileid: "47216335"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
  Сопоставитель токенов издателей используется для разрешения токена подписывания на входящих токенов и сообщений. Он используется для получения криптографическим материалом, используемый для проверки подписи. Необходимо указать `type` атрибута. Указанный тип может быть либо <xref:System.IdentityModel.Tokens.IssuerTokenResolver> или пользовательский тип, производный от <xref:System.IdentityModel.Tokens.IssuerTokenResolver> класса.  
@@ -87,5 +87,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

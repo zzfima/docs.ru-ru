@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
+title: Как выполнить Использовать настраиваемое имя пользователя и пароль проверяющий элемент управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700537"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Как выполнить Использовать настраиваемое имя пользователя и пароль проверяющий элемент управления
 По умолчанию Если имя пользователя и пароль используется для проверки подлинности, Windows Communication Foundation (WCF) использует Windows для проверки имени пользователя и пароля. Тем не менее, WCF позволяет пользовательского имени и пароля схем проверки подлинности, также известный как *проверяющие элементы управления*. Чтобы внедрить пользовательский проверяющий элемент управления для проверки подлинности имени пользователя и пароля, необходимо создать класс, унаследованный от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, и настроить его.  
   
  Образец приложения, см. в разделе [проверяющего элемента управления пароля имя пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "44085018"
   
     1.  В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент.  
   
-    2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент в раздел привязок. Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) или [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент в раздел привязок. Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: Указание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Задайте `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) или [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message`, `Transport`, или `TransportWithMessageCredential`.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "44085018"
         > [!NOTE]
         >  Когда служба WCF размещается в Internet Information Services (IIS) с использованием безопасности уровня транспорта и <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> свойству <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, пользовательскую схему проверки подлинности используется подмножество возможностей проверки подлинности Windows. Том, что в этом случае IIS выполняет проверку подлинности Windows, до вызова пользовательской структуры проверки подлинности WCF.  
   
-     Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Дополнительные сведения о создании элемента привязки WCF, см. в разделе [как: Указание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      В следующем примере показан код конфигурации для привязки.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "44085018"
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Практическое руководство. Использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
+- [Практическое руководство. Использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

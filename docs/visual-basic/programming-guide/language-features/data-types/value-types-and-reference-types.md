@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738752"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 В Visual Basic типы данных реализованы на основе их классификации. Типы данных Visual Basic могут быть классифицированы в соответствии с ли переменная определенного типа хранит собственные данные или указатель на данные. Если он хранит собственные данные *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочный тип*.  
@@ -25,7 +25,7 @@ ms.locfileid: "42934189"
   
 -   Все числовые типы данных  
   
--   `Boolean`, `Char` и `Date`  
+-   `Boolean`, `Char`и `Date`  
   
 -   Все структуры, даже если их элементы являются ссылочными типами  
   
@@ -72,10 +72,10 @@ Dim totals() As Single = New Single(8) {}
   
  Вы можете выяснить, был ли `Object` переменная используется в качестве ссылочным типом или типом значения, передав его в <xref:Microsoft.VisualBasic.Information.IsReference%2A> метод в <xref:Microsoft.VisualBasic.Information> класс <xref:Microsoft.VisualBasic?displayProperty=nameWithType> пространства имен. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Возвращает `True` Если содержание `Object` переменная представляет ссылочный тип.  
   
-## <a name="see-also"></a>См. также  
- [Типы значений, допускающие значение NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>См. также
+- [Типы значений, допускающие значение NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

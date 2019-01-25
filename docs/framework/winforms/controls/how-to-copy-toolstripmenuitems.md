@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Копирование объектов ToolStripMenuItem
+title: Как выполнить Копирование объектов ToolStripMenuItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 238516f18037a75b1d254d95086e22a970fadf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639449"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Практическое руководство. Копирование объектов ToolStripMenuItem
+# <a name="how-to-copy-toolstripmenuitems"></a>Как выполнить Копирование объектов ToolStripMenuItem
 Во время разработки вы можете копировать целиком меню верхнего уровня и пункты их подменю в другое место в <xref:System.Windows.Forms.MenuStrip>. Вы также можете копировать отдельные пункты меню верхнего уровня или переупорядочивать пункты меню.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Копирование меню верхнего уровня и его подменю в другое расположение верхнего уровня  
@@ -42,7 +42,7 @@ ms.locfileid: "33530485"
   
      Скопированный пункт подменю вставляется перед выбранным пунктом подменю.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

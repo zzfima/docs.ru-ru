@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 039dab1b4ca86cb26de739e74b152f108f074c43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a874c1493e1f8aaa18354de26905fabd3a793129
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674548"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>Метод ISymUnmanagedNamespace::GetNamespaces
 Возвращает дочерние элементы этого пространства имен.  
@@ -42,7 +42,7 @@ HRESULT GetNamespaces(
  [in] Объект `ULONG32` указывает размер `namespaces` массива.  
   
  `pcNameSpaces`  
- [out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для содержания пространств имен.  
+ [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения пространства имен.  
   
  `namespaces`  
  [out] Указатель на буфер, содержащий пространства имен.  
@@ -51,7 +51,7 @@ HRESULT GetNamespaces(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

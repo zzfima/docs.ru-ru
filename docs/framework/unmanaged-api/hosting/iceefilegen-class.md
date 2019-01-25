@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576438"
 ---
 # <a name="iceefilegen-class"></a>Класс ICeeFileGen
-Предоставляет функциональные возможности для создания собственного переносимый исполняемый файл (PE). Этот интерфейс обычно используется компиляторами для создания собственных скомпилированных выходных исполняемый файл.  
+Предоставляет функциональные возможности для создания собственного переносимый исполняемый файл (PE). Интерфейс обычно используется компиляторами для создания их выходные данные компиляции исполняемого файла.  
   
 > [!NOTE]
 >  `ICeeFileGen` поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** ICeeFileGen.h  
+ **Заголовок.** ICeeFileGen.h  
   
- **Версия платформы .NET framework:** 1.0  
+ **Версии платформы .NET framework:** 1.0  
   
-## <a name="see-also"></a>См. также  
- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

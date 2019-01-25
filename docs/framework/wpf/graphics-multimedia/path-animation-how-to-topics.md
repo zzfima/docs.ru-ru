@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665855"
 ---
 # <a name="path-animation-how-to-topics"></a>Практические руководства, посвященные анимации пути
-В подразделах этого раздела показано, как анимация объекта вдоль пути.  
+В подразделах этого раздела демонстрируется анимация объекта вдоль пути.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Анимация объекта вдоль контура (двойная анимация)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "33562009"
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>См. также  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>См. также
+- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

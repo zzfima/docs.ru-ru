@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Блокирование элементов управления в формах Windows Forms.
+title: Как выполнить Блокировать элементы управления в формы Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: 8de22ae6667446620867f3c15aac3c4af65582bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a59e5997104b9438681702d460dd8f6937df41b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741461"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Практическое руководство. Блокирование элементов управления в формах Windows Forms.
+# <a name="how-to-lock-controls-to-windows-forms"></a>Как выполнить Блокировать элементы управления в формы Windows Forms
 При разработке пользовательского интерфейса (UI) приложения Windows, можно блокировать элементы управления, если они размещены правильно, чтобы случайно не перемещать или изменять их размер, при задании других свойств.  
   
  Кроме того можно блокировать и разблокировать все элементы управления в форме, что полезно для форм с большим количеством элементов управления, или вы можете разблокировать отдельные элементы управления. После размещения всех элементов управления нужное место на форме, закрепить их все во избежание случайного перемещения.  
@@ -46,9 +46,9 @@ ms.locfileid: "43511142"
   
 1.  В **свойства** окно, нажмите кнопку **Locked** свойство и выберите `false`. (Дважды щелкните имя переключает значения этого свойства.)  
   
-## <a name="see-also"></a>См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>См. также
+- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

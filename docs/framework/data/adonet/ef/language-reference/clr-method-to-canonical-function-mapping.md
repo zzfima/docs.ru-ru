@@ -2,12 +2,12 @@
 title: Сопоставление методов CLR с каноническими функциями
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551583"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Сопоставление методов CLR с каноническими функциями
 Платформа Entity Framework предоставляет набор канонических функций, которые реализуют операции над строками, математические функции и другую общую функциональность для многих систем баз данных. Это позволяет разработчикам работать с широким кругом систем баз данных. При вызове из технологии запросов (например, из LINQ to Entities) канонические функции преобразуются в соответствующую функцию хранилища для используемого поставщика. Это позволяет для различных источников данных выражать вызовы функций в общей форме, обеспечивая согласованность при применении запросов. Битовые операторы AND, OR, NOT и XOR также сопоставляются с каноническими функциями, если операнд имеет числовой тип. Для операндов логического типа битовые операторы AND, OR, NOT и XOR выполняют логические операции «И», «ИЛИ», «НЕ» и «Исключающее ИЛИ». Дополнительные сведения см. в разделе [канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -40,14 +40,14 @@ ms.locfileid: "32766599"
 |Метод System.String (экземпляр)|Каноническая функция|Примечания|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) > 0|  
-|Boolean EndsWith(String `value`)|`this` КАК `'` % `value`"|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|  
+|Boolean EndsWith(String `value`)|`this` КАК И `'` % `value`"|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) = 1.|  
 |Длина|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
 |System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (подстрока (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, длина (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) поддерживается, только если `count` - это неотрицательное целое число.|  
-систему. Строка замены (строка `oldValue`, строка `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+системными. Строка, Replace (строка `oldValue`, строка `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
 |System.String Substring(Int32 `startIndex`, Int32 `length`)|SUBSTRING (`this`, `startIndex` + 1, `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
@@ -68,7 +68,7 @@ ms.locfileid: "32766599"
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> - оператор||  
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= - оператор||  
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= - оператор||  
-|Op_LessThan логическое (DateTime `t1`, DateTime `t2`)|< - оператор||  
+|Логическое op_LessThan (DateTime `t1`, даты и времени `t2`)|< - оператор||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= - оператор||  
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` как DateInterval, \_<br /><br /> ByVal `DateValue` как значение DateTime, \_<br /><br /> Необязательный ByVal `FirstDayOfWeekValue` как FirstDayOfWeek = VbSunday, \_<br /><br /> Необязательный ByVal `FirstWeekOfYearValue` как Первая_неделя_года = VbFirstJan1 \_<br /><br /> ) As Integer||Дополнительные сведения см. в разделе «Функция DatePart».|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
@@ -196,5 +196,5 @@ ms.locfileid: "32766599"
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>См. также
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

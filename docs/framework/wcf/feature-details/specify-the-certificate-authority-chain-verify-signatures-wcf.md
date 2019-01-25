@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
+title: Как выполнить Указание цепочки сертификатов центра сертификат, используемый для проверки сигнатур (WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648788"
 ---
-# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Как выполнить Указание цепочки сертификатов центра сертификат, используемый для проверки сигнатур (WCF)
 Получив сообщение SOAP, подписанное с помощью сертификата X.509, Windows Communication Foundation (WCF) по умолчанию он проверяет, сертификат X.509 выдан доверенным центром сертификации. Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный. Чтобы WCF для создания этого определения цепь сертификатов центра сертификации должны устанавливаться в надлежащем хранилище сертификатов.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>Установка цепи сертификатов центра сертификации  
@@ -33,5 +33,5 @@ ms.locfileid: "47200104"
   
          Дополнительные сведения об использовании MMC оснастку «Сертификаты» см. в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-## <a name="see-also"></a>См. также  
- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>См. также
+- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733701"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Метод ICorProfilerCallback4::ReJITError
-Уведомляет профилировщик, что компилятор just-in-time (JIT) произошла ошибка в процессе повторной компиляции.  
+Уведомляет профилировщик о том, что компилятор just-in-time (JIT) произошла ошибка в процессе повторной компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,40 +39,40 @@ HRESULT ReJITError(
   
 #### <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] `ModuleID` В которой была предпринята попытка сбой повторной компиляции.  
+ [in] `ModuleID` В которой была сделана попытка сбой повторной компиляции.  
   
  `methodId`  
- [in] `MethodDef` Метода, в которой была предпринята попытка сбой повторной компиляции.  
+ [in] `MethodDef` Метода, на котором была сделана попытка сбой повторной компиляции.  
   
  `functionId`  
- [in] Экземпляр функции, для которого создается перекомпилированные или отмечено для повторной компиляции. Это значение может быть `NULL` Если ошибка для каждого метода в отдельности вместо отдельно для каждого экземпляра (например, если профилировщик указанный маркер недопустимые метаданные для повторной компиляции метода).  
+ [in] Экземпляр функции, для которого выполняется повторная сборка или помечены для повторной компиляции. Это значение может быть `NULL` Если произошел на каждого метода вместо конкретных экземпляров (например, если профилировщик указан маркер недопустимые метаданные для метода повторной компиляции).  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее причину сбоя. В разделе значения HRESULT для состояния список значений.  
+ [in] Значение HRESULT, указывающее характер ошибки. См. в разделе значения HRESULT для состояния списка значений.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значения, возвращаемые из этого обратного вызова, игнорируются.  
   
 ## <a name="status-hresults"></a>Значения HRESULT для состояния  
   
-|Массив значений HRESULT для состояния|Описание|  
+|Массив значений HRESULT для состояния|Описание:|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID` Или `methodDef` маркер `NULL`.|  
+|E_INVALIDARG|`moduleID` Или `methodDef` маркер является `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Модуль еще не полностью загружен или находится в процессе выгрузки.|  
 |CORPROF_E_MODULE_IS_DYNAMIC|Указанный модуль был создан динамически (например, с `Reflection.Emit`) и поэтому не поддерживается этим методом.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Метод создается в собираемой сборке и таким образом, не может быть перекомпилирован. Обратите внимание, что типы и функции, определенные в контексте, отличном от отражения (например, `List<MyCollectibleStruct>`) могут быть созданы в собираемая сборка.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Метод создается в забираемой сборке и поэтому не может быть перекомпилирован. Обратите внимание, что типы и функции, определенные в контексте, отличных от отражения (например, `List<MyCollectibleStruct>`) могут быть созданы в забираемой сборке.|  
 |E_OUTOFMEMORY|Среда CLR не хватило памяти при попытке пометить указанный метод для перекомпиляции JIT.|  
-|Другое|Операционная система возвратила сбой за пределами среды CLR. Например сбой системного вызова изменения защиты доступа к странице памяти отображается ошибка операционной системы.|  
+|Другое|Операционная система возвратила сбой за пределами среды CLR. Например если происходит сбой системного вызова изменения защиты доступа к странице памяти, отображается ошибка операционной системы.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorProf.idl, CorProf.h  
+ **Заголовок.** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Интерфейс ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Интерфейс ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

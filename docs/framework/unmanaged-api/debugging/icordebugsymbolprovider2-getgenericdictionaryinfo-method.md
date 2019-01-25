@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502563"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Метод ICorDebugSymbolProvider2::GetGenericDictionaryInfo
 Получает универсальную карту словаря  
@@ -33,7 +33,7 @@ HRESULT GetGenericDictionaryInfo(
   
  Карта состоит из двух разделов верхнего уровня.  
   
--   Объект [каталога](#Directory) содержащий относительные виртуальные адреса (RVA) всех словарей, включенных в эту карту.  
+-   Объект [directory](#Directory) содержащий относительные виртуальные адреса (RVA) всех словарей, включенных в эту карту.  
   
 -   Байт синхронизированная [кучи](#Heap) , содержащий сведения о создании экземпляра объекта. Она запускается сразу после последней записи каталога.  
   
@@ -47,9 +47,9 @@ HRESULT GetGenericDictionaryInfo(
   
 -   *N* записей каталога. Каждая запись состоит из 8 байт в двух 4-байтовых сегментах.  
   
-    -   Байты с 0 по 3: RVA; относительный виртуальный адрес словаря.  
+    -   Байт 0-3: RVA; относительный виртуальный адрес словаря.  
   
-    -   Байты с 4 по 7: смещение; смещение относительно начала кучи.  
+    -   Байты 4 – 7: Смещение; смещение относительно начала кучи.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Куча  
@@ -72,14 +72,14 @@ Heap Size = Stream.Length – (Directory Size + 4)
  Включение длины для каждого элемента кучи позволяет простую сортировку раздела каталога без влияния на кучу.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

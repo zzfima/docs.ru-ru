@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Включение автозаполнения для элементов управления ToolStrip в Windows Forms
+title: Как выполнить Включение автозаполнения для элементов управления ToolStrip в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: c5836b03ad185d4a31a24dfea46db54214ac54b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc3ec2dd0bdd7f83b2cd6b8cfaf0cad37238707b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514820"
 ---
-# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Практическое руководство. Включение автозаполнения для элементов управления ToolStrip в Windows Forms
-В следующей процедуре компонент <xref:System.Windows.Forms.ToolStripLabel> с <xref:System.Windows.Forms.ToolStripComboBox> , можно раскрыть, чтобы показать список элементов, таких как последние посещенные веб-сайтов. Если пользователь вводит символ, который совпадает с первым символом одного из элементов в списке, сразу же отображается элемент.  
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Как выполнить Включение автозаполнения для элементов управления ToolStrip в Windows Forms
+В следующей процедуре компонент <xref:System.Windows.Forms.ToolStripLabel> с <xref:System.Windows.Forms.ToolStripComboBox> , можно раскрыть, чтобы показать список элементов, таких как недавно посещенные веб-сайтов. Если пользователь вводит символ, который совпадает с первым символом одного из элементов в списке, сразу же отображается элемент.  
   
 > [!NOTE]
->  Автозаполнение `ToolStrip` элементов управления таким же образом, что она работает с традиционных элементов управления, таких как <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.TextBox>.  
+>  Автозаполнение `ToolStrip` элементов управления таким же образом, он работает с традиционных элементов управления, такими как <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>Включение автозаполнения для элемента управления ToolStrip  
   
-1.  Создание <xref:System.Windows.Forms.ToolStrip> управления и добавьте в него элементы.  
+1.  Создание <xref:System.Windows.Forms.ToolStrip> управления и добавлять в нее элементы.  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ ms.locfileid: "33532542"
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  Задать <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> свойство метки и поле со списком для <xref:System.Windows.Forms.ToolStripItemOverflow.Never> , чтобы список всегда доступен независимо от того, размер формы.  
+2.  Задайте <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> свойство метки и поля со списком для <xref:System.Windows.Forms.ToolStripItemOverflow.Never> , чтобы список доступен всегда, независимо от размера формы.  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -67,7 +67,7 @@ ms.locfileid: "33532542"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  Задать <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> поля со списком на <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
+4.  Задайте <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> поля со списком для <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "33532542"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  Задать <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> поля со списком на <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
+5.  Задайте <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> поля со списком для <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  
@@ -89,12 +89,12 @@ ms.locfileid: "33532542"
     toolStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;  
     ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripLabel>  
- <xref:System.Windows.Forms.ToolStripComboBox>  
- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>  
- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>  
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripLabel>
+- <xref:System.Windows.Forms.ToolStripComboBox>
+- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>
+- <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>
+- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

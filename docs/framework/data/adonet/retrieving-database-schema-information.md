@@ -2,12 +2,12 @@
 title: Извлечение сведений о схеме базы данных
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a076ca792ee1b4b2194b778c51fefbd0bb19bd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494032"
 ---
 # <a name="retrieving-database-schema-information"></a>Извлечение сведений о схеме базы данных
 Получение сведений о схеме из базы данных выполняется с помощью процесса обнаружения схемы. Обнаружение схемы позволяет приложениям запрашивать, что управляемые поставщики для поиска и возвращения сведений о схеме базы данных, также называется *метаданных*, конкретной базы данных. Различные элементы схемы базы данных, например таблицы, столбцы и хранимые процедуры, предоставляются через коллекции схем. Каждая коллекция схемы в зависимости от используемого поставщика содержит различные сведения о схеме.  
@@ -71,6 +71,6 @@ ms.locfileid: "43772845"
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
  Описывает **GetSchemaTable** метод <xref:System.Data.SqlClient.SqlDataReader> класса.  
   
-## <a name="see-also"></a>См. также  
- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630922"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Метод IMetaDataImport2::GetVersionString
-Получает номер версии среды выполнения, который использовался для создания сборки.  
+Получает номер версии среды выполнения, которая использовалась для построения сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT GetVersionString (
   
 #### <a name="parameters"></a>Параметры  
  `pwzBuf`  
- [out] Массив для хранения строки, которое указывает версию.  
+ [out] Массив для хранения строки, в которой указывается версия.  
   
  `ccBufSize`  
  [in] Размер в расширенные символы из `pwzBuf` массива.  
   
  `pccBufSize`  
- [out] Число расширенных символов, включая значение NULL возвращается в `pwzBuf` массива.  
+ [out] Число расширенных символов, включая завершающий нуль-символ, возвращенных в `pwzBuf` массива.  
   
 ## <a name="remarks"></a>Примечания  
- `GetVersionString` Метод получает версию построения для текущей области метаданных. Если область никогда не сохранялся, не будет построен для версии, и будет возвращена пустая строка.  
+ `GetVersionString` Метод получает версию построения для текущей области метаданных. Если область никогда не был сохранен, он не будет иметь версию построения и возвращается пустая строка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

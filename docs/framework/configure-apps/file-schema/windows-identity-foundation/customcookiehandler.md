@@ -3,20 +3,20 @@ title: '&lt;customCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a3d032279d0b568d7072dbbe020344365c341c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724022"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
 Задает тип обработчика пользовательских файлов cookie. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Custom». Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
 \<cookieHandler >  
-\<customCookieHandler >  
+\<customCookieHandler>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,5 +63,5 @@ ms.locfileid: "48836424"
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IdentityModel.Services.CookieHandler>
+## <a name="see-also"></a>См. также
+- <xref:System.IdentityModel.Services.CookieHandler>

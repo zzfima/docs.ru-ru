@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664087"
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  
@@ -150,8 +150,8 @@ private static void OpenSqlConnection()
   
 -   Специальное размещение ASP.NET с использованием проверки подлинности Windows. Один экземпляр SQL Server Express может быть размещен в интрасети. Приложение подключается с использованием учетной записи ASPNET Windows, а не при помощи олицетворения. Пользовательские экземпляры не должны использоваться для сценариев сторонних производителей или общего размещения, где все приложения используют общий пользовательский экземпляр и больше не остаются изолированными друг от друга.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также
+- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
+title: Как выполнить Использование отдельных сертификатов X.509 для подписывания и шифрования
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500490"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
-В этом разделе показано, как настроить Windows Communication Foundation (WCF) на использование различных сертификатов для подписывания и шифрования на клиент и служба сообщений.  
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Как выполнить Использование отдельных сертификатов X.509 для подписывания и шифрования
+В этом разделе показано, как настроить Windows Communication Foundation (WCF) использовать разные сертификаты для подписывания и шифрования на клиенте и службе сообщений.  
   
- Чтобы включить отдельные сертификаты, которые будут использоваться для подписывания и шифрования, настраиваемый для клиента или службы учетные данные (или оба) должны создаваться поскольку WCF не предоставляет API для задания нескольких сертификатов клиента или службы. Кроме того, необходимо предоставить диспетчер маркеров безопасности для применения данных нескольких сертификатов и создания соответствующего поставщика маркеров безопасности для заданного использования ключа и указанного направления сообщения.  
+ Чтобы включить отдельные сертификаты для подписывания и шифрования, настраиваемый для клиента или службы учетные данные (или обе) должны создаваться так, как WCF не поддерживает API, чтобы задать несколько сертификатов клиента или службы. Кроме того, необходимо предоставить диспетчер маркеров безопасности для применения данных нескольких сертификатов и создания соответствующего поставщика маркеров безопасности для заданного использования ключа и указанного направления сообщения.  
   
  На представленном ниже рисунке показаны основные используемые классы, классы, от которых они наследуются (показаны стрелкой вверх), и возвращаемые типы некоторых методов и свойств.  
   
@@ -33,17 +33,17 @@ ms.locfileid: "33806186"
   
     -   Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
- ![Диаграмма, показывающая, как используются учетные данные клиента](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
+ ![Диаграмма, как используются учетные данные клиента](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- Дополнительные сведения о пользовательских учетных данных см. в разделе [Пошаговое руководство: Создание настраиваемых клиентских учетных данных и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Дополнительные сведения о пользовательских учетных данных, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Кроме того, необходимо создать пользовательское средство проверки идентификации и связать его с элементом привязки безопасности в специальной привязке. Следует также вместо учетных данных по умолчанию использовать пользовательские учетные данные.  
   
  На представленном ниже рисунке показаны классы, включенные в специальную привязку, и то, как осуществляется привязка пользовательского средства проверки идентификации. Существует несколько включенных элементов привязки, которые наследуются от <xref:System.ServiceModel.Channels.BindingElement>. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> имеет свойство <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>, возвращающее экземпляр <xref:System.ServiceModel.Security.IdentityVerifier>, на основе которого настраивается `MyIdentityVerifier`.  
   
- ![Диаграмма с элементом пользовательской привязки](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
+ ![Схема пользовательского элемента привязки](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- Дополнительные сведения о создании пользовательского средства проверки идентификации см. в разделе как: [как: Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ Дополнительные сведения о создании пользовательского средства проверки идентификации см. в разделе как: [Практическое руководство. Создание пользовательского клиентского средства проверки удостоверений](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Использование отдельных сертификатов для подписывания и шифрования  
   
@@ -89,10 +89,10 @@ ms.locfileid: "33806186"
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

@@ -2,17 +2,17 @@
 title: Строки подключения в ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497463"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Строки подключения в ADO.NET Entity Framework
 Строка подключения содержит сведения для инициализации, передаваемые в виде параметра от поставщика данных в источник данных. Синтаксис зависит от поставщика данных, и при попытке открыть соединение строка соединения анализируется. Строки соединения платформы Entity Framework содержат сведения, которые используются для соединения с базовым поставщиком данных ADO.NET, поддерживающим Entity Framework. Они также содержат сведения о необходимых файлах модели и сопоставления.  
   
- Строка соединения используется поставщиком EntityClient для доступа к метаданным модели и сопоставления, а также для соединения с источником данных. Свойство <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> объекта <xref:System.Data.EntityClient.EntityConnection> позволяет получить доступ к строке соединения или задать ее значение. Класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder> может использоваться для построения или обработки программным путем параметров строки соединения. Дополнительные сведения см. в разделе [как: сборка строки подключения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ Строка соединения используется поставщиком EntityClient для доступа к метаданным модели и сопоставления, а также для соединения с источником данных. Свойство <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> объекта <xref:System.Data.EntityClient.EntityConnection> позволяет получить доступ к строке соединения или задать ее значение. Класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder> может использоваться для построения или обработки программным путем параметров строки соединения. Дополнительные сведения см. в разделе [Как Построить строку соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  [Средства модели EDM](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) формируют строку соединения, которые хранятся в файле конфигурации приложения. <xref:System.Data.Objects.ObjectContext> автоматически извлекает сведения о соединении при создании запросов объекта. Доступ к соединению <xref:System.Data.EntityClient.EntityConnection>, используемому экземпляром <xref:System.Data.Objects.ObjectContext>, можно получить с помощью свойства <xref:System.Data.Objects.ObjectContext.Connection%2A>. Дополнительные сведения см. в разделе [Управление соединениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Параметр|Описание|  
 |-|-|  
-|`assemblyFullName`|Полное имя сборки с внедренным ресурсом. Это имя включает простое имя, имя версии, поддерживаемую культуру и открытый ключ следующим образом:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ресурсы можно внедрять в любую сборку, доступную для приложения.<br /><br /> Если подстановочный знак (\*) для `assemblyFullName`, исполняющая среда Entity Framework будет искать ресурсы в следующих расположениях, в следующем порядке:<br /><br /> 1.  вызывающая сборка;<br />2.  Сборки, на которые имеются ссылки<br />3.  сборки в каталоге исполняемых файлов (bin) приложения.<br /><br /> Если файлы не найдены ни в одном из этих расположений, вызывается исключение. **Примечание:** при использовании подстановочный знак (*), платформа Entity Framework должна обеспечить поиск во всех сборках ресурсов с правильным именем. В целях повышения производительности задавайте имя сборки, а не символ-шаблон.|  
+|`assemblyFullName`|Полное имя сборки с внедренным ресурсом. Это имя включает простое имя, имя версии, поддерживаемую культуру и открытый ключ следующим образом:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ресурсы можно внедрять в любую сборку, доступную для приложения.<br /><br /> Если подстановочный знак (\*) для `assemblyFullName`, исполняющая среда Entity Framework будет искать ресурсы в следующих расположениях, в следующем порядке:<br /><br /> 1.  вызывающая сборка;<br />2.  Сборки, на которые имеются ссылки<br />3.  сборки в каталоге исполняемых файлов (bin) приложения.<br /><br /> Если файлы не найдены ни в одном из этих расположений, вызывается исключение. **Примечание.**  Если используется символ-шаблон (*), то платформа Entity Framework должна обеспечить поиск во всех сборках ресурсов с подходящим именем. В целях повышения производительности задавайте имя сборки, а не символ-шаблон.|  
 |`resourceName`|Имена включенных ресурсов, например AdvendtureWorksModel.csdl. Службы метаданных осуществляют поиск файлов или ресурсов только для расширений CSDL, SSDL и MSL. Если имя `resourceName` не указано, то загружаются все ресурсы метаданных. Ресурсы должны иметь в сборке уникальные имена. Если в сборке в разных каталогах указано несколько файлов с одинаковыми именами, то в `resourceName` перед именем ресурса должна быть представлена структура папок, например ИмяПапки.ИмяФайла.csdl.<br /><br /> Указание `resourceName` не требуется, если для `assemblyFullName` задан символ-шаблон (*).|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  Процесс преобразования строки подстановки `DataDirectory` и оператора ~ является нерекурсивным. Например, если `DataDirectory` включает символ `~`, возникает исключение. Тем самым предотвращается бесконечная рекурсия.  
   
-## <a name="see-also"></a>См. также  
- [Работа с поставщиками данных](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Управление подключениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>См. также
+- [Работа с поставщиками данных](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Управление подключениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)

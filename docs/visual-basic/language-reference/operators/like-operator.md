@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703267"
 ---
 # <a name="like-operator-visual-basic"></a>Оператор Like (Visual Basic)
 Сравнивает строку с шаблоном.  
@@ -40,13 +40,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательно. Любой `Boolean` переменной. В результате `Boolean` значение, указывающее, является ли `string` удовлетворяет `pattern`.  
+ Обязательный. Любой `Boolean` переменной. В результате `Boolean` значение, указывающее, является ли `string` удовлетворяет `pattern`.  
   
  `string`  
- Обязательно. Произвольное выражение `String`.  
+ Обязательный. Произвольное выражение `String` .  
   
  `pattern`  
- Обязательно. Любой `String` выражения, согласующееся с правилами соответствия шаблону описано в подразделе «Примечания».  
+ Обязательный. Любой `String` выражения, согласующееся с правилами соответствия шаблону описано в подразделе «Примечания».  
   
 ## <a name="remarks"></a>Примечания  
  Если значение в `string` соответствует шаблону в `pattern`, `result` является `True`. Если строка соответствует шаблону, `result` является `False`. Если оба `string` и `pattern` представляют собой пустые строки, в результате `True`.  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>Специальные символы  
  Сопоставляется левая скобка специальные символы (`[`), вопросительный знак (`?`), решетка (`#`) и звездочка (`*`), заключите их в скобки. Закрывающая квадратная скобка (`]`) не может использоваться в пределах группы в соответствии с, но он может использоваться за пределами группы как отдельный символ.  
   
- Последовательность символов `[]` считается строкой нулевой длины (`""`). Тем не менее он не может быть включено в список символов, заключенные в квадратные скобки. Если вы хотите проверить, является ли позиция в `string` содержит один из нескольких символов вообще, можно использовать `Like` дважды. Например, см. в разделе [как: сравнение строки на соответствие шаблону](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ Последовательность символов `[]` считается строкой нулевой длины (`""`). Тем не менее он не может быть включено в список символов, заключенные в квадратные скобки. Если вы хотите проверить, является ли позиция в `string` содержит один из нескольких символов вообще, можно использовать `Like` дважды. Пример см. в статье [Практическое руководство. Сравнение строки на соответствие шаблону](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Диапазоны символов  
  С помощью дефиса (`–`) для разделения нижнюю и верхнюю границу диапазона, `charlist` можно указать диапазон символов. Например `[A–Z]` приводит к совпадению, в соответствующий символ позиционирование в `string` может содержать любые символы в диапазоне `A`—`Z`, и `[!H–L]` приводит к совпадению, в соответствующий символ позиции может содержать любые символы за пределами диапазона `H`—`L`.  
@@ -95,19 +95,19 @@ result = string Like pattern
  Если указан язык, который используется диграф в региональных параметрах системы, вхождение один диграф в любом `pattern` или `string` соответствует эквивалентный последовательности двух знаков в другой строке. Аналогичным образом диграф в `pattern` заключена в квадратные скобки (сам по себе, в списке или в диапазоне) соответствует эквивалентный последовательности двух знаков в `string`.  
   
 ## <a name="overloading"></a>Перегрузка  
- `Like` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Like` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
  В этом примере используется `Like` оператор для сравнения строк с различными шаблонами. Результаты направляются в `Boolean` переменной, показывающей, удовлетворяет ли каждая строка шаблону.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Практическое руководство. Сравнение строки на соответствие с шаблоном](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Операторы сравнения](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Практическое руководство. Сравнение строки на соответствие шаблону](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

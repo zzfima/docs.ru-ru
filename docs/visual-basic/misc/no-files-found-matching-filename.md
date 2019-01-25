@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-ms.openlocfilehash: d6b837a79366cb1af31acda496b52779db3a6c13
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6498992a0868a45d5783f7d4f8816fef995b9c4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53758137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729344"
 ---
 # <a name="no-files-found-matching-ltfilenamegt"></a>Не удалось найти файлы сопоставления "&lt;filename&gt;"
 Указано неверное имя файла или файл не существует.  
@@ -18,5 +18,5 @@ ms.locfileid: "53758137"
   
 1.  Убедитесь, что имя файла указано правильно.  
   
-## <a name="see-also"></a>См. также  
- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+## <a name="see-also"></a>См. также
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

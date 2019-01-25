@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710343"
 ---
 # <a name="exportnestedtype-method"></a>Метод ExportNestedType
 Задает вложенные типы как экспортируемый. [Метод ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) также можно экспортировать вложенные типы, но этот метод работает быстрее.  
@@ -46,10 +46,10 @@ HRESULT ExportNestedType(
  Идентификатор сборки для экспорта.  
   
  `FileToken`  
- Маркер файла или сборка файла, определяющая тип, который будет помечен в качестве экспортируемого.  
+ Маркер файла или сборки, определяющей тип, чтобы стать экспортируемый файл.  
   
  `TypeToken`  
- Введите маркер типа будут сделаны может быть экспортирован.  
+ Токен типа, чтобы стать экспортируемый типа.  
   
  `ParentType`  
  Маркер родительского типа.  
@@ -64,12 +64,12 @@ HRESULT ExportNestedType(
  Получает маркер для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK, если метод выполнен успешно.  
+ Возвращает S_OK, если метод выполнен успешно.  
   
 ## <a name="requirements"></a>Требования  
  Требуется alink.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

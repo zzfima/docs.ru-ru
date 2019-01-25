@@ -1,27 +1,27 @@
 ---
-title: Как отразить объект UIElement по горизонтали или по вертикали
+title: Как выполнить Отражение объекта UIElement по горизонтали или по вертикали
 ms.date: 03/30/2017
 helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 89dcf668f1fe361480dabdab227a35ea40c344a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 024d447eb8abdbdaed3b3a08d19a873a529d2040
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693231"
 ---
-# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Как отразить объект UIElement по горизонтали или по вертикали
-В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> отражение <xref:System.Windows.UIElement> горизонтально или вертикально. В этом примере <xref:System.Windows.Controls.Button> управления (тип <xref:System.Windows.UIElement>) Перевернутая путем применения <xref:System.Windows.Media.ScaleTransform> для его <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  
+# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Как выполнить Отражение объекта UIElement по горизонтали или по вертикали
+В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> перевернуть <xref:System.Windows.UIElement> горизонтально или вертикально. В этом примере <xref:System.Windows.Controls.Button> управления (разновидность <xref:System.Windows.UIElement>) изменилось, применяя <xref:System.Windows.Media.ScaleTransform> для его <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  
   
 ## <a name="example"></a>Пример  
- Кнопка для отражения на следующем рисунке.  
+ Ниже показан кнопка для отражения.  
   
  ![Кнопка без преобразования](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")  
-Элементов пользовательского интерфейса, чтобы отразить  
+UIElement, чтобы отразить  
   
- Ниже показан код, который создает кнопку.  
+ Ниже показан код, создающий кнопки.  
   
  [!code-xaml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
   
@@ -34,20 +34,20 @@ ms.locfileid: "33544399"
 Кнопка после применения ScaleTransform  
   
 ## <a name="example"></a>Пример  
- Как видно из предыдущего рисунка, кнопка была отражена, но он был перемещен. Это так, как кнопка была отражена от верхнего левого угла. Чтобы отразить кнопку на месте, необходимо применить <xref:System.Windows.Media.ScaleTransform> к ее центру, но не его угла. Простой способ применения <xref:System.Windows.Media.ScaleTransform> к кнопкам центр — задать свойству кнопки <xref:System.Windows.UIElement.RenderTransformOrigin%2A> значение 0,5, 0,5.  
+ Как видно из предыдущего рисунка, кнопка была отражена, но также была перемещена. Том, что кнопка была отражена от верхнего левого угла. Чтобы отразить кнопку на месте, необходимо применить <xref:System.Windows.Media.ScaleTransform> его центр, а не его угла. Простой способ применить <xref:System.Windows.Media.ScaleTransform> к кнопкам center — присвоить кнопки <xref:System.Windows.UIElement.RenderTransformOrigin%2A> значение 0,5, 0,5.  
   
  [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
   
  ![Кнопка, перевернута горизонтально по центру](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")  
-Кнопка с RenderTransformOrigin 0,5, 0,5  
+Кнопка с заданным для rendertransformorigin значением 0,5, 0,5  
   
 ## <a name="example"></a>Пример  
- Чтобы отразить кнопку по вертикали, задайте <xref:System.Windows.Media.ScaleTransform> объекта <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойство вместо его <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> свойство.  
+ Чтобы отразить вертикально кнопку, задайте <xref:System.Windows.Media.ScaleTransform> объекта <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства вместо его <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> свойство.  
   
  [!code-xaml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
   
  ![Кнопка, перевернута вертикально по центру](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")  
-По вертикали отраженных кнопки  
+Вертикально отраженная кнопка  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

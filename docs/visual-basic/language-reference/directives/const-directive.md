@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710603"
 ---
 # <a name="const-directive"></a>Директива #Const
 Задает константы условной компиляции для Visual Basic.  
@@ -33,10 +33,10 @@ ms.locfileid: "46537804"
   
 ## <a name="parts"></a>Части  
  `constname`  
- Обязательно. Имя определяемой константы.  
+ Обязательный. Имя определяемой константы.  
   
  `expression`  
- Обязательно. Литерал, другая константа условной компиляции или какое-либо сочетание включает любые или все арифметические или логические операторы, за исключением `Is`.  
+ Обязательный. Литерал, другая константа условной компиляции или какое-либо сочетание включает любые или все арифметические или логические операторы, за исключением `Is`.  
   
 ## <a name="remarks"></a>Примечания  
  Константы условной компиляции всегда являются закрытыми для файла, в котором они появляются. Не удается создать открытые константы компилятора с помощью `#Const` директив; их можно создать только в пользовательском интерфейсе или с помощью `/define` параметр компилятора.  
@@ -48,9 +48,9 @@ ms.locfileid: "46537804"
   
  [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [Директивы #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a>См. также
+- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [Директивы #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

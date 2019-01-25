@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ce2372be02bc0bae7097389d4933f1f28a4ed79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9bd6ae34903798a29f8666dfdba3e102fae28db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584562"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Метод ISymUnmanagedScope::GetChildren
-Получает дочерний объект этой области.  
+Возвращает дочерние элементы данной области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ HRESULT GetChildren(
  [in] Объект `ULONG32` указывает размер `children` массива.  
   
  `pcChildren`  
- [out] Указатель на `ULONG32` , получающий размер буфера, необходимый для хранения дочерних элементов.  
+ [out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения дочерних элементов.  
   
  `children`  
  [out] Возвращаемый массив дочерних элементов.  
@@ -51,8 +51,8 @@ HRESULT GetChildren(
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorSym.idl, CorSym.h  
+ **Заголовок.** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- [Метод GetParent](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [Метод GetParent](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)

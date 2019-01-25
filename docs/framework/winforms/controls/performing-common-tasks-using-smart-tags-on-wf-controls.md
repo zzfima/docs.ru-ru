@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579320"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
 При создании форм и элементов управления для приложения Windows Forms есть множество задач, которые выполняются несколько раз. Ниже перечислены некоторые наиболее типичных задач, которыми вы столкнетесь:  
@@ -57,17 +57,17 @@ ms.locfileid: "44201807"
   
 2.  Щелкните глиф смарт тега. Выберите в контекстном меню, отображаемый рядом с глифом, **добавить вкладку** элемента. Обратите внимание, что новую страницу вкладки добавляется <xref:System.Windows.Forms.TabControl>.  
   
-3.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
+3.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
   
 4.  Щелкните глиф смарт тега. Выберите в контекстном меню, отображаемый рядом с глифом, **добавить столбец** элемента. Обратите внимание, что новый столбец будет добавлен <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
   
-5.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** на форму.  
+5.  Перетащите элемент управления <xref:System.Windows.Forms.SplitContainer> из **панели элементов** в свою форму.  
   
 6.  Щелкните глиф смарт тега. Выберите в контекстном меню, отображаемый рядом с глифом, **Ориентация горизонтального разделителя** элемента. Обратите внимание, что <xref:System.Windows.Forms.SplitContainer> разделителя элемента управления — теперь горизонтальную ориентацию.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [Пошаговое руководство: Добавление смарт-тегов в компонент Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [Пошаговое руководство: Добавление смарт-тегов в компонент Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

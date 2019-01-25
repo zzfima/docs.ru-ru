@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683460"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>Метод IMetaDataTables::GetTableInfo
-Возвращает имя, размер строки, количество строк, количество столбцов и ключевого столбца индекса указанной таблицы.  
+Получает имя, размер строки, количество строк, число столбцов и ключевой столбец индекса указанной таблицы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,20 +54,20 @@ HRESULT GetTableInfo (
  [out] Указатель на число столбцов в таблице.  
   
  `piKey`  
- [out] Указатель на индекс ключевого столбца или значение -1, если таблица не имеет ключевого столбца.  
+ [out] Указатель на индекс ключевого столбца или -1, если таблица не имеет ключевого столбца.  
   
  `ppName`  
  [out] Указатель на указатель на имя таблицы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

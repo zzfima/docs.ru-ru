@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
+title: Как выполнить Использование режима интерполяции для управления качеством изображений при масштабировании
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 72a9cb3a19f0d449dcb376a65f1734b79ed61ab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c295411418dabac74626c3c4ab43fb8210bbfa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631431"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Как выполнить Использование режима интерполяции для управления качеством изображений при масштабировании
 Режим интерполяции <xref:System.Drawing.Graphics> влияет на способ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует (растягивает и сжимает) изображения. <xref:System.Drawing.Drawing2D.InterpolationMode> Перечисление определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
@@ -29,7 +29,7 @@ ms.locfileid: "33522363"
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- Растянуть изображение, каждая точка исходного изображения должно быть сопоставлено в группу точек увеличенного изображения. Сжать изображение, группы точек исходное изображение должно быть сопоставлено отдельным точкам уменьшенного изображения. Эффективность алгоритмы, которые выполняют эти сопоставления определяет качество масштабированного изображения. Алгоритмы, создающие масштабированные изображения более высокого качества, как правило, требуют большего времени обработки. В предыдущем списке <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> режим низкое качество и <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> режим высочайшее качество.  
+ Чтобы растянуть изображение, каждый пиксель исходного изображения должен быть сопоставлен группе точек увеличенного изображения. Чтобы сжать изображение, группы точек исходного изображения должны сопоставляться отдельным точкам уменьшенного изображения. Эффективность алгоритмов, которые выполняют эти сопоставления определяет качество масштабированное изображение. Алгоритмы, создающие масштабированные изображения более высокого качества, как правило, требуют большего времени обработки. В приведенном выше списке <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> режим низкое качество и <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> режим высочайшего качества.  
   
  Чтобы задать режим интерполяции, назначить один из членов <xref:System.Drawing.Drawing2D.InterpolationMode> перечисления <xref:System.Drawing.Graphics.InterpolationMode%2A> свойство <xref:System.Drawing.Graphics> объекта.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "33522363"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
-## <a name="see-also"></a>См. также  
- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также
+- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

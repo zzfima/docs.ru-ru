@@ -1,24 +1,24 @@
 ---
-title: Практическое руководство. Установка и настройка компонентов активации WCF
+title: Как выполнить Установка и настройка компонентов активации WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726901"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Как выполнить Установка и настройка компонентов активации WCF
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
   
 -   Установите (или подтвердить установку) компонентов активации WCF.  
   
 -   Настройте WAS на поддержку отличных от HTTP протоколов. Выполнение описанных ниже действий позволяет настроить [!INCLUDE[wv](../../../../includes/wv-md.md)] для активации TCP.  
   
- После установки и настройки WAS, см. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) для процедуры создания службы WCF, которая предоставляет конечную точку, отличные от HTTP, использующую WAS.  
+ После установки и настройки WAS, см. в разделе [как: Размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) для процедуры создания службы WCF, которая предоставляет конечную точку, отличные от HTTP, использующую WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Установка компонентов активации WCF, работающих по отличному от HTTP протоколу  
   
@@ -100,8 +100,8 @@ ms.locfileid: "47088338"
     > [!NOTE]
     >  Эта команда представляет собой одну строку текста.  
   
-## <a name="see-also"></a>См. также  
- [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [Активация NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>См. также
+- [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [Активация NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

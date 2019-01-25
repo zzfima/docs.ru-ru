@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742111"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt; элемент
 Указывает, нужно ли принудительно обеспечивать соблюдение требования конфигурации компьютера о том, что криптографические алгоритмы должны соответствовать стандартам FIPS.  
@@ -71,7 +71,7 @@ ms.locfileid: "53612014"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>См. также
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Модель криптографии](../../../../../docs/standard/security/cryptography-model.md)

@@ -1,20 +1,20 @@
 ---
-title: Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
+title: Пошаговое руководство. Размещение составного элемента управления WPF в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569668"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным, расширение существующего [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , а не переписывание кода с нуля. Распространенный сценарий — при необходимости внедрения одного или нескольких элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF, см. в разделе [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md).  
   
- В этом пошаговом руководстве пошагово продемонстрирует приложение, на котором размещена [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления для ввода данных в приложении Windows Forms. Составной элемент управления упакован в библиотеку DLL. Эта общая процедура может быть расширена для более сложных приложений и элементов управления. В этом пошаговом руководстве должна быть почти идентично повторяет свойства и функциональные возможности для [Пошаговое руководство: размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Основным отличием является то, что сценарий размещения выполняется в обратном порядке.  
+ В этом пошаговом руководстве пошагово продемонстрирует приложение, на котором размещена [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления для ввода данных в приложении Windows Forms. Составной элемент управления упакован в библиотеку DLL. Эта общая процедура может быть расширена для более сложных приложений и элементов управления. В этом пошаговом руководстве должна быть почти идентично повторяет свойства и функциональные возможности для [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Основным отличием является то, что сценарий размещения выполняется в обратном порядке.  
   
  Пошаговое руководство состоит из двух разделов. В первом разделе кратко описывается реализация [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления. Во втором разделе подробно рассматриваются размещение составного элемента управления в приложении Windows Forms, получение событий от него и доступ к некоторым свойствам элемента управления.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48582818"
   
 ## <a name="prerequisites"></a>Предварительные требования  
 
-Требуется Visual Studio для выполнения этого пошагового руководства.  
+Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Реализация составного элемента управления WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Составного элемента управления, используемый в этом примере представляет собой форму простого ввода данных, который принимает имя и адрес пользователя. Когда пользователь нажимает одну из двух кнопок, чтобы указать, что задача завершена, элемент управления создает пользовательское событие для возвращения сведений в ведущее приложение. На приведенном ниже рисунке показан отображаемый элемент управления.  
@@ -110,7 +110,7 @@ ms.locfileid: "48582818"
   
 3.  Вызывает пользовательское `OnButtonClick` событие, которое уведомляет ведущее приложение, что пользователь завершил работу и передает данные на узел.  
   
- Элемент управления также предоставляет ряд свойств цвета и шрифтов, которые позволяют изменять внешний вид. В отличие от <xref:System.Windows.Forms.Integration.WindowsFormsHost> класс, который используется для размещения элемента управления Windows Forms, <xref:System.Windows.Forms.Integration.ElementHost> класс предоставляет элемент управления <xref:System.Windows.Controls.Panel.Background%2A> только свойство. Чтобы обеспечить сходство между этим примером кода и примере, рассмотренном в [Пошаговое руководство: размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), элемент управления непосредственно предоставляет остальные свойства.  
+ Элемент управления также предоставляет ряд свойств цвета и шрифтов, которые позволяют изменять внешний вид. В отличие от <xref:System.Windows.Forms.Integration.WindowsFormsHost> класс, который используется для размещения элемента управления Windows Forms, <xref:System.Windows.Forms.Integration.ElementHost> класс предоставляет элемент управления <xref:System.Windows.Controls.Panel.Background%2A> только свойство. Чтобы обеспечить сходство между этим примером кода и примере, рассмотренном в [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), элемент управления непосредственно предоставляет остальные свойства.  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Базовая структура файла кода программной части  
  Файл с выделенным кодом состоит из одного пространства имен, `MyControls`, который будет содержать два класса `MyControl1` и `MyControlEventArgs`.  
@@ -320,9 +320,9 @@ namespace MyControls
   
  Выполните сборку и запуск приложения. Щелкайте различные переключатели, чтобы увидеть соответствующий эффект в составном элементе управления WPF.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство: Размещение составного элемента управления WPF, трехмерного в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Для режима открытия файла не было задано правильное значение
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: 2d4c12aaffad9be961f501ada75b5ea54e598bf3
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 28ee1776d0b99d1a960414edd975ced4f4d85402
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53761619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564458"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Для режима открытия файла не было задано правильное значение
 Значение, указанное для режима открытия файла, недопустимо. В следующей таблице показаны допустимые значения перечисления <xref:Microsoft.VisualBasic.OpenMode> .  
@@ -24,8 +24,8 @@ ms.locfileid: "53761619"
   
 -   Убедитесь, что для режима открытия файла указывается значение.  
   
-## <a name="see-also"></a>См. также  
-   
- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
- [Чтение из файлов](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Запись в файлы](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>См. также
+
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Чтение из файлов](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Запись в файлы](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

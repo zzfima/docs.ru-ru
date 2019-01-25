@@ -1,32 +1,32 @@
 ---
-title: Задание 2. Размещение конструктора рабочих процессов
+title: Задача 2. Размещение конструктора рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 8ac6b3590d146909c1cb9fd8cf9cae2352b0155b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572777"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Задание 2. Размещение конструктора рабочих процессов
-В этом разделе описана процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении Windows Presentation Foundation (WPF).  
+# <a name="task-2-host-the-workflow-designer"></a>Задача 2. Размещение конструктора рабочих процессов
+В этом разделе описывается процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении Windows Presentation Foundation (WPF).  
   
- Процедура выполняет настройку **сетки** управления, который содержит конструктор, программным образом создает экземпляр <xref:System.Activities.Presentation.WorkflowDesigner> , содержащий значение по умолчанию <xref:System.Activities.Statements.Sequence> действия, регистрирует метаданные конструктора, чтобы предоставить Поддержка конструктора для всех встроенных действий и узлы [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] в [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] приложения.  
+ Процедура выполняет настройку **сетки** элемент управления, который содержит конструктор, программным образом создает экземпляр <xref:System.Activities.Presentation.WorkflowDesigner> , содержащий значение по умолчанию <xref:System.Activities.Statements.Sequence> действия, регистрирует метаданные конструктора, чтобы предоставить Поддержка конструктора для всех встроенных действий и узлы [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] в [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] приложения.  
   
 ### <a name="to-host-the-workflow-designer"></a>Размещение конструктора рабочих процессов  
   
-1.  Откройте HostingApplication проект был создан в [задачи 1: Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Откройте проект HostingApplication, созданный в [задаче 1: Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
   
-2.  Отрегулируйте размер окна, чтобы было проще использовать [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Чтобы сделать это, выберите **MainWindow** в конструкторе, нажмите клавишу F4, чтобы открыть **свойства** окна и в **макета** установите **ширина** значение 600 и **высота** в значение 350.  
+2.  Отрегулируйте размер окна, чтобы было проще использовать [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Чтобы сделать это, выберите **MainWindow** в конструкторе, нажмите клавишу F4, чтобы открыть **свойства** окно и в **макета** раздел существует, задайте **ширины** значению, равному 600 и **высота** значение 350.  
   
-3.  Задайте имя сетки, выбрав **сетки** панель в конструкторе (щелкните поле в **MainWindow**) и параметр **имя** свойство в верхней части  **Свойства** окна «grid1».  
+3.  Задайте имя сетки, выбрав **сетки** панель в конструкторе (щелкните поле в **MainWindow**) и параметр **имя** свойство в верхней части  **Свойства** окно, чтобы значение «grid1».  
   
-4.  В **свойства** окно, нажмите кнопку с многоточием (**...** ) рядом с `ColumnDefinitions` свойства, чтобы открыть **редактор коллекции** диалоговое окно.  
+4.  В **свойства** окно, нажмите кнопку с многоточием (**...** ) рядом с полем `ColumnDefinitions` свойства, чтобы открыть **редактор коллекции** диалоговое окно.  
   
-5.  В **редактор коллекции** диалоговое окно, нажмите кнопку **добавить** три раза, чтобы вставить в макет три столбца. Первый столбец будет содержать **элементов**, во втором столбце будет размещен [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], и третий столбец будет использован для инспектора свойств.  
+5.  В **редактор коллекции** диалоговом окне щелкните **добавить** кнопку три раза, чтобы вставить в макет три столбца. Первый столбец будет содержать **элементов**, во втором столбце будет размещаться [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], и третий столбец будет использоваться для инспектора свойств.  
   
-6.  Задать `Width` свойства среднего столбца значение «4 *».  
+6.  Задайте `Width` свойство среднего столбца значение «4 *».  
   
 7.  Нажмите кнопку **ОК** , чтобы сохранить изменения. Следующий код XAML будет добавлен в файл MainWindows.xaml.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "33519068"
         }  
         ```  
   
-    3.  Добавьте следующий метод `AddDesigner` в класс `MainWindow`. В реализации создается экземпляр <xref:System.Activities.Presentation.WorkflowDesigner>, добавляет <xref:System.Activities.Statements.Sequence> действия и помещает его в среднем столбце grid1 **сетки**.  
+    3.  Добавьте следующий метод `AddDesigner` в класс `MainWindow`. Эта реализация создает экземпляр <xref:System.Activities.Presentation.WorkflowDesigner>, добавляет <xref:System.Activities.Statements.Sequence> действия и помещает его в средний столбец grid1 **сетки**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -119,9 +119,9 @@ ms.locfileid: "33519068"
   
 9. Нажмите клавишу F5 для построения и выполнения решения.  
   
-10. В разделе [задача 3: Создание области PropertyGrid элементов и](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) чтобы узнать, как добавить **элементов** и **PropertyGrid** поддержки для вашей размещенный конструктор рабочих процессов.  
+10. См. в разделе [задача 3: Создание элементов и сетки свойств](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) вы научитесь добавлять **элементов** и **PropertyGrid** поддержки в повторно размещенном рабочего процесса конструктор.  
   
-## <a name="see-also"></a>См. также  
- [Отдельное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Задача 1. Создание приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Задача 3. Создание панели элементов и сетки свойств](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>См. также
+- [Отдельное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Упражнение 1. Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Задача 3. Создание элементов и сетки свойств](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 83c3d9976f61513165e917da73dd50e846db3e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cf16fc1d9b5713be43a041c92dbd1228f3995d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694455"
 ---
 # <a name="data-types-in-visual-basic"></a>Типы данных в Visual Basic
 *Тип данных* программного элемента определяет данные, которые он может содержать, а также способ их хранения. Типы данных применяются ко всем значениям, которые могут храниться в памяти компьютера или участвовать в вычислении выражения. Все переменные, литералы, константы, перечисления, свойства, параметры и аргументы процедуры, а также возвращаемые значения процедуры относятся к определенному типу данных.  
@@ -34,15 +34,15 @@ ms.locfileid: "45971842"
   
  См. список [типов данных](../../../../visual-basic/language-reference/data-types/index.md) Visual Basic  
   
-## <a name="see-also"></a>См. также  
- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Кортежи](tuples.md)     
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>См. также
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Кортежи](tuples.md)
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
+- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

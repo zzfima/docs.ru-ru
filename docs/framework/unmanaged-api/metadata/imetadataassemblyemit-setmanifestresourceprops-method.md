@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 755c64aa00b82bf2d8213217787f4dc1916c0898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599053"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>Метод IMetaDataAssemblyEmit::SetManifestResourceProps
 Изменяет указанную структуру метаданных `ManifestResource`.  
@@ -40,10 +40,10 @@ HRESULT SetManifestResourceProps (
   
 #### <a name="parameters"></a>Параметры  
  `mr`  
- [in] Маркер, который указывает `ManifestResource` изменение структуры метаданных.  
+ [in] Токен, который указывает `ManifestResource` изменение структуры метаданных.  
   
  `tkImplementation`  
- [in] Маркер типа `File` или `AssemblyRef`, который сопоставляется с поставщиком ресурсов.  
+ [in] Токен типа `File` или `AssemblyRef`, который сопоставляет к поставщику ресурсов.  
   
  `dwOffset`  
  [in] Смещение в начало ресурса в файле.  
@@ -52,16 +52,16 @@ HRESULT SetManifestResourceProps (
  [in] Побитовое сочетание значения флагов, определяющих атрибуты ресурса.  
   
 ## <a name="remarks"></a>Примечания  
- Для создания `ManifestResource` структуру метаданных, используйте [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) метод.  
+ Чтобы создать `ManifestResource` структура метаданных, используйте [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) метод.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** используется как ресурс в MsCorEE.dll  
+ **Библиотека:** Используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

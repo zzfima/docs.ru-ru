@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718615"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Метод IMetaDataImport::GetTypeDefProps
 Возвращает сведения о метаданных для <xref:System.Type> представленного указанным токеном TypeDef.  
@@ -42,32 +42,32 @@ HRESULT GetTypeDefProps (
   
 #### <a name="parameters"></a>Параметры  
  `td`  
- [in] Представляющий тип, для возврата метаданных для токен TypeDef.  
+ [in] Токен TypeDef, который представляет метаданные для возвращаемого типа.  
   
  `szTypeDef`  
  [out] Буфер, содержащий имя типа.  
   
  `cchTypeDef`  
- [in] Размер в расширенных символах с `szTypeDef`.  
+ [in] Размер в расширенных символах `szTypeDef`.  
   
  `pchTypeDef`  
  [out] Число расширенных символов, возвращаемых в `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Указатель на любой флаги, которые изменяют определения типа. Это значение является битовой [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) перечисления.  
+ [out] Указатель на всех флагов изменить определение типа. Это значение является битовой [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) перечисления.  
   
  `ptkExtends`  
- [out] TypeDef или TypeRef токен метаданных, представляющий базовый тип запрошенного типа.  
+ [out] Определение типа или TypeRef токен метаданных, представляющий базовый тип запрошенного типа.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** Cor.h  
+ **Заголовок.** Cor.h  
   
- **Библиотека:** включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>См. также
+- [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

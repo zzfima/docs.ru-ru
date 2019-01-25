@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: 317e2a7dc5facb08388f3a3e635734e4daed5eac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522444"
 ---
 # <a name="erase-statement-visual-basic"></a>Оператор Erase (Visual Basic)
-Используется для выпуска переменных массива и освобождения памяти, используемой для их элементов.  
+Используется для удаления переменных массива и освободить память, используемая для их элементов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,18 +25,18 @@ Erase arraylist
   
 ## <a name="parts"></a>Части  
  `arraylist`  
- Обязательно. Список переменных массива для удаления. Переменные разделяются запятыми.  
+ Обязательный. Список переменных массива. Переменные разделяются запятыми.  
   
 ## <a name="remarks"></a>Примечания  
- `Erase` Оператор может присутствовать только на уровне процедуры. Это означает, что освобождением массивы внутри процедуры, но не на уровне класса или модуля.  
+ `Erase` Оператор может присутствовать только на уровне процедуры. Это означает, что вы можете выпустить массивы внутри процедуры, но не на уровне класса или модуля.  
   
- `Erase` Оператор эквивалентен назначение `Nothing` каждой переменной массива.  
+ `Erase` Инструкция эквивалентна присваиванию `Nothing` каждой переменной массива.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `Erase` инструкции для удаления двух массивов и высвобождения памяти (1000 и 100 элементов, соответственно). `ReDim` Оператора затем присваивается новый экземпляр массива трехмерного массива.  
+ В следующем примере используется `Erase` инструкцию, чтобы очистить два массива и освободить память (1000 и 100 элементов, соответственно). `ReDim` Оператора затем присваивается новый экземпляр массива трехмерный массив.  
   
  [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
+## <a name="see-also"></a>См. также
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
