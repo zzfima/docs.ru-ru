@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707886"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Обработка и создание исключений в .NET
 
@@ -48,7 +48,7 @@ ms.locfileid: "48845597"
 
 В следующей таблице перечислены некоторые общие исключения с примерами возможных причин.
 
-| Тип исключения | Описание: | Пример |
+| Тип исключения | Описание | Пример |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Базовый класс для всех исключений. | Отсутствует (используйте производный класс этого исключения). |
 | <xref:System.IndexOutOfRangeException> | Вызывается средой выполнения только при неправильной индексации массива. | Индексирование массива вне допустимого диапазона: <br /> `arr[arr.Length+1]` |
@@ -60,13 +60,13 @@ ms.locfileid: "48845597"
 
 ## <a name="see-also"></a>См. также
 
-- [Класс Exception и его свойства](exception-class-and-properties.md)  
-- [Практическое руководство. Использование пробного блока и блока перехвата для перехвата исключений](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-- [Практическое руководство. Использование определенных исключений в блоке catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-- [Практическое руководство. Явное создание исключений](how-to-explicitly-throw-exceptions.md)  
-- [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md)  
-- [Использование обработчиков исключений с пользовательской фильтрацией](using-user-filtered-exception-handlers.md)  
-- [Практическое руководство. Использование блоков Finally](how-to-use-finally-blocks.md)  
-- [Обработка исключений COM-взаимодействия](handling-com-interop-exceptions.md)  
-- [Рекомендации по обработке исключений](best-practices-for-exceptions.md)  
+- [Класс Exception и его свойства](exception-class-and-properties.md)
+- [Практическое руководство. Использование блока try/catch для перехвата исключений](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Практическое руководство. Использование определенных исключений в блоке catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Практическое руководство. Явное создание исключений](how-to-explicitly-throw-exceptions.md)
+- [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md)
+- [Использование обработчиков исключений с пользовательской фильтрацией](using-user-filtered-exception-handlers.md)
+- [Практическое руководство. Использование блоков Finally](how-to-use-finally-blocks.md)
+- [Обработка исключений COM-взаимодействия](handling-com-interop-exceptions.md)
+- [Рекомендации по обработке исключений](best-practices-for-exceptions.md)
 - [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Что нужно знать всем разработчикам об исключениях в среде выполнения).

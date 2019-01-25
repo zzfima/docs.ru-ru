@@ -1,12 +1,12 @@
 ---
 title: Атрибуты (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573352"
 ---
 # <a name="attributes-c"></a>Атрибуты (C#)
 
@@ -101,8 +101,8 @@ using System.Reflection;
 
 В следующем списке перечислены несколько распространенных применений для атрибутов.
 
-- Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.
-- Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Для получения дополнительной информации см. <xref:System.Web.Services.WebMethodAttribute>.
+- Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Описание свойств COM для классов, методов и интерфейсов.
 - Вызов неуправляемого кода с помощью класса <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Указание для сборки таких параметров, как заголовок, версия, описание или товарный знак.
@@ -125,7 +125,7 @@ using System.Reflection;
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../index.md)  
-- [Reflection (C#)](../reflection.md) (Отражение (C#))  
-- [Атрибуты](../../../../standard/attributes/index.md)  
-- [Использование атрибутов в C#](../../../tutorials/attributes.md)  
+- [Руководство по программированию на C#](../../index.md)
+- [Reflection (C#)](../reflection.md) (Отражение (C#))
+- [Атрибуты](../../../../standard/attributes/index.md)
+- [Использование атрибутов в C#](../../../tutorials/attributes.md)

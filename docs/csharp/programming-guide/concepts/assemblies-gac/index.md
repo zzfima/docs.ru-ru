@@ -2,17 +2,17 @@
 title: Сборки и глобальный кэш сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577052"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Сборки и глобальный кэш сборок (C#)
 Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
   
- Сборки могут содержать один или несколько модулей. Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку. Дополнительные сведения о модулях см. в статье [How to: Build a Multifile Assembly](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md) (Практическое руководство. Создание многофайловой сборки).  
+ Сборки могут содержать один или несколько модулей. Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку. См. дополнительные сведения о [ создании многофайловой сборки](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Сборки имеют следующие свойства.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "44042300"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
-- [Сборки в среде CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Дружественные сборки (C#)](friend-assemblies.md)  
-- [Практическое руководство. Совместное использование сборки с другими приложениями (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Практическое руководство. Загрузка и выгрузка сборок (C#)](how-to-load-and-unload-assemblies.md)  
-- [Практическое руководство. Как определить, является ли файл сборкой (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Практическое руководство. Создание и использование сборок с помощью командной строки (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Сборки в среде CLR](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Дружественные сборки (C#)](friend-assemblies.md)
+- [Практическое руководство. Совместное использование сборки с другими приложениями (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Практическое руководство. Загрузка и выгрузка сборок (C#)](how-to-load-and-unload-assemblies.md)
+- [Практическое руководство. Определение того, является ли файл сборкой (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Практическое руководство. Создание и использование сборок с помощью командной строки (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio в C#](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Пошаговое руководство: Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

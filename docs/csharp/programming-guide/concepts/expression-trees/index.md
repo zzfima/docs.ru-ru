@@ -2,17 +2,17 @@
 title: Деревья выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720932"
 ---
 # <a name="expression-trees-c"></a>Деревья выражений (C#)
 Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
   
- Вы можете компилировать и выполнять код, представленный деревьями выражений. Это позволяет динамически изменять выполняемый код, выполнять запросы LINQ в различных базах данных и создавать динамические запросы. Дополнительные сведения о деревьях выражений в LINQ см. в разделе [Практическое руководство. Использование деревьев выражений для создания динамических запросов (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Вы можете компилировать и выполнять код, представленный деревьями выражений. Это позволяет динамически изменять выполняемый код, выполнять запросы LINQ в различных базах данных и создавать динамические запросы. См. дополнительные сведения об [ использовании деревьев выражений в LINQ для создания динамических запросов (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Кроме того, деревья выражений используются в среде выполнения динамического языка (DLR) для обеспечения взаимодействия между динамическими языками и платформой .NET Framework, а также и предоставления разработчикам компиляторов возможности выдавать деревья выражений вместо промежуточного языка Microsoft (MSIL). Дополнительные сведения о DLR см. в разделе [Общие сведения о среде DLR](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Неизменность деревьев выражений  
- Деревья выражений должны быть неизменными. Это означает, что если требуется изменить дерево выражений, следует создать новое дерево выражений путем копирования существующего и заменить узлы в нем. Для прохода по существующему дереву выражений можно использовать другое дерево выражений (посетитель). Дополнительные сведения см. в разделе [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
+ Деревья выражений должны быть неизменными. Это означает, что если требуется изменить дерево выражений, следует создать новое дерево выражений путем копирования существующего и заменить узлы в нем. Для прохода по существующему дереву выражений можно использовать другое дерево выражений (посетитель). Дополнительные сведения см. в разделе [Как Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Компиляция деревьев выражений  
  Тип <xref:System.Linq.Expressions.Expression%601> предоставляет метод  <xref:System.Linq.Expressions.Expression%601.Compile%2A>, который компилирует код, представляемый деревом выражений, в исполняемый делегат.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
+ Дополнительные сведения см. в разделе [Как Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Linq.Expressions>  
-- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
-- [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
-- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Общие сведения о среде DLR](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- <xref:System.Linq.Expressions>
+- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Общие сведения о среде DLR](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Основные понятия программирования (C#)](../../../../csharp/programming-guide/concepts/index.md)
