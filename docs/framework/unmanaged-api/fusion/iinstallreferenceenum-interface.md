@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac9f9db0b7527a80671c825a4435e8ea2d135b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed89008dd2fa86b38f243c8e7cca1bdda901e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497778"
 ---
-# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="d5961-102">Интерфейс IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="d5961-102">IInstallReferenceEnum Interface</span></span>
-<span data-ttu-id="d5961-103">Представляет перечислитель для сборок, установленные в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="d5961-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="ad0a5-102">Интерфейс IInstallReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="ad0a5-102">IInstallReferenceEnum Interface</span></span>
+<span data-ttu-id="ad0a5-103">Представляет перечислитель для упоминаемой сборок, установленных в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="ad0a5-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5961-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d5961-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad0a5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ad0a5-104">Syntax</span></span>  
   
 ```  
 interface IInstallReferenceEnum : IUnknown {  
@@ -38,19 +38,19 @@ interface IInstallReferenceEnum : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="d5961-105">Методы</span><span class="sxs-lookup"><span data-stu-id="d5961-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ad0a5-105">Методы</span><span class="sxs-lookup"><span data-stu-id="ad0a5-105">Methods</span></span>  
   
-|<span data-ttu-id="d5961-106">Метод</span><span class="sxs-lookup"><span data-stu-id="d5961-106">Method</span></span>|<span data-ttu-id="d5961-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d5961-107">Description</span></span>|  
+|<span data-ttu-id="ad0a5-106">Метод</span><span class="sxs-lookup"><span data-stu-id="ad0a5-106">Method</span></span>|<span data-ttu-id="ad0a5-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="ad0a5-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d5961-108">Метод GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="d5961-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="d5961-109">Возвращает указатель на следующий `IInstallReferenceItem` , содержащихся в данном `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="d5961-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
+|[<span data-ttu-id="ad0a5-108">Метод GetNextInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="ad0a5-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="ad0a5-109">Получает указатель на следующий `IInstallReferenceItem` , содержащихся в данном `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="ad0a5-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d5961-110">Требования</span><span class="sxs-lookup"><span data-stu-id="d5961-110">Requirements</span></span>  
- <span data-ttu-id="d5961-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5961-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad0a5-110">Требования</span><span class="sxs-lookup"><span data-stu-id="ad0a5-110">Requirements</span></span>  
+ <span data-ttu-id="ad0a5-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad0a5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5961-112">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d5961-112">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="ad0a5-112">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ad0a5-112">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="d5961-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5961-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ad0a5-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad0a5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5961-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d5961-114">See Also</span></span>  
- [<span data-ttu-id="d5961-115">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="d5961-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="d5961-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="d5961-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ad0a5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="ad0a5-114">See also</span></span>
+- [<span data-ttu-id="ad0a5-115">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="ad0a5-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="ad0a5-116">Интерфейс IInstallReferenceItem</span><span class="sxs-lookup"><span data-stu-id="ad0a5-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
