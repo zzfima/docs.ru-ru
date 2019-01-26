@@ -2,12 +2,12 @@
 title: LINQ to XML для пользователей XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568170"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066272"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML для пользователей XPath (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "54568170"
   
 ## <a name="in-this-section"></a>Содержание  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Сравнительные характеристики XPath и LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Содержит общие сведения о подобиях и различиях между XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Практическое руководство. Поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Сравнивает ось дочернего элемента XPath с предусмотренным в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] методом <xref:System.Xml.Linq.XContainer.Element%2A>.<br /><br /> Связанным выражением XPath является `"DeliveryNotes"`.|  
@@ -32,7 +32,7 @@ ms.locfileid: "54568170"
 |[Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|Сравнивает использование оператора объединения <code>&#124;</code> в XPath со стандартным оператором запросов <xref:System.Linq.Enumerable.Concat%2A> в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:<code>"//Category&#124;//Price"</code>|  
 |[Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|Сравнивает способы нахождения с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] всех одноуровневых объектов узла с указанным именем.<br /><br /> Связанное выражение XPath:`"../Book"`|  
 |[Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Сравнивает способы перехода к родительскому элементу и поиска связанного атрибута с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"../@id"`|  
-|[Практическое руководство. Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Сравнивает способы поиска определенных атрибутов одноуровневых объектов контекстного узла при помощи XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"``../Book/@id``"`|  
+|[Практическое руководство. Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Сравнивает способы поиска определенных атрибутов одноуровневых объектов контекстного узла при помощи XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"../Book/@id"`|  
 |[Практическое руководство. Поиск элементов с определенным атрибутом (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|Сравнивает способы получения всех элементов, содержащих определенный атрибут, с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"./*[@Select]"`|  
 |[Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|Сравнивает способы поиска элемента на основе его относительного расположения с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"Test[position() >= 2 and position() <= 4]"`|  
 |[Практическое руководство. Найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Сравнивает способы нахождения ближайшего предшествующего одноуровневого элемента узла с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"preceding-sibling::*[1]"`|  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672049"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066120"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Как выполнить Объявление структуры (Visual Basic)
-Начать объявление структуры [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается с `End` `Structure` инструкции. Между этими двумя операторами должен быть объявлен по крайней мере *элемент*. Элементы могут быть любого типа данных, но по крайней мере один должен быть не являющаяся общей переменная или непользовательским событий.  
+Начать объявление структуры [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается с `End Structure` инструкции. Между этими двумя операторами должен быть объявлен по крайней мере *элемент*. Элементы могут быть любого типа данных, но по крайней мере один должен быть не являющаяся общей переменная или непользовательским событий.  
   
  Вы не можете инициализировать любого из элементов структуры в объявлении структуры. Если объявить переменную типа структуры, присваиваются значения в элементы, доступ к ним через переменную.  
   

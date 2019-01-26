@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 862a9177d9e10e9561da389fdbffa3e35aa3b51a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730286"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065938"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 Предоставляет доступ к потомкам из следующих: <xref:System.Xml.Linq.XElement> объекта, <xref:System.Xml.Linq.XDocument> объекта, коллекции <xref:System.Xml.Linq.XElement> объекты или коллекции <xref:System.Xml.Linq.XDocument> объектов.  
@@ -34,9 +34,9 @@ object...<descendant>
  Обязательный. Обозначает начало свойства дочерней оси.  
   
  `descendant`  
- Обязательный. Имя узлов-потомков, чтобы открыть окно, в формате [`prefix``:`]`name`.  
+ Обязательный. Имя узлов-потомков, чтобы открыть окно, в формате [`prefix:]name`.  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |----------|-----------------|  
 |`prefix`|Необязательный параметр. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции.|  
 |`name`|Обязательный. Локальное имя узлов-потомков. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  

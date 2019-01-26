@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669319"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065860"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Как выполнить Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 При использовании класса, модуля или структура, которая содержит члены типов целое число без знака, можно получить доступ к этим членам с помощью Visual Basic.  
@@ -32,7 +32,7 @@ ms.locfileid: "54669319"
   
 3.  См. в документации для функции Windows, чтобы найти имена и значения констант, используемых при вызове. Многие из них определяются в файле WinUser.h.  
   
-4.  Объявите необходимые константы в коде. Многие константы Windows-32-разрядных неподписанных значений, их следует объявлять `As``UInteger`.  
+4.  Объявите необходимые константы в коде. Многие константы Windows-32-разрядных неподписанных значений, их следует объявлять `As UInteger`.  
   
 5.  Вызовите функцию обычным способом. В следующем примере вызывается функция Windows `MessageBox`, который принимает в качестве аргумента целого числа без знака.  
   

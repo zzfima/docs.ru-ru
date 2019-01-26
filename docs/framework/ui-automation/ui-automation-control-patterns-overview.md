@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679075"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066256"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679075"
   
  Клиенты автоматизации пользовательского интерфейса получают доступ к методам и свойствам классов шаблонов элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и используют их для получения сведений о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]или для работы с [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Эти классы шаблонов элементов управления находятся в пространстве имен <xref:System.Windows.Automation> (например, в <xref:System.Windows.Automation.InvokePattern> или в <xref:System.Windows.Automation.SelectionPattern>).  
   
- Клиенты используют методы <xref:System.Windows.Automation.AutomationElement> (такие как <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) или методы доступа [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] для доступа к свойствам [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] шаблона. Каждый класс шаблона элемента управления имеет элемент поля (например, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' или <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), идентифицирует этот шаблон элемента управления и может быть передан в качестве параметра <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> Чтобы получить этот шаблон для <xref:System.Windows.Automation.AutomationElement>.  
+ Клиенты используют методы <xref:System.Windows.Automation.AutomationElement> (такие как <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) или методы доступа [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] для доступа к свойствам [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] шаблона. Каждый класс шаблона элемента управления имеет элемент поля (например, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> или <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), идентифицирует этот шаблон элемента управления и может быть передан в качестве параметра <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> Чтобы получить этот шаблон для <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Динамические шаблоны элементов управления  
@@ -53,7 +53,7 @@ ms.locfileid: "54679075"
 ## <a name="control-pattern-classes-and-interfaces"></a>Классы шаблонов элементов управления и интерфейсы  
  В следующей таблице описываются шаблоны элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . В этой таблице также приведены классы, используемые клиентами автоматизации пользовательского интерфейса для доступа к шаблонам элементов управления, а также интерфейсы, используемые поставщиками автоматизации пользовательского интерфейса для их реализации.  
   
-|Класс шаблона элемента управления|Интерфейс поставщика|Описание|  
+|Класс шаблона элемента управления|Интерфейс поставщика|Описание:|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Используется для элементов управления, которые могут быть закреплены в контейнере закрепления. Например, это могут быть панели инструментов или палитры инструментов.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Используется для элементов управления, которые можно разворачивать и сворачивать. Например, это могут быть пункты меню в приложении, такие как меню **Файл** .|  

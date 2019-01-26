@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 52793b6d077f1da33d2d675be3284ce134beb2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 345677f992491022a12fb03981f644343e405dfe
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730962"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066458"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Как выполнить Настройка клиента WCF для взаимодействия со службами WSE 3.0
 Клиенты Windows Communication Foundation (WCF) являются уровне линий связи совместимы с Web Services Enhancements 3.0 для служб Microsoft .NET (WSE), если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г.  
@@ -36,7 +36,7 @@ ms.locfileid: "54730962"
   
     2.  Добавьте в класс свойства, задающие готовое к использованию утверждение WSE, требуются ли производные ключи, используются ли безопасные сеансы, требуется ли подтверждение подписей, и параметры защиты сообщений.  
   
-         В следующем примере кода определяется `SecurityAssertion,``RequireDerivedKeys, EstablishSecurityContext, MessageProtectionOrder` свойства, задающие готовое к использованию утверждение WSE, требуются ли производные ключи, используются ли безопасные сеансы, требуются ли подтверждение подписей и параметры защиты сообщений, соответственно.  
+         В следующем примере кода определяется `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext`, и `MessageProtectionOrder` свойства. Они укажите готовое к использованию утверждение WSE, требуются ли производные ключи, используются ли безопасные сеансы, требуются ли подтверждение подписей и параметры защиты сообщений, соответственно.  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  

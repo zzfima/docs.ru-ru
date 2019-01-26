@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 597a7bef66ac3908345aa5c8b59c838a3e65b2f4
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527150"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065886"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 Предоставляет доступ к дочерним элементам одного из следующих: объекта <xref:System.Xml.Linq.XElement>, объекта <xref:System.Xml.Linq.XDocument>, коллекции объектов <xref:System.Xml.Linq.XElement> или коллекции объектов <xref:System.Xml.Linq.XDocument>.  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|Обязательный. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.|  
 |.<|Обязательный. Обозначает начало свойства дочерней оси.|  
-|`child`|Обязательный. Имя дочерних узлов для доступа к формы [`prefix``:`]`name`.<br /><br /> -   `Prefix` -Необязательно. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name` -Required. Имя локального дочернего узла. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Обязательный. Имя дочерних узлов для доступа к формы [`prefix:]name`.<br /><br /> -   `Prefix` -Необязательно. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name` -Required. Имя локального дочернего узла. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Обязательный. Обозначает конец свойства дочерней оси.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  

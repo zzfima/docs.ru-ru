@@ -2,12 +2,12 @@
 title: F#рекомендации по проектированию компонентов
 description: Дополнительные рекомендации для записи F# компоненты, предназначенный для использования другими вызывающими объектами.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415641"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066029"
 ---
 # <a name="f-component-design-guidelines"></a>F#рекомендации по проектированию компонентов
 
@@ -708,7 +708,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Избегайте использования каррирование параметров
 
-Вместо этого использовать соглашения о вызовах .NET ``Method(arg1,arg2,…,argN)``.
+Вместо этого использовать соглашения о вызовах .NET `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

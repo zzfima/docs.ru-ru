@@ -2,12 +2,12 @@
 title: Как выполнить Задание учетных данных безопасности канала
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495205"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066201"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Как выполнить Задание учетных данных безопасности канала
 Моникер служб Windows Communication Foundation (WCF) позволяет приложениям COM вызывать службы WCF. Большинство служб WCF потребовать от клиента указать учетные данные для проверки подлинности и авторизации. При вызове службы WCF из клиента WCF, можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы WCF из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -23,9 +23,9 @@ ms.locfileid: "54495205"
   
 2.  Откройте проект безопасности сообщений.  
   
-3.  Добавить `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` для `ICalculator` определение интерфейса.  
+3.  Добавить `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` для `ICalculator` определение интерфейса.  
   
-4.  Добавить `bindingNamespace=``http://Microsoft.ServiceModel.Samples` в тег конечной точки в файле App.config для службы.  
+4.  Добавить `bindingNamespace="http://Microsoft.ServiceModel.Samples"` в тег конечной точки в файле App.config для службы.  
   
 5.  Создайте образец безопасности сообщений и запустите файл Service.exe. Используйте Internet Explorer и перейдите к URI службы (http://localhost:8000/ServiceModelSamples/Service) чтобы убедиться, что служба работает.  
   

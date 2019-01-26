@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548054"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065977"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Элемент &lt;ImpliesType&gt; (машинный код .NET)
 Применяет политику к типу, если политика была применена к содержащему типу или методу.  
@@ -35,7 +35,7 @@ ms.locfileid: "54548054"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя типа.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -66,7 +66,7 @@ ms.locfileid: "54548054"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
@@ -99,7 +99,7 @@ ms.locfileid: "54548054"
 </Type>  
 ```  
   
- Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте универсальный метод `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)`, к которому заданная библиотека будет обращаться динамически вместе со связанными типами <xref:System.Collections.Generic.List%601> и <xref:System.Array>. Это можно выразить следующим образом:  
+ Элемент `<ImpliesType>` может также отображаться в элементе `<Method>`, так как в некоторых случаях создание экземпляров универсального метода подразумевает отражение на экземпляре типа. Например, представьте универсальный метод `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , заданная библиотека будет обращаться динамически вместе со связанными <xref:System.Collections.Generic.List%601> и <xref:System.Array> типов. Это можно выразить следующим образом:  
   
 ```xml  
 <Type Name="MyType">  

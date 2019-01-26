@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: bd08940ac04d0218f3d3936514a72c12449b34ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c50a25dc0802f275e5cd4e0068e1a68bf559abc1
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505566"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066042"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Ссылки и оператор Imports (Visual Basic)
 Вы внешние объекты можно сделать доступными в проект, выбрав **добавить ссылку** команды **проекта** меню. Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотек типов, но содержат больше сведений.  
@@ -24,7 +24,7 @@ ms.locfileid: "54505566"
   
  `Imports` Инструкция имеет следующий синтаксис:  
   
- `Imports` [`|``Aliasname` =] `Namespace`  
+ `Imports [Aliasname =] Namespace`  
   
  `Aliasname` ссылается на короткое имя, которое можно использовать в коде для ссылки на импортированное пространство имен. `Namespace` — Это пространство имен, доступное через ссылку на проект, через определение в проект, или с помощью предыдущего `Imports` инструкции.  
   

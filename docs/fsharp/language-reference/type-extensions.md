@@ -1,13 +1,13 @@
 ---
 title: Расширения типов
 description: Узнайте, как F# расширения типов позволяют добавлять новые члены в ранее определенный тип объекта.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614068"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066159"
 ---
 # <a name="type-extensions"></a>Расширения типов
 
@@ -121,7 +121,7 @@ type IEnumerable<'T> with
 
 * Как, `Sum` член имеет различные ограничения `'T` (`static member get_Zero` и `static member (+)`), чем то, что определяет расширение типа.
 * Изменение расширения типа иметь такое же ограничение как `Sum` больше не будут соответствовать определенные ограничения на `IEnumerable<'T>`.
-* Создание, изменение члена `member inline Sum` вызывает эту ошибку, что ограничения типов совпадают
+* Изменение `member this.Sum` для `member inline this.Sum` вызывает эту ошибку, что ограничения типов совпадают.
 
 Что требуется являются статических методов, которые могут быть представлены так, как если бы они расширение типа «float в пространстве». Это, где методы расширения возникает необходимость.
 

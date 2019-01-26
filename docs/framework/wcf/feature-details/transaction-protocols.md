@@ -2,12 +2,12 @@
 title: Протоколы транзакций
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533771"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066249"
 ---
 # <a name="transaction-protocols"></a>Протоколы транзакций
 Windows Communication Foundation (WCF) реализует протоколы WS-Atomic Transaction и WS-Coordination.  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
   
  R1232: Исходящие `wscoor:Register` сообщений необходимо использовать `IssuedTokenOverTransport` режим проверки подлинности, описано в разделе [протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- `wsse:Timestamp` Элемента должны быть подписаны с помощью `SecurityContextToken``STx` выдан. Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию. Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
+ `wsse:Timestamp` Элемента должны быть подписаны с помощью `SecurityContextToken STx` выдан. Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию. Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Конфигурация привязки протокола 2PC  
  WCF поддерживает односторонний (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  

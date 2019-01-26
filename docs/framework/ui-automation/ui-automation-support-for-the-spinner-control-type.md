@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518167"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066302"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Поддержка Автоматизации Пользовательского Интерфейса для типа элемента управления "Счетчик"
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518167"
 |------------------|------------------|  
 |Spinner<br /><br /> -Edit (0 или 1)<br />-Кнопка (2)<br />-Элемент списка (0 или более)|Spinner<br /><br /> -ListItem (0 или более)|  
   
- Чтобы средства автоматических тестов гарантированно могли различить две кнопки в поддереве представления элемента управления, назначьте `SmallIncrement` или `SmallDecrement``AutomationId` соответствующим образом. В некоторых реализациях связанный элемент управления "Поле ввода" может быть одноранговым с элементом управления "Счетчик".  
+ Чтобы убедиться, что средства автоматических тестов можно различить две кнопки в поддереве представления элемента управления, назначьте `SmallIncrement` или `SmallDecrement` `AutomationId` соответствующим образом. В некоторых реализациях связанный элемент управления "Поле ввода" может быть одноранговым с элементом управления "Счетчик".  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  

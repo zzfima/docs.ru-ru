@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691480"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066016"
 ---
 # <a name="securing-method-access"></a>Безопасность доступа к методам
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Переопределение объявлений Virtual и Internal или Overloads Overridable Friend  
   
 > [!NOTE]
->  В этом разделе рассматривается проблема безопасности при объявлении метода как `virtual` и `internal` (`Overloads``Overridable``Friend` в Visual Basic). Это предупреждение относится только к .NET Framework версий 1.0 и 1.1, она не применяется до более поздних версий.  
+>  В этом разделе рассматривается проблема безопасности при объявлении метода как `virtual` и `internal` (`Overloads` `Overridable` `Friend` в Visual Basic). Это предупреждение относится только к .NET Framework версий 1.0 и 1.1, она не применяется до более поздних версий.  
   
  В .NET Framework версий 1.0 и 1.1 необходимо иметь в виду особенности организации доступа в системе типов, когда код делается недоступным для других сборок. Метод, который объявлен **виртуального** и **внутренней** (**Overloads Overridable Friend** в Visual Basic) можно переопределить запись vtable родительского класса и может использоваться только с в этой сборке, так как он является внутренним. Однако доступность для переопределения напрямую определяется **виртуального** ключевое слово и его можно переопределить из другой сборки до тех пор, пока ее код имеет доступ к самому классу. Если такая возможность переопределения представляет собой проблему, используйте для ее или удалите декларативную безопасность **виртуального** ключевое слово, если он не является обязательным.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 51e85fa108775806d2c92935868d7ed68534818f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8b493e6d9af1f19ca395e7b71657c6fd65aaa55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587977"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066000"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Как выполнить Настройка каналов с использованием поставщика Entity Framework (WCF Data Services)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework. Дополнительные сведения см. в разделе [настройки веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "54587977"
 6.  Перекомпилируйте проект.  
   
 ## <a name="example"></a>Пример  
- Предыдущий пример возвращает следующий результат для URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
+ Предыдущий пример возвращает следующий результат для URI `http://myservice/Northwind.svc/Customers('ALFKI')`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
