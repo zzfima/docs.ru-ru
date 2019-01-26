@@ -11,14 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eaeffb365dd2c9999d4faa6b28c6d50e8cd6a6e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563057"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084332"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; элемент
 Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  Эти прослушиватели не получают все трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения. Прослушиватели, определенные как общие могут добавляться к источникам и трассировки по имени.  
@@ -43,7 +41,7 @@ ms.locfileid: "54563057"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `sharedListeners`.|  
   

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c34ca1a47910f4255951be041d97f92ea7fd46ad
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600410"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083318"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;источники&gt; элемент
 Задает источники трассировки, которые инициируют сообщения трассировки.  
@@ -41,13 +39,13 @@ ms.locfileid: "54600410"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Обязательный элемент.<br /><br /> Содержит источник трассировки, который инициирует сообщения трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  

@@ -1,16 +1,16 @@
 ---
 title: Извлечение данных с помощью объекта DataReader
-ms.date: 10/259/2018
+ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692760"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083851"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Для получения данных с помощью **DataReader**, создайте экземпляр **команда** объекта, а затем создайте **DataReader** путем вызова **Command.ExecuteReader**  для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий процедурам последовательно обрабатывать результаты из источника данных. **DataReader** хорошо подходит при извлечении больших объемов данных, поскольку данные не кэшируются в памяти.

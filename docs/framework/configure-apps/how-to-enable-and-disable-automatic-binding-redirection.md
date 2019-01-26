@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980837"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083669"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Практическое руководство. Включение и отключение автоматического перенаправления привязки
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Как выполнить Включение и отключение автоматического перенаправления привязки
 
 При компиляции приложения в Visual Studio, предназначенных [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] и более поздних версиях перенаправление привязки могут быть автоматически добавлены в файл конфигурации приложения для переопределения унификации сборок. Переадресации привязок добавляются, если приложение или его компоненты ссылаются на несколько версий одной сборки, даже если вручную указать переадресации привязок в файле конфигурации приложения. Возможность автоматической переадресации привязки затрагивает Классические приложения и веб-приложения, предназначенные [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] или более поздней версии, несмотря на то, что поведение несколько отличается для веб-приложения. Вы можете включить автоматическое перенаправление привязки, при наличии существующих приложений, нацеленных на предыдущие версии платформы .NET Framework, или можно отключить эту функцию, если вы хотите вручную создавать переадресации привязок.
 

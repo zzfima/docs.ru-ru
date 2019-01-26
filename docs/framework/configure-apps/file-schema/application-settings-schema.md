@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a74716bcdf3c85c08d0ff3bf66407dce30ee91cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701915"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083474"
 ---
 # <a name="application-settings-schema"></a>Схема параметров приложения
 
@@ -24,7 +22,7 @@ ms.locfileid: "54701915"
 
 Параметры приложения определяет следующие элементы как часть файлов конфигурации, используемые в нем.
 
-| Элемент                    | Описание:                                                                           |
+| Элемент                    | Описание                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings >** | Содержит все  **\<параметр >** теги, относящиеся к приложению.                         |
 | **\<userSettings >**        | Содержит все  **\<параметр >** теги, относящиеся к текущему пользователю.                        |
@@ -43,7 +41,7 @@ ms.locfileid: "54701915"
 
 Этот элемент определяет параметр. Он имеет следующие атрибуты.
 
-| Атрибут        | Описание: |
+| Атрибут        | Описание |
 | ---------------- | ----------- |
 | **name**         | Обязательный. Уникальный идентификатор параметра. Параметры, созданные с помощью Visual Studio сохраняются с именем `ProjectName.Properties.Settings`. |
 | **serializedAs** | Обязательный. Формат, используемый для сериализации значение к тексту. Допустимые значения:<br><br>- `string`. Значение сериализуется как строки с помощью <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Значение сериализуется с помощью XML-сериализации.<br>- `binary`. Значение сериализуется как двоичные кодировке текста, с использованием двоичной сериализации.<br />- `custom`. Поставщик параметров имеет распознает этот параметр и сериализует и десериализует его. |

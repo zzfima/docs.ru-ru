@@ -7,14 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530529"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083513"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Как выполнить Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
