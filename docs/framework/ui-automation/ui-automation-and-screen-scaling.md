@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717562"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] предоставляет пользователям возможность изменять параметр [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] таким образом, чтобы большинство элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] на экране отображалось большего размера. Хотя эта возможность уже давно была доступна в [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], в предыдущих версиях масштабирование должно было реализовываться в приложениях. В [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывают собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48845971"
   
  Масштабирование экрана создает новые проблемы для приложений, которые каким-либо образом связаны с экранными координатами. Теперь экран содержит две системы координат: физическую и логическую. Физические координаты точки являются фактическим смещением в пикселях от верхнего левого угла начала координат. Логические координаты — это смещения, какими они были бы, если бы сами пиксели масштабировались.  
   
- Предположим, вы разрабатываете диалоговое окно с кнопкой, имеющей координаты (100, 48). Когда это диалоговое окно отображается при разрешении по умолчанию в 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], кнопка располагается в точке с физическими координатами (100, 48). При разрешении 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]она располагается в точке с физическими координатами (125, 60). Однако логические координаты при любой настройке [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] остаются прежними: (100, 48).  
+ Предположим, вы разрабатываете диалоговое окно с кнопкой, имеющей координаты (100, 48). Когда это диалоговое окно отображается при разрешении по умолчанию в 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], кнопка располагается в точке с физическими координатами (100, 48). При разрешении 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]она располагается в точке с физическими координатами (125, 60). Однако логические координаты одинаковы в любой [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] параметр: (100, 48).  
   
- Логические координаты важны, так как они делают поведение операционной системы и приложений последовательным вне зависимости от настройки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Например <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> обычно возвращает логические координаты. Если навести курсор на элемент в диалоговом окне, возвращаются одни и те же координаты независимо от значения [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Если нарисовать элемент управления в точке (100, 100), он рисуется согласно этим логическим координатам и будет занимать одну и ту же относительную позицию при любом значении [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+ Логические координаты важны, так как они делают поведение операционной системы и приложений последовательным вне зависимости от настройки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Например, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> обычно возвращает логические координаты. Если навести курсор на элемент в диалоговом окне, возвращаются одни и те же координаты независимо от значения [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Если нарисовать элемент управления в точке (100, 100), он рисуется согласно этим логическим координатам и будет занимать одну и ту же относительную позицию при любом значении [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>Масштабирование в клиентах автоматизации пользовательского интерфейса  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] не использует логические координаты. Следующие методы и свойства либо возвращают физические координаты, либо принимают их в качестве параметров.  
+  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] не использует логические координаты. Следующие методы и свойства либо возвращают физические координаты, либо принимают их в качестве параметров.  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48845971"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Эта функция включает поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]во всем процессе, что означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. В [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), например, четыре окна, входящие в прямоугольник выделения находятся в физических координатах, полученных из [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], не в логических координатах. Если бы в этом примере не была включена поддержка [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то выделение выполнялось бы в логических координатах на рабочем столе, что привело бы к неверному размещению в среде с разрешением, отличным от 96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Эта функция включает поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]во всем процессе, что означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. Например, в [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)четыре окна, входящие в прямоугольник выделения, располагаются в физических координатах, полученных из [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], а не в логических координатах. Если бы в этом примере не была включена поддержка [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то выделение выполнялось бы в логических координатах на рабочем столе, что привело бы к неверному размещению в среде с разрешением, отличным от 96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "48845971"
   
  Если приложение выполняет прямое межпроцессное взаимодействие с приложениями без поддержки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то возможно придется выполнять преобразование между логическими и физическими координатами с помощью функций [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>См. также  
- [Пример маркера](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>См. также
+- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

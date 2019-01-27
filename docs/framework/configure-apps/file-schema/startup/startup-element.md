@@ -9,14 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222744"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083721"
 ---
 # <a name="ltstartupgt-element"></a>&lt;запуска&gt; элемент
 
@@ -50,14 +48,14 @@ ms.locfileid: "54222744"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |[\<requiredRuntime>](requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, созданные с помощью среды выполнения версии 1.1 или более поздней, должны использовать  **\<supportedRuntime >** элемент.|
 |[\<supportedRuntime>](supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание|
+|Элемент|Описание:|
 |-------------|-----------------|
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 
@@ -98,6 +96,6 @@ ms.locfileid: "54222744"
 
 - [Схема параметров запуска](index.md)
 - [Схема файла конфигурации](../index.md)
-- [Практическое руководство. Настройка приложения для поддержки .NET Framework 4 или более поздней версии](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Выполнение Side-by-Side COM-взаимодействия](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [Внутрипроцессное параллельное выполнение](../../../deployment/in-process-side-by-side-execution.md)

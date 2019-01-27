@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566350"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Указание сборки&#39;расположения
 Указание расположения сборки двумя способами:  
@@ -45,7 +45,7 @@ ms.locfileid: "48848053"
 </configuration>  
 ```  
   
- **Версии** атрибут является обязательным для всех сборок со строгими именами, но должен быть опущен для сборок, которые не имеют строгие имена. **\<CodeBase >** элемента требуется **href** атрибута. Нельзя указать диапазон версий в  **\<codeBase >** элемент.  
+ **Версии** атрибут является обязательным для всех сборок со строгими именами, но должен быть опущен для сборок, которые не имеют строгие имена.  **\<CodeBase >** элемента требуется **href** атрибута. Нельзя указать диапазон версий в  **\<codeBase >** элемент.  
   
 > [!NOTE]
 >  Если вы указали подсказка базы кода для сборки, не является строгим именем, должна указывать на базовой папки приложения или ее подкаталог базового каталога приложения.  
@@ -67,8 +67,8 @@ ms.locfileid: "48848053"
   
  **PrivatePath** атрибут содержит каталоги, которые среда выполнения должна искать сборки. Если приложение находится в каталоге C:\Program Files\MyApp, среда выполнения ищет сборки, которые не указаны базы кода в C:\Program Files\MyApp\Bin C:\Program Files\MyApp\Bin2\Subbin и C:\Program Files\MyApp\Bin3. Каталоги, указанные в **privatePath** должны быть подкаталогами базового каталога приложения.  
   
-## <a name="see-also"></a>См. также  
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>См. также
+- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

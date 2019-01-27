@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: e5c8449e72414775c40ced2c344e12d5137ac03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546417"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > элемент
 
@@ -36,13 +36,13 @@ ms.locfileid: "47200962"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание |
+|           | Описание: |
 | --------- | ----------- |
 | **href**  | Обязательный атрибут.<br><br>URL-адрес файла конфигурации для включения. Единственным форматом, поддерживаемым для **href** атрибут `file://`. Поддерживаются локальные файлы и файлы UNC. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации. |
 
@@ -52,10 +52,10 @@ ms.locfileid: "47200962"
 
 ## <a name="remarks"></a>Примечания
 
-**\<LinkedConfiguration >** элемент упрощает обслуживание сборки компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, которая находится в хорошо известного расположения, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов, обновление общего файла конфигурации предоставляет обновленные сведения о конфигурации для всех приложений, использующих сборку.
+ **\<LinkedConfiguration >** элемент упрощает обслуживание сборки компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, которая находится в хорошо известного расположения, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов, обновление общего файла конфигурации предоставляет обновленные сведения о конфигурации для всех приложений, использующих сборку.
 
 > [!NOTE]
-> **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
+>  **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
 
 Следующие правила определяют использование связанных файлов конфигурации:
 
@@ -67,7 +67,7 @@ ms.locfileid: "47200962"
 
 - Все связанные файлы конфигурации объединяются в один файл, аналогично поведению `#include` директив в C/C++.
 
-- **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
+-  **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
 
 - Циклические ссылки обнаружены и удалены. То есть если  **\<linkedConfiguration >** элементы из ряда файлов конфигурации образуют цикл, цикл обнаруживается остановлена.
 
@@ -85,5 +85,5 @@ ms.locfileid: "47200962"
 
 ## <a name="see-also"></a>См. также
 
-[**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

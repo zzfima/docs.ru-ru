@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600522"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; элемент
 
@@ -34,7 +34,7 @@ ms.locfileid: "53129251"
   
 ## <a name="attributes"></a>Атрибуты
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |**version**|Необязательный атрибут.<br /><br /> Строковое значение, задающее версию среды CLR, которая поддерживается данным приложением. Допустимые значения `version` атрибут, см. в разделе [значения «runtime version»](#version) раздел. **Примечание.**  Через .NET Framework 3.5 "*версии среды выполнения*" значение принимает форму *основных*. *дополнительный номер*. *Построение*. Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], требуются только основной и дополнительный номера версии (то есть "v4.0" вместо "v4.0.30319"). Рекомендуется использовать более короткие строки.|  
 |**sku**|Необязательный атрибут.<br /><br /> Строковое значение, которое указывает единицу складского хранения (SKU), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.<br /><br /> Начиная с .NET Framework 4.0, рекомендуется использовать атрибут `sku`.  Если он присутствует, он указывает целевую версию .NET Framework приложения.<br /><br /> Допустимые значения атрибута sku см. в разделе [значения «sku id»](#sku) раздел.|  
@@ -43,7 +43,7 @@ ms.locfileid: "53129251"
 
 Если  **\<supportedRuntime >** элемент отсутствует в файле конфигурации приложения, используется версия среды выполнения, используемый для построения приложения.  
 
-**\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемент.  
+ **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемент.  
   
 > [!NOTE]
 >  Если вы используете [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) функции для указания файла конфигурации, необходимо использовать `<requiredRuntime>` элемент для всех версий среды выполнения. `<supportedRuntime>` Элемент учитывается при использовании [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -61,12 +61,12 @@ ms.locfileid: "53129251"
 
 |Версия платформы .NET Framework|Атрибут `version`|  
 |----------------------------|-------------------------|  
-|1,0|"v1.0.3705"|  
+|1.0|"v1.0.3705"|  
 |1.1|"v1.1.4322"|  
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>Значения "sku id"
@@ -110,6 +110,6 @@ ms.locfileid: "53129251"
 
 ## <a name="see-also"></a>См. также
 
- [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12065d8bc484f7bbf77ae18c67df1de0845167b2
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599352"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083903"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > элемент для \<configuration >
 
@@ -33,7 +31,7 @@ ms.locfileid: "54599352"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание |
+|           | Описание: |
 | --------- | ----------- |
 | **xmlns** | Обязательный атрибут.<br><br>Задает пространство имен XML, необходимое для привязки сборок. Используйте строку urn:schemas-microsoft-com:asm.v1 в качестве значения. |
 
@@ -45,7 +43,7 @@ ms.locfileid: "54599352"
 
 ## <a name="child-element"></a>Дочерний элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Указание файла конфигурации, который следует включить. |
 
