@@ -2,12 +2,12 @@
 title: Команда dotnet tool update
 description: Команда dotnet tool update обновляет указанное глобальное средство .NET Core на вашем компьютере.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2716f7f88ffe364bebacf970d7152f5509edc888
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516647"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -81,4 +81,4 @@ dotnet tool update <-h|--help>
 
 ## <a name="see-also"></a>См. также
 
-* [Глобальные средства .NET Core](global-tools.md)
+- [Глобальные средства .NET Core](global-tools.md)

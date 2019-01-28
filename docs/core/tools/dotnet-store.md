@@ -4,12 +4,12 @@ description: Команда dotnet store сохраняет указанные �
 author: bleroy
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: db1af95150a8949f218169b2999c92c00ac94d56
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606755"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -83,4 +83,4 @@ ms.locfileid: "53170734"
 
 ## <a name="see-also"></a>См. также
 
-* [Хранилище пакетов среды выполнения](../deploying/runtime-store.md)
+- [Хранилище пакетов среды выполнения](../deploying/runtime-store.md)

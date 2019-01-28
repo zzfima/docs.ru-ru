@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617330"
 ---
 # <a name="redim-statement-visual-basic"></a>Оператор ReDim (Visual Basic)
 Перераспределяет область хранения для переменной массива.  
@@ -46,9 +46,9 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Термин|Определение|  
 |----------|----------------|  
-|`Preserve`|Необязательный. Модификатор, используемый для сохранения данных в существующем массиве при изменении размера только последнего измерения.|  
-|`name`|Обязательно. Имя переменной массива. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Обязательно. Список границ для всех измерений переопределенного массива.|  
+|`Preserve`|Необязательный параметр. Модификатор, используемый для сохранения данных в существующем массиве при изменении размера только последнего измерения.|  
+|`name`|Обязательный. Имя переменной массива. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Обязательный. Список границ для всех измерений переопределенного массива.|  
   
 ## <a name="remarks"></a>Примечания  
  Для изменения размера одного или нескольких из уже объявленных измерений массива можно использовать оператор `ReDim`. Если у вас есть большой массив и некоторые из входящих в него элементов больше не требуются, `ReDim` позволяет освободить память, уменьшив размер массива. Если же массив требует дополнительных элементов, `ReDim` может их добавить.  
@@ -75,7 +75,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
      Например, в одномерных массивах можно изменить это измерение и в то же время сохранить все содержимое массива, поскольку изменяется только одно, последнее, измерение. Если же массив имеет два или больше измерений, то с помощью оператора Preserve можно изменить только последнее измерение массива.`Preserve`  
   
--   **Свойства.** Оператор `ReDim` можно использовать для свойства, которое содержит массив значений.  
+-   **свойства.** Оператор `ReDim` можно использовать для свойства, которое содержит массив значений.  
   
 ## <a name="behavior"></a>Поведение  
   
@@ -83,7 +83,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Инициализация без использования оператора Preserve.** Если оператор `Preserve` не указан, `ReDim` инициализирует элементы нового массива, используя значение по умолчанию для соответствующего типа данных.  
   
--   **Инициализация с помощью оператора Preserve.** Если оператор `Preserve` указан, Visual Basic копирует элементы из существующего массива в новый массив.  
+-   **Инициализация с использованием оператора Preserve.** Если оператор `Preserve` указан, Visual Basic копирует элементы из существующего массива в новый массив.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере производится увеличение размера последнего измерения динамического массива без потери существующих данных, а затем уменьшение размера массива с частичной потерей данных. Кроме того, размер массива уменьшается до исходного значения и все элементы массива инициализируются повторно.  
@@ -100,10 +100,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Дополнительные примеры см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IndexOutOfRangeException>  
- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Оператор Erase](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.IndexOutOfRangeException>
+- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Оператор Erase](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
