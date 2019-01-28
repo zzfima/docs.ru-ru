@@ -8,35 +8,35 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: bbe9bed5a32e463424b98f4066e95374401931e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cfee16ad1cdc1e019a4133259c1603f5a0a09ac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536559"
 ---
-# <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="fe799-102">&lt;typeparamref&gt; (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="fe799-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="fe799-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fe799-103">Syntax</span></span>  
+# <a name="lttypeparamrefgt-c-programming-guide"></a><span data-ttu-id="be599-102">&lt;typeparamref&gt; (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="be599-102">&lt;typeparamref&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="be599-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="be599-103">Syntax</span></span>  
   
 ```xml  
 <typeparamref name="name"/>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fe799-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="fe799-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="be599-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="be599-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="fe799-105">Имя параметра типа.</span><span class="sxs-lookup"><span data-stu-id="fe799-105">The name of the type parameter.</span></span> <span data-ttu-id="fe799-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="fe799-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="be599-105">Имя параметра типа.</span><span class="sxs-lookup"><span data-stu-id="be599-105">The name of the type parameter.</span></span> <span data-ttu-id="be599-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="be599-106">Enclose the name in double quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe799-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="fe799-107">Remarks</span></span>  
- <span data-ttu-id="fe799-108">Дополнительные сведения о параметрах типа в универсальных типах и методах см. в разделе [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="fe799-108">For more information on type parameters in generic types and methods, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be599-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="be599-107">Remarks</span></span>  
+ <span data-ttu-id="be599-108">Дополнительные сведения о параметрах типа в универсальных типах и методах см. в разделе [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="be599-108">For more information on type parameters in generic types and methods, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- <span data-ttu-id="fe799-109">Используйте этот тег, чтобы разрешить получателям файла документации форматировать слово определенным образом, например курсивным шрифтом.</span><span class="sxs-lookup"><span data-stu-id="fe799-109">Use this tag to enable consumers of the documentation file to format the word in some distinct way, for example in italics.</span></span>  
+ <span data-ttu-id="be599-109">Используйте этот тег, чтобы разрешить получателям файла документации форматировать слово определенным образом, например курсивным шрифтом.</span><span class="sxs-lookup"><span data-stu-id="be599-109">Use this tag to enable consumers of the documentation file to format the word in some distinct way, for example in italics.</span></span>  
   
- <span data-ttu-id="fe799-110">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="fe799-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="be599-110">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="be599-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe799-111">Пример</span><span class="sxs-lookup"><span data-stu-id="fe799-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="be599-111">Пример</span><span class="sxs-lookup"><span data-stu-id="be599-111">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="fe799-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fe799-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be599-112">См. также</span><span class="sxs-lookup"><span data-stu-id="be599-112">See also</span></span>
 
-- [<span data-ttu-id="fe799-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="fe799-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="fe799-114">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="fe799-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="be599-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="be599-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="be599-114">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="be599-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
