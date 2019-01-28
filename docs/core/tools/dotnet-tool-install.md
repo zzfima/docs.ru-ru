@@ -2,12 +2,12 @@
 title: Команда dotnet tool install
 description: Команда dotnet tool install устанавливает указанное глобальное средство .NET Core на компьютер.
 ms.date: 05/29/2018
-ms.openlocfilehash: 251e7b04be96ac2340727fa03dbaa2d548110fa9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1348eb1165c77376a885fdcbf094bd17b2aa3514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563708"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -96,4 +96,4 @@ dotnet tool install <-h|--help>
 
 ## <a name="see-also"></a>См. также
 
-* [Глобальные средства .NET Core](global-tools.md)
+- [Глобальные средства .NET Core](global-tools.md)

@@ -4,12 +4,12 @@ description: См. сопоставление между элементами pr
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: 581ff7cd3fe02e22d481c8386776317a5251cc5c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682856"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Сопоставление между свойствами project.json и CSPROJ
 
@@ -676,4 +676,4 @@ And it's really great!</Description>
 
 ## <a name="see-also"></a>См. также
 
-* [Краткий обзор изменений в интерфейсе командной строки](../tools/cli-msbuild-architecture.md)
+- [Краткий обзор изменений в интерфейсе командной строки](../tools/cli-msbuild-architecture.md)
