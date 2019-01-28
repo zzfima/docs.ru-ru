@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c85d0c5c291743c6daac549e15d479fcf332235c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 864c39aa6673537d66d8402896bce5b4fa92e5ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602447"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>Классы ManualResetEvent и ManualResetEventSlim
 Класс <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> представляет событие локального дескриптора ожидания, которое необходимо сбросить вручную после создания сигнала. Этот класс представляет отдельный сценарий применения базового класса <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Основную документацию по использованию и функциональным возможностям событий ручного сброса см. в разделе [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md).  
@@ -25,9 +25,9 @@ ms.locfileid: "49452827"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
-- [AutoResetEvent](autoresetevent.md)  
-- [SpinWait](spinwait.md)  
+- [AutoResetEvent](autoresetevent.md)
+- [SpinWait](spinwait.md)
 - [Классы Semaphore и SemaphoreSlim](semaphore-and-semaphoreslim.md)
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)  
-- [Работа с потоками](index.md)  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)
+- [Работа с потоками](index.md)

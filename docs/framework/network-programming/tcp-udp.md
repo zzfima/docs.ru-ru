@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 987a8aa789d8c4585a58a031c9d920ee5cab45aa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692549"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Приложения могут использовать службы TCP и UDP с классами <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient>. Эти классы протоколов основаны на классе <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> и управляют различными аспектами передачи данных.  
@@ -32,10 +32,10 @@ ms.locfileid: "50191879"
   
  Класс **UdpClient** использует массив байтов для хранения датаграммы UDP. С помощью метода <xref:System.Net.Sockets.UdpClient.Send%2A> данные отправляются в сеть, а с помощью метода <xref:System.Net.Sockets.UdpClient.Receive%2A> принимается входящая датаграмма.  
   
-## <a name="see-also"></a>См. также  
- [Использование служб TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
- [Использование служб UDP](../../../docs/framework/network-programming/using-udp-services.md)  
- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Использование асинхронных сокетов клиента](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>См. также
+- [Использование служб TCP](../../../docs/framework/network-programming/using-tcp-services.md)
+- [Использование служб UDP](../../../docs/framework/network-programming/using-udp-services.md)
+- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Использование асинхронных сокетов клиента](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)

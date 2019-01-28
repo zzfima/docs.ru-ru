@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e52e5857d9fbe70cbd71ec91f8aa0c49b0e85df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552311"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен (Руководство по программированию в C#)
 Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов. Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.  
@@ -90,9 +90,9 @@ ms.locfileid: "53235789"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
-- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
+- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)
+- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

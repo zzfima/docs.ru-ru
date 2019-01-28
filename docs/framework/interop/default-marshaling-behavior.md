@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689004"
 ---
 # <a name="default-marshaling-behavior"></a>Поведение маршалинга по умолчанию
 Маршалинг взаимодействия работает по правилам, которые определяют поведение данных, связанных с параметрами метода, при их передаче между управляемой и неуправляемой памятью. Эти встроенные правила определяют такие операции маршалинга, как преобразования типов данных, возможность изменения вызываемым объектом переданных ему данных и возврата этих изменений вызывающему объекту, а также обстоятельства, при которых упаковщик обеспечивает оптимизацию производительности.  
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)  
- [Копирование и закрепление](copying-and-pinning.md)  
- [Маршалинг по умолчанию для массивов](default-marshaling-for-arrays.md)  
- [Маршалинг по умолчанию для объектов](default-marshaling-for-objects.md)  
- [Маршалинг по умолчанию для строк](default-marshaling-for-strings.md)
+## <a name="see-also"></a>См. также
+- [Преобразуемые и непреобразуемые типы](blittable-and-non-blittable-types.md)
+- [Копирование и закрепление](copying-and-pinning.md)
+- [Маршалинг по умолчанию для массивов](default-marshaling-for-arrays.md)
+- [Маршалинг по умолчанию для объектов](default-marshaling-for-objects.md)
+- [Маршалинг по умолчанию для строк](default-marshaling-for-strings.md)

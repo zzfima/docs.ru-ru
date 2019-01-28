@@ -2,12 +2,12 @@
 title: Улучшения производительности сокетов в версии 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 588edc35f1b0fb39beb9be9a71573a1727ffeab8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587769"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Улучшения производительности сокетов в версии 3.5
 Класс <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> был оптимизирован в версии 3.5 для обеспечения максимальной производительности приложений, которые используют асинхронные операции ввода-вывода по сети. В рамках набора усовершенствований класса <xref:System.Net.Sockets.Socket>, предоставляющих альтернативный шаблон асинхронной модели, который может использоваться специализированными высокопроизводительными приложениями сокетов, был добавлен ряд новых классов. Эти усовершенствования были специально разработаны для сетевых серверных приложений, требующих высокой производительности. Приложение может быть основано исключительно на улучшенном шаблоне асинхронной модели или может использовать его только в определенных областях (например, при получении больших объемов данных).  
@@ -33,10 +33,10 @@ ms.locfileid: "50193452"
   
  Время существования нового объекта контекста для асинхронной операции на сокете определяется ссылками в коде приложения и ссылками асинхронного ввода-вывода. Приложению не требуется сохранять ссылку на объект контекста асинхронной операции на сокете после ее передачи в качестве параметра в один из методов асинхронной операции на сокете. Ссылка сохраняется до тех пор, пока не будет возвращен обратный вызов завершения. Однако ссылку на объект контекста полезно сохранять, чтобы приложение могло использовать этот объект повторно для последующей асинхронной операции на сокете.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Примеры кода сокетов](socket-code-examples.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
+- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Примеры кода сокетов](socket-code-examples.md)

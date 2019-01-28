@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705327"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
@@ -19,7 +19,7 @@ ms.locfileid: "39333043"
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.|  
@@ -36,7 +36,7 @@ ms.locfileid: "39333043"
 ## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Добавляет уровень буферизации в операциях чтения и записи в другие потоки.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.|  
@@ -56,8 +56,8 @@ ms.locfileid: "39333043"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Считывает символы из `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
   
-## <a name="see-also"></a>См. также  
- [Составление потоков](../../../../standard/io/composing-streams.md)  
- [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)  
- [Асинхронный файловый ввод-вывод](../../../../standard/io/asynchronous-file-i-o.md)  
- [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>См. также
+- [Составление потоков](../../../../standard/io/composing-streams.md)
+- [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

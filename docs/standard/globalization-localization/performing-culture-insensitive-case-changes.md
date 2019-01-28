@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 04601ac0e6b1bc3289be36ce3e1a144ce57ccefb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550517"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Выполнение смены регистра независимо от языка и региональных параметров
 Методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра на основе значения <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Результат преобразования чувствителен к регистру и может быть разным для языков и региональных параметров. Чтобы четко указать, нужно ли учитывать язык и региональные параметры при изменении регистра, используйте перегрузки этих методов, принимающие параметр `culture` явным образом. Чтобы изменить регистр с учетом языка и региональных параметров, укажите значение `CultureInfo.CurrentCulture` для параметра `culture`. Чтобы изменить регистр без учета языка и региональных параметров, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`.  
@@ -69,8 +69,8 @@ static object LookupKey(string key)
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
 - [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

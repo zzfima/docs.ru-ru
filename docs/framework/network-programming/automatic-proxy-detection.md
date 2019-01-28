@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 3a59347c3fcd72f68ee2ae07ccc638ec43021a3b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699861"
 ---
 # <a name="automatic-proxy-detection"></a>Автоматическое обнаружение прокси-сервера
 В ходе автоматического обнаружения прокси-сервера система определяет сервер веб-прокси, который используется для отправки запросов от имени клиента. Эта функция также называется автообнаружением веб-прокси (WPAD). Если автоматическое обнаружение прокси-сервера включено, система пытается обнаружить скрипт конфигурации прокси-сервера, возвращающий набор прокси-серверов, который можно использовать для обработки запросов. Если такой скрипт обнаружен, он скачивается, компилируется и запускается на локальном компьютере при получении информации о прокси-сервере, потока запроса или ответа для запроса, который использует экземпляр <xref:System.Net.WebProxy>.  
@@ -67,7 +67,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
   
  Для обработки запросов, не указывающих прокси-сервер, используется прокси-сервер по умолчанию домена приложения, который доступен в свойстве <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.WebRequest>  
- [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.WebRequest>
+- [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

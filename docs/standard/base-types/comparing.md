@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688900"
 ---
 # <a name="comparing-strings-in-net"></a>Сравнение строк в .NET
 Платформа .NET обеспечивает несколько методов для сравнения значений строк. В таблице ниже перечислены и описаны методы сравнения значений.  
@@ -51,7 +51,7 @@ ms.locfileid: "45698566"
 |Положительное целое число<br /><br /> - или -<br /><br /> 1|Первая строка следует за второй в порядке сортировки.<br /><br /> - или -<br /><br /> Вторая строка имеет значение `null`.|  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.Compare%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Метод <xref:System.String.Compare%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  В примере ниже метод <xref:System.String.Compare%2A?displayProperty=nameWithType> используется для определения относительных значений двух строк.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "45698566"
   
  Этот пример выводит на консоль значение `-1` .  
   
- В предыдущем примере по умолчанию учитывается язык и региональные параметры. Для сравнения строк без учета языка и региональных параметров используйте перегрузку метода <xref:System.String.Compare%2A?displayProperty=nameWithType>, которая позволяет указать язык и региональные параметры с помощью параметра *culture*. См. пример, демонстрирующий использование метода <xref:System.String.Compare%2A?displayProperty=nameWithType> для [сравнения строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ В предыдущем примере по умолчанию учитывается язык и региональные параметры. Для сравнения строк без учета языка и региональных параметров используйте перегрузку метода <xref:System.String.Compare%2A?displayProperty=nameWithType> , которая позволяет указать язык и региональные параметры с помощью параметра *culture* . Пример, демонстрирующий использование метода <xref:System.String.Compare%2A?displayProperty=nameWithType> для сравнения без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> сравнивает два строковых объекта без учета локального языка и региональных параметров. Возвращаемые этим методом значения идентичны значениям, возвращаемым методом **Compare** в предыдущей таблице.  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  В примере ниже метод **CompareOrdinal** используется для сравнения значений двух строк.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "45698566"
  Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> сравнивает строку, которую инкапсулирует текущий строковый объект, с другой строкой или объектом. Возвращаемые этим методом значения идентичны значениям, возвращаемым методом <xref:System.String.Compare%2A?displayProperty=nameWithType> в предыдущей таблице.  
   
 > [!IMPORTANT]
->  Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> в основном предназначен для использования при упорядочивании или сортировке строк. Не следует использовать метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> для проверки на равенство (то есть для явного поиска возвращаемого значения 0 без учета того, является ли одна строка меньше или больше другой). Для определения равенства двух строк используйте метод <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- В примере ниже метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> используется для сравнения объекта `string1` с объектом `string2`.  
+ В примере ниже метод <xref:System.String.CompareTo%2A?displayProperty=nameWithType> используется для сравнения объекта `string1` с объектом `string2` .  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
@@ -91,7 +91,7 @@ ms.locfileid: "45698566"
   
  Этот пример выводит на консоль значение `-1` .  
   
- Все перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> по умолчанию выполняют сравнение с учетом языка и региональных параметров и регистра. У этого метода нет перегрузок, позволяющих выполнять сравнение без учета языка и региональных параметров. Для повышения ясности кода рекомендуется использовать вместо него метод **String.Compare**, указывая <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> для операций с учетом языка и региональных параметров и <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> для операций без учета языка и региональных параметров. Примеры, демонстрирующие использование метода **String.Compare** для сравнения с учетом и без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Все перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=nameWithType> по умолчанию выполняют сравнение с учетом языка и региональных параметров и регистра. У этого метода нет перегрузок, позволяющих выполнять сравнение без учета языка и региональных параметров. В целях повышения ясности кода рекомендуется использовать вместо него метод **String.Compare** , указывая <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> для операций с учетом языка и региональных параметров и <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> для операций без учета языка и региональных параметров. Примеры, демонстрирующие использование метода **String.Compare** для сравнения с учетом и без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Равно  
  С помощью метода **String.Equals** можно легко определить идентичность двух строк. Этот метод учитывает регистр и возвращает логическое значение **true** или **false** . Метод можно вызывать из существующего класса, как показано в следующем примере. В примере ниже метод **Equals** используется для определения того, содержит ли строковый объект фразу "Hello World".  
@@ -152,7 +152,7 @@ ms.locfileid: "45698566"
   
 ## <a name="see-also"></a>См. также
 
-- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)
 - [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Таблицы весовых коэффициентов сортировки (для .NET в Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [Таблица параметров сортировки по умолчанию для элементов Юникод (для .NET Core в Linux и macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

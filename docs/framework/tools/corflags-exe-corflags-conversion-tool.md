@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690752"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (средство преобразования CorFlags)
 Средство преобразования CorFlags позволяет настраивать раздел CorFlags в заголовке переносимого исполняемого образа.  
@@ -52,7 +52,7 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>Примечания  
  Если другие параметры не заданы, средство преобразования CorFlags отображает флаги заданной сборки.  
   
-## <a name="see-also"></a>См. также раздел  
- [Инструменты](../../../docs/framework/tools/index.md)  
- [64-разрядные приложения](../../../docs/framework/64-bit-apps.md)  
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>См. также
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [64-разрядные приложения](../../../docs/framework/64-bit-apps.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

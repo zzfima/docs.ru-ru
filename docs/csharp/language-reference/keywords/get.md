@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: e3cd4779b4f865c4c9bb46d4f25819c863de8bc2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675273"
 ---
 # <a name="get-c-reference"></a>get (Справочник по C#)
 
@@ -37,7 +37,7 @@ ms.locfileid: "53240041"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
 - [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 0176c2fe62d871b265ecd652d2789c7acdfdb765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631845"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (программа подписывания)
 Sign Tool — это программа командной строки, которая присваивает цифровые подписи файлам, проверяет подписи файлов и создает отметки времени для файлов.  
@@ -209,6 +209,6 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Инструменты](../../../docs/framework/tools/index.md)  
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>См. также
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

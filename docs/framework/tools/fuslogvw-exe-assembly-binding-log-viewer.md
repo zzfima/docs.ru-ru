@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574161"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
 Средство просмотра журнала привязки сборок выводит подробные сведения об ошибках привязки сборок. Эта информация поможет определить причину, по которой .NET Framework не находит сборку во время выполнения. Ошибки обычно вызваны развертыванием сборки в неверном расположении, использованием машинного образа, который более не является допустимым, а также несовпадением версий или языков и региональных параметров. Если среде CLR не удается найти сборку, обычно в приложении отображается исключение <xref:System.TypeLoadException>.  
@@ -228,9 +228,9 @@ Discarding native image.
     > [!NOTE]
     >  Это поле активно только в Windows 8 или более поздней версии.  
   
-## <a name="see-also"></a>См. также раздел  
- <xref:System.TypeLoadException>  
- [Инструменты](../../../docs/framework/tools/index.md)  
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>См. также
+- <xref:System.TypeLoadException>
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

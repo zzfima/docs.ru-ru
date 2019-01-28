@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3c4d38b60f349f0ecb87204cb980dd6681a8cc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bef8ce86a3dba5449e50c890b09acdee1375317c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719551"
 ---
 # <a name="msgbox-sample"></a>Пример MsgBox
 В этом примере демонстрируется, как передавать строковые типы по значению в качестве параметров ввода и когда следует использовать поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> и <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -44,9 +44,9 @@ ms.locfileid: "33388704"
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>См. также  
- [Mаршалинг строк](marshaling-strings.md)  
- [Типы данных в вызове неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Маршалинг по умолчанию для строк](default-marshaling-for-strings.md)  
- [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)  
- [Определение кодировки](specifying-a-character-set.md)
+## <a name="see-also"></a>См. также
+- [Mаршалинг строк](marshaling-strings.md)
+- [Типы данных в вызове неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Маршалинг по умолчанию для строк](default-marshaling-for-strings.md)
+- [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)
+- [Определение кодировки](specifying-a-character-set.md)

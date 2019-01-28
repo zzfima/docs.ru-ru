@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 20050eb3eb5fe41778d7a979f94cdd258650b33e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588929"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 Класс <xref:System.Threading.EventWaitHandle> позволяет потокам взаимодействовать друг с другом, передавая и ожидая передачи сигналов. Дескрипторы ожидания событий (часто их называют просто "события") — это дескрипторы ожидания, которые можно создавать для освобождения одного или нескольких потоков в состоянии ожидания. Созданное событие (дескриптор ожидания) затем сбрасывается вручную или автоматически. Класс <xref:System.Threading.EventWaitHandle> может представлять любой локальный дескриптор ожидания событий (локальное событие) или именованный системный дескриптор ожидания событий (именованное событие), который доступен для всех процессов.  
@@ -64,8 +64,8 @@ ms.locfileid: "46702781"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.EventWaitHandle>
+- <xref:System.Threading.WaitHandle>
+- <xref:System.Threading.AutoResetEvent>
+- <xref:System.Threading.ManualResetEvent>
 - [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: e21b75e5b7e338bda54ca00abaa733775865fdb9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 15a42b8fb23aed024fede726d0b5fb731d8272f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686365"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Исключения, создаваемые компилятором (Руководство по программированию в C#)
 Некоторые исключения создаются средой .NET Framework CLR (CLR) автоматически, когда происходит сбой основной операции. В следующей таблице перечислены эти исключения и условия возникновения ошибок.  
@@ -30,9 +30,9 @@ ms.locfileid: "53238394"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)  
-- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
+- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

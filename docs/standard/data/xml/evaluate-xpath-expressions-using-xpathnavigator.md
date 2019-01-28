@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2712c1de4a5f4a06ba041fdc0c5df2487eebdd2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b8666aa9cb9f0512c600a77891b16f439c46995a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517413"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Вычисление выражения XPath с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> содержит метод <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> для вычисления выражения Xpath. Метод <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> принимает выражение XPath, вычисляет его и возвращает соответствующий стандарту W3C тип XPath Boolean, Number, String или Node Set, основанный на результате вычисления выражения XPath.  
@@ -48,12 +48,12 @@ Console.WriteLine(total);
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [Выборка XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
-- [Соответствие узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
-- [Типы узлов, распознаваемые запросами XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
-- [Запросы XPath и пространства имен](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [Выборка XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [Соответствие узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [Типы узлов, распознаваемые запросами XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
+- [Запросы XPath и пространства имен](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
 - [Скомпилированные выражения XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

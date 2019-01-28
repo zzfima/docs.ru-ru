@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738843"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров
 В пространстве имен <xref:System.Collections> существуют классы и члены, поведение которых по умолчанию зависит от языка и региональных параметров. Конструкторы по умолчанию для классов <xref:System.Collections.CaseInsensitiveComparer> и <xref:System.Collections.CaseInsensitiveHashCodeProvider> инициализируют новый экземпляра с помощью свойства <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Все перегрузки метода <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> создают новый экземпляр класса <xref:System.Collections.Hashtable>, по умолчанию используя свойство `Thread.CurrentCulture`. Перегруженные версии метода <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> по умолчанию выполняют сортировку с учетом языка и региональных параметров, используя свойства `Thread.CurrentCulture`. Если в качестве ключей используются строки, на сортировку и поиск по <xref:System.Collections.SortedList> влияет значение `Thread.CurrentCulture`. Для получения результатов, не зависящих от языка и региональных параметров, для этих классов и методов в пространстве имен `Collections` следуйте рекомендациям, приведенным в этом разделе.  
@@ -135,11 +135,11 @@ internal class InvariantComparer : IComparer
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.CaseInsensitiveComparer>  
-- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
-- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
-- <xref:System.Collections.SortedList>  
-- <xref:System.Collections.Hashtable>  
-- <xref:System.Collections.IComparer>  
-- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.Collections.CaseInsensitiveComparer>
+- <xref:System.Collections.CaseInsensitiveHashCodeProvider>
+- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>
+- <xref:System.Collections.SortedList>
+- <xref:System.Collections.Hashtable>
+- <xref:System.Collections.IComparer>
+- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

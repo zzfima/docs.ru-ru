@@ -2,12 +2,12 @@
 title: Маршрутизация IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 19277f05d2feffd52f81cb5f0b70cb401579eb1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694819"
 ---
 # <a name="ipv6-routing"></a>Маршрутизация IPv6
 Гибкий механизм маршрутизации является преимуществом IPv6. Способ выделения идентификаторов сетей IPv4 требует от маршрутизаторов, находящихся в магистральных каналах в Интернете, поддержки больших таблиц маршрутизации. Эти маршрутизаторы должны знать все маршруты, чтобы пересылать пакеты, которые могут быть направлены на любой узел в Интернете. Благодаря возможности объединения адресов IPv6 обеспечивает гибкую адресацию и существенно сокращает размер таблиц маршрутизации. В этой новой архитектуре адресации промежуточные маршрутизаторы должны отслеживать локальную часть своей сети для правильной пересылки сообщений.  
@@ -33,6 +33,6 @@ ms.locfileid: "50195350"
   
 -   Перенаправление. Отправляется маршрутизаторами, чтобы указать лучший адрес следующего прыжка для конкретного назначения для отправляющего узла.  
   
-## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>См. также
+- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Сокеты](../../../docs/framework/network-programming/sockets.md)

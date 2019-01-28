@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 41c9793900c3e7accd5463a19de10d1cb81afd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503837"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Асинхронное программирование с использованием делегатов
 Делегаты позволяют вызывать синхронные методы асинхронно. При синхронном вызове делегата метод `Invoke` вызывает целевой метод непосредственно в текущем потоке. При вызове метода `BeginInvoke` среда CLR помещает запрос в очередь и сразу же передает управление вызывающему объекту. Целевой метод вызывается асинхронно в потоке из пула потоков. Исходный поток, отправивший этот запрос, продолжает выполняться параллельно с целевым методом. Если при вызове метода `BeginInvoke` был указан метод обратного вызова, то метод обратного вызова вызывается после завершения целевого метода. В методе обратного вызова метод `EndInvoke` получает возвращаемое значение и любые параметры ввода/вывода или только выходные параметры. Если при вызове `BeginInvoke` не указан метод обратного вызова, `EndInvoke` можно вызвать из потока, который вызвал `BeginInvoke`.  
@@ -37,4 +37,4 @@ ms.locfileid: "48033328"
   
 ## <a name="see-also"></a>См. также
 
-* <xref:System.Delegate>
+- <xref:System.Delegate>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652193"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Свойства интерфейса (Руководство по программированию на C#)
 Свойства можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Ниже показан пример метода доступа к свойству интерфейса:  
@@ -23,7 +23,7 @@ ms.locfileid: "53241591"
 ## <a name="example"></a>Пример  
  В этом примере интерфейс `IEmployee` содержит доступное для чтения и записи свойство `Name`, а также свойство `Counter`, предназначенное только для чтения. Класс `Employee` реализует интерфейс `IEmployee` и использует эти два свойства. Программа считывает имя нового сотрудника и текущее число сотрудников, после чего отображает имя сотрудника и его рассчитанный номер.  
   
- Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Пример:  
+ Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Например:  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
@@ -53,9 +53,9 @@ ms.locfileid: "53241591"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
 - [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)

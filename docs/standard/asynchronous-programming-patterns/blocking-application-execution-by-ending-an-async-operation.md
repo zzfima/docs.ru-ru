@@ -13,12 +13,12 @@ ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 854528670bbddbc2dc318bf4a5ecd12368a5e8d1
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 63ecff45e39f3d3813d3f817a2cc55c6c35f5b3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716069"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Блокировка выполнения приложения путем завершения асинхронной операции
 Приложения, которые не могут продолжать работу во время ожидания результатов асинхронной операции, должны блокироваться до завершения этой операции. Используйте один из следующих вариантов, чтобы блокировать основной поток приложения на период ожидания асинхронной операции.  
@@ -37,5 +37,5 @@ ms.locfileid: "54361980"
   
 ## <a name="see-also"></a>См. также
 
-- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Обзор асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

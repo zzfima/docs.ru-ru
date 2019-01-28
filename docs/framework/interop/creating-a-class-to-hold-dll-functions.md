@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745042"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Создание класса, содержащего функции DLL
 Упаковка часто используемых функций DLL в управляемый класс позволяет эффективно инкапсулировать функциональные возможности платформы. Делать это в каждом случае необязательно, однако использование оболочки класса удобно, поскольку определение функций DLL может быть затруднительно и нередко приводит к ошибкам. При программировании на языке Visual Basic или C# необходимо объявлять функции DLL в классе или модуле Visual Basic.  
@@ -36,8 +36,8 @@ ms.locfileid: "33387066"
   
  Имена класса и его методов могут быть произвольными. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>См. также  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>См. также
+- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)
+- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)

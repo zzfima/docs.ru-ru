@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731924"
 ---
 # <a name="file-encodings-visual-basic"></a>Кодировки файлов (Visual Basic)
 Кодировки файлов (или кодировки символов) определяют отображение символов при обработке текстов. Одна кодировка может быть предпочтительнее другой с точки зрения возможности или невозможности оперирования языковыми символами, хотя обычно предпочитается Юникод.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="encoding-class"></a>Класс Encoding  
  Класс <xref:System.Text.Encoding> представляет кодировку символов. В этой таблице перечислены типы доступных кодировок и дано их описание.  
   
-|name|Описание:|
+|name|Описание|
 |---|---|    
 |<xref:System.Text.ASCIIEncoding>|Представляет кодировку ASCII символов Юникода.|  
 |<xref:System.Text.UnicodeEncoding>|Представляет кодировку символов Юникода в формате UTF-16.|  
@@ -34,6 +35,6 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.Text.UTF7Encoding>|Представляет кодировку UTF-7 символов Юникода.|  
 |<xref:System.Text.UTF8Encoding>|Представляет кодировку символов Юникода в формате UTF-8.|  
   
-## <a name="see-also"></a>См. также  
- [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Запись в файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>См. также
+- [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Запись в файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

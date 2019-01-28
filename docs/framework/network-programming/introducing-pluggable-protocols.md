@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729136"
 ---
 # <a name="introducing-pluggable-protocols"></a>Введение в подключаемые протоколы
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. Классы доступа к Интернету в пространствах имен <xref:System.Net> и <xref:System.Net.Sockets> можно использовать для реализации веб-приложений и интернет-приложений.  
@@ -66,8 +66,8 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
   
  Разработчикам, знакомым с интерфейсом сокетов Windows, или пользователям, которым требуется управление, предоставляемое программированием на уровне сокетов, окажутся полезны классы **System.Net.Sockets**. Классы **System.Net.Sockets** являются точкой перехода из управляемого кода в машинный код в раках классов **System.Net**. В большинстве случаев классы **System.Net.Sockets** выполняют маршалинг данных в свои 32-разрядные аналоги Windows, а также обрабатывают все необходимые проверки безопасности.  
   
-## <a name="see-also"></a>См. также  
- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>См. также
+- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

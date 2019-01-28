@@ -2,12 +2,12 @@
 title: О пространстве имен System.Net.PeerToPeer.Collaboration
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 9e95dc571bc520c0abd0cf676ce37f383fed84ba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570867"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>О пространстве имен System.Net.PeerToPeer.Collaboration
 Пространство имен <xref:System.Net.PeerToPeer.Collaboration> предоставляет классы и API, которые применяются для реализации функций однорангового взаимодействия с использованием инфраструктуры одноранговой совместной работы.  
@@ -39,5 +39,5 @@ ms.locfileid: "50197084"
   
  Распространенные одноранговые приложения: конференции, совместная работа с заметками или досками, приложения чата без сервера, интерактивная реклама и интернет-игры.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.PeerToPeer.Collaboration>
+## <a name="see-also"></a>См. также
+- <xref:System.Net.PeerToPeer.Collaboration>

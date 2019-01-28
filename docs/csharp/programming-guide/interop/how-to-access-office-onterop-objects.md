@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695118"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Как выполнить Доступ к объектам взаимодействия Office с помощью функций языка Visual C# (Руководство по программированию на C#)
 В Visual C# предусмотрены функции, упрощающие доступ к объектам API Office. К новым функциям относятся именованные и необязательные аргументы, новый тип `dynamic`, а также возможность передавать аргументы ссылочным параметрам в методах COM, как если бы они были параметрами значений.  
@@ -175,8 +175,8 @@ ms.locfileid: "53236574"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Type.Missing?displayProperty=nameWithType>  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
-- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- <xref:System.Type.Missing?displayProperty=nameWithType>
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

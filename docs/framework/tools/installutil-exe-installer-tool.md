@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e2cba7099b84cb8a11fb7c11fae960293eb60a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658264"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (инструмент для установки)
 Программа для установки является программой командной строки, с помощью которой можно устанавливать и удалять ресурсы сервера путем выполнения компонентов установщика в соответствующих сборках. Эта программа работает совместно с классами в пространстве имен <xref:System.Configuration.Install>.  
@@ -161,7 +161,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- <xref:System.Configuration.Install>  
- [Инструменты](../../../docs/framework/tools/index.md)  
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Configuration.Install>
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

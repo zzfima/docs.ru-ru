@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc160678817266dc649f60dc3f2cc77044c05691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb1aba9e794928b0eb905722e2a5d7df84100ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729214"
 ---
 # <a name="identifying-functions-in-dlls"></a>Идентификация функций в библиотеках DLL
 Идентификатор функции DLL состоит из следующих элементов:  
@@ -45,9 +45,9 @@ ms.locfileid: "33388623"
   
  Полную документацию по API Win32 см. в разделе "Пакет SDK платформы". Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>См. также  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>См. также
+- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)
+- [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)

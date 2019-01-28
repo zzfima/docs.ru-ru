@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631312"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (программа экспорта библиотек типов)
 Программа импорта библиотек типов преобразует определения типов, содержащиеся в библиотеке типов COM, в эквивалентные определения сборки среды CLR. Tlbimp.exe выводит двоичный файл (сборку), содержащий метаданные среды выполнения для типов, определенных в исходной библиотеке типов. Этот файл можно просмотреть с помощью таких средств, как [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Инструменты](index.md)  
- [Tlbexp.exe (программа экспорта библиотек типов)](tlbexp-exe-type-library-exporter.md)  
- [Импорт библиотеки типов в виде сборки](../interop/importing-a-type-library-as-an-assembly.md)  
- [Общие сведения о преобразовании библиотеки типов в сборку](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe (дизассемблер IL)](ildasm-exe-il-disassembler.md)  
- [Sn.exe (средство строгих имен)](sn-exe-strong-name-tool.md)  
- [Сборки со строгими именами](../app-domains/strong-named-assemblies.md)  
- [Атрибуты для импорта библиотек типов в сборки взаимодействия](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [Командные строки](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>См. также
+- [Инструменты](index.md)
+- [Tlbexp.exe (программа экспорта библиотек типов)](tlbexp-exe-type-library-exporter.md)
+- [Импорт библиотеки типов в виде сборки](../interop/importing-a-type-library-as-an-assembly.md)
+- [Общие сведения о преобразовании библиотеки типов в сборку](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe (дизассемблер IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (средство строгих имен)](sn-exe-strong-name-tool.md)
+- [Сборки со строгими именами](../app-domains/strong-named-assemblies.md)
+- [Атрибуты для импорта библиотек типов в сборки взаимодействия](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [Командные строки](developer-command-prompt-for-vs.md)

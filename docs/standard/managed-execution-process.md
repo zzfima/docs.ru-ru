@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652024"
 ---
 # <a name="managed-execution-process"></a>процесс управляемого выполнения
 <a name="introduction"></a> Процесс управляемого исполнения включает следующие шаги, которые подробно разбираются позднее в этом разделе:  
@@ -109,12 +109,12 @@ ms.locfileid: "44192597"
   
 ## <a name="see-also"></a>См. также
 
-- [Обзор набора средств Visual Studio для Unity](../../docs/framework/get-started/overview.md)  
-- [Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md)  
-- [Метаданные и компоненты с самоописанием](../../docs/standard/metadata-and-self-describing-components.md)  
-- [Ilasm.exe (ассемблер IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-- [Безопасность](../../docs/standard/security/index.md)  
-- [Взаимодействие с неуправляемым кодом](../../docs/framework/interop/index.md)  
-- [Развертывание](../../docs/framework/deployment/net-framework-applications.md)  
-- [Сборки в среде CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Обзор](../../docs/framework/get-started/overview.md)
+- [Независимость от языка и независимые от языка компоненты](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Метаданные и компоненты с самоописанием](../../docs/standard/metadata-and-self-describing-components.md)
+- [Ilasm.exe (ассемблер IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Безопасность](../../docs/standard/security/index.md)
+- [Взаимодействие с неуправляемым кодом](../../docs/framework/interop/index.md)
+- [Развертывание](../../docs/framework/deployment/net-framework-applications.md)
+- [Сборки в среде CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Домены приложений](../../docs/framework/app-domains/application-domains.md)

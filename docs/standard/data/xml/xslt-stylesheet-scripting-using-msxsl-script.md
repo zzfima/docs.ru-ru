@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46584257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563435"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Создание скриптов таблиц стилей XSLT с помощью &lt;msxsl:script&gt;
 Класс <xref:System.Xml.Xsl.XslTransform> поддерживает внедрение скриптов с помощью элемента `script`.  
@@ -31,7 +31,7 @@ ms.locfileid: "46584257"
   
  , где `msxsl` является префиксом, привязанным к пространству имен `urn:schemas-microsoft-com:xslt`.  
   
- Атрибут `language` не является обязательным, но если он указан, то может иметь одно из следующих значений: C#, VB, JScript, JavaScript, VisualBasic или CSharp. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
+ Атрибут `language` не является обязательным, но если он указан, его значение должно быть одним из следующих: C#, VB, JScript, JavaScript, VisualBasic, или CSharp. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
   
  Атрибут `implements-prefix` обязателен. Этот атрибут используется для объявления пространства имен и связывания его с блоком скрипта. Значением этого атрибута является префикс, соответствующий пространству имен. Пространство имен может быть определено где-то в таблице стилей.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "46584257"
   
  Функции можно объявлять внутри элемента `msxsl:script`. В следующей таблице показаны пространства имен, поддерживаемые по умолчанию. Можно использовать классы вне перечисленных пространств имен. Однако эти классы должны указываться полными именами.  
   
-|Пространства имен по умолчанию|Описание:|  
+|Пространства имен по умолчанию|Описание|  
 |------------------------|-----------------|  
 |Система|Системный класс.|  
 |System.Collection|Классы коллекций.|  
@@ -72,7 +72,7 @@ ms.locfileid: "46584257"
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Если функция скрипта использует один из числовых типов (Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal), то он приводится к типу Double, который сопоставлен с числовым типом W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
+ Если функция скрипта использует один из следующих числовых типов: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal, они приводятся к типу Double, который преобразуется в тип number W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
   
  Если функция скрипта использует тип, отличный от перечисленных выше, или функция не компилируется при загрузке таблицы стилей в объект <xref:System.Xml.Xsl.XslTransform>, возникает исключение.  
   
@@ -89,9 +89,10 @@ ms.locfileid: "46584257"
  Настоятельно рекомендуется помещать все содержимое скрипта в секцию CDATA, так как операторы, идентификаторы или разделители для данного языка могут быть ошибочно интерпретированы как XML. В следующем примере показано, как использовать логический оператор AND в скрипт.  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 219327d246416cfb3d76919680aa74a58bae5fb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724451"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Изменение XML-данных с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для изменения узлов и значений в XML-документе. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -250,9 +250,9 @@ Console.WriteLine(navigator.OuterXml);
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [Вставка XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [Вставка XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
 - [Удаление XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

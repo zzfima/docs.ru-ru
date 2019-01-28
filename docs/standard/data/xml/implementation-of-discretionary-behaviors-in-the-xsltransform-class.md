@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609581"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Реализация поведения по выбору в классе XslTransform
 
@@ -82,10 +82,10 @@ ms.locfileid: "44087944"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [Реализация классом XslTransform XSLT-процессора](xsltransform-class-implements-the-xslt-processor.md)  
-- [XSLT-преобразования с помощью класса XslTransform](xslt-transformations-with-the-xsltransform-class.md)  
-- [XPathNavigator в преобразованиях](xpathnavigator-in-transformations.md)  
-- [XPathNodeIterator в преобразованиях](xpathnodeiterator-in-transformations.md)  
-- [Ввод XPathDocument в XslTransform](xpathdocument-input-to-xsltransform.md)  
-- [Ввод XmlDataDocument в XslTransform](xmldatadocument-input-to-xsltransform.md)  
-- [Ввод XmlDocument в XslTransform](xmldocument-input-to-xsltransform.md)  
+- [Реализация классом XslTransform XSLT-процессора](xsltransform-class-implements-the-xslt-processor.md)
+- [XSLT-преобразования с помощью класса XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [XPathNavigator в преобразованиях](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator в преобразованиях](xpathnodeiterator-in-transformations.md)
+- [Ввод XPathDocument в XslTransform](xpathdocument-input-to-xsltransform.md)
+- [Ввод XmlDataDocument в XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [Ввод XmlDocument в XslTransform](xmldocument-input-to-xsltransform.md)

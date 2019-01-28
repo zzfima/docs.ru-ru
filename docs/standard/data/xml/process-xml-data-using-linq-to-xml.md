@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d24f379bcfdb494369b84173cad4daa800fb7a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502185"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Обработка XML-данных с помощью LINQ to XML
 LINQ to XML - новая модель для обработки XML-данных в платформе .NET Framework версии 3.5. С помощью LINQ to XML разработчик может выполнять над XML-данными любые операции: запросы, изменения, создание, сохранение и сериализацию XML-документов. Основные преимущества заключаются в возможностях запросов и создания.  
@@ -23,7 +23,7 @@ LINQ to XML - новая модель для обработки XML-данных
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.Linq>  
-- <xref:System.Linq>  
-- [Сравнение LINQ to XML с DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
+- <xref:System.Xml.Linq>
+- <xref:System.Linq>
+- [Сравнение LINQ to XML с DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)
 - [Сравнение LINQ to XML с другими XML-технологиями](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

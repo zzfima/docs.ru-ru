@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-ms.openlocfilehash: 72d9017064959c801bd2702ff585ee16b1592da6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a2cbbabdad1d79c82bb5b3ec02a391727e552c98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718641"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Сравнение указателей (Руководство по программированию в C#)
 Для сравнения указателей любого типа можно применять следующие операторы:  
@@ -31,12 +31,12 @@ ms.locfileid: "53236795"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
-- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
-- [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Типы](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Типы](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

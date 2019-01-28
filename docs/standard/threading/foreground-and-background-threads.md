@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697506"
 ---
 # <a name="foreground-and-background-threads"></a>Основные и фоновые потоки
 Управляемый поток может быть основным или фоновым. Фоновые потоки отличаются от основных только в одном аспекте: фоновый поток не поддерживает управляемое выполнение среды выполнения. После того, как в управляемом процессе (где управляемой сборкой является файл EXE) остановятся все основные потоки, система принудительно останавливает все фоновые потоки и завершает работу процесса.  
@@ -34,6 +34,6 @@ ms.locfileid: "44081333"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadAbortException>

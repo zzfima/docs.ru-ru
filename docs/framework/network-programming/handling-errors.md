@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599790"
 ---
 # <a name="handling-errors"></a>Обработка ошибок
 Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> вызывают одновременно системные исключения (например, <xref:System.ArgumentException>) и веб-исключения (исключения <xref:System.Net.WebException>, вызываемые методом <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -45,7 +45,7 @@ ms.locfileid: "50198345"
   
  В следующей таблице описаны возможные значения свойства **Status**.  
   
-|Status|Описание:|  
+|Status|Описание|  
 |------------|-----------------|  
 |ConnectFailure|Не удалось связаться с удаленной службой на транспортном уровне.|  
 |ConnectionClosed|Соединение было преждевременно закрыто.|  
@@ -167,6 +167,6 @@ End Try
   
  Если возникает исключение **SocketException**, класс **SocketException** присваивает свойству <xref:System.Net.Sockets.SocketException.ErrorCode%2A> значение, отражающее последнюю ошибку сокета операционной системы. Дополнительные сведения о кодах ошибок сокета см. в документации по кодам ошибок API Winsock 2.0 на веб-сайте MSDN.  
   
-## <a name="see-also"></a>См. также  
- [Основы обработки исключений](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>См. также
+- [Основы обработки исключений](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)

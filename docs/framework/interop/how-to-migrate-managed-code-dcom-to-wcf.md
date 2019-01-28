@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734520"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Как выполнить Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
@@ -421,8 +421,8 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
- [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>См. также
+- [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)
+- [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md)

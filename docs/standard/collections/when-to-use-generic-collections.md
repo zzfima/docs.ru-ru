@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674041"
 ---
 # <a name="when-to-use-generic-collections"></a>Когда следует использовать универсальные коллекции
 Использование универсальных коллекций является рекомендуемой практикой, поскольку при этом сразу же обеспечивается безопасность типов без необходимости наследования от базового типа коллекции и реализации элементов определенного типа. Типы универсальных коллекций обычно работают лучше, чем соответствующие типы неуниверсальных коллекций (и лучше, чем типы, являющиеся производными от базовых типов неуниверсальных коллекций), если элементами коллекции являются типы значений, поскольку при использовании универсальных коллекций упаковывать элементы не требуется.  
@@ -55,6 +55,6 @@ ms.locfileid: "48261239"
   
 ## <a name="see-also"></a>См. также
 
-- [Коллекции и структуры данных](../../../docs/standard/collections/index.md)  
-- [Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Коллекции и структуры данных](../../../docs/standard/collections/index.md)
+- [Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Универсальные шаблоны](../../../docs/standard/generics/index.md)

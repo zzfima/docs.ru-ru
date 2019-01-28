@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728402"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Обработка XML-данных с использованием модели данных XPath
 Пространство имен <xref:System.Xml?displayProperty=nameWithType> обеспечивает программное представление XML-документов, фрагментов, узлов и наборов узлов в памяти с использованием классов <xref:System.Xml.XmlDocument> и <xref:System.Xml.XPath.XPathDocument>.  
@@ -37,7 +37,7 @@ ms.locfileid: "50202752"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
 - [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

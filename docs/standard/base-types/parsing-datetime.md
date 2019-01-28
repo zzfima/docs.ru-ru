@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560820"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -89,8 +89,8 @@ ms.locfileid: "44207620"
 
 ## <a name="see-also"></a>См. также
 
-- [Анализ строк в .NET Framework](parsing-strings.md)  
-- [Типы форматирования](formatting-types.md)  
-- [Преобразование типов в .NET](type-conversion.md)  
-- [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)  
+- [Parsing Strings](parsing-strings.md)
+- [Типы форматирования](formatting-types.md)
+- [Преобразование типов в .NET](type-conversion.md)
+- [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)
 - [Строки настраиваемых форматов даты и времени](custom-date-and-time-format-strings.md)

@@ -5,12 +5,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 74b457eba9642eb4d54873769014a7db5d28003b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22b5f128bd797fda23d14008e016dcdc2432b3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645136"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Установка .NET Framework в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2
 
@@ -39,6 +39,6 @@ ms.locfileid: "53155435"
 
 ## <a name="see-also"></a>См. также
 
-[Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Устранение неполадок заблокированных установок и удалений .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Установка .NET Framework для разработчиков](guide-for-developers.md)
+- [Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Установка .NET Framework для разработчиков](guide-for-developers.md)

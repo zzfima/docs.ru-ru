@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e83cf82aee57b1f40f695700d8d0b38c12e0ac39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5349b6476e204606fb1ec63144a1fccb0677d9d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505059"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Ввод XmlDocument в XslTransform
 Класс <xref:System.Xml.XmlDocument> представляет возможности изменения XML-документа. Если нужно изменить XML-документ перед передачей методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>, загрузите XML-документ в объект <xref:System.Xml.XmlDocument>, измените его и отправьте в объект <xref:System.Xml.Xsl.XslTransform>.  
@@ -49,10 +49,10 @@ while (rdr.Read()) {}
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.XmlDocument>  
-- [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
-- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
-- [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
-- [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
-- [Ввод XPathDocument в XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- <xref:System.Xml.XmlDocument>
+- [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
+- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
+- [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
+- [Ввод XPathDocument в XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
 - [Ввод XmlDataDocument в XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)

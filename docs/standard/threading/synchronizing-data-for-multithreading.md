@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617919"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Синхронизация данных для многопоточности
 Если несколько потоков могут вызывать свойства и методы отдельного объекта, эти вызовы важно синхронизировать. В противном случае поток может прерваться действиями другого потока, а объект может остаться в недопустимом состоянии. Класс, члены которого защищены от подобных прерываний, называется потокобезопасным.  
@@ -69,8 +69,8 @@ ms.locfileid: "48842662"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
-- [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [Оператор SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)
+- [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Оператор SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [Оператор lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
