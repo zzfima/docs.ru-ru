@@ -16,46 +16,46 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 39b5aeecba39c0e5377fd4f76902dae4b678c324
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660181"
 ---
-# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="42f53-102">-filealign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="42f53-102">-filealign (C# Compiler Options)</span></span>
-<span data-ttu-id="42f53-103">Параметр **-filealign** позволяет указать размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="42f53-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
+# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="c981e-102">-filealign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="c981e-102">-filealign (C# Compiler Options)</span></span>
+<span data-ttu-id="c981e-103">Параметр **-filealign** позволяет указать размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="c981e-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42f53-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42f53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c981e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c981e-104">Syntax</span></span>  
   
 ```console  
 -filealign:number  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="42f53-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="42f53-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="c981e-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="c981e-105">Arguments</span></span>  
  `number`  
- <span data-ttu-id="42f53-106">Значение, которое задает размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="42f53-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="42f53-107">Допустимые значения: 512, 1024, 2048, 4096 и 8192.</span><span class="sxs-lookup"><span data-stu-id="42f53-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="42f53-108">Эти значения указаны в байтах.</span><span class="sxs-lookup"><span data-stu-id="42f53-108">These values are in bytes.</span></span>  
+ <span data-ttu-id="c981e-106">Значение, которое задает размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="c981e-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="c981e-107">Допустимые значения: 512, 1024, 2048, 4096 и 8192.</span><span class="sxs-lookup"><span data-stu-id="c981e-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="c981e-108">Эти значения указаны в байтах.</span><span class="sxs-lookup"><span data-stu-id="c981e-108">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="42f53-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="42f53-109">Remarks</span></span>  
- <span data-ttu-id="42f53-110">Каждый раздел выравнивается по границе, кратной значению **-filealign**.</span><span class="sxs-lookup"><span data-stu-id="42f53-110">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="42f53-111">Фиксированный размер по умолчанию не предусмотрен.</span><span class="sxs-lookup"><span data-stu-id="42f53-111">There is no fixed default.</span></span> <span data-ttu-id="42f53-112">Если значение **-filealign** не указано, среда CLR выбирает значение по умолчанию во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="42f53-112">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c981e-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="c981e-109">Remarks</span></span>  
+ <span data-ttu-id="c981e-110">Каждый раздел выравнивается по границе, кратной значению **-filealign**.</span><span class="sxs-lookup"><span data-stu-id="c981e-110">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="c981e-111">Фиксированный размер по умолчанию не предусмотрен.</span><span class="sxs-lookup"><span data-stu-id="c981e-111">There is no fixed default.</span></span> <span data-ttu-id="c981e-112">Если значение **-filealign** не указано, среда CLR выбирает значение по умолчанию во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="c981e-112">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
   
- <span data-ttu-id="42f53-113">Указанный размер раздела влияет на размер выходного файла.</span><span class="sxs-lookup"><span data-stu-id="42f53-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="42f53-114">Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.</span><span class="sxs-lookup"><span data-stu-id="42f53-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
+ <span data-ttu-id="c981e-113">Указанный размер раздела влияет на размер выходного файла.</span><span class="sxs-lookup"><span data-stu-id="c981e-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="c981e-114">Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.</span><span class="sxs-lookup"><span data-stu-id="c981e-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
- <span data-ttu-id="42f53-115">Используйте [DUMPBIN](/cpp/build/reference/dumpbin-options) для просмотра информации о разделах выходного файла.</span><span class="sxs-lookup"><span data-stu-id="42f53-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
+ <span data-ttu-id="c981e-115">Используйте [DUMPBIN](/cpp/build/reference/dumpbin-options) для просмотра информации о разделах выходного файла.</span><span class="sxs-lookup"><span data-stu-id="c981e-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="42f53-116">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="42f53-116">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="c981e-116">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c981e-116">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="42f53-117">Откройте страницу **Свойства** проекта.</span><span class="sxs-lookup"><span data-stu-id="42f53-117">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="c981e-117">Откройте страницу **Свойства** проекта.</span><span class="sxs-lookup"><span data-stu-id="c981e-117">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="42f53-118">Щелкните страницу свойств **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="42f53-118">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="c981e-118">Щелкните страницу свойств **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="c981e-118">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="42f53-119">Нажмите кнопку **Дополнительно** .</span><span class="sxs-lookup"><span data-stu-id="42f53-119">Click the **Advanced** button.</span></span>  
+3.  <span data-ttu-id="c981e-119">Нажмите кнопку **Дополнительно** .</span><span class="sxs-lookup"><span data-stu-id="c981e-119">Click the **Advanced** button.</span></span>  
   
-4.  <span data-ttu-id="42f53-120">Измените свойство **Выравнивание файла**.</span><span class="sxs-lookup"><span data-stu-id="42f53-120">Modify the **File Alignment** property.</span></span>  
+4.  <span data-ttu-id="c981e-120">Измените свойство **Выравнивание файла**.</span><span class="sxs-lookup"><span data-stu-id="c981e-120">Modify the **File Alignment** property.</span></span>  
   
- <span data-ttu-id="42f53-121">Сведения об установке этого параметра компилятора программными средствами см. в статье <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="42f53-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
+ <span data-ttu-id="c981e-121">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="c981e-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42f53-122">См. также</span><span class="sxs-lookup"><span data-stu-id="42f53-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c981e-122">См. также</span><span class="sxs-lookup"><span data-stu-id="c981e-122">See also</span></span>
 
-- [<span data-ttu-id="42f53-123">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="42f53-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="42f53-124">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="42f53-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="c981e-123">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="c981e-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="c981e-124">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="c981e-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

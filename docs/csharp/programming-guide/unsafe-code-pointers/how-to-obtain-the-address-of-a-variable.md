@@ -7,42 +7,42 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: 3e2eac468643b755c6db2d6055427baa7ce2b7a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490562"
 ---
-# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="58f28-102">Практическое руководство. Получение адреса переменной (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="58f28-102">How to: obtain the address of a variable (C# Programming Guide)</span></span>
+# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="5bd0c-102">Практическое руководство. Получение адреса переменной (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="5bd0c-102">How to: obtain the address of a variable (C# Programming Guide)</span></span>
 
-<span data-ttu-id="58f28-103">Чтобы получить адрес унарного выражения, при вычислении которого получается фиксированная переменная, используйте оператор address-of `&`:</span><span class="sxs-lookup"><span data-stu-id="58f28-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  
+<span data-ttu-id="5bd0c-103">Чтобы получить адрес унарного выражения, при вычислении которого получается фиксированная переменная, используйте оператор address-of `&`:</span><span class="sxs-lookup"><span data-stu-id="5bd0c-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  
   
 ```csharp  
 int number;  
 int* p = &number; //address-of operator &  
 ```  
   
- <span data-ttu-id="58f28-104">Оператор address-of применяется только к переменным.</span><span class="sxs-lookup"><span data-stu-id="58f28-104">The address-of operator can only be applied to a variable.</span></span> <span data-ttu-id="58f28-105">Если переменная может перемещаться, используйте [оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md), чтобы временно зафиксировать переменную перед получением ее адреса.</span><span class="sxs-lookup"><span data-stu-id="58f28-105">If the variable is a moveable variable, you can use the [fixed statement](../../../csharp/language-reference/keywords/fixed-statement.md) to temporarily fix the variable before obtaining its address.</span></span>  
+ <span data-ttu-id="5bd0c-104">Оператор address-of применяется только к переменным.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-104">The address-of operator can only be applied to a variable.</span></span> <span data-ttu-id="5bd0c-105">Если переменная может перемещаться, используйте [оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md), чтобы временно зафиксировать переменную перед получением ее адреса.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-105">If the variable is a moveable variable, you can use the [fixed statement](../../../csharp/language-reference/keywords/fixed-statement.md) to temporarily fix the variable before obtaining its address.</span></span>  
   
- <span data-ttu-id="58f28-106">Вам необходимо самостоятельно обеспечить проверку инициализации переменной.</span><span class="sxs-lookup"><span data-stu-id="58f28-106">It's your responsibility to ensure that the variable is initialized.</span></span> <span data-ttu-id="58f28-107">Если переменная не инициализирована, компилятор не выдает сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="58f28-107">The compiler doesn't issue an error message if the variable is not initialized.</span></span>  
+ <span data-ttu-id="5bd0c-106">Вам необходимо самостоятельно обеспечить проверку инициализации переменной.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-106">It's your responsibility to ensure that the variable is initialized.</span></span> <span data-ttu-id="5bd0c-107">Если переменная не инициализирована, компилятор не выдает сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-107">The compiler doesn't issue an error message if the variable is not initialized.</span></span>  
   
- <span data-ttu-id="58f28-108">Получить адрес константы или значения нельзя.</span><span class="sxs-lookup"><span data-stu-id="58f28-108">You can't get the address of a constant or a value.</span></span>  
+ <span data-ttu-id="5bd0c-108">Получить адрес константы или значения нельзя.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-108">You can't get the address of a constant or a value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="58f28-109">Пример</span><span class="sxs-lookup"><span data-stu-id="58f28-109">Example</span></span>  
- <span data-ttu-id="58f28-110">В этом примере объявляется указатель на `int`, `p`, которому присваивается адрес целочисленной переменной `number`.</span><span class="sxs-lookup"><span data-stu-id="58f28-110">In this example, a pointer to `int`, `p`, is declared and assigned the address of an integer variable, `number`.</span></span> <span data-ttu-id="58f28-111">Переменная `number` инициализируется в результате назначения `*p`.</span><span class="sxs-lookup"><span data-stu-id="58f28-111">The variable `number` is initialized as a result of the assignment to `*p`.</span></span> <span data-ttu-id="58f28-112">Если закомментировать этот оператор назначения, инициализация `number` будет удалена, однако во время компиляции ошибка не возникнет.</span><span class="sxs-lookup"><span data-stu-id="58f28-112">If you comment out this assignment statement, the initialization of the variable `number` is removed, but no compile-time error is issued.</span></span>  
+## <a name="example"></a><span data-ttu-id="5bd0c-109">Пример</span><span class="sxs-lookup"><span data-stu-id="5bd0c-109">Example</span></span>  
+ <span data-ttu-id="5bd0c-110">В этом примере объявляется указатель на `int`, `p`, которому присваивается адрес целочисленной переменной `number`.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-110">In this example, a pointer to `int`, `p`, is declared and assigned the address of an integer variable, `number`.</span></span> <span data-ttu-id="5bd0c-111">Переменная `number` инициализируется в результате назначения `*p`.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-111">The variable `number` is initialized as a result of the assignment to `*p`.</span></span> <span data-ttu-id="5bd0c-112">Если закомментировать этот оператор назначения, инициализация `number` будет удалена, однако во время компиляции ошибка не возникнет.</span><span class="sxs-lookup"><span data-stu-id="5bd0c-112">If you comment out this assignment statement, the initialization of the variable `number` is removed, but no compile-time error is issued.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="58f28-113">Скомпилируйте этот пример с использованием параметра компилятора [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="58f28-113">Compile this example with the [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
+> <span data-ttu-id="5bd0c-113">Скомпилируйте этот пример с использованием параметра компилятора [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="5bd0c-113">Compile this example with the [`-unsafe`](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span>
   
  [!code-csharp[address-of-a-variable](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#8)]  
   
-## <a name="see-also"></a><span data-ttu-id="58f28-114">См. также</span><span class="sxs-lookup"><span data-stu-id="58f28-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5bd0c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="5bd0c-114">See also</span></span>
 
-- [<span data-ttu-id="58f28-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="58f28-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="58f28-116">Выражения указателей</span><span class="sxs-lookup"><span data-stu-id="58f28-116">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [<span data-ttu-id="58f28-117">Типы указателей</span><span class="sxs-lookup"><span data-stu-id="58f28-117">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [<span data-ttu-id="58f28-118">Типы</span><span class="sxs-lookup"><span data-stu-id="58f28-118">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="58f28-119">unsafe</span><span class="sxs-lookup"><span data-stu-id="58f28-119">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="58f28-120">Оператор fixed</span><span class="sxs-lookup"><span data-stu-id="58f28-120">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
-- [<span data-ttu-id="58f28-121">stackalloc</span><span class="sxs-lookup"><span data-stu-id="58f28-121">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+- [<span data-ttu-id="5bd0c-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="5bd0c-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="5bd0c-116">Выражения указателей</span><span class="sxs-lookup"><span data-stu-id="5bd0c-116">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [<span data-ttu-id="5bd0c-117">Типы указателей</span><span class="sxs-lookup"><span data-stu-id="5bd0c-117">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="5bd0c-118">Типы</span><span class="sxs-lookup"><span data-stu-id="5bd0c-118">Types</span></span>](../../../csharp/language-reference/keywords/types.md)
+- [<span data-ttu-id="5bd0c-119">unsafe</span><span class="sxs-lookup"><span data-stu-id="5bd0c-119">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)
+- [<span data-ttu-id="5bd0c-120">Оператор fixed</span><span class="sxs-lookup"><span data-stu-id="5bd0c-120">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+- [<span data-ttu-id="5bd0c-121">stackalloc</span><span class="sxs-lookup"><span data-stu-id="5bd0c-121">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)

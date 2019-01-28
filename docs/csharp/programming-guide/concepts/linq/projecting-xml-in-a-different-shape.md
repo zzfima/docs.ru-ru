@@ -2,24 +2,24 @@
 title: Проецирование XML в другую форму (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43787003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723788"
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="dc634-102">Проецирование XML в другую форму (C#)</span><span class="sxs-lookup"><span data-stu-id="dc634-102">Projecting XML in a Different Shape (C#)</span></span>
-<span data-ttu-id="dc634-103">В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="dc634-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="197fc-102">Проецирование XML в другую форму (C#)</span><span class="sxs-lookup"><span data-stu-id="197fc-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="197fc-103">В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="197fc-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="dc634-104">Множество типичных преобразований XML состоят из цепочек запросов, как в примере.</span><span class="sxs-lookup"><span data-stu-id="dc634-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="dc634-105">Принято начинать с XML в некой форме, проецировать промежуточные результаты как коллекции анонимных типов или именованных типов, затем опять проецировать результаты в XML, который совсем отличен от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="dc634-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="197fc-104">Множество типичных преобразований XML состоят из цепочек запросов, как в примере.</span><span class="sxs-lookup"><span data-stu-id="197fc-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="197fc-105">Принято начинать с XML в некой форме, проецировать промежуточные результаты как коллекции анонимных типов или именованных типов, затем опять проецировать результаты в XML, который совсем отличен от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="197fc-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dc634-106">Пример</span><span class="sxs-lookup"><span data-stu-id="dc634-106">Example</span></span>  
- <span data-ttu-id="dc634-107">В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев.</span><span class="sxs-lookup"><span data-stu-id="dc634-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="dc634-108">Также идентифицируется стиль и текст каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="dc634-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="dc634-109">Наконец, в примере проецируется XML с другой формой.</span><span class="sxs-lookup"><span data-stu-id="dc634-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="dc634-110">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="dc634-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="dc634-111">Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="dc634-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="197fc-106">Пример</span><span class="sxs-lookup"><span data-stu-id="197fc-106">Example</span></span>  
+ <span data-ttu-id="197fc-107">В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев.</span><span class="sxs-lookup"><span data-stu-id="197fc-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="197fc-108">Также идентифицируется стиль и текст каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="197fc-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="197fc-109">Наконец, в примере проецируется XML с другой формой.</span><span class="sxs-lookup"><span data-stu-id="197fc-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="197fc-110">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="197fc-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="197fc-111">Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="197fc-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="dc634-112">Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="dc634-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="197fc-112">Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="197fc-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="dc634-113">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="dc634-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="dc634-114">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dc634-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="197fc-113">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="197fc-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="197fc-114">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="197fc-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="dc634-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="dc634-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="197fc-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="197fc-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -230,11 +230,11 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="dc634-116">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="dc634-116">Next Steps</span></span>  
- <span data-ttu-id="dc634-117">В следующем примере составлен запрос на выявление всего текста в документе Word:</span><span class="sxs-lookup"><span data-stu-id="dc634-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="197fc-116">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="197fc-116">Next Steps</span></span>  
+ <span data-ttu-id="197fc-117">В следующем примере составлен запрос на выявление всего текста в документе Word:</span><span class="sxs-lookup"><span data-stu-id="197fc-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="dc634-118">Поиск текста в документах Word (C#)</span><span class="sxs-lookup"><span data-stu-id="dc634-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="197fc-118">Поиск текста в документах Word (C#)</span><span class="sxs-lookup"><span data-stu-id="197fc-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="dc634-119">См. также</span><span class="sxs-lookup"><span data-stu-id="dc634-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="197fc-119">См. также</span><span class="sxs-lookup"><span data-stu-id="197fc-119">See also</span></span>
 
-- [<span data-ttu-id="dc634-120">Учебник. Управление содержимым в документе WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="dc634-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="197fc-120">Учебник. Обработка содержимого документа WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="197fc-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

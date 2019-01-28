@@ -2,24 +2,24 @@
 title: Создание деревьев XML в C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503174"
 ---
-# <a name="creating-xml-trees-in-c-linq-to-xml"></a><span data-ttu-id="e4512-102">Создание деревьев XML на языке C# (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e4512-102">Creating XML trees in C# (LINQ to XML)</span></span>
-<span data-ttu-id="e4512-103">В этом разделе размещены сведения о создании XML-деревьев при помощи языка C#.</span><span class="sxs-lookup"><span data-stu-id="e4512-103">This section provides information about creating XML trees in C#.</span></span>  
+# <a name="creating-xml-trees-in-c-linq-to-xml"></a><span data-ttu-id="8772e-102">Создание деревьев XML на языке C# (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8772e-102">Creating XML trees in C# (LINQ to XML)</span></span>
+<span data-ttu-id="8772e-103">В этом разделе размещены сведения о создании XML-деревьев при помощи языка C#.</span><span class="sxs-lookup"><span data-stu-id="8772e-103">This section provides information about creating XML trees in C#.</span></span>  
   
- <span data-ttu-id="e4512-104">Дополнительные сведения об использовании результатов запросов LINQ как содержимого для <xref:System.Xml.Linq.XElement> см. в разделе [Функциональное построение (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e4512-104">For information about using the results of LINQ queries as the content for an <xref:System.Xml.Linq.XElement>, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="8772e-104">Дополнительные сведения об использовании результатов запросов LINQ как содержимого для <xref:System.Xml.Linq.XElement> см. в разделе [Функциональное построение (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8772e-104">For information about using the results of LINQ queries as the content for an <xref:System.Xml.Linq.XElement>, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
-## <a name="constructing-elements"></a><span data-ttu-id="e4512-105">Построение элементов</span><span class="sxs-lookup"><span data-stu-id="e4512-105">Constructing elements</span></span>
- <span data-ttu-id="e4512-106">Сигнатуры конструкторов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute> позволяют передать конструктору содержимое элемента или атрибута в качестве аргументов.</span><span class="sxs-lookup"><span data-stu-id="e4512-106">The signatures of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> constructors let you pass the contents of the element or attribute as arguments to the constructor.</span></span> <span data-ttu-id="e4512-107">Поскольку один из конструкторов принимает переменное количество аргументов, можно пропустить любое количество дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="e4512-107">Because one of the constructors takes a variable number of arguments, you can pass any number of child elements.</span></span> <span data-ttu-id="e4512-108">Естественно, каждый из этих дочерних элементов может содержать собственные дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="e4512-108">Of course, each of those child elements can contain their own child elements.</span></span> <span data-ttu-id="e4512-109">Для любого элемента можно добавить любое количество атрибутов.</span><span class="sxs-lookup"><span data-stu-id="e4512-109">For any element, you can add any number of attributes.</span></span>  
+## <a name="constructing-elements"></a><span data-ttu-id="8772e-105">Построение элементов</span><span class="sxs-lookup"><span data-stu-id="8772e-105">Constructing elements</span></span>
+ <span data-ttu-id="8772e-106">Сигнатуры конструкторов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute> позволяют передать конструктору содержимое элемента или атрибута в качестве аргументов.</span><span class="sxs-lookup"><span data-stu-id="8772e-106">The signatures of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> constructors let you pass the contents of the element or attribute as arguments to the constructor.</span></span> <span data-ttu-id="8772e-107">Поскольку один из конструкторов принимает переменное количество аргументов, можно пропустить любое количество дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="8772e-107">Because one of the constructors takes a variable number of arguments, you can pass any number of child elements.</span></span> <span data-ttu-id="8772e-108">Естественно, каждый из этих дочерних элементов может содержать собственные дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="8772e-108">Of course, each of those child elements can contain their own child elements.</span></span> <span data-ttu-id="8772e-109">Для любого элемента можно добавить любое количество атрибутов.</span><span class="sxs-lookup"><span data-stu-id="8772e-109">For any element, you can add any number of attributes.</span></span>  
   
- <span data-ttu-id="e4512-110">При добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="e4512-110">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="e4512-111">Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="e4512-111">If the new content already is parented, and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span> <span data-ttu-id="e4512-112">Это демонстрирует последний пример из данного раздела.</span><span class="sxs-lookup"><span data-stu-id="e4512-112">The last example in this topic demonstrates this.</span></span>  
+ <span data-ttu-id="8772e-110">При добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="8772e-110">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="8772e-111">Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="8772e-111">If the new content already is parented, and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span> <span data-ttu-id="8772e-112">Это демонстрирует последний пример из данного раздела.</span><span class="sxs-lookup"><span data-stu-id="8772e-112">The last example in this topic demonstrates this.</span></span>  
   
- <span data-ttu-id="e4512-113">Чтобы создать `contacts`<xref:System.Xml.Linq.XElement>, можно использовать следующий код:</span><span class="sxs-lookup"><span data-stu-id="e4512-113">To create a `contacts`<xref:System.Xml.Linq.XElement>, you could use the following code:</span></span>  
+ <span data-ttu-id="8772e-113">Чтобы создать `contacts`<xref:System.Xml.Linq.XElement>, можно использовать следующий код:</span><span class="sxs-lookup"><span data-stu-id="8772e-113">To create a `contacts`<xref:System.Xml.Linq.XElement>, you could use the following code:</span></span>  
   
 ```csharp  
 XElement contacts =  
@@ -37,62 +37,62 @@ XElement contacts =
     );  
 ```  
   
- <span data-ttu-id="e4512-114">Если цель определена верно, то код для создания объектов <xref:System.Xml.Linq.XElement> становится похож на структуру соответствующего XML.</span><span class="sxs-lookup"><span data-stu-id="e4512-114">If indented properly, the code to construct <xref:System.Xml.Linq.XElement> objects closely resembles the structure of the underlying XML.</span></span>  
+ <span data-ttu-id="8772e-114">Если цель определена верно, то код для создания объектов <xref:System.Xml.Linq.XElement> становится похож на структуру соответствующего XML.</span><span class="sxs-lookup"><span data-stu-id="8772e-114">If indented properly, the code to construct <xref:System.Xml.Linq.XElement> objects closely resembles the structure of the underlying XML.</span></span>  
   
-## <a name="xelement-constructors"></a><span data-ttu-id="e4512-115">Конструкторы XElement</span><span class="sxs-lookup"><span data-stu-id="e4512-115">XElement constructors</span></span>  
- <span data-ttu-id="e4512-116">В классе <xref:System.Xml.Linq.XElement> используются следующие конструкторы для функционального построения.</span><span class="sxs-lookup"><span data-stu-id="e4512-116">The <xref:System.Xml.Linq.XElement> class uses the following constructors for functional construction.</span></span> <span data-ttu-id="e4512-117">Обратите внимание, что существуют другие конструкторы для <xref:System.Xml.Linq.XElement>, однако, поскольку они не используются для функциональных построений, они здесь не приводятся.</span><span class="sxs-lookup"><span data-stu-id="e4512-117">Note that there are some other constructors for <xref:System.Xml.Linq.XElement>, but because they are not used for functional construction they are not listed here.</span></span>  
+## <a name="xelement-constructors"></a><span data-ttu-id="8772e-115">Конструкторы XElement</span><span class="sxs-lookup"><span data-stu-id="8772e-115">XElement constructors</span></span>  
+ <span data-ttu-id="8772e-116">В классе <xref:System.Xml.Linq.XElement> используются следующие конструкторы для функционального построения.</span><span class="sxs-lookup"><span data-stu-id="8772e-116">The <xref:System.Xml.Linq.XElement> class uses the following constructors for functional construction.</span></span> <span data-ttu-id="8772e-117">Обратите внимание, что существуют другие конструкторы для <xref:System.Xml.Linq.XElement>, однако, поскольку они не используются для функциональных построений, они здесь не приводятся.</span><span class="sxs-lookup"><span data-stu-id="8772e-117">Note that there are some other constructors for <xref:System.Xml.Linq.XElement>, but because they are not used for functional construction they are not listed here.</span></span>  
   
-|<span data-ttu-id="e4512-118">Конструктор</span><span class="sxs-lookup"><span data-stu-id="e4512-118">Constructor</span></span>|<span data-ttu-id="e4512-119">Описание:</span><span class="sxs-lookup"><span data-stu-id="e4512-119">Description</span></span>|  
+|<span data-ttu-id="8772e-118">Конструктор</span><span class="sxs-lookup"><span data-stu-id="8772e-118">Constructor</span></span>|<span data-ttu-id="8772e-119">Описание</span><span class="sxs-lookup"><span data-stu-id="8772e-119">Description</span></span>|  
 |-----------------|-----------------|  
-|`XElement(XName name, object content)`|<span data-ttu-id="e4512-120">Создает <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="e4512-120">Creates an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="e4512-121">Параметр `name` задает имя элемента; `content` задает содержание элемента.</span><span class="sxs-lookup"><span data-stu-id="e4512-121">The `name` parameter specifies the name of the element; `content` specifies the content of the element.</span></span>|  
-|`XElement(XName name)`|<span data-ttu-id="e4512-122">Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="e4512-122">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span>|  
-|`XElement(XName name, params object[] content)`|<span data-ttu-id="e4512-123">Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="e4512-123">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span> <span data-ttu-id="e4512-124">Атрибуты и/или дочерние элементы создаются из содержимого списка параметров.</span><span class="sxs-lookup"><span data-stu-id="e4512-124">The attributes and/or child elements are created from the contents of the parameter list.</span></span>|  
+|`XElement(XName name, object content)`|<span data-ttu-id="8772e-120">Создает <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="8772e-120">Creates an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="8772e-121">Параметр `name` задает имя элемента; `content` задает содержание элемента.</span><span class="sxs-lookup"><span data-stu-id="8772e-121">The `name` parameter specifies the name of the element; `content` specifies the content of the element.</span></span>|  
+|`XElement(XName name)`|<span data-ttu-id="8772e-122">Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="8772e-122">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span>|  
+|`XElement(XName name, params object[] content)`|<span data-ttu-id="8772e-123">Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="8772e-123">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span> <span data-ttu-id="8772e-124">Атрибуты и/или дочерние элементы создаются из содержимого списка параметров.</span><span class="sxs-lookup"><span data-stu-id="8772e-124">The attributes and/or child elements are created from the contents of the parameter list.</span></span>|  
   
- <span data-ttu-id="e4512-125">Параметр `content` чрезвычайно гибок.</span><span class="sxs-lookup"><span data-stu-id="e4512-125">The `content` parameter is extremely flexible.</span></span> <span data-ttu-id="e4512-126">Он поддерживает любой тип объекта, который является действительным дочерним объектом <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="e4512-126">It supports any type of object that is a valid child of an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="e4512-127">К различным типам объектов, передающимся в этом параметре, применимы следующие правила.</span><span class="sxs-lookup"><span data-stu-id="e4512-127">The following rules apply to different types of objects passed in this parameter:</span></span>  
+ <span data-ttu-id="8772e-125">Параметр `content` чрезвычайно гибок.</span><span class="sxs-lookup"><span data-stu-id="8772e-125">The `content` parameter is extremely flexible.</span></span> <span data-ttu-id="8772e-126">Он поддерживает любой тип объекта, который является действительным дочерним объектом <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="8772e-126">It supports any type of object that is a valid child of an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="8772e-127">К различным типам объектов, передающимся в этом параметре, применимы следующие правила.</span><span class="sxs-lookup"><span data-stu-id="8772e-127">The following rules apply to different types of objects passed in this parameter:</span></span>  
   
--   <span data-ttu-id="e4512-128">Строка добавляется как текстовое содержимое.</span><span class="sxs-lookup"><span data-stu-id="e4512-128">A string is added as text content.</span></span>  
+-   <span data-ttu-id="8772e-128">Строка добавляется как текстовое содержимое.</span><span class="sxs-lookup"><span data-stu-id="8772e-128">A string is added as text content.</span></span>  
   
--   <span data-ttu-id="e4512-129"><xref:System.Xml.Linq.XElement> добавляется к дочернему элементу.</span><span class="sxs-lookup"><span data-stu-id="e4512-129">An <xref:System.Xml.Linq.XElement> is added as a child element.</span></span>  
+-   <span data-ttu-id="8772e-129"><xref:System.Xml.Linq.XElement> добавляется к дочернему элементу.</span><span class="sxs-lookup"><span data-stu-id="8772e-129">An <xref:System.Xml.Linq.XElement> is added as a child element.</span></span>  
   
--   <span data-ttu-id="e4512-130"><xref:System.Xml.Linq.XAttribute> добавляется как атрибут.</span><span class="sxs-lookup"><span data-stu-id="e4512-130">An <xref:System.Xml.Linq.XAttribute> is added as an attribute.</span></span>  
+-   <span data-ttu-id="8772e-130"><xref:System.Xml.Linq.XAttribute> добавляется как атрибут.</span><span class="sxs-lookup"><span data-stu-id="8772e-130">An <xref:System.Xml.Linq.XAttribute> is added as an attribute.</span></span>  
   
--   <span data-ttu-id="e4512-131"><xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> или <xref:System.Xml.Linq.XText> добавляется в качестве дочернего содержимого.</span><span class="sxs-lookup"><span data-stu-id="e4512-131">An <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, or <xref:System.Xml.Linq.XText> is added as child content.</span></span>  
+-   <span data-ttu-id="8772e-131"><xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> или <xref:System.Xml.Linq.XText> добавляется в качестве дочернего содержимого.</span><span class="sxs-lookup"><span data-stu-id="8772e-131">An <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, or <xref:System.Xml.Linq.XText> is added as child content.</span></span>  
   
--   <span data-ttu-id="e4512-132"><xref:System.Collections.IEnumerable> перечисляется, и эти правила рекурсивно применяются к результатам.</span><span class="sxs-lookup"><span data-stu-id="e4512-132">An <xref:System.Collections.IEnumerable> is enumerated, and these rules are applied recursively to the results.</span></span>  
+-   <span data-ttu-id="8772e-132"><xref:System.Collections.IEnumerable> перечисляется, и эти правила рекурсивно применяются к результатам.</span><span class="sxs-lookup"><span data-stu-id="8772e-132">An <xref:System.Collections.IEnumerable> is enumerated, and these rules are applied recursively to the results.</span></span>  
   
--   <span data-ttu-id="e4512-133">Для любого другого типа вызывается метод `ToString`, при этом результат добавляется как текстовое содержимое.</span><span class="sxs-lookup"><span data-stu-id="e4512-133">For any other type, its `ToString` method is called and the result is added as text content.</span></span>  
+-   <span data-ttu-id="8772e-133">Для любого другого типа вызывается метод `ToString`, при этом результат добавляется как текстовое содержимое.</span><span class="sxs-lookup"><span data-stu-id="8772e-133">For any other type, its `ToString` method is called and the result is added as text content.</span></span>  
   
-### <a name="creating-an-xelement-with-content"></a><span data-ttu-id="e4512-134">Создание элемента XElement с содержимым</span><span class="sxs-lookup"><span data-stu-id="e4512-134">Creating an XElement with content</span></span>  
- <span data-ttu-id="e4512-135">Можно создать <xref:System.Xml.Linq.XElement> с простым содержимым при помощи одного вызова метода.</span><span class="sxs-lookup"><span data-stu-id="e4512-135">You can create an <xref:System.Xml.Linq.XElement> that contains simple content with a single method call.</span></span> <span data-ttu-id="e4512-136">Чтобы это сделать, укажите содержимое в качестве второго параметра следующим образом:</span><span class="sxs-lookup"><span data-stu-id="e4512-136">To do this, specify the content as the second parameter, as follows:</span></span>  
+### <a name="creating-an-xelement-with-content"></a><span data-ttu-id="8772e-134">Создание элемента XElement с содержимым</span><span class="sxs-lookup"><span data-stu-id="8772e-134">Creating an XElement with content</span></span>  
+ <span data-ttu-id="8772e-135">Можно создать <xref:System.Xml.Linq.XElement> с простым содержимым при помощи одного вызова метода.</span><span class="sxs-lookup"><span data-stu-id="8772e-135">You can create an <xref:System.Xml.Linq.XElement> that contains simple content with a single method call.</span></span> <span data-ttu-id="8772e-136">Чтобы это сделать, укажите содержимое в качестве второго параметра следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8772e-136">To do this, specify the content as the second parameter, as follows:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="e4512-137">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-137">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-137">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-137">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
- <span data-ttu-id="e4512-138">Содержимому можно передать любой тип объекта.</span><span class="sxs-lookup"><span data-stu-id="e4512-138">You can pass any type of object as the content.</span></span> <span data-ttu-id="e4512-139">Например, в следующем коде выполняется создание элемента, в котором в качестве содержимого содержится число с плавающей запятой:</span><span class="sxs-lookup"><span data-stu-id="e4512-139">For example, the following code creates an element that contains a floating point number as content:</span></span>  
+ <span data-ttu-id="8772e-138">Содержимому можно передать любой тип объекта.</span><span class="sxs-lookup"><span data-stu-id="8772e-138">You can pass any type of object as the content.</span></span> <span data-ttu-id="8772e-139">Например, в следующем коде выполняется создание элемента, в котором в качестве содержимого содержится число с плавающей запятой:</span><span class="sxs-lookup"><span data-stu-id="8772e-139">For example, the following code creates an element that contains a floating point number as content:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Cost", 324.50);  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="e4512-140">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-140">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-140">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-140">This example produces the following output:</span></span>  
   
 ```xml  
 <Cost>324.5</Cost>  
 ```  
   
- <span data-ttu-id="e4512-141">Число с плавающей запятой помещается в контейнер и передается конструктору.</span><span class="sxs-lookup"><span data-stu-id="e4512-141">The floating point number is boxed and passed in to the constructor.</span></span> <span data-ttu-id="e4512-142">Это число в контейнере преобразуется в строку и используется в качестве содержимого элемента.</span><span class="sxs-lookup"><span data-stu-id="e4512-142">The boxed number is converted to a string and used as the content of the element.</span></span>  
+ <span data-ttu-id="8772e-141">Число с плавающей запятой помещается в контейнер и передается конструктору.</span><span class="sxs-lookup"><span data-stu-id="8772e-141">The floating point number is boxed and passed in to the constructor.</span></span> <span data-ttu-id="8772e-142">Это число в контейнере преобразуется в строку и используется в качестве содержимого элемента.</span><span class="sxs-lookup"><span data-stu-id="8772e-142">The boxed number is converted to a string and used as the content of the element.</span></span>  
   
-### <a name="creating-an-xelement-with-a-child-element"></a><span data-ttu-id="e4512-143">Создание элемента XElement с дочерним элементом</span><span class="sxs-lookup"><span data-stu-id="e4512-143">Creating an XElement with a child element</span></span>  
- <span data-ttu-id="e4512-144">Если передать экземпляр класса <xref:System.Xml.Linq.XElement> как аргумент содержимого, конструктор создаст элемент с дочерним элементом:</span><span class="sxs-lookup"><span data-stu-id="e4512-144">If you pass an instance of the <xref:System.Xml.Linq.XElement> class for the content argument, the constructor creates an element with a child element:</span></span>  
+### <a name="creating-an-xelement-with-a-child-element"></a><span data-ttu-id="8772e-143">Создание элемента XElement с дочерним элементом</span><span class="sxs-lookup"><span data-stu-id="8772e-143">Creating an XElement with a child element</span></span>  
+ <span data-ttu-id="8772e-144">Если передать экземпляр класса <xref:System.Xml.Linq.XElement> как аргумент содержимого, конструктор создаст элемент с дочерним элементом:</span><span class="sxs-lookup"><span data-stu-id="8772e-144">If you pass an instance of the <xref:System.Xml.Linq.XElement> class for the content argument, the constructor creates an element with a child element:</span></span>  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -101,7 +101,7 @@ XElement shippingUnit = new XElement("ShippingUnit",
 Console.WriteLine(shippingUnit);  
 ```  
   
- <span data-ttu-id="e4512-145">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-145">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-145">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-145">This example produces the following output:</span></span>  
   
 ```xml  
 <ShippingUnit>  
@@ -109,8 +109,8 @@ Console.WriteLine(shippingUnit);
 </ShippingUnit>  
 ```  
   
-### <a name="creating-an-xelement-with-multiple-child-elements"></a><span data-ttu-id="e4512-146">Создание элемента XElement с несколькими дочерними элементами</span><span class="sxs-lookup"><span data-stu-id="e4512-146">Creating an XElement with multiple child elements</span></span>  
- <span data-ttu-id="e4512-147">Можно передать некоторое количество объектов <xref:System.Xml.Linq.XElement> в качестве содержимого.</span><span class="sxs-lookup"><span data-stu-id="e4512-147">You can pass in a number of <xref:System.Xml.Linq.XElement> objects for the content.</span></span> <span data-ttu-id="e4512-148">Каждый из объектов <xref:System.Xml.Linq.XElement> включается в качестве дочернего элемента.</span><span class="sxs-lookup"><span data-stu-id="e4512-148">Each of the <xref:System.Xml.Linq.XElement> objects is included as a child element.</span></span>  
+### <a name="creating-an-xelement-with-multiple-child-elements"></a><span data-ttu-id="8772e-146">Создание элемента XElement с несколькими дочерними элементами</span><span class="sxs-lookup"><span data-stu-id="8772e-146">Creating an XElement with multiple child elements</span></span>  
+ <span data-ttu-id="8772e-147">Можно передать некоторое количество объектов <xref:System.Xml.Linq.XElement> в качестве содержимого.</span><span class="sxs-lookup"><span data-stu-id="8772e-147">You can pass in a number of <xref:System.Xml.Linq.XElement> objects for the content.</span></span> <span data-ttu-id="8772e-148">Каждый из объектов <xref:System.Xml.Linq.XElement> включается в качестве дочернего элемента.</span><span class="sxs-lookup"><span data-stu-id="8772e-148">Each of the <xref:System.Xml.Linq.XElement> objects is included as a child element.</span></span>  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -122,7 +122,7 @@ XElement address = new XElement("Address",
 Console.WriteLine(address);  
 ```  
   
- <span data-ttu-id="e4512-149">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-149">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-149">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-149">This example produces the following output:</span></span>  
   
 ```xml  
 <Address>  
@@ -133,7 +133,7 @@ Console.WriteLine(address);
 </Address>  
 ```  
   
- <span data-ttu-id="e4512-150">Расширив предыдущим пример, можно создать все XML-дерево следующим образом:</span><span class="sxs-lookup"><span data-stu-id="e4512-150">By extending the above example, you can create an entire XML tree, as follows:</span></span>  
+ <span data-ttu-id="8772e-150">Расширив предыдущим пример, можно создать все XML-дерево следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8772e-150">By extending the above example, you can create an entire XML tree, as follows:</span></span>  
   
 ```csharp  
 XElement contacts =  
@@ -152,7 +152,7 @@ XElement contacts =
 Console.WriteLine(contacts);  
 ```  
   
- <span data-ttu-id="e4512-151">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-151">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-151">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-151">This example produces the following output:</span></span>  
   
 ```xml  
 <Contacts>  
@@ -169,8 +169,8 @@ Console.WriteLine(contacts);
 </Contacts>  
 ```  
 
-### <a name="creating-an-xelement-with-an-xattribute"></a><span data-ttu-id="e4512-152">Создание элемента XElement с атрибутом XAttribute</span><span class="sxs-lookup"><span data-stu-id="e4512-152">Creating an XElement with an XAttribute</span></span>
- <span data-ttu-id="e4512-153">Если передать экземпляр класса <xref:System.Xml.Linq.XAttribute> как аргумент содержимого, конструктор создаст элемент с атрибутом:</span><span class="sxs-lookup"><span data-stu-id="e4512-153">If you pass an instance of the <xref:System.Xml.Linq.XAttribute> class for the content argument, the constructor creates an element with an attribute:</span></span>
+### <a name="creating-an-xelement-with-an-xattribute"></a><span data-ttu-id="8772e-152">Создание элемента XElement с атрибутом XAttribute</span><span class="sxs-lookup"><span data-stu-id="8772e-152">Creating an XElement with an XAttribute</span></span>
+ <span data-ttu-id="8772e-153">Если передать экземпляр класса <xref:System.Xml.Linq.XAttribute> как аргумент содержимого, конструктор создаст элемент с атрибутом:</span><span class="sxs-lookup"><span data-stu-id="8772e-153">If you pass an instance of the <xref:System.Xml.Linq.XAttribute> class for the content argument, the constructor creates an element with an attribute:</span></span>
 
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -179,30 +179,30 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- <span data-ttu-id="e4512-154">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-154">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-154">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-154">This example produces the following output:</span></span>  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
 ```   
 
-### <a name="creating-an-empty-element"></a><span data-ttu-id="e4512-155">Создание пустого элемента</span><span class="sxs-lookup"><span data-stu-id="e4512-155">Creating an empty element</span></span>  
- <span data-ttu-id="e4512-156">Чтобы создать пустой элемент <xref:System.Xml.Linq.XElement>, нужно просто не передавать никакого содержимого в конструктор.</span><span class="sxs-lookup"><span data-stu-id="e4512-156">To create an empty <xref:System.Xml.Linq.XElement>, you do not pass any content to the constructor.</span></span> <span data-ttu-id="e4512-157">На следующем примере показано создание пустого элемента:</span><span class="sxs-lookup"><span data-stu-id="e4512-157">The following example creates an empty element:</span></span>  
+### <a name="creating-an-empty-element"></a><span data-ttu-id="8772e-155">Создание пустого элемента</span><span class="sxs-lookup"><span data-stu-id="8772e-155">Creating an empty element</span></span>  
+ <span data-ttu-id="8772e-156">Чтобы создать пустой элемент <xref:System.Xml.Linq.XElement>, нужно просто не передавать никакого содержимого в конструктор.</span><span class="sxs-lookup"><span data-stu-id="8772e-156">To create an empty <xref:System.Xml.Linq.XElement>, you do not pass any content to the constructor.</span></span> <span data-ttu-id="8772e-157">На следующем примере показано создание пустого элемента:</span><span class="sxs-lookup"><span data-stu-id="8772e-157">The following example creates an empty element:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Customer");  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="e4512-158">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="e4512-158">This example produces the following output:</span></span>  
+ <span data-ttu-id="8772e-158">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="8772e-158">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a><span data-ttu-id="e4512-159">Присоединение и клонирование</span><span class="sxs-lookup"><span data-stu-id="e4512-159">Attaching vs. cloning</span></span>  
- <span data-ttu-id="e4512-160">Как упоминалось ранее, при добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="e4512-160">As mentioned previously, when adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="e4512-161">Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="e4512-161">If the new content already is parented and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
+### <a name="attaching-vs-cloning"></a><span data-ttu-id="8772e-159">Присоединение и клонирование</span><span class="sxs-lookup"><span data-stu-id="8772e-159">Attaching vs. cloning</span></span>  
+ <span data-ttu-id="8772e-160">Как упоминалось ранее, при добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="8772e-160">As mentioned previously, when adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="8772e-161">Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="8772e-161">If the new content already is parented and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
 
-<span data-ttu-id="e4512-162">В следующем примере кода показано поведение при добавлении к дереву элемента с родителем и при добавлении к дереву элемента без родителей.</span><span class="sxs-lookup"><span data-stu-id="e4512-162">The following example demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>
+<span data-ttu-id="8772e-162">В следующем примере кода показано поведение при добавлении к дереву элемента с родителем и при добавлении к дереву элемента без родителей.</span><span class="sxs-lookup"><span data-stu-id="8772e-162">The following example demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>
 
 ```csharp  
 // Create a tree with a child element.  
@@ -234,6 +234,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e4512-163">См. также</span><span class="sxs-lookup"><span data-stu-id="e4512-163">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8772e-163">См. также</span><span class="sxs-lookup"><span data-stu-id="8772e-163">See also</span></span>
 
-- [<span data-ttu-id="e4512-164">Создание деревьев XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e4512-164">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="8772e-164">Создание деревьев XML (C#)</span><span class="sxs-lookup"><span data-stu-id="8772e-164">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

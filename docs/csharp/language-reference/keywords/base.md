@@ -10,48 +10,48 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 513e28debe5fdccc4cc7e4e41d212b976c4a4595
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681759"
 ---
-# <a name="base-c-reference"></a><span data-ttu-id="4b076-103">base (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4b076-103">base (C# Reference)</span></span>
+# <a name="base-c-reference"></a><span data-ttu-id="6dea3-103">base (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="6dea3-103">base (C# Reference)</span></span>
 
-<span data-ttu-id="4b076-104">Ключевое слово `base` используется для доступа к членам базового из производного класса в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="4b076-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
+<span data-ttu-id="6dea3-104">Ключевое слово `base` используется для доступа к членам базового из производного класса в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="6dea3-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
 
-- <span data-ttu-id="4b076-105">Вызов метода базового класса, который был переопределен другим методом.</span><span class="sxs-lookup"><span data-stu-id="4b076-105">Call a method on the base class that has been overridden by another method.</span></span>
+- <span data-ttu-id="6dea3-105">Вызов метода базового класса, который был переопределен другим методом.</span><span class="sxs-lookup"><span data-stu-id="6dea3-105">Call a method on the base class that has been overridden by another method.</span></span>
 
-- <span data-ttu-id="4b076-106">Определение конструктора базового класса, который должен вызываться при создании экземпляров производного класса.</span><span class="sxs-lookup"><span data-stu-id="4b076-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
+- <span data-ttu-id="6dea3-106">Определение конструктора базового класса, который должен вызываться при создании экземпляров производного класса.</span><span class="sxs-lookup"><span data-stu-id="6dea3-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
 
-<span data-ttu-id="4b076-107">Доступ к базовому классу разрешен только в конструкторе, методе экземпляра или методе доступа к свойству экземпляра.</span><span class="sxs-lookup"><span data-stu-id="4b076-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
+<span data-ttu-id="6dea3-107">Доступ к базовому классу разрешен только в конструкторе, методе экземпляра или методе доступа к свойству экземпляра.</span><span class="sxs-lookup"><span data-stu-id="6dea3-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
 
-<span data-ttu-id="4b076-108">Использование ключевого слова `base` в статическом методе является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="4b076-108">It is an error to use the `base` keyword from within a static method.</span></span>
+<span data-ttu-id="6dea3-108">Использование ключевого слова `base` в статическом методе является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="6dea3-108">It is an error to use the `base` keyword from within a static method.</span></span>
 
-<span data-ttu-id="4b076-109">Доступ осуществляется к базовому классу, заданному в объявлении класса.</span><span class="sxs-lookup"><span data-stu-id="4b076-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="4b076-110">Например, если указать `class ClassB : ClassA`, члены ClassA будут доступны из ClassB независимо от базового класса ClassA.</span><span class="sxs-lookup"><span data-stu-id="4b076-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
+<span data-ttu-id="6dea3-109">Доступ осуществляется к базовому классу, заданному в объявлении класса.</span><span class="sxs-lookup"><span data-stu-id="6dea3-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="6dea3-110">Например, если указать `class ClassB : ClassA`, члены ClassA будут доступны из ClassB независимо от базового класса ClassA.</span><span class="sxs-lookup"><span data-stu-id="6dea3-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4b076-111">Пример</span><span class="sxs-lookup"><span data-stu-id="4b076-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6dea3-111">Пример</span><span class="sxs-lookup"><span data-stu-id="6dea3-111">Example</span></span>
 
-<span data-ttu-id="4b076-112">В приведенном ниже примере метод `Getinfo` присутствует как в базовом классе `Person`, так и в производном классе `Employee`.</span><span class="sxs-lookup"><span data-stu-id="4b076-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="4b076-113">С помощью ключевого слова `base` можно вызвать метод `Getinfo` базового класса из производного класса.</span><span class="sxs-lookup"><span data-stu-id="4b076-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
+<span data-ttu-id="6dea3-112">В приведенном ниже примере метод `Getinfo` присутствует как в базовом классе `Person`, так и в производном классе `Employee`.</span><span class="sxs-lookup"><span data-stu-id="6dea3-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="6dea3-113">С помощью ключевого слова `base` можно вызвать метод `Getinfo` базового класса из производного класса.</span><span class="sxs-lookup"><span data-stu-id="6dea3-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-<span data-ttu-id="4b076-114">Дополнительные примеры см. в разделах [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) и [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="4b076-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
+<span data-ttu-id="6dea3-114">Дополнительные примеры см. в разделах [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) и [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="6dea3-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="4b076-115">Пример</span><span class="sxs-lookup"><span data-stu-id="4b076-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6dea3-115">Пример</span><span class="sxs-lookup"><span data-stu-id="6dea3-115">Example</span></span>
 
-<span data-ttu-id="4b076-116">В этом примере показано, как задать конструктор базового класса, вызываемый при создании экземпляров производного класса.</span><span class="sxs-lookup"><span data-stu-id="4b076-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
+<span data-ttu-id="6dea3-116">В этом примере показано, как задать конструктор базового класса, вызываемый при создании экземпляров производного класса.</span><span class="sxs-lookup"><span data-stu-id="6dea3-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
 
 [!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="4b076-117">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="4b076-117">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="6dea3-117">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="6dea3-117">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="4b076-118">См. также</span><span class="sxs-lookup"><span data-stu-id="4b076-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6dea3-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6dea3-118">See also</span></span>
 
-- [<span data-ttu-id="4b076-119">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="4b076-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="4b076-120">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="4b076-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="4b076-121">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="4b076-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="4b076-122">this</span><span class="sxs-lookup"><span data-stu-id="4b076-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="6dea3-119">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="6dea3-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="6dea3-120">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6dea3-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="6dea3-121">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="6dea3-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="6dea3-122">this</span><span class="sxs-lookup"><span data-stu-id="6dea3-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)

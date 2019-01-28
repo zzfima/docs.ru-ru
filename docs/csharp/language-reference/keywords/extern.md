@@ -9,39 +9,39 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 89c5ec7713c6420060310b5df90acec0cc3b088b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620202"
 ---
-# <a name="extern-c-reference"></a><span data-ttu-id="571ea-102">extern (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="571ea-102">extern (C# Reference)</span></span>
+# <a name="extern-c-reference"></a><span data-ttu-id="fb414-102">extern (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="fb414-102">extern (C# Reference)</span></span>
 
-<span data-ttu-id="571ea-103">Модификатор `extern` используется для объявления метода с внешней реализацией.</span><span class="sxs-lookup"><span data-stu-id="571ea-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="571ea-104">При применении служб взаимодействия для вызова неуправляемого кода модификатор `extern` обычно используется с атрибутом `DllImport`.</span><span class="sxs-lookup"><span data-stu-id="571ea-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="571ea-105">В этом случае также необходимо объявить метод как `static` в соответствии со следующим примером:</span><span class="sxs-lookup"><span data-stu-id="571ea-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
+<span data-ttu-id="fb414-103">Модификатор `extern` используется для объявления метода с внешней реализацией.</span><span class="sxs-lookup"><span data-stu-id="fb414-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="fb414-104">При применении служб взаимодействия для вызова неуправляемого кода модификатор `extern` обычно используется с атрибутом `DllImport`.</span><span class="sxs-lookup"><span data-stu-id="fb414-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="fb414-105">В этом случае также необходимо объявить метод как `static` в соответствии со следующим примером:</span><span class="sxs-lookup"><span data-stu-id="fb414-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-<span data-ttu-id="571ea-106">Ключевое слово `extern` может также определять внешний псевдоним сборки, который позволяет ссылаться на разные версии одного компонента из одной сборки.</span><span class="sxs-lookup"><span data-stu-id="571ea-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="571ea-107">Дополнительные сведения см. в разделе [Псевдоним extern](extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="571ea-107">For more information, see [extern alias](extern-alias.md).</span></span>
+<span data-ttu-id="fb414-106">Ключевое слово `extern` может также определять внешний псевдоним сборки, который позволяет ссылаться на разные версии одного компонента из одной сборки.</span><span class="sxs-lookup"><span data-stu-id="fb414-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="fb414-107">Дополнительные сведения см. в разделе [Псевдоним extern](extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="fb414-107">For more information, see [extern alias](extern-alias.md).</span></span>
 
-<span data-ttu-id="571ea-108">Совместное использование модификаторов [abstract](abstract.md) и `extern` для изменения одного члена недопустимо.</span><span class="sxs-lookup"><span data-stu-id="571ea-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="571ea-109">Использование модификатора `extern` означает, что метод реализуется вне кода C#, а применение модификатора `abstract` указывает на то, что в данном классе реализация метода не обеспечивается.</span><span class="sxs-lookup"><span data-stu-id="571ea-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
+<span data-ttu-id="fb414-108">Совместное использование модификаторов [abstract](abstract.md) и `extern` для изменения одного члена недопустимо.</span><span class="sxs-lookup"><span data-stu-id="fb414-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="fb414-109">Использование модификатора `extern` означает, что метод реализуется вне кода C#, а применение модификатора `abstract` указывает на то, что в данном классе реализация метода не обеспечивается.</span><span class="sxs-lookup"><span data-stu-id="fb414-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
 
-<span data-ttu-id="571ea-110">В C# ключевое слово extern имеет более ограниченное применение, чем в C++.</span><span class="sxs-lookup"><span data-stu-id="571ea-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="571ea-111">Сравнительные характеристики использования этого ключевого слова в C# и в C++ см. в разделе "Использование extern для указания компоновки" Справочника по языку C++.</span><span class="sxs-lookup"><span data-stu-id="571ea-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
+<span data-ttu-id="fb414-110">В C# ключевое слово extern имеет более ограниченное применение, чем в C++.</span><span class="sxs-lookup"><span data-stu-id="fb414-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="fb414-111">Сравнительные характеристики использования этого ключевого слова в C# и в C++ см. в разделе "Использование extern для указания компоновки" Справочника по языку C++.</span><span class="sxs-lookup"><span data-stu-id="fb414-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="571ea-112">Пример 1</span><span class="sxs-lookup"><span data-stu-id="571ea-112">Example 1</span></span>
+## <a name="example-1"></a><span data-ttu-id="fb414-112">Пример 1</span><span class="sxs-lookup"><span data-stu-id="fb414-112">Example 1</span></span>
 
-<span data-ttu-id="571ea-113">В этом примере программа получает от пользователя строку и отображает ее в окне сообщения.</span><span class="sxs-lookup"><span data-stu-id="571ea-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="571ea-114">В этой программе используется метод `MessageBox`, импортированный из библиотеки User32.dll.</span><span class="sxs-lookup"><span data-stu-id="571ea-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
+<span data-ttu-id="fb414-113">В этом примере программа получает от пользователя строку и отображает ее в окне сообщения.</span><span class="sxs-lookup"><span data-stu-id="fb414-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="fb414-114">В этой программе используется метод `MessageBox`, импортированный из библиотеки User32.dll.</span><span class="sxs-lookup"><span data-stu-id="fb414-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
-## <a name="example-2"></a><span data-ttu-id="571ea-115">Пример 2</span><span class="sxs-lookup"><span data-stu-id="571ea-115">Example 2</span></span>
+## <a name="example-2"></a><span data-ttu-id="fb414-115">Пример 2</span><span class="sxs-lookup"><span data-stu-id="fb414-115">Example 2</span></span>
 
-<span data-ttu-id="571ea-116">В этом примере показана программа C#, в которой вызывается библиотека C (собственная библиотека DLL).</span><span class="sxs-lookup"><span data-stu-id="571ea-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
+<span data-ttu-id="fb414-116">В этом примере показана программа C#, в которой вызывается библиотека C (собственная библиотека DLL).</span><span class="sxs-lookup"><span data-stu-id="fb414-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
 
-1. <span data-ttu-id="571ea-117">Создайте следующий файл C и назовите его `cmdll.c`.</span><span class="sxs-lookup"><span data-stu-id="571ea-117">Create the following C file and name it `cmdll.c`:</span></span>
+1. <span data-ttu-id="fb414-117">Создайте следующий файл C и назовите его `cmdll.c`.</span><span class="sxs-lookup"><span data-stu-id="fb414-117">Create the following C file and name it `cmdll.c`:</span></span>
 
 ```c
 // cmdll.c
@@ -52,9 +52,9 @@ int __declspec(dllexport) SampleMethod(int i)
 }
 ```
 
-2. <span data-ttu-id="571ea-118">Откройте из каталога установки Visual Studio окно командной строки Visual Studio x64 (или x32) Native Tools и скомпилируйте файл `cmdll.c`, введя в командной строке **cl -LD cmdll.c**.</span><span class="sxs-lookup"><span data-stu-id="571ea-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
+2. <span data-ttu-id="fb414-118">Откройте из каталога установки Visual Studio окно командной строки Visual Studio x64 (или x32) Native Tools и скомпилируйте файл `cmdll.c`, введя в командной строке **cl -LD cmdll.c**.</span><span class="sxs-lookup"><span data-stu-id="fb414-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
 
-3. <span data-ttu-id="571ea-119">В том же каталоге создайте следующий файл C# и назовите его `cm.cs`.</span><span class="sxs-lookup"><span data-stu-id="571ea-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
+3. <span data-ttu-id="fb414-119">В том же каталоге создайте следующий файл C# и назовите его `cm.cs`.</span><span class="sxs-lookup"><span data-stu-id="fb414-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
 
 ```csharp
 // cm.cs
@@ -72,26 +72,26 @@ public class MainClass
 }
 ```
 
-4. <span data-ttu-id="571ea-120">Откройте из каталога установки Visual Studio окно командной строки Visual Studio x64 (или x32) Native Tools и скомпилируйте файл `cm.cs`, введя:</span><span class="sxs-lookup"><span data-stu-id="571ea-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
+4. <span data-ttu-id="fb414-120">Откройте из каталога установки Visual Studio окно командной строки Visual Studio x64 (или x32) Native Tools и скомпилируйте файл `cm.cs`, введя:</span><span class="sxs-lookup"><span data-stu-id="fb414-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
 
-> <span data-ttu-id="571ea-121">**csc cm.cs** (для командной строки x64) — или — **csc -platform:x86 cm.cs** (для командной строки x32)</span><span class="sxs-lookup"><span data-stu-id="571ea-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
+> <span data-ttu-id="fb414-121">**csc cm.cs** (для командной строки x64) — или — **csc -platform:x86 cm.cs** (для командной строки x32)</span><span class="sxs-lookup"><span data-stu-id="fb414-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
 
-<span data-ttu-id="571ea-122">При этом будет создан исполняемый файл `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="571ea-122">This will create the executable file `cm.exe`.</span></span>
+<span data-ttu-id="fb414-122">При этом будет создан исполняемый файл `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="fb414-122">This will create the executable file `cm.exe`.</span></span>
 
-5. <span data-ttu-id="571ea-123">Запустите `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="571ea-123">Run `cm.exe`.</span></span> <span data-ttu-id="571ea-124">Метод `SampleMethod` передает значение 5 в файл DLL, который возвращает значение, умноженное на 10.</span><span class="sxs-lookup"><span data-stu-id="571ea-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="571ea-125">Программа выдает следующие результаты.</span><span class="sxs-lookup"><span data-stu-id="571ea-125">The program produces the following output:</span></span>
+5. <span data-ttu-id="fb414-123">Запустите `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="fb414-123">Run `cm.exe`.</span></span> <span data-ttu-id="fb414-124">Метод `SampleMethod` передает значение 5 в файл DLL, который возвращает значение, умноженное на 10.</span><span class="sxs-lookup"><span data-stu-id="fb414-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="fb414-125">Программа выдает следующие результаты.</span><span class="sxs-lookup"><span data-stu-id="fb414-125">The program produces the following output:</span></span>
 
 ```
 SampleMethod() returns 50.
 ```
 
-## <a name="c-language-specification"></a><span data-ttu-id="571ea-126">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="571ea-126">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="fb414-126">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="fb414-126">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="571ea-127">См. также</span><span class="sxs-lookup"><span data-stu-id="571ea-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb414-127">См. также</span><span class="sxs-lookup"><span data-stu-id="fb414-127">See also</span></span>
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-- [<span data-ttu-id="571ea-128">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="571ea-128">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="571ea-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="571ea-129">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="571ea-130">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="571ea-130">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="571ea-131">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="571ea-131">Modifiers</span></span>](modifiers.md)  
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
+- [<span data-ttu-id="fb414-128">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="fb414-128">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="fb414-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="fb414-129">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="fb414-130">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="fb414-130">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="fb414-131">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="fb414-131">Modifiers</span></span>](modifiers.md)
