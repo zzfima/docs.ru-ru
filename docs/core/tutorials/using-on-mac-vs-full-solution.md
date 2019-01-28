@@ -4,12 +4,12 @@ description: Этот раздел описывает, как сборку ре�
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 710ce4c26bf06f7f7a9b1dc633fa55ddb3477dd6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727759"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
@@ -192,4 +192,4 @@ Visual Studio для Mac предоставляет полнофункциона
 
 ## <a name="see-also"></a>См. также
 
-* [Заметки о выпуске Visual Studio 2017 для Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Заметки о выпуске Visual Studio 2017 для Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

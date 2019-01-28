@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 19063d5fdfc81e1c2315211d7599b9e588250589
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679781"
 ---
 # <a name="whats-new-in-net-core-22"></a>Новые возможности .NET Core 2.2
 
@@ -98,6 +98,6 @@ internal sealed class SimpleEventListener : EventListener
 
 ## <a name="see-also"></a>См. также
 
-* [Новые возможности .NET Core](index.md)
-* [Новые возможности ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)  
-* [Новые возможности в EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)  
+- [Новые возможности .NET Core](index.md)
+- [Новые возможности ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)
+- [Новые возможности в EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)

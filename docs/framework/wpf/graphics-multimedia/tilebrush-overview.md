@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683025"
 ---
 # <a name="tilebrush-overview"></a>Общие сведения о TileBrush
 <xref:System.Windows.Media.TileBrush> объекты обеспечивают высокую степень контроля над закрашивание области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>. В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции позволяют получить больший контроль над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.  
@@ -104,11 +104,11 @@ ms.locfileid: "43505143"
   
 -   <xref:System.Windows.Media.TileMode.Tile>: Базовый мозаичный элемент рисуется, и оставшаяся область заполняется повторами базового элемента мозаики таким образом, правого края одну плитку Примыкает к левой границей следующей и аналогично для верхней и нижней границ.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Аналогично <xref:System.Windows.Media.TileMode.Tile>, но Чередующиеся столбцы элементов отражаются по горизонтали.  
+-   <xref:System.Windows.Media.TileMode.FlipX>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но Чередующиеся столбцы элементов отражаются по горизонтали.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Аналогично <xref:System.Windows.Media.TileMode.Tile>, но чередующиеся строки элементов отражаются по вертикали.  
+-   <xref:System.Windows.Media.TileMode.FlipY>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но чередующиеся строки элементов отражаются по вертикали.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Сочетание <xref:System.Windows.Media.TileMode.FlipX> и <xref:System.Windows.Media.TileMode.FlipY>.  
+-   <xref:System.Windows.Media.TileMode.FlipXY>: Комбинация <xref:System.Windows.Media.TileMode.FlipX> и <xref:System.Windows.Media.TileMode.FlipY>.  
   
  На следующем рисунке показаны различные режимы заполнения.  
   
@@ -121,13 +121,13 @@ ms.locfileid: "43505143"
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>См. также
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
