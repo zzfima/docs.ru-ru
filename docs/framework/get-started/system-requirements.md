@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529532"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -108,6 +108,6 @@ ms.locfileid: "50203947"
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по установке](../../../docs/framework/install/index.md)   
-- [Начало работы](../../../docs/framework/get-started/index.md)   
+- [Руководство по установке](../../../docs/framework/install/index.md)
+- [Начало работы](../../../docs/framework/get-started/index.md)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

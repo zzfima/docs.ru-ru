@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732525"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Анонимные методы (Руководство по программированию в C#)
 В версиях языка C# до 2.0 объявить [делегат](../../../csharp/language-reference/keywords/delegate.md) можно было только с помощью [именованных методов](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). В версии C# 2.0 были представлены анонимные методы, в версии C# 3.0 и более поздних замененные лямбда-выражениями, которые теперь рекомендуется использовать для написания встроенного кода. Тем не менее сведения об анонимных методах из этого раздела также относятся и к лямбда-выражениям. В одном случае анонимные методы реализуют функциональные возможности, недоступные при использовании лямбда-выражений. При использовании анонимных методов можно опустить список параметров. Это значит, что анонимный метод может быть преобразован в делегаты с различными сигнатурами. При работе с лямбда-выражениями это невозможно. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -59,10 +59,10 @@ ms.locfileid: "53243986"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
-- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Делегаты с именованными методами и делегаты с анонимными методами](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

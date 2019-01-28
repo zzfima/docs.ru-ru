@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563201"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
 Следующая процедура демонстрирует добавление событий, которые соответствуют стандартному шаблону [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для классов и структур. Все события в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
@@ -76,7 +76,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Delegate>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [События](../../../csharp/programming-guide/events/index.md)  
+- <xref:System.Delegate>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [События](../../../csharp/programming-guide/events/index.md)
 - [Делегаты](../../../csharp/programming-guide/delegates/index.md)

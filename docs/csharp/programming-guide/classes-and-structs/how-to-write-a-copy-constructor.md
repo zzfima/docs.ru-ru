@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: daf0683060d7df5dc5e644b4b84aac3dcdea939f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 252e66229b75c545c85aa175267ea267c138a087
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573128"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Создание конструктора копий
 В C# не предусмотрен конструктор копии для объектов, однако его можно написать самостоятельно.  
@@ -23,8 +23,8 @@ ms.locfileid: "53240688"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.ICloneable>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.ICloneable>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)

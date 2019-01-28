@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: d61d48ca05e93743ef3afa894ad0cbc98d6d2ab0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1d6884dc7376c07d2cc6fc03aa3972fb68d39ead
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615255"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Преобразование из шестнадцатеричных строк в числовые типы
 В следующих примерах кода показано выполнение указанных ниже задач.  
@@ -55,6 +55,6 @@ ms.locfileid: "53237172"
   
 ## <a name="see-also"></a>См. также
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Типы](../../../csharp/programming-guide/types/index.md)  
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Типы](../../../csharp/programming-guide/types/index.md)
 - [Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

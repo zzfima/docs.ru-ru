@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676826"
 ---
 # <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
 
@@ -74,10 +74,10 @@ ms.locfileid: "53451213"
 
 Дополнительные сведения см. в разделе [Свойства](~/_csharplang/spec/classes.md#properties) в [Спецификации языка C#](../../language-reference/language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
-- [Ключевое слово get](../../../csharp/language-reference/keywords/get.md)    
-- [Ключевое слово set](../../../csharp/language-reference/keywords/set.md)    
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
+- [Ключевое слово get](../../../csharp/language-reference/keywords/get.md)
+- [Ключевое слово set](../../../csharp/language-reference/keywords/set.md)

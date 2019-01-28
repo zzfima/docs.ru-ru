@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c52e93bcf5771fe556730a1d7cf45b8f1c9432b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513026"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Справочник по C#)
 Создание контрольных сумм для исходных файлов для помощи в отладке страниц [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)

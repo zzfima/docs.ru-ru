@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 96153dcc9c144df0f412678ec5c0928d4e832a40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652169"
 ---
 # <a name="finalizers-c-programming-guide"></a>Методы завершения (руководство по программированию в C#)
 Методы завершения (также называемые **деструкторами**) используются для любой необходимой окончательной очистки, когда сборщик мусора окончательно удаляет экземпляра класса.  
@@ -89,7 +89,7 @@ protected override void Finalize()
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IDisposable>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Сборка мусора](../../../standard/garbage-collection/index.md)

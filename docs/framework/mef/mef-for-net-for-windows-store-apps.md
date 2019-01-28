@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c2c6f28a88c709c27df82250fcbdc22de210e93a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663301"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Managed Extensibility Framework для .NET: приложения из магазина Windows Store
 Пространство имен <xref:System.Composition?displayProperty=nameWithType> и его дочерние пространства содержат типы для разработки расширяемых приложений для [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с использованием Managed Extensibility Framework (MEF). Эти пространства имен являются частью подмножества [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] для операционной системы [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "49121120"
   
  Дополнительные сведения о платформе [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и список входящих в нее пространств имен и типов см. в статье [Обзор приложений .NET для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312) в Центре разработки для Windows.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о платформе .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [Поддерживаемые API .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
- [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)
+## <a name="see-also"></a>См. также
+- [Общие сведения о платформе .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)
+- [Поддерживаемые API .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=247912)
+- [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502070"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Общие сведения о взаимодействии. (Руководство по программированию в C#)
 В этом разделе описываются способы включения взаимодействия между управляемым кодом C# и неуправляемым кодом.  
@@ -60,9 +60,9 @@ ms.locfileid: "53238677"
   
 ## <a name="see-also"></a>См. также
 
-- [Улучшение производительности взаимодействия](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
-- [Общие сведения о взаимодействии между COM и .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
-- [Общие сведения о взаимодействии между COM и Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
-- [Marshaling between Managed and Unmanaged Code (Маршалинг между управляемым и неуправляемым кодом)](../../../../docs/framework/interop/interop-marshaling.md)  
-- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)  
+- [Улучшение производительности взаимодействия](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Общие сведения о взаимодействии между COM и .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Общие сведения о взаимодействии между COM и Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Marshaling between Managed and Unmanaged Code (Маршалинг между управляемым и неуправляемым кодом)](../../../../docs/framework/interop/interop-marshaling.md)
+- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

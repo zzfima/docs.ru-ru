@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: e7dc10706257b2c1fa8574f193523272339f61ff
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df184bf32fa09b10c7f3de508ffb73b9cf156b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663407"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (справочник по C#)
 
@@ -108,11 +108,11 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.SByte>  
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.SByte>
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

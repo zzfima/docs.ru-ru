@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b5699535553629fb22e4e5789538fd9d598c9f88
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576919"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию. Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.  
@@ -83,6 +83,6 @@ ms.locfileid: "53235089"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
 - [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

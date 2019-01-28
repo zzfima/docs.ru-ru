@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618978"
 ---
 # <a name="await-c-reference"></a>await (Справочник по C#)
 Оператор `await` применяется к задаче в асинхронном методе для вставки точки приостановки выполнения метода до завершения выполнения ожидаемой задачи. Задача представляет выполняющуюся работу.  
@@ -68,7 +68,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 В предыдущем примере используется C# 7.1 с поддержкой [ метода `async` `Main`](../../programming-guide/main-and-command-args/index.md). Так как более ранние версии C# не поддерживают точки входа приложения, которые возвращают <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, нельзя применить модификатор `async` к методу `Main` и реализовать ожидание вызова метода `GetPageLengthsAsync`. В этом случае вы можете извлечь значение свойства <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>, чтобы обеспечить ожидание методом `Main` завершения асинхронной операции. Для задач, которые не возвращают значение, можно вызвать метод <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Ознакомьтесь со сведениями о том, [как выбрать версию языка C#](../configure-language-version.md).
 
-## <a name="see-also"></a>См. также  
-- [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)   
-- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+## <a name="see-also"></a>См. также
+- [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

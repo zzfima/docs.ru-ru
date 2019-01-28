@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514066"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (параметры компилятора C#)
 Параметр компилятора **-appconfig** позволяет приложению C# задать расположение файла конфигурации приложения сборки (app.config) в среде CLR во время привязки сборки.  
@@ -26,7 +26,7 @@ ms.locfileid: "45698133"
   
 ## <a name="arguments"></a>Аргументы  
  `file`  
- Обязательно. Файл конфигурации приложения, содержащий параметры привязки сборки.  
+ Обязательный. Файл конфигурации приложения, содержащий параметры привязки сборки.  
   
 ## <a name="remarks"></a>Примечания  
  Один из случаев использования параметра **-appconfig** — сложные сценарии, когда в сборке одновременно используются ссылки и на версию .NET Framework, и на версию .NET Framework для Silverlight определенной базовой сборки. Например, для конструктора XAML, написанного в Windows Presentation Foundation (WPF), может потребоваться ссылаться на оба рабочих стола WPF, для пользовательского интерфейса конструктора и для подмножества WPF, поставляемого с Silverlight. Одна и та же сборка конструктора имеет доступ к обеим сборкам. По умолчанию отдельные ссылки вызывают ошибку компиляции, так как привязка сборки видит две эквивалентные сборки.  
@@ -54,7 +54,7 @@ ms.locfileid: "45698133"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- [Элемент \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [Элемент \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

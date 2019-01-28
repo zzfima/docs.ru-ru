@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0b75a6aa47cfc169157b229c4386ed7dc1e627b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710200"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции с указателями (руководство по программированию на C#)
 В этом разделе рассматривается использование арифметических операторов `+` и `-` для управления указателями.  
@@ -38,13 +38,13 @@ ms.locfileid: "53242104"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
-- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
-- [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Типы](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Типы](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

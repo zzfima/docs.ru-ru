@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560752"
 ---
 # <a name="using-properties-c-programming-guide"></a>Использование свойств (Руководство по программированию в C#)
 Свойства сочетают в себе возможности полей и методов. Пользователю объекта свойство представляется как поле, и для доступа к нему применяется тот же синтаксис. При реализации класса свойство представляется в виде одного или двух блоков кода для методов доступа [get](../../../csharp/language-reference/keywords/get.md) и (или) [set](../../../csharp/language-reference/keywords/set.md). Блок кода для метода доступа `get` выполняется только при считывании свойства, а для метода `set` — при присвоении свойству нового значения. Свойство без метода доступа `set` доступно только для чтения. Свойство без метода доступа `get` доступно только для записи. Свойство, для которого определены оба этих метода, доступно для чтения и записи.  
@@ -34,7 +34,7 @@ ms.locfileid: "53243066"
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
- При ссылке на свойство (кроме случаев, когда свойство является целью присваивания) вызывается метод доступа `get`, который считывает значение свойства. Пример:  
+ При ссылке на свойство (кроме случаев, когда свойство является целью присваивания) вызывается метод доступа `get`, который считывает значение свойства. Например:  
   
  [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
@@ -102,7 +102,7 @@ ms.locfileid: "53243066"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
 - [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

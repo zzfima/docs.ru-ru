@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672244"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Чтение из текстового файла
 В этом примере считывается содержимое текстового файла с помощью статических методов <xref:System.IO.File.ReadAllText%2A> и <xref:System.IO.File.ReadAllLines%2A> из класса <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -43,6 +43,6 @@ ms.locfileid: "53240311"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

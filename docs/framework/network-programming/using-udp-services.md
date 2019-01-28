@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f89a0ad79dbf46c6d75d56106ad05a683482a501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511609"
 ---
 # <a name="using-udp-services"></a>Использование служб UDP
 Класс <xref:System.Net.Sockets.UdpClient> взаимодействует с сетевыми службами по протоколу UDP. Методы и свойства класса <xref:System.Net.Sockets.UdpClient> абстрагируют сведения о создании <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу UDP.
@@ -159,4 +159,5 @@ class Program
 ```
 
 ## <a name="see-also"></a>См. также
- <xref:System.Net.Sockets.UdpClient> <xref:System.Net.IPAddress>
+- <xref:System.Net.Sockets.UdpClient>
+- <xref:System.Net.IPAddress>

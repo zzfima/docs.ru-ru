@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: df1b26b0e06d4fff81627ec633ce97f9d6ca036f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 07679ed0334af26cd52353080ebd6fb39f9daecf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592553"
 ---
 # <a name="if-c-reference"></a>#if (Справочник по C#)
 
-Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](preprocessor-endif.md), код между этими директивами он компилирует, только когда определен указанный символ. В отличие от С и С++ здесь нельзя назначить символу числовое значение. Оператор #if в C# является логическим. Он проверяет только одно условие — определен ли указанный символ. Пример:
+Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](preprocessor-endif.md), код между этими директивами он компилирует, только когда определен указанный символ. В отличие от С и С++ здесь нельзя назначить символу числовое значение. Оператор #if в C# является логическим. Он проверяет только одно условие — определен ли указанный символ. Например:
 
 ```csharp
 #if DEBUG
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Директивы препроцессора C#](index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Директивы препроцессора C#](index.md)
 - [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

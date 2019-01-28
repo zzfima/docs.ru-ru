@@ -1,14 +1,14 @@
 ---
 title: Выполнение внутренних соединений (LINQ в C#)
 description: Узнайте, как выполнять внутренние соединения с помощью LINQ в C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112787"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857961"
 ---
 # <a name="perform-inner-joins"></a>Выполнение внутренних соединений
 
@@ -66,8 +66,8 @@ ms.locfileid: "47112787"
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Выполнение групповых соединений](perform-grouped-joins.md)  
-- [Выполнение левых внешних соединений](perform-left-outer-joins.md)  
-- [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Выполнение групповых соединений](perform-grouped-joins.md)
+- [Выполнение левых внешних соединений](perform-left-outer-joins.md)
+- [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)

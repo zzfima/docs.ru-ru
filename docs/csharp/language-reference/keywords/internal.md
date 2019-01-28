@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 48e7dcfd5bbe569a37ceb3ec746e7c3e53a7cdd9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8d787f8deb8f3b7d1e59d99e71662960a5c04e15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652089"
 ---
 # <a name="internal-c-reference"></a>internal (Справочник по C#)
 Ключевое слово `internal` является [модификатором доступа](../../../csharp/language-reference/keywords/access-modifiers.md) для типов и членов типов. 
@@ -93,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)  
-- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: bfc997631cc147bf5718ec91a57e2995cead052f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e4642d0e43a538217493298b58d572e435db5dae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645331"
 ---
 # <a name="goto-c-reference"></a>goto (Справочник по C#)
 
@@ -41,8 +41,8 @@ ms.locfileid: "53236769"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)  
-- [Руководство по программированию на C#](../../programming-guide/index.md)  
-- [Ключевые слова в C#](index.md)  
-- [Оператор goto (C++)](/cpp/cpp/goto-statement-cpp)  
-- [Операторы перехода](jump-statements.md)  
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Оператор goto (C++)](/cpp/cpp/goto-statement-cpp)
+- [Операторы перехода](jump-statements.md)

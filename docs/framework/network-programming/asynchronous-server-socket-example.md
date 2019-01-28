@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 26b5c53c4983aa392dba7346f357e2700cfe0178
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b512a391833e726bee7cb21c43912994fe860697
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589952"
 ---
 # <a name="asynchronous-server-socket-example"></a>Пример асинхронного сокета сервера
 Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов. Сервер создается с использованием асинхронного сокета, поэтому выполнение серверного приложения не приостанавливается, пока оно ожидает подключения от клиента. Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту. В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".  
@@ -289,7 +289,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры асинхронных сокетов клиента](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a>См. также
+- [Примеры асинхронных сокетов клиента](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)

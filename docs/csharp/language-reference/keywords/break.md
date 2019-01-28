@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 02d12ef92e1361bc8d46603d803a1b8b7c06a0a0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 18be5171329dd43c419e977a1799e2e72c32404d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727577"
 ---
 # <a name="break-c-reference"></a>break (Справочник по C#)
 
@@ -50,9 +50,9 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [switch](../../../csharp/language-reference/keywords/switch.md)  
-- [Операторы перехода](../../../csharp/language-reference/keywords/jump-statements.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [switch](../../../csharp/language-reference/keywords/switch.md)
+- [Операторы перехода](../../../csharp/language-reference/keywords/jump-statements.md)
 - [Операторы итерации](../../../csharp/language-reference/keywords/iteration-statements.md)

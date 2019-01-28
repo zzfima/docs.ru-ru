@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: 0dd06aead738bb5ea1dcee7e7dade99be80582b6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1bf3eb97d633322f6bd04f8e975ae3fc8ec54329
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651815"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Различия между шаблонами языка C++ и универсальными шаблонами языка C# (Руководство по программированию в C#)
 Универсальные шаблоны C# и шаблоны C++ — это возможности языков программирования, обеспечивающие поддержку параметризированных типов. Однако между ними существует немало различий. На уровне синтаксиса универсальные шаблоны C# представляют собой более простой способ работы с параметризованными типами без сложностей, связанных с шаблонами C++. Кроме того, C# не пытается предоставить все функции, предоставляемые шаблонами C++. На уровне реализации основное различие заключается в том, что замена универсальных типов C# осуществляется во время выполнения, а значит для объектов, экземпляры которых при этом создаются, сохраняются данные об универсальных типах. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -35,6 +35,6 @@ ms.locfileid: "53236431"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Шаблоны](/cpp/cpp/templates-cpp)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650984"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Преимущества универсальных шаблонов (Руководство по программированию на C#)
 Универсальные шаблоны позволяют обойти ограничение, существовавшее в более ранних версиях общеязыковой среды выполнения (CLR) и языка C#, из-за которого обобщение реализовывалось путем приведения типов к универсальному базовому типу <xref:System.Object> или из него. Создавая универсальный класс, вы можете создать коллекцию, которая будет типобезопасной во время компиляции.  
@@ -37,9 +37,9 @@ ms.locfileid: "53245016"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Generic>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)  
-- [Рекомендации по использованию коллекций](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)
+- [Рекомендации по использованию коллекций](../../../standard/design-guidelines/guidelines-for-collections.md)

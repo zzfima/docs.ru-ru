@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572291fa5674c541136e587bc40818da85f71a65
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741710"
 ---
 # <a name="shadow-copying-assemblies"></a>Теневое копирование сборок
 Теневое копирование позволяет обновлять используемые в домене приложения сборки без выгрузки домена приложения. Это особенно полезно для приложений, которые должны быть доступны постоянно, таких как сайты ASP.NET.  
@@ -77,9 +77,9 @@ ms.locfileid: "53125709"
 ## <a name="obsolete-methods"></a>Устаревшие методы  
  Класс <xref:System.AppDomain> имеет несколько методов, например <xref:System.AppDomain.SetShadowCopyFiles%2A> и <xref:System.AppDomain.ClearShadowCopyPath%2A>, которые можно использовать для управления теневым копированием в домене приложения, но в .NET Framework версии 2.0 они были помечены как устаревшие. Рекомендуемый способ настройки теневого копирования для домена приложения — это использование свойств класса <xref:System.AppDomainSetup>.  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>См. также
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
 - [Элемент \<shadowCopyVerifyByTimeStamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

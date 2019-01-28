@@ -2,18 +2,18 @@
 title: Итерации по коллекциям в C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720802"
 ---
 # <a name="iterators-c"></a>Итераторы (C#)
 
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.
 
-Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции. Метод итератора использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для поочередного возврата каждого элемента. При достижении оператора `yield return` текущее расположение в коде запоминается. При следующем вызове функции итератора выполнение возобновляется с этого места.
+Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции. Метод итератора использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для поочередного возврата каждого элемента. При достижении инструкции `yield return` текущее расположение в коде запоминается. При следующем вызове функции итератора выполнение возобновляется с этого места.
 
 Итератор используется из клиентского кода с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md) или с помощью запроса LINQ.
 

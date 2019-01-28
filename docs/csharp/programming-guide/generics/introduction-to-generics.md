@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: fd53e0abaab4ff7d242b32d6f26be13e97f20c44
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ed767ca100ee0405ce918d2d842d951f09d19e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646348"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Введение в универсальные шаблоны. (Руководство по программированию на C#)
 Универсальные классы и методы сочетают такие характеристики, как возможность многократного использования, типобезопасность и эффективность, которые не обеспечивают их неуниверсальные аналоги. Универсальные типы наиболее часто используются с коллекциями и методами, которые выполняют с ними операции. Библиотека классов на платформе .NET Framework 2.0 предоставляет новое пространство имен <xref:System.Collections.Generic>, которое содержит несколько новых универсальных классов коллекций. Во всех приложениях, предназначенных для .NET Framework 2.0 и более поздних версий, рекомендуем использовать новые универсальные классы коллекций вместо старых неуниверсальных аналогов, например <xref:System.Collections.ArrayList>. Дополнительные сведения см. в статье об [универсальных шаблонах в .NET](../../../standard/generics/index.md).  
@@ -33,6 +33,6 @@ ms.locfileid: "53239031"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Generic>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Collections.Generic>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)

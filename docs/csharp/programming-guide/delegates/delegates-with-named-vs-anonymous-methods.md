@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 077bc9d7a433c6fdf60f739f34c25a1b469fea02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509571"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Делегаты с именованными методами и Анонимные методы (Руководство по программированию в C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) можно связать с именованным методом. При создании экземпляра делегата с использованием именованного метода этот метод передается в качестве параметра, например:  
@@ -39,8 +39,8 @@ ms.locfileid: "53241497"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
-- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [События](../../../csharp/programming-guide/events/index.md)

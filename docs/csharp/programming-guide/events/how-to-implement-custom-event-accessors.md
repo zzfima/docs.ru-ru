@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-ms.openlocfilehash: aaf58307cb4e33a1caa7b1ef8584fbb33decea3f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cdae5222cfe435142d93f222d140bd41ecf2c5c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643485"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Реализация пользовательских методов доступа к событиям
 Событие представляет собой особый вид многоадресного делегата, который можно вызвать только из класса, где он объявлен. В клиентском коде создается подписка на событие. Для этого предоставляется ссылка на метод, который должен вызываться при возникновении этого события. Эти методы добавляются в список вызова делегата с помощью методов доступа к событиям, которые схожи с методами доступа к свойствам и отличаются только именами (`add` и `remove`). В большинстве случаев реализовывать настраиваемые методы доступа к событиям не требуется. Если в коде отсутствуют настраиваемые методы доступа к событиям, компилятор добавляет их автоматически. Тем не менее в некоторых случаях требуется реализовать настраиваемое поведение. Один из таких сценариев приводится в разделе [Практическое руководство.  Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
@@ -26,5 +26,5 @@ ms.locfileid: "53240077"
   
 ## <a name="see-also"></a>См. также
 
-- [События](../../../csharp/programming-guide/events/index.md)  
+- [События](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540290"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Реализация событий интерфейса
 [Интерфейс](../../../csharp/language-reference/keywords/interface.md) может объявлять [события](../../../csharp/language-reference/keywords/event.md). Следующий пример демонстрирует реализацию событий интерфейса в классе. По сути правила остаются таким же, как при реализации любого метода или свойства интерфейса.  
@@ -60,8 +60,8 @@ namespace ImplementInterfaceEvents
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [События](../../../csharp/programming-guide/events/index.md)  
-- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
-- [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [События](../../../csharp/programming-guide/events/index.md)
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+- [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
 - [Практическое руководство. Создание событий базового класса в производных классах](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

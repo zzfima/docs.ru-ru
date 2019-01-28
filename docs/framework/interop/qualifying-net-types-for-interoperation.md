@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524316"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
 Если вы планируете предоставлять типы в сборке COM-приложениям, во время разработки необходимо учитывать требования COM-взаимодействия. Управляемые типы (класс, интерфейс, структура и перечисление) легко интегрируются с COM-типами, если следовать приведенным ниже рекомендациям:  
@@ -47,9 +47,9 @@ ms.locfileid: "33389048"
   
  При экспорте в модель COM иерархия наследования управляемого типа преобразуется в плоскую структуру. Кроме того, в управляемой и неуправляемой средах существуют различия в управлении версиями. Типы, предоставляемые модели COM, имеют характеристики управления версиями, отличные от других управляемых типов.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)  
- [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)  
- [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
+- [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)
+- [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

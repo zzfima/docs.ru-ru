@@ -6,12 +6,12 @@ ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: 88c8c9d881719bd1d09a8879112b26d1c484f827
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 33169315f8bef45aba52f0696d4acac031584817
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582634"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Идентификация типа, допускающего значение NULL
 
@@ -35,6 +35,6 @@ ms.locfileid: "53240272"
   
 ## <a name="see-also"></a>См. также
 
-- [Типы, допускающие значения NULL](index.md)  
-- [Использование типов, допускающих значение NULL](using-nullable-types.md)  
-- <xref:System.Nullable.GetUnderlyingType%2A>  
+- [Типы, допускающие значения NULL](index.md)
+- [Использование типов, допускающих значение NULL](using-nullable-types.md)
+- <xref:System.Nullable.GetUnderlyingType%2A>

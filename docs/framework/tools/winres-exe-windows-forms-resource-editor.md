@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663170"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (редактор для локализации ресурсов Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Аргументы
 
-|Аргумент|Описание:|
+|Аргумент|Описание|
 |--------------|-----------------|
 |`resourceFile`|Файл ресурсов, который требуется локализовать. Это должен быть файл ресурсов Windows Forms с расширением RESX или RESOURCES, созданный с помощью конструктора Visual Studio. Программа Winres.exe не может открывать универсальные RESX-файлы и RESOURCES-файлы.|
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |**/?**|Отображает синтаксис команд и параметров программы.|
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655677"
 ---
 # <a name="fields-c-programming-guide"></a>Поля (Руководство по программированию в C#)
 *Поле* является переменной любого типа, которая объявлена непосредственно в [классе](../../../csharp/language-reference/keywords/class.md) или [структуре](../../../csharp/language-reference/keywords/struct.md). Поля являются *членами* содержащих их типов.  
@@ -21,7 +21,7 @@ ms.locfileid: "53242725"
   
  Как правило, поля хранят данные, которые должны быть доступны нескольким методам класса и храниться дольше, чем время существования любого отдельного метода. Например, класс, представляющий календарную дату, может иметь три целочисленных поля: одно для месяца, одно для числа и одно для года. Переменные, не используемые вне области одного метода, должны быть объявлены как *локальные переменные* в самом теле метода.  
   
- Поля объявляются в блоке класса путем указания уровня доступа поля, за которым следует тип поля, а затем имя поля. Пример:  
+ Поля объявляются в блоке класса путем указания уровня доступа поля, за которым следует тип поля, а затем имя поля. Например:  
   
  [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
@@ -49,9 +49,9 @@ ms.locfileid: "53242725"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592854"
 ---
 # <a name="members-c-programming-guide"></a>Члены (Руководство по программированию на C#)
 В классах и структурах есть члены, представляющие их данные и поведение. Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса. Закрытые члены в базовых классах наследуются, но недоступны из производных классов.  
   
  В следующей таблице перечислены виды членов, которые содержатся в классе или в структуре.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)|Поля являются переменными, объявленными в области класса. Поле может иметь встроенный числовой тип или быть экземпляром другого класса. Например, в классе календаря может быть поле, содержащее текущую дату.|  
 |[Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)|Константы — это поля или свойства, значения которых устанавливаются во время компиляции и не изменяются.|  
@@ -33,15 +33,15 @@ ms.locfileid: "53245108"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
-- [События](../../../csharp/programming-guide/events/index.md)  
-- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
+- [События](../../../csharp/programming-guide/events/index.md)
+- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

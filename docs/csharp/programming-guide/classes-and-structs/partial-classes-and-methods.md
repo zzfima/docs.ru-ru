@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713321"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
 Можно разделить определение [класса](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md), [интерфейса](../../../csharp/language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.  
@@ -110,7 +110,7 @@ ms.locfileid: "53243469"
   
 ## <a name="example-1"></a>Пример 1  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере поля и конструктор класса `CoOrds` объявлены в одном определении разделяемого класса, а член `PrintCoOrds` — в другом определении разделяемого класса.  
   
 ### <a name="code"></a>Код  
@@ -118,7 +118,7 @@ ms.locfileid: "53243469"
   
 ## <a name="example-2"></a>Пример 2  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере показано, что можно также разработать разделяемые структуры и интерфейсы.  
   
 ### <a name="code"></a>Код  
@@ -164,8 +164,8 @@ partial void onNameChanged()
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (тип)](../../../csharp/language-reference/keywords/partial-type.md)

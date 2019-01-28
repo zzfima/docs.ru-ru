@@ -2,12 +2,12 @@
 title: Обслуживание пар "имя-значение" (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2f350083724cba7d5b9cfa593ed5733cc9836df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701421"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Обслуживание пар "имя-значение" (C#)
 Множеству приложений приходится сохранять данные, которые лучше всего хранить в виде пар «имя-значение». Эти данные могут представлять сведения о конфигурации или глобальные параметры. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит несколько методов, которые облегчают хранение пар «имя-значение». Можно либо оставить информацию в виде атрибутов, либо в виде набора дочерних элементов.  
@@ -120,6 +120,6 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
-- <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
+- <xref:System.Xml.Linq.XElement.SetElementValue%2A>
 - [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

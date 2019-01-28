@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613848"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Итерация дерева каталогов
 Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,6 +59,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO>  
-- [LINQ и каталоги файлов](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- <xref:System.IO>
+- [LINQ и каталоги файлов](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

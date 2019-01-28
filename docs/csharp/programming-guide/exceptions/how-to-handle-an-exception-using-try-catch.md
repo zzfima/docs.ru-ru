@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 17b3be52bb89a1cf74bb8171ca937e434a8d94f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552532"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Обработка исключений с помощью блока try-catch
 Блок [try-catch-](../../../csharp/language-reference/keywords/try-catch.md) предназначен для перехвата и обработки исключений, происходящих в исполняемом коде. Некоторые исключения могут обрабатываться в блоке `catch`, и проблема решается без повторного создания исключения. Но в большинстве случаев на этом этапе можно только проверить, что создано подходящее исключение.  
@@ -27,6 +27,6 @@ ms.locfileid: "53244942"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
 - [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)

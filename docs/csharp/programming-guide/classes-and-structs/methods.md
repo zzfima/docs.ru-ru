@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712159"
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
 Метод — это блок кода, содержащий ряд инструкций. Программа инициирует выполнение инструкций, вызывая метод и указывая все аргументы, необходимые для этого метода. В C# все инструкции выполняются в контексте метода. Метод Main является точкой входа для каждого приложения C#, и он вызывается общеязыковой средой выполнения (CLR) при запуске программы.  
@@ -158,14 +158,14 @@ public Customer this[long id] => store.LookupCustomer(id);
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы и структуры](index.md)  
-- [Модификаторы доступа](access-modifiers.md)  
-- [Статические классы и члены статических классов](static-classes-and-static-class-members.md)  
-- [Наследование](inheritance.md)  
-- [Абстрактные и запечатанные классы и члены классов](abstract-and-sealed-classes-and-class-members.md)  
-- [params](../../../csharp/language-reference/keywords/params.md)  
-- [return](../../../csharp/language-reference/keywords/return.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы и структуры](index.md)
+- [Модификаторы доступа](access-modifiers.md)
+- [Статические классы и члены статических классов](static-classes-and-static-class-members.md)
+- [Наследование](inheritance.md)
+- [Абстрактные и запечатанные классы и члены классов](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../../csharp/language-reference/keywords/params.md)
+- [return](../../../csharp/language-reference/keywords/return.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
 - [Передача параметров](passing-parameters.md)

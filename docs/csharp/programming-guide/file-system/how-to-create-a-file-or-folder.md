@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731885"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Создание файла или папки
 Вы можете программно создать на компьютере папку, вложенную папку и файл во вложенной папке, а затем записать данные в этот файл.  
@@ -70,6 +70,6 @@ ms.locfileid: "53240207"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 3b50585e0ae0964cf19379573bd85923daa552f4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c664ee7d6e0e083eba958e6ee36a63009e13956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606612"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Справочник по C#)
 `#pragma warning` может включать или отключать определенные предупреждения.  
@@ -61,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
 - [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)

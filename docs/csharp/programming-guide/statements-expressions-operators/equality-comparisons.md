@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 2bf1e788c635dd466739178f80b0f2f147c04cfd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620179"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Сравнения на равенство (Руководство по программированию на C#)
 Иногда возникает необходимость проверить равенство двух значений. В некоторых случаях проверяется *равенство значений*, которое также называют их *эквивалентностью*, что означает, что содержащиеся в двух переменных значения равны. В других случаях требуется определить, ссылаются ли две переменные на один и тот же объект в памяти. Такой тип равенства называется *равенством ссылок* или *идентичностью*. В этом разделе описаны эти два типа равенства и приведены ссылки на разделы, содержащие дополнительные сведения.  
@@ -47,7 +47,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Проверка на ссылочное равенство (идентичность)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Описание процедуры проверки равенства ссылок двух переменных.|  
 |[Практическое руководство. Определение равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Описание предоставления пользовательского определения равенства значений для типа.|  

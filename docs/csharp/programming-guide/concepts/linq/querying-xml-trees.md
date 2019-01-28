@@ -2,12 +2,12 @@
 title: Выполнение запросов к деревьям XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-ms.openlocfilehash: 349235689dba125f697d0df5ff90bd10a69432c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71a3d8538d96a9a5c273188a1bbb920ad6fa2d37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741734"
 ---
 # <a name="querying-xml-trees-c"></a>Выполнение запросов к деревьям XML (C#)
 В этом разделе приведены примеры запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -18,7 +18,7 @@ ms.locfileid: "43501055"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Содержит общие примеры запросов к XML-деревьям.|  
 |[Проекции и преобразования (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Содержит общие примеры получения проекции и преобразования XML-деревьев.|  
@@ -28,5 +28,5 @@ ms.locfileid: "43501055"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

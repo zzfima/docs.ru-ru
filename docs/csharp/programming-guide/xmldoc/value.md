@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: e3b77af312abcc99945a22abf2b73ebd47556026
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 28c07331931450f41f8c93d24e119f8a981ae9ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500607"
 ---
 # <a name="ltvaluegt-c-programming-guide"></a>&lt;value&gt; (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -36,5 +36,5 @@ ms.locfileid: "53234530"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

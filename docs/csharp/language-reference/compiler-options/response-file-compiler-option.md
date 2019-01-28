@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738096"
 ---
 # <a name="-c-compiler-options"></a>@ (параметры компилятора C#)
 С помощью параметра @ можно указать файл, содержащий параметры компилятора и файлы исходного кода, которые требуется компилировать.  
@@ -30,7 +30,7 @@ ms.locfileid: "44259812"
 ## <a name="remarks"></a>Примечания  
  Параметры компилятора и файлы исходного кода будут обрабатываться компилятором таким образом, как если бы они были указаны в командной строке.  
   
- Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Пример:  
+ Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Например:  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ ms.locfileid: "44259812"
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
 - [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

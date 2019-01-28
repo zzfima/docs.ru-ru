@@ -2,12 +2,12 @@
 title: Сравнение функционального и Императивное программирование (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518960"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Сравнение функционального и Императивное программирование (C#)
 В этом разделе сравнивается и противопоставляется функциональное программирование с традиционным императивным (процедурным) программированием.  
@@ -52,6 +52,6 @@ ms.locfileid: "46696447"
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [Преобразования XSLT](../../../../standard/data/xml/xslt-transformations.md)  
+- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Преобразования XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: f2439bb955f821b58acc818ede308c379d5b68a6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727642"
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
 
@@ -98,11 +98,11 @@ int x = (int)Day.Sun;
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)  
-- [Типы перечисления](../../programming-guide/enumeration-types.md)  
-- [Ключевые слова в C#](index.md)  
-- [Таблица целых типов](integral-types-table.md)  
-- [Таблица встроенных типов](built-in-types-table.md)  
-- [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)  
-- [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)  
+- [Справочник по C#](../index.md)
+- [Типы перечисления](../../programming-guide/enumeration-types.md)
+- [Ключевые слова в C#](index.md)
+- [Таблица целых типов](integral-types-table.md)
+- [Таблица встроенных типов](built-in-types-table.md)
+- [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)
+- [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)
 - [Соглашения об именовании перечислений](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 1b5e03ffa0f956d7404c7c41f04aef1bfd8769df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4949b88a32dae2a727e623bb6e4db0a4f9d8418c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557998"
 ---
 # <a name="explicit-c-reference"></a>explicit (Справочник по C#)
 
@@ -51,10 +51,10 @@ ms.locfileid: "53238563"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)  
-- [Руководство по программированию на C#](../../programming-guide/index.md)  
-- [Ключевые слова в C#](index.md)  
-- [implicit](implicit.md)  
-- [operator (справочник по C#)](operator.md)  
-- [Практическое руководство. Реализация определяемых пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-- [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [implicit](implicit.md)
+- [operator (справочник по C#)](operator.md)
+- [Практическое руководство. Реализация определяемых пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

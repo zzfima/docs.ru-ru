@@ -2,12 +2,12 @@
 title: Создание настраиваемых атрибутов (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674639"
 ---
 # <a name="creating-custom-attributes-c"></a>Создание настраиваемых атрибутов (C#)
 Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных. Предположим, что требуется пометить тип тегом с именем программиста, который его разработал. Вы можете определить класс настраиваемых атрибутов `Author`:  
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- <xref:System.Reflection>  
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
-- [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)  
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
-- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- <xref:System.Reflection>
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))
+- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

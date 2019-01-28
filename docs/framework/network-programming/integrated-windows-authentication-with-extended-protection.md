@@ -2,12 +2,12 @@
 title: Встроенная аутентификация Windows с расширенной защитой
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591621"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Встроенная аутентификация Windows с расширенной защитой
 Были добавлены улучшения, которые влияют на обработку встроенной проверки подлинности Windows в <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> и связанных классах в <xref:System.Net> и соответствующих пространствах имен. Была добавлена поддержка расширенной защиты для повышения безопасности.  
@@ -148,6 +148,6 @@ ms.locfileid: "50189710"
   
  Эти функции расширенной защиты также могут использоваться серверными приложениями для проверки подлинности с другими типами запросов, а также при использовании доверенного прокси.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Authentication.ExtendedProtection>  
- <xref:System.Security.Authentication.ExtendedProtection.Configuration>
+## <a name="see-also"></a>См. также
+- <xref:System.Security.Authentication.ExtendedProtection>
+- <xref:System.Security.Authentication.ExtendedProtection.Configuration>

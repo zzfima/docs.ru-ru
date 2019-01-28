@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: daad986a1e62fe3b1d28fc25d3ebf6d2960d8b1d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694975"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (руководство по программированию на C#)
 
@@ -113,7 +113,7 @@ ms.locfileid: "53244275"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Collections.Generic>
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)
+- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)

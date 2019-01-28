@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 39b5aeecba39c0e5377fd4f76902dae4b678c324
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660181"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (параметры компилятора C#)
 Параметр **-filealign** позволяет указать размер разделов в выходном файле.  
@@ -53,9 +53,9 @@ ms.locfileid: "43530406"
   
 4.  Измените свойство **Выравнивание файла**.  
   
- Сведения об установке этого параметра компилятора программными средствами см. в статье <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

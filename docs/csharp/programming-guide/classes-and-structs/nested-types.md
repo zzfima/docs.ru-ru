@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: b08a7e95e3ddf7e2392be30f2e69c4ec8f425107
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32f434d9813b08254b72b713ec2f9a1bc9d1b06d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725016"
 ---
 # <a name="nested-types-c-programming-guide"></a>Вложенные типы (Руководство по программированию на C#)
 Тип, определенный внутри [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md), называется вложенным типом. Например:  
@@ -43,7 +43,7 @@ ms.locfileid: "53244015"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)

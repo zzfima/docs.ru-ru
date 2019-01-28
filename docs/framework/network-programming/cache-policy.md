@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740896"
 ---
 # <a name="cache-policy"></a>Политика кэша
 Политика кэша определяет правила, согласно которым определяется возможность выполнения запроса с помощью кэшированной копии запрашиваемого ресурса. В приложениях указываются требования к кэшу клиента в плане актуальности, однако фактическая политика кэша определяется требованиями к кэшу клиента, требованиями сервера к сроку действия и требованиями сервера к повторной проверке. Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований сервера всегда применяется наиболее консервативная политика кэша.  
@@ -24,7 +24,7 @@ ms.locfileid: "50199439"
   
  В приведенной ниже таблице описываются классы, используемые для настройки политик кэширования.  
   
-|Имя класса|Описание:|  
+|Имя класса|Описание|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Представляет политики кэша на основе расположения и на основе времени для ресурсов, запрашиваемых с помощью объектов <xref:System.Net.HttpWebRequest>.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Представляет политики кэша на основе расположения или политики кэша на основе времени <xref:System.Net.Cache.RequestCacheLevel.Default> для ресурсов, запрашиваемых с помощью объектов <xref:System.Net.WebRequest>.|  
@@ -38,8 +38,8 @@ ms.locfileid: "50199439"
   
  Примеры кода, демонстрирующие создание и использование политик кэша, см. в разделе [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
-## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+## <a name="see-also"></a>См. также
+- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc4f40ab954a3bb31e0b55aad8c00ed2ee63f6c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514898"
 ---
 # <a name="marshaling-strings"></a>Маршалинг строк
 При вызове неуправляемого кода копируются строковые аргументы, и при необходимости выполняется преобразование этих аргументов из формата .NET Framework (Юникод) в неуправляемый формат (ANSI). Так как управляемые строки являются неизменяемыми, то при вызове неуправляемого кода они не копируются обратно из неуправляемой памяти в управляемую память при возврате из функции.  
   
  В таблице ниже представлены варианты маршалинга строк, описано их использование и приведена ссылка на соответствующий пример кода .NET Framework.  
   
-|String|Описание:|Пример|  
+|String|Описание|Пример|  
 |------------|-----------------|------------|  
 |По значению.|Передает строки в качестве параметров In.|[MsgBox](msgbox-sample.md)|  
 |Как результат.|Возвращает строки из неуправляемого кода.|[Строки](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))|  
@@ -38,9 +38,9 @@ ms.locfileid: "33391125"
 |Как массив строк по значению.|Создает массив строк, который передается по значению.|[Массивы](marshaling-different-types-of-arrays.md)|  
 |Как массив структур, содержащих строки по значению.|Создает массив структур, содержащих строки. Массив передается по значению.|[Массивы](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>См. также  
- [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md)  
- [Типы данных в вызове неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Маршалинг классов, структур и объединений](marshaling-classes-structures-and-unions.md)  
- [Маршалинг массивов типов](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [Различные примеры маршалинга](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))
+## <a name="see-also"></a>См. также
+- [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md)
+- [Типы данных в вызове неуправляемого кода](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Маршалинг классов, структур и объединений](marshaling-classes-structures-and-unions.md)
+- [Маршалинг массивов типов](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Различные примеры маршалинга](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))

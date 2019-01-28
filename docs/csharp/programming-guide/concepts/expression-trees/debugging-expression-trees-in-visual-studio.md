@@ -2,12 +2,12 @@
 title: Отладка деревьев выражений в Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: dd3008ffd1364eec3938053bd7d37f95b8a1ebc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632157"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Отладка деревьев выражений в Visual Studio (C#)
 При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуры дерева выражения, можно использовать свойство `DebugView`, которое доступно только в режиме отладки. Дополнительные сведения об отладке см. в разделе [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
@@ -31,7 +31,7 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
@@ -52,7 +52,7 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
@@ -62,7 +62,7 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
@@ -74,7 +74,7 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
@@ -88,7 +88,7 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
@@ -98,13 +98,13 @@ ms.locfileid: "43509627"
   
 ### <a name="examples"></a>Примеры  
   
-|Выражение|Свойство `DebugView`|  
+|Выражение|Свойство`DebugView` |  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
 ## <a name="see-also"></a>См. также
 
-- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))  
-- [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
+- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Создание настраиваемых визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data)

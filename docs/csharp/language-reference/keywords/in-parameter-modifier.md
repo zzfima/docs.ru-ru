@@ -5,12 +5,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631416"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Модификатор параметров in (справочник по C#)
 
@@ -121,8 +121,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)  
-- [Руководство по программированию на C#](../../programming-guide/index.md)  
-- [Ключевые слова в C#](index.md)  
-- [Параметры методов](method-parameters.md)  
-- [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)  
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Параметры методов](method-parameters.md)
+- [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)

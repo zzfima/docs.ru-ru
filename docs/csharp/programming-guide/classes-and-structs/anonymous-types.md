@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 234190beb2cde69906df9d5c5f468689b7399535
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729763"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Анонимные типы (Руководство по программированию в C#)
 Анонимные типы позволяют легко инкапсулировать свойства только для чтения в один объект без необходимости предварительного определения типа. Имя типа создается компилятором и недоступно на уровне исходного кода. Тип каждого свойства выводится компилятором.  
@@ -53,11 +53,11 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  Никакое поле, свойство, событие или тип возвращаемого значения метода невозможно объявить, используя анонимный тип. Точно так же нельзя объявить с помощью анонимного типа ни один формальный параметр метода, свойства, конструктора или индексатора. Для передачи анонимного типа или коллекции, содержащей анонимные типы, как аргумента для метода можно использовать этот параметр в качестве объекта типа. Однако подобное решение противоречит цели строгой типизации. Если вам нужно сохранить результаты запроса или передать их за пределы метода, используйте вместо анонимного типа структуру или класс, названные обычным образом.  
   
- Так как методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A> в анонимных типах определяются с точки зрения методов свойств `Equals` и `GetHashCode`, два экземпляра одного и того же анонимного типа равны, только если равны их свойства.  
+ Так как методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A> в анонимных типах определяются через  методы `Equals` и `GetHashCode` свойств, два экземпляра одного и того же анонимного типа равны, только если равны их свойства.  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

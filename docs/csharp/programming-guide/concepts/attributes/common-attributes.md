@@ -2,12 +2,12 @@
 title: Общие атрибуты (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558596"
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  
@@ -73,7 +73,7 @@ ms.locfileid: "43504399"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Определяет понятный псевдоним по умолчанию для манифеста сборки.|  
   
 ##  <a name="Obsolete"></a> Атрибут Obsolete  
- Атрибут `Obsolete` помечает сущность программы как нерекомендуемую для использования. Каждый случай использования сущности, помеченной как устаревшая, будет приводить к созданию предупреждения или сообщения об ошибке в зависимости от настройки атрибута. Пример:  
+ Атрибут `Obsolete` помечает сущность программы как нерекомендуемую для использования. Каждый случай использования сущности, помеченной как устаревшая, будет приводить к созданию предупреждения или сообщения об ошибке в зависимости от настройки атрибута. Например:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -221,7 +221,7 @@ class SampleClass
   
  Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Атрибут|Описание:|Тип|  
+|Атрибут|Описание|Тип|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
-- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Атрибуты](../../../../../docs/standard/attributes/index.md)
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))
 - [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

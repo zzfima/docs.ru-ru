@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726654"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -154,12 +154,12 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
   
 ## <a name="see-also"></a>См. также
 
-- [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)  
+- [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)
 - [Возвращаемые значения ref и локальные переменные ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Условное выражение REF](../operators/conditional-operator.md#conditional-ref-expression)
 - [Ссылочный оператор присваивания](../operators/assignment-operator.md#ref-assignment-operator)
-- [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [Параметры методов](method-parameters.md)  
-- [Справочник по C#](../index.md)  
-- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Параметры методов](method-parameters.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)

@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724048"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -45,7 +45,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 Значением переменной-указателя типа `myType*` является адрес переменной типа `myType`. Ниже приведены примеры объявлений типов указателей.
 
-|Пример|Описание:|
+|Пример|Описание|
 |-------------|-----------------|
 |`int* p`|`p` — указатель на целое число.|
 |`int** p`|`p` — указатель на указатель на целое число.|
@@ -91,12 +91,12 @@ int* myVariable;
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../index.md)  
-- [Небезопасный код и указатели](index.md)  
-- [Преобразования указателей](pointer-conversions.md)  
-- [Выражения указателей](pointer-expressions.md)  
-- [Типы](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [Оператор fixed](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [Руководство по программированию на C#](../index.md)
+- [Небезопасный код и указатели](index.md)
+- [Преобразования указателей](pointer-conversions.md)
+- [Выражения указателей](pointer-expressions.md)
+- [Типы](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Оператор fixed](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/keywords/stackalloc.md)
 - [Упаковка-преобразование и распаковка-преобразование](../types/boxing-and-unboxing.md)
