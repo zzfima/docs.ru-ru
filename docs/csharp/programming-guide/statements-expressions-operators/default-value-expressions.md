@@ -6,12 +6,12 @@ ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: 4b14714a55f77763425299ffc13ba579ead57810
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8e10a5de73e8d49f1a380fb8945b98ac797ef270
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575545"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Выражения значения по умолчанию (руководство по программированию на C#)
 
@@ -62,9 +62,9 @@ T t = default(T);
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Generic>  
-- [Руководство по программированию на C#](../index.md)  
-- [Универсальные шаблоны (Руководство по программированию на C#)](../generics/index.md)  
-- [Универсальные методы](../generics/generic-methods.md)  
-- [Универсальные шаблоны в .NET](~/docs/standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [Руководство по программированию на C#](../index.md)
+- [Универсальные шаблоны (Руководство по программированию на C#)](../generics/index.md)
+- [Универсальные методы](../generics/generic-methods.md)
+- [Универсальные шаблоны в .NET](~/docs/standard/generics/index.md)
 - [Таблица значений по умолчанию](../../language-reference/keywords/default-values-table.md)

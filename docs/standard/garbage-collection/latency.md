@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498077"
 ---
 # <a name="latency-modes"></a>Режимы задержки
 Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения. В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность. Степень вмешательства сборщика мусора можно настроить, присвоив свойству <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> одно из значений <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -56,6 +56,6 @@ ms.locfileid: "43883726"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.GC?displayProperty=nameWithType>  
-- [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)  
+- <xref:System.GC?displayProperty=nameWithType>
+- [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)
 - [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

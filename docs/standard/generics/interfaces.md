@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613809"
 ---
 # <a name="generic-interfaces"></a>Универсальные интерфейсы
 В этом разделе приводится обзор универсальных интерфейсов, которые предоставляют общие функциональные возможности для различных семейств универсальных типов.  
@@ -44,9 +44,9 @@ ms.locfileid: "47234683"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Универсальные шаблоны](../../../docs/standard/generics/index.md)  
-- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)  
-- [Универсальные методы-делегаты для управления массивами и списками](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Универсальные шаблоны](../../../docs/standard/generics/index.md)
+- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)
+- [Универсальные методы-делегаты для управления массивами и списками](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Ковариация и контрвариантность](../../../docs/standard/generics/covariance-and-contravariance.md)

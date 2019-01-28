@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493424"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
 Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
@@ -81,11 +81,11 @@ using System.Linq;
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Parallel Programming Samples (Образцы параллельного программирования, включают множество примеров методов расширения)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
-- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Parallel Programming Samples (Образцы параллельного программирования, включают множество примеров методов расширения)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Общие сведения о стандартных операторах запроса](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Conversion Rules for Instance Parameters and their Impact (Правила преобразования для параметров экземпляра и их влияние)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
-- [Extension Methods Interoperability between Languages (Взаимодействие между языками с помощью методов расширения)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
-- [Extension Methods and Curried Delegates (Методы расширения и каррированные делегаты)](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Conversion Rules for Instance Parameters and their Impact (Правила преобразования для параметров экземпляра и их влияние)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)
+- [Extension Methods Interoperability between Languages (Взаимодействие между языками с помощью методов расширения)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)
+- [Extension Methods and Curried Delegates (Методы расширения и каррированные делегаты)](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)
 - [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

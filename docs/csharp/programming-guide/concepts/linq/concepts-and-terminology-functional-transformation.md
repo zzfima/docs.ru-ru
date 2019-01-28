@@ -2,12 +2,12 @@
 title: Основные принципы и терминология (функциональное преобразование) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583367"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Основные принципы и терминология (функциональное преобразование) (C#)
 В данном разделе вводятся основные понятия и терминология чисто функциональных преобразований. Подход с использованием функциональных преобразований для преобразования данных порождает код, который обычно быстрее для программирования, более выразительный и легче для отладки и сопровождения, чем порожденный с использованием традиционного императивного программирования.  
@@ -73,5 +73,5 @@ ms.locfileid: "43526999"
   
 ## <a name="see-also"></a>См. также
 
-- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Сравнение функционального и императивного программирования (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

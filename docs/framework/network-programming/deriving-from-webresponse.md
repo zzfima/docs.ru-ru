@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50088602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598871"
 ---
 # <a name="deriving-from-webresponse"></a>Наследование от класса WebResponse
 <xref:System.Net.WebResponse> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика ответов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс <xref:System.Net.WebRequest> для запроса данных ресурсов, получают ответы в **WebResponse**. Потомки класса **WebResponse** для определенных протоколов должны реализовывать абстрактные члены класса **WebResponse**.  
@@ -38,9 +38,9 @@ ms.locfileid: "50088602"
   
  Экземпляр потока, возвращаемый методом **GetResponseStream**, принадлежит приложению. Его можно закрыть, не закрывая **WebResponse**. По соглашению вызов метода **WebResponse.Close** также закрывает поток, возвращаемый методом **GetResponse**.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)

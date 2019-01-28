@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659505"
 ---
 # <a name="creating-new-strings-in-net"></a>Создание новых строк в .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет создавать строки с помощью простой операции присваивания, а также перегружать конструктор класса для создания строк с помощью различных параметров. Кроме того, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет в классе <xref:System.String?displayProperty=nameWithType> несколько методов для создания строковых объектов путем объединения строк, массивов строк или объектов.  
@@ -82,5 +82,5 @@ ms.locfileid: "43870114"
   
 ## <a name="see-also"></a>См. также
 
-- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)
 - [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md)

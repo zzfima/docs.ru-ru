@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654663"
 ---
 # <a name="types-of-isolation"></a>Типы изоляции
 Доступ к изолированному хранилищу всегда предоставляется только пользователю, который его создал. Чтобы поддерживать изоляцию такого типа, общеязыковая среда выполнения использует тот же подход к идентификации пользователя, что и операционная система, применяя идентификатор, связанный с процессом, в котором выполнялся код при открытии хранилища. Этот идентификатор обозначает аутентифицированного пользователя, но использование функции олицетворения может привести к тому, что идентификатор текущего пользователя изменится в ходе выполнения приложения.  
@@ -54,7 +54,7 @@ ms.locfileid: "47424458"
  Обратите внимание, что изолированные хранилища, за исключением перемещаемых, всегда неявно изолируются по компьютерам, так как для них применяются локальные средства хранения конкретного компьютера.  
   
 > [!IMPORTANT]
->  Изолированное хранилище недоступно для приложений Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage` , включенных в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов. Дополнительные сведения см. в статье [Данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
+>  Изолированное хранилище недоступно для приложений Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage` , включенных в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов. Дополнительные сведения см. в статье [Доступ к данным приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Изоляция по пользователям и сборкам  
@@ -108,5 +108,5 @@ ms.locfileid: "47424458"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507087"
 ---
 # <a name="copying-and-pinning"></a>Копирование и закрепление
 При маршалировании данных маршалер может копировать или закреплять включаемые в процесс данные. В ходе этого процесса копия данных переносится из одного расположения в памяти в другое. На следующем рисунке показаны различия между копированием типа значения и типа, передаваемого по ссылке, из управляемой памяти в неуправляемую.  
@@ -77,8 +77,8 @@ ms.locfileid: "33392805"
   
  Если <xref:System.Text.StringBuilder?displayProperty=nameWithType> передается по значению, маршалер передает ссылку на внутренний буфер **StringBuilder** напрямую вызывающему объекту. Вызывающий и вызываемый объекты должны согласовывать размер буфера. Вызывающий объект отвечает за создание буфера **StringBuilder** соответствующей длины. Вызываемый объект должен принимать необходимые меры предосторожности, чтобы предотвратить переполнение буфера. **StringBuilder** является исключением из правила, согласно которому ссылочные типы, передаваемые по значению, по умолчанию передаются в виде параметра ввода. Он всегда передается как параметр ввода-вывода.  
   
-## <a name="see-also"></a>См. также  
- [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)  
- [Управление памятью с помощью упаковщика взаимодействия](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
- [Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) (Атрибуты направления)  
- [Маршалинг взаимодействия](interop-marshaling.md)
+## <a name="see-also"></a>См. также
+- [Характеристики маршалинга по умолчанию](default-marshaling-behavior.md)
+- [Управление памятью с помощью упаковщика взаимодействия](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
+- [Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) (Атрибуты направления)
+- [Маршалинг взаимодействия](interop-marshaling.md)

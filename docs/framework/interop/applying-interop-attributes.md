@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589770"
 ---
 # <a name="applying-interop-attributes"></a>Применение атрибутов взаимодействия
 В пространстве имен <xref:System.Runtime.InteropServices> представлены три категории атрибутов взаимодействия: атрибуты, применяемые разработчиком во время разработки, API и средствами COM-взаимодействия в процессе преобразования, а также разработчиком или средой COM-взаимодействия.  
@@ -30,7 +30,7 @@ ms.locfileid: "33392568"
 ## <a name="design-time-attributes"></a>Атрибуты времени разработки  
  Атрибуты времени разработки позволяют настраивать результаты процесса преобразования, который выполняется API и средствами COM-взаимодействия. В следующей таблице описываются атрибуты, которые можно применять к управляемому исходному коду. В некоторых случаях средства COM-взаимодействия также могут применять описываемые здесь атрибуты.  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Указывает, будет ли выполняться маршалинг типа с использованием маршалера автоматизации или настраиваемого прокси-сервера и заглушки.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Определяет тип интерфейса, создаваемого для класса.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33392568"
 ## <a name="conversion-tool-attributes"></a>Атрибуты средств преобразования  
  В следующей таблице описываются атрибуты, которые применяются средствами COM-взаимодействия во время преобразования. Эти атрибуты не применяются во время разработки.  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Указывает псевдоним COM для типа параметра или поля. Может использоваться в качестве атрибута параметров, полей или возвращаемых значений.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Указывает, что сведения о классе или интерфейсе были потеряны при импорте из библиотеки типов в сборку.|  
@@ -67,9 +67,9 @@ ms.locfileid: "33392568"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Содержит флаги **TYPEFLAGS**, которые были первоначально импортированы для этого типа из библиотеки типов COM.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Содержит флаги **VARFLAGS**, которые были первоначально импортированы для этой переменной из библиотеки типов COM.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices>  
- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Атрибуты](../../../docs/standard/attributes/index.md)  
- [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices>
+- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Атрибуты](../../../docs/standard/attributes/index.md)
+- [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

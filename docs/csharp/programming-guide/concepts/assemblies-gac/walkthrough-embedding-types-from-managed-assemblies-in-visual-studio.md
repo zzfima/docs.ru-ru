@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio в C#
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500633"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio в C#
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.  
@@ -232,9 +232,9 @@ ms.locfileid: "54415719"
   
 6.  В проводнике откройте папку выходного пути (например, C:\TypeEquivalenceSample). Дважды щелкните файл TypeEquivalenceClient.exe, чтобы выполнить программу. Новая версия сборки TypeEquivalenceRuntime отображается в программе без повторной компиляции.  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
-- [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+- [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

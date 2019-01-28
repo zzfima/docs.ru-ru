@@ -2,12 +2,12 @@
 title: Публикация и разрешение имени однорангового узла
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682986"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Публикация и разрешение имени однорангового узла
 
@@ -47,5 +47,5 @@ ms.locfileid: "53143731"
   
  В пространстве имен <xref:System.Net.PeerToPeer> определено отношение "многие ко многим" между записями <xref:System.Net.PeerToPeer.PeerName>, содержащими конечные точки, и одноранговыми сетями или облаками PNRP, в которых они осуществляют обмен данными. При наличии повторяющихся или устаревших записей или нескольких узлов с одинаковыми именами однорангового узла узлы PNRP могут получать актуальную информацию с помощью класса <xref:System.Net.PeerToPeer.PeerNameResolver>. Методы <xref:System.Net.PeerToPeer.PeerNameResolver> используют одно имя однорангового узла, упрощая соотношение между именами одноранговых узлов и записями или облаками до "один ко многим". Это поведение аналогично выполнению запроса с использованием соединения реляционной таблицы. В случае успешного выполнения объект Resolver возвращает <xref:System.Net.PeerToPeer.PeerNameRecordCollection> для заданного имени однорангового узла.  Например, имя однорангового узла может встречаться во всех записях имен одноранговых узлов в коллекции с упорядочением по облаку. Для этих экземпляров имен одноранговых узлов приложение на основе протокола PNRP сможет запрашивать вспомогательные данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 - <xref:System.Net.PeerToPeer>

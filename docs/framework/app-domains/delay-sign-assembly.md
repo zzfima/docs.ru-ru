@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a833bb0f412407d1f18793c356d4c207716eb101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632625"
 ---
 # <a name="delay-signing-an-assembly"></a>Отложенная подпись сборки
 Организация может располагать тщательно оберегаемой парой ключей, повседневный доступ к которой разработчикам не предоставляется. Открытый ключ часто является доступным, но доступ к закрытому ключу предоставляется лишь отдельным лицам. При разработке сборок со строгими именами каждая сборка, в которой имеется ссылка на другую сборку со строгим именем, должна содержать маркер открытого ключа, использованного для присвоения строгого имени второй сборке. Данный подход требует, чтобы открытый ключ был доступен во время процесса разработки.  
@@ -72,8 +72,8 @@ ms.locfileid: "53152296"
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## <a name="see-also"></a>См. также  
-- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>См. также
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
+- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 9880766641be618a6a0f54ded501cf6f6e95e128
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2a4fd2f903f96a14d4a256ea68240e942ccd59eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50034368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614280"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Использование синхронного сокета сервера
 Синхронные сокеты сервера приостанавливают выполнение приложения до тех пор, пока сокет не получит запрос на соединение. Синхронные сокеты сервера не подходят для приложений, которые сильно загружают сеть своими операциями, но они могут подходить для простых сетевых приложений.  
@@ -75,7 +75,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>См. также
+- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)

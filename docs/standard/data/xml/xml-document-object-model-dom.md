@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508683"
 ---
 # <a name="xml-document-object-model-dom"></a>Модель объектов XML-документов (DOM)
 Класс XML DOM является представлением XML-документа в памяти. Модель DOM позволяет читать, обрабатывать и изменять XML-документ программным образом. Класс **XmlReader** также читает XML, но предоставляет только последовательный доступ для чтения без поддержки кэширования. Это значит, что **XmlReader** не позволит изменять значения атрибутов или содержимое элемента, а также вставлять и удалять узлы. Изменение - основная функция модели DOM. Это стандартизованный, структурированный способ представления XML-данных в памяти, хотя на самом деле данные XML хранятся в файлах и пересылаются из других объектов в строковом виде. Далее приведен пример XML-данных.  
@@ -78,5 +78,5 @@ ms.locfileid: "44087197"
   
 ## <a name="see-also"></a>См. также
 
-- [Типы XML-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Типы XML-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Сопоставление объектной иерархии с XML-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

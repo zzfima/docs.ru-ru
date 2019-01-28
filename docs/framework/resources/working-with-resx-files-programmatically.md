@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c13a00ddad974ebba8eea4fceddd6a9fe3ed942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597584"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Работа с RESX-файлами программным способом
 Поскольку XML-файлы ресурсов (RESX-файлы) должны иметь четко определенный XML-формат (включая заголовок, который должен соответствовать конкретной схеме и за которым следуют данные в парах "имя-значение"), создание этих файлов вручную может приводить к ошибкам. RESX-файлы можно также создавать программно, используя типы и члены из библиотеки классов .NET Framework. Кроме того, библиотеку классов .NET Framework можно использовать для извлечения ресурсов, хранящихся в RESX-файлах. В этой статье рассматривается использование типов и членов из пространства имен <xref:System.Resources> для работы с RESX-файлами.  
@@ -84,7 +84,7 @@ ms.locfileid: "33398837"
   
  **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
-## <a name="see-also"></a>См. также  
- [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>См. также
+- [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)

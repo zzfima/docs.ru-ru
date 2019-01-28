@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637746"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Забираемые сборки для динамической генерации типа
 
@@ -77,9 +77,9 @@ ms.locfileid: "33398265"
 - **Контекстно привязанные объекты**    
    Контекстно статические переменные не поддерживаются. Типы в забираемой сборке не могут расширять <xref:System.ContextBoundObject>. Однако код в забираемых сборках может использовать контекстно привязанные объекты, определенные в другом месте.
 
-- **Потокостатические данные**       
+- **Потокостатические данные**       
    Потокостатические переменные не поддерживаются.
 
 ## <a name="see-also"></a>См. также
 
-[Предоставление динамических методов и сборок](emitting-dynamic-methods-and-assemblies.md)
+- [Предоставление динамических методов и сборок](emitting-dynamic-methods-and-assemblies.md)

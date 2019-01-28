@@ -2,12 +2,12 @@
 title: PNRP в разработке приложений
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93dd65100e19f16c6597374cbab1e10d6a759562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736550"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP в разработке приложений
 В ОС Windows Vista сетевые приложения могут получать доступ к функциям публикации и разрешения имен через упрощенный программный интерфейс (API) PNRP.  
@@ -19,5 +19,5 @@ ms.locfileid: "50180437"
   
  Передача сообщений между одноранговыми приложениями по-прежнему осуществляется с применением базовых архитектур, таких как PeerChannel и [Большие наборы данных и потоковая передача](https://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>См. также
+- <xref:System.Net.PeerToPeer>

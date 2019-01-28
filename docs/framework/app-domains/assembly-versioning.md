@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53b757417f1f37c1a76021a518570da85dc04ad2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724074"
 ---
 # <a name="assembly-versioning"></a>Управление версиями сборок
 Управление версиями сборок, использующих среду CLR, производится полностью на уровне сборки. Конкретная версия сборки и версии зависимых от нее сборок указываются в манифесте сборки. Политика управления версиями по умолчанию для среды выполнения заключается в том, что приложения могут выполняться только с версиями, с которыми они были разработаны и протестированы, если иное не переопределено явной политикой использования версий в файлах конфигурации (в файле конфигурации приложения, файле политики издателя и файле конфигурации администратора компьютера).  
@@ -70,8 +70,8 @@ ms.locfileid: "50187326"
   
  Информационная версия представляется с помощью пользовательского атрибута <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Дополнительные сведения об атрибуте информационной версии см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>См. также  
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
-- [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
-- [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+## <a name="see-also"></a>См. также
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Настройка приложений](../../../docs/framework/configure-apps/index.md)
+- [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md)
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

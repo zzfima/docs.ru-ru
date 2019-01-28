@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 4fd7d01a3592c76fc1bb4ff8afe280c50cdf9f12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5579dd05e11de9dd54023604f7515fb52fb29a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650736"
 ---
 # <a name="managing-connections"></a>Управление подключениями
 Приложения, которые используют протокол HTTP для подключения к ресурсам данных, могут использовать классы <xref:System.Net.ServicePoint> и <xref:System.Net.ServicePointManager> .NET Framework для управления подключением к Интернету и для оптимизации масштабирования и производительности.  
@@ -64,6 +64,6 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Группирование подключений](../../../docs/framework/network-programming/connection-grouping.md)  
- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>См. также
+- [Группирование подключений](../../../docs/framework/network-programming/connection-grouping.md)
+- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)

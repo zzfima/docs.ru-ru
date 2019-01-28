@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fcfaa05d4efec43a49e3f485b74cadadbabd9236
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557943"
 ---
 # <a name="event-c-reference"></a>event (Справочник по C#)
 Ключевое слово `event` используется для объявления события в классе Publisher.  
@@ -46,12 +46,12 @@ ms.locfileid: "53240532"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [add](../../../csharp/language-reference/keywords/add.md)  
-- [remove](../../../csharp/language-reference/keywords/remove.md)  
-- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [add](../../../csharp/language-reference/keywords/add.md)
+- [remove](../../../csharp/language-reference/keywords/remove.md)
+- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
 - [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

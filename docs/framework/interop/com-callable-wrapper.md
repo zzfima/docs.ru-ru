@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655339"
 ---
 # <a name="com-callable-wrapper"></a>Вызываемая оболочка COM
 Когда клиент COM вызывает объект .NET, среда CLR создает для этого объекта управляемый объект и вызываемую оболочку COM. Не имея возможности обращаться к объекту .NET напрямую, клиенты COM используют вызываемую оболочку COM в качестве посредника для управляемого объекта.  
@@ -189,9 +189,9 @@ public class LoanApp
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [Oболочки COM](com-wrappers.md)  
- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)  
- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)  
- [Вызываемая оболочка времени выполнения](runtime-callable-wrapper.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [Oболочки COM](com-wrappers.md)
+- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
+- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)
+- [Вызываемая оболочка времени выполнения](runtime-callable-wrapper.md)

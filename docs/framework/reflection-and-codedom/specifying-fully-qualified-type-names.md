@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628543"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Указание полных имен типов
 Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -134,7 +134,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>Указание имен сборок  
  Единственным обязательным компонентом спецификации имени сборки является текстовое имя сборки (IDENTIFIER). За ним может следовать список разделенных запятыми пар "свойство/значение", как показано в таблице ниже. Имя IDENTIFIER должно удовлетворять правилам именования файлов. Регистр символов в имени IDENTIFIER не учитывается.  
   
-|Имя свойства.|Описание:|Допустимые значения|  
+|Имя свойства.|Описание|Допустимые значения|  
 |-------------------|-----------------|----------------------|  
 |**Версия**|Номер версии сборки|*Major.Minor.Build.Revision*, где *Major*, *Minor*, *Build* и *Revision* являются целочисленными значениями в диапазоне от 0 до 65 535 включительно.|  
 |**PublicKey**|Полный открытый ключ|Строковое значение полного открытого ключа в шестнадцатеричном формате. Чтобы явным образом описать сборку как закрытую, необходимо задать пустую ссылку (**Nothing** в Visual Basic).|  
@@ -201,11 +201,11 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  Для метода **ModuleBuilder.GetType** `MyArray[0..5]` указывает одномерный массив размером 6 с нижней границей 0. `MyArray[4…]` указывает одномерный массив неизвестного размера с нижней границей 4.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection.AssemblyName>  
- <xref:System.Reflection.Emit.ModuleBuilder>  
- <xref:System.Reflection.Emit.TypeBuilder>  
- <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Reflection.AssemblyName>
+- <xref:System.Reflection.Emit.ModuleBuilder>
+- <xref:System.Reflection.Emit.TypeBuilder>
+- <xref:System.Type.FullName%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
+- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

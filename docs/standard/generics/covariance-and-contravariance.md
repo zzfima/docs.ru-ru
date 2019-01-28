@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692968"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Ковариация и контравариация в универсальных шаблонах
 <a name="top"></a> Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контравариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контравариантность" и "инвариантность" в контексте системы типов. В этом примере предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
@@ -94,9 +94,9 @@ ms.locfileid: "44038748"
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Универсальные интерфейсы с контравариантными параметрами универсального типа  
  Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], несколько универсальных интерфейсов имеют контравариантные параметры типа; например: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>и <xref:System.Collections.Generic.IEqualityComparer%601>. Эти интерфейсы имеют только параметры контравариантного типа, таким образом, параметры типа используются только как типы параметра в членах интерфейсов.  
   
- В следующем примере демонстрируются контравариантные параметры типа. В примере определяется абстрактный (`MustInherit` в Visual Basic) класс `Shape` со свойством `Area` . В примере также определяется класс `ShapeAreaComparer` , реализующий `IComparer<Shape>` (`IComparer(Of Shape)` в Visual Basic). Реализация метода <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> основывается на значении свойства `Area`, поэтому с помощью `ShapeAreaComparer` можно сортировать объекты `Shape` по областям.  
+ В следующем примере демонстрируются контравариантные параметры типа. В примере определяется абстрактный (`MustInherit` в Visual Basic) класс `Shape` со свойством `Area` . В примере также определяется класс `ShapeAreaComparer` , реализующий `IComparer<Shape>` (`IComparer(Of Shape)` в Visual Basic). Реализация метода <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> основывается на значении свойства `Area` , поэтому с помощью `ShapeAreaComparer` можно сортировать объекты `Shape` по областям.  
   
- Класс `Circle` наследует `Shape` и переопределяет `Area`. В примере создается набор <xref:System.Collections.Generic.SortedSet%601> объектов `Circle` с помощью конструктора, принимающего `IComparer<Circle>` (`IComparer(Of Circle)` в Visual Basic). Однако вместо передачи `IComparer<Circle>`, в примере передается объект `ShapeAreaComparer`, реализующий `IComparer<Shape>`. В примере может передаваться компаратор типа меньшей глубины наследования (`Shape`), когда код вызывает компаратор типа большей глубины наследования (`Circle`), поскольку параметр типа универсального интерфейса <xref:System.Collections.Generic.IComparer%601> контрвариантен.  
+ Класс `Circle` наследует `Shape` и переопределяет `Area`. В примере создается набор <xref:System.Collections.Generic.SortedSet%601> объектов `Circle` с помощью конструктора, принимающего `IComparer<Circle>` (`IComparer(Of Circle)` в Visual Basic). Однако вместо передачи `IComparer<Circle>`, в примере передается объект `ShapeAreaComparer` , реализующий `IComparer<Shape>`. В примере может передаваться компаратор типа меньшей глубины наследования (`Shape`), когда код вызывает компаратор типа большей глубины наследования (`Circle`), поскольку параметр типа универсального интерфейса <xref:System.Collections.Generic.IComparer%601> контрвариантен.  
   
  При добавлении нового объекта `Circle` в `SortedSet<Circle>`метод `IComparer<Shape>.Compare` (метод`IComparer(Of Shape).Compare` в Visual Basic) объекта `ShapeAreaComparer` вызывается всякий раз, когда новый элемент сравнивается с существующим элементом. Тип параметра метода (`Shape`) является менее производным, чем передаваемый тип (`Circle`), поэтому этот вызов является типобезопасным. Контрвариантность позволяет объекту `ShapeAreaComparer` сортировать коллекцию какого-либо одного типа, а также смешанную коллекцию типов, унаследованных от `Shape`.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "44038748"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Универсальные делегаты с параметрами вариантного типа  
- В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]универсальные методы-делегаты `Func` , такие как <xref:System.Func%602>, имеют ковариантные возвращаемые типы и контравариантные типы параметров. Универсальные методы-делегаты `Action` , такие как <xref:System.Action%602>, имеют контравариантные типы параметров. Это означает, что делегаты можно присваивать переменным, имеющим более производные типы параметров и (в случае универсальных методов-делегатов `Func`) менее производные возвращаемые типы.  
+ В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]универсальные методы-делегаты `Func` , такие как <xref:System.Func%602>, имеют ковариантные возвращаемые типы и контравариантные типы параметров. Универсальные методы-делегаты `Action` , такие как <xref:System.Action%602>, имеют контравариантные типы параметров. Это означает, что делегаты можно присваивать переменным, имеющим более производные типы параметров и (в случае универсальных методов-делегатов `Func` ) менее производные возвращаемые типы.  
   
 > [!NOTE]
 >  Последний параметр универсального типа универсальных методов-делегатов `Func` указывает тип возвращаемого значения в сигнатуре делегата. Он является ковариантным (ключевое слово`out` ), в то время как остальные параметры универсального типа являются контравариантными (ключевое слово`in` ).  
@@ -190,6 +190,6 @@ ms.locfileid: "44038748"
   
 ## <a name="see-also"></a>См. также
 
-- [Covariance and Contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))  
-- [Covariance and Contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контравариация (Visual Basic))    
+- [Covariance and Contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))
+- [Covariance and Contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контравариация (Visual Basic))
 - [Расхождение в делегатах](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

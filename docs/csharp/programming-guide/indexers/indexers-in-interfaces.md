@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5d2dc8f5bdb0b89d5fd265ad86cbb13401bc8b14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523588"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Индексаторы в интерфейсах (Руководство по программированию в C#)
 Индексаторы можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Методы доступа индексаторов интерфейса отличаются от методов доступа индексаторов [класса](../../../csharp/language-reference/keywords/class.md) следующим образом:  
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
-- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)

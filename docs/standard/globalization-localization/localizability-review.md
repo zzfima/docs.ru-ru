@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623991"
 ---
 # <a name="localizability-review"></a>Обзор локализуемости
 Проверка локализуемости — промежуточный шаг в разработке международных приложений. Это проверка, что международное приложение готово к локализации, которая позволяет определить код и элементы пользовательского интерфейса, требующие специальной обработки. Этот шаг также помогает удостовериться, что процесс локализации не внесет в приложение функциональных дефектов. Когда все проблемы, выявленные при анализе локализуемости, устранены, приложение готово для локализации. Исчерпывающая проверка локализуемости позволяет не изменять исходный код при локализации.  
@@ -75,7 +75,7 @@ ms.locfileid: "49086509"
   
 ## <a name="see-also"></a>См. также
 
-- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
-- [Локализация](../../../docs/standard/globalization-localization/localization.md)  
-- [Глобализация](../../../docs/standard/globalization-localization/globalization.md)  
+- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
+- [Локализация](../../../docs/standard/globalization-localization/localization.md)
+- [Глобализация](../../../docs/standard/globalization-localization/globalization.md)
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)

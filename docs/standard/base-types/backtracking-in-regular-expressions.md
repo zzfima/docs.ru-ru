@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615984"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Поиск с возвратом в регулярных выражениях
 <a name="top"></a> Поиск с возвратом происходит, если шаблон регулярного выражения содержит переменные [квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) или [конструкции изменения](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), и обработчик регулярных выражений возвращается в предыдущее сохраненное состояние, чтобы продолжить поиск совпадения. В поиске с возвратом заключена сила регулярных выражений. Благодаря ему выражения могут быть мощными и гибкими, а также совпадать со сложными шаблонами. С другой стороны, эти возможности дорого обходятся. Часто именно поиск с возвратом существенно снижает производительность обработчика регулярных выражений. К счастью, разработчик может управлять работой обработчика регулярных выражений и тем, как он использует поиск с возвратом. В этом разделе описано, как функционирует поиск с возвратом, и как им можно управлять.  
@@ -157,7 +157,7 @@ ms.locfileid: "53130095"
   
  `(?<=` *subexpression* `)` — это утверждение положительного просмотра назад; символы, непосредственно предшествующие текущему, должны соответствовать *subexpression*. `(?<!`*subexpression*`)` — это утверждение отрицательного просмотра назад; символы, непосредственно предшествующие текущему, не должны соответствовать *subexpression*. Утверждения положительного и отрицательного просмотра назад наиболее полезны, если *subexpression* является подмножеством предыдущего подвыражения.  
   
- В следующем примере используются два равнозначных шаблона регулярных выражений, которые проверяют имя пользователя в адресе электронной почты. Первый шаблон демонстрирует низкую производительность из-за неоправданного использования поиска с возвратом. Во втором шаблоне то же самое регулярное выражение изменено. Вложенный квантификатор заменен на утверждение положительного просмотра назад. Выходные данные примера демонстрируют время выполнения метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ В следующем примере используются два равнозначных шаблона регулярных выражений, которые проверяют имя пользователя в адресе электронной почты. Первый шаблон демонстрирует низкую производительность из-за неоправданного использования поиска с возвратом. Во втором шаблоне то же самое регулярное выражение изменено. Вложенный квантификатор заменен на утверждение положительного просмотра назад. Выходные данные примера демонстрируют время выполнения метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -167,7 +167,7 @@ ms.locfileid: "53130095"
 |Шаблон|Описание|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
-|`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, сравнение не зависит от регистра символов.|  
+|`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
 |`[-.\w]*`|Нуль и более совпадений с дефисом, точкой или символом слова.|  
 |`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом.|  
 |`([-.\w]*[0-9A-Z])*`|Ноль и более совпадений с комбинацией нуля и более дефисов, точек и символов слова, за которыми следует алфавитно-цифровой символ. Это первая группа записи.|  
@@ -175,7 +175,7 @@ ms.locfileid: "53130095"
   
  Второй шаблон регулярного выражения `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`использует утверждение положительного просмотра назад. Определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`^`|Совпадение с началом строки.|  
 |`[0-9A-Z]`|Совпадение с алфавитно-цифровым символом. Поскольку метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> вызывается с параметром <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , сравнение не зависит от регистра символов.|  
@@ -219,8 +219,8 @@ ms.locfileid: "53130095"
   
 ## <a name="see-also"></a>См. также
 
-- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Конструкции чередования](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Конструкции чередования](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

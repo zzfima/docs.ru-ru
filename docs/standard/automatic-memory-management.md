@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592540"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Для автоматического управления памятью используется одна из служб, которые среда CLR предоставляет при [управляемом выполнении](../../docs/standard/managed-execution-process.md). Сборщик мусора среды CLR управляет освобождением и выделением памяти для приложения. Для разработчиков это означает, что при разработке управляемого приложения не нужно писать код для управления памятью. Автоматическое управление памятью позволяет устранить распространенные проблемы, такие как не освобожденный по забывчивости объект, вызывающий утечку памяти, или попытки доступа к памяти для уже удаленного объекта. В этом разделе описано, каким образом сборщик мусора выделяет и освобождает память.  
@@ -53,6 +53,6 @@ ms.locfileid: "45991341"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.GC>  
-- [Сборка мусора](../../docs/standard/garbage-collection/index.md)  
+- <xref:System.GC>
+- [Сборка мусора](../../docs/standard/garbage-collection/index.md)
 - [Процесс управляемого выполнения](../../docs/standard/managed-execution-process.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50088797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589575"
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
 <a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
@@ -62,7 +62,7 @@ ms.locfileid: "50088797"
   
  Так как строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантирует целостность, политику управления доступом для кода можно основать на этих двух видах свидетельства сборки. Строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантируют целостность благодаря цифровым подписям и сертификатам. Все перечисленные технологии (проверка хэша, использование строгих имен и цифровая подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md)) используются вместе, чтобы гарантировать, что сборка не была каким-либо образом изменена.  
   
-## <a name="see-also"></a>См. также  
-- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+## <a name="see-also"></a>См. также
+- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (программа подписывания)](../../../docs/framework/tools/signtool-exe.md)

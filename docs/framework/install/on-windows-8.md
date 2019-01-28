@@ -5,12 +5,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: ffb05ea480775a2e284e76b5ff72cc70c5a4f977
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 46f0401075f434a5406d7ba19e6ef4b7a6639caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542799"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Установка .NET Framework в Windows 8 и Windows Server 2012
 
@@ -47,6 +47,6 @@ ms.locfileid: "53155055"
 
 ## <a name="see-also"></a>См. также
 
-[Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Устранение неполадок заблокированных установок и удалений .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Установка .NET Framework для разработчиков](guide-for-developers.md)
+- [Скачивание .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Установка .NET Framework для разработчиков](guide-for-developers.md)

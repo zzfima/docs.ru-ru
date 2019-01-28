@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727408"
 ---
 # <a name="target-frameworks"></a>Требуемые версии .NET Framework
 
@@ -131,10 +131,10 @@ public class MyClass
 
 ## <a name="see-also"></a>См. также
 
-- [Пакеты, метапакеты и платформы](../core/packages.md)  
-- [Разработка библиотек с помощью кроссплатформенных средств](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [Управление версиями .NET Core](../core/versions/index.md)  
-- [Репозиторий GitHub dotnet/standard](https://github.com/dotnet/standard)  
-- [Инструменты NuGet в репозитории GitHub](https://github.com/joelverhagen/NuGetTools)  
+- [Пакеты, метапакеты и платформы](../core/packages.md)
+- [Разработка библиотек с помощью кроссплатформенных средств](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [Управление версиями .NET Core](../core/versions/index.md)
+- [Репозиторий GitHub dotnet/standard](https://github.com/dotnet/standard)
+- [Инструменты NuGet в репозитории GitHub](https://github.com/joelverhagen/NuGetTools)
 - [Профили платформы в .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
