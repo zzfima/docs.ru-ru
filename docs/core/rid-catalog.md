@@ -2,49 +2,49 @@
 title: Каталог идентификаторов сред выполнения (RID) в .NET Core
 description: Сведения об идентификаторах сред выполнения и их использовании в .NET Core.
 ms.date: 07/19/2018
-ms.openlocfilehash: b801b7866b563ae06499d8ccd2d07cf5fd52b928
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534552"
 ---
-# <a name="net-core-rid-catalog"></a><span data-ttu-id="fc2e9-103">Каталог идентификаторов сред выполнения (RID) в .NET Core</span><span class="sxs-lookup"><span data-stu-id="fc2e9-103">.NET Core RID Catalog</span></span>
+# <a name="net-core-rid-catalog"></a><span data-ttu-id="4a281-103">Каталог идентификаторов сред выполнения (RID) в .NET Core</span><span class="sxs-lookup"><span data-stu-id="4a281-103">.NET Core RID Catalog</span></span>
 
-<span data-ttu-id="fc2e9-104">RID — это сокращение от *Runtime IDentifier* (идентификатор среды выполнения).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="fc2e9-105">Идентификаторы RID служат для идентификации целевых платформ, на которых выполняется приложение.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-105">RID values are used to identify target platforms where the application runs.</span></span>
-<span data-ttu-id="fc2e9-106">Они используются пакетами .NET для представления ресурсов, специфичных для платформы, в пакетах NuGet.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="fc2e9-107">Некоторые примеры идентификаторов RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` или `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
-<span data-ttu-id="fc2e9-108">Для пакетов с собственными зависимостями они указывают, на каких платформах можно восстановить пакет.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
+<span data-ttu-id="4a281-104">RID — это сокращение от *Runtime IDentifier* (идентификатор среды выполнения).</span><span class="sxs-lookup"><span data-stu-id="4a281-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="4a281-105">Идентификаторы RID служат для идентификации целевых платформ, на которых выполняется приложение.</span><span class="sxs-lookup"><span data-stu-id="4a281-105">RID values are used to identify target platforms where the application runs.</span></span>
+<span data-ttu-id="4a281-106">Они используются пакетами .NET для представления ресурсов, специфичных для платформы, в пакетах NuGet.</span><span class="sxs-lookup"><span data-stu-id="4a281-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="4a281-107">Некоторые примеры идентификаторов RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` или `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="4a281-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
+<span data-ttu-id="4a281-108">Для пакетов с собственными зависимостями они указывают, на каких платформах можно восстановить пакет.</span><span class="sxs-lookup"><span data-stu-id="4a281-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
 
-<span data-ttu-id="fc2e9-109">Один идентификатор RID можно задать в элементе `<RuntimeIdentifier>` вашего файла проекта.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="fc2e9-110">Несколько идентификаторов RID можно определить в виде списка, разделенного точкой с запятой, в элементе `<RuntimeIdentifiers>` файла проекта.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="fc2e9-111">Они также используются с помощью параметра `--runtime` со следующими [командами интерфейса командной строки .NET Core](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="fc2e9-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
+<span data-ttu-id="4a281-109">Один идентификатор RID можно задать в элементе `<RuntimeIdentifier>` вашего файла проекта.</span><span class="sxs-lookup"><span data-stu-id="4a281-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="4a281-110">Несколько идентификаторов RID можно определить в виде списка, разделенного точкой с запятой, в элементе `<RuntimeIdentifiers>` файла проекта.</span><span class="sxs-lookup"><span data-stu-id="4a281-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="4a281-111">Они также используются с помощью параметра `--runtime` со следующими [командами интерфейса командной строки .NET Core](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="4a281-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
 
-- [<span data-ttu-id="fc2e9-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="fc2e9-112">dotnet build</span></span>](./tools/dotnet-build.md)
-- [<span data-ttu-id="fc2e9-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="fc2e9-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
-- [<span data-ttu-id="fc2e9-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="fc2e9-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
-- [<span data-ttu-id="fc2e9-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="fc2e9-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
-- [<span data-ttu-id="fc2e9-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="fc2e9-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
-- [<span data-ttu-id="fc2e9-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="fc2e9-117">dotnet run</span></span>](./tools/dotnet-run.md)
-- [<span data-ttu-id="fc2e9-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="fc2e9-118">dotnet store</span></span>](./tools/dotnet-store.md)
+- [<span data-ttu-id="4a281-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="4a281-112">dotnet build</span></span>](./tools/dotnet-build.md)
+- [<span data-ttu-id="4a281-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="4a281-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
+- [<span data-ttu-id="4a281-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="4a281-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
+- [<span data-ttu-id="4a281-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="4a281-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
+- [<span data-ttu-id="4a281-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="4a281-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
+- [<span data-ttu-id="4a281-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="4a281-117">dotnet run</span></span>](./tools/dotnet-run.md)
+- [<span data-ttu-id="4a281-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="4a281-118">dotnet store</span></span>](./tools/dotnet-store.md)
 
-<span data-ttu-id="fc2e9-119">Идентификаторы RID, представляющие отдельные операционные системы, обычно имеют следующий формат: `[os].[version]-[architecture]-[additional qualifiers]`, где:</span><span class="sxs-lookup"><span data-stu-id="fc2e9-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
+<span data-ttu-id="4a281-119">Идентификаторы RID, представляющие отдельные операционные системы, обычно имеют следующий формат: `[os].[version]-[architecture]-[additional qualifiers]`, где:</span><span class="sxs-lookup"><span data-stu-id="4a281-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
 
-- <span data-ttu-id="fc2e9-120">`[os]` — это моникер платформы или операционной системы.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="fc2e9-121">Например, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-121">For example, `ubuntu`.</span></span>
+- <span data-ttu-id="4a281-120">`[os]` — это моникер платформы или операционной системы.</span><span class="sxs-lookup"><span data-stu-id="4a281-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="4a281-121">Например, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="4a281-121">For example, `ubuntu`.</span></span>
 
-- <span data-ttu-id="fc2e9-122">`[version]` — это версия операционной системы в виде номера, разделенного точкой (`.`).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="fc2e9-123">Например, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-123">For example, `15.10`.</span></span>
+- <span data-ttu-id="4a281-122">`[version]` — это версия операционной системы в виде номера, разделенного точкой (`.`).</span><span class="sxs-lookup"><span data-stu-id="4a281-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="4a281-123">Например, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="4a281-123">For example, `15.10`.</span></span>
 
-  - <span data-ttu-id="fc2e9-124">Это **не должен быть** коммерческий номер версии, так как такой номер часто представляет отдельные версии операционной системы с различными контактными зонами API.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
+  - <span data-ttu-id="4a281-124">Это **не должен быть** коммерческий номер версии, так как такой номер часто представляет отдельные версии операционной системы с различными контактными зонами API.</span><span class="sxs-lookup"><span data-stu-id="4a281-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
 
-- <span data-ttu-id="fc2e9-125">`[architecture]` — это архитектура процессора.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="fc2e9-126">Например, `x86`, `x64`, `arm` или `arm64`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
+- <span data-ttu-id="4a281-125">`[architecture]` — это архитектура процессора.</span><span class="sxs-lookup"><span data-stu-id="4a281-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="4a281-126">Например, `x86`, `x64`, `arm` или `arm64`.</span><span class="sxs-lookup"><span data-stu-id="4a281-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
 
-- <span data-ttu-id="fc2e9-127">`[additional qualifiers]` дополнительно дифференцируют разные платформы.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="fc2e9-128">Пример: `aot` или `corert`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-128">For example: `aot` or `corert`.</span></span>
+- <span data-ttu-id="4a281-127">`[additional qualifiers]` дополнительно дифференцируют разные платформы.</span><span class="sxs-lookup"><span data-stu-id="4a281-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="4a281-128">Пример: `aot` или `corert`.</span><span class="sxs-lookup"><span data-stu-id="4a281-128">For example: `aot` or `corert`.</span></span>
 
-## <a name="rid-graph"></a><span data-ttu-id="fc2e9-129">Схема RID</span><span class="sxs-lookup"><span data-stu-id="fc2e9-129">RID graph</span></span>
+## <a name="rid-graph"></a><span data-ttu-id="4a281-129">Схема RID</span><span class="sxs-lookup"><span data-stu-id="4a281-129">RID graph</span></span>
 
-<span data-ttu-id="fc2e9-130">Схема RID или резервная схема среды выполнения — это список идентификаторов RID, которые совместимы друг с другом.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="fc2e9-131">Идентификаторы RID определены в пакете [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="fc2e9-132">Список поддерживаемых идентификаторов RID и схема RID содержатся в файле [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), который находится в репозитории CoreFX.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="fc2e9-133">В этом файле можно увидеть, что все идентификаторы RID, кроме основного, содержат оператор `"#import"`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="fc2e9-134">Эти операторы указывают совместимые RID.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-134">These statements indicate compatible RIDs.</span></span>
+<span data-ttu-id="4a281-130">Схема RID или резервная схема среды выполнения — это список идентификаторов RID, которые совместимы друг с другом.</span><span class="sxs-lookup"><span data-stu-id="4a281-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="4a281-131">Идентификаторы RID определены в пакете [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/).</span><span class="sxs-lookup"><span data-stu-id="4a281-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="4a281-132">Список поддерживаемых идентификаторов RID и схема RID содержатся в файле [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json), который находится в репозитории CoreFX.</span><span class="sxs-lookup"><span data-stu-id="4a281-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="4a281-133">В этом файле можно увидеть, что все идентификаторы RID, кроме основного, содержат оператор `"#import"`.</span><span class="sxs-lookup"><span data-stu-id="4a281-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="4a281-134">Эти операторы указывают совместимые RID.</span><span class="sxs-lookup"><span data-stu-id="4a281-134">These statements indicate compatible RIDs.</span></span>
 
-<span data-ttu-id="fc2e9-135">Когда NuGet восстанавливает пакеты, он пытается найти точное совпадение для указанной среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
-<span data-ttu-id="fc2e9-136">Если его не удается найти, NuGet проходит схему до тех пор, пока не найдет ближайшую совместимую систему в соответствии со схемой RID.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
+<span data-ttu-id="4a281-135">Когда NuGet восстанавливает пакеты, он пытается найти точное совпадение для указанной среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="4a281-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
+<span data-ttu-id="4a281-136">Если его не удается найти, NuGet проходит схему до тех пор, пока не найдет ближайшую совместимую систему в соответствии со схемой RID.</span><span class="sxs-lookup"><span data-stu-id="4a281-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
 
-<span data-ttu-id="fc2e9-137">Ниже приведена запись для идентификатора RID `osx.10.12-x64`:</span><span class="sxs-lookup"><span data-stu-id="fc2e9-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
+<span data-ttu-id="4a281-137">Ниже приведена запись для идентификатора RID `osx.10.12-x64`:</span><span class="sxs-lookup"><span data-stu-id="4a281-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
 
 ```json
 "osx.10.12-x64": {
@@ -52,9 +52,9 @@ ms.locfileid: "53170214"
 }
 ```
 
-<span data-ttu-id="fc2e9-138">Приведенный выше идентификатор RID указывает, что `osx.10.12-x64` импортирует `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="fc2e9-139">Таким образом, когда NuGet восстанавливает пакеты, он пытается найти в пакете точное совпадение для `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="fc2e9-140">Например, если NuGet не удается найти определенную среду выполнения, он может восстановить пакеты, которые определяют среды выполнения `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
+<span data-ttu-id="4a281-138">Приведенный выше идентификатор RID указывает, что `osx.10.12-x64` импортирует `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="4a281-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="4a281-139">Таким образом, когда NuGet восстанавливает пакеты, он пытается найти в пакете точное совпадение для `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="4a281-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="4a281-140">Например, если NuGet не удается найти определенную среду выполнения, он может восстановить пакеты, которые определяют среды выполнения `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="4a281-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
 
-<span data-ttu-id="fc2e9-141">В следующем примере показана немного большая схема RID, которая также указана в файле *runtime.json*:</span><span class="sxs-lookup"><span data-stu-id="fc2e9-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
+<span data-ttu-id="4a281-141">В следующем примере показана немного большая схема RID, которая также указана в файле *runtime.json*:</span><span class="sxs-lookup"><span data-stu-id="4a281-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
 
 ```
     win7-x64    win7-x86
@@ -68,69 +68,69 @@ ms.locfileid: "53170214"
             any
 ```
 
-<span data-ttu-id="fc2e9-142">Все идентификаторы RID в конечном итоге сопоставляются с корневым идентификатором RID `any`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-142">All RIDs eventually map back to the root `any` RID.</span></span>
+<span data-ttu-id="4a281-142">Все идентификаторы RID в конечном итоге сопоставляются с корневым идентификатором RID `any`.</span><span class="sxs-lookup"><span data-stu-id="4a281-142">All RIDs eventually map back to the root `any` RID.</span></span>
 
-<span data-ttu-id="fc2e9-143">При работе с идентификаторами RID следует учитывать некоторые моменты:</span><span class="sxs-lookup"><span data-stu-id="fc2e9-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
+<span data-ttu-id="4a281-143">При работе с идентификаторами RID следует учитывать некоторые моменты:</span><span class="sxs-lookup"><span data-stu-id="4a281-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
 
-- <span data-ttu-id="fc2e9-144">RID являются **непрозрачными строками**, и их следует рассматривать как "черные ящики".</span><span class="sxs-lookup"><span data-stu-id="fc2e9-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
-- <span data-ttu-id="fc2e9-145">Не следует создавать идентификаторы RID программным способом.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-145">Don't build RIDs programmatically.</span></span>
-- <span data-ttu-id="fc2e9-146">Используйте только те идентификаторы RID, которые уже определены для платформы.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-146">Use RIDs that are already defined for the platform.</span></span>
-- <span data-ttu-id="fc2e9-147">Идентификаторы RID должны указываться точно. Предположения недопустимы.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
+- <span data-ttu-id="4a281-144">RID являются **непрозрачными строками**, и их следует рассматривать как "черные ящики".</span><span class="sxs-lookup"><span data-stu-id="4a281-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
+- <span data-ttu-id="4a281-145">Не следует создавать идентификаторы RID программным способом.</span><span class="sxs-lookup"><span data-stu-id="4a281-145">Don't build RIDs programmatically.</span></span>
+- <span data-ttu-id="4a281-146">Используйте только те идентификаторы RID, которые уже определены для платформы.</span><span class="sxs-lookup"><span data-stu-id="4a281-146">Use RIDs that are already defined for the platform.</span></span>
+- <span data-ttu-id="4a281-147">Идентификаторы RID должны указываться точно. Предположения недопустимы.</span><span class="sxs-lookup"><span data-stu-id="4a281-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
 
-## <a name="using-rids"></a><span data-ttu-id="fc2e9-148">Использование идентификаторов RID</span><span class="sxs-lookup"><span data-stu-id="fc2e9-148">Using RIDs</span></span>
+## <a name="using-rids"></a><span data-ttu-id="4a281-148">Использование идентификаторов RID</span><span class="sxs-lookup"><span data-stu-id="4a281-148">Using RIDs</span></span>
 
-<span data-ttu-id="fc2e9-149">Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="fc2e9-150">В платформу регулярно добавляются новые идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-150">New values are added regularly to the platform.</span></span>
-<span data-ttu-id="fc2e9-151">Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
+<span data-ttu-id="4a281-149">Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют.</span><span class="sxs-lookup"><span data-stu-id="4a281-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="4a281-150">В платформу регулярно добавляются новые идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="4a281-150">New values are added regularly to the platform.</span></span>
+<span data-ttu-id="4a281-151">Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.</span><span class="sxs-lookup"><span data-stu-id="4a281-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
 
-<span data-ttu-id="fc2e9-152">SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="fc2e9-153">Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="fc2e9-154">Их особенно удобно использовать при работе с несколькими дистрибутивами Linux.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
+<span data-ttu-id="4a281-152">SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID.</span><span class="sxs-lookup"><span data-stu-id="4a281-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="4a281-153">Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС.</span><span class="sxs-lookup"><span data-stu-id="4a281-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="4a281-154">Их особенно удобно использовать при работе с несколькими дистрибутивами Linux.</span><span class="sxs-lookup"><span data-stu-id="4a281-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
 
-<span data-ttu-id="fc2e9-155">Ниже представлен список наиболее распространенных RID, используемых для каждой ОС.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="fc2e9-156">Он не охватывает значения `arm` или `corert`.</span><span class="sxs-lookup"><span data-stu-id="fc2e9-156">It doesn't cover `arm` or `corert` values.</span></span>
+<span data-ttu-id="4a281-155">Ниже представлен список наиболее распространенных RID, используемых для каждой ОС.</span><span class="sxs-lookup"><span data-stu-id="4a281-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="4a281-156">Он не охватывает значения `arm` или `corert`.</span><span class="sxs-lookup"><span data-stu-id="4a281-156">It doesn't cover `arm` or `corert` values.</span></span>
 
-## <a name="windows-rids"></a><span data-ttu-id="fc2e9-157">Идентификаторы RID для Windows</span><span class="sxs-lookup"><span data-stu-id="fc2e9-157">Windows RIDs</span></span>
+## <a name="windows-rids"></a><span data-ttu-id="4a281-157">Идентификаторы RID для Windows</span><span class="sxs-lookup"><span data-stu-id="4a281-157">Windows RIDs</span></span>
 
-- <span data-ttu-id="fc2e9-158">Портативные</span><span class="sxs-lookup"><span data-stu-id="fc2e9-158">Portable</span></span>
+- <span data-ttu-id="4a281-158">Портативные</span><span class="sxs-lookup"><span data-stu-id="4a281-158">Portable</span></span>
   - `win-x86`
   - `win-x64`
-- <span data-ttu-id="fc2e9-159">Windows 7 или Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="fc2e9-159">Windows 7 / Windows Server 2008 R2</span></span>
+- <span data-ttu-id="4a281-159">Windows 7 или Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="4a281-159">Windows 7 / Windows Server 2008 R2</span></span>
   - `win7-x64`
   - `win7-x86`
-- <span data-ttu-id="fc2e9-160">Windows 8 или Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="fc2e9-160">Windows 8 / Windows Server 2012</span></span>
+- <span data-ttu-id="4a281-160">Windows 8 или Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="4a281-160">Windows 8 / Windows Server 2012</span></span>
   - `win8-x64`
   - `win8-x86`
   - `win8-arm`
-- <span data-ttu-id="fc2e9-161">Windows 8.1 или Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="fc2e9-161">Windows 8.1 / Windows Server 2012 R2</span></span>
+- <span data-ttu-id="4a281-161">Windows 8.1 или Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="4a281-161">Windows 8.1 / Windows Server 2012 R2</span></span>
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- <span data-ttu-id="fc2e9-162">Windows 10 или Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="fc2e9-162">Windows 10 / Windows Server 2016</span></span>
+- <span data-ttu-id="4a281-162">Windows 10 или Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="4a281-162">Windows 10 / Windows Server 2016</span></span>
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-<span data-ttu-id="fc2e9-163">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](windows-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="4a281-163">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](windows-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="4a281-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
 
-## <a name="linux-rids"></a><span data-ttu-id="fc2e9-164">Идентификаторы RID для Linux</span><span class="sxs-lookup"><span data-stu-id="fc2e9-164">Linux RIDs</span></span>
+## <a name="linux-rids"></a><span data-ttu-id="4a281-164">Идентификаторы RID для Linux</span><span class="sxs-lookup"><span data-stu-id="4a281-164">Linux RIDs</span></span>
 
-- <span data-ttu-id="fc2e9-165">Портативные</span><span class="sxs-lookup"><span data-stu-id="fc2e9-165">Portable</span></span>
+- <span data-ttu-id="4a281-165">Портативные</span><span class="sxs-lookup"><span data-stu-id="4a281-165">Portable</span></span>
   - `linux-x64`
-- <span data-ttu-id="fc2e9-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="fc2e9-166">CentOS</span></span>
+- <span data-ttu-id="4a281-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="4a281-166">CentOS</span></span>
   - `centos-x64`
   - `centos.7-x64`
-- <span data-ttu-id="fc2e9-167">Debian</span><span class="sxs-lookup"><span data-stu-id="fc2e9-167">Debian</span></span>
+- <span data-ttu-id="4a281-167">Debian</span><span class="sxs-lookup"><span data-stu-id="4a281-167">Debian</span></span>
   - `debian-x64`
   - `debian.8-x64`
-  - <span data-ttu-id="fc2e9-168">`debian.9-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-168">`debian.9-x64` (.NET Core 1.1 or later versions)</span></span>
-- <span data-ttu-id="fc2e9-169">Fedora</span><span class="sxs-lookup"><span data-stu-id="fc2e9-169">Fedora</span></span>
+  - <span data-ttu-id="4a281-168">`debian.9-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-168">`debian.9-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="4a281-169">Fedora</span><span class="sxs-lookup"><span data-stu-id="4a281-169">Fedora</span></span>
   - `fedora-x64`
   - `fedora.27-x64`
-  - <span data-ttu-id="fc2e9-170">`fedora.28-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-170">`fedora.28-x64` (.NET Core 1.1 or later versions)</span></span>
-- <span data-ttu-id="fc2e9-171">Gentoo (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-170">`fedora.28-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-170">`fedora.28-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="4a281-171">Gentoo (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
   - `gentoo-x64`
-- <span data-ttu-id="fc2e9-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="fc2e9-172">openSUSE</span></span>
+- <span data-ttu-id="4a281-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="4a281-172">openSUSE</span></span>
   - `opensuse-x64`
   - `opensuse.42.3-x64`
-- <span data-ttu-id="fc2e9-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="fc2e9-173">Oracle Linux</span></span>
+- <span data-ttu-id="4a281-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="4a281-173">Oracle Linux</span></span>
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
@@ -138,62 +138,62 @@ ms.locfileid: "53170214"
   - `ol.7.2-x64`
   - `ol.7.3-x64`
   - `ol.7.4-x64`
-- <span data-ttu-id="fc2e9-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="fc2e9-174">Red Hat Enterprise Linux</span></span>
+- <span data-ttu-id="4a281-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="4a281-174">Red Hat Enterprise Linux</span></span>
   - `rhel-x64`
-  - <span data-ttu-id="fc2e9-175">`rhel.6-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-175">`rhel.6-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - <span data-ttu-id="fc2e9-176">`rhel.7.3-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="fc2e9-177">`rhel.7.4-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="fc2e9-178">Tizen (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-178">Tizen (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-176">`rhel.7.3-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-177">`rhel.7.4-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="4a281-178">Tizen (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-178">Tizen (.NET Core 2.0 or later versions)</span></span>
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- <span data-ttu-id="fc2e9-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="fc2e9-179">Ubuntu</span></span>
+- <span data-ttu-id="4a281-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="4a281-179">Ubuntu</span></span>
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
   - `ubuntu.16.04-x64`
   - `ubuntu.17.10-x64`
   - `ubuntu.18.04-x64`
-- <span data-ttu-id="fc2e9-180">Производные дистрибутивы Ubuntu</span><span class="sxs-lookup"><span data-stu-id="fc2e9-180">Ubuntu derivatives</span></span>
+- <span data-ttu-id="4a281-180">Производные дистрибутивы Ubuntu</span><span class="sxs-lookup"><span data-stu-id="4a281-180">Ubuntu derivatives</span></span>
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
-  - <span data-ttu-id="fc2e9-181">`linuxmint.18-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-181">`linuxmint.18-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="fc2e9-182">`linuxmint.18.1-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-182">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="fc2e9-183">`linuxmint.18.2-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-183">`linuxmint.18.2-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="fc2e9-184">`linuxmint.18.3-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-184">`linuxmint.18.3-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="fc2e9-185">SUSE Enterprise Linux (SLES) (.NET Core 2.0 или более поздних версий)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-185">SUSE Enterprise Linux (SLES) (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-181">`linuxmint.18-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-181">`linuxmint.18-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-182">`linuxmint.18.1-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-182">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-183">`linuxmint.18.2-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-183">`linuxmint.18.2-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="4a281-184">`linuxmint.18.3-x64` (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-184">`linuxmint.18.3-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="4a281-185">SUSE Enterprise Linux (SLES) (.NET Core 2.0 или более поздних версий)</span><span class="sxs-lookup"><span data-stu-id="4a281-185">SUSE Enterprise Linux (SLES) (.NET Core 2.0 or later versions)</span></span>
   - `sles-x64`
   - `sles.12-x64`
   - `sles.12.1-x64`
   - `sles.12.2-x64`
   - `sles.12.3-x64`
-- <span data-ttu-id="fc2e9-186">Alpine Linux (.NET Core 2.1 или более поздних версий)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-186">Alpine Linux (.NET Core 2.1 or later versions)</span></span>
+- <span data-ttu-id="4a281-186">Alpine Linux (.NET Core 2.1 или более поздних версий)</span><span class="sxs-lookup"><span data-stu-id="4a281-186">Alpine Linux (.NET Core 2.1 or later versions)</span></span>
   - `alpine-x64`
   - `alpine.3.7-x64`
 
-<span data-ttu-id="fc2e9-187">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-187">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="4a281-187">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="4a281-187">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
 
-## <a name="macos-rids"></a><span data-ttu-id="fc2e9-188">Относительные идентификаторы macOS</span><span class="sxs-lookup"><span data-stu-id="fc2e9-188">macOS RIDs</span></span>
+## <a name="macos-rids"></a><span data-ttu-id="4a281-188">Относительные идентификаторы macOS</span><span class="sxs-lookup"><span data-stu-id="4a281-188">macOS RIDs</span></span>
 
-<span data-ttu-id="fc2e9-189">Относительные идентификаторы macOS используют старую фирменную символику "OSX".</span><span class="sxs-lookup"><span data-stu-id="fc2e9-189">macOS RIDs use the older "OSX" branding.</span></span>
+<span data-ttu-id="4a281-189">Относительные идентификаторы macOS используют старую фирменную символику "OSX".</span><span class="sxs-lookup"><span data-stu-id="4a281-189">macOS RIDs use the older "OSX" branding.</span></span>
 
-- <span data-ttu-id="fc2e9-190">`osx-x64` (.NET Core 2.0 или более поздние версии, минимальная версия — `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-190">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
+- <span data-ttu-id="4a281-190">`osx-x64` (.NET Core 2.0 или более поздние версии, минимальная версия — `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="4a281-190">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- <span data-ttu-id="fc2e9-191">`osx.10.12-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-191">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="4a281-191">`osx.10.12-x64` (.NET Core 1.1 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-191">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
 - `osx.10.13-x64`
 
-<span data-ttu-id="fc2e9-192">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в macOS](macos-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="fc2e9-192">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="4a281-192">Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в macOS](macos-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="4a281-192">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
 
-## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="fc2e9-193">Идентификаторы RID для Android (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="fc2e9-193">Android RIDs (.NET Core 2.0 or later versions)</span></span>
+## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="4a281-193">Идентификаторы RID для Android (.NET Core 2.0 или более поздние версии)</span><span class="sxs-lookup"><span data-stu-id="4a281-193">Android RIDs (.NET Core 2.0 or later versions)</span></span>
 
 - `android`
 - `android.21`
 
-## <a name="see-also"></a><span data-ttu-id="fc2e9-194">См. также</span><span class="sxs-lookup"><span data-stu-id="fc2e9-194">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a281-194">См. также</span><span class="sxs-lookup"><span data-stu-id="4a281-194">See also</span></span>
 
-* [<span data-ttu-id="fc2e9-195">Идентификаторы среды выполнения</span><span class="sxs-lookup"><span data-stu-id="fc2e9-195">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [<span data-ttu-id="4a281-195">Идентификаторы среды выполнения</span><span class="sxs-lookup"><span data-stu-id="4a281-195">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
