@@ -4,7 +4,7 @@
 ## [Строгое именование](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [Зависимости](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [Ссылка на источник](sourcelink.md)
 ### [Публикация](publish-nuget-package.md)
 ## [Управление версиями](versioning.md)
 ### [Критические изменения](breaking-changes.md)
