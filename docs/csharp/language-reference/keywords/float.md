@@ -9,69 +9,69 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 4ca256bf7204cdaad7d49ed19c662ab81bb01bf9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514141"
 ---
-# <a name="float-c-reference"></a><span data-ttu-id="c7386-102">float (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c7386-102">float (C# Reference)</span></span>
+# <a name="float-c-reference"></a><span data-ttu-id="c2066-102">float (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c2066-102">float (C# Reference)</span></span>
 
-<span data-ttu-id="c7386-103">Ключевое слово `float` обозначает простой тип, в котором хранятся 32-разрядные значения с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c7386-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="c7386-104">В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типа `float`.</span><span class="sxs-lookup"><span data-stu-id="c7386-104">The following table shows the precision and approximate range for the `float` type.</span></span>
+<span data-ttu-id="c2066-103">Ключевое слово `float` обозначает простой тип, в котором хранятся 32-разрядные значения с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c2066-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="c2066-104">В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типа `float`.</span><span class="sxs-lookup"><span data-stu-id="c2066-104">The following table shows the precision and approximate range for the `float` type.</span></span>
 
-|<span data-ttu-id="c7386-105">Тип</span><span class="sxs-lookup"><span data-stu-id="c7386-105">Type</span></span>|<span data-ttu-id="c7386-106">Приблизительный диапазон значений</span><span class="sxs-lookup"><span data-stu-id="c7386-106">Approximate range</span></span>|<span data-ttu-id="c7386-107">Точность</span><span class="sxs-lookup"><span data-stu-id="c7386-107">Precision</span></span>|<span data-ttu-id="c7386-108">Тип .NET</span><span class="sxs-lookup"><span data-stu-id="c7386-108">.NET type</span></span>|  
+|<span data-ttu-id="c2066-105">Тип</span><span class="sxs-lookup"><span data-stu-id="c2066-105">Type</span></span>|<span data-ttu-id="c2066-106">Приблизительный диапазон значений</span><span class="sxs-lookup"><span data-stu-id="c2066-106">Approximate range</span></span>|<span data-ttu-id="c2066-107">Точность</span><span class="sxs-lookup"><span data-stu-id="c2066-107">Precision</span></span>|<span data-ttu-id="c2066-108">Тип .NET</span><span class="sxs-lookup"><span data-stu-id="c2066-108">.NET type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|<span data-ttu-id="c7386-109">От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="c7386-109">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="c7386-110">6–9 цифр</span><span class="sxs-lookup"><span data-stu-id="c7386-110">~6-9 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|<span data-ttu-id="c2066-109">От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="c2066-109">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="c2066-110">6–9 цифр</span><span class="sxs-lookup"><span data-stu-id="c2066-110">~6-9 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
 
-## <a name="literals"></a><span data-ttu-id="c7386-111">Литералы</span><span class="sxs-lookup"><span data-stu-id="c7386-111">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="c2066-111">Литералы</span><span class="sxs-lookup"><span data-stu-id="c2066-111">Literals</span></span>
 
-<span data-ttu-id="c7386-112">По умолчанию фактический числовой литерал в правой части оператора назначения обрабатывается как [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="c7386-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="c7386-113">Таким образом, для инициализации переменной с плавающей запятой следует использовать суффикс `f` или `F`, как показано в следующих примерах:</span><span class="sxs-lookup"><span data-stu-id="c7386-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>
+<span data-ttu-id="c2066-112">По умолчанию фактический числовой литерал в правой части оператора назначения обрабатывается как [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="c2066-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="c2066-113">Таким образом, для инициализации переменной с плавающей запятой следует использовать суффикс `f` или `F`, как показано в следующих примерах:</span><span class="sxs-lookup"><span data-stu-id="c2066-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>
 
 ```csharp
 float x = 3.5F;
 ```
 
-<span data-ttu-id="c7386-114">Если этот суффикс не указан в предыдущем объявлении, вы получите ошибку компиляции, поскольку пытаетесь сохранить значение [double](double.md) в переменную `float`.</span><span class="sxs-lookup"><span data-stu-id="c7386-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>
+<span data-ttu-id="c2066-114">Если этот суффикс не указан в предыдущем объявлении, вы получите ошибку компиляции, поскольку пытаетесь сохранить значение [double](double.md) в переменную `float`.</span><span class="sxs-lookup"><span data-stu-id="c2066-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>
 
-## <a name="conversions"></a><span data-ttu-id="c7386-115">Преобразования</span><span class="sxs-lookup"><span data-stu-id="c7386-115">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="c2066-115">Преобразования</span><span class="sxs-lookup"><span data-stu-id="c2066-115">Conversions</span></span>
 
-<span data-ttu-id="c7386-116">В одном и том же выражении можно сочетать и числовые целочисленные типы и типы с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c7386-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="c7386-117">В этом случае целочисленные типы преобразуются в типы с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c7386-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="c7386-118">Выражение вычисляется по следующим правилам:</span><span class="sxs-lookup"><span data-stu-id="c7386-118">The evaluation of the expression is performed according to the following rules:</span></span>
+<span data-ttu-id="c2066-116">В одном и том же выражении можно сочетать и числовые целочисленные типы и типы с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c2066-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="c2066-117">В этом случае целочисленные типы преобразуются в типы с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c2066-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="c2066-118">Выражение вычисляется по следующим правилам:</span><span class="sxs-lookup"><span data-stu-id="c2066-118">The evaluation of the expression is performed according to the following rules:</span></span>
 
-- <span data-ttu-id="c7386-119">Если одним из типов с плавающей запятой является [double](double.md), то выражение оценивается как [double](double.md) или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.</span><span class="sxs-lookup"><span data-stu-id="c7386-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md), or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
+- <span data-ttu-id="c2066-119">Если одним из типов с плавающей запятой является [double](double.md), то выражение оценивается как [double](double.md) или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.</span><span class="sxs-lookup"><span data-stu-id="c2066-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md), or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
 
-- <span data-ttu-id="c7386-120">Если в выражении нет типа [double](double.md), выражение оценивается как `float` или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.</span><span class="sxs-lookup"><span data-stu-id="c7386-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float`, or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
+- <span data-ttu-id="c2066-120">Если в выражении нет типа [double](double.md), выражение оценивается как `float` или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.</span><span class="sxs-lookup"><span data-stu-id="c2066-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float`, or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
 
-<span data-ttu-id="c7386-121">Выражение с плавающей запятой может содержать следующие наборы значений:</span><span class="sxs-lookup"><span data-stu-id="c7386-121">A floating-point expression can contain the following sets of values:</span></span>
+<span data-ttu-id="c2066-121">Выражение с плавающей запятой может содержать следующие наборы значений:</span><span class="sxs-lookup"><span data-stu-id="c2066-121">A floating-point expression can contain the following sets of values:</span></span>
 
-- <span data-ttu-id="c7386-122">Положительный и отрицательный ноль</span><span class="sxs-lookup"><span data-stu-id="c7386-122">Positive and negative zero</span></span>
+- <span data-ttu-id="c2066-122">Положительный и отрицательный ноль</span><span class="sxs-lookup"><span data-stu-id="c2066-122">Positive and negative zero</span></span>
 
-- <span data-ttu-id="c7386-123">Положительная и отрицательная бесконечность</span><span class="sxs-lookup"><span data-stu-id="c7386-123">Positive and negative infinity</span></span>
+- <span data-ttu-id="c2066-123">Положительная и отрицательная бесконечность</span><span class="sxs-lookup"><span data-stu-id="c2066-123">Positive and negative infinity</span></span>
 
-- <span data-ttu-id="c7386-124">Нечисловое значение (NaN)</span><span class="sxs-lookup"><span data-stu-id="c7386-124">Not-a-Number value (NaN)</span></span>
+- <span data-ttu-id="c2066-124">Нечисловое значение (NaN)</span><span class="sxs-lookup"><span data-stu-id="c2066-124">Not-a-Number value (NaN)</span></span>
 
-- <span data-ttu-id="c7386-125">Конечный набор ненулевых значений</span><span class="sxs-lookup"><span data-stu-id="c7386-125">The finite set of nonzero values</span></span>
+- <span data-ttu-id="c2066-125">Конечный набор ненулевых значений</span><span class="sxs-lookup"><span data-stu-id="c2066-125">The finite set of nonzero values</span></span>
 
-<span data-ttu-id="c7386-126">Дополнительные сведения об этих значениях см. в документе "Стандарт IEEE для двоичной арифметики с плавающей запятой" на веб-сайте [IEEE](https://www.ieee.org).</span><span class="sxs-lookup"><span data-stu-id="c7386-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) website.</span></span>
+<span data-ttu-id="c2066-126">Дополнительные сведения об этих значениях см. в документе "Стандарт IEEE для двоичной арифметики с плавающей запятой" на веб-сайте [IEEE](https://www.ieee.org).</span><span class="sxs-lookup"><span data-stu-id="c2066-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) website.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c7386-127">Пример</span><span class="sxs-lookup"><span data-stu-id="c7386-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c2066-127">Пример</span><span class="sxs-lookup"><span data-stu-id="c2066-127">Example</span></span>
 
-<span data-ttu-id="c7386-128">В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`.</span><span class="sxs-lookup"><span data-stu-id="c7386-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="c7386-129">(Помните, что `float` — это псевдоним для типа <xref:System.Single?displayProperty=nameWithType>.) Обратите внимание, что в выражении нет типа [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="c7386-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>
+<span data-ttu-id="c2066-128">В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`.</span><span class="sxs-lookup"><span data-stu-id="c2066-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="c2066-129">(Помните, что `float` — это псевдоним для типа <xref:System.Single?displayProperty=nameWithType>.) Обратите внимание, что в выражении нет типа [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="c2066-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="c7386-130">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="c7386-130">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c2066-130">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="c2066-130">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="c7386-131">См. также</span><span class="sxs-lookup"><span data-stu-id="c7386-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2066-131">См. также</span><span class="sxs-lookup"><span data-stu-id="c2066-131">See also</span></span>
 
-- <xref:System.Single>  
-- [<span data-ttu-id="c7386-132">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="c7386-132">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="c7386-133">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c7386-133">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="c7386-134">Приведение и преобразование типов</span><span class="sxs-lookup"><span data-stu-id="c7386-134">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)  
-- [<span data-ttu-id="c7386-135">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="c7386-135">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="c7386-136">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="c7386-136">Integral Types Table</span></span>](integral-types-table.md)  
-- [<span data-ttu-id="c7386-137">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="c7386-137">Built-In Types Table</span></span>](built-in-types-table.md)  
-- [<span data-ttu-id="c7386-138">Таблица неявных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="c7386-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="c7386-139">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="c7386-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>
+- [<span data-ttu-id="c2066-132">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="c2066-132">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c2066-133">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c2066-133">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c2066-134">Приведение и преобразование типов</span><span class="sxs-lookup"><span data-stu-id="c2066-134">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)
+- [<span data-ttu-id="c2066-135">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="c2066-135">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c2066-136">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="c2066-136">Integral Types Table</span></span>](integral-types-table.md)
+- [<span data-ttu-id="c2066-137">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="c2066-137">Built-In Types Table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="c2066-138">Таблица неявных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="c2066-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)
+- [<span data-ttu-id="c2066-139">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="c2066-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)
