@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628013"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -319,14 +319,13 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionFunction`:
+Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionEngine`:
 
 [!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Добавьте комментарий для проверки прогнозирования обученной модели в методе `Predict`, создав экземпляр `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
-
 
  Это можно использовать для прогнозирования токсичной или нетоксичной тональности одного экземпляра данных комментария. Чтобы получить прогноз, примените <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> для данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
 
@@ -437,4 +436,4 @@ Sentiment: He is the best, and the article should say that. | Prediction: Not To
 
 Переходите к следующему руководству:
 > [!div class="nextstepaction"]
-> [Прогнозирование платы за такси](taxi-fare.md)
+> [Классификация задач](github-issue-classification.md)
