@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 69cafb53feca392729c20efe0de3d1e74362dc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69dad31e750143af8fee94de9ccdbfd609737fe
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720565"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204487"
 ---
 # <a name="getting-started-sample"></a>Пример для начала работы
 Пример начала показано, как реализовать типовую службу и типовой клиент с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.  
@@ -27,7 +27,7 @@ ms.locfileid: "54720565"
 >   
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`  
   
  Служба описывает операции, выполняемые ею в контракте службы, который она открыто предоставляет как метаданные. Служба также содержит код для реализации операций.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638305"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204812"
 ---
 # <a name="examples-of-xml-serialization"></a>Примеры сериализации XML
 Сериализация XML может иметь несколько форм, от простой до сложной. Например, можно сериализовать класс, который состоит всего лишь из открытых полей и свойств, как показано в разделе [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md). В следующих примерах кода представлены различные сложные сценарии, включая способы использования XML-сериализации для создания потока XML, соответствующего определенному документу схемы XML (XSD).  
@@ -71,7 +71,7 @@ private void SerializeDataSet(string filename){
 ```  
   
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Сериализация XmlElement и XmlNode  
- Также можно сериализовать экземпляры класса <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode>, см. следующий пример кода.  
+ Также можно сериализовать экземпляры <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode> класса, как показано в следующем примере кода.  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -146,9 +146,9 @@ public class Address
   
 ```xml  
 <PurchaseOrder>  
-    <Address>  
+    <MyAddress>  
         <FirstName>George</FirstName>  
-    </Address>  
+    </MyAddress>  
 </PurchaseOrder>  
 ```  
   
@@ -169,13 +169,13 @@ End Class
 ```csharp  
 public class PurchaseOrder  
 {  
-    public Item [] ItemsOrders  
+    public Item [] ItemsOrders;  
 }  
   
 public class Item  
 {  
-    public string ItemID  
-    public decimal ItemPrice  
+    public string ItemID;  
+    public decimal ItemPrice;  
 }  
 ```  
   
@@ -183,7 +183,7 @@ public class Item
   
 ```xml  
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
-    <Items>  
+    <ItemsOrders>  
         <Item>  
             <ItemID>aaa111</ItemID>  
             <ItemPrice>34.22</ItemPrice>  
@@ -192,7 +192,7 @@ public class Item
             <ItemID>bbb222</ItemID>  
             <ItemPrice>2.89</ItemPrice>  
         <Item>  
-    </Items>  
+    </ItemsOrders>  
 </PurchaseOrder>  
 ```  
   
@@ -363,7 +363,7 @@ public class Employee {
   
  Метод `CreatePO` создает `PurchaseOrder`, `Address` и объекты класса `OrderedItem` и задает значения открытых полей. Метод также создает экземпляр класса <xref:System.Xml.Serialization.XmlSerializer>, который используется для сериализации и десериализации `PurchaseOrder`. Обратите внимание, что код передает тип класса, который будет сериализован в конструктор. Код также создает `FileStream`, который используется для записи потока XML в документ XML.  
   
- Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. Аналогично методу `CreatePo` сначала следует создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип сериализуемого класса конструктору. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.  
+ Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. Как и в `CreatePo` метод, нужно сначала создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип класса должны быть десериализованы в конструктор. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.  
   
 ```vb  
 Imports System  
@@ -395,8 +395,8 @@ End Class
   
 Public Class Address  
     ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    ' Name field as an XML attribute instead of an XML element (the   
-    ' default behavior).   
+    ' Name field as an XML attribute instead of an XML element (XML element is  
+    ' the default behavior).     
     <XmlAttribute()> _  
     Public Name As String  
     Public Line1 As String  
@@ -575,8 +575,8 @@ public class PurchaseOrder
 public class Address  
 {  
     // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    // Name field as an XML attribute instead of an XML element (the   
-    // default behavior).  
+    // Name field as an XML attribute instead of an XML element (XML element is  
+    // the default behavior).  
     [XmlAttribute]  
     public string Name;  
     public string Line1;  
