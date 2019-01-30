@@ -4,12 +4,12 @@ description: Общие сведения о процессе переноса и
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170045"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266576"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Перенос кода в .NET Core из .NET Framework
 
@@ -41,7 +41,7 @@ ms.locfileid: "53170045"
 
 Ниже перечислены средства, которые могут оказаться полезными при переносе.
 
-* Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b) — цепочка инструментов для создания отчетов о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам. См. дополнительные сведения об [анализаторе переносимости .NET](../../standard/analyzers/portability-analyzer.md).
+* Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) — цепочка инструментов для создания отчетов о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам. См. дополнительные сведения об [анализаторе переносимости .NET](../../standard/analyzers/portability-analyzer.md).
 * Анализатор API .NET на основе Roslyn выявляет риски совместимости для API на языке C# на разных платформах, а также отслеживает вызовы устаревших API. См. дополнительные сведения об [анализаторе API .NET](../../standard/analyzers/api-analyzer.md).
 * Reverse Package Search — [полезная веб-служба](https://packagesearch.azurewebsites.net), которая позволяет выполнять поиск типа и находить пакеты, содержащие его.
 

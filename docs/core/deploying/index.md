@@ -5,6 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
+ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266914"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -60,7 +66,7 @@ ms.custom: seodec18
 
 - Пакет развертывания имеет относительно большой размер, так как в него необходимо включить платформу .NET Core в дополнение к приложению и зависимостям сторонних разработчиков.
 
-  Начиная с версии .NET Core 2.0 можно уменьшить размер развертывания в системах Linux примерно на 28 МБ с помощью [ *инвариантного режима глобализации* ](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) в .NET Core. Как правило, .NET Core использует в Linux [библиотеки ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) для поддержки глобализации. В инвариантном режиме библиотеки не включаются в развертывание и все языки и региональные параметры используются как [инвариантные](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  Начиная с версии .NET Core 2.0 можно уменьшить размер развертывания в системах Linux примерно на 28 МБ с помощью [ *инвариантного режима глобализации* ](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) в .NET Core. Как правило, .NET Core использует в Linux [библиотеки ICU](http://icu-project.org) для поддержки глобализации. В инвариантном режиме библиотеки не включаются в развертывание и все языки и региональные параметры используются как [инвариантные](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - При развертывании множества автономных приложений .NET Core в системе может использоваться значительный объем дискового пространства, так как каждое приложение создает копии файлов .NET Core.
 
