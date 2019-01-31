@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Переопределение глобальных прокси-серверов
+title: Как выполнить Переопределение глобальных прокси-серверов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: bda2da2400c97b3cc0ad2bbc573283cff8035310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6973503f12e0e60ee139c5cd7da09ab319d70218
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592128"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="2601f-102">Практическое руководство. Переопределение глобальных прокси-серверов</span><span class="sxs-lookup"><span data-stu-id="2601f-102">How to: Override a Global Proxy Selection</span></span>
-<span data-ttu-id="2601f-103">В этом примере класс **WebRequest** отправляется на веб-сайт `www.contoso.com`, который переопределяет глобальные прокси-серверы прокси-сервером с именем `alternateproxy` на порту 80.</span><span class="sxs-lookup"><span data-stu-id="2601f-103">This example sends a **WebRequest** to `www.contoso.com` that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
+# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="4741d-102">Как выполнить Переопределение глобальных прокси-серверов</span><span class="sxs-lookup"><span data-stu-id="4741d-102">How to: Override a Global Proxy Selection</span></span>
+<span data-ttu-id="4741d-103">В этом примере класс **WebRequest** отправляется на веб-сайт `www.contoso.com`, который переопределяет глобальные прокси-серверы прокси-сервером с именем `alternateproxy` на порту 80.</span><span class="sxs-lookup"><span data-stu-id="4741d-103">This example sends a **WebRequest** to `www.contoso.com` that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2601f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="2601f-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4741d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4741d-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -27,11 +27,11 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com/")
 req.Proxy = New WebProxy("http://alternateproxy:80/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2601f-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="2601f-105">Compiling the Code</span></span>  
- <span data-ttu-id="2601f-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="2601f-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4741d-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4741d-105">Compiling the Code</span></span>  
+ <span data-ttu-id="4741d-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="4741d-106">This example requires:</span></span>  
   
--   <span data-ttu-id="2601f-107">Директива [`using` ](~/docs/csharp/language-reference/keywords/using-directive.md) для пространства имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="2601f-107">A [`using` directive](~/docs/csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="4741d-107">Директива [`using` ](~/docs/csharp/language-reference/keywords/using-directive.md) для пространства имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="4741d-107">A [`using` directive](~/docs/csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2601f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="2601f-108">See Also</span></span>  
- [<span data-ttu-id="2601f-109">Использование протоколов приложений</span><span class="sxs-lookup"><span data-stu-id="2601f-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
- [<span data-ttu-id="2601f-110">Доступ к Интернету через прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="2601f-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="4741d-108">См. также</span><span class="sxs-lookup"><span data-stu-id="4741d-108">See also</span></span>
+- [<span data-ttu-id="4741d-109">Использование протоколов приложений</span><span class="sxs-lookup"><span data-stu-id="4741d-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
+- [<span data-ttu-id="4741d-110">Доступ к Интернету через прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="4741d-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

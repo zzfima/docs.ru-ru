@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Поиск элементов с определенным атрибутом (C#)
+title: Как выполнить Поиск элементов с определенным атрибутом (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 351fb4160328ebcf547b0b3442adef11a153c523
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 800e6cf5c499e616416ac90a561a440d4dcc2d7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629687"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="b385b-102">Практическое руководство. Поиск элементов с определенным атрибутом (C#)</span><span class="sxs-lookup"><span data-stu-id="b385b-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
-<span data-ttu-id="b385b-103">В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.</span><span class="sxs-lookup"><span data-stu-id="b385b-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="7c3ec-102">Как выполнить Поиск элементов с определенным атрибутом (C#)</span><span class="sxs-lookup"><span data-stu-id="7c3ec-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
+<span data-ttu-id="7c3ec-103">В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.</span><span class="sxs-lookup"><span data-stu-id="7c3ec-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b385b-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b385b-104">Example</span></span>  
- <span data-ttu-id="b385b-105">В примере показано, как выполнить поиск элемента `Address`, имеющего атрибут `Type` со значением «Billing».</span><span class="sxs-lookup"><span data-stu-id="b385b-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
+## <a name="example"></a><span data-ttu-id="7c3ec-104">Пример</span><span class="sxs-lookup"><span data-stu-id="7c3ec-104">Example</span></span>  
+ <span data-ttu-id="7c3ec-105">В примере показано, как выполнить поиск элемента `Address`, имеющего атрибут `Type` со значением «Billing».</span><span class="sxs-lookup"><span data-stu-id="7c3ec-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- <span data-ttu-id="b385b-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="b385b-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="7c3ec-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="7c3ec-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -27,7 +27,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b385b-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b385b-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="7c3ec-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="7c3ec-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Address Type="Billing">  
@@ -40,10 +40,10 @@ foreach (XElement el in address)
 </Address>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b385b-108">Пример</span><span class="sxs-lookup"><span data-stu-id="b385b-108">Example</span></span>  
- <span data-ttu-id="b385b-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b385b-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b385b-110">Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="b385b-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="7c3ec-108">Пример</span><span class="sxs-lookup"><span data-stu-id="7c3ec-108">Example</span></span>  
+ <span data-ttu-id="7c3ec-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="7c3ec-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7c3ec-110">Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="7c3ec-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="b385b-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="b385b-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="7c3ec-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="7c3ec-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -56,7 +56,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b385b-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b385b-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="7c3ec-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="7c3ec-112">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -69,10 +69,10 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b385b-113">См. также</span><span class="sxs-lookup"><span data-stu-id="b385b-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c3ec-113">См. также</span><span class="sxs-lookup"><span data-stu-id="7c3ec-113">See also</span></span>
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A>  
-- [<span data-ttu-id="b385b-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b385b-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [<span data-ttu-id="b385b-115">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="b385b-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [<span data-ttu-id="b385b-116">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="b385b-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [<span data-ttu-id="7c3ec-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="7c3ec-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="7c3ec-115">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="7c3ec-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="7c3ec-116">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="7c3ec-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

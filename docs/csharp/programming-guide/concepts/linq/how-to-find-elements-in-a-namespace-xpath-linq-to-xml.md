@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Поиск элементов в пространстве имен (XPath-LINQ to XML) (C#)
+title: Как выполнить Поиск элементов в пространстве имен (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: a0375641f9f5e75c51fe27936c07c32020e5dc0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ba5fc03bbd831cfee0c4fd15e71708c4eafd212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646780"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="d6006-102">Практическое руководство. Поиск элементов в пространстве имен (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d6006-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="d6006-103">Выражения XPath позволяют находить узлы в конкретном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="d6006-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="d6006-104">Для указания пространств имен в выражениях XPath используются префиксы пространств имен.</span><span class="sxs-lookup"><span data-stu-id="d6006-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="d6006-105">Для синтаксического анализа выражения XPath, содержащего префиксы пространств имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="d6006-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="d6006-106">В этом примере используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="d6006-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="6a618-102">Как выполнить Поиск элементов в пространстве имен (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="6a618-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="6a618-103">Выражения XPath позволяют находить узлы в конкретном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="6a618-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="6a618-104">Для указания пространств имен в выражениях XPath используются префиксы пространств имен.</span><span class="sxs-lookup"><span data-stu-id="6a618-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="6a618-105">Для синтаксического анализа выражения XPath, содержащего префиксы пространств имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="6a618-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="6a618-106">В этом примере используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="6a618-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- <span data-ttu-id="d6006-107">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="d6006-107">The XPath expression is:</span></span>  
+ <span data-ttu-id="6a618-107">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="6a618-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a><span data-ttu-id="d6006-108">Пример</span><span class="sxs-lookup"><span data-stu-id="d6006-108">Example</span></span>  
- <span data-ttu-id="d6006-109">В следующем примере считывается XML-дерево, содержащее два пространства имен.</span><span class="sxs-lookup"><span data-stu-id="d6006-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="d6006-110">Для считывания XML-документа используется <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="d6006-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="d6006-111">Затем в примере происходит получение <xref:System.Xml.XmlNameTable> из <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlNamespaceManager> из <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="d6006-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="d6006-112">При выделении элементов используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="d6006-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="6a618-108">Пример</span><span class="sxs-lookup"><span data-stu-id="6a618-108">Example</span></span>  
+ <span data-ttu-id="6a618-109">В следующем примере считывается XML-дерево, содержащее два пространства имен.</span><span class="sxs-lookup"><span data-stu-id="6a618-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="6a618-110">Для считывания XML-документа используется <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="6a618-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="6a618-111">Затем в примере происходит получение <xref:System.Xml.XmlNameTable> из <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlNamespaceManager> из <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="6a618-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="6a618-112">При выделении элементов используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="6a618-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -39,7 +39,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="d6006-113">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="d6006-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="6a618-113">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="6a618-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -74,6 +74,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6006-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d6006-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a618-114">См. также</span><span class="sxs-lookup"><span data-stu-id="6a618-114">See also</span></span>
 
-- [<span data-ttu-id="d6006-115">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="d6006-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="6a618-115">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="6a618-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

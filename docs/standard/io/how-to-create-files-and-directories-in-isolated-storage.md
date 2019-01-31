@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание файлов и каталогов в изолированном хранилище
+title: Как выполнить Создание файлов и каталогов в изолированном хранилище
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47157838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709017"
 ---
-# <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="23f8e-102">Практическое руководство. Создание файлов и каталогов в изолированном хранилище</span><span class="sxs-lookup"><span data-stu-id="23f8e-102">How to: Create Files and Directories in Isolated Storage</span></span>
-<span data-ttu-id="23f8e-103">Получив изолированное хранилище, в нем можно создавать файлы и папки для хранения данных.</span><span class="sxs-lookup"><span data-stu-id="23f8e-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="23f8e-104">В хранилище имена файлов и каталогов указываются относительно корня виртуальной файловой системы.</span><span class="sxs-lookup"><span data-stu-id="23f8e-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  
+# <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="c82bb-102">Как выполнить Создание файлов и каталогов в изолированном хранилище</span><span class="sxs-lookup"><span data-stu-id="c82bb-102">How to: Create Files and Directories in Isolated Storage</span></span>
+<span data-ttu-id="c82bb-103">Получив изолированное хранилище, в нем можно создавать файлы и папки для хранения данных.</span><span class="sxs-lookup"><span data-stu-id="c82bb-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="c82bb-104">В хранилище имена файлов и каталогов указываются относительно корня виртуальной файловой системы.</span><span class="sxs-lookup"><span data-stu-id="c82bb-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  
   
- <span data-ttu-id="23f8e-105">Чтобы создать каталог, используйте экземпляр метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="23f8e-105">To create a directory, use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="23f8e-106">Если вы укажете подкаталог в несуществующем каталоге, создаются оба этих каталога.</span><span class="sxs-lookup"><span data-stu-id="23f8e-106">If you specify a subdirectory of an directory that doesn't exist, both directories are created.</span></span> <span data-ttu-id="23f8e-107">Если вы укажете уже существующий каталог, метод сразу завершает работу, не создавая каталог и не вызывая исключений.</span><span class="sxs-lookup"><span data-stu-id="23f8e-107">If you specify a directory that already exists, the method returns without creating a directory, and no exception is thrown.</span></span> <span data-ttu-id="23f8e-108">Но если вы укажете в имени каталога недопустимые символы, создастся исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException>.</span><span class="sxs-lookup"><span data-stu-id="23f8e-108">However, if you specify a directory name that contains invalid characters, an <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception is thrown.</span></span>  
+ <span data-ttu-id="c82bb-105">Чтобы создать каталог, используйте экземпляр метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c82bb-105">To create a directory, use the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType> instance method.</span></span> <span data-ttu-id="c82bb-106">Если вы укажете подкаталог в несуществующем каталоге, создаются оба этих каталога.</span><span class="sxs-lookup"><span data-stu-id="c82bb-106">If you specify a subdirectory of an directory that doesn't exist, both directories are created.</span></span> <span data-ttu-id="c82bb-107">Если вы укажете уже существующий каталог, метод сразу завершает работу, не создавая каталог и не вызывая исключений.</span><span class="sxs-lookup"><span data-stu-id="c82bb-107">If you specify a directory that already exists, the method returns without creating a directory, and no exception is thrown.</span></span> <span data-ttu-id="c82bb-108">Но если вы укажете в имени каталога недопустимые символы, создастся исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException>.</span><span class="sxs-lookup"><span data-stu-id="c82bb-108">However, if you specify a directory name that contains invalid characters, an <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception is thrown.</span></span>  
   
- <span data-ttu-id="23f8e-109">Для создания файла используется метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="23f8e-109">To create a file, use  the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="c82bb-109">Для создания файла используется метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c82bb-109">To create a file, use  the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateFile%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="23f8e-110">В изолированных хранилищах на операционной системе Windows регистр в именах файлов и каталогов не учитывается.</span><span class="sxs-lookup"><span data-stu-id="23f8e-110">In the Windows operating system, isolated storage file and directory names are case-insensitive.</span></span> <span data-ttu-id="23f8e-111">Таким образом, если попытаться создать файл с именем `ThisFile.txt` и еще один файл с именем `THISFILE.TXT`, будет создан только один файл.</span><span class="sxs-lookup"><span data-stu-id="23f8e-111">That is, if you create a file named `ThisFile.txt`, and then create another file named `THISFILE.TXT`, only one file is created.</span></span> <span data-ttu-id="23f8e-112">Имя файла отображается в том регистре, который был указан при создании файла.</span><span class="sxs-lookup"><span data-stu-id="23f8e-112">The file name keeps its original casing for display purposes.</span></span>  
+ <span data-ttu-id="c82bb-110">В изолированных хранилищах на операционной системе Windows регистр в именах файлов и каталогов не учитывается.</span><span class="sxs-lookup"><span data-stu-id="c82bb-110">In the Windows operating system, isolated storage file and directory names are case-insensitive.</span></span> <span data-ttu-id="c82bb-111">Таким образом, если попытаться создать файл с именем `ThisFile.txt` и еще один файл с именем `THISFILE.TXT`, будет создан только один файл.</span><span class="sxs-lookup"><span data-stu-id="c82bb-111">That is, if you create a file named `ThisFile.txt`, and then create another file named `THISFILE.TXT`, only one file is created.</span></span> <span data-ttu-id="c82bb-112">Имя файла отображается в том регистре, который был указан при создании файла.</span><span class="sxs-lookup"><span data-stu-id="c82bb-112">The file name keeps its original casing for display purposes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23f8e-113">Пример</span><span class="sxs-lookup"><span data-stu-id="23f8e-113">Example</span></span>  
- <span data-ttu-id="23f8e-114">В примере кода ниже показано, как создавать файлы и каталоги в изолированном хранилище.</span><span class="sxs-lookup"><span data-stu-id="23f8e-114">The following code example illustrates how to create files and directories in an isolated store.</span></span>  
+## <a name="example"></a><span data-ttu-id="c82bb-113">Пример</span><span class="sxs-lookup"><span data-stu-id="c82bb-113">Example</span></span>  
+ <span data-ttu-id="c82bb-114">В примере кода ниже показано, как создавать файлы и каталоги в изолированном хранилище.</span><span class="sxs-lookup"><span data-stu-id="c82bb-114">The following code example illustrates how to create files and directories in an isolated store.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="23f8e-115">См. также</span><span class="sxs-lookup"><span data-stu-id="23f8e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c82bb-115">См. также</span><span class="sxs-lookup"><span data-stu-id="c82bb-115">See also</span></span>
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
-- [<span data-ttu-id="23f8e-116">Изолированное хранилище</span><span class="sxs-lookup"><span data-stu-id="23f8e-116">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
+- [<span data-ttu-id="c82bb-116">Изолированное хранилище</span><span class="sxs-lookup"><span data-stu-id="c82bb-116">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
