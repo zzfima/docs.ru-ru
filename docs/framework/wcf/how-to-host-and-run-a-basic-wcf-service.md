@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Размещение и запуск службы основные Windows Communication Foundation
+title: Размещение и запуск базовой службы Windows Communication Foundation
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129380"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277775"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Как выполнить Размещение и запуск службы основные Windows Communication Foundation
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Размещение и запуск базовой службы Windows Communication Foundation
 
-Это третья из шести задач, необходимых для создания приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).
+Это третья из шести задач, необходимых для создания приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](getting-started-tutorial.md).
 
 В этом разделе описывается размещение службы Windows Communication Foundation (WCF) в консольном приложении. Эта процедура состоит из следующих шагов:
 
@@ -142,14 +142,14 @@ End Module
 
 **Шаг 2** — создает экземпляр класса <xref:System.ServiceModel.ServiceHost> класса для размещения службы. Конструктор принимает 2 параметра: тип класса, который реализует контракт службы, и базовый адрес службы.
 
-**Шаг 3** — создание <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляра. Конечная точка службы состоит из адреса, привязки и контракта службы. Таким образом, конструктор <xref:System.ServiceModel.Description.ServiceEndpoint> принимает тип интерфейса контракта службы, привязку и адрес. Контракт службы - `ICalculator`. Он определен и реализуется в типе службы. В этом образце используется встроенная привязка <xref:System.ServiceModel.WSHttpBinding> для подключения к конечным точкам, соответствующим спецификациями WS-*. Дополнительные сведения о привязках WCF см. в разделе [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md). Адрес добавляется к базовому адресу для определения конечной точки. Адрес, указанный в этом коде является «CalculatorService», поэтому полный адрес для конечной точки `"http://localhost:8000/GettingStarted/CalculatorService"`.
+**Шаг 3** — создание <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляра. Конечная точка службы состоит из адреса, привязки и контракта службы. Таким образом, конструктор <xref:System.ServiceModel.Description.ServiceEndpoint> принимает тип интерфейса контракта службы, привязку и адрес. Контракт службы - `ICalculator`. Он определен и реализуется в типе службы. В этом образце используется встроенная привязка <xref:System.ServiceModel.WSHttpBinding> для подключения к конечным точкам, соответствующим спецификациями WS-*. Дополнительные сведения о привязках WCF см. в разделе [Общие сведения о привязках WCF](bindings-overview.md). Адрес добавляется к базовому адресу для определения конечной точки. Адрес, указанный в этом коде является «CalculatorService», поэтому полный адрес для конечной точки `"http://localhost:8000/GettingStarted/CalculatorService"`.
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**Шаг 4** — включите обмен метаданными. Клиенты могут использовать обмен метаданными для создания прокси-объектов, которые будут использоваться для вызова операции службы. Для поддержки обмена метаданными создайте экземпляр <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, установите для свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> значение `true`, добавьте поведение в коллекцию <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` экземпляра <xref:System.ServiceModel.ServiceHost>.
+**Шаг 4** — включите обмен метаданными. Клиенты могут использовать обмен метаданными для создания прокси-объектов, которые будут использоваться для вызова операции службы. Для поддержки обмена метаданными создайте экземпляр <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, установите <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> в значении `true`, добавьте поведение в коллекцию <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> экземпляра <xref:System.ServiceModel.ServiceHost>.
 
-**Шаг 5** — откройте <xref:System.ServiceModel.ServiceHost> для прослушивания входящих сообщений. Обратите внимание, что код ожидает, пока пользователь не нажмет ENTER. Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try/catch. После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try/catch. Дополнительные сведения о перехвате исключений, создаваемых <xref:System.ServiceModel.ServiceHost>, см. в разделе [используйте Close и Abort для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**Шаг 5** — откройте <xref:System.ServiceModel.ServiceHost> для прослушивания входящих сообщений. Обратите внимание, что код ожидает, пока пользователь не нажмет ENTER. Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try/catch. После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try/catch. Дополнительные сведения о перехвате исключений, создаваемых <xref:System.ServiceModel.ServiceHost>, см. в разделе [используйте Close и Abort для освобождения ресурсов клиента WCF](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Измените файл App.config в GettingStartedLib, чтобы отразить изменения, внесенные в код:
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> Подобные службы требуют разрешения на регистрацию на компьютере HTTP-адресов, на которые будет ожидаться передача данных. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. Дополнительные сведения о настройке резервирования пространств имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Запуск файла service.exe в Visual Studio возможен только при наличии прав администратора.
+> Подобные службы требуют разрешения на регистрацию на компьютере HTTP-адресов, на которые будет ожидаться передача данных. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. Дополнительные сведения о настройке резервирования пространств имен см. в разделе [Настройка протоколов HTTP и HTTPS](feature-details/configuring-http-and-https.md). Запуск файла service.exe в Visual Studio возможен только при наличии прав администратора.
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Сейчас служба запущена. В следующей задаче вы создадите клиента WCF.
 
 > [!div class="nextstepaction"]
-> [Инструкции: Создание клиента WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Практическое руководство. Создание клиента WCF](how-to-create-a-wcf-client.md)
 
-Сведения об устранении неполадок см. в разделе [Устранение неполадок, связанных с руководством по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
+Сведения об устранении неполадок см. в разделе [Устранение неполадок, связанных с руководством по началу работы](troubleshooting-the-getting-started-tutorial.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)
+- [Начало работы](samples/getting-started-sample.md)
+- [Резидентное размещение](samples/self-host.md)

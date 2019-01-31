@@ -1,15 +1,15 @@
 ---
-title: '&lt;Расширения&gt;'
+title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 9589eaf8ee133f0be670782574dfd30272f29b45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: feac4999438a67043899eef98bb8b49644ee30d9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556354"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270021"
 ---
-# <a name="ltextensionsgt"></a>&lt;Расширения&gt;
+# <a name="extensions"></a>\<расширения >
 Этот элемент конфигурации содержит коллекцию элементов XML, в которой находятся пользовательские метаданные, публикуемые вместе со стандартными обнаруживаемыми метаданными (EPR, ContractTypeName, BindingName, Scope и ListenURI). Далее приводится пример использования этого элемента конфигурации.  
   
 ```xml  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;transport&gt; для &lt;ws2007HttpBinding&gt;'
+title: <transport> из <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 6f09a71a7ec7dbfae5eb6f1896f1fba68456973f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8f84d0ed6c6248e72e3353675c9da96a0678ae6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642598"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273310"
 ---
-# <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; для &lt;ws2007HttpBinding&gt;
+# <a name="transport-of-ws2007httpbinding"></a>\<Транспорт > из \<ws2007HttpBinding >
 Определяет параметры проверки подлинности для HTTP-транспорта.  
   
  \<system.serviceModel>  
@@ -68,7 +68,7 @@ ms.locfileid: "54642598"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Представляет возможности безопасности [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) элемент.|  
   

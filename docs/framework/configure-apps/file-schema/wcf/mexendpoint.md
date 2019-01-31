@@ -1,18 +1,18 @@
 ---
-title: '&lt;mexEndpoint&gt;'
+title: <mexEndpoint>
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
-ms.openlocfilehash: 4e2fb4946ee68b3cbd5bd6bfbafe6bb5e9c9106f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8fffcc05d5f53f719efce182083fbf103b1230ff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149154"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271698"
 ---
-# <a name="ltmexendpointgt"></a>&lt;mexEndpoint&gt;
+# <a name="mexendpoint"></a>\<mexEndpoint>
 Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом IMetadataExchange. Поскольку все конечные точки обмена метаданными указывают IMetadataExchange в качестве своего контракта, можно использовать эту стандартную точку вместо определения собственной точки.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Синтаксис  

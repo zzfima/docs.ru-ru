@@ -1,17 +1,17 @@
 ---
-title: '&lt;Thread_UseAllCpuGroups&gt; элемент'
+title: Элемент < Thread_UseAllCpuGroups >
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80f67502c61df13b17cfb3b75564d710e5fad2f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95411f5adde07c0d00124b2793b495c7ed8f49ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579945"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288942"
 ---
-# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; элемент
+# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > элемент
 Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.  
   
  \<configuration>  
@@ -36,7 +36,7 @@ ms.locfileid: "54579945"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Среда выполнения не распространяет управляемые потоки по нескольким группам ЦП. Это значение по умолчанию.|  
 |`true`|Среда выполнения распространяет управляемые потоки по нескольким группам ЦП, если компьютер имеет несколько групп ЦП и [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) включен элемент.|  
@@ -46,7 +46,7 @@ ms.locfileid: "54579945"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;Маршрутизация&gt;'
+title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 855faedfd2e9523e939174441b0cfa50e052b375
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565882"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275578"
 ---
-# <a name="ltroutinggt"></a>&lt;Маршрутизация&gt;
+# <a name="routing"></a>\<Маршрутизация >
 
 Представляет раздел конфигурации для определения набора фильтров маршрутизации, которые определяют тип Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> для использования при вычислении входящих сообщений, а также маршрутизации, определяющих целевые конечные точки для таблиц Если фильтр соответствует отправите сообщения.
 
@@ -50,14 +50,14 @@ ms.locfileid: "54565882"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<Фильтры >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Содержит набор фильтров маршрутизации, которые определяют, что тип MessageFilter Windows Communication Foundation (WCF), который будет использоваться при вычислении входящих сообщений. |
 | [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Содержит сопоставление между фильтрами маршрутизации и целевыми конечными точками для определения того, какие конечные точки будут использоваться при совпадении с критериями фильтра. |
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | **\<system.ServiceModel>** | Корневой элемент всех элементов конфигурации WCF. |
 

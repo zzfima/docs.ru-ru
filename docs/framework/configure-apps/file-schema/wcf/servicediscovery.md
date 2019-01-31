@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceDiscovery&gt;'
+title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 73943f5f962a6963809e2c65ce8593f6181559f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 564410fdc4085cc3ed14c394006551cddb028910
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587337"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267876"
 ---
-# <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
+# <a name="servicediscovery"></a>\<serviceDiscovery >
 Указывает возможность обнаружения конечных точек службы.  
   
  \<system.ServiceModel>  
@@ -47,7 +47,7 @@ ms.locfileid: "54587337"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Коллекция конечных точек объявления. Используйте этот раздел, чтобы задать конечные точки, которые будут использоваться для отправки сообщений с объявлениями.|  
 |[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Коллекция конечных точек обнаружения. Используйте этот раздел, чтобы задать конечные точки, которые будут прослушиваться на предмет сообщений об обнаружении.|  

@@ -1,5 +1,5 @@
 ---
-title: Имя &#39; &lt;имя&gt; &#39; не объявлена
+title: Имя <name> не объявлено
 ms.date: 10/10/2018
 f1_keywords:
 - bc30451
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: e52b93980cfc2d162d35b86bd93ce9eeb9875c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574824"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260149"
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Имя &#39; &lt;имя&gt; &#39; не объявлена
+# <a name="name-name-is-not-declared"></a>Имя "\<имя >" не объявлена
 Оператор ссылается на элемент программирования, но компилятор не может найти элемент с указанным именем.  
   
  **Идентификатор ошибки:** BC30451  

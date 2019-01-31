@@ -1,5 +1,5 @@
 ---
-title: Пространство имен или тип, указанный в Imports &#39; &lt;полное_имя_элемента&gt; &#39; &#39;t содержат открытые члены или не найден
+title: Пространство имен или тип, указанный в Imports <qualifiedelementname>, не содержит общих членов или не найден
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552142"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288279"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Пространство имен или тип, указанный в Imports &#39; &lt;полное_имя_элемента&gt; &#39; &#39;t содержат открытые члены или не найден
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Пространство имен или тип, указанный в Imports\<полное_имя_элемента > "не содержат открытые члены или не найден
 Пространство имен или тип, указанный в Imports\<полное_имя_элемента > "не содержат открытые члены или не найден. Убедитесь, что пространство имен или тип определены и содержат хотя бы один открытый член. Убедитесь, что псевдоним не может содержать другие псевдонимы.  
   
  `Imports` Инструкция указывает содержащий элемент, который не может быть найден или не определяет никакие `Public` членов.  
