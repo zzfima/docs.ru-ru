@@ -1,5 +1,5 @@
 ---
-title: Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;сборка1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;сборка2&gt;&#39;
+title: Была создана ссылка на внедренную сборку взаимодействия <assembly1> из-за наличия неявной ссылки на эту сборки из сборки <assembly2>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: fe04742e0a3be5e1d19ab4017e55f2293988a671
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560026"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262956"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;сборка1&gt; &#39; из-за наличия неявной ссылки на эту сборку из сборки &#39; &lt;сборка2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Была создана ссылка на внедренную сборку взаимодействия "\<сборка1 >" из-за наличия неявной ссылки на эту сборку из сборки "\<сборка2 >"
 Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>". Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.  
   
  Была добавлена ссылка на сборку (сборка1), для которой свойству `Embed Interop Types` присвоено значение `True`. Это указывает компилятору на необходимость внедрить сведения о типе взаимодействия из этой сборки. Тем не менее компилятор не может внедрить такие сведения из этой сборки, поскольку другая сборка, на которую задаются ссылки (сборка2), также ссылается на эту сборку (сборка1) и содержит свойство `Embed Interop Types` со значением `False`.  

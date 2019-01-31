@@ -1,15 +1,15 @@
 ---
-title: '&lt;transport&gt; для &lt;peerTransport&gt;'
+title: <transport> из <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: d02bb1cb4c20ab7dc482001ea7ce21180394eee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716587"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284015"
 ---
-# <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; для &lt;peerTransport&gt;
+# <a name="transport-of-peertransport"></a>\<Транспорт > из \<peerTransport >
 Задает тип транспорта для безопасных сообщений, отправленных одноранговыми узлами, настроенными с помощью этой привязки.  
   
  \<system.serviceModel>  
@@ -49,7 +49,7 @@ ms.locfileid: "54716587"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Определяет параметры безопасности для однорангового транспорта.|  
   

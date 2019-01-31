@@ -1,5 +1,5 @@
 ---
-title: '&lt;System.CodeDom&gt; элемент'
+title: Элемент < system.codedom >
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 1a97b20ae1f4e5c85d678f559cf0f7d69cfff4e1
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083955"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268227"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;System.CodeDom&gt; элемент
+# <a name="systemcodedom-element"></a>\<System.CodeDom > элемент
 Задает параметры конфигурации компилятора для доступных поставщиков языков.  
   
  \<Конфигурация > элемент  
@@ -38,13 +38,13 @@ ms.locfileid: "55083955"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) или несколько.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   

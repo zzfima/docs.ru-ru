@@ -1,15 +1,15 @@
 ---
-title: '&lt;authentication&gt; элемента &lt;clientCertificate&gt;'
+title: <authentication> элемента <clientCertificate>
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 1e15bd10495a2dff4a844f89a3ba5124235eea7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656855"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263018"
 ---
-# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;authentication&gt; элемента &lt;clientCertificate&gt;
+# <a name="authentication-of-clientcertificate-element"></a>\<Проверка подлинности > из \<clientCertificate > элемента
 Указывает расширения функциональности аутентификации для сертификатов клиентов, используемых службой.  
   
  \<system.ServiceModel>  
@@ -74,7 +74,7 @@ ms.locfileid: "54656855"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.|  
   

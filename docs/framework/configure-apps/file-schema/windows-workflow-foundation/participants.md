@@ -1,16 +1,16 @@
 ---
-title: '&lt;Участники&gt;'
+title: <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
-ms.openlocfilehash: b0b4fff4913f539c16389c4a15b6fe49d26a1736
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffb38bca1848d7f679b6a2a717cd7082cfe356f3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670336"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277385"
 ---
-# <a name="ltparticipantsgt"></a>&lt;Участники&gt;
+# <a name="participants"></a>\<Участники >
 Настройте список участников отслеживания, которые будут прослушивать записи отслеживания, прямо исходящие из среды выполнения, и обрабатывать их (в зависимости от настройки). Включает запись результата в определенном виде (например, в виде файла, консоли, ETW), обработку или сбор записей или любое другое требуемое сочетание.  
   
  Дополнительные сведения об отслеживании рабочих процессов и участники отслеживания, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [участники отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
@@ -39,13 +39,13 @@ ms.locfileid: "54670336"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|Содержит настройки участника отслеживания.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Отслеживание >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.|  
   

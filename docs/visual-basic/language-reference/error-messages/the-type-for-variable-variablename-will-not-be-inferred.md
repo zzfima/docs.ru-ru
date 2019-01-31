@@ -1,5 +1,5 @@
 ---
-title: Тип для переменной &#39; &lt;variablename&gt; &#39; не будет определен, так как она привязана к полю во включающей области
+title: Тип для переменной <variablename> не будет определен, так как она привязана к полю во включающей области
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672387"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259245"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Тип для переменной &#39; &lt;variablename&gt; &#39; не будет определен, так как она привязана к полю во включающей области
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Тип для переменной "\<имя_переменной >" не будет определен, так как она привязана к полю во включающей области
 Тип для переменной "\<имя_переменной >" не будет определен, так как она привязана к полю во включающей области. Либо измените имя "\<имя_переменной >", или используйте полное доменное имя (например, «Me.variablename» или «MyBase.variablename»).  
   
  Управляющая переменная цикла в коде имеет имя, как поле класса или других внешней области видимости. Так как переменная управления используется без `As` предложение, он привязан к полю во включающей области, и компилятор не создает новую переменную для него и вывести его тип.  

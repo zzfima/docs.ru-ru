@@ -1,15 +1,15 @@
 ---
-title: '&lt;BackupList&gt;'
+title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627996"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262438"
 ---
-# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+# <a name="backuplist"></a>\<backupList >
 Представляет раздел конфигурации для определения резервного списка, который перечисляет набор конечных точек, которые вы хотите использовать служба маршрутизации в случае, если основная конечная точка становится недоступной. Если первая конечная точка в списке недоступна, то служба маршрутизации автоматически переключается на следующую точку в списке.  Этот метод позволяет быстро повысить надежность приложения, не реализуя в клиентском приложении обработку сложных схем и не задавая расположение всех служб.  
   
  \<system.serviceModel>  
@@ -40,13 +40,13 @@ ms.locfileid: "54627996"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Список резервных конечных точек.|  
   

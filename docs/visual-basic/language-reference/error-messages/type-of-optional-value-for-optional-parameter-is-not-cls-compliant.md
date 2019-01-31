@@ -1,5 +1,5 @@
 ---
-title: Тип необязательного значения для необязательного параметра &lt;parametername&gt; не является CLS-совместимым
+title: Тип необязательного значения для необязательного параметра <parametername> несовместим с CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960353"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261429"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Тип необязательного значения для необязательного параметра &lt;parametername&gt; не является CLS-совместимым
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Тип необязательного значения для необязательного параметра \<имя_параметра > не является CLS-совместимым
 Процедура помечена как `<CLSCompliant(True)>`, но она объявляет [необязательный](../../../visual-basic/language-reference/modifiers/optional.md) параметр со значением по умолчанию несовместимого типа.  
   
  Для соответствия требованиям, описанным в статье [Независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), процедура должна использовать только типы, совместимые с CLS. Это касается типов параметров, типа возвращаемого значения и типов всех локальных переменных. Это также касается значений по умолчанию для необязательных параметров.  

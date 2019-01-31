@@ -1,20 +1,20 @@
 ---
-title: '&lt;CertificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269345"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference >
 Задает параметры, которые используются для поиска и проверки сертификатов X.509 в хранилище сертификатов.  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
 \<serviceCertificate >  
 \<certificateReference >  
   
@@ -43,11 +43,11 @@ ms.locfileid: "47206895"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|storeName|Имя хранилища сертификатов X.509. Значение по умолчанию — «My». Необязательный.|  
-|storeLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее расположение хранилища сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, который должен выполняться. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательный.|  
-|findValue|Значение для поиска в хранилище сертификатов X.509. Необязательный.|  
-|isChainIncluded|Указывает, нужно ли выполнять проверку с помощью цепочки сертификатов. Значение по умолчанию равно «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательный.|  
+|storeName|Имя хранилища сертификатов X.509. Значение по умолчанию — «My». Необязательный параметр.|  
+|storeLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее расположение хранилища сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный параметр.|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, который должен выполняться. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательный параметр.|  
+|findValue|Значение для поиска в хранилище сертификатов X.509. Необязательный параметр.|  
+|isChainIncluded|Указывает, нужно ли выполнять проверку с помощью цепочки сертификатов. Значение по умолчанию равно «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательный параметр.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  

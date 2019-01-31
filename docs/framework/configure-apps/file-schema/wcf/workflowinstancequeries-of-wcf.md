@@ -1,21 +1,21 @@
 ---
-title: '&lt;workflowInstanceQueries&gt; (WCF)'
+title: <workflowInstanceQueries> для WCF
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: e3ad1139781c54cc1ca4e2d2b264f3f375b49108
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 544ca868485a409554ece9d9b000beb1a472d344
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145566"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255306"
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a>&lt;workflowInstanceQueries&gt; (WCF)
+# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > из WCF
 
 Представляет коллекцию элементов конфигурации, которые отслеживают изменения жизненного цикла экземпляра рабочего процесса, например события «запущен» или «завершен».  
   
 Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Отслеживание >  
 \<профили >  
 \<trackingProfile >  
@@ -52,7 +52,7 @@ ms.locfileid: "54145566"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery >](workflowinstancequery-of-wcf.md)|Запрос, используемый для отслеживания изменений жизненного цикла экземпляра рабочего процесса.|  
   

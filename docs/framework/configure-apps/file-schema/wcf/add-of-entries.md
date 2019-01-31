@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;entries&gt;'
+title: <add> из <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 082b19cd4515deb19ee7190dfeb8ae04ab834830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645370"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264574"
 ---
-# <a name="ltaddgt-of-ltentriesgt"></a>&lt;add&gt; для &lt;entries&gt;
+# <a name="add-of-entries"></a>\<Добавить > из \<записи >
 Представляет запись маршрутизации, которая сопоставляет фильтр с ранее определенной конечной точкой клиента. Сообщения, соответствующие этому фильтру, будут отправлены по данному назначению.  
   
  \<system.serviceModel>  
@@ -56,7 +56,7 @@ ms.locfileid: "54645370"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Раздел конфигурации, в котором содержатся записи сопоставления маршрутизации.|  
   

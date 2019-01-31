@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Method&gt; (машинный код .NET)
+title: <Method> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfec7ce93dd3954af03f6f4822ac00576a7e043
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562938"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288084"
 ---
-# <a name="ltmethodgt-element-net-native"></a>Элемент &lt;Method&gt; (машинный код .NET)
+# <a name="method-element-net-native"></a>\<Метод > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения к конструктору или методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -28,7 +28,7 @@ ms.locfileid: "54562938"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя метода.|  
 |`Signature`|Общие|Необязательный атрибут. Задает подпись метода. При наличии нескольких параметров, они разделяются запятыми. Например, следующий элемент `<Method>` определяет политику для метода <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Если атрибут отсутствует, директива среды выполнения применяется для всех перегруженных версий метода.|  
@@ -43,7 +43,7 @@ ms.locfileid: "54562938"
   
 ## <a name="signature-attribute"></a>Сигнатура атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*method_signature*|Типы параметров, которые образуют сигнатуру метода. Несколько параметров разделяются запятыми, например, `"System.String,System.Int32,System.Int32)"`. Имена параметров типа должно быть полными.|  
   

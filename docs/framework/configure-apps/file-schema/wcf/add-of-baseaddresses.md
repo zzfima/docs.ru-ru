@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;baseAddresses&gt;'
+title: <add> из <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: 31edf570a7374a4b4fe31760d35ec196ecfcb3c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d66be51fa2626283063c250905efdb7d47babfb0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553572"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279946"
 ---
-# <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;add&gt; для &lt;baseAddresses&gt;
+# <a name="add-of-baseaddresses"></a>\<Добавить > из \<baseAddresses >
 Представляет элемент конфигурации, который задает базовые адреса, используемые узлом службы.  
   
  \<system.ServiceModel>  
@@ -42,7 +42,7 @@ ms.locfileid: "54553572"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Коллекция элементов `baseAddress`.|  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Первый оператор данного &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; поскольку &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;'
+title: 'Первым оператором в этой процедуре Sub New должен быть явный вызов MyBase.New или MyClass.New, так как <constructorname> в базовом классе <baseclassname> класса <derivedclassname> отмечен как устаревший: <errormessage>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566785"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268799"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>Первый оператор данного &#39;Sub New&#39; должен быть явным вызовом &#39;MyBase.New&#39; или &#39;MyClass.New&#39; поскольку &#39; &lt;имя_конструктора&gt; &#39; в базовом классе &#39; &lt;имя_базового_класса&gt; &#39; из &#39; &lt;имя_производного_класса&gt; &#39; помечен как устаревший: &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Первый оператор в «Sub New» должен иметь явный вызов в «MyBase.New» или «MyClass.New», так как "\<имя_конструктора >" в базовом классе\<имя_базового_класса > "из"\<имя_производного_класса > "помечен как устаревший:"\< сообщение об ошибке > "
 Конструктор класса не вызывает явно конструктор базового класса, а вызванный неявно конструктор базового класса помечается атрибутом <xref:System.ObsoleteAttribute> , что является причиной возникновения ошибки.  
   
  Если конструктор производного класса не вызывает конструктор базового класса, Visual Basic пытается создать неявный вызов конструктора базового класса без параметров. Если в базовом классе, которые могут вызываться без аргументов нет доступного конструктора, Visual Basic не удается создать неявный вызов. В этом случае необходимый конструктор помечается <xref:System.ObsoleteAttribute> атрибут, поэтому его нельзя вызвать Visual Basic.  

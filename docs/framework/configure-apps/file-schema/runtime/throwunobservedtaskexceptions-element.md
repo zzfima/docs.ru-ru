@@ -1,5 +1,5 @@
 ---
-title: '&lt;ThrowUnobservedTaskExceptions&gt; элемент'
+title: Элемент <ThrowUnobservedTaskExceptions>
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd3a7a4305dc60beb73b20580049e40780f95c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bc2bffa11c3205c265ca21a9d4c4caa9b31d4e9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515658"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281506"
 ---
-# <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; элемент
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
   
  \<configuration>  
@@ -42,7 +42,7 @@ ms.locfileid: "54515658"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не прекращает выполнение запущенного процесса для необработанное исключение задачи. Это значение по умолчанию.|  
 |`true`|Завершает работу выполняющегося процесса для необработанное исключение задачи.|  

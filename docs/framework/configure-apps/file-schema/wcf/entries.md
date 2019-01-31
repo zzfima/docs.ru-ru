@@ -1,15 +1,15 @@
 ---
-title: '&lt;Записи&gt;'
+title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 33f98cb4b138307622a14463ce5a3008058b6e31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4c7fa4f778642d549deebce6e7476f4da13a0d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587064"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283690"
 ---
-# <a name="ltentriesgt"></a>&lt;Записи&gt;
+# <a name="entries"></a>\<записи >
 Запись маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).  
   
  \<system.serviceModel>  

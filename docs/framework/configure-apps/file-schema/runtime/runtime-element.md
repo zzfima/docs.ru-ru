@@ -1,5 +1,5 @@
 ---
-title: '&lt;Среда выполнения&gt; элемент'
+title: Элемент <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: e97af56530d3d805dd7945e8514bb8f7209da86d
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 05a94116d3b3cc662036b2ed15e255d4f8eda2c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084475"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285952"
 ---
-# <a name="ltruntimegt-element"></a>&lt;Среда выполнения&gt; элемент
+# <a name="runtime-element"></a>\<Среда выполнения > элемент
 Предоставляет информацию о используется среда CLR для настройки приложений.  
   
  \<configuration>  
@@ -37,7 +37,7 @@ ms.locfileid: "55084475"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Указывает, что удостоверение Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.|  
 |[\<AppContextSwitchOverrides>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.|  
@@ -80,7 +80,7 @@ ms.locfileid: "55084475"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   

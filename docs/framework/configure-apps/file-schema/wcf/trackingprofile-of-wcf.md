@@ -1,15 +1,15 @@
 ---
-title: '&lt;trackingProfile&gt; (WCF)'
+title: <trackingProfile> для WCF
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: a35b91867464b48b5e5ea858bca18296cb2d903a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2cbde3b7639e48e60b66ec02f5697390f573b3f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629553"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275045"
 ---
-# <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; (WCF)
+# <a name="trackingprofile-of-wcf"></a>\<trackingProfile > из WCF
 Представляет раздел конфигурации для создания подписки на записи в участнике отслеживания отслеживания рабочего процесса. Профиль отслеживания содержит запросы отслеживания, позволяющие участнику отслеживания подписываться на события рабочего процесса, формируемые во время выполнения при изменении состояния экземпляра рабочего процесса. Запросы, заданные в разделе профиля отслеживания, определяют виды событий, возвращаемых подпиской.  
   
  Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
@@ -87,13 +87,13 @@ ms.locfileid: "54629553"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Участники >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Отслеживание >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.|  
   

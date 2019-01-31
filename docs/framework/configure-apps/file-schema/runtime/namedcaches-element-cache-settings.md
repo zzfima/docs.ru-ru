@@ -1,19 +1,19 @@
 ---
-title: '&lt;namedCaches&gt; (параметры кэша)'
+title: Элемент <namedCaches> (параметры кэша)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: f00d973a2faff1709a98842d1164d69c59027c53
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083617"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287486"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; (параметры кэша)
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > (параметры кэша)
 Определяет коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров. <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> Свойство ссылается на коллекцию параметров конфигурации из одного или нескольких `namedCaches` элементов файла конфигурации.  
   
  \<configuration>  
@@ -37,7 +37,7 @@ ms.locfileid: "55083617"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`cacheMemoryLimitMegabytes`|Целочисленное значение, указывающее максимально допустимый размер в мегабайтах, который экземпляр <xref:System.Runtime.Caching.MemoryCache> может увеличиться. Значение по умолчанию — 0, это означает, что эвристика из <xref:System.Runtime.Caching.MemoryCache> класс используются по умолчанию.|  
 |`name`|Имя кэша.|  
@@ -46,7 +46,7 @@ ms.locfileid: "55083617"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|Добавляет именованный кэш к коллекции `namedCaches` для кэша памяти.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|Очищает коллекцию `namedCaches` для кэша памяти.|  
@@ -54,7 +54,7 @@ ms.locfileid: "55083617"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<memoryCache>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|  
   

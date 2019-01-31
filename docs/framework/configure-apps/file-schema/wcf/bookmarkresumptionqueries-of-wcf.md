@@ -1,15 +1,15 @@
 ---
-title: '&lt;bookmarkResumptionQueries&gt; (WCF)'
+title: <bookmarkResumptionQueries> для WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 80d1c1e4bc61972d44c27bcbdd0eba14d97c2d6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493954"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261278"
 ---
-# <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; (WCF)
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries > из WCF
   
 Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "54493954"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<bookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|Запрос, используемый для отслеживания возобновления закладки в экземпляре рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<рабочий процесс >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством `activityDefinitionId`.|  
   

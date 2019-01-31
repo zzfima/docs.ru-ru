@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuedTokenParameters&gt;'
+title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: d3770764e75b3bfd1345ac6a44761861595309d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b40bd6edd27f4c3b4b530387417311e1f93a921
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627464"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283599"
 ---
-# <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
+# <a name="issuedtokenparameters"></a>\<issuedTokenParameters>
 Задает параметры маркера безопасности, выданного в федеративном сценарии безопасности.  
   
  \<system.serviceModel>  
@@ -56,7 +56,7 @@ ms.locfileid: "54627464"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Коллекция элементов конфигурации, задающих дополнительные параметры запросов.|  
 |[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию обязательных типов утверждений.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным. Например, входящие учетные данные должны обладать определенным набором типов утверждений. Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
@@ -65,7 +65,7 @@ ms.locfileid: "54627464"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  

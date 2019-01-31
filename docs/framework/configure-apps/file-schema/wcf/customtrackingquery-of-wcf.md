@@ -1,27 +1,27 @@
 ---
-title: '&lt;customTrackingQuery&gt; (WCF)'
+title: <customTrackingQuery> для WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146385"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279491"
 ---
-# <a name="ltcustomtrackingquerygt-of-wcf"></a>&lt;customTrackingQuery&gt; (WCF)
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > из WCF
 
 Представляет запрос, который используется для отслеживания событий, определенных в действиях кода. Запрос необходим, чтобы участник отслеживания подписался на пользовательские записи отслеживания.
 
 Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Отслеживание >  
 \<профили >  
 \<trackingProfile >  
 \<рабочий процесс >  
 \<customTrackingQueries >  
-\<customTrackingQuery >  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54146385"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`activityName`|Строка, задающая имя действия, сформировавшего запись отслеживания.|  
 |`name`|Строка, задающая имя выдаваемой пользовательской записи отслеживания.|  

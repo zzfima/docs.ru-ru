@@ -1,15 +1,15 @@
 ---
-title: '&lt;NET.TCP&gt;'
+title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 7df24d816b4eed8ceed542e14261413fbe7651a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a9112def77fc31c8e4b826454894fe7372b31b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728730"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257659"
 ---
-# <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
+# <a name="nettcp"></a>\<net.tcp>
 Задает параметры конфигурации для службы общего доступа к портам Net.Tcp, которая позволяет нескольким процессам совместно использовать один и тот же порт протокола TCP.  
   
  \<system.serviceModel.activation>  
@@ -60,7 +60,7 @@ ms.locfileid: "54728730"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Коллекция элементов конфигурации, которые содержат `securityIdentifier` атрибут для указания учетных записей пользователей для процессов размещения служб WCF, которые предоставляются доступ при подключении к совместно используемой службе.|  
   

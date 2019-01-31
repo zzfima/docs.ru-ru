@@ -1,19 +1,19 @@
 ---
-title: '&lt;memoryCache&gt; (параметры кэша)'
+title: Элемент <memoryCache> (параметры кэша)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: cdf7d0e5605bde42d092492ea1b16d712984c182
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083916"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266381"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; (параметры кэша)
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > (параметры кэша)
 Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> . Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) , который можно использовать для настройки кэша. В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache> . Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache> .  
   
  \<configuration>  
@@ -38,7 +38,7 @@ ms.locfileid: "55083916"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`CacheMemoryLimitMegabytes`|Максимальный объем памяти в мегабайтах, который может занимать экземпляр объекта <xref:System.Runtime.Caching.MemoryCache> . Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.|  
 |`Name`|Имя конфигурации кэша.|  
@@ -47,7 +47,7 @@ ms.locfileid: "55083916"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для экземпляра `namedCache` .|  
   

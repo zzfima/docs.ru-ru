@@ -1,16 +1,16 @@
 ---
-title: '&lt;chunkedCookieHandler&gt;'
+title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: 1726d4ade9405543bdfdb4e4803f87f258de791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 383ce39816ec7d3f2567765549b537073ee7e081
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691285"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277034"
 ---
-# <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
+# <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
 Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Default» или шифрование «фрагментированной».  
   
  \<system.identityModel.services>  
@@ -45,7 +45,7 @@ ms.locfileid: "54691285"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.|  
   

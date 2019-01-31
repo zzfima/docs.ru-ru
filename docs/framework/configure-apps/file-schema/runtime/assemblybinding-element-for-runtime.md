@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;'
+title: Элемент <assemblyBinding> для <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e75f8e0561711fea8646c9da84f1b7553b3f7553
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713997"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284405"
 ---
-# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; элемент для &lt;среды выполнения&gt;
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > элемент для \<среды выполнения >
 Содержит сведения о перенаправлении версии сборки и о расположениях сборок.  
   
  \<configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "54713997"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Инкапсулирует политику привязки и расположение сборки. Используйте один  **\<dependentAssembly >** тег для каждой сборки.|  
 |[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Задает вложенные папки, в которых среда CLR выполняет поиск при загрузке сборки.|  

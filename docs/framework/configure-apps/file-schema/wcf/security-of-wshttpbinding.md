@@ -1,15 +1,15 @@
 ---
-title: '&lt;security&gt; для &lt;wsHttpBinding&gt;'
+title: <security> из <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: dd3ff1b1b00be376abc5f8d3c44cb0aabc49a230
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0de9ade585a2170aa1def9898581aedddc651bd7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688822"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258465"
 ---
-# <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; для &lt;wsHttpBinding&gt;
+# <a name="security-of-wshttpbinding"></a>\<Безопасность > из \<wsHttpBinding >
 Представляет возможности безопасности [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
@@ -55,7 +55,7 @@ ms.locfileid: "54688822"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Определяет параметры безопасности транспорта. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
 |[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Определяет параметры безопасности сообщения. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  

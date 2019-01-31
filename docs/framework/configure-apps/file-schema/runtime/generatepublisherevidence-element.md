@@ -1,5 +1,5 @@
 ---
-title: '&lt;generatePublisherEvidence&gt; элемент'
+title: Элемент <generatePublisherEvidence>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33d4c023b7a649fd2aa3d9d52a90bb7111c59743
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f029131f5b10cc487021ee15e72552a26c0b04e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683038"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275851"
 ---
-# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; элемент
+# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > элемент
 Указывает, является ли среда выполнения создает <xref:System.Security.Policy.Publisher> свидетельство для Управление доступом для кода (CAS).  
   
  \<configuration>  
@@ -39,7 +39,7 @@ ms.locfileid: "54683038"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не создает <xref:System.Security.Policy.Publisher> свидетельства.|  
 |`true`|Создает <xref:System.Security.Policy.Publisher> свидетельства. Это значение по умолчанию.|  

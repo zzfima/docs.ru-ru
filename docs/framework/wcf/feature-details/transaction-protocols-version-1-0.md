@@ -2,20 +2,20 @@
 title: Протоколы транзакций версии 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: d2a50e798af47dd4f80f149362f2afffbab007f6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066367"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258023"
 ---
 # <a name="transaction-protocols-version-10"></a>Протоколы транзакций версии 1.0
 Windows Communication Foundation (WCF) версии 1 реализует версию 1.0 протоколов WS-Atomic Transaction и WS-Coordination. Дополнительные сведения о версии 1.1, см. в разделе [протоколов транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Спецификация/документ|Ссылка|  
 |-----------------------------|----------|  
-|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
+|WS-Coordination|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
+|WS-AtomicTransaction|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
   
  Согласно этим спецификациям протоколов, требуется взаимодействие на двух уровнях: между приложениями и между диспетчерами транзакций (см. следующий рисунок). В спецификациях подробно описываются форматы сообщений и обмен сообщениями для обоих уровней взаимодействия. При обмене между приложениями применяются определенные средства обеспечения безопасности, надежности и методы кодирования, как и при обычном обмене в пределах сообщения. Однако для успешного взаимодействия между диспетчерами транзакций требуется соглашение по конкретной привязке, поскольку она обычно не настраивается пользователем.  
   

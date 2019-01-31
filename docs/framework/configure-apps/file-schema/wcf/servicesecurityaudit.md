@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceSecurityAudit&gt;'
+title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 91fe14c22dce45a89b91d9d4c20e30928acd60c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05579f1c2a0d0c0637530c524c37b141a9d37b5b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630701"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287759"
 ---
-# <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
+# <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.  
   
  \<system.ServiceModel>  
@@ -44,7 +44,7 @@ ms.locfileid: "54630701"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   

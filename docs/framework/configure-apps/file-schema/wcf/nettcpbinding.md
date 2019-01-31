@@ -1,17 +1,17 @@
 ---
-title: '&lt;NetTcpBinding&gt;'
+title: <netTcpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0dc07bfb7b26e433fd3ff2b004253d8d2d90bf62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe2ae5923e4cd46abadc7103655dea410a97b60
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573442"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258049"
 ---
-# <a name="ltnettcpbindinggt"></a>&lt;NetTcpBinding&gt;
+# <a name="nettcpbinding"></a>\<netTcpBinding >
 
 Задает безопасную, надежную и оптимизированную привязку, пригодную для обмена данными между компьютерами. По умолчанию создает стек связи среды выполнения с безопасностью Windows для защиты и проверки подлинности сообщений, с протоколом TCP для доставки сообщений, а также с кодированием двоичных сообщений.
 
@@ -90,7 +90,7 @@ ms.locfileid: "54573442"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<привязки >](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
