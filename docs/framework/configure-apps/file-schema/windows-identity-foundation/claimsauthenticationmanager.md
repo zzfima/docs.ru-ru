@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimsAuthenticationManager&gt;'
+title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: b0cee2fedb5f90ca2a1f7e379e199cfee66ee745
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ecf26263bf47e8b4609e7adc208f0a59a2fa795b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190974"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255189"
 ---
-# <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
+# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
 Регистрирует диспетчер аутентификации утверждений для входящих утверждений.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<claimsAuthenticationManager >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<claimsAuthenticationManager>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50190974"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
   

@@ -1,16 +1,16 @@
 ---
-title: Что&#39;возможности в Windows Communication Foundation 4.5
+title: Новые возможности в Windows Communication Foundation 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873522"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280011"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Новые возможности в Windows Communication Foundation 4.5
 
@@ -58,7 +58,7 @@ ms.locfileid: "48873522"
  Некоторые стеки обработки WSDL от сторонних производителей не могут обрабатывать документы WSDL, которые имеют зависимости от других документов посредством xsd:import.  WCF теперь позволяет указывать, что все данные WSDL должны быть возвращены в одном документе. Чтобы запросить один документ WSDL, добавьте «? singleWSDL» к URL-АДРЕСУ при запросе метаданных от службы.
 
 ## <a name="websocket-support"></a>Поддержка WebSocket
- WebSockets - это технология, которая обеспечивает истинный двусторонний обмен сообщениями по портам 80 и 443, имеющий характеристики производительности, схожие с протоколом TCP. Были добавлены две привязки для поддержки обмена данными через транспорт WebSocket. <xref:System.ServiceModel.NetHttpBinding> и <xref:System.ServiceModel.NetHttpsBinding>. Дополнительные сведения см. в разделе: [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).
+ WebSockets - это технология, которая обеспечивает истинный двусторонний обмен сообщениями по портам 80 и 443, имеющий характеристики производительности, схожие с протоколом TCP. Были добавлены две привязки для поддержки обмена данными через транспорт WebSocket. <xref:System.ServiceModel.NetHttpBinding> и <xref:System.ServiceModel.NetHttpsBinding>. Дополнительные сведения см. в разделе: [Предоставляемые системой привязки](../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта
  В следующей таблице описываются измененные настройки и разделы, в которых можно найти дополнительные сведения.
