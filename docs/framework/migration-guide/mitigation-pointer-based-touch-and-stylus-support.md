@@ -1,5 +1,5 @@
 ---
-title: Устранение рисков. Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
+title: Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501952"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Устранение рисков. Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Устранение рисков. Поддержка сенсорного управления и пера на основе указателя
 
 В приложениях WPF, предназначенных 4.7 .NET Framework и выполняемых в системах Windows, начиная с версии Windows 10 Creators Update, можно включить дополнительный стек сенсорного управления и пера WPF на основе `WM_POINTER`.
 
@@ -56,4 +56,4 @@ ms.locfileid: "33387784"
 
 ## <a name="see-also"></a>См. также
 
-[Изменения целевой платформы в .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Изменения целевой платформы в .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

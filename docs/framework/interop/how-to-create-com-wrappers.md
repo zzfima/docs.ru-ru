@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание оболочек COM
+title: Как выполнить Создание оболочек COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540979"
 ---
-# <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
+# <a name="how-to-create-com-wrappers"></a>Как выполнить Создание оболочек COM
 
 Программы-оболочки модели COM можно создавать с использованием функций Visual Studio 2005 или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:
 
@@ -73,7 +73,7 @@ ms.locfileid: "49121766"
   
 Программу Regasm.exe можно запускать для сборки, расположенной в любом каталоге. После этого необходимо запустить [Gacutil.exe (программу глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), чтобы перенести ее в глобальный кэш сборок. При переносе сборки записи расположения в реестре сохраняют силу, поскольку во всех случаях, когда сборка не найдена, проверяется глобальный кэш сборок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 
-- [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)
 - [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)

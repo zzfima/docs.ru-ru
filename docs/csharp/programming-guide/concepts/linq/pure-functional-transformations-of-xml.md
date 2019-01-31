@@ -2,17 +2,17 @@
 title: Чистые функциональные преобразования XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d3da72e890eac92675d7eccc7fbc871249912a6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47209766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578563"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Чистые функциональные преобразования XML (C#)
 В этом разделе приведен учебник по функциональным преобразованиям для XML. В учебнике разъясняются основные принципы и языковые конструкции, которые необходимо понять, чтобы использовать функциональные преобразования. В нем также рассказывается об использовании функциональных преобразований для обработки XML-документа. Несмотря на то что в этом учебнике приведены примеры кода LINQ to XML, все базовые принципы также применяются и к другим технологиям LINQ.  
   
- В учебнике [Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) приведен ряд примеров, каждый из которых является продолжением предыдущего. Эти примеры демонстрируют подход с использованием чисто функциональных преобразований для обработки XML.  
+ В разделе [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) приведен ряд примеров, каждый из которых является продолжением предыдущего. Эти примеры демонстрируют подход с использованием чисто функциональных преобразований для обработки XML.  
   
  Для работы с этим учебником требуются твердые знания в области C#. В этом учебнике не приводится подробное описание семантики и языковых конструкций, однако в нем есть ссылки на соответствующую документацию по языку.  
   
@@ -20,11 +20,11 @@ ms.locfileid: "47209766"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Описывает функциональные преобразования и определяет соответствующую технологию.|  
 |[Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Подробно описывает отложенное вычисление и отложенное выполнение.|  
-|[Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Учебник, в котором демонстрируется функциональное преобразование.|  
+|[Учебник. Обработка содержимого документа WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Учебник, в котором демонстрируется функциональное преобразование.|  
   
 ## <a name="see-also"></a>См. также
 

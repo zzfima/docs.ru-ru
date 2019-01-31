@@ -2,12 +2,12 @@
 title: Включение и отключение IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50183091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543767"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Включение и отключение IPv6
 Чтобы использовать протокол IPv6, убедитесь, что он поддерживается вашей версией операционной системы, а также что операционная система и сетевые классы настроены должным образом.  
@@ -15,7 +15,7 @@ ms.locfileid: "50183091"
 ## <a name="configuration-steps"></a>Шаги настройки  
  В следующей таблице перечислены различные конфигурации  
   
-|Операционная система поддерживает протокол IPv6?|Сетевые классы поддерживают протокол IPv6?|Описание:|  
+|Операционная система поддерживает протокол IPv6?|Сетевые классы поддерживают протокол IPv6?|Описание|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |Нет|Нет|Можно анализировать IPv6-адреса.|  
 |Нет|Да|Можно анализировать IPv6-адреса.|  
@@ -29,10 +29,14 @@ ms.locfileid: "50183091"
  В файле конфигурации для платформы .NET Framework параметры установлены следующим образом  
   
 ```xml  
-<system.net>…  
-    <settings>…  
-        <ipv6 enabled="true"/>…  
-    </settings>…  
+<system.net>  
+  ...  
+  <settings>  
+    ...  
+    <ipv6 enabled="true"/>  
+    ...  
+  </settings>  
+  ...  
 </system.net>  
 ```  
   
@@ -40,8 +44,8 @@ ms.locfileid: "50183091"
   
  Для .NET Framework версии 2.0 и более поздней версии, если Windows поддерживает IPv6, то члены класса <xref:System.Net.Dns?displayProperty=nameWithType> (например, метод <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>) будут возвращать IPv6-адреса с одним ограничением. Устаревшие члены службы доменных имен <xref:System.Net.Dns?displayProperty=nameWithType> (например, метод <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) считывают и распознают значение из файла конфигурации для параметра ipv6 enabled.  
   
-## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Сокеты](../../../docs/framework/network-programming/sockets.md)  
- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+## <a name="see-also"></a>См. также
+- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

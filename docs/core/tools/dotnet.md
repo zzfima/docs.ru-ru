@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170859"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066445"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -78,9 +78,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 Отображает установленные пакеты SDK для .NET Core.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Отключает накат дополнительных версий, если установлено `0`. Дополнительные сведения о накате можно найти в [этой статье](../whats-new/dotnet-core-2-1.md#roll-forward).
+Определяет поведение, когда требуемая общая платформа недоступна. Параметр `N` может принимать следующие значения:
+ * `0` — отключает увеличение дополнительных версий.
+ * `1` — позволяет увеличивать дополнительный номер версии, но не основной. Это поведение установлено по умолчанию.
+ * `2` — включает увеличение основных и дополнительных версий.
+
+ Дополнительные сведения о накате можно найти в [этой статье](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 

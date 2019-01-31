@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600769"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
@@ -55,10 +55,10 @@ ms.locfileid: "53155029"
   
  В следующей таблице перечислены типичные задачи, выполняемые с помощью потока:  
   
-|Целевой тип|См. статью|
+|Кому|См. статью|
 |---|---|   
-|Чтение и запись файла данных|[Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Чтение текста из файла|[Практическое руководство. Считывание текста из файла](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Чтение и запись файла данных|[Практическое руководство. Считывание данных из нового файла и запись в этот файл](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Чтение текста из файла|[Практическое руководство. Чтение текста из файла](../../../../standard/io/how-to-read-text-from-a-file.md)|  
 |Запись текста в файл|[Практическое руководство. Запись текста в файл](../../../../standard/io/how-to-write-text-to-a-file.md)|  
 |Считывание символов из строки|[Практическое руководство. Считывание символов из строки](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
 |Запись символов в строку|[Практическое руководство. Запись символов в строку](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
@@ -78,7 +78,7 @@ ms.locfileid: "53155029"
 |Определение атрибутов файла|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Разрешения файла  
- Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Дополнительные сведения см. в разделе <xref:System.Security.Permissions.FileIOPermission>.  
+ Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Для получения дополнительной информации см. <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Изолированное хранилище файлов  
  Изолированное хранилище — это попытка устранить проблемы, которые могут возникать, если при работе с файлами у пользователя или кода отсутствуют необходимые разрешения. Изолированное хранилище назначает каждому пользователю секцию данных, которая может содержать одно или несколько хранилищ. Хранилища могут изолироваться друг от друга по пользователю или по сборке. Доступ к хранилищу имеет только пользователь и сборка, которые его создали. Хранилище действует в качестве полноценной виртуальной файловой системы — в пределах одного хранилища можно создавать и использовать каталоги и файлы.  
@@ -98,8 +98,8 @@ ms.locfileid: "53155029"
 ## <a name="file-events"></a>События файлов  
  Компонент <xref:System.IO.FileSystemWatcher> позволяет наблюдать за изменениями в файлах и каталогах в локальной системе или на любом компьютере, к которому имеется доступ по сети. Например, при изменении файла можно отправить пользователю соответствующее оповещение. При внесении изменений выдается одно или несколько событий, которые сохраняются в буфере и передаются в компонент <xref:System.IO.FileSystemWatcher> для обработки.  
   
-## <a name="see-also"></a>См. также  
- [Составление потоков](../../../../standard/io/composing-streams.md)  
- [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>См. также
+- [Составление потоков](../../../../standard/io/composing-streams.md)
+- [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

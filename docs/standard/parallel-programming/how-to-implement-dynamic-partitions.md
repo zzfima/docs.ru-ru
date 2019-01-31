@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация динамических разделов
+title: Как выполнить Реализация динамических секций
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2d46264113cb4c961f6c4b971b5986bdd9eb6a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180976"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720240"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a>Практическое руководство. Реализация динамических разделов
+# <a name="how-to-implement-dynamic-partitions"></a>Как выполнить Реализация динамических секций
 Приведенный ниже пример демонстрирует, как реализовать пользовательский <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> с реализацией динамического секционирования, который можно использовать из некоторых перегрузок <xref:System.Threading.Tasks.Parallel.ForEach%2A> и из PLINQ.  
   
 ## <a name="example"></a>Пример  
@@ -30,5 +30,5 @@ ms.locfileid: "44180976"
   
 ## <a name="see-also"></a>См. также
 
-- [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
+- [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
 - [Практическое руководство. Реализация разделителя для статического секционирования](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

@@ -2,12 +2,12 @@
 title: LINQ и каталоги файлов (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 4bdd21cf4d8558f140b265f195368082964c34c4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652375"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ и каталоги файлов (C#)
 Многие операции файловой системы по существу являются запросами и, следовательно, соответствуют принципам LINQ.  
@@ -16,7 +16,7 @@ ms.locfileid: "47396800"
   
  В этом разделе рассматриваются следующие вопросы.  
   
- [Практическое руководство. Запрос файлов с указанными атрибутами или именем (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  Демонстрация поиска файлов путем проверки одного или нескольких свойств его объекта <xref:System.IO.FileInfo>.  
   
  [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  

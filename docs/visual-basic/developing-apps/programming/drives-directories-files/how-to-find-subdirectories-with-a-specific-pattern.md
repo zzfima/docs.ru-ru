@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Поиск подкаталогов по шаблону в Visual Basic
+title: Как выполнить Поиск подкаталогов по шаблону в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: b3c80fccea06a48c78f37dc7d1c8dcc88e143de4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b0f5c1052d45e9c068d291f8e6efaf6dfbf906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677697"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Практическое руководство. Поиск подкаталогов по шаблону в Visual Basic
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Как выполнить Поиск подкаталогов по шаблону в Visual Basic
 Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей к подкаталогам каталога. Для указания определенного шаблона можно использовать параметр `wildCards` . Если требуется включить в поиск содержимое подкаталогов, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.  
   
  Если каталоги, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.  
@@ -44,6 +44,6 @@ ms.locfileid: "33586442"
   
 -   У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>  
- [Практическое руководство. Поиск файлов по конкретному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
+- [Практическое руководство. Поиск файлов по конкретному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

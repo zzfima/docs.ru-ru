@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework
+title: Как выполнить Определение установленных обновлений и исправлений безопасности платформы .NET Framework
 description: Сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604190"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Как выполнить Определение установленных обновлений и исправлений безопасности платформы .NET Framework
 
 В этой статье содержатся сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework.
 
@@ -37,7 +37,7 @@ ms.locfileid: "33389604"
 
      Установленные обновления перечислены в подразделах, соответствующих версии .NET Framework, к которой они относятся. Каждому обновлению присваивается номер базы знаний Microsoft (KB).
 
-В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об обнаружении номеров установленных версий см. в статье [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об определении номеров установленных версий см. в разделе [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Поиск установленных обновлений путем запроса к реестру в коде
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>См. также
 
-[Практическое руководство.Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
-[Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)
+- [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)

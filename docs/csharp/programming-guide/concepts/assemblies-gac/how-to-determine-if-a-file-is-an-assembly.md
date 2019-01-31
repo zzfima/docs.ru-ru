@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Как определить, является ли файл сборкой (C#)
+title: Как выполнить Определение того, является ли файл сборкой (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681772"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Практическое руководство. Как определить, является ли файл сборкой (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Как выполнить Определение того, является ли файл сборкой (C#)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Как вручную определить, является ли файл сборкой  
@@ -18,7 +18,7 @@ ms.locfileid: "53125539"
   
 2.  Загрузите файл, который нужно протестировать.  
   
-3.  Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [Практическое руководство. Просмотр содержимого сборок](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [Практическое руководство. просмотреть одержимое сборки](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Как программно определить, является ли файл сборкой  
   
@@ -68,6 +68,6 @@ class TestAssembly
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Reflection.AssemblyName>  
-- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
 - [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

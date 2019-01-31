@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689212"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Динамическая загрузка и использование типов
 Отражение предоставляет инфраструктуру, с помощью которой компиляторы различных языков, таких как [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] и JScript, реализуют позднее связывание. Привязка — это процесс поиска объявления (то есть реализации), которое соответствует уникально определенному типу. Если этот процесс происходит во время выполнения, а не во время компиляции, он называется поздним связыванием. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] позволяет использовать неявное позднее связывание в коде; компилятор Visual Basic вызывает вспомогательный метод, который использует отражение для получения типа объекта. Аргументы, передаваемые вспомогательному методу, приводят к вызову соответствующего метода во время выполнения. Эти аргументы определяют экземпляр (объект), для которого вызывается метод, имя вызываемого метода (строка) и аргументы, передаваемые в вызываемый метод (массив объектов).  
@@ -67,11 +67,11 @@ End Module
   
  Метод **BindToMethod** возвращает вызывающему объекту <xref:System.Reflection.MethodBase> или пустую ссылку (в Visual Basic **не возвращает ничего**), если такой вызов невозможен. Возвращаемое значение метода **MethodBase** не обязательно должно содержаться в параметре *match*, хотя обычно это имеет место.  
   
- При наличии аргументов ByRef может потребоваться вернуть их для вызывающего объекта. Таким образом, класс **Binder** позволяет клиенту вернуть массив аргументов в исходную форму, если метод **BindToMethod** изменил массив аргументов. Для этого необходимо гарантировать вызывающему объекту, что порядок аргументов не изменяется. Если аргументы передаются по имени, класс **Binder** изменяет порядок аргументов в массиве, и это видит вызывающий объект. Дополнительные сведения см. в разделе <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ При наличии аргументов ByRef может потребоваться вернуть их для вызывающего объекта. Таким образом, класс **Binder** позволяет клиенту вернуть массив аргументов в исходную форму, если метод **BindToMethod** изменил массив аргументов. Для этого необходимо гарантировать вызывающему объекту, что порядок аргументов не изменяется. Если аргументы передаются по имени, класс **Binder** изменяет порядок аргументов в массиве, и это видит вызывающий объект. Для получения дополнительной информации см. <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  В набор доступных членов входят члены, которые определены в типе или любом базовом типе. Если указан параметр <xref:System.Reflection.BindingFlags>, в наборе будут возвращены члены с любым уровнем доступности. Если параметр **BindingFlags.NonPublic** не указан, модуль привязки должен применить правила доступа. Если указан флаг привязки **Public** или **NonPublic**, необходимо также указать флаг привязки **Instance** или **Static**, в противном случае ни одного члена не будет возвращено.  
   
- Если имеется только один член с заданным именем, обратный вызов не требуется и привязка для этого метода считается выполненной. Этот аспект иллюстрируется в первом примере: доступен только метод **PrintBob**, поэтому обратный вызов не требуется.  
+ Если имеется только один член с заданным именем, обратный вызов не требуется и привязка для этого метода считается выполненной. Этот аспект иллюстрируется в первом примере. Доступен только метод **PrintBob**, поэтому обратный вызов не требуется.  
   
  Если в доступном наборе содержится несколько членов, все эти методы передаются методу **BindToMethod**, который выбирает нужный метод и возвращает его. Во втором примере кода есть два метода с именем **PrintValue**. Нужный метод выбирается с помощью вызова метода **BindToMethod**.  
   
@@ -99,8 +99,8 @@ End Module
   
  Класс <xref:System.Type> содержит методы **Get**, которые используют параметры типа **Binder**, чтобы разрешить ссылки на конкретный член. Методы <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> и <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> выполняют поиск определенного члена текущего типа по сведениям о подписи для этого члена. Методы <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> и <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> используются в качестве методов обратного вызова для выбора заданных сведений о подписи для соответствующих методов.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)

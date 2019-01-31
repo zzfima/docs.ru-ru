@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск элементов с определенным дочерним элементом (C#)
+title: Как выполнить Поиск элементов с определенным дочерним элементом (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 36a6981a26f6f75c74256369c78361ee7f129a3e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6888de3bc255691fbbb05f2a1debae05492661c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547284"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Практическое руководство. Поиск элементов с определенным дочерним элементом (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Как выполнить Поиск элементов с определенным дочерним элементом (C#)
 В этом разделе показан определенный элемент, имеющий дочерний элемент с заданным значением.  
   
 ## <a name="example"></a>Пример  
@@ -59,8 +59,8 @@ foreach (XElement el in tests)
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A>  
-- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Операции проекции (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

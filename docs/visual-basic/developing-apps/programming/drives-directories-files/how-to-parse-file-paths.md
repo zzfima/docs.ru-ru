@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Анализ путей к файлам в Visual Basic
+title: Как выполнить Анализ путей к файлам в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 7479f368558a8a8a07c1e6ed588bdfef21a0b1de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707756"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>Практическое руководство. Анализ путей к файлам в Visual Basic
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>Как выполнить Анализ путей к файлам в Visual Basic
 Объект <xref:Microsoft.VisualBasic.FileIO.FileSystem> предоставляет ряд полезных методов при анализе путей к файлам.  
   
 -   Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> получает два пути и возвращает комбинированный путь в правильном формате.  
@@ -35,9 +35,9 @@ ms.locfileid: "33585948"
   
      [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- <xref:System.IO.FileInfo>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>  
- [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
+- <xref:System.IO.FileInfo>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
+- [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

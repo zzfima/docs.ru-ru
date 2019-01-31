@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Сохранение пользовательских параметров в Visual Basic
+title: Как выполнить Сохранение пользовательских параметров в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: e9d3ab96ffece3c7f441721b90c8c82c734b1405
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab285f175838fb71e4218cbafdd4f7593c9e786
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611298"
 ---
-# <a name="how-to-persist-user-settings-in-visual-basic"></a>Практическое руководство. Сохранение пользовательских параметров в Visual Basic
+# <a name="how-to-persist-user-settings-in-visual-basic"></a>Как выполнить Сохранение пользовательских параметров в Visual Basic
 Для сохранения изменений в параметрах пользователя можно использовать метод `My.Settings.Save`.  
   
  Как правило, сохранение изменений в параметрах пользователя выполняется при завершении работы приложения. Это связано с тем, что сохранение параметров может занять, в зависимости от разных факторов, несколько секунд.  
@@ -30,9 +30,9 @@ ms.locfileid: "33584570"
   
  Для надлежащего выполнения этого примера приложение должно иметь пользовательский параметр `LastChanged` типа `Date`. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
-## <a name="see-also"></a>См. также  
- [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Практическое руководство. Чтение параметров приложения в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>См. также
+- [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [Практическое руководство. Чтение параметров приложения в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

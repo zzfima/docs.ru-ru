@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)
+title: Как выполнить Поиск дочерних элементов по положению (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 5d62418fe6d89c8dc5c7ddb4975404f1a7e0aa2d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d9cf80b5d5edfe995196751b4f769ed6088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577442"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Как выполнить Поиск дочерних элементов по положению (XPath-LINQ to XML) (C#)
 Иногда требуется найти элементы на основании их позиции. Может понадобиться найти второй элемент или найти третий элемент через пятый.  
   
  Выражение XPath:  

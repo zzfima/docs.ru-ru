@@ -1,15 +1,15 @@
 ---
-title: Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
+title: Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 20ed45b1796062973a1d4a9bcaa86782655d3867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732704"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
 Если в приложение, имеющее ссылки на COM-объекты, внедрены данные о типе, можно исключить необходимость использования основной сборки взаимодействия (PIA). Кроме того внедренные данные о типах позволяют создать приложение, не зависящее от версии. Это означает, что в программе можно использовать типы из нескольких версий библиотеки COM, т. е. необходимость использования конкретной основной сборки взаимодействия для каждой версии библиотеки COM отпадает. Это стандартный сценарий для приложений, использующих объекты из библиотек Microsoft Office. Внедрение данных о типе позволяет одной сборке программы работать с разными версиями приложения Microsoft Office на разных компьютерах без необходимости повторного развертывания программы или основной сборки взаимодействия для каждой версии приложения Microsoft Office.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -126,5 +126,5 @@ ms.locfileid: "44187972"
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio в C#](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

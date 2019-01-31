@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Получение хранилищ для изолированного хранения
+title: Как выполнить Получение хранилищ для изолированного хранения
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524576"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Практическое руководство. Получение хранилищ для изолированного хранения
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Как выполнить Получение хранилищ для изолированного хранения
 Изолированное хранилище предоставляет виртуальную файловую систему в секции данных. Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет ряд методов для взаимодействия с изолированным хранилищем. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических метода, позволяющих создать и получить хранилище:  
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> возвращает хранилище, изолированное по пользователю и сборке.  
@@ -58,8 +58,8 @@ ms.locfileid: "44084074"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
-- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
-- [Типы изоляции](../../../docs/standard/io/types-of-isolation.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
+- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
+- [Типы изоляции](../../../docs/standard/io/types-of-isolation.md)
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

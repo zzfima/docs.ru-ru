@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание раздела в реестре (Visual C#)
+title: Как выполнить Создание раздела в реестре (Visual C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: a3a6af8eb493ce17ac73769decd1f60b903ae165
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553777"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Практическое руководство. Создание раздела в реестре (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Как выполнить Создание раздела в реестре (Visual C#)
 Код в этом примере добавляет в раздел Names реестра текущего пользователя пару значений — Name и Isabella.  
   
 ## <a name="example"></a>Пример  
@@ -57,7 +57,7 @@ key.Close();
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
 - [Чтение, запись и удаление данных реестра с помощью C#](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

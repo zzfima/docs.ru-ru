@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531516"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Упаковка сборки для модели COM
 Разработчики приложений на основе модели COM могут использовать следующую информацию об управляемых типах, которые они планируют включать в свои приложения:  
@@ -80,13 +80,13 @@ ms.locfileid: "33392400"
 ## <a name="net-services-installation-tool"></a>Средство установки служб .NET  
  [Средство установки служб .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) добавляет управляемые классы в службы компонентов Windows 2000 и реализует одновременно несколько задач. Помимо загрузки и регистрации сборки программа Regsvcs.exe может создавать, регистрировать и устанавливать библиотеку типов в существующее приложение COM+ 1.0.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)  
- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)  
- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)  
- [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (программа экспорта библиотек типов)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Регистрация сборок в COM](registering-assemblies-with-com.md)  
- [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>См. также
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
+- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)
+- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
+- [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (программа экспорта библиотек типов)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Регистрация сборок в COM](registering-assemblies-with-com.md)
+- [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

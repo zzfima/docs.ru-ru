@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143621"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066275"
 ---
 # <a name="design-a-microservice-domain-model"></a>Проектирование модели предметной области микрослужбы
 
@@ -82,16 +82,17 @@ EF Core 2.0 включает функцию [Принадлежащие сущн
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Мартин Фоулер (Martin Fowler). Шаблон объекта значения**
+- **Мартин Фоулер (Martin Fowler). Шаблон объекта значения** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Объект значения**
+- **Объект значения** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Объекты значения при разработке на основе тестирования**
+- **Объекты значений при разработке на основе тестирования** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга, в которой рассматриваются объекты значений) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software**. (Книга, в которой рассматриваются объекты значений) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Шаблон агрегата
 
@@ -134,14 +135,14 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть I. Моделирование одного агрегата** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть I. Моделирование одиночного агрегата** (из <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть II. Организация совместной работы агрегатов** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть II. Организация совместной работы агрегатов** (из <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть III. Получение аналитических сведений путем обнаружения** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть III. Постижение через обнаружение** (из <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Сергей Грибняк (Sergey Grybniak). Тактические конструктивные шаблоны DDD** \
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)

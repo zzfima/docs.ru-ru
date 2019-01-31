@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
+title: Как выполнить Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: c93ba3209b80cf2467c0f3b49dc25e729c6a14c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64287abbf8a411d8c231ceaf3311c51738d7ea96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733965"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Практическое руководство. Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Как выполнить Использование заметок для преобразования деревьев LINQ to XML в стиль XSLT (C#)
 Заметки можно использовать для упрощения преобразований XML-дерева.  
   
  Некоторые XML-документы рассматриваются как «предназначенные для обработки в виде документов со смешанным содержимым». При использовании таких документов не требуется знать форму дочерних узлов элемента. Например, узел, содержащий текст, может выглядеть так:  

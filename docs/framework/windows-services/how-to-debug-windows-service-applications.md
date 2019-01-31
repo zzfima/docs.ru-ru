@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отладка приложений служб Windows
+title: Как выполнить Отладка приложений служб Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720370"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Практическое руководство. Отладка приложений служб Windows
+# <a name="how-to-debug-windows-service-applications"></a>Как выполнить Отладка приложений служб Windows
 Служба должна запускаться из диспетчера управления службами, а не из Visual Studio. Поэтому, процесс отладки службы сложнее, чем отладка приложений Visual Studio других типов. Для отладки службы необходимо запустить службу, а затем подключить отладчик к процессу, в котором она выполняется. Приложение можно отлаживать с помощью всех стандартных средств отладки Visual Studio.  
   
 > [!CAUTION]
@@ -29,7 +29,7 @@ ms.locfileid: "48035952"
  В этой статье рассматривается процесс отладки службы, выполняемой на локальном компьютере (также можно выполнять отладку служб Windows, которые выполняются на удаленном компьютере). См. статью об [удаленной отладке](/visualstudio/debugger/debug-installed-app-package).  
   
 > [!NOTE]
->  Процесс отладки метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> может быть сложным, так как диспетчер управления службами накладывает ограничение в 30 секунд на все попытки запуска службы. Дополнительные сведения см. в статье [Устранение неполадок: отладка служб Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+>  Процесс отладки метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> может быть сложным, так как диспетчер управления службами накладывает ограничение в 30 секунд на все попытки запуска службы. Дополнительные сведения см. в статье [Устранение неполадок. Отладка служб Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
 >  Для получения значимой информации для отладки отладчик Visual Studio должен найти файлы символов для двоичных файлов, для которых выполняется отладка. При отладке службы, созданной в Visual Studio, файлы символов (PDB-файлы) находятся в той же папке, что и исполняемый файл или библиотека, и отладчик загружает их автоматически. При отладке службы, которая не была построена, сначала следует найти символы для службы и убедиться, что они могут быть найдены отладчиком. См. статью [Указание файлов символов (.pdb) и файлов с исходным кодом в отладчике Visual Studio](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Если вы выполняете отладку системного процесса или хотите иметь символы для системных вызовов в своих службах, то необходимо добавить серверы символов Майкрософт. См. статью [об отладке с помощью символов](/windows/desktop/DxTechArts/debugging-with-symbols).  
@@ -38,15 +38,15 @@ ms.locfileid: "48035952"
   
 1.  Постройте службу в конфигурации отладки.  
   
-2.  Установите службу. Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  Установите службу. Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Запустите службу из **диспетчера служб**, **обозревателя сервера** или из кода. Дополнительные сведения см. в [практическом руководстве по запуску служб](../../../docs/framework/windows-services/how-to-start-services.md).  
+3.  Запустите службу из **диспетчера служб**, **обозревателя сервера** или из кода. Дополнительные сведения см. в разделе [Как Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md).  
   
 4.  Запустите Visual Studio с учетными данными администратора, чтобы вы могли подключиться к системным процессам.  
   
 5.  (Необязательное действие.) В строке меню Visual Studio последовательно выберите **Инструменты** и **Параметры**. В диалоговом окне **Параметры** последовательно выберите **Отладка** и **Символы**, установите флажок **Серверы символов Microsoft** и нажмите кнопку **ОК**.  
   
-6.  В строке меню в меню **Отладка** или **Инструменты** выберите пункт **Присоединение к процессу**. (Комбинация клавиш: Ctrl+Alt+P)  
+6.  В строке меню в меню **Отладка** или **Инструменты** выберите пункт **Присоединение к процессу**. (Клавиатура: CTRL+ALT+P)  
   
      Откроется диалоговое окно **Процессы**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48035952"
   
 10. Установите точки останова, которые буден нужно использовать в коде.  
   
-11. Откройте диспетчер управления службами и выполните несколько операций со своей службой (выполните команды остановки, приостановки и продолжения), чтобы обнаружить свои точки останова. Дополнительные сведения о запуске диспетчера служб см. в статье [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md). Также см. статью [Устранение неполадок: отладка служб Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. Откройте диспетчер управления службами и выполните несколько операций со своей службой (выполните команды остановки, приостановки и продолжения), чтобы обнаружить свои точки останова. Дополнительные сведения о запуске диспетчера управления службами см. в разделе [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md). Также см. раздел [Устранение неполадок. Отладка служб Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 ## <a name="debugging-tips-for-windows-services"></a>Советы по отладке для служб Windows  
  Присоединение к процессу службы позволяет отлаживать основную часть кода (но не весь код) для этой службы. Например, так как служба уже была запущена, нельзя выполнять отладку кода в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> службы или кода в методе `Main`, который используется для загрузки службы подобным образом. Одним из способов обхода этого ограничения является создание временной второй службы в приложении службы, которая предназначена только для отладки. Можно установить обе службы,а затем запустить эту фиктивную службу для загрузки процесса службы. Когда временная служба запустит процесс, в Visual Studio в меню **Отладка** можно будет присоединиться к процессу службы.  
@@ -75,7 +75,7 @@ ms.locfileid: "48035952"
   
  Попробуйте заменить программу на обычное консольное приложение. Для этого измените метод `Main` следующим образом, чтобы он мог быть запущен и как служба Windows, и как консольное приложение (в зависимости от способа запуска).  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Запуск службы Windows как консольного приложения  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Как выполнить Запуск службы Windows как консольного приложения  
   
 1.  Добавьте метод в свою службу, которая запускает методы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
@@ -113,8 +113,8 @@ ms.locfileid: "48035952"
   
  В некоторых случаях, например, если требуется устранить некоторую проблему, которая возникает только при запуске системы, необходимо использовать отладчик Windows. Установите [средства отладки для Windows](https://msdn.microsoft.com/windows/hardware/hh852365) и прочтите статью [Отладка служб Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>См. также  
- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Отладка службы](/windows/desktop/Services/debugging-a-service)
+## <a name="see-also"></a>См. также
+- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Отладка службы](/windows/desktop/Services/debugging-a-service)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712578"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Пошаговое руководство. Выпуск кода в сценариях частичного доверия
 При порождении отражения для полного или частичного доверия используется одинаковый набор интерфейсов API, но для некоторых функциональных возможностей требуются особые разрешения в коде с частичным доверием. Кроме того, в порождении отражения имеется функциональная возможность, анонимно размещенные динамические методы, которые предназначены для использования при частичном доверии и в прозрачных с точки зрения безопасности сборках.  
@@ -184,7 +184,7 @@ ms.locfileid: "33399760"
 <a name="Example"></a>   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода демонстрируется использование флага <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> для разрешения пропуска проверок видимости, выполняемых JIT-компилятором, анонимно размещенными динамическими методами, но только в тех случаях, когда уровень доверия целевого члена не превышает уровень доверия сборки, порождающей код.  
   
  В примере определяется класс `Worker`, который может маршалироваться через границы домена приложения. Этот класс содержит две перегрузки метода `AccessPrivateMethod`, которые порождают и выполняют динамические методы. Первая перегрузка порождает динамический метод, который вызывает закрытый метод `PrivateMethod` класса `Worker`. Она может порождать динамический метод с проверкой видимости с помощью JIT-компилятора или без нее. Вторая перегрузка порождает динамический метод, который получает доступ к свойству `internal` (свойство `Friend` в Visual Basic) класса <xref:System.String>.  
@@ -211,6 +211,6 @@ ms.locfileid: "33399760"
   
 -   При сборке этого примера кода в Visual Studio необходимо изменить имя класса при передаче его в метод <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>, включив в него пространство имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
   
-## <a name="see-also"></a>См. также  
- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>См. также
+- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

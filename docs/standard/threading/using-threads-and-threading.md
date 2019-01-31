@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690622"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -24,11 +24,11 @@ ms.locfileid: "43864233"
 > [!NOTE]
 > Если требуется больший контроль над поведением потоков приложения, можно управлять потоками самостоятельно. Но начиная с .NET Framework 4 многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), новым классам параллельных коллекций из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в статье [Параллельное программирование в .NET](../parallel-programming/index.md) и [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Практическое руководство. Создание и запуск нового потока
+## <a name="how-to-create-and-start-a-new-thread"></a>Как выполнить Создание и запуск нового потока
 
 Чтобы создать поток, создайте новый экземпляр класса <xref:System.Threading.Thread?displayProperty=nameWithType> и укажите в конструкторе имя метода, который должен выполняться в новом потоке. Чтобы запустить созданный поток, вызовите метод <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Дополнительные сведения и примеры см. в статье [Создание потоков и передача данных во время запуска](creating-threads-and-passing-data-at-start-time.md) и справочнике по API <xref:System.Threading.Thread>.
 
-## <a name="how-to-stop-a-thread"></a>Практическое руководство. Остановка потока
+## <a name="how-to-stop-a-thread"></a>Как выполнить Остановка потока
 
 Чтобы прервать выполнение потока, используйте метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Этот метод вызывает <xref:System.Threading.ThreadAbortException> в потоке, для которого был вызван. Дополнительные сведения см. в разделе [Уничтожение потоков](destroying-threads.md).
 
@@ -36,7 +36,7 @@ ms.locfileid: "43864233"
 
 Используйте метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, чтобы вызывающий поток ждал завершения потока, для которого был вызван метод.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Практическое руководство. Приостановка или прерывание потока
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Как выполнить Приостановка или прерывание потока
 
 Используйте метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, чтобы приостановить текущий поток на определенное время. Заблокированный поток можно прервать путем вызова метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Приостановка и прерывание потоков](pausing-and-resuming-threads.md).
 
@@ -44,7 +44,7 @@ ms.locfileid: "43864233"
 
 В приведенной ниже таблице показаны некоторые свойства <xref:System.Threading.Thread>.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Возвращает `true`, если поток был запущен и не был завершен нормально либо был прерван.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Возвращает или задает логическое значение, которое указывает, является ли поток фоновым потоком. Фоновые потоки отличаются от основных потоков лишь тем, что они не влияют на завершение процесса. Когда обработка всех основных потоков закончена, общеязыковая среда выполнения завершает процесс, применяя метод <xref:System.Threading.Thread.Abort%2A> к тем фоновым потокам, которые еще продолжают существовать. См. дополнительные сведения об [основных и фоновых потоках](foreground-and-background-threads.md).|  
@@ -54,6 +54,6 @@ ms.locfileid: "43864233"
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Потоки и работа с потоками](threads-and-threading.md)  
-- [Параллельное программирование](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Потоки и работа с потоками](threads-and-threading.md)
+- [Параллельное программирование](../parallel-programming/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Запрос данных с помощью класса WebRequest
+title: Как выполнить Запрос данных с помощью класса WebRequest
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 8a740d2eecd4d866fd3042985f1f6f3194a12ec5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ac7f9fc4a3c7a376d96d7cf820d2051bf2103e51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623070"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>Практическое руководство. Запрос данных с помощью класса WebRequest
+# <a name="how-to-request-data-using-the-webrequest-class"></a>Как выполнить Запрос данных с помощью класса WebRequest
 Следующая процедура описывает шаги, используемые для запроса ресурсов с сервера, например веб-страницы или файла. Ресурс должен быть определен универсальным кодом ресурса (URI).  
   
 ### <a name="to-request-data-from-a-host-server"></a>Запрос данных с сервера узла  
@@ -172,9 +172,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)  
- [Практическое руководство. Отправка данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>См. также
+- [Создание интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
+- [Практическое руководство. Отправка данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

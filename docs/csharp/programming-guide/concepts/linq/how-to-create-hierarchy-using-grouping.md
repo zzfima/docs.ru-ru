@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание иерархии с помощью группировки (C#)
+title: Как выполнить Создание иерархии с помощью группировки (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bd2e8ab9fb0ed1fee68cb51d2d032b202b14ba88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560858"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Практическое руководство. Создание иерархии с помощью группировки (C#)
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Как выполнить Создание иерархии с помощью группировки (C#)
 Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.  
   
 ## <a name="example"></a>Пример  

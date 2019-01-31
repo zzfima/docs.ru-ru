@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509324"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.). Использование отражения для получения информации о типах и членах не ограничено. В любом коде отражение можно использовать для выполнения следующих задач:  
@@ -82,7 +82,7 @@ ms.locfileid: "33398708"
     > [!NOTE]
     >  По умолчанию политика безопасности отказывает в предоставлении этого разрешения коду, полученному из Интернета. Это разрешение ни в коем случае нельзя предоставлять коду, источником которого является Интернет.  
   
--   Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством, коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+-   Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством: Коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
  Предположим, вы предоставляете домену приложения разрешения на доступ к Интернету плюс разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, а затем запускаете веб-приложение с двумя сборками, A и B.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "33398708"
   
 -   Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)  
- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)  
- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)  
- [Доступ к пользовательским атрибутам](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)
+- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
+- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)
+- [Доступ к пользовательским атрибутам](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

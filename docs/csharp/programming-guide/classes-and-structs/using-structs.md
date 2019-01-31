@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 16a8c1c9534e121c24289fbbfff14485b0338f63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743950"
 ---
 # <a name="using-structs-c-programming-guide"></a>Использование структур (Руководство по программированию на C#)
 Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle`и `Color`. Хотя point удобно представить в виде [класса](../../../csharp/language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), в некоторых сценариях [структура](../../../csharp/language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется CoOrds.  
@@ -43,8 +43,8 @@ ms.locfileid: "53237107"
   
 ## <a name="example-2"></a>Пример 2  
   
-### <a name="description"></a>Описание:  
- В этом примере демонстрируется уникальная возможность структур. Здесь создается объект CoOrds без использования оператора `new` . Если заменить слово `struct` на слово `class`, программа не будет скомпилирована.  
+### <a name="description"></a>Описание  
+ В этом примере демонстрируется уникальная возможность структур. Здесь создается объект CoOrds без использования оператора `new`. Если заменить слово `struct` на слово `class`, программа не будет скомпилирована.  
   
 ### <a name="code"></a>Код  
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
@@ -53,6 +53,6 @@ ms.locfileid: "53237107"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)

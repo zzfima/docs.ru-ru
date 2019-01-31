@@ -2,19 +2,19 @@
 title: Анализ XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-ms.openlocfilehash: a2dc3043c8cbf8138a164ab06d8394e4c859fa50
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f19e5a316621262bfe0f3fb56a13275336cf763f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617048"
 ---
 # <a name="parsing-xml-c"></a>Анализ XML (C#)
 Подразделы в данном разделе описывают синтаксический анализ XML-документов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Анализ строки (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md)|Показывает, как анализировать строку для создания XML-дерева.|  
 |[Практическое руководство. Загрузка XML-кода из файла (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Показывает, как загружать XML из URI-кода с помощью метода <xref:System.Xml.Linq.XElement.Load%2A>.|  

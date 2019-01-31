@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539757"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения об извлечении ресурсов в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. на странице [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) в центре разработки для Windows.  
@@ -40,7 +40,7 @@ ms.locfileid: "43801558"
   
  Диспетчер ресурсов использует процесс резервных ресурсов, чтобы управлять тем, как приложение извлекает ресурсы, связанные с языком и региональными параметрами. Дополнительные сведения см. в разделе "Процесс использования резервных ресурсов" статьи [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Сведения о создании экземпляра объекта <xref:System.Resources.ResourceManager> см. в разделе "Создание экземпляров объекта ResourceManager" статьи о классе <xref:System.Resources.ResourceManager> .  
   
-### <a name="retrieving-string-data-an-example"></a>Извлечение строковых данных: пример  
+### <a name="retrieving-string-data-an-example"></a>Извлечение строковых данных. Пример  
  В следующем примере вызывается метод <xref:System.Resources.ResourceManager.GetString%28System.String%29> для извлечения строковых ресурсов текущего языка и региональных параметров пользовательского интерфейса. Он включает нейтральный строковый ресурс для английского языка (США) и локализованные ресурсы для французского (Франция) и русского (Россия) языков и соответствующих региональных параметров. Следующий ресурс для английского языка (США) находится в файле Strings.txt:  
   
 ```  
@@ -81,7 +81,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Если текущая комбинация языка и региональных параметров пользовательского интерфейса относится к испанскому языку (Испания), обратите внимание, что пример отображает ресурсы на английском языке, так как ресурсы для испанского языка недоступны, а в примере английский язык задан по умолчанию.  
   
-### <a name="retrieving-object-data-two-examples"></a>Извлечение данных объекта: два примера  
+### <a name="retrieving-object-data-two-examples"></a>Извлечение объектных данных. Два примера  
  Для извлечения данных объекта можно использовать методы <xref:System.Resources.ResourceManager.GetObject%2A> и <xref:System.Resources.ResourceManager.GetStream%2A> . Сюда входят типы-примитивы, сериализуемые объекты и объекты, хранящиеся в двоичном формате (например, изображения).  
   
  В следующем примере метод <xref:System.Resources.ResourceManager.GetStream%28System.String%29> используется для извлечения точечного рисунка, который используется на экране-заставке приложения. Следующий исходный код в файле с именем CreateResources.cs (для C#) или CreateResources.vb (для Visual Basic) создает файл RESX, содержащий сериализованное изображение. В этом случае изображение загружается из файла SplashScreen.jpg; имя файла можно изменить, чтобы использовать собственное изображение.  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Resources.ResourceManager>  
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>См. также
+- <xref:System.Resources.ResourceManager>
+- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
+- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)

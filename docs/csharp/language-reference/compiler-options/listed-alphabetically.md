@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653753"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 
@@ -29,7 +29,7 @@ ms.locfileid: "43525689"
 |[-baseaddress](baseaddress-compiler-option.md)|Задает базовый адрес библиотеки для сборки.|
 |[-bugreport](bugreport-compiler-option.md)|Создает файл отчета об ошибках. Этот файл будет отправляться вместе со сведениями о сбое, если использовать параметр с -errorreport:prompt или -errorreport:send.|
 |[/checked](checked-compiler-option.md)|Указывает компилятору создавать проверки переполнения.|
-|-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы исходного файла, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|
+|-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы исходного файла, хранящегося в PDB.  Допустимые значения: SHA1 (по умолчанию) или SHA256.|
 |[-codepage](codepage-compiler-option.md)|Указывает кодовую страницу, используемую при открытии исходных файлов.|
 |[-debug](debug-compiler-option.md)|Выдает сведения об отладке.|
 |[-define](define-compiler-option.md)|Определяет символы условной компиляции|
@@ -44,7 +44,7 @@ ms.locfileid: "43525689"
 |-incremental|Включает инкрементную компиляцию [устарело].|
 |[-keycontainer](keycontainer-compiler-option.md)|Задает контейнер ключа для строгого имени.|
 |[-keyfile](keyfile-compiler-option.md)|Задает файл ключа для строгого имени.|
-|[-langversion:\<строка>](langversion-compiler-option.md)|Указание языковой версии: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 или Latest. |
+|[-langversion:\<строка>](langversion-compiler-option.md)|Укажите версию языка: по умолчанию, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 или последняя версия |
 |[/lib](lib-compiler-option.md)|Задает дополнительные каталоги для поиска ссылок.|
 |[-link](link-compiler-option.md)|Делает сведения о типах COM в указанных сборках доступными для проекта.|
 |[-linkresource](linkresource-compiler-option.md)|Включает указанные файлы ресурсов в эту сборку.|
@@ -82,7 +82,7 @@ ms.locfileid: "43525689"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](index.md)  
-- [Параметры компилятора C#, упорядоченные по категориям](listed-by-category.md)  
-- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [Параметры компилятора C# ](index.md)
+- [Параметры компилятора C#, упорядоченные по категориям](listed-by-category.md)
+- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Элемент \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание многофайловой сборки
+title: Как выполнить Создание многофайловой сборки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f7bbbb2a0c0344d1da1e26d2eb35a65a56a80d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534446"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Практическое руководство. Создание многофайловой сборки
+# <a name="how-to-build-a-multifile-assembly"></a>Как выполнить Создание многофайловой сборки
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.  
   
 > [!NOTE]
@@ -96,8 +96,8 @@ ms.locfileid: "50183104"
   
      Для проверки содержимого сборки или определения, является ли файл сборкой или модулем, можно использовать средство [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   
-## <a name="see-also"></a>См. также  
-- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Практическое руководство. Просмотр содержимого сборок](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>См. также
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
+- [Практическое руководство. Просмотр содержимого сборки](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)

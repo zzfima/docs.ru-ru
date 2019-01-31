@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление хранилищ из области изолированного хранения
+title: Как выполнить Удаление хранилищ из области изолированного хранения
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfb6111b080b7c8c359458e3fd1dc99cb0ff3c36
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19a671cac609e79088956ecb4324ebb0a25fb941
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547405"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Практическое руководство. Удаление хранилищ из области изолированного хранения
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Как выполнить Удаление хранилищ из области изолированного хранения
 Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет два метода для удаления файлов изолированного хранилища.  
   
 -   Метод экземпляра <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> не требует аргументов и удаляет хранилище, которое его вызывает. Для данной операции не требуется никаких разрешений. Код, имеющий доступ к хранилищу, может удалить данные внутри него полностью или выборочно.  
@@ -40,5 +40,5 @@ ms.locfileid: "43877324"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

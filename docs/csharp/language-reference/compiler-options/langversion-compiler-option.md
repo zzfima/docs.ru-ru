@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 9ebc90b3d4f610aec58f950f375d97fd2abf3617
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee23c962d8ea9adecabc5146af75419c87fcc75a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516802"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (параметры компилятора C#)
 
@@ -65,24 +65,24 @@ ms.locfileid: "43857275"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](index.md)  
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)  
+- [Параметры компилятора C# ](index.md)
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
 
 ### <a name="c-language-specification"></a>Спецификация языка C#
 
-|Версия|Ссылка|Описание:|
+|Версия|Ссылка|Описание|
 |-------|----|-----------|
-|C# 1.0|[Загрузить DOC-файл](https://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|Спецификация языка C# версии 1.0: корпорация Майкрософт|
-|C# 1.2|[Загрузить DOC-файл](https://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|Спецификация языка C# версии 1.2: корпорация Майкрософт|
+|C# 1.0|[Загрузить DOC-файл](https://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|Спецификация языка C#, версия 1.0: Microsoft Corporation|
+|C# 1.2|[Загрузить DOC-файл](https://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|Спецификация языка C#, версия 1.2: Microsoft Corporation|
 |C# 2.0|[Загрузить PDF-файл](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/Ecma-334%204th%20edition%20June%202006.pdf)|Стандарт ECMA-334, 4-й выпуск|
-|C# 3.0|[Загрузить DOC-файл](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Спецификация языка C# версии 3.0: корпорация Майкрософт|
+|C# 3.0|[Загрузить DOC-файл](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Спецификация языка C#, версия 3.0: Microsoft Corporation|
 |C# 5.0|[Загрузить PDF-файл](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf)|Стандарт ECMA-334, 5-й выпуск|
 |C# 6.0|[Ссылка](../language-specification/index.md)|Спецификация языка C# версии 6 (неофициальный проект): .NET Foundation|
 |C# 7.0 и более поздние версии||в настоящее время недоступно|
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Минимальная версия компилятора, необходимая для поддержки всех возможностей языка
 
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .Net 2002 или встроенный компилятор .Net Framework 1.0 [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 или встроенный компилятор .Net Framework 2.0 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 или встроенный компилятор .Net Framework 3.5 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 или встроенный компилятор .Net Framework 4.0 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 или встроенный компилятор .Net Framework 4.5 [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015 [↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.3 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.7
+[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 или встроенный компилятор .NET Framework 1.0 [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 или встроенный компилятор .Net Framework 2.0 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 или встроенный компилятор .Net Framework 3.5 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 или встроенный компилятор .Net Framework 4.0 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 или встроенный компилятор .Net Framework 4.5 [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015 [↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.3 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, версия 15.7
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    

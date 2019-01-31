@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635030"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md).
@@ -84,7 +84,7 @@ ms.locfileid: "47196759"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|Класс <xref:System.Configuration.Assemblies.AssemblyHash> не рекомендуется к использованию.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5. Вместо этого используйте класс <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> в пространстве имен System.Runtime.CompilerServices.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Также доступен альтернативный API: в этом качестве можно выпустить настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Доступен альтернативный API. Взамен следует выдавать настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
@@ -256,7 +256,7 @@ ms.locfileid: "47196759"
  [К началу](#introduction)
 
 <a name="web"></a>
-### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll
+### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll.
 
 |Тип|Сообщение|
 |----------|-------------|
@@ -777,4 +777,5 @@ ms.locfileid: "47196759"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|
 
 ## <a name="see-also"></a>См. также
- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md) [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)
+- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)

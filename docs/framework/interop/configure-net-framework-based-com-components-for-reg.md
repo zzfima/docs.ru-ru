@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+title: Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530710"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
   
 -   Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.  
@@ -105,7 +105,7 @@ ms.locfileid: "43519412"
   
 4.  Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
   
-    |Атрибут|Описание:|Обязательно|  
+    |Атрибут|Описание|Обязательно|  
     |---------------|-----------------|--------------|  
     |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
     |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|Нет|  
@@ -172,8 +172,8 @@ ms.locfileid: "43519412"
   
      Файл, содержащий внедренный ресурс, также будет носить имя `myresource.res`.  
   
-## <a name="see-also"></a>См. также  
- [COM-взаимодействие без регистрации](registration-free-com-interop.md)  
- [Requirements for Registration-Free COM Interop](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)) (Требования для COM-взаимодействия без регистрации)  
- [Configuring COM Components for Registration-Free Activation](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)) (Настройка COM-компонентов для активации без регистрации)  
- [Пошаговое руководство. Активация компонентов на основе платформы .NET без регистрации](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>См. также
+- [COM-взаимодействие без регистрации](registration-free-com-interop.md)
+- [Requirements for Registration-Free COM Interop](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)) (Требования для COM-взаимодействия без регистрации)
+- [Configuring COM Components for Registration-Free Activation](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)) (Настройка COM-компонентов для активации без регистрации)
+- [Активация компонентов на основе платформы .NET без регистрации. Пошаговое руководство](https://msdn.microsoft.com/library/ms973915.aspx)

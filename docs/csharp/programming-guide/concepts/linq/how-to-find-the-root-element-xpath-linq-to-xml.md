@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск корневого элемента (XPath-LINQ to XML) (C#)
+title: Как выполнить Поиск корневого элемента (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a74556e4b05bc3ae02998eeb6dd3190a3bade36a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697170"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск корневого элемента (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Как выполнить Поиск корневого элемента (XPath-LINQ to XML) (C#)
 В этом разделе показан поиск корневого элемента с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  Выражение XPath:  
@@ -19,7 +19,7 @@ ms.locfileid: "47195637"
 ## <a name="example"></a>Пример  
  В этом примере осуществляется поиск корневого элемента.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

@@ -1,17 +1,17 @@
 ---
-title: 'Решение проблемы: кадры PNG в объектах Icon'
+title: Устранение рисков. Кадры PNG в объектах Icon
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3ee5cc03f684acf103c96ecd14387f119bf0bdc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d67b2fac0c1d55bfa5594e90998d9613de4ad271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659791"
 ---
-# <a name="mitigation-png-frames-in-icon-objects"></a>Решение проблемы: кадры PNG в объектах Icon
+# <a name="mitigation-png-frames-in-icon-objects"></a>Устранение рисков. Кадры PNG в объектах Icon
 начиная с версии .NET Framework 4.6 метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> успешно преобразует значки с кадрами PNG в объекты <xref:System.Drawing.Bitmap> .  
   
  В приложениях, предназначенных для .NET Framework 4.5.2 и более ранних версий, метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> создает исключение <xref:System.ArgumentOutOfRangeException> , если объект <xref:System.Drawing.Icon> содержит кадры PNG.  
@@ -34,5 +34,5 @@ ms.locfileid: "33387930"
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>См. также
+- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

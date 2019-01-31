@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация функций обратного вызова
+title: Как выполнить Реализация функций обратного вызова
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718680"
 ---
-# <a name="how-to-implement-callback-functions"></a>Практическое руководство. Реализация функций обратного вызова
+# <a name="how-to-implement-callback-functions"></a>Как выполнить Реализация функций обратного вызова
 В приведенных ниже процедуре и примере показано, как, используя вызов неуправляемого кода, можно напечатать из управляемого приложения значение дескриптора для каждого окна на локальном компьютере. В частности, для печати значения дескриптора окна в процедуре и примере используется функция **EnumWindows**, которая просматривает список окон, и управляемая функция обратного вызова CallBack.  
   
 ### <a name="to-implement-a-callback-function"></a>Реализация функции обратного вызова  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции обратного вызова](../../../docs/framework/interop/callback-functions.md)  
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>См. также
+- [Функции обратного вызова](../../../docs/framework/interop/callback-functions.md)
+- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)

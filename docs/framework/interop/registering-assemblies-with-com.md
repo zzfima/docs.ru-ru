@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3ba8cb41244157b1fca0f7e9d345625cc579d0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494045"
 ---
 # <a name="registering-assemblies-with-com"></a>Регистрация сборок в COM
 С помощью программы командной строки, которая называется [средством регистрации сборок (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md), можно регистрировать сборки для использования с моделью COM и отменять их регистрацию. Программа Regasm.exe добавляет сведения о классе в системный реестр, что обеспечивает прозрачное использование класса .NET Framework COM-клиентами. Класс <xref:System.Runtime.InteropServices.RegistrationServices> реализует эквивалентные функциональные возможности.  
   
  Управляемый компонент необходимо регистрировать в реестре Windows до того, как он будет активироваться из COM-клиента. В следующей таблице показаны разделы, которые программа Regasm.exe обычно добавляет в реестр Windows. (000000 указывает фактическое значение GUID.)  
   
-|Идентификатор GUID|Описание:|Раздел реестра|  
+|Идентификатор GUID|Описание|Раздел реестра|  
 |----------|-----------------|------------------|  
 |CLSID|Идентификатор класса|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|Идентификатор интерфейса|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -43,8 +43,8 @@ ms.locfileid: "33389165"
   
  В подразделе `InprocServer32` вместо традиционной библиотеки типов COM указывается ссылка на библиотеку Mscoree.dll. Это указывает на то, что общеязыковая среда выполнения создает объект.  
   
-## <a name="see-also"></a>См. также  
- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)  
- [Практическое руководство. Создание ссылки на типы .NET из COM](how-to-reference-net-types-from-com.md)  
- [Вызов объекта .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [Развертывание приложения для доступа к COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>См. также
+- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
+- [Практическое руководство. Создание ссылки на типы .NET из COM](how-to-reference-net-types-from-com.md)
+- [Вызов объекта .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
+- [Развертывание приложения для доступа к COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

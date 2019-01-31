@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517686"
 ---
 # <a name="composite-formatting"></a>Составное форматирование
 
@@ -67,7 +67,7 @@ ms.locfileid: "53126865"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- На один и тот же элемент в списке объектов может ссылаться сразу несколько элементов форматирования — достигается это путем задания одинакового описателя параметра. Например, одно и то же числовое значение можно перевести в формат шестнадцатеричного, экспоненциального и десятичного числа, задав строку составного формата, например "0x{0:X} {0:E} {0:N}", как показано в примере ниже.  
+ На один и тот же элемент в списке объектов может ссылаться сразу несколько элементов форматирования — достигается это путем задания одинакового описателя параметра. Например, одно и то же числовое значение можно отформатировать в шестнадцатеричном, экспоненциальном и десятичном виде путем задания следующей строки составного форматирования: "0x{0:X} {0:E} {0:N}", как показано в следующем примере.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ ms.locfileid: "53126865"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [Интерполяция строк (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [Интерполяция строк (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
-- [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [Строки стандартного формата TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [Интерполяция строк (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [Интерполяция строк (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)
+- [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Строки стандартного формата TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

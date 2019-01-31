@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Загрузка XML-кода из файла (C#)
+title: Как выполнить Загрузка XML-кода из файла (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: b8322863ad33f8116e26d98467490b9114339553
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43746659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688136"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Практическое руководство. Загрузка XML-кода из файла (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>Как выполнить Загрузка XML-кода из файла (C#)
 В этом разделе показана загрузка XML из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  

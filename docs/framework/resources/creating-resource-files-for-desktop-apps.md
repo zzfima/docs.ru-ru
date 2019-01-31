@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569944"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Создание файлов ресурсов для приложений для настольных систем
 Ресурсы, такие как строки, изображения или данные объектов, можно включать в файлы ресурсов, чтобы сделать их легко доступными для приложения. В платформе .NET Framework предлагается пять способов создания файлов ресурсов.  
@@ -58,7 +58,7 @@ name2=value2
   
  Форматы TXT- и RESTEXT-файлов ресурсов идентичны. Расширение файла RESTEX служит для того, чтобы текстовые файлы сразу опознавались как файлы ресурсов на основе текста.  
   
- Строковые ресурсы представляются в виде пар *имя/значение*, где *имя* — строка, определяющая ресурс, а *значение* — строка ресурса, которая возвращается при передаче *имени* методу извлечения ресурсов, например, <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *Имя* и *значение* должны быть разделены знаком равенства (=). Пример:  
+ Строковые ресурсы представляются в виде пар *имя/значение*, где *имя* — строка, определяющая ресурс, а *значение* — строка ресурса, которая возвращается при передаче *имени* методу извлечения ресурсов, например, <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *Имя* и *значение* должны быть разделены знаком равенства (=). Например:  
   
 ```  
 FileMenuName=File  
@@ -70,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  Не следует использовать файлы ресурсов для хранения паролей, конфиденциальной информации или личных данных.  
   
- В текстовых файлах допускаются пустые строки (то есть, ресурсы, значение которых равно <xref:System.String.Empty?displayProperty=nameWithType>). Пример:  
+ В текстовых файлах допускаются пустые строки (то есть, ресурсы, значение которых равно <xref:System.String.Empty?displayProperty=nameWithType>). Например:  
   
 ```  
 EmptyString=  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  Во время компиляции среда Visual Studio сначала преобразует RESX-файлы проекта в двоичные файлы ресурсов (RESOURCES-файлы) и сохраняет их в подкаталоге каталога obj проекта. Visual Studio внедряет любые файлы ресурсов, не содержащие локализованные ресурсы, в основную сборку, созданную проектом. Если в каких-либо файлах ресурсов есть локализованные ресурсы, Visual Studio внедряет их в отдельные вспомогательные сборки для каждого локализованного языка и региональных параметров. Затем Visual Studio сохраняет каждую вспомогательную сборку в каталоге, имя которого соответствует локализованному языку и региональным параметрам. Например, локализованные ресурсы английского языка (США) сохраняются во вспомогательной сборке в подкаталоге en-US.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Resources>  
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Resources>
+- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
+- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

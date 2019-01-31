@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517621"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Структуры данных для параллельного программирования
 На платформе .NET Framework версии 4 появились несколько новых типов для параллельного программирования, включая набор классов параллельных коллекций, упрощенные примитивы синхронизации и типы отложенной инициализации. Эти типы можно использовать с любым кодом многопоточного приложения, включая библиотеку параллельных задач и PLINQ.  
@@ -22,7 +22,7 @@ ms.locfileid: "48836478"
   
  В следующей таблице перечислены новые классы параллельных коллекций.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Предоставляет возможности блокировки и ограничения для потокобезопасных коллекций, реализующих <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Потоки-производителя блокируются, если нет доступных слотов или коллекция заполнена. Потоки-потребители блокируются, если коллекция пуста. Этот тип также поддерживает неблокирующий доступ для потребителей и производителей. <xref:System.Collections.Concurrent.BlockingCollection%601> можно использовать в качестве базового класса или резервного хранилища с поддержкой блокировок и ограничений для любого класса коллекции с поддержкой <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Потокобезопасная реализация контейнера, которая предоставляет масштабируемые операции добавления и получения.|  
@@ -37,7 +37,7 @@ ms.locfileid: "48836478"
   
  В следующей таблице перечислены новые типы синхронизации.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Позволяет нескольким потокам работать над выполнением алгоритма параллельно, поддерживая точку регистрации, в которой каждая задача отмечает свою доступность и ожидает новых задач. Дополнительные сведения см. в разделе [Барьер](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Упрощает сценарии ветвления и соединения, предоставляя удобный механизм взаимодействия. Более подробную информацию можно найти в [описании события CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -57,7 +57,7 @@ ms.locfileid: "48836478"
   
  В следующей таблице перечислены типы отложенной инициализации.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Легкая и потокобезопасная реализация отложенной инициализации.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Предоставляет отложенно инициализированное значение для каждого потока, при этом каждый поток вызывает функцию отложенной инициализации.|  
@@ -66,10 +66,10 @@ ms.locfileid: "48836478"
  Дополнительные сведения см. в статье [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Агрегатные исключения  
- Тип <xref:System.AggregateException?displayProperty=nameWithType> позволяет захватить несколько исключений, создаваемых одновременно в нескольких отдельных потоках, и передать их в присоединяемый поток в виде одного исключения. Типы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, а также PLINQ, широко используют для этой цели <xref:System.AggregateException>. Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [Практическое руководство. Обработка исключений в запросах PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Тип <xref:System.AggregateException?displayProperty=nameWithType> позволяет захватить несколько исключений, создаваемых одновременно в нескольких отдельных потоках, и передать их в присоединяемый поток в виде одного исключения. Типы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, а также PLINQ, широко используют для этой цели <xref:System.AggregateException>. Дополнительные сведения см. в разделе [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [Практическое руководство. Обработка исключений в запросе PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- <xref:System.Threading?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- <xref:System.Threading?displayProperty=nameWithType>
 - [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

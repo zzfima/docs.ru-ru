@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532686"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -167,7 +167,7 @@ public class Startup
 
 Но если код запускает транзакцию с помощью BeginTransaction, вы сами определяете группу операций, которые должны рассматриваться как единица, — все содержимое транзакции можно будет откатить в случае сбоя. Если вы попытаетесь выполнить эту транзакцию при использовании стратегии выполнения EF (политика повтора) и включаете несколько вызовов SaveChanges из нескольких DbContext в транзакции, отобразится следующее исключение.
 
-System.InvalidOperationException: настроенная стратегия выполнения 'SqlServerRetryingExecutionStrategy' не поддерживает запуск транзакций пользователем. Используйте стратегию выполнения, возвращенную 'DbContext.Database.CreateExecutionStrategy()', чтобы выполнить все операции в транзакции как повторяемую единицу.
+"System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user initiated transactions" (System.InvalidOperationException: настроенная стратегия выполнения SqlServerRetryingExecutionStrategy не поддерживает запуск транзакций пользователем). Используйте стратегию выполнения, возвращенную 'DbContext.Database.CreateExecutionStrategy()', чтобы выполнить все операции в транзакции как повторяемую единицу.
 
 Необходимо вручную вызвать стратегию выполнения EF с делегатом, который представляет все, что должно быть выполнено. В случае временного сбоя стратегия выполнения будет снова вызывать делегат. В следующем примере кода показано, как реализовать этот подход:
 
@@ -200,7 +200,7 @@ await strategy.ExecuteAsync(async () =>
 >
 > - **Документация по EF Core**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: связанные данные**  
+> - **EF Core. Связанные данные**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Предотвращение отложенной загрузки сущностей в приложениях ASPNET**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>

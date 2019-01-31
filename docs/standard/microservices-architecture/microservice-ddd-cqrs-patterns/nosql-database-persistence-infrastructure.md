@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150879"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066289"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -161,7 +161,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 По сути, это просто предупреждение о том, что не следует всегда выбирать API MongoDB в сравнении с Azure Cosmos DB, как мы сделали в eShopOnContainers, так как API MongoDB хорошо подходит для контейнеров Linux. При принятии решения следует учитывать конкретные потребности и провести конкретные проверки для приложения в рабочей среде.
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Код: использование API MongoDB в приложениях .NET Core
+### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Код. Использование API MongoDB в приложениях .NET Core
 
 API MongoDB для .NET основан на пакетах NuGet, которые необходимо добавить в свои проекты, например проект Locations.API, показанный на следующем рисунке.
 
@@ -317,12 +317,12 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Вон Вернон (Vaughn Vernon). Идеальное хранилище агрегатов, созданное с помощью предметно-ориентированного проектирования?** \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Введение в Azure Cosmos DB: API для MongoDB**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
-- **Azure Cosmos DB: разработка веб-приложения API MongoDB с помощью .NET и портала Azure**  \
+- **Azure Cosmos DB. Разработка веб-приложения API MongoDB с помощью .NET и портала Azure**  \
   [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **Использование эмулятора Azure Cosmos DB для разработки и тестирования в локальной среде**  \

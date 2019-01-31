@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576529"
 ---
 # <a name="interpreting-network-tracing"></a>Интерпретация сетевой трассировки
 Если включена трассировка сети, ее можно использовать для записи вызовов, осуществляемых приложением к различным членам класса <xref:System.Net>. Выходные данные этих вызовов могут быть аналогичны приведенным далее.  
@@ -44,7 +44,7 @@ ms.locfileid: "53152267"
   
  `Connection: Close`  
   
-## <a name="see-also"></a>См. также  
- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>См. также
+- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

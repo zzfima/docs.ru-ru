@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление к числу начальных нулей.
+title: Как выполнить Добавление к числу начальных нулей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673040"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Практическое руководство. Добавление к числу начальных нулей.
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Как выполнить Добавление к числу начальных нулей
 К целому числу можно добавить начальные нули, используя [строку стандартного числового формата](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" с описателем точности. С помощью [строки настраиваемого числового формата](../../../docs/standard/base-types/custom-numeric-format-strings.md) начальные нули можно добавлять как к целым числам, так и к числам с плавающей запятой. В этой статье показано, как использовать оба метода для дополнения числа начальными нулями.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Дополнение целого числа начальными нулями до определенной длины  
@@ -95,6 +95,6 @@ ms.locfileid: "44086726"
   
 ## <a name="see-also"></a>См. также
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md)

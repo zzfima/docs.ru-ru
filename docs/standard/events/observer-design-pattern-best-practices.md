@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600002"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Рекомендации по шаблону разработки Observer
 На платформе .NET Framework шаблон разработки наблюдателя реализован в виде набора интерфейсов. Интерфейс <xref:System.IObservable%601?displayProperty=nameWithType> представляет поставщик данных, который также отвечает за предоставление реализации <xref:System.IDisposable>, позволяющей наблюдателям отменять подписку на уведомления. Интерфейс <xref:System.IObserver%601?displayProperty=nameWithType> представляет наблюдателя. В этом разделе содержатся рекомендации, которым должны следовать разработчики при реализации шаблона разработки наблюдателя с помощью этих интерфейсов.  
@@ -55,6 +55,6 @@ ms.locfileid: "45664687"
   
 ## <a name="see-also"></a>См. также
 
-- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)  
-- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)
+- [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Практическое руководство. Реализация поставщика](../../../docs/standard/events/how-to-implement-a-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Открытие файла журнала и добавление в него данных
+title: Как выполнить Открытие файла журнала и добавление в него данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622741"
 ---
-# <a name="how-to-open-and-append-to-a-log-file"></a>Практическое руководство. Открытие файла журнала и добавление в него данных
+# <a name="how-to-open-and-append-to-a-log-file"></a>Как выполнить Открытие файла журнала и добавление в него данных
 <xref:System.IO.StreamWriter> и <xref:System.IO.StreamReader> записывают данные в потоки и считывают данные из потоков. Следующий пример кода открывает файл `log.txt` для получения входных данных или создает файл с таким именем, если он не существует, а затем добавляет сведения в конец файла. После этого он выводит содержимое файла для отображения в стандартный поток вывода. Вместо использованного здесь подхода вы можете сохранить данные в одной строке или в массиве строк и выполнить те же функции с помощью метода <xref:System.IO.File.WriteAllText%2A> или <xref:System.IO.File.WriteAllLines%2A>.  
   
 > [!NOTE]
@@ -32,15 +32,15 @@ ms.locfileid: "48848157"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Практическое руководство. Считывание текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Практическое руководство. Запись символов в строку](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Практическое руководство. Считывание данных из нового файла и запись в этот файл](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Практическое руководство. Чтение текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Практическое руководство. Запись символов в строку](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)

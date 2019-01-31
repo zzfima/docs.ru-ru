@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582182"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -24,7 +24,7 @@ ms.locfileid: "50200944"
   
  В каждой новой версии платформы .NET Framework сохранены функции предыдущих версий и добавлены новые функции. Среда CLR определяется своим собственным номером версии. Номер версии платформы .NET Framework увеличивается при каждом выпуске, хотя версия среды CLR увеличивается не всегда. Например, в .NET Framework 4 и более поздние выпуски входит среда CLR 4, а в .NET Framework 2.0, 3.0 и 3.5 — среда CLR 2.0. (Версии 3 среды CLR не было.)  
   
- Полный список поддерживаемых операционных систем см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Скачиваемые файлы см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Для определения установленных версий .NET Framework на компьютере см. [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+ Полный список поддерживаемых операционных систем см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Скачиваемые файлы см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Сведения об определении версий платформы .NET Framework, установленных на компьютере, см. в разделе [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
  Версии платформы .NET Framework, установленные в версиях операционных систем, которые помечены символом "✓" в столбцах **Включено в / может быть установлено в Windows** и **Включено в / может быть установлено в Windows Server**, необходимо [включить в панели управления](../../../docs/framework/install/dotnet-35-windows-10.md) (для Windows) или с помощью диспетчера сервера (для Windows Server).  
   
@@ -76,10 +76,10 @@ ms.locfileid: "50200944"
   
 -   Сведения о миграции приложения с платформы .NET Framework 4 на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее доработанные выпуски см. в [руководстве по миграции](../../../docs/framework/migration-guide/index.md).  
   
--   Сведения об определении версий или обновлений, установленных на компьютере, см. в разделах [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
+-   Сведения о том, как определить, какие версии и обновления установлены на компьютере, см. в разделах [Практическое руководство. Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

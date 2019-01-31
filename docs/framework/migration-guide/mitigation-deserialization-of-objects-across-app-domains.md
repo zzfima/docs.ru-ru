@@ -1,17 +1,17 @@
 ---
-title: 'Устранение рисков: десериализация объектов между доменами приложений'
+title: Устранение рисков. Десериализация объектов между доменами приложений
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be1ca715fbf4a8166385ba1985986859d91527f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5424eac20992d87542bd8a9a27d5775483d64a60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633957"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков: десериализация объектов между доменами приложений
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков. Десериализация объектов между доменами приложений
 В некоторых случаях, когда приложение использует два или большее количество доменов с разными базовыми папками приложения, при попытке выполнить десериализацию объектов в логическом контексте вызова между доменами приложения возникнет исключение.  
   
 ## <a name="diagnosing-the-issue"></a>Диагностика проблемы  
@@ -48,5 +48,5 @@ ms.locfileid: "33389465"
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+## <a name="see-also"></a>См. также
+- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

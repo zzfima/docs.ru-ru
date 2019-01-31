@@ -2,19 +2,19 @@
 title: Основные запросы (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 77ff053e3cf8589cbc44caf66a4e5b532bc54b26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a77ea062889e05c598df27fb143ba34466714e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583341"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Основные запросы (LINQ to XML) (C#)
 В этом разделе показаны примеры основных запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Поиск элементов с определенным атрибутом (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Показывает, каким образом находится конкретный элемент с определенным атрибутом и значением.|  
 |[Практическое руководство. Поиск элементов с определенным дочерним элементом (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Показывает, каким образом находится конкретный элемент с его дочерним элементом с определенным значением.|  
@@ -22,10 +22,10 @@ ms.locfileid: "43518497"
 |[Практическое руководство. Поиск потомков с определенным именем элемента (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Показывает, как найти все потомки элемента с определенным именем. В этом примере используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.|  
 |[Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Показывает, как использовать <xref:System.Xml.Linq.XContainer.Descendants%2A> метод оси для поиска единственного элемента с уникальным именем.|  
 |[Практическое руководство. Создание запросов со сложной фильтрацией (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Показывает с более сложным фильтром.|  
-|[Практическое руководство. Фильтрация по необязательным элементам (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Показывает, как находить узлы в дереве неправильной формы.|  
+|[Практическое руководство. Фильтрация по необязательному элементу (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Показывает, как находить узлы в дереве неправильной формы.|  
 |[Практическое руководство. Поиск всех узлов в пространстве имен (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Показывает, как найти все узлы в определенном пространстве имен.|  
 |[Практическое руководство. Сортировка элементов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Показывает, как составлять запрос, при котором его результаты будут отсортированы.|  
-|[Практическое руководство. Сортировка элементов по множеству ключей (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Показывает способ сортировки по нескольким ключам.|  
+|[Практическое руководство. Сортировка элементов по нескольким ключам (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Показывает способ сортировки по нескольким ключам.|  
 |[Практическое руководство. Вычисление промежуточных значений (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Показано, как следует использовать предложение `Let` для вычисления промежуточных значений запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Практическое руководство. Написание запроса, ищущего элементы на основании контекста (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Показывает, как выбирать элементы на основе других элементов в дереве.|  
 |[Практическое руководство. Отладка пустых наборов результатов запроса (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Показывает нужный метод устранения неполадки при устранении ошибок в XML, которые находятся в пространстве имен по умолчанию.|  

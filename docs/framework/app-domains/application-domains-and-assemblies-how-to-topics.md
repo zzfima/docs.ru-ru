@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636612"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Руководства по работе с доменами приложений и сборками
 В следующих разделах содержатся ссылки на все разделы практического руководства базовой документации по программированию с использованием доменов приложений и сборок.  
@@ -41,9 +41,9 @@ ms.locfileid: "50191000"
   
 -   [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
--   [Практическое руководство. Создание ссылки на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
+-   [Практическое руководство. Ссылка на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
--   [Практическое руководство. Отключение возможности обхода строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+-   [Практическое руководство. Отключение функции пропуска строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 -   [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50191000"
   
 -   [Практическое руководство. Удаление сборки из глобального кэша сборок](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
--   [Практическое руководство. Просмотр содержимого сборок](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+-   [Практическое руководство. Просмотр содержимого сборки](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
 - [Домены приложений и сборки](../../../docs/framework/app-domains/index.md)

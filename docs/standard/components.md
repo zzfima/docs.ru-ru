@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570727"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -28,9 +28,9 @@ ms.locfileid: "50189697"
 
 Каждая реализация .NET включает в себя следующие компоненты.
 
-- Одна среда выполнения или несколько. Примеры: CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.
+- Одна среда выполнения или несколько. Примеры CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.
 - Библиотека классов, которая реализует .NET Standard, а также может реализовывать дополнительные API-интерфейсы. Примеры: библиотека базовых классов .NET Framework, библиотека базовых классов .NET Core.
-- (Необязательно) Одна платформа приложений или несколько. Примеры: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework.
+- (Необязательно) Одна платформа приложений или несколько. Примеры [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework.
 - (Необязательно) Средства разработки. Некоторые средства разработки, являются общими для нескольких реализаций.
 
 Существуют четыре основные реализации .NET, которые корпорация Майкрософт активно разрабатывает и обслуживает: .NET Core, .NET Framework, Mono и UWP.
@@ -86,10 +86,10 @@ UWP представляет собой реализацию .NET, котора�
 
 ## <a name="see-also"></a>См. также
 
-- [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [Руководство по .NET Core](../core/index.md)  
-- [Руководство по .NET Framework](../framework/index.md)  
-- [Руководство по языку C#](../csharp/index.md)  
-- [Руководство по языку F#](../fsharp/index.md)  
-- [Руководство по VB .NET](../visual-basic/index.md)  
+- [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [Руководство по .NET Core](../core/index.md)
+- [Руководство по .NET Framework](../framework/index.md)
+- [Руководство по языку C#](../csharp/index.md)
+- [Руководство по языку F#](../fsharp/index.md)
+- [Руководство по VB .NET](../visual-basic/index.md)

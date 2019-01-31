@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
+title: Как выполнить Значения даты и времени кругового пути
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628192"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
+# <a name="how-to-round-trip-date-and-time-values"></a>Как выполнить Значения даты и времени кругового пути
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Выполнение цикла обработки значения DateTime  
@@ -101,6 +101,6 @@ ms.locfileid: "45668422"
   
 ## <a name="see-also"></a>См. также
 
-- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).  
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 - [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

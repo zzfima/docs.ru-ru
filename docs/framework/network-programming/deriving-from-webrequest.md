@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717458"
 ---
 # <a name="deriving-from-webrequest"></a>Наследование от WebResponse
 <xref:System.Net.WebRequest> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика запросов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс **WebRequest**, могут запрашивать данные с использованием любого поддерживаемого протокола, не указывая конкретный протокол.  
@@ -88,9 +88,9 @@ ms.locfileid: "53147552"
   
  Метод **GetResponse** используется для создания соответствующего потомка класса **WebResponse**, который содержит полученный ответ.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)

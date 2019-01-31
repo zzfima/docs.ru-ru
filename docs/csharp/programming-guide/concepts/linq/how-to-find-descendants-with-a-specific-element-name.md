@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск потомков с определенным именем элемента (C#)
+title: Как выполнить Поиск потомков с определенным именем элемента (C#)
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
-ms.openlocfilehash: 6c5e035b4ee0168a0c41a34754314e18d089b1ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11f13dfc61e837a923cb9709301d89ff6d2149dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530393"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Практическое руководство. Поиск потомков с определенным именем элемента (C#)
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Как выполнить Поиск потомков с определенным именем элемента (C#)
 Иногда возникает необходимость найти всех потомков с определенным именем. В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -93,5 +93,5 @@ Some text that is broken up into multiple segments.
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

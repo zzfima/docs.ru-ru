@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Считывание из нового файла данных и запись в этот файл
+title: Как выполнить Считывание данных из нового файла и запись в этот файл
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4f51042564158cfd7924164ce2b1a0fcc9d2658d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562834"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Практическое руководство. Считывание из нового файла данных и запись в этот файл
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Как выполнить Считывание данных из нового файла и запись в этот файл
 Классы <xref:System.IO.BinaryWriter> И <xref:System.IO.BinaryReader?displayProperty=nameWithType> используются для записи и чтения данных вместо строк символов. Следующий пример демонстрирует запись данных в новый пустой файловый поток с именем `Test.data` и чтение данных из него. Этот код создает файл данных в текущем каталоге, создает связанные с ним объекты <xref:System.IO.BinaryWriter> и <xref:System.IO.BinaryReader>, а затем применяет объект <xref:System.IO.BinaryWriter> для записи в `Test.data` целых чисел с 0 до 10. По завершении этих действий указатель файла остается в конце файла. Затем пример кода возвращает указатель файла в начало и через объект <xref:System.IO.BinaryReader> считывает его содержимое.  
   
 ## <a name="example"></a>Пример  
@@ -35,15 +35,15 @@ ms.locfileid: "45592910"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryWriter>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.SeekOrigin>  
-- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Практическое руководство. Открытие файла журнала и добавление в него данных](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Практическое руководство. Считывание текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Практическое руководство. Запись символов в строку](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryWriter>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>
+- <xref:System.IO.SeekOrigin>
+- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Практическое руководство. Открытие файла журнала и добавление в него данных](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Практическое руководство. Чтение текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Практическое руководство. Запись символов в строку](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)

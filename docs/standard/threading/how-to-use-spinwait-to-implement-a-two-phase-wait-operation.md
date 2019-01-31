@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
+title: Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576516"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
 В примере ниже показано, как использовать объект <xref:System.Threading.SpinWait?displayProperty=nameWithType> для реализации двухэтапной операции ожидания. На первом этапе объект синхронизации `Latch` выполняет несколько циклов, в которых проверяет доступность блокировки. На втором этапе, если блокировка стала доступной, метод `Wait` возвращается, не вызывая <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> для ожидания. В противном случае `Wait` выполняет операцию ожидания.  
   
 ## <a name="example"></a>Пример  
@@ -32,5 +32,5 @@ ms.locfileid: "44209216"
   
 ## <a name="see-also"></a>См. также
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

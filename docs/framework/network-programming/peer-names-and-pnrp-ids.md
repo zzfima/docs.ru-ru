@@ -2,12 +2,12 @@
 title: Одноранговые имена и идентификаторы PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690794"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Одноранговые имена и идентификаторы PNRP
 Имя однорангового узла представляет конечную точку для взаимодействия, в качестве которой может выступать компьютер, пользователь, группа, служба или любой другой объект, связанный с одноранговым узлом, которую можно разрешить в IPv6-адрес. Протокол PNRP принимает статистически уникальное имя однорангового узла для создания идентификатора PNRP, который используется для идентификации членов облака.  
@@ -30,6 +30,6 @@ ms.locfileid: "50187657"
   
  Такое сочетание идентификатора одноранговой сети и расположения службы позволяет регистрировать несколько идентификаторов PNRP с одного компьютера.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>См. также
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635979"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Устаревшие члены в платформе .NET Framework
 В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и более поздних версий члены типов, упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -177,12 +177,12 @@ ms.locfileid: "53151412"
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Этот конструктор не рекомендуется к использованию. Взамен рекомендуется использовать <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|Это свойство использовать не рекомендуется. Взамен рекомендуется использовать <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|Это свойство использовать не рекомендуется.|  
-|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Также доступен альтернативный API: в этом качестве можно выпустить настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Доступен альтернативный API. Взамен следует выдавать настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Этот API не рекомендуется к использованию.|  
-|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Также доступен альтернативный API: в этом качестве можно выпустить настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Доступен альтернативный API. Взамен следует выдавать настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Этот API не рекомендуется к использованию.|  
 |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Этот API не рекомендуется к использованию.|  
-|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Также доступен альтернативный API: в этом качестве можно выпустить настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Доступен альтернативный API. Взамен следует выдавать настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|Вместо него вызовите метод <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|Метод <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> не рекомендуется к использованию и будет удален в одном из следующих выпусков.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|Метод <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> не рекомендуется к использованию. Для этой операции рекомендуется использовать хост-API.|  
@@ -416,7 +416,7 @@ ms.locfileid: "53151412"
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Этот метод использовать не рекомендуется. Взамен рекомендуется использовать <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>.|  
 |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|Метод <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> заменен методом <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>.|  
 |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|Этот метод использовать не рекомендуется. Вместо него следует использовать элементы <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> или <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>.|  
-|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|При использовании данного свойства возникает ошибка компилятора.<br /><br /> Ошибка: ссылаться на это свойство больше нельзя, оно включено для поддержки существующих скомпилированных приложений. Архитектура представления элемента во время разработки больше не используется.\-|  
+|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|При использовании данного свойства возникает ошибка компилятора.<br /><br /> Ошибка: Ссылаться на это свойство больше нельзя, оно включено для поддержки существующих скомпилированных приложений. Архитектура представления элемента во время разработки больше не используется.\-|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|Вместо этого рекомендуется использовать [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A).|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|Взамен рекомендуется использовать <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|Вместо этого рекомендуется использовать [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) и [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A).|  
@@ -426,7 +426,7 @@ ms.locfileid: "53151412"
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|Этот метод использовать не рекомендуется, поскольку изменение размера обрабатывает метод <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|Взамен рекомендуется наследование из <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> и использование <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>. Области упрощают управление содержимым в конструкторе.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|Взамен рекомендуется использовать <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
-|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|При использовании данного свойства возникает ошибка компилятора.<br /><br /> Ошибка: ссылаться на это свойство больше нельзя, оно включено для поддержки существующих скомпилированных приложений. Элемент времени разработки не всегда может предоставлять доступ к элементу в разметке.\- Существуют альтернативные методы в <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> для обработки клиентского скрипта и элементов управления.|  
+|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|При использовании данного свойства возникает ошибка компилятора.<br /><br /> Ошибка: Ссылаться на это свойство больше нельзя, оно включено для поддержки существующих скомпилированных приложений. Элемент времени разработки не всегда может предоставлять доступ к элементу в разметке.\- Существуют альтернативные методы в <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> для обработки клиентского скрипта и элементов управления.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|Взамен рекомендуется использовать <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|Взамен рекомендуется использовать <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|В качестве альтернативы рекомендуется обрабатывать событие [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed). Коллекция <xref:System.Web.UI.DataBindingCollection>, возвращаемая свойством <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType>, упрощает управление привязками данных, связанными с элементом управления.|  
@@ -616,7 +616,7 @@ ms.locfileid: "53151412"
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> не рекомендуется к использованию. Взамен можно использовать <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>.|  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll  
+### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll.  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -798,6 +798,6 @@ ms.locfileid: "53151412"
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|При использовании данного члена возникает ошибка компилятора.<br /><br /> Этот метод использовать не следует.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Раздел реестра `DynData` применим только на платформе Win9x, для которой эта версия .NET Framework не предназначена. Вместо этого используйте раздел реестра `PerformanceData`. В одной из будущих версий платформы это свойство будет удалено.|  
   
-## <a name="see-also"></a>См. также  
- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>См. также
+- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)

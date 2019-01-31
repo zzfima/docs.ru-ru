@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка трассировки сети
+title: Как выполнить Настройка трассировки сети
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540537"
 ---
-# <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
+# <a name="how-to-configure-network-tracing"></a>Как выполнить Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  Файл конфигурации компьютера (machine.config) хранится в папке %Windir%\Microsoft.NET\Framework в каталоге, в который установлена ОС Windows. В папках %Windir%\Microsoft.NET\Framework находятся отдельные файлы machine.config для каждой версии .NET Framework, установленной на компьютере (например, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config или C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
@@ -97,8 +97,8 @@ ms.locfileid: "53143367"
 |`maxdatasize`|Необязательный атрибут элемента <xref:System.Int32>. Задает максимальное число байтов сетевых данных, включенных в трассировку каждой линии. Значение по умолчанию — 1024.<br /><br /> Этот атрибут следует задавать в элементе \<source>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<switches>.|  
 |`Tracemode`|Необязательный атрибут элемента <xref:System.String>. Задается `includehex`, чтобы трассировка протоколов отображалась в шестнадцатеричном или текстовом формате. Установите значение `protocolonly`, чтобы отображался только текст. Значение по умолчанию — `includehex`.<br /><br /> Этот атрибут следует задавать в элементе \<switches>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<source>.|  
   
-## <a name="see-also"></a>См. также  
- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>См. также
+- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

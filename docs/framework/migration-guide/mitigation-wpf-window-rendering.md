@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e1829716e0a9d5fc63692ca84c8bfefe4cefef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663470"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Устранение рисков. Отрисовка окна WPF
 В [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] на компьютере под управлением Windows 8 и более поздних версий все содержимое окна выводится без обрезки, если изображение выходит за пределы одного экрана при использовании нескольких мониторов.  
@@ -38,5 +38,5 @@ ms.locfileid: "33389572"
   
 -   Путем задания значения `true` для свойства <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> при запуске приложения.  
   
-## <a name="see-also"></a>См. также  
- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>См. также
+- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

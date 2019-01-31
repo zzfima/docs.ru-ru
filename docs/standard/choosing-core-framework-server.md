@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699510"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -91,9 +91,9 @@ ms.locfileid: "50202241"
 
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
-* Службы, связанные с рабочим процессом. Службы Windows Workflow Foundation (WF), Workflow Services (WCF и WF в одной службе) и WCF Data Services (ранее службы данных ADO.NET) доступны только в среде .NET Framework.  Добавление служб WF, WCF и WF, WCF Data Services в .NET Core не планируется.
+* Службы, связанные с рабочими процессами. Службы Windows Workflow Foundation (WF), Workflow Services (WCF и WF в одной службе) и WCF Data Services (ранее известные как службы данных ADO.NET) доступны только в составе платформы .NET Framework.  Добавление служб WF, WCF и WF, WCF Data Services в .NET Core не планируется.
 
-* Поддержка языков.Сейчас в среде .NET Core поддерживаются Visual Basic и F#, но не для всех типов проектов. Список поддерживаемых шаблонов проектов см. в статье о [параметрах шаблона для dotnet new](../core/tools/dotnet-new.md#arguments).
+* Поддержка языков. Сейчас в среде .NET Core поддерживаются Visual Basic и F#, но не для всех типов проектов. Список поддерживаемых шаблонов проектов см. в статье о [параметрах шаблона для dotnet new](../core/tools/dotnet-new.md#arguments).
 
 Кроме платформ, указанных в официальной стратегии, существуют и другие платформы, которые можно перенести в среду .NET Core. Полный список см. в репозитории CoreFX. Эти платформы помечены как [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Корпорация Майкрософт не намеревается добавлять эти компоненты в среду .NET Core. Компоненты, добавленные в список, отражают желания пользователей сообщества. Тем не менее, если вас заинтересовал любой из компонентов, помеченный как `port-to-core`, примите участие в обсуждениях на сайте GitHub. Если вы думаете, что чего-то не хватает, отправьте новый вопрос в [репозиторий CoreFX](https://github.com/dotnet/corefx/issues/new).
 
@@ -103,11 +103,11 @@ ms.locfileid: "50202241"
 
 ## <a name="see-also"></a>См. также
 
-* [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-* [ASP.NET Core с целевой платформой .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Целевые платформы](frameworks.md)
-* [Руководство по .NET Core](../core/index.md)  
-* [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)  
-* [Руководство по Docker в .NET Framework](../framework/docker/index.md)  
-* [Общие сведения о компонентах .NET](components.md)  
-* [Микрослужбы .NET: архитектура контейнерных приложений .NET](microservices-architecture/index.md)
+- [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+- [ASP.NET Core с целевой платформой .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Целевые платформы](frameworks.md)
+- [Руководство по .NET Core](../core/index.md)
+- [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)
+- [Руководство по Docker в .NET Framework](../framework/docker/index.md)
+- [Общие сведения о компонентах .NET](components.md)
+- [Микрослужбы .NET: архитектура контейнерных приложений .NET](microservices-architecture/index.md)

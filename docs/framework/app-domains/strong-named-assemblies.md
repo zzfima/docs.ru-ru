@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657302"
 ---
 # <a name="strong-named-assemblies"></a>Сборки со строгими именами
 При задании строгого имени для сборки для нее создается уникальный идентификатор, что позволяет избежать конфликтов сборок.  
@@ -20,7 +20,7 @@ ms.locfileid: "50190909"
 ## <a name="what-makes-a-strong-named-assembly"></a>Что такое сборка со строгим именем?  
  Сборка со строгим именем создается с помощью закрытого ключа, который соответствует открытому ключу, распространяемому со сборкой, и самой сборке. Сборка включает манифест сборки, который содержит имена и хэши всех файлов, из которых состоит сборка. Сборки с одинаковым строгим именем должны быть идентичны.  
   
- Задавать строгие имена для сборок можно с помощью Visual Studio или программы командной строки. Дополнительные сведения см. в разделах [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) и [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
+ Задавать строгие имена для сборок можно с помощью Visual Studio или программы командной строки. Дополнительные сведения см. в разделе [Как Подписывание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) и [Sn.exe (средство создания строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
  При создании сборки со строгим именем она содержит простое текстовое имя сборки, номер версии, дополнительные сведения о языке и языковых параметрах, цифровую подпись и открытый ключ, который соответствует закрытому ключу, используемому для подписи.  
   
@@ -42,8 +42,8 @@ ms.locfileid: "50190909"
   
  Если вы являетесь разработчиком открытого кода и хотите воспользоваться преимуществами идентификации, которые обеспечивают сборки со строгими именами, рекомендуется возвращать закрытый ключ, связанный со сборкой, в систему управления версиями.  
   
-## <a name="see-also"></a>См. также  
-- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
-- [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>См. также
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

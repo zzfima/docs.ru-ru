@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680311"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -173,7 +173,7 @@ ms.locfileid: "33509220"
 
 - Поля <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType>, которые идентифицируют свойство **LiveSetting** и событие **LiveRegionChanged**. Их можно задать с помощью XAML.
 
-- Присоединенное свойство **AutomationProperties.LiveSetting**, средство чтения с экрана, уведомляющее о том, насколько важно изменение пользовательского интерфейса для пользователя.
+- Присоединенное свойство **AutomationProperties.LiveSetting**, уведомляющее средство чтения с экрана о том, насколько важно изменение пользовательского интерфейса для пользователя.
 
 - Свойство<xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>, которое идентифицирует присоединенное свойство **AutomationProperties.LiveSetting**.
  
@@ -213,37 +213,37 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Элемент управления <xref:System.Windows.Controls.Expander>
 
-    Визуальный элемент фокуса для элемента управления <xref:System.Windows.Controls.Expander> теперь отображается. Визуальные элементы клавиатуры для элементов управления <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.RadioButton> также видимы. Пример:
+    Визуальный элемент фокуса для элемента управления <xref:System.Windows.Controls.Expander> теперь отображается. Визуальные элементы клавиатуры для элементов управления <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.RadioButton> также видимы. Например:
 
-    До: 
+    До: 
     
     ![Элемент управления Expander с фокусом до внесения улучшений](media/expander-before.png)
 
-    После: 
+    После: 
 
     ![Элемент управления Expander с фокусом после внесения улучшений](media/expander-after.png)
 
 - Элементы управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton>
  
-    Текст в элементах управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton> теперь стало проще читать, когда он выбран при использовании тем с высокой контрастностью. Пример:
+    Текст в элементах управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton> теперь стало проще читать, когда он выбран при использовании тем с высокой контрастностью. Например:
 
-    До: 
+    До: 
 
     ![Переключатель высокой контрастности до внесения улучшений](media/radio-button-before.png)
     
-    После: 
+    После: 
 
     ![Переключатель высокой контрастности после внесения улучшений](media/radio-button-after.png)
 
 - Элемент управления <xref:System.Windows.Controls.ComboBox>
  
-    Начиная с .NET Framework 4.7.1, граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Пример:
+    Начиная с .NET Framework 4.7.1, граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
     
-    До: 
+    До: 
 
      ![Отключенная граница и текст поля со списком до внесения улучшений](media/combo-disabled-before.png)
 
-    После:   
+    После:   
 
      ![Отключенная граница и текст поля со списком после внесения улучшений](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     До:
 
-    ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
+    ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
     
-    После: 
+    После: 
 
-    ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
+    ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
 
-    Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1, эта проблема устранена. Пример:
+    Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1, эта проблема устранена. Например:
 
-    До: 
+    До: 
 
-    ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
+    ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
     
-    После: 
+    После: 
 
-    ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
+    ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
 
 - Элемент управления <xref:System.Windows.Controls.DataGrid>
 
-    Начиная с .NET Framework 4.7.1, стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> теперь использует правильные цвета темы. Пример:
+    Начиная с .NET Framework 4.7.1, стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> теперь использует правильные цвета темы. Например:
 
-    До: 
+    До: 
 
-    ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
+    ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
     
-    После:   
+    После:   
  
-    ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
+    ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
     
     Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1, эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры, начиная с .NET Framework 4.7.1.
 
-    До: 
+    До: 
 
-    ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
+    ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
  
-    После:    
+    После:    
   
-    ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png)  
+    ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png)  
 
 Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -298,7 +298,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Улучшенное отображение в режиме высокой контрастности**
 
-Начиная с .NET Framework 4.7.1, различные элементы управления WinForms обеспечивают улучшенную отрисовку в режимах высокой контрастности, доступных в операционной системе. В Windows 10 были изменены некоторые системные цвета в режиме высокой контрастности, а Windows Forms основан на платформе Win32 Windows 10. Для достижения наилучших результатов используйте самую последнюю версию Windows и согласитесь на последние изменения операционной системы, добавив файл app.manifest в тестовое приложение и раскомментировав строку поддержки Windows 10, чтобы она выглядела следующим образом:
+Начиная с .NET Framework 4.7.1 различные элементы управления WinForms обеспечивают улучшенную отрисовку в режимах высокой контрастности, доступных в операционной системе. В Windows 10 были изменены некоторые системные цвета в режиме высокой контрастности, а Windows Forms основан на платформе Win32 Windows 10. Для достижения наилучших результатов используйте самую последнюю версию Windows и согласитесь на последние изменения операционной системы, добавив файл app.manifest в тестовое приложение и раскомментировав строку поддержки Windows 10, чтобы она выглядела следующим образом:
 
 ```xml
 <!-- Windows 10 -->
@@ -312,15 +312,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Текст в выбранном <xref:System.Windows.Forms.Button> элементе управления отличается от цвета выбора.
 
-- Отключенный текст проще читать. Пример:
+- Отключенный текст проще читать. Например:
 
     До:
 
-    ![Отключенный текст до внесения улучшений](media/wf-disabled-before.png) 
+    ![Отключенный текст до внесения улучшений](media/wf-disabled-before.png) 
 
     После:
 
-    ![Отключенный текст после внесения улучшений](media/wf-disabled-after.png) 
+    ![Отключенный текст после внесения улучшений](media/wf-disabled-after.png) 
 
 - Усовершенствования режима высокой контрастности в диалоговом окне исключения потока.
 
@@ -441,5 +441,5 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>См. также
 
-[Новые возможности .NET Framework](whats-new.md)
- 
+- [Новые возможности .NET Framework](whats-new.md)
+

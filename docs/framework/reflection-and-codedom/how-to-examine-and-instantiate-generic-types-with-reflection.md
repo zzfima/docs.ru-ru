@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
+title: Как выполнить Изучение универсальных типов и создание их экземпляров при помощи отражения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622056"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Как выполнить Изучение универсальных типов и создание их экземпляров при помощи отражения
 Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип. Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа. В первой процедуре данного раздела изучаются универсальные типы.  
   
  Можно создать объект <xref:System.Type>, представляющий сконструированный тип, путем привязки аргументов типа к параметрам типа определения универсального типа. Это демонстрируется во второй процедуре.  
@@ -123,9 +123,9 @@ ms.locfileid: "33397576"
   
 -   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Универсальные шаблоны](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>См. также
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Универсальные шаблоны](../../../docs/standard/generics/index.md)

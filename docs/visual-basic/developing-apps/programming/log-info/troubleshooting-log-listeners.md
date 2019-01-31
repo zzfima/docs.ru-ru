@@ -1,24 +1,24 @@
 ---
-title: Устранение неполадок, связанных с прослушивателями журнала (Visual Basic)
+title: 'Устранение неполадок: прослушиватели журнала (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 54c3ed0f607edf992fa3c40a8e6214252740587c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d21024a7ebda749f337a95b0fca419b529d2872
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662820"
 ---
-# <a name="troubleshooting-log-listeners-visual-basic"></a>Устранение неполадок, связанных с прослушивателями журнала (Visual Basic)
+# <a name="troubleshooting-log-listeners-visual-basic"></a>Устранение неполадок: прослушиватели журнала (Visual Basic)
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации о событиях, происходящих в приложении.  
   
- Чтобы определить, какие прослушиватели журналов получают эти сообщения, см. раздел [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+ Чтобы определить, какие прослушиватели журналов получают эти сообщения, см. раздел [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
- Объект `Log` может использовать фильтрацию журнала для ограничения объема данных, регистрируемых в журнале. Если фильтры настроены неправильно, журналы могут содержать неверные данные. Дополнительные сведения см. в разделе [Пошаговое руководство. Фильтрация вывода My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ Объект `Log` может использовать фильтрацию журнала для ограничения объема данных, регистрируемых в журнале. Если фильтры настроены неправильно, журналы могут содержать неверные данные. Дополнительные сведения о фильтрации см. в разделе [Пошаговое руководство. Фильтрация выходных данных My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  Однако если журнал настроен неправильно, необходима дополнительная информация о его текущей конфигурации. Эту информацию можно получить с помощью расширенного свойства журнала `TraceSource`.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33589048"
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
+     Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Пошаговое руководство: Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

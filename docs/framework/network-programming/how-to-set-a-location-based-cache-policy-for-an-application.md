@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Установка политики кэша для приложения на основе расположения
+title: Как выполнить Установка политики кэша для приложения на основе расположения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514053"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Практическое руководство. Установка политики кэша для приложения на основе расположения
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Как выполнить Установка политики кэша для приложения на основе расположения
 Политики кэша на основе расположения позволяют приложению явным образом определить поведение кэша на основе расположения запрошенного ресурса. В этом разделе описана установка политики кэша программным способом. Сведения об установке политики для приложения с помощью файлов конфигурации см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Установка политики кэша для приложения на основе расположения  
@@ -153,9 +153,9 @@ ms.locfileid: "50193686"
     End Sub  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)  
- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>См. также
+- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
+- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

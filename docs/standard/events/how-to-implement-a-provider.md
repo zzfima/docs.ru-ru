@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация поставщика
+title: Как выполнить Реализация поставщика
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543793"
 ---
-# <a name="how-to-implement-a-provider"></a>Практическое руководство. Реализация поставщика
-Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы). В этой статье описан процесс создания поставщика. Создание наблюдателя рассматривается в схожей статье [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md).  
+# <a name="how-to-implement-a-provider"></a>Как выполнить Реализация поставщика
+Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы). В этой статье описан процесс создания поставщика. Создание наблюдателя рассматривается в связанной статье [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md).  
   
 ### <a name="to-create-a-provider"></a>Создание поставщика  
   
@@ -62,7 +62,7 @@ ms.locfileid: "44087330"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IObservable%601>  
-- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)  
-- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)
+- [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Рекомендации по шаблону разработки Observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)

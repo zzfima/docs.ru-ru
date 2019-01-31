@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665270"
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 
@@ -87,12 +87,12 @@ ms.locfileid: "46003689"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
-- [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)  
-- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)  
-- [Потоки и работа с потоками](threads-and-threading.md)  
-- [Асинхронный файловый ввод-вывод](../io/asynchronous-file-i-o.md)  
-- [Таймеры](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md)
+- [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)
+- [Потоки и работа с потоками](threads-and-threading.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [Таймеры](timers.md)

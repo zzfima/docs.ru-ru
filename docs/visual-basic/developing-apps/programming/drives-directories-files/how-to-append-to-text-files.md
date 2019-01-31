@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Дозапись в текстовый файл в Visual Basic
+title: Как выполнить Дозапись в текстовый файл в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 78d98dcf098966de435254926af21db76b7bccfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fabd0b6894fc5ab7d4bab1979d71b171d2b21c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498220"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>Практическое руководство. Дозапись в текстовый файл в Visual Basic
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>Как выполнить Дозапись в текстовый файл в Visual Basic
 Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> можно использовать для добавления данных в текстовый файл, задав для параметра `append` значение `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Добавление данных в текстовый файл  
@@ -41,7 +41,7 @@ ms.locfileid: "33585740"
   
 -   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- [Запись в файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- [Запись в файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -2,12 +2,12 @@
 title: Протокол PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662665"
 ---
 # <a name="peer-name-resolution-protocol"></a>Протокол PNRP
 В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов. Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).  
@@ -36,18 +36,18 @@ ms.locfileid: "53129161"
   
 -   Ниже приведены базовые типы, используемые для регистрации и разрешения имен с использованием доступной службы PNRP:  
   
--   <xref:System.Net.PeerToPeer.Cloud>. Определяет сведения, описывающие доступное облако PNRP, включая его область действия.  
+-   <xref:System.Net.PeerToPeer.Cloud>: Определяет сведения, описывающие доступное облако PNRP, включая его область действия.  
   
--   <xref:System.Net.PeerToPeer.PeerName>. Определяет имя однорангового узла, которое может использоваться для регистрации и последующего разрешения этого узла в облаке.  
+-   <xref:System.Net.PeerToPeer.PeerName>: Определяет имя однорангового узла, которое может использоваться для регистрации и последующего разрешения этого узла в облаке.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>. Определяет запись в облаке PNRP, которая содержит сведения о регистрации для однорангового узла, включая сетевые конечные точки доступа, которые могут использоваться для связи с этим узлом.  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>: Определяет запись в облаке PNRP, которая содержит сведения о регистрации для однорангового узла, включая сетевые конечные точки доступа, которые могут использоваться для связи с этим узлом.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>. Определяет процесс регистрации имени однорангового узла, включая методы запуска и остановки регистрации.  
+-   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Определяет процесс регистрации имени однорангового узла, включая методы запуска и остановки регистрации.  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>. Определяет процесс разрешения имени однорангового узла в его сетевые конечные точки, включая синхронные и асинхронные методы разрешения.  
+-   <xref:System.Net.PeerToPeer.PeerNameResolver>: Определяет процесс разрешения имени однорангового узла в его сетевые конечные точки, включая синхронные и асинхронные методы разрешения.  
   
-## <a name="see-also"></a>См. также  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>См. также
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Пример технологии PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

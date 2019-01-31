@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML) (C#)
+title: Как выполнить Поиск объединения двух путей расположения (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: a8272f5ae1df8e076bebc0d368364806535b34d3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 837a94f716c87a1671b5577f8a21a520d4314ec1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526770"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Как выполнить Поиск объединения двух путей расположения (XPath-LINQ to XML) (C#)
 XPath позволяет найти объединение результатов определения двух путей доступа XPath.  
   
  Выражение XPath:  

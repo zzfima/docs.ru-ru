@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отмена запроса PLINQ
+title: Как выполнить Отмена запроса PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45973096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604305"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Практическое руководство. Отмена запроса PLINQ
+# <a name="how-to-cancel-a-plinq-query"></a>Как выполнить Отмена запроса PLINQ
 В приведенных ниже примерах показаны два способа отмены запроса PLINQ. В первом примере отменяется запрос, который состоит в основном из обхода данных. Во втором примере отменяется запрос, который содержит ресурсоемкую функцию.  
   
 > [!NOTE]
@@ -52,6 +52,6 @@ ms.locfileid: "45973096"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- <xref:System.Linq.ParallelEnumerable>
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)

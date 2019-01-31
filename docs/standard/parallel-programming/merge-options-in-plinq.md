@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45648074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714741"
 ---
 # <a name="merge-options-in-plinq"></a>Параметры слияние в PLINQ
 Когда запрос выполняется как параллельный, PLINQ разделяет исходную последовательность между несколькими потоками, чтобы они могли параллельно работать с разными частями. Если результаты будут использоваться в одном потоке, например в цикле `foreach` (`For Each` в Visual Basic), то полученные в каждом потоке результаты нужно объединить в одну последовательность. PLINQ может выполнять разные типы слияния в зависимости от операторов, которые присутствуют в запросе. Например, для операторов, изменяющих порядок результатов, необходимо собрать в буфер все элементы из всех потоков. Для потока ожидающего такой результат (и для пользователя приложения) может пройти достаточно большой период времени, пока появятся первые результаты полностью буферизованного запроса. Другие операторы по умолчанию используют частичную буферизацию, то есть возвращают результаты несколькими пакетами. Один оператор (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) по умолчанию не использует буферизацию. Он немедленно выдает все элементы из всех потоков.  
@@ -25,7 +25,7 @@ ms.locfileid: "45648074"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Полный пример см. в статье [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Полный пример см. в подразделе [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Если выполняемый запрос не поддерживает запрошенный вариант, этот параметр просто игнорируется. В большинстве случаев нет необходимости указывать параметр слияния для запроса PLINQ. Однако, в некоторых случаях тесты и (или) измерения показывают, что запрос лучше всего выполняется в нестандартном режиме. Чаще всего этот параметр используется, чтобы заставить оператор с частичной буферизацией выдавать все результаты в общем потоке. Это позволяет улучшить скорость реагирования интерфейса на действия пользователя.  
   
@@ -67,5 +67,5 @@ ms.locfileid: "45648074"
   
 ## <a name="see-also"></a>См. также
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

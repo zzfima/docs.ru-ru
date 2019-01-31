@@ -2,12 +2,12 @@
 title: Производительность связанных запросов (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 9377c4e57eb19f133a1f973ea7f86c3bf72e4cf8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e099d4d725a0603df61f5e308ce9897feec0af29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677323"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Производительность связанных запросов (LINQ to XML) (C#)
 Одним из наиболее важных преимуществ LINQ (и LINQ to XML) является возможность эффективного выполнения цепочек запросов наряду с одиночными большими и более сложными запросами.  
@@ -54,7 +54,7 @@ foreach (var i in query2)
   
  Дополнительные сведения об итерациях см. в разделе [yield](../../../../csharp/language-reference/keywords/yield.md).  
   
- Более подробные сведения об объединении запросов в цепочки см. в разделе [Учебное руководство. Связывание запросов](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
+ Более подробные сведения об объединении запросов в цепочки см. в разделе [Учебник. Объединение запросов в цепочки](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
 ## <a name="see-also"></a>См. также
 

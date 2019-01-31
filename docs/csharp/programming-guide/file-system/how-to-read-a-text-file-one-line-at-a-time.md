@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Построчное чтение текстового файла (Visual C#)
+title: Как выполнить Построчное чтение текстового файла (Visual C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718654"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Практическое руководство. Построчное чтение текстового файла (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Как выполнить Построчное чтение текстового файла (Visual C#)
 В этом примере производится построчное чтение содержимого текстового файла в строку с помощью метода `ReadLine` класса `StreamReader`. Каждая строка текста сохраняется в строке `line` и отображается на экране.  
   
 ## <a name="example"></a>Пример  
@@ -52,6 +52,6 @@ System.Console.ReadLine();
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

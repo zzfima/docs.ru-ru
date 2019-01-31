@@ -1,17 +1,17 @@
 ---
-title: 'Устранение рисков: управление версиями продукта'
+title: Устранение рисков. Управление версиями продукта
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 483a6532ad62fb7e1561ac5cc4de37aeaaf45fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573183"
 ---
-# <a name="mitigation-product-versioning"></a>Устранение рисков: управление версиями продукта
+# <a name="mitigation-product-versioning"></a>Устранение рисков. Управление версиями продукта
 В [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и более поздних версиях управление версиями продукта отличается от предыдущих выпусков платформы .NET Framework (.NET Framework 4, 4.5, 4.5.1 и 4.5.2).  
   
 ## <a name="product-versioning-changes"></a>Изменения управления версиями продукта  
@@ -28,7 +28,7 @@ ms.locfileid: "33389409"
 ### <a name="handling-the-product-versioning-changes"></a>Обработка изменений управления версиями продукта  
  В общем случае приложения для обнаружения таких сведений, как версия среды выполнения .NET Framework и каталог установки, должны использовать следующие рекомендуемые методы:  
   
--   Инструкции для определения версии среды выполнения .NET см. в разделе [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+-   Чтобы определить версию среды выполнения .NET Framework, см. статью [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
 -   Чтобы определить путь установки платформы .NET Framework, используйте значение записи `InstallPath` в ключе `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33389409"
   
 -   Чтобы получить версию среды CLR, вызовите метод <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>.   Для .NET Framework 4 и ее доработанных выпусков (.NET Framework 4.5, 4.5.1, 4.5.2 и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7) возвращается строка `v4.0.30319`.  
   
-## <a name="see-also"></a>См. также  
- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
- 
+## <a name="see-also"></a>См. также
+- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Чтение данных объекта из XML-файла (C#)
+title: Как выполнить Чтение данных объекта из XML-файла (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583490"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Практическое руководство. Чтение данных объекта из XML-файла (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Как выполнить Чтение данных объекта из XML-файла (C#)
 В этом примере демонстрируется считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
@@ -63,7 +63,7 @@ public void ReadXML()
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.StreamWriter>  
-- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
-- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- <xref:System.IO.StreamWriter>
+- [Практическое руководство. Запись данных объекта в XML-файл (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

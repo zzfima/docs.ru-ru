@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 9f37c9ab0eb3b0943d1ae0720690a95e8c491704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549268"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Доступ к клавиатуре (Visual Basic)
 Объект `My.Computer.Keyboard` предоставляет свойства для доступа к текущему состоянию клавиатуры, например перечню нажатых в настоящее время клавиш, и метод для отправки сообщений о нажатиях клавиш активному окну.  
@@ -30,6 +30,6 @@ ms.locfileid: "33582655"
 |Определение, включен ли режим SCROLL LOCK|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
 |Запуск приложения и отправка ему нажатий клавиш|[Практическое руководство. Запуск приложения и отправка ему нажатий клавиш (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Devices.Keyboard>  
- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
+## <a name="see-also"></a>См. также
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

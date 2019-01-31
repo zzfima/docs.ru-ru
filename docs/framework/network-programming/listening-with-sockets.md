@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527852"
 ---
 # <a name="listening-with-sockets"></a>прослушивание с помощью сокетов
 Сокеты прослушивателя и сервера открывают порт в сети и ожидают, когда клиент подключится к этому порту. В этом примере показано, как создать удаленную службу для сети TCP/IP (хотя существуют и другие семейства сетевых адресов и протоколов).  
@@ -59,9 +59,9 @@ listener.Listen(100);
   
  Метод **Listen** принимает один параметр, который определяет максимальное количество ожидающих подключений для сокета **Socket**. При превышении этого количества клиенту возвращается ошибка "Сервер занят". В данном случае в очередь на подключение размещается до 100 клиентов. 101 клиенту возвращается ответ "Сервер занят".  
   
-## <a name="see-also"></a>См. также  
- [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>См. также
+- [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Сокеты](../../../docs/framework/network-programming/sockets.md)

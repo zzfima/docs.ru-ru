@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Изменение содержимого строки (C#)
+title: Как выполнить Изменение содержимого строки (C#)
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664029"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Практическое руководство. Изменение содержимого строки в C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Как выполнить Изменение содержимого строки в C\#
 
 В этой статье демонстрируется несколько способов получения `string` путем изменения существующего объекта `string`. Все показанные методы возвращают результат изменений как новый объект `string`. Чтобы это было очевидно, во всех примерах результат сохраняется в новой переменной. Затем вы можете изучить исходный объект `string` и объект `string`, полученный в результате изменений при выполнении каждого примера.
 
@@ -73,5 +73,5 @@ ms.locfileid: "49453441"
 
 ## <a name="see-also"></a>См. также
 
-- [Регулярные выражения в .NET Framework](../../standard/base-types/regular-expressions.md)  
-- [Элементы языка регулярных выражений — краткий справочник](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Регулярные выражения в .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Элементы языка регулярных выражений — краткий справочник](../../standard/base-types/regular-expression-language-quick-reference.md)

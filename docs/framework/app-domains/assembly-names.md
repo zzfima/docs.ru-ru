@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50184789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529821"
 ---
 # <a name="assembly-names"></a>Имена сборок
 Имя сборки хранится в метаданных и в значительной степени влияет на ее область определения и использование в приложениях. Сборки со строгим именем имеют полное имя, в состав которого входит имя сборки, язык и региональные параметры, открытый ключ и номер версии. Оно часто называется отображаемым именем; у загружаемых сборок его можно получить через свойство <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -24,7 +24,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  Для поддержки сборок, привязанных к конкретным процессорам, в идентификации сборки в платформе .NET Framework версии 2.0 указывается архитектура процессора. Можно создавать версии сборок, идентификации которых различаются только архитектурой процессора — например 32-разрядные и 64-разрядные версии. При строгом именовании указывать архитектуру процессора не требуется. Дополнительные сведения см. в разделе <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
+>  Для поддержки сборок, привязанных к конкретным процессорам, в идентификации сборки в платформе .NET Framework версии 2.0 указывается архитектура процессора. Можно создавать версии сборок, идентификации которых различаются только архитектурой процессора — например 32-разрядные и 64-разрядные версии. При строгом именовании указывать архитектуру процессора не требуется. Для получения дополнительной информации см. <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  В этом примере полное имя указывает, что у сборки `myTypes` имеется строгое имя с маркером общего ключа, значение языка и региональных параметров "Английский (США)" и номер версии 1.0.1234.0. Архитектурой процессора является "msil", что означает, что должна выполняться JIT-компиляция в 32- или 64-разрядный код в зависимости от операционной системы и процессора.  
   
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Если сборка со строгим именем помещается в глобальный кэш сборок, то имя файла сборки должно соответствовать имени сборки (без учета расширения файла — например EXE или DLL). Так, если имя файла сборки — myAssembly.dll, то именем сборки должно быть myAssembly. Имена закрытых сборок, развертываемых только в корневом каталоге приложения, могут отличаться от соответствующих файловых имен.  
   
-## <a name="see-also"></a>См. также  
-- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
-- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
-- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>См. также
+- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
+- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -2,12 +2,12 @@
 title: Коллекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679178"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084124"
 ---
 # <a name="collections-c"></a>Коллекции (C#)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -193,7 +193,7 @@ public class Galaxy
   
  В таблице ниже перечислены некоторые из часто используемых классов пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType>.  
 
-|Класс|Описание:| 
+|Класс|Описание| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|  
 |<xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  В следующей таблице перечислены некоторые из часто используемых классов пространства имен `System.Collections`:  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|  
 |<xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|  
@@ -577,13 +577,13 @@ private static IEnumerable<int> EvenSequence(
   
 ## <a name="see-also"></a>См. также
 
-- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Основные понятия программирования (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Коллекции и структуры данных](../../../standard/collections/index.md)  
-- [Управление коллекциями и их создание](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)  
-- [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Основные понятия программирования (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Коллекции и структуры данных](../../../standard/collections/index.md)
+- [Управление коллекциями и их создание](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)
+- [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание XML-файла документации с использованием CodeDOM
+title: Как выполнить Создание XML-файла документации с использованием CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632833"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Практическое руководство. Создание XML-файла документации с использованием CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Как выполнить Создание XML-файла документации с использованием CodeDOM
 CodeDOM можно использовать для создания кода, создающего XML-документацию. Этот процесс предполагает создание графа CodeDOM, содержащего комментарии XML-документации, создание кода, а также компиляцию созданного кода с параметром компилятора, при выборе которого в итоге создается XML-документация.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Создание графа CodeDOM, содержащего комментарии XML-документации  
@@ -79,7 +79,7 @@ CodeDOM можно использовать для создания кода, с
   
 -   Для выполнения этого кода должно быть установлено разрешение `FullTrust`.  
   
-## <a name="see-also"></a>См. также  
- [Документирование кода с помощью XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [Комментарии XML-документации](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [Документация XML](/cpp/ide/xml-documentation-visual-cpp)
+## <a name="see-also"></a>См. также
+- [Документирование кода с помощью XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Комментарии XML-документации](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Документация XML](/cpp/ide/xml-documentation-visual-cpp)

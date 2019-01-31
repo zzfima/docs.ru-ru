@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548551"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Пример COM-взаимодействия. COM-клиент и сервер .NET
 В этом примере демонстрируется взаимодействие [клиента COM](#cpconcominteropsamplecomclientnetserveranchor1) и [сервера .NET](#cpconcominteropsamplecomclientnetserveranchor2), в рамках которого рассчитывается величина выплат по ипотечному кредиту. В этом примере клиент создает и вызывает экземпляр управляемого класса `Loan`, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений. Примеры кода из этого образца используются в рамках всего этого раздела.  
@@ -389,5 +389,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>См. также
+- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

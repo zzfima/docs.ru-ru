@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сопоставление значений HRESULT и исключений
+title: Как выполнить Сопоставление значений HRESULT и исключений
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729240"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Практическое руководство. Сопоставление значений HRESULT и исключений
+# <a name="how-to-map-hresults-and-exceptions"></a>Как выполнить Сопоставление значений HRESULT и исключений
 Методы COM сообщают об ошибках, возвращая значения HRESULT. Методы .NET в этом случае вызывают исключения. Среда выполнения обеспечивает сопоставление этих двух элементов. Каждый класс платформы .NET Framework сопоставляется со значением HRESULT.  
   
  Соответствующие значения HRESULT задаются определяемыми пользователем классами исключений. Эти классы исключений могут динамически изменять значение HRESULT, возвращаемое при возникновении исключения, устанавливая поле **HResult** соответствующего объекта исключения. Дополнительные сведения об исключении предоставляются клиенту посредством интерфейса **IErrorInfo**, который реализуется для объекта .NET в неуправляемом процессе.  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  Поля исключения **Message**, **Source** и **StackTrace** недоступны для **StackOverflowException**.  
   
-## <a name="see-also"></a>См. также  
- [Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Исключения](../../standard/exceptions/index.md)
+## <a name="see-also"></a>См. также
+- [Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Исключения](../../standard/exceptions/index.md)

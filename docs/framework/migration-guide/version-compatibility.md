@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48845545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558921"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Совместимость версий в .NET Framework
-Обратная совместимость означает, что приложение, разработанное для конкретной версии платформы, будет запускаться и в более поздних версиях этой платформы. В платформе .NET Framework в максимально возможной степени обеспечивается обратная совместимость: исходный код, написанный для одной версии платформы .NET Framework, должен компилироваться в более поздних версиях этой платформы, а двоичные файлы, работающие в одной версии платформы .NET Framework, должны точно так же работать в более поздних версиях этой платформы.  
+Обратная совместимость означает, что приложение, разработанное для конкретной версии платформы, будет запускаться и в более поздних версиях этой платформы. На платформе .NET Framework в максимально возможной степени обеспечивается обратная совместимость: исходный код, написанный для одной версии платформы .NET Framework, должен компилироваться в более поздних версиях этой платформы, а двоичные файлы, работающие в одной версии платформы .NET Framework, должны точно так же работать в более поздних версиях этой платформы.  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>Совместимость версий приложений  
@@ -34,7 +34,7 @@ ms.locfileid: "48845545"
 </configuration>  
 ```  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Настройка в приложении поддержки .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
+ Дополнительные сведения см. в разделе [Как Настройка приложения для поддержки платформы .NET Framework 4 или 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
   
 ## <a name="version-compatibility-for-components"></a>Совместимость версий компонентов  
  Приложение может определять версию платформы .NET Framework, в которой оно запускается, однако компонент не может. Компоненты и библиотеки классов загружаются в контексте конкретного приложения и, следовательно, автоматически запускаются в той версии .NET Framework, в которой запускается это приложение.  
@@ -65,9 +65,9 @@ ms.locfileid: "48845545"
 ## <a name="compatibility-and-side-by-side-execution"></a>Совместимость и параллельное выполнение  
  Если найти подходящий обходной путь для проблемы не удается, помните, что платформа .NET Framework 4.5 (или один из ее доработанных выпусков) работает параллельно с версиями 1.1, 2.0 и 3.5 и представляет собой обновление "на месте", заменяющее версию 4. Для приложений, предназначенных для версий 1.1, 2.0 и 3.5, можно установить на целевом компьютере соответствующую версию .NET Framework и запускать приложение в оптимальной для него среде. Дополнительные сведения о параллельном выполнении см. в разделе [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md).  
   
-## <a name="see-also"></a>См. также  
- [Новые возможности](../../../docs/framework/whats-new/index.md)  
- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
- [Проблемы при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a>См. также
+- [Новые возможности](../../../docs/framework/whats-new/index.md)
+- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)
+- [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Проблемы при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

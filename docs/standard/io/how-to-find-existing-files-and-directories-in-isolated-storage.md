@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
+title: Как выполнить Поиск существующих файлов и каталогов в изолированном хранилище
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646715"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Как выполнить Поиск существующих файлов и каталогов в изолированном хранилище
 
 Чтобы выполнить поиск по каталогу в изолированном хранилище, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Этот метод принимает строку, которая представляет шаблон для поиска. В шаблоне поиска вы можете использовать как одиночные (?), так и многосимвольные (\*) подстановочные знаки, но они должны находиться только в последней части имени. Например, допустимой строкой для поиска является `directory1/*ect*`, но не `*ect*/directory2`.  
   
@@ -43,5 +43,5 @@ ms.locfileid: "50202098"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)

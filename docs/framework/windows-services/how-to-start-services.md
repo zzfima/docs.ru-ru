@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Запуск служб
+title: Как выполнить Запуск служб
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494388"
 ---
-# <a name="how-to-start-services"></a>Практическое руководство. Запуск служб
+# <a name="how-to-start-services"></a>Как выполнить Запуск служб
 Установленную службу необходимо запустить. Процедура запуска вызывает метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> в классе службы. Как правило, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> определяет полезные действия, которые будет выполнять служба. Запущенная служба остается активной, пока не будет приостановлена или остановлена вручную.  
   
  Службы можно настроить на запуск автоматически или вручную. Служба, которая запускается автоматически, будет запущена при первом включении или перезагрузке компьютера, на котором она установлена. Службу, которая запускается вручную, должен запустить пользователь.  
@@ -27,7 +27,7 @@ ms.locfileid: "47176751"
   
 ### <a name="to-specify-how-a-service-should-start"></a>Настройка способа запуска службы  
   
-1.  Создав службу, добавьте для нее необходимые установщики. Дополнительные сведения см. в [руководстве по добавлению установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Создав службу, добавьте для нее необходимые установщики. Дополнительные сведения см. в разделе [Как Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  В конструкторе щелкните установщик процессов службы, с которой вы работаете.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47176751"
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Запуск службы вручную из обозревателя сервера  
   
-1.  В **обозревателе сервера** добавьте нужный сервер, если его нет в списке. Дополнительные сведения см. в руководстве по получению доступа и инициализации обозревателя сервера и обозревателя базы данных.  
+1.  В **обозревателе сервера** добавьте нужный сервер, если его нет в списке. Дополнительные сведения см. в разделах "Практическое руководство. Подключение и инициализация обозревателя серверов или обозревателя баз данных".  
   
 2.  Разверните узел **Службы** и выберите службу, которую нужно запустить.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47176751"
   
 2.  Чтобы запустить службу, вызовите метод <xref:System.ServiceProcess.ServiceController.Start%2A>.  
   
-## <a name="see-also"></a>См. также  
- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Практическое руководство. Добавление установщиков в приложение служб](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>См. также
+- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

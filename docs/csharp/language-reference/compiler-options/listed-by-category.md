@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546992"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Параметры компилятора C#, упорядоченные по категориям
 
@@ -95,7 +95,7 @@ ms.locfileid: "43527191"
 |[-codepage](codepage-compiler-option.md)|Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.|
 |[-help](help-compiler-option.md)|Перечисляет параметры компилятора в stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Указывает, что исполняемый файл поддерживает технологию Address Space Layout Randomization (ASLR).|
-|[-langversion](langversion-compiler-option.md)|Указание языковой версии: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 или Latest. |
+|[-langversion](langversion-compiler-option.md)|Укажите версию языка: по умолчанию, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 или последняя версия |
 |[-main](main-compiler-option.md)|Указывает местоположение метода **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Предписывает компилятору не компилировать csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Подавляет сведения баннера компилятора.|
@@ -104,7 +104,7 @@ ms.locfileid: "43527191"
 |[/unsafe](unsafe-compiler-option.md)|Разрешает компиляцию кода, использующего ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|
 |[-utf8output](utf8output-compiler-option.md)|Отображает выходные данные компилятора в кодировке UTF-8.|
 |-parallel[+&#124;-]|Указывает, следует ли использовать параллельную сборку (+).|
-|-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|
+|-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Допустимые значения: SHA1 (по умолчанию) или SHA256.|
 
 ## <a name="obsolete-options"></a>Устаревшие параметры
 
@@ -114,6 +114,6 @@ ms.locfileid: "43527191"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](index.md)  
-- [Параметры компилятора C# в алфавитном порядке](listed-alphabetically.md)  
+- [Параметры компилятора C# ](index.md)
+- [Параметры компилятора C# в алфавитном порядке](listed-alphabetically.md)
 - [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

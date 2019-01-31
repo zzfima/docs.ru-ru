@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554560"
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
@@ -50,15 +50,15 @@ ms.locfileid: "53143848"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Общие сценарии параллельного размещения  
   
--   **Сценарий 1.** Собственное приложение, которое использует COM-компоненты, созданные в более ранних версиях платформы .NET Framework.  
+-   **Сценарий 1.** Собственное приложение, которое использует COM-компоненты, созданные в более ранних версиях платформы .NET Framework.  
   
-     Установленные версии платформы .NET Framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и все остальные версии платформы .NET Framework, используемые COM-компонентами.  
+     Установленные версии платформы .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и все остальные версии платформы .NET Framework, используемые COM-компонентами.  
   
      Необходимые действия: в этой ситуации не следует предпринимать никаких действий. COM-компоненты будут выполняться в той версии платформы .NET Framework, в которой они были зарегистрированы.  
   
 -   **Сценарий 2**. Управляемое приложение, созданное в [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], которое желательно запустить в [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], но допустимо и в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], если версия 2.0 отсутствует.  
   
-     Установленные версии платформы .NET Framework: более ранняя версия платформы .NET Framework и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Установленные версии платформы .NET Framework. Боле ранняя версия .NET Framework и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Необходимые действия: откройте [файл конфигурации приложения](../../../docs/framework/configure-apps/index.md) в каталоге приложения и используйте [элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) и [элемент \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "53143848"
   
 -   **Сценарий 3.** Собственное приложение, которое использует COM-компоненты, созданные в более ранних версиях платформы .NET Framework. При этом приложение необходимо запустить в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Установленные версии платформы .NET Framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Установленные версии платформы .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Необходимые действия: откройте файл конфигурации приложения в каталоге приложения и используйте элемент `<startup>`, атрибут `useLegacyV2RuntimeActivationPolicy` которого имеет значение `true`, и набор элементов `<supportedRuntime>` следующим образом:  
   
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
-- [Элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>См. также
+- [Элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

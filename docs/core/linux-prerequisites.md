@@ -4,12 +4,12 @@ description: Поддерживаемые версии Linux и зависимо
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656054"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083890"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -100,7 +100,8 @@ Alpine Linux                  | 3.8+                  | x64, ARM64
 Для дистрибутивов Ubuntu должны быть установлены следующие библиотеки:
 
 * liblttng-ust0
-* libcurl3
+* libcurl3 (для 14.x и 16.x)
+* libcurl4 (для 18.x)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

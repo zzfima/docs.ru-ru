@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
+title: Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085229"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857662"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
 Веб-страницы могут отображаться в любой точке мира, поэтому в операциях синтаксического анализа и форматирования значений даты и времени при взаимодействии с пользователем не должен использоваться формат по умолчанию (который обычно определяется форматом языка и региональных параметров, установленным для веб-сервера). Вместо этого при обработке строк даты и времени, вводимых пользователем, веб-формы должны выполнять их синтаксический анализ с учетом значений языка и региональных параметров, установленных для пользователя. Аналогичным образом, отображать данные даты и времени для пользователя следует в формате, соответствующем языку и региональным параметрам пользователя. В настоящем разделе показано, как это делается.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Синтаксический анализ строк даты и времени, вводимых пользователем  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Синтаксический анализ строк даты и времени, вводимых пользователем  
   
 1.  Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
   
@@ -40,7 +43,7 @@ ms.locfileid: "44085229"
   
 6.  Если преобразование по-прежнему завершается сбоем или свойство <xref:System.Web.HttpRequest.UserLanguages%2A> содержит пустой массив строк, используйте для синтаксического анализа инвариантные язык и региональные параметры, которые возвращаются в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Синтаксический анализ локальной даты и времени из запроса пользователя  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Синтаксический анализ локальной даты и времени из запроса пользователя  
   
 1.  Добавьте элемент управления <xref:System.Web.UI.WebControls.HiddenField> в веб-форму.  
   
@@ -110,7 +113,7 @@ ms.locfileid: "44085229"
   
 ## <a name="see-also"></a>См. также
 
-- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Анализ строк даты и времени](../../../docs/standard/base-types/parsing-datetime.md)

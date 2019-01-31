@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720214"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Устранение неполадок заблокированных установок и удалений .NET Framework
 
@@ -33,7 +33,7 @@ ms.locfileid: "53781080"
 |Удаление платформы Microsoft .NET Framework может вызвать неполадки в работе некоторых приложений.|Обычно не рекомендуется удалять установленные версии .NET Framework, поскольку используемые приложения могут зависеть от конкретной версии .NET Framework. Дополнительные сведения см. в разделе [.NET Framework для пользователей](../../../docs/framework/get-started/index.md#ForUsers) руководства *Начало работы*.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (RUS) или более позднее обновление уже установлено на этом компьютере.|Никаких действий не требуется.<br /><br /> Чтобы определить, какие версии платформы .NET Framework установлены в системе, см. статью [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (*язык*) требует наличия .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Установите.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* из Центра загрузки и повторно запустите программу установки.|Перед установкой языкового пакета необходимо установить английскую версию указанного выпуска .NET Framework. Дополнительные сведения см. в разделе о [языковых пакетах](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs) руководства по установке.|  
-|Не удается установить .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Эта программа несовместима с другими приложениями на данном компьютере.<br /><br /> -или-<br /><br /> Эта программа несовместима с другими приложениями на данном компьютере.|Скорее всего, на компьютере установлена предварительная или RC-версия .NET Framework. Удалите ее и снова запустите программу установки.|  
+|Не удается установить .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Эта программа несовместима с другими приложениями на данном компьютере.<br /><br /> - или -<br /><br /> Эта программа несовместима с другими приложениями на данном компьютере.|Скорее всего, на компьютере установлена предварительная или RC-версия .NET Framework. Удалите ее и снова запустите программу установки.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* невозможно удалить, используя этот пакет. Чтобы удалить .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* с компьютера, откройте **панель управления**, выберите **Программы и компоненты**, **Просмотр установленных обновлений**, затем "Обновление для Microsoft Windows" (KB2828152) и нажмите **Удалить**.|Устанавливаемый пакет не удаляет предварительную или RC-версию .NET Framework.<br /><br /> Удалите предварительную или RC-версию с помощью панели управления.|  
 |Не удается удалить .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. От этой программы зависят другие приложения на данном компьютере.|Обычно не рекомендуется удалять установленные версии .NET Framework, поскольку используемые приложения могут зависеть от конкретной версии .NET Framework. Дополнительные сведения см. в разделе [.NET Framework для пользователей](../../../docs/framework/get-started/index.md#ForUsers) руководства *Начало работы*.|  
 |Распространяемый пакет .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* неприменим к этой операционной системе. Скачайте .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* для вашей операционной системы из Центра загрузки Майкрософт.|Возможно, вы пытаетесь установить [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 или 4.7.2 на платформу, которая не поддерживается, или выбрали пакет установки, в котором отсутствуют компоненты для некоторых операционных систем. Повторите установку с помощью автономного установщика ([для 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493), [для 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706), [для 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233), [для 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744), для [4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), для [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)) для [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) или для [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265). Дополнительные сведения см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md) и в [требованиях к системе](../../../docs/framework/get-started/system-requirements.md) для поддерживаемых операционных систем.|  
@@ -77,6 +77,6 @@ ms.locfileid: "53781080"
 
 ## <a name="see-also"></a>См. также
 
-[Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)   
-[Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)
+- [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)

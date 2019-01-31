@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 1c6ca568cae45a54e781c30bf5774015ae09c98a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704463"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Доступ к Интернету через прокси-сервер
 Если вы используете прокси-сервер для предоставления доступа к Интернету, необходимо настроить экземпляр прокси-сервера, который будет обеспечивать обмен данными между вашим приложением и веб-прокси.  
@@ -32,6 +32,6 @@ ms.locfileid: "50201890"
   
 -   [Практическое руководство. Переопределение глобальных прокси-серверов](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>См. также  
- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>См. также
+- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)

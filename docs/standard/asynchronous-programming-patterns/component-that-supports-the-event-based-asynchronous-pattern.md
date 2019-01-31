@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация компонента, поддерживающего асинхронную модель, основанную на событиях
+title: Как выполнить Реализация компонента, поддерживающего асинхронную модель на основе событий
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745471"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация компонента, поддерживающего асинхронную модель, основанную на событиях
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Как выполнить Реализация компонента, поддерживающего асинхронную модель на основе событий
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  В этом руководстве мы покажем, как создать компонент, реализующий асинхронную модель на основе событий. Для такой реализации применяются вспомогательные классы из пространства имен <xref:System.ComponentModel?displayProperty=nameWithType>, что обеспечивает правильную работу компонента для приложений любой модели, включая [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], консольные приложения и приложения Windows Forms. Также этот компонент можно создать на основе элемента управления <xref:System.Windows.Forms.PropertyGrid> и пользовательских конструкторов.  
@@ -48,7 +48,7 @@ ms.locfileid: "46003819"
   
 -   реализация методов запуска и отмены.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. [практическое руководство по реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>создание компонента;  
  На первом шаге мы создадим компонент, который будет реализовать асинхронную модель на основе событий.  
@@ -99,7 +99,7 @@ ms.locfileid: "46003819"
      Мы рассмотрим эти предупреждения в следующем разделе.  
   
 ## <a name="defining-private-delegates"></a>Определение закрытых делегатов  
- Асинхронные аспекты компонента `PrimeNumberCalculator` реализуются внутри него в виде специального делегата <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> представляет метод обратного вызова, который выполняется для потока <xref:System.Threading.ThreadPool>. Метод обратного вызова должен содержать подпись, которая принимает один параметр типа <xref:System.Object>. Это значит, что вам следует передавать состояние вместе с делегатами в классе-оболочке. Дополнительные сведения см. в разделе <xref:System.Threading.SendOrPostCallback>.  
+ Асинхронные аспекты компонента `PrimeNumberCalculator` реализуются внутри него в виде специального делегата <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> представляет метод обратного вызова, который выполняется для потока <xref:System.Threading.ThreadPool>. Метод обратного вызова должен содержать подпись, которая принимает один параметр типа <xref:System.Object>. Это значит, что вам следует передавать состояние вместе с делегатами в классе-оболочке. Для получения дополнительной информации см. <xref:System.Threading.SendOrPostCallback>.  
   
 #### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Чтобы реализовать внутреннее асинхронное поведение компонента, выполните следующие действия.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "46003819"
  Метод `CalculateWorker` заключается в делегат и вызывается асинхронно с помощью вызова к `BeginInvoke`.  
   
 > [!NOTE]
->  Отчет о ходе выполнения реализован в методе `BuildPrimeNumberList`. На быстрых компьютерах события `ProgressChanged` могут возникать быстро друг за другом. Клиентский поток, в котором возникают эти события, должен быть готов к такой ситуации. Если код пользовательского интерфейса будет перегружен сообщениями, это приведет к зависанию. Пример пользовательского интерфейса, который успешно справляется с этой ситуацией, см. в статье [Практическое руководство. Реализация клиента асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Отчет о ходе выполнения реализован в методе `BuildPrimeNumberList`. На быстрых компьютерах события `ProgressChanged` могут возникать быстро друг за другом. Клиентский поток, в котором возникают эти события, должен быть готов к такой ситуации. Если код пользовательского интерфейса будет перегружен сообщениями, это приведет к зависанию. Пример пользовательского интерфейса, который успешно справляется с этой ситуацией, см. в разделе [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Для асинхронного вычисления простых чисел выполните следующие действия.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "46003819"
   
  Итак, компонент `PrimeNumberCalculator` полностью готов к использованию.  
   
- Пример клиента, который использует компонент `PrimeNumberCalculator`, см. в статье [Практическое руководство. Реализация клиента асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Пример клиента, который использует компонент `PrimeNumberCalculator`, см. в статье [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Попробуйте изучить следующий пример, в котором вы создадите `CalculatePrime`, синхронный эквивалент метода `CalculatePrimeAsync`. После этого компонент `PrimeNumberCalculator` будет полностью совместим с асинхронной моделью на основе событий.  
@@ -253,6 +253,6 @@ ms.locfileid: "46003819"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Обзор асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Практическое руководство. Фоновое выполнение операции](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Обзор асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

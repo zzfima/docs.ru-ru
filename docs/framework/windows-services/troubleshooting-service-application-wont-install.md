@@ -1,5 +1,5 @@
 ---
-title: 'Устранение неполадок: невозможно установить приложение-службу'
+title: 'Устранение неполадок: Невозможно установить приложение-службу'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 998c7a3f5ca405b3bd66b877d027126f6c76cc15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494422"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Устранение неполадок: невозможно установить приложение-службу
+# <a name="troubleshooting-service-application-won39t-install"></a>Устранение неполадок: Невозможно установить приложение-службу
 Если приложение-служба не устанавливается надлежащим образом, убедитесь, что для свойства <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> класса службы задано значение, которое отображается в установщике этой службы. Для правильной установки службы необходимо, чтобы эти значения совпадали.  
   
 > [!NOTE]
@@ -25,5 +25,5 @@ ms.locfileid: "48035835"
   
  Также убедитесь, что у вас не установлена другая служба с таким же именем. Для успешной установки необходимо, чтобы у каждой службы было уникальное имя.  
   
-## <a name="see-also"></a>См. также  
- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>См. также
+- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

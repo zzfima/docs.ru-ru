@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
+title: Как выполнить Изменение файла конфигурации компьютера для включения поддержки IPv6
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 32aa1c3fa50d5c0486da4ef6799c77ead605b504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8427a1641b4d6c782f2b2585ab49d38073567f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698080"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Как выполнить Изменение файла конфигурации компьютера для включения поддержки IPv6
 В следующем примере кода показано, как изменить файл конфигурации компьютера, *machine.config*, чтобы включить поддержку IPv6. Файл *machine.config* находится в папке *%Windir%\Microsoft.NET\Framework* в каталоге установки ОС Windows. В папках *%Windir%\Microsoft.NET\Framework* находятся отдельные файлы *machine.config* для каждой версии .NET Framework, установленной на компьютере (например, *C: \WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Эти параметры могут также задаваться в файле конфигурации приложения, который имеет более высокий приоритет, чем в файл конфигурации компьютера.  
@@ -35,7 +35,7 @@ ms.locfileid: "50187261"
 <system.net>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Адресация IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)  
- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+## <a name="see-also"></a>См. также
+- [Адресация IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)
+- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561976"
 ---
 # <a name="network-programming-how-to-topics"></a>Практические руководства по сетевому программированию
 Ниже приведены ссылки на разделы руководства по сетевому программированию, находящиеся в основной документации.  
@@ -33,7 +33,7 @@ ms.locfileid: "50192362"
   
 -   [Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
--   [Практическое руководство. Доступ к свойствам, относящимся с HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
+-   [Практическое руководство. Доступ к свойствам, относящимся к HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
   
 -   [Практическое руководство. Присвоение данных пользователя групповым подключениям](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50192362"
   
 -   [Практическое руководство. Отправка файлов с использованием FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
   
--   [Практическое руководство. Список содержимого каталога с помощью FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
+-   [Практическое руководство. Перечисление содержимого каталога с помощью FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
  **IP-протокол версии 6:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "50192362"
   
 -   [Практическое руководство. Проверка связи с узлом](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>См. также  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>См. также
+- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Примеры сетевых приложений для .NET в галерее кода MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

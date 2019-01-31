@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603317"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Присоединенные и отсоединенные дочерние задачи
 *Дочерняя задача* (или *вложенная задача*) — это экземпляр <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, создаваемый в пользовательском делегате другой задачи, которая называется *родительской задачей*. Дочерняя задача может быть отсоединенной или присоединенной. *Отсоединенная дочерняя задача* — это задача, которая выполняется независимо от своего родительского объекта. *Присоединенная дочерняя задача* — это вложенная задача, созданная с параметром <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>, родительский объект которой не запрещает ее присоединение явно или по умолчанию. Задача может создавать любое количество присоединенных и отсоединенных дочерних задач, ограничиваемое только системными ресурсами.  
@@ -76,9 +76,9 @@ ms.locfileid: "46003767"
   
  Чтобы запретить присоединение к родительской задаче дочерних задач, укажите параметр <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> при создании родительской задачи <xref:System.Threading.Tasks.Task> или объекта <xref:System.Threading.Tasks.Task%601>. Если задача пытается присоединиться к родительской, а родительская задача задана с параметром <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>, то дочерней задаче не удастся присоединиться к родительской задаче, и она будет выполняться в точности так, как если бы параметр <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> не был указан.  
   
- Можно также запрещать присоединение дочерней задачи к ее родителю, когда дочерняя задача не завершается своевременно. Поскольку родительская задача не завершается, пока не будут завершены все ее дочерние задачи, дочерняя задача с длительным временем выполнения может привести к снижению производительности всего приложения. Пример, в котором показано, как повысить производительность приложения, предотвращая присоединение задачи к ее родительской задаче, см. в [руководстве по запрету присоединения дочерней задачи к ее родительской задаче](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Можно также запрещать присоединение дочерней задачи к ее родителю, когда дочерняя задача не завершается своевременно. Поскольку родительская задача не завершается, пока не будут завершены все ее дочерние задачи, дочерняя задача с длительным временем выполнения может привести к снижению производительности всего приложения. Пример, в котором показано, как повысить производительность приложения, предотвращая присоединение задачи к ее родительской задаче, см. в разделе [Практическое руководство. Запрет присоединения дочерней задачи к ее родительской задаче](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

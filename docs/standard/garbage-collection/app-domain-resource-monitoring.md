@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606534"
 ---
 # <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения
 Функция наблюдения за ресурсами доменов приложений (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Это полезно для некоторых узлов, таких как ASP.NET, которые используют несколько доменов приложений в длительных процессах. Узел может выгрузить домен приложения, если его работа понижает производительность процесса в целом. Но для нужно определить проблемное приложение. ARM предоставляет сведения, которые помогут решить эту задачу.  
@@ -40,35 +40,35 @@ ms.locfileid: "48266654"
 ## <a name="using-arm"></a>Использование ARM  
  ARM передает данные общего процессорного времени, используемого доменом приложения, а также три параметра использования памяти.  
   
--   **Общее процессорное время для домена приложения, в секундах.** Результат вычисляется путем сложения значений времени для всех потоков операционной системы, выполнявшихся в домене приложения за весь период его существования. Заблокированные потоки и потоки в спящем режиме не используют процессорное время. Если поток вызывает машинный код, время нового потока в машинном коде включается в статистику по домену приложения, из которого он был вызван.  
+-   **Общее процессорное время для домена приложения, в секундах**. Результат вычисляется путем сложения значений времени для всех потоков операционной системы, выполнявшихся в домене приложения за весь период его существования. Заблокированные потоки и потоки в спящем режиме не используют процессорное время. Если поток вызывает машинный код, время нового потока в машинном коде включается в статистику по домену приложения, из которого он был вызван.  
   
     -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
-    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
+    -   Интерфейс API размещения. Метод [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
   
     -   События трассировки событий Windows: события `ThreadCreated`, `ThreadAppDomainEnter` и `ThreadTerminated`. Сведения о поставщиках и ключевые слова вы найдете в разделе о событиях ресурсов для доменов приложения в статье [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md) (События трассировки событий Windows в среде CLR).  
   
--   **Общий объем выделенной управляемой памяти для домена приложения за все время его существования (в байтах).** Общий объем выделенной памяти не всегда правильно отражает использование памяти доменом приложения, так как объекты могут выделяться на короткий промежуток времени. Но накладные расходы могут оказаться существенными, если приложение часто выделяет и освобождает большое количество объектов.  
+-   **Общий объем выделенной управляемой памяти для домена приложения за все время его существования (в байтах)**. Общий объем выделенной памяти не всегда правильно отражает использование памяти доменом приложения, так как объекты могут выделяться на короткий промежуток времени. Но накладные расходы могут оказаться существенными, если приложение часто выделяет и освобождает большое количество объектов.  
   
     -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
+    -   Интерфейс API размещения. Метод [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
   
     -   События трассировки событий Windows: событие `AppDomainMemAllocated`, поле `Allocated`.  
   
--   **Управляемая память (в байтах), которая используется доменом приложения и осталась выделенной после последней полной блокирующей сборки мусора.** Этот параметр имеет смысл, только если выполнялась полная блокирующая сборка (в отличие от параллельных операций сборки, которые выполняются в фоновом режиме и не блокируют работу приложения). Например, перегрузка метода <xref:System.GC.Collect?displayProperty=nameWithType> вызывает полную блокирующую сборку мусора.  
+-   **Управляемая память (в байтах), которая используется доменом приложения и осталась выделенной после последней полной блокирующей сборки мусора**. Этот параметр имеет смысл, только если выполнялась полная блокирующая сборка. (в отличие от параллельных операций сборки, которые выполняются в фоновом режиме и не блокируют работу приложения). Например, перегрузка метода <xref:System.GC.Collect?displayProperty=nameWithType> вызывает полную блокирующую сборку мусора.  
   
     -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pAppDomainBytesSurvived`.  
+    -   Интерфейс API размещения. Метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pAppDomainBytesSurvived`.  
   
     -   События трассировки событий Windows: событие `AppDomainMemSurvived`, поле `Survived`.  
   
--   **Общий объем управляемой памяти (в байтах), которая используется процессом и осталась выделенной после последней полной блокирующей сборки мусора.** Это значение можно сравнить с объемами памяти, которая осталась выделенной для отдельных доменов приложений.  
+-   **Общий объем управляемой памяти (в байтах), которая используется процессом и осталась выделенной после последней полной блокирующей сборки мусора**. Это значение можно сравнить с объемами памяти, которая осталась выделенной для отдельных доменов приложений.  
   
     -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pTotalBytesSurvived`.  
+    -   Интерфейс API размещения. Метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pTotalBytesSurvived`.  
   
     -   События трассировки событий Windows: событие `AppDomainMemSurvived`, поле `ProcessSurvived`.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48266654"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Интерфейс ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Интерфейс ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

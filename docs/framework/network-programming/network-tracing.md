@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514703"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Трассировка сети в .NET Framework
 Трассировка сети в .NET Framework предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Эта возможность полезна для отладки приложений на стадии разработки, а также для анализа развернутых приложений. Выходные данные трассировки сети можно настраивать с целью поддержки различных сценариев использования во время разработки и в производственной среде.  
@@ -35,8 +35,8 @@ ms.locfileid: "53147415"
 > [!NOTE]
 >  Данный член генерирует сведения трассировки, если в приложении включена трассировка сети. Дополнительные сведения о трассировке см. в разделе "Трассировка сети".  
   
-## <a name="see-also"></a>См. также  
- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
-[Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>См. также
+- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

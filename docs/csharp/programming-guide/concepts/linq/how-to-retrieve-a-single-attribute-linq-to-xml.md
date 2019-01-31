@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#)
+title: Как выполнить Извлечение одного атрибута (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 7e7da2b63b9b46a23fcdbcbea6a0f499de32cf19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2bf42333d7a0b3e34cc0a636b68659b8c45d1d83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738187"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Как выполнить Извлечение одного атрибута (LINQ to XML) (C#)
 В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно. Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.  
   
  Метод <xref:System.Xml.Linq.XElement.Attribute%2A> класса <xref:System.Xml.Linq.XElement> возвращает значение <xref:System.Xml.Linq.XAttribute> с указанным именем.  

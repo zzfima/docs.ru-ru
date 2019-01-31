@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153618"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066328"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016
 
-Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) является последней доступной версией.
+Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) является последней доступной версией.
 
 Вы могли попасть на эту страницу после попытки запуска приложения и отображения диалогового окна, аналогичного приведенному ниже:
 
@@ -29,11 +29,11 @@ ms.locfileid: "53153618"
 * [Обновления Windows 10 за апрель 2018 г.](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [Загрузить .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Загрузить .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) можно использовать для запуска приложений, созданных для .NET Framework версии от 4.0 до 4.7.1.
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) можно использовать для запуска приложений, созданных для .NET Framework версии от 4.0 до 4.7.1.
 
-Вы можете установить [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) в:
+Вы можете установить [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) в:
 
 * Windows 10 Fall Creators Update (версия 1709)
 * Обновление Windows 10 Creators Update (версия 1703)
@@ -78,6 +78,6 @@ ms.locfileid: "53153618"
 
 ## <a name="see-also"></a>См. также
 
-[Скачиваемые файлы .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
-[Устранение неполадок заблокированных установок и удалений .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Установка .NET Framework для разработчиков](guide-for-developers.md)
+- [Скачиваемые файлы .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Установка .NET Framework для разработчиков](guide-for-developers.md)

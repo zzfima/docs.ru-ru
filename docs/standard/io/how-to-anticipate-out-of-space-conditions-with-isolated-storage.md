@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Предупреждение нехватки места при изолированном хранении
+title: Как выполнить Предупреждение нехватки места при изолированном хранении
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609685"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Практическое руководство. Предупреждение нехватки места при изолированном хранении
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Как выполнить Предупреждение нехватки места при изолированном хранении
 Код, использующий изолированное хранилище, ограничен [квотой](../../../docs/standard/io/isolated-storage.md#quotas) на максимальный размер секции данных, в которой существуют изолированные файлы и каталоги хранения. Эта квота определяется политикой безопасности и настраивается администраторами. Если при попытке записи данных превышается максимальный размер, создается исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException> и операция завершается ошибкой. Это помогает предотвратить атаки типа "отказ в обслуживании", которые могут привести к неспособности приложения обрабатывать запросы из-за переполнения хранилища данных.  
   
  Чтобы заранее определить, может ли попытка записи привести к сбою по этой причине, класс <xref:System.IO.IsolatedStorage.IsolatedStorage> предоставляет три свойства <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> и <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>, доступных только для чтения. С их помощью вы можете оценить, будет ли превышен максимальный размер при записи в хранилище. Имейте в виду, что к изолированному хранилищу можно обращаться параллельно. Это означает, что доступное пространство хранилища может измениться в период между проверкой свободного места и попыткой записи в хранилище. Но максимальный размер операции всегда полезен для того, чтобы выявить приближение к лимиту доступного пространства в хранилище.  
@@ -47,6 +47,6 @@ ms.locfileid: "45649390"
   
 ## <a name="see-also"></a>См. также
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
 - [Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
