@@ -1,5 +1,5 @@
 ---
-title: '&lt;proceduresignature1&gt; не является CLS-совместимым, поскольку он перегружает &lt;proceduresignature2&gt; которого отличается от него только массивом типов параметров массива или рангом типов параметра массива'
+title: <proceduresignature1> несовместима с CLS, поскольку перегружает <proceduresignature2>, отличающуюся только массивом типов параметров или его рангом
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 0f4eaa09c3d04af350637fba0d672f55040a6466
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626853"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269566"
 ---
-# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; не является CLS-совместимым, поскольку он перегружает &lt;proceduresignature2&gt; которого отличается от него только массивом типов параметров массива или рангом типов параметра массива
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > не является CLS-совместимым, поскольку он перегружает \<proceduresignature2 > который отличается от него только массивом типов параметров массива или рангом типов параметра массива
 Процедура или свойство помечается как `<CLSCompliant(True)>` когда оно переопределяет другую процедуру или свойство, и единственное различие между их списки параметров — уровень вложенности массива массивов или ранг массива.  
   
  В следующих объявлениях второе и третье объявления вызвать эту ошибку.  

@@ -1,5 +1,5 @@
 ---
-title: 'Не удается скомпоновать с файлом ресурсов &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;'
+title: 'Не удается создать связь с файлом ресурсов <filename>: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 4b10ee66598a84b5da60f90e746bd6d2afd6007c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e84de65a9aef89d8cb9c210989e7a5dd976c13df
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725237"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289644"
 ---
-# <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Не удается скомпоновать с файлом ресурсов &#39; &lt;filename&gt;&#39;: &lt;сообщение об ошибке&gt;
+# <a name="unable-to-link-to-resource-file-filename-error-message"></a>Не удается скомпоновать с файлом ресурсов "\<имя_файла >": \<сообщение об ошибке >
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке связывания с файлом машинного ресурса COM+ из сборки.  
   
  **Идентификатор ошибки:** BC30144  

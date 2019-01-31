@@ -1,5 +1,5 @@
 ---
-title: '&lt;UseSmallInternalThreadStacks&gt; элемент'
+title: Элемент <UseSmallInternalThreadStacks>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed128cc2ddec3c599932cd5a82364d1cf6642cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78d03956db3f50b4d01f06c9a6438afd62fac5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505241"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289800"
 ---
-# <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; элемент
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > элемент
 Запросы, что сокращает общеязыковой среды выполнения (CLR) используют путем указания явных размеров стека при создании определенных потоков, используемых для внутренних целей, вместо размер стека по умолчанию для этих потоков.  
   
  \<Конфигурация > элемент  
@@ -38,7 +38,7 @@ ms.locfileid: "54505241"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |true|Запросите явных размеров стека.|  
 |False|Используйте размер стека по умолчанию. Это значение по умолчанию для [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
@@ -48,7 +48,7 @@ ms.locfileid: "54505241"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

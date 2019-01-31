@@ -1,5 +1,5 @@
 ---
-title: '&lt;supportPortability&gt; элемент'
+title: Элемент <supportPortability>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2295ebd919a91ae9942ec225f2bfe784e5ee151
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655508"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267798"
 ---
-# <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; элемент
+# <a name="supportportability-element"></a>\<supportPortability > элемент
 Указывает, что приложение может ссылаться на ту же сборку в двух различных реализациях .NET Framework, отключая поведение по умолчанию, которое рассматривает сборки как эквивалент для переносимости приложения.  
   
  \<Конфигурация > элемент  
@@ -33,7 +33,7 @@ ms.locfileid: "54655508"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |PKT|Обязательный атрибут.<br /><br /> Указывает токен открытого ключа затрагиваемой сборки в виде строки.|  
 |enabled|Необязательный атрибут.<br /><br /> Указывает, следует ли включить поддержку для обеспечения переносимости между реализациями заданной сборки .NET Framework.|  
@@ -50,7 +50,7 @@ ms.locfileid: "54655508"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

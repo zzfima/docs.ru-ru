@@ -1,16 +1,16 @@
 ---
-title: '&lt;Аргументы&gt;'
+title: <arguments>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-ms.openlocfilehash: 34695cd2fd62a0a10398fd73f014c093c3c5f61b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e9fc4f286e7aba6406ce61910da9e614e13ffca
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681668"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276575"
 ---
-# <a name="ltargumentsgt"></a>&lt;Аргументы&gt;
+# <a name="arguments"></a>\<аргументы >
 Представляет коллекцию аргументов, связанных с запросом состояния действия.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "54681668"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|Представляет элемент конфигурации, используемый для отслеживания запросов на отмену дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.|  
   

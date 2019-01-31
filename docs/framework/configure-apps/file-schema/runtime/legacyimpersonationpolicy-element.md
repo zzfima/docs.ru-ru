@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyImpersonationPolicy&gt; элемент'
+title: Элемент <legacyImpersonationPolicy>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 196aaa35561cba7925bcd005474cccb393494250
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699889"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270504"
 ---
-# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; элемент
+# <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > элемент
 Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.  
   
  \<configuration>  
@@ -42,7 +42,7 @@ ms.locfileid: "54699889"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity> проходит через асинхронные точки, в зависимости от <xref:System.Threading.ExecutionContext> настройки для текущего потока. Это значение по умолчанию.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> не проходит через асинхронные точки, вне зависимости от <xref:System.Threading.ExecutionContext> настройки в текущем потоке.|  

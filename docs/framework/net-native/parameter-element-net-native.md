@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Parameter&gt; (машинный код .NET)
+title: <Parameter> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c2cb79948f5bd762a0cd1b9fd83fd420a5821e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537183"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266407"
 ---
-# <a name="ltparametergt-element-net-native"></a>Элемент &lt;Parameter&gt; (машинный код .NET)
+# <a name="parameter-element-net-native"></a>\<Параметр > элемент (машинный код .NET)
 Применяет политику отражения к типу аргумента, переданного методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,7 +51,7 @@ ms.locfileid: "54537183"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*parameter_name*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54537183"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   

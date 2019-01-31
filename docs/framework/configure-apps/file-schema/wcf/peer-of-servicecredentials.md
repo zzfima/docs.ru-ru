@@ -1,15 +1,15 @@
 ---
-title: '&lt;peer&gt;’ для &lt;serviceCredentials&gt;'
+title: <peer> из <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 132c001de02e223375453c91832f461b96b57dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2090e79e6affe8ade6e2e52b94d2c4e1dafe8fa1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741273"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266030"
 ---
-# <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt;’ для &lt;serviceCredentials&gt;
+# <a name="peer-of-servicecredentials"></a>\<Одноранговый > из \<serviceCredentials >
 Задает текущие учетные данные для однорангового узла.  
   
  \<system.ServiceModel>  
@@ -37,7 +37,7 @@ ms.locfileid: "54741273"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для служб одноранговых сетей. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
@@ -45,7 +45,7 @@ ms.locfileid: "54741273"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   

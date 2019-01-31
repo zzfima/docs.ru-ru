@@ -1,15 +1,15 @@
 ---
-title: Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt;
+title: Элемент <security> для <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 32dcf2995780c4a92109232bbdf8d92b3365fdd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d533a930bfa57f523d7800205c230583559cb141
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629592"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272894"
 ---
-# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt;
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<Безопасность > элемент \<ws2007FederationHttpBinding >
 Определяет параметры безопасности [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) элемент.  
   
  \<system.ServiceModel>  
@@ -54,7 +54,7 @@ ms.locfileid: "54629592"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Определяет параметры безопасности уровня сообщений. Это элемент типа <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   

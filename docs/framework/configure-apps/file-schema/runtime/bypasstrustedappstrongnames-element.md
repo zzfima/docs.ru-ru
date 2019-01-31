@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypassTrustedAppStrongNames&gt; элемент'
+title: Элемент <bypassTrustedAppStrongNames>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565479"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282312"
 ---
-# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; элемент
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > элемент
 Указывает, следует ли пропустить проверку строгих имен для сборок с полным доверием, которые загружаются с полным доверием <xref:System.AppDomain>.  
   
  \<configuration>  
@@ -41,7 +41,7 @@ ms.locfileid: "54565479"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`true`|Подписи строгих имен сборок с полным доверием не проверяются, когда сборки загружаются в с полным доверием <xref:System.AppDomain>. Это значение по умолчанию.|  
 |`false`|Подписи строгого имени для сборок с полным доверием проверяются при сборки загружаются в с полным доверием <xref:System.AppDomain>. Подпись строгого имени проверяется только правильность подписи; они не сравниваются с другой строгого имени для сопоставления.|  

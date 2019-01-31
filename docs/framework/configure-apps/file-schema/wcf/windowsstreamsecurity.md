@@ -1,15 +1,15 @@
 ---
-title: '&lt;windowsstreamsecurity инициирует&gt;'
+title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: 4218072f63cabe511ca9d30c77395f734d961eca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aff415bb75cf719ce19fb2189cc69c2c159af6cf
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745185"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281012"
 ---
-# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity инициирует&gt;
+# <a name="windowsstreamsecurity"></a>\<windowsStreamSecurity>
 Задает параметры безопасности потока Windows пользовательской привязки.  
   
  \<system.serviceModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "54745185"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

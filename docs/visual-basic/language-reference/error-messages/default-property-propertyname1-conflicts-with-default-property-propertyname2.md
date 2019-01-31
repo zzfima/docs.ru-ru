@@ -1,5 +1,5 @@
 ---
-title: Свойство по умолчанию &#39; &lt;propertyname1&gt; &#39; конфликтует со свойством по умолчанию &#39; &lt;имя_свойства2&gt; &#39; в &#39; &lt;classname&gt; &#39;и должен быть объявлен &#39;Shadows&#39;
+title: Свойство <propertyname1>, используемое по умолчанию, конфликтует со свойством <propertyname2>, используемым по умолчанию в классе <classname>, и должно быть объявлено с ключевым словом Shadows
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521430"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270412"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Свойство по умолчанию &#39; &lt;propertyname1&gt; &#39; конфликтует со свойством по умолчанию &#39; &lt;имя_свойства2&gt; &#39; в &#39; &lt;classname&gt; &#39;и должен быть объявлен &#39;Shadows&#39;
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>Свойство по умолчанию "\<propertyname1 >" конфликтует со свойством по умолчанию "\<имя_свойства2 >" в "\<имя_класса >" и должен быть объявлен «Shadows»
 Свойство объявлено с тем же именем, что это свойство, определенное в базовом классе. В этом случае свойство в данном классе должно затемнять свойство базового класса.  
   
  Это сообщение является предупреждением. `Shadows` подразумевается по умолчанию. Дополнительные сведения о сокрытии предупреждений и обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidMap&gt; элемент'
+title: Элемент <oidMap>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 130e0d6184f24c5d26efa8497775955f8d602819
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083630"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262521"
 ---
-# <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; элемент
+# <a name="oidmap-element"></a>\<oidMap > элемент
 Содержит сопоставления идентификатора объекта ASN.1 с классами.  
   
  \<configuration>  
@@ -38,13 +38,13 @@ ms.locfileid: "55083630"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Сопоставление идентификатора объекта ASN.1 с понятным именем.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  

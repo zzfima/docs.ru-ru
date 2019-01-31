@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Namespace&gt; (машинный код .NET)
+title: <Namespace> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89c9edf47edcb5089e094529b8e8108271518d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590582"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261585"
 ---
-# <a name="ltnamespacegt-element-net-native"></a>Элемент &lt;Namespace&gt; (машинный код .NET)
+# <a name="namespace-element-net-native"></a>\<Пространство имен > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,7 +51,7 @@ ms.locfileid: "54590582"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*namespace_name*|Имя пространства имен. Если элемент \<Namespace> является дочерним элементом для элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) или [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* должно быть полным именем пространства имен. Если элемент \<Namespace> является дочерним элементом другого элемента \<Namespace>, то *namespace_name* должно быть относительным именем пространства имен.|  
   

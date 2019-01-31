@@ -1,15 +1,15 @@
 ---
-title: Элемент &lt;messageSenderAuthentication&gt;
+title: <messageSenderAuthentication> - элемент
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 9b5155e579973555db1fefb6b22bd6c1ff38ea70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac10dbdb7267eb4f1a83ccad7cc5605fa588aa6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579905"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271243"
 ---
-# <a name="ltmessagesenderauthenticationgt-element"></a>Элемент &lt;messageSenderAuthentication&gt;
+# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > элемент
 Задает параметры проверки подлинности для одноранговых отправителей сообщений.  
   
  Дополнительные сведения о программировании peer-to-peer см. в разделе [сети Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;reliableSession&gt;'
+title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 0768cbce237b2d119be719eab1de9da4a551e5ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: add69cfe1503c5ab78640cebc7c241a1f93b364f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509809"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283677"
 ---
-# <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
+# <a name="reliablesession"></a>\<reliableSession >
 Определяет параметры протокола WS-Reliable Messaging. Когда этот элемент добавляется к пользовательской привязке, получаемый канал может поддерживать гарантии доставки только один раз.  
   
  \<system.serviceModel>  
@@ -52,7 +52,7 @@ ms.locfileid: "54509809"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

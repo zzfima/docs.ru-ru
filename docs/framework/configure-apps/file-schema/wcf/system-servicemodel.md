@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.serviceModel&gt;'
+title: <system.serviceModel>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2cd1dadb2284a8e8dd3fad5d6101334706418782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0c91bafc14dee0d298a5cd31dc674f5002466a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565960"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274200"
 ---
-# <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
+# <a name="systemservicemodel"></a>\<system.serviceModel>
 Этот раздел конфигурации содержит все элементы конфигурации ServiceModel службы Windows Communication Foundation (WCF).  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -59,7 +59,7 @@ ms.locfileid: "54565960"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<варианты поведения >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Данный раздел определяет две дочерние коллекции с именами `endpointBehaviors` и `serviceBehaviors`.  Каждая коллекция определяет элементы поведений, используемые конечными точками и службами соответственно. Каждый элемент поведения идентифицируется по уникальному атрибуту `name`.|  
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|В этом разделе содержится коллекция стандартных и пользовательских привязок. Каждая запись идентифицируется по уникальному свойству `name`. Службы используют привязки, связывая их с помощью параметра `name`.|  

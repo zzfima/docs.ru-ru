@@ -1,16 +1,16 @@
 ---
-title: '&lt;add&gt; &lt;participants&gt;'
+title: <add> из <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575899"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284548"
 ---
-# <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;add&gt; &lt;participants&gt;
+# <a name="add-of-participants"></a>\<Добавить > из \<участников >
 Настройте участника отслеживания, который будет прослушивать записи отслеживания, прямо исходящие из среды выполнения, и обрабатывать их (в зависимости от настройки). Включает запись результата в определенном виде (например, в виде файла, консоли, ETW), обработку или сбор записей или любое другое требуемое сочетание.  
   
  Дополнительные сведения об отслеживании рабочих процессов и участники отслеживания, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [участники отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  

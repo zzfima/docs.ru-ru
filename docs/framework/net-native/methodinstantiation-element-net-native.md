@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;MethodInstantiation&gt; (машинный код .NET)
+title: <MethodInstantiation> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc8cd22c3175a2b6456f71d9dc773ce85848949
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538269"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275070"
 ---
-# <a name="ltmethodinstantiationgt-element-net-native"></a>Элемент &lt;MethodInstantiation&gt; (машинный код .NET)
+# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения к сконструированному универсальному методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -29,7 +29,7 @@ ms.locfileid: "54538269"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание|  
+|Атрибут|Тип атрибута|Описание:|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя метода.|  
 |`Signature`|Общие|Необязательный атрибут. Определяет именованные параметры метода. Несколько именованных параметров разделяются запятыми. Атрибут `Signature` позволяет различать перегруженные методы.|  
@@ -51,13 +51,13 @@ ms.locfileid: "54538269"
   
 ## <a name="arguments-attribute"></a>Атрибут аргументов  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*method_arguments*|Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми. Каждый аргумент должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для метода. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   

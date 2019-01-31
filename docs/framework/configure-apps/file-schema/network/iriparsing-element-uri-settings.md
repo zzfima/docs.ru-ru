@@ -1,15 +1,15 @@
 ---
-title: '&lt;iriParsing&gt; (параметры Uri)'
+title: Элемент <iriParsing> (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552948"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256661"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; (параметры Uri)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > (параметры Uri)
 Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.  
   
 ## <a name="schema-hierarchy"></a>Схема иерархии  
@@ -65,7 +65,7 @@ ms.locfileid: "54552948"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки синтаксического анализа IRI и IDN-имена.  
   
 ### <a name="code"></a>Код  

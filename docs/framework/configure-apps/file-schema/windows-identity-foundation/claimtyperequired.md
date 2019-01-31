@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837767"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277463"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 Указывает набор утверждений, необходимых для входящих маркеров безопасности.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<claimTypeRequired >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<claimTypeRequired>  
   
 ## <a name="syntax"></a>Синтаксис  
   

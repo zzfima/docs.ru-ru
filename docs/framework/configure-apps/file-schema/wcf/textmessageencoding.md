@@ -1,15 +1,15 @@
 ---
-title: '&lt;textMessageEncoding&gt;'
+title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 68b5c9f1f158f7f78f4ea31dedb9b72eab409e05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9f8347b4ee5f8fdbcf5c65c9a38b171ea6309de
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540706"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289605"
 ---
-# <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
+# <a name="textmessageencoding"></a>\<textMessageEncoding >
 Указывает кодировку символов и управление версиями сообщений для текстовых сообщений XML.  
   
  \<system.serviceModel>  
@@ -41,13 +41,13 @@ ms.locfileid: "54540706"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

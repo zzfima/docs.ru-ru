@@ -1,20 +1,20 @@
 ---
-title: '&lt;state&gt; (WCF), &lt;workflowInstanceQuery&gt;'
+title: <state> WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 168a6980e955f602ee60bff26461f06cb16c836a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145930"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270869"
 ---
-# <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>&lt;state&gt; (WCF), &lt;workflowInstanceQuery&gt;
+# <a name="state-of-wcf-workflowinstancequery"></a>\<Состояние > WCF, \<workflowInstanceQuery >
 Представляет коллекцию состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<Отслеживание >  
 \<профили >  
 \<trackingProfile >  
@@ -60,7 +60,7 @@ ms.locfileid: "54145930"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<состояния >](states-of-wcf-workflowinstancequery.md)|Коллекция состояний, на которые установлена подписка, из отслеживаемого экземпляра рабочего процесса в момент создания записей отслеживания.|  
   

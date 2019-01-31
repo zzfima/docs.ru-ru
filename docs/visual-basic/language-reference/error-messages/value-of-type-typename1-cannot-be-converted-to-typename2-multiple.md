@@ -1,5 +1,5 @@
 ---
-title: Значение типа &#39; &lt;Имя_типа1&gt; &#39; невозможно преобразовать в &#39; &lt;имя_типа2&gt; &#39; (множественные ссылки на файл)
+title: Значение типа <typename1> невозможно преобразовать в <typename2> (Множественные ссылки на файл)
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30961
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261351"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Значение типа &#39; &lt;Имя_типа1&gt; &#39; невозможно преобразовать в &#39; &lt;имя_типа2&gt; &#39; (множественные ссылки на файл)
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >" (множественные ссылки на файл)
 Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >". Несоответствие типов может быть вызвана смешением ссылки на файл "\<путь_к_файлу1 >" в проекте "\<имя_проекта1 >" с помощью ссылки на файл "\<путь_к_файлу2 >" в проекте "\<имя_проекта2 >". Если обе сборки идентичны, попробуйте заменить эти ссылки так, чтобы они ссылались из одного места.  
   
  В ситуации, когда проект делает более одной ссылки на сборку компилятор не может гарантировать, что один тип может быть преобразован в другой.  

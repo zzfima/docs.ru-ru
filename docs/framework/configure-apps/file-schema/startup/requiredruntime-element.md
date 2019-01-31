@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt; элемент'
+title: <requiredRuntime> - элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222133"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254734"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; элемент
+# <a name="requiredruntime-element"></a>\<requiredRuntime > элемент
 
 Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент устарел и больше не используется. [ `supportedRuntime` ](supportedruntime-element.md) Элемента, которые должны использоваться вместо нее.
 
@@ -86,4 +86,4 @@ safemode="true|false"/>
 
 - [Схема параметров запуска](index.md)
 - [Схема файла конфигурации](../index.md)
-- [Практическое руководство. Настройка приложения для поддержки .NET Framework 4 или более поздней версии](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

@@ -1,17 +1,17 @@
 ---
-title: Преобразование из строки &quot; &lt;строка&gt; &quot; к типу "&lt;typename&gt;" является недопустимым
+title: Преобразование из строки &quot; <string> &quot; к типу "<typename>" является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
-ms.openlocfilehash: 7454158f0b9f6a34af63560fde6438c7180daa02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1570f1d63e643c822161f13e8392d90e1b138
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704294"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268084"
 ---
-# <a name="cast-from-string-quotltstringgtquot-to-type-lttypenamegt-is-not-valid"></a>Преобразование из строки &quot; &lt;строка&gt; &quot; к типу "&lt;typename&gt;" является недопустимым
+# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Преобразование из строки &quot; \<строка >&quot; к типу "\<typename >" является недопустимым
 Предпринята попытка недопустимого преобразования строковой переменной в другой тип.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

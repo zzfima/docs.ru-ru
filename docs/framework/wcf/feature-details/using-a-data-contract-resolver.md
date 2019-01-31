@@ -2,12 +2,12 @@
 title: Использование арбитра контрактов данных
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 8859a343c5dcc3b88edf4840a759fbed52bbf984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658836"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279153"
 ---
 # <a name="using-a-data-contract-resolver"></a>Использование арбитра контрактов данных
 Арбитр контрактов данных позволяет динамически настраивать известные типы. Известные типы необходимы для сериализации или десериализации типов, не предусмотренных контрактом данных. Дополнительные сведения об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Известные типы обычно задаются статически. Это означает, что при реализации операции необходимо знать все типы, которые могут быть переданы операции. Существуют сценарии, в которых это не так, и важно иметь возможность динамического задания типов.  
@@ -55,7 +55,7 @@ public class MyCustomerResolver : DataContractResolver
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- Можно указать <xref:System.Runtime.Serialization.DataContractSerializer> в вызове метода <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> или <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A>, как показано в следующем примере.  
+ Можно указать <xref:System.Runtime.Serialization.DataContractResolver> в вызове метода <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> или <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>, как показано в следующем примере.  
   
 ```  
 MemoryStream ms = new MemoryStream();  

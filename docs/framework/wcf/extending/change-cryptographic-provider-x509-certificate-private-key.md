@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменить поставщика служб шифрования для сертификата X.509&#39;s закрытого ключа
+title: Как выполнить Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498977"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265952"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Как выполнить Изменить поставщика служб шифрования для сертификата X.509&#39;s закрытого ключа
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Как выполнить Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
 В этом разделе показано, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в инфраструктуру безопасности Windows Communication Foundation (WCF). Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Платформа безопасности WCF предоставляет способ введения новые типы маркеров безопасности, как описано в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  

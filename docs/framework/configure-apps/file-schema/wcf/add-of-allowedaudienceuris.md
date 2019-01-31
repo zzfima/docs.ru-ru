@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;allowedAudienceUris&gt;'
+title: <add> из <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: 2e3939f670bcb2424cfb1dfaa2b5e036bbf2888b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5538db902525b03513a69fcc1a5c06d0877b8e0e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569015"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281155"
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;add&gt; для &lt;allowedAudienceUris&gt;
+# <a name="add-of-allowedaudienceuris"></a>\<Добавить > из \<allowedAudienceUris >
 Добавляет целевой универсальный код ресурса, для которого может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы считаться допустимым для экземпляра <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  \<system.ServiceModel>  
@@ -43,7 +43,7 @@ ms.locfileid: "54569015"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<allowedAudienceUris >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|Представляет коллекцию целевых универсальных кодов ресурса (URI), для которых может быть задан маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы они считались допустимыми для экземпляра <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
   

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;атрибут&gt; &#39; нельзя применить, поскольку формат GUID &#39; &lt;номер&gt; &#39; неверны'
+title: <attribute> не может быть применен из-за неверного формата GUID <number>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: 85b8c9dcccbb307d8a744e33a5f1d4b1775fda04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e92c77e6138bbd546d9b837e095e41d5dfaf30c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623669"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279868"
 ---
-# <a name="39ltattributegt39-cannot-be-applied-because-the-format-of-the-guid-39ltnumbergt39-is-not-correct"></a>&#39;&lt;атрибут&gt; &#39; нельзя применить, поскольку формат GUID &#39; &lt;номер&gt; &#39; неверны
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>"\<атрибут >" не может использоваться, так как формат GUID "\<номер >" не подходит
 Объект `COMClassAttribute` блок атрибутов задает глобальный уникальный идентификатор (GUID), который не соответствует правильному формату для GUID. `COMClassAttribute` идентификаторы GUID используются для однозначной идентификации класса, интерфейса и события создания.  
   
  Идентификатор GUID состоит из 16 байтов, первые восемь из которых являются числовыми, а последние восемь — двоичными. Он создается служебными программами Microsoft, например uuidgen.exe и гарантированно будет уникальным в пространстве и времени.  

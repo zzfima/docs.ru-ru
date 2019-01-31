@@ -1,5 +1,5 @@
 ---
-title: '&lt;Удалить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;'
+title: Элемент <remove> для <listeners> для <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: c1587c28e05609970c732192752578d089ec9f35
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5a6b94756cb1b451d40229674dd887dd9f84676b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083838"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267070"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Удалить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;
+# <a name="remove-element-for-listeners-for-trace"></a>\<Удалить > элемент для \<прослушиватели > для \<трассировки >
 Удаляет прослушиватель из **прослушиватели** коллекции.  
   
  \<configuration>  
@@ -43,7 +43,7 @@ ms.locfileid: "55083838"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`listeners`|Указывает прослушиватель, который собирает, хранилищ и направляет сообщения. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.|  

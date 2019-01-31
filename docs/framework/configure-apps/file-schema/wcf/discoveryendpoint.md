@@ -1,15 +1,15 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524173"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274787"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="discoveryendpoint"></a>\<discoveryEndpoint >
 
 Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом обнаружения. При добавлении в конфигурацию службы указывает, где необходимо следить за появлением сообщений обнаружения. При добавлении в клиентскую конфигурацию указывает, куда необходимо отправлять запросы обнаружения.  
   

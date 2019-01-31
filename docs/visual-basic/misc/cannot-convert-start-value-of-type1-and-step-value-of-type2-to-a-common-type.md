@@ -1,17 +1,17 @@
 ---
-title: Невозможно преобразовать начальное значение типа "&lt;тип1&gt;«и значение шага типа»&lt;тип2&gt;" к общему типу
+title: Невозможно преобразовать начальное значение типа "<type1>«и значение шага типа»<type2>" к общему типу
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: 22732abd58a4cbc2d1c4cf8dba28a935d9ed0be1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3a6ac206082c6adaf35659db93e6535a433c6bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490592"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262706"
 ---
-# <a name="cannot-convert-start-value-of-type-lttype1gt-and-step-value-of-type-lttype2gt-to-a-common-type"></a>Невозможно преобразовать начальное значение типа "&lt;тип1&gt;«и значение шага типа»&lt;тип2&gt;" к общему типу
+# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>Невозможно преобразовать начальное значение типа "\<тип1 >" и значение шага типа "\<тип2 >" к общему типу
 Указанные управляющие значения `For...Next` имеют разные типы и, следовательно, недопустимы, так как не могут быть преобразованы в общий тип.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

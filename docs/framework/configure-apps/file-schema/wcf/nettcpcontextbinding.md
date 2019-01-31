@@ -1,15 +1,15 @@
 ---
-title: '&lt;netTcpContextBinding&gt;'
+title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 0f5e4df5a25062ba6454dfc845ba2999ddcc6ca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f43d437f062ec8c1a279ca9e248b52edc1b32995
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572270"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257906"
 ---
-# <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
+# <a name="nettcpcontextbinding"></a>\<netTcpContextBinding >
 Задает контекст для <xref:System.ServiceModel.NetTcpBinding>, который требует, чтобы уровень защиты был подписан. Механизмом contextExchangeMechanism для привязки NetTcpContextBinding является SOAPHeader.  
   
  \<system.ServiceModel>  
@@ -94,7 +94,7 @@ ms.locfileid: "54572270"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   

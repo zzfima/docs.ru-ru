@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;TypeParameter&gt; (машинный код .NET)
+title: <TypeParameter> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79e7a61f66a29ad4eeca1c6413b87d4b9ee9632e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644343"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263567"
 ---
-# <a name="lttypeparametergt-element-net-native"></a>Элемент &lt;TypeParameter&gt; (машинный код .NET)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter > элемент (машинный код .NET)
 Применяет политику к типу, представленному аргументом типа , переданным методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,13 +51,13 @@ ms.locfileid: "54644343"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*parameter_name*|Имя типа параметра типа <xref:System.Type>. Например, для сигнатуры метода `Type.GetInterfaceMap(Type interfaceType)`, значение атрибута `Name` — "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   

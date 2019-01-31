@@ -1,15 +1,15 @@
 ---
-title: '&lt;standardEndpoints&gt;'
+title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: f3851ed4d6a166cf698a5acf18f92e29bb7545cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7677d7f4c0ef7927fd50885bb887dccaa62a27b4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666700"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286797"
 ---
-# <a name="ltstandardendpointsgt"></a>&lt;standardEndpoints&gt;
+# <a name="standardendpoints"></a>\<standardEndpoints >
 Этот раздел конфигурации позволяет задать коллекцию стандартных конечных точек (многократно используемых, заранее настроенных конечных точек). Значение одного или нескольких атрибутов стандартной конечной точки, обозначающих адрес, привязку или контракт, является фиксированным. Например, в конечной точке обнаружения фиксированным является контракт. По аналогии с определением пользовательских привязок можно также использовать стандартные конечные точки для расширения конечной точки службы за счет новых свойств.  
   
  \<system.ServiceModel>  
@@ -45,7 +45,7 @@ ms.locfileid: "54666700"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |\<system.ServiceModel>|Корневой элемент всех элементов конфигурации WCF.|  
   

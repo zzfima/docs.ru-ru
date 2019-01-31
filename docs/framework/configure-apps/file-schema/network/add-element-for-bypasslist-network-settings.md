@@ -1,5 +1,5 @@
 ---
-title: '&lt;Добавление&gt; элемент для bypasslist (параметры сети)'
+title: Элемент <add> для bypasslist (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680785"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265666"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Добавление&gt; элемент для bypasslist (параметры сети)
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Добавить > элемент для bypasslist (параметры сети)
 Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.  
   
  \<configuration>  

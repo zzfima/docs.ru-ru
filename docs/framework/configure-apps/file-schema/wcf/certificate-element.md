@@ -1,15 +1,15 @@
 ---
-title: Элемент &lt;certificate&gt;
+title: Элемент <certificate>
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: d1449cc6c40ae16190bacf378df3bd60c49d060c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b53a0328ed1fcbae03e8844ccca64e949db44e7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538327"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254552"
 ---
-# <a name="ltcertificategt-element"></a>Элемент &lt;certificate&gt;
+# <a name="certificate-element"></a>\<сертификат > элемент
 Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей.  
   
  \<system.ServiceModel>  

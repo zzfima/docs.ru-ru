@@ -1,17 +1,17 @@
 ---
-title: КОД языка "&lt;имя&gt;" не поддерживается в этой системе
+title: КОД языка "<name>" не поддерживается в этой системе
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-ms.openlocfilehash: 39a225b3164e700db9cd53aa0bf1e2b55d9bdbe7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7953b65204d1c38a8a8218829844cf0826d00cb8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701629"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285744"
 ---
-# <a name="locale-id-ltnamegt-is-not-supported-on-this-system"></a>КОД языка "&lt;имя&gt;" не поддерживается в этой системе
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>КОД языка "\<имя >" не поддерживается в этой системе
 Предпринята попытка использования `VbStrConv`, но система не поддерживает указанный языковой стандарт.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

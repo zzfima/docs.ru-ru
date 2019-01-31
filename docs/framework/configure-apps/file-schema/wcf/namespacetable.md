@@ -1,15 +1,15 @@
 ---
-title: '&lt;namespaceTable&gt;'
+title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: fb2b324a2c128b470f1a9a21343408280c5e1862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743248"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269579"
 ---
-# <a name="ltnamespacetablegt"></a>&lt;namespaceTable&gt;
+# <a name="namespacetable"></a>\<namespaceTable>
 
 Представляет секцию конфигурации для определения набора элементов, содержащих пространство имен для использования в качестве префиксов сопоставлений, которые в дальнейшем могут быть использованы в фильтрах XPath для маршрутизации.
 
@@ -40,7 +40,7 @@ ms.locfileid: "54743248"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<Фильтр >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Определяет сопоставление префикса пространства имен, используемого в выражениях XPath. |
 

@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Directives&gt; (машинный код .NET)
+title: <Directives> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 497ec1a432352e3b9f50bd94e03e95e98edcfd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14eac92a2f3e5ed5d93f4e608f7d42b13849036e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725651"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254175"
 ---
-# <a name="ltdirectivesgt-element-net-native"></a>Элемент &lt;Directives&gt; (машинный код .NET)
+# <a name="directives-element-net-native"></a>\<Директивы > элемент (машинный код .NET)
 Корневой элемент в любом файле директив среды выполнения для машинного кода .NET.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
@@ -32,7 +32,7 @@ ms.locfileid: "54725651"
   
 ## <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, чьи дочерние типы и члены типов требуют метаданные во время выполнения.|  

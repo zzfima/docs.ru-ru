@@ -1,5 +1,5 @@
 ---
-title: '&#39;Расширение&#39; атрибут может применяться только к &#39;модуль&#39;, &#39;Sub&#39;, или &#39;функция&#39; объявления'
+title: Атрибут Extension может быть применен только к объявлениям Module, Sub или Function
 ms.date: 07/20/2015
 f1_keywords:
 - bc36550
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: fabd602f31a362fe33954253d565e86a065e0a83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2e2c41d713b0b04b8bc7208a83d059f0d16bf06
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718238"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278724"
 ---
-# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>&#39;Расширение&#39; атрибут может применяться только к &#39;модуль&#39;, &#39;Sub&#39;, или &#39;функция&#39; объявления
+# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>Атрибут Extension может быть применен только к объявлениям Module, Sub или Function
 Единственный способ расширения типа данных в Visual Basic является определение метода расширения внутри стандартного модуля. Метод расширения может быть `Sub` процедуры или `Function` процедуры. Все методы расширения должны быть помечены атрибутом расширения, `<Extension()>`, из <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> пространства имен. Кроме того модуль, содержащий метод расширения может быть помечен таким же образом. Не используется атрибут расширения является допустимым.  
   
  **Идентификатор ошибки:** BC36550  

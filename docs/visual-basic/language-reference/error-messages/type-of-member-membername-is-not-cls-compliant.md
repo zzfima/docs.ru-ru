@@ -1,5 +1,5 @@
 ---
-title: Тип члена &#39; &lt;membername&gt; &#39; не является CLS-совместимым
+title: Тип члена <membername> не является CLS-совместимым
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603855"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254097"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Тип члена &#39; &lt;membername&gt; &#39; не является CLS-совместимым
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>Тип члена "\<имя_члена >" не является CLS-совместимым
 Тип данных, указанный для этого элемента не является частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS). Это не ошибка в компоненте, поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и Visual Basic поддерживает этот тип данных. Тем не менее другой компонент, написанный в строго CLS-совместимого кода могут не поддерживать этот тип данных. Такой компонент не может иметь возможность успешно взаимодействовать с данным компонентом.  
   
  Следующие типы данных Visual Basic не являются CLS-совместимыми:  

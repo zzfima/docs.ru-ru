@@ -1,15 +1,15 @@
 ---
-title: '&lt;Среди базовых адресов&gt;'
+title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 34d400e74b24e9eb4140d1b43597b0217b23d80c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc4b31e729f9037da101bdf3e6cde28e91b1a070
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730130"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277021"
 ---
-# <a name="ltbaseaddressesgt"></a>&lt;Среди базовых адресов&gt;
+# <a name="baseaddresses"></a>\<baseAddresses >
 Представляет коллекцию элементов `baseAddress`, которые являются базовыми адресам для узла службы в резидентной среде. Если указан базовый адрес, конечные точки можно настроить, используя относительные (по отношению к базовому адресу) адреса.  
   
  \<system.ServiceModel>  
@@ -43,7 +43,7 @@ ms.locfileid: "54730130"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<узел >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Элемент конфигурации, который задает параметры узла службы.|  
   

@@ -1,15 +1,15 @@
 ---
-title: '&gt;= (больше или равно) (Entity SQL)'
+title: '>= (Больше или равно) (язык Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 34326072f4772e74a45e0ffb6ea1e35f1596b206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7b2aa7be0b978fb6b1317393fb3c6e9a87c621
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697153"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289020"
 ---
-# <a name="gt-greater-than-or-equal-to-entity-sql"></a>&gt;= (больше или равно) (Entity SQL)
+# <a name="-greater-than-or-equal-to-entity-sql"></a>>= (больше или равно) (Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.  
   
 ## <a name="syntax"></a>Синтаксис  

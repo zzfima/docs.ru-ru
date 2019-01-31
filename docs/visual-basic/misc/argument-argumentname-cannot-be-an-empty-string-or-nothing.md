@@ -1,17 +1,17 @@
 ---
-title: Аргумент &lt;имя_аргумента&gt; не может быть пустой строкой или Nothing
+title: Аргумент <argumentname> не может быть пустой строкой или Nothing
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentEmptyOrNothing_Name
 ms.assetid: 2c458944-1bdf-4ea7-9caf-560ca7582cc0
-ms.openlocfilehash: 85fb04af5dc2492ea17570160c8b49de9ea2ac39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23e38adf0edcacd5c3392f03b6808044f0804ff0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540992"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280921"
 ---
-# <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Аргумент &lt;имя_аргумента&gt; не может быть пустой строкой или Nothing
+# <a name="argument-argumentname-cannot-be-an-empty-string-or-nothing"></a>Аргумент \<имя_аргумента > не может быть пустой строкой или Nothing
 Этот аргумент требует значение, отличное от пустой строки ("") или `Nothing`. Это может быть результатом неправильного вычисления значения.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

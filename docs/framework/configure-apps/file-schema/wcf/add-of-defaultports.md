@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;defaultPorts&gt;'
+title: <add> из <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 8b7a4730af6690616058a91cf23bb39734d81abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 799715ef008274ead6b745e8ab97e769cb59e6b5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541720"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261608"
 ---
-# <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;add&gt; для &lt;defaultPorts&gt;
+# <a name="add-of-defaultports"></a>\<Добавить > из \<defaultPorts >
 Конечная точка связи по умолчанию, которую прослушивает клиентское приложение.  
   
  \<system.ServiceModel>  
@@ -46,7 +46,7 @@ ms.locfileid: "54541720"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Коллекция портов по умолчанию со списком конечных точек связи по умолчанию, которые прослушивает клиентское приложение.|  
   

@@ -1,16 +1,16 @@
 ---
-title: '&lt;sqlWorkflowInstanceStore&gt;'
+title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: f0393cd4192ca7e775b4d311d6dd5de462155c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 350ffc2eff94492b43acefd95c71e02f6525d55e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520949"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285380"
 ---
-# <a name="ltsqlworkflowinstancestoregt"></a>&lt;sqlWorkflowInstanceStore&gt;
+# <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore >
 Поведение службы, которое позволяет настроить <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> функция, которая поддерживает сохранение сведений о состоянии для экземпляров службы рабочего процесса в базе данных SQL Server 2005 или SQL Server 2008. Дополнительные сведения об этой функции см. в разделе [Store экземпляра рабочего процесса SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
 \<system.ServiceModel>  
@@ -56,7 +56,7 @@ ms.locfileid: "54520949"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение > из \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
   

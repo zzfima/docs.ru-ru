@@ -1,5 +1,5 @@
 ---
-title: Выражение типа &lt;тип&gt; не поддерживает запросы
+title: Выражение типа <type> не доступно для запроса
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521495"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261260"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>Выражение типа &lt;тип&gt; не поддерживает запросы
+# <a name="expression-of-type-type-is-not-queryable"></a>Выражение типа \<тип > не поддерживает запросы
 Выражение типа \<тип > не поддерживает запросы. Убедитесь, что не пропущена импорта сборки ссылки или пространство имен для поставщика LINQ.  
   
  Запрашиваемые типы определяются в <xref:System.Linq>, <xref:System.Data.Linq>, и <xref:System.Xml.Linq> пространства имен. Необходимо импортировать один или несколько из этих пространств имен для выполнения запросов LINQ.  

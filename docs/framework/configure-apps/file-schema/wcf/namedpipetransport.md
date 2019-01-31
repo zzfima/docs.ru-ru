@@ -1,15 +1,15 @@
 ---
-title: '&lt;namedPipeTransport&gt;'
+title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: cdb2863ff376a92f7c4b679f4812b895ac3f2234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e30fcd5952fadc3b6cf30cb352a3bb51c86cc117
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518843"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285935"
 ---
-# <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
+# <a name="namedpipetransport"></a>\<namedPipeTransport >
 Задает транспорт, принуждающий канал передавать сообщения с использованием именованных каналов, когда он включается в пользовательскую привязку.  
   
 \<system.serviceModel>  
@@ -63,7 +63,7 @@ ms.locfileid: "54518843"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

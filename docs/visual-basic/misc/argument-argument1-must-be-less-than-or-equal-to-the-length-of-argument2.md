@@ -1,17 +1,17 @@
 ---
-title: Аргумент "&lt;аргумент1&gt;«должно быть меньше или равен длине аргумента»&lt;аргумент2&gt;"
+title: Аргумент "<argument1>«должно быть меньше или равен длине аргумента»<argument2>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-ms.openlocfilehash: 4b3dac7c2bfbc9a69a23b01d8bcd6f832c26a9c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ce37a4286dbea4a7181493ad98506860d1d12c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636057"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269085"
 ---
-# <a name="argument-ltargument1gt-must-be-less-than-or-equal-to-the-length-of-argument-ltargument2gt"></a>Аргумент "&lt;аргумент1&gt;«должно быть меньше или равен длине аргумента»&lt;аргумент2&gt;"
+# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>Аргумент "\<аргумент1 >" должно быть меньше или равен длине аргумента "\<аргумент2 >"
 Длина аргумента превышает допустимый предел, который определяется длиной второго аргумента.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

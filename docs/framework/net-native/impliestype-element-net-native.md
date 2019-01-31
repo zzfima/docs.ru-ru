@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;ImpliesType&gt; (машинный код .NET)
+title: <ImpliesType> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065977"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288019"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>Элемент &lt;ImpliesType&gt; (машинный код .NET)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType > элемент (машинный код .NET)
 Применяет политику к типу, если политика была применена к содержащему типу или методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,7 +35,7 @@ ms.locfileid: "55065977"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание|  
+|Атрибут|Тип атрибута|Описание:|  
 |---------------|--------------------|-----------------|  
 |`Name`|Общие правила|Обязательный атрибут. Задает имя типа.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
@@ -51,13 +51,13 @@ ms.locfileid: "55065977"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*type_name*|Имя типа. Если тип, представленный этим элементом `<ImpliesType>`, находится в том же пространстве имен, что и содержащий его элемент `<Type>`, атрибут *type_name* может содержать имя типа без пространства имен. В противном случае атрибут *type_name* должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   

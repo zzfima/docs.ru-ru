@@ -1,15 +1,15 @@
 ---
-title: '&lt;security&gt; для &lt;netMsmqBinding&gt;'
+title: <security> из <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 71f0c10c336a9682971bc774141cb0c3bd37c092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb509bb0c4f7192aefbb51a98042f3f359969321
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696390"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272621"
 ---
-# <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; для &lt;netMsmqBinding&gt;
+# <a name="security-of-netmsmqbinding"></a>\<Безопасность > из \<netMsmqBinding >
 Определяет параметры безопасности для привязки MSMQ. Он указывает, включена ли поддержка транспорта или безопасности SOAP и, если поддержка включена, указывает используемые уровни защиты и режим проверки подлинности.  
   
  \<system.ServiceModel>  

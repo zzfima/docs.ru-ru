@@ -1,21 +1,21 @@
 ---
-title: '&lt;soapProcessing&gt;'
+title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152012"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279673"
 ---
-# <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
+# <a name="soapprocessing"></a>\<soapProcessing >
 
 Определяет поведение конечной точки клиента, используемое для маршалинга сообщений между различными типами привязок и версиями сообщения.
 
-**\<система. ServiceModel >**   
+**\<system.ServiceModel>**   
 &nbsp;&nbsp;**\<варианты поведения >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors>**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<поведение >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
   
@@ -41,7 +41,7 @@ ms.locfileid: "54152012"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<поведение >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | Задает поведение конечной точки. |
 

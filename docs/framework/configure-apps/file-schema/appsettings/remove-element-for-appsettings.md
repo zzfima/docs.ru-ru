@@ -1,5 +1,5 @@
 ---
-title: '&lt;Удалить&gt; элемент для &lt;appSettings&gt;'
+title: <remove> - элемент для <appSettings>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: cf9a34e47b70aaff12b29b9c5cf944d5bb15fee9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235782"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258725"
 ---
 # <a name="remove-element-for-appsettings"></a>\<Удалить > элемент для \<appSettings >
 
@@ -34,13 +34,13 @@ ms.locfileid: "50235782"
 
 ### <a name="attribute"></a>Атрибут
 
-|         | Описание |
+|         | Описание: |
 | ------- | ----------- |
 | **key** | Обязательный атрибут.<br><br>Указывает имя ключа для удаления. |
 
 ### <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб и другие сведения о пользовательской конфигурации приложения. |
 

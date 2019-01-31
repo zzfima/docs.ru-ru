@@ -1,15 +1,15 @@
 ---
-title: '&lt;windows&gt; элемента &lt;clientCredentials&gt;'
+title: <windows> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 1331456f6defc24511064684181f615451be5b93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610751"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275162"
 ---
-# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; элемента &lt;clientCredentials&gt;
+# <a name="windows-of-clientcredentials-element"></a>\<Windows > из \<clientCredentials > элемент
 Определяет параметры учетных данных Windows, которые используются для представления клиента.  
   
  \<system.ServiceModel>  
@@ -41,7 +41,7 @@ ms.locfileid: "54610751"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   

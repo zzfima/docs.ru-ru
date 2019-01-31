@@ -1,16 +1,16 @@
 ---
-title: '&lt;federationConfiguration&gt;'
+title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 6f658fb4746211ac9d7001899133111c64f22408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645123"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286407"
 ---
-# <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
+# <a name="federationconfiguration"></a>\<federationConfiguration>
 Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании Федеративная проверка подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класс, чтобы обеспечить управление доступом на основе утверждений.  
   
  \<system.identityModel.services>  

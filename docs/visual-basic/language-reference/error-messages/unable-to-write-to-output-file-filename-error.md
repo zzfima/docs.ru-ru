@@ -1,5 +1,5 @@
 ---
-title: 'Не удалось выполнить запись в выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибка&gt;'
+title: 'Не удается выполнить запись в файл результатов <filename>: <error>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f7580c53535c28c97213a5a0488c3fc0365c4ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572699"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274113"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Не удалось выполнить запись в выходной файл &#39; &lt;filename&gt;&#39;: &lt;ошибка&gt;
+# <a name="unable-to-write-to-output-file-filename-error"></a>Не удалось выполнить запись в выходной файл "\<имя_файла >": \<ошибка >
 Возникла проблема при создании файла.  
   
  Не удается открыть выходной файл для записи. Файл (или содержащая его папка) может быть открыт другим процессом для монопольного использования либо может иметь установленный атрибут "только для чтения".  

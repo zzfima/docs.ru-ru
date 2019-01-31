@@ -1,16 +1,16 @@
 ---
-title: Новые возможности Windows Identity Foundation 4.5
+title: Новые возможности Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: deb75494b2813aac3182270b027391b87fdeb0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619614"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275422"
 ---
-# <a name="what39s-new-in-windows-identity-foundation-45"></a>Новые возможности Windows Identity Foundation 4.5
+# <a name="whats-new-in-windows-identity-foundation-45"></a>Новые возможности Windows Identity Foundation 4.5
 Первая версия Windows Identity Foundation (WIF) поставлялась в виде отдельного загружаемого файла и называлась WIF 3.5, поскольку она вышла одновременно с .NET 3.5 с пактом обновления 1 (SP1). Начиная с версии .NET 4.5 WIF является частью .NET framework. Прямая доступность классов WIF на этой платформе обеспечивает гораздо более глубокую интеграцию удостоверения на базе утверждений с платформой .NET, благодаря которой использовать утверждения становится проще. Приложения, написанные для WIF 3.5, должны быть изменены для использования новой модели. Дополнительные сведения см. в разделе [Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
   
  Ниже описаны некоторые особенности основных изменений.  

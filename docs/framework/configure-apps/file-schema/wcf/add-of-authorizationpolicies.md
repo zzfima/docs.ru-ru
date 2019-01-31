@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;authorizationPolicies&gt;'
+title: <add> из <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: c283f99bedc16352ffca4c41c3d4628271200695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a1a7d6b1ef9732e015536d8a78c058fe348113f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577529"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255501"
 ---
-# <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; для &lt;authorizationPolicies&gt;
+# <a name="add-of-authorizationpolicies"></a>\<Добавить > из \<authorizationPolicies >
 Задает политику авторизации для преобразования требований.  
   
  \<system.ServiceModel>  

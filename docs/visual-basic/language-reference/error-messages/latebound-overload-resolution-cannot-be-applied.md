@@ -1,5 +1,5 @@
 ---
-title: Разрешение перегрузки не может использоваться для &#39; &lt;имя_процедуры&gt; &#39; поскольку интерфейс доступа принадлежит к типу интерфейса
+title: Разрешение перегружаемой функции с поздним связыванием не может быть применено к <procedurename>, так как типом экземпляра, к которому осуществляется доступ, является интерфейс
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651523"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272656"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Разрешение перегрузки не может использоваться для &#39; &lt;имя_процедуры&gt; &#39; поскольку интерфейс доступа принадлежит к типу интерфейса
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Разрешение перегрузки не может использоваться для "\<имя_процедуры >", поскольку интерфейс доступа принадлежит к типу интерфейса
 Компилятор пытается разрешить ссылку на перегруженное свойство или процедуру, но не выполняется, так как аргумент имеет тип `Object` и ссылающийся объект имеет тип данных интерфейса. `Object` Аргумент указывает компилятору разрешить ссылку с поздней привязкой.  
   
  В этих случаях компилятор разрешает перегрузку посредством реализации класса, а не базового интерфейса. Если класс переименовывает одну из перегруженных версий, компилятор не учитывает эту версию в качестве перегрузки, так как его имя отличается. Это указывает компилятору игнорировать переименованную версию, когда было бы разрешить ссылку на правильный выбор.  

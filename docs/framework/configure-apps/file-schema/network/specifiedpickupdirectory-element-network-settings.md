@@ -1,5 +1,5 @@
 ---
-title: '&lt;specifiedPickupDirectory&gt; (сетевые параметры)'
+title: Элемент <specifiedPickupDirectory> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 7735aea55f03b0703ebb7b0e3c5f958b57f1238d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6abee1b01e690633dabfd225b30fcb9b8b408dad
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611310"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270827"
 ---
-# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; (сетевые параметры)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > (сетевые параметры)
 Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).  
   
  \<configuration>  
@@ -37,7 +37,7 @@ ms.locfileid: "54611310"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`pickupDirectoryLocation`|Каталог, в которой приложения сохраняют сообщения электронной почты для последующей обработки SMTP-сервером.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54611310"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).|  
   

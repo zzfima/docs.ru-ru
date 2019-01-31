@@ -1,15 +1,15 @@
 ---
-title: '&lt;callbackDebug&gt;'
+title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 1aa292a3fe06af9cf1dbc53ebf5bbdf9841be8d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62ce1bc179c7215d4988e4c6bda08025c3d3e5de
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286316"
 ---
-# <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
+# <a name="callbackdebug"></a>\<callbackDebug >
 Задает отладку службы для объекта обратного вызова Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
@@ -41,7 +41,7 @@ ms.locfileid: "54687379"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
   

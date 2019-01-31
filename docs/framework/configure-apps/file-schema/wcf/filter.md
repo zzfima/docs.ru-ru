@@ -1,15 +1,15 @@
 ---
-title: '&lt;Фильтр&gt;'
+title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645513"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278789"
 ---
-# <a name="ltfiltergt"></a>&lt;Фильтр&gt;
+# <a name="filter"></a>\<Фильтр >
 
 Определяет фильтр маршрутизации, который определяет тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> для использования при вычислении входящих сообщений также все вспомогательные данные и параметры, необходимые для фильтра.
 
@@ -47,7 +47,7 @@ ms.locfileid: "54645513"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание: |
+| Элемент | Описание |
 | ------- | ----------- |
 | [\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Раздел конфигурации для определения набора фильтров маршрутизации, которые определяют тип Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> для использования при вычислении входящих сообщений. |
 

@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpAnnoucementEndpoint&gt;'
+title: <udpAnnoucementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c92db479efa9f6fdf2dafc9a6d512df4254e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582439"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265198"
 ---
-# <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
+# <a name="udpannoucementendpoint"></a>\<udpAnnoucementEndpoint >
 Этот элемент конфигурации определяет стандартную конечную точку, используемую службами для отправки сообщений с объявлениями по привязке UDP. Имеет фиксированный контракт и поддерживает две версии обнаружения. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию, как определено в спецификациях WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1). Можно задать многопоточный адрес, который будет использовать для отправки и получения сообщений объявлений.  
   
 \<system.ServiceModel>  

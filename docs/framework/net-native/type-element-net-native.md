@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Type&gt; (машинный код .NET)
+title: <Type> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b839afe0ca14e49bcf595241169b601999d7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85c5ae85a07567305d6e7e2a57f4b5459bd647d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706797"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276312"
 ---
-# <a name="lttypegt-element-net-native"></a>Элемент &lt;Type&gt; (машинный код .NET)
+# <a name="type-element-net-native"></a>\<Тип > элемент (машинный код .NET)
 Применяет политику выполнения для конкретного типа, например класса или структуры.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -57,7 +57,7 @@ ms.locfileid: "54706797"
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54706797"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения.|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения ко всем типам в указанной сборке.|  
