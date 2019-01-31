@@ -1,21 +1,21 @@
 ---
-title: '&lt;UserDefinedTypes&gt;'
+title: <userDefinedTypes>
 ms.date: 03/30/2017
 ms.assetid: 6f69742e-5144-4115-9344-cbe175aab73d
-ms.openlocfilehash: e8acf42f7a22cc223f211149e560d5e6273e462f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10762fe6fb4ed92ead6af26f6db17514d93df64f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672851"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275461"
 ---
-# <a name="ltuserdefinedtypesgt"></a><span data-ttu-id="7bf8f-102">&lt;UserDefinedTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="7bf8f-102">&lt;userDefinedTypes&gt;</span></span>
-<span data-ttu-id="7bf8f-103">Данный раздел содержит коллекцию элементов `userDefinedType`.</span><span class="sxs-lookup"><span data-stu-id="7bf8f-103">This section contains a collection of `userDefinedType` elements.</span></span>  
+# <a name="userdefinedtypes"></a><span data-ttu-id="1366a-101">\<userDefinedTypes></span><span class="sxs-lookup"><span data-stu-id="1366a-101">\<userDefinedTypes></span></span>
+<span data-ttu-id="1366a-102">Данный раздел содержит коллекцию элементов `userDefinedType`.</span><span class="sxs-lookup"><span data-stu-id="1366a-102">This section contains a collection of `userDefinedType` elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bf8f-104">См. также</span><span class="sxs-lookup"><span data-stu-id="7bf8f-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1366a-103">См. также</span><span class="sxs-lookup"><span data-stu-id="1366a-103">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [<span data-ttu-id="7bf8f-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="7bf8f-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [<span data-ttu-id="7bf8f-106">Интеграция с приложениями COM+</span><span class="sxs-lookup"><span data-stu-id="7bf8f-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="7bf8f-107">Практическое руководство. Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="7bf8f-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="1366a-104">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="1366a-104">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [<span data-ttu-id="1366a-105">Интеграция с приложениями COM+</span><span class="sxs-lookup"><span data-stu-id="1366a-105">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="1366a-106">Практическое руководство. Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="1366a-106">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

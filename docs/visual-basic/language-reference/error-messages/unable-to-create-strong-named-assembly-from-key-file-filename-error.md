@@ -1,5 +1,5 @@
 ---
-title: 'Не удается создать сборку со строгим именем из файла ключа &#39; &lt;filename&gt;&#39;: &lt;ошибка&gt;'
+title: 'Не удается создать сборку со строгим именем из файла ключа <filename>: <error>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: de0f9fabdb2b64f0d246e2d169e60b35da2a28b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8070dd05f9964546f03fc8227b8dbe8adccccd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511242"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269358"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a><span data-ttu-id="28081-102">Не удается создать сборку со строгим именем из файла ключа &#39; &lt;filename&gt;&#39;: &lt;ошибка&gt;</span><span class="sxs-lookup"><span data-stu-id="28081-102">Unable to create strong-named assembly from key file &#39;&lt;filename&gt;&#39;: &lt;error&gt;</span></span>
-<span data-ttu-id="28081-103">Не удалось создать сборку со строгим именем из указанного файла ключа.</span><span class="sxs-lookup"><span data-stu-id="28081-103">A strong-named assembly could not be created from the specified key file.</span></span>  
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a><span data-ttu-id="831b9-102">Не удается создать сборку со строгим именем из файла ключа "\<имя_файла >": \<ошибка ></span><span class="sxs-lookup"><span data-stu-id="831b9-102">Unable to create strong-named assembly from key file '\<filename>': \<error></span></span>
+<span data-ttu-id="831b9-103">Не удалось создать сборку со строгим именем из указанного файла ключа.</span><span class="sxs-lookup"><span data-stu-id="831b9-103">A strong-named assembly could not be created from the specified key file.</span></span>  
   
- <span data-ttu-id="28081-104">**Идентификатор ошибки:** BC31026</span><span class="sxs-lookup"><span data-stu-id="28081-104">**Error ID:** BC31026</span></span>  
+ <span data-ttu-id="831b9-104">**Идентификатор ошибки:** BC31026</span><span class="sxs-lookup"><span data-stu-id="831b9-104">**Error ID:** BC31026</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="28081-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="28081-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="831b9-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="831b9-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="28081-106">Убедитесь, что указан правильный файл ключа и что он не блокирован другим приложением.</span><span class="sxs-lookup"><span data-stu-id="28081-106">Verify that the correct key file has been specified, and that it is not locked by another application.</span></span>  
+1.  <span data-ttu-id="831b9-106">Убедитесь, что указан правильный файл ключа и что он не блокирован другим приложением.</span><span class="sxs-lookup"><span data-stu-id="831b9-106">Verify that the correct key file has been specified, and that it is not locked by another application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28081-107">См. также</span><span class="sxs-lookup"><span data-stu-id="28081-107">See also</span></span>
-- <span data-ttu-id="28081-108">[Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md))</span><span class="sxs-lookup"><span data-stu-id="28081-108">[Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))</span></span>
+## <a name="see-also"></a><span data-ttu-id="831b9-107">См. также</span><span class="sxs-lookup"><span data-stu-id="831b9-107">See also</span></span>
+- <span data-ttu-id="831b9-108">[Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md))</span><span class="sxs-lookup"><span data-stu-id="831b9-108">[Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))</span></span>

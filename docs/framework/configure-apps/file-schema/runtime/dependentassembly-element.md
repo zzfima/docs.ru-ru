@@ -1,5 +1,5 @@
 ---
-title: '&lt;dependentAssembly&gt; элемент'
+title: Элемент <dependentAssembly>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -11,53 +11,53 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2cf4d9940873c04ee6f0ab2d378a3d1253be4ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729204"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273953"
 ---
-# <a name="ltdependentassemblygt-element"></a><span data-ttu-id="b963f-102">&lt;dependentAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="b963f-102">&lt;dependentAssembly&gt; Element</span></span>
-<span data-ttu-id="b963f-103">Инкапсулирует политику привязки и расположение каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="b963f-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="b963f-104">Используйте один `dependentAssembly` элемент для каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="b963f-104">Use one `dependentAssembly` element for each assembly.</span></span>  
+# <a name="dependentassembly-element"></a><span data-ttu-id="a82a9-102">\<dependentAssembly > элемент</span><span class="sxs-lookup"><span data-stu-id="a82a9-102">\<dependentAssembly> Element</span></span>
+<span data-ttu-id="a82a9-103">Инкапсулирует политику привязки и расположение каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="a82a9-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="a82a9-104">Используйте один `dependentAssembly` элемент для каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="a82a9-104">Use one `dependentAssembly` element for each assembly.</span></span>  
   
- <span data-ttu-id="b963f-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b963f-105">\<configuration></span></span>  
-<span data-ttu-id="b963f-106">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="b963f-106">\<runtime></span></span>  
-<span data-ttu-id="b963f-107">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="b963f-107">\<assemblyBinding></span></span>  
-<span data-ttu-id="b963f-108">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="b963f-108">\<dependentAssembly></span></span>  
+ <span data-ttu-id="a82a9-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a82a9-105">\<configuration></span></span>  
+<span data-ttu-id="a82a9-106">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="a82a9-106">\<runtime></span></span>  
+<span data-ttu-id="a82a9-107">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="a82a9-107">\<assemblyBinding></span></span>  
+<span data-ttu-id="a82a9-108">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="a82a9-108">\<dependentAssembly></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b963f-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b963f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a82a9-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a82a9-109">Syntax</span></span>  
   
 ```xml  
 <dependentAssembly>   
 </dependentAssembly>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b963f-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b963f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="b963f-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b963f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a82a9-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a82a9-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a82a9-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a82a9-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b963f-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b963f-112">Attributes</span></span>  
- <span data-ttu-id="b963f-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="b963f-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a82a9-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a82a9-112">Attributes</span></span>  
+ <span data-ttu-id="a82a9-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a82a9-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="b963f-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b963f-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a82a9-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a82a9-114">Child Elements</span></span>  
   
-|<span data-ttu-id="b963f-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="b963f-115">Element</span></span>|<span data-ttu-id="b963f-116">Описание</span><span class="sxs-lookup"><span data-stu-id="b963f-116">Description</span></span>|  
+|<span data-ttu-id="a82a9-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="a82a9-115">Element</span></span>|<span data-ttu-id="a82a9-116">Описание</span><span class="sxs-lookup"><span data-stu-id="a82a9-116">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyIdentity`|<span data-ttu-id="b963f-117">Содержит идентификационные сведения о сборке.</span><span class="sxs-lookup"><span data-stu-id="b963f-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="b963f-118">Этот элемент должен быть включен в каждом `dependentAssembly` элемент.</span><span class="sxs-lookup"><span data-stu-id="b963f-118">This element must be included in each `dependentAssembly` element.</span></span>|  
-|`codeBase`|<span data-ttu-id="b963f-119">Указывает, где среда выполнения можно найти общей сборки, если он не установлен на компьютере.</span><span class="sxs-lookup"><span data-stu-id="b963f-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
-|`bindingRedirect`|<span data-ttu-id="b963f-120">Перенаправляет одну версию сборки на другую.</span><span class="sxs-lookup"><span data-stu-id="b963f-120">Redirects one assembly version to another.</span></span>|  
-|`publisherPolicy`|<span data-ttu-id="b963f-121">Указывает, применяет ли среда выполнения политику издателя для этой сборки.</span><span class="sxs-lookup"><span data-stu-id="b963f-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
+|`assemblyIdentity`|<span data-ttu-id="a82a9-117">Содержит идентификационные сведения о сборке.</span><span class="sxs-lookup"><span data-stu-id="a82a9-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="a82a9-118">Этот элемент должен быть включен в каждом `dependentAssembly` элемент.</span><span class="sxs-lookup"><span data-stu-id="a82a9-118">This element must be included in each `dependentAssembly` element.</span></span>|  
+|`codeBase`|<span data-ttu-id="a82a9-119">Указывает, где среда выполнения можно найти общей сборки, если он не установлен на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a82a9-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
+|`bindingRedirect`|<span data-ttu-id="a82a9-120">Перенаправляет одну версию сборки на другую.</span><span class="sxs-lookup"><span data-stu-id="a82a9-120">Redirects one assembly version to another.</span></span>|  
+|`publisherPolicy`|<span data-ttu-id="a82a9-121">Указывает, применяет ли среда выполнения политику издателя для этой сборки.</span><span class="sxs-lookup"><span data-stu-id="a82a9-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="b963f-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b963f-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a82a9-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a82a9-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="b963f-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="b963f-123">Element</span></span>|<span data-ttu-id="b963f-124">Описание:</span><span class="sxs-lookup"><span data-stu-id="b963f-124">Description</span></span>|  
+|<span data-ttu-id="a82a9-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="a82a9-123">Element</span></span>|<span data-ttu-id="a82a9-124">Описание</span><span class="sxs-lookup"><span data-stu-id="a82a9-124">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="b963f-125">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="b963f-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="b963f-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b963f-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="b963f-127">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="b963f-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="a82a9-125">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="a82a9-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="a82a9-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a82a9-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="a82a9-127">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="a82a9-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b963f-128">Пример</span><span class="sxs-lookup"><span data-stu-id="b963f-128">Example</span></span>  
- <span data-ttu-id="b963f-129">В следующем примере показано, как для инкапсуляции сведений о сборке для двух сборок.</span><span class="sxs-lookup"><span data-stu-id="b963f-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="a82a9-128">Пример</span><span class="sxs-lookup"><span data-stu-id="a82a9-128">Example</span></span>  
+ <span data-ttu-id="a82a9-129">В следующем примере показано, как для инкапсуляции сведений о сборке для двух сборок.</span><span class="sxs-lookup"><span data-stu-id="a82a9-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ ms.locfileid: "54729204"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b963f-130">См. также</span><span class="sxs-lookup"><span data-stu-id="b963f-130">See also</span></span>
-- [<span data-ttu-id="b963f-131">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="b963f-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="b963f-132">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="b963f-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="b963f-133">Перенаправление версий сборки</span><span class="sxs-lookup"><span data-stu-id="b963f-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="a82a9-130">См. также</span><span class="sxs-lookup"><span data-stu-id="a82a9-130">See also</span></span>
+- [<span data-ttu-id="a82a9-131">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="a82a9-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="a82a9-132">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="a82a9-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="a82a9-133">Перенаправление версий сборки</span><span class="sxs-lookup"><span data-stu-id="a82a9-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

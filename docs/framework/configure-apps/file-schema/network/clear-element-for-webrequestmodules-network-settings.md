@@ -1,5 +1,5 @@
 ---
-title: '&lt;Очистить&gt; элемент для webRequestModules (параметры сети)'
+title: Элемент <clear> для webRequestModules (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: ccb9a19d4e6d79a84123014746b659a7168b2158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0096c7b3426645b90e2e1609fb2427334345fd87
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607008"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284158"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="90b71-102">&lt;Очистить&gt; элемент для webRequestModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="90b71-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="90b71-103">Удаляет все зарегистрированные модули веб-запросов из приложения.</span><span class="sxs-lookup"><span data-stu-id="90b71-103">Removes all registered Web request modules from the application.</span></span>  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="e108d-102">\<Очистить > элемент для webRequestModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="e108d-102">\<clear> Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="e108d-103">Удаляет все зарегистрированные модули веб-запросов из приложения.</span><span class="sxs-lookup"><span data-stu-id="e108d-103">Removes all registered Web request modules from the application.</span></span>  
   
- <span data-ttu-id="90b71-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="90b71-104">\<configuration></span></span>  
-<span data-ttu-id="90b71-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="90b71-105">\<system.net></span></span>  
-<span data-ttu-id="90b71-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="90b71-106">\<webRequestModules></span></span>  
-<span data-ttu-id="90b71-107">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="90b71-107">\<clear></span></span>  
+ <span data-ttu-id="e108d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e108d-104">\<configuration></span></span>  
+<span data-ttu-id="e108d-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e108d-105">\<system.net></span></span>  
+<span data-ttu-id="e108d-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="e108d-106">\<webRequestModules></span></span>  
+<span data-ttu-id="e108d-107">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="e108d-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90b71-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="90b71-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e108d-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e108d-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="90b71-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="90b71-109">Attributes and Elements</span></span>  
- <span data-ttu-id="90b71-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="90b71-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e108d-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e108d-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e108d-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e108d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="90b71-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="90b71-111">Attributes</span></span>  
- <span data-ttu-id="90b71-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="90b71-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e108d-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e108d-111">Attributes</span></span>  
+ <span data-ttu-id="e108d-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="e108d-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="90b71-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="90b71-113">Child Elements</span></span>  
- <span data-ttu-id="90b71-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="90b71-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e108d-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e108d-113">Child Elements</span></span>  
+ <span data-ttu-id="e108d-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="e108d-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="90b71-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="90b71-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e108d-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e108d-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="90b71-116">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="90b71-116">**Element**</span></span>|<span data-ttu-id="90b71-117">**Описание**</span><span class="sxs-lookup"><span data-stu-id="90b71-117">**Description**</span></span>|  
+|<span data-ttu-id="e108d-116">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="e108d-116">**Element**</span></span>|<span data-ttu-id="e108d-117">**Описание**</span><span class="sxs-lookup"><span data-stu-id="e108d-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="90b71-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="90b71-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="90b71-119">Задает модули, используемые для запроса данных от сетевых узлов.</span><span class="sxs-lookup"><span data-stu-id="90b71-119">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="e108d-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="e108d-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="e108d-119">Задает модули, используемые для запроса данных от сетевых узлов.</span><span class="sxs-lookup"><span data-stu-id="e108d-119">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="90b71-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="90b71-120">Remarks</span></span>  
- <span data-ttu-id="90b71-121">`clear` Элемент удаляет все зарегистрированные модули веб-запросов, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.</span><span class="sxs-lookup"><span data-stu-id="90b71-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e108d-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="e108d-120">Remarks</span></span>  
+ <span data-ttu-id="e108d-121">`clear` Элемент удаляет все зарегистрированные модули веб-запросов, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.</span><span class="sxs-lookup"><span data-stu-id="e108d-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="90b71-122">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="90b71-122">Configuration Files</span></span>  
- <span data-ttu-id="90b71-123">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="90b71-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="e108d-122">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="e108d-122">Configuration Files</span></span>  
+ <span data-ttu-id="e108d-123">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="e108d-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="90b71-124">Пример</span><span class="sxs-lookup"><span data-stu-id="90b71-124">Example</span></span>  
- <span data-ttu-id="90b71-125">В следующем примере удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.</span><span class="sxs-lookup"><span data-stu-id="90b71-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
+## <a name="example"></a><span data-ttu-id="e108d-124">Пример</span><span class="sxs-lookup"><span data-stu-id="e108d-124">Example</span></span>  
+ <span data-ttu-id="e108d-125">В следующем примере удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.</span><span class="sxs-lookup"><span data-stu-id="e108d-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,6 @@ ms.locfileid: "54607008"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="90b71-126">См. также</span><span class="sxs-lookup"><span data-stu-id="90b71-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e108d-126">См. также</span><span class="sxs-lookup"><span data-stu-id="e108d-126">See also</span></span>
 - <xref:System.Net.WebRequest>
-- [<span data-ttu-id="90b71-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="90b71-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="e108d-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="e108d-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

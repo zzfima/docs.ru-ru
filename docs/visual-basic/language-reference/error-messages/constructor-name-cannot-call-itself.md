@@ -1,5 +1,5 @@
 ---
-title: Конструктор &#39; &lt;имя&gt; &#39; может вызвать сам себя
+title: Конструктор <name> не может вызывать сам себя
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662729"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276046"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a><span data-ttu-id="4ccae-102">Конструктор &#39; &lt;имя&gt; &#39; может вызвать сам себя</span><span class="sxs-lookup"><span data-stu-id="4ccae-102">Constructor &#39;&lt;name&gt;&#39; cannot call itself</span></span>
-<span data-ttu-id="4ccae-103">Объект `Sub New` процедура в классе или структуре вызывает саму себя.</span><span class="sxs-lookup"><span data-stu-id="4ccae-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
+# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="440f8-102">Конструктор "\<имя >" не может вызвать сам себя</span><span class="sxs-lookup"><span data-stu-id="440f8-102">Constructor '\<name>' cannot call itself</span></span>
+<span data-ttu-id="440f8-103">Объект `Sub New` процедура в классе или структуре вызывает саму себя.</span><span class="sxs-lookup"><span data-stu-id="440f8-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
   
- <span data-ttu-id="4ccae-104">Конструктор предназначен для инициализации нового экземпляра класса или структуры при первом создании.</span><span class="sxs-lookup"><span data-stu-id="4ccae-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="4ccae-105">Класс или структура может иметь несколько конструкторов, если все они имеют разные списки параметров.</span><span class="sxs-lookup"><span data-stu-id="4ccae-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="4ccae-106">Конструктор может вызвать другой конструктор для выполнения его функциональных возможностей в дополнение к свой собственный.</span><span class="sxs-lookup"><span data-stu-id="4ccae-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="4ccae-107">Но не имеет смысла для конструктора вызвать сам себя, и на самом деле это приведет к бесконечной рекурсии Если это разрешено.</span><span class="sxs-lookup"><span data-stu-id="4ccae-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
+ <span data-ttu-id="440f8-104">Конструктор предназначен для инициализации нового экземпляра класса или структуры при первом создании.</span><span class="sxs-lookup"><span data-stu-id="440f8-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="440f8-105">Класс или структура может иметь несколько конструкторов, если все они имеют разные списки параметров.</span><span class="sxs-lookup"><span data-stu-id="440f8-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="440f8-106">Конструктор может вызвать другой конструктор для выполнения его функциональных возможностей в дополнение к свой собственный.</span><span class="sxs-lookup"><span data-stu-id="440f8-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="440f8-107">Но не имеет смысла для конструктора вызвать сам себя, и на самом деле это приведет к бесконечной рекурсии Если это разрешено.</span><span class="sxs-lookup"><span data-stu-id="440f8-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
   
- <span data-ttu-id="4ccae-108">**Идентификатор ошибки:** BC30298</span><span class="sxs-lookup"><span data-stu-id="4ccae-108">**Error ID:** BC30298</span></span>  
+ <span data-ttu-id="440f8-108">**Идентификатор ошибки:** BC30298</span><span class="sxs-lookup"><span data-stu-id="440f8-108">**Error ID:** BC30298</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4ccae-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4ccae-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="440f8-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="440f8-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="4ccae-110">Проверьте список параметров конструктора.</span><span class="sxs-lookup"><span data-stu-id="4ccae-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="4ccae-111">Она должна отличаться от вызова конструктора.</span><span class="sxs-lookup"><span data-stu-id="4ccae-111">It should be different from that of the constructor making the call.</span></span>  
+1.  <span data-ttu-id="440f8-110">Проверьте список параметров конструктора.</span><span class="sxs-lookup"><span data-stu-id="440f8-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="440f8-111">Она должна отличаться от вызова конструктора.</span><span class="sxs-lookup"><span data-stu-id="440f8-111">It should be different from that of the constructor making the call.</span></span>  
   
-2.  <span data-ttu-id="4ccae-112">Если вам не требуется вызывать другой конструктор, удалите `Sub New` вызов полностью.</span><span class="sxs-lookup"><span data-stu-id="4ccae-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
+2.  <span data-ttu-id="440f8-112">Если вам не требуется вызывать другой конструктор, удалите `Sub New` вызов полностью.</span><span class="sxs-lookup"><span data-stu-id="440f8-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ccae-113">См. также</span><span class="sxs-lookup"><span data-stu-id="4ccae-113">See also</span></span>
-- [<span data-ttu-id="4ccae-114">Время существования: Способ создания и уничтожения объектов</span><span class="sxs-lookup"><span data-stu-id="4ccae-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a><span data-ttu-id="440f8-113">См. также</span><span class="sxs-lookup"><span data-stu-id="440f8-113">See also</span></span>
+- [<span data-ttu-id="440f8-114">Время существования: Способ создания и уничтожения объектов</span><span class="sxs-lookup"><span data-stu-id="440f8-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

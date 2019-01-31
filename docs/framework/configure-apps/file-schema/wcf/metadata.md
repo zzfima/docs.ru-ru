@@ -1,21 +1,21 @@
 ---
-title: '&lt;Метаданные&gt;'
+title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 017a58c7e48a1c4c5b4abdcb7cc603e95f6516a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ff59a3a1a075be4f8024a2a78921d1d50311327
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723970"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270801"
 ---
-# <a name="ltmetadatagt"></a><span data-ttu-id="44405-102">&lt;Метаданные&gt;</span><span class="sxs-lookup"><span data-stu-id="44405-102">&lt;metadata&gt;</span></span>
-<span data-ttu-id="44405-103">Задает способ обработки метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="44405-103">Specifies how service metadata can be processed.</span></span>  
+# <a name="metadata"></a><span data-ttu-id="a7a1a-101">\<метаданные ></span><span class="sxs-lookup"><span data-stu-id="a7a1a-101">\<metadata></span></span>
+<span data-ttu-id="a7a1a-102">Задает способ обработки метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-102">Specifies how service metadata can be processed.</span></span>  
   
- <span data-ttu-id="44405-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="44405-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="44405-105">\<Клиент ></span><span class="sxs-lookup"><span data-stu-id="44405-105">\<client></span></span>  
+ <span data-ttu-id="a7a1a-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="a7a1a-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a7a1a-104">\<Клиент ></span><span class="sxs-lookup"><span data-stu-id="a7a1a-104">\<client></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44405-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="44405-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7a1a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a7a1a-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -32,30 +32,30 @@ ms.locfileid: "54723970"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="44405-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="44405-107">Attributes and Elements</span></span>  
- <span data-ttu-id="44405-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="44405-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7a1a-106">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a7a1a-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="a7a1a-107">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="44405-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="44405-109">Attributes</span></span>  
- <span data-ttu-id="44405-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="44405-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a7a1a-108">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a7a1a-108">Attributes</span></span>  
+ <span data-ttu-id="a7a1a-109">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="44405-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="44405-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a7a1a-110">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a7a1a-110">Child Elements</span></span>  
   
-|<span data-ttu-id="44405-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="44405-112">Element</span></span>|<span data-ttu-id="44405-113">Описание:</span><span class="sxs-lookup"><span data-stu-id="44405-113">Description</span></span>|  
+|<span data-ttu-id="a7a1a-111">Элемент</span><span class="sxs-lookup"><span data-stu-id="a7a1a-111">Element</span></span>|<span data-ttu-id="a7a1a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="a7a1a-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="44405-114">\<policyImporters ></span><span class="sxs-lookup"><span data-stu-id="44405-114">\<policyImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|<span data-ttu-id="44405-115">Задает все средства импорта политики, контролирующие импорт утверждений пользовательской политики о привязках.</span><span class="sxs-lookup"><span data-stu-id="44405-115">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="44405-116">Средство импорта политики используется для поиска утверждений пользовательской политики о свойствах привязки, а также для подключения пользовательского элемента привязки, реализующего свойства, необходимые для утверждения.</span><span class="sxs-lookup"><span data-stu-id="44405-116">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>|  
-|[<span data-ttu-id="44405-117">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="44405-117">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="44405-118">Задает все средства импорта WSDL, импортирующие метаданные на языке WSDL 1.1 с вложениями WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="44405-118">Specifies all the WSDL importers that import Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="44405-119">Средство импорта WSDL используется для импорта метаданных, а также для их преобразования в различные классы, представляющие данные контракта и конечной точки.</span><span class="sxs-lookup"><span data-stu-id="44405-119">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="44405-120">Он может выборочно импортировать сведения контракта и конечной точки, а также свойства, предоставляющие сведения об ошибках и принимающие сведения о типах, относящиеся к процессу импорта и преобразования.</span><span class="sxs-lookup"><span data-stu-id="44405-120">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="44405-121">Оно также поддерживает импорт данных привязки и свойств, предоставляющих доступ к каким-либо документам политики, документам WSDL, расширениям WSDL и документам схемы XML.</span><span class="sxs-lookup"><span data-stu-id="44405-121">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>|  
+|[<span data-ttu-id="a7a1a-113">\<policyImporters ></span><span class="sxs-lookup"><span data-stu-id="a7a1a-113">\<policyImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|<span data-ttu-id="a7a1a-114">Задает все средства импорта политики, контролирующие импорт утверждений пользовательской политики о привязках.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-114">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="a7a1a-115">Средство импорта политики используется для поиска утверждений пользовательской политики о свойствах привязки, а также для подключения пользовательского элемента привязки, реализующего свойства, необходимые для утверждения.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-115">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>|  
+|[<span data-ttu-id="a7a1a-116">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="a7a1a-116">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="a7a1a-117">Задает все средства импорта WSDL, импортирующие метаданные на языке WSDL 1.1 с вложениями WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-117">Specifies all the WSDL importers that import Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="a7a1a-118">Средство импорта WSDL используется для импорта метаданных, а также для их преобразования в различные классы, представляющие данные контракта и конечной точки.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-118">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="a7a1a-119">Он может выборочно импортировать сведения контракта и конечной точки, а также свойства, предоставляющие сведения об ошибках и принимающие сведения о типах, относящиеся к процессу импорта и преобразования.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-119">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="a7a1a-120">Оно также поддерживает импорт данных привязки и свойств, предоставляющих доступ к каким-либо документам политики, документам WSDL, расширениям WSDL и документам схемы XML.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-120">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="44405-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="44405-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a7a1a-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a7a1a-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="44405-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="44405-123">Element</span></span>|<span data-ttu-id="44405-124">Описание</span><span class="sxs-lookup"><span data-stu-id="44405-124">Description</span></span>|  
+|<span data-ttu-id="a7a1a-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="a7a1a-122">Element</span></span>|<span data-ttu-id="a7a1a-123">Описание:</span><span class="sxs-lookup"><span data-stu-id="a7a1a-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="44405-125">\<Клиент ></span><span class="sxs-lookup"><span data-stu-id="44405-125">\<client></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|<span data-ttu-id="44405-126">В разделе client определяется список конечных точек, к которым может подключаться клиент.</span><span class="sxs-lookup"><span data-stu-id="44405-126">The client section defines a list of endpoints that a client can connect to.</span></span>|  
+|[<span data-ttu-id="a7a1a-124">\<Клиент ></span><span class="sxs-lookup"><span data-stu-id="a7a1a-124">\<client></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|<span data-ttu-id="a7a1a-125">В разделе client определяется список конечных точек, к которым может подключаться клиент.</span><span class="sxs-lookup"><span data-stu-id="a7a1a-125">The client section defines a list of endpoints that a client can connect to.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="44405-127">См. также</span><span class="sxs-lookup"><span data-stu-id="44405-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7a1a-126">См. также</span><span class="sxs-lookup"><span data-stu-id="a7a1a-126">See also</span></span>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [<span data-ttu-id="44405-128">Конфигурация клиента WCF</span><span class="sxs-lookup"><span data-stu-id="44405-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [<span data-ttu-id="44405-129">Клиенты</span><span class="sxs-lookup"><span data-stu-id="44405-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [<span data-ttu-id="a7a1a-127">Конфигурация клиента WCF</span><span class="sxs-lookup"><span data-stu-id="a7a1a-127">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [<span data-ttu-id="a7a1a-128">Клиенты</span><span class="sxs-lookup"><span data-stu-id="a7a1a-128">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
