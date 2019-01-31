@@ -1,5 +1,5 @@
 ---
-title: Ограничения компонента Timer в Windows Forms&#39;свойства Interval s
+title: Ограничения свойства Interval компонента Timer в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d8e25d9d27c0908f2d794a0c3c9646024984764
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516958"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269681"
 ---
-# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Ограничения компонента Timer в Windows Forms&#39;свойства Interval s
+# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Ограничения свойства Interval компонента Timer в Windows Forms
 Windows Forms <xref:System.Windows.Forms.Timer> компонент имеет <xref:System.Windows.Forms.Timer.Interval%2A> свойство, которое указывает количество миллисекунд, которые проходят между событие одного таймера, а также следующие. Если компонент отключен, таймер для получения <xref:System.Windows.Forms.Timer.Tick> событий через приблизительно равные интервалы времени.  
   
  Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  

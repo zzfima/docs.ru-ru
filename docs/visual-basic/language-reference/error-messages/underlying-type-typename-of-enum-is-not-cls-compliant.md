@@ -1,5 +1,5 @@
 ---
-title: Базовый тип &lt;typename&gt; перечисления несовместим с CLS
+title: Базовый тип <typename> перечисления несовместим с CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40032
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674798"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258634"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Базовый тип &lt;typename&gt; перечисления несовместим с CLS
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Базовый тип \<typename > перечисления несовместим с CLS
 Тип данных, указанный для этого перечисления не является частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS). Это не ошибка в компоненте, поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и Visual Basic поддерживает этот тип данных. Тем не менее другой компонент, написанный в строго CLS-совместимого кода могут не поддерживать этот тип данных. Такой компонент не может иметь возможность успешно взаимодействовать с данным компонентом.  
   
  Следующие типы данных Visual Basic не являются CLS-совместимыми:  

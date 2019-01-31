@@ -1,5 +1,5 @@
 ---
-title: '&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;'
+title: Элемент <add> для <listeners> для <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 9e1bc2629b613b278ad38bbe9aab4cdfaa3f2a5e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ae5231f43e7c157b5250376f7ab97deccea595e5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084033"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277125"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Добавить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;
+# <a name="add-element-for-listeners-for-source"></a>\<Добавить > элемент для \<прослушиватели > для \<источника >
 Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.  
   
  \<configuration>  
@@ -38,7 +38,7 @@ ms.locfileid: "55084033"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`type`|Необходимый атрибут, в том случае, если не обращаются к прослушивателю в `sharedListeners` коллекции, в котором случае необходима только для ссылки на него по имени (см. в разделе [пример](#example)).<br /><br /> Указывает тип прослушивателя. Необходимо использовать строку, которая соответствует требованиям, перечисленным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса. Объект <xref:System.Configuration.ConfigurationException> создается, если класс имеет конструктор, принимающий строку.|  

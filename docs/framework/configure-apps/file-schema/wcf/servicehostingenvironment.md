@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceHostingEnvironment&gt;'
+title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 47e683969a62541dd48a3c7211e1edf3bb7b4038
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09a796a78cf37b464f5f7c359822d9d0c5001787
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493850"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257581"
 ---
-# <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
+# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Этот элемент определяет тип, который среда размещения служб создает для определенного транспорта. Если этот элемент является пустым, используется тип, применяемый по умолчанию. Этот элемент может применяться только на уровне файлов конфигурации приложения или компьютера.  
   
  \<system.ServiceModel>  
@@ -48,7 +48,7 @@ ms.locfileid: "54493850"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
 |[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  

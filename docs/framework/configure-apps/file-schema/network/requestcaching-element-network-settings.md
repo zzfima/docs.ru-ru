@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt; (сетевые параметры)'
+title: Элемент <requestCaching> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: e5d74a033b14d5f1b523422d0afd360206c0cb48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78325438ba158c0c1d0e322d0b02d0a0a2a57f0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685017"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277710"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; (сетевые параметры)
+# <a name="requestcaching-element-network-settings"></a>\<requestCaching > (сетевые параметры)
 Определяет механизм кэширования для сетевых запросов.  
   
  \<configuration>  
@@ -49,7 +49,7 @@ ms.locfileid: "54685017"
   
 ## <a name="policylevel-attribute"></a>policyLevel атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`Default`|Возвращает кэшированный ресурс, если ресурс является новым, длина содержимого точна и присутствуют атрибуты content-length, модификации и истечения срока действия.|  
 |`BypassCache`|Возвращает ресурс с сервера.|  
@@ -62,14 +62,14 @@ ms.locfileid: "54685017"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли HTTP-кэширования и описывает политику кэширования по умолчанию.|  
 |[\<defaultFtpCachePolicy > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   

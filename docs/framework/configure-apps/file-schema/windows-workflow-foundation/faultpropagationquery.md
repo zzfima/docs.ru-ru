@@ -1,16 +1,16 @@
 ---
-title: '&lt;faultPropagationQuery&gt;'
+title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: a91a6f61b39a780ed48ad8d5f5e0dfb9ef60da39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a6899eaa04ad16192e07f4bc2ad1abe6e4aedd5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538340"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257373"
 ---
-# <a name="ltfaultpropagationquerygt"></a>&lt;faultPropagationQuery&gt;
+# <a name="faultpropagationquery"></a>\<faultPropagationQuery>
 Представляет запрос, который используется для отслеживания обработки ошибок, возникающих в рамках действия.  Это событие возникает каждый раз, когда FaultHandler обрабатывает ошибку. Такой запрос следует использовать для отслеживания обработки ошибок, возникающих в рамках действия. Этот запрос необходим, чтобы участник отслеживания подписался на записи распространения ошибок.  
   
  Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "54538340"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<faultPropagationQueries >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationqueries.md)|Представляет список элементов конфигурации, которые используются для отслеживания обработки ошибок, возникающих в рамках действия.  Это событие возникает каждый раз, когда FaultHandler обрабатывает ошибку.|  
   

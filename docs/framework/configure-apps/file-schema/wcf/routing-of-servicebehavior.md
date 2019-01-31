@@ -1,18 +1,18 @@
 ---
-title: '&lt;маршрутизация&gt; для &lt;serviceBehavior&gt;'
+title: <routing> из <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146853"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261780"
 ---
-# <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;маршрутизация&gt; для &lt;serviceBehavior&gt;
+# <a name="routing-of-servicebehavior"></a>\<Маршрутизация > из \<serviceBehavior >
 Обеспечивает доступ к службе маршрутизации во время выполнения, чтобы вносить динамические изменения в конфигурацию маршрутизации.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
@@ -48,7 +48,7 @@ ms.locfileid: "54146853"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   

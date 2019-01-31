@@ -1,18 +1,18 @@
 ---
-title: '&lt;Добавить&gt; элемент для &lt;namedCaches&gt;'
+title: Элемент <add> для <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: 0a292d5bdde019c4c01385a2126de29c3eea7afb
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cbe7c98e9603e51aa381f07ea35ffe46e6d3adfb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084085"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257364"
 ---
-# <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Добавить&gt; элемент для &lt;namedCaches&gt;
+# <a name="add-element-for-namedcaches"></a>\<Добавить > элемент для \<namedCaches >
 Добавляет `namedCache` запись `namedCaches` коллекции для кэша памяти.  
   
  \<system.runtime.caching>  

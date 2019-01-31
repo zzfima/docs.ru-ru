@@ -1,5 +1,5 @@
 ---
-title: Исключение комментария XML должно содержать &#39;cref&#39; атрибут
+title: Исключение комментария XML должно иметь атрибут cref
 ms.date: 07/20/2015
 f1_keywords:
 - bc42319
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649951"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266641"
 ---
-# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Исключение комментария XML должно содержать &#39;cref&#39; атрибут
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>Исключение комментария XML должно иметь атрибут cref
 \<Исключение > тег предоставляет способ для документирования исключений, которые могут быть созданы с помощью метода. Необходимая `cref` атрибут назначает имя элемента, которое проверяется генератором документации. Если элемент существует, он преобразуется в каноническое имя элемента в файле документации.  
   
  **Идентификатор ошибки:** BC42319  

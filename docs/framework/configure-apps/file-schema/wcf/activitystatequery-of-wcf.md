@@ -1,15 +1,15 @@
 ---
-title: '&lt;activityStateQuery&gt; (WCF)'
+title: <activityStateQuery> для WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151794"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254799"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; (WCF)
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > из WCF
 
 Представляет запрос, используемый для трассировки изменений жизненного цикла действий, составляющих экземпляр рабочего процесса. Например можно хранить список всякий раз по завершении действия «Send E-Mail» внутри рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на объекты записей состояния действия. Состояния, доступные для подписки, указаны в ActivtyStates.  
   
@@ -18,8 +18,8 @@ ms.locfileid: "54151794"
 \<system.serviceModel > \<отслеживания >  
 \<профили > \<trackingProfile >  
 \<рабочий процесс >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,9 +67,9 @@ ms.locfileid: "54151794"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Представляет список элементов конфигурации, которые используются для отслеживания запросов на отмену дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Представляет список элементов конфигурации, которые используются для отслеживания запросов на отмену дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.|  
   
 ## <a name="remarks"></a>Примечания
 
