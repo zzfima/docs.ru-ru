@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выбор принтера, подключенного к пользователю&#39;s компьютера в Windows Forms
+title: Как выполнить Выбор принтера, подключенного к компьютеру пользователя в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 10f45fadab0f3480d4c475ff8ee448b8d1cddb13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b206030b87aad5df40e518dc36ee198838e51b9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572816"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276774"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="71943-102">Как выполнить Выбор принтера, подключенного к пользователю&#39;s компьютера в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="71943-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
-<span data-ttu-id="71943-103">Часто для печати пользователям требуется выбрать принтер, отличный от используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="71943-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="71943-104">С помощью компонента <xref:System.Windows.Forms.PrintDialog> можно разрешить пользователям выбрать один из установленных принтеров.</span><span class="sxs-lookup"><span data-stu-id="71943-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="71943-105">Компонент <xref:System.Windows.Forms.PrintDialog> позволяет зафиксировать <xref:System.Windows.Forms.DialogResult> компонента <xref:System.Windows.Forms.PrintDialog> и использовать его для выбора принтера.</span><span class="sxs-lookup"><span data-stu-id="71943-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a><span data-ttu-id="faa00-102">Как выполнить Выбор принтера, подключенного к компьютеру пользователя в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="faa00-102">How to: Choose the Printers Attached to a User's Computer in Windows Forms</span></span>
+<span data-ttu-id="faa00-103">Часто для печати пользователям требуется выбрать принтер, отличный от используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="faa00-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="faa00-104">С помощью компонента <xref:System.Windows.Forms.PrintDialog> можно разрешить пользователям выбрать один из установленных принтеров.</span><span class="sxs-lookup"><span data-stu-id="faa00-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="faa00-105">Компонент <xref:System.Windows.Forms.PrintDialog> позволяет зафиксировать <xref:System.Windows.Forms.DialogResult> компонента <xref:System.Windows.Forms.PrintDialog> и использовать его для выбора принтера.</span><span class="sxs-lookup"><span data-stu-id="faa00-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- <span data-ttu-id="71943-106">В следующей процедуре выбирается текстовый файл для печати на принтер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="71943-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="71943-107">После этого создается экземпляр класса <xref:System.Windows.Forms.PrintDialog> .</span><span class="sxs-lookup"><span data-stu-id="71943-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
+ <span data-ttu-id="faa00-106">В следующей процедуре выбирается текстовый файл для печати на принтер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="faa00-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="faa00-107">После этого создается экземпляр класса <xref:System.Windows.Forms.PrintDialog> .</span><span class="sxs-lookup"><span data-stu-id="faa00-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="71943-108">Выбор принтера и печать файла</span><span class="sxs-lookup"><span data-stu-id="71943-108">To choose a printer and then print a file</span></span>  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="faa00-108">Выбор принтера и печать файла</span><span class="sxs-lookup"><span data-stu-id="faa00-108">To choose a printer and then print a file</span></span>  
   
-1.  <span data-ttu-id="71943-109">Выберите принтер для использования с помощью <xref:System.Windows.Forms.PrintDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="71943-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
+1.  <span data-ttu-id="faa00-109">Выберите принтер для использования с помощью <xref:System.Windows.Forms.PrintDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="faa00-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     <span data-ttu-id="71943-110">В следующем примере кода обрабатываются два события.</span><span class="sxs-lookup"><span data-stu-id="71943-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="71943-111">В первом <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий, <xref:System.Windows.Forms.PrintDialog> создается экземпляр класса, а выбранный пользователем принтер фиксируется в <xref:System.Windows.Forms.DialogResult> свойство.</span><span class="sxs-lookup"><span data-stu-id="71943-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
+     <span data-ttu-id="faa00-110">В следующем примере кода обрабатываются два события.</span><span class="sxs-lookup"><span data-stu-id="faa00-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="faa00-111">В первом <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий, <xref:System.Windows.Forms.PrintDialog> создается экземпляр класса, а выбранный пользователем принтер фиксируется в <xref:System.Windows.Forms.DialogResult> свойство.</span><span class="sxs-lookup"><span data-stu-id="faa00-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     <span data-ttu-id="71943-112">Во втором событии <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие <xref:System.Drawing.Printing.PrintDocument> компонент, образец документа распечатывается на указанном принтере.</span><span class="sxs-lookup"><span data-stu-id="71943-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
+     <span data-ttu-id="faa00-112">Во втором событии <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие <xref:System.Drawing.Printing.PrintDocument> компонент, образец документа распечатывается на указанном принтере.</span><span class="sxs-lookup"><span data-stu-id="faa00-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ ms.locfileid: "54572816"
        }  
     ```  
   
-     <span data-ttu-id="71943-113">(Visual C# и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="71943-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="faa00-113">(Visual C# и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="faa00-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -106,5 +106,5 @@ ms.locfileid: "54572816"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="71943-114">См. также</span><span class="sxs-lookup"><span data-stu-id="71943-114">See also</span></span>
-- [<span data-ttu-id="71943-115">Поддержка печати в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="71943-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="faa00-114">См. также</span><span class="sxs-lookup"><span data-stu-id="faa00-114">See also</span></span>
+- [<span data-ttu-id="faa00-115">Поддержка печати в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="faa00-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
