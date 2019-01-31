@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidEntry&gt; элемент'
+title: Элемент <oidEntry>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 7c5309bc98a7781e82753869b1cf2bcf0a472327
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b1dc4c788576fd3cab55db5255617cc55e68594b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084098"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259063"
 ---
-# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; элемент
+# <a name="oidentry-element"></a>\<oidEntry > элемент
 Сопоставляет идентификатор объекта (OID) ASN.1 с понятным именем.  
   
  \<configuration>  
@@ -35,7 +35,7 @@ ms.locfileid: "55084098"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**ИДЕНТИФИКАТОР ОБЪЕКТА**|Обязательный атрибут.<br /><br /> Указывает идентификатор Объекта ASN.1, соответствующий алгоритм, реализованный класс.|  
 |**name**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) тега.|  

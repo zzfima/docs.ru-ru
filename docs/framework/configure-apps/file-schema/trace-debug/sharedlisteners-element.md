@@ -1,5 +1,5 @@
 ---
-title: '&lt;sharedListeners&gt; элемент'
+title: Элемент <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 7eaeffb365dd2c9999d4faa6b28c6d50e8cd6a6e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084332"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254943"
 ---
-# <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; элемент
+# <a name="sharedlisteners-element"></a>\<sharedListeners > элемент
 Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  Эти прослушиватели не получают все трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения. Прослушиватели, определенные как общие могут добавляться к источникам и трассировки по имени.  
   
  \<configuration>  
@@ -47,7 +47,7 @@ ms.locfileid: "55084332"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`Configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает корневой элемент для раздела конфигурации ASP.NET.|  

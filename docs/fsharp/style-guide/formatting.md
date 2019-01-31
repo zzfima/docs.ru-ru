@@ -2,12 +2,12 @@
 title: F#рекомендации по форматированию кода
 description: Дополнительные сведения, касающиеся форматирования F# кода.
 ms.date: 11/26/2018
-ms.openlocfilehash: d4b61646154c613093374ef3dcf7436de4b0d3ea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415446"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254834"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#рекомендации по форматированию кода
 
@@ -275,6 +275,17 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+Он также часто принят для пропуска круглые скобки, если кортеж возвращаемое значение функции:
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+Таким образом, предпочитать экземпляров кортежа заключенные в круглые скобки, но при использовании кортежей для сопоставления шаблонов или возвращаемое значение, он считается можно избежать круглые скобки.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Форматирование размеченные объявления объединений
 

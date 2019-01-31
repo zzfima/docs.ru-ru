@@ -1,15 +1,15 @@
 ---
-title: '&lt;Издатель&gt;'
+title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 8313d7e361356e5159d1f2d531a6dd34ae7ff4d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54f52b1496ada2573949f98e1397b3b7736078d3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612181"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254513"
 ---
-# <a name="ltissuergt"></a>&lt;Издатель&gt;
+# <a name="issuer"></a>\<issuer>
 Задает службу маркеров безопасности, выдающую маркеры безопасности.  
   
  \<system.serviceModel>  
@@ -54,7 +54,7 @@ ms.locfileid: "54612181"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адресов для конечных точек, которые может создать конструктор.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|При использовании выданного маркера задает параметры, позволяющие клиенту проверить подлинность сервера.|  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;endpointDiscovery&gt;'
+title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 4611d529c1854ee456585ad3f7aac339ff771bce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: effceee30abdaa1725b8c8718df22632961871e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556448"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266420"
 ---
-# <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
+# <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Указывает различные параметры обнаружения для конечной точки, такие как возможность обнаружения, области и любые пользовательские модули для ее метаданных.  
   
 \<system.ServiceModel>  
@@ -46,7 +46,7 @@ ms.locfileid: "54556448"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция URI областей для этой конечной точки. С одной конечной точкой можно связать несколько URI областей.|  
 |[\<расширения >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [из \<endpointDiscovery >]|Коллекция элементов XML, позволяющая указывать пользовательские метаданные, публикуемые для конечной точки.|  

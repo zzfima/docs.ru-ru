@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;GenericParameter&gt; (машинный код .NET)
+title: <GenericParameter> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 002addf0f020365f87e239b7b8707f3a6031003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519454"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257776"
 ---
-# <a name="ltgenericparametergt-element-net-native"></a>Элемент &lt;GenericParameter&gt; (машинный код .NET)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter > элемент (машинный код .NET)
 Применяет политику к параметру типа универсального типа или метода.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,13 +51,13 @@ ms.locfileid: "54519454"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Обязательный атрибут. Имя универсального параметра типа. Например, для универсального делегата <xref:System.Func%603> значение *generic_parameter_name*, равное "TResult", применяет политику среды выполнения к возвращаемому значению делегата.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   

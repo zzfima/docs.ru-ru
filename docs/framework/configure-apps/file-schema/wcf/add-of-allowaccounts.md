@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; для &lt;allowAccounts&gt;'
+title: <add> из <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 63f8e678b81838a25664180888e9e7a8eabd043d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6edf0bc2d532deb01f24450b9868bbc240bab413
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259635"
 ---
-# <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;add&gt; для &lt;allowAccounts&gt;
+# <a name="add-of-allowaccounts"></a>\<Добавить > из \<allowAccounts >
 Указывает учетную запись пользователя для процессов размещения служб WCF, которые предоставляются доступ при подключении к совместно используемой службе.  
   
  \<system.serviceModel.activation>  
