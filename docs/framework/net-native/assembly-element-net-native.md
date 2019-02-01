@@ -1,17 +1,17 @@
 ---
-title: Элемент &lt;Assembly&gt; (машинный код .NET)
+title: <Assembly> Элемент (машинный код .NET)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f723579d3ce545d6b9a3264467733039d9fcf0e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653636"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281974"
 ---
-# <a name="ltassemblygt-element-net-native"></a>Элемент &lt;Assembly&gt; (машинный код .NET)
+# <a name="assembly-element-net-native"></a>\<Сборка > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения ко всем типам в указанной сборке.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -71,7 +71,7 @@ ms.locfileid: "54653636"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения. Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов `<Assembly>`.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения. Элемент [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) может иметь ноль или один элемент `<Assembly>`.|  
