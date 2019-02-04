@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 37600331ac52add60a98c9fd573591dc34b94f5f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083968"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674910"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Схема файлов конфигурации для .NET Framework
 
@@ -75,10 +75,10 @@ ms.locfileid: "55083968"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Схема параметров удаленного взаимодействия](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e). Описание элементов, настраивающих клиентские и серверные приложения, реализующие удаленное взаимодействие.
+[Схема параметров удаленного взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)). Описание элементов, настраивающих клиентские и серверные приложения, реализующие удаленное взаимодействие.
 
-[Схема параметров ASP.NET](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx). Описание элементов, управляющих поведением веб-приложений ASP.NET.
+[Схема параметров ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)). Описание элементов, управляющих поведением веб-приложений ASP.NET.
 
-[Схема параметров веб-служб](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e). Описание элементов, которые управляют поведением веб-служб ASP.NET и их клиентов.
+[Схема параметров веб-служб](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)). Описание элементов, которые управляют поведением веб-служб ASP.NET и их клиентов.
 
-[Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42). Описание способов настройки безопасности, привязки сборок и удаленного взаимодействия в платформе .NET Framework.
+[Настройка приложений .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)). Описание способов настройки безопасности, привязки сборок и удаленного взаимодействия в платформе .NET Framework.

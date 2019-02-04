@@ -2,12 +2,12 @@
 title: <add> из <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 63ff98d91db7c8c112b0b00e9bd37c3262bcad6d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258630"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674429"
 ---
 # <a name="add-of-commonparameters"></a>\<Добавить > из \<commonParameters >
 Определяет пару параметров «имя-значение», которые используются глобально в нескольких службах. Как правило, этот параметр включает строку подключения базы данных, которая может совместно использоваться долговременными службами.  
@@ -47,7 +47,7 @@ ms.locfileid: "55258630"
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Коллекция общих параметров, используемых службой. Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.|  
+|[\<commonParameters >](commonparameters.md)|Коллекция общих параметров, используемых службой. Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<commonParameters>` определяет любые параметры, которые используются глобально несколькими службами, например `ConnectionString` при использовании <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -92,4 +92,4 @@ ms.locfileid: "55258630"
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [Файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+- [\<commonParameters >](commonparameters.md)

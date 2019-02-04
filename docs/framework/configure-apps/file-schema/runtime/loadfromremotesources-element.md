@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269696"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675313"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > элемент
 Указывает, следует ли предоставлять полное доверие в .NET Framework 4 и более поздних версий сборки, загруженные из удаленных источников.
   
 > [!NOTE]
->  Если вы перешли на этот раздел из-за сообщение об ошибке в списке ошибок Visual Studio проекта или ошибка сборки, см. в разделе [как: Использовать сборку из Интернета в Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Если вы перешли в этой статье из-за сообщение об ошибке в списке ошибок Visual Studio проекта или ошибка сборки, см. в разделе [как: Использовать сборку из Интернета в Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
  \<configuration>  
 \<Среда выполнения >  
@@ -42,7 +42,7 @@ ms.locfileid: "55269696"
   
 ## <a name="enabled-attribute"></a>атрибут Enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не предоставляйте полное доверие к приложениям из удаленных источников. Это значение по умолчанию.|  
 |`true`|Предоставить полное доверие к приложениям из удаленных источников.|  
@@ -118,7 +118,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 ## <a name="see-also"></a>См. также
 
 - [Более неявного использования политики CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Практическое руководство. Выполнение частично доверенного кода в изолированной среде](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

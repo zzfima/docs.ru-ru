@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743547"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674884"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Функции преобразования типов (Visual Basic)
 Эти функции являются компилируется путем подстановки, это означает, что код преобразования является частью кода, который вычисляет выражение. Иногда отсутствует вызов процедуры для выполнения преобразований, что улучшает производительность. Каждая функция преобразует выражение к определенному типу данных.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений; 4.94065645841246544E-324 до 1, 79769313486231570E + 308 для положительных значений.|  
 |`CDec`|[Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79228162514264337593543950335 для целых чисел то есть числа без десятичных разрядов. Для чисел с 28 десятичных разрядов диапазон — от +/-7,9228162514264337593543950335. Наименьшее возможное число ненулевое значение — 0,0000000000000000000000000001 (+/-1E-28).|  
 |`CInt`|[Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2147483648) через <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2 147 483 647); дробная часть округляется.<sup> 1</sup> <br/><br/>Начиная с 15.8 Visual Basic, Visual Basic оптимизирует производительность вычислений с плавающей запятой в целое число, преобразование с `CInt` функции; см. в разделе ["Примечания"](#remarks) Дополнительные сведения. См. в разделе [пример CInt](#cint-example) приведен пример. |  
-|`CLng`|[Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9223372036854775808) через <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9223372036854775807); дробная часть округляется.<sup> 1</sup><br/><br/>Начиная с 15.8 Visual Basic, Visual Basic оптимизирует производительность вычислений с плавающей запятой, для преобразования 64-разрядное целое число, с помощью `CLng` функции; см. в разделе ["Примечания"](#remarks) Дополнительные сведения. См. в разделе [пример CInt](#cint-example) приведен пример.|  
+|`CLng`|[Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) через <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9223372036854775807); дробная часть округляется.<sup> 1</sup><br/><br/>Начиная с 15.8 Visual Basic, Visual Basic оптимизирует производительность вычислений с плавающей запятой, для преобразования 64-разрядное целое число, с помощью `CLng` функции; см. в разделе ["Примечания"](#remarks) Дополнительные сведения. См. в разделе [пример CInt](#cint-example) приведен пример.|  
 |`CObj`|[Тип данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Любое допустимое выражение.|  
 |`CSByte`|[Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (от -128) через <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); дробная часть округляется.<sup> 1</sup><br/><br/>Начиная с 15.8 Visual Basic, Visual Basic оптимизирует производительность вычислений с плавающей запятой, для преобразования байт со знаком с `CSByte` функции; см. в разделе ["Примечания"](#remarks) Дополнительные сведения. См. в разделе [пример CInt](#cint-example) приведен пример.|  
 |`CShort`|[Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32 768) до <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32 767); дробная часть округляется.<sup> 1</sup><br/><br/>Начиная с 15.8 Visual Basic, Visual Basic оптимизирует производительность вычислений с плавающей запятой, для преобразования 16-разрядное целое число, с помощью `CShort` функции; см. в разделе ["Примечания"](#remarks) Дополнительные сведения. См. в разделе [пример CInt](#cint-example) приведен пример.|  

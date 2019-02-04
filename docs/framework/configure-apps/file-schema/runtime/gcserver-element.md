@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5cfe52d37c3ce2e78d07886b0856be46bfaadc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9125ee35b081a1723f379bd3fbdec808d085c675
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287564"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674455"
 ---
 # <a name="gcserver-element"></a>\<gcServer > элемент
 Указывает, выполняет ли среда CLR сборку мусора сервера.  
@@ -42,7 +42,7 @@ ms.locfileid: "55287564"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Не выполняет сборку мусора сервера. Это значение по умолчанию.|  
 |`true`|Выполняет сборку мусора сервера.|  
@@ -82,4 +82,4 @@ ms.locfileid: "55287564"
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Практическое руководство. Отключение параллельной сборки мусора](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Отключение параллельной сборки мусора](gcconcurrent-element.md#to-disable-background-garbage-collection)

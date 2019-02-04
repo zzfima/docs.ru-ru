@@ -2,17 +2,17 @@
 title: Схем конфигурации WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508906"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675365"
 ---
 # <a name="wcf-configuration-schema"></a>Схем конфигурации WCF
 Элементы конфигурации Windows Communication Foundation (WCF) служат для настройки служб и клиентских приложений WCF. [Средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) можно использовать для создания и изменения файлов конфигурации для клиентов и служб. Поскольку файлы конфигурации имеют формат XML, для их изменения вручную с помощью текстового редактора необходимо уметь работать с XML-кодом. В противном случае возможно возникновение проблем, таких как отсутствие тега или атрибута элемента XML. Это обусловлено тем, что в тегах и атрибутах элементов XML учитывается регистр символов.  
   
- Система конфигурации WCF на базе <xref:System.Configuration> пространства имен. Поэтому можно использовать все стандартные функции, имеющиеся в пространстве имен <xref:System.Configuration>, например блокировку, шифрование и объединение конфигурации для повышения безопасности приложения и его конфигурации. Дополнительные сведения об этих возможностях см. в следующих разделах:  
+ Система конфигурации WCF на базе <xref:System.Configuration> пространства имен. Поэтому можно использовать все стандартные возможности, имеющиеся в пространстве имен <xref:System.Configuration>, например блокировку, шифрование и объединение конфигурации для повышения безопасности приложения и его конфигурации. Дополнительные сведения об этих возможностях см. в следующих разделах:  
   
  [Шифрование данных конфигурации](https://go.microsoft.com/fwlink/?LinkId=95337)  
   
@@ -36,5 +36,5 @@ ms.locfileid: "43508906"
  Элемент верхнего уровня для установки параметров при использовании сериализаторов, таких как <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Настройка приложений Windows Communication Foundation](../../../wcf/configuring-services.md)  
  В этой статье описывается настройка службы и клиенты WCF.

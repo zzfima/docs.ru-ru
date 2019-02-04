@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a389403d58bb0b4fb4f98e25d2c9a6b2cf337281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264652"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674780"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > элемент
 Определяет, поддерживает ли сборка мусора несколько групп ЦП.  
@@ -75,5 +75,5 @@ ms.locfileid: "55264652"
 ## <a name="see-also"></a>См. также
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Практическое руководство. Отключение параллельной сборки мусора](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Отключение параллельной сборки мусора](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Сборка мусора рабочей станции и сборка мусора сервера](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

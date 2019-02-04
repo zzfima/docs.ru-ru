@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198371"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674416"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
@@ -25,11 +25,11 @@ ms.locfileid: "50198371"
   
 ## <a name="oob-projects"></a>Встроенные проекты
   
-| Проект | Описание |  
+| Проект | Описание: |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Предоставляет потокобезопасные коллекции, содержимое которых никогда не меняется. |
 | <xref:System.Net.Http.WinHttpHandler> | Предоставляет обработчик сообщений для <xref:System.Net.Http.HttpClient> на основе интерфейса WinHTTP ОС Windows. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Представляет собой библиотеку векторных типов, которые могут использовать преимущества аппаратного ускорения SIMD.| 
+| <xref:System.Numerics> | Представляет собой библиотеку векторных типов, которые могут использовать преимущества аппаратного ускорения SIMD.| 
 | <xref:System.Threading.Tasks.Dataflow> | Библиотека потоков данных TPL предоставляет компоненты потока данных, позволяющие повысить надежность приложений с поддержкой параллелизма. |  
 
 ## <a name="platform-specific-libraries"></a>Библиотеки для конкретных платформ
@@ -52,8 +52,8 @@ ms.locfileid: "50198371"
 | [System.Net.CoreResponseData.m\_ResponseHeaders поля](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
 | [System.Net.CoreResponseData.m\_поле StatusCode](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
 | [System.Net.HttpWebRequest. \_AutoRedirects поля](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest. \_CoreResponse поля](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest. \_HttpResponse поля](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [System.Net.HttpWebRequest.\_CoreResponse Field](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
+| [System.Net.HttpWebRequest.\_HttpResponse Field](../../../docs/framework/additional-apis/_httpresponse.md) |
 | [System.Net.ServicePoint.m\_ConnectionGroupList поля](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
 | [System.Net.ServicePointManager.s\_ServicePointTable поля](../../../docs/framework/additional-apis/s_servicepointtable.md) |
 | [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes поля](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
