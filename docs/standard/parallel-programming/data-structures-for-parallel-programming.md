@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517621"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479702"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Структуры данных для параллельного программирования
 На платформе .NET Framework версии 4 появились несколько новых типов для параллельного программирования, включая набор классов параллельных коллекций, упрощенные примитивы синхронизации и типы отложенной инициализации. Эти типы можно использовать с любым кодом многопоточного приложения, включая библиотеку параллельных задач и PLINQ.  
@@ -41,7 +41,7 @@ ms.locfileid: "54517621"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Позволяет нескольким потокам работать над выполнением алгоритма параллельно, поддерживая точку регистрации, в которой каждая задача отмечает свою доступность и ожидает новых задач. Дополнительные сведения см. в разделе [Барьер](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Упрощает сценарии ветвления и соединения, предоставляя удобный механизм взаимодействия. Более подробную информацию можно найти в [описании события CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Примитив синхронизации, аналогичный <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> менее требователен к ресурсам, но пригоден только для обмена данными внутри процесса. Дополнительные сведения см. в [описаниях классов ManualResetEvent и ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Примитив синхронизации, аналогичный <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> менее требователен к ресурсам, но пригоден только для обмена данными внутри процесса.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Примитив синхронизации, который ограничивает количество потоков, одновременно обращающихся к ресурсу или пулу ресурсов. Дополнительные сведения см. в [описании классов Semaphore и SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Примитив взаимоисключающей блокировки, при использовании которого поток, который пытается получить блокировку, применяет *цикл ожидания* в течение заданного времени, прежде чем получить свою часть времени. В сценариях, где прогнозируется короткий период ожидания блокировки, <xref:System.Threading.SpinLock> обеспечит более высокую производительность по сравнению с другими формами блокировки. Дополнительные сведения см. в [описании SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Небольшой и нетребовательный к ресурсам тип, который реализует небольшую паузу, и только по истечении заданного времени переходит в состояние ожидания.  Дополнительные сведения см. в [описании SpinWait](../../../docs/standard/threading/spinwait.md).|  

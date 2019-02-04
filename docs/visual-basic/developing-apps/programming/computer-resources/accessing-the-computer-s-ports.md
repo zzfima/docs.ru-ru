@@ -5,14 +5,14 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: 1136bed5d329c5283b4e7b95a5085f3e0db46286
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198527"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289033"
 ---
-# <a name="accessing-the-computer39s-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
+# <a name="accessing-the-computers-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
 Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
   
 ## <a name="in-this-section"></a>В этом разделе  

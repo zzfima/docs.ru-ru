@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198176"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674741"
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
 При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows). WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе. Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.  
@@ -38,7 +38,7 @@ ms.locfileid: "50198176"
   
 -   приведение `IntPtr` к `Int32`.  
   
- Дополнительные сведения о переносе 32-разрядного приложения в 64-разрядную среду CLR см. на странице [Миграция 32-разрядного управляемого кода в 64-разрядную систему](https://msdn.microsoft.com/library/ms973190.aspx).  
+ Дополнительные сведения о переносе 32-разрядного приложения в 64-разрядную среду CLR см. на странице [Миграция 32-разрядного управляемого кода в 64-разрядную систему](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Общие сведения о 64-разрядном программировании  
  Общие сведения о 64-разрядном программировании см. в перечисленных ниже материалах.  
