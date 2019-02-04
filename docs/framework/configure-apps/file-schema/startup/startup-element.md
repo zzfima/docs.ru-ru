@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280206"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674572"
 ---
 # <a name="startup-element"></a>\<Startup > элемент
 
@@ -41,7 +41,7 @@ ms.locfileid: "55280206"
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>атрибут useLegacyV2RuntimeActivationPolicy
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`true`|Включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения для выбранной среды выполнения, используемого для привязки методы активации старой среды выполнения (таких как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) в среду выполнения, выбранный из файла конфигурации вместо ограничивая их в среде CLR версии 2.0. Таким образом Если вы выбрали CLR версии 4 или более поздней версии из файла конфигурации, смешанных сборок, созданных в более ранних версиях платформы .NET Framework, загружаются с выбранной версией среды CLR. Установка этого значения предотвращает CLR версии 1.1 или среду CLR версии 2.0 загрузку в одном процессе, эффективно отключение функции-process side-by-side.|
 |`false`|Использовать политику активации по умолчанию для [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] и более поздней версии, чтобы разрешить старой среды выполнения методов активации для загрузки в процесс среды CLR версии 1.1 или 2.0. Установка этого значения предотвращает смешанной сборки от загрузки в .NET Framework 4 или более поздней версии, если они были созданы с помощью .NET Framework 4 или более поздней версии. Это значение по умолчанию.|
@@ -61,7 +61,7 @@ ms.locfileid: "55280206"
 
 ## <a name="remarks"></a>Примечания
 
- **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемент.
+  **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемент.
 
  Код запуска для приложения, размещенного в Internet Explorer не учитывает  **\<startup >** элемент и его дочерние элементы.
 
@@ -70,7 +70,7 @@ ms.locfileid: "55280206"
  Этот атрибут полезен, если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение созданные с помощью [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , но имеет зависимость от сборки смешанного режима, созданных с помощью более ранней версии платформы .NET Framework. В этих сценариях, задать для атрибута `true`.
 
 > [!NOTE]
-> Присвоение атрибуту `true` предотвращает загрузку в одном процессе, эффективно отключение функции-process side-by-side CLR версии 1.1 или среду CLR версии 2.0 (см. в разделе [Side-by-Side выполнение для COM-взаимодействия](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).
+> Присвоение атрибуту `true` предотвращает загрузку в одном процессе, эффективно отключение функции-process side-by-side CLR версии 1.1 или среду CLR версии 2.0 (см. в разделе [Side-by-Side выполнение для COM-взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Пример
 
@@ -97,5 +97,5 @@ ms.locfileid: "55280206"
 - [Схема параметров запуска](index.md)
 - [Схема файла конфигурации](../index.md)
 - [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Выполнение Side-by-Side COM-взаимодействия](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [Выполнение Side-by-Side COM-взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Внутрипроцессное параллельное выполнение](../../../deployment/in-process-side-by-side-execution.md)
