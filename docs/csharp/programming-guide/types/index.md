@@ -1,17 +1,23 @@
 ---
-title: 'Руководство по программированию на C#. Типы'
+title: Руководство по программированию на C#. Типы
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739323"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 ## <a name="types-variables-and-values"></a>Типы, переменные и значения  
@@ -82,8 +88,8 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
  Встроенные числовые типы являются структурами и имеют свойства и методы, к которым можно обращаться.  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  Но объявление и присвоение значений вы выполняете для них так, как если бы они были простыми нестатистическими типами.  
