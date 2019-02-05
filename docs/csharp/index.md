@@ -1,13 +1,19 @@
 ---
-title: 'Руководство по языку C#'
-description: "Руководство по\_C# поможет и новым разработчикам, и опытным специалистам получить обширные знания о языке\_C#."
+title: Руководство по языку C#
+description: Руководство по C# поможет и новым разработчикам, и опытным специалистам получить обширные знания о языке C#.
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-  - 'documentation [C#]'
-  - 'Help, Visual C# documentation'
-  - 'C# language'
-  - 'Visual C#'
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709485"
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
