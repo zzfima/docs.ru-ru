@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733952"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738569"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Пошаговое руководство. Проверка паролей на сложность (Visual Basic)
 Этот метод проверяет некоторые характеристики надежный пароль и обновляет строковый параметр с информацией о том, какие проверки пароля завершается ошибкой.  
@@ -31,7 +31,7 @@ ms.locfileid: "54733952"
 -   Доступ к членам пространства имен <xref:System.Text.RegularExpressions>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Безопасность  
- Пароль при перемещении по сети, необходимо использовать безопасный метод передачи данных. Дополнительные сведения см. в разделе [безопасности веб-приложений ASP.NET](https://msdn.microsoft.com/library/330a99hc).  
+ Если вы перемещаете пароля по сети, необходимо использовать безопасный метод передачи данных. Дополнительные сведения см. в разделе [безопасности веб-приложений ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Можно повысить точность `ValidatePassword` функцию, добавив дополнительные проверки сложности:  
   
@@ -45,4 +45,4 @@ ms.locfileid: "54733952"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Text.RegularExpressions.Regex>
-- [Безопасность веб-приложений ASP.NET](https://msdn.microsoft.com/library/330a99hc)
+- [Безопасность веб-приложений ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

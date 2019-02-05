@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+title: Как выполнить  Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065860"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738621"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Как выполнить Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Как выполнить  Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 При использовании класса, модуля или структура, которая содержит члены типов целое число без знака, можно получить доступ к этим членам с помощью Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Для вызова функции Windows, принимающей тип без знака  
@@ -75,7 +75,7 @@ ms.locfileid: "55065860"
     >  Вызов неуправляемого кода, таких как интерфейс (API), Windows предоставляет код, чтобы потенциальные угрозы безопасности.  
   
     > [!IMPORTANT]
-    >  Вызов Windows API требует разрешение неуправляемого кода, которое может повлиять на выполнение в ситуациях частичного доверия. Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Вызов Windows API требует разрешение неуправляемого кода, которое может повлиять на выполнение в ситуациях частичного доверия. Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)

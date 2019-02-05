@@ -2,12 +2,12 @@
 title: Коллекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 55234e39fc692ec8f6cc10d05df6b29be5818927
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674832"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739011"
 ---
 # <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -191,7 +191,7 @@ End Class
   
  В таблице ниже перечислены некоторые из часто используемых классов пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|  
 |<xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|  
@@ -462,7 +462,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Определение настраиваемой коллекции  
- Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [перечисление коллекции](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [перечисление коллекции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
   
  Хотя можно определить настраиваемую коллекцию, обычно лучше использовать коллекции, входящие в .NET Framework, которые описаны в подразделе [Виды коллекций](#kinds-of-collections) ранее в этом разделе.  
   

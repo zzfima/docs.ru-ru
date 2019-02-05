@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение данных в базе данных с помощью LINQ (Visual Basic)
+title: Как выполнить  Изменение данных в базе данных с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658420"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739492"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Как выполнить Изменение данных в базе данных с помощью LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Как выполнить  Изменение данных в базе данных с помощью LINQ (Visual Basic)
 Запросы Language-Integrated Query (LINQ) упрощают доступ к данным базы данных и измените значения в базе данных.  
   
  В примере показан способ создания нового приложения, которое извлекает и обновляет сведения в базе данных SQL Server.  
@@ -165,4 +165,4 @@ ms.locfileid: "54658420"
 - [Запросы](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Практическое руководство. Назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+- [Практическое руководство. Назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор объектов)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

@@ -2,12 +2,12 @@
 title: Имя источника, указанное в EventLogSource, зарегистрировано в журнале, отличном от указанного в EventLogName
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 4de98bef87b871036c3c5730ff09cf94c1df2918
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f6cff95129c5a8f1c7cb8d5a1597fdc4bc98c6e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584575"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738868"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>Имя источника, указанное в EventLogSource, зарегистрировано в журнале, отличном от указанного в EventLogName
 `EventLog` пытается сослаться на источник, который зарегистрирован в другом журнале. Для добавления записей в журнал событий необходимо задать свойство <xref:System.Diagnostics.EventLog.Source%2A> . Свойство <xref:System.Diagnostics.EventLog.Source%2A> регистрирует компонент в журнале событий в качестве допустимого источника записей. Один источник может быть связан только с одним журналом событий одновременно (и поэтому может добавлять записи только в него).  
@@ -19,7 +19,7 @@ ms.locfileid: "54584575"
 -   Убедитесь в том, что источник зарегистрирован в соответствующем журнале. Для этого используйте метод <xref:System.Diagnostics.EventLog.CreateEventSource%2A> или одну из его перегрузок, чтобы указать строку, однозначно идентифицирующую компонент в журнале событий.  
   
 ## <a name="see-also"></a>См. также
-- [Администрирование журнала событий](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
-- [Ссылки на журнал событий](https://msdn.microsoft.com/library/4af0661c-6c96-49f4-961d-b26ed9bc3e87)
-- [Практическое руководство. Добавьте приложение в качестве источника записей журнала событий](https://msdn.microsoft.com/library/948ff920-a739-4e66-a191-ee951512d42c)
-- [Практическое руководство. Удалить источник событий](https://msdn.microsoft.com/library/bc66c900-4b8a-426a-b8e2-17031a20167e)
+- [Администрирование журнала событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [Ссылки на журнал событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))
+- [Практическое руководство. Добавьте приложение в качестве источника записей журнала событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
+- [Практическое руководство. Удалить источник событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 611195143fd216caab0b5f89badefb93d7dea017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589114"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739570"
 ---
 # <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
 Процедура оператора — это последовательность операторов Visual Basic, которые определяют поведение стандартного оператора (такие как `*`, `<>`, или `And`) для класса или структуры, которые вы определили. Это также называется *перегрузка операторов*.  
@@ -44,7 +44,7 @@ ms.locfileid: "54589114"
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
  Ниже приведен синтаксис объявления процедуры оператора:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "54589114"
   
  `Dim testStruct As`  *Имя структуры*  
   
- `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*   `10`  
+ `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
  Следующая структура сохраняет значение 128-битового знакового целого числа в качестве составных частей старшие и младшие. Он определяет `+` оператора для добавления двух `veryLong` значения и сформировать результирующий `veryLong` значение.  
@@ -79,7 +79,6 @@ ms.locfileid: "54589114"
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Дополнительные сведения и примеры см. в разделе [Перегрузка операторов в Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

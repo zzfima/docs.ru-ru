@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание временных сертификатов для использования во время разработки
+title: Как выполнить  Создание временных сертификатов для использования во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698588"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738634"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Практическое руководство. Создание временных сертификатов для использования во время разработки
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Как выполнить  Создание временных сертификатов для использования во время разработки
 
 При разработке безопасной службы или клиента с помощью Windows Communication Foundation (WCF), часто бывает необходимо предоставить сертификат X.509 для использования в качестве учетных данных. Обычно этот сертификат является частью цепи сертификатов, корневой центр которых находится в хранилище «Доверенные корневые центры сертификации» на компьютере. Наличие цепи сертификатов позволяет ограничить набор сертификатов, корневой центр которых, как правило, принадлежит организации или подразделению. Для эмуляции этого во время разработки можно создать два сертификата, чтобы выполнить требования безопасности. Первый сертификат является самозаверяющим и помещается в хранилище «Доверенные корневые центры сертификации». Второй сертификат создается из первого и помещается как в хранилище «Личное» на локальном компьютере, так и в хранилище «Личное» текущего пользователя. Здесь описаны шаги по созданию этих двух сертификатов с помощью Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) командлета.
 
@@ -21,7 +21,7 @@ ms.locfileid: "46698588"
 >
 > По умолчанию [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) командлет создает самозаверяющие сертификаты, и эти сертификаты сделаны ненадежными. Размещение самозаверяющие сертификаты в доверенных корневых центров сертификации магазина позволяет создать среду разработки, более точно моделирующую среду развертывания.
 
- Дополнительные сведения о создании и использовании сертификатов см. в разделе [работа с сертификатами](working-with-certificates.md). Дополнительные сведения об использовании сертификата в качестве учетных данных см. в разделе [Securing Services and Clients](securing-services-and-clients.md). Руководство по использованию технологии Microsoft Authenticode см. в разделе [и учебникам по Authenticode](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Дополнительные сведения о создании и использовании сертификатов см. в разделе [работа с сертификатами](working-with-certificates.md). Дополнительные сведения об использовании сертификата в качестве учетных данных см. в разделе [Securing Services and Clients](securing-services-and-clients.md). Руководство по использованию технологии Microsoft Authenticode см. в разделе, посвященном [общим сведениям и учебникам по Authenticode](https://go.microsoft.com/fwlink/?LinkId=88919).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Создание самозаверяющего сертификата корневого центра и экспорт закрытого ключа
 
@@ -62,7 +62,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Установка самозаверяющего сертификата в хранилище «Доверенные корневые центры сертификации»
 
-1. Откройте оснастку сертификата. (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](how-to-view-certificates-with-the-mmc-snap-in.md).)
+1. Откройте оснастку сертификата. Дополнительные сведения см. в разделе [Как Просмотр сертификатов с помощью оснастки MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Откройте папку, чтобы сохранить сертификат: **Локальный компьютер** либо **Текущий пользователь**.
 
@@ -70,7 +70,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. Щелкните правой кнопкой мыши папку **Сертификаты** , выберите пункт **Все задачи**, а затем выберите **Импортировать**.
 
-5. Следуйте инструкциям мастера на экране, чтобы импортировать TempCa.cer в хранилище.
+5. Следуйте инструкциям мастера инструкциям, чтобы импортировать RootCA.pfx в хранилище.
 
 ## <a name="using-certificates-with-wcf"></a>Использование сертификатов с WCF
 
@@ -106,7 +106,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 </behaviors>
 ```
 
-Дополнительные сведения об использовании сертификатов в WCF см. в разделе [работа с сертификатами](working-with-certificates.md).
+Дополнительные сведения об использовании сертификатов в WCF см. в разделе [Working with Certificates](working-with-certificates.md).
 
 ## <a name="net-framework-security"></a>безопасность платформы .NET Framework
 
@@ -115,5 +115,5 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ## <a name="see-also"></a>См. также
 
 - [Работа с сертификатами](working-with-certificates.md)
-- [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Практическое руководство. Просмотр сертификатов с помощью оснастки MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Защита служб и клиентов](securing-services-and-clients.md)
