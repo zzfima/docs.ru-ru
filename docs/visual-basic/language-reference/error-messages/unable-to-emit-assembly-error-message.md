@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754054"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759227"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>Не удается выпустить сборку: \<сообщение об ошибке >
 
@@ -61,7 +61,7 @@ ms.locfileid: "42754054"
 
 ## <a name="see-also"></a>См. также
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).
-- [Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Практическое руководство. Создание пары открытого и закрытого ключей](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Обращайтесь к нам](/visualstudio/ide/talk-to-us)

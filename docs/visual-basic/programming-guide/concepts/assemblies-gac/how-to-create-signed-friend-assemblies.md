@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создание подписанных дружественных сборок (Visual Basic)
+title: Как выполнить  Создание подписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667306"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758876"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Как выполнить Создание подписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Как выполнить  Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
   
 1.  Откройте окно командной строки.  
   
-2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)][Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:  
   
@@ -90,6 +90,6 @@ ms.locfileid: "54667306"
 - [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Создание и использование сборок со строгими именами](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)

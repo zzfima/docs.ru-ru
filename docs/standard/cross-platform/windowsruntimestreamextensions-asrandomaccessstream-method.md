@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193592"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758798"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
 
@@ -25,8 +25,8 @@ ms.locfileid: "44193592"
 
 Преобразует заданный поток в поток прямого доступа.
 
-**Пространство имен:** <xref:System.IO?displayProperty=nameWithType> 
- **сборки:** System.Runtime.WindowsRuntime (в System.Runtime.WindowsRuntime.dll)
+**Пространство имен:** <xref:System.IO?displayProperty=nameWithType>
+**Сборка:** System.Runtime.WindowsRuntime (в System.Runtime.WindowsRuntime.dll)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -76,5 +76,4 @@ Public Shared Function AsRandomAccessStream ( _
 
 ## <a name="see-also"></a>См. также
 
--[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[как: преобразование между потоками .NET Framework и потоками среды выполнения Windows](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

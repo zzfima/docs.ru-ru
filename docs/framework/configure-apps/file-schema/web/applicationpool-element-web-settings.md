@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: b1afd6227444828c58b6dbb44de24fe82af9f8b2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271984"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758278"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<пул приложений > элемент (веб-параметры)
 Задает параметры конфигурации, которые используются платформой ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
@@ -36,7 +36,7 @@ ms.locfileid: "55271984"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|Указывает, какое количество одновременных запросов, позволяет ASP.NET на один ЦП.|  
 |`maxConcurrentThreadsPerCPU`|Указывает, сколько потоков может выполняться для пула приложений для каждого ЦП. Это обеспечивает альтернативный способ управления параллелизмом ASP.NET, так как можно ограничить число управляемых потоков, которые могут использоваться для обслуживания запросов на один ЦП. По умолчанию этот параметр является 0, означающее, что ASP.NET не ограничивает количество потоков, которые могут быть созданы на ЦП, несмотря на то, что пул потоков CLR также ограничивает количество потоков, которые могут быть созданы.|  
@@ -61,7 +61,7 @@ ms.locfileid: "55271984"
   
  Для `maxConcurrentRequestsPerCPU` параметр, значение по умолчанию «5000» в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] управляемое эффективно отключает регулирование запросов, ASP.NET, если у вас фактически нет 5000 или несколько запросов на один ЦП. Значение по умолчанию вместо зависит от пула потоков CLR автоматически управлять параллелизмом для каждого ЦП. Преимущества приложений, более широко использовать обработку асинхронного запроса, или в которых много долго выполняющихся запросов, заблокированных в сетевых операций ввода-вывода, ограничение по умолчанию повышения в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Параметр `maxConcurrentRequestsPerCPU` ноль отключается использование управляемых потоков для обработки запросов ASP.NET. Если приложение выполняется в пуле приложений IIS, запросы остаются в потоке ввода-вывода IIS, и таким образом, параллелизм регулируется параметрами потоков IIS.  
   
- `requestQueueLimit` Параметр работает так же, как `requestQueueLimit` атрибут [processModel](https://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) элемент, который задается в файлах Web.config для приложений ASP.NET. Тем не менее `requestQueueLimit` переопределяет параметр в файле aspnet.config `requestQueueLimit` настройки в файле Web.config. Другими словами Если заданы оба атрибута (по умолчанию это значение равно true), `requestQueueLimit` приоритет имеет параметр в файле aspnet.config.  
+ `requestQueueLimit` Параметр работает так же, как `requestQueueLimit` атрибут [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) элемент, который задается в файлах Web.config для приложений ASP.NET. Тем не менее `requestQueueLimit` переопределяет параметр в файле aspnet.config `requestQueueLimit` настройки в файле Web.config. Другими словами Если заданы оба атрибута (по умолчанию это значение равно true), `requestQueueLimit` приоритет имеет параметр в файле aspnet.config.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config в следующих случаях:  

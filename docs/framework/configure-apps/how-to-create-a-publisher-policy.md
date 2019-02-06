@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание политики издателя
+title: Как выполнить  Создание политики издателя
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083513"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758993"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Как выполнить Создание политики издателя
+# <a name="how-to-create-a-publisher-policy"></a>Как выполнить  Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
   
  Существует три действия, связанные с созданием политики издателя:  
@@ -103,8 +103,7 @@ ms.locfileid: "55083513"
 ## <a name="see-also"></a>См. также
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Настройка приложений](../../../docs/framework/configure-apps/index.md)
-- [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Настройка приложений с помощью файлов конфигурации](../../../docs/framework/configure-apps/index.md)
 - [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
