@@ -2,24 +2,24 @@
 title: <peer> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8970100b1ad3019ff4a639d835d1db1430968008
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275149"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758356"
 ---
-# <a name="peer-of-clientcredentials-element"></a><span data-ttu-id="fe04b-102">\<Одноранговый > из \<clientCredentials > элемент</span><span class="sxs-lookup"><span data-stu-id="fe04b-102">\<peer> of \<clientCredentials> Element</span></span>
-<span data-ttu-id="fe04b-103">Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.</span><span class="sxs-lookup"><span data-stu-id="fe04b-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
+# <a name="peer-of-clientcredentials-element"></a><span data-ttu-id="5fab5-102">\<Одноранговый > из \<clientCredentials > элемент</span><span class="sxs-lookup"><span data-stu-id="5fab5-102">\<peer> of \<clientCredentials> Element</span></span>
+<span data-ttu-id="5fab5-103">Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.</span><span class="sxs-lookup"><span data-stu-id="5fab5-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
   
- <span data-ttu-id="fe04b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="fe04b-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="fe04b-105">\<варианты поведения ></span><span class="sxs-lookup"><span data-stu-id="fe04b-105">\<behaviors></span></span>  
-<span data-ttu-id="fe04b-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="fe04b-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="fe04b-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="fe04b-107">\<behavior></span></span>  
-<span data-ttu-id="fe04b-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="fe04b-108">\<clientCredentials></span></span>  
-<span data-ttu-id="fe04b-109">\<Одноранговый ></span><span class="sxs-lookup"><span data-stu-id="fe04b-109">\<peer></span></span>  
+ <span data-ttu-id="5fab5-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5fab5-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5fab5-105">\<варианты поведения ></span><span class="sxs-lookup"><span data-stu-id="5fab5-105">\<behaviors></span></span>  
+<span data-ttu-id="5fab5-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="5fab5-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="5fab5-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="5fab5-107">\<behavior></span></span>  
+<span data-ttu-id="5fab5-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="5fab5-108">\<clientCredentials></span></span>  
+<span data-ttu-id="5fab5-109">\<Одноранговый ></span><span class="sxs-lookup"><span data-stu-id="5fab5-109">\<peer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe04b-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fe04b-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fab5-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5fab5-110">Syntax</span></span>  
   
 ```xml  
 <peer>
@@ -29,30 +29,30 @@ ms.locfileid: "55275149"
 </peer>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fe04b-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fe04b-111">Attributes and Elements</span></span>  
- <span data-ttu-id="fe04b-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fe04b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5fab5-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="5fab5-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="5fab5-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="5fab5-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fe04b-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fe04b-113">Attributes</span></span>  
- <span data-ttu-id="fe04b-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fe04b-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5fab5-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="5fab5-113">Attributes</span></span>  
+ <span data-ttu-id="5fab5-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="5fab5-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fe04b-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fe04b-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5fab5-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="5fab5-115">Child Elements</span></span>  
   
-|<span data-ttu-id="fe04b-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="fe04b-116">Element</span></span>|<span data-ttu-id="fe04b-117">Описание:</span><span class="sxs-lookup"><span data-stu-id="fe04b-117">Description</span></span>|  
+|<span data-ttu-id="5fab5-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="5fab5-116">Element</span></span>|<span data-ttu-id="5fab5-117">Описание</span><span class="sxs-lookup"><span data-stu-id="5fab5-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe04b-118">\<сертификат ></span><span class="sxs-lookup"><span data-stu-id="fe04b-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="fe04b-119">Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей.</span><span class="sxs-lookup"><span data-stu-id="fe04b-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="fe04b-120">.</span><span class="sxs-lookup"><span data-stu-id="fe04b-120">.</span></span>|  
-|[<span data-ttu-id="fe04b-121">\<peerAuthentication></span><span class="sxs-lookup"><span data-stu-id="fe04b-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="fe04b-122">Задает параметры проверки подлинности для одноранговых клиентов.</span><span class="sxs-lookup"><span data-stu-id="fe04b-122">Specifies authentication options for peer clients.</span></span>|  
-|[<span data-ttu-id="fe04b-123">\<messageSenderAuthentication></span><span class="sxs-lookup"><span data-stu-id="fe04b-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="fe04b-124">Задает параметры проверки подлинности для отправителей сообщений.</span><span class="sxs-lookup"><span data-stu-id="fe04b-124">Specifies authentication options for message senders.</span></span>|  
+|[<span data-ttu-id="5fab5-118">\<сертификат ></span><span class="sxs-lookup"><span data-stu-id="5fab5-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="5fab5-119">Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей.</span><span class="sxs-lookup"><span data-stu-id="5fab5-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="5fab5-120">.</span><span class="sxs-lookup"><span data-stu-id="5fab5-120">.</span></span>|  
+|[<span data-ttu-id="5fab5-121">\<peerAuthentication></span><span class="sxs-lookup"><span data-stu-id="5fab5-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="5fab5-122">Задает параметры проверки подлинности для одноранговых клиентов.</span><span class="sxs-lookup"><span data-stu-id="5fab5-122">Specifies authentication options for peer clients.</span></span>|  
+|[<span data-ttu-id="5fab5-123">\<messageSenderAuthentication></span><span class="sxs-lookup"><span data-stu-id="5fab5-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="5fab5-124">Задает параметры проверки подлинности для отправителей сообщений.</span><span class="sxs-lookup"><span data-stu-id="5fab5-124">Specifies authentication options for message senders.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fe04b-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fe04b-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5fab5-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="5fab5-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="fe04b-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="fe04b-126">Element</span></span>|<span data-ttu-id="fe04b-127">Описание:</span><span class="sxs-lookup"><span data-stu-id="fe04b-127">Description</span></span>|  
+|<span data-ttu-id="5fab5-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="5fab5-126">Element</span></span>|<span data-ttu-id="5fab5-127">Описание:</span><span class="sxs-lookup"><span data-stu-id="5fab5-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe04b-128">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="fe04b-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="fe04b-129">Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.</span><span class="sxs-lookup"><span data-stu-id="fe04b-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
+|[<span data-ttu-id="5fab5-128">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="5fab5-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="5fab5-129">Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.</span><span class="sxs-lookup"><span data-stu-id="5fab5-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe04b-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="fe04b-130">Remarks</span></span>  
- <span data-ttu-id="fe04b-131">Этот элемент конфигурации задает учетные данные, используемые одноранговым узлом для подтверждения своей подлинности для других узлов в сетке, а также параметры, используемые одноранговым узлом для проверки подлинности других одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="fe04b-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="fe04b-132">Дополнительные сведения см. в разделе [проверки подлинности сообщений однорангового канала](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) и [защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span><span class="sxs-lookup"><span data-stu-id="fe04b-132">For more information, see [Peer Channel Message Authentication](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fab5-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="5fab5-130">Remarks</span></span>  
+ <span data-ttu-id="5fab5-131">Этот элемент конфигурации задает учетные данные, используемые одноранговым узлом для подтверждения своей подлинности для других узлов в сетке, а также параметры, используемые одноранговым узлом для проверки подлинности других одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="5fab5-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="5fab5-132">Дополнительные сведения см. в разделе [проверки подлинности сообщений однорангового канала](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) и [защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span><span class="sxs-lookup"><span data-stu-id="5fab5-132">For more information, see [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe04b-133">См. также</span><span class="sxs-lookup"><span data-stu-id="fe04b-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fab5-133">См. также</span><span class="sxs-lookup"><span data-stu-id="5fab5-133">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
@@ -60,9 +60,9 @@ ms.locfileid: "55275149"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [<span data-ttu-id="fe04b-134">Одноранговая сеть</span><span class="sxs-lookup"><span data-stu-id="fe04b-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [<span data-ttu-id="fe04b-135">Защита клиентов</span><span class="sxs-lookup"><span data-stu-id="fe04b-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="fe04b-136">Проверка подлинности сообщений однорангового канала</span><span class="sxs-lookup"><span data-stu-id="fe04b-136">Peer Channel Message Authentication</span></span>](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [<span data-ttu-id="fe04b-137">Нестандартной проверки подлинности одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="fe04b-137">Peer Channel Custom Authentication</span></span>](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
-- [<span data-ttu-id="fe04b-138">Защита приложений одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="fe04b-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [<span data-ttu-id="fe04b-139">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="fe04b-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="5fab5-134">Одноранговая сеть</span><span class="sxs-lookup"><span data-stu-id="5fab5-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [<span data-ttu-id="5fab5-135">Защита клиентов</span><span class="sxs-lookup"><span data-stu-id="5fab5-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- <span data-ttu-id="5fab5-136">[Проверка подлинности сообщений однорангового канала](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="5fab5-136">[Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))</span></span>
+- <span data-ttu-id="5fab5-137">[Нестандартной проверки подлинности одноранговых каналов](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="5fab5-137">[Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))</span></span>
+- [<span data-ttu-id="5fab5-138">Защита приложений одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="5fab5-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [<span data-ttu-id="5fab5-139">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="5fab5-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
