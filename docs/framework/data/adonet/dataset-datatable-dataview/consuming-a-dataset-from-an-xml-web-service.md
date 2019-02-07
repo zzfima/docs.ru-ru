@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608486"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828297"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **Набора данных** является «сериализуемые», в том, что он может быть указан в качестве входных данных или выходные данные из XML-веб-служб без дополнительного кода, необходимых для потоковой передачи содержимого **набора данных** из XML-веб-службы к клиенту и обратно. **Набора данных** неявно преобразуется в поток XML с использованием формата DiffGram, отправляемых по сети и затем восстанавливается из потока XML в виде **набора данных** на принимающей стороне. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате DiffGram см. в разделе [дельт](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "54608486"
  Приведенный ниже показано, как создать XML-веб-службы и клиента, который использовать **набора данных** для передачи реляционных данных (в том числе измененных данных) и внесения всех обновлений к исходному источнику данных.  
   
 > [!NOTE]
->  При создании веб-службы XML следует всегда учитывать возможные вопросы безопасности. Сведения о защите веб-службы XML, см. в разделе [защита XML-веб-службы создан с помощью ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  При создании веб-службы XML следует всегда учитывать возможные вопросы безопасности. Сведения о защите веб-службы XML, см. в разделе [защита XML-веб-службы создан с помощью ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Создание веб-службы XML, которая возвращает и потребляет объект DataSet  
   
@@ -266,5 +266,5 @@ ms.locfileid: "54608486"
 - [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [Обновление источников данных с объектами DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Инструмент языка описания веб-служб (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [Инструмент языка описания веб-служб (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
