@@ -4,12 +4,12 @@ description: Практические рекомендации по упаков
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724311"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204617"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,9 +69,9 @@ NuGet — это диспетчер пакетов для экосистемы .
 
 **✔️ РЕКОМЕНДУЕТСЯ.** Используйте для значка пакета изображение размером 64×64 с прозрачным фоном, чтобы обеспечить оптимальную видимость.
 
-**✔️ ДОПУСТИМО.** Вы можете настроить [SourceLink](./sourcelink.md), чтобы добавить метаданные системы управления версиями в сборки и пакет NuGet.
+**✔️ ДОПУСТИМО.** Вы можете настроить [Source Link](./sourcelink.md), чтобы добавить метаданные системы управления версиями в сборки и пакет NuGet.
 
-> SourceLink автоматически добавляет метаданные `RepositoryUrl` и `RepositoryType` в пакет NuGet. SourceLink также добавляет сведения о точном исходном коде, из которого создан пакет. Например, к пакету, созданному из репозитория Git, будет добавлен хэш фиксации в качестве метаданных.
+> Source Link автоматически добавляет метаданные `RepositoryUrl` и `RepositoryType` в пакет NuGet. Source Link также добавляет сведения о точном исходном коде, из которого создан пакет. Например, к пакету, созданному из репозитория Git, будет добавлен хэш фиксации в качестве метаданных.
 
 ## <a name="pre-release-packages"></a>Пакеты предварительного выпуска
 

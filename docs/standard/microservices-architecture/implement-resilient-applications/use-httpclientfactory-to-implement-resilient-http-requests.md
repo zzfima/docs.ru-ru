@@ -3,13 +3,13 @@ title: Использование HttpClientFactory для реализации 
 description: Узнайте, как использовать фабрику HttpClientFactory, доступную в .NET Core, начиная с версии 2.1, для создания экземпляров `HttpClient`, чтобы облегчить их применение в ваших приложениях.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362645"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479819"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -25,7 +25,7 @@ ms.locfileid: "54362645"
 
 Но есть еще одна проблема с `HttpClient`, которая может возникнуть, когда вы используете его как класс-одиночку или статический объект. В этом случае класс-одиночка или статический класс `HttpClient` не учитывает изменения в DNS, как описано в этой [проблеме в репозитории GitHub по .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
-Чтобы решить эти проблемы и упростить управление экземплярами `HttpClient`, .NET Core 2.1 предлагает новую фабрику `HttpClientFactory`, которую также можно использовать для реализации устойчивых HTTP-вызовов путем интеграции с Polly.   
+Чтобы решить эти проблемы и упростить управление экземплярами `HttpClient`, в .NET Core 2.1 появилась новая фабрика `HttpClientFactory`, которую также можно использовать для реализации устойчивых HTTP-вызовов путем интеграции с Polly.   
 
 ## <a name="what-is-httpclientfactory"></a>Что такое HttpClientFactory
 
@@ -157,7 +157,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Использование HttpClientFactory в .NET Core 2.1**\
+- **Использование HttpClientFactory в .NET Core**\
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Репозиторий GitHub HttpClientFactory**\

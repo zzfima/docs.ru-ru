@@ -1,5 +1,5 @@
 ---
-title: Справочник по C#. Оператор &lt;&lt;
+title: Оператор << — справочник по C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 79a48d88e2c83b5ad78804367ee3c07f78622c08
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333529"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261754"
 ---
-# <a name="ltlt-operator-c-reference"></a>Справочник по C#. Оператор &lt;&lt;
+# <a name="-operator-c-reference"></a>Справочник по C#. Оператор \<\<
 
 Оператор сдвига влево (`<<`) сдвигает первый операнд влево на число битов, задаваемое вторым операндом. Второй операнд должен иметь тип [int](../keywords/int.md) или тип, для которого существует предварительно определенное неявное числовое преобразование в `int`.
 

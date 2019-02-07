@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)
+title: Как выполнить  запрос к метаданным сборки при помощи отражения (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 849244f1345966dbe198686f4f9024fc321b6ded
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696065"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263502"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Как выполнить Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Как выполнить  запрос к метаданным сборки при помощи отражения (LINQ) (C#)
 В следующем примере показано использование LINQ с отражением для извлечения определенных метаданных о методах, соответствующих условиям поиска. В этом примере запрос будет искать имена всех методов в сборке, которые возвращают перечислимые типы, такие как массивы.  
   
 ## <a name="example"></a>Пример  

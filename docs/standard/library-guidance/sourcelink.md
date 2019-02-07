@@ -1,33 +1,33 @@
 ---
-title: SourceLink и библиотеки .NET
-description: Практические рекомендации по использованию SourceLink для повышения эффективности отладки для библиотек .NET.
+title: Source Link и библиотеки .NET
+description: Практические рекомендации по использованию Source Link для повышения эффективности отладки для библиотек .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333542"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204760"
 ---
-# <a name="sourcelink"></a>SourceLink
+# <a name="source-link"></a>Source Link
 
-SourceLink — это технология, которая дает возможность разработчикам выполнять отладку исходного кода сборок .NET из NuGet. SourceLink выполняется при создании пакета NuGet и внедряет метаданные системы управления версиями внутри сборки и пакета. Разработчики, загрузившие пакет (функция SourceLink должна быть включена в Visual Studio), могут выполнить исходный код по шагам. SourceLink предоставляет метаданные системы управления версиями для создания эффективной среды отладки.
+Source Link — это технология, которая дает возможность разработчикам выполнять отладку исходного кода сборок .NET из NuGet. Source Link выполняется при создании пакета NuGet и внедряет метаданные системы управления версиями внутри сборки и пакета. Разработчики, загрузившие пакет и включившие Source Link в Visual Studio, могут выполнить исходный код по шагам. Source Link предоставляет метаданные системы управления версиями для создания эффективной среды отладки.
 
-## <a name="sourcelink-demo"></a>Демонстрация SourceLink
+## <a name="source-link-demo"></a>Демонстрация Source Link
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-sourcelink"></a>Использование SourceLink
+## <a name="using-source-link"></a>Использование Source Link
 
-Инструкции по использованию SourceLink можно найти в репозитории GitHub [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md).
+Инструкции по использованию Source Link можно найти в репозитории GitHub [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md).
 
-Вы можете использовать [обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), чтобы убедиться, что метаданные SourceLink успешно внедрены в пакет. Проверьте наличие метаданных `Repository` с идентификатором комментария и убедитесь, что для каждой DLL-библиотеки целевого пакета есть PDB-файлы.
+Вы можете использовать [обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), чтобы убедиться, что метаданные Source Link успешно внедрены в пакет. Проверьте наличие метаданных `Repository` с идентификатором комментария и убедитесь, что для каждой DLL-библиотеки целевого пакета есть PDB-файлы.
 
-![SourceLink в обозревателе пакетов NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink in NuGet Package Explorer")
+![Source Link в обозревателе пакетов NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Source Link в обозревателе пакетов NuGet")
 
-**✔️ РЕКОМЕНДУЕТСЯ** использовать SourceLink для добавления метаданных системы управления версиями в сборки и пакеты NuGet.
+**✔️ РЕКОМЕНДУЕТСЯ** использовать Source Link для добавления метаданных системы управления версиями в сборки и пакеты NuGet.
 
 > [!TIP]
 > Вы можете дополнительно повысить эффективность отладки путем добавления атрибутов отладчика в типы.
@@ -37,7 +37,7 @@ SourceLink — это технология, которая дает возмож
 
 **✔️ ДОПУСТИМО.** Публикация файлов символов (`*.pdb`).
 
-> См. дополнительные сведения о [файлах и пакетах символов](./nuget.md#symbol-packages).
+> Для улучшения отладки библиотеки необходимо опубликовать файлы символов и использовать Source Link. См. дополнительные сведения о [файлах и пакетах символов](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Назад](dependencies.md)

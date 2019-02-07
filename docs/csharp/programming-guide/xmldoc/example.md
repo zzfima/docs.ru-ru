@@ -1,5 +1,5 @@
 ---
-title: Руководство по программированию на C#. Тег &lt;example&gt;
+title: <example> — Руководство по программированию на C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 658250aa598511727d5534932fcf8c31ab4e418e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a3d9fa6314b9b97f7231ddd21318654468ce026
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650500"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287915"
 ---
-# <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (руководство по программированию на C#)
+# <a name="example-c-programming-guide"></a>\<example> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  

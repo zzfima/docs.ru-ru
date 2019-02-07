@@ -3,13 +3,13 @@ title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128756"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479910"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -31,7 +31,7 @@ ms.locfileid: "53128756"
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Использование технологий .NET, недоступных для .NET Core 
 
-Некоторые технологии .NET Framework отсутствуют в текущей версии .NET Core (версии 2.1 на момент написания этой статьи). Поддержка некоторых из них будет добавлена в последующих выпусках .NET Core (.NET Core 2.x), однако остальные технологии не применяются к новым шаблонам приложений, используемым в среде .NET Core, и будут недоступными всегда.
+Некоторые технологии .NET Framework отсутствуют в текущей версии .NET Core (версии 2.2 на момент написания этой статьи). Поддержка некоторых из них будет добавлена в последующих выпусках .NET Core (.NET Core 2.x), однако остальные технологии не применяются к новым шаблонам приложений, используемым в среде .NET Core, и будут недоступными всегда.
 
 В следующем списке перечислены почти все технологии, недоступные в .NET Core 2.x.
 

@@ -5,14 +5,14 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066328"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204305"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016 и более поздней версии
 
 Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) является последней доступной версией.
 
@@ -27,6 +27,12 @@ ms.locfileid: "55066328"
 * [Обновление Windows 10 за октябрь 2018 г.](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Обновления Windows 10 за апрель 2018 г.](https://www.microsoft.com/software-download/windows10)
+
+* Windows Server 2019
+
+* Windows Server, версия 1809
+
+* Windows Server, версия 1803
 
 > [!div class="button"]
 > [Загрузить .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)

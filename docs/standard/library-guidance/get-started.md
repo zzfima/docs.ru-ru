@@ -4,12 +4,12 @@ description: Начало работы по созданию библиотек 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145729"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204653"
 ---
 # <a name="get-started"></a>Начало работы
 
@@ -29,9 +29,9 @@ ms.locfileid: "53145729"
 
 NuGet упрощает применение существующих пакетов при создании библиотеки .NET. Здесь собраны сведения о распространенных источниках трудностей при создании зависимостей NuGet и рекомендации, позволяющие их избежать.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Ссылка на источник](./sourcelink.md)
 
-SourceLink является отличным средством, которое позволяет пользователям при отладке библиотеки .NET выполнять исходный код по шагам с заходом . Эта статья описывает назначение и преимущества SourceLink.
+Source Link является отличным средством, которое позволяет пользователям при отладке библиотеки .NET выполнять исходный код по шагам. Эта статья описывает назначение и преимущества Source Link.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Публикация](./publish-nuget-package.md)
 

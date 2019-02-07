@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240389"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261624"
 ---
 # <a name="structs-c-programming-guide"></a>Структуры (Руководство по программированию на C#)
 
@@ -28,8 +28,8 @@ ms.locfileid: "53240389"
 - В отличие от классов структуры можно создавать без использования оператора `new`.  
 - Структуры могут объявлять конструкторы, имеющие параметры. 
 - Структура не может наследовать от другой структуры или класса и не может быть базовой для класса. Все структуры наследуют непосредственно от <xref:System.ValueType>, который наследует от <xref:System.Object>.  
-- Структуры могут реализовывать интерфейсы.  
-- Структура может использоваться как тип, допускающий значение NULL, и ей можно назначить значение NULL.  
+- Структуры могут реализовывать интерфейсы. 
+- Структура не может быть `null`, а переменная структуры не может быть назначена `null`, если переменная не объявлена как тип, допускающий значение null.
   
 ## <a name="related-sections"></a>Связанные разделы  
 

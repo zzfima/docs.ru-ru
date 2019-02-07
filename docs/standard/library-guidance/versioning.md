@@ -4,12 +4,12 @@ description: Рекомендации по использованию систе
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169603"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204747"
 ---
 # <a name="versioning"></a>Управление версиями
 
@@ -87,7 +87,7 @@ ms.locfileid: "53169603"
 
 ### <a name="assembly-informational-version"></a>Информационная версия сборки
 
-Информационная версия сборки используется для сохранения дополнительных сведений о версии и никак не влияет на поведение во время выполнения. Настройка этой версии является необязательной. Если вы используете SourceLink, это значение при сборке составляется из номера версии пакета NuGet и номера в системе управления версиями. Например, `1.0.0-beta1+204ff0a` включает хэш фиксации для исходного кода, из которого построена сборка. См. сведения об [использовании SourceLink](./sourcelink.md).
+Информационная версия сборки используется для сохранения дополнительных сведений о версии и никак не влияет на поведение во время выполнения. Настройка этой версии является необязательной. Если вы используете SourceLink, это значение при сборке составляется из номера версии пакета NuGet и номера в системе управления версиями. Например, `1.0.0-beta1+204ff0a` включает хэш фиксации для исходного кода, из которого построена сборка. Дополнительные сведения см. в разделе [Ссылка на источник](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

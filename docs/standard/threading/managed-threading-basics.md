@@ -10,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586517"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479572"
 ---
 # <a name="managed-threading-basics"></a>Основы управляемых потоков
+
 Первые пять тем этого раздела помогут вам понять, в каких случаях уместно применять управляемые потоки, и предоставят описания их основных компонентов. Сведения о классах, которые предоставляют дополнительные возможности, вы найдете в статьях [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md) и [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  Остальные темы этого раздела посвящены дополнительным возможностям, включая взаимодействие управляемых потоков с операционной системой Windows.  
@@ -25,7 +26,8 @@ ms.locfileid: "33586517"
 > [!NOTE]
 >  На платформе [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] библиотека параллельных задач и PLINQ предоставляют интерфейсы API для поддержки параллелизма задач и данных в многопоточных программах. Дополнительные сведения см. в разделе [Параллельное программирование](../../../docs/standard/parallel-programming/index.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание раздела
+
  [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
  Преимущества и недостатки использования нескольких потоков, а также описание сценариев, в которых целесообразно создавать потоки или использовать пул потоков.  
   
@@ -34,9 +36,6 @@ ms.locfileid: "33586517"
   
  [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  Описание стратегий синхронизации данных в классах, которые следует применять при работе с несколькими потоками.  
-  
- [Состояния управляемых потоков](../../../docs/standard/threading/managed-thread-states.md)  
- Описание основных состояний потоков и действий, позволяющих определить, выполняется ли поток.  
   
  [Основные и фоновые потоки](../../../docs/standard/threading/foreground-and-background-threads.md)  
  Описание различий между основными и фоновыми потоками.  
@@ -53,14 +52,16 @@ ms.locfileid: "33586517"
  [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  Описание процесса отмены асинхронных или долго выполняющихся синхронных операций с использованием маркера отмены.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Ссылка
+
  <xref:System.Threading.Thread>  
  Справочная документация по классу **Thread**, который представляет управляемый поток вне зависимости от того, был ли он получен из неуправляемого кода или создан в управляемом приложении.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Описание безопасного подхода к многопоточности при работе с объектами пользовательского интерфейса.  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы
+
  [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  Описание управляемых классов, которые применяются для синхронизации действий в нескольких потоках.  
   

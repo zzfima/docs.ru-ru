@@ -3,13 +3,13 @@ title: Для какой ОС использовать контейнеры .NET
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Для какой ОС использовать контейнеры .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147204"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479871"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Для какой ОС использовать контейнеры .NET
 
@@ -38,21 +38,21 @@ ms.locfileid: "53147204"
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>.NET core 2.1 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker.</td>
+<td>microsoft/dotnet:2.2-runtime</td>
+<td>.NET Core 2.2 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker.</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>ASP.NET Core 2.1 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker.</p>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td><p>ASP.NET Core 2.2 (мультиархитектурный): поддерживает Linux и Windows Nano Server в зависимости от узла Docker.</p>
 <p>Образ aspnetcore имеет несколько оптимизаций для ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>.NET Core 2.1 (только для среды выполнения), основанный на дистрибутиве Alpine Linux</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>.NET Core 2.2 (только для среды выполнения), основанный на дистрибутиве Alpine Linux</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>.NET Core 2.1 (только для среды выполнения), основанный на Windows Nano Server (Windows Server версии 1803)</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>.NET Core 2.2 (только для среды выполнения), основанный на Windows Nano Server (Windows Server версии 1803)</td>
 </tr>
 </tbody>
 </table>

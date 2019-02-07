@@ -3,13 +3,13 @@ title: Реализация повторных попыток вызова HTTP 
 description: Узнайте, как обрабатывать сбои HTTP-запросов с помощью Polly и HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362760"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479650"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
 
@@ -21,9 +21,9 @@ Polly — это библиотека .NET, которая предоставл
 
 Ниже показано, как можно использовать повторные HTTP-запросы через Polly с интеграцией HttpClientFactory, как описано в предыдущем разделе.
 
-**Ссылка на пакеты ASP.NET Core 2.1**
+**Ссылка на пакеты ASP.NET Core 2.2**
 
-В проекте должны использоваться пакеты NuGet ASP.NET Core 2.1. Обычно вам нужен метапакет `AspNetCore` и пакет расширений `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` доступно с версии .NET Core 2.1, но мы рекомендуем использовать последние пакеты ASP.NET Core 2.2 из NuGet в проекте. Обычно вам нужен метапакет `AspNetCore` и пакет расширений `Microsoft.Extensions.Http.Polly`.
 
 **Настройка клиента с помощью политики повтора Polly в параметрах запуска**
 
