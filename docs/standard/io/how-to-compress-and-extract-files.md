@@ -1,6 +1,6 @@
 ---
-title: Как выполнить Сжатие и извлечение файлов
-ms.date: 06/06/2018
+title: Как выполнить  Сжатие и извлечение файлов
+ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,67 +12,71 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35bf549dc4dcd5e12e3580c2357b64dcc42905b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a4ea4c32f5b73b283a5982f16e55a4d078171c1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650945"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255007"
 ---
-# <a name="how-to-compress-and-extract-files"></a><span data-ttu-id="9bd88-102">Как выполнить Сжатие и извлечение файлов</span><span class="sxs-lookup"><span data-stu-id="9bd88-102">How to: Compress and extract files</span></span>
+# <a name="how-to-compress-and-extract-files"></a><span data-ttu-id="4ac1b-102">Как выполнить  Сжатие и извлечение файлов</span><span class="sxs-lookup"><span data-stu-id="4ac1b-102">How to: Compress and extract files</span></span>
 
-<span data-ttu-id="9bd88-103">Пространство имен <xref:System.IO.Compression> предоставляет следующие типы для сжатия и распаковки файлов и потоков.</span><span class="sxs-lookup"><span data-stu-id="9bd88-103">The <xref:System.IO.Compression> namespace contains the following types for compressing and decompressing files and streams.</span></span> <span data-ttu-id="9bd88-104">Вы также можете использовать эти типы для чтения и изменения содержимого сжатого файла:</span><span class="sxs-lookup"><span data-stu-id="9bd88-104">You can also use these types to read and modify the contents of a compressed file:</span></span>
+<span data-ttu-id="4ac1b-103">Пространство имен <xref:System.IO.Compression> предоставляет следующие типы для сжатия и распаковки файлов и потоков.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-103">The <xref:System.IO.Compression> namespace contains the following types for compressing and decompressing files and streams.</span></span> <span data-ttu-id="4ac1b-104">Вы также можете использовать эти типы для чтения и изменения содержимого сжатого файла.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-104">You can also use these types to read and modify the contents of a compressed file.</span></span>
 
 - <xref:System.IO.Compression.ZipFile>
-
 - <xref:System.IO.Compression.ZipArchive>
-
 - <xref:System.IO.Compression.ZipArchiveEntry>
-
 - <xref:System.IO.Compression.DeflateStream>
-
 - <xref:System.IO.Compression.GZipStream>
 
-<span data-ttu-id="9bd88-105">В примерах ниже показано несколько функций для работы со сжатыми файлами.</span><span class="sxs-lookup"><span data-stu-id="9bd88-105">The following examples show some of the functions you can perform when working with compressed files.</span></span>
+<span data-ttu-id="4ac1b-105">В примерах ниже показано несколько операций для работы со сжатыми файлами.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-105">The following examples show some of the operations you can perform with compressed files.</span></span>
 
-## <a name="example-1---create-and-extract-a-zip-file"></a><span data-ttu-id="9bd88-106">Пример 1. Создание и извлечение ZIP-файла</span><span class="sxs-lookup"><span data-stu-id="9bd88-106">Example 1 - Create and extract a .zip file</span></span>
+## <a name="example-1-create-and-extract-a-zip-file"></a><span data-ttu-id="4ac1b-106">Пример 1: Создание и извлечение ZIP-файла</span><span class="sxs-lookup"><span data-stu-id="4ac1b-106">Example 1: Create and extract a .zip file</span></span>
 
-<span data-ttu-id="9bd88-107">В следующем примере показано, как создавать и извлекать сжатый файл с расширением .zip с помощью класса <xref:System.IO.Compression.ZipFile>.</span><span class="sxs-lookup"><span data-stu-id="9bd88-107">The following example shows how to create and extract a compressed file that has a .zip file name extension by using the <xref:System.IO.Compression.ZipFile> class.</span></span> <span data-ttu-id="9bd88-108">Он сжимает содержимое папки в новый ZIP-файл и затем извлекает это содержимое в новую папку.</span><span class="sxs-lookup"><span data-stu-id="9bd88-108">It compresses the contents of a folder into a new .zip file and then extracts that content to a new folder.</span></span> <span data-ttu-id="9bd88-109">Чтобы использовать класс <xref:System.IO.Compression.ZipFile>, укажите в проекте ссылку на сборку `System.IO.Compression.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="9bd88-109">To use the <xref:System.IO.Compression.ZipFile> class, you must reference the `System.IO.Compression.FileSystem` assembly in your project.</span></span>
+<span data-ttu-id="4ac1b-107">В следующем примере показано, как создавать и извлекать сжатый файл *.zip* с помощью класса <xref:System.IO.Compression.ZipFile>.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-107">The following example shows how to create and extract a compressed *.zip* file by using the <xref:System.IO.Compression.ZipFile> class.</span></span> <span data-ttu-id="4ac1b-108">Он сжимает содержимое папки в новый *ZIP*-файл и затем извлекает его в новую папку.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-108">The example compresses the contents of a folder into a new *.zip* file, and then extracts the zip to a new folder.</span></span> 
+
+<span data-ttu-id="4ac1b-109">Чтобы запустить пример, создайте папку *start* в папке программы и заполните ее файлами для сжатия.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-109">To run the sample, create a *start* folder in your program folder and populate it with files to zip.</span></span> 
+
+<span data-ttu-id="4ac1b-110">Если возникнет ошибка сборки "Имя ZipFile не существует в текущем контексте", добавьте в проект ссылку на сборку `System.IO.Compression.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-110">If you get the build error "The name 'ZipFile' does not exist in the current context," add a reference to the `System.IO.Compression.FileSystem` assembly to your project.</span></span>
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
 
-## <a name="example-2---extract-specific-file-extensions"></a><span data-ttu-id="9bd88-110">Пример 2. Извлечение файлов с определенными расширениями</span><span class="sxs-lookup"><span data-stu-id="9bd88-110">Example 2 - Extract specific file extensions</span></span>
+## <a name="example-2-extract-specific-file-extensions"></a><span data-ttu-id="4ac1b-111">Пример 2: Извлечение файлов с определенными расширениями</span><span class="sxs-lookup"><span data-stu-id="4ac1b-111">Example 2: Extract specific file extensions</span></span>
 
-<span data-ttu-id="9bd88-111">В этом примере показано, как просмотреть в цикле содержимое существующего ZIP-файла и извлечь из него файлы с расширением .txt.</span><span class="sxs-lookup"><span data-stu-id="9bd88-111">The next example shows how to iterate through the contents of an existing .zip file and extract files that have a .txt extension.</span></span> <span data-ttu-id="9bd88-112">Он использует класс <xref:System.IO.Compression.ZipArchive> для доступа к существующему ZIP-файлу, а также класс <xref:System.IO.Compression.ZipArchiveEntry> для проверки элементов в сжатом файле.</span><span class="sxs-lookup"><span data-stu-id="9bd88-112">It uses the <xref:System.IO.Compression.ZipArchive> class to access an existing .zip file, and the <xref:System.IO.Compression.ZipArchiveEntry> class to inspect the individual entries in the compressed file.</span></span> <span data-ttu-id="9bd88-113">Он использует метод расширения (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) для объекта <xref:System.IO.Compression.ZipArchiveEntry>.</span><span class="sxs-lookup"><span data-stu-id="9bd88-113">It uses an extension method (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) for the <xref:System.IO.Compression.ZipArchiveEntry> object.</span></span> <span data-ttu-id="9bd88-114">Метод расширения доступен в классе <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9bd88-114">The extension method is available in the <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="9bd88-115">Чтобы использовать класс <xref:System.IO.Compression.ZipFileExtensions>, укажите в проекте ссылку на сборку `System.IO.Compression.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="9bd88-115">To use the <xref:System.IO.Compression.ZipFileExtensions> class, you must reference the `System.IO.Compression.FileSystem` assembly in your project.</span></span>
+<span data-ttu-id="4ac1b-112">В этом примере выполняется итерация по содержимому существующего *ZIP*-файла и извлекаются файлы с расширением *.txt*.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-112">The next example iterates through the contents of an existing *.zip* file and extracts files that have a *.txt* extension.</span></span> <span data-ttu-id="4ac1b-113">Здесь используется класс <xref:System.IO.Compression.ZipArchive> для доступа к ZIP-файлу и класс <xref:System.IO.Compression.ZipArchiveEntry> для проверки отдельных элементов.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-113">It uses the <xref:System.IO.Compression.ZipArchive> class to access the zip, and the <xref:System.IO.Compression.ZipArchiveEntry> class to inspect the individual entries.</span></span> <span data-ttu-id="4ac1b-114">Метод расширения <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> для объекта <xref:System.IO.Compression.ZipArchiveEntry> доступен в классе <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-114">The extension method <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> for the <xref:System.IO.Compression.ZipArchiveEntry> object is available in the <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> class.</span></span> 
+
+<span data-ttu-id="4ac1b-115">Чтобы запустить пример, поместите *ZIP*-файл с именем *result.zip* в папку программы.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-115">To run the sample, place a *.zip* file called *result.zip* in your program folder.</span></span> <span data-ttu-id="4ac1b-116">По запросу укажите имя папки для извлечения.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-116">When prompted, provide a folder name to extract to.</span></span> 
+
+<span data-ttu-id="4ac1b-117">Если возникнет ошибка сборки "Имя ZipFile не существует в текущем контексте", добавьте в проект ссылку на сборку `System.IO.Compression.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-117">If you get the build error "The name 'ZipFile' does not exist in the current context," add a reference to the `System.IO.Compression.FileSystem` assembly to your project.</span></span>
+
+<span data-ttu-id="4ac1b-118">Если возникает ошибка "Тип ZipArchive определен в сборке, на которую нет ссылки", добавьте ссылку на сборку `System.IO.Compression` в проект.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-118">If you get the error "The type 'ZipArchive' is defined in an assembly that is not referenced," add a reference to the `System.IO.Compression` assembly to your project.</span></span> 
 
 > [!IMPORTANT]
-> <span data-ttu-id="9bd88-116">При распаковке файлов важно убедиться в отсутствии вредоносных путей, которые могут находиться за пределами каталога, в который вы извлекаете файлы.</span><span class="sxs-lookup"><span data-stu-id="9bd88-116">When unzipping files, you must look for malicious file paths which can escape out of the directory where you want to unzip into.</span></span> <span data-ttu-id="9bd88-117">Такая атака известна как обход путей.</span><span class="sxs-lookup"><span data-stu-id="9bd88-117">This is known as a path traversal attack.</span></span>
-
-<span data-ttu-id="9bd88-118">В следующем примере показано, как правильно проверить наличие вредоносных путей и безопасно извлечь файлы:</span><span class="sxs-lookup"><span data-stu-id="9bd88-118">The following example demonstrates how to check for malicious file paths and provides a safe way to unzip:</span></span>
+> <span data-ttu-id="4ac1b-119">При распаковке файлов важно убедиться в отсутствии вредоносных путей, которые могут вести за пределы каталога, в который вы извлекаете файлы.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-119">When unzipping files, you must look for malicious file paths, which can escape out of the directory you unzip into.</span></span> <span data-ttu-id="4ac1b-120">Такая атака известна как обход путей.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-120">This is known as a path traversal attack.</span></span> <span data-ttu-id="4ac1b-121">В следующем примере показано, как правильно проверить наличие вредоносных путей и безопасно извлечь файлы.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-121">The following example demonstrates how to check for malicious file paths and provides a safe way to unzip.</span></span>
 
 [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]
 
-## <a name="example-3---add-a-new-file-to-an-existing-zip-file"></a><span data-ttu-id="9bd88-119">Пример 3. Добавление нового файла в существующий ZIP-файл</span><span class="sxs-lookup"><span data-stu-id="9bd88-119">Example 3 - Add a new file to an existing .zip file</span></span>
+## <a name="example-3-add-a-file-to-an-existing-zip"></a><span data-ttu-id="4ac1b-122">Пример 3. Добавление файла в существующий ZIP-файл</span><span class="sxs-lookup"><span data-stu-id="4ac1b-122">Example 3: Add a file to an existing zip</span></span>
 
-<span data-ttu-id="9bd88-120">В следующем примере используется класс <xref:System.IO.Compression.ZipArchive> для доступа к существующему ZIP-файлу и добавления в него нового файла.</span><span class="sxs-lookup"><span data-stu-id="9bd88-120">The following example uses the <xref:System.IO.Compression.ZipArchive> class to access an existing .zip file, and adds a new file to the compressed file.</span></span> <span data-ttu-id="9bd88-121">Новый файл сжимается при добавлении в существующий ZIP-файл.</span><span class="sxs-lookup"><span data-stu-id="9bd88-121">The new file gets compressed when you add it to the existing .zip file.</span></span>
+<span data-ttu-id="4ac1b-123">В следующем примере используется класс <xref:System.IO.Compression.ZipArchive> для доступа к существующему *ZIP*-файлу и добавления в него файла.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-123">The following example uses the <xref:System.IO.Compression.ZipArchive> class to access an existing *.zip* file, and adds a file to it.</span></span> <span data-ttu-id="4ac1b-124">Новый файл сжимается при добавлении в существующий ZIP-файл.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-124">The new file gets compressed when you add it to the existing zip.</span></span>
 
 [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]
 
-## <a name="example-4---compress-and-decompress-a-directory-of-gz-files"></a><span data-ttu-id="9bd88-122">Пример 4. Сжатие и распаковка каталога с GZ-файлами</span><span class="sxs-lookup"><span data-stu-id="9bd88-122">Example 4 - Compress and decompress a directory of .gz files</span></span>
+## <a name="example-4-compress-and-decompress-gz-files"></a><span data-ttu-id="4ac1b-125">Пример 4. Сжатие и распаковка GZ-файлов</span><span class="sxs-lookup"><span data-stu-id="4ac1b-125">Example 4: Compress and decompress .gz files</span></span>
 
-<span data-ttu-id="9bd88-123">Также вы можете использовать классы <xref:System.IO.Compression.GZipStream> и <xref:System.IO.Compression.DeflateStream> для сжатия и распаковки данных.</span><span class="sxs-lookup"><span data-stu-id="9bd88-123">You can also use the <xref:System.IO.Compression.GZipStream> and <xref:System.IO.Compression.DeflateStream> classes to compress and decompress data.</span></span> <span data-ttu-id="9bd88-124">Они применяют тот же алгоритм сжатия.</span><span class="sxs-lookup"><span data-stu-id="9bd88-124">They use the same compression algorithm.</span></span> <span data-ttu-id="9bd88-125">Сжатые объекты <xref:System.IO.Compression.GZipStream>, которые записаны в файл с расширением .gz, можно распаковать с помощью методов, предоставляемых <xref:System.IO.Compression.GZipStream>, и многих других распространенных средств.</span><span class="sxs-lookup"><span data-stu-id="9bd88-125">Compressed <xref:System.IO.Compression.GZipStream> objects that are written to a file that has an extension of .gz can be decompressed by using many common tools in addition to the methods provided by <xref:System.IO.Compression.GZipStream>.</span></span> <span data-ttu-id="9bd88-126">В следующем примере показано, как использовать класс <xref:System.IO.Compression.GZipStream> для сжатия и распаковки каталога файлов.</span><span class="sxs-lookup"><span data-stu-id="9bd88-126">The following example shows how to compress and decompress a directory of files by using the <xref:System.IO.Compression.GZipStream> class:</span></span>
+<span data-ttu-id="4ac1b-126">Также вы можете использовать классы <xref:System.IO.Compression.GZipStream> и <xref:System.IO.Compression.DeflateStream> для сжатия и распаковки данных.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-126">You can also use the <xref:System.IO.Compression.GZipStream> and <xref:System.IO.Compression.DeflateStream> classes to compress and decompress data.</span></span> <span data-ttu-id="4ac1b-127">Они применяют тот же алгоритм сжатия.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-127">They use the same compression algorithm.</span></span> <span data-ttu-id="4ac1b-128">Вы можете распаковать объекты <xref:System.IO.Compression.GZipStream>, которые записаны в *GZ*-файл, с помощью многих распространенных средств.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-128">You can decompress <xref:System.IO.Compression.GZipStream> objects that are written to a *.gz* file by using many common tools.</span></span> <span data-ttu-id="4ac1b-129">В следующем примере показано, как использовать класс <xref:System.IO.Compression.GZipStream> для сжатия и распаковки каталога файлов.</span><span class="sxs-lookup"><span data-stu-id="4ac1b-129">The following example shows how to compress and decompress a directory of files by using the <xref:System.IO.Compression.GZipStream> class:</span></span>
 
 [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
 [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="9bd88-127">См. также</span><span class="sxs-lookup"><span data-stu-id="9bd88-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ac1b-130">См. также</span><span class="sxs-lookup"><span data-stu-id="4ac1b-130">See also</span></span>
 
-- <xref:System.IO.Compression.ZipArchive>
-- <xref:System.IO.Compression.ZipFile>
-- <xref:System.IO.Compression.ZipArchiveEntry>
-- <xref:System.IO.Compression.DeflateStream>
-- <xref:System.IO.Compression.GZipStream>
-- [<span data-ttu-id="9bd88-128">Файловый и потоковый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="9bd88-128">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+- <xref:System.IO.Compression.ZipArchive>  
+- <xref:System.IO.Compression.ZipFile>  
+- <xref:System.IO.Compression.ZipArchiveEntry>  
+- <xref:System.IO.Compression.DeflateStream>  
+- <xref:System.IO.Compression.GZipStream>  
+- [<span data-ttu-id="4ac1b-131">Файловый и потоковый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="4ac1b-131">File and stream I/O</span></span>](../../../docs/standard/io/index.md)
