@@ -1189,7 +1189,7 @@
 ## [Учебники](machine-learning/tutorials/index.md)
 ### [Анализ тональности (двоичная классификация)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Классификация проблем (мультиклассовая классификация)](machine-learning/tutorials/github-issue-classification.md)
-### [Прогнозирование платы за такси (регрессия)](machine-learning/tutorials/taxi-fare.md)
+### [Прогнозирование цен (регрессия)](machine-learning/tutorials/taxi-fare.md)
 ### [Ирисы Фишера (кластеризация)](machine-learning/tutorials/iris-clustering.md)
 ## [Практические руководства](machine-learning/how-to-guides/index.md)
 ### Подготовка данных
@@ -1200,7 +1200,7 @@
 #### [Загрузка данных из текстовых файлов](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Предварительная обработка данных с помощью методов нормализации](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Обучение, оценка и описание модели
-#### [Обучение модели с данными не в текстовом файле](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Обучение модели с использованием источников данных в реальном времени](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Обучение модели с использованием перекрестной проверки](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Проверка промежуточных значений данных конвейера](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Обучение регрессионной модели](machine-learning/how-to-guides/train-regression-model-ml-net.md)
