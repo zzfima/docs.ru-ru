@@ -1,7 +1,7 @@
 ---
 title: Метод SqlStreamChars.SetLength(Int64) (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
 ms.technology:
 - dotnet-data
@@ -13,37 +13,37 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c7199cbd08e62b1f0391437a0c1864cb9036fe1f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 750b46c2050228f630eaa6be31922869bff15e0a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222709"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827348"
 ---
-# <a name="sqlstreamcharssetlengthint64-method"></a><span data-ttu-id="f3ac4-102">Метод SqlStreamChars.SetLength(Int64)</span><span class="sxs-lookup"><span data-stu-id="f3ac4-102">SqlStreamChars.SetLength(Int64) Method</span></span>
+# <a name="sqlstreamcharssetlengthint64-method"></a><span data-ttu-id="6b95e-102">Метод SqlStreamChars.SetLength(Int64)</span><span class="sxs-lookup"><span data-stu-id="6b95e-102">SqlStreamChars.SetLength(Int64) Method</span></span>
 
-<span data-ttu-id="f3ac4-103">При переопределении в производном классе, освобождает ресурсы, используемые в поток.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="f3ac4-104">Дружественные сборки, содержащей этот метод связан с SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="f3ac4-105">Он предназначен для использования с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="f3ac4-106">Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="6b95e-103">При переопределении в производном классе, освобождает ресурсы, используемые в поток.</span><span class="sxs-lookup"><span data-stu-id="6b95e-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="6b95e-104">Дружественные сборки, содержащей этот метод связан с SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="6b95e-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="6b95e-105">Он предназначен для использования с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6b95e-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="6b95e-106">Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="6b95e-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
 ```csharp
 public abstract void SetLength (long value);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="f3ac4-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="f3ac4-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="6b95e-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="6b95e-107">Parameters</span></span>
 
 `value`\
-<span data-ttu-id="f3ac4-108">Нужная длина текущего потока в байтах.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-108">The desired length of the current stream in bytes.</span></span>
+<span data-ttu-id="6b95e-108">Нужная длина текущего потока в байтах.</span><span class="sxs-lookup"><span data-stu-id="6b95e-108">The desired length of the current stream in bytes.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f3ac4-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="f3ac4-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6b95e-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="6b95e-109">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="f3ac4-110">`SqlStreamChars.SetLength` Метод является закрытым и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-110">The `SqlStreamChars.SetLength` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="6b95e-110">`SqlStreamChars.SetLength` Метод является закрытым и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="6b95e-110">The `SqlStreamChars.SetLength` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="f3ac4-111">Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-111">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="6b95e-111">Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="6b95e-111">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f3ac4-112">Требования</span><span class="sxs-lookup"><span data-stu-id="f3ac4-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="6b95e-112">Требования</span><span class="sxs-lookup"><span data-stu-id="6b95e-112">Requirements</span></span>
 
-<span data-ttu-id="f3ac4-113">**Пространство имен:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="f3ac4-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="6b95e-113">**Пространство имен:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="6b95e-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="f3ac4-114">**Сборка:** System.Data (в System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="f3ac4-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="6b95e-114">**Сборка:** System.Data (в System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="6b95e-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="f3ac4-115">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="f3ac4-115">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="6b95e-115">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="6b95e-115">**.NET Framework versions:** Available since 2.0.</span></span>

@@ -1,7 +1,7 @@
 ---
 title: Метод SqlStreamChars.Dispose(Boolean) (System.Data.SqlTypes)
-author: douglaslMS
-ms.author: douglasl
+author: stevestein
+ms.author: sstein
 ms.date: 12/20/2018
 ms.technology:
 - dotnet-data
@@ -13,37 +13,37 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 930a4a69c6c44269e728fbcef62e561ab165ea22
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 4e6cfd6d4c04b1a2835b6e34b82c95b564dea588
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222367"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826867"
 ---
-# <a name="sqlstreamcharsdisposeboolean-method"></a><span data-ttu-id="bef15-102">Метод SqlStreamChars.Dispose(Boolean)</span><span class="sxs-lookup"><span data-stu-id="bef15-102">SqlStreamChars.Dispose(Boolean) Method</span></span>
+# <a name="sqlstreamcharsdisposeboolean-method"></a><span data-ttu-id="65845-102">Метод SqlStreamChars.Dispose(Boolean)</span><span class="sxs-lookup"><span data-stu-id="65845-102">SqlStreamChars.Dispose(Boolean) Method</span></span>
 
-<span data-ttu-id="bef15-103">При переопределении в производном классе, освобождает ресурсы, используемые в поток.</span><span class="sxs-lookup"><span data-stu-id="bef15-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="bef15-104">Дружественные сборки, содержащей этот метод связан с SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="bef15-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="bef15-105">Он предназначен для использования с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="bef15-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="bef15-106">Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="bef15-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="65845-103">При переопределении в производном классе, освобождает ресурсы, используемые в поток.</span><span class="sxs-lookup"><span data-stu-id="65845-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="65845-104">Дружественные сборки, содержащей этот метод связан с SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="65845-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="65845-105">Он предназначен для использования с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="65845-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="65845-106">Для других баз данных используйте механизм размещения, предоставляемый этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="65845-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
 ```csharp
 protected virtual void Dispose (bool disposing);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="bef15-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="bef15-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="65845-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="65845-107">Parameters</span></span>
 
 `disposing`\
-<span data-ttu-id="bef15-108">Значение `true` позволяет освободить как управляемые, так и неуправляемые ресурсы; значение `false` освобождает только неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="bef15-108">`true` to release both managed and unmanaged resources; `false` to release only unmanaged resources.</span></span>
+<span data-ttu-id="65845-108">Значение `true` позволяет освободить как управляемые, так и неуправляемые ресурсы; значение `false` освобождает только неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="65845-108">`true` to release both managed and unmanaged resources; `false` to release only unmanaged resources.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="bef15-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="bef15-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="65845-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="65845-109">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="bef15-110">`SqlStreamChars.Dispose` Метод является закрытым и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="bef15-110">The `SqlStreamChars.Dispose` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="65845-110">`SqlStreamChars.Dispose` Метод является закрытым и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="65845-110">The `SqlStreamChars.Dispose` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="bef15-111">Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="bef15-111">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="65845-111">Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="65845-111">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bef15-112">Требования</span><span class="sxs-lookup"><span data-stu-id="bef15-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="65845-112">Требования</span><span class="sxs-lookup"><span data-stu-id="65845-112">Requirements</span></span>
 
-<span data-ttu-id="bef15-113">**Пространство имен:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="bef15-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="65845-113">**Пространство имен:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="65845-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="bef15-114">**Сборка:** System.Data (в System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="bef15-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="65845-114">**Сборка:** System.Data (в System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="65845-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="bef15-115">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="bef15-115">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="65845-115">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="65845-115">**.NET Framework versions:** Available since 2.0.</span></span>
