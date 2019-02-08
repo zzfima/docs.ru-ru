@@ -2,12 +2,12 @@
 title: Общие сведения о LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: a1f01c95513eee1de65343e9f574b8f7df68e0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0f95e4118ec688ade628152b28537433d24d5d2
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612567"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903656"
 ---
 # <a name="linq-to-dataset-overview"></a>Общие сведения о LINQ to DataSet
 Класс <xref:System.Data.DataSet> является одним из наиболее распространенных компонентов [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Это ключевой элемент модели автономного программирования, основанной на [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], он позволяет явно кэшировать данные из различных источников данных. Для уровня представления <xref:System.Data.DataSet> тесно интегрирован с элементами управления графическим интерфейсом привязки данных. Для среднего уровня он предоставляет кэш, который защищает реляционную форму данных и включает в себя быстрые простые службы запросов и навигации по иерархии. Распространенным приемом, используемым для сокращения числа запросов к базе данных является использование <xref:System.Data.DataSet> для кэширования в среднего уровня. Например, рассмотрим данными [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-приложения. Обычно значительная часть данных приложения изменяется нечасто и остается неизменной во время сеанса пользователя. Эти данные могут сохраняться в памяти веб-сервера, что сократит число запросов к базе данных и ускорит взаимодействие с пользователями. Другим полезным аспектом <xref:System.Data.DataSet> является то, что приложения могут переносить подмножества данных из одного или нескольких источников данных в пространстве приложения. Затем приложение может работать с данными в памяти как с реляционными данными.  
@@ -30,5 +30,6 @@ ms.locfileid: "54612567"
   
 ## <a name="see-also"></a>См. также
 - [Запросы к DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Language-Integrated Query (LINQ):C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ): Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

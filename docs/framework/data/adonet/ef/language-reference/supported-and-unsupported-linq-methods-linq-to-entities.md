@@ -2,12 +2,12 @@
 title: Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a1a5f9f1789d8c0446a2816c2c07f61b6a373869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710382"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904276"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 В данном разделе приводятся сведения о стандартных операторах запросов LINQ, поддерживаемых или неподдерживаемых в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. У многих стандартных операторов запросов LINQ существуют перегруженные версии, принимающие целочисленный аргумент. Отсчитываемый от нуля индекс в последовательности, которой выполняется операция, соответствующий целочисленному аргументу <xref:System.Collections.Generic.IEqualityComparer%601>, или <xref:System.Collections.Generic.IComparer%601>. Если не указано обратное, эти перегруженные версии стандартных операторов LINQ не поддерживаются и при попытке их использования будет вызвано исключение.  
@@ -145,7 +145,7 @@ ms.locfileid: "54710382"
 |<xref:System.Linq.Queryable.Sum%2A>|Не поддерживается|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Методы типов  
- Стандартные операторы запросов LINQ, использующие преобразование и проверку типов CLR, поддерживаются в платформе [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. В языке LINQ to Entities поддерживаются только те типы CLR, которые сопоставляются с типами концептуальной модели. Список типов концептуальной модели, см. в разделе [типов концептуальной модели (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). В следующей таблице перечислены поддерживаемые и неподдерживаемые методы типа.  
+ Стандартных операторов запросов LINQ, которые имеют дело с CLR преобразование и проверку типов поддерживаются на платформе Entity Framework. В языке LINQ to Entities поддерживаются только те типы CLR, которые сопоставляются с типами концептуальной модели. Список типов концептуальной модели, см. в разделе [типов концептуальной модели (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). В следующей таблице перечислены поддерживаемые и неподдерживаемые методы типа.  
   
 |Метод|Поддержка|Сигнатура функции Visual Basic|Сигнатура метода C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

@@ -2,12 +2,12 @@
 title: объявляемая моделью функция
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 5db7d49fd4b839cef47db8086b4ef39ce4dc6aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31efbab4b8323ff8cec9498fa20fa40b1efb819e
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725146"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904077"
 ---
 # <a name="model-declared-function"></a>объявляемая моделью функция
 Объект *объявляемая моделью функция* является функцией, которая объявлена в концептуальной модели, но не определен в концептуальной модели. Функция может быть определена в среде размещения или хранения. Например, объявляемая моделью функция может быть сопоставлена функции, определенной в базе данных, экспонируя таким образом функцию в концептуальной модели на стороне сервера.  
@@ -24,7 +24,7 @@ ms.locfileid: "54725146"
 -   Сведения о параметрах, включая имя и тип параметров. (Необязательный параметр).  
   
 ## <a name="example"></a>Пример  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. В языке CSDL, одна реализация объявляемой моделью функции является [импорта функции](https://msdn.microsoft.com/library/125704ae-56c7-4233-80b7-389a10f3a65d). Далее на языке CSDL определяется контейнер сущностей с определением импорта функции. Обратите внимание, что тип возвращаемого значения для функции отсутствует, поскольку тип возвращаемого значения не задан.  
+ [ADO.NET Entity Framework](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) для определения концептуальных моделей. В языке CSDL, одна реализация объявляемой моделью функции является импорт функции (с помощью [элемент FunctionImport](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)). Далее на языке CSDL определяется контейнер сущностей с определением импорта функции. Обратите внимание, что тип возвращаемого значения для функции отсутствует, поскольку тип возвращаемого значения не задан.  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   
