@@ -2,14 +2,14 @@
 title: Перенос кода в .NET Core из .NET Framework
 description: Общие сведения о процессе переноса и инструментах, которые могут оказаться полезными при переносе проектов .NET Framework в .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266576"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903570"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Перенос кода в .NET Core из .NET Framework
 
@@ -37,8 +37,6 @@ ms.locfileid: "55266576"
 
 5. Выполните план переноса.
 
-## <a name="tools-to-help"></a>Полезные средства
-
 Ниже перечислены средства, которые могут оказаться полезными при переносе.
 
 * Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) — цепочка инструментов для создания отчетов о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам. См. дополнительные сведения об [анализаторе переносимости .NET](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ ms.locfileid: "55266576"
 > CsprojToVs2017 — это стороннее средство. Нет никакой гарантии, что оно будет поддерживать все проекты. Кроме того, оно может вызвать незначительные изменения в ожидаемом поведении. CsprojToVs2017 следует использовать в качестве _начальной точки_, которая автоматизирует соответствующие основные процессы. Это решение не может гарантировать перенос форматов файлов проекта.
 
 >[!div class="step-by-step"]
->[Вперед](third-party-deps.md)
+>[Вперед](net-framework-tech-unavailable.md)
