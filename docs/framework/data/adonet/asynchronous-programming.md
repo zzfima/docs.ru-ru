@@ -2,12 +2,12 @@
 title: Асинхронное программирование
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 8069ff646a124c6922358dda57de3e598ef62262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 774a6d3476c8e3b310ffe67bb56fc5a4d5c45bb0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692890"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826880"
 ---
 # <a name="asynchronous-programming"></a>Асинхронное программирование
 
@@ -176,7 +176,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Использование модели базового поставщика и новых асинхронных функциональных возможностей  
  Может потребоваться создать инструмент, который может подключаться к разным базам данных и выполнять запросы. Можно использовать базовую модель поставщика и новую асинхронную функцию.  
   
- Для использования распределенных транзакций необходимо включить на сервере MSDTC. Сведения о включении MSDTC см. в разделе [как включить MSDTC на веб-сервере](https://msdn.microsoft.com/library/dd327979.aspx).  
+ Для использования распределенных транзакций необходимо включить на сервере MSDTC. Сведения о включении MSDTC см. в разделе [как включить MSDTC на веб-сервере](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).  
   
 ```csharp
 using System;  

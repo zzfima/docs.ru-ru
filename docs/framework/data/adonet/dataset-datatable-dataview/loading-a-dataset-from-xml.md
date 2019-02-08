@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594919"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827608"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Загрузка набора данных из XML
 Содержимое объекта <xref:System.Data.DataSet> технологии ADO.NET может быть создано на основе XML-потока или XML-документа. Кроме того, использование .NET Framework обеспечивает большую гибкость при выборе сведений, загружаемых из XML, а также способа создания схемы или реляционной структуры <xref:System.Data.DataSet>.  
   
- Для заполнения <xref:System.Data.DataSet> с данными из XML следует использовать **ReadXml** метод <xref:System.Data.DataSet> объекта. **ReadXml** метод считывает из файла, потока или **XmlReader**и принимает в качестве аргументов источник XML, а также необязательный **XmlReadMode** аргумент. (Дополнительные сведения о **XmlReader**, см. в разделе [NIB: Чтение XML-данных с помощью XmlTextReader](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** метод считывает содержимое XML-потока или документа и загружает <xref:System.Data.DataSet> с данными. Он также создаст реляционную схему <xref:System.Data.DataSet> в зависимости от **XmlReadMode** и ли реляционной схемы уже существует.  
+ Для заполнения <xref:System.Data.DataSet> с данными из XML следует использовать **ReadXml** метод <xref:System.Data.DataSet> объекта. **ReadXml** метод считывает из файла, потока или **XmlReader**и принимает в качестве аргументов источник XML, а также необязательный **XmlReadMode** аргумент. Дополнительные сведения о **XmlReader**, см. в разделе [чтению данных XML с помощью XmlTextReader](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** метод считывает содержимое XML-потока или документа и загружает <xref:System.Data.DataSet> с данными. Он также создаст реляционную схему <xref:System.Data.DataSet> в зависимости от **XmlReadMode** и ли реляционной схемы уже существует.  
   
  В следующей таблице описаны параметры для **XmlReadMode** аргумент.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**Auto**|Это значение по умолчанию. Анализирует XML и выбирает наиболее подходящий параметр в следующем порядке.<br /><br /> — Если допустимость XML-DiffGram, **DiffGram** используется.<br />Если <xref:System.Data.DataSet> содержит схему или XML-документ содержит встроенную схему, **ReadSchema** используется.<br />Если <xref:System.Data.DataSet> содержит схему и XML не содержит встроенную схему, **InferSchema** используется.<br /><br /> Если известен формат считанного XML-кода, для достижения оптимальной производительности рекомендуется установить явно **XmlReadMode**, а не принимать **автоматически** по умолчанию.|  
 |**ReadSchema**|Считывает любую встроенную схему и загружает данные и схему.<br /><br /> Если набор данных <xref:System.Data.DataSet> уже содержит схему, новые таблицы добавляются из встроенной схемы в существующую в наборе данных <xref:System.Data.DataSet>. Если любая таблица встроенной схемы уже существует в наборе данных <xref:System.Data.DataSet>, возникает исключение. Вы не сможете изменить схему существующей таблицы с помощью **XmlReadMode.ReadSchema**.<br /><br /> Если набор данных <xref:System.Data.DataSet> не содержит схему, а также отсутствует встроенная схема, то данные не считываются.<br /><br /> Встроенная схема может быть определена с помощью схемы на языке XSD. Дополнительные сведения о записи встроенной схемы в виде схемы XML, см. в разделе [наследование реляционной структуры DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  

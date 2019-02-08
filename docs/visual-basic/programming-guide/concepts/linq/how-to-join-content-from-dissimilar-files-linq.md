@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
+title: Как выполнить  Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655469"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827751"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Как выполнить  Объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
 
 В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   
@@ -82,8 +82,7 @@ Class JoinStrings
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
                             Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
-                            Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
-                              n2(2) & "," & n2(3)  
+                            Select n(0) & "," & n2(1) & "," & n2(2) & "," & n2(3) & "," &  n2(4)
   
         ' Pass a query variable to a Sub and execute it there.  
         ' The query itself is unchanged.  

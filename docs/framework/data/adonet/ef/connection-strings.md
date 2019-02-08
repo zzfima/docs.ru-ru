@@ -2,19 +2,19 @@
 title: Строки подключения в ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30972edb7877127eb2e4c60f7e6377e4d893aecc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497463"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826477"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Строки подключения в ADO.NET Entity Framework
 Строка подключения содержит сведения для инициализации, передаваемые в виде параметра от поставщика данных в источник данных. Синтаксис зависит от поставщика данных, и при попытке открыть соединение строка соединения анализируется. Строки соединения платформы Entity Framework содержат сведения, которые используются для соединения с базовым поставщиком данных ADO.NET, поддерживающим Entity Framework. Они также содержат сведения о необходимых файлах модели и сопоставления.  
   
  Строка соединения используется поставщиком EntityClient для доступа к метаданным модели и сопоставления, а также для соединения с источником данных. Свойство <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> объекта <xref:System.Data.EntityClient.EntityConnection> позволяет получить доступ к строке соединения или задать ее значение. Класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder> может использоваться для построения или обработки программным путем параметров строки соединения. Дополнительные сведения см. в разделе [Как Построить строку соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- [Средства модели EDM](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) формируют строку соединения, которые хранятся в файле конфигурации приложения. <xref:System.Data.Objects.ObjectContext> автоматически извлекает сведения о соединении при создании запросов объекта. Доступ к соединению <xref:System.Data.EntityClient.EntityConnection>, используемому экземпляром <xref:System.Data.Objects.ObjectContext>, можно получить с помощью свойства <xref:System.Data.Objects.ObjectContext.Connection%2A>. Дополнительные сведения см. в разделе [Управление соединениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ [Средства модели EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) формируют строку соединения, которые хранятся в файле конфигурации приложения. <xref:System.Data.Objects.ObjectContext> автоматически извлекает сведения о соединении при создании запросов объекта. Доступ к соединению <xref:System.Data.EntityClient.EntityConnection>, используемому экземпляром <xref:System.Data.Objects.ObjectContext>, можно получить с помощью свойства <xref:System.Data.Objects.ObjectContext.Connection%2A>. Дополнительные сведения см. в разделе [Управление соединениями и транзакциями](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
 
 ## <a name="connection-string-syntax"></a>Синтаксис строки подключения
 
@@ -31,7 +31,7 @@ ms.locfileid: "54497463"
 |`Metadata`|Необходимо, если не задано ключевое слово `Name`. Список каталогов, файлов и расположений ресурсов с разделителями в виде вертикальной черты (|), в которых будет выполняться поиск сведений о метаданных и сопоставлениях. Ниже представлен пример такого кода.<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Пустые пространства, расположенные с обеих сторон вертикальной черты (|), не учитываются.<br /><br /> Это ключевое слово является взаимоисключающим по отношению к ключевому слову `Name`.|  
 |`Name`|По желанию можно определить имя соединения в файле конфигурации приложения, в котором предоставляются необходимые для строки соединения пары «ключевое слово/значение». В этом случае нельзя задавать эти пары непосредственно в строке соединения. Применение ключевого слова `Name` в файле конфигурации не допускается.<br /><br /> Если в строке соединения не содержится ключевое слово `Name`, то необходимо задать непустые значения для ключевого слова Provider.<br /><br /> Это ключевое слово является взаимоисключающим по отношению к другим ключевым словам строки соединения.|  
   
- Ниже приведен пример строки подключения для [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) хранятся в файле конфигурации приложения:  
+ Ниже приведен пример строки подключения для [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) хранятся в файле конфигурации приложения:  
   
   
   
@@ -111,5 +111,5 @@ Metadata=.\
 ## <a name="see-also"></a>См. также
 - [Работа с поставщиками данных](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
 - [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Управление подключениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Управление подключениями и транзакциями](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)

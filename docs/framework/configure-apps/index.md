@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 30e9e768ceef3e75d383232fcca1ea01c60199c6
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083773"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826438"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Настройка приложений с использованием файлов конфигурации
 Среда .NET Framework предоставляет разработчикам и администраторам возможность управления и гибкой настройки способа выполнения приложений с помощью файлов конфигурации. Файлы конфигурации имеют формат XML, и при необходимости их можно изменять. Администратор может контролировать, к каким из защищенных ресурсов может осуществлять доступ приложение, какие оно будет использовать версии сборок и где расположены удаленные объекты и приложения. Разработчики могут задавать параметры в файлах конфигурации, устраняя необходимость в перекомпиляции приложения при каждом изменении той или иной установки. В этом разделе рассказывается, какие параметры могут быть настроены и для чего может потребоваться настройка приложения.  
@@ -52,7 +52,7 @@ ms.locfileid: "55083773"
 ```  
   
 ## <a name="machine-configuration-files"></a>Файлы конфигурации компьютеров  
- В файле конфигурации компьютера, Machine.config, задаются параметры, влияющие на работу компьютера в целом. Этот файл находится в каталоге %*путь установки среды выполнения*%\Config. В файле Machine.config задаются параметры конфигурации для привязки сборок компьютера, встроенных [каналов удаленного взаимодействия](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) и ASP.NET.  
+ В файле конфигурации компьютера, Machine.config, задаются параметры, влияющие на работу компьютера в целом. Этот файл находится в каталоге %*путь установки среды выполнения*%\Config. В файле Machine.config задаются параметры конфигурации для привязки сборок компьютера, встроенных [каналов удаленного взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) и ASP.NET.  
   
  Поиск [элемента **\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/index.md) и других разделов конфигурации, определяемых разработчиками, производится системой конфигурации в первую очередь в файле конфигурации компьютера. Затем поиск выполняется в файле конфигурации приложения. Для облегчения управления файлом конфигурации компьютера рекомендуется переместить эти параметры в файл конфигурации приложения. Однако размещение параметров в файле конфигурации компьютера упрощает управление системой. Например, при наличии компонентов сторонних производителей, используемых сервером и клиентами, рекомендуется разместить параметры этих компонентов в одном файле. В этом случае следует задавать параметры в файле конфигурации компьютера, чтобы не дублировать параметры в разных файлах.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "55083773"
   
 -   Приложение, размещенное в ASP.NET.  
   
-     Дополнительные сведения о файлах конфигурации ASP.NET см. в разделе [Параметры конфигурации ASP.NET](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100)).  
+     Дополнительные сведения о файлах конфигурации ASP.NET см. в разделе [параметры конфигурации ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 -   Приложение, размещенное в Internet Explorer.  
   
@@ -123,9 +123,7 @@ ms.locfileid: "55083773"
 - [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Указание расположения сборки](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Регистрация удаленных объектов с помощью файлов конфигурации](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)
-- [Администрирование веб-сайта ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
-- [NIB: Управление политикой безопасности](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)
+- [Администрирование веб-сайта ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Управление политикой безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (средство настройки политики управления доступом для кода)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Удаленные объекты](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

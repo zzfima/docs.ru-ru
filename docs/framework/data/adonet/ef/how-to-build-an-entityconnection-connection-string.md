@@ -1,23 +1,23 @@
 ---
-title: Как выполнить построить строку соединения EntityConnection
+title: Как выполнить  построить строку соединения EntityConnection
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: a78d325b5a687a09ef1d1e627c5894808538aaa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84cef3b874f7deab129fad6dcd363c078153c311
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632771"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826399"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a>Как выполнить построить строку соединения EntityConnection
+# <a name="how-to-build-an-entityconnection-connection-string"></a>Как выполнить  построить строку соединения EntityConnection
 В этом разделе содержится пример создания экземпляра <xref:System.Data.EntityClient.EntityConnection>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Выполнение кода в этом примере  
   
-1.  Добавить [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  Добавить [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2.  На странице кода приложения добавьте следующие инструкции `using` (`Imports` в Visual Basic):  
   
@@ -31,5 +31,5 @@ ms.locfileid: "54632771"
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Использовать класс EntityConnection с контекстом объекта](https://msdn.microsoft.com/library/2140fe7b-b88b-47c8-a749-d7f142eb1080)
+- [Практическое руководство. Использовать класс EntityConnection с контекстом объекта](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

@@ -8,91 +8,78 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415329"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828375"
 ---
 # <a name="debugging-structures"></a>Структуры отладки
-В этом разделе описаны неуправляемые структуры, которые использует API отладки.  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Структура CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
- Определяет версию продукта среды CLR, предназначенную для отладки.  
-  
- [Структура1 CodeChunkInfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
- Представляет одинарный блок кода в памяти.  
-  
- [Структура CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
- Определяет объект, блокирующий поток, и причину блокировки потока.  
-  
- [Структура CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)  
- Представляет предложение обработки исключений для данного фрагмента кода промежуточного языка.  
-  
- [Структура CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Представляет сведения о кадре стека из объекта исключения.  
-  
- [Структура CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Соответствующим [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) объекта.  
-  
- COR_ACTIVE_FUNCTION  
- Содержит сведения о функциях, которые в данный момент активны в кадрах потока.  
-  
- [Структура COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)  
- Предоставляет сведения о расположении объекта массива в памяти.  
-  
- COR_DEBUG_IL_TO_NATIVE_MAP  
- Содержит смещения, которые используются для сопоставления кода MSIL с машинным кодом.  
-  
- COR_DEBUG_STEP_RANGE  
- Содержит сведения о смещении для диапазона кода.  
-  
- [Структура COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)  
- Предоставляет сведения о поле в объекте.  
-  
- [Структура COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)  
- Содержит сведения об объекте, в котором должна быть выполнена сборка мусора.  
-  
- [Структура COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)  
- Содержит общие сведения о куче для сборки мусора и указывает, является ли она перечислимой.  
-  
- [Структура COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)  
- Предоставляет сведения об объекте, находящемся в управляемой куче.  
-  
- COR_IL_MAP  
- Указывает изменения в относительном смещении функции.  
-  
- [Структура COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md)  
- Содержит сведения об области памяти в управляемой куче.  
-  
- [Структура COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)  
- Содержит идентификатор типа.  
-  
- [Структура COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md)  
- Предоставляет сведения о расположении объекта в памяти.  
-  
- COR_VERSION  
- Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
-  
- [Структура StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.
+В этом разделе описаны неуправляемые структуры, которые использует API отладки.
 
+## <a name="in-this-section"></a>В этом разделе
  [Структура CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) определяет диапазон адресов.
- 
+
  [Структура CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) определяет инструкцию IL для сопоставления адресов
- 
+
+ [Структура CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) определяет версию среды выполнения (CLR) для целей отладки.
+
+ [Структура1 codechunkinfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) представляет одинарный блок кода в памяти.
+
+ [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) содержит сведения о функциях, которые в настоящее время активны в кадрах потока.
+
+ [Структура COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) предоставляет сведения о расположении объекта массива в памяти.
+
+ [COR_DEBUG_IL_TO_NATIVE_MAP](cor-debug-il-to-native-map-structure.md) содержит смещения, которые используются для сопоставления промежуточного языка Майкрософт (MSIL) кода в машинный код.
+
+ [COR_DEBUG_STEP_RANGE](cor-debug-step-range-structure.md) содержит сведения о смещении для диапазона кода.
+
+ [Структура COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) предоставляет сведения о поле в объекте.
+
+ [Структура COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) содержит сведения об объекте, который должен быть сборщиком мусора.
+
+ [Структура COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) содержит общие сведения о куче для сборки мусора, включая ли он является перечислимым.
+
+ [Структура COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) предоставляет сведения об объекте в управляемой куче.
+
+ [COR_IL_MAP](cor-il-map-structure.md) определяет изменения в относительном смещении функции.
+
+ [Структура COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) содержит сведения об области памяти в управляемой куче.
+
+ [Структура COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) содержит идентификатор типа.
+
+ [Структура COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) предоставляет сведения о расположении объекта в памяти.
+
+ [COR_VERSION](cor-version-structure.md) хранит номер версии standard из четырех частей среда CLR.
+
+ [Структура CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) определяет объект, который блокирует поток и причину, почему поток блокируется.
+
+ [Структура CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) представляет предложение обработки (EH) исключения для данной части промежуточный язык (IL).
+
+ [Структура CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) представляет сведения о кадре от объекта исключения стека.
+
+ [Структура CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Соответствующим [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) объекта.
+
  [Структура DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) определяет контейнер для запроса адрес модуля.
 
-  
-## <a name="related-sections"></a>Связанные разделы  
- [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
-  
- [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
-  
- [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
-  
- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
-  
+ [Структура DacpMethodDescData](../../../../docs/framework/unmanaged-api/debugging/dacpmethoddescdata-structure.md) определяет буфер транспорта сведения среды выполнения метода.
+
+ [Структура DacpModuleData](../../../../docs/framework/unmanaged-api/debugging/dacpmoduledata-structure.md) определяет буфер транспорта для модуля сведения среды выполнения.
+
+ [Структура DacpReJitData](../../../../docs/framework/unmanaged-api/debugging/dacprejitdata-structure.md) , определяющего основную информацию о данный метод инструментированного профилировщиком.
+
+ [Структура StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) обеспечивает простой контекст, который может использоваться вместо полной `CONTEXT` структуры.
+
+
+
+## <a name="related-sections"></a>Связанные разделы
+ [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+
+ [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+ [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+
+ [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
  [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

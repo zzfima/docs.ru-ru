@@ -1,23 +1,23 @@
 ---
-title: Как выполнить выполнить параметризованный запрос Entity SQL, использующий команды EntityCommand
+title: Как выполнить  выполнить параметризованный запрос Entity SQL, использующий команды EntityCommand
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: a9b4069004cc48fa05efa29b4467aa1dca47fb29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e605166fa11fbf6424657e1fefa0a5087a11049c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610101"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825658"
 ---
-# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Как выполнить выполнить параметризованный запрос Entity SQL, использующий команды EntityCommand
+# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Как выполнить  выполнить параметризованный запрос Entity SQL, использующий команды EntityCommand
 В этом разделе показано выполнение [!INCLUDE[esql](../../../../../includes/esql-md.md)] запрос с параметрами с помощью <xref:System.Data.EntityClient.EntityCommand> объекта.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Выполнение кода в этом примере  
   
-1.  Добавить [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  Добавить [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2.  На странице кода приложения добавьте следующие инструкции `using` (`Imports` в Visual Basic):  
   
@@ -31,5 +31,5 @@ ms.locfileid: "54610101"
  [!code-vb[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#parameterizedquerywithentitycommand)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Выполнение параметризованного запроса](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)
+- [Практическое руководство. Выполнение параметризованного запроса](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
 - [Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

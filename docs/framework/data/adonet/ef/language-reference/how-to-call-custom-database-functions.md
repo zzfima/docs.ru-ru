@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Вызов настраиваемых функций базы данных
+title: Как выполнить  Вызов настраиваемых функций базы данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 5ea558e23b6b0c191244031560c0fcf4738604e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdb7b5c90e98f299f37cd09fc83ddfdcca31effd
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731105"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826633"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Как выполнить Вызов настраиваемых функций базы данных
+# <a name="how-to-call-custom-database-functions"></a>Как выполнить  Вызов настраиваемых функций базы данных
 В данном разделе описаны процедуры вызова пользовательских функций, определенных в базе данных, из запросов LINQ to Entities.  
   
  Функции базы данных, вызываемые в запросах LINQ to Entities, выполняются в базе данных. При выполнении функций в базе данных может увеличиться производительность приложений.  
@@ -27,14 +27,14 @@ ms.locfileid: "54731105"
   
 2.  Объявите функцию на языке SSDL в EDMX-файле. Имя функции должно совпадать с именем функции, объявленной в базе данных.  
   
-     Дополнительные сведения см. в разделе [функция элемент SSDL](https://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
+     Дополнительные сведения см. в разделе [функция элемент SSDL](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
 3.  Добавьте соответствующий метод к классу в коде приложения и примените <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> к этому методу. Обратите внимание, что параметры атрибута <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> и <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> представляют собой имя пространства имен концептуальной модели и имя функции концептуальной модели соответственно. При разрешении имени функции для LINQ учитывается регистр.  
   
 4.  Вызовите метод в запросе LINQ to Entities.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показываются процедуры вызова пользовательской функции базы данных из запроса LINQ to Entities. В этом примере используется модель School. Сведения о модели School см. в разделе [Создание образца базы данных School](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) и [Создание School EDMX-файл](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ В следующем примере показываются процедуры вызова пользовательской функции базы данных из запроса LINQ to Entities. В этом примере используется модель School. Сведения о модели School см. в разделе [Создание образца базы данных School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) и [Создание School EDMX-файл](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
  Следующий код добавляет функцию `AvgStudentGrade` в образец базы данных.  
   
@@ -61,5 +61,5 @@ ms.locfileid: "54731105"
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>См. также
-- [Обзор файла .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

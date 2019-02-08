@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 84c0319c49534cc9a09ffd15d9a07b8ec18882b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728743"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825593"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Создание строго типизированных наборов данных
 При наличии схемы XML, соответствующей стандарту языка XSD, можно создать объект <xref:System.Data.DataSet> со строгой типизацией с помощью инструмента XSD.exe, предоставляемого [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
   
- (Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ (Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
  Ниже показан синтаксис для создания **набора данных** с помощью этого средства.  
   

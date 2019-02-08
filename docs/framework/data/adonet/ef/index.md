@@ -2,14 +2,14 @@
 title: ADO.NET Entity Framework
 ms.date: 03/30/2017
 ms.assetid: a437041f-6899-4ae7-96ce-aabf528d7205
-ms.openlocfilehash: e5a282a1a4cfd0e986456d0e277585c2b08c0bfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 826e794299c247f411d1b0c08bebe910dee88f46
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195018"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825866"
 ---
 # <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 [Docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) является сайт основного местоположения содержимого для Entity Framework.  
   
- Содержимое этого раздела теперь доступно на следующей странице [Знакомство с платформой Entity Framework](https://msdn.microsoft.com/data/jj590134).
+ Содержимое этого раздела теперь доступно на следующей странице: [Знакомство с Entity Framework](/ef/ef6/get-started).

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Использование EdmGen.exe для создания файлов модели и сопоставления
+title: Как выполнить  Использование EdmGen.exe для создания файлов модели и сопоставления
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 340ef0b20c25ca76df51085592e53849c6bf7a12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49890eb8bdb9f956cc36b3adde2f11db1e1e07bc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610157"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826958"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Как выполнить Использование EdmGen.exe для создания файлов модели и сопоставления
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Как выполнить  Использование EdmGen.exe для создания файлов модели и сопоставления
 В этом разделе показано, как с помощью средства «Генератор модели EDM» (EdmGen.exe) на основе базы данных School формируются следующие файлы:  
   
 -   Концептуальная модель (CSDL-файл).  
@@ -24,14 +24,14 @@ ms.locfileid: "54610157"
   
  Средство EdmGen.exe использует ключ /mode:FullGeneration для создания перечисленных выше файлов. Дополнительные сведения о командах EdmGen.exe см. в разделе [генератор модели EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   
- Если вы используете EdmGen.exe для формирования файлов модели и сопоставления, необходимо по-прежнему настроить проект Visual Studio для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Вручную настроить проект Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+ Если вы используете EdmGen.exe для формирования файлов модели и сопоставления, необходимо по-прежнему настроить проект Visual Studio для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Вручную настроить проект Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 > [!NOTE]
->  Концептуальная модель, созданная с помощью средства EdmGen.exe, включает все объекты базы данных. При необходимости создания концептуальной модели, включающей только определенные объекты, следует использовать мастер моделей EDM. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Концептуальная модель, созданная с помощью средства EdmGen.exe, включает все объекты базы данных. При необходимости создания концептуальной модели, включающей только определенные объекты, следует использовать мастер моделей EDM. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Создание модели School для проекта Visual Basic с помощью программы EdmGen.exe  
   
-1.  Создайте базу данных School. Дополнительные сведения см. в разделе [Создание образца базы данных School](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
+1.  Создайте базу данных School. Дополнительные сведения см. в разделе [Создание образца базы данных School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
 2.  Выполните в командной строке следующую команду (введя ее без разрывов строк):  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54610157"
   
 ### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>Создание модели School для проекта C# с помощью программы EdmGen.exe  
   
-1.  Создайте базу данных School. Дополнительные сведения см. в разделе [Создание образца базы данных School](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
+1.  Создайте базу данных School. Дополнительные сведения см. в разделе [Создание образца базы данных School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).  
   
 2.  Выполните в командной строке следующую команду (введя ее без разрывов строк):  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54610157"
   
 ## <a name="see-also"></a>См. также
 - [Моделирование и сопоставление](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Практическое руководство. Вручную настроить проект Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)
-- [Практическое руководство. Предварительное создание представлений для повышения производительности запросов](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)
-- [Средства работы с моделью EDM ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Практическое руководство. Вручную настроить проект Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [Практическое руководство. Предварительное создание представлений для повышения производительности запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Средства модели EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Практическое руководство. Использование EdmGen.exe для проверки файлов модели и сопоставления](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629619"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825736"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме вызовет типизированного **набора данных** ссылаться на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
@@ -43,7 +43,7 @@ ms.locfileid: "54629619"
   
  В следующей таблице показаны доступные для использования заметки.  
   
-|Комментарий|Описание|  
+|Комментарий|Описание:|  
 |----------------|-----------------|  
 |**typedName**|Имя объекта.|  
 |**typedPlural**|Имя коллекции объектов.|  
@@ -74,7 +74,7 @@ ms.locfileid: "54629619"
 |**Родительский** метода доступа|TableNameRow|typedParent|  
 |**Набор данных** события|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Чтобы использовать типизированные **набора данных** заметки, необходимо включить следующие **xmlns** ссылки в схеме языка определения схемы XML. (Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Чтобы использовать типизированные **набора данных** заметки, необходимо включить следующие **xmlns** ссылки в схеме языка определения схемы XML. Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
