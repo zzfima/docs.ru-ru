@@ -2,14 +2,14 @@
 title: Анализ зависимостей для переноса кода в .NET Core
 description: Научитесь анализировать внешние зависимости, чтобы перенести свой проект из .NET Framework в .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415225"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904332"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Анализ зависимостей для переноса кода в .NET Core
 
@@ -93,13 +93,13 @@ portable-net45-win8-wpa8-wpa81
 
 Дополнительные сведения о том, как отключить предупреждения компилятора в Visual Studio, см. в разделе [Подавление предупреждений для пакетов NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
-### <a name="port-your-packages-to-packagereference"></a>Перенос собственных пакетов в `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>Перенос собственных пакетов в `PackageReference`
 
 [PackageReference](/nuget/consume-packages/package-references-in-project-files) используется в .NET Core для указания зависимостей пакета. Если вы указываете пакеты с помощью файла [packages.config](/nuget/reference/packages-config), вам нужно будет преобразовать его в `PackageReference`.
 
 Дополнительные сведения см. в статье [Перенос из packages.config в PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Что делать, если зависимость пакета NuGet не работает в .NET Core
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Что делать, если зависимость пакета NuGet не работает в .NET Core
 
 Если пакет NuGet, от которого зависит ваш проект, не работает в .NET Core, можно предпринять ряд мер:
 
@@ -119,6 +119,5 @@ portable-net45-win8-wpa8-wpa81
 
 Возможно, вы используете зависимость, которая не является пакетом NuGet, например библиотеку DLL в файловой системе. Единственный способ определить переносимость такой зависимости — запустить [средство .NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport). Это средство может анализировать сборки, предназначенные для .NET Framework, и идентифицировать API, которые невозможно перенести на другие платформы .NET, например .NET Core. Можно запустить средство в качестве консольного приложения или [расширения Visual Studio](../../standard/analyzers/portability-analyzer.md).
 
-## <a name="next-steps"></a>Следующие шаги
-
-Если вы переносите библиотеку, обратитесь к разделу о [переносе библиотек](libraries.md).
+>[!div class="step-by-step"]
+>[Вперед](libraries.md)
