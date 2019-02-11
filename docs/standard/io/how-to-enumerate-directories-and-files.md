@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Перечисление каталогов и файлов
+title: Как выполнить  Перечисление каталогов и файлов
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580464"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758668"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>Как выполнить Перечисление каталогов и файлов
+# <a name="how-to-enumerate-directories-and-files"></a>Как выполнить  Перечисление каталогов и файлов
 Перечислимые коллекции дают более высокую производительность, чем массивы, если вы работаете с большими коллекциями файлов и каталогов. Чтобы перечислить каталоги и файлы, вы можете применить методы, которые возвращают перечисляемую коллекцию имен каталогов или файлов, либо их объекты <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> или <xref:System.IO.FileSystemInfo>.  
   
 Если вы хотите найти и вернуть только имена каталогов или файлов, используйте методы перечисления из класса <xref:System.IO.Directory>. Если вы хотите найти и вернуть другие свойства каталогов или файлов, используйте классы <xref:System.IO.DirectoryInfo> и <xref:System.IO.FileSystemInfo>.  
@@ -65,4 +65,4 @@ ms.locfileid: "54580464"
   
 ## <a name="see-also"></a>См. также
 
-[Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)
+- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)

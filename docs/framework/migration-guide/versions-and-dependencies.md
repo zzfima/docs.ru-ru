@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 3cec103d72cf8bf714abfe5cb645802f92b7fc5d
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204877"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759786"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -80,6 +80,6 @@ ms.locfileid: "55204877"
   
 ## <a name="see-also"></a>См. также
 
-- [Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)   - 
+- [Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)
 - [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
