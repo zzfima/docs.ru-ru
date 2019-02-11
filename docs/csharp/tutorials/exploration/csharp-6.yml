@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634263"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807048"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Повторите то же самое с методом `Caps`. Это незначительное улучшение, но при рациональном использовании оно создает гораздо более удобочитаемый код, особенно для объектов передачи данных (DTO) и других типов с минимальными поведением.
+    Повторите то же самое с методом `AllCaps`. Это незначительное улучшение, но при рациональном использовании оно создает гораздо более удобочитаемый код, особенно для объектов передачи данных (DTO) и других типов с минимальными поведением.
 - title: Импорт одиночного класса
   durationInMinutes: 2
   content: "Если постоянно использовать статические методы одного класса во всем коде, включение имени класса каждый раз искажает смысл кода. Класс `Person` в настоящее время импортирует пространство имен `System` несмотря на то, что используется только <xref:System.Console?displayProperty=nameWithType>. Измените оператор `using` следующим образом:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\nОператор `static using` лучше подходит для более крупных программ, активно использующих один класс со множеством статических методов, таких как класс [`string`](xref:System.String) или <xref:System.Math?displayProperty=nameWithType>.\n"
