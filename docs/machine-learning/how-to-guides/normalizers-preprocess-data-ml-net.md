@@ -1,27 +1,27 @@
 ---
 title: Предобработка данных для обучения с помощью методов нормализации для использования в обработке данных — ML.NET
 description: Сведения об использовании методов нормализации для предобработки данных для обучения для использования при создании, обучении и оценке модели машинного обучения с помощью ML.NET
-ms.date: 11/07/2018
+ms.date: 02/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c8b959904705e996c97bdcd8b3444e754d14d046
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4311307f5410a96bb4a30fcedd88bc43afd25c12
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148838"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738582"
 ---
-# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="3d4ee-103">Предобработка данных для обучения с помощью методов нормализации для использования в обработке данных — ML.NET</span><span class="sxs-lookup"><span data-stu-id="3d4ee-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
+# <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a><span data-ttu-id="8b074-103">Предобработка данных для обучения с помощью методов нормализации для использования в обработке данных — ML.NET</span><span class="sxs-lookup"><span data-stu-id="8b074-103">Preprocess training data with normalizers to use in data processing - ML.NET</span></span>
 
-<span data-ttu-id="3d4ee-104">ML.NET предоставляет ряд [параметрических и непараметрических алгоритмов](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="3d4ee-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
+<span data-ttu-id="8b074-104">ML.NET предоставляет ряд [параметрических и непараметрических алгоритмов](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span><span class="sxs-lookup"><span data-stu-id="8b074-104">ML.NET exposes a number of [parametric and non-parametric algorithms](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/).</span></span>
 
-<span data-ttu-id="3d4ee-105">**Не** столь важно, какой метод нормализации вы выберете, важно **использовать** его при обучении линейных или других параметрических моделей.</span><span class="sxs-lookup"><span data-stu-id="3d4ee-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
+<span data-ttu-id="8b074-105">**Не** столь важно, какой метод нормализации вы выберете, важно **использовать** его при обучении линейных или других параметрических моделей.</span><span class="sxs-lookup"><span data-stu-id="8b074-105">It's **not** as important which normalizer you choose as it is to **use** a normalizer when training linear or other parametric models.</span></span>
 
-<span data-ttu-id="3d4ee-106">Всегда включайте метод нормализации непосредственно в конвейер обучения ML.NET, чтобы он:</span><span class="sxs-lookup"><span data-stu-id="3d4ee-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
+<span data-ttu-id="8b074-106">Всегда включайте метод нормализации непосредственно в конвейер обучения ML.NET, чтобы он:</span><span class="sxs-lookup"><span data-stu-id="8b074-106">Always include the normalizer directly in the ML.NET learning pipeline, so it:</span></span>
 
-- <span data-ttu-id="3d4ee-107">обучался только на данных для обучения, а не на тестовых данных;</span><span class="sxs-lookup"><span data-stu-id="3d4ee-107">is only trained on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="3d4ee-108">правильно применялся для всех новых входящих данных без необходимости дополнительной предобработки во время прогнозирования.</span><span class="sxs-lookup"><span data-stu-id="3d4ee-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="8b074-107">обучался только на данных для обучения, а не на тестовых данных;</span><span class="sxs-lookup"><span data-stu-id="8b074-107">is only trained on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="8b074-108">правильно применялся для всех новых входящих данных без необходимости дополнительной предобработки во время прогнозирования.</span><span class="sxs-lookup"><span data-stu-id="8b074-108">is correctly applied to all the new incoming data, without the need for extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="3d4ee-109">Ниже приведен фрагмент кода, демонстрирующий нормализацию в конвейерах обучения.</span><span class="sxs-lookup"><span data-stu-id="3d4ee-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="3d4ee-110">В нем предполагается использование набора данных по ирисам:</span><span class="sxs-lookup"><span data-stu-id="3d4ee-110">It assumes the Iris dataset:</span></span>
+<span data-ttu-id="8b074-109">Ниже приведен фрагмент кода, демонстрирующий нормализацию в конвейерах обучения.</span><span class="sxs-lookup"><span data-stu-id="8b074-109">Here's a snippet of code that demonstrates normalization in learning pipelines.</span></span> <span data-ttu-id="8b074-110">В нем предполагается использование набора данных по ирисам:</span><span class="sxs-lookup"><span data-stu-id="8b074-110">It assumes the Iris dataset:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -29,17 +29,19 @@ ms.locfileid: "53148838"
 var mlContext = new MLContext();
 
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
-{
-    Column = new[] {
+var reader = mlContext.Data.CreateTextReader(
+    columns: new TextLoader.Column[]
+    {
         // The four features of the Iris dataset will be grouped together as one Features column.
-        new TextLoader.Column("Features", DataKind.R4, 0, 3),
+        new TextLoader.Column("Features",DataKind.R4,0,3),
         // Label: kind of iris.
-        new TextLoader.Column("Label", DataKind.TX, 4),
+        new TextLoader.Column("Label",DataKind.TX,4)
     },
     // Default separator is tab, but the dataset has comma.
-    Separator = ","
-});
+    separatorChar: ',',
+    // First line of the file is a header, not a data row.
+    hasHeader: true
+);
 
 // Read the training data.
 var trainData = reader.Read(dataPath);
