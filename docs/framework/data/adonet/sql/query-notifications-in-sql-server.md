@@ -2,12 +2,12 @@
 title: Уведомления запросов в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636694"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092297"
 ---
 # <a name="query-notifications-in-sql-server"></a>Уведомления запросов в SQL Server
 С помощью уведомлений о запросах на основе инфраструктуры компонента Service Broker приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -26,17 +26,17 @@ ms.locfileid: "54636694"
   
  При разработке приложения нужном надежных доли секунды уведомления об изменении данных, см. подразделы **планирование эффективной стратегии уведомлений о запросах** и **альтернативы запроса Уведомления** в [планирование уведомлений](https://go.microsoft.com/fwlink/?LinkId=211984) раздела в электронной документации по SQL Server. Дополнительные сведения об уведомлениях о запросах и компоненте SQL Server Service Broker см. в указанных ниже разделах электронной документации по SQL Server.  
   
- **Электронная документация по SQL Server**  
+ **Документация по SQL Server**  
   
--   [С помощью уведомлений о запросах](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [С помощью уведомлений о запросах](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Создание запроса для уведомлений](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Создание запроса для уведомлений](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Компонент Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Разработка (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Справочный центр разработчика службы Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Справочный центр разработчика службы Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Разработка (компонент Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Руководство разработчика (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Включение уведомлений запросов](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

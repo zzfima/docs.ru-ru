@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855287"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092505"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Отладка, трассировка и профилирование
 Для отладки приложения .NET Framework компилятор и среда выполнения должны быть настроены для включения присоединения отладчика к приложению и создания символов и сопоставлений строк, если это возможно, для приложения и его соответствующего языка MSIL. После отладки управляемого приложения можно выполнить его профилирование для повышения производительности. Профилирование оценивает и описывает строки исходного кода, создающие наиболее часто выполняемый код, и время, необходимое для их выполнения.  
@@ -47,7 +47,7 @@ ms.locfileid: "43855287"
  Описываются счетчики, которые можно использовать для отслеживания производительности приложения.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Отладка приложений ASP.NET и AJAX](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Отладка приложений ASP.NET или ASP.NET Core в Visual Studio](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  Предоставляются предварительные требования и инструкции по отладке приложения ASP.NET во время разработки или после развертывания.  
   
  [Руководство по разработке](../../../docs/framework/development-guide.md)  

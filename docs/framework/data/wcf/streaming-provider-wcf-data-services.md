@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697352"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093844"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 Служба данных может обеспечивать доступ к данным больших двоичных объектов. Эти двоичные данные могут представлять видео- и аудиопотоки, изображения, файлы документов или двоичные данные медиаресурсов других типов. Когда сущность в модели данных включает одно или несколько двоичных свойств, служба данных возвращает двоичные данные в кодировке base-64 в записи в канале ответа. Поскольку загрузка и сериализация больших объемов двоичных данных таким способом может ухудшить производительность, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет механизм получения двоичных данных независимо от сущности, к которой он принадлежит. Это достигается отделением двоичных данных от сущности с последующим разделением их на один или несколько потоков данных.  
@@ -24,7 +24,8 @@ ms.locfileid: "54697352"
   
 -   Запись медиассылки — это сущность, содержащая ссылку на соответствующий поток медиаресурса.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить двоичный поток ресурса путем определения поставщика потоковых данных. Реализация потокового поставщика предоставляет службе данных с помощью медиаресурса, связанный с конкретной сущностью, как <xref:System.IO.Stream> объект. Эта реализация позволяет службе данных принимать и возвращать медиаресурсы по протоколу HTTP в виде потоков двоичных данных с указанным типом MIME.  
+ 
+  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить двоичный поток ресурса путем определения поставщика потоковых данных. Реализация потокового поставщика предоставляет службе данных с помощью медиаресурса, связанный с конкретной сущностью, как <xref:System.IO.Stream> объект. Эта реализация позволяет службе данных принимать и возвращать медиаресурсы по протоколу HTTP в виде потоков двоичных данных с указанным типом MIME.  
   
  Настройка службы данных для поддержки потоков двоичных данных состоит из следующих этапов.  
   
@@ -89,7 +90,7 @@ ms.locfileid: "54697352"
   
  Дополнительные сведения см. в разделе [потоковая передача сообщений](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) и [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- По умолчанию службы IIS также накладывают на размер запроса ограничение в 4 МБ. Чтобы включить службу данных для приема потоков размером более 4 МБ, работающей под управлением IIS, необходимо также задать `maxRequestLength` атрибут [элемент httpRuntime (схема параметров ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) в `<system.web />` раздел конфигурации, как показано в следующем примере:  
+ По умолчанию службы IIS также накладывают на размер запроса ограничение в 4 МБ. Чтобы включить службу данных для приема потоков размером более 4 МБ, работающей под управлением IIS, необходимо также задать `maxRequestLength` атрибут [элемент httpRuntime (схема параметров ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) в `<system.web />` раздел конфигурации, как показано в следующем примере:  
   
   
   
@@ -119,7 +120,7 @@ ms.locfileid: "54697352"
   
 -   При реализации методов <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> или <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> необходимо использовать значения eTag и Content-Type, предоставляемые в качестве параметров метода. Не устанавливайте заголовки eTag или Content-Type в реализации поставщика <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Так как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, см. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Так как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, см. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Требования к управлению версиями  

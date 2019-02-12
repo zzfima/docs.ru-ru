@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743040"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093961"
 ---
 # <a name="enabling-query-notifications"></a>Включение уведомлений запросов
 Приложения, в которых используются уведомления о запросах, имеют общий набор требований. Чтобы поддерживать уведомления о запросах, источник данных SQL должен быть правильно настроен, а пользователь должен иметь соответствующие права доступа на стороне клиента и сервера.  
@@ -28,25 +28,25 @@ ms.locfileid: "54743040"
 ## <a name="query-notifications-requirements"></a>Требования к уведомлениям о запросах  
  Уведомления о запросах поддерживаются только для инструкций SELECT, удовлетворяющих списку конкретных требований. В приведенной ниже таблице указаны ссылки на разделы электронной документации по SQL Server, посвященные компоненту Service Broker и уведомлениям о запросах.  
   
- **Электронная документация по SQL Server**  
+ **Документация по SQL Server**  
   
--   [Создание запроса для уведомлений](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Создание запроса для уведомлений](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Вопросы безопасности для компонента Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Вопросы безопасности для компонента Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Безопасность и защита (компонент Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Безопасность и защита (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Вопросы безопасности для служб уведомления](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Вопросы безопасности для служб уведомления](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Разрешения уведомления о запросе](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Разрешения уведомления о запросе](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Вопросы международного использования компонента Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Вопросы международного использования компонента Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Вопросы проектирования решений (компонент Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Вопросы проектирования решений (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Справочный центр разработчика службы Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Справочный центр разработчика службы Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Руководство разработчика (компонент Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Руководство разработчика (компонент Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Включение уведомлений о запросах для запуска примеров кода  
  Чтобы включить компонент Service Broker на **AdventureWorks** базы данных с помощью SQL Server Management Studio, выполните следующую инструкцию Transact-SQL:  

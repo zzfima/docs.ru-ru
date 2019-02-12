@@ -2,12 +2,12 @@
 title: Примеры запросов
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211870"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093766"
 ---
 # <a name="query-examples"></a>Примеры запросов
 В этом разделе Примеры Visual Basic и C# обычно [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов. Разработчики, использующие Visual Studio можно найти много примеров в образце решения, представленном в разделе примеров. Дополнительные сведения см. в разделе [примеры](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -65,8 +65,11 @@ ms.locfileid: "44211870"
  Содержит примеры сочетания `select` с другими компонентами (например, *анонимные типы*) для создания проекций запросов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о стандартных операторах запроса](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- Содержит основные сведения о стандартных операторах запроса.  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Поясняет понятие стандартных операторов запросов с помощью C#.  
+  
+ [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Поясняет понятие стандартных операторов запросов с помощью Visual Basic.  
   
  [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Содержит описание использования [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] принципов, применимых к запросам.  

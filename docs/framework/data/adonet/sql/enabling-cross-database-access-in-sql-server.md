@@ -2,12 +2,12 @@
 title: Организация межбазового доступа в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596882"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093857"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Организация межбазового доступа в SQL Server
 Межбазовые цепочки владения возникают, когда процедура в одной базе данных зависит от объектов в другой базе данных. Межбазовая цепочка владения работает так же, как цепочка владения внутри единой базы данных, но для непрерывной цепочки владения необходимо, чтобы все владельцы объекта были сопоставлены с одной учетной записью входа. Если одна учетная запись входа является владельцем исходного объекта в исходной базе данных и целевых объектов в целевых базах данных, то SQL Server не проверяет наличие разрешений в целевых объектах.  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Ресурс|Описание:|  
 |--------------|-----------------|  
-|[Расширение олицетворения базы данных с помощью инструкции EXECUTE AS](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) и [параметр Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)электронная документация по SQL Server.|Разделы описывают, как настроить межбазовые цепочки владения для экземпляра SQL Server.|  
+|[Расширение олицетворения базы данных с помощью инструкции EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) и [параметр Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Статьи описывают, как настроить межбазовые цепочки владения для экземпляра SQL Server.|  
   
 ## <a name="see-also"></a>См. также
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

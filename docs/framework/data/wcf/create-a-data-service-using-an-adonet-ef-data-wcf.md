@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
+title: Как выполнить  Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 294c579c366c1abf0b9a328f7480d1b29e2cb8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675605"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093103"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Как выполнить Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Как выполнить  Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
 
-Службы данных WCF предоставляет данные сущности в виде службы данных. Эти данные сущностей предоставляется [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] когда источником данных является реляционной базы данных. В этом разделе показано, как создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-на основе модели данных в Visual Studio веб-приложения, основанную на существующей базы данных и использовать эту модель данных для создания новой службы данных.
+Службы данных WCF предоставляет данные сущности в виде службы данных. Эти данные сущностей предоставляются [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], если источником данных является реляционная база данных. В этом разделе показано, как создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-на основе модели данных в Visual Studio веб-приложения, основанную на существующей базы данных и использовать эту модель данных для создания новой службы данных.
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Также предоставляет средство командной строки, позволяющее создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] модели за пределами проекта Visual Studio. Дополнительные сведения см. в разделе [Как Использование EdmGen.exe для создания файлов модели и сопоставления](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
@@ -45,7 +45,8 @@ ms.locfileid: "54675605"
 
 9. Нажмите кнопку **Готово** завершите работу мастера.
 
-     При этом создается модель данных по умолчанию на основе указанной базы данных. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] позволяет настроить модель данных. Дополнительные сведения см. в разделе [Задачи](https://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).
+     При этом создается модель данных по умолчанию на основе указанной базы данных. 
+  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] позволяет настроить модель данных. Дополнительные сведения см. в разделе [задачи средств модели данных Entity](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Создание службы данных с использованием новой модели данных
 

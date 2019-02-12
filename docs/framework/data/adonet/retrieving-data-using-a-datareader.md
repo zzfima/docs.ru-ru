@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083851"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093285"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Для получения данных с помощью **DataReader**, создайте экземпляр **команда** объекта, а затем создайте **DataReader** путем вызова **Command.ExecuteReader**  для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий процедурам последовательно обрабатывать результаты из источника данных. **DataReader** хорошо подходит при извлечении больших объемов данных, поскольку данные не кэшируются в памяти.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Чтобы избежать **OverflowException**, рекомендуется также производить преобразования из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в <xref:System.Data.DataRow>. Можно использовать <xref:System.Data.Common.DataAdapter.FillError> событий на предмет **OverflowException** произошла. Дополнительные сведения о <xref:System.Data.Common.DataAdapter.FillError> событий, см. в разделе [обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>См. также
-- [Работа с объекты DataReader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

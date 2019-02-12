@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198157"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091725"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Данные и модели в .NET Framework
 Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.  
@@ -20,8 +20,11 @@ ms.locfileid: "44198157"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.  
   
- [Портал LINQ](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- Содержит ссылки на важную документацию по LINQ.  
+ [LINQ](../../csharp/programming-guide/concepts/linq/index.md)  
+ Ссылки на соответствующую документацию по использованию Language Integrated Query (LINQ) C#.  
+  
+ [Синтаксис LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Ссылки на соответствующую документацию для Language Integrated Query (LINQ) с помощью Visual Basic.  
   
  [Обработка транзакций](../../../docs/framework/data/transactions/index.md)  
  Обсуждение поддержки транзакций в .NET Framework.  

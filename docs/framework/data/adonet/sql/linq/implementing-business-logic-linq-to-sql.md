@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496094"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093974"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Реализация бизнес-логики (LINQ to SQL)
 Термин "бизнес-логика" в данном разделе относится к любым пользовательским правилам или проверкам, которые применяются к данным перед их вставкой, обновлением или удалением в базе данных. Бизнес-логику также иногда называют терминами "бизнес-правила" или "логика домена". В многоуровневых приложениях бизнес-логика реализуется в виде логического уровня, и ее можно изменять независимо от уровня представления данных или уровня доступа к данным. Бизнес-логика может вызываться уровнем доступа к данным перед обновлением, вставкой или удалением данных в базе данных или после выполнения этих операций.  
@@ -181,10 +181,10 @@ partial class Customer
   
  [Пошаговое руководство: Настройка операций вставки, обновления и удаления в классах сущностей](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Пошаговое руководство: Добавление проверки в классы сущностей](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [Пошаговое руководство: Добавление проверки в классы сущностей](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>См. также
-- [Разделяемые классы и методы](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Разделяемые классы и методы](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Разделяемые методы](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

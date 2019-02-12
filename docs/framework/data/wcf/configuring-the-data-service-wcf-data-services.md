@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614361"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092557"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
 С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует поставщики данных для представления данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "54614361"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|  
   
- <sup>1</sup> в этом примере `Address` представляет свойство сложного типа `Customers` сущность, которая имеет свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. Если модель данных определяется с помощью поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], такой сложный тип можно определить с помощью средств модели [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [Как Создавать и изменять сложные типы](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> в этом примере `Address` представляет свойство сложного типа `Customers` сущность, которая имеет свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. Если модель данных определяется с помощью поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], такой сложный тип можно определить с помощью средств модели [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [Как Создавать и изменять сложные типы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> этот универсальный код Ресурса поддерживается в том случае, если свойство, возвращающее большой двоичный объект (BLOB) определяется как ресурса мультимедиа, принадлежащего сущности, который является ссылкой на носитель, который в данном случае является `Customers`. Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

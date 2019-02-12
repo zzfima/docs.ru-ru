@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: bee0cf4a1fcd70274ff8c1107a35ec3501ef2249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563643"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093090"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание службы WCF Data Services
 
@@ -55,7 +55,7 @@ ms.locfileid: "54563643"
 
     -   Доступ к этому серверу возможен только с локального компьютера.
 
-    -   Этот сервер прослушивает `localhost` и указанный порт, отличный от порта 80, который по умолчанию настроен для HTTP-сообщений. Дополнительные сведения см. в разделе [Веб-серверы в Visual Studio для веб-проектов ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).
+    -   Этот сервер прослушивает `localhost` и указанный порт, отличный от порта 80, который по умолчанию настроен для HTTP-сообщений. Дополнительные сведения см. в разделе [Веб-серверы в Visual Studio для веб-проектов ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
     -   На этом сервере служба данных работает в контексте текущей учетной записи пользователя. Например при запуске пользователя уровня администратора служба данных, работающая в Visual Studio Development Server будет иметь права уровня администратора. Это может обеспечить службе данных доступ к ресурсам, для которых у нее не будет прав после развертывания на сервере служб IIS.
 
@@ -82,7 +82,7 @@ ms.locfileid: "54563643"
 
 -   При отладке службы данных, можно получить дополнительные сведения об ошибке из службы данных, чем во время простой операции. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в публикации [Debugging WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Можно также включить трассировку в WCF для просмотра исключений, созданных в уровень обмена сообщениями HTTP. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Службы данных обычно разрабатывается как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проект приложения, но вы также можете создать службу данных как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта веб-сайта в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [NIB: Проекты веб-приложений и проектами веб-сайтов в Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Службы данных обычно разрабатывается как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проект приложения, но вы также можете создать службу данных как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта веб-сайта в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [проектами веб-приложения веб-сайта в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
 -   При создании службы данных с помощью **Добавление нового элемента** диалоговое окно в Visual Studio, службы данных управляется [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] в службах IIS. Несмотря на то что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и IIS используются для размещения службы данных по умолчанию, поддерживаются и другие варианты размещения. Дополнительные сведения см. в разделе [размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -96,19 +96,19 @@ ms.locfileid: "54563643"
 
     -   **Технологии развертывания для веб-приложений ASP.NET**
 
-        -   [Пакет веб-развертывания](https://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)
+        -   [Практическое руководство. Создать пакет веб-развертывания в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [Публикация одним щелчком](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
+        -   [Практическое руководство. Развертывание веб-публикации проекта с помощью одним щелчком в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
     -   **Технологии развертывания для веб-узлов ASP.NET**
 
-        -   [Средство копирования веб-узлов](https://msdn.microsoft.com/library/b819aed4-014b-427e-be80-02317b1bb003)
+        -   [Практическое руководство. Скопируйте файлы веб-сайта с помощью средства копирования веб-сайта](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [Средство публикации веб-узлов](https://msdn.microsoft.com/library/d0a1a20f-15be-4940-9485-cb8e4aa8181b)
+        -   [Практическое руководство. Публикация веб-сайтов](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [XCopy](https://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)
+        -   [Пошаговое руководство: Развертывание веб-приложения ASP.NET с помощью XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     Дополнительные сведения о вариантах развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
+     Дополнительные сведения о вариантах развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
     > Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Дополнительные сведения см. в разделе [Как Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
@@ -121,7 +121,7 @@ ms.locfileid: "54563643"
 
 При разработке службы данных необходимо учитывать следующее:
 
--   При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создавать скрипты (SQL-файлы) для этого в целевой базе данных, и эти скрипты могут быть включены в пакет развертывания веб- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения. Дополнительные сведения см. в разделе [Как Развертывание базы данных для проекта веб-приложения](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта, это можно сделать помощью **мастер публикации баз данных** в Visual Studio. Для получения дополнительной информации см. [развертывание базы данных с помощью мастера публикации баз данных](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7). 
+-   При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создавать скрипты (SQL-файлы) для этого в целевой базе данных, и эти скрипты могут быть включены в пакет развертывания веб- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения. Дополнительные сведения см. в разделе [Как Развертывание базы данных для проекта веб-приложения](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта, это можно сделать помощью **мастер публикации баз данных** в Visual Studio. Дополнительные сведения см. в разделе [публикации базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 -   Поскольку службы данных WCF включает в себя базовую реализацию WCF, можно использовать Windows Server AppFabric для наблюдения за службой данных, развернутой в службах IIS, под управлением Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для наблюдения за службами данных см. в публикации [Tracking WCF Data Services with Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

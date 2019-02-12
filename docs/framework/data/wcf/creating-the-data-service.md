@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772745"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091829"
 ---
 # <a name="create-the-data-service"></a>Создание службы данных
 
@@ -52,7 +52,7 @@ ms.locfileid: "43772745"
 
 5. Подключите модель данных в базу данных, выполнив одно из следующих действий, а затем нажмите кнопку **Далее**:
 
-    -   Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [как: создание подключений к базам данных SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
+    -   Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [Как Создание подключений к базам данных SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
 
          \- или -
 
@@ -103,4 +103,4 @@ ms.locfileid: "43772745"
 
 ## <a name="see-also"></a>См. также
 
-- [Средства модели EDM ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Средства модели EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
