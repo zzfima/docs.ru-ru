@@ -1,24 +1,24 @@
 ---
-title: Прогнозирование платы за проезд в такси в Нью-Йорке с помощью алгоритма обучения регрессии с использованием ML.NET
+title: Прогнозирование платы с помощью алгоритма обучения регрессии с использованием ML.NET
 description: Прогнозирование платы с помощью алгоритма обучения регрессии с использованием ML.NET.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333789"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828401"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Учебник. Прогнозирование платы за проезд в такси в Нью-Йорке с помощью алгоритма обучения регрессии с использованием ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Учебник. Прогнозирование платы с помощью алгоритма обучения регрессии с использованием ML.NET
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-В этом руководства описано, как с помощью ML.NET создать [модель регрессии](../resources/glossary.md#regression) для прогнозирования платы за проезд в такси в городе Нью-Йорк.
+В этом руководстве описано, как с помощью ML.NET создать [модель регрессии](../resources/glossary.md#regression) для прогнозирования цен, особенно платы за проезд в такси в городе Нью-Йорке.
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]

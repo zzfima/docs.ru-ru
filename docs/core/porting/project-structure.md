@@ -2,20 +2,20 @@
 title: Организация проектов для .NET Framework и .NET Core
 description: Эта статья поможет владельцам проектов, которые хотят скомпилировать свое решение одновременно для .NET Framework и .NET Core.
 author: conniey
-ms.date: 04/06/2017
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498665"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904026"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Организация проекта для параллельной поддержки .NET Framework и .NET Core
 
 Узнайте, как создать решение, которое выполняет параллельную сборку для .NET Framework и .NET Core. Изучите несколько вариантов организации проектов, которые могут помочь вам достичь этой цели. Ниже приводится несколько типичных сценариев, которые следует принять во внимание при выборе способа компоновки проекта с помощью .NET Core. Этот список может охватывать не все необходимые случаи. Устанавливайте приоритеты в зависимости от потребностей вашего проекта.
 
-* [**Объединение существующих проектов и проектов .NET Core в единые проекты**][option-csproj]
+* [**Объединение существующих проектов и проектов .NET Core в единые проекты**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *Преимущества*
   * Упрощение процесса сборки благодаря компиляции одного, а не нескольких проектов, каждый из которых предназначен для отдельной версии .NET Framework или платформы.
@@ -26,7 +26,7 @@ ms.locfileid: "54498665"
   *Неподдерживаемые сценарии*
   * Для открытия существующих проектов разработчики должны использовать Visual Studio 2017. Для поддержки предыдущих версий Visual Studio лучше [хранить файлы проектов в разных папках](#support-vs).
 
-* <a name="support-vs"></a>[**Разделение существующих и новых проектов .NET Core**][option-csproj-folder]
+* <a name="support-vs"></a>[**Разделение существующих и новых проектов .NET Core**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Преимущества*
   * Продолжение работы над существующими проектами для разработчиков и участников, у которых нет Visual Studio 2017.
@@ -36,9 +36,9 @@ ms.locfileid: "54498665"
 
 Рассмотрим показанный ниже репозиторий.
 
-![Существующий проект][example-initial-project]
+![Существующий проект](media/project-structure/project.png)
 
-[**Исходный код**][example-initial-project-code]
+[**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
 В зависимости от ограничений и сложности существующих проектов добавить поддержку .NET Core для этого репозитория можно несколькими способами, которые описаны ниже.
 
@@ -46,21 +46,21 @@ ms.locfileid: "54498665"
 
 Измените файлы в репозитории, удалив все существующие файлы *\*.csproj* и создав единственный файл *\*.csproj*, предназначенный для нескольких платформ. Это удобно по той причине, что один проект можно компилировать для разных платформ. Это также позволяет управлять различными параметрами компиляции и зависимостями для каждой целевой платформы.
 
-![Создание файла CSPROJ, предназначенного для нескольких платформ][example-csproj]
+![Создание файла CSPROJ, предназначенного для нескольких платформ](media/project-structure/project.csproj.png)
 
-[**Исходный код**][example-csproj-code]
+[**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
 Обратите внимание на следующие изменения:
 
-* Замена файлов *packages.config* и *\*.csproj* на новый файл [.NET Core*\*.csproj*][example-csproj-netcore]. Пакеты NuGet указываются с помощью `<PackageReference> ItemGroup`.
+* Замена файлов *packages.config* и *\*.csproj* на новый файл [.NET Core*\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Пакеты NuGet указываются с помощью `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Сохранение существующих проектов и создание проекта .NET Core
 
 При наличии существующих проектов, предназначенных для более старых платформ, можно оставить эти проекты без изменения и использовать проект .NET Core для новых платформ.
 
-![Проект .NET Core с существующим проектом в другой папке][example-csproj-different-folder]
+![Проект .NET Core с существующим проектом в другой папке](media/project-structure/project.csproj.different.png)
 
-[**Исходный код**][example-csproj-different-code]
+[**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
 Обратите внимание на следующие изменения:
 
@@ -69,18 +69,4 @@ ms.locfileid: "54498665"
 
 ## <a name="see-also"></a>См. также
 
-* Дополнительные указания по переходу на .NET Core [документации по переходу на .NET Core][porting-doc].
-
-[porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png "Существующий проект"
-[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
-
-[example-csproj]: media/project-structure/project.csproj.png "Создание файла CSPROJ, предназначенного для нескольких платформ"
-[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
-
-[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Проект .NET Core с существующей библиотекой PCL в другой папке"
-[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
-
-[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
-[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project
+Дополнительные указания по переходу на .NET Core см. в [документации по переходу на .NET Core](index.md).

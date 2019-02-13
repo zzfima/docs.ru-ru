@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086768"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739466"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -47,9 +47,6 @@ ms.locfileid: "44086768"
  [Реализация наследования с использованием COM-объектов](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  В этом пошаговом руководстве описывается использование Visual Basic 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в Visual Basic.  
   
- [Многопоточность](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- В этом пошаговом руководстве описывается создание многопоточного приложения, которое выполняет поиск заданного слова в текстовом файле.  
-  
  [Определение места записи сведений для My.Application.Log](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  В этом пошаговом руководстве описываются параметры `My.Application.Log` по умолчанию и способ определения параметров для приложения.  
   
@@ -80,5 +77,5 @@ ms.locfileid: "44086768"
  [Сохранение объекта в Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.  
   
- [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Пошаговое руководство: основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  В этом пошаговом руководстве описывается разработка типа "Сначала тест", при которой разработчик сначала пишет модульные тесты, а затем исходный код для их успешного выполнения.

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502185"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903510"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Обработка XML-данных с помощью LINQ to XML
 LINQ to XML - новая модель для обработки XML-данных в платформе .NET Framework версии 3.5. С помощью LINQ to XML разработчик может выполнять над XML-данными любые операции: запросы, изменения, создание, сохранение и сериализацию XML-документов. Основные преимущества заключаются в возможностях запросов и создания.  
@@ -19,7 +19,7 @@ LINQ to XML - новая модель для обработки XML-данных
   
  В LINQ to XML используется технология интегрированного в язык запроса (LINQ) на платформе .NET Framework версии 3.5. LINQ расширяет синтаксис C# и Visual Basic, обеспечивая мощные возможности запросов, которые потенциально могут охватить любое хранилище данных.  
   
- См. дополнительные сведения об использовании [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), а также общие сведения о [платформе LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Подробное описание использования см. в разделе [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Общие сведения о платформе LINQ см. в разделе [LINQ — C#](../../../csharp/programming-guide/concepts/linq/index.md) или [LINQ — Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
 ## <a name="see-also"></a>См. также
 

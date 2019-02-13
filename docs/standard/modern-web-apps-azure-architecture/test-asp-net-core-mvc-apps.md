@@ -3,20 +3,20 @@ title: Тестирование приложений MVC ASP.NET Core
 description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Тестирование приложений MVC ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154207"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827556"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Тестирование приложений MVC ASP.NET Core
 
 > *"Если вы не хотите выполнять модульное тестирование своего продукта, ваши заказчики также вряд ли захотят делать это".*
  > \_ -Аноним-
 
-В ответ на изменения в программном обеспечении любой сложности могут возникать самые непредвиденные ошибки. Соответственно, после внесения изменений для любых приложений, за исключением самых простых или наименее важных, необходимо проводить тестирование. Тестирование вручную является самым медленным, наименее надежным и наиболее дорогим способом проверить программное обеспечение. К сожалению, если возможность тестирования не заложена в приложение на этапе проектирования, это может быть единственный доступный способ. Приложения, при написании которых соблюдались изложенные в главе X архитектурные принципы, а также приложения ASP.NET Core поддерживают автоматические интеграционные и функциональные тесты.
+В ответ на изменения в программном обеспечении любой сложности могут возникать самые непредвиденные ошибки. Соответственно, после внесения изменений для любых приложений, за исключением самых простых или наименее важных, необходимо проводить тестирование. Тестирование вручную является самым медленным, наименее надежным и наиболее дорогим способом проверить программное обеспечение. К сожалению, если возможность тестирования не заложена в приложение на этапе проектирования, это может быть единственный доступный способ. Приложения, при написании которых соблюдались изложенные в [главе 4](architectural-principles.md) архитектурные принципы, а также приложения ASP.NET Core поддерживают автоматические интеграционные и функциональные тесты.
 
 ## <a name="kinds-of-automated-tests"></a>Виды автоматических тестов
 
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Модульное тестирование этого метода затруднено из-за наличия прямой зависимости от System.IO.File, который используется для чтения из файловой системы. Вы можете проверить корректность поведения этого метода, однако для тестирования работы с реальными файлами вам потребуются интеграционные тесты. Следует отметить, что вы не сможете протестировать маршрут этого метода. О том, как можно сделать это, вы узнаете вскоре из описания функционального теста.
+Модульное тестирование этого метода затруднено из-за наличия прямой зависимости от System.IO.File, который используется для чтения из файловой системы. Вы можете проверить корректность поведения этого метода, однако для тестирования работы с реальными файлами вам потребуются интеграционные тесты. Следует отметить, что вы не сможете провести модульные тесты для маршрута этого метода. О том, как можно сделать это, вы узнаете вскоре из описания функционального теста.
 
 Что следует проверять, если вы не можете напрямую протестировать поведение файловой системы или маршрут с помощью модульного теста? После рефакторинга, который позволит провести модульное тестирование, вы можете заметить отсутствие некоторых тестовых случаев и функционального поведения, например обработки ошибок. Что делает метод в том случае, если файл не найден? Что он должен делать в такой ситуации? В этом примере после рефакторинга метод будет выглядеть следующим образом:
 
@@ -171,53 +171,15 @@ public IActionResult GetImage(int id)
 
 В качестве зависимостей внедряются \_logger и \_imageService. После этого вы можете проверить, что в \_imageService передается тот же идентификатор, который был передан в метод действия, а полученное число байтов возвращается в FileResult. Также вы можете проверить правильность ведения журнала ошибок, то есть регистрацию результата NotFound в случае отсутствия изображения, поскольку это поведение можно отнести к важным функциям приложения (то есть это не просто временный код, который разработчик добавляет для диагностики проблем). Реальная логика файла вынесена в отдельную службу реализации и дополнена таким образом, чтобы возвращать специфичное для приложения исключение в том случае, если файл не найден. Эту реализацию можно проверить отдельно с помощью интеграционного теста.
 
+В большинстве случаев стоит использовать обработчики глобальных исключений в контроллерах, чтобы объем логики в них был минимальным и модульное тестирование не требовалось. Вы должны выполнить большую часть тестирования действий контроллера с помощью функциональных тестов и класса `TestServer`, как описано ниже.
+
 ## <a name="integration-testing-aspnet-core-apps"></a>Интеграционное тестирование приложений ASP.NET Core
 
-Чтобы проверить корректность работы службы LocalFileImageService с помощью интеграционного теста, вам необходимо создать известный тестовый файл изображения и убедиться, что служба возвращает его при вводе соответствующих данных. Обратите внимание, что не следует использовать макеты объектов для поведения, которое вы хотите проверить (в этом случае считывание из файловой системы). Тем не менее макеты объектов по-прежнему могут быть полезны при настройке интеграционных тестов. В этом случае вы можете создать макет IHostingEnvironment таким образом, чтобы его атрибут ContentRootPath указывал на папку, которая будет использоваться для тестового изображения. Полностью рабочий класс интеграционного теста показан здесь:
-
-```csharp
-public class LocalFileImageServiceGetImageBytesById
-{
-    private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
-    private readonly Mock<IHostingEnvironment> _mockEnvironment = new Mock<IHostingEnvironment>();
-    private int _testImageId = 123;
-    private string _testFileName = "123.png";
-
-    public LocalFileImageServiceGetImageBytesById()
-    {
-        // create folder if necessary
-        Directory.CreateDirectory(Path.Combine(GetFileDirectory(), "Pics"));
-        string filePath = GetFilePath(_testFileName);
-        System.IO.File.WriteAllBytes(filePath, _testBytes);
-        _mockEnvironment.SetupGet<string>(m => m.ContentRootPath).Returns(GetFileDirectory());
-    }
-
-    private string GetFilePath(string fileName)
-    {
-        return Path.Combine(GetFileDirectory(), "Pics", fileName);
-        }
-            private string GetFileDirectory()
-        {
-        var location = System.Reflection.Assembly.GetEntryAssembly().Location;
-        return Path.GetDirectoryName(location);
-    }
-
-    [Fact]
-    public void ReturnsFileContentResultGivenValidId()
-    {
-        var fileService = new LocalFileImageService(_mockEnvironment.Object);
-        var result = fileService.GetImageBytesById(_testImageId);
-        Assert.Equal(_testBytes, result);
-    }
-}
-```
-
-> [!NOTE]
-> Этот тест сам по себе очень прост: основная часть кода настраивает систему для создания инфраструктуры тестирования (в этом случае создается файл, который будет считываться с диска). Это характерно для интеграционных тестов, которые зачастую требуют более тщательной настройки по сравнению с модульными тестами.
+Большая часть интеграционных тестов в приложениях ASP.NET Core должны работать со службами и другими типами реализации, определенными в проекте инфраструктуры. Лучший способ проверить, правильно ли работает проект ASP.NET Core MVC, — с помощью функциональных тестов, выполняемых при работе приложения на тестовом узле. В разделе "Тестирование интеграции" выше показан пример интеграционного тестирования класса доступа к данным.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Функциональное тестирование приложений ASP.NET Core
 
-Для удобства функционального тестирования приложений ASP.NET Core используется класс TestServer. Вы настраиваете TestServer с помощью WebHostBuilder напрямую (так же, как вы обычно это делаете для приложения), или с использованием типа WebApplicationFactory (доступно в версии 2.1). Тестовый узел должен максимально соответствовать рабочему узлу, чтобы при тестировании приложение вело себя так же, как в рабочей среде. Класс WebApplicationFactory помогает настраивать каталог ContentRoot на сервере TestServer, который используется платформой ASP.NET Core для поиска статических ресурсов, таких как представления.
+Для удобства функционального тестирования приложений ASP.NET Core используется класс `TestServer`. Вы настраиваете `TestServer` с помощью `WebHostBuilder` напрямую (как обычно для приложения) или с помощью типа `WebApplicationFactory` (доступно начиная с версии 2.1). Тестовый узел должен максимально соответствовать рабочему узлу, чтобы при тестировании приложение вело себя так же, как в рабочей среде. Класс `WebApplicationFactory` помогает настраивать каталог ContentRoot на сервере TestServer, который используется платформой ASP.NET Core для поиска статических ресурсов, таких как представления.
 
 Можно создать простые функциональные тесты, создав тестовый класс, который реализует IClassFixture\<WebApplicationFactory\<TEntry>>, где TEntry — это класс запуска веб-приложения. После этого ваше средство тестирования может создать клиента с помощью метода фабрики CreateClient:
 
@@ -238,19 +200,19 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 Как правило, необходимо выполнить дополнительную конфигурацию сайта перед запуском каждого теста, например, настроить приложение, чтобы оно использовало выполняющееся в памяти хранилище данных, а затем заполнилось тестовыми данными. Для этого создайте собственный подкласс WebApplicationFactory<TEntry> и переопределите его метод ConfigureWebHost. Приведенный ниже пример взят из проекта eShopOnWeb FunctionalTests и используется как часть тестов в главном веб-приложении.
 
 ```cs
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.eShopWeb;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.eShopWeb.Infrastructure.Data;
+using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.eShopWeb.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.Identity;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 {
-    public class CustomWebRazorPagesApplicationFactory<TStartup>
+    public class CustomWebApplicationFactory<TStartup>
     : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
@@ -262,7 +224,7 @@ namespace FunctionalTests.WebRazorPages
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -288,7 +250,7 @@ namespace FunctionalTests.WebRazorPages
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebRazorPagesApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -310,19 +272,20 @@ namespace FunctionalTests.WebRazorPages
 }
 ```
 
-Тесты могут использовать эту пользовательскую фабрику WebApplicationFactory, чтобы с ее помощью создать клиент, а затем делать запросы к приложению, используя этот экземпляр клиента. Приложение заполнится данными, которые можно использовать в утверждениях теста. Этот тест проверяет, что домашняя страница приложения eShopOnWeb Razor Pages правильно загружается и содержит список продуктов, который был добавлен в приложение при заполнении данными.
+Тесты могут использовать эту пользовательскую фабрику WebApplicationFactory, чтобы с ее помощью создать клиент, а затем делать запросы к приложению, используя этот экземпляр клиента. Приложение заполнится данными, которые можно использовать в утверждениях теста. Следующий тест проверяет, что домашняя страница приложения eShopOnWeb правильно загружается и содержит список продуктов, который был добавлен в приложение при заполнении данными.
 
 ```cs
-using Microsoft.eShopWeb.RazorPages;
+using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
+using Microsoft.eShopWeb.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebRazorPagesApplicationFactory<Startup>>
+    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
     {
-        public HomePageOnGet(CustomWebRazorPagesApplicationFactory<Startup> factory)
+        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
         {
             Client = factory.CreateClient();
         }
@@ -338,7 +301,7 @@ namespace FunctionalTests.WebRazorPages
             var stringResponse = await response.Content.ReadAsStringAsync();
 
             // Assert
-            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse); // from seed data
+            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse);
         }
     }
 }

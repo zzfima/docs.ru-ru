@@ -3,13 +3,13 @@ title: Работа с данными в приложениях ASP.NET Core
 description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Работа с данными в приложениях ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532686"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827179"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Можно включить несколько отношений, а также вложенные отношения с помощью ThenInclude. EF Core выполнит один запрос для извлечения результирующего набора сущностей.
+Можно включить несколько отношений, а также вложенные отношения с помощью ThenInclude. EF Core выполнит один запрос для извлечения результирующего набора сущностей. Кроме того, вы можете включить свойства навигации, передав строку с разделением "." в метод расширения `.Include()` следующим образом:
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+Помимо инкапсуляции логики фильтрации, эта спецификация может указывать форму возвращаемых данных, включая свойства, которые следует заполнить. Пример приложения eShopOnWeb содержит несколько спецификаций, которые демонстрируют сведения об инкапсулирующей безотложной загрузке в спецификации. Вы видите, как спецификация используется в рамках запроса:
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 Также для загрузки связанных данных можно использовать _явную загрузку_. Явная загрузка позволяет загружать дополнительные данные в уже извлеченную сущность. Поскольку для этого требуется дополнительный запрос к базе данных, такой подход не рекомендуется для веб-приложений, в которых необходимо свести к минимуму число обращений к базе данных в рамках одного запроса.
 
 _Отложенная загрузка_ позволяет автоматически загружать данные в тот момент, когда на них ссылается приложение. В EF Core добавлена поддержка отложенной загрузки в версии 2.1. Отложенная загрузка не включена по умолчанию и требует установки `Microsoft.EntityFrameworkCore.Proxies`. Как и явная загрузка, отложенная загрузка обычно отключена для веб-приложений, так как ее использование приведет к дополнительным запросам к базе данных в пределах каждого веб-запроса. К сожалению, издержки, связанные с отложенной загрузкой, часто незаметны во время разработки, когда задержка маленькая и для тестирования используются небольшие наборы данных. Но в рабочей среде с большим количеством пользователей, данных и задержек запросы к базе данных могут приводить к снижению производительности для веб-приложений, где активно используется отложенная загрузка.
 
 [Предотвращение отложенной загрузки сущностей в веб-приложениях](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>Инкапсуляция данных
+
+EF Core поддерживает несколько функций, которые позволяют модели правильно инкапсулировать свое состояние. Распространенной проблемой моделей предметной области является то, что они предоставляют свойства навигации коллекции как общедоступные типы списка. Это позволяет любому участнику совместной работы управлять содержимым этих типов в коллекции. В результате могут обходиться важные бизнес-правила, связанные с коллекцией, из-за чего объект может оказаться в недопустимом состоянии. Решение заключается в предоставлении доступа только для чтения к связанным коллекциям и явном предоставлении методов, которые определяют возможные способы работы клиентов с этими коллекциями, как в этом примере:
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Обратите внимание, что этот тип сущности не предоставляет открытое свойство `List` или `ICollection`, но вместо этого предоставляет тип `IReadOnlyCollection`, который создает оболочку для базового типа списка. При использовании этого шаблона можно указать для Entity Framework Core использовать резервное поле следующим образом:
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Еще один способ улучшить модель предметной области — использовать объекты значений для типов, которым не хватает удостоверений и которые различаются только по своим свойствам. Использование таких типов в качестве свойств сущностей может помочь сохранить логику, присущую объекту значения, и избежать повторяющуюся логику между несколькими сущностями, использующими одну концепцию. В Entity Framework Core можно сохранить объекты значений в той же таблице, что и сущность-владелец, настроив тип в качестве принадлежащей сущности следующим образом:
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+В этом примере свойство `ShipToAddress` принадлежит типу `Address`. `Address` является объектом значения с несколькими свойствами, такими как `Street` и `City`. EF Core сопоставляет объект `Order` со своей таблицей, по одному столбцу на свойство `Address`, вставляя перед именем каждого столбца имя свойства. В этом примере таблица `Order` должна включать такие столбцы, как `ShipToAddress_Street` и `ShipToAddress_City`.
+
+[В EF Core 2.2 добавлена поддержка коллекций принадлежащих сущностей](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Устойчивые подключения
 

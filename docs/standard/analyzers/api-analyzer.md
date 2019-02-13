@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696888"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759136"
 ---
 # <a name="net-api-analyzer"></a>Анализатор .NET API
 
@@ -55,7 +55,7 @@ ms.locfileid: "34696888"
 
 ### <a name="suppressing-warnings-locally"></a>Локальное скрытие предупреждений
 
-Чтобы скрыть предупреждения локально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики*\<идентификатор диагностики>** > **в исходном коде**. Это действие добавляет в ваш исходный код директиву препроцессора [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) для определенной области. ![Снимок экрана с фрагментом кода, для которого #pragma отключает предупреждение](media/api-analyzer/suppress-in-source.jpg)
+Чтобы скрыть предупреждения локально, щелкните нужный элемент правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** > **Скрыть *идентификатор диагностики*\<идентификатор диагностики>** > **в исходном коде**. Это действие добавляет в ваш исходный код директиву препроцессора [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) для определенной области: ![снимок экрана с фрагментом кода, для которого #pragma отключает предупреждение](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Глобальное скрытие предупреждений
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>См. также
 
-* Запись блога [Знакомство с API анализатора](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
-* Демонстрационное видео [об анализаторе API](https://youtu.be/eeBEahYXGd0) на YouTube.
+- Запись блога [Знакомство с API анализатора](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Демонстрационное видео [об анализаторе API](https://youtu.be/eeBEahYXGd0) на YouTube.

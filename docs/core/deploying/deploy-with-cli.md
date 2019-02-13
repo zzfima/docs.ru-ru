@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504006"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826464"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Публикации приложений .NET Core с помощью интерфейса командной строки
 
@@ -38,11 +38,11 @@ ms.locfileid: "54504006"
 
 ## <a name="publishing-basics"></a>Основы публикации
 
-Параметр `<TargetFramework>` файла проекта указывает целевую платформу по умолчанию при публикации приложения. Можно изменить целевую платформу на любой допустимый [моникер целевой платформы (TFM)](../../standard/frameworks.md). Например, если проект использует `<TargetFramework>netcoreapp2.2</TargetFramework>`, создается двоичный файл, предназначенный для .NET Core 2.2. TFM, указанный в этом параметре, является целевым объектом по умолчанию, используемым командой [`dotnet publish`][dotnet-publish].
+Параметр `<TargetFramework>` файла проекта указывает целевую платформу по умолчанию при публикации приложения. Можно изменить целевую платформу на любой допустимый [моникер целевой платформы (TFM)](../../standard/frameworks.md). Например, если проект использует `<TargetFramework>netcoreapp2.2</TargetFramework>`, создается двоичный файл, предназначенный для .NET Core 2.2. TFM, указанный в этом параметре, является целевым объектом по умолчанию, используемым командой [`dotnet publish`](../tools/dotnet-publish.md).
 
 Если вам нужно охватить несколько платформ, можно задать в параметре `<TargetFrameworks>` несколько значений TFM, разделенных точками с запятой. Вы можете опубликовать одну из платформ с помощью команды `dotnet publish -f <TFM>`. Например, если вы используете `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` и запускаете `dotnet publish -f netcoreapp2.1`, создается двоичный файл, предназначенный для .NET Core 2.1.
 
-Если не указано иное, выходной каталог команды [`dotnet publish`][dotnet-publish] — `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Значение по умолчанию для режима **BUILD-CONFIGURATION** — **Отладка**, если с помощью параметра `-c` не задано иное. Например `dotnet publish -c Release -f netcoreapp2.1` публикует в `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Если не указано иное, выходной каталог команды [`dotnet publish`](../tools/dotnet-publish.md) — `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Значение по умолчанию для режима **BUILD-CONFIGURATION** — **Отладка**, если с помощью параметра `-c` не задано иное. Например `dotnet publish -c Release -f netcoreapp2.1` публикует в `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Если вы используете .NET Core SDK 3.0, режим публикации по умолчанию для приложений, нацеленных на .NET Core версии 2.1, 2.2 или 3.0, — это исполняемый файл, зависящий от платформы.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-При выполнении приложения ([`dotnet run`][dotnet-run]) получается следующий результат.
+При выполнении приложения ([`dotnet run`](../tools/dotnet-run.md)) отображается следующий результат:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ End Module
 
 - [Общие сведения о развертывании приложений для .NET Core](index.md)
 - [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

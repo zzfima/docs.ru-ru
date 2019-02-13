@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699510"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828518"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -99,7 +99,7 @@ ms.locfileid: "54699510"
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Использование платформы, не поддерживающей .NET Core
 
-Некоторые платформы Майкрософт и платформы сторонних поставщиков не поддерживают среду .NET Core. Например, для некоторых служб Azure, таких как Service Fabric Reliable Services с отслеживанием состояния и Service Fabric Reliable Actors, требуется среда .NET Framework. Некоторые другие службы предоставляют пакеты SDK, недоступные в среде .NET Core. Это временные обстоятельства, так как все службы Azure используют среду .NET Core. В то же время в качестве альтернативы клиентскому пакету SDK всегда можно использовать REST API.
+Некоторые платформы Майкрософт и платформы сторонних поставщиков не поддерживают среду .NET Core. Некоторые службы Azure предоставляют пакеты SDK, недоступные в среде .NET Core. Это временные обстоятельства, так как все службы Azure используют среду .NET Core. В то же время в качестве альтернативы клиентскому пакету SDK всегда можно использовать REST API.
 
 ## <a name="see-also"></a>См. также
 
