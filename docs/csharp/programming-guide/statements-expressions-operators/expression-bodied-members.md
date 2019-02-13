@@ -1,106 +1,98 @@
 ---
 title: Руководство по программированию на C#. Элементы, воплощающие выражения
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36f71352dca584c107af4f45850ce21bb016ba01
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238121"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826620"
 ---
-# <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="7f9ac-102">Члены, воплощающие выражения (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="7f9ac-102">Expression-bodied members (C# programming guide)</span></span>
-<span data-ttu-id="7f9ac-103">Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="7f9ac-104">Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="7f9ac-105">Определение тела выражения имеет следующий общий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="7f9ac-105">An expression body definition has the following general syntax:</span></span>
+# <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="36648-102">Члены, воплощающие выражения (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="36648-102">Expression-bodied members (C# programming guide)</span></span>
+
+<span data-ttu-id="36648-103">Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом.</span><span class="sxs-lookup"><span data-stu-id="36648-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="36648-104">Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения.</span><span class="sxs-lookup"><span data-stu-id="36648-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="36648-105">Определение тела выражения имеет следующий общий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="36648-105">An expression body definition has the following general syntax:</span></span>
 
 ```csharp
 member => expression;
 ```
 
-<span data-ttu-id="7f9ac-106">здесь *expression* является допустимым выражением.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-106">where *expression* is a valid expression.</span></span> 
+<span data-ttu-id="36648-106">здесь *expression* является допустимым выражением.</span><span class="sxs-lookup"><span data-stu-id="36648-106">where *expression* is a valid expression.</span></span>
 
-<span data-ttu-id="7f9ac-107">В C# 6 была представлена поддержка для определений тела выражений для методов и методов доступа Property Get. В C# 7.0 эта поддержка была расширена.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-107">Support for expression body definitions was introduced for methods and property get accessors in C# 6 and was expanded in C# 7.0.</span></span> <span data-ttu-id="7f9ac-108">Определения тела выражений можно использовать с членами типа, указанными в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-108">Expression body definitions can be used with the type members listed in the following table:</span></span> 
+<span data-ttu-id="36648-107">В C# 6 была представлена поддержка для определений тела выражений для методов и свойств только для чтения. В C# 7.0 эта поддержка была расширена.</span><span class="sxs-lookup"><span data-stu-id="36648-107">Support for expression body definitions was introduced for methods and read-only properties in C# 6 and was expanded in C# 7.0.</span></span> <span data-ttu-id="36648-108">Определения тела выражений можно использовать с членами типа, указанными в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="36648-108">Expression body definitions can be used with the type members listed in the following table:</span></span>
 
-|<span data-ttu-id="7f9ac-109">Член</span><span class="sxs-lookup"><span data-stu-id="7f9ac-109">Member</span></span>  |<span data-ttu-id="7f9ac-110">Поддерживается как...</span><span class="sxs-lookup"><span data-stu-id="7f9ac-110">Supported as of...</span></span> |
+|<span data-ttu-id="36648-109">Член</span><span class="sxs-lookup"><span data-stu-id="36648-109">Member</span></span>  |<span data-ttu-id="36648-110">Поддерживается как...</span><span class="sxs-lookup"><span data-stu-id="36648-110">Supported as of...</span></span> |
 |---------|---------|
-|[<span data-ttu-id="7f9ac-111">Метод</span><span class="sxs-lookup"><span data-stu-id="7f9ac-111">Method</span></span>](#methods)  |<span data-ttu-id="7f9ac-112">C# 6</span><span class="sxs-lookup"><span data-stu-id="7f9ac-112">C# 6</span></span> |
-|[<span data-ttu-id="7f9ac-113">Конструктор</span><span class="sxs-lookup"><span data-stu-id="7f9ac-113">Constructor</span></span>](#constructors)   |<span data-ttu-id="7f9ac-114">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="7f9ac-114">C# 7.0</span></span> |
-|[<span data-ttu-id="7f9ac-115">Метод завершения</span><span class="sxs-lookup"><span data-stu-id="7f9ac-115">Finalizer</span></span>](#finalizers)     |<span data-ttu-id="7f9ac-116">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="7f9ac-116">C# 7.0</span></span> |
-|[<span data-ttu-id="7f9ac-117">Property Get</span><span class="sxs-lookup"><span data-stu-id="7f9ac-117">Property Get</span></span>](#property-get-statements)  |<span data-ttu-id="7f9ac-118">C# 6</span><span class="sxs-lookup"><span data-stu-id="7f9ac-118">C# 6</span></span> |
-|[<span data-ttu-id="7f9ac-119">Property Set</span><span class="sxs-lookup"><span data-stu-id="7f9ac-119">Property Set</span></span>](#property-set-statements)  |<span data-ttu-id="7f9ac-120">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="7f9ac-120">C# 7.0</span></span> |
-|[<span data-ttu-id="7f9ac-121">Индексатор</span><span class="sxs-lookup"><span data-stu-id="7f9ac-121">Indexer</span></span>](#indexers)       |<span data-ttu-id="7f9ac-122">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="7f9ac-122">C# 7.0</span></span> |
+|[<span data-ttu-id="36648-111">Метод</span><span class="sxs-lookup"><span data-stu-id="36648-111">Method</span></span>](#methods)  |<span data-ttu-id="36648-112">C# 6</span><span class="sxs-lookup"><span data-stu-id="36648-112">C# 6</span></span> |
+|[<span data-ttu-id="36648-113">Свойство только для чтения</span><span class="sxs-lookup"><span data-stu-id="36648-113">Read-only property</span></span>](#read-only-properties)   |<span data-ttu-id="36648-114">C# 6</span><span class="sxs-lookup"><span data-stu-id="36648-114">C# 6</span></span>  |
+|[<span data-ttu-id="36648-115">Property</span><span class="sxs-lookup"><span data-stu-id="36648-115">Property</span></span>](#properties)  |<span data-ttu-id="36648-116">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="36648-116">C# 7.0</span></span> |
+|[<span data-ttu-id="36648-117">Конструктор</span><span class="sxs-lookup"><span data-stu-id="36648-117">Constructor</span></span>](#constructors)   |<span data-ttu-id="36648-118">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="36648-118">C# 7.0</span></span> |
+|[<span data-ttu-id="36648-119">Метод завершения</span><span class="sxs-lookup"><span data-stu-id="36648-119">Finalizer</span></span>](#finalizers)     |<span data-ttu-id="36648-120">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="36648-120">C# 7.0</span></span> |
+|[<span data-ttu-id="36648-121">Индексатор</span><span class="sxs-lookup"><span data-stu-id="36648-121">Indexer</span></span>](#indexers)       |<span data-ttu-id="36648-122">C# 7.0</span><span class="sxs-lookup"><span data-stu-id="36648-122">C# 7.0</span></span> |
 
-## <a name="methods"></a><span data-ttu-id="7f9ac-123">Методы</span><span class="sxs-lookup"><span data-stu-id="7f9ac-123">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="36648-123">Методы</span><span class="sxs-lookup"><span data-stu-id="36648-123">Methods</span></span>
 
-<span data-ttu-id="7f9ac-124">Метод, воплощающий выражение, состоит из одного выражения, возвращающего значение, тип которого соответствует возвращаемому типу метода, или методов, возвращающих `void`, который выполняет некоторые операции.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-124">An expression-bodied method consists of a single expression that returns a value whose type matches the method's return type, or, for methods that return `void`, that performs some operation.</span></span> <span data-ttu-id="7f9ac-125">Например, типы, переопределяющие метод <xref:System.Object.ToString%2A>, обычно содержат одно выражение, которое возвращает строковое представление текущего объекта.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-125">For example, types that override the <xref:System.Object.ToString%2A> method typically include a single expression that returns the string representation of the current object.</span></span> 
+<span data-ttu-id="36648-124">Метод, воплощающий выражение, состоит из одного выражения, возвращающего значение, тип которого соответствует возвращаемому типу метода, или методов, возвращающих `void`, который выполняет некоторые операции.</span><span class="sxs-lookup"><span data-stu-id="36648-124">An expression-bodied method consists of a single expression that returns a value whose type matches the method's return type, or, for methods that return `void`, that performs some operation.</span></span> <span data-ttu-id="36648-125">Например, типы, переопределяющие метод <xref:System.Object.ToString%2A>, обычно содержат одно выражение, которое возвращает строковое представление текущего объекта.</span><span class="sxs-lookup"><span data-stu-id="36648-125">For example, types that override the <xref:System.Object.ToString%2A> method typically include a single expression that returns the string representation of the current object.</span></span>
 
-<span data-ttu-id="7f9ac-126">В следующем примере определяется класс `Person`, который переопределяет метод <xref:System.Object.ToString%2A> с помощью определения тела выражения.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-126">The following example defines a `Person` class that overrides the <xref:System.Object.ToString%2A> method with an expression body definition.</span></span> <span data-ttu-id="7f9ac-127">Он также определяет метод `DisplayName`, который отображает имя в консоли.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-127">It also defines a `DisplayName` method that displays a name to the console.</span></span> <span data-ttu-id="7f9ac-128">Обратите внимание, что ключевое слово `return` не используется в определении тела выражения `ToString`.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-128">Note that the `return` keyword is not used in the `ToString` expression body definition.</span></span>
+<span data-ttu-id="36648-126">В следующем примере определяется класс `Person`, который переопределяет метод <xref:System.Object.ToString%2A> с помощью определения тела выражения.</span><span class="sxs-lookup"><span data-stu-id="36648-126">The following example defines a `Person` class that overrides the <xref:System.Object.ToString%2A> method with an expression body definition.</span></span> <span data-ttu-id="36648-127">Он также определяет метод `DisplayName`, который отображает имя в консоли.</span><span class="sxs-lookup"><span data-stu-id="36648-127">It also defines a `DisplayName` method that displays a name to the console.</span></span> <span data-ttu-id="36648-128">Обратите внимание, что ключевое слово `return` не используется в определении тела выражения `ToString`.</span><span class="sxs-lookup"><span data-stu-id="36648-128">Note that the `return` keyword is not used in the `ToString` expression body definition.</span></span>
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
-<span data-ttu-id="7f9ac-129">Дополнительные сведения см. в разделе [Методы (руководство по программированию на C#)](../classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-129">For more information, see [Methods (C# Programming Guide)](../classes-and-structs/methods.md).</span></span>
- 
-## <a name="constructors"></a><span data-ttu-id="7f9ac-130">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="7f9ac-130">Constructors</span></span>
+<span data-ttu-id="36648-129">Дополнительные сведения см. в разделе [Методы (руководство по программированию на C#)](../classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="36648-129">For more information, see [Methods (C# Programming Guide)](../classes-and-structs/methods.md).</span></span>
 
-<span data-ttu-id="7f9ac-131">Определение тела выражения для конструктора обычно состоит из одного выражения присваивания или вызова метода, который обрабатывает аргументы конструктора или инициализирует состояние экземпляра.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-131">An expression body definition for a constructor typically consists of a single assignment expression or a method call that handles the constructor's arguments or initializes instance state.</span></span> 
+## <a name="read-only-properties"></a><span data-ttu-id="36648-130">Свойства только для чтения</span><span class="sxs-lookup"><span data-stu-id="36648-130">Read-only properties</span></span>
 
-<span data-ttu-id="7f9ac-132">В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-132">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="7f9ac-133">Определение тела выражения присваивает аргумент свойству `Name`.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-133">The expression body definition assigns the argument to the `Name` property.</span></span>
+<span data-ttu-id="36648-131">Начиная с C# 6 определение тела выражения можно использовать для реализации свойства только для чтения.</span><span class="sxs-lookup"><span data-stu-id="36648-131">Starting with C# 6, you can use expression body definition to implement a read-only property.</span></span> <span data-ttu-id="36648-132">Для этого используйте следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="36648-132">To do that, use the following syntax:</span></span>
+
+```csharp
+PropertyType PropertyName => expression;
+```
+
+<span data-ttu-id="36648-133">В следующем примере определяется класс `Location`, свойство `Name` только для чтения которого реализуется как определение тела выражения, возвращающее значение закрытого поля `locationName`:</span><span class="sxs-lookup"><span data-stu-id="36648-133">The following example defines a `Location` class whose read-only `Name` property is implemented as an expression body definition that returns the value of the private `locationName` field:</span></span>
+
+[!code-csharp[expression-bodied-read-only-property](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
+
+<span data-ttu-id="36648-134">Дополнительные сведения о свойствах см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="36648-134">For more information about properties, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
+
+## <a name="properties"></a><span data-ttu-id="36648-135">Свойства</span><span class="sxs-lookup"><span data-stu-id="36648-135">Properties</span></span>
+
+<span data-ttu-id="36648-136">Начиная с C# 7.0 определения тела выражения можно использовать для реализации методов доступа `get` и `set` свойства.</span><span class="sxs-lookup"><span data-stu-id="36648-136">Starting with C# 7.0, you can use expression body definitions to implement property `get` and `set` accessors.</span></span> <span data-ttu-id="36648-137">В следующем примере показано, как это сделать:</span><span class="sxs-lookup"><span data-stu-id="36648-137">The following example demonstrates how to do that:</span></span>
+
+[!code-csharp[expression-bodied-property-get-set](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]
+
+<span data-ttu-id="36648-138">Дополнительные сведения о свойствах см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="36648-138">For more information about properties, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
+
+## <a name="constructors"></a><span data-ttu-id="36648-139">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="36648-139">Constructors</span></span>
+
+<span data-ttu-id="36648-140">Определение тела выражения для конструктора обычно состоит из одного выражения присваивания или вызова метода, который обрабатывает аргументы конструктора или инициализирует состояние экземпляра.</span><span class="sxs-lookup"><span data-stu-id="36648-140">An expression body definition for a constructor typically consists of a single assignment expression or a method call that handles the constructor's arguments or initializes instance state.</span></span>
+
+<span data-ttu-id="36648-141">В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*.</span><span class="sxs-lookup"><span data-stu-id="36648-141">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="36648-142">Определение тела выражения присваивает аргумент свойству `Name`.</span><span class="sxs-lookup"><span data-stu-id="36648-142">The expression body definition assigns the argument to the `Name` property.</span></span>
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-<span data-ttu-id="7f9ac-134">Дополнительные сведения см. в разделе [Конструкторы (руководство по программированию на C#)](../classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-134">For more information, see [Constructors (C# Programming Guide)](../classes-and-structs/constructors.md).</span></span>
+<span data-ttu-id="36648-143">Дополнительные сведения см. в разделе [Конструкторы (руководство по программированию на C#)](../classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="36648-143">For more information, see [Constructors (C# Programming Guide)](../classes-and-structs/constructors.md).</span></span>
 
-## <a name="finalizers"></a><span data-ttu-id="7f9ac-135">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="7f9ac-135">Finalizers</span></span>
+## <a name="finalizers"></a><span data-ttu-id="36648-144">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="36648-144">Finalizers</span></span>
 
-<span data-ttu-id="7f9ac-136">Определение тела выражения для метода завершения обычно содержит операторы очистки, например операторы, высвобождающие неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-136">An expression body definition for a finalizer typically contains cleanup statements, such as statements that release unmanaged resources.</span></span>
+<span data-ttu-id="36648-145">Определение тела выражения для метода завершения обычно содержит операторы очистки, например операторы, высвобождающие неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="36648-145">An expression body definition for a finalizer typically contains cleanup statements, such as statements that release unmanaged resources.</span></span>
 
-<span data-ttu-id="7f9ac-137">В следующем примере определяется метод завершения, который использует определение тела выражения для указания того, что был вызван метод завершения.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-137">The following example defines a finalizer that uses an expression body definition to indicate that the finalizer has been called.</span></span>
+<span data-ttu-id="36648-146">В следующем примере определяется метод завершения, который использует определение тела выражения для указания того, что был вызван метод завершения.</span><span class="sxs-lookup"><span data-stu-id="36648-146">The following example defines a finalizer that uses an expression body definition to indicate that the finalizer has been called.</span></span>
 
 [!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
 
-<span data-ttu-id="7f9ac-138">Дополнительные сведения см. в разделе [Методы завершения (руководство по программированию на C#)](../classes-and-structs/destructors.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-138">For more information, see [Finalizers (C# Programming Guide)](../classes-and-structs/destructors.md).</span></span>
+<span data-ttu-id="36648-147">Дополнительные сведения см. в разделе [Методы завершения (руководство по программированию на C#)](../classes-and-structs/destructors.md).</span><span class="sxs-lookup"><span data-stu-id="36648-147">For more information, see [Finalizers (C# Programming Guide)](../classes-and-structs/destructors.md).</span></span>
 
-## <a name="property-get-statements"></a><span data-ttu-id="7f9ac-139">Операторы Property Get</span><span class="sxs-lookup"><span data-stu-id="7f9ac-139">Property get statements</span></span>
+## <a name="indexers"></a><span data-ttu-id="36648-148">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="36648-148">Indexers</span></span>
 
-<span data-ttu-id="7f9ac-140">Если вы решили самостоятельно реализовать метод доступа Property Get, определение тела выражения можно использовать для отдельных выражений, которые просто возвращают значение свойства.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-140">If you choose to implement a property get accessor yourself, you can use an expression body definition for single expressions that simply return the property value.</span></span> <span data-ttu-id="7f9ac-141">Обратите внимание, что оператор `return` не используется.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-141">Note that the `return` statement isn't used.</span></span>
+<span data-ttu-id="36648-149">Как и свойства, методы доступа set и get индексатора состоят из определений тела выражений, если метод доступа get состоит из одного оператора, который возвращает значение, или метод доступа set выполняет простое присваивание.</span><span class="sxs-lookup"><span data-stu-id="36648-149">Like properties, an indexer's get and set accessors consist of expression body definitions if the get accessor consists of a single statement that returns a value or the set accessor performs a simple assignment.</span></span>
 
-<span data-ttu-id="7f9ac-142">В следующем примере определяется свойство `Location.Name`, метод доступа Property Get которого возвращает значение закрытого поля `locationName`, поддерживающего свойство.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-142">The following example defines a `Location.Name` property whose property get accessor returns the value of the private `locationName` field that backs the property.</span></span> 
+<span data-ttu-id="36648-150">В следующем примере определяется класс с именем `Sports`, включающий внутренний массив <xref:System.String>, который содержит названия нескольких видов спорта.</span><span class="sxs-lookup"><span data-stu-id="36648-150">The following example defines a class named `Sports` that includes an internal <xref:System.String> array that contains the names of a number of sports.</span></span> <span data-ttu-id="36648-151">Методы доступа get и set индексатора реализуются как определения тела выражений.</span><span class="sxs-lookup"><span data-stu-id="36648-151">Both the indexer's get and set accessors are implemented as expression body definitions.</span></span>
 
-[!code-csharp[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 
-<span data-ttu-id="7f9ac-143">Свойства только для чтения, использующие определение тела выражения, можно реализовать без явного оператора `set`.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-143">Read-only properties that use an expression body definition can be implemented without an explicit `set` statement.</span></span> <span data-ttu-id="7f9ac-144">Синтаксис выглядит следующим образом.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-144">The syntax is:</span></span>
-
-```csharp
-PropertyName => returnValue;
-```
-
-<span data-ttu-id="7f9ac-145">В следующем примере определяется класс `Location`, свойство `Name` только для чтения которого реализуется как определение тела выражения, возвращающее значение закрытого поля `locationName`.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-145">The following example defines a `Location` class whose read-only `Name` property is implemented as an expression body definition that returns the value of the private `locationName` field.</span></span>
-
-[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
-
-<span data-ttu-id="7f9ac-146">Дополнительные сведения см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-146">For more information, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
-
-## <a name="property-set-statements"></a><span data-ttu-id="7f9ac-147">Операторы Property Set</span><span class="sxs-lookup"><span data-stu-id="7f9ac-147">Property set statements</span></span>
-
-<span data-ttu-id="7f9ac-148">Если вы решили самостоятельно реализовать метод доступа Property Set, определение тела выражения можно использовать для однострочного выражения, которое присваивает значение полю, поддерживающему свойство.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-148">If you choose to implement a property set accessor yourself, you can use an expression body definition for a single-line expression that assigns a value to the field that backs the property.</span></span>
-
-<span data-ttu-id="7f9ac-149">В следующем примере определяется свойство `Location.Name`, метод доступа Property Set которого присваивает входной аргумент закрытому полю `locationName`, поддерживающему свойство.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-149">The following example defines a `Location.Name` property whose property set statement assigns its input argument to the private `locationName` field that backs the property.</span></span>
-
-[!code-csharp[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
-
-<span data-ttu-id="7f9ac-150">Дополнительные сведения см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-150">For more information, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
-
-## <a name="indexers"></a><span data-ttu-id="7f9ac-151">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="7f9ac-151">Indexers</span></span>
-
-<span data-ttu-id="7f9ac-152">Как и свойства, методы доступа set и get индексатора состоят из определений тела выражений, если метод доступа get состоит из одного оператора, который возвращает значение, или метод доступа set выполняет простое присваивание.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-152">Like properties, an indexer's get and set accessors consist of expression body definitions if the get accessor consists of a single statement that returns a value or the set accessor performs a simple assignment.</span></span>
-
-<span data-ttu-id="7f9ac-153">В следующем примере определяется класс с именем `Sports`, включающий внутренний массив <xref:System.String>, который содержит названия нескольких видов спорта.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-153">The following example defines a class named `Sports` that includes an internal <xref:System.String> array that contains the names of a number of sports.</span></span> <span data-ttu-id="7f9ac-154">Методы доступа get и set индексатора реализуются как определения тела выражений.</span><span class="sxs-lookup"><span data-stu-id="7f9ac-154">Both the indexer's get and set accessors are implemented as expression body definitions.</span></span>
-
-[!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
-
-<span data-ttu-id="7f9ac-155">Дополнительные сведения см. в разделе [Индексаторы (руководство по программированию на C#)](../indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="7f9ac-155">For more information, see [Indexers (C# Programming Guide)](../indexers/index.md).</span></span>
-
+<span data-ttu-id="36648-152">Дополнительные сведения см. в разделе [Индексаторы (руководство по программированию на C#)](../indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="36648-152">For more information, see [Indexers (C# Programming Guide)](../indexers/index.md).</span></span>
