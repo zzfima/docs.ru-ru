@@ -1,25 +1,31 @@
 ---
-title: "Ресурсы в приложениях\_.NET"
+title: Ресурсы в приложениях .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221047"
 ---
 # <a name="resources-in-net-apps"></a>Ресурсы в приложениях .NET
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  
   
  .NET Framework и .NET Core обеспечивают всестороннюю поддержку для создания и локализации ресурсов. Кроме того, .NET поддерживает простую модель упаковки и развертывания локализованных ресурсов.  
   
- Сведения о ресурсах ASP.NET см. в разделе [Общие сведения о ресурсах страниц ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+ Сведения о ресурсах ASP.NET см. в разделе [Общие сведения о ресурсах страниц ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  ## <a name="creating-and-localizing-resources"></a>Создание и локализация ресурсов  
  В нелокализованном приложении файлы ресурсов можно использовать как хранилище для данных приложения, особенно для строк, которые в противном случае было бы необходимо жестко задавать в нескольких местах в исходном коде. Чаще всего ресурсы создаются в виде текстовых (txt) или XML-файлов (.resx), а для их компиляции в двоичные RESOURCES-файлы используется [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Эти файлы можно затем встроить в исполняемый файл приложения с помощью компилятора языка. Дополнительные сведения о создании ресурсов см. в разделе [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

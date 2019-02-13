@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041490"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220115"
 ---
 # <a name="net-framework-tools"></a>Инструменты .NET Framework
 Назначение средств .NET Framework состоит в том, чтобы облегчить создание, развертывание и администрирование приложений и компонентов, предназначенных для .NET Framework.  
@@ -129,7 +129,7 @@ ms.locfileid: "44041490"
  Помогает производить локализацию ресурсов пользовательского интерфейса (файлы .resx или .resources), используемых формами Windows Forms. Можно перевести строки, а затем изменять размеры элементов управления, перемещать их и скрывать, чтобы вместить в них локализованные строки.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Инструменты](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [средства WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Включает такие инструменты, как средство соответствия isXPS (isXPS.exe) и средства профилирования производительности.  
   
  [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
