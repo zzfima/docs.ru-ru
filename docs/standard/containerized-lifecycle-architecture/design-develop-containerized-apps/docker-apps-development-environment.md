@@ -1,19 +1,19 @@
 ---
 title: Среда разработки приложений Docker
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Узнайте о наиболее важные параметры средства разработки, которые поддерживают жизненного цикла разработки Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152420"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220001"
 ---
 # <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
-## <a name="development-tools-choices-ide-or-editor"></a>Выбор средства разработки: Интегрированная среда разработки или редактор
+## <a name="development-tools-choices-ide-or-editor"></a>Выбор средств разработки: интегрированная среда разработки или редактор
 
 Независимо от того, если вы предпочитаете полнофункциональную среду IDE или упрощенный редактор, корпорация Майкрософт предлагает вам рассматриваются, когда дело доходит до разработки приложений Docker.
 
@@ -47,5 +47,5 @@ ms.locfileid: "53152420"
 По сути можно использовать любой современный язык, поддерживаемых в Docker в Linux или Windows.
 
 >[!div class="step-by-step"]
->[Назад](orchestrate-high-scalability-availability.md)
+>[Назад](deploy-azure-kubernetes-service.md)
 >[Вперед](docker-apps-inner-loop-workflow.md)

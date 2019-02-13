@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка объекта MenuStrip полей флажков и значков
+title: Как выполнить  Настройка объекта MenuStrip полей флажков и значков
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: 49c228fef387a7c2a18cf8cecd5081e7b5519ab3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab606e126d346332f3da1ca1281372f3cce8f7ab
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530779"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219066"
 ---
-# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Как выполнить Настройка объекта MenuStrip полей флажков и значков
+# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Как выполнить  Настройка объекта MenuStrip полей флажков и значков
 Элемент управления <xref:System.Windows.Forms.MenuStrip> можно настраивать, устанавливая свойства <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> и <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> в различных сочетаниях.   
   
 ## <a name="example"></a>Пример  
@@ -30,7 +30,7 @@ ms.locfileid: "54530779"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.MenuStrip>

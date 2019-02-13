@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Разрешить пользователям копировать в буфер обмена нескольких ячеек из элемента управления DataGridView в Windows Forms
+title: Как выполнить  Разрешить пользователям копировать в буфер обмена нескольких ячеек из элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], copying multiple cells
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
-ms.openlocfilehash: ad603204ad97df55e8b7f30686b08103a55f1e8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8b466aac35f928be66b46a2fe840945847f4bc6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624331"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220261"
 ---
-# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Как выполнить Разрешить пользователям копировать в буфер обмена нескольких ячеек из элемента управления DataGridView в Windows Forms
+# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Как выполнить  Разрешить пользователям копировать в буфер обмена нескольких ячеек из элемента управления DataGridView в Windows Forms
 При включении копирования ячеек данные в элементе управления <xref:System.Windows.Forms.DataGridView> становятся доступны для других приложений с помощью <xref:System.Windows.Forms.Clipboard>. Значения выделенных ячеек преобразуются в строки и добавляются в буфер обмена в виде значений, разделенных символами табуляции, для вставки в такие приложения, как "Блокнот" или Excel, и в виде таблицы в формате HTML для вставки в такие приложения, как Microsoft Word.  
   
  Можно настроить копирование ячеек, чтобы копировать только значения ячеек, включить текст заголовка строки и столбца в данные буфера обмена или включать текст заголовка только в том случае, когда пользователь выбирает все строки или столбцы.  
@@ -42,7 +42,7 @@ ms.locfileid: "54624331"
   
 -   ссылки на сборки N:System и N:System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>

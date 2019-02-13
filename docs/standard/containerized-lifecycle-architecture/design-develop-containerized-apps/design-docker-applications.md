@@ -1,15 +1,15 @@
 ---
 title: Проектирование приложений Docker
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Здесь поиска ссылки на подробное руководство по архитектуре микрослужб, потому что это раздел, он не подробно описана в данном руководстве.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: d02cec0595024eb7bd7c0ac46df093359680da74
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: f31421cab7d2072441999231adfbe771a3f9a0f5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155383"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220209"
 ---
 # <a name="design-docker-applications"></a>Проектирование приложений Docker
 

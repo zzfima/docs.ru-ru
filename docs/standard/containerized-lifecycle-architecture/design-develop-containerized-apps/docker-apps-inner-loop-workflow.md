@@ -1,15 +1,15 @@
 ---
 title: Рабочий процесс внутреннего цикла разработки для приложений Docker
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Дополнительные сведения «внутреннем цикле» рабочего процесса для разработки приложений Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148867"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219092"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Рабочий процесс внутреннего цикла разработки для приложений Docker
 
@@ -41,7 +41,7 @@ ms.locfileid: "53148867"
 
 Рис. 4-15. Высокоуровневый рабочий процесс для жизненного цикла для Docker контейнерных приложений с помощью интерфейса командной строки Docker
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Шаг 1. Приступаем к написанию кода в Visual Studio Code и создания начальной приложения или услуги базовых показателей
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Шаг 1. Приступаем к написанию кода в Visual Studio Code и создания начальной приложения или услуги базовых показателей
 
 Способ разработки приложения очень похоже на способ сделать это без Docker. Разница в том, что при разработке, развертывании и тестировании приложения или службы, работающие в контейнеры Docker, размещенные в локальной среде (например, виртуальной Машины Linux или Windows).
 
@@ -67,7 +67,7 @@ Visual Studio Code предоставляется расширение, кото
 
 Рис. 4-16. Установка расширения Docker в Visual Studio Code
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Шаг 2. Создание файла DockerFile, связанного с существующим образом (plain ОС или сред разработки, например .NET Core, Node.js и Ruby)
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Шаг 2. Создание файла DockerFile, связанного с существующим образом (plain ОС или сред разработки, например .NET Core, Node.js и Ruby)
 
 Вам потребуется файл DockerFile в пользовательский образ для построения и каждый контейнер развертывается, таким образом, если приложение состоит из единственный экземпляр пользовательской службы, вам потребуется один DockerFile. Но если приложение состоит из нескольких служб (как в архитектуре микрослужб), вам потребуется один Dockerfile каждой службы.
 
@@ -159,7 +159,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 Рис. 4-20: Просмотр существующих образов с помощью образов docker
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Шаг 4. (Необязательно) Определение служб в файле docker-compose.yml, при создании составного приложения Docker с несколькими службами
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Шаг 4. (Необязательно) Определение служб в файле docker-compose.yml, при создании составного приложения Docker с несколькими службами
 
 В файле docker-compose.yml можно определить набор связанных служб для развертывания как составное приложение с помощью команд развертывания, как описано в следующем разделе шаг.
 
@@ -192,7 +192,7 @@ services:
 
 Служба использует redis [последней версии образа общей redis](https://hub.docker.com/_/redis/) извлечь из реестра Docker Hub. [redis](https://redis.io/) — это система очень популярных кэширования для серверных приложений.
 
-### <a name="step-5-build-and-run-your-docker-app"></a>Шаг 5. Сборка и запуск приложения Docker
+### <a name="step-5-build-and-run-your-docker-app"></a>Шаг 5. Сборка и запуск приложения Docker
 
 Если приложение имеет только один контейнер, необходимо просто запустите его, развернув ее к узлу Docker (виртуальной Машине или физическом сервере). Тем не менее, если приложение состоит из нескольких служб, необходимо *комбинирование ее*, слишком. Давайте посмотрим, различные варианты.
 
@@ -225,7 +225,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 Для [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) и [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) команд разные развертывания и сценарии, а также используются.
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Шаг 6. Тестирование приложения Docker (локально, в вашей локальной виртуальной Машине компакт-диска)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Шаг 6. Тестирование приложения Docker (локально, в вашей локальной виртуальной Машине компакт-диска)
 
 Этот шаг будет зависеть от действия приложения.
 

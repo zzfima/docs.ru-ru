@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Доступ к связанным объектам в Windows Forms DataGridView строк
+title: Как выполнить  Доступ к связанным объектам в Windows Forms DataGridView строк
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 2a4c5cc052ce8c44d36c43daf11d91c798dd741f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a36a0bb84b851945b530d7d323e13e034234051b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679452"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220407"
 ---
-# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Как выполнить Доступ к связанным объектам в Windows Forms DataGridView строк
+# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Как выполнить  Доступ к связанным объектам в Windows Forms DataGridView строк
 Иногда полезно отображать таблицу данных, которые хранятся в коллекции бизнес-объектов. При привязке элемента управления <xref:System.Windows.Forms.DataGridView> к такого рода коллекции каждое открытое свойство отображается в собственном столбце, если только оно не помечено как недоступное для просмотра с помощью <xref:System.ComponentModel.BrowsableAttribute>. Например, коллекция объектов `Customer` будет содержать такие столбцы, как **Имя** и **Адрес**.  
   
  Если такие объекты содержат дополнительную информацию и код, к которым требуется доступ, можно использовать объекты строк. В примере кода ниже пользователи могут выбрать несколько строк и отправить счета каждому из соответствующих клиентов путем нажатия на кнопку.  
@@ -39,7 +39,7 @@ ms.locfileid: "54679452"
   
 -   ссылки на сборки System и System.Windows.Forms;  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>

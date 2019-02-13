@@ -1,15 +1,15 @@
 ---
 title: Мониторинг служб контейнерных приложений
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Узнайте, некоторые ключевые аспекты мониторинга контейнера архитектуры
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153929"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221190"
 ---
 # <a name="monitor-containerized-application-services"></a>Мониторинг служб контейнерных приложений
 
@@ -88,7 +88,7 @@ Application Insights и Operations Management Suite сосредоточитьс
 
 Вы увидите сведения о производительности с помощью запросов, такие как тип = Perf, как показано на рис. 6-3.
 
-![DockerPerfMetricsView](./media/image3.png){width = «5.78625 in» height = «3,25 in»}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Рис. 6-3. Метрики производительности узлов Docker, представленной в Operations Management Suite
 

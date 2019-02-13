@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540667"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219845"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#. 
@@ -37,7 +37,7 @@ ms.locfileid: "54540667"
  Вам следует задать целевые показатели производительности для ключевых пользовательских функций или сценариев в приложении и написать тесты для измерения производительности. Случаи сбоя тестов следует рассматривать с применением научного подхода: используйте профили для определения признаков, сделайте предположение о характере неполадки и подтвердите или опровергните это предположение с помощью эксперимента или изменения кода. Проводите измерения базовой производительности и регулярные тестирования, чтобы иметь возможность исключить изменения, вызывающие снижение производительности. Выбрав правильный подход к работе над производительностью, вы избавите себя от потери времени на внесение в код ненужных обновлений. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Факт 3. Хороших средств создают все различия  
- Хорошие средства позволяют вам быстро выявлять наиболее важные проблемы с производительностью (ЦП, память или диск) и помогают локализовать код, вызывающий такие узкие места. Корпорация Майкрософт предоставляет разнообразные средства оценки производительности, такие как [профилировщик Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), [средство анализа Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) и [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ Хорошие средства позволяют вам быстро выявлять наиболее важные проблемы с производительностью (ЦП, память или диск) и помогают локализовать код, вызывающий такие узкие места. Корпорация Майкрософт предоставляет разнообразные средства оценки производительности, такие как [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) и [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView — это бесплатное и крайне эффективное средство, помогающее вам сконцентрироваться на самых важных проблемах — операциях ввода-вывода диска, событиях сборки мусора и памяти. Вы можете перехватывать связанные с производительностью события [трассировки событий Windows](../../../docs/framework/wcf/samples/etw-tracing.md) и просматривать информацию для отдельных приложений, процессов, стеков и потоков. PerfView показывает, какой объем и тип памяти выделяет ваше приложение, а также какие функции или стеки вызовов чаще всего осуществляют выделение памяти. Дополнительные сведения см. в разделах справки, демонстрациях и видеозаписях, поставляемых вместе с этим средством (например, [учебники по PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) в Channel 9). 
   
@@ -466,9 +466,8 @@ class Compilation { /*...*/
 - [Видеозапись презентации по данному разделу](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Производительность](../../../docs/framework/performance/index.md)
-- [Советы по повышению производительности .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Советы по повышению производительности .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Средство анализа производительности Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Поиск ограничений приложений с Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 учебники по PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Пакет SDK для .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [репозиторий DotNet/roslyn на GitHub](https://github.com/dotnet/roslyn)

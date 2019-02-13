@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b998240b6ecf692b00e16c2ad311c804edc0d7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518225"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219247"
 ---
 # <a name="net-performance-tips"></a>Советы по производительности .NET
 Под *производительностью* обычно понимается скорость выполнения программы. В некоторых случаях ее можно увеличить, следуя определенным основным правилам написания исходного кода. В некоторых программах важно тщательно проверить код и с помощью профилировщиков убедиться, что он выполняется максимально быстро. В других случаях такая оптимизация не требуется, поскольку код выполняется достаточно быстро в своем первоначальном виде. В этой статье описываются основные причины снижения производительности и приводятся рекомендации по ее повышению, а также ссылки на разделы с дополнительной информацией. Дополнительные сведения о планировании и измерении производительности см. в разделе [Производительность](../../../docs/framework/performance/index.md)  
@@ -44,6 +44,5 @@ ms.locfileid: "54518225"
   
 ## <a name="see-also"></a>См. также
 - [Производительность](../../../docs/framework/performance/index.md)
-- [Основные понятия программирования](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)
 - [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Руководство по программированию на C#](../../csharp/programming-guide/index.md)

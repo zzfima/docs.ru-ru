@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отключение кнопок в кнопочном столбце в элементе управления DataGridView Windows Forms
+title: Как выполнить  Отключение кнопок в кнопочном столбце в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - buttons [Windows Forms], disabling in button columns
 - DataGridView control [Windows Forms], disabling button cells
 ms.assetid: 5c344d01-013a-4a6b-8f8d-62ec9321d81e
-ms.openlocfilehash: dc92ed2ee7710d6a05cb14fa0cd28606a9a399b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b468e17213126162e13c1102a5bf261663899cb1
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726342"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220131"
 ---
-# <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Как выполнить Отключение кнопок в кнопочном столбце в элементе управления DataGridView Windows Forms
+# <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Как выполнить  Отключение кнопок в кнопочном столбце в элементе управления DataGridView Windows Forms
 Элемент управления <xref:System.Windows.Forms.DataGridView> включает класс <xref:System.Windows.Forms.DataGridViewButtonCell> для отображения ячеек с пользовательским интерфейсом, похожим на кнопку. Однако элемент управления <xref:System.Windows.Forms.DataGridViewButtonCell> не дает возможности отключить показ кнопки в ячейке.  
   
  В примере кода ниже показано, как настроить класс <xref:System.Windows.Forms.DataGridViewButtonCell> для отображения кнопок, которые выглядят как отключенные. В этом примере определен новый тип ячейки, `DataGridViewDisableButtonCell`, производный от <xref:System.Windows.Forms.DataGridViewButtonCell>. Этот тип предоставляет новое свойство `Enabled`, которому можно присвоить значение `false` для отрисовки отключенной кнопки в ячейке. В этом примере также определен новый тип столбца, `DataGridViewDisableButtonColumn`, в котором отображаются объекты `DataGridViewDisableButtonCell`. Для демонстрации этих новых типов ячеек и столбцов текущее значение каждого объекта <xref:System.Windows.Forms.DataGridViewCheckBoxCell> в родительском элементе <xref:System.Windows.Forms.DataGridView> определяет значение свойства `Enabled` элемента `DataGridViewDisableButtonCell` в одной и той же строке: `true` или `false`.  
@@ -33,7 +33,7 @@ ms.locfileid: "54726342"
   
 -   ссылки на сборки System, System.Drawing, System.Windows.Forms и System.Windows.Forms.VisualStyles.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

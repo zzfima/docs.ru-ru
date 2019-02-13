@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641581"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220956"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать приложение [!INCLUDE[net_native](../../../includes/net-native-md.md)] , выполните следующие действия:  
@@ -114,7 +114,7 @@ ms.locfileid: "54641581"
   
 ## <a name="see-also"></a>См. также
 - [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [NIB: Установка .NET и конфигурация](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [Установка .NET и конфигурация](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

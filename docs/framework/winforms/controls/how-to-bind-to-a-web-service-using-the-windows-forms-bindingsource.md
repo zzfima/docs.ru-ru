@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Связывание веб-службой, с помощью компонента BindingSource в Windows Forms
+title: Как выполнить  Связывание веб-службой, с помощью компонента BindingSource в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 4f3bec715858f1d618957b61d3e15f9251f9fd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ea95ad21ee02745e835dc469ec3849af5a5a2d7
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639137"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219897"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Как выполнить Связывание веб-службой, с помощью компонента BindingSource в Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Как выполнить  Связывание веб-службой, с помощью компонента BindingSource в Windows Forms
 Компонент <xref:System.Windows.Forms.BindingSource> можно использовать, если необходимо привязать элемент управления Windows Form к результатам вызова веб-служб XML.  Эта процедура аналогична привязке компонента <xref:System.Windows.Forms.BindingSource> к типу. Необходимо создать клиентский прокси, который содержит методы и типы, предоставляемые веб-службой. Клиентский прокси веб-службы можно создать либо непосредственно в самой веб-службе (ASMX-файл) или с помощью файла языка описания веб-служб (WSDL-файл). Кроме того, клиентский прокси должен предоставлять доступ к полям сложных типов, используемых веб-службой, в виде общих свойств. Затем <xref:System.Windows.Forms.BindingSource> привязывается к одному из типов, доступных в прокси веб-службы.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Создание и привязка к прокси на стороне клиента  
@@ -70,7 +70,7 @@ ms.locfileid: "54639137"
   
 -   ссылки на сборки System, System.Drawing, System.Web.Services, System.Windows.Forms и System.XML.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

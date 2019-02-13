@@ -1,15 +1,15 @@
 ---
 title: Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
-description: Рабочий процесс "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт" с использованием средств Майкрософт
+description: Контейнерные жизненный цикл приложения Docker с помощью платформы Microsoft и инструменты DevOps рабочего процесса с использованием средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a2d88dda9f3560675fcb6826960c6e76fa7daf92
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128444"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219079"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 
@@ -34,5 +34,5 @@ Microsoft Visual Studio, службам DevOps в Azure, Team Foundation Server 
 -   Организации могут легко создавать контейнеры Docker из частных образов, хранящихся в реестре контейнеров Azure вместе с любыми зависимостями от компонентов Azure (данные, PaaS и т. д.), используя шаблоны Azure Resource Manager и хорошо знакомые инструменты.
 
 >[!div class="step-by-step"]
->[Назад](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Назад](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[Вперед](docker-application-outer-loop-devops-workflow.md)

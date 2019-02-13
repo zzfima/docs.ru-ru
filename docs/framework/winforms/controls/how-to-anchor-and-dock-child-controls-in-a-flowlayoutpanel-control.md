@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
+title: Как выполнить  Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: e0a711c91f78ed26301c360582b08ac5c03ce565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9087045aaace5463d375af6850f822abefd45fb7
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520650"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220930"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Как выполнить Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Как выполнить  Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
 Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel  
@@ -40,11 +40,11 @@ ms.locfileid: "54520650"
     >  Вторая кнопка принимает ту же ширину, что и первая кнопка. Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>. Общее правило для привязки и закрепления в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>: в вертикальном направлении элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет ширину предполагаемого столбца исходя из ширины самого широкого элемента управления в столбце. Другие элементы управления в этом столбце со свойствами <xref:System.Windows.Forms.Control.Anchor%2A> или <xref:System.Windows.Forms.Control.Dock%2A> выравниваются или растягиваются до этого предполагаемого столбца. Аналогичное поведение работает и в горизонтальном направлении. Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет высоту предполагаемой строки на основе самого высокого дочернего элемента управления в строке, и все закрепленные или привязанные дочерние элементы управления в этой строке выравниваются или их размеры устанавливаются в соответствии с предполагаемой строкой.  
   
 ## <a name="example"></a>Пример  
- На следующем рисунке показаны четыре кнопки, привязанные и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>. Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
+ На следующем рисунке показаны четыре кнопки, привязанный и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>. Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
   
  ![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")  
   
- На следующем рисунке показаны четыре кнопки, привязанные и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>. Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+ На следующем рисунке показаны четыре кнопки, привязанный и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>. Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
  ![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.gif "VS_FLPanchor2")  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54520650"
   
 -   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.FlowLayoutPanel>

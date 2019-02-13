@@ -1,15 +1,15 @@
 ---
 title: Контейнеры, образы и реестры Docker
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Узнайте, ключевую роль, что реестры играть в целом в Docker способ развертывания приложений.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: af235280c985d20f9e6a2ee6096edbe6c3aad63a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 7a2e20e09561a5cc91aa29059fb8d19a14205bb5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142753"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221203"
 ---
 # <a name="docker-containers-images-and-registries"></a>Контейнеры, образы и реестры Docker
 
@@ -35,4 +35,4 @@ ms.locfileid: "53142753"
 
 >[!div class="step-by-step"]
 >[Назад](docker-terminology.md)
->[Вперед](Docker-application-lifecycle/index.md)
+>[Вперед](road-to-modern-applications-based-on-containers.md)

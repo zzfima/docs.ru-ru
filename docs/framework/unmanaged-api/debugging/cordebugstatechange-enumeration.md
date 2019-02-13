@@ -1,6 +1,6 @@
 ---
 title: Перечисление CorDebugStateChange
-ms.date: 03/30/2017
+ms.date: 02/07/2019
 api_name:
 - CorDebugStateChange
 api_location:
@@ -12,48 +12,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513793"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221138"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Перечисление CorDebugStateChange
-Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typedef enum CorDebugStateChange  
-{  
-    PROCESS_RUNNING = 0x0000001,   
-    FLUSH_ALL       = 0x0000002,   
-} CorDebugStateChange;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-|Член|Описание|  
-|------------|-----------------|  
-|`PROCESS_RUNNING`|Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|Память процесса может отличаться произвольным образом от предыдущего варианта.|  
-  
-## <a name="remarks"></a>Примечания  
- Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) метод  
-  
-> [!NOTE]
->  Это перечисление предназначено для использования только в сценариях отладки .NET Native.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
-  
+
+Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+typedef enum CorDebugStateChange
+{
+    PROCESS_RUNNING = 0x0000001,
+    FLUSH_ALL       = 0x0000002,
+} CorDebugStateChange;
+```
+
+## <a name="members"></a>Участники
+
+| Член            | Описание                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| `PROCESS_RUNNING` | Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.            |
+| `FLUSH_ALL`       | Память процесса может отличаться произвольным образом от предыдущего варианта. |
+
+## <a name="remarks"></a>Примечания
+
+ Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком `ProcessStateChanged` метод с помощью [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) или [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+
+## <a name="requirements"></a>Требования
+
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Заголовок.** CorDebug.idl, CorDebug.h
+
+ **Библиотека:** CorGuids.lib
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>См. также
-- [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [Перечисления отладки](debugging-enumerations.md)
+- [Отладка](index.md)

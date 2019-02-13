@@ -1,15 +1,15 @@
 ---
 title: Действия в рабочем процессе внешнего цикла DevOps для приложения Docker
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Инструкции по «внешний цикл» рабочего процесса DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143653"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220943"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Действия в рабочем процессе внешнего цикла DevOps для приложения Docker
 
@@ -21,11 +21,11 @@ ms.locfileid: "53143653"
 
 Теперь давайте рассмотрим каждое из этих действий более подробно.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Шаг 1. Рабочий процесс внутреннего цикла разработки
+## <a name="step-1-inner-loop-development-workflow"></a>Шаг 1. Рабочий процесс внутреннего цикла разработки
 
 Этот шаг описан подробно в главе 4, но Напомню, Вот где начинается внешний цикл некоторое время, по которому разработчик помещает код в систему управления версиями (например, Git), инициированные действия конвейера непрерывной Интеграции.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Шаг 2. Интеграция системы управления версиями и управление с помощью служб Azure DevOps и Git
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Шаг 2. Интеграция системы управления версиями и управление с помощью служб Azure DevOps и Git
 
 На этом этапе необходимо иметь систему управления версиями для сбора консолидированных версию весь код, поступающие от разные разработчики в команде.
 
@@ -157,7 +157,7 @@ Azure DevOps Services и Team Foundation Server поддерживает Git и 
 
 **Дополнительные сведения о** Дополнительные сведения о расширении Docker для служб Azure DevOps, перейдите к <https://aka.ms/vstsdockerextension>. Дополнительные сведения о реестре контейнеров Azure, перейдите к <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>Шаг 4. Компакт-ДИСК, развертывание
+## <a name="step-4-cd-deploy"></a>Шаг 4. Компакт-ДИСК, развертывание
 
 Неизменность образов Docker гарантирует воспроизводимые развертывания с что разработки, тестирования через непрерывной Интеграции и запустить в рабочей среде. После образы Docker приложений, опубликованных в реестр Docker (частный или общедоступный), их можно развернуть в нескольких средах, которые могут иметь (производство, контроля Качества, промежуточного хранения, и т.д.) из конвейера компакт-диска с помощью служб Azure DevOps конвейер задачи или Azure DevOps Services Release Management.
 
@@ -223,11 +223,11 @@ Azure DevOps Services и Team Foundation Server поддерживает Git и 
 
 Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>Шаг 5. Запуск и управление ими
+## <a name="step-5-run-and-manage"></a>Шаг 5. Запуск и управление ими
 
 Так как выполнение приложений и управления ими в рабочей среде корпоративного уровня является главной темой в самого себя и из-за тип операций, людей, работающих на этом уровне (ИТ-операций), а также большого объема в этой области, мы приложили все рядом Глава описано его.
 
-## <a name="step-6-monitor-and-diagnose"></a>Шаг 6. Мониторинг и диагностика
+## <a name="step-6-monitor-and-diagnose"></a>Шаг 6. Мониторинг и диагностика
 
 В этом разделе также рассматривается в следующей главе как часть задач, выполняемых ИТ-операций в рабочих системах; Тем не менее важно подчеркнуть, что информации, полученной на этом шаге нужно передать обратно к группе разработки, таким образом, чтобы приложение постоянно повышается. С этой точки зрения, он также является частью DevOps, несмотря на то, что задачи и операции, обычно выполняются с ИТ.
 
@@ -235,4 +235,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 >[!div class="step-by-step"]
 >[Назад](index.md)
->[Вперед](../run-manage-monitor-docker-environments/index.md)
+>[Вперед](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

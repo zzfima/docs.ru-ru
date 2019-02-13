@@ -1,15 +1,15 @@
 ---
 title: Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
-description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+description: Ознакомьтесь с предложениями корпорации Microsoft для поддержки жизненного цикла приложений Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 0e883041624f99d51b49994f02f3a42fc945a96d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152346"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219585"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 
@@ -26,7 +26,7 @@ ms.locfileid: "53152346"
 
 Таблица 3-1. Откройте рабочий процесс DevOps для любой технологии
 
-| Ведущее приложение | Технологии Майкрософт | Сторонние — подключаемые к Azure |
+| Узел | Технологии Майкрософт | Сторонние — подключаемые к Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Платформа для приложений Docker   | • Microsoft Visual Studio и Visual Studio Code<br /> • .NET<br /> • Служба контейнеров Microsoft Azure<br /> • Azure Service Fabric<br /> • Реестр контейнеров Azure<br /> | • Любой редактор кода (например, Sublime)<br /> • Любой язык (Node.js, Java, Go и т. д.)<br /> • Любой оркестратор и планировщик<br /> • Любой реестр Docker<br /> |
 | DevOps для приложений Docker     | • Службы azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Служба контейнеров Azure<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion и т. д.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI и т. д.<br /> • Локальный Docker Datacenter, Docker Swarm, ОС/ЦОД Mesos, Kubernetes и т. д.<br /> |

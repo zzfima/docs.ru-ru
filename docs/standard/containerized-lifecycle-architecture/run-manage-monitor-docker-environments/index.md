@@ -3,13 +3,13 @@ title: Запуск, мониторинг рабочих сред Docker и уп
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 2f29119e102bbb62e96da6b3c00f9c53c0a270a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9c24a87fd691723b8f91077288478d26e5123265
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130954"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219130"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Запуск, мониторинг рабочих сред Docker и управление ими
 
@@ -20,5 +20,5 @@ ms.locfileid: "53130954"
 Запуск и выполнение контейнерных приложений в рабочей среде (в архитектуре инфраструктуры и с технологиями платформы) в значительной степени связаны и полностью основаны на выбранной архитектуре и платформах разработки, которые рассматривались в первой главе этой электронной книги. В этой главе содержатся сведения о конкретных продуктах и технологиях корпорации Майкрософт и других поставщиков, которые можно использовать для эффективного выполнения высокомасштабируемых и распределенных приложений с высоким уровнем доступности, а также о том, как управлять ими и отслеживать их с точки зрения ИТ.
 
 >[!div class="step-by-step"]
->[Назад](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+>[Назад](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 >[Вперед](run-microservices-based-applications-in-production.md)
