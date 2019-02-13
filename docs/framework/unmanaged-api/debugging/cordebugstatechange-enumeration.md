@@ -1,6 +1,6 @@
 ---
 title: Перечисление CorDebugStateChange
-ms.date: 03/30/2017
+ms.date: 02/07/2019
 api_name:
 - CorDebugStateChange
 api_location:
@@ -12,48 +12,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513793"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221138"
 ---
-# <a name="cordebugstatechange-enumeration"></a><span data-ttu-id="7eb82-102">Перечисление CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="7eb82-102">CorDebugStateChange Enumeration</span></span>
-<span data-ttu-id="7eb82-103">Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.</span><span class="sxs-lookup"><span data-stu-id="7eb82-103">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="7eb82-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7eb82-104">Syntax</span></span>  
-  
-```  
-typedef enum CorDebugStateChange  
-{  
-    PROCESS_RUNNING = 0x0000001,   
-    FLUSH_ALL       = 0x0000002,   
-} CorDebugStateChange;  
-```  
-  
-## <a name="members"></a><span data-ttu-id="7eb82-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7eb82-105">Members</span></span>  
-  
-|<span data-ttu-id="7eb82-106">Член</span><span class="sxs-lookup"><span data-stu-id="7eb82-106">Member</span></span>|<span data-ttu-id="7eb82-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7eb82-107">Description</span></span>|  
-|------------|-----------------|  
-|`PROCESS_RUNNING`|<span data-ttu-id="7eb82-108">Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.</span><span class="sxs-lookup"><span data-stu-id="7eb82-108">The process reached a new memory state via forward execution.</span></span>|  
-|`SET_CONTEXT_FLAG_UNWIND_FRAME`|<span data-ttu-id="7eb82-109">Память процесса может отличаться произвольным образом от предыдущего варианта.</span><span class="sxs-lookup"><span data-stu-id="7eb82-109">The process' memory may be arbitrarily different than it was previously.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="7eb82-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="7eb82-110">Remarks</span></span>  
- <span data-ttu-id="7eb82-111">Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) метод</span><span class="sxs-lookup"><span data-stu-id="7eb82-111">A member of the `CorDebugStateChange` enumeration is provided as an argument when the debugger calls the [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) method</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="7eb82-112">Это перечисление предназначено для использования только в сценариях отладки .NET Native.</span><span class="sxs-lookup"><span data-stu-id="7eb82-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="7eb82-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7eb82-113">Requirements</span></span>  
- <span data-ttu-id="7eb82-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7eb82-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="7eb82-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7eb82-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="7eb82-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7eb82-116">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="7eb82-117">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7eb82-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7eb82-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7eb82-118">See also</span></span>
-- [<span data-ttu-id="7eb82-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="7eb82-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="7eb82-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="7eb82-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+# <a name="cordebugstatechange-enumeration"></a><span data-ttu-id="d4ca1-102">Перечисление CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="d4ca1-102">CorDebugStateChange Enumeration</span></span>
+
+<span data-ttu-id="d4ca1-103">Описывает объем кэшированных данных, которые должны быть отброшены на основе изменений, внесенных в процесс.</span><span class="sxs-lookup"><span data-stu-id="d4ca1-103">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="d4ca1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d4ca1-104">Syntax</span></span>
+
+```
+typedef enum CorDebugStateChange
+{
+    PROCESS_RUNNING = 0x0000001,
+    FLUSH_ALL       = 0x0000002,
+} CorDebugStateChange;
+```
+
+## <a name="members"></a><span data-ttu-id="d4ca1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="d4ca1-105">Members</span></span>
+
+| <span data-ttu-id="d4ca1-106">Член</span><span class="sxs-lookup"><span data-stu-id="d4ca1-106">Member</span></span>            | <span data-ttu-id="d4ca1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d4ca1-107">Description</span></span>                                                              |
+| ----------------- | ------------------------------------------------------------------------ |
+| `PROCESS_RUNNING` | <span data-ttu-id="d4ca1-108">Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.</span><span class="sxs-lookup"><span data-stu-id="d4ca1-108">The process reached a new memory state via forward execution.</span></span>            |
+| `FLUSH_ALL`       | <span data-ttu-id="d4ca1-109">Память процесса может отличаться произвольным образом от предыдущего варианта.</span><span class="sxs-lookup"><span data-stu-id="d4ca1-109">The process' memory may be arbitrarily different than it was previously.</span></span> |
+
+## <a name="remarks"></a><span data-ttu-id="d4ca1-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="d4ca1-110">Remarks</span></span>
+
+ <span data-ttu-id="d4ca1-111">Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком `ProcessStateChanged` метод с помощью [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) или [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)</span><span class="sxs-lookup"><span data-stu-id="d4ca1-111">A member of the `CorDebugStateChange` enumeration is provided as an argument when the debugger calls the `ProcessStateChanged` method either with [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) or [ICorDebugProcess6::ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="d4ca1-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d4ca1-112">Requirements</span></span>
+
+ <span data-ttu-id="d4ca1-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4ca1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="d4ca1-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4ca1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+ <span data-ttu-id="d4ca1-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4ca1-115">**Library:** CorGuids.lib</span></span>
+
+ <span data-ttu-id="d4ca1-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4ca1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d4ca1-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d4ca1-117">See also</span></span>
+
+- [<span data-ttu-id="d4ca1-118">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="d4ca1-118">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="d4ca1-119">Отладка</span><span class="sxs-lookup"><span data-stu-id="d4ca1-119">Debugging</span></span>](index.md)

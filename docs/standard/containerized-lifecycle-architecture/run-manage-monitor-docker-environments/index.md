@@ -3,23 +3,23 @@ title: Запуск, мониторинг рабочих сред Docker и уп
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 2f29119e102bbb62e96da6b3c00f9c53c0a270a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9c24a87fd691723b8f91077288478d26e5123265
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130954"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219130"
 ---
-# <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="ddd73-103">Запуск, мониторинг рабочих сред Docker и управление ими</span><span class="sxs-lookup"><span data-stu-id="ddd73-103">Run, manage, and monitor Docker production environments</span></span>
+# <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="c0d2e-103">Запуск, мониторинг рабочих сред Docker и управление ими</span><span class="sxs-lookup"><span data-stu-id="c0d2e-103">Run, manage, and monitor Docker production environments</span></span>
 
-<span data-ttu-id="ddd73-104">Концепция. Корпоративные приложения должны выполняться на высокий уровень доступности и масштабируемости; ИТ-операции должны иметь возможность управлять и отслеживать среды и сами приложения.</span><span class="sxs-lookup"><span data-stu-id="ddd73-104">Vision: Enterprise applications need to run with high availability and high scalability; IT operations need to be able to manage and monitor the environments and the applications themselves.</span></span>
+<span data-ttu-id="c0d2e-104">Концепция. Корпоративные приложения должны выполняться на высокий уровень доступности и масштабируемости; ИТ-операции должны иметь возможность управлять и отслеживать среды и сами приложения.</span><span class="sxs-lookup"><span data-stu-id="c0d2e-104">Vision: Enterprise applications need to run with high availability and high scalability; IT operations need to be able to manage and monitor the environments and the applications themselves.</span></span>
 
-<span data-ttu-id="ddd73-105">Этот последний принцип жизненного цикла контейнерных приложений Docker касается методов выполнения и мониторинга приложений, а также управления ими в масштабируемых и высокодоступных производственных средах.</span><span class="sxs-lookup"><span data-stu-id="ddd73-105">This last pillar in the containerized Docker applications life cycle is centered on how you can run, manage, and monitor your applications in scalable, high availability (HA) production environments.</span></span>
+<span data-ttu-id="c0d2e-105">Этот последний принцип жизненного цикла контейнерных приложений Docker касается методов выполнения и мониторинга приложений, а также управления ими в масштабируемых и высокодоступных производственных средах.</span><span class="sxs-lookup"><span data-stu-id="c0d2e-105">This last pillar in the containerized Docker applications life cycle is centered on how you can run, manage, and monitor your applications in scalable, high availability (HA) production environments.</span></span>
 
-<span data-ttu-id="ddd73-106">Запуск и выполнение контейнерных приложений в рабочей среде (в архитектуре инфраструктуры и с технологиями платформы) в значительной степени связаны и полностью основаны на выбранной архитектуре и платформах разработки, которые рассматривались в первой главе этой электронной книги.</span><span class="sxs-lookup"><span data-stu-id="ddd73-106">How you run your containerized applications in production (infrastructure architecture and platform technologies) is also very much related and completely founded on the chosen architecture and development platforms that we looked at in the Chapter 1 of this e-book.</span></span> <span data-ttu-id="ddd73-107">В этой главе содержатся сведения о конкретных продуктах и технологиях корпорации Майкрософт и других поставщиков, которые можно использовать для эффективного выполнения высокомасштабируемых и распределенных приложений с высоким уровнем доступности, а также о том, как управлять ими и отслеживать их с точки зрения ИТ.</span><span class="sxs-lookup"><span data-stu-id="ddd73-107">This chapter examines specific products and technologies from Microsoft and other vendors that you can use to effectively run highly scalable, HA distributed applications plus how you can manage and monitor them from the IT perspective.</span></span>
+<span data-ttu-id="c0d2e-106">Запуск и выполнение контейнерных приложений в рабочей среде (в архитектуре инфраструктуры и с технологиями платформы) в значительной степени связаны и полностью основаны на выбранной архитектуре и платформах разработки, которые рассматривались в первой главе этой электронной книги.</span><span class="sxs-lookup"><span data-stu-id="c0d2e-106">How you run your containerized applications in production (infrastructure architecture and platform technologies) is also very much related and completely founded on the chosen architecture and development platforms that we looked at in the Chapter 1 of this e-book.</span></span> <span data-ttu-id="c0d2e-107">В этой главе содержатся сведения о конкретных продуктах и технологиях корпорации Майкрософт и других поставщиков, которые можно использовать для эффективного выполнения высокомасштабируемых и распределенных приложений с высоким уровнем доступности, а также о том, как управлять ими и отслеживать их с точки зрения ИТ.</span><span class="sxs-lookup"><span data-stu-id="c0d2e-107">This chapter examines specific products and technologies from Microsoft and other vendors that you can use to effectively run highly scalable, HA distributed applications plus how you can manage and monitor them from the IT perspective.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="ddd73-108">[Назад](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
->[Вперед](run-microservices-based-applications-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="ddd73-108">[Previous](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+><span data-ttu-id="c0d2e-108">[Назад](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Вперед](run-microservices-based-applications-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="c0d2e-108">[Previous](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 [Next](run-microservices-based-applications-in-production.md)</span></span>
