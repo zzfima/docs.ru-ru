@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация формы, в который выполняется фоновая операция
+title: Как выполнить  Реализация формы, в который выполняется фоновая операция
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: a472226103f077975c9c6ddc744d419cfcc390cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ace37b1c79ff2e5cd06fce08557dc6cdf2fcc11
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532140"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261312"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Как выполнить Реализация формы, в который выполняется фоновая операция
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Как выполнить  Реализация формы, в который выполняется фоновая операция
 В примере ниже программа создает форму, которая вычисляет числа Фибоначчи. Вычисление выполняется в потоке, отдельном от потока пользовательского интерфейса, поэтому в ходе вычисления пользовательский интерфейс продолжает выполняться без задержек.  
   
  В Visual Studio предусмотрена расширенная поддержка данной задачи.  
   
- Также см. в разделе [Пошаговое руководство: Реализация формы, в который выполняется фоновая операция](https://msdn.microsoft.com/library/b2zk6580\(v=vs.110\)).  
+ Также см. в разделе [Пошаговое руководство: Реализация формы, в который выполняется фоновая операция](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
   
 ## <a name="example"></a>Пример  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -40,7 +40,7 @@ ms.locfileid: "54532140"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
   

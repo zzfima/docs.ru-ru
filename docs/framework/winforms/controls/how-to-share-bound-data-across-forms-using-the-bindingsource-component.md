@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Совместное использование связанных данных в нескольких формах с помощью компонента BindingSource
+title: Как выполнить  Совместное использование связанных данных в нескольких формах с помощью компонента BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 6bd2c0aca7e24ed903e31f1c27e7e173ade6086b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6631fb4c4483853b3c4ba6c2e3484654c4f83342
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619958"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260846"
 ---
-# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Как выполнить Совместное использование связанных данных в нескольких формах с помощью компонента BindingSource
+# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Как выполнить  Совместное использование связанных данных в нескольких формах с помощью компонента BindingSource
 С помощью компонента <xref:System.Windows.Forms.BindingSource> одни и те же данные можно легко использовать в нескольких формах. Например, может потребоваться отобразить одну форму только для чтения со сводкой данных и другую редактируемую форму с подробными сведениями о выбранном в данный момент элементе в источнике данных. В этом примере демонстрируется такая возможность.  
   
 ## <a name="example"></a>Пример  
@@ -34,7 +34,7 @@ ms.locfileid: "54619958"
   
 -   Ссылки на сборки System, System.Windows.Forms, System.Drawing, System.Data и System.Xml.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

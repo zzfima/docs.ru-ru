@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730949"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261106"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
@@ -52,7 +52,8 @@ ms.locfileid: "54730949"
   
  Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы. До версии [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF не поддерживает несколько адресов для схемы и, если они были заданы, вызвал <xref:System.ArgumentException> во время активации.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет поставщикам услуг Интернета размещать на одном сайте несколько приложений с различными базовыми адресами в рамках одной схемы.  
+ 
+  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет поставщикам услуг Интернета размещать на одном сайте несколько приложений с различными базовыми адресами в рамках одной схемы.  
   
  Например, сайт может содержать следующие базовые адреса:  
   
@@ -119,7 +120,7 @@ ms.locfileid: "54730949"
   
 -   в коде создайте пользовательские заголовки адреса с помощью класса <xref:System.ServiceModel.Channels.AddressHeader>, а затем используйте их в конструкторе класса <xref:System.ServiceModel.EndpointAddress>;  
   
--   В конфигурации пользовательские [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) указываются как дочерние элементы [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
+-   В конфигурации пользовательские [ \<заголовки >](../../configure-apps/file-schema/wcf/headers.md) указываются как дочерние элементы [ \<конечной точки >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) элемент.  
   
  Обычно рекомендуется использовать не код, а файл конфигурации, поскольку в этом случае заголовки можно будет менять после развертывания.  
   
@@ -130,7 +131,7 @@ ms.locfileid: "54730949"
   
 -   для задания пользовательского адреса ожидания передачи данных в коде необходимо добавить класс <xref:System.ServiceModel.Description.ClientViaBehavior> в коллекцию расширений функциональности конечной точки;  
   
--   В конфигурации укажите пользовательский адрес ожидания передачи данных с помощью `ListenUri` атрибут службы [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
+-   В конфигурации укажите пользовательский адрес ожидания передачи данных с помощью `ListenUri` атрибут службы [ \<конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) элемент.  
   
 ### <a name="custom-soap-address-filter"></a>Пользовательский фильтр адресов SOAP  
  Свойство <xref:System.ServiceModel.EndpointAddress.Uri%2A> в сочетании со свойством <xref:System.ServiceModel.EndpointAddress.Headers%2A> позволяет определить фильтр адресов SOAP конечной точки (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). По умолчанию этот фильтр проверяет, что заголовок `To` входящего сообщения совпадает с универсальным кодом ресурса (URI) конечной точки и что в сообщении имеются все обязательные заголовки конечной точки.  

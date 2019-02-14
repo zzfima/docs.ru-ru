@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Управление столбцами в элементе управления DataGridView Windows Forms
+title: Как выполнить  Управление столбцами в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 6c740330946e1c509a1b8ea7ef7ed1a83aa67e2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bda971ca6d8ab7c578695ad5984c1c81d61c065
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656873"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260677"
 ---
-# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Как выполнить Управление столбцами в элементе управления DataGridView Windows Forms
+# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Как выполнить  Управление столбцами в элементе управления DataGridView Windows Forms
 В примере кода ниже показаны различные способы управления столбцами <xref:System.Windows.Forms.DataGridView> с помощью свойств класса <xref:System.Windows.Forms.DataGridViewColumn>.  
   
 ## <a name="example"></a>Пример  
@@ -30,8 +30,8 @@ ms.locfileid: "54656873"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
-  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
+
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Создание транзакционной службы
+title: Как выполнить  Создание транзакционной службы
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 98346c0fd8990d3122ceb7c25950dc815bd5bed5
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245643"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261148"
 ---
-# <a name="how-to-create-a-transactional-service"></a>Как выполнить Создание транзакционной службы
+# <a name="how-to-create-a-transactional-service"></a>Как выполнить  Создание транзакционной службы
 В этом примере показаны различные аспекты создания транзакционной службы и использования инициируемых клиентом транзакций для координации операций службы.  
   
 ### <a name="creating-a-transactional-service"></a>Создание транзакционной службы  
   
-1.  Создайте контракт службы и добавляет заметки к операции с выбранным параметром из перечисления <xref:System.ServiceModel.TransactionFlowOption>, чтобы задать требования входящих транзакций. Обратите внимание, что в реализуемый класс службы также можно включить атрибут <xref:System.ServiceModel.TransactionFlowAttribute>. Это позволит одной реализации интерфейса, а не всем реализациям, использовать эти параметры.  
+1.  Создайте контракт службы и аннотируйте операции с выбранным параметром из перечисления <xref:System.ServiceModel.TransactionFlowOption>, чтобы задать требования входящих транзакций. Обратите внимание, что в реализуемый класс службы также можно включить атрибут <xref:System.ServiceModel.TransactionFlowAttribute>. Это позволит одной реализации интерфейса, а не всем реализациям, использовать эти параметры транзакции.  
   
     ```csharp
     [ServiceContract]  
@@ -65,7 +65,7 @@ ms.locfileid: "53245643"
     }  
     ```  
   
-3.  Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. Дополнительные сведения см. в разделе [конфигурация транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент содержит `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
+3.  Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. Дополнительные сведения см. в разделе [конфигурация транзакции ServiceModel](servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) элемент содержит `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
   
     ```xml  
     <service name="CalculatorService">  

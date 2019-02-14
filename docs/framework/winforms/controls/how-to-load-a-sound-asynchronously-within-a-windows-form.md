@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Загрузка звука асинхронно в форме Windows
+title: Как выполнить  Загрузка звука асинхронно в форме Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: ed1257a942eb990c9b0c6427d264013e3324326b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8619ea3fb06a9c7c6896176fe3ae2a4b8dfe4ded
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523679"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260708"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Как выполнить Загрузка звука асинхронно в форме Windows
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Как выполнить  Загрузка звука асинхронно в форме Windows
 В примере кода ниже производится асинхронная загрузка звука по URL-адресу, после чего он воспроизводится в новом потоке.  
   
 ## <a name="example"></a>Пример  
@@ -30,7 +30,7 @@ ms.locfileid: "54523679"
   
 -   замена имени файла `"http://www.tailspintoys.com/sounds/stop.wav"` на допустимое имя файла.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Операции с файлами должны быть включены в соответствующие блоки обработки исключений.  

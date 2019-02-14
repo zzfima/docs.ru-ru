@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 798a1d1cd21fd9a0bc21c6ccaa42c478379cc7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 698d65d951ed7adad5aa32e874befb15a3b24d12
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511541"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261431"
 ---
 # <a name="extending-security"></a>Расширение безопасности
 Чтобы адаптировать новые типы утверждений и пользовательские маркеры, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Пошаговое рассмотрение архитектуры системы безопасности WCF.  
   
  [Пользовательские учетные данные и проверка учетных данных](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Рассматривается, как модель удостоверения используется при проверке пользовательских учетных данных.  

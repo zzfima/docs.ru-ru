@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
+title: Как выполнить  Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 3acc4fd200b547fc754c4151aedc8d70fd1fa0bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc6cb747ea5ff80770f18c2e884e72883c9a82f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502160"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261041"
 ---
-# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Как выполнить Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Как выполнить  Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
 Элемент управления <xref:System.Windows.Forms.WebBrowser> можно использовать для добавления существующего динамического кода веб-приложений HTML (DHTML) в клиентские приложения Windows Forms. Это полезно, если на разработку элементов управления DHTML затрачено немало времени и нужно воспользоваться широкими возможностями интерфейса Windows Forms, не тратя время на переписывание существующего кода.  
   
  Элемент управления <xref:System.Windows.Forms.WebBrowser> позволяет реализовать двусторонний обмен данными между кодом клиентского приложения и кодом скрипта веб-страницы с помощью свойств <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> и <xref:System.Windows.Forms.WebBrowser.Document%2A>. Кроме того, вы можете настроить элемент управления <xref:System.Windows.Forms.WebBrowser> так, чтобы веб-элементы управления выглядели точно так же, как другие элементы управления в форме приложения, то есть чтобы скрыть их реализацию посредством DHTML. Для одновременного использования элементов управления следует отформатировать страницу так, чтобы ее фоновый цвет и стиль оформления соответствовали остальной форме, и использовать свойства <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> и <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> для отключения стандартных функций браузера.  
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Внедрение DHTML в приложение Windows Forms  
   
-1.  Присвойте свойству <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> элемента управления <xref:System.Windows.Forms.WebBrowser> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не открывал файлы, которые сбрасываются в него пользователем.  
+1.  Присвойте свойству <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> элемента управления <xref:System.Windows.Forms.WebBrowser> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не открывал файлы, которые перетаскиваются в него мышью.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
@@ -105,7 +105,7 @@ ms.locfileid: "54502160"
   
 -   ссылки на сборки System и System.Windows.Forms;  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.WebBrowser>

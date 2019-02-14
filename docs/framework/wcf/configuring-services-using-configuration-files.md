@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717406"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261366"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF) с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данные поведение службы точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
@@ -91,7 +91,7 @@ ms.locfileid: "54717406"
   
 -   `contract`. Задает интерфейс, определяющий контракт. Это интерфейс, реализованный в типе CLR, который задан атрибутом `name` элемента `service` .  
   
--   [\<Конечная точка > Справочник по элементам](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<Конечная точка >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<Привязки > элемент  
  Элемент `bindings` содержит спецификации для всех привязок, которые могут использоваться любой конечной точкой, заданной в любой службе.  
@@ -101,7 +101,7 @@ ms.locfileid: "54717406"
 ### <a name="the-binding-element"></a>\<Привязки > элемент  
  Элемент `binding` , содержащиеся в элементе `bindings` , могут являться одной из предоставленных системой привязок (см. раздел [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) или пользовательской привязкой (см. раздел [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). Элемент `binding` имеет атрибут `name` , сопоставляющий привязку с конечной точкой, заданной в атрибуте `bindingConfiguration` элемента `endpoint` . Если имя не указано, то привязка будет соответствовать значению по умолчанию для этого типа привязки.  
   
- Дополнительные сведения о настройке служб и клиентов, см. в разделе [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+Дополнительные сведения о настройке служб и клиентов, см. в разделе [служб WCF, Настройка](configuring-services.md).
   
  [\<Привязка >](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ ms.locfileid: "54717406"
   
 ## <a name="see-also"></a>См. также
 - [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)
-- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Настройка служб WCF](configuring-services.md)
 - [\<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<Привязка >](../../../docs/framework/misc/binding.md)

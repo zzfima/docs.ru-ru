@@ -2,12 +2,12 @@
 title: Обработка ошибок
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695560"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261158"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ## <a name="error-handling-in-windows-communication-foundation"></a>Обработка ошибок в Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695560"
   
  Программные блоки предназначены для встраивания широко используемых методов и обеспечивают общий подход к обработке исключений в пределах всего приложения. С другой стороны, могут быть весьма полезными самостоятельно разрабатываемые пользовательские обработчики ошибок и контракты ошибок. Например пользовательские обработчики ошибок предоставляют отличную возможность автоматически повышать все исключения до уровня FaultExceptions, так и для добавления возможностей ведения журнала в приложении.  
   
- Дополнительные сведения см. в разделе [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Дополнительные сведения см. в разделе [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Работа с ожидаемыми исключениями  
  Правильный порядок действий: перехватывать ожидаемые исключения в каждой операции или в соответствующей точке расширяемости, решите ли они быть восстановлено и возвращать пользовательскую ошибку в исключении FaultException\<T >  

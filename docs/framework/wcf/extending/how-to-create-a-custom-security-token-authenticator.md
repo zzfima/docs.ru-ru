@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: acf2e02479e66c6b2304b47340f19b665922cf5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df45f943da62624b92d483851e788dad0e240f47
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638747"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261132"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Практическое: создать структуру проверки подлинности маркеров безопасности
 В этом разделе показано, как создать пользовательскую структуру проверки подлинности маркеров безопасности и интегрировать ее с пользовательским диспетчером маркеров безопасности. Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности, которым снабжается входящее сообщение. В случае успешной проверки структура проверки подлинности возвращает коллекцию экземпляров <xref:System.IdentityModel.Policy.IAuthorizationPolicy>, которая при вычислении возвращает набор утверждений.  
   
- Чтобы использовать средство проверки подлинности маркеров безопасности в Windows Communication Foundation (WCF), необходимо сначала создать пользовательских учетных данных и безопасности реализации диспетчера маркеров. Дополнительные сведения о создании пользовательских учетных данных и обеспечения безопасности диспетчер маркеров см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Дополнительные сведения об учетных данных, диспетчер маркеров безопасности и классы поставщика и структуры проверки подлинности см. в разделе [архитектуры безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Чтобы использовать средство проверки подлинности маркеров безопасности в Windows Communication Foundation (WCF), необходимо сначала создать пользовательских учетных данных и безопасности реализации диспетчера маркеров. Дополнительные сведения о создании пользовательских учетных данных и обеспечения безопасности диспетчер маркеров см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
   
 ## <a name="procedures"></a>Процедуры  
   
@@ -65,4 +65,3 @@ ms.locfileid: "54638747"
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
 - [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание поставщика маркеров безопасности
+title: Как выполнить  Создание поставщика маркеров безопасности
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627711"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261353"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>Как выполнить Создание поставщика маркеров безопасности
+# <a name="how-to-create-a-custom-security-token-provider"></a>Как выполнить  Создание поставщика маркеров безопасности
 В этом разделе показано, как создавать новые типы маркеров с помощью поставщика пользовательских маркеров безопасности и как интегрировать поставщик с диспетчером пользовательских маркеров безопасности.  
   
 > [!NOTE]
@@ -23,8 +23,6 @@ ms.locfileid: "54627711"
  Поставщик маркеров безопасности создает представление маркера безопасности на основании сведений в учетных данных клиента или службы. Чтобы использовать пользовательский поставщик маркеров безопасности в системе безопасности Windows Communication Foundation (WCF), необходимо создать пользовательские учетные данные и реализации диспетчера маркеров безопасности.  
   
  Дополнительные сведения о пользовательских учетных данных и диспетчере маркеров безопасности см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
-  
- Дополнительные сведения об учетных данных безопасности диспетчера, поставщика и структуры проверки подлинности классов маркеров, см. в разделе [архитектуры безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Создание поставщика пользовательских маркеров безопасности  
   
@@ -61,4 +59,3 @@ ms.locfileid: "54627711"
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

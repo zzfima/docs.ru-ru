@@ -2,12 +2,12 @@
 title: Клиенты
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: ed1e0634344c93ba8e83035d393fc8cfb319b003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa9762e93e9cde2f33992757a6d40c9ac08b93a6
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546297"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261691"
 ---
 # <a name="clients"></a>Клиенты
 В подразделах этого раздела описывается архитектура клиента, как получить доступ к службы Windows Communication Foundation (WCF), как настроить клиент WCF и ряд вопросов безопасности для клиентов WCF.  
@@ -26,4 +26,4 @@ ms.locfileid: "54546297"
  Описание некоторых вопросов безопасности для клиентов WCF.  
   
 ## <a name="see-also"></a>См. также
-- [Примеры клиентов](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)
+- [Примеры клиентов](../samples/client.md)

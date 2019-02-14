@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение уведомления об изменении, с использованием метода ResetItem компонента BindingSource
+title: Как выполнить  Получение уведомления об изменении, с использованием метода ResetItem компонента BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: 50d2203638363831d236a6add7c6f4ba4fbebf4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb97191e30cd2c4eb5ad8b8bbc158819ac1fe396
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644828"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261418"
 ---
-# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Как выполнить Получение уведомления об изменении, с использованием метода ResetItem компонента BindingSource
+# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Как выполнить  Получение уведомления об изменении, с использованием метода ResetItem компонента BindingSource
 Некоторые источники данных для элементов управления не инициируют уведомления об изменении при добавлении, изменении или удалении элементов. При помощи компонента <xref:System.Windows.Forms.BindingSource> можно выполнить привязку к источникам данных и вызывать уведомление об изменениях из кода.  
   
 ## <a name="example"></a>Пример  
@@ -34,7 +34,7 @@ ms.locfileid: "54644828"
   
 -   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.BindingNavigator>
