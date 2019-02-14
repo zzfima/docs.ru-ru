@@ -8,63 +8,63 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609806"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261795"
 ---
-# <a name="basic-wcf-programming"></a><span data-ttu-id="9d9dc-102">Базовое программирование WCF</span><span class="sxs-lookup"><span data-stu-id="9d9dc-102">Basic WCF Programming</span></span>
-<span data-ttu-id="9d9dc-103">В этом разделе представлены основные принципы создания приложений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9d9dc-103">This section presents the fundamentals for creating Windows Communication Foundation (WCF) applications.</span></span>  
+# <a name="basic-wcf-programming"></a><span data-ttu-id="0ef40-102">Базовое программирование WCF</span><span class="sxs-lookup"><span data-stu-id="0ef40-102">Basic WCF Programming</span></span>
+<span data-ttu-id="0ef40-103">В этом разделе представлены основные принципы создания приложений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0ef40-103">This section presents the fundamentals for creating Windows Communication Foundation (WCF) applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d9dc-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9d9dc-104">In This Section</span></span>  
- [<span data-ttu-id="9d9dc-105">Базовый жизненный цикл программирования</span><span class="sxs-lookup"><span data-stu-id="9d9dc-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- <span data-ttu-id="9d9dc-106">Описание жизненного цикла разработки, создания и развертывания служб и клиентских приложений WCF.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-106">Describes the lifecycle of designing, building, and deploying WCF service and client applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0ef40-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0ef40-104">In This Section</span></span>  
+ [<span data-ttu-id="0ef40-105">Базовый жизненный цикл программирования</span><span class="sxs-lookup"><span data-stu-id="0ef40-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ <span data-ttu-id="0ef40-106">Описание жизненного цикла разработки, создания и развертывания служб и клиентских приложений WCF.</span><span class="sxs-lookup"><span data-stu-id="0ef40-106">Describes the lifecycle of designing, building, and deploying WCF service and client applications.</span></span>  
   
- [<span data-ttu-id="9d9dc-107">Проектирование и реализация служб</span><span class="sxs-lookup"><span data-stu-id="9d9dc-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- <span data-ttu-id="9d9dc-108">Описание разработки и реализации контракта службы, выбора шаблона обмена сообщениями, задания контракта сбоя и других основных аспектов служб.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
+ [<span data-ttu-id="0ef40-107">Проектирование и реализация служб</span><span class="sxs-lookup"><span data-stu-id="0ef40-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ <span data-ttu-id="0ef40-108">Описание разработки и реализации контракта службы, выбора шаблона обмена сообщениями, задания контракта сбоя и других основных аспектов служб.</span><span class="sxs-lookup"><span data-stu-id="0ef40-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
   
- [<span data-ttu-id="9d9dc-109">Настройка служб</span><span class="sxs-lookup"><span data-stu-id="9d9dc-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
- <span data-ttu-id="9d9dc-110">В этой статье описывается настройка службы WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-110">Describes how to configure a WCF service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
+ [<span data-ttu-id="0ef40-109">Настройка служб</span><span class="sxs-lookup"><span data-stu-id="0ef40-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
+ <span data-ttu-id="0ef40-110">В этой статье описывается настройка службы WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.</span><span class="sxs-lookup"><span data-stu-id="0ef40-110">Describes how to configure a WCF service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
   
- [<span data-ttu-id="9d9dc-111">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="9d9dc-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
- <span data-ttu-id="9d9dc-112">Описание основных принципов размещения служб в приложении.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-112">Describes the basics of hosting services in an application.</span></span>  
+ [<span data-ttu-id="0ef40-111">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="0ef40-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ <span data-ttu-id="0ef40-112">Описание основных принципов размещения служб в приложении.</span><span class="sxs-lookup"><span data-stu-id="0ef40-112">Describes the basics of hosting services in an application.</span></span>  
   
- [<span data-ttu-id="9d9dc-113">Создание клиентов</span><span class="sxs-lookup"><span data-stu-id="9d9dc-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
- <span data-ttu-id="9d9dc-114">Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и размещения клиентом WCF.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-114">Describes how to obtain metadata from services, convert that into WCF client code, handle security issues, and build, configure, and host an WCF client.</span></span>  
+ [<span data-ttu-id="0ef40-113">Создание клиентов</span><span class="sxs-lookup"><span data-stu-id="0ef40-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ <span data-ttu-id="0ef40-114">Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и размещения клиентом WCF.</span><span class="sxs-lookup"><span data-stu-id="0ef40-114">Describes how to obtain metadata from services, convert that into WCF client code, handle security issues, and build, configure, and host an WCF client.</span></span>  
   
- [<span data-ttu-id="9d9dc-115">Введение в расширяемость</span><span class="sxs-lookup"><span data-stu-id="9d9dc-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- <span data-ttu-id="9d9dc-116">Описывает способы расширения WCF для создания пользовательских решений.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-116">Describes how to extend WCF to create custom solutions.</span></span>  
+ [<span data-ttu-id="0ef40-115">Введение в расширяемость</span><span class="sxs-lookup"><span data-stu-id="0ef40-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ <span data-ttu-id="0ef40-116">Описывает способы расширения WCF для создания пользовательских решений.</span><span class="sxs-lookup"><span data-stu-id="0ef40-116">Describes how to extend WCF to create custom solutions.</span></span>  
   
- [<span data-ttu-id="9d9dc-117">Примеры устранения неполадок WCF</span><span class="sxs-lookup"><span data-stu-id="9d9dc-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- <span data-ttu-id="9d9dc-118">Описание наиболее распространенных проблем, способов их решения и источников дополнительной информации о них.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
+ [<span data-ttu-id="0ef40-117">Примеры устранения неполадок WCF</span><span class="sxs-lookup"><span data-stu-id="0ef40-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ <span data-ttu-id="0ef40-118">Описание наиболее распространенных проблем, способов их решения и источников дополнительной информации о них.</span><span class="sxs-lookup"><span data-stu-id="0ef40-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
   
- [<span data-ttu-id="9d9dc-119">WCF и веб-API ASP.NET</span><span class="sxs-lookup"><span data-stu-id="9d9dc-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- <span data-ttu-id="9d9dc-120">Описывает две технологии, их взаимосвязь друг с другом и способы их использования.</span><span class="sxs-lookup"><span data-stu-id="9d9dc-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
+ [<span data-ttu-id="0ef40-119">WCF и веб-API ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0ef40-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ <span data-ttu-id="0ef40-120">Описывает две технологии, их взаимосвязь друг с другом и способы их использования.</span><span class="sxs-lookup"><span data-stu-id="0ef40-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="9d9dc-121">Ссылка</span><span class="sxs-lookup"><span data-stu-id="9d9dc-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0ef40-121">Ссылка</span><span class="sxs-lookup"><span data-stu-id="0ef40-121">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## <a name="related-sections"></a><span data-ttu-id="9d9dc-122">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9d9dc-122">Related Sections</span></span>  
- [<span data-ttu-id="9d9dc-123">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="9d9dc-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
+## <a name="related-sections"></a><span data-ttu-id="0ef40-122">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0ef40-122">Related Sections</span></span>  
+ [<span data-ttu-id="0ef40-123">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="0ef40-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [<span data-ttu-id="9d9dc-124">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="9d9dc-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="0ef40-124">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="0ef40-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [<span data-ttu-id="9d9dc-125">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="9d9dc-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="0ef40-125">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="0ef40-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [<span data-ttu-id="9d9dc-126">Правила и рекомендации</span><span class="sxs-lookup"><span data-stu-id="9d9dc-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="0ef40-126">Правила и рекомендации</span><span class="sxs-lookup"><span data-stu-id="0ef40-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [<span data-ttu-id="9d9dc-127">Средства Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9d9dc-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ [<span data-ttu-id="0ef40-127">Средства Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="0ef40-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
   
- [<span data-ttu-id="9d9dc-128">Примеры Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9d9dc-128">Windows Communication Foundation Samples</span></span>](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [<span data-ttu-id="0ef40-128">Примеры Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="0ef40-128">Windows Communication Foundation (WCF) samples</span></span>](./samples/index.md)  
   
- [<span data-ttu-id="9d9dc-129">Начало работы</span><span class="sxs-lookup"><span data-stu-id="9d9dc-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="0ef40-129">Начало работы</span><span class="sxs-lookup"><span data-stu-id="0ef40-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [<span data-ttu-id="9d9dc-130">Размещение в службах IIS с использованием встроенного кода</span><span class="sxs-lookup"><span data-stu-id="9d9dc-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [<span data-ttu-id="0ef40-130">Размещение в службах IIS с использованием встроенного кода</span><span class="sxs-lookup"><span data-stu-id="0ef40-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
- [<span data-ttu-id="9d9dc-131">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="9d9dc-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+ [<span data-ttu-id="0ef40-131">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="0ef40-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
