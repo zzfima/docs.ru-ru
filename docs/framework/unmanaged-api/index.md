@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508526"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303402"
 ---
 # <a name="unmanaged-api-reference"></a>Справочник по неуправляемым API
 В данном разделе содержатся сведения о неуправляемых API, которые могут использоваться приложениями, связанными с управляемым кодом, например хост-приложениями среды выполнения, компиляторами, дизассемблерами, средствами запутывания, отладчиками и профилировщиками.  
@@ -32,7 +32,7 @@ ms.locfileid: "43508526"
  [Константы](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Описывает константы, определяемые в CorSym.idl.  
   
- [Пользовательские атрибуты интерфейса](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Пользовательские атрибуты интерфейса](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Описывает атрибуты пользовательского интерфейса COM.  
   
  [Отладка](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ ms.locfileid: "43508526"
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Руководство по разработке](../../../docs/framework/development-guide.md)  
-  
- [Дополнительные сведения о .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
