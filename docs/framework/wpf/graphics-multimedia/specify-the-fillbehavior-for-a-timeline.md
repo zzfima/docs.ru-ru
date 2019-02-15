@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
+title: Как выполнить  Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 6745cf5d57a341068e93784d5487f21e34f8a64a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dac9423212b02c509d12fce46af29bb912ae2b4
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530109"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304886"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Как выполнить Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Как выполнить  Указание режима FillBehavior для временной шкалы, достигшей конца периода активности
 В этом примере показано, как указать <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> для неактивного <xref:System.Windows.Media.Animation.Timeline> анимированного свойства.  
   
 ## <a name="example"></a>Пример  
@@ -34,5 +34,4 @@ ms.locfileid: "54530109"
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
 - [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Анимация и расчет времени](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)

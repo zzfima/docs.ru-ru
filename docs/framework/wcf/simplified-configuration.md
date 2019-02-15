@@ -2,12 +2,12 @@
 title: Упрощенная конфигурация
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498363"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305643"
 ---
 # <a name="simplified-configuration"></a>Упрощенная конфигурация
 Настройка служб Windows Communication Foundation (WCF) может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб WCF, они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  
@@ -118,5 +118,5 @@ ms.locfileid: "54498363"
 - [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Настройка привязок, предоставляемых системой](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
-- [Настройка приложений Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Настройка служб WCF](configuring-services.md)
 - [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

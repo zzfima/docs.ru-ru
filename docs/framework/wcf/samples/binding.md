@@ -1,18 +1,19 @@
 ---
-title: Binding1
+title: Примеры привязок WCF
 ms.date: 03/30/2017
 ms.assetid: 324fa627-d012-465a-b266-95594a09dac2
-ms.openlocfilehash: 124a4bd252f838b737a06b76452619182bc9dea1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 260e8a957b76c0e00ac0adae8d2a032d0d0d598b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026825"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305835"
 ---
 # <a name="binding"></a>Привязка
+
 Этот раздел содержит образцы, которые демонстрируют использование атрибутов привязки элемента конечной точки.  
   
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание раздела
   
  [Простая привязка](../../../../docs/framework/wcf/samples/basic-binding.md)  
  Демонстрирует базовые привязки в WCF.  

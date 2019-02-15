@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: e961826f4c33edf59934597734aec36ce301194e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc18c571d65d95b8ffc84f9b7d84213e527689b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694390"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305822"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic
 Составные элементы управления предоставляют средства для создания и повторного использования настраиваемых графических интерфейсов. Составной элемент управления — это компонент, имеющий визуальное представление. Таким образом, он может состоять из одного или нескольких элементов управления, компонентов или блоков кода Windows Forms, позволяющих расширить функциональные возможности за счет проверки введенных пользователем данных, изменения свойств отображения или выполнения других предусмотренных разработчиком действий. Составные элементы управления можно вставлять в Windows Forms точно так же, как другие элементы управления. В первой части этого пошагового руководства мы создадим простой составной элемент управления с именем `ctlClock`. Во второй части мы расширим функциональность `ctlClock` за счет наследования.  
@@ -399,4 +399,3 @@ ms.locfileid: "54694390"
 - [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
 - [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Примеры создания компонентов](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

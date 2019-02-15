@@ -2,12 +2,12 @@
 title: Структура проверки подлинности маркера
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: fbd036001e3b39c7df27e2388bc2ac4b803f0de3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619549"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305006"
 ---
 # <a name="token-authenticator"></a>Структура проверки подлинности маркера
 Данный образец демонстрирует способ реализации пользовательской структуры проверки подлинности маркеров. Маркер проверки подлинности в Windows Communication Foundation (WCF) используется для проверки маркера, используемого с сообщением, проверка того, что является согласованным и проверки подлинности идентификации связанное с маркером.
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Запустите программу Client.exe из \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. На клиентском компьютере из командной строки запустите программу Client.exe.  
   
-10. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664033"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305549"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Инструкции по созданию простейшей версии службы WCF и клиента, см. в разделе [Приступая к работе](../../../docs/framework/wcf/getting-started-tutorial.md). Научиться программированию WCF, см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -96,7 +96,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Объединяет несколько связанных операций в один функциональный модуль. Контракт может определять параметры уровня службы, такие как пространство имен службы, соответствующий контракт обратного вызова и другие подобные параметры. В большинстве случаев контракт задается путем создания интерфейса на выбранном языке программирования и применения атрибута <xref:System.ServiceModel.ServiceContractAttribute> к этому интерфейсу. Фактический код службы создается при реализации этого интерфейса.  
   
  контракт операции  
- Контракт операции определяет параметры операции и тип возвращаемых ею данных. При создании интерфейса, определяющего контракт службы, контракт операции задается применением атрибута <xref:System.ServiceModel.OperationContractAttribute> к определению каждого метода, входящего в контракт. Операции могут задаваться как получающие одно сообщение и возвращающие одно сообщение или как получающие набор типов и возвращающие тип. В последнем случае формат сообщений, обмен которыми происходит при выполнении данной операции, определяется системой.  
+ Контракт операции определяет параметры операции и тип возвращаемых ею значений. При создании интерфейса, определяющего контракт службы, контракт операции задается применением атрибута <xref:System.ServiceModel.OperationContractAttribute> к определению каждого метода, входящего в контракт. Операции могут задаваться как получающие одно сообщение и возвращающие одно сообщение или как получающие набор типов и возвращающие тип. В последнем случае формат сообщений, обмен которыми происходит при выполнении данной операции, определяется системой.  
   
  контракт сообщения  
  Описывает формат сообщения. Например, в нем описывается, должны элементы сообщения размещаться в заголовках или в теле, уровень безопасности, применяемый к определенным элементам сообщения и т. д.  
@@ -155,4 +155,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>См. также
 - [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
-- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

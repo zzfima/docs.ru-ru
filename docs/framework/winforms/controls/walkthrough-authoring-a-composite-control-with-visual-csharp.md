@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 6205bea2ccb75078cba507c09f1a4d65571e3418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 357e001effe22f5e9603ebee63188ddff957d585
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631702"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305731"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Пошаговое руководство. Создание составного элемента управления с помощью C# #
 Составные элементы управления предоставляют средства для создания и повторного использования настраиваемых графических интерфейсов. Составной элемент управления — это компонент, имеющий визуальное представление. Таким образом, он может состоять из одного или нескольких элементов управления, компонентов или блоков кода Windows Forms, позволяющих расширить функциональные возможности за счет проверки введенных пользователем данных, изменения свойств отображения или выполнения других предусмотренных разработчиком действий. Составные элементы управления можно вставлять в Windows Forms точно так же, как другие элементы управления. В первой части этого пошагового руководства мы создадим простой составной элемент управления с именем `ctlClock`. Во второй части мы расширим функциональность `ctlClock` за счет наследования.  
@@ -406,7 +406,5 @@ ms.locfileid: "54631702"
   
 ## <a name="see-also"></a>См. также
 - [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
-- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
-- [Примеры создания компонентов](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
 - [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

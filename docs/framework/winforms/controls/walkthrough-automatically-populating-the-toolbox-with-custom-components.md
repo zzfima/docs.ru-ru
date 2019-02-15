@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730273"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304093"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами
-Если компоненты определяются в проекте в настоящее время в открытом решении, они автоматически будут отображаться в **элементов**, не выполняя никаких действий от вас требуется. Можно также вручную заполнять **элементов** компонентами с помощью [выберите элементов элементов-диалоговое окно (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), но **элементов** принимает учетную запись элементов в своем решении выходные данные сборки со следующими характеристиками:  
+Если компоненты определяются в проекте в настоящее время в открытом решении, они автоматически будут отображаться в **элементов**, не выполняя никаких действий от вас требуется. Можно также вручную заполнять **элементов** компонентами с помощью [выберите элементов элементов-диалоговое окно (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), но **элементов** принимает учетную запись элементов в своем решении выходные данные сборки со следующими характеристиками:  
   
 -   Реализует <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54730273"
   
 2.  Добавьте новый компонент в проект. Назовите его `DemoComponent`.  
   
-     Дополнительные сведения см. в разделе [NIB: Практическое: Добавление новых элементов проекта](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Дополнительные сведения см. в разделе [Как Добавление новых элементов проекта](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
 3.  Выполните построение проекта.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "54730273"
   
 1.  Выгрузите проект из решения.  
   
-     Дополнительные сведения о выгрузке проектов см. в разделе [NIB: Практическое: Выгрузите и перезагрузите проекты](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Если вам будет предложено сохранить, выберите **Да**.  
+     Дополнительные сведения о выгрузке проектов см. в разделе [как: Выгрузите и перезагрузите проекты](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Если вам будет предложено сохранить, выберите **Да**.  
   
 2.  Добавьте новый **приложения Windows** проекта к решению. Откройте форму в **конструктор**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "54730273"
  В этом пошаговом руководстве показано, что **элементов** компонентов проекта, но **элементов** учетная запись также принимает элементов управления. Поэкспериментируйте с собственные пользовательские элементы управления, добавляя и удаляя управления проекты из решения.  
   
 ## <a name="see-also"></a>См. также
-- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
-- [Практическое руководство. Управление вкладками панели элементов](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
-- [Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Практическое руководство. Управление вкладками панели элементов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

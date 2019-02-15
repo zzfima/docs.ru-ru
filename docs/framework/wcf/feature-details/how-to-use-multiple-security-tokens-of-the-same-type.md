@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Использование нескольких маркеров безопасности одного типа
+title: Как выполнить  Использование нескольких маркеров безопасности одного типа
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 40fc95c905f8923b8aaf2c97fb9dc2b937dfb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a532d40d8c31894c63a382ecad0cbcf8b42e3a66
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691353"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303768"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Как выполнить Использование нескольких маркеров безопасности одного типа
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Как выполнить  Использование нескольких маркеров безопасности одного типа
 -   В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 клиентское сообщение содержало только один маркер любого заданного типа. Теперь клиентские сообщения могут содержать несколько маркеров одного типа. В этом разделе описывается, как включать в сообщение клиента несколько маркеров одного типа.  
   
 -   Обратите внимание, что настроить таким образом службу невозможно: служба может содержать только один вспомогательный маркер.  
@@ -48,6 +48,3 @@ ms.locfileid: "54691353"
  Ниже приводится весь метод, описанный в предыдущей процедуре.  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
-  
-## <a name="see-also"></a>См. также
-- [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

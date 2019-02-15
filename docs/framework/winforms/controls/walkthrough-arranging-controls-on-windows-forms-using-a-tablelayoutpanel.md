@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585423"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305848"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel
 В некоторых приложениях требуется форма, макет которой изменяется надлежащим образом при изменении размера формы или содержимого. Если необходим динамический макет и вы не хотите обрабатывать события <xref:System.Windows.Forms.Control.Layout> явно в коде, рассмотрите возможность использования панели макета.  
@@ -22,7 +22,7 @@ ms.locfileid: "54585423"
   
  <xref:System.Windows.Forms.TableLayoutPanel> Упорядочивает свое содержимое в сетке, обеспечивая функциональные возможности, аналогичные HTML \<таблицы > элемента. <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления позволяет размещать элементы управления в виде сетки без необходимости точного указания положения каждого отдельного элемента управления. Его ячейки организованы в строки и столбцы, и они могут быть разного размера. Ячейки могут быть объединены между строками и столбцами. Ячейки могут содержать что-либо формы может содержать и ведут себя во многих отношениях как контейнеры.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления также предоставляет возможность пропорционального изменения размера во время выполнения, то макет можно без проблем при изменении размера формы. Это делает <xref:System.Windows.Forms.TableLayoutPanel> управления хорошо подходит для форм ввода данных и локализованных приложений. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) и [Пошаговое руководство: Создание формы Windows локализуемые](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления также предоставляет возможность пропорционального изменения размера во время выполнения, то макет можно без проблем при изменении размера формы. Это делает <xref:System.Windows.Forms.TableLayoutPanel> управления хорошо подходит для форм ввода данных и локализованных приложений. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) и [Пошаговое руководство: Создание формы Windows локализуемые](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  В общем случае не следует использовать <xref:System.Windows.Forms.TableLayoutPanel> управления как контейнер для всего макета. Используйте <xref:System.Windows.Forms.TableLayoutPanel> элементы управления для предоставления возможностей пропорционального изменения размера его части.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54585423"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Выберите форму в **Windows** **конструктора**.  
   
@@ -184,8 +184,8 @@ ms.locfileid: "54585423"
 - [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Редмонд, штат Вашингтон: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [Пошаговое руководство: Создание формы локализуемые Windows](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [Пошаговое руководство: Создание переменного размера Windows формы для ввода данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [Пошаговое руководство: Создание формы локализуемые Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Советы по использованию элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [Практическое руководство. Закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

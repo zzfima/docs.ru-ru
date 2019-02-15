@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Анимация расположения объекта с помощью PointAnimation
+title: Как выполнить  Анимация расположения объекта с помощью PointAnimation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], animation
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-ms.openlocfilehash: e359e712f533c861a694c53848ca0eaeb289eb21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0551ba7c22e6c13ef2875e5f4ba681fc6df14d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495557"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304795"
 ---
-# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Как выполнить Анимация расположения объекта с помощью PointAnimation
+# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Как выполнить  Анимация расположения объекта с помощью PointAnimation
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimation> класс для анимации объекта вдоль <xref:System.Windows.Shapes.Path>.  
   
 ## <a name="example"></a>Пример  
@@ -31,6 +31,5 @@ ms.locfileid: "54495557"
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)
-- [Анимация и расчет времени](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Разделы руководства, посвященные графики](graphics-how-to-topics.md)
+- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)
