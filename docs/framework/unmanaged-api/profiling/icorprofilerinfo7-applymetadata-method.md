@@ -1,6 +1,6 @@
 ---
 title: Метод ICorProfilerInfo7::ApplyMetaData
-ms.date: 03/30/2017
+ms.date: 02/15/2019
 dev_langs:
 - cpp
 api_name:
@@ -12,19 +12,19 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7209314f9cf3170ba0b577395a5134f9549475e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5caf7b5e24ac5e583420b45c563f53b8988f1e00
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536572"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332667"
 ---
-# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="f4a3e-102">Метод ICorProfilerInfo7::ApplyMetaData</span><span class="sxs-lookup"><span data-stu-id="f4a3e-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
-<span data-ttu-id="f4a3e-103">[Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="f4a3e-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="cd53f-102">Метод ICorProfilerInfo7::ApplyMetaData</span><span class="sxs-lookup"><span data-stu-id="cd53f-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
+<span data-ttu-id="cd53f-103">[Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="cd53f-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="f4a3e-104">Применяет метаданные, вновь определением `IMetadataEmit::Define*` методов к указанному модулю.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
+ <span data-ttu-id="cd53f-104">Применяет метаданные, вновь определением `IMetadataEmit::Define*` методов к указанному модулю.</span><span class="sxs-lookup"><span data-stu-id="cd53f-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4a3e-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f4a3e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd53f-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd53f-105">Syntax</span></span>  
   
 ```cpp
 HRESULT ApplyMetaData(  
@@ -32,35 +32,41 @@ HRESULT ApplyMetaData(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f4a3e-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f4a3e-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cd53f-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="cd53f-106">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="f4a3e-107">[in] Идентификатор модуля, метаданные которого было изменено.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-107">[in] The identifier of the module whose metadata was changed.</span></span>  
+ <span data-ttu-id="cd53f-107">[in] Идентификатор модуля, метаданные которого было изменено.</span><span class="sxs-lookup"><span data-stu-id="cd53f-107">[in] The identifier of the module whose metadata was changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f4a3e-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="f4a3e-108">Remarks</span></span>  
- <span data-ttu-id="f4a3e-109">При изменении метаданных после [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) обратного вызова, этот метод необходимо вызвать перед использованием новые метаданные.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd53f-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="cd53f-108">Remarks</span></span>  
+ <span data-ttu-id="cd53f-109">При изменении метаданных после [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) обратного вызова, этот метод необходимо вызвать перед использованием новые метаданные.</span><span class="sxs-lookup"><span data-stu-id="cd53f-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
   
- <span data-ttu-id="f4a3e-110">`ApplyMetaData` поддерживает только добавление следующие метаданные:</span><span class="sxs-lookup"><span data-stu-id="f4a3e-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
+ <span data-ttu-id="cd53f-110">`ApplyMetaData` поддерживает только добавление следующие метаданные:</span><span class="sxs-lookup"><span data-stu-id="cd53f-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
   
--   <span data-ttu-id="f4a3e-111">`AssemblyRef` записи, которые создаются путем вызова [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span><span class="sxs-lookup"><span data-stu-id="f4a3e-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="f4a3e-112">метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-112">method.</span></span>  
+-   <span data-ttu-id="cd53f-111">`AssemblyRef` записи, которые создаются путем вызова [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span><span class="sxs-lookup"><span data-stu-id="cd53f-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="cd53f-112">метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-112">method.</span></span>  
   
--   <span data-ttu-id="f4a3e-113">`TypeRef` записи, которые создаются путем вызова [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
+-   <span data-ttu-id="cd53f-113">`TypeRef` записи, которые создаются путем вызова [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
   
--   <span data-ttu-id="f4a3e-114">`TypeSpec` записи, которые создаются путем вызова [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
+-   <span data-ttu-id="cd53f-114">`TypeSpec` записи, которые создаются путем вызова [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
   
--   <span data-ttu-id="f4a3e-115">`MemberRef` записи, которые создаются путем вызова [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
+-   <span data-ttu-id="cd53f-115">`MemberRef` записи, которые создаются путем вызова [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
   
--   <span data-ttu-id="f4a3e-116">`MemberSpec` записи, которые создаются путем вызова [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
+-   <span data-ttu-id="cd53f-116">`MemberSpec` записи, которые создаются путем вызова [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
   
--   <span data-ttu-id="f4a3e-117">`UserString` записи, которые создаются путем вызова [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f4a3e-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
+-   <span data-ttu-id="cd53f-117">`UserString` записи, которые создаются путем вызова [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
+
+<span data-ttu-id="cd53f-118">Начиная с .NET Core 3.0 — `ApplyMetaData` также поддерживает следующие типы:</span><span class="sxs-lookup"><span data-stu-id="cd53f-118">Starting with .NET Core 3.0, `ApplyMetaData` also supports the following types:</span></span>
+
+- <span data-ttu-id="cd53f-119">`TypeDef` записи, которые создаются путем вызова [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-119">`TypeDef` records, which you create by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method.</span></span>
+
+- <span data-ttu-id="cd53f-120">`MethodDef` записи, которые создаются путем вызова [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd53f-120">`MethodDef` records, which you create by calling the [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) method.</span></span> <span data-ttu-id="cd53f-121">Однако добавление виртуальные методы в существующий тип не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="cd53f-121">However, adding virtual methods to an existing type is not supported.</span></span> <span data-ttu-id="cd53f-122">Виртуальные методы, которые необходимо добавить перед [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="cd53f-122">Virtual methods must be added before the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="cd53f-123">Требования</span><span class="sxs-lookup"><span data-stu-id="cd53f-123">Requirements</span></span>  
+ <span data-ttu-id="cd53f-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd53f-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4a3e-118">Требования</span><span class="sxs-lookup"><span data-stu-id="f4a3e-118">Requirements</span></span>  
- <span data-ttu-id="f4a3e-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4a3e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="cd53f-125">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cd53f-125">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f4a3e-120">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f4a3e-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cd53f-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd53f-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4a3e-121">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4a3e-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cd53f-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd53f-127">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
   
- <span data-ttu-id="f4a3e-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4a3e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f4a3e-123">См. также</span><span class="sxs-lookup"><span data-stu-id="f4a3e-123">See also</span></span>
-- [<span data-ttu-id="f4a3e-124">Интерфейс ICorProfilerInfo7</span><span class="sxs-lookup"><span data-stu-id="f4a3e-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cd53f-128">См. также</span><span class="sxs-lookup"><span data-stu-id="cd53f-128">See also</span></span>
+- [<span data-ttu-id="cd53f-129">Интерфейс ICorProfilerInfo7</span><span class="sxs-lookup"><span data-stu-id="cd53f-129">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
