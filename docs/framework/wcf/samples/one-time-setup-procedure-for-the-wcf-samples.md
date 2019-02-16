@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583424"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333460"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске; Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.
@@ -25,7 +25,7 @@ ms.locfileid: "54583424"
   
 3.  Если не установлена Visual Studio 2012, и операционная система не Windows Server 2008 SP2 или более поздней версии, установите [пакет исправлений 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Выполните следующие команды. Дополнительные сведения о почему необходимо запустить следующие команды, см. в разделе [сбоя размещенной службы IIS](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Выполните следующие команды. Дополнительные сведения о почему необходимо запустить следующие команды, см. в разделе [сбоя размещенной службы IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Если IIS был переустановлен, необходимо вновь выполнить следующие команды.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: f031443ac14404f24e7137afc9176d445e62f2c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ead36beda4a56d779969eea0ed746bfb47891243
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583289"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333317"
 ---
 # <a name="message-security-certificate"></a>Сертификат безопасности сообщений
 В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера. В этом образце используются параметры по умолчанию, обеспечивающие подписывание и шифрование всех сообщений приложения, которыми обмениваются клиент и сервер. Этот образец основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) и состоит из консольной программы клиента и библиотеку службы, размещаемую в Internet Information Services (IIS). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  
@@ -297,7 +297,7 @@ Press <ENTER> to terminate client.
   
 3.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -325,7 +325,7 @@ Press <ENTER> to terminate client.
   
 12. На сервере запустите файл ImportClientCert.bat в командную строку разработчика для Visual Studio с правами администратора. При этом импортируется сертификат клиента из файла Client.cer в хранилище «LocalMachine - TrustedPeople».  
   
-13. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

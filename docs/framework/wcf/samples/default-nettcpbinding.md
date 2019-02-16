@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589984"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333356"
 ---
 # <a name="default-nettcpbinding"></a>Привязка NetTcpBinding по умолчанию
 В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
@@ -26,7 +26,7 @@ ms.locfileid: "54589984"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки задается в `binding` атрибут [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, как показано в следующем образце конфигурации.  
+ Привязка задается в файлах конфигурации для клиента и службы. Тип привязки задается в `binding` атрибут [ \<конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) элемент, как показано в следующем образце конфигурации.  
   
 ```xml  
 <endpoint address=""  

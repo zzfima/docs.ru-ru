@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721114"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333473"
 ---
 # <a name="securing-clients"></a>Обеспечение безопасности клиентов
 В Windows Communication Foundation (WCF), требования безопасности для клиентов определяются службой. Это означает, что служба указывает используемый режим безопасности и определяет, должен ли клиент предоставить учетные данные. Таким образом, процесс обеспечения безопасности клиента прост: используйте метаданные, полученные от службы (если она опубликована), и создайте клиент. Метаданные указывают, как настроить клиент. Если служба требует, чтобы клиент предоставлял учетные данные, необходимо получить учетные данные, удовлетворяющие требованиям. В этом разделе подробно описан данный процесс. Дополнительные сведения о создании безопасной службы см. в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "54721114"
  При наличии конфигурации файла, созданного инструментом Svcutil.exe, изучите [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) раздел, чтобы определить, какой тип учетных данных клиента необходим. В этом разделе находятся элементы привязки, задающие требования безопасности. В частности, изучите \<безопасности > элемента каждой привязки. Этот элемент содержит атрибут `mode`, которому можно присвоить одно из трех возможных значений (`Message`, `Transport` или `TransportWithMessageCredential`). Значение этого атрибута определяет режим, задающий, в свою очередь, какой из дочерних элементов является значимым.  
   
  `<security>` Элемент может содержать либо `<transport>` или `<message>` элемент, или оба. Значимым элементом является тот, который соответствует режиму безопасности. Например, следующий код задает режим безопасности `"Message"`, а типом учетных данных клиента для элемента `<message>` является `"Certificate"`. В этом случае элемент `<transport>` можно игнорировать. Однако элемент `<message>` задает, что должен быть предоставлен сертификат X.509.  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ ms.locfileid: "54721114"
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  Обратите внимание, что если для атрибута `clientCredentialType` задано значение `"Windows"`, как показано с следующем примере, предоставлять фактическое значение учетных данных не требуется. Это связано с тем, что встроенная система безопасности Windows предоставляет фактические учетные данные (маркер Kerberos) пользователя, запустившего клиент.  
   
 ```xml  
@@ -107,29 +107,21 @@ ms.locfileid: "54721114"
 </configuration>  
 ```  
   
- Чтобы задать учетные данные клиента в конфигурации, добавьте [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) элемент в файле конфигурации. Кроме того, добавленный элемент расширения функциональности должны быть связаны с конечной точки службы с помощью `behaviorConfiguration` атрибут [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, как показано в следующем примере. Значение атрибута `behaviorConfiguration` должно соответствовать значению атрибута `name` расширения функциональности.  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ Чтобы задать учетные данные клиента в конфигурации, добавьте [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) элемент в файле конфигурации. Кроме того, добавленный элемент расширения функциональности должны быть связаны с конечной точки службы с помощью `behaviorConfiguration` атрибут [ \<конечной точки > из \<клиента >](../configure-apps/file-schema/wcf/endpoint-of-client.md) элемент, как показано в следующем примере. Значение атрибута `behaviorConfiguration` должно соответствовать значению атрибута `name` расширения функциональности.  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  Некоторые из значений учетных данных клиента не могут задаваться с помощью файлов конфигурации приложения; это, например, значения имени пользователя и пароля или значения пользователя и пароля Windows. Такие значения учетных данных могут быть заданы только в коде.  

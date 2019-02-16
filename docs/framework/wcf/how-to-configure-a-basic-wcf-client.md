@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Настройка базового клиента Windows Communication Foundation
+title: Как выполнить  Настройка клиента основные Windows Communication Foundation
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: 3f267edf87711de8a5969e3e0b577648008c5a75
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 18acec48b2af78877f99335da38ccb0ae8942824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562194"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332327"
 ---
-# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Практическое руководство. Настройка базового клиента Windows Communication Foundation
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Как выполнить  Настройка клиента основные Windows Communication Foundation
 
 Это пятая из шести задач, необходимых для создания базового приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -19,7 +19,7 @@ ms.locfileid: "46562194"
 
 ## <a name="configure-a-windows-communication-foundation-client"></a>Настройка клиента Windows Communication Foundation
 
-Откройте сформированный файл конфигурации (App.config) из проекта GettingStartedClient. В следующем примере приведено представление созданного файла конфигурации. В разделе [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) найдите [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.
+Откройте сформированный файл конфигурации (App.config) из проекта GettingStartedClient. В следующем примере приведено представление созданного файла конфигурации. В разделе [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) найдите [ \<конечной точки >](../configure-apps/file-schema/wcf/endpoint-element.md) элемент.
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,12 +53,12 @@ ms.locfileid: "46562194"
 
 В элементе конечной точки указано, что контракт службы `ServiceReference1.ICalculator` используется для взаимодействия между клиентом и службой WCF. Канал WCF настроен с привязкой <xref:System.ServiceModel.WSHttpBinding>, предоставленной системой. Этот контракт был сформирован с помощью **Add Service Reference** в Visual Studio. В сущности, это является копией контракта, определенного в проекте GettingStartedLib. Привязка <xref:System.ServiceModel.WSHttpBinding> задает HTTP в качестве транспорта, уровень безопасности и другие данные конфигурации.
 
-Дополнительные сведения о способах использования созданного клиента с помощью этой конфигурации см. в разделе [как: использовать клиент](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
+Дополнительные сведения о способах использования созданного клиента с помощью этой конфигурации см. в разделе [как: Использование клиента](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Практическое: использование клиента WCF](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+> [Практическое руководство. Использование клиента WCF](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
 ## <a name="see-also"></a>См. также
 

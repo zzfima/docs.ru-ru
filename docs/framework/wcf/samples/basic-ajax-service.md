@@ -2,17 +2,17 @@
 title: Базовая служба AJAX
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 7a9529b79c9993e045e6bb28a7ad608f453a694e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f488ea1784e41c0c8e4bb815397ab81de95e53b
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509991"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332441"
 ---
 # <a name="basic-ajax-service"></a>Базовая служба AJAX
 В этом примере показано, как использовать Windows Communication Foundation (WCF), чтобы создать базовую службу ASP.NET асинхронных скриптов JavaScript и XML (AJAX) (службы, доступны с помощью кода JavaScript из веб-браузера клиента). Служба использует атрибут <xref:System.ServiceModel.Web.WebGetAttribute>, чтобы обеспечить ответы службы на запросы HTTP GET и настройку на использование при ответах формата данных JSON.  
   
- Поддержка AJAX в WCF оптимизирована для использования с ASP.NET AJAX с помощью `ScriptManager` элемента управления. Пример использования WCF с ASP.NET AJAX, см. в разделе [образцы AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Поддержка AJAX в WCF оптимизирована для использования с ASP.NET AJAX с помощью `ScriptManager` элемента управления. Пример использования WCF с ASP.NET AJAX, см. в разделе [образцы AJAX](ajax.md).  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -35,7 +35,8 @@ public interface ICalculator
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
 ```
 
- <xref:System.ServiceModel.Description.WebScriptEndpoint> предварительно настраивается таким образом, чтобы служба была доступна с клиентской страницы ASP.NET AJAX. Следующий раздел в Web.config может использоваться для дополнительных изменений конфигурации конечной точки. Если дополнительных изменений не требуется, он может быть удален.  
+ 
+  <xref:System.ServiceModel.Description.WebScriptEndpoint> предварительно настраивается таким образом, чтобы служба была доступна с клиентской страницы ASP.NET AJAX. Следующий раздел в Web.config может использоваться для дополнительных изменений конфигурации конечной точки. Если дополнительных изменений не требуется, он может быть удален.  
   
 ```xml  
 <system.serviceModel>  
@@ -48,7 +49,8 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> задает формат данных по умолчанию для службы как JSON вместо XML. Чтобы вызвать службу, перейдите к `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` после завершения настройки и шагов, описанных далее в этом разделе. Таки функциональные возможности тестирования обеспечиваются за счет запроса HTTP GET.  
+ 
+  <xref:System.ServiceModel.Description.WebScriptEndpoint> задает формат данных по умолчанию для службы как JSON вместо XML. Чтобы вызвать службу, перейдите к `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` после завершения настройки и шагов, описанных далее в этом разделе. Таки функциональные возможности тестирования обеспечиваются за счет запроса HTTP GET.  
   
  Клиентская веб-страница SimpleAjaxClientPage.aspx содержит код ASP.NET для вызова службы, когда пользователь нажимает одну из кнопок операций на странице. Элемент управления `ScriptManager` используется для создания прокси-сервера для службы, доступной через JavaScript.  
 

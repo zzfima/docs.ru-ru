@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600431"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333031"
 ---
 # <a name="queues-overview"></a>Общие сведения об очередях
 В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей. Последующих подразделах содержатся подробные сведения о том, как описанные здесь принципы очередей представлены в Windows Communication Foundation (WCF).  
@@ -81,6 +81,5 @@ ms.locfileid: "54600431"
 - [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Примеры привязок интеграции с очередью сообщений](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
 - [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

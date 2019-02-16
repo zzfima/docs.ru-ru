@@ -2,12 +2,12 @@
 title: Защита сообщений с использованием средств обеспечения безопасности транспорта
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747951"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332353"
 ---
 # <a name="securing-messages-using-transport-security"></a>Защита сообщений с использованием средств обеспечения безопасности транспорта
 В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.  
@@ -97,6 +97,6 @@ ms.locfileid: "54747951"
  Поддерживаются алгоритмы: `MD5`, `SHA1`, `SHA256` и `SHA512`. Значение по умолчанию — `SHA1`.  
   
 ## <a name="see-also"></a>См. также
-- [Очереди сообщений](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Общие сведения об очередях](queues-overview.md)
 - [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

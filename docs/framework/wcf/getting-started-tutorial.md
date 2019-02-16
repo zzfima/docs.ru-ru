@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491367"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332251"
 ---
 # <a name="getting-started-tutorial"></a>Учебник по началу работы
 В подразделах этого раздела призваны кратко познакомить читателя в Windows Communication Foundation (WCF) опыт программирования. Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы. Прохождение этого учебника дает начальное понимание шагов, необходимых для создания служб WCF и клиентских приложений. Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы. *Конечной точки* службы задает адрес, по которому можно найти службу, привязку, содержащую сведения, описывающие, как клиент должен связаться со службой и контракт, который определяет функциональные возможности предоставляемую службой клиентам.
@@ -22,7 +22,7 @@ ms.locfileid: "54491367"
 
 В подразделах этого раздела предполагается, что вы используете Visual Studio в качестве среды разработки. Если используется другая среда разработки, игнорировать инструкции конкретных Visual Studio.
 
-Примеры приложений, которые можно загрузить на жесткий диск и запуска, см. в пункте [образцов Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Для этого раздела, см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).
+Примеры приложений, которые можно загрузить на жесткий диск и запуска, см. в пункте [образцов Windows Communication Foundation (WCF)](./samples/index.md). Для этого раздела, см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).
 
 Дополнительные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).
 
@@ -58,7 +58,7 @@ ms.locfileid: "54491367"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-- [Примеры Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Примеры Windows Communication Foundation (WCF)](./samples/index.md)
 - [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>См. также

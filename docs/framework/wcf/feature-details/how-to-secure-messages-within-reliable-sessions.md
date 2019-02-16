@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Защита сообщений с помощью надежных сеансов
+title: Как выполнить  Защита сообщений с помощью надежных сеансов
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185356"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333057"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Практическое руководство. Защита сообщений с помощью надежных сеансов
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Как выполнить  Защита сообщений с помощью надежных сеансов
 
 В этом разделе описывается обеспечение безопасности на уровне сообщения в ходе надежного сеанса обмена сообщениями с использованием одной из предоставляемых системой привязок, которые поддерживают такие сеансы, но не по умолчанию. Включите защищенный, надежный сеанс можно принудительно с помощью кода или декларативно в файле конфигурации. В этой процедуре для разрешения защищенного, надежного сеанса используются файлы конфигурации клиента и службы.
 
@@ -21,7 +21,7 @@ ms.locfileid: "50185356"
 
 1. необходимо задать тип учетных данных клиента, который должен использоваться при проверке подлинности клиента в службе.
 
-Очень важно в первой задаче, который содержит элемент конфигурации конечной точки `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем (в данном примере) `MessageSecurity`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемент конфигурации, затем ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) элемент `true`. Можно потребовать гарантии упорядоченной доставки сообщений в ходе надежного сеанса, присвоив атрибуту `ordered` значение `true`.
+Очень важно в первой задаче, который содержит элемент конфигурации конечной точки `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем (в данном примере) `MessageSecurity`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемент конфигурации, затем ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) элемент `true`. Можно потребовать гарантии упорядоченной доставки сообщений в ходе надежного сеанса, присвоив атрибуту `ordered` значение `true`.
 
 Копию исходного кода примера, на котором основывается данная процедура конфигурации, см. в разделе [надежный сеанс WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -34,11 +34,11 @@ ms.locfileid: "50185356"
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Настройка службы с привязкой WSHttpBinding использования надежного сеанса
 
-Эта процедура описана в [как: Exchange сообщения в рамках надежного сеанса](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Эта процедура описана в [как: Обмен сообщениями в рамках надежного сеанса](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Настройка клиента с привязкой WSHttpBinding использования надежного сеанса
 
-Эта процедура описана в [как: Exchange сообщения в рамках надежного сеанса](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Эта процедура описана в [как: Обмен сообщениями в рамках надежного сеанса](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Задание режима и свойства ClientCredentialType в конфигурации
 

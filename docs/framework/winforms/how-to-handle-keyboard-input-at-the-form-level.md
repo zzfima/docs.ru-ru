@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обработка ввода с клавиатуры на уровне формы
+title: Как выполнить  Обработка ввода с клавиатуры на уровне формы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: ba17788933cb87215dc66d248357b3333ec04838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8c0f37d8a55e37680ea20bf071b02725a201ff
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573377"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332797"
 ---
-# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Как выполнить Обработка ввода с клавиатуры на уровне формы
+# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Как выполнить  Обработка ввода с клавиатуры на уровне формы
 Windows Forms предоставляет возможность обработки сообщений клавиатуры на уровне формы, прежде чем они достигнут элемента управления. В этом разделе показано, как выполнить данную задачу.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>Обработка ввода с клавиатуры на уровне формы  
@@ -40,7 +40,7 @@ Windows Forms предоставляет возможность обработк
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
-  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
+
 ## <a name="see-also"></a>См. также
 - [Ввод с клавиатуры в приложении Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)

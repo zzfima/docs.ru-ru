@@ -2,17 +2,17 @@
 title: Пример службы AJAX с JSON и XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632300"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332352"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Пример службы AJAX с JSON и XML
 В этом примере показано, как использовать Windows Communication Foundation (WCF) для создания служб асинхронных сценариев JavaScript и XML (AJAX), возвращающих нотацию объектов JavaScript (JSON) или XML-данные. К службе AJAX можно обращаться с помощью кода JavaScript из веб-браузера. Этот пример основан на [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образца.  
   
- В отличие от других примеров AJAX, в данном примере не используется ASP.NET AJAX и управление <xref:System.Web.UI.ScriptManager>. Дополнительная настройка службы WCF AJAX может осуществляться из любой HTML-страницы через JavaScript, и этот сценарий показан здесь. Пример использования WCF с ASP.NET AJAX, см. в разделе [образцы AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
+ В отличие от других примеров AJAX, в данном примере не используется ASP.NET AJAX и управление <xref:System.Web.UI.ScriptManager>. Дополнительная настройка службы WCF AJAX может осуществляться из любой HTML-страницы через JavaScript, и этот сценарий показан здесь. Пример использования WCF с ASP.NET AJAX, см. в разделе [образцы AJAX](ajax.md).
   
  В данном разделе показано переключение типа отклика операции между JSON и XML. Данная функциональность доступна независимо от того, настроена служба для доступа через клиентскую страницу ASP.NET AJAX или через HTML/JavaScript.  
   

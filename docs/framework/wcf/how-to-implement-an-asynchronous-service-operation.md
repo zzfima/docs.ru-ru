@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Реализация асинхронной операции службы
+title: Как выполнить  Реализация асинхронной операции службы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 56b82b44b56ab336ae9a460c328b76aa6974fcd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cbea3ae4528016a736c639c07059c1d2cb6407
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559766"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332043"
 ---
-# <a name="how-to-implement-an-asynchronous-service-operation"></a>Как выполнить Реализация асинхронной операции службы
-В приложениях Windows Communication Foundation (WCF) операции службы можно реализовать асинхронно или синхронно без жесткого задания клиенту как к нему обратиться. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении, см. в разделе [как: Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример, служба и клиент сторон см. в разделе [асинхронной](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+# <a name="how-to-implement-an-asynchronous-service-operation"></a>Как выполнить  Реализация асинхронной операции службы
+В приложениях Windows Communication Foundation (WCF) операции службы можно реализовать асинхронно или синхронно без жесткого задания клиенту как к нему обратиться. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении, см. в разделе [как: Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример, служба и клиент сторон, см. в разделе [асинхронной](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Асинхронная реализация операции службы  
   

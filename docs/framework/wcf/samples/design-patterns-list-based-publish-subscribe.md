@@ -2,12 +2,12 @@
 title: 'Шаблоны разработки: Публикация-подписка на основе списка'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717916"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333395"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Шаблоны разработки: Публикация-подписка на основе списка
 Этот пример иллюстрирует шаблон публикация-подписка на основе списка, реализован как программа Windows Communication Foundation (WCF).  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Запустите Datasource.exe из \datasource\bin\\, из языковой папке. Действия источника данных отображаются в окне консоли. После того, как источник данных отправляет информацию службе, она должна быть передана каждому клиенту.  
   
-4.  Если клиент, источник данных и служебные программы не могут взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиент, источник данных и служебные программы не могут взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   

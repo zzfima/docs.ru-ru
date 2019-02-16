@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение ввода с клавиатуры в стандартном элементе управления
+title: Как выполнить  Изменение ввода с клавиатуры в стандартном элементе управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 98e6f4ddbaed5eff2bab53ee332f97253daf4409
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfb7ee9a97c5b88d4b2404d4d895ca91150b903b
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571747"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333343"
 ---
-# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Как выполнить Изменение ввода с клавиатуры в стандартном элементе управления
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Как выполнить  Изменение ввода с клавиатуры в стандартном элементе управления
 Формы Windows Forms предоставляют возможность получать и изменять вводимые с клавиатуры данные. Получением клавиши называется обработка клавиши внутри метода или обработчика событий таким образом, чтобы следующие методы и события в очереди сообщений не получали значение этой клавиши. Изменением клавиши называется изменение значения клавиши таким образом, чтобы следующие методы и обработчики событий в очереди сообщений получали другое значение клавиши. В этом разделе показано, как выполнять эти задачи.  
   
 ### <a name="to-consume-a-key"></a>Получение клавиши  
@@ -65,7 +65,7 @@ ms.locfileid: "54571747"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  Также см. раздел [Как Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 - [Ввод с клавиатуры в приложении Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)

@@ -2,12 +2,12 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 93097c5f13a45ba399ec90d6282db8ca277a8ede
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640554"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332160"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 В образце двустороннего HTTP-взаимодействия показано, как настроить привязку `WSDualHttpBinding`. Этот образец содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в службах IIS. Служба реализует дуплексный контракт. Контракт определяется интерфейсом `ICalculatorDuplex`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). В этом образце интерфейс `ICalculatorDuplex` позволяет клиенту выполнять математические операции, вычисляя результат выполнения в сеансе. Независимо от этого служба возвращает результаты в интерфейсе `ICalculatorDuplexCallback`. Для дуплексного контракта требуется сеанс, поскольку необходимо установить контекст для корреляции набора сообщений, обмен которыми осуществляется между клиентом и службой. Привязка `WSDualHttpBinding` поддерживает дуплексное взаимодействие.  
@@ -87,7 +87,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Если пример выполняется на нескольких компьютерах, не забудьте заменить localhost в `address` атрибут [конечной точки](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент и `clientBaseAddress` атрибут [ \< Привязка >](../../../../docs/framework/misc/binding.md) элемент [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) элемент с именем соответствующего компьютера, как показано:  
+    >  Если пример выполняется на нескольких компьютерах, не забудьте заменить localhost в `address` атрибут [ \<конечной точки > из \<клиента >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) элемент и `clientBaseAddress` атрибут [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) элемент с именем соответствующего компьютера, как показано:  
   
     ```xml  
     <client>  

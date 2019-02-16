@@ -2,12 +2,12 @@
 title: Политика авторизации
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873483"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332680"
 ---
 # <a name="authorization-policy"></a>Политика авторизации
 
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. Запустите Client.exe из *\client\bin*. Действия клиента отображаются в консольном приложении клиента.
 
-  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах
 
@@ -500,11 +500,11 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.
 
-   Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Очистка после образца
 
 Очистка после примера, запустите *Cleanup.bat* в папку «samples» после завершения выполнения образца. Он удалит из хранилища сертификатов сертификаты сервера и клиента.
 
 > [!NOTE]
-> Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы запустили примеры WCF, которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - TrustedPeople хранения. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. Если вы запустили примеры WCF, которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - TrustedPeople хранения. Чтобы сделать это, используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

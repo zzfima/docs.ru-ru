@@ -2,12 +2,12 @@
 title: Совместимость возможностей частичного доверия
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564734"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333510"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 Windows Communication Foundation (WCF) поддерживает ограниченный набор функциональности при работе в среде с частичным доверием. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
  Пример общего поведения, см. в разделе [как: Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
  За одним исключением, частично доверенный код может загружать только разделы конфигурации WCF в локальной `app.config` файл. Для загрузки разделов конфигурации WCF, которые ссылаются на разделы WCF в файле machine.config или в корневом файле web.config требуется разрешение ConfigurationPermission(Unrestricted). Без этого разрешения ссылок на WCF разделов конфигурации (поведения, привязки) за пределами файла локальной конфигурации приводят к возникновению исключения при загрузке конфигурации.  
   
  Одно из известных исключений — конфигурация типа для сериализации, как описано в разделе "Сериализация" данной статьи.  
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
  Ведение журнала сообщений не работает при запуске WCF в среде с частичным доверием. Если для частичного доверия включено ведение журнала сообщений, сбой активации службы не произойдет, однако сообщения записываться не будут.  
   
 ### <a name="tracing"></a>Трассировка  
- При выполнении в среде с частичным доверием доступна ограниченная функциональность трассировки. В элементе <`listeners`> файла конфигурации можно добавлять только тип <xref:System.Diagnostics.TextWriterTraceListener> и новый тип <xref:System.Diagnostics.EventSchemaTraceListener>. Использование обычного типа <xref:System.Diagnostics.XmlWriterTraceListener> может привести к неполным или неверным записям.  
+ При выполнении в среде с частичным доверием доступна ограниченная функциональность трассировки. В <`listeners`> являются только типы, которые можно добавить элемент в файле конфигурации <xref:System.Diagnostics.TextWriterTraceListener> и новый <xref:System.Diagnostics.EventSchemaTraceListener>. Использование обычного типа <xref:System.Diagnostics.XmlWriterTraceListener> может привести к неполным или неверным записям.  
   
  Поддерживаются следующие источники трассировки:  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Не должны быть заданы следующие члены перечисления <xref:System.Diagnostics.TraceOptions> :  
   
