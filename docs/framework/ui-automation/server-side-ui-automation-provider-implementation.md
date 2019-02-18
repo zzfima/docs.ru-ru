@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8a6d604e78e1568714d5b574594af752abe221e
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744119"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305511"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
@@ -127,7 +127,7 @@ ms.locfileid: "54744119"
   
  Для оптимизации производительности поставщик можно выборочно вызывать события или вообще не создавать события, если отсутствует клиентское приложение, зарегистрированное для их получения. Для оптимизации используются следующие методы.  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Это статическое свойство указывает, подписано ли какое-либо клиентское приложение на события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий в фрагменте.|  
@@ -178,5 +178,3 @@ ms.locfileid: "54744119"
 - [Вызов событий из поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
 - [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Пример простого поставщика](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
-- [Пример поставщика фрагмента](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

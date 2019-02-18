@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717562"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304899"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717562"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Эта функция включает поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]во всем процессе, что означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. Например, в [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)четыре окна, входящие в прямоугольник выделения, располагаются в физических координатах, полученных из [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], а не в логических координатах. Если бы в этом примере не была включена поддержка [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то выделение выполнялось бы в логических координатах на рабочем столе, что привело бы к неверному размещению в среде с разрешением, отличным от 96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Эта функция упрощает весь процесс, поддерживающего определение dpi, это означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. В [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), например, четыре окна, входящие в прямоугольник выделения находятся в физических координатах, полученных из модели автоматизации пользовательского интерфейса, а не в логических координатах. Если пример не поддерживающего определение dpi, выделение будет выполнено в логических координатах на рабочем столе, что привело бы к неверному размещению в среде 96 dpi.  
   
 2.  Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717562"
  Если приложение выполняет прямое межпроцессное взаимодействие с приложениями без поддержки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то возможно придется выполнять преобразование между логическими и физическими координатами с помощью функций [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>См. также
-- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
