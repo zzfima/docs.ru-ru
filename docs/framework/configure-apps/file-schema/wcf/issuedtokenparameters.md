@@ -52,7 +52,7 @@ ms.locfileid: "55283599"
 |inclusionMode|Задает требования включения маркера. Это атрибут типа <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
 |keySize|Целое число, которое задает размер ключа маркера. Значение по умолчанию — 256.|  
 |keyType|Допустимое значение <xref:System.IdentityModel.Tokens.SecurityKeyType>, которое задает тип ключа. Значение по умолчанию — `SymmetricKey`.|  
-|tokenType|Строка, задающая тип маркера. Значение по умолчанию - « http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML».|  
+|tokenType|Строка, задающая тип маркера. Значение по умолчанию - "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
