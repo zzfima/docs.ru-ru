@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10e93af4172e6759cbe04f88e54b6e1db995efa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679010"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219481"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
 Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Обратите внимание, что программа Tlbexp.exe игнорирует поле <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.  
   
- Так как библиотеки типов не могут разместить все данные, найденные в сборке, программа Tlbexp.exe может пропустить некоторые данные в процессе экспорта. Описание процесса преобразования и определения для источников каждого элемента данных, передаваемого в библиотеку типов, см. в разделе [Общие сведения о преобразовании сборки в библиотеку типов](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Так как библиотеки типов не могут разместить все данные, найденные в сборке, программа Tlbexp.exe может пропустить некоторые данные в процессе экспорта. Описание процесса преобразования и определения для источников каждого элемента данных, передаваемого в библиотеку типов, см. в разделе [Общие сведения о преобразовании сборки в библиотеку типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  Следует иметь в виду, что программа экспорта библиотек типов экспортирует методы, для которых в качестве параметра <xref:System.TypedReference> задано `VARIANT`, несмотря на то что объект <xref:System.TypedReference> теряет смысл в неуправляемом коде. При экспорте методов с параметрами <xref:System.TypedReference> программа экспорта библиотек типов не выдает предупреждение или сообщение об ошибке, и неуправляемый код, в котором используется полученная библиотека типов, будет выполняться неправильно.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Общие сведения о преобразовании сборки в библиотеку типов](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)
+- [Общие сведения о преобразовании сборки в библиотеку типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

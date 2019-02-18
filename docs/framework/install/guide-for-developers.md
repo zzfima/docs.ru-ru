@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eee3238c4aa7e061fa29a4062b089c6d44ec89ad
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204838"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093948"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -45,7 +45,7 @@ ms.locfileid: "55204838"
 |**4.6**|Включено в Visual Studio 2015.<br /><br /> [Пакет выбора целевой платформы Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Страница загрузки веб-установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Страница загрузки автономного установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Входит в состав:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Также устанавливается в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.2**|[Пакет разработчика Microsoft .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Страница загрузки автономного установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Можно установить в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.1**|[Пакет разработчика Microsoft .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Страница загрузки автономного установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Входит в состав:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Также устанавливается в:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] и более ранние версии<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
-|**4.5**|Включено в Visual Studio 2012<br /><br /> Также доступно как часть [пакета SDK для Windows 8](https://msdn.microsoft.com/windows/hardware/hh852363)|[Страница загрузки веб-установщика 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Входит в состав:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Также устанавливается в:**<br/><br /> Windows 7 и более ранние версии<br /> Windows Server 2008 SP2 и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
+|**4.5**|Включено в Visual Studio 2012<br /><br /> Также доступно как часть [пакета SDK для Windows 8](/windows/downloads/sdk-archive)|[Страница загрузки веб-установщика 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Входит в состав:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Также устанавливается в:**<br/><br /> Windows 7 и более ранние версии<br /> Windows Server 2008 SP2 и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
 
 Можно установить **Developer Pack** (если он доступен) для конкретной версии платформы .NET Framework на всех поддерживаемых платформах.
 

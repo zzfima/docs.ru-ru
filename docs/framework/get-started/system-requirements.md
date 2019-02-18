@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204565"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091842"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -98,7 +98,7 @@ ms.locfileid: "55204565"
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] включает [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поэтому ее не требуется устанавливать. Аналогично [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] включает [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
-- .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://msdn.microsoft.com/library/ee391632.aspx).
+- .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
 
 - Платформа .NET Framework не поддерживается в Windows Server 2008 R2 for Itanium-Based Systems.
 

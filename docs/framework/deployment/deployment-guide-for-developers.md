@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589182"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094013"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
 В этом разделе приводятся сведения для разработчиков, которые планируют установить любую версию платформы с NET Framework 4.5 по [!INCLUDE[net_current](../../../includes/net-current-version.md)] вместе со своими приложениями.
@@ -55,7 +55,7 @@ ms.locfileid: "54589182"
 
 - Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]пользователи могут просматривать список запущенных приложений .NET Framework во время установки и легко закрывать их. Это помогает избежать перезапуска системы, вызываемого установкой .NET Framework. См. раздел [Уменьшение перезапусков системы](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- При удалении [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или одного из вспомогательных выпусков этой платформы также удаляются более ранние файлы [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . Если требуется вернуться к [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], необходимо переустановить приложение со всеми обновлениями. (См. раздел [Установка платформы .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
+- При удалении [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или одного из вспомогательных выпусков этой платформы также удаляются более ранние файлы [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . Если требуется вернуться к [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], необходимо переустановить приложение со всеми обновлениями. (См. раздел [Установка платформы .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
 
 - Распространяемый пакет платформы .NET Framework 4.5 был обновлен 9 октября 2012 г., чтобы устранить проблему, связанную с неправильной отметкой времени в цифровом сертификате, которая вызывала преждевременное истечение срока действия цифровой подписи в файлах, создаваемых и подписываемых Microsoft. Если вы ранее установили распространяемый пакет платформы .NET Framework 4.5 от 16 августа 2012 г., рекомендуется обновить установленную копию до последнего распространяемого пакета из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=245484). Дополнительные сведения об этой проблеме см. в статье [Советы по безопасности (Microsoft) (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 

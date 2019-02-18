@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c80ba473b0080a1368c82949c765820239ef25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715742"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218740"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Предоставление COM-клиентам доступа к компонентам .NET Framework
 Написание типа .NET и его использование из неуправляемого кода — это разные операции с точки зрения разработчика. В этом разделе приводятся советы по написанию управляемого кода, который взаимодействует с клиентами COM:  
@@ -42,11 +42,11 @@ ms.locfileid: "54715742"
   
      Разработчики COM-приложений могут использовать доступные средства и методы для ссылки на типы в сборке.  
   
-3.  [Вызов объекта .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100)).  
+3.  [Вызов объекта .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      Разработчики COM-приложений могут вызывать методы для объектов .NET так же, как и методы для любого неуправляемого типа. Например, API **CoCreateInstance** модели COM активирует объекты .NET.  
   
-4.  [Развертывание приложения для доступа к COM-приложению](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100)).  
+4.  [Развертывание приложения для доступа к COM-приложению](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      Сборки со строгими именами могут устанавливаться в глобальный кэш сборок и должны быть подписаны их издателем. Сборки, которые не имеют строгих имен, должны устанавливаться в каталог приложения клиента.  
   

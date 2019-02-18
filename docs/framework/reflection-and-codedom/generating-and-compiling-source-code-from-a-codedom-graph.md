@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40bbf0cfab8044d582490ed0890501d6b123d18e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631247"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219530"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Создание и компиляция исходного кода из графа CodeDOM
 Пространство имен <xref:System.CodeDom.Compiler> предоставляет интерфейсы для создания исходного кода из графов объекта CodeDOM и для управления компиляцией в поддерживаемых компиляторах. Поставщик кода может создавать исходный код на конкретном языке программирования, используя граф CodeDOM. Класс, производный от <xref:System.CodeDom.Compiler.CodeDomProvider>, обычно может предоставлять методы для создания и компиляции кода для языка, поддерживаемого поставщиком.  
@@ -97,4 +97,4 @@ ms.locfileid: "54631247"
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Динамическое создание и компиляция исходного кода](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
-- [Краткий справочник по CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+- [Краткий справочник по CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

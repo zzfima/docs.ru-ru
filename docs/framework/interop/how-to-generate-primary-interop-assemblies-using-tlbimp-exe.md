@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
+title: Как выполнить  Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596141"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218987"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Как выполнить Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Как выполнить  Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
 Существует два способа создания основной сборки взаимодействия.  
   
 -   С помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), предоставляемой [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "54596141"
   
  Зависимую основную сборку взаимодействия с номером версии, отличающимся от номера версии исходной библиотеки типов, невозможно обнаружить при установке в текущий каталог. Необходимо или зарегистрировать зависимую основную сборку взаимодействия в реестре Windows, или воспользоваться параметром **/reference**, чтобы программа Tlbimp.exe обнаружила зависимую библиотеку DLL.  
   
- Также можно включить несколько версий библиотеки типов. Инструкции см. в разделе [Практическое руководство. Включение нескольких версий библиотек типов](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
+ Также можно включить несколько версий библиотеки типов. Инструкции см. в разделе [Практическое руководство. Включение нескольких версий библиотек типов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере выполняется импорт библиотеки типов COM `LibUtil.tlb` и подписание сборки `LibUtil.dll` строгим именем с помощью файла ключа `CompanyA.snk`. Так как имя пространства имен не указано, в этом примере создается пространство имен по умолчанию (`LibUtil`).  

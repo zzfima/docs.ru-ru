@@ -1,14 +1,14 @@
 ---
 title: Загрузка данных с множеством столбцов из CSV-файла для обработки с помощью машинного обучения — ML.NET
 description: Узнайте, как загружать данные со множеством столбцов из CSV-файла для использования при создании, обучении и оценке модели машинного обучения с помощью ML.NET
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a06d7edfb4746a39377116b15903b68f8723cb02
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479715"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091972"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Загрузка данных с множеством столбцов из CSV-файла для обработки с помощью машинного обучения — ML.NET
 
@@ -33,7 +33,7 @@ ms.locfileid: "55479715"
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
     // We read the first 10 values as a single float vector.

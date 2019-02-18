@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249077"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093610"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
@@ -129,7 +129,7 @@ ms.locfileid: "54249077"
 
 Обратите внимание, что имена столбцов и индексы соответствуют схеме, определяемой классом `IrisData`. Значение <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> задает тип `float`.
 
-Используйте созданный экземпляр <xref:Microsoft.ML.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.ML.Data.IDataView>, который представляет источник данных для набора данных для обучения:
+Используйте созданный экземпляр <xref:Microsoft.ML.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.Data.DataView.IDataView>, который представляет источник данных для набора данных для обучения:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

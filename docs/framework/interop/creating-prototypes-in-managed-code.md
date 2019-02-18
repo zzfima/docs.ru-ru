@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564296"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219572"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
@@ -226,7 +226,7 @@ interface IDemandStubsItf
 - [Задание точки входа](specifying-an-entry-point.md)
 - [Определение кодировки](specifying-a-character-set.md)
 - [Примеры вызовов неуправляемого кода](platform-invoke-examples.md)
-- [Platform Invoke Security Considerations](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100)) (Вопросы безопасности при вызове неуправляемого кода)
+- [Platform Invoke Security Considerations](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100)) (Вопросы безопасности при вызове неуправляемого кода)
 - [Идентификация функций в библиотеках DLL](identifying-functions-in-dlls.md)
 - [Создание класса, содержащего функции DLL](creating-a-class-to-hold-dll-functions.md)
 - [Вызов функции DLL](calling-a-dll-function.md)

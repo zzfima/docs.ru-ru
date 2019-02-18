@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение универсального типа с порождаемым отражением
+title: Как выполнить  Определение универсального типа с порождаемым отражением
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645078"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221151"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Как выполнить Определение универсального типа с порождаемым отражением
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Как выполнить  Определение универсального типа с порождаемым отражением
 В этом разделе приведено описание способов создания простого универсального типа с двумя параметрами типа, порядка применения ограничений класса, ограничений интерфейса и специальных ограничений параметров типа, создания элементов, использующих параметры типа класса в качестве типов параметров и возвращаемых типов.  
   
 > [!IMPORTANT]
@@ -137,5 +137,5 @@ ms.locfileid: "54645078"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Использование порождаемого отражения](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
-- [Сценарии динамических сборок порождаемого отражения](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+- [Использование порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Сценарии динамических сборок порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

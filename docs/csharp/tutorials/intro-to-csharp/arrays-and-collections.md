@@ -3,12 +3,12 @@ title: Работа с коллекциями. Вводное руководст
 description: Это руководство по C# предоставляет для изучения примере коллекции списков.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205286"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261275"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Научитесь управлять коллекциями данных с использованием универсального типа списка
 
@@ -19,9 +19,6 @@ ms.locfileid: "50205286"
 ## <a name="a-basic-list-example"></a>Пример простого списка
 
 Создайте каталог с именем **list-tutorial**. Откройте этот каталог и выполните команду `dotnet new console`.
-
-> [!NOTE]
-> Если вы выполнили инструкции из руководства по [началу работы с .NET за 10 минут](https://www.microsoft.com/net), вы можете продолжать использовать только что созданное приложение myApp.
 
 Откройте **Program.cs** в любом редакторе и замените существующий код следующим:
 
