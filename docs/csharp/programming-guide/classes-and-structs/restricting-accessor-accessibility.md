@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544670"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219433"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ограничение доступности методов доступа (Руководство по программированию на C#)
 Выражения [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md) свойства или индексатора называются *методами доступа*. По умолчанию они имеют такие же уровни видимости или доступа, что и свойство или индексатор, которым они принадлежат. Дополнительные сведения см. в разделе [Уровни доступа](../../../csharp/language-reference/keywords/accessibility-levels.md). Тем не менее в некоторых случаях рекомендуется ограничить уровни доступа для этих методов. Как правило, в этом случае ограничивается уровень доступа для метода `set`, тогда как метод `get` остается общедоступным. Например:  

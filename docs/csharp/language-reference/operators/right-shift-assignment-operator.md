@@ -1,45 +1,51 @@
 ---
 title: '>>Оператор = — справочник по C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278984"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220917"
 ---
 # <a name="-operator-c-reference"></a>Оператор >>= (справочник по C#)
 
 Оператор присваивания сдвига вправо.
 
-## <a name="remarks"></a>Примечания
-
-Выражение в формате
+Выражение, использующее оператор `>>=`, такое как
 
 ```csharp
 x >>= y
 ```
 
-вычисляется как
+эквивалентно
 
 ```csharp
 x = x >> y
 ```
 
-за исключением того, что `x` вычисляется только один раз. [Оператор >>](right-shift-operator.md) сдвигает `x` вправо на величину, указанную в `y`.
+за исключением того, что `x` вычисляется только один раз.
 
-Оператор >>= нельзя перегружать напрямую, однако пользовательские типы могут перегружать [оператор >>](right-shift-operator.md) (см. [оператор](../keywords/operator.md)).
+[Оператор `>>`](right-shift-operator.md) сдвигает первый операнд вправо на число битов, определяемое вторым операндом.
 
-## <a name="example"></a>Пример
+В следующем примере иллюстрируется использование оператора `>>=`.
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Если определяемый пользователем тип [перегружает](../keywords/operator.md) [оператор `>>`](right-shift-operator.md), то оператор присваивания сдвига вправо `>>=` неявно перегружается. Пользовательский тип не может перегружать оператор присваивания сдвига вправо явным образом.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе [Составное присваивание](~/_csharplang/spec/expressions.md#compound-assignment) в [Спецификации языка C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
