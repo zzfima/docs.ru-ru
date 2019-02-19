@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540576"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220982"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 
@@ -80,7 +80,7 @@ ms.locfileid: "54540576"
 
  Среда DLR добавляет в среду CLR ряд служб для лучшей поддержки динамических языков. К ним относятся перечисленные ниже службы.
 
--   Деревья выражений. Среда DLR использует деревья выражений для представления семантики языка. С этой целью в среде DLR имеются расширенные деревья выражений LINQ, включающие в себя поток управления, назначение и другие узлы моделирования языков. Дополнительные сведения см. в статье [Деревья выражений](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   Деревья выражений. Среда DLR использует деревья выражений для представления семантики языка. С этой целью в среде DLR имеются расширенные деревья выражений LINQ, включающие в себя поток управления, назначение и другие узлы моделирования языков. Дополнительные сведения см. в разделах [Деревья выражений (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) или [Деревья выражений (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Кэширование места вызова. *Динамическое место вызова* — это часть кода, в которой выполняется такая операция с динамическими объектами, как `a + b` или `a.b()`. Среда DLR кэширует характеристики `a` и `b` (как правило, типы этих объектов) и сведения об операции. Если такая операция выполнялась ранее, среда DLR извлекает всю необходимую информацию из кэша для быстрой отправки.
 
@@ -96,5 +96,6 @@ ms.locfileid: "54540576"
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Общеязыковая среда выполнения](../../../docs/standard/clr.md)
-- [Деревья выражений](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
 - [Пошаговое руководство: Создание и использование динамических объектов](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

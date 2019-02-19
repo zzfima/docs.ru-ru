@@ -1,15 +1,15 @@
 ---
 title: Использование ML.NET для сценариев многоклассовой классификации задач GitHub
 description: Узнайте, как использовать ML.NET для сценариев многоклассовой классификации, чтобы назначать задачи GitHub определенным областям.
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739427"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333525"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Учебник. Использование ML.NET для сценариев многоклассовой классификации задач GitHub
 
@@ -20,11 +20,11 @@ ms.locfileid: "55739427"
 > * Определение проблемы
 > * Выбор подходящего алгоритма машинного обучения
 > * подготавливать данные;
-> * Извлечение компонентов и преобразование данных
+> * Преобразование данных
 > * Обучение модели
-> * проводить оценку модели по другому набору данных;
-> * Прогнозирование единого экземпляра результатов тестовых данных с помощью обученной модели
-> * Прогнозирование единого экземпляра тестовых данных с помощью загруженной модели
+> * Оценка модели
+> * Прогнозирование с помощью обученной модели
+> * Развертывание и прогнозирование с помощью загруженной модели
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -55,8 +55,8 @@ ms.locfileid: "55739427"
 3. **Сборка и обучение**. 
    * **Обучение модели**.
    * **оценка модели**;
-4. **Выполнить**
-   * **Потребление модели**.
+4. **Развертывание модели**
+   * **Использование модели для прогнозирования**
 
 ### <a name="understand-the-problem"></a>Определение проблемы
 
@@ -146,7 +146,7 @@ ms.locfileid: "55739427"
 * `_testDataPath` содержит путь к набору данных, используемому для оценки модели;
 * `_modelPath` содержит путь, по которому сохраняется обученная модель.
 * `_mlContext` соответствует классу <xref:Microsoft.ML.MLContext>, предоставляющему контекст для обработки;
-* `_trainingDataView` представляет собой интерфейс <xref:Microsoft.ML.Data.IDataView>, используемый для обработки обучающего набора данных;
+* `_trainingDataView` представляет собой интерфейс <xref:Microsoft.Data.DataView.IDataView>, используемый для обработки обучающего набора данных;
 * `_predEngine` соответствует классу <xref:Microsoft.ML.PredictionEngine%602>, используемому для одиночных прогнозов;
 * `_reader` представляет собой <xref:Microsoft.ML.Data.TextLoader>, используемый для загрузки и преобразования наборов данных.
 
@@ -187,7 +187,7 @@ ms.locfileid: "55739427"
 
 ## <a name="load-the-data"></a>Загрузка данных
 
-Затем инициализируйте глобальную переменную `_trainingDataView` <xref:Microsoft.ML.Data.IDataView> и загрузите данные с параметром `_trainDataPath`.
+Затем инициализируйте глобальную переменную `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> и загрузите данные с параметром `_trainDataPath`.
 
  Точно так же как входные и выходные данные [`Transforms`](../basic-concepts-model-training-in-mldotnet.md#transformer), `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
 
@@ -195,7 +195,7 @@ ms.locfileid: "55739427"
 
 Так как созданный ранее тип модели данных `GitHubIssue` соответствует схеме набора данных, вы можете объединить инициализацию, сопоставление и загрузку набора данных в одной строке кода.
 
-Первая часть строки (`CreateTextReader<GitHubIssue>(hasHeader: true)`) создает <xref:Microsoft.ML.Data.TextLoader>, выводя схему набора данных из типа модели данных `GitHubIssue` и используя заголовок набора данных.
+Первая часть строки (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) создает <xref:Microsoft.ML.Data.TextLoader>, выводя схему набора данных из типа модели данных `GitHubIssue` и используя заголовок набора данных.
 
 Вы определили схему данных ранее при создании класса `GitHubIssue`. Для схемы:
 
@@ -245,6 +245,9 @@ public static EstimatorChain<ITransformer> ProcessData()
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> В ML.NET версии 0.10 изменился порядок параметров преобразования. Ошибка не возникнет до момента сборки. Используйте имена параметров для преобразования, как показано в предыдущем фрагменте кода.
+
 Последний шаг на этапе подготовки данных заключается в объединении всех столбцов признаков в столбце **Features** с помощью класса преобразования `Concatenate`. По умолчанию алгоритм обучения обрабатывает только признаки, представленные в столбце **Features**. Добавьте это преобразование в конвейер, используя следующий код:
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 ### <a name="choose-a-learning-algorithm"></a>Выбор алгоритма обучения
 
-Чтобы добавить обучающий алгоритм, используйте объект <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer>.  `SdcaMultiClassTrainer` добавляется в `pipeline` и принимает в качестве входных параметров `Title` и `Description` (`Features`) с присвоенными признаками, а также `Label` для обучения по историческим данным.
-
-Добавьте следующий код в метод `BuildAndTrainModel`:
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-Теперь, когда вы создали обучающий алгоритм, добавьте его в `pipeline`. Для возврата в исходное доступное для чтения состояние необходимо также сопоставить метку со значением. Выполните оба эти действия, используя следующий код:
+Чтобы добавить алгоритм обучения, вызовите метод оболочки `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent`, возвращающий объект <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer>.  `SdcaMultiClassTrainer` добавляется в `pipeline` и принимает в качестве входных параметров `Title` и `Description` (`Features`) с присвоенными признаками, а также `Label` для обучения по историческим данным. Для возврата в исходное доступное для чтения состояние необходимо также сопоставить метку со значением. Выполните оба эти действия, используя следующий код:
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>Прогнозирование с помощью обученной модели
+
 Добавьте задачу GitHub для тестирования прогноза обученной модели в методе `Predict`, создав экземпляр `GitHubIssue`:
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>Использование модели: прогнозирование
+### <a name="using-the-model-prediction-results"></a>Использование модели: результаты прогнозирования
 
 Отобразите `GitHubIssue` и соответствующий прогноз метки `Area`, чтобы поделиться результатами и обработать их должным образом.  Создайте отображение для результатов с помощью следующего кода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
@@ -356,7 +355,7 @@ public static void Evaluate()
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` является оболочкой для метода <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A>, который вычисляет метрики качества для модели по указанному набору данных. Он возвращает объект <xref:Microsoft.ML.Data.MultiClassClassifierMetrics>, содержащий общие метрики, вычисляемые средствами оценки многоклассовой классификации.
+`MulticlassClassificationContext.Evaluate` является оболочкой для метода <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A>, который вычисляет метрики качества для модели по указанному набору данных. Он возвращает объект <xref:Microsoft.ML.Data.MultiClassClassifierMetrics>, содержащий общие метрики, вычисляемые средствами оценки многоклассовой классификации.
 Чтобы отобразить метрики для оценки качества модели, сначала их необходимо получить.
 Используйте метод `Transform` (преобразователь) для глобальной переменной `_trainedModel` машинного обучения для ввода признаков и возврата прогнозов. В качестве следующей строки в методе `Evaluate` добавьте приведенный ниже код:
 
@@ -409,7 +408,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Прогнозирование результатов для тестовых данных с помощью сохраненной модели
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Развертывание и прогнозирование с помощью загруженной модели
 
 Добавьте вызов нового метода из метода `Main`, сразу после вызова метода `Evaluate`, используя следующий код:
 
@@ -478,11 +477,11 @@ The model is saved to C:\Users\johalex\dotnet-samples\samples\machine-learning\t
 > * Определение проблемы
 > * Выбор подходящего алгоритма машинного обучения
 > * подготавливать данные;
-> * Извлечение компонентов и преобразование данных
+> * Преобразование данных
 > * Обучение модели
-> * проводить оценку модели по другому набору данных;
-> * Прогнозирование единого экземпляра результатов тестовых данных с помощью обученной модели
-> * Прогнозирование единого экземпляра тестовых данных с помощью загруженной модели
+> * Оценка модели
+> * Прогнозирование с помощью обученной модели
+> * Развертывание и прогнозирование с помощью загруженной модели
 
 Переходите к следующему руководству:
 > [!div class="nextstepaction"]

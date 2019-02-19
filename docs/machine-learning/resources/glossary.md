@@ -3,12 +3,12 @@ title: Глоссарий по машинному обучению — ML.NET
 description: Глоссарий содержит подборку важных терминов по машинному обучению, которые будут полезны при создании пользовательских моделей с помощью ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415381"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092440"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Глоссарий важных терминов по машинному обучению
 
@@ -90,7 +90,7 @@ ms.locfileid: "54415381"
 
 В контексте [классификации](#classification) полнота класса обозначает количество элементов, правильно отнесенных к некоторому классу, деленное на общее число элементов, реально относящихся к этому классу.
 
-## <a name="regression"></a>Возвращение
+## <a name="regression"></a>Регрессия
 
 Задача [контролируемого машинного обучения](#supervised-machine-learning), которая выводит реальное значение, например в формате двойной точности. В качестве примера можно привести прогнозирование цен на акции. Дополнительные сведения см. в разделе [Регрессия](tasks.md#regression) в теме [Задачи машинного обучения](tasks.md).
 

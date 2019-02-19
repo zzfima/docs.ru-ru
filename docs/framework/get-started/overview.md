@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592579"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093688"
 ---
 # <a name="overview-of-the-net-framework"></a>Общие сведения о платформе .NET Framework
 
@@ -87,7 +87,7 @@ ms.locfileid: "54592579"
 
 - Сервисноориентированные приложения, использующие Windows Communication Foundation (WCF). См. статью [Разработка сервисноориентированных приложений с помощью WCF](../../../docs/framework/wcf/index.md).
 
-- Приложения, поддерживающие бизнес-процессы Windows Workflow Foundation (WF). См. статью [Построение рабочих процессов в .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Приложения, поддерживающие бизнес-процессы Windows Workflow Foundation (WF). См. [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
 Классы Windows Forms представляют собой полный набор типов, существенно упрощающих разработку графических интерфейсов пользователя Windows. При написании приложения веб-форм ASP.NET можно использовать классы веб-форм.
 
@@ -97,5 +97,5 @@ ms.locfileid: "54592579"
 - [Руководство по установке](../../../docs/framework/install/index.md)
 - [Руководство по разработке](../../../docs/framework/development-guide.md)
 - [Инструменты](../../../docs/framework/tools/index.md)
-- [Примеры по платформе .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [Примеры и руководства .NET](../../samples-and-tutorials/index.md)
 - [Библиотека классов .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

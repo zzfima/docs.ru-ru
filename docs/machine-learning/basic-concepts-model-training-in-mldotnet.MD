@@ -1,15 +1,15 @@
 ---
 title: Основные понятия для обучения модели в ML.NET
 description: В этой статье разъясняются основные понятия в сценариях *обучения моделей* в ML.NET. Не все понятия относятся к самому простому сценарию *прогнозирования с помощью существующей модели*.
-ms.date: 11/06/2018
+ms.date: 02/13/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: cff833b45583bc752bb42616820a95ca6c5c6b12
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "55252443"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303664"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>Основные понятия для обучения модели в ML.NET
 
@@ -28,11 +28,11 @@ ms.locfileid: "55252443"
   - Еще один пример: создатель маркеров текста принимает отдельные текстовые столбцы и выводит векторный столбец с отдельными словами, извлеченными из текста.
 - [*Модуль чтения данных*](#data-reader) представлен в виде интерфейса `IDataReader<T>`.
   - Модуль чтения данных — это компонент ML.NET для создания данных. Он принимает экземпляр `T` и возвращает данные из него. 
-  - Например, *TextLoader* — это `IDataReader<FileSource>`. Он принимает исходный файл и создает данные. 
+  - Например, *TextLoader* — это `IDataReader<IMultiStreamSource>`. Он принимает источник и создает данные. 
 - [*Средство оценки*](#estimator) представлено в виде интерфейса `IEstimator<T>`.
   - Это объект, который учится на основе данных. Результатом обучения является *преобразователь*.
   - Можно представить *алгоритм* машинного обучения как средство оценки, которое учится на основе данных и создает *модель* машинного обучения.
-- [*Прогнозирующая функция*](#prediction-function) представлена в виде класса `PredictionFunction<TSrc, TDst>`.
+- [*Прогнозирующая функция*](#prediction-function) представлена в виде класса `PredictionEngine<TSrc, TDst>`.
   - Прогнозирующую функцию можно рассматривать как машину, которая применяет преобразователь к одной строке, например во время прогнозирования.
 
 ## <a name="data"></a>Данные
@@ -50,11 +50,11 @@ ms.locfileid: "55252443"
 
 Преобразователь — это компонент, который принимает данные, выполняет с ними определенные действия и возвращает новые преобразованные данные.
 
-Большинство преобразователей в ML.NET, как правило, работают с *входными столбцами* по одному и создают *выходной столбец*. Например, `new HashTransformer("foo", "bar")` принимает значения из столбца "foo", хэширует их и объединяет в столбец "bar". 
+Большинство преобразователей в ML.NET, как правило, работают с *входными столбцами* по одному и создают *выходной столбец*. Например, `new HashTransformer("bar", "foo")` принимает значения из столбца "foo", хэширует их и объединяет в столбец "bar". 
 
-Имена входных и выходных столбцов часто совпадают. В этом случае старый столбец заменяется новым. Например, `new HashTransformer("foo")` принимает значения из столбца "foo", хэширует их и объединяет обратно в столбец "foo". 
+Имена входных и выходных столбцов часто совпадают. В этом случае старый столбец заменяется новым. Например, `new HashTransformer("foo")` принимает значения из столбца "foo", хэширует их и помещает обратно в столбец "foo". 
 
-Любой преобразователь, разумеется, создает новое представление данных при вызове `Transform`. Помните, что представления данных являются неизменяемыми.
+Любой преобразователь создает новое представление данных при вызове `Transform`. Помните, что представления данных являются неизменяемыми.
 
 Еще один важный момент — поскольку данные вычисляются отложенно, *преобразователи также работают отложенно*. По сути, после вызова
 
@@ -62,17 +62,17 @@ ms.locfileid: "55252443"
 var newData = transformer.Transform(oldData)
 ```
 
-никаких вычислений не происходит. Только после того, как вы получите курсор из `newData` и начнете использовать значение `newData`, вызывает логику преобразования `transformer` (и даже в этом случае, только если `transformer` необходим для создания запрошенных столбцов).
+никаких вычислений не происходит. Только после того, как вы получите курсор из `newData` и начнете использовать значение, `newData` вызывает логику преобразования `transformer` (и даже в этом случае, только если `transformer` необходим для создания запрошенных столбцов).
 
 ### <a name="transformer-chains"></a>Цепочки преобразователей
 
-Полезное свойство преобразователя в том, что *вы можете сформулировать последовательное применение преобразователей как еще один преобразователь*:
+Полезное свойство преобразователя в том, что *вы можете создать последовательное применение преобразователей как еще один преобразователь*:
 
 ```csharp
 var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 ```
 
-Это свойство часто используется в ML.NET: как правило, обученная модель ML.NET представляет собой цепочку преобразователей, которая по сути является *преобразователем*. 
+Это свойство часто используется в ML.NET: как правило, обученная модель ML.NET представляет собой цепочку преобразователей, которая по сути является *преобразователем*.
 
 ## <a name="data-reader"></a>Модуль чтения данных
 
@@ -80,11 +80,11 @@ var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 
 Интересно отметить, что вы можете создать модуль чтения данных, присоединив преобразователь к существующему модулю чтения данных. Таким образом вы можете использовать модуль чтения с поведением преобразования:
 
-```c#
+```csharp
 var newReader = reader.Append(transformer1).Append(transformer2)
 ```
 
-Еще одно сходство с преобразователями заключается в том, что из-за отложенного вычисления данных *модули чтения также являются отложенными*: фактическое чтение не происходит (или почти не происходит) при вызове `dataReader.Read()` — только при запросе курсора на полученные данные модуль чтения начинает работу.
+Еще одно сходство с преобразователями заключается в том, что из-за отложенного вычисления данных *модули чтения также являются отложенными*: фактическое чтение не происходит (или почти не происходит) при вызове `reader.Read()` — только при запросе курсора на полученные данные модуль чтения начинает работу.
 
 ## <a name="estimator"></a>Средство оценки
 
@@ -95,12 +95,12 @@ var newReader = reader.Append(transformer1).Append(transformer2)
 ```csharp
 MLContext mlContext = new MLContext(seed: 0);
 
-var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "VendorId"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "RateCode"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "PaymentType"))
-.Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
-.Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+var pipeline = mlContext.Transforms.CopyColumns("Label","FareAmount")
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
+    .Append(mlContext.Transforms.Concatenate("Features","VendorId","RateCode","PassengerCount","TripTime","TripDistance","PaymentType"))
+    .Append(mlContext.Regression.Trainers.FastTree("Label","Features"));
 
 var model = pipeline.Fit(dataView);
 ```
@@ -109,7 +109,7 @@ var model = pipeline.Fit(dataView);
 
 ## <a name="prediction-function"></a>Прогнозирующая функция
 
-Прогнозирующую функцию можно рассматривать как машину, которая применяет преобразователь к одной строке.
+Прогнозирующую функцию можно рассматривать как компонент, который применяет преобразователь к одной строке.
 
 Когда у вас будет модель (*преобразователь*, обученный с помощью `Fit()` или загруженный из другого места), ее можно использовать для создания прогнозов с помощью обычных вызовов к `model.Transform(data)`. Но при использовании этой модели в реальных сценариях часто у вас не бывает много примеров для прогнозирования. У вас есть по примеру за раз, и вам сразу нужны своевременные прогнозы.
 
@@ -123,17 +123,17 @@ var model = pipeline.Fit(dataView);
 
 Предыдущий алгоритм может осуществляться с помощью [понимания схемы](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) с двумя объектами, определяемыми пользователем, `InputExample` и `OutputPrediction`, как в следующем примере:
 
-```c#
-var inputData = env.CreateDataView(new InputExample[] { example });
+```csharp
+var inputData = mlContext.Data.ReadFromEnumerable(new InputExample[] { example });
 var outputData = model.Transform(inputData);
-var output = outputData.AsDynamic.AsEnumerable<OutputPrediction>(env, reuseRowObject: false).Single();
+var output = mlContext.CreateEnumerable<OutputPrediction>(outputData,reuseRowObject:false).First();
 ```
 
-Но это неудобно и влечет за собой снижение производительности. Вместо этого объект прогнозирующей функции выполняет ту же работу, но быстрее и удобнее, с помощью метода расширения `MakePredictionFunction`:
+Но это неудобно и влечет за собой снижение производительности. Вместо этого объект прогнозирующей функции выполняет ту же работу, но быстрее и удобнее, с помощью метода расширения `CreatePredictionEngine`:
 
-```c#
-var predictionFunc = model.MakePredictionFunction<InputExample, OutputPrediction>(env);
-var output = predictionFunc.Predict(example);
+```csharp
+var predictionEngine = model.CreatePredictionEngine<InputExample,OutputPrediction>(mlContext);
+var prediction = predictionEngine.Predict(example);
 ```
 
 Прогнозирующая функция является *нереентерабельной и потокобезопасной*. Если вы хотите осуществлять прогнозирование с несколькими потоками, вам нужна прогнозирующая функция для каждого потока.

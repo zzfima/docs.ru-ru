@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+title: Как выполнить  Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530710"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093545"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Как выполнить  Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
   
 -   Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.  
@@ -174,6 +174,6 @@ ms.locfileid: "54530710"
   
 ## <a name="see-also"></a>См. также
 - [COM-взаимодействие без регистрации](registration-free-com-interop.md)
-- [Requirements for Registration-Free COM Interop](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)) (Требования для COM-взаимодействия без регистрации)
-- [Configuring COM Components for Registration-Free Activation](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)) (Настройка COM-компонентов для активации без регистрации)
-- [Активация компонентов на основе платформы .NET без регистрации. Пошаговое руководство](https://msdn.microsoft.com/library/ms973915.aspx)
+- [Требования для COM-взаимодействия без регистрации](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Настройка COM-компонентов для активации без регистрации](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Активация компонентов на основе платформы .NET без регистрации. Пошаговое руководство](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

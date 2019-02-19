@@ -1,15 +1,15 @@
 ---
 title: Использование ML.NET для анализа тональности методом двоичной классификации
 description: На примере двоичной классификации с использованием ML.NET вы сможете узнать, как использовать прогнозирование тональности для выбора соответствующих действий.
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628013"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092765"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -21,18 +21,19 @@ ms.locfileid: "54628013"
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
 > * Определение проблемы
-> * Выбор подходящей задачи машинного обучения
+> * Выбор подходящего алгоритма машинного обучения
 > * подготавливать данные;
-> * создавать конвейеры обучения;
-> * загружать классификатор;
-> * обучить модель;
-> * проводить оценку модели по другому набору данных;
-> * прогнозировать единый экземпляр результатов тестовых данных с помощью модели;
-> * прогнозировать результаты для тестовых данных с помощью загруженной модели.
+> * Преобразование данных
+> * Обучение модели
+> * Оценка модели
+> * Прогнозирование с помощью обученной модели
+> * Развертывание и прогнозирование с помощью загруженной модели
 
 ## <a name="sentiment-analysis-sample-overview"></a>Обзор примера для анализа тональности
 
 В качестве примера мы используем консольное приложение, которое использует ML.NET для обучения модели, которая классифицирует и прогнозирует тональность по двоичному признаку: положительная или отрицательная. Также оно оценивает качество модели по второму набору данных. Наборы данных для анализа тональности взяты из проекта WikiDetox.
+
+Исходный код для этого руководства можно найти в репозитории [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -54,8 +55,8 @@ ms.locfileid: "54628013"
 3. **Сборка и обучение**. 
    * **Обучение модели**.
    * **оценка модели**;
-4. **Выполнить**
-   * **Потребление модели**.
+4. **Развертывание модели**
+   * **Использование модели для прогнозирования**
 
 ### <a name="understand-the-problem"></a>Определение проблемы
 
@@ -67,7 +68,7 @@ ms.locfileid: "54628013"
 
 После этого нужно дать **определение** тональности, которое поможет выбрать задачу машинного обучения.
 
-## <a name="select-the-appropriate-machine-learning-task"></a>Выбор подходящей задачи машинного обучения
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>Выбор подходящего алгоритма машинного обучения
 
 Для этой проблемы вам известны следующие факты.
 
@@ -77,18 +78,18 @@ ms.locfileid: "54628013"
 * Воздержитесь от добавления ерунды в Википедию.
 * Он просто лучший, и в статье надо об этом сказать.
 
-Для этого сценария лучше всего подходит задача классификации в машинном обучении.
+Для этого сценария лучше всего подходит алгоритм классификации в машинном обучении.
 
 ### <a name="about-the-classification-task"></a>Сведения о задаче классификации
 
-Классификацией называют задачу машинного обучения, которая использует данные для **определения** категории, типа или класса для некоторого элемента или ряда данных. Например, классификацию можно использовать для следующих действий:
+Классификацией называют алгоритм машинного обучения, который использует данные для **определения** категории, типа или класса для некоторого элемента или ряда данных. Например, классификацию можно использовать для следующих действий:
 
 * определение положительной или отрицательной тональности;
 * сортировка сообщений электронной почты на спам, нежелательную почту и нужные сообщения;
 * диагностика раковых заболеваний по лабораторным пробам, взятых у пациентов;
 * распределение клиентов по категориям с разной готовностью реагировать на рекламную акцию.
 
-Задачи классификации обычно относятся к одному из следующих типов.
+Алгоритмы классификации обычно относятся к одному из следующих типов:
 
 * Двоичная: A или B.
 * Многоклассовая: несколько категорий, которые прогнозируются по одной модели.
@@ -105,9 +106,9 @@ ms.locfileid: "54628013"
 
     В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Обзор", выполните поиск по фразе **Microsoft.ML**, выберите из списка этот пакет и нажмите кнопку **Установить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов.
 
-### <a name="prepare-your-data"></a>Подготовка данных
+### <a name="prepare-your-data"></a>подготавливать данные;
 
-1. Скачайте файлы [WikiPedia-detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) и [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) с наборами данных и сохраните их в ранее созданную папку *Data*. Первый из этих наборов данных обучает модель машинного обучения, а второй позволяет оценить точность полученной модели.
+1. Скачайте файлы [Wikipedia-detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) и [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) с наборами данных и сохраните их в ранее созданную папку *Data*. Первый из этих наборов данных обучает модель машинного обучения, а второй позволяет оценить точность полученной модели.
 
 2. В обозревателе решений щелкните правой кнопкой мыши каждый из файлов \*.tsv и выберите **Свойства**. В разделе **Дополнительно** для параметра **Копировать в выходной каталог** установите значение **Копировать более позднюю версию**.
 
@@ -152,14 +153,14 @@ ms.locfileid: "54628013"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Затем, чтобы настроить загрузку данных, инициализируйте глобальную переменную `_textLoader` для повторного использования.  Обратите внимание, что вы используете `TextReader`. При создании `TextLoader` с использованием `TextReader` вы передаете необходимый контекст и класс <xref:Microsoft.ML.Data.TextLoader.Arguments>, который включает настройку.
+Затем, чтобы настроить загрузку данных, инициализируйте глобальную переменную `_textLoader` для повторного использования.  При создании `TextLoader` с использованием `MLContext.Data.CreateTextLoader` вы передаете необходимый контекст и класс <xref:Microsoft.ML.Data.TextLoader.Arguments>, который включает настройку.
 
  Укажите схему данных, передав в загрузчик массив объектов <xref:Microsoft.ML.Data.TextLoader.Column>, содержащий имена всех столбцов и их типы. Вы определили схему данных ранее при создании класса `SentimentData`. Для нашей схемы первый столбец (метка) — это <xref:System.Boolean> (прогноз), а второй столбец (SentimentText) — это функция текстового или строкового типа, используемая для прогнозирования тональности.
-Класс `TextReader` возвращает полностью инициализированный <xref:Microsoft.ML.Data.TextLoader>.  
+Класс `TextLoader` возвращает полностью инициализированный <xref:Microsoft.ML.Data.TextLoader>.  
 
 Чтобы инициализировать глобальную переменную `_textLoader` и повторно использовать ее для необходимых наборов данных, добавьте следующий код после инициализации `mlContext`:
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 Добавьте в следующую строку метода `Main` приведенный ниже код:
 
@@ -186,7 +187,7 @@ ms.locfileid: "54628013"
 
 ## <a name="load-the-data"></a>Загрузка данных
 
-Вы загрузите данные с использованием глобальной переменной `_textLoader` с параметром `dataPath`. В результате возвратится <xref:Microsoft.ML.Data.IDataView>. Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
+Вы загрузите данные с использованием глобальной переменной `_textLoader` с параметром `dataPath`. В результате возвратится <xref:Microsoft.Data.DataView.IDataView>. Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
 
 В ML.NET данные аналогичны представлению SQL. Они схематизированы, неоднородны, и к ним применено отложенное вычисление. Объект является первой частью конвейера. Он загружает данные. Для этого руководства он загружает набор данных с комментариями и соответствующей токсичной или нетоксичной тональностью. Это позволяет создать и обучить модель.
 
@@ -216,7 +217,7 @@ ms.locfileid: "54628013"
 
 ## <a name="train-the-model"></a>Обучение модели
 
-Обучения модели <xref:Microsoft.ML.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
+Обучения модели <xref:Microsoft.ML.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Data.EstimatorChain%601.Fit*>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
 
 Добавьте следующий код в метод `Train`:
 
@@ -290,14 +291,13 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Далее создайте метод для сохранения модели, чтобы ее можно было использовать повторно, а также применять в других приложениях. `ITransformer` содержит метод <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)>, который принимает глобальное поле `_modelPath`, и <xref:System.IO.Stream>. Чтобы сохранить модель в качестве ZIP-файла, мы создадим `FileStream` непосредственно перед вызовом метода `SaveTo`. В качестве следующей строки в методе `SaveModelAsFile` добавьте приведенный ниже код:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-Вы также можете просмотреть, куда был записан файл, написав консольное сообщение с `_modelPath`, используя следующий код:
+Развертывание и прогнозирование с помощью загруженной модели Вы также можете просмотреть, куда был записан файл, написав консольное сообщение с `_modelPath`, используя следующий код:
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>Прогнозирование результатов тестовых данных с помощью модели и одного комментария
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Прогнозирование результатов для тестовых данных с помощью сохраненной модели
 
 Создайте метод `Predict` сразу после метода `Evaluate`, вставив в него следующий код:
 
@@ -321,7 +321,7 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionEngine`:
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 Добавьте комментарий для проверки прогнозирования обученной модели в методе `Predict`, создав экземпляр `SentimentData`:
 
@@ -331,13 +331,13 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>Ввод модели в эксплуатацию: прогнозирование
+### <a name="using-the-model-prediction"></a>Использование модели: прогнозирование
 
 Отобразите `SentimentText` и соответствующие прогнозы тональности, чтобы поделиться результатами и выполнить соответствующие действия. Этот этап называется вводом в эксплуатацию, после которого возвращаемые данные можно включить в операционные политики. Создайте отображение для результатов с помощью следующего кода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>Прогнозирование результатов для тестовых данных с помощью сохраненной модели
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Развертывание и прогнозирование с помощью загруженной модели
 
 Создайте метод `PredictWithModelLoadedFromFile` непосредственно перед методом `SaveModelAsFile`, вставив в него следующий код:
 
@@ -367,11 +367,11 @@ public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования токсичной или нетоксичной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование. Добавьте в метод `PredictWithModelLoadedFromFile` приведенный ниже код для прогнозирования:
+Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования токсичной или нетоксичной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование. Добавьте в метод `PredictWithModelLoadedFromFile` приведенный ниже код для прогнозирования:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>Ввод модели в эксплуатацию: прогнозирование
+### <a name="using-the-loaded-model-for-prediction"></a>Использование загружаемой модели для прогнозирования
 
 Отобразите `SentimentText` и соответствующие прогнозы тональности, чтобы поделиться результатами и выполнить соответствующие действия. Этот этап называется вводом в эксплуатацию, после которого возвращаемые данные можно включить в операционные политики. Создайте заголовок для результатов с помощью следующего кода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ Sentiment: He is the best, and the article should say that. | Prediction: Not To
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
 > * Определение проблемы
-> * Выбор подходящей задачи машинного обучения
+> * Выбор подходящего алгоритма машинного обучения
 > * подготавливать данные;
-> * создавать конвейеры обучения;
-> * загружать классификатор;
-> * обучить модель;
-> * проводить оценку модели по другому набору данных;
-> * прогнозировать результаты для тестовых данных с помощью модели.
+> * Преобразование данных
+> * Обучение модели
+> * Оценка модели
+> * Прогнозирование с помощью обученной модели
+> * Развертывание и прогнозирование с помощью загруженной модели
 
 Переходите к следующему руководству:
 > [!div class="nextstepaction"]

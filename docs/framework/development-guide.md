@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123765"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092960"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -79,5 +79,5 @@ ms.locfileid: "49123765"
  [Инструменты](../../docs/framework/tools/index.md)  
  Инструменты, описанные в этом разделе, помогут в разработке, настройке и развертывании приложений с помощью технологий .NET Framework.  
   
- [Примеры по платформе .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Здесь содержатся ссылки на приложения в галерее примеров кода MSDN, демонстрирующие технологии .NET Framework.
+ [Примеры и руководства .NET](../samples-and-tutorials/index.md)  
+ Предоставляет ссылки на примеры и руководства для изучения .NET.

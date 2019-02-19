@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582597"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220313"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Динамическое создание и компиляция исходного кода
 В среду .NET Framework включен механизм, который называется Code Document Object Model (CodeDOM). Он позволяет разработчикам программ, порождающих исходный код, создавать код на нескольких языках программирования во время выполнения на основе единой модели, представляющей код для визуализации.  
@@ -51,5 +51,5 @@ ms.locfileid: "48582597"
  Определяет интерфейсы для формирования и компиляции кода во время выполнения.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Краткий справочник по CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [Краткий справочник по CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
  Предоставляет разработчикам быстрый способ поиска элементов CodeDOM, представляющих элементы исходного кода.
