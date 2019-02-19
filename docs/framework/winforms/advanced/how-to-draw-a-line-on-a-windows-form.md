@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54586752"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a>Практическое руководство. Рисований линий в Windows Forms
+# <a name="how-to-draw-a-line-on-a-windows-form"></a>Как выполнить Нарисовать линию в форме Windows
 Этот пример рисует линию на форме. Как правило, рисование на форме осуществляют, обрабатывая событие <xref:System.Windows.Forms.Control.Paint> формы и выполняя отрисовку с использованием свойства <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> объекта <xref:System.Windows.Forms.PaintEventArgs>, как показано в следующем примере  
   
 ## <a name="example"></a>Пример  
