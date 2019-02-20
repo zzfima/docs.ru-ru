@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695612"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442065"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
 С помощью Microsoft .NET Framework, разработчики приложений с помощью Windows Presentation Foundation (WPF) имеют новый набор печати и управления печатью [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "54695612"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>О формате XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] и другие отраслевые стандарты для создания кроссплатформенных документов. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] упрощает процесс создания, совместного использования, печати, просмотра и архивирования цифровых документов. Дополнительные сведения по [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] см. на [веб-сайте XPS](https://www.microsoft.com/xps).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] и другие отраслевые стандарты для создания кроссплатформенных документов. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] упрощает процесс создания, совместного использования, печати, просмотра и архивирования цифровых документов. Дополнительные сведения о [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], см. в разделе [документы XPS](/windows/desktop/printdocs/documents).  
   
  Несколько методов печати содержимого на основе [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются в разделе [Печать XPS-файлов программным способом](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчикам неуправляемого кода следует изучить документацию по [MXDC_ESCAPE функция](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). Windows Forms разработчики приложений должны использовать [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] в <xref:System.Drawing.Printing> пространства имен, который не поддерживает полный [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати, но также поддерживает гибридные GDI в XPS путь печати. См. раздел **Архитектура способа печати** ниже.)  
   
@@ -144,6 +144,6 @@ ms.locfileid: "54695612"
 - <xref:System.Printing.PrintQueue>
 - [Разделы практического руководства](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
 - [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [XPS-документы](/windows/desktop/printdocs/documents)
 - [Сериализация и хранение документов](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
 - [Microsoft XPS-документов преобразователя (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f838f94698375eca27027c4769fcc5f54f96528c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195658"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443189"
 ---
 # <a name="helpprovider-component-windows-forms"></a>Компонент HelpProvider (Windows Forms)
 Компонент `HelpProvider` Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.  
@@ -33,4 +33,4 @@ ms.locfileid: "47195658"
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- Также см. в разделе [справочные системы в приложениях Windows Forms](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).
+ Также см. в разделе [справочные системы в приложениях Windows Forms](../advanced/help-systems-in-windows-forms-applications.md).

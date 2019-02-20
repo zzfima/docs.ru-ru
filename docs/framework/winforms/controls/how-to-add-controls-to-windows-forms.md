@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление элементов управления Windows Forms
+title: Практическое руководство. Добавление элементов управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611362"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443176"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Как выполнить Добавление элементов управления Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления Windows Forms
 Большинство форм разрабатываются путем добавления элементов управления в область формы для определения пользовательского интерфейса (UI). Объект *управления* — это компонент на форме, использующийся для отображения сведений или принимают пользовательский ввод. Дополнительные сведения об элементах управления см. в разделе [элементов управления Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "54611362"
   
 ### <a name="to-draw-a-control-on-a-form"></a>Для рисования элемента управления в форме  
   
-1.  Откройте форму. Дополнительные сведения см. в разделе [Как Отображение в конструкторе Windows Forms](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Откройте форму. Дополнительные сведения см. в разделе [Как Отображение в конструкторе Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  В **элементов**, щелкните элемент управления, который вы хотите добавить в форму.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54611362"
   
 ### <a name="to-drag-a-control-to-a-form"></a>Чтобы перетащить элемент управления на форму  
   
-1.  Откройте форму. Дополнительные сведения см. в разделе [Как Отображение в конструкторе Windows Forms](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Откройте форму. Дополнительные сведения см. в разделе [Как Отображение в конструкторе Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  В **элементов**, щелкните и перетащите его в форму элемент управления.  
   

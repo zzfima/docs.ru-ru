@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582110"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442130"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Развертывание ClickOnce для форм Windows Forms
 В приведенных ниже разделах описывается технология [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], предназначенная для простого развертывания приложений Windows Forms на клиентских компьютерах.  
@@ -66,6 +66,6 @@ ms.locfileid: "54582110"
 - [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)
 - [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Построение ClickOnce-приложений из командной строки](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [Отладка ClickOnce-приложений, использующих System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Отладка ClickOnce-приложений, использующих System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [Развертывание компонентов COM с помощью ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
 - [Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

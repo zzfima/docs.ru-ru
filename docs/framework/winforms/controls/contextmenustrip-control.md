@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 31c056f823cc38d370d7d23b7e91d682aa571f76
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748906"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441545"
 ---
 # <a name="contextmenustrip-control"></a>Элемент управления ContextMenuStrip
 Элемент управления <xref:System.Windows.Forms.ContextMenuStrip> предоставляет контекстное меню, связываемое с каким-либо элементом управления.  
@@ -26,16 +26,16 @@ ms.locfileid: "43748906"
  [Практическое руководство. Добавление элементов меню в элемент управления ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
  Описание добавления доступных для выбора пунктов в <xref:System.Windows.Forms.ContextMenuStrip>.  
   
- [Практическое руководство. Настройка полей флажков и значков для объекта ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
- Описывается настройка <xref:System.Windows.Forms.ContextMenuStrip> путем задания свойств полей флажков и значков различными способами.  
+ [Практическое руководство. Руководство Настройка полей флажков и значков](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
+ Описание настройки <xref:System.Windows.Forms.ContextMenuStrip> путем задания свойств полей флажков и значков различными способами.  
   
  [Практическое руководство. Включение полей флажков и значков для элементов управления ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Описание порядка включения и выключения полей флажков <xref:System.Windows.Forms.ContextMenuStrip>.  
   
- [Практическое руководство. Обработка события Opening компонента ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
+ [Практическое руководство. Обработка события Opening объекта ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Описание настройки поведения элемента управления <xref:System.Windows.Forms.ContextMenuStrip> путем обработки события <xref:System.Windows.Forms.ToolStripDropDown.Opening>.  
   
- Также см. в разделе [диалоговое окно задач ContextMenuStrip](https://msdn.microsoft.com/library/ms233646\(v=vs.110\)) или [редактор коллекции элементов ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
+ Также см. в разделе [диалоговое окно задач ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100)) или [редактор коллекции элементов ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100)).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MenuStrip>  

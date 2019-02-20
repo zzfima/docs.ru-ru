@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525540"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442715"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Разработка пользовательских элементов управления Windows Forms в .NET Framework
 Элементы управления Windows Forms — это многократно используемые компоненты, которые инкапсулируют функциональность пользовательского интерфейса и используются в клиентских приложениях Windows. Windows Forms предоставляет не только множество готовых к использованию элементов управления, но и инфраструктуру для разработки собственных элементов управления. Вы можете объединять существующие элементы управления, расширять существующие или создавать пользовательские элементы управления. В этом разделе приводятся дополнительные сведения и образцы, которые помогут вам в разработке элементов управления Windows Forms.  
@@ -51,13 +51,13 @@ ms.locfileid: "43525540"
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Атрибуты времени разработки для компонентов](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Атрибуты времени разработки для компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Перечислены атрибуты метаданных, которые нужно применить к компонентам и элементам управления, чтобы они корректно отображались в режиме разработки в визуальных конструкторах.  
   
- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  Описывается, как реализовать такие классы, как редакторы и конструкторы, обеспечивающие поддержку во время разработки.  
   
- [Практическое руководство. Лицензирование компонентов и элементов управления](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Практическое руководство. Лицензии компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Описывается, как реализовать лицензирование в элементе управления или компоненте.  
   
- См. также [Создание элементов управления Windows Forms во время разработки](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ См. также [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md).

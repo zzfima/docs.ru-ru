@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: 09fb5c26f7ecccd427155836c3864773153dddfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668955"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442559"
 ---
 # <a name="application-settings-attributes"></a>Атрибуты параметров приложения
 Архитектура параметров приложения предоставляет множество атрибутов, которые могут быть применены к классу-оболочке параметров приложения или его отдельным свойствам. Эти атрибуты проверяются во время выполнения с помощью инфраструктуры параметры приложения, часто поставщиком параметров, чтобы адаптировать работу с указанными потребностям настраиваемой оболочки.  
@@ -21,18 +21,18 @@ ms.locfileid: "54668955"
 > [!NOTE]
 >  Настраиваемый поставщик параметров, производным от <xref:System.Configuration.SettingsProvider> класса, требуется только для распознавания следующие три атрибута: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, и **DefaultSettingValueAttribute**.  
   
-|Атрибут|целевого объекта|Описание|  
+|Атрибут|целевого объекта|Описание:|  
 |---------------|------------|-----------------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Оба значения|Задает короткое имя поставщика параметров, используемый для сохранения состояния.<br /><br /> Если этот атрибут не задан, поставщик по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, предполагается, что.|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Оба значения|Определяет свойство как параметр приложений пользователя.|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Оба значения|Определяет свойство как параметр приложения.|  
+|<xref:System.Configuration.SettingsProviderAttribute>|Оба|Задает короткое имя поставщика параметров, используемый для сохранения состояния.<br /><br /> Если этот атрибут не задан, поставщик по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, предполагается, что.|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|Оба|Определяет свойство как параметр приложений пользователя.|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Оба|Определяет свойство как параметр приложения.|  
 |<xref:System.Configuration.DefaultSettingValueAttribute>|Свойство.|Указывает строку, которая может быть десериализован поставщиком жестко заданную по умолчанию для этого свойства.<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider> Этот атрибут не требуется и переопределяет любое значение, предоставляемые этим атрибутом Если значение уже сохранены.|  
 |<xref:System.Configuration.SettingsDescriptionAttribute>|Свойство.|Предоставляет описательный тест для отдельных параметров, в основном используется средствами времени выполнения и во время разработки.|  
 |<xref:System.Configuration.SettingsGroupNameAttribute>|Класс|Содержит явное имя для группы параметров. Если этот атрибут отсутствует, <xref:System.Configuration.ApplicationSettingsBase> использует имя класса-оболочки.|  
 |<xref:System.Configuration.SettingsGroupDescriptionAttribute>|Класс|Предоставляет описательный тест для группы параметров, в основном используется средствами времени выполнения и во время разработки.|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Оба значения|Указывает ноль или более служб управляемости, которые должна быть представлена группа параметров или свойство. Описываются доступные службы <xref:System.Configuration.SettingsManageability> перечисления.|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|Оба|Указывает ноль или более служб управляемости, которые должна быть представлена группа параметров или свойство. Описываются доступные службы <xref:System.Configuration.SettingsManageability> перечисления.|  
 |<xref:System.Configuration.SpecialSettingAttribute>|Свойство.|Указывает, что параметр принадлежит к особой предопределенной категории, например строку подключения, предлагаемое специальной обработки поставщика параметров. Стандартные категории для этого атрибута определяется <xref:System.Configuration.SpecialSetting> перечисления.|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Оба значения|Указывает предпочтительный механизм сериализации для группы параметров или свойства. Доступные механизмы сериализации определяются <xref:System.Configuration.SettingsSerializeAs> перечисления.|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|Оба|Указывает предпочтительный механизм сериализации для группы параметров или свойства. Доступные механизмы сериализации определяются <xref:System.Configuration.SettingsSerializeAs> перечисления.|  
 |<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Свойство.|Указывает, что поставщик параметров должен отключить всю функциональность обновления приложения для помеченного свойства.|  
   
  *Класс* указывает, что атрибут может применяться только к классу-оболочке параметров приложения. *Свойство* указывает, что атрибут может быть применен только к свойствам параметров. *Оба* указывает, что атрибут может применяться на любом уровне.  
@@ -41,4 +41,4 @@ ms.locfileid: "54668955"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
-- [Практическое руководство. Создание параметров приложения](https://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)
+- [Практическое руководство. Создание параметров приложения](how-to-create-application-settings.md)

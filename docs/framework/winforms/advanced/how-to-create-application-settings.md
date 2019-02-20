@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание параметров приложения
+title: Практическое руководство. Создание параметров приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558960"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441363"
 ---
-# <a name="how-to-create-application-settings"></a>Как выполнить Создание параметров приложения
+# <a name="how-to-create-application-settings"></a>Практическое руководство. Создание параметров приложения
 С помощью управляемого кода можно создавать параметры приложения и привязывать их к свойствам формы или ее элементов управления, чтобы эти параметры загружались и сохранялись автоматически во время выполнения.  
   
  В представленной ниже процедуре вручную создается класс-оболочка, производный от класса <xref:System.Configuration.ApplicationSettingsBase>. К этому классу добавляется открытое свойство для каждого параметра приложения, который требуется предоставить.  
   
- Эту процедуру можно также выполнить с помощью минимального объема кода в конструкторе Visual Studio.  Также см. раздел [Как Создание параметров приложения с помощью конструктора](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Эту процедуру можно также выполнить с помощью минимального объема кода в конструкторе Visual Studio.  Также см. раздел [Как Создание параметров приложения с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Создание параметров приложения программными средствами  
   
