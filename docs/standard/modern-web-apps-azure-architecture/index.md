@@ -4,13 +4,8 @@ description: Этот документ является полным руков�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827868"
 ---
+
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Разработка современных веб-приложений с помощью ASP.NET Core и Azure
 
 ![изображение обложки](./media/cover.png)
@@ -107,7 +102,7 @@ Mac и macOS являются товарными знаками Apple Inc.
 ## <a name="references"></a>Ссылки
 
 - **Выбор между .NET Core и .NET Framework для серверных приложений**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
 >[Вперед](modern-web-applications-characteristics.md)

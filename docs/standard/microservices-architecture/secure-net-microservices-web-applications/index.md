@@ -1,15 +1,9 @@
 ---
 title: Обеспечение безопасности веб-приложений и микрослужб .NET
-description: Безопасность микрослужб и веб-приложений .NET — узнайте о способах проверки подлинности в веб-приложениях ASP.NET Core.
+description: "Безопасность микрослужб и веб-приложений .NET\_— узнайте о способах проверки подлинности в веб-приложениях ASP.NET\_Core."
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333507"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Обеспечение безопасности микрослужб и веб-приложений .NET
 
@@ -247,8 +241,6 @@ public void ConfigureServices(IServiceCollection services)
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
 
     // Add Authentication services
-
-    var identityUrl = configuration.GetValue<string>("IdentityUrl");
 
     services.AddAuthentication(options =>
     {

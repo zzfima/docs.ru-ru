@@ -2,21 +2,15 @@
 title: Разработка служебных приложений Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035926"
 ---
 # <a name="develop-windows-service-apps"></a>Разработка приложений службы Windows
 
@@ -31,7 +25,7 @@ ms.locfileid: "48035926"
 
 Сведения о приложениях служб Windows, времени существования служб и отличиях приложений служб от распространенных типов проектов.
 
-[Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Пошаговое руководство: Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Пример создания службы на Visual Basic и Visual C#.
 
@@ -51,4 +45,4 @@ ms.locfileid: "48035926"
 
 <xref:System.ServiceProcess.ServiceInstaller> — описываются возможности класса <xref:System.ServiceProcess.ServiceInstaller>, который используется вместе с классом <xref:System.ServiceProcess.ServiceProcessInstaller> для установки и удаления службы.
 
-[Create Projects from Templates](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) (Создание проектов на основе шаблонов) — описываются типы проектов, которые используются в этом разделе, и способ их выбора.
+[Create Projects from Templates](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) (Создание проектов на основе шаблонов) — описываются типы проектов, которые используются в этом разделе, и способ их выбора.
