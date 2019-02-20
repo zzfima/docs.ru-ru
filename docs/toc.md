@@ -259,6 +259,7 @@
 ### [Обзор C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Использование ссылочных типов, допускающих значение NULL](csharp/tutorials/nullable-reference-types.md)
 ### [Создание и использование асинхронных потоков](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [Перевод приложения на ссылочные типы, допускающие значение NULL](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [Консольное приложение](csharp/tutorials/console-teleprompter.md)
 ### [Клиент REST](csharp/tutorials/console-webapiclient.md)
 ### [Наследование в C# и .NET](csharp/tutorials/inheritance.md)
