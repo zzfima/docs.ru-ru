@@ -95,7 +95,7 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 |-----------|-----------------|  
 |[Сводка по массивам](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Содержит список элементов языка, используемых для создания, определения и использования массивов.|  
 |[Сводка по объекту Collection](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Содержит список элементов языка, используемых для коллекций.|  
-|[Сводка по управлению ходом выполнения](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Содержит список операторов, используемых для циклов и управления последовательностью процедур.|  
+|[Сводка по управлению ходом выполнения](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Содержит список операторов, используемых для циклов и управления потоком процедур.|  
 |[Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Содержит список функций для преобразования чисел, дат, времени и строк.|  
 |[Сводка по типам данных](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Содержит список типов данных. Также содержит перечень функций для преобразования и проверки типов данных.|  
 |[Сводка элементов для работы со значениями дат и времени](../../../visual-basic/language-reference/keywords/dates-and-times-summary.md)|Содержит список элементов языка, используемых для дат и времени.|  

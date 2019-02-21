@@ -97,7 +97,7 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>Скачивание программы
 
-Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Следующие шаги описывают процесс открытия и запуска программы.
+Вы можете скачать приложение для этого раздела на странице примеров [Пример Async: поток управления в асинхронных программах](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Следующие шаги описывают процесс открытия и запуска программы.
 
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.
 

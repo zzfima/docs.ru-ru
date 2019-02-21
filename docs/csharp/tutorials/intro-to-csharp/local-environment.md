@@ -16,7 +16,7 @@ ms.locfileid: "53129991"
 
 Кроме того, вы можете установить [пакет SDK для .NET Core](https://www.microsoft.com/net/download) и [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="basic-application-development-flow"></a>Основная последовательность разработки приложения
+## <a name="basic-application-development-flow"></a>Базовый поток разработки приложения
 
 Чтобы создать приложения, выполните команду [`dotnet new`](../../../core/tools/dotnet-new.md). Эта команда создает файлы и ресурсы, необходимые для приложения. Во всех ознакомительных руководствах по C# используется тип приложения `console`. Освоив описанные здесь основы, вы сможете перейти и к другим типам приложений.
 

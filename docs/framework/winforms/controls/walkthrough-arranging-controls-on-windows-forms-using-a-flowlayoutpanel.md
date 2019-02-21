@@ -88,7 +88,7 @@ ms.locfileid: "54573527"
 2.  Измените размер <xref:System.Windows.Forms.FlowLayoutPanel> , чтобы его высота была меньше, чем столбец элементов управления <xref:System.Windows.Forms.Button> . Обратите внимание, что <xref:System.Windows.Forms.FlowLayoutPanel> перестраивает дочерние элементы управления, чтобы они перешли в следующий столбец. Продолжайте уменьшать высоту и обратите внимание, что дочерние элементы управления перемещаются в последующие столбцы. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> на <xref:System.Windows.Forms.FlowDirection.RightToLeft>. Обратите внимание, что позиции дочерних элементов управления изменяются в обратном направлении. Проследите за макетом при изменении значения свойства <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> на <xref:System.Windows.Forms.FlowDirection.BottomUp>.  
   
 ## <a name="inserting-flow-breaks"></a>Вставка разрывов потока  
- Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> предоставляет свойство FlowBreak своим дочерним элементам управления. Если свойству FlowBreak присвоено значение `true` , элементы управления внутри элемента <xref:System.Windows.Forms.FlowLayoutPanel> перестают размещаться в текущем направлении и переносятся на следующую строку или в следующий столбец.  
+ Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> предоставляет свойство FlowBreak своим дочерним элементам управления. Если свойству FlowBreak присвоено значение `true`, элементы управления внутри элемента <xref:System.Windows.Forms.FlowLayoutPanel> перестают размещаться в текущем направлении и переносятся на следующую строку или в следующий столбец.  
   
 #### <a name="to-insert-flow-breaks"></a>Вставка разрывов потока  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54573527"
   
 2.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> в середине самого левого столбца.  
   
-3.  Измените значение свойства FlowBreak элемента управления <xref:System.Windows.Forms.Button> на `true`. Обратите внимание, что столбец разрывается, и элементы управления, следующие за выбранным элементом управления <xref:System.Windows.Forms.Button> , переносятся в следующий столбец. Задайте для свойства FlowBreak элемента управления <xref:System.Windows.Forms.Button> значение `false` , чтобы вернуться к исходному поведению.  
+3.  Измените значение свойства FlowBreak элемента управления <xref:System.Windows.Forms.Button> на `true`. Обратите внимание, что столбец разрывается и элементы управления, следующие за выбранным элементом управления <xref:System.Windows.Forms.Button>, переносятся в следующий столбец. Задайте для свойства FlowBreak элемента управления <xref:System.Windows.Forms.Button> значение `false` , чтобы вернуться к исходному поведению.  
   
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Размещение элементов управления с использованием закрепления и привязки  
  Функциональные возможности закрепления и привязки дочерних элементов управления отличаются от их функциональных возможностей в других контейнерных элементах управления. И закрепление, и привязка относятся к самому крупному элементу управления в направлении потока.  

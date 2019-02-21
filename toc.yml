@@ -555,7 +555,7 @@ items:
         - name: Константы и перечисления
           tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
           topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
-        - name: Управление ходом выполнения
+        - name: Поток управления
           tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
           topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
         - name: Типы данных
