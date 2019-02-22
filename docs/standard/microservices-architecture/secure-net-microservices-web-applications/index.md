@@ -19,7 +19,7 @@ ms.date: 10/19/2018
 
 **Рис. 9-1**. Централизованная проверка подлинности с помощью шлюза API
 
-Если службы доступны напрямую, для проверки подлинности пользователей можно применять службу проверки подлинности, например Azure Active Directory или выделенную микрослужбу проверки подлинности, выступающую в роли службы токенов безопасности (STS). Сведения о доверии передаются между службами с помощью токенов безопасности или файлов cookie. (При необходимости эти токены могут передаваться между приложениями в ASP.NET Core с помощью [служб защиты данных](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) Такая схема проиллюстрирована на рис. 9-2.
+Если службы доступны напрямую, для проверки подлинности пользователей можно применять службу проверки подлинности, например Azure Active Directory или выделенную микрослужбу проверки подлинности, выступающую в роли службы токенов безопасности (STS). Сведения о доверии передаются между службами с помощью токенов безопасности или файлов cookie. (При необходимости эти токены могут передаваться между приложениями ASP.NET Core путем реализации [совместного использования файлов cookie](/aspnet/core/security/cookie-sharing).) Такая схема проиллюстрирована на рис. 9-2.
 
 ![При прямом доступе к микрослужбам доверие, включающее проверку подлинности и авторизацию, обрабатывается общим для всех токеном безопасности, который выдает специализированная микрослужба.](./media/image2.png)
 
@@ -271,7 +271,7 @@ public void ConfigureServices(IServiceCollection services)
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Совместное использование файлов cookie в приложениях** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Общие сведения об Identity** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ public void ConfigureServices(IServiceCollection services)
 - **Мичелл Аникас (Michell Anicas). An Introduction to OAuth 2 (Введение в OAuth 2)** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (репозиторий GitHub для поставщиков OAuth в ASP.NET) \
+- **AspNet.Security.OAuth.Providers** (репозиторий GitHub для поставщиков OAuth в ASP.NET)
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Дэнни Строкис (Danny Strockis). Integrating Azure AD into an ASP.NET Core Web App (Интеграция Azure AD в веб-приложение ASP.NET Core)** \
