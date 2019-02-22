@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Разрешение изменения порядка столбцов в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Разрешение изменения порядка столбцов в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: e216a91a612c5d4370d5786492426f757f39a262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aff0b0262441fb6c9d24240b1fe1c24707f94b8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658095"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584256"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Как выполнить Разрешение изменения порядка столбцов в элементе управления DataGridView Windows Forms
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Разрешение изменения порядка столбцов в элементе управления DataGridView Windows Forms
 При разрешении изменения порядка столбцов в элементе управления <xref:System.Windows.Forms.DataGridView> пользователи могут переместить столбец в новое местоположение, перетащив заголовок столбца с помощью мыши. В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> определяет, могут ли пользователи перемещать столбцы.  
   
- Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Разрешение изменения порядка столбцов в элементе управления DataGridView формы Windows с помощью конструктора](https://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
+ Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Включить изменение порядка столбцов в Windows Forms с помощью конструктора элемента управления DataGridView](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>Разрешение изменения порядка столбцов программным путем  
   

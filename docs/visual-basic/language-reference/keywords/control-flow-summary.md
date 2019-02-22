@@ -1,5 +1,5 @@
 ---
-title: Сводка по управлению ходом выполнения (Visual Basic)
+title: Сводка по потоку управления (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - decision structures [Visual Basic]
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54505764"
 ---
-# <a name="control-flow-summary-visual-basic"></a>Сводка по управлению ходом выполнения (Visual Basic)
+# <a name="control-flow-summary-visual-basic"></a>Сводка по потоку управления (Visual Basic)
 Ключевые слова языка Visual Basic и члены библиотек времени выполнения упорядочены по назначению и использованию.  
   
 |Действие|Элемент языка|  

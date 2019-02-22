@@ -2,12 +2,12 @@
 title: Параметры и аргументы
 description: Дополнительные сведения о F# поддержка языков для определения параметров и передачи аргументов в функции, методы и свойства.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612482"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583502"
 ---
 # <a name="parameters-and-arguments"></a>Параметры и аргументы
 
@@ -140,7 +140,17 @@ type C =
         printfn "%s" message
 ```
 
-Значение, заданное в качестве аргумента `DefaultParameterValue` должен совпадать с типом параметра, т. е. следующие не допускается:
+Можно также указать новый объект как значение параметра по умолчанию. Например `Foo` член может иметь необязательный `CanceallationToken` как входной вместо:
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+Значение, заданное в качестве аргумента `DefaultParameterValue` должен соответствовать типу параметра. Например ниже не допускается:
 
 ```fsharp
 type C =

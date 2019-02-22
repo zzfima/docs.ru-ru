@@ -216,7 +216,7 @@ ms.locfileid: "54547057"
 ##### <a name="other-layout-options"></a>Другие параметры макета  
  Параметры макета, являются <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> и <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>.  
   
-##### <a name="flow-layout"></a>Последовательное размещение  
+##### <a name="flow-layout"></a>Потоковый макет  
  <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> макет по умолчанию для <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, и <xref:System.Windows.Forms.ToolStripOverflow>. Это похоже на <xref:System.Windows.Forms.FlowLayoutPanel>. Возможности <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> макета, следующим образом:  
   
 -   Все функции <xref:System.Windows.Forms.FlowLayoutPanel> предоставляемых <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> свойство. Необходимо привести <xref:System.Windows.Forms.LayoutSettings> класс <xref:System.Windows.Forms.FlowLayoutSettings> класса.  

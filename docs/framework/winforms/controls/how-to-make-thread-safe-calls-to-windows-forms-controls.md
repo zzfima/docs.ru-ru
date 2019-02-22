@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сделать потокобезопасных вызовов элементов управления Windows Forms
+title: Практическое руководство. Сделать потокобезопасных вызовов элементов управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c5792425bec8dce9a45f438f62c112aec21c360
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710473"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584243"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Как выполнить Сделать потокобезопасных вызовов элементов управления Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Сделать потокобезопасных вызовов элементов управления Windows Forms
 
 При использовании многопоточности для улучшения производительности приложений Windows Forms во время вызова элементов управления необходимо соблюдать принципы безопасности потоков.
 
@@ -404,9 +404,6 @@ private:
 
 ## <a name="example"></a>Пример
  В следующем примере кода представлено полное приложение Windows Forms, состоящее из формы с тремя кнопками и одного текстового поля. Первая кнопка показывает доступ с нарушением принципов безопасности нескольких потоков, вторая кнопка показывает безопасный доступ с использованием <xref:System.Windows.Forms.Control.Invoke%2A>, а третья кнопка показывает безопасный доступ с использованием <xref:System.ComponentModel.BackgroundWorker>.
-
-> [!NOTE]
-> Инструкции для выполнения этого примера, см. в разделе [как: Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Для этого примера требуются ссылки на сборки System.Drawing и System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1051,7 +1048,7 @@ int main()
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Практическое руководство. Выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Практическое руководство. Реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Практическое руководство. Фоновое выполнение операции](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

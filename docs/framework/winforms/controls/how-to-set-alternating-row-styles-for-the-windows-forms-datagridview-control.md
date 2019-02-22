@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Установка стилей чередующихся строк для элемента управления DataGridView в Windows Forms
+title: Практическое руководство. Установка стилей чередующихся строк для элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: ba5aaec9e66f1d3c66bb50709f6fbd4afde893ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eea77b7601b7dc81b92f7b08806f3f00b494aecd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562730"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583892"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Как выполнить Установка стилей чередующихся строк для элемента управления DataGridView в Windows Forms
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Практическое руководство. Установка стилей чередующихся строк для элемента управления DataGridView в Windows Forms
 Данные в таблицах часто представлены в формате, подобном бухгалтерским книгам: в чередующихся строках используется разный цвет фона. Такой формат позволяет проще определять, какие ячейки находятся в какой строке, что особенно удобно в широких таблицах со множеством столбцов.  
   
  С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно указать полные сведения о стиле для чередующихся строк. Таким образом для различения чередующихся строк можно использовать такие характеристики стиля, как цвет фона, цвет текста и начертание шрифта.  
   
- Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Установка стилей чередующихся строк для Windows Forms с помощью конструктора элемента управления DataGridView](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\)).  
+ Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Установка стилей чередующихся строк для Windows Forms с помощью конструктора элемента управления DataGridView](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>Задание стилей чередующихся строк программными средствами  
   

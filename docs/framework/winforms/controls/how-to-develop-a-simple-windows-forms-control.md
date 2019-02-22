@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Разработка элемента управления простого Windows Forms
+title: Практическое руководство. Разработка элемента управления простого Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527631"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583840"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Как выполнить Разработка элемента управления простого Windows Forms
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Практическое руководство. Разработка элемента управления простого Windows Forms
 В этом разделе рассматриваются основные этапы создания пользовательского элемента управления Windows Forms. Простой элемент управления, разработанный в этом пошаговом руководстве, позволяет изменять выравнивание его <xref:System.Windows.Forms.Control.Text%2A> значение изменяемого свойства. Он не вызывает и не обрабатывает события.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Создание простого пользовательского элемента управления  
@@ -34,7 +34,7 @@ ms.locfileid: "54527631"
     public class FirstControl:Control {}  
     ```  
   
-2.  Определите свойства. (Не является обязательным для определения свойств, так как элемент управления наследует многие свойства из <xref:System.Windows.Forms.Control> класс, но большинство пользовательских элементов управления обычно определяются дополнительные свойства.) В следующем фрагменте кода определяется свойство с именем `TextAlignment` , `FirstControl` используется для форматирования отображения <xref:System.Windows.Forms.Control.Text%2A> свойство унаследовано от <xref:System.Windows.Forms.Control>. Дополнительные сведения об определении свойств см. в разделе [Общие сведения о свойствах](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Определите свойства. (Не является обязательным для определения свойств, так как элемент управления наследует многие свойства из <xref:System.Windows.Forms.Control> класс, но большинство пользовательских элементов управления обычно определяются дополнительные свойства.) В следующем фрагменте кода определяется свойство с именем `TextAlignment` , `FirstControl` используется для форматирования отображения <xref:System.Windows.Forms.Control.Text%2A> свойство унаследовано от <xref:System.Windows.Forms.Control>. Дополнительные сведения об определении свойств см. в разделе [Общие сведения о свойствах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ ms.locfileid: "54527631"
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Укажите атрибуты для своего элемента управления. Атрибуты позволяют визуальному конструктору адекватно отображать ваш элемент управления, а также его свойства и события во время разработки. Код в следующем фрагменте применяет атрибуты к свойству `TextAlignment`. В конструкторе, например Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> атрибут (показанный в фрагменте кода) вызывает отображение свойства для отображения логической категории. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Атрибут приводит к строку описания, которое должно отображаться в нижней части **свойства** окно при `TextAlignment` было выбрано свойство. Дополнительные сведения об атрибутах см. в разделе [Атрибуты времени разработки для компонентов](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Укажите атрибуты для своего элемента управления. Атрибуты позволяют визуальному конструктору адекватно отображать ваш элемент управления, а также его свойства и события во время разработки. Код в следующем фрагменте применяет атрибуты к свойству `TextAlignment`. В конструкторе, например Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> атрибут (показанный в фрагменте кода) вызывает отображение свойства для отображения логической категории. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Атрибут приводит к строку описания, которое должно отображаться в нижней части **свойства** окно при `TextAlignment` было выбрано свойство. Дополнительные сведения об атрибутах см. в разделе [Атрибуты времени разработки для компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  

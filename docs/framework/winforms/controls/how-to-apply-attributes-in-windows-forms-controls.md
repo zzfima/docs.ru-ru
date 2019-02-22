@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Применение атрибутов в элементах управления Windows Forms
+title: Практическое руководство. Применение атрибутов в элементах управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35cd40a3219c86e8f82f85360bf213d6ef3f9fc6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735160"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583944"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Как выполнить Применение атрибутов в элементах управления Windows Forms
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов в элементах управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и правильно выполнять во время выполнения, необходимо правильно применять атрибуты к классам и членам.  
   
 ## <a name="example"></a>Пример  
@@ -82,4 +82,4 @@ ms.locfileid: "54735160"
 - <xref:System.Windows.Forms.DataGridView>
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
-- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

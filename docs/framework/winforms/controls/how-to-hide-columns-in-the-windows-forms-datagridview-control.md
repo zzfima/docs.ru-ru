@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Скрытие столбцов элемента управления DataGridView в Windows Forms
+title: Практическое руководство. Скрытие столбцов элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 673c852b89518e2cb4df6ea98a337acd60bc42cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726fa8ee05498ae365409c8330c6e1d9283ae9f5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659674"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583279"
 ---
-# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Как выполнить Скрытие столбцов элемента управления DataGridView в Windows Forms
+# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Скрытие столбцов элемента управления DataGridView в Windows Forms
 Иногда требуется показать только некоторые из столбцов, доступных в элементе управления <xref:System.Windows.Forms.DataGridView> Windows Forms. Например, руководителям может потребоваться показать столбец с заработной платой сотрудников, в то время как от других пользователей его нужно скрыть. Или может возникнуть необходимость привязать элемент управления к источнику данных, содержащему много столбцов, только часть из которых нужно показать. В этом случае столбцы, которые не следует показывать, обычно не скрываются, а удаляются.  
   
  В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> столбца определяет, будет ли этот столбец показан.  
   
- Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Скрытие столбцов в Windows Forms с помощью конструктора элемента управления DataGridView](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
+ Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Скрытие столбцов в Windows Forms с помощью конструктора элемента управления DataGridView](hide-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-hide-a-column-programmatically"></a>Как скрыть столбец программным образом  
   

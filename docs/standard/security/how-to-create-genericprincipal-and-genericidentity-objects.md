@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание объектов GenericPrincipal и GenericIdentity
+title: Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8dd255aafe16cf0cb893ff4157b3590b3fc8d03
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608067"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583684"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Как выполнить Создание объектов GenericPrincipal и GenericIdentity
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
 Можно использовать <xref:System.Security.Principal.GenericIdentity> класс в сочетании с <xref:System.Security.Principal.GenericPrincipal> класса для создания схемы авторизации, которая существует независимо от домена Windows.  
   
 ### <a name="to-create-a-genericprincipal-object"></a>Создание объекта GenericPrincipal  
@@ -28,33 +28,33 @@ ms.locfileid: "54608067"
 1.  Создайте новый экземпляр класса identity и инициализируйте его с необходимым именем. Следующий код создает новый объект **GenericIdentity** и инициализирует его с именем `MyUser`.  
   
     ```vb  
-    Dim MyIdentity As New GenericIdentity("MyUser")  
+    Dim myIdentity As New GenericIdentity("MyUser")  
     ```  
   
     ```csharp  
-    GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
+    GenericIdentity myIdentity = new GenericIdentity("MyUser");  
     ```  
   
 2.  Создайте новый экземпляр класса **GenericPrincipal** и инициализируйте его с ранее созданным объектом **GenericIdentity** и массивом строк, представляющими роли, которые требуется связать с этим участником. В следующем примере кода задается массив строк, представляющих роль администратора и роль пользователя. Затем **GenericPrincipal** инициализируется с предыдущим **GenericIdentity** и массивом строк.  
   
     ```vb  
-    Dim MyStringArray As String() = {"Manager", "Teller"}  
-    DIm MyPrincipal As New GenericPrincipal(MyIdentity, MyStringArray)  
+    Dim myStringArray As String() = {"Manager", "Teller"}  
+    DIm myPrincipal As New GenericPrincipal(myIdentity, myStringArray)  
     ```  
   
     ```csharp  
-    String[] MyStringArray = {"Manager", "Teller"};  
-    GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
+    String[] myStringArray = {"Manager", "Teller"};  
+    GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);  
     ```  
   
 3.  Для подключения участника к текущему потоку используйте следующий код. Это полезно в ситуациях, когда участника следует проверить несколько раз, он должен быть проверен кодом, выполняющимся в приложении, или он должен быть проверен <xref:System.Security.Permissions.PrincipalPermission> объекта. Объект Principal по-прежнему можно проверять на основании ролей без подключения его к потоку. Дополнительные сведения см. в разделе [Замена объекта Principal](../../../docs/standard/security/replacing-a-principal-object.md).  
   
     ```vb  
-    Thread.CurrentPrincipal = MyPrincipal  
+    Thread.CurrentPrincipal = myPrincipal  
     ```  
   
     ```csharp  
-    Thread.CurrentPrincipal = MyPrincipal;  
+    Thread.CurrentPrincipal = myPrincipal;  
     ```  
   
 ## <a name="example"></a>Пример  
@@ -69,26 +69,26 @@ Public Class Class1
   
     Public Shared Sub Main()  
         ' Create generic identity.  
-        Dim MyIdentity As New GenericIdentity("MyIdentity")  
+        Dim myIdentity As New GenericIdentity("MyIdentity")  
   
         ' Create generic principal.  
-        Dim MyStringArray As String() =  {"Manager", "Teller"}  
-        Dim MyPrincipal As New GenericPrincipal(MyIdentity, MyStringArray)  
+        Dim myStringArray As String() =  {"Manager", "Teller"}  
+        Dim myPrincipal As New GenericPrincipal(myIdentity, myStringArray)  
   
         ' Attach the principal to the current thread.  
         ' This is not required unless repeated validation must occur,  
         ' other code in your application must validate, or the   
         ' PrincipalPermisson object is used.   
-        Thread.CurrentPrincipal = MyPrincipal  
+        Thread.CurrentPrincipal = myPrincipal  
   
         ' Print values to the console.  
-        Dim Name As String = MyPrincipal.Identity.Name  
-        Dim Auth As Boolean = MyPrincipal.Identity.IsAuthenticated  
-        Dim IsInRole As Boolean = MyPrincipal.IsInRole("Manager")  
+        Dim name As String = myPrincipal.Identity.Name  
+        Dim auth As Boolean = myPrincipal.Identity.IsAuthenticated  
+        Dim isInRole As Boolean = myPrincipal.IsInRole("Manager")  
   
-        Console.WriteLine("The Name is: {0}", Name)  
-        Console.WriteLine("The IsAuthenticated is: {0}", Auth)  
-        Console.WriteLine("Is this a Manager? {0}", IsInRole)  
+        Console.WriteLine("The name is: {0}", name)  
+        Console.WriteLine("The isAuthenticated is: {0}", auth)  
+        Console.WriteLine("Is this a Manager? {0}", isInRole)  
   
     End Sub  
   
@@ -105,27 +105,27 @@ public class Class1
     public static int Main(string[] args)  
     {  
     // Create generic identity.  
-    GenericIdentity MyIdentity = new GenericIdentity("MyIdentity");  
+    GenericIdentity myIdentity = new GenericIdentity("MyIdentity");  
   
     // Create generic principal.  
-    String[] MyStringArray = {"Manager", "Teller"};  
-    GenericPrincipal MyPrincipal =   
-        new GenericPrincipal(MyIdentity, MyStringArray);  
+    String[] myStringArray = {"Manager", "Teller"};  
+    GenericPrincipal myPrincipal =   
+        new GenericPrincipal(myIdentity, myStringArray);  
   
     // Attach the principal to the current thread.  
     // This is not required unless repeated validation must occur,  
     // other code in your application must validate, or the   
     // PrincipalPermisson object is used.   
-    Thread.CurrentPrincipal = MyPrincipal;  
+    Thread.CurrentPrincipal = myPrincipal;  
   
     // Print values to the console.  
-    String Name =  MyPrincipal.Identity.Name;  
-    bool Auth =  MyPrincipal.Identity.IsAuthenticated;   
-    bool IsInRole =  MyPrincipal.IsInRole("Manager");  
+    String name =  myPrincipal.Identity.Name;  
+    bool auth =  myPrincipal.Identity.IsAuthenticated;   
+    bool isInRole =  myPrincipal.IsInRole("Manager");  
   
-    Console.WriteLine("The Name is: {0}", Name);  
-    Console.WriteLine("The IsAuthenticated is: {0}", Auth);  
-    Console.WriteLine("Is this a Manager? {0}", IsInRole);  
+    Console.WriteLine("The name is: {0}", name);  
+    Console.WriteLine("The isAuthenticated is: {0}", auth);  
+    Console.WriteLine("Is this a Manager? {0}", isInRole);  
   
     return 0;  
     }  

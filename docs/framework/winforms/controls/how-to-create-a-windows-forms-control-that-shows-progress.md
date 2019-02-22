@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание элемента управления Windows Forms, показывающего прогресс
+title: Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: c474419d1b60d8dbc937e77251b877efca2709b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb3048d837f6f1ffe2d9733cab3eb11fc4d066d3
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594724"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583905"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Как выполнить Создание элемента управления Windows Forms, показывающего прогресс
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс
 В следующем примере кода показан пользовательский элемент управления `FlashTrackBar`, который позволяет показывать пользователю уровень или ход выполнения приложения. Ход выполнения отображается с помощью градиента.  
   
  Элемент управления `FlashTrackBar` иллюстрирует следующие концепции.  
@@ -93,5 +93,5 @@ ms.locfileid: "54594724"
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>См. также
-- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
