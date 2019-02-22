@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание формы MDI с помощью слияния меню и элементов управления ToolStrip
+title: Практическое руководство. Создание формы MDI с помощью слияния меню и элементов управления ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 6cbab3c588aa74809a7aef80ae6ffc4c3772069f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6b8669717e8f07d9c7acd624e77a5c35a4eb7e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646020"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583463"
 ---
-# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a><span data-ttu-id="abc95-102">Как выполнить Создание формы MDI с помощью слияния меню и элементов управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abc95-102">How to: Create an MDI Form with Menu Merging and ToolStrip Controls</span></span>
-<span data-ttu-id="abc95-103">Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> поддерживает приложения с интерфейсом MDI, а элемент управления <xref:System.Windows.Forms.MenuStrip> поддерживает слияние меню.</span><span class="sxs-lookup"><span data-stu-id="abc95-103">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace supports multiple document interface (MDI) applications, and the <xref:System.Windows.Forms.MenuStrip> control supports menu merging.</span></span> <span data-ttu-id="abc95-104">Формы MDI также могут содержать элементы управления <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="abc95-104">MDI forms can also <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
+# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a><span data-ttu-id="fe2be-102">Практическое руководство. Создание формы MDI с помощью слияния меню и элементов управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="fe2be-102">How to: Create an MDI Form with Menu Merging and ToolStrip Controls</span></span>
+<span data-ttu-id="fe2be-103">Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> поддерживает приложения с интерфейсом MDI, а элемент управления <xref:System.Windows.Forms.MenuStrip> поддерживает слияние меню.</span><span class="sxs-lookup"><span data-stu-id="fe2be-103">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace supports multiple document interface (MDI) applications, and the <xref:System.Windows.Forms.MenuStrip> control supports menu merging.</span></span> <span data-ttu-id="fe2be-104">Формы MDI также могут содержать элементы управления <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="fe2be-104">MDI forms can also <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- <span data-ttu-id="abc95-105">Имеется широкая поддержка этой возможности в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="abc95-105">There is extensive support for this feature in Visual Studio.</span></span>  
+ <span data-ttu-id="fe2be-105">Имеется широкая поддержка этой возможности в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fe2be-105">There is extensive support for this feature in Visual Studio.</span></span>  
   
- <span data-ttu-id="abc95-106">Также см. в разделе [Пошаговое руководство: Создание формы MDI путем слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span><span class="sxs-lookup"><span data-stu-id="abc95-106">Also see [Walkthrough: Creating an MDI Form with Menu Merging and ToolStrip Controls](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
+ <span data-ttu-id="fe2be-106">Также см. в разделе [Пошаговое руководство: Создание формы MDI путем слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span><span class="sxs-lookup"><span data-stu-id="fe2be-106">Also see [Walkthrough: Creating an MDI Form with Menu Merging and ToolStrip Controls](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="abc95-107">Пример</span><span class="sxs-lookup"><span data-stu-id="abc95-107">Example</span></span>  
- <span data-ttu-id="abc95-108">В примере кода ниже показано использование элементов управления <xref:System.Windows.Forms.ToolStripPanel> с формой MDI.</span><span class="sxs-lookup"><span data-stu-id="abc95-108">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStripPanel> controls with an MDI form.</span></span> <span data-ttu-id="abc95-109">Форма также поддерживает слияние меню с вложенными меню.</span><span class="sxs-lookup"><span data-stu-id="abc95-109">The form also supports menu merging with child menus.</span></span>  
+## <a name="example"></a><span data-ttu-id="fe2be-107">Пример</span><span class="sxs-lookup"><span data-stu-id="fe2be-107">Example</span></span>  
+ <span data-ttu-id="fe2be-108">В примере кода ниже показано использование элементов управления <xref:System.Windows.Forms.ToolStripPanel> с формой MDI.</span><span class="sxs-lookup"><span data-stu-id="fe2be-108">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStripPanel> controls with an MDI form.</span></span> <span data-ttu-id="fe2be-109">Форма также поддерживает слияние меню с вложенными меню.</span><span class="sxs-lookup"><span data-stu-id="fe2be-109">The form also supports menu merging with child menus.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="abc95-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="abc95-110">Compiling the Code</span></span>  
- <span data-ttu-id="abc95-111">Для этого примера кода требуются:</span><span class="sxs-lookup"><span data-stu-id="abc95-111">This code example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fe2be-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="fe2be-110">Compiling the Code</span></span>  
+ <span data-ttu-id="fe2be-111">Для этого примера кода требуются:</span><span class="sxs-lookup"><span data-stu-id="fe2be-111">This code example requires:</span></span>  
   
--   <span data-ttu-id="abc95-112">ссылки на сборки System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="abc95-112">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="fe2be-112">ссылки на сборки System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="fe2be-112">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="abc95-113">Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="abc95-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="abc95-114">Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.</span><span class="sxs-lookup"><span data-stu-id="abc95-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="abc95-115">См. также [как: Компиляция и выполнение примера кода завершения Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="abc95-115">Also sssee [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="fe2be-113">Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="fe2be-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="fe2be-114">Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.</span><span class="sxs-lookup"><span data-stu-id="fe2be-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abc95-116">См. также</span><span class="sxs-lookup"><span data-stu-id="abc95-116">See also</span></span>
-- [<span data-ttu-id="abc95-117">Элемент управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abc95-117">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fe2be-115">См. также</span><span class="sxs-lookup"><span data-stu-id="fe2be-115">See also</span></span>
+- [<span data-ttu-id="fe2be-116">Элемент управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="fe2be-116">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
