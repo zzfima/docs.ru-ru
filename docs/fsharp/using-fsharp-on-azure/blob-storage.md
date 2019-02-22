@@ -1,16 +1,16 @@
 ---
-title: Начало работы с хранилищем BLOB-объектов Azure, с помощью F#
+title: Начало работы с хранилищем BLOB-объектов Azure с использованиемF#
 description: Store неструктурированных данных в облаке в хранилище BLOB-объектов Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037286"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664995"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure с использованиемF# #
 
 Хранилище BLOB-объектов Azure — это служба, которая сохраняет неструктурированные данные в облаке в виде BLOB-объектов. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.
 
@@ -22,9 +22,9 @@ ms.locfileid: "44037286"
 
 Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранения](/azure/storage/storage-create-storage-account). Вам также потребуется ключ доступа к хранилищу для этой учетной записи.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Создать скрипт F# и начала F#, интерактивный
+## <a name="create-an-f-script-and-start-f-interactive"></a>Создание F# сценариев и запустить F# интерактивный
 
-Примеры в этой статье можно использовать в F# приложение или скрипт F#. Чтобы создать скрипт F#, создайте файл с `.fsx` расширение, например `blobs.fsx`, в среде разработки F#.
+Примеры в этой статье можно использовать в любом F# приложения или F# скрипта. Чтобы создать F# скрипт, создайте файл с `.fsx` расширение, например `blobs.fsx`в вашей F# среды разработки.
 
 Затем используйте [диспетчера пакетов](package-management.md) например [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) установка `WindowsAzure.Storage` и `Microsoft.WindowsAzure.ConfigurationManager` пакетов и справочник по `WindowsAzure.Storage.dll` и `Microsoft.WindowsAzure.Configuration.dll` в скрипт с помощью `#r` директива.
 
@@ -216,23 +216,24 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 По умолчанию данные больших двоичных объектов в учетной записи хранения доступен только владельцу учетной записи хранения. Проверка подлинности запросов к хранилищу BLOB-объектов требуется ключ доступа учетной записи по умолчанию. Тем не менее может потребоваться сделать определенные данные больших двоичных объектов доступным другим пользователям.
 
-Дополнительные сведения о том, как управлять доступом к хранилище BLOB-объектов см. в разделе [руководство по .NET для раздела хранилища BLOB-объектов используется управление доступом на](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data).
-
-
 ### <a name="encrypting-blob-data"></a>Шифрование данных больших двоичных объектов
 
 Служба хранилища Azure поддерживает шифрование данных больших двоичных объектов, как на стороне клиента, так и на сервере.
-
-Сведения о шифровании данных больших двоичных объектов, см. в разделе [руководство по .NET для раздела хранилища BLOB-объектов на шифрование](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data).
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Теперь, когда вы узнали основные сведения о хранилище BLOB-объектов, используйте следующие ссылки для получения дополнительных сведений.
 
 ### <a name="tools"></a>Инструменты
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) поставщик типов F#, который может использоваться для просмотра ресурсов BLOB-объектов, таблиц и хранилища очередей Azure и легко применить с ними операции CRUD.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# API для использования службы хранилища таблиц Microsoft Azure
-- [Обозреватель хранилищ Microsoft Azure (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) — это бесплатное автономное приложение от корпорации Майкрософт, который позволяет визуально работать с данными из хранилища Azure в Windows, OS X и Linux.
+
+- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F# Тип поставщика, который может использоваться для просмотра ресурсов BLOB-объектов, таблиц и хранилища очередей Azure и легко применить с ними операции CRUD.
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F# API за использование службы хранилища таблиц Microsoft Azure
+
+- [Обозреватель хранилищ Microsoft Azure (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Это бесплатное автономное приложение от корпорации Майкрософт, который позволяет визуально работать с данными из хранилища Azure в Windows, OS X и Linux.
 
 ### <a name="blob-storage-reference"></a>Справочник по хранилища BLOB-объектов
 
@@ -246,3 +247,4 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 - [Перенос данных с помощью служебной программы командной строки AzCopy для Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Настройка строк подключения службы хранилища Azure](/azure/storage/common/storage-configure-connection-string)
 - [Блог группы разработчиков хранилища Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Краткое руководство. Создание большого двоичного объекта в хранилище объектов с помощью .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

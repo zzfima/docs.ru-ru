@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591946"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664891"
 ---
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
@@ -51,7 +51,7 @@ ms.locfileid: "54591946"
  Эта возможность доступна только в [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
  [Практическое руководство. Индикация в элементе управления ListView формы Windows](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- Описывается, как реализовать обратную связь с пользователем при выполнении операций перетаскивания, в ходе которых метка вставки указывает расположение сброса для каждого положения указателя мыши.  
+ Описывается, как реализовать обратную связь с пользователем при выполнении операций перетаскивания, в ходе которых метка вставки указывает место перетаскивания для каждого положения указателя мыши.  
   
  Эта возможность доступна только в [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
@@ -81,9 +81,6 @@ ms.locfileid: "54591946"
   
  [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Инструкции по компоновке формы Windows Forms с несколькими панелями.  
-  
- [Возможности Windows XP и элементы управления Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Объясняется, как использовать преимущества Windows XP, относящиеся к элементу управления <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>См. также
 - [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

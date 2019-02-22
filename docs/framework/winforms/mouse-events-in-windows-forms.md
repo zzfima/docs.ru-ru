@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507581"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664189"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
-При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши, см. в разделе [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши, см. в разделе [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).  
   
 ## <a name="mouse-information"></a>Сведения о мыши  
  Объект <xref:System.Windows.Forms.MouseEventArgs> отправляется обработчикам событий мыши, связанных с нажатием кнопки мыши и отслеживанием ее движений. Объект <xref:System.Windows.Forms.MouseEventArgs> предоставляет сведения о текущем состоянии мыши, включая положение указателя мыши в клиентских координатах, какие кнопки мыши нажаты и произошла ли прокрутка колесика мыши. Некоторые события мыши, например те, которые просто уведомляют о том, что указатель мыши пересек границы элемента управления, отправляют обработчику событий объект <xref:System.EventArgs> без подробных сведений.  

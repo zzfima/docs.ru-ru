@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527033"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664774"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Функциональная возможность перетаскивания в Windows Forms
-Windows Forms включает набор методов, событий и классов, реализующих режим перетаскивания. В этом разделе приводится обзор поддержки перетаскивания в Windows Forms.  Также см. в разделе [и-операции перетаскивания и поддержка буфера обмена](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms включает набор методов, событий и классов, реализующих режим перетаскивания. В этом разделе приводится обзор поддержки перетаскивания в Windows Forms.  Также см. в разделе [и-операции перетаскивания и поддержка буфера обмена](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Выполнение операций перетаскивания  
  Для выполнения операций перетаскивания используйте метод <xref:System.Windows.Forms.Control.DoDragDrop%2A> класса <xref:System.Windows.Forms.Control>. Подробнее о том, как выполняется операция перетаскивания, см. в описании метода <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Для получения прямоугольника, над которым должен быть перемещен указатель мыши, чтобы началась операция перетаскивания, используется свойство <xref:System.Windows.Forms.SystemInformation.DragSize%2A> класса <xref:System.Windows.Forms.SystemInformation>.  

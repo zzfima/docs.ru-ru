@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 3ac1bc5482d00419ec8a41815633150e30b4039a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613991"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664631"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Общие сведения об элементе управления ListView (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.ListView> Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника. Элемент управления имеет четыре режима представления: LargeIcon, SmallIcon, списка и сведений.  
@@ -23,7 +23,7 @@ ms.locfileid: "54613991"
 > [!NOTE]
 >  Дополнительный режим просмотра плитки, доступна только в ОС Windows Server 2003 и Windows XP. Дополнительные сведения см. в разделе [Как Включение вида мозаики в Windows Forms элемента управления ListView](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- В режиме LargeIcon отображаются крупные значки, рядом с текстом элемента; элементы появляются в нескольких столбцах, если элемент управления является достаточно большим. Режим SmallIcon аналогичен за исключением того, что отображается мелких значков. Режим списка отображаются мелкие значки, но всегда находится в одном столбце. Режим сведений отображаются элементы в нескольких столбцах. Дополнительные сведения см. в разделе [как: Добавление столбцов в Windows Forms элемента управления ListView](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Режим представления определяется <xref:System.Windows.Forms.ListView.View%2A> свойство. Все режимы представлении можно отобразить изображения из списков изображений. Дополнительные сведения см. в разделе [как: Отображение значков Windows Forms элемента управления ListView](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ В режиме LargeIcon отображаются крупные значки, рядом с текстом элемента; элементы появляются в нескольких столбцах, если элемент управления является достаточно большим. Режим SmallIcon аналогичен за исключением того, что отображается мелких значков. Режим списка отображаются мелкие значки, но всегда находится в одном столбце. Режим сведений отображаются элементы в нескольких столбцах. Подробную информацию см. в разделе [Практическое руководство. Добавление столбцов в Windows Forms элемента управления ListView](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Режим представления определяется <xref:System.Windows.Forms.ListView.View%2A> свойство. Все режимы представлении можно отобразить изображения из списков изображений. Подробную информацию см. в разделе [Практическое руководство. Отображение значков Windows Forms элемента управления ListView](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
  В следующей таблице перечислены некоторые из <xref:System.Windows.Forms.ListView> члены и представления, они допустимы в.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54613991"
   
  <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: возможные варианты: <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick> Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком мыши изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard> Активация требует от пользователя, дважды щелкните, чтобы активировать элемент, но элемент не приводит к изменению внешнего вида.  
   
- <xref:System.Windows.Forms.ListView> Управления также поддерживает стили оформления и другие функции, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Управления также поддерживает стили оформления и другие функции, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ListView>

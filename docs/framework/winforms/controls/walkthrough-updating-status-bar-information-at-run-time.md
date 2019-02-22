@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745887"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665151"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Пошаговое руководство. Обновление строки состояния во время выполнения
 > [!IMPORTANT]
@@ -30,16 +30,16 @@ ms.locfileid: "54745887"
   
 1.  Создание новой формы Windows Forms.  
   
-2.  Добавьте элемент управления <xref:System.Windows.Forms.StatusBar> в форму. Дополнительные сведения см. в разделе [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Добавьте элемент управления <xref:System.Windows.Forms.StatusBar> в форму. Подробную информацию см. в разделе [Практическое руководство. Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
-3.  Добавьте панель строки состояния для вашей <xref:System.Windows.Forms.StatusBar> элемента управления. Дополнительные сведения см. в разделе [как: Добавление панелей в элемент управления StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Добавьте панель строки состояния для вашей <xref:System.Windows.Forms.StatusBar> элемента управления. Подробную информацию см. в разделе [Практическое руководство. Добавление панелей в элемент управления StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  Для <xref:System.Windows.Forms.StatusBar> вы добавили в форму элемента управления значение <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойства `true`.  
   
 5.  Добавление форм Windows <xref:System.Windows.Forms.Timer> в форму компонент.  
   
     > [!NOTE]
-    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> компонент разработан для среды Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> компонент разработан для среды Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 6.  Задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `true`.  
   

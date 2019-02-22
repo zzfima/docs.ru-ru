@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание приложения Windows Forms из командной строки
+title: Практическое руководство. Создание приложения Windows Forms из командной строки
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581991"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664202"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как выполнить Создание приложения Windows Forms из командной строки
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Создание формы Windows простой](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание приложения Windows Forms из командной строки
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
   
 ## <a name="procedure"></a>Процедура  
   

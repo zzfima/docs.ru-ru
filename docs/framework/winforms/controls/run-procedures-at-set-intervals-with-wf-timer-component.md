@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms
+title: Практическое руководство. Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6d1149e6a0c8fdb04b37af15feabfd965b5cc993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642273"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663994"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Как выполнить Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Практическое руководство. Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms
 Иногда может потребоваться создать процедуру, которая выполняется через определенные интервалы времени до окончания цикла или запускается по истечении установленного интервала. Создание такой процедуры возможно благодаря компоненту <xref:System.Windows.Forms.Timer>.  
   
- Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
 >  Существуют некоторые ограничения при использовании компонента <xref:System.Windows.Forms.Timer>. Дополнительные сведения см. в разделе [ограничения свойства Interval компонента Timer Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
   
-### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Выполнение процедуры через заданные интервалы времени с помощью компонента Timer  
+## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Выполнение процедуры через заданные интервалы времени с помощью компонента Timer  
   
-1.  Добавьте элемент <xref:System.Windows.Forms.Timer> в форму. В следующем разделе "Пример" показано, как сделать это программным путем. Visual Studio также поддерживает добавление компонентов в форму. Также см. раздел [Как Добавление элементов управления без пользовательского интерфейса в Windows Forms](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Добавьте элемент <xref:System.Windows.Forms.Timer> в форму. В следующем разделе "Пример" показано, как сделать это программным путем. Visual Studio также поддерживает добавление компонентов в форму. Также см. раздел [Как Добавление элементов управления без пользовательского интерфейса в Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
   
 2.  Задайте значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> (в миллисекундах) для таймера. Это свойство определяет, сколько времени пройдет до момента повторного запуска процедуры.  
   

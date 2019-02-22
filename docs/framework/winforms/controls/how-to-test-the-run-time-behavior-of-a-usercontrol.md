@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Тестирование во время выполнения поведения элемента UserControl
+title: Практическое руководство. Тестирование во время выполнения поведения элемента UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506372"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664423"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Как выполнить Тестирование во время выполнения поведения элемента UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Практическое руководство. Тестирование во время выполнения поведения элемента UserControl
 При разработке <xref:System.Windows.Forms.UserControl>, необходимо проверить его поведение во время выполнения. Можно создать проект отдельные приложения на основе Windows и разместить элемент управления в тестовую форму, но эта процедура неудобно. Быстрый и удобный способ — использовать **тестовом контейнере элементов управления** , предоставляемые Visual Studio. Тестовый контейнер запускается непосредственно из проект библиотеки элементов управления Windows.  
   
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "54506372"
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Для тестирования поведения элемента UserControl во время выполнения  
   
-1.  Создайте проект библиотеки элементов управления Windows вызывается **TestContainerExample**. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Создайте проект библиотеки элементов управления Windows вызывается **TestContainerExample**. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  В **конструктор Windows Forms**, перетащите <xref:System.Windows.Forms.Label> управления из **элементов** в область конструктора элемента управления.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54506372"
   
 6.  Закройте тестовый контейнер.  
   
-7.  Добавить другой пользовательский элемент управления для **TestContainerExample** проекта. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление существующих элементов в проект](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Добавить другой пользовательский элемент управления для **TestContainerExample** проекта. Подробную информацию см. в разделе [Практическое руководство. Добавление существующих элементов в проект](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  В **конструктор Windows Forms**, перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в область конструктора элемента управления.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54506372"
   
 #### <a name="to-test-user-controls-from-another-project"></a>Для проверки пользовательских элементов управления из другого проекта  
   
-1.  Создайте проект библиотеки элементов управления Windows вызывается **TestContainerExample2**. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Создайте проект библиотеки элементов управления Windows вызывается **TestContainerExample2**. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  В **конструктор Windows Forms**, перетащите <xref:System.Windows.Forms.RadioButton> управления из **элементов** в область конструктора элемента управления.  
   
@@ -71,4 +71,4 @@ ms.locfileid: "54506372"
 - [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Конструктор пользовательских элементов управления](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Конструктор пользовательских элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

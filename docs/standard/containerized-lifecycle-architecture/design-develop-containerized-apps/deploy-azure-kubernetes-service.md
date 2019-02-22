@@ -3,13 +3,13 @@ title: Управление микрослужбами и многоконтей
 description: Сведения о развертывании приложения с помощью службы Azure Kubernetes.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 984a72c9ca8883b338d10fdaa826a6007580372d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221524"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664969"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Развертывание в службе Azure Kubernetes (AKS)
 
@@ -26,9 +26,9 @@ ms.locfileid: "56221524"
 > [!NOTE]
 > Чтобы найти подробные сведения о:
 >
-> Azure CLI: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)
+> Azure CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
 >
-> Подсистема Windows для Linux: [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)
+> Подсистема Windows для Linux: <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>Создание среды AKS в Azure
 

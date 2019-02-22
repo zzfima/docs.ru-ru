@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: fa835663edc54a2e4fd70a038f8900f32b0effba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738551"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664358"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Отрисовка элементов управления с применением визуальных стилей
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает поддержку для отрисовки элементов управления и других элементов пользовательского интерфейса Windows с использованием стилей оформления в операционных системах, поддерживающих их. В этом разделе описано несколько уровней поддержки в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего стиля оформления операционной системы.  
@@ -56,7 +56,7 @@ ms.locfileid: "54738551"
   
  Главными классами пространства имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> являются <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> и <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> — это класс платформы для идентификации любого элемента управления или элемента пользовательского интерфейса, поддерживаемого стилями оформления. В дополнение к самому <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> пространство имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> содержит много вложенных классов <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> со свойствами `static` , которые возвращают <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> для каждого состояния элемента управления, части элемента управления или другого элемента пользовательского интерфейса, поддерживаемого стилями оформления.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> предоставляет методы для рисования каждого <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , определяемого текущим стилем оформления операционной системы, и получения сведений о нем. Сведения, которые можно получить об элементе, включают его размер по умолчанию, тип фона и определения цвета. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> использует программу-оболочку для функций API стилей оформления (UxTheme) из части оболочки Windows пакета SDK платформы Windows. Дополнительные сведения см. в разделе [с помощью визуальные стили XP Windows](https://msdn.microsoft.com/library/ms997649.aspx).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> предоставляет методы для рисования каждого <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , определяемого текущим стилем оформления операционной системы, и получения сведений о нем. Сведения, которые можно получить об элементе, включают его размер по умолчанию, тип фона и определения цвета. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> использует программу-оболочку для функций API стилей оформления (UxTheme) из части оболочки Windows пакета SDK платформы Windows. Дополнительные сведения см. в разделе [включения визуальных стилей](/windows/desktop/controls/cookbook-overview).  
   
  Дополнительные сведения об использовании <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> и <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, см. в разделе [как: Элемент визуального стиля отрисовки](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   

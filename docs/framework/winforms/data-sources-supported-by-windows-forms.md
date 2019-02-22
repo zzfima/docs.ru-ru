@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573979"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664748"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязки данных используется в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в других структурах, таких как массивы и коллекции, до тех пор, пока определенные минимальные требования будут соблюдены.  
@@ -37,7 +37,7 @@ ms.locfileid: "54573979"
  Windows Forms поддерживает свойства элемента управления привязки данных к общим свойствам экземпляра объекта с помощью <xref:System.Windows.Forms.Binding> типа. Windows Forms также поддерживает привязка элементов управления на основе списка, таких как <xref:System.Windows.Forms.ListControl> экземпляре, когда к объекту <xref:System.Windows.Forms.BindingSource> используется.  
   
  массива или коллекции  
- В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейс; один примера можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: Создайте массив объектов (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейс; один примера можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: Создайте массив объектов (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100)).  
   
  В общем случае следует использовать <xref:System.ComponentModel.BindingList%601> при создании списков объектов для привязки данных. <xref:System.ComponentModel.BindingList%601> — Это универсальная версия <xref:System.ComponentModel.IBindingList> интерфейс. <xref:System.ComponentModel.IBindingList> Интерфейс расширяет <xref:System.Collections.IList> интерфейса путем добавления свойства, методы и события, необходимые для двусторонней привязки данных.  
   

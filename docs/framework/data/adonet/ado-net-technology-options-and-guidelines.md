@@ -2,12 +2,12 @@
 title: Возможности технологии и рекомендации по ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828479"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664800"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Возможности технологии и рекомендации по ADO.NET
 Платформа данных ADO.NET представляет собой стратегию многократного выпуска, целью которой является снижение объемов кодирования и обслуживания. Эта платформа позволяет разработчикам программировать на основе концептуальных моделей EDM (entity data model). Данная платформа включает платформу ADO.NET Entity Framework и связанные с нею технологии.  
@@ -28,7 +28,7 @@ ms.locfileid: "55828479"
  Entity SQL - это текстовый язык запросов, разработанный для взаимодействия с моделью EDM. Язык Entity SQL является диалектом SQL и содержит конструкции для выполнения запросов в терминах высокоуровневых понятий моделирования, таких как наследование, сложные типы и явные отношения. Разработчики также могут использовать язык Entity SQL непосредственно со службами объектов. Дополнительные сведения см. в разделе [язык Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient - это новый поставщик данных .NET Framework, используемый для взаимодействия с моделью EDM. EntityClient создан на основе шаблона поставщика данных .NET Framework и предоставляет объекты <xref:System.Data.EntityClient.EntityConnection> и <xref:System.Data.EntityClient.EntityCommand>, возвращающие объект <xref:System.Data.EntityClient.EntityDataReader>. EntityClient работает с языком Entity SQL и предоставляет возможности гибкого сопоставления поставщикам данных для конкретных хранилищ. Дополнительные сведения см. в разделе [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient - это новый поставщик данных .NET Framework, используемый для взаимодействия с моделью EDM. EntityClient создан на основе шаблона поставщика данных .NET Framework и предоставляет объекты <xref:System.Data.EntityClient.EntityConnection> и <xref:System.Data.EntityClient.EntityCommand>, возвращающие объект <xref:System.Data.EntityClient.EntityDataReader>. EntityClient работает с языком Entity SQL и предоставляет возможности гибкого сопоставления поставщикам данных для конкретных хранилищ. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Средства работы с моделью EDM  
  Платформа Entity Framework предоставляет программы командной строки, мастера и конструкторы, упрощающие создание приложений EDM. Элемент управления EntityDataSource поддерживает привязку данных на основе модели EDM. Программирование элемента управления EntityDataSource аналогично программированию других элементов управления для источников данных в Visual Studio. Дополнительные сведения см. в разделе [средств модели ADO.NET EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  

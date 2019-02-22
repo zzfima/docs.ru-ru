@@ -2,19 +2,13 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542253"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Так как формы являются основной частью приложения, необходимо уделить особое внимание их внешнему виду и функциям. В конечном счете форма представляет собой чистый лист, который разработчик оснащает элементами управления, формируя пользовательский интерфейс, и кодом для работы с данными. Для этого Visual Studio обеспечивает интегрированной среды разработки (IDE), упрощающую написание кода, а также широкий набор элементов управления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополняя функциональные возможности этих элементов управления своим кодом, вы можете легко и быстро разработать нужное приложение.  
+Так как формы являются основной частью приложения, необходимо уделить особое внимание их внешнему виду и функциям. В конечном счете форма представляет собой чистый лист, который разработчик оснащает элементами управления, формируя пользовательский интерфейс, и кодом для работы с данными. С этой целью Visual Studio позволяет среде разработки (IDE), упрощающую написание кода, а также расширенный набор элементов управления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополняя функциональные возможности этих элементов управления своим кодом, вы можете легко и быстро разработать нужное приложение.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
@@ -45,7 +39,7 @@ ms.locfileid: "33542253"
  [Приложения Windows Forms](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Описывается процесс отладки приложений, созданных с помощью шаблона проекта приложения Windows, а также способы изменения конфигураций отладки и выпуска.  
   
- [Развертывание приложений, служб и компонентов](https://msdn.microsoft.com/library/wtzawcsz)  
+ [Общие сведения о развертывании в Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
  Описывается процесс, с помощью которого готовое приложение или компонент распространяются для установки на других компьютерах.  
   
  [Построение консольных приложений](../../../docs/standard/building-console-apps.md)  

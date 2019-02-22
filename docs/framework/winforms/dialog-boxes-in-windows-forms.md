@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b218be7d845ede7661ba31a1023ec12ec15231ab
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864259"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664770"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Диалоговые окна в Windows Forms
 Диалоговые окна используются для взаимодействия с пользователем и получения информации. Проще говоря, диалоговое окно представляет собой форму со значением ее свойства перечисления <xref:System.Windows.Forms.FormBorderStyle>, установленным в `FixedDialog`. Можно создать собственные пользовательские диалоговые окна с помощью конструктора Windows Forms в Visual Studio. Для настройки диалоговых окон под конкретные потребности можно добавить элементы управления, такие как `Label`, `Textbox` и `Button`. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Также включает стандартные диалоговые окна, такие как **Открытие файла** и окна сообщений, которые можно адаптировать для собственных приложений. Дополнительные сведения см. в разделе [диалоговых элементов управления и компонентов](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
@@ -19,22 +19,6 @@ ms.locfileid: "43864259"
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Отображение диалоговых окон для Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
  Указания по отображению диалоговых окон.  
-  
--   [Практическое: получение сведений из диалогового окна выборочно с помощью нескольких свойств](https://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
-  
--   [Практическое: получать сведения из родительской формы диалогового окна](https://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))  
-  
--   [Ввод пользовательских данных в диалоговые окна](https://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))  
-  
--   [Практическое: извлечение результата из диалоговых окон](https://msdn.microsoft.com/library/40x40td1\(v=vs.110\))  
-  
--   [Пошаговое руководство: Извлечение сведений из диалогового окна совместно с помощью объектов](https://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))  
-  
--   [Практическое: закройте диалоговые окна и сохранение введенных пользователем данных](https://msdn.microsoft.com/library/65ad5907\(v=vs.110\))  
-  
--   [Практическое: создание диалоговых окон во время разработки](https://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))  
-  
--   [Практическое: отображение окон сообщений](https://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления и компоненты диалоговых окон](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  

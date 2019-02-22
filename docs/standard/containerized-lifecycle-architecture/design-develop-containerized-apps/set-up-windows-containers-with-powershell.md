@@ -3,13 +3,13 @@ title: Использование команд Windows PowerShell в DockerFile 
 description: Узнайте, как с помощью PowerShell при работе с Docker в контейнерах Windows
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: df9e98e3f963b6492e1008455251b61a8cb6e771
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: d9c0bc28f62d44eb7471b99c63055ef43da12a69
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219975"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664709"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Использование команд Windows PowerShell в DockerFile для настройки контейнеров Windows (на основе стандарта Docker)
 
@@ -17,7 +17,7 @@ ms.locfileid: "56219975"
 
 Чтобы использовать контейнеры Windows, необходимо просто написать команды Windows PowerShell в DockerFile, как показано в следующем примере:
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -28,7 +28,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 Аналогичным образом, вы также может использовать команды Windows PowerShell для настройки дополнительных компонентов, таких как традиционные модели ASP.NET 4.x и .NET 4.6 или любое другое Windows программное обеспечение, как показано ниже:
 
-```
+```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733341"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664228"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки
 При создании пользовательского элемента управления, вам будет часто понадобиться для отладки его поведение во время разработки. Это особенно верно в случае, если вы создаете пользовательский конструктор для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -60,9 +60,9 @@ ms.locfileid: "54733341"
   
 1.  Добавить **Windows Control Library** проекта к решению.  
   
-2.  Добавьте новый **UserControl** DebugControlLibrary проект. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление новых элементов проекта](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Предоставить новый исходный файл «DebugControl» базовым именем.  
+2.  Добавьте новый **UserControl** DebugControlLibrary проект. Подробную информацию см. в разделе [Практическое руководство. Добавление новых элементов проекта](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Предоставить новый исходный файл «DebugControl» базовым именем.  
   
-3.  С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию путем удаления файла с базовым именем "`UserControl1`«. Дополнительные сведения см. в разделе [NIB: Практическое: Удалить, удаление и исключить элементы](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию путем удаления файла с базовым именем "`UserControl1`«. Подробную информацию см. в разделе [Практическое руководство. Удалить, удаление и исключить элементы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 4.  Постройте решение.  
   
@@ -174,5 +174,5 @@ ms.locfileid: "54733341"
   
 ## <a name="see-also"></a>См. также
 - [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
-- [Практическое руководство. Доступа к службам времени разработки](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
-- [Практическое руководство. Поддержка разработки доступа в Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+- [Практическое руководство. Доступа к службам времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [Практическое руководство. Поддержка разработки доступа в Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

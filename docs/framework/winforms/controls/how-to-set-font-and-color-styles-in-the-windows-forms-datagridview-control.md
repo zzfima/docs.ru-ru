@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка шрифтов и цветов в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Настройка шрифтов и цветов в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: a9ae5ed5222179d4b3872478ac94e2ec3fc61c28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1855c7c95638576bf13897e023e07ade5b977d7d
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636148"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664020"
 ---
-# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Как выполнить Настройка шрифтов и цветов в элементе управления DataGridView Windows Forms
+# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Настройка шрифтов и цветов в элементе управления DataGridView Windows Forms
 Внешний вид ячеек в элементе управления <xref:System.Windows.Forms.DataGridView> можно определять путем указания свойств класса <xref:System.Windows.Forms.DataGridViewCellStyle>. Экземпляры этого класса можно извлечь из различных свойств класса <xref:System.Windows.Forms.DataGridView> и сопутствующих классов или же можно создать экземпляры объектов <xref:System.Windows.Forms.DataGridViewCellStyle> для назначения этим свойствам.  
   
  Приведенные ниже процедуры демонстрируют основные способы настройки внешнего вида ячеек с помощью свойства <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>. Каждая ячейка элемента управления наследует стили, указанные с помощью этого свойства, если они не переопределены на уровне столбца, строки или ячейки. Пример наследования стиля, см. в разделе [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Информацию о дополнительных способах использования класса <xref:System.Windows.Forms.DataGridViewCellStyle> см. в разделах, перечисленных в разделе "См. также".  
   
- В Visual Studio предусмотрена расширенная поддержка данной задачи.  Также см. раздел [Как Установка стилей ячейки по умолчанию и форматов данных, для Windows Forms с помощью конструктора элемента управления DataGridView](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ В Visual Studio предусмотрена расширенная поддержка данной задачи.  Также см. раздел [Как Установка стилей ячейки по умолчанию и форматов данных, для Windows Forms с помощью конструктора элемента управления DataGridView](default-cell-styles-datagridview.md).  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>Указание шрифта текста для ячеек элемента управления DataGridView  
   

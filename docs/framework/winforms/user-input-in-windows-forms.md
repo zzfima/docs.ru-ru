@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593795"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664566"
 ---
 # <a name="user-input-in-windows-forms"></a>Ввод данных пользователем в Windows Forms
 В Windows Forms включена модель ввода пользователя, основанная на событиях, которые возникают во время обработки соответствующих сообщений Windows. Здесь приведены ссылки на разделы с информацией о вводе с помощью мыши и клавиатуры, включая примеры кода, демонстрирующие выполнение определенных задач.  
@@ -30,11 +30,11 @@ ms.locfileid: "45593795"
  [Практическое руководство. Имитация событий мыши и клавиатуры в коде](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Показано несколько различных способов программной имитации ввода с помощью мыши и клавиатуры.  
   
- [Практическое руководство. Обработка событий пользовательского ввода в элементах управления Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Практическое руководство. Обрабатывать события пользовательского ввода в элементах управления Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Пример кода, который обрабатывает большую часть событий пользовательского ввода и сообщает сведения о каждом событии.  
   
  [Проверка введенных пользователем данных в Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  Описываются методы проверки пользовательского ввода в приложениях Windows Forms.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- Также см. в разделе [Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Также см. в разделе [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md).

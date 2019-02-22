@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c77a004d52afc67a3811ff98e9a62c788c001803
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197117"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664787"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Создание обработчиков событий в Windows Forms
 Обработчик событий — это процедура в коде, определяющая, какие действия должны выполняться при возникновении тех или иных событий, например, если пользователь нажимает кнопку или сообщение поступает в очередь. При порождении события запускается получивший его обработчик или несколько обработчиков. События могут назначаться сразу нескольким обработчикам, а методы, которые управляют конкретными событиями, можно изменять динамически. Для создания обработчиков событий можно также использовать Конструктор Windows Forms.  
@@ -25,7 +25,7 @@ ms.locfileid: "47197117"
  [Общие сведения об обработчиках событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  Описывает порядок обработки событий.  
   
- [Практическое руководство. Создание обработчиков событий для Windows Forms во время выполнения](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
+ [Практическое руководство. Создание обработчиков событий во время выполнения для форм Windows Forms](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
  Динамически выдает инструкции по реагированию на системные или пользовательские события.  
   
  [Практическое руководство. Подключение нескольких событий к одному обработчику в Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "47197117"
  [Порядок событий в формах Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Описывает порядок порождения событий в элементах управления Windows Forms.  
   
- [Практическое руководство. Создание обработчика событий с помощью конструктора](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Практическое руководство. Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))  
  Описывает использование Конструктора Windows Forms для создания обработчиков событий.  
   
 ## <a name="related-sections"></a>Связанные разделы  

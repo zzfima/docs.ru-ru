@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Предотвращение добавления и удаления в элементе управления DataGridView Windows Forms строк
+title: Практическое руководство. Предотвращение добавления и удаления в элементе управления DataGridView Windows Forms строк
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: 0af92d43269685245d1732762a71d465e91d6c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f579720b4f3ff561ecd807e09db8d464abc9001
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634562"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664592"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Как выполнить Предотвращение добавления и удаления в элементе управления DataGridView Windows Forms строк
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Предотвращение добавления и удаления в элементе управления DataGridView Windows Forms строк
 Иногда необходимо запретить пользователям вставлять новые строки данных или удалять существующие из элемента управления <xref:System.Windows.Forms.DataGridView>. Свойство <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> указывает, имеется ли в наличии строка для ввода новых записей в нижней части элемента управления, свойство <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> указывает, могут ли строки быть удалены. В следующем примере кода используются эти свойства, а также задается свойство <xref:System.Windows.Forms.DataGridView.ReadOnly%2A>, чтобы сделать элемент управления доступным только для чтения.  
   
- Эта задача поддерживается в Visual Studio.  Также см. раздел [Как Запретить добавление строк и удаления в Windows Forms с помощью конструктора элемента управления DataGridView](https://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\)).  
+ Эта задача поддерживается в Visual Studio. Также см. раздел [Как Запретить добавление строк и удаления в Windows Forms с помощью конструктора элемента управления DataGridView](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]
