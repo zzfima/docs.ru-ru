@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 68e750fccd988a9cf7e08b4e7169bd2385d48e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734861"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745603"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
 Модель объектов компонентов (COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. Хотя COM-объектов, стали основой для Windows, программирования в течение многих лет, приложений, предназначенных для общеязыковой среды выполнения (CLR) предоставляют множество преимуществ.  
@@ -38,7 +38,7 @@ ms.locfileid: "54734861"
   
 -   Разрешения, необходимые для сборки для правильной работы.  
   
- Дополнительные сведения о сборках и манифестов сборки см. в разделе [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Дополнительные сведения о сборках и манифестов сборки см. в разделе [сборок в .NET](../../../standard/assembly/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотеки типов  
  Visual Studio содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
@@ -57,7 +57,7 @@ ms.locfileid: "54734861"
 - [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)
 - [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../standard/assembly/index.md)
 - [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Маршалинг взаимодействия](../../../framework/interop/interop-marshaling.md)

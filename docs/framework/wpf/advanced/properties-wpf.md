@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546033"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745577"
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Метаданные свойств среды](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [Приоритет значения свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [Свойства зависимости "только для чтения"](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [Загрузка кода XAML и свойства зависимостей](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [Метаданные свойств среды](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [Приоритет значения свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Свойства зависимости "только для чтения"](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [Загрузка кода XAML и свойства зависимостей](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.DependencyProperty>  

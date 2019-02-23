@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686053"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746527"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Структура программы Visual Basic
 Программы на Visual Basic — это результат из стандартных блоков. Объект *решение* состоит из одного или нескольких проектов. Объект *проекта* в свою очередь может содержать одну или несколько сборок. Каждый *сборки* компилируется из одного или нескольких исходных файлов. Объект *исходный файл* предоставляет определение и реализацию классов, структур, модулей и интерфейсов, которые в конечном счете содержит весь код.  
   
- Дополнительные сведения о эти блоки программы на Visual Basic, см. в разделе [решения и проекты](/visualstudio/ide/solutions-and-projects-in-visual-studio) и [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Дополнительные сведения о эти блоки программы на Visual Basic, см. в разделе [решения и проекты](/visualstudio/ide/solutions-and-projects-in-visual-studio) и [сборок в .NET](../../../standard/assembly/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Элементы программирования на уровне файлов  
  При запуске проекта или файла и открыть редактор кода, вы увидите некоторые код уже на месте и в правильном порядке. Любой код, написанный следует придерживаться следующей последовательности:  

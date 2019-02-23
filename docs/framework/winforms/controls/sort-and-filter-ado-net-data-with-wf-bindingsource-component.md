@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource
+title: Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23f0ac8ff2a92fb96fbb7c69d87b01ed02b3b6b1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584783"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746329"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Как выполнить Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource
 Можно предоставить возможность фильтрации и сортировки <xref:System.Windows.Forms.BindingSource> управлять через <xref:System.Windows.Forms.BindingSource.Sort%2A> и <xref:System.Windows.Forms.BindingSource.Filter%2A> свойства. Можно применить простую сортировку, когда в источнике данных <xref:System.ComponentModel.IBindingList>, и можно применить фильтрацию и если источником данных является <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Свойства требуется стандартный [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] синтаксис: строка, представляющая имя столбца данных в источнике данных, за которым следует `ASC` или `DESC` для указания ли списка должны быть отсортированы в порядке возрастания или убывания. Можно задать дополнительные возможности сортировки или несколько столбцов сортировки, каждый столбец отделяется разделителем запятой. <xref:System.Windows.Forms.BindingSource.Filter%2A> Свойство принимает строковое выражение.  
   
 > [!NOTE]
@@ -56,5 +56,5 @@ ms.locfileid: "54584783"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
-- [Практическое руководство. Установка образцов баз данных](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [Практическое руководство. Установка образцов баз данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))
 - [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611986"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747023"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "54611986"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Создание приложения обозревателя XAML (XBAP)  
- Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения браузера WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения браузера WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
  При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP в Visual Studio, приложение запускается с разрешениями зоны Интернета и, следовательно, если эти разрешения будут превышены исключения безопасности. Дополнительные сведения см. в разделах [Безопасность](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия в WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54611986"
 ## <a name="deploying-an-xbap"></a>Развертывание XBAP  
  При построении XBAP создаются следующие три файла:  
   
-|Файл|Описание|  
+|Файл|Описание:|  
 |----------|-----------------|  
 |Исполняемый файл (.EXE)|Содержит скомпилированный код и имеет расширение EXE.|  
 |Манифест приложения (.MANIFEST)|Содержит метаданные, связанные с приложением, и имеет расширение MANIFEST.|  

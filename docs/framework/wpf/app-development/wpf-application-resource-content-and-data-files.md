@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fed7127624714e67121c388e70b8b833d88d772
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606300"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746540"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложения часто зависят от файлов, которые содержат неисполняемые данные, такие как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], изображения, видео и аудио. Windows Presentation Foundation (WPF) предоставляет специальную поддержку при настройке, распознавании и использовании этих типов файлов данных, которые называются файлы данных приложения. Эта поддержка относится к определенному набору типов файлов данных приложения, включая следующие:  
@@ -53,7 +53,7 @@ ms.locfileid: "54606300"
 -   Файлы данных приложения должны быть локализуемыми (см. в разделе [Обзор локализации и глобализации WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
->  Файлы ресурсов, описанные в этом разделе, отличаются от файлов ресурсов, описанных в [ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) и отличаются от внедренных или связанных ресурсов, описанных в [управлении ресурсами приложения (.NET) ](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Файлы ресурсов, описанные в этом разделе, отличаются от файлов ресурсов, описанных в [ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) и отличаются от внедренных или связанных ресурсов, описанных в [управление ресурсами приложения (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Настройка файлов ресурсов  
  В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], файл ресурсов — это файл, который включен в [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] проект в качестве `Resource` элемента.  

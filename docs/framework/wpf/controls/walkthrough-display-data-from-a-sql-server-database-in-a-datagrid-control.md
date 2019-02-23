@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid
+title: Пошаговое руководство. Отобразить данные из базы данных SQL Server в элементе управления DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197140"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748418"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Пошаговое руководство: Отображение данных из базы данных SQL Server в элементе управления DataGrid
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid
 
 В этом пошаговом руководстве, получения данных из базы данных SQL Server и отображение их в <xref:System.Windows.Controls.DataGrid> элемента управления. Использовать ADO.NET Entity Framework для создания классов сущностей, которые представляют данные и использовать LINQ для записи запроса, который получает указанные данные из класса сущностей.
 
@@ -75,7 +75,7 @@ ms.locfileid: "47197140"
 
 4.  Выберите <xref:System.Windows.Window>.
 
-5.  С помощью окна свойств или редактор XAML, создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> событий. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+5.  С помощью окна свойств или редактор XAML, создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> событий. Дополнительные сведения см. в разделе [Как Создание простого обработчика событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      Ниже показан XAML для MainWindow.xaml.
 
@@ -100,4 +100,4 @@ ms.locfileid: "47197140"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Как I: начало работы с Entity Framework в приложениях WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [Инструкции: Начало работы с Entity Framework в приложениях WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)

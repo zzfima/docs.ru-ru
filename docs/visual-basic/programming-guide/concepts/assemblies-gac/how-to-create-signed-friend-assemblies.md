@@ -1,15 +1,15 @@
 ---
-title: Как выполнить  Создание подписанных дружественных сборок (Visual Basic)
+title: Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f0c36d6b134e1c742905ca9081bf3d44e5fe369f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758876"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748730"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Как выполнить  Создание подписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
@@ -86,7 +86,7 @@ ms.locfileid: "55758876"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)

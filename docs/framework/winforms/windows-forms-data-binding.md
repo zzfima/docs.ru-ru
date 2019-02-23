@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b33ad9d78230588b9c1afd5d59fd0333e2cd18a6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486014"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747065"
 ---
 # <a name="windows-forms-data-binding"></a>Привязка данных Windows Forms
 Привязка данных в Windows Forms дает возможность отображать и изменять информацию из источника данных в элементах управления в форме. В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные.  
@@ -27,7 +27,7 @@ ms.locfileid: "43486014"
  [Интерфейсы, относящиеся к привязке данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
  Описывает некоторые интерфейсы, используемые для привязки данных Windows Forms.  
   
- [Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ [Практическое руководство. Переход между данными в Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
  Показано, как перемещаться по элементам в источнике данных.  
   
  [Уведомления об изменениях в привязке данных Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
@@ -45,17 +45,17 @@ ms.locfileid: "43486014"
  [Практическое руководство. Реализация интерфейса IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
  Показано, как реализовать интерфейс <xref:System.ComponentModel.IListSource>, чтобы создать связываемый класс, который не реализует <xref:System.Collections.IList>, но предоставляет список из другого расположения.  
   
- [Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [Практическое руководство. Элементов управления с привязкой к тому же источнику данных будут синхронизированы](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
  Показано, как обрабатывать событие <xref:System.Windows.Forms.BindingSource.BindingComplete> для обеспечения синхронизация всех элементов управления, привязанных к источнику данных.  
   
- [Практическое руководство. Правильное позиционирование выделенной строки в дочерней таблице](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Практическое руководство. Убедитесь, что выбранной строки в дочерней таблице остается в правильном положении](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Показано, как обеспечить сохранение позиции выбранной строки дочерней таблицы при изменении поля родительской таблицы.  
   
- Также см. в разделе [интерфейсы, относящиеся к привязке данных](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [как: перемещения данных в Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [как: Создание элемента управления простой привязкой в форме Windows](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Также см. в разделе [интерфейсы, относящиеся к привязке данных](interfaces-related-to-data-binding.md), [как: Переход между данными в Windows Forms](how-to-navigate-data-in-windows-forms.md), и [как: Создание элемента управления простой привязкой в форме Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
- Описывает класс, представляющий привязку связываемых компонентов к источнику данных.  
+ Описывает класс, представляющий связку между связываемым компонентом и источником данных.  
   
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
  Описывает класс, инкапсулирующий источник данных для привязки к элементам управления.  

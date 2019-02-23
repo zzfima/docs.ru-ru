@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543228"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748038"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. В конструкторе Windows Forms предоставляет множество средств форматирования, для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функции.  
@@ -154,7 +154,7 @@ ms.locfileid: "54543228"
   
 1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
-2.  Изменение размера <xref:System.Windows.Forms.Button> элемента управления, перетаскивая один из угловых маркеров изменения размера. Дополнительные сведения см. в разделе [как: Изменение размера элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Изменение размера <xref:System.Windows.Forms.Button> элемента управления, перетаскивая один из угловых маркеров изменения размера. Подробную информацию см. в разделе [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
   
 3.  Перетащите маркер изменения размера, пока один из <xref:System.Windows.Forms.Button> границы элемента управления выравнивается с другим элементом управления. Обратите внимание, что появляется линия привязки. Обратите внимание на то, что маркер изменения размера привязывается к положению, указанному по линии привязки.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "54543228"
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Чтобы отключить линии привязки в среде разработки  
   
-1.  Из **средства** откройте в меню **параметры** диалоговое окно. Откройте диалоговое окно конструктора Windows Forms. Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Из **средства** откройте в меню **параметры** диалоговое окно. Откройте диалоговое окно конструктора Windows Forms. Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   
 2.  Выберите **Общие** узла. В **режим макета** измените выбор в **линии привязки** для **SnapToGrid**.  
   

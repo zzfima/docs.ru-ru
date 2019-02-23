@@ -1,15 +1,15 @@
 ---
-title: 'Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)'
+title: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245481"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747548"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.  
   
  Внедрение типов часто используется с COM-взаимодействием, например в приложениях, использующих объекты автоматизации из Microsoft Office. Сведения о типе внедрения позволяют одной и той же сборке программы работать с различными версиями Microsoft Office на разных компьютерах. Тем не менее внедрение типа можно также использовать с полностью управляемым решением.  
@@ -222,8 +222,8 @@ End Function
   
 6.  В проводнике откройте папку выходного пути (например, C:\TypeEquivalenceSample). Дважды щелкните файл TypeEquivalenceClient.exe, чтобы выполнить программу. Новая версия сборки TypeEquivalenceRuntime отображается в программе без повторной компиляции.  
   
-## <a name="see-also"></a>См. также  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>См. также
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)

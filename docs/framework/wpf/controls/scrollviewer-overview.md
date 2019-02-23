@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519623"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746063"
 ---
 # <a name="scrollviewer-overview"></a>Общие сведения об элементе управления ScrollViewer
 Часто содержимое в пользовательском интерфейсе занимает больше места, чем вмещает область отображения на экране компьютера. <xref:System.Windows.Controls.ScrollViewer> Элемент управления предоставляет удобный способ включить прокрутку содержимого в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. В данном разделе представлены <xref:System.Windows.Controls.ScrollViewer> элемент и приводится несколько примеров использования.  
@@ -64,7 +64,7 @@ ms.locfileid: "54519623"
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Создание средства прокрутки](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [Практическое руководство. Создание средства прокрутки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [Стили и шаблоны элемента ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
 - [Элементы управления](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

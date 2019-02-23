@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863060"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747036"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Управления предоставляется пользователям в список параметров. Список отображения или скрытия как элемент управления развернут и свернут. В состоянии по умолчанию список свернут, отображая только один вариант. Пользователь нажимает кнопку, чтобы увидеть полный список параметров.  
@@ -21,9 +21,6 @@ ms.locfileid: "43863060"
   
  ![Поле со списком в состоянии по умолчанию и нажатое](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Свернуть и развернуть  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое: руководство.](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ComboBox>

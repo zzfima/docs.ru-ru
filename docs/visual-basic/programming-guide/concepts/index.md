@@ -2,12 +2,6 @@
 title: Основные понятия программирования (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147246"
 ---
 # <a name="programming-concepts-visual-basic"></a>Основные понятия программирования (Visual Basic)
 Этот раздел описывает концепции программирования на языке Visual Basic.  
@@ -16,7 +10,7 @@ ms.locfileid: "53147246"
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
-|[Сборки и глобальный кэш сборок (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Описывает создание и использование сборок.|  
+|[Сборки в .NET](../../../standard/assembly/index.md)|Описывает создание и использование сборок.|  
 |[Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Описывает создание асинхронных решений с помощью ключевых слов [Async](../../../visual-basic/language-reference/modifiers/async.md) и [Await](../../../visual-basic/language-reference/operators/await-operator.md). Содержит пошаговое руководство.|  
 |[Общие сведения об атрибутах (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Описывает, как с помощью атрибутов предоставлять дополнительные сведения об элементах программы, таких как типы, поля, методы и свойства.|  
 |[Caller Information (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md) (Сведения о вызывающем (Visual Basic))|Описывает, как получить сведения о вызывающем объекте метода. Можно получить такую информацию, как путь к файлу, номер строки в исходном коде и имя вызывающего объекта.|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865648"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746789"
 ---
 # <a name="windows-forms-security"></a>Безопасность Windows Forms
 Windows Forms представляют модель безопасности, основанные на коде (безопасности для кода, независимо от того, пользователь, запускающий код заданы режимы). Это дополнение к всем схемам безопасности, которые могут быть выполнены уже на компьютере. Они могут включать в браузере (например, безопасность на основе зон в Internet Explorer) или для операционной системы (например, безопасность Windows NT, основанная на учетных данных).  
@@ -33,10 +33,10 @@ Windows Forms представляют модель безопасности, о
  Описание работы с окнами с помощью буфера обмена и вызовы неуправляемого кода в среде с частичным доверием.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [NIB: Политика безопасности по умолчанию](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [Политика безопасности по умолчанию](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Перечисляет разрешения по умолчанию в наборах разрешений полного доверия, локальной интрасети и Интернета.  
   
- [NIB: Общее администрирование политики безопасности](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [Общее администрирование политики безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  Сведения по администрированию политики безопасности платформы .NET Framework и повышению разрешений.  
   
  [Опасные разрешения и администрирование политик](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Windows Forms представляют модель безопасности, о
  [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)  
  Ссылки на разделы, объясняющие и рекомендации по написанию безопасного кода для .NET Framework.  
   
- [NIB: Запрос разрешений](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [Запрос разрешений](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  Обсуждается использование атрибутов, которые позволяют среду выполнения о разрешениях, ваш код должен выполнять.  
   
  [Основные понятия безопасности](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Windows Forms представляют модель безопасности, о
  [Основы управления доступом для кода](../../../docs/framework/misc/code-access-security-basics.md)  
  Рассматриваются основы работы с политикой безопасности времени выполнения .NET Framework.  
   
- [NIB: Определение необходимости изменения политики безопасности](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [Определение необходимости изменения политики безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Объясняется, как определить, когда ваши приложения должны отклоняться от политики безопасности по умолчанию.  
   
- [NIB: Развертывание политики безопасности](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [Развертывание политики безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  Обсуждение наилучших способов для развертывания изменений политики безопасности.

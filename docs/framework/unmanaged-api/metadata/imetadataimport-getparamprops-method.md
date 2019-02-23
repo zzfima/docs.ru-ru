@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685533"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745924"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Метод IMetaDataImport::GetParamProps
 Возвращает значения метаданных для параметра, на который ссылается указанный токен ParamDef.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] Возвращаемый размер в расширенных символах `szName`.  
   
  `pdwAttr`  
- [out] Указатель на любой атрибут флаги, связанные с параметром.  
+ [out] Указатель на любой атрибут флаги, связанные с параметром. Это битовая маска `CorParamAttr` значения.  
   
  `pdwCPlusTypeFlag`  
  [out] Указатель на значение типа, указывающее флаг, параметр <xref:System.ValueType>.  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out] Размер `ppValue` в расширенные символы, или нуль, если `ppValue` не содержит строку.  
   
+## <a name="remarks"></a>Примечания
+
+Последовательность значений элементов в `pulSequence` начинаются с 1 для параметров. Возвращаемое значение имеет порядковый номер 0.
+
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   

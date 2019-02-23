@@ -8,18 +8,18 @@ helpviewer_keywords:
 - handwriting recognition [WPF]
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-ms.openlocfilehash: 8f520b80970bfeebdfea01a6c722634efd99ffe7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a93c1486f191df31213fc6c85254ecd8801799b8
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725393"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747305"
 ---
 # <a name="handwriting-recognition"></a>Распознавание рукописного ввода
 В этом разделе рассматриваются базовые понятия, связанные с распознаванием рукописного ввода на платформе WPF.  
   
 ## <a name="recognition-solutions"></a>Решения для распознавания рукописного ввода  
- В следующем примере показано, как распознать рукописный ввод с помощью класса [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx).  
+ В следующем примере показано, как распознать рукописный ввод с помощью класса [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)).  
   
 > [!NOTE]
 >  Этот образец требует установки в системе средств распознавания рукописного ввода.  
@@ -34,4 +34,4 @@ ms.locfileid: "54725393"
  [!code-vb[InkRecognition#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>См. также
-- [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/microsoft.ink.inkcollector\(v=vs.90\).aspx)
+- [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))

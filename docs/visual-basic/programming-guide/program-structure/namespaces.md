@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e48d28535b9e8cd022f7a4f14e620a4db93ff69f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492316"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748086"
 ---
 # <a name="namespaces-in-visual-basic"></a>Пространства имен в Visual Basic
 Пространства имен упорядочивают объекты, определенные в сборке. Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен. Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.  
@@ -123,7 +123,7 @@ End Namespace
 
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
-- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../standard/assembly/index.md)
 - [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

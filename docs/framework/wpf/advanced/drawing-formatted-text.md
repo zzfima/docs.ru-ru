@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562782"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748470"
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе представлен обзор функций <xref:System.Windows.Media.FormattedText> объекта. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -85,7 +85,7 @@ ms.locfileid: "54562782"
  ![Сфера, следующая по геометрическому пути текста](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Сфера, следующая по геометрическому пути текста  
   
- Дополнительные сведения см. в разделе [Как Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Дополнительные сведения см. в разделе [Как Создание анимации PathGeometry для текста](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Можно создать другие интересные сферы применения форматированного текста после преобразования в <xref:System.Windows.Media.PathGeometry> объекта. Например, можно обрезать видео для отображения внутри текста.  
   
@@ -128,4 +128,4 @@ ms.locfileid: "54562782"
 - [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
 - [Создание контурного текста](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
-- [Практическое руководство. Создание анимации PathGeometry для текста](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+- [Практическое руководство. Создание анимации PathGeometry для текста](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

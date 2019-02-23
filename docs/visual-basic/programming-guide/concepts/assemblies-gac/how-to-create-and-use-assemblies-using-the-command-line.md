@@ -1,24 +1,24 @@
 ---
-title: Как выполнить Создание и использование сборок с помощью командной строки (Visual Basic)
+title: Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: eefb6ccfabdb7897874ae4e5a8abc8c2d9cc8e35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534778"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746394"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Как выполнить Создание и использование сборок с помощью командной строки (Visual Basic)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)
 Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения. Сборка и использование библиотеки DLL рассматривается в следующем сценарии:  
   
--   `MathLibrary.DLL`: Файл библиотеки, который содержит методы для вызова во время выполнения. В этом примере библиотека DLL содержит два метода: `Add` и `Multiply`.  
+-   `MathLibrary.DLL`: Файл библиотеки с методами, вызываемыми во время выполнения. В этом примере библиотека DLL содержит два метода: `Add` и `Multiply`.  
   
--   `Add`: Исходный файл, содержащий метод `Add`. Он возвращает сумму своих параметров. Класс `AddClass` с методом `Add` является членом пространства имен `UtilityMethods`.  
+-   `Add`: Исходный файл с методом `Add`. Он возвращает сумму своих параметров. Класс `AddClass` с методом `Add` является членом пространства имен `UtilityMethods`.  
   
--   `Mult`: Исходный код, который содержит метод `Multiply`. Он возвращает результат своих параметров. Класс `MultiplyClass` с методом `Multiply` также является членом пространства имен `UtilityMethods`.  
+-   `Mult`: Исходный код, содержащий метод `Multiply`. Он возвращает результат своих параметров. Класс `MultiplyClass` с методом `Multiply` также является членом пространства имен `UtilityMethods`.  
   
--   `TestCode`: Файл, содержащий `Main` метод. Он использует методы в DLL-файле для вычисления суммы и результата аргументов времени выполнения.  
+-   `TestCode`: Файл с методом `Main`. Он использует методы в DLL-файле для вычисления суммы и результата аргументов времени выполнения.  
   
 ## <a name="example"></a>Пример  
   
@@ -119,5 +119,5 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
 ## <a name="see-also"></a>См. также
 - [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Создание класса, содержащего функции DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

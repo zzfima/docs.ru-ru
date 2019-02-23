@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500299"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746906"
 ---
 # <a name="label"></a>Метка
 <xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически сложилось так, что <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , поставляемый в комплекте с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
   
  Объект <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку клавиш доступа. Он часто используется для включения быстрый доступ к элементам управления, такие как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> для <xref:System.Windows.Controls.Control>, задайте <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> свойство к элементу управления, который должен получить фокус, когда пользователь нажимает клавишу доступа.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [как: Установка целевого свойства метки](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [Как Установка целевого свойства метки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
  ![Свойства отображения помеченные по использованию](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Установка целевого свойства метки](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Label>

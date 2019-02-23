@@ -2,12 +2,12 @@
 title: Дружественные сборки (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b91f894f9b10c85eb322b4421fd0473335df7a3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579801"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748158"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Дружественные сборки (Visual Basic)
 Объект *дружественной сборки* — это сборка, можно получить доступ к другой сборке [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) типы и члены. Если сборка определяется как дружественная, помечать типы и члены как открытые для того, чтобы другие сборки могли получить к ним доступ, больше не требуется. Это особенно удобно в следующих ситуациях:  
@@ -69,5 +69,5 @@ End Class
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)

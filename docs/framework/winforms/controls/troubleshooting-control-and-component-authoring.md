@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: b49100ee2ba9ac3f86bff8c646c185f26b5c96f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620309"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746381"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Разрешение вопросов, связанных с созданием элементов управления и компонентов
-В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 -   Не удается добавить элемент управления на панель элементов  
   
@@ -112,6 +112,5 @@ ms.locfileid: "54620309"
 - [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
-- [Создание компонентов](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)
-- [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
-- [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [Создание компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
+- [Устранение неполадок при разработке во время разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

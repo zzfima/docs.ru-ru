@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714897"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746248"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пошаговое руководство. Создание профессионально оформленного элемента управления ToolStrip
 Можно предоставить приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид и поведение, написав собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.  
@@ -30,7 +30,7 @@ ms.locfileid: "54714897"
   
  Когда вы закончите, имеется элемент управления для повторного использования настраиваемых клиентских с профессиональный внешний вид элемента управления Microsoft Office® XP.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -49,7 +49,7 @@ ms.locfileid: "54714897"
   
 2.  В **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка.  
   
-     Дополнительные сведения см. в разделе [NIB: Практическое: Удалить, удаление и исключить элементы](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Дополнительные сведения см. в разделе [Как Удалить, удаление и исключить элементы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Добавьте новый <xref:System.Windows.Forms.UserControl> элемент **StackViewLibrary** проекта. Назовите новый исходный файл базового объекта `StackView`.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "54714897"
   
 8.  Переименуйте `mailStackButton_Click` в обработчике событий `stackButton_Click`.  
   
-     Дополнительные сведения см. в разделе [Как Переименовать идентификатор (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Дополнительные сведения см. в разделе [переименование рефакторинга кода символа](/visualstudio/ide/reference/rename).  
   
 9. Вставьте следующий код в `stackButton_Click` обработчик событий.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54714897"
 12. Повторите шаги 10 и 11 for `contactsStackButton` и `tasksStackButton` элементов управления.  
   
 ## <a name="defining-icons"></a>Определение значков  
- Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> создается из него. В рабочей среде данные растрового изображения хранятся в виде ресурса и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [Как Добавление фоновых изображений в формы Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> создается из него. В рабочей среде данные растрового изображения хранятся в виде ресурса и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [Как Добавление фоновых изображений в формы Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Чтобы определить значки  
   

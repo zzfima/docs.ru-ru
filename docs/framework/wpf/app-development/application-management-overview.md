@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ae02f77948da9b1371db1d1b67ce5030d207c0e8
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204851"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748106"
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. В этом разделе представлен обзор функциональных возможностей в <xref:System.Windows.Application> класс для создания и управления приложениями.  
@@ -362,5 +362,5 @@ ms.locfileid: "55204851"
 - [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)
 - [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
 - [URI типа "pack" в WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Модель приложения: Разделы руководства](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [Модель приложения: Разделы руководства](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Разработка приложений](../../../../docs/framework/wpf/app-development/index.md)

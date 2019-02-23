@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683928"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746608"
 ---
 # <a name="varieties-of-custom-controls"></a>Создание собственных элементов управления
 Платформа .NET Framework предоставляет возможности разработки и реализации новых элементов управления. С ее помощью можно расширить функциональные возможности привычных пользовательских элементов управления, а также уже существующих элементов управления через наследование. Кроме того, она позволяет писать настраиваемые элементы управления с собственной отрисовкой.  
@@ -24,7 +24,7 @@ ms.locfileid: "54683928"
  Выбор типа создаваемого элемента управления может быть затруднителен. В этом разделе описываются различия между типами элементов управления, которые можно использовать для наследования, и рассказывается, как выбрать тип элемента управления для конкретного проекта.  
   
 > [!NOTE]
->  Дополнительные сведения о создании элемента управления для использования в Web Forms см. в разделе [Разработка пользовательских серверных элементов управления ASP.NET](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Дополнительные сведения о создании элемента управления для использования в Web Forms см. в разделе [Разработка пользовательских серверных элементов управления ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="base-control-class"></a>Базовый класс элемента управления  
  <xref:System.Windows.Forms.Control> Класс является базовым классом для элементов управления Windows Forms. Он обеспечивает инфраструктуру, необходимую для визуального отображения элементов управления в приложениях Windows Forms.  
@@ -104,11 +104,11 @@ ms.locfileid: "54683928"
 ## <a name="custom-design-experience"></a>Пользовательская среда разработки  
  Если вам требуется пользовательская среда разработки, вы можете создать свой собственный конструктор. Для составных элементов управления, создайте производный пользовательский класс конструктора из <xref:System.Windows.Forms.Design.ParentControlDesigner> или <xref:System.Windows.Forms.Design.DocumentDesigner> классы. Для расширенных и настраиваемых элементов управления, создайте производный пользовательский класс конструктора из <xref:System.Windows.Forms.Design.ControlDesigner> класса.  
   
- Используйте <xref:System.ComponentModel.DesignerAttribute> должен быть сопоставлен конструктора элемента управления. Дополнительные сведения см. в разделе [расширение поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) и [как: Создание элемента управления Windows Forms, используются преимущества функций разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Используйте <xref:System.ComponentModel.DesignerAttribute> должен быть сопоставлен конструктора элемента управления. Дополнительные сведения см. в разделе [расширение поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) и [как: Создание элемента управления Windows Forms, используются преимущества функций разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>См. также
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Практическое руководство. Разработка элемента управления простого Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
 - [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-- [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

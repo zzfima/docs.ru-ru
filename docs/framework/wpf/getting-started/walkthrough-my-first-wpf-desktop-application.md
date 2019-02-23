@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150749"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748379"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание первого классического приложения WPF
 
@@ -66,7 +66,7 @@ ms.locfileid: "53150749"
       Visual Studio создаст проект и открывает конструктор для окна приложения по умолчанию с именем **MainWindow.xaml**.
 
    > [!NOTE]
-   > В этом пошаговом руководстве использует <xref:System.Windows.Controls.DataGrid> элемент управления, доступных в .NET Framework 4 и более поздних версиях. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > В этом пошаговом руководстве использует <xref:System.Windows.Controls.DataGrid> элемент управления, доступных в .NET Framework 4 и более поздних версиях. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как определить целевую версию .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Откройте *Application.xaml* (Visual Basic) или *App.xaml* (C#).
 
@@ -327,7 +327,7 @@ ms.locfileid: "53150749"
 
 1. Откройте *`ExpenseItHome.xaml`*.
 
-2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [Как Создание простого обработчика событий](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [Как Создание простого обработчика событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "53150749"
 3. Выполните сборку и запуск приложения.
 
     > [!NOTE]
-    > Если отобразится сообщение об ошибке, <xref:System.Windows.Controls.DataGrid> не найден или не существует, убедитесь, что ваш проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Если отобразится сообщение об ошибке, <xref:System.Windows.Controls.DataGrid> не найден или не существует, убедитесь, что ваш проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как определить целевую версию .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Выберите **представление** кнопки.
 

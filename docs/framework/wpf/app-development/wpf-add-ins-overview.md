@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662742"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746566"
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 <a name="Introduction"></a> .NET Framework включает модель надстроек, разработчики могут использовать для создания приложений, поддерживающих расширяемость надстроек. Эта модель позволяет создавать надстройки, которые интегрируются с функциональностью приложения и расширяют ее. В некоторых сценариях приложения также должны отображать пользовательские интерфейсы, которые предоставляются надстройками. В этом разделе показано, как WPF расширяет модель надстроек платформы .NET Framework для поддержки таких сценариев, архитектуры, его преимущества и ограничения.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662742"
 -   Имеет <xref:System.SerializableAttribute> применен атрибут.  
   
 > [!NOTE]
->  Дополнительные сведения о создании объектов удаленного взаимодействия .NET Framework, см. в разделе [внесения поддержки удаленного взаимодействия объектами](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Дополнительные сведения о создании объектов удаленного взаимодействия .NET Framework, см. в разделе [внесения поддержки удаленного взаимодействия объектами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  Типы пользовательского интерфейса WPF, не поддерживающие удаленное взаимодействие. Чтобы решить проблему, WPF расширяет модель надстроек платформы .NET Framework для включения пользовательского интерфейса WPF созданные надстройки для отображения из ведущих приложений. Эта поддержка обеспечивается WPF с двух типов: <xref:System.AddIn.Contract.INativeHandleContract> интерфейс и два статических метода, реализуемый <xref:System.AddIn.Pipeline.FrameworkElementAdapters> класса: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> и <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. На высоком уровне эти типы и методы используются следующим образом:  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662742"
 - <xref:System.LoaderOptimizationAttribute>
 - [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Домены приложений](../../../../docs/framework/app-domains/application-domains.md)
-- [Обзор удаленного взаимодействия .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Обеспечение поддержки удаленного взаимодействия объектами](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Обзор удаленного взаимодействия .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Обеспечение поддержки удаленного взаимодействия объектами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Разделы практического руководства](../../../../docs/framework/wpf/app-development/how-to-topics.md)

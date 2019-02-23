@@ -5,24 +5,24 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 82eeda8ab3c0445c98a7ba7ad3b97c7b7ff21fcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a01960978f5fd4d17c7ae3e0f019efa5adfe050c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501672"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745911"
 ---
 # <a name="statusstrip-control"></a>Элемент управления StatusStrip
 Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления StatusStrip](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
- Описывается элемент управления, его основные возможности и свойства.  
+ Описание элемента управления, его основных возможностей и свойств.  
   
  [Практическое руководство. Интерактивное использование свойства Spring в элементе управления StatusStrip](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  Демонстрирует использование свойства `Spring` для интерактивного центрирования `ToolStripStatusLabel` в `StatusStrip`.  
   
- Также см. в разделе [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
+ Также см. в разделе [редактор коллекции элементов StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100)) и [диалоговое окно задач StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100)).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.StatusStrip>  

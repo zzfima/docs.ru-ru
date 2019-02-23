@@ -7,18 +7,18 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718667"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748275"
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. Примерами ресурсов являются кисти и стили. В этом обзоре описывается использование ресурсов в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Можно также создать и доступ к ресурсам с помощью кода или попеременно между кодом и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения см. в разделе [ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  Файлы ресурсов, описанных в этом разделе, отличаются от файлов ресурсов, описанных в [ресурса приложения WPF, содержимое и файлы данных](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) и отличаются от внедренных или связанных ресурсов, описанных в [ Управление ресурсами приложения (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Файлы ресурсов, описанных в этом разделе, отличаются от файлов ресурсов, описанных в [ресурса приложения WPF, содержимое и файлы данных](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) и отличаются от внедренных или связанных ресурсов, описанных в [управление Ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
   
 <a name="usingresources"></a>   

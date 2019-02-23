@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507954"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746984"
 ---
 # <a name="listbox-how-to-topics"></a>Разделы руководства, посвященные ListBox
 В этом разделе описываются способы использования <xref:System.Windows.Controls.ListBox> управления для отображения выделяемых списков элементов.  
@@ -20,7 +20,7 @@ ms.locfileid: "43507954"
 ## <a name="in-this-section"></a>В этом разделе  
  [Привязка элемента ListBox к данным](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [Получение элемента ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [Способ: добавить данные в элемент управления ItemsControl](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [Практическое руководство. Добавить данные в элемент управления ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))  
  [Улучшение производительности прокрутки ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Ссылка  

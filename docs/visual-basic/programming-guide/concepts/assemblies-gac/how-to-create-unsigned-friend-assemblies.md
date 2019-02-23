@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание неподписанных дружественных сборок (Visual Basic)
+title: Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698210"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748132"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Как выполнить Создание неподписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
@@ -86,7 +86,7 @@ ms.locfileid: "54698210"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Основные понятия о программировании руководство](../../../../visual-basic/programming-guide/concepts/index.md)

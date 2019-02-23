@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543858"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748587"
 ---
 # <a name="graphics-rendering-tiers"></a>Уровни графической отрисовки
 Уровень отрисовки определяет уровень возможностей графического оборудования и производительность для устройства, на котором выполняется приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -90,7 +90,7 @@ ms.locfileid: "54543858"
 |Растровое содержимое, использующее <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Любое содержимое отображается с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> метод <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Мозаичное содержимое, использующее <xref:System.Windows.Media.TileBrush>|Любое Мозаичное содержимое, в котором <xref:System.Windows.Media.TileBrush.TileMode%2A> свойство <xref:System.Windows.Media.TileBrush> присваивается <xref:System.Windows.Media.TileMode.Tile>.|  
 |Поверхности, которые превышают максимальный размер текстуры графического оборудования|Для большинства графических устройств большие поверхности имеют размер 2048 x 2048 или 4096 x 4096 пикселей.|  
-|Любая операция, требования к видеопамяти которой превышают объем памяти графического оборудования|Можно отслеживать использование видеопамяти приложения, используя средство Perforator, включенное в [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) в комплекте SDK Windows.|  
+|Любая операция, требования к видеопамяти которой превышают объем памяти графического оборудования|Можно отслеживать использование видеопамяти приложения, используя средство Perforator, включенное в [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) в комплекте SDK Windows.|  
 |Многослойные окна|Многослойные окна позволяют приложениям [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображать содержимое на экране в непрямоугольных окнах. В операционных системах, поддерживающих Windows Display Driver Model (WDDM), например [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)], многослойные окна реализованы с аппаратным ускорением. В других системах, таких как [!INCLUDE[winxp](../../../../includes/winxp-md.md)], многоуровневые окна отрисовываются программным обеспечением без аппаратного ускорения.<br /><br /> Вы можете включить многослойные окна в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , задав следующие <xref:System.Windows.Window> свойства:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -112,12 +112,12 @@ ms.locfileid: "54543858"
 ### <a name="wpf-performance-profiling-tools"></a>Средства профилирования производительности WPF  
  В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. В следующей таблице перечислены средства профилирования производительности, включенные в средство [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite.  
   
-|Средство|Описание:|  
+|Средство|Описание|  
 |----------|-----------------|  
 |Perforator|Используется для анализа поведения отрисовки.|  
 |Visual Profiler|Служит для профилирования использования служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например обработки макета и событий, по элементам в визуальном дереве.|  
   
- WPF Performance Suite обеспечивает многофункциональное графическое представление данных производительности. Дополнительные сведения о средствах производительности WPF см. в разделе [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ WPF Performance Suite обеспечивает многофункциональное графическое представление данных производительности. Дополнительные сведения о средствах производительности WPF см. в разделе [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>средство диагностики DirectX  
  Диагностическое средство [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, поможет в диагностике и устранении проблем, связанных с [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Папка установки по умолчанию для средства диагностики [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  
@@ -133,6 +133,6 @@ ms.locfileid: "54543858"
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Настройки реестра графической отрисовки](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

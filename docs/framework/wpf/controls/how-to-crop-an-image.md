@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обрезка изображения
+title: Практическое руководство. Обрезка изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - images [WPF], cropping
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-ms.openlocfilehash: fbd15ea6c5c47aa090829754402cc3a6926654d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dab4b2907f3aeeb2c480adb952a9afc92b6d5c17
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663970"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745937"
 ---
-# <a name="how-to-crop-an-image"></a>Как выполнить Обрезка изображения
+# <a name="how-to-crop-an-image"></a>Практическое руководство. Обрезка изображения
 В этом примере показано, как обрезать изображение с помощью <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap> используется главным образом при кодировании обрезанной версии изображения для сохранения файла. Чтобы обрезать изображение для отображения см. в целях [Создание области отсечения](https://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) раздела.  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap> используется главным образом при кодировании обрезанной версии изображения для сохранения файла. Чтобы обрезать изображение для отображения см. в целях [как: Создание области отсечения](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90)) раздела.  
   
 ## <a name="example"></a>Пример  
  Следующие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] определяет ресурсы, используемые в примерах ниже.  
@@ -40,4 +40,4 @@ ms.locfileid: "54663970"
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>См. также
-- [Создание области отсечения](https://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+- [Практическое руководство. Создание области отсечения](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))

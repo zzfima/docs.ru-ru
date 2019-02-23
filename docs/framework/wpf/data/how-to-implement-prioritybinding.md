@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация PriorityBinding
+title: Практическое руководство. Реализация PriorityBinding
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717919"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745309"
 ---
-# <a name="how-to-implement-prioritybinding"></a>Как выполнить Реализация PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>Практическое руководство. Реализация PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] работает путем указания списка привязок. Список привязок упорядочен от наиболее важных к наименее важным. Если привязка наивысшего приоритета возвращает значение успешно при его обработке то нет необходимости обрабатывать другие привязки в списке. Возможно, что привязка наивысшего приоритета занимает много времени для оценки, будет использоваться самым высоким приоритетом, которое возвращает значение успешно, пока не будет успешно возвращает значение привязки более высокий приоритет.  
   
 ## <a name="example"></a>Пример  
@@ -27,7 +27,7 @@ ms.locfileid: "54717919"
  Метод доступа get `SlowestDP` ожидает в течение 5 секунд перед возвратом значения `_slowestDP` элемента данных.  
   
 > [!NOTE]
->  Этот пример приведен только в качестве демонстрации. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Правила рекомендованы для определения свойств, которые являются порядков медленнее, чем мог бы быть набор полей. Дополнительные сведения см. в разделе [NIB: Выбор между свойствами и методами](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Этот пример приведен только в качестве демонстрации. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Правила рекомендованы для определения свойств, которые являются порядков медленнее, чем мог бы быть набор полей. Дополнительные сведения см. в разделе [Выбор между свойствами и методами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

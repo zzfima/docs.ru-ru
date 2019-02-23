@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533550"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747668"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute
 Пользовательские элементы управления, иногда будет предоставлять коллекции как свойство. В этом пошаговом руководстве демонстрируется использование <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> класс для управления способом сериализации коллекции во время разработки. Применение <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> значение для свойства коллекции гарантирует, что будет сериализовано свойство.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -36,9 +36,9 @@ ms.locfileid: "54533550"
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Создание элемента управления с сериализуемой коллекцией  
   
-1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [Как Переименуйте идентификаторы](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [переименование рефакторинга кода символа](/visualstudio/ide/reference/rename).  
   
 3.  В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойства `10`.  
   
@@ -129,16 +129,16 @@ ms.locfileid: "54533550"
 ## <a name="next-steps"></a>Следующие шаги  
  Когда вы знаете, как для сериализации коллекции стандартных типов, рассмотрите возможность более глубоко интеграции пользовательских элементов управления в среду разработки. Как улучшить интеграцию разработки пользовательских элементов управления в следующих разделах:  
   
--   [Архитектура времени разработки](https://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
+-   [Архитектура времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
 -   [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Общие сведения о сериализации конструктора](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+-   [Общие сведения о сериализации конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
 -   [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Общие сведения о сериализации конструктора](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
-- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Общие сведения о сериализации конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Практическое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
 - [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
