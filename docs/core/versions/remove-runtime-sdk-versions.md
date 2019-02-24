@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63fc441d045f62abc6776cac56571a971d64fefd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129705"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583879"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Как удалить среду выполнения .NET Core и пакет SDK
 
@@ -158,7 +158,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 - [apt-get(8)](https://linux.die.net/man/8/apt-get) используется в системах на основе Debian, включая Ubuntu.
 - [yum(8)](https://linux.die.net/man/8/yum) используется в Fedora, CentOS и Oracle Linux.
 - [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) используется в openSUSE и SUSE Linux Enterprise System (SLES).
-- [dnf(8)](https://dnf.readthedocs.io/latest/command_ref.html) используется в Fedora.
+- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) используется в Fedora.
 
 Практически во всех случаях для удаления пакета используется команда `remove`.
 
