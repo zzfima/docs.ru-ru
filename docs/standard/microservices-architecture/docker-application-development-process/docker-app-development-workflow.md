@@ -4,12 +4,12 @@ description: Сведения о рабочем процессе для разр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480105"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584308"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -489,7 +489,7 @@ services:
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Примечание о тестировании и развертывании с использованием оркестраторов
 
-Команды docker-compose up и docker run (или запуск и отладка контейнеров в Visual Studio) подходят для тестирования контейнеров в вашей среде разработки. Но этот подход не следует использовать для развертывания в рабочей среде, где следует выбирать оркестраторы, например [Kubernetes](https://kubernetes.io/) или [Service Fabric](https://azure.microsoft.com/services/service-fabric/). При использовании Kubernetes необходимо использовать [модули](https://kubernetes.io/docs/concepts/workloads/pods/pod/) для организации контейнеров и [службы](https://kubernetes.io/docs/concepts/services-networking/service/) для их объединения в сеть. Можно также использовать [развертывания](https://kubernetes.io/docs/tutorials/k8s201/#deployments) для упорядочения создания и изменения модулей.
+Команды docker-compose up и docker run (или запуск и отладка контейнеров в Visual Studio) подходят для тестирования контейнеров в вашей среде разработки. Но этот подход не следует использовать для развертывания в рабочей среде, где следует выбирать оркестраторы, например [Kubernetes](https://kubernetes.io/) или [Service Fabric](https://azure.microsoft.com/services/service-fabric/). При использовании Kubernetes необходимо использовать [модули](https://kubernetes.io/docs/concepts/workloads/pods/pod/) для организации контейнеров и [службы](https://kubernetes.io/docs/concepts/services-networking/service/) для их объединения в сеть. Можно также использовать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для упорядочения создания и изменения модулей.
 
 ![6. Проведите тестирование приложений или микрослужб](./media/image17.png)
 
