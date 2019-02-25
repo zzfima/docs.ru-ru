@@ -1,22 +1,16 @@
 ---
-title: Основные понятия программирования (C#)
+title: 'Основные понятия программирования (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143198"
 ---
 # <a name="programming-concepts-c"></a>Основные понятия программирования (C#)
 Этот раздел описывает концепции программирования на языке C#.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
-|[Сборки и глобальный кэш сборок (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|Описывает создание и использование сборок.|  
+|[Сборки в .NET](../../../standard/assembly/index.md)|Описывает создание и использование сборок.|  
 |[Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Описывает создание асинхронных решений в C# с помощью ключевых слов [async](../../../csharp/language-reference/keywords/async.md) и [await](../../../csharp/language-reference/keywords/await.md). Содержит пошаговое руководство.|  
 |[Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|Описывает, как с помощью атрибутов предоставлять дополнительные сведения об элементах программы, таких как типы, поля, методы и свойства.|  
 |[Caller Information (C#)](../../../csharp/programming-guide/concepts/caller-information.md) (Сведения о вызывающем объекте (C#))|Описывает, как получить сведения о вызывающем объекте метода. Можно получить такую информацию, как путь к файлу, номер строки в исходном коде и имя вызывающего объекта.|  

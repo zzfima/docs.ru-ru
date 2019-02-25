@@ -270,6 +270,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## Новые возможности C#
+### [C# 8.0 — предварительная версия 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1](csharp/whats-new/csharp-7-1.md)
@@ -615,7 +616,7 @@
 ### [Ключевые слова](visual-basic/language-reference/keywords/index.md)
 #### [Сводка по массивам](visual-basic/language-reference/keywords/arrays-summary.md)
 #### [Сводка по объекту Collection](visual-basic/language-reference/keywords/collection-object-summary.md)
-#### [Сводка по управлению ходом выполнения](visual-basic/language-reference/keywords/control-flow-summary.md)
+#### [Сводка по потоку управления](visual-basic/language-reference/keywords/control-flow-summary.md)
 #### [Сводка по преобразованию](visual-basic/language-reference/keywords/conversion-summary.md)
 #### [Сводка по типам данных](visual-basic/language-reference/keywords/data-types-summary.md)
 #### [Сводка элементов для работы со значениями дат и времени](visual-basic/language-reference/keywords/dates-and-times-summary.md)
