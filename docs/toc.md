@@ -31,7 +31,8 @@
 ### [Анализатор переносимости](standard/analyzers/portability-analyzer.md)
 ### [Анализатор Framework](standard/analyzers/framework-analyzer.md)
 ## [Обработка и создание исключений](standard/exceptions/)
-## [Формат файла сборки .NET](standard/assembly-format.md)
+## [Сборки в .NET](standard/assembly/index.md)
+### [Формат файла сборки .NET](standard/assembly/file-format.md) 
 ## [Сборка мусора](standard/garbage-collection/)
 ## [Универсальные типы](standard/generics.md)
 ## [Делегаты и лямбда-выражения](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [Настройка доступа к объектам через My](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Основные понятия программирования](visual-basic/programming-guide/concepts/index.md)
-### [Сборки и глобальный кэш сборок](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [Сборки в .NET](standard/assembly/index.md)
 ### [Асинхронное программирование с использованием ключевых слов Async и Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Атрибуты](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [Деревья выражений](visual-basic/programming-guide/concepts/expression-trees/index.md)
