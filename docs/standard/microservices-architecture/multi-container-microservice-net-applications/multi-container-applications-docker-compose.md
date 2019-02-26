@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145258"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442234"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml 
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 1.  **sdk**: для сценариев разработки и сборки.
 2.  **runtime**: для сценария рабочей среды.
-3.  **runtime-deps**: для сценария рабочей среды у [автономных приложений](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+3.  **runtime-deps**: для сценария рабочей среды у [автономных приложений](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Образы среды выполнения также обеспечивают автоматическую настройку aspnetcore\_urls на порт 80 и кэш pre-ngend сборок, что позволяет ускорить запуск.
 
@@ -468,7 +468,7 @@ ENTRYPOINT ["dotnet", "run"]
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **Создание образов Docker для приложений .NET Core** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Назад](data-driven-crud-microservice.md)

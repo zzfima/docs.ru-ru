@@ -3,13 +3,13 @@ title: Архитектурные принципы
 description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Архитектурные принципы
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828102"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442988"
 ---
 # <a name="architectural-principles"></a>Архитектурные принципы
 
@@ -99,21 +99,10 @@ ms.locfileid: "55828102"
 
 Как минимум, в отдельном веб-приложении необходимо постараться реализовать собственный ограниченный контекст со своим хранилищем сохраняемости для бизнес-модели вместо того, чтобы использовать общую для всех приложений базу данных. Взаимодействие между ограниченными контекстами осуществляется посредством программных интерфейсов, а не за счет общей базы данных, благодаря чему бизнес-логика и события могут реагировать на происходящие изменения. Ограниченные контексты тесно связаны с микрослужбами, которые в идеальном случае также реализуются в качестве отдельных ограниченных контекстов.
 
-> ### <a name="references--modern-web-applications"></a>Ссылки — современные веб-приложения
-> - **Разделение задач**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Инкапсуляция**  
-> <https://deviq.com/encapsulation/>
-> - **Принцип инверсии зависимостей**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Принцип явных зависимостей**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Принцип "Не повторяйся"**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Независимость сохраняемости**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Ограниченный контекст**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Дополнительные ресурсы
+
+* [Конструктивные шаблоны JAVA: принципы](https://java-design-patterns.com/principles/)
+* [Ограниченный контекст](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Назад](choose-between-traditional-web-and-single-page-apps.md)
