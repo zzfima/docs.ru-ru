@@ -1,23 +1,17 @@
 ---
-title: Файловый и потоковый ввод-вывод — .NET
+title: "Файловый и потоковый ввод-вывод\_— .NET"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279478"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 
@@ -47,7 +41,7 @@ ms.locfileid: "55279478"
 
 Помимо использования этих классов, пользователи Visual Basic могут использовать методы и свойства, предоставляемые классом <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> для файлового ввода-вывода.
 
-См. [Практическое руководство. Копирование каталогов](how-to-copy-directories.md), [Практическое руководство. Создание списка каталогов](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) и [Практическое руководство. Перечисление каталогов и файлов](how-to-enumerate-directories-and-files.md).
+См. практическое руководство по [ Копирование каталогов](how-to-copy-directories.md), [Практическое руководство. Создание списка каталогов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) и [Практическое руководство. перечислить каталоги и файлы](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Потоки
 
@@ -95,7 +89,7 @@ ms.locfileid: "55279478"
 
 - <xref:System.IO.TextReader> и <xref:System.IO.TextWriter> используются в качестве абстрактных базовых классов для других средств чтения и записи, которые считывают и записывают символы и строки, а не двоичные данные.
 
-См. [Практическое руководство. Считывание текста из файла](how-to-read-text-from-a-file.md), [Практическое руководство. Запись текста в файл](how-to-write-text-to-a-file.md), [Практическое руководство. Считывание символов из строки](how-to-read-characters-from-a-string.md) и [Практическое руководство. Запись символов в строку](how-to-write-characters-to-a-string.md).
+См. практическое руководство по [ Считывание текста из файла](how-to-read-text-from-a-file.md), [Практическое руководство. Запись текста в файл](how-to-write-text-to-a-file.md), [Практическое руководство. Считывание символов из строки](how-to-read-characters-from-a-string.md) и [Практическое руководство. Запись символов в строку](how-to-write-characters-to-a-string.md).
 
 ## <a name="asynchronous-io-operations"></a>Асинхронные операции ввода-вывода
 
@@ -123,7 +117,7 @@ ms.locfileid: "55279478"
 
 - <xref:System.IO.Compression.GZipStream> — для сжатия и распаковки потоков в формате gzip.
 
-См. [Практическое руководство. Сжатие и извлечение файлов](how-to-compress-and-extract-files.md).
+См. практическое руководство по [ Сжатие и извлечение файлов](how-to-compress-and-extract-files.md).
 
 ## <a name="isolated-storage"></a>Изолированное хранилище
 
@@ -155,13 +149,13 @@ ms.locfileid: "55279478"
 
 - Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведения: [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) или <xref:System.IO.WindowsRuntimeStreamExtensions>.
+При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведения см. в разделе [Как Преобразование между потоками .NET Framework и потоками среды выполнения Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) или <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
 Дополнительные сведения об операциях ввода-вывода в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]: [Краткое руководство. Чтение и запись файлов](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>Ввод-вывод и безопасность
 
-При использовании классов в пространстве имен <xref:System.IO?displayProperty=nameWithType> необходимо выполнить требования безопасности операционной системы, такие как списки управления доступом для контроля доступа к файлам и каталогам. Это требование дополняет остальные требования <xref:System.Security.Permissions.FileIOPermission>. Списками управления доступом можно управлять программно. Дополнительные сведения: [Практическое руководство. Добавление или удаление записей списка управления доступом](how-to-add-or-remove-access-control-list-entries.md).
+При использовании классов в пространстве имен <xref:System.IO?displayProperty=nameWithType> необходимо выполнить требования безопасности операционной системы, такие как списки управления доступом для контроля доступа к файлам и каталогам. Это требование дополняет остальные требования <xref:System.Security.Permissions.FileIOPermission>. Списками управления доступом можно управлять программно. Дополнительные сведения см. в разделе [Как Добавление или удаление записей списка управления доступом](how-to-add-or-remove-access-control-list-entries.md).
 
 По умолчанию политика безопасности не позволяет обращаться к файлам на компьютере пользователя через Интернет или из приложений интрасети. Поэтому при составлении кода не используйте классы ввода-вывода, которым нужен путь к физическому файлу, загружаемому через Интернет или интрасеть. Вместо этого используйте [изолированное хранилище](isolated-storage.md) для обычных приложений .NET Framework или [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
