@@ -1,6 +1,6 @@
 ---
 title: Метод IMetaDataImport::GetInterfaceImplProps
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600562"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835724"
 ---
-# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="7bcd4-102">Метод IMetaDataImport::GetInterfaceImplProps</span><span class="sxs-lookup"><span data-stu-id="7bcd4-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
-<span data-ttu-id="7bcd4-103">Возвращает указатель на токены метаданных для <xref:System.Type> , реализующий заданный метод, и для интерфейса, который объявляет этот метод.</span><span class="sxs-lookup"><span data-stu-id="7bcd4-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>  
+# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="6c765-102">Метод IMetaDataImport::GetInterfaceImplProps</span><span class="sxs-lookup"><span data-stu-id="6c765-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
+<span data-ttu-id="6c765-103">Возвращает указатель на токены метаданных для <xref:System.Type> , реализующий заданный метод, и для интерфейса, который объявляет этот метод.</span><span class="sxs-lookup"><span data-stu-id="6c765-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>
   
-## <a name="syntax"></a><span data-ttu-id="7bcd4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7bcd4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c765-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c765-104">Syntax</span></span>  
   
 ```  
 HRESULT GetInterfaceImplProps (  
@@ -37,25 +37,52 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7bcd4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7bcd4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6c765-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c765-105">Parameters</span></span>  
  `iiImpl`  
- <span data-ttu-id="7bcd4-106">[in] Токен метаданных, представляющий метод для возврата маркеров для класса и интерфейса.</span><span class="sxs-lookup"><span data-stu-id="7bcd4-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
+ <span data-ttu-id="6c765-106">[in] Токен метаданных, представляющий метод для возврата маркеров для класса и интерфейса.</span><span class="sxs-lookup"><span data-stu-id="6c765-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="7bcd4-107">[out] Токен метаданных, представляющий класс, который реализует метод.</span><span class="sxs-lookup"><span data-stu-id="7bcd4-107">[out] The metadata token representing the class that implements the method.</span></span>  
+ <span data-ttu-id="6c765-107">[out] Токен метаданных, представляющий класс, который реализует метод.</span><span class="sxs-lookup"><span data-stu-id="6c765-107">[out] The metadata token representing the class that implements the method.</span></span>  
   
  `ptkIface`  
- <span data-ttu-id="7bcd4-108">[out] Токен метаданных, представляющий интерфейс, определяющий метод, реализованный.</span><span class="sxs-lookup"><span data-stu-id="7bcd4-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
+ <span data-ttu-id="6c765-108">[out] Токен метаданных, представляющий интерфейс, определяющий метод, реализованный.</span><span class="sxs-lookup"><span data-stu-id="6c765-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
+
+## <a name="remarks"></a><span data-ttu-id="6c765-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c765-109">Remarks</span></span>
+
+ <span data-ttu-id="6c765-110">Получить значение для `iImpl` путем вызова [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="6c765-110">You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.</span></span>
+ 
+ <span data-ttu-id="6c765-111">Например, предположим, что класс содержит `mdTypeDef` token значением 0x02000007 и что он реализует три интерфейсы, типы которых имеют токенов:</span><span class="sxs-lookup"><span data-stu-id="6c765-111">For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens:</span></span> 
+
+- <span data-ttu-id="6c765-112">0x02000003 (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="6c765-112">0x02000003 (TypeDef)</span></span>
+- <span data-ttu-id="6c765-113">0x0100000A (TypeRef)</span><span class="sxs-lookup"><span data-stu-id="6c765-113">0x0100000A (TypeRef)</span></span>
+- <span data-ttu-id="6c765-114">0x0200001C (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="6c765-114">0x0200001C (TypeDef)</span></span>
+
+<span data-ttu-id="6c765-115">По существу эта информация хранится в таблицу реализации интерфейса, как:</span><span class="sxs-lookup"><span data-stu-id="6c765-115">Conceptually, this information is stored into an interface implementation table as:</span></span>
+
+| <span data-ttu-id="6c765-116">Номер строки</span><span class="sxs-lookup"><span data-stu-id="6c765-116">Row number</span></span> | <span data-ttu-id="6c765-117">Маркер класса</span><span class="sxs-lookup"><span data-stu-id="6c765-117">Class token</span></span> | <span data-ttu-id="6c765-118">Токен интерфейса</span><span class="sxs-lookup"><span data-stu-id="6c765-118">Interface token</span></span> |
+|------------|-------------|-----------------|
+| <span data-ttu-id="6c765-119">4</span><span class="sxs-lookup"><span data-stu-id="6c765-119">4</span></span>          |             |                 |
+| <span data-ttu-id="6c765-120">5</span><span class="sxs-lookup"><span data-stu-id="6c765-120">5</span></span>          | <span data-ttu-id="6c765-121">02000007</span><span class="sxs-lookup"><span data-stu-id="6c765-121">02000007</span></span>    | <span data-ttu-id="6c765-122">02000003</span><span class="sxs-lookup"><span data-stu-id="6c765-122">02000003</span></span>        |
+| <span data-ttu-id="6c765-123">6</span><span class="sxs-lookup"><span data-stu-id="6c765-123">6</span></span>          | <span data-ttu-id="6c765-124">02000007</span><span class="sxs-lookup"><span data-stu-id="6c765-124">02000007</span></span>    | <span data-ttu-id="6c765-125">0100000A</span><span class="sxs-lookup"><span data-stu-id="6c765-125">0100000A</span></span>        |
+| <span data-ttu-id="6c765-126">7</span><span class="sxs-lookup"><span data-stu-id="6c765-126">7</span></span>          |             |                 |
+| <span data-ttu-id="6c765-127">8</span><span class="sxs-lookup"><span data-stu-id="6c765-127">8</span></span>          | <span data-ttu-id="6c765-128">02000007</span><span class="sxs-lookup"><span data-stu-id="6c765-128">02000007</span></span>    | <span data-ttu-id="6c765-129">0200001C</span><span class="sxs-lookup"><span data-stu-id="6c765-129">0200001C</span></span>        |
+
+<span data-ttu-id="6c765-130">Помните, что маркер является 4-байтовое значение:</span><span class="sxs-lookup"><span data-stu-id="6c765-130">Recall, the token is a 4-byte value:</span></span>
+
+- <span data-ttu-id="6c765-131">Нижние 3 байта содержат номер строки, или удалить.</span><span class="sxs-lookup"><span data-stu-id="6c765-131">The lower 3 bytes hold the row number, or RID.</span></span>
+- <span data-ttu-id="6c765-132">Старшему байту содержит тип токена — 0x09 для `mdtInterfaceImpl`.</span><span class="sxs-lookup"><span data-stu-id="6c765-132">The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.</span></span>
+
+<span data-ttu-id="6c765-133">`GetInterfaceImplProps` Возвращает данные, хранящиеся в строке, маркер которого вами в `iImpl` аргумент.</span><span class="sxs-lookup"><span data-stu-id="6c765-133">`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument.</span></span> 
   
-## <a name="requirements"></a><span data-ttu-id="7bcd4-109">Требования</span><span class="sxs-lookup"><span data-stu-id="7bcd4-109">Requirements</span></span>  
- <span data-ttu-id="7bcd4-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7bcd4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c765-134">Требования</span><span class="sxs-lookup"><span data-stu-id="6c765-134">Requirements</span></span>  
+ <span data-ttu-id="6c765-135">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c765-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7bcd4-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7bcd4-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6c765-136">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6c765-136">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7bcd4-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7bcd4-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6c765-137">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6c765-137">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7bcd4-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bcd4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6c765-138">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c765-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bcd4-114">См. также</span><span class="sxs-lookup"><span data-stu-id="7bcd4-114">See also</span></span>
-- [<span data-ttu-id="7bcd4-115">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="7bcd4-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7bcd4-116">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="7bcd4-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6c765-139">См. также</span><span class="sxs-lookup"><span data-stu-id="6c765-139">See also</span></span>
+- [<span data-ttu-id="6c765-140">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6c765-140">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6c765-141">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6c765-141">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
