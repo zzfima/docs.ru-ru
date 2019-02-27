@@ -3,13 +3,13 @@ title: Действия в рабочем процессе внешнего ци
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 7a98c34bfdbbdc9b34a04c891ca031f454ac4396
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221521"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834970"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Создание конвейеров CI/CD в службах Azure DevOps для приложения .NET Core 2.0 для контейнеров и развертывание в кластер Kubernetes
 
@@ -23,20 +23,20 @@ ms.locfileid: "56221521"
 
 Как показано на рисунке 5-13, первый этап заключается в конвейер сборки и CI. В службах DevOps Azure можно создать конвейеры Непрерывной сборки, на которые будет скомпилировать код, создание образов Docker и отправки их в реестр Docker, например Docker Hub или реестра контейнеров Azure.
 
-![](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Представление обозревателя Azure DevOps, определение задач процесса сборки.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
 **Рис. 5-13**. Конвейер сборки/непрерывной Интеграции в Azure DevOps, создание образов Docker и отправке образов в реестр Docker
 
 Второй этап заключается в создании конвейера развертывания или выпуска. В службах Azure DevOps можно легко создать конвейер развертывания, предназначенные для кластера Kubernetes с помощью задач Kubernetes для служб Azure DevOps, как показано на рисунке 5-14.
 
-![Развертывание MVC](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Представление обозревателя Azure DevOps, развертывание в Kubernetes определение задачи.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
 **Рис. 5-14**. Конвейер выпуска и непрерывного Развертывания в развертывание служб Azure DevOps в кластере Kubernetes
 
 > [! Пошаговое руководство] развертывание eShopModernized Kubernetes:
 >
 > Подробное пошаговое руководство конвейеров Azure DevOps Непрерывной интеграции и развертывания в Kubernetes, см. запись блога: \
->[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
 >[Назад](docker-application-outer-loop-devops-workflow.md)

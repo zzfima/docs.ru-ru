@@ -3,13 +3,13 @@ title: Управление рабочими средами Docker
 description: Узнайте о ключевые аспекты управления на базе контейнеров рабочей среде.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219494"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836621"
 ---
 # <a name="manage-production-docker-environments"></a>Управление рабочими средами Docker
 
@@ -23,26 +23,24 @@ ms.locfileid: "56219494"
 
 В таблице 6-1 перечислены стандартные инструменты управления, относящиеся к их оркестраторы, планировщики и кластеризации платформы.
 
-Таблица 6-1. Средства управления docker
+**В таблице 6-1**. Средства управления docker
 
-
-| Средства управления      | Описание:           | Связанные оркестраторов |
-|-----------------------|-----------------------|-----------------------|
-| Служба контейнеров\(управления пользовательского интерфейса на портале Azure) | [Служба контейнеров](https://azure.microsoft.com/services/container-service/) позволяет легко получить работы способ [развертывание кластера контейнера в Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) основании популярных оркестраторов, например Mesosphere DC/OS, Kubernetes и Docker Swarm. <br /><br /> Служба контейнеров оптимизирует конфигурации этих платформ. Необходимо просто выбрать размер, количество узлов и средства управления, а служба контейнеров позаботится обо всем остальном. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Docker универсальной плоскость управления\(в локальной или облачной) | [Docker универсальной плоскость управления](https://docs.docker.com/v1.11/ucp/overview/) является решение по управлению кластерами корпоративного уровня с Docker. Он помогает управлять весь кластер из одного места. <br /><br /> Docker универсальной плоскость управления входит в состав коммерческий продукт, с именем Docker Datacenter, Docker Swarm, Docker универсальной плоскость управления и доверенный реестр Docker. <br /><br /> Docker центра обработки данных может быть установлена локально или подготовленные общедоступном облаке типа Azure. | Docker Swarm\(поддерживается службой контейнеров) |
-| Docker Cloud\(также называется Tutum; облака SaaS) | [Docker Cloud](https://docs.docker.com/docker-cloud/) — это служба размещенной управления (SaaS), которая предоставляет возможности оркестрации и реестра Docker с построения и тестирования средства образы пакетных приложений, средства, позволяющие выполнять настройку и управление инфраструктурой узла функции и развертывания для автоматизации развертывания ваших образов к конкретной инфраструктуре. SaaS Docker облачной учетной записи можно подключиться к инфраструктуре в службе контейнеров, кластер Docker Swarm. | Docker Swarm\(поддерживается службой контейнеров) |
-| Mesosphere Marathon\(в локальной или облачной) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) — это производственного уровня контейнера orchestration и планировщик платформа Mesosphere DC/OS и Apache Mesos. <br /><br /> Она работает с Mesos (DC/OS на основе Apache Mesos) к элементу управления долго выполняющейся службы и предоставляет [веб-интерфейса для обработки и управления контейнером](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Он предоставляет веб-инструмент управления пользовательского интерфейса | Mesosphere DC/OS\(основанное на Apache Mesos; поддерживается службой контейнеров) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) охватывает оркестрации, планирования и инфраструктуру кластера. Это платформа с открытым кодом для автоматизации развертывания, масштабирование и выполнение операций в контейнерах приложений в кластерах узлов, предоставляя ориентированную на контейнеры инфраструктуру. | Google Kubernetes\(поддерживается службой контейнеров) |
+| Средства управления | Описание: | Связанные оркестраторов |
+|------------------|-------------|-----------------------|
+| [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure уровня dedicated средство управления Kubernetes | Службы Azure Kubernetes (AKS) |
+| [Веб-интерфейса Kubernetes (панель мониторинга)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Средства управления Kubernetes, можно отслеживать и управлять локального кластера Kubernetes | Служба Azure Kubernetes (AKS)<br/>Локальный Kubernetes |
+| [Портал Azure для Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Версия Online и рабочего стола для кластеров Service Fabric в Azure, локально, локальной разработки, а также других облаках | Azure Service Fabric |
+| [Контейнер мониторинга (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Y управления общие контейнера решение для мониторинга. Позволяет управлять кластерами Kubernetes через [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Служба Azure Kubernetes (AKS)<br/>Mesosphere DC/OS и другим пользователям. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Другим вариантом для управления и развертывания кластера является Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) — платформа Майкрософт включает в себя оркестрации контейнера, а также разработчиков программирования модели для создания приложений с высокой степенью масштабируемости микрослужбы. Service Fabric поддерживает Docker в текущей предварительной версии Linux, как показано на [предварительной версии Service Fabric в Linux](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere), а также для контейнеров Windows [в следующем выпуске](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Другим вариантом для управления и развертывания кластера является Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) — платформа Майкрософт включает в себя оркестрации контейнера, а также разработчиков программирования модели для создания приложений с высокой степенью масштабируемости микрослужбы. Service Fabric поддерживает Docker в Linux и контейнеров Windows и может работать в серверах Windows и Linux.
 
 Ниже приведены средства управления Service Fabric:
 
--   [Портал Azure для Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) операции, относящиеся к кластеру (создания/обновления/удаления) кластера или настроить его инфраструктурой (виртуальными машинами, подсистемы балансировки нагрузки, сети и т. д.)
+- [Портал Azure для Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) операции, относящиеся к кластеру (создания/обновления/удаления) кластера или настроить его инфраструктурой (виртуальными машинами, подсистемы балансировки нагрузки, сети и т. д.)
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) — это средство пользовательского интерфейса в Интернете, получить сведения и определенных операций в кластере Service Fabric, с точки зрения узлы или виртуальные машины и службы приложений и с точки зрения.
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) является специализированным веб-интерфейса и рабочего стола нескольких платформ, позволяющим insights и определенных операций в кластере Service Fabric, с точки зрения узлы или виртуальные машины и службы приложений и с точки зрения.
 
 >[!div class="step-by-step"]
 >[Назад](run-microservices-based-applications-in-production.md)

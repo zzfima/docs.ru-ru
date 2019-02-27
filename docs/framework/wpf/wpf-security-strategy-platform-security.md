@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640450"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836348"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя Windows Presentation Foundation (WPF) предоставляет широкий набор служб безопасности, предусмотрена также возможность средства безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
@@ -50,7 +50,7 @@ ms.locfileid: "54640450"
   
  Ранее переполнения буфера были причиной многих эксплойтов безопасности с высокой степенью воздействия. Переполнение буфера возникает, когда злоумышленник использует уязвимость кода, которая позволяет внедрить вредоносный код, выполняющий записи за границами буфера. Затем это позволяет злоумышленнику перехватить процесс, в котором выполняется код, путем перезаписи адреса возврата функции, чтобы вызвать выполнение кода злоумышленника. Результатом является вредоносный код, выполняющий произвольный код с привилегиями перехваченного процесса.  
   
- На высоком уровне флаг компилятора /GS защищает от некоторых потенциальных переполнений буфера путем добавления специального cookie безопасности для защиты адреса возврата функции, которая содержит буферы локальных строк. После возврата функции cookie безопасности сравнивается со своим предыдущим значением. Если значение изменилось, то возможно, произошло переполнение буфера, и процесс будет остановлен с состоянием ошибки. Остановка процесса предотвращает выполнение потенциально вредоносного кода. См. в разделе [/GS (проверка безопасности буфера)](https://msdn.microsoft.com/library/8dbf701c.aspx) для получения дополнительных сведений.  
+ На высоком уровне флаг компилятора /GS защищает от некоторых потенциальных переполнений буфера путем добавления специального cookie безопасности для защиты адреса возврата функции, которая содержит буферы локальных строк. После возврата функции cookie безопасности сравнивается со своим предыдущим значением. Если значение изменилось, то возможно, произошло переполнение буфера, и процесс будет остановлен с состоянием ошибки. Остановка процесса предотвращает выполнение потенциально вредоносного кода. См. в разделе [/GS (проверка безопасности буфера)](/cpp/build/reference/gs-buffer-security-check) для получения дополнительных сведений.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] компилируется с флагом /GS, чтобы добавить еще один уровень защиты для приложений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -174,7 +174,7 @@ ms.locfileid: "54640450"
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>развертывание ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] — это комплексная технология развертывания входит в состав .NET Framework, который интегрируется с [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (см. в разделе [Общие сведения о развертывании ClickOnce](https://msdn.microsoft.com/library/142dbbz4.aspx) подробные сведения). Автономные приложения [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] могут развертываться с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], тогда как браузерные приложения необходимо развертывать с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] — это комплексная технология развертывания входит в состав .NET Framework, который интегрируется с [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (см. в разделе [ClickOnce развертывание и безопасность](/visualstudio/deployment/clickonce-security-and-deployment) подробные сведения). Автономные приложения [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] могут развертываться с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], тогда как браузерные приложения необходимо развертывать с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Приложения, развернутые с помощью [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)], приобретают дополнительный уровень безопасности посредством [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; в сущности, приложения, развернутые с помощью [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], запрашивают разрешения, которые им необходимы. Им предоставляются только разрешения, не расширяющие набор разрешений для зоны, в которой развертывается приложения. За счет ограничения набора разрешений только теми, которые необходимы, даже если они меньше, чем разрешения, предоставляемые набором разрешений зоны запуска, можно до минимума сократить количество ресурсов, к которым приложение имеет доступ. Таким образом, уменьшается вероятность повреждений на клиентском компьютере в случае перехвата приложения.  
   
@@ -210,9 +210,6 @@ ms.locfileid: "54640450"
   
 ## <a name="see-also"></a>См. также
 - [Общие сведения о безопасности в Microsoft Internet Explorer 6 в Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Понимание принципов и работа в защищенный режим Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)
-- [Windows XP с пакетом обновления 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
-- [Руководство по безопасности Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
 - [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
 - [Безопасность](../../../docs/framework/wpf/security-wpf.md)
 - [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
