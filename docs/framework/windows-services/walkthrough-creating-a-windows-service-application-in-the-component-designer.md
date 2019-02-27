@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123674"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665034"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Пошаговое руководство. Создание приложения службы Windows
 
@@ -86,7 +86,7 @@ ms.locfileid: "49123674"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Приложение службы предполагает длительное время выполнения, поэтому оно обычно опрашивает или отслеживает что-либо в системе. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Тем не менее, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> не отвечает за фактическое отслеживание. После начала работы службы метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> должен возвращать управление операционной системе. Он не должен уходить в бесконечный цикл или блокироваться. Для простого механизма опроса можно использовать компонент <xref:System.Timers.Timer?displayProperty=nameWithType> следующим образом: в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> задайте параметры компонента, а затем установите для свойства <xref:System.Timers.Timer.Enabled%2A> значение `true`. Таймер периодическую генерирует события в вашем коде, при возникновении которых служба сможет выполнять отслеживание. Для этого можно использовать следующий код:
+Приложение службы предполагает длительное время выполнения, поэтому оно обычно опрашивает или отслеживает что-либо в системе. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Тем не менее, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> не отвечает за фактическое отслеживание. После начала работы службы метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> должен возвращать управление операционной системе. Он не должен уходить в бесконечный цикл или блокироваться. Для настройки простого механизма опроса можно воспользоваться компонентом <xref:System.Timers.Timer?displayProperty=nameWithType>, как показано ниже: В методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> можно задать параметры компонента и установить значение <xref:System.Timers.Timer.Enabled%2A> для свойства `true`. Таймер периодическую генерирует события в вашем коде, при возникновении которых служба сможет выполнять отслеживание. Для этого можно использовать следующий код:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -132,7 +132,7 @@ Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
 End Sub
 ```
 
-Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Дополнительные сведения см. в разделе <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
+Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Для получения дополнительной информации см. <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Определение действий при остановке службы
 
@@ -294,9 +294,9 @@ eventLog1.WriteEntry("In OnStop.");
 9. В конструкторе щелкните **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Задайте для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. Это позволит установить и запускать службу от имени локальной системной учетной записи.
 
     > [!IMPORTANT]
-    > У учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalSystem> имеется множество разрешений, включая разрешение на запись в журнал событий. Эту учетную запись следует использовать с осторожностью, поскольку это может увеличить риск атак с помощью вредоносных программ. Для других задач следует рассмотреть возможность использования учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalService>, которая аналогична учетной записи непривилегированного пользователя локального компьютера. Удаленным серверам при этом передаются учетные данные анонимного пользователя. В этом примере произойдет ошибка, если вы попытаетесь использовать учетную запись <xref:System.ServiceProcess.ServiceAccount.LocalService> , так как для нее требуется разрешение на запись в журнал событий.
+    > У учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalSystem> имеется множество разрешений, включая разрешение на запись в журнал событий. Эту учетную запись следует использовать с осторожностью, поскольку это может увеличить риск атак с помощью вредоносных программ. Для других задач следует рассмотреть возможность использования учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalService> , которая аналогична учетной записи непривилегированного пользователя локального компьютера. Удаленным серверам при этом передаются учетные данные анонимного пользователя. В этом примере произойдет ошибка, если вы попытаетесь использовать учетную запись <xref:System.ServiceProcess.ServiceAccount.LocalService> , так как для нее требуется разрешение на запись в журнал событий.
 
-Дополнительные сведения об установщиках см. в статье [Практическое руководство. Добавление установщиков в приложение служб](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Дополнительные сведения об установщиках см. в руководстве по [ добавлению установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>Установка параметров запуска (необязательно)
 
@@ -431,7 +431,7 @@ eventLog1.WriteEntry("In OnStop.");
 
     Если процесс **installutil.exe** сообщает о сбое, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем, если класс <xref:System.ComponentModel.RunInstallerAttribute> отсутствует в классе `ProjectInstaller`, значение атрибута отличается от **true** или класс `ProjectInstaller` не имеет атрибута **public**.
 
-Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Запуск и выполнение службы
 
@@ -452,7 +452,7 @@ eventLog1.WriteEntry("In OnStop.");
 1. Чтобы открыть компонент **Просмотр событий**, начните вводить строку **Просмотр событий** в поле поиска на панели задач Windows и выберите **Просмотр событий** в результатах поиска.
 
    > [!TIP]
-   > В Visual Studio доступ к журналам событий можно получить, открыв **обозреватель сервера** (сочетание клавиш **CTRL**+**ALT**+**S**) и развернув узел **Журналы событий** для локального компьютера.
+   > В Visual Studio доступ к журналам событий можно получить, открыв **обозреватель сервера** (клавиши **CTRL**+**Alt**+**S**) и развернув узел **Журналы событий** узел для локального компьютера.
 
 2. В **средстве просмотра событий** разверните узел **Журналы приложений и служб**.
 
@@ -472,11 +472,11 @@ eventLog1.WriteEntry("In OnStop.");
     installutil.exe /u MyNewService.exe
     ```
 
-   Если служба удалена успешно, **installutil.exe** сообщит об этом. Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Если служба удалена успешно, **installutil.exe** сообщит об этом. Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Завершив создание службы, вы можете создать автономную программу установки, с помощью которой другие пользователи будут устанавливать вашу службу Windows. ClickOnce не поддерживает службы Windows, но вы можете создать установщик службы Windows с помощью [набора средств WiX](http://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Завершив создание службы, вы можете создать автономную программу установки, с помощью которой другие пользователи будут устанавливать вашу службу Windows. ClickOnce не поддерживает службы Windows, но вы можете создать установщик службы Windows с помощью [набора средств WiX](http://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Также изучите возможности компонента <xref:System.ServiceProcess.ServiceController>, который позволяет отправлять команды в установленную службу.
 
@@ -487,4 +487,4 @@ eventLog1.WriteEntry("In OnStop.");
 - [Приложения служб Windows](../../../docs/framework/windows-services/index.md)
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Службы (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Службы (Windows)](/windows/desktop/Services/services)

@@ -4,12 +4,12 @@ description: См. сопоставление между элементами pr
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682856"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747415"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Сопоставление между свойствами project.json и CSPROJ
 
@@ -39,7 +39,7 @@ ms.locfileid: "54682856"
 }
 ```
 
-Больше не поддерживается. В CSPROJ это свойство определяется именем файла проекта, которое определяется именем каталога. Например, `MyProjectName.csproj`.
+Больше не поддерживается. В CSPROJ-файле это свойство определяется именем файла проекта, которое обычно соответствует имени каталога. Например, `MyProjectName.csproj`.
 
 По умолчанию имя файла проекта также определяет значение свойств `<AssemblyName>` и `<PackageId>`.
 

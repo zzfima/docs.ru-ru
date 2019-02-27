@@ -3,15 +3,15 @@ title: Кластеризация цветков ириса с помощью з
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093610"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664475"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
@@ -84,7 +84,7 @@ ms.locfileid: "56093610"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-Класс `IrisData` содержит входные данные и определения для каждого признака в наборе данных. Используйте атрибут [Column](xref:Microsoft.ML.Data.ColumnAttribute), чтобы указать индексы исходных столбцов в файле набора данных.
+Класс `IrisData` содержит входные данные и определения для каждого признака в наборе данных. Используйте атрибут [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute), чтобы указать индексы исходных столбцов в файле набора данных.
 
 Класс `ClusterPrediction` представляет выходные данные модели кластеризации, примененные к экземпляру `IrisData`. Используйте атрибут [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute), чтобы привязать поля `PredictedClusterId` и `Distances` к столбцам **PredictedLabel** и **Score** соответственно. В случае задачи кластеризации эти столбцы означают следующее:
 
@@ -127,7 +127,7 @@ ms.locfileid: "56093610"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Обратите внимание, что имена столбцов и индексы соответствуют схеме, определяемой классом `IrisData`. Значение <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> задает тип `float`.
+Используйте [универсальный метод `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) для определения схемы набора данных из определения класса `IrisData`.
 
 Используйте созданный экземпляр <xref:Microsoft.ML.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.Data.DataView.IDataView>, который представляет источник данных для набора данных для обучения:
 

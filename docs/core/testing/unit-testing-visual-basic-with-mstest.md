@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b6036b10e87560a45880f41f30fabc7a348241d0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242468"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747483"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и MStest
 
@@ -30,7 +30,7 @@ ms.locfileid: "53242468"
     /PrimeService
 ```
 
-Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib -lang VB`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.VB* в *PrimeService.VB*. Чтобы использовать разработку на основе тестирования (TDD), требуется создать сбойную реализацию класса `PrimeService`:
+Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib -lang VB`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.VB* в *PrimeService.VB*. Создайте сбойную реализацию класса `PrimeService`:
 
 ```vb
 Imports System
@@ -94,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Удалите файл *UnitTest1.vb* из каталога *PrimeService.Tests* и создайте файл Visual Basic с именем *PrimeService_IsPrimeShould.VB*. Добавьте следующий код:
+Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. Удалите файл *UnitTest1.vb* из каталога *PrimeService.Tests* и создайте файл Visual Basic с именем *PrimeService_IsPrimeShould.VB*. Добавьте следующий код:
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
@@ -132,7 +132,7 @@ End Function
 
 ## <a name="adding-more-features"></a>Добавление дополнительных возможностей
 
-Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0 и –1. Можно добавить их в качестве тестов с помощью атрибута `<TestMethod>`, но это скоро станет утомительным. Есть другие атрибуты MSTest, которые позволяют создавать наборы похожих тестов.  Атрибут `<DataTestMethod>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `<DataRow>` можно указать значения для этих входных аргументов.
+Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0, -1. Можно добавить их в качестве тестов с помощью атрибута `<TestMethod>`, но это скоро станет утомительным. Есть другие атрибуты MSTest, которые позволяют создавать наборы похожих тестов.  Атрибут `<DataTestMethod>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `<DataRow>` можно указать значения для этих входных аргументов.
 
 Вместо того чтобы создавать новые тесты, используйте эти два атрибута, чтобы создать единый алгоритм, который проверяет несколько значений меньше 2, то есть наименьшего простого числа:
 

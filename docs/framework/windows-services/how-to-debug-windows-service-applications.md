@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отладка приложений служб Windows
+title: Как выполнить  Отладка приложений служб Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720370"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441883"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Как выполнить Отладка приложений служб Windows
+# <a name="how-to-debug-windows-service-applications"></a>Как выполнить  Отладка приложений служб Windows
 Служба должна запускаться из диспетчера управления службами, а не из Visual Studio. Поэтому, процесс отладки службы сложнее, чем отладка приложений Visual Studio других типов. Для отладки службы необходимо запустить службу, а затем подключить отладчик к процессу, в котором она выполняется. Приложение можно отлаживать с помощью всех стандартных средств отладки Visual Studio.  
   
 > [!CAUTION]
@@ -32,7 +32,7 @@ ms.locfileid: "54720370"
 >  Процесс отладки метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> может быть сложным, так как диспетчер управления службами накладывает ограничение в 30 секунд на все попытки запуска службы. Дополнительные сведения см. в статье [Устранение неполадок. Отладка служб Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Для получения значимой информации для отладки отладчик Visual Studio должен найти файлы символов для двоичных файлов, для которых выполняется отладка. При отладке службы, созданной в Visual Studio, файлы символов (PDB-файлы) находятся в той же папке, что и исполняемый файл или библиотека, и отладчик загружает их автоматически. При отладке службы, которая не была построена, сначала следует найти символы для службы и убедиться, что они могут быть найдены отладчиком. См. статью [Указание файлов символов (.pdb) и файлов с исходным кодом в отладчике Visual Studio](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Если вы выполняете отладку системного процесса или хотите иметь символы для системных вызовов в своих службах, то необходимо добавить серверы символов Майкрософт. См. статью [об отладке с помощью символов](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Для получения значимой информации для отладки отладчик Visual Studio должен найти файлы символов для двоичных файлов, для которых выполняется отладка. При отладке службы, созданной в Visual Studio, файлы символов (PDB-файлы) находятся в той же папке, что и исполняемый файл или библиотека, и отладчик загружает их автоматически. При отладке службы, которая не была построена, сначала следует найти символы для службы и убедиться, что они могут быть найдены отладчиком. См. руководство по [определению файлов символов (.pdb) и файлов с исходным кодом в отладчике Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger). Если вы выполняете отладку системного процесса или хотите иметь символы для системных вызовов в своих службах, то необходимо добавить серверы символов Майкрософт. См. статью [об отладке с помощью символов](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Отладка службы  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54720370"
   
  Попробуйте заменить программу на обычное консольное приложение. Для этого измените метод `Main` следующим образом, чтобы он мог быть запущен и как служба Windows, и как консольное приложение (в зависимости от способа запуска).  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Как выполнить Запуск службы Windows как консольного приложения  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Как выполнить  Запуск службы Windows как консольного приложения  
   
 1.  Добавьте метод в свою службу, которая запускает методы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
@@ -111,7 +111,7 @@ ms.locfileid: "54720370"
   
 5.  Чтобы снова запустить программу как службу Windows, установите ее и запустите обычным образом (для службы Windows). Отменять эти изменения необязательно.  
   
- В некоторых случаях, например, если требуется устранить некоторую проблему, которая возникает только при запуске системы, необходимо использовать отладчик Windows. Установите [средства отладки для Windows](https://msdn.microsoft.com/windows/hardware/hh852365) и прочтите статью [Отладка служб Windows](https://support.microsoft.com/kb/824344).  
+ В некоторых случаях, например, если требуется устранить некоторую проблему, которая возникает только при запуске системы, необходимо использовать отладчик Windows. [Скачайте набор драйверов Windows (WDK)](/windows-hardware/drivers/download-the-wdk) и узнайте о [способах отладки служб Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>См. также
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635671"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663903"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (параметры компилятора C#)
 Указывает, в какой версии среды CLR может запускаться сборка.  
@@ -36,6 +36,8 @@ ms.locfileid: "54635671"
   
 -   **ARM** компилирует сборку для выполнения на компьютере с процессором Advanced RISC Machine (ARM).  
   
+-   **ARM64** компилирует сборку для выполнения 64-разрядной средой CLR на компьютере с процессором Advanced RISC Machine (ARM) с поддержкой набора инструкций А64.  
+
 -   **x64** компилирует сборку для запуска в 64-разрядной среде CLR на компьютере, поддерживающем набор инструкций AMD64 или EM64T.  
   
 -   **x86** компилирует сборку для запуска в 32-разрядной среде CLR с архитектурой x86.  

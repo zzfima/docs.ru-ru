@@ -2,14 +2,14 @@
 title: Обзор средства WCF svcutil
 description: Обзор инструмента Microsoft WCF dotnet-svcutil, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично инструменту WCF svcutil для проектов .NET Framework.
 author: mlacouture
-ms.date: 08/20/2018
+ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: e42ec0d4072c56456c824a814f1b383ea70a9307
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237263"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747240"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Средство WCF dotnet-svcutil для .NET Core
 
@@ -24,12 +24,19 @@ ms.locfileid: "53237263"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) 1.0.4 или более поздней версии
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+* [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
 * Любой редактор кода
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+* [пакет SDK для .NET Core 1.0.4](https://dotnet.microsoft.com/download) или более поздней версии;
+* Любой редактор кода
+
+---
 
 ## <a name="getting-started"></a>Начало работы
 
-В следующем примере описываются шаги, необходимые для добавления ссылки на веб-службу в проект консольного приложения .NET Core и вызова службы. Вы создадите консольное приложение .NET Core с именем _HelloSvcutil_ и добавите ссылку на веб-службу, которая реализует следующий контракт:
+В следующем примере описаны шаги, необходимые для добавления ссылки на веб-службу в веб-проект .NET Core и вызова службы. Вы создадите веб-приложение .NET Core с именем _HelloSvcutil_ и добавите ссылку на веб-службу, которая реализует следующий контракт:
 
 ```csharp
 [ServiceContract]
@@ -51,13 +58,20 @@ mkdir HelloSvcutil
 cd HelloSvcutil
 ```
 
-2. Создайте в этом каталоге новый проект консольного приложения C# с помощью команд [`dotnet new`](../tools/dotnet-new.md), как показано ниже:
+2. Создайте в этом каталоге веб-проект C# с помощью команды [`dotnet new`](../tools/dotnet-new.md), как показано ниже:
 
 ```console
-dotnet new console
+dotnet new web
 ```
 
-3. Откройте в редакторе файл проекта `HelloSvcutil.csproj`, измените элемент `Project` и добавьте [пакет NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) в виде ссылки на средство командной строки, используя следующий код:
+3. Установите [`dotnet-svcutil` (пакет NuGet)](https://nuget.org/packages/dotnet-svcutil) в качестве средства CLI:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet tool install --global dotnet-svcutil
+```
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+Откройте в редакторе файл проекта `HelloSvcutil.csproj`, измените элемент `Project` и добавьте [пакет NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) в виде ссылки на средство командной строки, используя следующий код:
 
 ```xml
 <ItemGroup>
@@ -65,58 +79,94 @@ dotnet new console
 </ItemGroup>
 ```
 
-4. Восстановите пакет _dotnet-svcutil_ с помощью команды [`dotnet restore`](../tools/dotnet-restore.md), как показано ниже:
+Затем восстановите пакет _dotnet-svcutil_ с помощью команды [`dotnet restore`](../tools/dotnet-restore.md), как показано ниже:
 
 ```console
 dotnet restore
 ```
 
-5. Запустите _dotnet_ с помощью команды _svcutil_, чтобы создать файл со ссылкой на веб-службу, как показано ниже:
+---
 
+4. Выполните команду _dotnet-svcutil_, чтобы создать файл со ссылкой на веб-службу, как показано ниже:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet-svcutil http://contoso.com/SayHello.svc
+```
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
-Созданный файл сохраняется с именем _HelloSvcutil/ServiceReference1/Reference.cs_. Средство _dotnet_svcutil_ также добавляет в проект все необходимые пакеты WCF, которые указаны в коде прокси-сервера как ссылки на пакет.
+---
 
-6. Восстановите пакеты WCF с помощью команды [`dotnet restore`](../tools/dotnet-restore.md), как показано ниже:
+Созданный файл сохраняется с именем _HelloSvcutil/ServiceReference/Reference.cs_. Средство _dotnet-svcutil_ также добавляет в проект необходимые пакеты WCF, которые указаны в коде прокси-сервера как ссылки на пакеты.
+
+## <a name="using-the-service-reference"></a>Использование ссылки на службу
+
+1. Восстановите пакеты WCF с помощью команды [`dotnet restore`](../tools/dotnet-restore.md), как показано ниже:
 
 ```console
 dotnet restore
 ```
 
-7. Откройте в редакторе файл `Program.cs` и замените автоматически созданный код метода `Main()` приведенным ниже кодом для вызова веб-службы.
+2. Определите имена класса клиента и операций, которые хотите использовать. Файл `Reference.cs` будет содержать класс, наследующий свойства от `System.ServiceModel.ClientBase`, с методами, которые можно использовать для вызова операций из службы. В этом примере вызовите из службы _SayHello_ операцию _Hello_. `ServiceReference.SayHelloClient` — это имя класса клиента с методом `HelloAsync`, который можно использовать для вызова операции.
+
+3. Откройте файл `Startup.cs` в редакторе и добавьте оператор using для пространства имен ссылки на службу вверху:
 
 ```csharp
-static void Main(string[] args)
-{
-    var client = new SayHelloClient();
-    Console.WriteLine(client.HelloAsync("dotnet-svcutil").Result);
-}
+using ServiceReference;
 ```
 
-8. Запустите приложение с помощью команды [`dotnet run`](../tools/dotnet-run.md), как показано ниже:
+ 4. Измените метод `Configure` для вызова веб-службы. Для этого создайте экземпляр класса, который наследует свойства от класса `ClientBase`, и вызовите метод для объекта клиента:
+
+```csharp
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+
+    app.Run(async (context) =>
+    {
+        var client = new SayHelloClient();
+        var response = await client.HelloAsync();
+        await context.Response.WriteAsync(response);
+    });
+}
+
+```
+
+5. Запустите приложение с помощью команды [`dotnet run`](../tools/dotnet-run.md), как показано ниже:
 
 ```console
 dotnet run
 ```
+
+6. Перейдите по указанному в консоли URL-адресу (например, `http://localhost:5000`) в веб-браузере.
+
 Должны выводиться следующие данные: "Hello dotnet-svcutil!"
 
 Подробное описание параметров средства `dotnet-svcutil` можно получить, вызвав это средство с параметром help, как показано ниже:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet-svcutil --help
+```
 
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 ```console
 dotnet svcutil --help
 ```
+---
 
-## <a name="next-steps"></a>Следующие шаги
-
-### <a name="feedback--questions"></a>Отзывы и вопросы
+## <a name="feedback--questions"></a>Отзывы и вопросы
 
 Если у вас появились вопросы или отзывы, [сообщите об этом на сайте GitHub](https://github.com/dotnet/wcf/issues/new). Вы также можете просмотреть имеющиеся вопросы или проблемы [в репозитории WCF на сайте GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
-### <a name="release-notes"></a>заметки о выпуске;
+## <a name="release-notes"></a>заметки о выпуске;
 
 * Актуальные сведения о выпуске, включая описание известных проблем, см. в [заметках о выпуске](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md).
 
-### <a name="information"></a>Сведения
+## <a name="information"></a>Сведения
 
 * [Пакет NuGet dotnet-svcutil](https://nuget.org/packages/dotnet-svcutil)

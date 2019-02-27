@@ -1,6 +1,6 @@
 ---
 title: Указание полных имен типов
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628543"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747253"
 ---
-# <a name="specifying-fully-qualified-type-names"></a>Указание полных имен типов
+# <a name="specifying-fully-qualified-type-names"></a>Определение полных имен типов
 Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="grammar-for-type-names"></a>Грамматика для имен типов  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -107,7 +110,7 @@ AssemblyProperty
     ;
 ```
 
-## <a name="specifying-special-characters"></a>Указание специальных символов  
+## <a name="specifying-special-characters"></a>Определение специальных символов  
  В имени типа IDENTIFIER — любое допустимое имя, определяемое правилами языка.  
   
  Приведенные ниже лексемы при использовании в составе IDENTIFIER отделяются escape-символом в виде обратной косой черты (\\).  
@@ -131,7 +134,7 @@ AssemblyProperty
   
  Если бы использовалось пространство имен `Ozzy.Out+Back`, перед плюсом должна была бы стоять обратная косая черта. В противном случае синтаксический анализатор интерпретировал бы плюс как разделитель вложений. Отражение порождает эту строку в следующем виде: `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.  
   
-## <a name="specifying-assembly-names"></a>Указание имен сборок  
+## <a name="specifying-assembly-names"></a>Определение имен сборок  
  Единственным обязательным компонентом спецификации имени сборки является текстовое имя сборки (IDENTIFIER). За ним может следовать список разделенных запятыми пар "свойство/значение", как показано в таблице ниже. Имя IDENTIFIER должно удовлетворять правилам именования файлов. Регистр символов в имени IDENTIFIER не учитывается.  
   
 |Имя свойства.|Описание|Допустимые значения|  
@@ -177,14 +180,17 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>Определение универсальных типов
+
+SimpleTypeSpec\`NUMBER представляет открытый универсальный тип с параметрами универсального типа от 1 до *n*. Например, чтобы получить ссылку на List\<T> для открытого универсального типа или List\<String> для закрытого универсального типа, используйте ``Type.GetType("System.Collections.Generic.List`1")``. Чтобы получить ссылку на Dictionary\<TKey,TValue> для универсального типа, используйте ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
 ## <a name="specifying-pointers"></a>Определение указателей  
  Спецификация SimpleTypeSpec* представляет неуправляемый указатель. Например, для получения указателя на тип MyType можно использовать вызов метода `Type.GetType("MyType*")`. Для получения указателя на указатель на тип MyType используется вызов `Type.GetType("MyType**")`.  
   
-## <a name="specifying-references"></a>Указание ссылок  
+## <a name="specifying-references"></a>Определение ссылок  
  Спецификация SimpleTypeSpec & представляет управляемый указатель или ссылку. Например, для получения ссылки на тип MyType можно использовать вызов `Type.GetType("MyType &")`. Обратите внимание, что ссылки, в отличие от указателей, ограничены одним уровнем.  
   
-## <a name="specifying-arrays"></a>Указание массивов  
+## <a name="specifying-arrays"></a>Определение массивов  
  В БНФ спецификация ReflectionEmitDimension применяется только в отношении неполных определений типов, полученных с использованием метода <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. К неполным определениям типов относятся объекты <xref:System.Reflection.Emit.TypeBuilder>, созданные с помощью метода <xref:System.Reflection.Emit?displayProperty=nameWithType>, но для которых не был выполнен вызов <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>. Спецификацию ReflectionDimension можно использовать для получения любого полного определения типа, то есть типа, который уже загружен.  
   
  Доступ к массиву при отражении осуществляется путем указания размерности массива:  
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` — получение одномерного массива с нижней границей 0.  
   
 -   `Type.GetType("MyArray[*]")` — получение одномерного массива с неизвестной нижней границей.  
-  
 -   `Type.GetType("MyArray[][]")` — получение массива двумерных массивов.  
   
 -   `Type.GetType("MyArray[*,*]")` и `Type.GetType("MyArray[,]")` — получение прямоугольного двумерного массива с неизвестными нижними границами.  

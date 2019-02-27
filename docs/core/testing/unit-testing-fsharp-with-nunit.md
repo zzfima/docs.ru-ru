@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241766"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746050"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек F# в .NET Core с использованием dotnet-test и NUnit
 
@@ -45,7 +45,7 @@ dotnet new sln
 dotnet new classlib -lang F#
 ```
 
-Чтобы использовать разработку на основе тестирования (TDD), требуется создать реализацию службы вычислений со сбоем:
+Создайте реализацию службы вычислений со сбоем:
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Откройте файл *UnitTest1.fs* и добавьте следующий код:
+Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. Откройте файл *UnitTest1.fs* и добавьте следующий код:
 
 ```fsharp
 namespace MathService.Tests

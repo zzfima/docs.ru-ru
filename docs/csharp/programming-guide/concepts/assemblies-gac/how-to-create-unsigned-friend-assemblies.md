@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание неподписанных дружественных сборок (C#)
+title: Как выполнить  Создание неподписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf9a8bd18a1b98ae5e128ca67ca185baa7d599d
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703228"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745267"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Как выполнить Создание неподписанных дружественных сборок (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Как выполнить  Создание неподписанных дружественных сборок (C#)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
@@ -93,7 +93,7 @@ ms.locfileid: "54703228"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Практическое руководство. Создание подписанных дружественных сборок в C#](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

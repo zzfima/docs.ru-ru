@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio в C#
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd03154f9f4defdedd0694fe10398c6f62d920df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500633"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746932"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio в C#
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.  
@@ -237,4 +237,4 @@ ms.locfileid: "54500633"
 - [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
 - [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)
-- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239161"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746880"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 
@@ -44,7 +44,7 @@ dotnet new sln
 dotnet new classlib -lang VB
 ```
 
-Переименуйте *Class1.VB* в *PrimeService.VB*. Чтобы использовать разработку на основе тестирования (TDD), требуется создать сбойную реализацию класса `PrimeService`:
+Переименуйте *Class1.VB* в *PrimeService.VB*. Создайте сбойную реализацию класса `PrimeService`:
 
 ```vb
 Imports System
@@ -116,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.vb* в *PrimeService_IsPrimeShould.VB* и замените его содержимое следующим кодом:
+Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.vb* в *PrimeService_IsPrimeShould.VB* и замените его содержимое следующим кодом:
 
 ```vb
 Imports NUnit.Framework

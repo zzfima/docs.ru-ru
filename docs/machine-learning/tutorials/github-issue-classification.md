@@ -1,15 +1,15 @@
 ---
 title: Использование ML.NET для сценариев многоклассовой классификации задач GitHub
 description: Узнайте, как использовать ML.NET для сценариев многоклассовой классификации, чтобы назначать задачи GitHub определенным областям.
-ms.date: 02/14/2019
+ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333525"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584295"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Учебник. Использование ML.NET для сценариев многоклассовой классификации задач GitHub
 
@@ -114,7 +114,7 @@ ms.locfileid: "56333525"
 
 ### <a name="create-a-project"></a>Создание проекта
 
-1. Откройте Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "Анализ тональности" и нажмите кнопку **ОК**.
+1. Откройте Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовое поле **Имя** введите GitHubIssueClassification, а затем нажмите кнопку **ОК**.
 
 2. Создайте каталог с именем *Data* в папке проекта, чтобы сохранить в нем файлы с наборами данных:
 
@@ -255,6 +255,9 @@ public static EstimatorChain<ITransformer> ProcessData()
  Затем добавьте <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> для кэширования DataView, которое может ускорить обучение при многократных итерациях по данным, используя следующий код:
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
+
+> [!WARNING]
+> Используйте AppendCacheCheckpoint для небольших и средних наборов данных для ускорения обучения. НЕ используйте AppendCacheCheckpoint (удалите .AppendCacheCheckpoint()) при обработке очень больших наборов данных.
 
 Выполните возврат конвейера в конце метода `ProcessData`.
 

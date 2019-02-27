@@ -1,13 +1,13 @@
 ---
 title: Каталог идентификаторов сред выполнения (RID) в .NET Core
 description: Сведения об идентификаторах сред выполнения и их использовании в .NET Core.
-ms.date: 07/19/2018
-ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534552"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745746"
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
 
@@ -35,7 +35,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 
 - `[architecture]` — это архитектура процессора. Например, `x86`, `x64`, `arm` или `arm64`.
 
-- `[additional qualifiers]` дополнительно дифференцируют разные платформы. Пример: `aot` или `corert`.
+- `[additional qualifiers]` дополнительно дифференцируют разные платформы. Например, `aot`.
 
 ## <a name="rid-graph"></a>Схема RID
 
@@ -82,22 +82,22 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют. В платформу регулярно добавляются новые идентификаторы.
 Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
-SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС. Их особенно удобно использовать при работе с несколькими дистрибутивами Linux.
+SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленные в граф RID, которые не привязаны к конкретной версии или дистрибутиву ОС и рекомендуются для использования с .NET Core 2.0 и более поздних версий. Они особенно удобны во время работы с несколькими дистрибутивами Linux, так как большинство идентификаторов RID дистрибутивов сопоставлено с переносными идентификаторами RID.
 
-Ниже представлен список наиболее распространенных RID, используемых для каждой ОС. Он не охватывает значения `arm` или `corert`.
+Ниже представлена небольшая выборка наиболее распространенных RID, используемых для каждой ОС.
 
 ## <a name="windows-rids"></a>Идентификаторы RID для Windows
 
-- Портативные
-  - `win-x86`
+Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
+
+- Переносные (.NET Core 2.0 или более поздние версии):
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7 или Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8 или Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1 или Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -112,87 +112,40 @@ SDK для .NET Core 2.0 представляет концепцию перен
 
 ## <a name="linux-rids"></a>Идентификаторы RID для Linux
 
-- Портативные
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64` (.NET Core 1.1 или более поздние версии)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64` (.NET Core 1.1 или более поздние версии)
-- Gentoo (.NET Core 2.0 или более поздние версии)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX. Устройства с дистрибутивами, не перечисленными ниже, могут работать с одним из переносных идентификаторов RID. Например, для устройств Raspberry Pi с дистрибутивом Linux, которого нет в списке, можно использовать `linux-arm`.
+
+- Переносные (.NET Core 2.0 или более поздние версии):
+  - `linux-x64` (большинство дистрибутивов для компьютеров, например CentOS, Debian, Fedora, Ubuntu и производные от них);
+  - `linux-musl-x64` (упрощенные дистрибутивы, которые используют [musl](https://wiki.musl-libc.org/projects-using-musl.html), например Alpine Linux);
+  - `linux-arm` (дистрибутивы Linux, которые работают на архитектуре ARM, например Raspberry Pi).
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (заменен на `linux-x64` для RHEL новее версии 6);
   - `rhel.6-x64` (.NET Core 2.0 или более поздние версии)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64` (.NET Core 2.0 или более поздние версии)
-  - `rhel.7.4-x64` (.NET Core 2.0 или более поздние версии)
 - Tizen (.NET Core 2.0 или более поздние версии)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Производные дистрибутивы Ubuntu
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64` (.NET Core 2.0 или более поздние версии)
-  - `linuxmint.18.1-x64` (.NET Core 2.0 или более поздние версии)
-  - `linuxmint.18.2-x64` (.NET Core 2.0 или более поздние версии)
-  - `linuxmint.18.3-x64` (.NET Core 2.0 или более поздние версии)
-- SUSE Enterprise Linux (SLES) (.NET Core 2.0 или более поздних версий)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux (.NET Core 2.1 или более поздних версий)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).
 
 ## <a name="macos-rids"></a>Относительные идентификаторы macOS
 
-Относительные идентификаторы macOS используют старую фирменную символику "OSX".
+Относительные идентификаторы macOS используют старую фирменную символику "OSX". Перечислены только распространенные значения. Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
-- `osx-x64` (.NET Core 2.0 или более поздние версии, минимальная версия — `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64` (.NET Core 1.1 или более поздние версии)
-- `osx.10.13-x64`
+- Переносные (.NET Core 2.0 или более поздние версии):
+  - `osx-x64` (минимальная версия — macOS 10.12 Sierra).
+- macOS 10.10 Yosemite:
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan:
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra (.NET Core 1.1 или более поздние версии):
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra (.NET Core 1.1 или более поздние версии):
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave (.NET Core 1.1 или более поздние версии):
+  - `osx.10.14-x64`
 
 Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в macOS](macos-prerequisites.md).
-
-## <a name="android-rids-net-core-20-or-later-versions"></a>Идентификаторы RID для Android (.NET Core 2.0 или более поздние версии)
-
-- `android`
-- `android.21`
 
 ## <a name="see-also"></a>См. также
 

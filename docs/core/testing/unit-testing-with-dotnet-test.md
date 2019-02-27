@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: f84792e5d973f2b2d8bcf418f68e7038fd7a81f5
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738738"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747854"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit
 
@@ -28,7 +28,7 @@ ms.locfileid: "55738738"
     /PrimeService
 ```
 
-Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.cs* в *PrimeService.cs*. Чтобы использовать разработку на основе тестирования (TDD), сначала требуется создать сбойную реализацию класса `PrimeService`:
+Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.cs* в *PrimeService.cs*. Сначала создайте сбойную реализацию класса `PrimeService`:
 
 ```csharp
 using System;
@@ -105,7 +105,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Удалите файл *UnitTest1.cs* из каталога *PrimeService.Tests* и создайте новый файл C# с именем *PrimeService_IsPrimeShould.cs*. Добавьте следующий код:
+Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. Удалите файл *UnitTest1.cs* из каталога *PrimeService.Tests* и создайте новый файл C# с именем *PrimeService_IsPrimeShould.cs*. Добавьте следующий код:
 
 ```csharp
 using Xunit;

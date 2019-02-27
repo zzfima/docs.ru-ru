@@ -3,12 +3,12 @@ title: Дополнения к формату CSPROJ для .NET Core
 description: Различия между существующими файлами и файлами CSPROJ .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222068"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748014"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -97,26 +97,26 @@ ms.locfileid: "54222068"
 Чтобы использовать инструменты и выполнять сборку кода .NET Core, в качестве значения атрибута `Sdk` в элементе `<Project>` нужно задать один из этих идентификаторов. 
 
 ### <a name="packagereference"></a>PackageReference
-Элемент `<PackageReference>`, определяющий зависимость NuGet в проекте. Атрибут `Include` указывает идентификатор пакета. 
+Элемент `<PackageReference>` указывает [зависимость NuGet в проекте](/nuget/consume-packages/package-references-in-project-files). Атрибут `Include` указывает идентификатор пакета. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Версия
-`Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/create-packages/dependency-versions#version-ranges). По умолчанию выбирается точное соответствие версии. Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.
+Обязательный атрибут `Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). По умолчанию выбирается точное соответствие версии. Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets и PrivateAssets
-Атрибут `IncludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. 
+Атрибут `IncludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. По умолчанию включаются все ресурсы пакета.
 
 Атрибут `ExcludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, не следует использовать.
 
-Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать, но не следует передавать в следующий проект. 
+Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать, но не следует передавать в следующий проект. Если этот атрибут отсутствует, ресурсы `Analyzers`, `Build` и `ContentFiles` по умолчанию являются частными.
 
 > [!NOTE]
 > `PrivateAssets` эквивалентен элементу *project.json*/*xproj* `SuppressParent`.
 
-Эти атрибуты могут содержать по меньшей мере один из перечисленных ниже элементов.
+Эти атрибуты могут содержать один или несколько следующих элементов (если их больше одного, они разделяются точкой с запятой `;`):
 
 * `Compile` — содержимое папки lib доступно для компиляции.
 * `Runtime` — содержимое папки среды выполнения распределяется.
@@ -206,12 +206,64 @@ ms.locfileid: "54222068"
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 Логическое значение, указывающее, должен ли клиент просить потребителя принять условия лицензии перед установкой пакета. Значение по умолчанию — `false`.
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Выражение лицензии SPDX или путь к файлу лицензии в пакете, часто отображается в пользовательском интерфейсе и на сайте nuget.org.
+
+Здесь приведен полный список [идентификаторов лицензии SPDX](https://spdx.org/licenses/). Если используется выражение типа лицензии, NuGet.org принимает только утвержденные OSI или FSF лицензии.
+
+Точный синтаксис выражений лицензии описан ниже в спецификации метаязыка [ABNF](https://tools.ietf.org/html/rfc5234).
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> За один раз можно указать только одно из свойств `PackageLicenseExpression`, `PackageLicenseFile` и `PackageLicenseUrl`.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Путь к файлу лицензии в пакете, если вы используете лицензию, которой не назначен идентификатор SPDX, или пользовательскую лицензию (в противном случае предпочтительнее использовать свойство `PackageLicenseExpression`).
+
+> [!NOTE]
+> За один раз можно указать только одно из свойств `PackageLicenseExpression`, `PackageLicenseFile` и `PackageLicenseUrl`.
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-URL-адрес лицензии, применимой к пакету.
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-URL-адрес для домашней страницы пакета, часто указываемый при отображении пользовательского интерфейса, также как и nuget.org.
+URL-адрес лицензии, применимой к пакету. (_Отмечено как нерекомендуемое начиная с Visual Studio версии 15.9.4, пакета SDK для .NET 2.1.502 и 2.2.101._)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+[Идентификатор лицензии SPDX](https://spdx.org/licenses/) или выражение, т. е. `Apache-2.0`.
+
+Заменяет свойство `PackageLicenseUrl`, не может сочетаться со свойством `PackageLicenseFile`. Требуется Visual Studio версии 15.9.4 и пакет SDK для .NET 2.1.502, 2.2.101 или более поздней версии.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Путь к файлу лицензии на диске относительно файла проекта, т. е. `LICENSE.txt`.
+
+Заменяет свойство `PackageLicenseUrl`, не может сочетаться со свойством `PackageLicenseExpression`. Требуется Visual Studio версии 15.9.4, пакет SDK для .NET 2.1.502, 2.2.101 или более поздней версии.
+
+Вам необходимо убедиться, что файл лицензии упакован. Для этого явно добавьте его в проект. Пример использования:
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 URL-адрес для изображения размером 64x64 с прозрачным фоном, используемого в качестве значка для пакета при отображении пользовательского интерфейса.
 

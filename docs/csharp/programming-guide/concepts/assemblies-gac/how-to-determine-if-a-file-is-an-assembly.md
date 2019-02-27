@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Определение того, является ли файл сборкой (C#)
+title: Как выполнить  Определение того, является ли файл сборкой (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681772"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745254"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Как выполнить Определение того, является ли файл сборкой (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Как выполнить  Определение того, является ли файл сборкой (C#)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Как вручную определить, является ли файл сборкой  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Сборки в .NET](../../../../standard/assembly/index.md)

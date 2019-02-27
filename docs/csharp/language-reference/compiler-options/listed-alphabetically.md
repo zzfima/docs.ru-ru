@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653753"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583658"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 
@@ -36,6 +36,10 @@ ms.locfileid: "54653753"
 |[-delaysign](delaysign-compiler-option.md)|Отложенная подпись сборки с помощью только открытой части ключа строгого имени.|
 |[-deterministic](deterministic-compiler-option.md)|Указывает компилятору на необходимость вывода сборки, чье двоичное содержимое идентично в разных компиляциях, если входные данные идентичны.|
 |[-doc](doc-compiler-option.md)|Задает создаваемый XML-файл документации.|
+|-embed|Внедрение всех исходных файлов в PDB-файл.|
+|-embed:\<список_файлов>|Внедрение определенных файлов в PDB-файл.|
+|-errorendlocation|Выходные строка и столбец конечного расположения каждой ошибки.|
+|-errorlog:\<файл>|Укажите файл для записи данных диагностики компилятора и анализатора в журнал.|
 |[-errorreport](errorreport-compiler-option.md)|Указывает способ обработки внутренних ошибок компилятора: prompt, send или none. Значение по умолчанию — none.|
 |[-filealign](filealign-compiler-option.md)|Указывает выравнивание для разделов выходного файла.|
 |[/fullpaths](fullpaths-compiler-option.md)|Указывает компилятору создавать полные пути.|
@@ -68,12 +72,14 @@ ms.locfileid: "54653753"
 |[-reference](reference-compiler-option.md)|Ссылается на метаданные из указанных файлов сборки.|
 |[/refout](refout-compiler-option.md)|Создание ссылочной сборки в дополнение к основной.|
 |[/refonly](refonly-compiler-option.md)|Создание ссылочной сборки вместо основной.|
+|-reportanalyzer|Включение в отчет дополнительных сведений об анализаторе, включая время выполнения.|
 |[-resource](resource-compiler-option.md)|Внедряет указанный ресурс.|
 |-ruleset:\<файл>|Укажите файл набора правил, который отключает определенные диагностики.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|
 |[-target](target-compiler-option.md)|Задает формат выходного файла, используя один из четырех параметров: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md).|
 |[/unsafe](unsafe-compiler-option.md)|Разрешает небезопасный ([unsafe](../../../csharp/language-reference/keywords/unsafe.md)) код.|
 |[-utf8output](utf8output-compiler-option.md)|Выводит сообщения компилятора в кодировке UTF-8.|
+|-version|Отображение номера версии компилятора и выход.|
 |[/warn](warn-compiler-option.md)|Устанавливает уровень предупреждений (0–4).|
 |[-warnaserror](warnaserror-compiler-option.md)|Задает интерпретацию определенных предупреждений как ошибок.|
 |[-win32icon](win32icon-compiler-option.md)|Задает использование этого значка для вывода.|
