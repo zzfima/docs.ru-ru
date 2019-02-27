@@ -1,5 +1,5 @@
 ---
-title: Файловый ввод-вывод файла структуры с полем "<fieldname>«типа»<typename>" является недопустимым
+title: Файловый ввод-вывод файла структуры с полем '<fieldname>«типа»<typename>' является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55262943"
 ---
-# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a><span data-ttu-id="f0c59-102">Файловый ввод-вывод файла структуры с полем "\<имя_поля >" типа "\<typename >" является недопустимым</span><span class="sxs-lookup"><span data-stu-id="f0c59-102">File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid</span></span>
-<span data-ttu-id="f0c59-103">Структура, которую вы пытаетесь записать в файл, содержит неподдерживаемый тип.</span><span class="sxs-lookup"><span data-stu-id="f0c59-103">The structure you are attempting to write to a file contains an unsupported type.</span></span>  
+# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a><span data-ttu-id="83746-102">Файловый ввод-вывод файла структуры с полем '\<имя_поля >' типа '\<typename >' является недопустимым</span><span class="sxs-lookup"><span data-stu-id="83746-102">File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid</span></span>
+<span data-ttu-id="83746-103">Структура, которую вы пытаетесь записать в файл, содержит неподдерживаемый тип.</span><span class="sxs-lookup"><span data-stu-id="83746-103">The structure you are attempting to write to a file contains an unsupported type.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f0c59-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f0c59-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="83746-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="83746-104">To correct this error</span></span>  
   
--   <span data-ttu-id="f0c59-105">Проверьте структуру, чтобы определить, где содержится неподдерживаемый тип, и измените его на допустимый тип.</span><span class="sxs-lookup"><span data-stu-id="f0c59-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
+-   <span data-ttu-id="83746-105">Проверьте структуру, чтобы определить, где содержится неподдерживаемый тип, и измените его на допустимый тип.</span><span class="sxs-lookup"><span data-stu-id="83746-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0c59-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f0c59-106">See also</span></span>
-- [<span data-ttu-id="f0c59-107">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="f0c59-107">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
-- [<span data-ttu-id="f0c59-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="f0c59-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="83746-106">См. также</span><span class="sxs-lookup"><span data-stu-id="83746-106">See also</span></span>
+- [<span data-ttu-id="83746-107">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="83746-107">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+- [<span data-ttu-id="83746-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="83746-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

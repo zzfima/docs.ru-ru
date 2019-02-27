@@ -1,5 +1,5 @@
 ---
-title: Файл "<filename>" не найден
+title: Файл '<filename>' не найден
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileNotFound1
@@ -11,12 +11,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55274525"
 ---
-# <a name="file-filename-not-found"></a><span data-ttu-id="d9b7e-102">Файл "\<имя_файла >" не найден</span><span class="sxs-lookup"><span data-stu-id="d9b7e-102">File '\<filename>' not found</span></span>
-<span data-ttu-id="d9b7e-103">Указано неверное имя файла или файл не существует.</span><span class="sxs-lookup"><span data-stu-id="d9b7e-103">A file name is incorrect or the file does not exist.</span></span>  
+# <a name="file-filename-not-found"></a><span data-ttu-id="3afed-102">Файл '\<имя_файла >' не найден</span><span class="sxs-lookup"><span data-stu-id="3afed-102">File '\<filename>' not found</span></span>
+<span data-ttu-id="3afed-103">Указано неверное имя файла или файл не существует.</span><span class="sxs-lookup"><span data-stu-id="3afed-103">A file name is incorrect or the file does not exist.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d9b7e-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d9b7e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3afed-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="3afed-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="d9b7e-105">Убедитесь, что имя файла указано правильно.</span><span class="sxs-lookup"><span data-stu-id="d9b7e-105">Ensure that the file name is correct and that it exists.</span></span>  
+1.  <span data-ttu-id="3afed-105">Убедитесь, что имя файла указано правильно.</span><span class="sxs-lookup"><span data-stu-id="3afed-105">Ensure that the file name is correct and that it exists.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9b7e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d9b7e-106">See also</span></span>
-- [<span data-ttu-id="d9b7e-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="d9b7e-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+## <a name="see-also"></a><span data-ttu-id="3afed-106">См. также</span><span class="sxs-lookup"><span data-stu-id="3afed-106">See also</span></span>
+- [<span data-ttu-id="3afed-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="3afed-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
