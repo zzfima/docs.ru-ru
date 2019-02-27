@@ -1,5 +1,5 @@
 ---
-title: Файловый ввод-вывод с типом "<typename>" является недопустимым
+title: Файловый ввод-вывод с типом '<typename>' является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedIOType1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55276515"
 ---
-# <a name="file-io-with-type-typename-is-not-valid"></a>Файловый ввод-вывод с типом "\<typename >" является недопустимым
+# <a name="file-io-with-type-typename-is-not-valid"></a>Файловый ввод-вывод с типом '\<typename >' является недопустимым
 Попытка записи в файл неподдерживаемого типа.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

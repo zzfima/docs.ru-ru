@@ -1,5 +1,5 @@
 ---
-title: Не удается преобразовать аргумент "<argumentname>«типа»<type1>«в тип»<type2>"
+title: Не удается преобразовать аргумент '<argumentname>«типа»<type1>«в тип»<type2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55264522"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Не удается преобразовать аргумент "\<имя_аргумента >" типа "\<тип1 >" к типу "\<тип2 >"
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Не удается преобразовать аргумент '\<имя_аргумента >' типа '\<тип1 >' к типу '\<тип2 >'
 Операция преобразования пытается преобразовать аргумент в несовместимый тип.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

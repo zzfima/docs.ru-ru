@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" не может быть многомерным массивом
+title: Аргумент '<argumentname>' не может быть многомерным массивом
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RankEQOne1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55270788"
 ---
-# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>Аргумент "\<имя_аргумента >" не может быть многомерным массивом
+# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>Аргумент '\<имя_аргумента >' не может быть многомерным массивом
 Ранг аргумента массива больше единицы, однако массив может быть только одномерным.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

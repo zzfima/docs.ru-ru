@@ -1,5 +1,5 @@
 ---
-title: Файл "<filename>" не найден
+title: Файл '<filename>' не найден
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55274525"
 ---
-# <a name="file-filename-not-found"></a>Файл "\<имя_файла >" не найден
+# <a name="file-filename-not-found"></a>Файл '\<имя_файла >' не найден
 Указано неверное имя файла или файл не существует.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

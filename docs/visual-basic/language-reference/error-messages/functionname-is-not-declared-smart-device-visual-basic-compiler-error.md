@@ -1,5 +1,5 @@
 ---
-title: "\"<functionname>\" не объявлен (смарт-устройства-Ошибка компилятора Visual Basic)"
+title: "'<functionname>' не объявлен (смарт-устройства-Ошибка компилятора Visual Basic)"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30766
@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55274629"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>"\<имя_функции >" не объявлен (смарт-устройств/Ошибка компилятора Visual Basic)
+# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<имя_функции >' не объявлен (смарт-устройств/Ошибка компилятора Visual Basic)
 <`functionname`> не объявлен. Функциональные возможности файлового ввода-вывода обычно предоставляются пространством имен `Microsoft.VisualBasic` , однако целевая платформа .NET Compact Framework его не поддерживает.  
   
  **Идентификатор ошибки:** BC30766  

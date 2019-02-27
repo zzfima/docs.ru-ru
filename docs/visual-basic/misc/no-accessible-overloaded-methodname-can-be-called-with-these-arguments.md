@@ -1,5 +1,5 @@
 ---
-title: Нет доступных перегруженных "<methodname>" может вызываться с этими аргументами без преобразования с сужением
+title: Нет доступных перегруженных '<methodname>' может вызываться с этими аргументами без преобразования с сужением
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55260402"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами без преобразования с сужением
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Нет доступных перегруженных '\<имя_метода >' может вызываться с этими аргументами без преобразования с сужением
 Вызван перегруженный метод, однако ни один метод не может быть сопоставлен со списком предоставленных аргументов без сужающего преобразования.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

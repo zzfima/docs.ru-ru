@@ -1,5 +1,5 @@
 ---
-title: Вложенная функция не имеет сигнатуры, совместимой с делегатом "<delegatename>"
+title: Вложенная функция не имеет сигнатуры, совместимой с делегатом '<delegatename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc36532
@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55283469"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Вложенная функция не имеет сигнатуры, совместимой с делегатом "\<имя_делегата >"
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Вложенная функция не имеет сигнатуры, совместимой с делегатом '\<имя_делегата >'
 Лямбда-выражение, явно назначенной делегат, который имеет несовместимую сигнатуру. Например, в следующем коде, делегировать `Del` имеет два целочисленных параметра.  
   
 ```vb  

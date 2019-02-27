@@ -1,5 +1,5 @@
 ---
-title: Файловый ввод-вывод файла структуры с полем "<fieldname>«типа»<typename>" является недопустимым
+title: Файловый ввод-вывод файла структуры с полем '<fieldname>«типа»<typename>' является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55262943"
 ---
-# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Файловый ввод-вывод файла структуры с полем "\<имя_поля >" типа "\<typename >" является недопустимым
+# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Файловый ввод-вывод файла структуры с полем '\<имя_поля >' типа '\<typename >' является недопустимым
 Структура, которую вы пытаетесь записать в файл, содержит неподдерживаемый тип.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

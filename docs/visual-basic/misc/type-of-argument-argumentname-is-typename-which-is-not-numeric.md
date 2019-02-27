@@ -1,5 +1,5 @@
 ---
-title: Тип аргумента "<argumentname>«is»<typename>", который не является числовым
+title: Тип аргумента '<argumentname>«is»<typename>', который не является числовым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55254591"
 ---
-# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Тип аргумента "\<имя_аргумента >" является "\<typename >", который не является числовым
+# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Тип аргумента '\<имя_аргумента >' является '\<typename >', который не является числовым
 Вместо ожидаемого числового аргумента используется нечисловой.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

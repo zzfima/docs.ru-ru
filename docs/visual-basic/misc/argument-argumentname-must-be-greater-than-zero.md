@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" должно быть больше нуля
+title: Аргумент '<argumentname>' должно быть больше нуля
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55286472"
 ---
-# <a name="argument-argumentname-must-be-greater-than-zero"></a>Аргумент "\<имя_аргумента >" должен быть больше нуля
+# <a name="argument-argumentname-must-be-greater-than-zero"></a>Аргумент '\<имя_аргумента >' должен быть больше нуля
 Аргумент недопустим, так как он меньше или равен нулю.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

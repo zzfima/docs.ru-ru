@@ -1,5 +1,5 @@
 ---
-title: 'Нет доступных перегруженных "<methodname>" может вызываться с этими аргументами: <list>'
+title: "Нет доступных перегруженных '<methodname>' может вызываться с этими аргументами: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_ExactMatch2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55278997"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a>Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами: \<список >
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a>Нет доступных перегруженных '\<имя_метода >' может вызываться с этими аргументами: \<список >
 Вызывается перегруженный метод, однако списку указанных аргументов не соответствует ни один метод.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
