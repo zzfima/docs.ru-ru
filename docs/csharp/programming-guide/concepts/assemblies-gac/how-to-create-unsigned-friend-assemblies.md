@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создание неподписанных дружественных сборок (C#)
+title: Как выполнить  Создание неподписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf9a8bd18a1b98ae5e128ca67ca185baa7d599d
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703228"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745267"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="93649-102">Как выполнить Создание неподписанных дружественных сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="93649-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
-<span data-ttu-id="93649-103">В этом примере показано использование дружественных сборок с неподписанными сборками.</span><span class="sxs-lookup"><span data-stu-id="93649-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="f54e9-102">Как выполнить  Создание неподписанных дружественных сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="f54e9-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
+<span data-ttu-id="f54e9-103">В этом примере показано использование дружественных сборок с неподписанными сборками.</span><span class="sxs-lookup"><span data-stu-id="f54e9-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="93649-104">Создание сборки и дружественной сборки</span><span class="sxs-lookup"><span data-stu-id="93649-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="f54e9-104">Создание сборки и дружественной сборки</span><span class="sxs-lookup"><span data-stu-id="f54e9-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="93649-105">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="93649-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="f54e9-105">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="f54e9-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="93649-106">Создайте файл C# с именем `friend_unsigned_A.`, содержащий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="93649-106">Create a C# file named `friend_unsigned_A.` that contains the following code.</span></span> <span data-ttu-id="93649-107">Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_unsigned_В в качестве дружественной сборки.</span><span class="sxs-lookup"><span data-stu-id="93649-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_unsigned_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="f54e9-106">Создайте файл C# с именем `friend_unsigned_A.`, содержащий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="f54e9-106">Create a C# file named `friend_unsigned_A.` that contains the following code.</span></span> <span data-ttu-id="f54e9-107">Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_unsigned_В в качестве дружественной сборки.</span><span class="sxs-lookup"><span data-stu-id="f54e9-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_unsigned_B as a friend assembly.</span></span>  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ ms.locfileid: "54703228"
     }  
     ```  
   
-3.  <span data-ttu-id="93649-108">Скомпилируйте и подпишите сборку friend_unsigned_A с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="93649-108">Compile and sign friend_unsigned_A by using the following command.</span></span>  
+3.  <span data-ttu-id="f54e9-108">Скомпилируйте и подпишите сборку friend_unsigned_A с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="f54e9-108">Compile and sign friend_unsigned_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  <span data-ttu-id="93649-109">Создайте файл C# с именем `friend_unsigned_B`, содержащий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="93649-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="93649-110">Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `internal` из friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="93649-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="f54e9-109">Создайте файл C# с именем `friend_unsigned_B`, содержащий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="f54e9-109">Create a C# file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="f54e9-110">Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `internal` из friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="f54e9-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `internal` types and members from friend_unsigned_A.</span></span>  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,25 +75,25 @@ ms.locfileid: "54703228"
     }  
     ```  
   
-5.  <span data-ttu-id="93649-111">Скомпилируйте сборку friend_unsigned_В с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="93649-111">Compile friend_unsigned_B by using the following command.</span></span>  
+5.  <span data-ttu-id="f54e9-111">Скомпилируйте сборку friend_unsigned_В с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="f54e9-111">Compile friend_unsigned_B by using the following command.</span></span>  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     <span data-ttu-id="93649-112">Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="93649-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="93649-113">Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.</span><span class="sxs-lookup"><span data-stu-id="93649-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="93649-114">Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="93649-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
+     <span data-ttu-id="f54e9-112">Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="f54e9-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="f54e9-113">Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.</span><span class="sxs-lookup"><span data-stu-id="f54e9-113">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span> <span data-ttu-id="f54e9-114">Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="f54e9-114">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-6.  <span data-ttu-id="93649-115">Запустите файл friend_unsigned_B.exe.</span><span class="sxs-lookup"><span data-stu-id="93649-115">Run the friend_unsigned_B.exe file.</span></span>  
+6.  <span data-ttu-id="f54e9-115">Запустите файл friend_unsigned_B.exe.</span><span class="sxs-lookup"><span data-stu-id="f54e9-115">Run the friend_unsigned_B.exe file.</span></span>  
   
-     <span data-ttu-id="93649-116">Программа выведет две строки: Class1.Test и Class2.Test.</span><span class="sxs-lookup"><span data-stu-id="93649-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="f54e9-116">Программа выведет две строки: Class1.Test и Class2.Test.</span><span class="sxs-lookup"><span data-stu-id="f54e9-116">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="93649-117">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="93649-117">.NET Framework Security</span></span>  
- <span data-ttu-id="93649-118">Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство.</span><span class="sxs-lookup"><span data-stu-id="93649-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="93649-119">Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.</span><span class="sxs-lookup"><span data-stu-id="93649-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="f54e9-117">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f54e9-117">.NET Framework Security</span></span>  
+ <span data-ttu-id="f54e9-118">Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство.</span><span class="sxs-lookup"><span data-stu-id="f54e9-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="f54e9-119">Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.</span><span class="sxs-lookup"><span data-stu-id="f54e9-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93649-120">См. также</span><span class="sxs-lookup"><span data-stu-id="93649-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f54e9-120">См. также</span><span class="sxs-lookup"><span data-stu-id="f54e9-120">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="93649-121">Сборки и глобальный кэш сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="93649-121">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-- [<span data-ttu-id="93649-122">Дружественные сборки (C#)</span><span class="sxs-lookup"><span data-stu-id="93649-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
-- [<span data-ttu-id="93649-123">Практическое руководство. Создание подписанных дружественных сборок в C#</span><span class="sxs-lookup"><span data-stu-id="93649-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [<span data-ttu-id="93649-124">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="93649-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="f54e9-121">Сборки в .NET</span><span class="sxs-lookup"><span data-stu-id="f54e9-121">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="f54e9-122">Дружественные сборки (C#)</span><span class="sxs-lookup"><span data-stu-id="f54e9-122">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [<span data-ttu-id="f54e9-123">Практическое руководство. Создание подписанных дружественных сборок в C#</span><span class="sxs-lookup"><span data-stu-id="f54e9-123">How to: Create Signed Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [<span data-ttu-id="f54e9-124">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="f54e9-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
