@@ -8,43 +8,43 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7e0587d7737d99d48fcc9cd4a102e78248a55e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565115"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979948"
 ---
-# <a name="take-while-clause-visual-basic"></a><span data-ttu-id="3117f-102">Предложение Take While (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3117f-102">Take While Clause (Visual Basic)</span></span>
-<span data-ttu-id="3117f-103">Включает элементы в коллекцию, если заданное условие имеет значение `true`, и пропускает остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="3117f-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
+# <a name="take-while-clause-visual-basic"></a><span data-ttu-id="8fc1e-102">Предложение Take While (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc1e-102">Take While Clause (Visual Basic)</span></span>
+<span data-ttu-id="8fc1e-103">Включает элементы в коллекцию, если заданное условие имеет значение `true`, и пропускает остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3117f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3117f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fc1e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8fc1e-104">Syntax</span></span>  
   
 ```  
 Take While expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="3117f-105">Части</span><span class="sxs-lookup"><span data-stu-id="3117f-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="8fc1e-105">Части</span><span class="sxs-lookup"><span data-stu-id="8fc1e-105">Parts</span></span>  
   
-|<span data-ttu-id="3117f-106">Термин</span><span class="sxs-lookup"><span data-stu-id="3117f-106">Term</span></span>|<span data-ttu-id="3117f-107">Определение</span><span class="sxs-lookup"><span data-stu-id="3117f-107">Definition</span></span>|  
+|<span data-ttu-id="8fc1e-106">Термин</span><span class="sxs-lookup"><span data-stu-id="8fc1e-106">Term</span></span>|<span data-ttu-id="8fc1e-107">Определение</span><span class="sxs-lookup"><span data-stu-id="8fc1e-107">Definition</span></span>|  
 |---|---|  
-|`expression`|<span data-ttu-id="3117f-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="3117f-108">Required.</span></span> <span data-ttu-id="3117f-109">Выражение, которое представляет условие для проверки элементов.</span><span class="sxs-lookup"><span data-stu-id="3117f-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="3117f-110">Выражение должно возвращать `Boolean` значение или функциональный эквивалент, например `Integer` для оценки в качестве `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="3117f-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
+|`expression`|<span data-ttu-id="8fc1e-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-108">Required.</span></span> <span data-ttu-id="8fc1e-109">Выражение, которое представляет условие для проверки элементов.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="8fc1e-110">Выражение должно возвращать `Boolean` значение или функциональный эквивалент, например `Integer` для оценки в качестве `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3117f-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="3117f-111">Remarks</span></span>  
- <span data-ttu-id="3117f-112">`Take While` Предложение включает элементы от начала результата запроса до предоставленного `expression` возвращает `false`.</span><span class="sxs-lookup"><span data-stu-id="3117f-112">The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="3117f-113">После `expression` возвращает `false`, запрос будет выполнять все оставшиеся элементы.</span><span class="sxs-lookup"><span data-stu-id="3117f-113">After the `expression` returns `false`, the query will bypass all remaining elements.</span></span> <span data-ttu-id="3117f-114">`expression` Игнорируется для оставшихся результатов.</span><span class="sxs-lookup"><span data-stu-id="3117f-114">The `expression` is ignored for the remaining results.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8fc1e-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="8fc1e-111">Remarks</span></span>  
+ <span data-ttu-id="8fc1e-112">`Take While` Предложение включает элементы от начала результата запроса до предоставленного `expression` возвращает `false`.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-112">The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="8fc1e-113">После `expression` возвращает `false`, запрос будет выполнять все оставшиеся элементы.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-113">After the `expression` returns `false`, the query will bypass all remaining elements.</span></span> <span data-ttu-id="8fc1e-114">`expression` Игнорируется для оставшихся результатов.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-114">The `expression` is ignored for the remaining results.</span></span>  
   
- <span data-ttu-id="3117f-115">`Take While` Предложение отличается от `Where` предложение, в который `Where` предложение может использоваться для включения всех элементов из запроса, которые удовлетворяют определенному условию.</span><span class="sxs-lookup"><span data-stu-id="3117f-115">The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition.</span></span> <span data-ttu-id="3117f-116">`Take While` Предложение включает элементы только до момента первого, условие не выполняется.</span><span class="sxs-lookup"><span data-stu-id="3117f-116">The `Take While` clause includes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="3117f-117">`Take While` Предложение наиболее полезно при работе с упорядоченным результатом запроса.</span><span class="sxs-lookup"><span data-stu-id="3117f-117">The `Take While` clause is most useful when you are working with an ordered query result.</span></span>  
+ <span data-ttu-id="8fc1e-115">`Take While` Предложение отличается от `Where` предложение, в который `Where` предложение может использоваться для включения всех элементов из запроса, которые удовлетворяют определенному условию.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-115">The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition.</span></span> <span data-ttu-id="8fc1e-116">`Take While` Предложение включает элементы только до момента первого, условие не выполняется.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-116">The `Take While` clause includes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="8fc1e-117">`Take While` Предложение наиболее полезно при работе с упорядоченным результатом запроса.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-117">The `Take While` clause is most useful when you are working with an ordered query result.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3117f-118">Пример</span><span class="sxs-lookup"><span data-stu-id="3117f-118">Example</span></span>  
- <span data-ttu-id="3117f-119">В следующем примере кода используется `Take While` предложение для получения результатов, пока не будет найден первый клиент без заказов.</span><span class="sxs-lookup"><span data-stu-id="3117f-119">The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fc1e-118">Пример</span><span class="sxs-lookup"><span data-stu-id="8fc1e-118">Example</span></span>  
+ <span data-ttu-id="8fc1e-119">В следующем примере кода используется `Take While` предложение для получения результатов, пока не будет найден первый клиент без заказов.</span><span class="sxs-lookup"><span data-stu-id="8fc1e-119">The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.</span></span>  
   
- [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="3117f-120">См. также</span><span class="sxs-lookup"><span data-stu-id="3117f-120">See also</span></span>
-- <span data-ttu-id="3117f-121">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3117f-121">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>
-- [<span data-ttu-id="3117f-122">Запросы</span><span class="sxs-lookup"><span data-stu-id="3117f-122">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="3117f-123">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="3117f-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="3117f-124">Предложение From</span><span class="sxs-lookup"><span data-stu-id="3117f-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="3117f-125">Предложение Take</span><span class="sxs-lookup"><span data-stu-id="3117f-125">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)
-- [<span data-ttu-id="3117f-126">Предложение Skip While</span><span class="sxs-lookup"><span data-stu-id="3117f-126">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [<span data-ttu-id="3117f-127">Предложения Where</span><span class="sxs-lookup"><span data-stu-id="3117f-127">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="8fc1e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="8fc1e-120">See also</span></span>
+- <span data-ttu-id="8fc1e-121">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc1e-121">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>
+- [<span data-ttu-id="8fc1e-122">Запросы</span><span class="sxs-lookup"><span data-stu-id="8fc1e-122">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="8fc1e-123">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="8fc1e-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="8fc1e-124">Предложение From</span><span class="sxs-lookup"><span data-stu-id="8fc1e-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="8fc1e-125">Предложение Take</span><span class="sxs-lookup"><span data-stu-id="8fc1e-125">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)
+- [<span data-ttu-id="8fc1e-126">Предложение Skip While</span><span class="sxs-lookup"><span data-stu-id="8fc1e-126">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [<span data-ttu-id="8fc1e-127">Предложения Where</span><span class="sxs-lookup"><span data-stu-id="8fc1e-127">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
