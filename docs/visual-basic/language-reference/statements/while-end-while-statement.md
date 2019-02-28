@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 72263ddb7930373ab2a4843ea08974cb08d1b42f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269a4c0f069b3837959b04f8463f96e7c5d5fdf7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617335"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970154"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Оператор While... End While (Visual Basic)
 Выполняет ряд инструкций до тех пор, пока заданное условие является `True`.  
@@ -69,17 +69,17 @@ End While
 ## <a name="example"></a>Пример  
  В следующем примере операторы в цикле продолжать выполняться до `index` переменной превышает 10.  
   
- [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует использование `Continue While` и `Exit While` инструкций.  
   
- [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере считываются все строки в текстовом файле. <xref:System.IO.File.OpenText%2A> Метод открывает файл и возвращает <xref:System.IO.StreamReader> , считывает символы. В `While` условие, <xref:System.IO.StreamReader.Peek%2A> метод `StreamReader` определяет, содержит ли файл, дополнительные символы.  
   
- [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
 ## <a name="see-also"></a>См. также
 - [Циклические структуры](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

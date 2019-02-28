@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737667"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965960"
 ---
 # <a name="sub-statement-visual-basic"></a>Оператор Sub (Visual Basic)
 Объявляет имя, параметры и код, которые определяют `Sub` процедуры.  
@@ -217,14 +217,14 @@ End Sub
 ## <a name="example"></a>Пример  
  В следующем примере используется `Sub` инструкции для определения имени, параметров и кода, образующих текст `Sub` процедуры.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return` , которая возвращает целое число. Таким образом, объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое, как показано в следующей инструкции: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Процедура является примером `Async Sub` процедуры. Так как `DoSomethingAsync` — `Async` функции, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показано в следующей инструкции: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Процедура должна быть определена с помощью `Async` модификатор из-за `Await` выражение.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор Implements](implements-statement.md)

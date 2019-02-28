@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640762"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976503"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Логические и побитовые операторы в Visual Basic
 Логические операторы сравнения `Boolean` выражения и возвращают `Boolean` результат. `And`, `Or`, `AndAlso`, `OrElse`, И `Xor` операторы *двоичных* так, как они принимают два операнда, тогда как `Not` оператор *унарный* так как он принимает один операнд. Некоторые из этих операторов можно также выполнять побитовые логические операции над целыми значениями.  
@@ -34,7 +34,7 @@ ms.locfileid: "54640762"
 ## <a name="unary-logical-operator"></a>Унарный логический оператор  
  [Оператор Not](../../../../visual-basic/language-reference/operators/not-operator.md) выполняет логические *отрицания* на `Boolean` выражение. Он возвращает логическое отрицание операнда. Если выражение, результатом которого является `True`, затем `Not` возвращает `False`; Если выражение, результатом которого является `False`, затем `Not` возвращает `True`. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>Двоичный логические операторы  
  [И оператором](../../../../visual-basic/language-reference/operators/and-operator.md) выполняет логические *совместно* двух `Boolean` выражения. Если оба выражения имеют значение `True`, затем `And` возвращает `True`. Если по крайней мере одно из выражений имеет значение `False`, затем `And` возвращает `False`.  
@@ -45,7 +45,7 @@ ms.locfileid: "54640762"
   
  В следующем примере показано `And`, `Or`, и `Xor` операторы.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>Логические операторы сокращенного вычисления  
  [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) очень похожа на `And` оператор, в том, что он также выполняет логическое умножение двух `Boolean` выражения. Это ключевое различие между этими двумя `AndAlso` характеризуется *сокращенного вычисления* поведение. Если первое выражение в `AndAlso` выражение, результатом которого является `False`, то второе выражение не вычисляется, так как его невозможно изменить конечный результат и `AndAlso` возвращает `False`.  
@@ -57,18 +57,18 @@ ms.locfileid: "54640762"
   
  В следующем примере показано различие между `And`, `Or`и их сокращенными аналогами.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  В предыдущем примере обратите внимание, что некоторые важные коды внутри `checkIfValid()` не выполняется при сокращенном вызов. Первый `If` инструкция вызывает `checkIfValid()` несмотря на то что `12 > 45` возвращает `False`, так как `And` сокращенный. Второй `If` инструкция не вызывает `checkIfValid()`, так как при `12 > 45` возвращает `False`, `AndAlso` игнорирует второе выражение. Третий `If` инструкция вызывает `checkIfValid()` несмотря на то что `12 < 45` возвращает `True`, так как `Or` сокращенный. Четвертый `If` инструкция не вызывает `checkIfValid()`, так как при `12 < 45` возвращает `True`, `OrElse` игнорирует второе выражение.  
   
 ## <a name="bitwise-operations"></a>Поразрядные операции  
  Побитовые операции оценки двух целочисленных значений в виде двоичного файла (по основанию 2). Они сравнения биты в соответствующих позициях, а затем назначьте на основе сравнения значений. В следующем примере показано `And` оператор.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  Предыдущий пример задает значение `x` 1. Это происходит по следующим причинам:  
   

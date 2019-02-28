@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
+title: Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553702"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977992"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Как выполнить Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
 Visual Basic предоставляет `Join` и `Group Join` для объединения содержимого нескольких коллекций на основе общих значений между коллекциями предложения запроса. Эти значения называются *ключ* значения. Разработчикам, знакомым с понятиями реляционной базы данных будет распознавать `Join` предложение INNER JOIN и `Group Join` предложение as, фактически, ЛЕВОЕ ВНЕШНЕЕ соединение.  
   
  В примерах в этом разделе показано несколько способов объединения данных с помощью `Join` и `Group Join` предложения запроса.  
@@ -29,8 +29,8 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 2.  Примеры в этом разделе используется `Person` и `Pet` типы и данные из следующего примера кода. Скопируйте этот код в значение по умолчанию `Module1` модуля, созданного с Visual Basic.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Выполнение внутреннего соединения с помощью предложения Join  
  ВНУТРЕННЕЕ соединение объединяет данные из двух коллекций. Включены элементы, для которых соответствует указанных значений ключа. Все элементы из любой коллекции, у которых нет соответствующего элемента в другой коллекции, исключаются.  
@@ -45,7 +45,7 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 1.  Добавьте следующий код, чтобы `Module1` модуля в проект, чтобы ознакомиться с примерами явные и неявные внутреннее соединение.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Выполнить левое внешнее соединение, используя предложение Group Join  
  ЛЕВОЕ ВНЕШНЕЕ соединение включает в себя все элементы из коллекции слева от оператора соединения и только совпадающие значения из коллекции правой стороны соединения. Все элементы из коллекции правой части соединения, у которых нет соответствующего элемента в коллекции слева от оператора, исключаются из результата запроса.  
@@ -58,7 +58,7 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 1.  Добавьте следующий код, чтобы `Module1` модуля проекта, чтобы просмотреть примеры сгруппированного левого внешнего соединения и несгруппированные левого внешнего соединения.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Выполнение соединения с помощью составного ключа  
  Можно использовать `And` ключевое слово в `Join` или `Group Join` предложение, чтобы определить несколько ключевых полей для использования при сопоставлении значения из соединяемых коллекций. `And` Ключевое слово указывает, что все указанные ключевые поля должны соответствовать элементам для объединения.  
@@ -67,7 +67,7 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 1.  Добавьте следующий код, чтобы `Module1` модуль проекта, чтобы просмотреть примеры соединения, в которых используется составной ключ.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>Выполните код  
   
@@ -75,7 +75,7 @@ Visual Basic предоставляет `Join` и `Group Join` для объед
   
 1.  Замените `Sub Main` в `Module1` модуля в проекте следующим кодом, чтобы выполнить примеры в этом разделе.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  Нажмите клавишу F5 для запуска примеров.  
   

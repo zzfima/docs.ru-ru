@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe593e9c132f4fc151983d6c4dc04bd13627120
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690895"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978414"
 ---
 # <a name="serialization-guidelines"></a>Правила сериализации
 В настоящем документе перечислены рекомендации, которые следует учитывать при разработке сериализуемого API.  
@@ -144,6 +144,6 @@ ms.locfileid: "54690895"
 - [Сериализатор контракта данных](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [Типы, поддерживаемые сериализатором контракта данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Двоичная сериализация](binary-serialization.md)
-- [Удаленные объекты](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [Удаленное взаимодействие .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Сериализация XML и SOAP](xml-and-soap-serialization.md)
 - [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)

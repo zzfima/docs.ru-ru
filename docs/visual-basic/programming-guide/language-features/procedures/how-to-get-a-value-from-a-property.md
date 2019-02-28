@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение значения из свойства (Visual Basic)
+title: Практическое руководство. Получение значения из свойства (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964777"
 ---
-# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Как выполнить Получение значения из свойства (Visual Basic)
+# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Практическое руководство. Получение значения из свойства (Visual Basic)
 Извлечь значение свойства, включая имена свойств в выражении.  
   
  Свойства `Get` процедура получает значение, но не нужно явно вызывать ее по имени. Используйте свойство так же, как переменную. Visual Basic выполняет вызовы процедур свойств.  
@@ -30,7 +30,7 @@ ms.locfileid: "54543374"
   
      В следующем примере считывается значение Visual Basic `Now` свойство, неявно вызова его `Get` процедуры.  
   
-     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
 2.  Если свойство принимает аргументы, после имени свойства круглые скобки, чтобы заключить список аргументов. Если аргументы не используются, скобки можно опустить.  
   

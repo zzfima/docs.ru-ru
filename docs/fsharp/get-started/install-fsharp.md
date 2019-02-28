@@ -1,29 +1,29 @@
 ---
-title: Установка F#
-description: Сведения об установке F# об используемой среде.
+title: УстановкаF#
+description: Дополнительные сведения об установке F# об используемой среде.
 ms.date: 08/28/2018
-ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 873d3021ba884ec81992469e5d0f3b7c18b1e0f4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50193907"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975255"
 ---
-# <a name="install-f"></a>Установка F# #
+# <a name="install-f"></a>Установка F\#
 
 Вы можете установить F# несколькими способами, в зависимости от среды.
 
-## <a name="install-f-with-visual-studio"></a>Установка F# с Visual Studio
+## <a name="install-f-with-visual-studio"></a>Установка F# с помощью Visual Studio
 
 Если происходит загрузка [Visual Studio](https://visualstudio.microsoft.com/) в первый раз, его вначале установит установщик Visual Studio. Установите соответствующие номера SKU из Visual Studio с помощью установщика. Если вы уже установили его, нажмите кнопку **изменить**.
 
-Далее вы увидите список рабочих нагрузок. Выберите **ASP.NET и веб-разработка** которого будет устанавливаться, поддержка F# и поддержке .NET Core для проектов ASP.NET Core.
+Далее вы увидите список рабочих нагрузок. Выберите **ASP.NET и веб-разработка** каких будут установлены F# поддержки и .NET Core поддерживает для проектов ASP.NET Core.
 
-Затем щелкните **изменить** в нижнем правом углу.  Эта команда установит все, что вы выбрали. Затем можно открыть Visual Studio 2017 с поддержкой языка F#, щелкнув **запуска**.
+Затем щелкните **изменить** в нижнем правом углу.  Эта команда установит все, что вы выбрали. Затем можно открыть Visual Studio 2017 с F# языковой поддержки, нажав кнопку **запуска**.
 
-## <a name="install-f-with-visual-studio-for-mac"></a>Установка F# с Visual Studio для Mac
+## <a name="install-f-with-visual-studio-for-mac"></a>Установка F# с помощью Visual Studio для Mac
 
-F# по умолчанию устанавливается в [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/), независимо от того, какую конфигурацию вы выберите.
+F#устанавливается по умолчанию в [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/), независимо от того, какую конфигурацию вы выберите.
 
 После завершения установки, выберите «Запустить Visual Studio». Его можно также запустить через Finder в macOS.
 
@@ -33,7 +33,7 @@ F# по умолчанию устанавливается в [Visual Studio дл
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](https://www.mono-project.com) используется для [F# Interactive](../tutorials/fsharp-interactive/index.md) поддержки. Самый простой способ установить Mono в macOS — с помощью Homebrew. Просто введите следующую команду в окне терминала:
+[Mono](https://www.mono-project.com) используется для [ F# интерактивные](../tutorials/fsharp-interactive/index.md) поддержки. Самый простой способ установить Mono в macOS — с помощью Homebrew. Просто введите следующую команду в окне терминала:
 
 ```console
 brew install mono
@@ -43,7 +43,7 @@ brew install mono
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-[Mono](https://www.mono-project.com) используется для [F# Interactive](../tutorials/fsharp-interactive/index.md) поддержки. Если вы в Debian и Ubuntu, можно использовать следующее:
+[Mono](https://www.mono-project.com) используется для [ F# интерактивные](../tutorials/fsharp-interactive/index.md) поддержки. Если вы в Debian и Ubuntu, можно использовать следующее:
 
 ```console
 sudo apt-get update
@@ -54,7 +54,7 @@ sudo apt-get install mono-complete fsharp
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Установка [Visual Studio с поддержкой F#](#install-f-with-visual-studio). При этом будут установлены все необходимые компоненты для написания, компиляции и выполнения кода на F#.
+Установка [Visual Studio с F# поддерживает](#install-f-with-visual-studio). При этом будут установлены все необходимые компоненты для написания, компиляции и выполнения F# кода.
 
 Кроме того, установить [пакет SDK для .NET Core](https://www.microsoft.com/net/download/).
 
@@ -64,4 +64,4 @@ sudo apt-get install mono-complete fsharp
 
 Затем щелкните значок расширения и выполните поиск «Ionide»:
 
-Только подключаемый модуль, необходимый для поддержки F# в Visual Studio Code является [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Тем не менее, можно также установить [Ionide ИМИТАЦИИ](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) для получения [ИМИТИРОВАТЬ](https://fsharp.github.io/FAKE/) поддержки и [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) для получения [Paket](https://fsprojects.github.io/Paket/) поддержки. ПОДДЕЛКИ и Paket средства Дополнительные сообщества F# для создания проектов и управление зависимостями, соответственно.
+Только необходимые для подключаемого модуля F# является поддержка в Visual Studio Code [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Тем не менее, можно также установить [Ionide ИМИТАЦИИ](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) для получения [ИМИТИРОВАТЬ](https://fsharp.github.io/FAKE/) поддержки и [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) для получения [Paket](https://fsprojects.github.io/Paket/) поддержки. ПОДДЕЛКИ и Paket приведены дополнительные F# инструменты сообщества для построения проектов и управление зависимостями, соответственно.

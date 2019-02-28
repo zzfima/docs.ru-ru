@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724818"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965917"
 ---
 # <a name="value-comparisons-visual-basic"></a>Сравнение значений (Visual Basic)
 Операторы сравнения можно использовать для создания выражений, которые сравнивают значения числовых переменных. Эти выражения возвращают `Boolean` значение, основанное на ли сравнение значение true или false. Ниже приведены примеры таких выражений.  
@@ -34,15 +34,15 @@ ms.locfileid: "54724818"
   
  Чаще всего используются в выражениях, которые сравнивают значения `If...Then` конструкции, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=` Входа является оператором сравнения, а также оператор присваивания. При использовании в качестве оператора сравнения, она проверяет, является ли значение слева равно значению справа, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  Можно также использовать выражения сравнения в любом `Boolean` значение, например, как показано на `If`, `While`, `Loop`, или `ElseIf` инструкции, или при назначении или передаче значения `Boolean` переменной. В следующем примере присваивается значение, возвращаемое выражением сравнения `Boolean` переменной.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>См. также
 - [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

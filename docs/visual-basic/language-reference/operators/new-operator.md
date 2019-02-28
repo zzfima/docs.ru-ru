@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587558"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980468"
 ---
 # <a name="new-operator-visual-basic"></a>Оператор New (Visual Basic)
 Представляет `New` предложение, чтобы создать новый экземпляр объекта, задает для параметра типа ограничение конструктора, либо определяет `Sub` процедуры как конструктор класса.  
@@ -26,11 +26,11 @@ ms.locfileid: "54587558"
   
  Можно использовать `New` предложение в операторе объявления или присваивания. При выполнении оператора вызывается соответствующий конструктор указанного класса, передав любые аргументы, заданные. В следующем примере показано это путем создания экземпляров `Customer` класс, который имеет два конструктора, который не принимает никаких параметров, а другой принимает строковый параметр.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  Поскольку массивы являются классами, `New` можно создать новый экземпляр массива, как показано в следующих примерах.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  Общеязыковая среда выполнения (CLR) создает <xref:System.OutOfMemoryException> ошибки, если недостаточно памяти для создания нового экземпляра.  
   

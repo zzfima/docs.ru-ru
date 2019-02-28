@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugEval
+title: Интерфейс ICorDebugEval
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da68bc4218d59320997a341f8c4a860201ba643
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16beff67b4ef918afeb07ce4734fb8d2945e93c8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620335"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977205"
 ---
-# <a name="icordebugeval-interface1"></a>Интерфейс1 ICorDebugEval
+# <a name="icordebugeval-interface"></a>Интерфейс ICorDebugEval
+
 Предоставляет методы, позволяющие отладчику выполнять код в контексте отлаживаемого кода.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Прерывает вычисление это `ICorDebugEval` объект в данный момент выполняет.|  
 |[Метод CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Настраивает вызов указанной функции. (Устарело в .NET Framework версии 2.0; используйте [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) вместо.)|  

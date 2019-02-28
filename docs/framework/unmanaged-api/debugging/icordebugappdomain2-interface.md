@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugAppDomain2
+title: Интерфейс ICorDebugAppDomain2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4549b0fe6379979a7b9bd6344d65ff465f33f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82b58780472443874f2dae93c2d8568006db2e8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506138"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978570"
 ---
-# <a name="icordebugappdomain2-interface1"></a>Интерфейс1 ICorDebugAppDomain2
+# <a name="icordebugappdomain2-interface"></a>Интерфейс ICorDebugAppDomain2
+
 Предоставляет методы для работы с массивами, указателями, указатели на функции и ссылочные типы. Этот интерфейс является расширением интерфейса ICorDebugAppDomain.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Получает массив указанного типа, указатель или ссылка на указанный тип.|  
 |[Метод GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Получает указатель на функцию с заданной подписью.|  

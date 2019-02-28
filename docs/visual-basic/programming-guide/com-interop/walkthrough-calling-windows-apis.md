@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657978"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981469"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Пошаговое руководство. Вызов API Windows (Visual Basic)
 API-интерфейсы Windows, библиотеки динамической компоновки (DLL), которые являются частью операционной системы Windows. Они используются для выполнения задач при очень трудно написать собственную процедуру. Например, Windows предоставляет функцию с именем `FlashWindowEx` , позволяющий изменять строку заголовка приложения от светлые и темные оттенки.  
@@ -45,7 +45,7 @@ API-интерфейсы Windows, библиотеки динамической 
   
 4.  Добавьте следующий `Declare` работать либо на класс или модуль, в котором вы хотите использовать библиотеку DLL:  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
 ### <a name="parts-of-the-declare-statement"></a>Части оператор Declare  
  `Declare` Инструкция включает в себя следующие элементы.  
@@ -79,7 +79,7 @@ API-интерфейсы Windows, библиотеки динамической 
   
 3.  Добавьте соответствующие `Const` инструкции, чтобы класс или модуль, чтобы сделать эти константы доступными для приложения. Пример:  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>Вызов процедуры DLL  
   
@@ -87,7 +87,7 @@ API-интерфейсы Windows, библиотеки динамической 
   
 2.  Добавьте код для `Click` обработчик событий для кнопки, вы добавили, чтобы вызвать процедуру и предоставьте соответствующие аргументы:  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
 3.  Запустите проект, нажав клавишу F5. Окно сообщения отображается с обоими **Да** и **нет** кнопками. Нажмите одну из них.  
   
@@ -100,11 +100,11 @@ API-интерфейсы Windows, библиотеки динамической 
   
 2.  Для упрощения доступа к `MarshalAs` атрибута, добавьте `Imports` в начало кода для класса или модуля, как показано в следующем примере:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 3.  Добавьте прототип функции для импортированной функции в класс или модуль, вы используете и применить `MarshalAs` атрибут параметров или возвращаемого значения. В следующем примере вызов API, который ожидает, что тип `void*` маршалируется как `AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
 ## <a name="api-calls-using-dllimport"></a>Вызовы API, с помощью DllImport  
  `DllImport` Атрибут предоставляет второй способ вызова функций в библиотеках DLL без библиотеки типов. `DllImport` с помощью приблизительно соответствует `Declare` инструкции, но обеспечивает больший контроль над процессом вызова функций.  
@@ -123,23 +123,23 @@ API-интерфейсы Windows, библиотеки динамической 
   
 5.  Для упрощения доступа к `DllImport`, добавьте `Imports` в начало кода для класса формы запуска:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 6.  Объявите пустую функцию выше `End Class` инструкции для формы и имя функции `MoveFile`.  
   
 7.  Применить `Public` и `Shared` модификаторы объявления функции, а также задавать параметры для `MoveFile` на основе аргументов в функции Windows API используется:  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      Функция может иметь любое допустимое имя процедуры; `DllImport` атрибут указывает имя библиотеки DLL. Он также обрабатывает маршалинг взаимодействия для параметров и возвращаемых значений, поэтому вы можете выбрать типы данных Visual Studio, которые похожи на данные типах, которые использует API.  
   
 8.  Применить `DllImport` атрибут пустой функции. Первый параметр — это имя и расположение библиотеки DLL, содержащей функцию, которую вы вызываете. Необходимо указать путь для файлов в файловой системы Windows. Второй параметр — именованный аргумент, который задает имя функции в Windows API. В этом примере `DllImport` атрибут приводит вызовы `MoveFile` должно перенаправляться в `MoveFileW` в KERNEL32. БИБЛИОТЕКА DLL. `MoveFileW` Метод копирует файл из пути `src` путь `dst`.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
 9. Добавьте код для `Button2_Click` обработчик событий для вызова функции:  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
 10. Создайте файл с именем Test.txt и поместите его в каталог C:\Tmp на жестком диске. При необходимости создайте каталог Tmp.  
   

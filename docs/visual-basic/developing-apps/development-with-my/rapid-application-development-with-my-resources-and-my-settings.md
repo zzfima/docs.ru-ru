@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 4150d2f9634045351cb52e02c4f4807e55d118e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d5fe35ea491c2c2d3de82ef208fec59a6079a25
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717918"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976075"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Быстрая разработка приложений с использованием My.Resources и My.Settings (Visual Basic)
 `My.Resources` Объект предоставляет доступ к ресурсам приложения и позволяет динамически получать ресурсы для приложения.  
@@ -20,7 +20,7 @@ ms.locfileid: "54717918"
 ## <a name="retrieving-resources"></a>Извлечение ресурсов  
  Множество ресурсов, таких как звуковые файлы, значки, изображения и строки можно извлечь с помощью `My.Resources` объекта. Например можно получить доступ к файлы ресурсов, связанные с языком и региональными параметрами приложения. В следующем примере задается значок формы на значок с именем `Form1Icon` хранятся в файле ресурсов приложения.  
   
- [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
+ [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
  `My.Resources` Объект предоставляет только глобальные ресурсы. Она предоставляет доступ к файлам ресурсов, связанных с формами. Доступ к ресурсам формы необходимо из формы.  
   

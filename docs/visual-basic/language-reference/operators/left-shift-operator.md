@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 494a56ec186bdb82d6794fb5c225789b23cddd0c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 329cdf1aea9ca97db000bb5ced8d9e8d6b7a4f58
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970562"
 ---
 # <a name="-operator-visual-basic"></a>\<\< Operator (Visual Basic)
 Выполняет арифметическое смещение влево битового шаблона.  
@@ -56,7 +56,7 @@ result = pattern << amount
 ## <a name="example"></a>Пример  
  В следующем примере используется `<<` оператор для выполнения арифметических левых сдвигов целых значений. Результат всегда имеет тот же тип данных, выражения был перемещен.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
  Далее приведены результаты предыдущего примера.  
   

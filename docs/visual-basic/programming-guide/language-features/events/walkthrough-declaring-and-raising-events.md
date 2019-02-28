@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580503"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975398"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Пошаговое руководство. Объявление и вызов событий (Visual Basic)
 В этом пошаговом руководстве демонстрируется объявление и вызов событий для класса с именем `Widget`. После выполнения действий, может потребоваться чтение сопутствующего раздела [Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), который показывает, как использовать события из `Widget` объекты, содержащие сведения о состоянии в приложении.  
@@ -46,7 +46,7 @@ ms.locfileid: "54580503"
   
 -   Используйте `Event` ключевого слова для объявления события в `Widget` класса. Обратите внимание, что событие может иметь `ByVal` и `ByRef` аргументы, как `Widget`в `PercentDone` демонстрирует событий:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  Когда вызывающий объект получает `PercentDone` событий, `Percent` аргумент содержит процент завершения задачи. `Cancel` Аргумент может быть задан равным `True` отменить метод, который вызвал событие.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "54580503"
   
 1.  Для упрощения доступа к `Timer` добавьте свойство, используемое этим классом, `Imports` в начало раздела объявлений класса модуля, выше `Class Widget` инструкции.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  Добавьте следующий код в класс `Widget` :  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  Когда приложение вызывает `LongTask` метод, `Widget` формируемых классом `PercentDone` событий каждые `MinimumInterval` секунд. По возвращении из события `LongTask` проверяет, если `Cancel` значение аргумента `True`.  
   

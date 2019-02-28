@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618913"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965714"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Устранение неполадок, связанных с переменными, в Visual Basic
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с переменными в Visual Basic.  
@@ -24,7 +24,7 @@ ms.locfileid: "54618913"
   
  Когда [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) задает для проверки типа значение `On`, переменная объекта может получать доступ только к методам и свойствам класса, в котором она объявлена. Это показано в следующем примере.  
 
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  В этом примере `p` может использовать только члены класса <xref:System.Object> без свойства `Left` . С другой стороны, `q` был объявлен с типом <xref:System.Windows.Forms.Label>, поэтому он может использовать все методы и свойства класса <xref:System.Windows.Forms.Label> в пространстве имен <xref:System.Windows.Forms> .  
   

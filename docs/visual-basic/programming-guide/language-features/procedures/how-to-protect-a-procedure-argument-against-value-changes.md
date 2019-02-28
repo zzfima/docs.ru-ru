@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Защита аргумента процедуры от изменения значения (Visual Basic)
+title: Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 42015e2a024ece75a920deb414d326c88f31249e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2548d7a686f3557d154fc4cc15f6fc8026ac46bf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528892"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968378"
 ---
-# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Как выполнить Защита аргумента процедуры от изменения значения (Visual Basic)
+# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
 Если процедура объявляет параметр как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет код процедуры прямую ссылку на элемент программирования, в аргументе в вызывающем коде. Это позволяет процедуре для изменения значения в аргументе в вызывающем коде. В некоторых случаях вызывающий код может потребоваться защита от таких изменений.  
   
  Всегда можно защитить аргумент от изменений, объявив соответствующий параметр [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) в процедуре. Если вы хотите иметь возможность изменять данный аргумент в некоторых случаях, но не другие, его можно объявить `ByRef` и позволить вызывающему коду определять механизм передачи в каждом вызове. Это достигается путем заключения в круглые скобки, чтобы передать его по значению соответствующего аргумента, или не заключать в круглые скобки, чтобы передавать по ссылке. Дополнительные сведения см. в разделе [Как Принудительная передаваться по значению аргумента](./how-to-force-an-argument-to-be-passed-by-value.md).  
@@ -29,11 +29,11 @@ ms.locfileid: "54528892"
 ## <a name="example"></a>Пример  
  Следующий пример показывает две процедуры, которые принимают переменную массива и работают на его элементы. `increase` Процедура добавляет единицу к каждому элементу. `replace` Процедура присваивает новый массив в параметре `a()` и добавляет единицу к каждому элементу. Тем не менее переназначение не влияет на базовую переменную массива в вызывающем коде.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Первый `MsgBox` вызове отображается «после увеличения (n): 11, 21, 31, 41". Так как массив `n` является ссылочным типом, `increase` может изменить его элементы, несмотря на то, что механизм передачи `ByVal`.  
   

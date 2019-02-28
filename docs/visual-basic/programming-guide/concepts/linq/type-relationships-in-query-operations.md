@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731131"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979103"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Отношения типов в операциях запроса (Visual Basic)
 Переменные, используемые в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] запроса операции являются строго типизированными и должны быть совместимы друг с другом. Строгая типизация используется в источнике данных, в самом запросе и при выполнении запроса. На следующем рисунке показаны термины, используемые для описания [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запроса. Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "54731131"
   
  Visual Basic делает строгую типизацию удобной путем реализации вывод локального типа, также известный как *неявное типизирование*. В предыдущем примере используется функция, что вы увидите применяется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] примеров и документации. В Visual Basic, вывод локального типа выполняется путем с помощью `Dim` инструкцию без `As` предложение. В следующем примере `city` строго типизируется как строка.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Вывод локального типа работает только тогда, когда `Option Infer` присваивается `On`. Дополнительные сведения см. в разделе [оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ ms.locfileid: "54731131"
   
  Может потребоваться указать явный тип для переменной диапазона, который не соответствует типу, возвращаемому из источника данных. Можно указать тип переменной диапазона с помощью `As` предложение. Тем не менее, это приводит к ошибке при преобразовании [сужающее преобразование](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и `Option Strict` присваивается `On`. Поэтому рекомендуется выполнить преобразование значения, полученные из источника данных. Можно преобразовать значения из источника данных для переменной типа явные диапазона с помощью <xref:System.Linq.Enumerable.Cast%2A> метод. Можно также выполнить приведение значений, выбранных в `Select` предложение для явному типу, отличается от типа переменной диапазона. В следующем коде показаны следующие моменты.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Запросы, которые возвращают целые элементы из источника данных  
  В следующем примере показан [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операция, которая возвращает последовательность элементов, выбранных из источника данных запроса. Источник, `names`, содержит массив строк, и выходных данных запроса является последовательность, содержащая строки, начинающиеся на букву M.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  Это эквивалентно следующему коду, но намного короче и проще написать. Зависимость от вывод локального типа в запросах является предпочтительным в Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  Следующие отношения существуют в обоих приведенных выше примерах кода ли типы определяются явно или неявно.  
   

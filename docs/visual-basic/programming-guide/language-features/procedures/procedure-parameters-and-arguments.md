@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731742"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972565"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Параметры и аргументы процедуры (Visual Basic)
 В большинстве случаев процедура должна некоторые сведения об условиях ее возникновения, в которых она была вызвана. Процедура, выполняющая повторяющихся или общих задач использует различные сведения для каждого вызова. Эта информация состоит из переменных, констант и выражений, которые передаются в процедуру при ее вызове.  
@@ -44,7 +44,7 @@ ms.locfileid: "54731742"
 ## <a name="parameter-data-type"></a>Тип данных параметра  
  Определить тип данных для параметра с помощью `As` предложение в его объявлении. Например следующая функция принимает строку и целое число.  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  Если переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `Off,` `As` предложение является необязательным, за исключением того, что если используется в любой из параметров, его необходимо использовать все параметры. Если проверка типов `On`, `As` предложение является обязательным для всех параметров процедуры.  
   

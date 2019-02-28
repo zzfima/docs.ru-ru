@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение параметра для процедуры (Visual Basic)
+title: Практическое руководство. Определение параметра для процедуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660805"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971797"
 ---
-# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Как выполнить Определение параметра для процедуры (Visual Basic)
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Практическое руководство. Определение параметра для процедуры (Visual Basic)
 Объект *параметр* позволяет вызывающему коду значение передается в процедуру при ее вызове. Каждый параметр процедуры объявляется так же, как объявить переменную, указав его имя и тип данных. Можно также указать способ передачи и параметр является необязательным.  
   
  Дополнительные сведения см. в разделе [параметры и аргументы процедуры](./procedure-parameters-and-arguments.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "54660805"
   
      В следующем примере определяется контура `Sub` процедуры с тремя параметрами. Первые два являются обязательными, а третий — необязательным. Объявления параметра в списке параметров разделяются запятыми.  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      Первый параметр принимает `customer` объекта, и `updateCustomer` можно непосредственно обновить переменную, передаваемую в `c` так, как аргумент, передаваемый [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Процедура не может изменить значения последних двух аргументов, поскольку они передаются [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

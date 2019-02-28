@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение значения аргумента процедуры (Visual Basic)
+title: Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 096bc6adfa7a8c95674d235f0112d23f7a45caf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672296"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974917"
 ---
-# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Как выполнить Изменение значения аргумента процедуры (Visual Basic)
+# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
 При вызове процедуры, каждый аргумент соответствует одному из параметров, определенных в процедуре. В некоторых случаях код процедуры можно изменить значение базового аргумента в вызывающем коде. В других случаях процедуру можно изменить только свою локальную копию аргумента.  
   
  При вызове процедуры, Visual Basic производит локальную копию каждый аргумент, передаваемый [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Для каждого передаваемого аргумента [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет код процедуры прямую ссылку на элемент программирования, в аргументе в вызывающем коде.  
@@ -57,11 +57,11 @@ ms.locfileid: "54672296"
 ## <a name="example"></a>Пример  
  Следующий пример показывает две процедуры, которые принимают переменную массива и работают на его элементы. `increase` Процедура добавляет единицу к каждому элементу. `replace` Процедура присваивает новый массив в параметре `a()` и добавляет единицу к каждому элементу.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#36)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Первый `MsgBox` вызове отображается «после увеличения (n): 11, 21, 31, 41". Так как массив `n` является ссылочным типом, `replace` может изменить его элементы, несмотря на то, что механизм передачи `ByVal`.  
   

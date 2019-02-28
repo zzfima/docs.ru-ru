@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667392"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976048"
 ---
 # <a name="lifetime-in-visual-basic"></a>Время существования в Visual Basic
 *Время существования* объявленного элемента — это период времени, во время которого он доступен для использования. Переменные являются только элементы, которые имеют время существования. Для этой цели компилятор обрабатывает параметры процедуры, и функция возвращает как особые случаи переменных. Время существования переменной представляет период времени, в течение которого он может содержать значение. Его значение может меняться в течение времени существования, но он всегда содержит некоторое значение.  
@@ -58,7 +58,7 @@ ms.locfileid: "54667392"
  В следующем примере объявляется переменная с [статический](../../../../visual-basic/language-reference/modifiers/static.md) ключевое слово. (Обратите внимание, что нет необходимости `Dim` ключевое слово при [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) использует модификатор, такой как `Static`.)  
   
 ### <a name="code"></a>Код  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Комментарии  
  В приведенном выше примере переменная `applesSold` продолжает существовать после описания процедуры `runningTotal` возвращает в вызывающий код. В следующий раз `runningTotal` вызове `applesSold` сохраняет ранее вычисленное значение.  

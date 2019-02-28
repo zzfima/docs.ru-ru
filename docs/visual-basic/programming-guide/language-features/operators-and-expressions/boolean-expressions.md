@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562756"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965544"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Логические выражения (Visual Basic)
 Объект *логическое выражение* представляет собой выражение, результатом которого является значение из [логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`. `Boolean` выражения могут принимать различные формы. Самым простым является прямое сравнение значения `Boolean` переменной `Boolean` литерал, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>Два значения =-оператор  
  Обратите внимание, что оператор присваивания `newCustomer = True` выглядит так же, как выражение в предыдущем примере, но она выполняет другую функцию и используется по-разному. В предыдущем примере выражение `newCustomer = True` представляет логическое значение и `=` входа интерпретируется как оператор сравнения. В автономной инструкции `=` входа интерпретируется как оператор присваивания и присваивает значение справа переменной слева. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  Для получения дополнительных сведений см. в разделе [сравнений значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) и [инструкций](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54562756"
 ## <a name="short-circuiting-operators"></a>Сокращенное вычисление операторы  
  Логические операторы `AndAlso` и `OrElse` демонстрируют поведение, известный как *сокращенного вычисления*. Вычисляют сначала вычисляет левый операнд. Если левый операнд определяет значение всего выражения, выполнение программы продолжается без вычисления правого выражения. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  В приведенном выше примере оператор вычисляет левое выражение `45 < 12`. Так как левое выражение, результатом которого является `False`, всего логическое выражение должно возвращать `False`. Таким образом, выполнение программы пропускает выполнение кода внутри `If` блок без вычисления правого выражения `testFunction(3)`. В этом примере не вызывает `testFunction()` так как левое выражение опровергает всего выражения.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54562756"
 ### <a name="comparison-with-non-short-circuiting-operators"></a>Сравнение с не--сокращенного операторы  
  Напротив, обе части логического оператора вычисляются при логические операторы `And` и `Or` используются. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  В предыдущем примере вызывается `testFunction()` несмотря на то, что левое выражение, результатом которого является `False`.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: fafeb6cd47ebab5dd8f197b27d1aee9d7573e6ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717739"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975385"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Расширение пространства имен My в Visual Basic
 `My` Пространства имен в Visual Basic предоставляет свойства и методы, которые позволяют легко воспользоваться преимуществами мощной платформы .NET Framework. `My` Пространство имен упрощает типовых задач программирования, часто уменьшая трудной задачей для одной строки кода. Кроме того `My` пространства имен является полностью расширяемым, таким образом, чтобы можно было настроить поведение `My` и добавлять новые службы в его иерархию для адаптации к потребностям конкретного приложения. В этом разделе обсуждается настройка существующих членов `My` пространства имен и добавить пользовательские классы для `My` пространства имен.  
@@ -41,7 +41,7 @@ ms.locfileid: "54717739"
   
  Например, предположим, что часто `My.User` объект для доступа к текущему контексту безопасности пользователя, запустившего приложение. Тем не менее ваша компания использует объект пользовательский для предоставления дополнительных сведений и возможностей для пользователей компании. В этом случае можно заменить значение по умолчанию `My.User.CurrentPrincipal` свойство с помощью экземпляра собственного пользовательского объекта-участника, как показано в следующем примере.  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]  
   
  Установка `CurrentPrincipal` свойство `My.User` объекта изменяет удостоверение, под которой выполняется приложение. `My.User` Объект, в свою очередь, возвращает сведения о только что указанный пользователь.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54717739"
   
  Например, в следующем примере добавляется свойство с именем `DnsServerIPAddresses` для `My.Computer` объекта.  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
 ##  <a name="addingcustom"></a> Добавление пользовательских объектов в пространство имен My  
  Несмотря на то что `My` пространство имен предоставляет решения для многих распространенных задач программирования, встречаются задачи, `My` пространства имен не рассматриваются. Например приложение может получить доступ к пользовательским службам каталогов для пользовательских данных, или ваше приложение может использовать сборки, которые не устанавливаются по умолчанию с помощью Visual Basic. Вы можете расширить `My` пространство имен и включить пользовательские решения для распространенных задачах, относящиеся к используемой среде. `My` Пространства имен можно легко расширить для добавления новых элементов для удовлетворения растущих потребностей приложения. Кроме того, можно развернуть в `My` расширения пространства имен для других разработчиков, как шаблон Visual Basic.  
@@ -58,20 +58,20 @@ ms.locfileid: "54717739"
 ###  <a name="addingtonamespace"></a> Добавление элементов в пространство имен My  
  Так как `My` — это пространство имен как и любое другое пространство имен, можно добавить свойства верхнего уровня к нему, просто добавив модуль и указав `Namespace` из `My`. Снабдите модуль `HideModuleName` атрибута, как показано в следующем примере. `HideModuleName` Атрибут гарантирует, что IntelliSense не будет отображать имя модуля при его отображении членами `My` пространства имен.  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
   
  Добавление членов в `My` пространства имен, добавить свойства для модуля. Для каждого свойства, добавляемого `My` пространства имен, добавьте закрытое поле типа `ThreadSafeObjectProvider(Of T)`, где типом является тип, возвращаемый вашим пользовательским свойством. Это поле используется для создания экземпляров объектов поточно ориентированными, возвращаемый этим свойством, вызвав `GetInstance` метод. Таким образом каждый поток, который обращается к расширенному свойству получает собственный экземпляр возвращаемого типа. В следующем примере добавляется свойство с именем `SampleExtension` типа `SampleExtension` для `My` пространство имен:  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
 ##  <a name="addingevents"></a> Добавление событий в настраиваемые Мои объекты  
  Можно использовать `My.Application` объект для предоставления событий для настраиваемых `My` объектов путем расширения `MyApplication` разделяемый класс в `My` пространства имен. Для проектов на основе Windows, можно дважды щелкнуть **Мой проект** узел проекта в **обозревателе решений**. В Visual Basic **конструктор проектов**, нажмите кнопку `Application` вкладке и нажмите кнопку `View Application Events` кнопки. Создается новый файл с именем ApplicationEvents.vb. Он содержит следующий код для расширения `MyApplication` класса.  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
   
  Можно добавить обработчики событий для настраиваемых `My` объектов путем добавления пользовательских обработчиков событий для `MyApplication` класса. Пользовательские события позволяют добавлять код, который будет выполняться при добавлении обработчика событий, удалении, или события. Обратите внимание, что `AddHandler` кода для пользовательского события выполняется только в том случае, если пользователь для обработки события добавляется код. Например, рассмотрим, `SampleExtension` объект из предыдущего раздела имеет `Load` событие, которое вы хотите добавить пользовательский обработчик событий для. В следующем примере кода показан пользовательский обработчик событий с именем `SampleExtensionLoad` , которые будут вызываться при `My.SampleExtension.Load` событием. При добавлении кода для обработки нового `My.SampleExtensionLoad` событий, `AddHandler` выполняется часть этого кода пользовательское событие. `MyApplication_SampleExtensionLoad` Метод включен в пример кода демонстрирует пример обработчика событий, который обрабатывает `My.SampleExtensionLoad` событий. Обратите внимание, что `SampleExtensionLoad` события будут доступны при выборе **Мои события приложения** параметр в левом раскрывающемся списке над редактором кода при редактировании файла ApplicationEvents.vb.  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
 ##  <a name="design"></a> Рекомендации по проектированию  
  При разработке расширений для `My` пространства имен, следуйте приведенным ниже рекомендациям, чтобы свести к минимуму затраты на обслуживание компонентов расширения.  

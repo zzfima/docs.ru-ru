@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugAssembly
+title: Интерфейс ICorDebugAssembly
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a6776467eb9f5eaaacadb2908de17fc277e495b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2b802845e36e818a962484c1fea09cbcc1ceefd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569184"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974579"
 ---
-# <a name="icordebugassembly-interface1"></a>Интерфейс1 ICorDebugAssembly
+# <a name="icordebugassembly-interface"></a>Интерфейс ICorDebugAssembly
+
 Представляет сборку.  
   
 ## <a name="methods"></a>Методы  

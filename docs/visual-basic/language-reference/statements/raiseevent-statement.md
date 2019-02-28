@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655014"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973305"
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
 Вызывает событие, объявленное на уровне модуля в классе, форме или документа.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Если не был объявлен в модуле, в котором вызывается событие, возникает ошибка. В следующем фрагменте кода показано объявление события и процедуры, в котором события.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  Нельзя использовать `RaiseEvent` для вызова событий, которые не объявлены явно в модуле. Например, наследуют все формы <xref:System.Windows.Forms.Control.Click> событий из <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, он не может быть изменен с помощью `RaiseEvent` в производной форме. При объявлении `Click` событий в модуле формы, он скрывает формы собственные <xref:System.Windows.Forms.Control.Click> событий. Можно по-прежнему вызывать формы <xref:System.Windows.Forms.Control.Click> событие путем вызова <xref:System.Windows.Forms.Control.OnClick%2A> метод.  
   
@@ -63,12 +63,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Добавить `WithEvents` переменной в раздел объявлений `Form1` класса.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Пример  
  Добавьте следующий код в код для `Form1`. Замените все повторяющиеся процедуры, которые могут существовать, такие как `Form_Load`, или `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Нажмите клавишу F5 для запуска примера и нажмите кнопку с надписью **запустить**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529480"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974813"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Лямбда-выражения (Visual Basic)
 Объект *лямбда-выражение* является функцией или подпрограммой без имени, который может использоваться везде, где допустим делегат. Лямбда-выражения могут быть функции или подпрограммы и может быть одной или нескольких линий. Можно передавать значения из текущей области в лямбда-выражение.  
@@ -26,19 +26,19 @@ ms.locfileid: "54529480"
   
  Следующий пример является лямбда-выражения и увеличивает значение своего аргумента и возвращает значение. В этом примере синтаксис однострочные и многострочные лямбда-выражений для функции.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  Следующий пример является лямбда-выражения и записывает значение в консоль. В примере синтаксиса однострочные и многострочные лямбда-выражения для подпрограммы.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  Обратите внимание на то, что в предыдущих примерах лямбда-выражения относятся к имени переменной. При ссылке на эту переменную, можно вызвать лямбда-выражения. Можно также объявить и вызвать лямбда-выражение, в то же время, как показано в следующем примере.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Лямбда-выражения могут быть возвращены для параметра вызов функции (как показано в примере в [контекст](#context) разделе этой статьи), или передаваться в качестве аргумента параметр, принимающий тип делегата, как показано ниже Пример.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Синтаксис лямбда-выражений  
  Синтаксис лямбда-выражения похож стандартные функции или подпрограммы. Ниже приведены различия.  
@@ -114,7 +114,7 @@ End Class
   
  Доступ к локальным переменным и параметрам в содержащей области можно расширить за время существования этой области. До тех пор, пока делегат, ссылающийся на лямбда-выражение не доступен в сборку мусора, можно сохранить доступ к переменным в исходной среде. В следующем примере переменной `target` является локальным для `makeTheGame`, метод, в котором лямбда-выражение `playTheGame` определен. Обратите внимание, что возвращенный лямбда-выражения, назначенный `takeAGuess` в `Main`, по-прежнему имеет доступ к локальной переменной `target`.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  В следующем примере показано широкий спектр прав доступа вложенных лямбда-выражения. При выполнении возвращаемого лямбда-выражения из `Main` как `aDel`, он обращается к следующим элементам:  
   
@@ -128,16 +128,16 @@ End Class
   
 -   Параметр лямбда-выражения, в который он вложен: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>Преобразование в тип делегата  
  Лямбда-выражения могут быть неявно преобразованы совместимого типа делегата. Сведения об общих требованиях для обеспечения совместимости, см. в разделе [неявное преобразование делегата](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Например, в следующем примере кода показано лямбда-выражение, которое неявно преобразуется к `Func(Of Integer, Boolean)` или соответствующий сигнатуре делегата.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  В следующем примере кода показано лямбда-выражение, которое неявно преобразуется к `Sub(Of Double, String, Double)` или соответствующий сигнатуре делегата.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  Когда назначать делегатам лямбда-выражения или передавать их в качестве аргументов для процедуры, можно указать имена параметров, но опустить их типы, позволяя принимать типы из делегата.  
   
@@ -145,11 +145,11 @@ End Class
   
 -   В следующем примере определяется лямбда-выражение, возвращающее `True` Если присвоено значение, допускающее значение NULL аргумент и `False` имеет значение `Nothing`.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   В следующем примере определяется лямбда-выражение, которое возвращает индекс последнего элемента в массиве.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

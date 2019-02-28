@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731118"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970552"
 ---
 # <a name="extension-methods-visual-basic"></a>Методы расширения (Visual Basic)
 Методы расширения позволяют разработчикам добавлять пользовательские функциональные возможности типам данных, которые уже определены без создания нового производного типа. Методы расширения делают возможным написание метода, который может вызываться, как если бы это был метод экземпляра существующего типа.  
@@ -24,20 +24,20 @@ ms.locfileid: "54731118"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере определяется `Print` расширение <xref:System.String> тип данных. Данный метод использует `Console.WriteLine` для отображения строки. Параметр `Print` метод, `aString`, устанавливает, что метод расширяет <xref:System.String> класса.  
   
- [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  Обратите внимание, что определение метода расширения помечено атрибутом расширения `<Extension()>`. Помечать модуль, в котором определен метод является необязательным, но каждый метод расширения должен быть помечен. <xref:System.Runtime.CompilerServices> Чтобы получить доступ к атрибуту расширения должен быть импортирован.  
   
  Методы расширения могут быть объявлены только внутри модулей. Как правило модуль, в котором определен метод расширения не одного модуля, который, в котором он вызывается. Вместо этого модуль, содержащий метод расширения, импортируется, если необходимо, чтобы включить их в область. После модуля, содержащего `Print` находится в области, метод можно вызывать, как если бы он был обычным экземпляром метода, не принимающую аргументы, такие как `ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
  Следующий пример, `PrintAndPunctuate`, также является расширением <xref:System.String>, но определенным с двумя параметрами. Первый параметр, `aString`, устанавливает, что метод расширения расширяет <xref:System.String>. Второй параметр, `punc`, должен быть строкой знаков пунктуации, передается в качестве аргумента при вызове метода. Метод отображает строку, за которой следует пунктуации.  
   
- [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
  Метод вызывается отправкой аргумента строки для `punc`: `example.PrintAndPunctuate(".")`  
   
@@ -111,7 +111,7 @@ End Module
   
  Методы расширения не учитываются при позднем связывании. В следующем примере инструкция `anObject.PrintMe()` вызывает <xref:System.MissingMemberException> исключение, то же исключение возникает, если второй `PrintMe` определение метода расширения были удалены.  
   
- [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
   
 ## <a name="best-practices"></a>Рекомендации  
  Методы расширения предоставляют удобный и мощный способ расширить существующий тип. Однако для успешного использования, существуют некоторые моменты, которые следует учитывать. Эти советы главным образом касаются авторов библиотек классов, но они могут повлиять на любое приложение, использующее методы расширения.  
@@ -131,23 +131,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>Методы расширения, методы экземпляра и свойства  
  Если метод экземпляра в области имеет сигнатуру, совместимую с аргументом вызывающего оператора, метод экземпляра выбирается в предпочтение любому методу расширения. Метод экземпляра имеет приоритет, даже если метод расширения является более подходящим. В следующем примере `ExampleClass` содержит метод экземпляра с именем `ExampleMethod` , имеющий один параметр типа `Integer`. Метод расширения `ExampleMethod` расширяет `ExampleClass`, и имеет один параметр типа `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
  Первый вызов `ExampleMethod` в следующем коде вызывает метод расширения, так как `arg1` — `Long` и совместим только с `Long` параметр метода расширения. Второй вызов `ExampleMethod` имеет `Integer` аргумент, `arg2`, и он вызывает метод экземпляра.  
   
- [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
  Теперь обратный типы данных параметров в два метода:  
   
- [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
   
  В этот раз код в `Main` вызывает метод экземпляра оба раза. Это обусловлено тем, как `arg1` и `arg2` иметь расширяющее преобразование `Long`, а метод экземпляра имеет преимущество перед методом расширения в обоих случаях.  
   
- [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
   
  Таким образом метод расширения не может заменить существующий метод экземпляра. Тем не менее если метод расширения имеет то же имя, как метод экземпляра, но подписи не конфликтуют, может осуществляться оба метода. Например если класс `ExampleClass` содержит метод с именем `ExampleMethod` , не имеющий аргументов, методы расширения с тем же именем, но различными сигнатурами, допускаются, как показано в следующем коде.  
   
- [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
   
  Результат выполнения этого кода выглядит следующим образом:  
   

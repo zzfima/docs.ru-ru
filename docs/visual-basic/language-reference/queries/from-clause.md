@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678789"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978167"
 ---
 # <a name="from-clause-visual-basic"></a>Предложение From (Visual Basic)
 Указывает один или несколько переменных диапазона и набор для запроса.  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  Можно указать несколько `From` предложения в запросе для идентификации нескольких коллекций для объединения. При указании нескольких коллекций, они воспринимаются независимо друг от друга, или вы можете объединить их, если они связаны. Объединение коллекций неявно с помощью `Select` предложения, или явно с помощью `Join` или `Group Join` предложения. Кроме того, можно указать несколько переменных диапазона и коллекций в одном `From` предложение, с каждой связанной переменной диапазона и коллекций, разделенных запятыми от других. В следующем примере кода показаны оба варианта синтаксиса для `From` предложение.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  `From` Предложение определяет область запроса, который аналогичен рамки `For` цикла. Таким образом, каждый `element` переменной диапазона в области запроса должен иметь уникальное имя. Поскольку можно указать несколько `From` предложения запроса, последующие `From` предложения могут ссылаться на переменные диапазона в `From` предложения, или они могут ссылаться на переменную диапазона в предыдущем `From` предложение. Например, в следующем примере показано вложенный `From` предложение, где коллекция во втором предложении основана на свойстве переменной диапазона в первом предложении.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  Каждый `From` предложение может следовать любое сочетание дополнительных предложений запроса для уточнения запроса. Можно уточнить запрос следующим образом:  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>Пример  
  В следующем запросе используется выражение `From` предложение для объявления переменной диапазона `cust` для каждого `Customer` объекта в `customers` коллекции. `Where` Предложение использует переменную диапазона для ограничения выходных данных клиентов из заданной области. `For Each` Цикл имя компании для каждого клиента в результатах запроса.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>См. также
 - [Запросы](../../../visual-basic/language-reference/queries/index.md)

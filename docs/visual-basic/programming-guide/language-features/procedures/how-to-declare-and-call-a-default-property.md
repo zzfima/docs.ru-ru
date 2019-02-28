@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объявление и вызов свойства по умолчанию в Visual Basic
+title: Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640970"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977556"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Как выполнить Объявление и вызов свойства по умолчанию в Visual Basic
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic
 Объект *свойство по умолчанию* — это свойство класса или структуры, которое ваш код может получить доступ без указания его. Если вызывающий код задает класс или структуру, но не свойство и контекст разрешает доступ к свойству, Visual Basic разрешает доступ для этого класса или структуры свойство по умолчанию, если он существует.  
   
  Класс или структура может иметь не более одного свойства по умолчанию. Тем не менее можно перегружать свойство по умолчанию и иметь более одной версии.  
@@ -32,43 +32,43 @@ ms.locfileid: "54640970"
   
 3.  Укажите хотя бы один параметр для свойства. Нельзя определить свойство по умолчанию, которая не принимает хотя бы один аргумент.  
   
-     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Чтобы вызвать свойство по умолчанию  
   
 1.  Объявите переменную типа содержащего класса или структуры.  
   
-     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
 2.  Используйте имя переменной отдельно в выражении, где вы обычно содержит имя свойства.  
   
-     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
 3.  После имени переменной список аргументов в скобках. Свойство по умолчанию необходимо выполнить хотя бы один аргумент.  
   
-     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
 4.  Чтобы получить значение свойства по умолчанию, используйте имя переменной, списку аргументов в выражении или после равенства (`=`) войдите в операторе присваивания.  
   
-     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
 5.  Чтобы задать значение свойства по умолчанию, используйте имя переменной со списком аргументов, в левой части оператора присваивания.  
   
-     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
 6.  Всегда можно указать имя свойства по умолчанию, а также имя переменной, так же, как это делается для доступа к любому другому свойству.  
   
-     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере объявляется свойство по умолчанию для класса.  
   
- [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует вызов свойства по умолчанию `myProperty` класса `class1`. Три оператора присваивания сохраняют значения в `myProperty`и <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> вызов считывает значения.  
   
- [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
  Наиболее распространенное использование свойства по умолчанию является <xref:Microsoft.VisualBasic.Collection.Item%2A> свойство для различных классов коллекций.  
   

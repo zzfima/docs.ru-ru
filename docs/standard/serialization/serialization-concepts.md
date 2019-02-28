@@ -2,12 +2,12 @@
 title: Концепции сериализации
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: f16de0e95f7520e377dc9920743261ad6019e430
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583764"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976542"
 ---
 # <a name="serialization-concepts"></a>Концепции сериализации
 Для чего нужна сериализация? Двумя наиболее важными причинами являются сохранение состояния объекта в среде хранения, чтобы впоследствии можно было воссоздать точную копию, и отправить объект по значению из одного домена приложения в другой. Например, сериализация используется, чтобы сохранить состояние сеанса в ASP.NET и скопировать объекты в буфер обмена в Windows Forms. Она также используется при удаленном взаимодействии для передачи объектов по значению с одного домена приложения в другой.
@@ -30,7 +30,7 @@ ms.locfileid: "33583764"
  [Двоичная сериализация](../../../docs/standard/serialization/binary-serialization.md)  
  Описывает механизм двоичной сериализации, входящий в среду CLR.  
   
- [Удаленные объекты](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Удаленное взаимодействие .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Описывает различные методы взаимодействия, доступные в платформе .NET Framework для удаленного взаимодействия.  
   
  [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: a974a68010fe80a07e83ac31e109bbf1c2b955e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568781"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977465"
 ---
 # <a name="partial-methods-visual-basic"></a>Разделяемые методы (Visual Basic)
 Разделяемые методы позволяют разработчикам использовать пользовательскую логику в код. Как правило код входит в созданном конструктором класса. Разделяемые методы определяются в разделяемый класс, созданный генератором кода, и они часто используются для предоставления уведомления, что что-то было изменено. Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
@@ -56,15 +56,15 @@ End Sub
 ## <a name="example"></a>Пример  
  В файле с именем Product.Designer.vb, определить `Product` классом, имеющим `Quantity` свойство.  
   
- [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
  В файле с именем Product.vb, обеспечить реализацию для `QuantityChanged`.  
   
- [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
  Наконец, в методе Main проекта, объявите `Product` экземпляра и укажите начальное значение для его `Quantity` свойство.  
   
- [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
  Откроется окно сообщения, отображается следующее сообщение:  
   

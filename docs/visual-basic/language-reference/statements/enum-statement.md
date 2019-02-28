@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: f1086fdc26f1909e751617b78e0cd31f2a8b1b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656665"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965700"
 ---
 # <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 Объявляет перечисление и определяет значения его членов.  
@@ -139,37 +139,37 @@ End Enum
 ## <a name="example"></a>Пример  
  В следующем примере показано использование оператора `Enum`. Обратите внимание, что элемент называется `EggSizeEnum.Medium`, а не как `Medium`.  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере метод находится за пределами `Egg` класса. Таким образом `EggSizeEnum` полностью принимается в качестве `Egg.EggSizeEnum`.  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Enum` инструкции для определения связанного набора именованных констант. В этом случае значения являются цветами, которые можно выбрать для создаваемых форм ввода данных для базы данных.  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>Пример  
  Пример значения, включающих положительные и отрицательные числа.  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `As` предложение используется для указания `datatype` перечисления.  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже показано, как использовать побитовое перечисление. Несколько значений могут назначаться экземпляр побитового перечисления. `Enum` Объявление включает в себя <xref:System.FlagsAttribute> атрибут, который указывает, что перечисление может обрабатываться как набор флагов.  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже пример проходит через перечисления. Она использует <xref:System.Enum.GetNames%2A> метод для получения массива имен членов из перечисления, и <xref:System.Enum.GetValues%2A> для извлечения массива значений элементов.  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Enum>

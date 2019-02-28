@@ -3,14 +3,14 @@ title: Начало работы с хранилищем BLOB-объектов A
 description: Store неструктурированных данных в облаке в хранилище BLOB-объектов Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664995"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981911"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure с использованиемF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F\#
 
 Хранилище BLOB-объектов Azure — это служба, которая сохраняет неструктурированные данные в облаке в виде BLOB-объектов. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.
 

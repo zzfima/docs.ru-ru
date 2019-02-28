@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653623"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966077"
 ---
 # <a name="event-statement"></a>Оператор Event
 Объявляет пользовательское событие.  
@@ -56,7 +56,7 @@ End Event
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание|  
+|Отделение|Описание:|  
 |---|---|  
 |`attrlist`|Необязательный параметр. Список атрибутов, применимых к этому событию. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (»`<`«и»`>`«).|  
 |`accessmodifier`|Необязательный параметр. Указывает, какой код может получать доступ к событию. Ниже указаны доступные значения.<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— любой код, который можно получить доступ к элементу, который объявляет он доступен.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри его класса или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только код в той же сборке может получить доступ к его.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— доступ к нему только код в объявляющем его элементе.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-только доступ к нему код в классе события, производном классе или той же сборки. <br />- [Частный защищенный](../../language-reference/modifiers/private-protected.md)-только доступ к нему код в классе события или производного класса в той же сборке.|  
@@ -82,14 +82,15 @@ End Event
 ## <a name="remarks"></a>Примечания  
  После объявления события используйте оператор `RaiseEvent` для создания события. Типичные события можно объявлять и создавать, как показано в следующих фрагментах кода.  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  Аргументы событий можно объявлять так же, как аргументы процедур, за следующими исключениями: события не могут иметь именованные аргументы, аргументы `ParamArray` и аргументы `Optional`. События не имеют возвращаемых значений.  
   
  Для обработки события его необходимо связать с подпрограммой обработчика событий с помощью оператора `Handles` или `AddHandler`. Подписи подпрограммы и события должны совпадать. Для обработки общего события необходимо использовать оператор `AddHandler`.  
   
- `Event` можно использовать только на уровне модуля. Это означает, что *контекст объявления* события должен быть класс, структура, модуль или интерфейс, и не может быть исходный файл, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ 
+  `Event` можно использовать только на уровне модуля. Это означает, что *контекст объявления* события должен быть класс, структура, модуль или интерфейс, и не может быть исходный файл, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  В большинстве случаев для объявления события можно использовать первый пример синтаксиса в разделе "Синтаксис" этой статьи. Однако в некоторых сценариях требуется контролировать поведение события более детально. Последний пример синтаксиса в разделе "Синтаксис" этой статьи, в котором используется ключевое слово `Custom`, обеспечивает такие возможности, позволяя определять настраиваемые события. В настраиваемом событии можно точно указать, что происходит, когда код добавляет или удаляет обработчик события для события или когда код вызывает событие. Примеры см. в разделах [Практическое руководство. Объявление пользовательских событий для экономии памяти](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) и [как: Объявление пользовательских событий для предотвращения блокировки](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
@@ -106,11 +107,11 @@ End Event
   
  Добавьте переменную `WithEvents` в раздел объявлений класса `Form1`:  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
  Добавьте следующий код в код для `Form1`. Замените все повторяющиеся процедуры, которые могут существовать, такие как `Form_Load` или `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Нажмите клавишу F5 для запуска предыдущего примера и нажмите кнопку **запустить**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
   

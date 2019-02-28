@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553741"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974150"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Пошаговое руководство. Обработка событий (Visual Basic)
 Это второе из двух разделов, которые демонстрируют, как работать с событиями. Первый раздел [Пошаговое руководство: Объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), показано, как объявлять и создавать события. Чтобы показать, как обрабатывать события при их возникновении в этом разделе используется форма и класс из предыдущего примера.  
@@ -25,7 +25,7 @@ ms.locfileid: "54553741"
   
 1.  Поместите следующий код в `Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
      `WithEvents` Ключевое слово указывает, что переменная `mWidget` используется для обработки событий объекта. Необходимо указывать тип объекта, указав имя класса, из которого будет создан объект.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "54553741"
   
 3.  Добавьте следующий код в обработчик событий `mWidget_PercentDone` .  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Каждый раз, когда `PercentDone` события, процедура события отображает процент выполнения в `Label` элемента управления. `DoEvents` Метод позволяет обновить надпись, а также предоставляет пользователю возможность воспользоваться **отменить** кнопки.  
   
 4.  Добавьте следующий код для `Button2_Click` обработчик событий:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
  При нажатии кнопки **отменить** кнопку в активном `LongTask` работает под управлением, `Button2_Click` событие выполняется сразу же `DoEvents` оператор разрешает обработки события. Переменную уровня класса `mblnCancel` присваивается `True`и `mWidget_PercentDone` событий затем проверяет и устанавливает `ByRef Cancel` аргумент `True`.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54553741"
   
 3.  Добавьте следующий код для `Form1_Load` процедуру обработки события для создания `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
  При выполнении этого кода Visual Basic создает `Widget` объекта и подключает его события к процедурам события, связанные с `mWidget`. Из этой точки, каждый раз, когда `Widget` вызывает его `PercentDone` событий, `mWidget_PercentDone` выполняется процедура обработки событий.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "54553741"
   
 -   Добавьте следующий код в обработчик событий `Button1_Click` .  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
  Прежде чем `LongTask` вызывается метод, метки, что отображает процент завершения должен быть инициализирован и уровня класса `Boolean` флаг для отмены метода должно быть присвоено `False`.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54553741"
   
 -   Добавьте следующую строку кода, чтобы `Button1_Click` процедуры, непосредственно перед строкой, которая считывает `mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
  Приведенный выше код создает новый `Widget` при каждом нажатии кнопки. Как только `LongTask` завершения метода, ссылка на `Widget` освобождается и `Widget` уничтожается.  
   

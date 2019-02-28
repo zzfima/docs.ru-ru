@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502902"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965752"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Вызывает текущий класс или интерфейс для наследования атрибутов, переменных, свойства, процедуры и события из другого класса или набора интерфейсов.  
@@ -54,12 +54,12 @@ Inherits basetypenames
 ## <a name="example"></a>Пример  
  В следующем примере используется `Inherits` инструкцию, чтобы показать, как класс с именем `thisClass` может наследовать все члены базового класса с именем `anotherClass`.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано наследование от нескольких интерфейсов.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
  Интерфейс, с именем `thisInterface` теперь включает все определения в <xref:System.IComparable>, <xref:System.IDisposable>, и <xref:System.IFormattable> интерфейсы, наследуемые члены предоставляют соответственно для сравнения двух объектов освобождения выделенных ресурсов и выражения значение объекта как `String`. Класс, реализующий `thisInterface` должен реализовать каждый член каждого базового интерфейса.  
   

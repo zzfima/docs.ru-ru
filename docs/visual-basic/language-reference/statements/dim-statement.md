@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 487e2ff55f256bc06a463043dd2849a404eb82cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567741"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975204"
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 Объявляет и выделяет область хранения для одной или нескольких переменных.  
@@ -100,7 +100,7 @@ Dim [ WithEvents ] variablelist
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`variablename`|Обязательный. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
     |`boundslist`|Необязательный параметр. Список границ для каждого измерения массива.|  
@@ -196,7 +196,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ```  
   
 ## <a name="arrays"></a>Массивы  
- Можно объявить переменную для хранения *массив*, который может содержать несколько значений. Чтобы указать, что переменная содержит массив, выполните его `variablename` немедленно со скобками. Дополнительные сведения о массивах см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Можно объявить переменную для хранения *массив*, который может содержать несколько значений. Чтобы указать, что переменная содержит массив, выполните его `variablename` немедленно со скобками. Дополнительные сведения см. в руководстве по работе с [массивами](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  Можно указать нижнюю и верхнюю границу каждого измерения массива. Чтобы сделать это, включите `boundslist` в скобках. Для каждого измерения `boundslist` указывает верхнюю границу и при необходимости нижняя граница. Нижняя граница всегда равно нулю, задания или нет. Каждый индекс может изменяться от нуля до значения верхней границы.  
   
@@ -251,7 +251,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  
 |---|---|---|---|  
-|Нет|Нет|`Dim qty`|Если [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) — off (по умолчанию), переменной присваивается `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени компиляции.|  
+|Нет|Нет|`Dim qty`|Если [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) — off (по умолчанию), переменной присваивается `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|  
 |Нет|Да|`Dim qty = 5`|Если [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) включен (по умолчанию), переменная получает тип данных инициализатора. См. в разделе [вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, при компиляции возникает ошибка.|  
 |Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. в таблице ниже в данном разделе.|  
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|  
@@ -299,19 +299,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>Пример  
  В следующем примере объявляется переменных с помощью `Dim` инструкции с различными параметрами.  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере перечисляются простых чисел от 1 до 30. Область локальных переменных описан в комментариях к коду.  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `speedValue` переменная, объявленная на уровне класса. `Private` Ключевое слово используется для объявления переменной. Переменная может осуществляться в любой процедурой `Car` класса.  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)

@@ -1,24 +1,24 @@
 ---
-title: Как выполнить Доступа к символам строк в Visual Basic
+title: Практическое руководство. Доступа к символам строк в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618926"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967559"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Как выполнить Доступа к символам строк в Visual Basic
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Практическое руководство. Доступа к символам строк в Visual Basic
 В этом примере демонстрируется использование <xref:System.String.Chars%2A> свойство для доступа к знаку в указанном расположении в строке.  
   
 ## <a name="example"></a>Пример  
  Иногда бывает удобно иметь данные о символов в строки и позиции этих символов. Можно считать строки массив символов (`Char` экземпляров); можно получить определенный символ, ссылаясь на индекс символа с помощью <xref:System.String.Chars%2A> свойство.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
  `index` Параметр <xref:System.String.Chars%2A> свойство отсчитывается от нуля.  
   

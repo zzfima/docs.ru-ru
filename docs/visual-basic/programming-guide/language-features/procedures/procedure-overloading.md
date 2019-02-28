@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712526"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975476"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Перегрузка процедур (Visual Basic)
 *Перегрузка* процедуры означает определение ее в нескольких версиях с помощью тем же именем, но различными списками параметров. Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры без необходимости различать их по имени. Это делается путем изменения списка параметров.  
@@ -67,12 +67,12 @@ ms.locfileid: "54712526"
 ## <a name="multiple-versions-of-a-procedure"></a>Несколько версий процедуры  
  Предположим, что при написании `Sub` процедуры для публикации транзакций, применительно к балансу клиента, а хотите иметь возможность идентификации клиента по имени или по номеру счета. Чтобы решить эту проблему, можно определить двумя разными `Sub` процедуры, как показано в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]  
   
 ### <a name="overloaded-versions"></a>Перегруженные версии  
  Альтернативой является перегрузка процедуры. Можно использовать [перегружает](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово, чтобы определить версию процедуры для каждого списка аргументов следующим образом:  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
 #### <a name="additional-overloads"></a>Дополнительные перегрузки  
  Если вы хотите принять сумму транзакции в формате `Decimal` или `Single`, определить дополнительные перегруженные версии `post` для для этих вариантов. Если вы уже сделали это для каждой из перегрузок в предыдущем примере, имеется четыре `Sub` процедуры, с тем же именем, но с четырьмя различными сигнатурами.  
@@ -80,9 +80,9 @@ ms.locfileid: "54712526"
 ## <a name="advantages-of-overloading"></a>Преимущества перегрузки  
  Преимущество перегрузки процедуры заключается в гибкости вызова. Для использования `post` объявление процедуры в предыдущем примере, вызывающий код может получить идентификатор клиента как `String` или `Integer`, а затем вызвать ту же процедуру в любом случае. Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
- [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

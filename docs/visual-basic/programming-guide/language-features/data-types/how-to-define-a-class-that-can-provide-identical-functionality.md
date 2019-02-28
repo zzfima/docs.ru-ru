@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение класса, реализующего одинаковую функциональность для различных типов данных (Visual Basic)
+title: Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667483"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977803"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Как выполнить Определение класса, реализующего одинаковую функциональность для различных типов данных (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных (Visual Basic)
 Можно определить класс, из которого можно создавать объекты, обеспечивающие одинаковые функциональные возможности для различных типов данных. Для этого укажите в определении один или несколько *параметров типа* . После этого класс может служить шаблоном для объектов, которые используют различные типы данных. Класс, определенный таким образом, называется *универсальным классом*.  
   
  Преимущество определения универсального класса состоит в том, он определяется только один раз, и код может использовать его для создания многих объектов, использующих разнообразные типы данных. Это дает более высокую производительность, чем при определении класса с помощью типа `Object` .  
@@ -64,7 +64,7 @@ ms.locfileid: "54667483"
   
      В следующем примере определяется класс, управляющий простым списком. Он хранит список во внутреннем массиве `items`, и использующий код может объявить тип данных элементов списка. Параметризованный конструктор позволяет использующему коду задать значение верхней границы `items`, и конструктор по умолчанию устанавливает это значение равным 9 (для всех 10 элементов).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      Можно объявить один класс из `simpleList` для хранения списка значений `Integer` , другой класс — для хранения списка значений `String` и еще один — для хранения значений `Date` . Кроме типа данных элементов списка, объекты, созданные из всех этих классов, ведут себя одинаково.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54667483"
   
      Можно протестировать класс `simpleList` с помощью следующего кода.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>См. также
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

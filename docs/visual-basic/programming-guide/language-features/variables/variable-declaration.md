@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a23d16d4ef4e90041e320c52381fa34b8b33d2d4
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738751"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973552"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
 Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Определить характеристики переменной, ее расположение и содержимое.  
@@ -66,7 +66,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="local-type-inference"></a>Вывод локального типа  
  *Определение типа* используется для определения типов данных локальных переменных, объявленных без `As` предложение. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа. В следующем примере оба `num1` и `num2` являются строго типизированными как целые числа.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
  Если вы хотите использовать вывод локального типа `Option Infer` должно быть присвоено `On`. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

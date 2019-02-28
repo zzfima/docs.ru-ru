@@ -16,26 +16,26 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: e48d28535b9e8cd022f7a4f14e620a4db93ff69f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748086"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977257"
 ---
 # <a name="namespaces-in-visual-basic"></a>Пространства имен в Visual Basic
 Пространства имен упорядочивают объекты, определенные в сборке. Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен. Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.  
   
  Например, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет класс <xref:System.Windows.Forms.ListBox> в пространстве имен <xref:System.Windows.Forms?displayProperty=nameWithType> . В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
   
- [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
+ [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Предотвращение конфликтов имен  
  Пространства имен[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] помогают решить проблему, которую иногда называют *загрязнением пространства имен*, при которой у разработчика библиотеки классов возникают трудности, связанные с использованием аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
   
  Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Однако если вы захотите использовать в том же проекте класс [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> , потребуется использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальным, Visual Basic выводит сообщение об ошибке о том, что имя является неоднозначным. В примере кода ниже показано, как объявить эти объекты:  
   
- [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
+ [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
  На следующем рисунке показаны две иерархии пространств имен, в каждой из которых присутствует объект `ListBox`.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "56748086"
 ## <a name="fully-qualified-names"></a>полные имена  
  Полные имена — это ссылки на объекты, имеющие префикс в виде имени пространства имен, в котором определен объект. Вы можете использовать объекты, определенные в других проектах, если создадите ссылку на класс (выбрав **Добавить ссылку** в меню **Проект** ) и затем используете полное имя объекта в коде. В следующем фрагменте кода показано, как использовать полное имя объекта из пространства имен другого проекта:  
   
- [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
+ [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
  Полные имена предотвращают возникновение конфликтов имен, так как позволяют компилятору определить, какой именно объект используется. Однако сами эти имена могут получиться длинными и громоздкими. Чтобы обойти эту проблему, можно использовать оператор `Imports` для определения *псевдонима*— сокращенного имени, которое можно применить вместо полного имени. Например, в следующем примере кода создаются псевдонимы для двух полных имен, которые затем используются для определения двух объектов.  
   
- [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
+ [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
- [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
+ [!code-vb[VbVbalrApplication#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#10)]  
   
  Если вы применяете оператор `Imports` без псевдонима, можно использовать все имена в данном пространстве имен без уточнения при условии, что они являются уникальными в данном проекте. Если проект содержит операторы `Imports` для пространств имен, где есть элементы с одинаковым именем, необходимо полностью уточнять это имя. Предположим, что проект содержал два следующих оператора `Imports` :  
   
- [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
+ [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
  Если вы попытаетесь использовать `Class1` без полного имени, Visual Basic выводит сообщение об ошибке, о том, что имя `Class1` является неоднозначным.  
   
@@ -105,7 +105,7 @@ End Namespace
   
  В следующих примерах используется ключевое слово `Global` для объявления пространства имен из корневого пространства имен для проекта.  
   
- [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
+ [!code-vb[VbVbalrApplication#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#22)]  
   
  В объявлении пространства имен `Global` не может быть вложенным в другое пространство имен.  
   
@@ -117,7 +117,7 @@ End Namespace
   
  Если ключевое слово `Global` отсутствует в объявлении пространства имен, к <xref:System.Text.StringBuilder> нельзя обратиться без указания `Global.System.Text.StringBuilder`. Если ключевое слово `ConsoleApplication1`не использовалось, для проекта с именем `System.Text` ссылки на `ConsoleApplication1.System.Text` обращаются к `Global` .  
   
- [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
+ [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение различных версий процедуры (Visual Basic)
+title: Практическое руководство. Определение различных версий процедуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528879"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980780"
 ---
-# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Как выполнить Определение различных версий процедуры (Visual Basic)
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Практическое руководство. Определение различных версий процедуры (Visual Basic)
 Можно определить процедуру в нескольких версиях, *перегрузка* его с помощью тем же именем, но другим списком параметров для каждой версии. Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры без необходимости различать их по имени.  
   
  Дополнительные сведения см. в разделе [Procedure Overloading](./procedure-overloading.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "54528879"
 ## <a name="example"></a>Пример  
  В следующем примере определяется `Sub` процедуры для публикации транзакций с сальдо клиента. Она использует `Overloads` ключевое слово для определения двух версий процедуры, принимающую клиента по имени, а другая по номеру счета.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  Вызывающий код может получить идентификатор клиента как `String` или `Integer`, а затем использовать тот же вызывающий оператор в любом случае.  
   

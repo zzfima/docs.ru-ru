@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сравнение строки на соответствие с шаблоном (Visual Basic)
+title: Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: a4d5f12c5cf1ba89f7b505fb44c3f8fb19cb09d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669163"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965948"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Как выполнить Сравнение строки на соответствие с шаблоном (Visual Basic)
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
 Если вы хотите определить выражение [строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) удовлетворяет шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
  `Like` принимает два операнда. Левый операнд представляет собой строковое выражение, а правый — строка, содержащая шаблон, используемый для сопоставления. `Like` Возвращает `Boolean` значение, указывающее, удовлетворяет ли строковое выражение шаблону.  
@@ -33,7 +33,7 @@ ms.locfileid: "54669163"
   
      В следующем примере производится проверка ли `myString` состоит ровно из символов `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Сравнение символа в строковом выражении с символом-шаблоном  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54669163"
   
      В следующем примере производится проверка ли `myString` состоит из символов `W` и любых значений между двумя символами.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Сравнение символа в строковом выражении в списке символов  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54669163"
   
      В следующем примере производится проверка ли `myString` состоит из любой допустимый символ, за которым следует точно один из символов `A`, `C`, или `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
   
      Обратите внимание на то, что при сравнении учитывается регистр.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54669163"
   
      В следующем примере производится проверка ли `myString` состоит из символов `num` с одного из символов `i`, `j`, `k`, `l`, `m`, или `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
   
      Обратите внимание на то, что при сравнении учитывается регистр.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "54669163"
   
      В следующем примере проверяется номер телефона из семи цифр `phoneNum` ровно три цифры, а затем пробел, дефис (`–`), точку (`.`), или ни один знак, за которым следует ровно четыре цифры.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>См. также
 - [Операторы сравнения](../../../../visual-basic/language-reference/operators/comparison-operators.md)

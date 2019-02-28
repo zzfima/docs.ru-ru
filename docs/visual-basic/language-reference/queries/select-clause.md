@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519012"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979610"
 ---
 # <a name="select-clause-visual-basic"></a>Предложение Select (Visual Basic)
 Определяет результат запроса.  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  `Select` Предложение может ссылаться на переменные в текущей области. Сюда входят переменные диапазона, определенные в `From` предложения (или `From` предложения). Он также включает любые новые переменные, созданные с псевдонимом, `Aggregate`, `Let`, `Group By`, или `Group Join` предложения, или переменные из предыдущей `Select` предложение в выражении запроса. `Select` Предложение может также включать статические значения. Например, в следующем примере кода показано выражение запроса, в котором `Select` предложение определяет результат запроса как новый анонимный тип с четырьмя элементами: `ProductName`, `Price`, `Discount`, и `DiscountedPrice`. `ProductName` И `Price` член значения берутся из переменной диапазона продукта, который определен в `From` предложение. `DiscountedPrice` Значение элемента вычисляется в `Let` предложение. `Discount` Член представляет собой статическое значение.  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  `Select` Предложение вводит новый набор переменных диапазона для последующих запросов предложения, а предыдущие переменные диапазона больше не находятся в области. Последний `Select` предложение в выражении запроса определяет возвращаемое значение запроса. Например следующий запрос возвращает компании имя и идентификатор для каждого заказчика, для которого итоговая сумма превышает 500. Первый `Select` предложение определяет переменные диапазона для `Where` предложение, а второй `Select` предложение. Второй `Select` предложение определяет значения, возвращаемые запросом как новый анонимный тип.  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  Если `Select` предложение определяет один элемент для возврата, выражение запроса возвращает коллекцию типа одного элемента. Если `Select` предложение определяет несколько элементов для возврата, выражение запроса возвращает коллекцию нового анонимного типа, на основе выбранных элементов. Например, следующие два запроса возвращают коллекции двух различных типов, на основе `Select` предложение. Первый запрос возвращает коллекцию имен компании как строки. Второй запрос возвращает коллекцию `Customer` объектов, заполненных названия компаний и сведения об адресе.  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Пример  
  В следующем запросе используется выражение `From` предложение для объявления переменной диапазона `cust` для `customers` коллекции. `Select` Предложение выбирает имя клиента и значение идентификатора и заполняет `CompanyName` и `CustomerID` столбцов новой переменной диапазона. `For Each` Инструкция перебирает каждый возвращаемый объект и отображает `CompanyName` и `CustomerID` столбцов для каждой записи.  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>См. также
 - [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)

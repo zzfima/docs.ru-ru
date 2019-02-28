@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519401"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974267"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Возможности Visual Basic, поддерживающие LINQ
 Имя [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] относится к технологии в Visual Basic, что для поддержки синтаксиса запроса, так и для других языковых конструкций на языке. С помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], нет необходимости изучать новый язык для запросов к внешнему источнику данных. Выполнять запросы к данным в реляционных базах данных, хранилища XML или объектов с помощью Visual Basic. Такая интеграция возможностей запроса в язык позволяет проверки во время компиляции для синтаксических ошибок и безопасность типов. Такая интеграция также гарантирует, что вы уже известна большая часть нужно знать для написания насыщенных и разнообразных запросов в Visual Basic.  
@@ -20,7 +20,7 @@ ms.locfileid: "54519401"
 ## <a name="query-expressions"></a>Выражения запросов  
  Выражения запросов в Visual Basic может выражаться в декларативный синтаксис, похожий на SQL или XQuery. Во время компиляции синтаксис запроса преобразуется в вызовы методов к реализации поставщика LINQ методы стандартных операторов запросов расширения. Приложения управляют стандартных операторов запроса находятся в области действия, указав соответствующее пространство имен с `Imports` инструкции. Синтаксис выражения запроса Visual Basic выглядит следующим образом:  
   
- [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
+ [!code-vb[VbLINQVbFeatures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#1)]  
   
  Дополнительные сведения см. в разделе [Знакомство с LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
@@ -31,18 +31,18 @@ ms.locfileid: "54519401"
   
  В следующем примере вывод локального типа. Чтобы использовать этот пример, необходимо задать `Option Infer` для `On`.  
   
- [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
+ [!code-vb[VbLINQVbFeatures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#2)]  
   
  Вывод локального типа также делает возможным создание анонимных типов, которые описаны далее в этом разделе и необходимы для запросов LINQ.  
   
  В следующем примере LINQ, вывод типа происходит, если `Option Infer` либо `On` или `Off`. Ошибка времени компиляции возникает, если `Option Infer` — `Off` и `Option Strict` является `On`.  
   
- [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
+ [!code-vb[VbLINQVbFeatures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#3)]  
   
 ## <a name="object-initializers"></a>Инициализаторы объектов  
  Инициализаторы объектов используются в выражениях запросов при необходимости создать анонимный тип для хранения результатов запроса. Они также могут использоваться для инициализации объектов с именованными типами за пределами запросов. С помощью инициализатора объектов, можно инициализировать объект в одной строке без явного вызова конструктора. Предположим, что у вас есть класс с именем `Customer` , имеющий открытые `Name` и `Phone` свойства, вместе с другими свойствами, можно использовать инициализатор объекта таким образом:  
   
- [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
+ [!code-vb[VbLINQVbFeatures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#4)]  
   
  Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54519401"
   
  *Анонимного типа* динамически создается компилятором. Имя типа назначается компилятором, и он может измениться при каждой новой компиляции. Таким образом имя не может использоваться непосредственно. Анонимные типы инициализируются следующим образом:  
   
- [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
+ [!code-vb[VbLINQVbFeatures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#5)]  
   
  Дополнительные сведения см. в статье [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
@@ -60,36 +60,36 @@ ms.locfileid: "54519401"
   
  Следующий метод расширения добавляет метод печати для <xref:System.String> класса.  
   
- [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
+ [!code-vb[VbLINQVbFeatures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#6)]  
   
  Как и обычный метод экземпляра вызывается метод <xref:System.String>:  
   
- [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
+ [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
  Дополнительные сведения см. в разделе [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Лямбда-выражения  
  Лямбда-выражения является функцией без имени, которая вычисляет и возвращает одиночное значение. В отличие от именованных функций лямбда-выражение может быть определен и выполнена в то же время. В следующем примере отображается 4.  
   
- [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
+ [!code-vb[VbLINQVbFeatures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#8)]  
   
  Можно назначить определения лямбда-выражения в имени переменной и затем использовать имя для вызова функции. Следующий пример выводит 4.  
   
- [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
+ [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
  В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], лямбда-выражения лежат в основе многих стандартных операторов запроса. Компилятор создает лямбда-выражения для записи вычислений, которые определены в основных методах запроса, таких как `Where`, `Select`, `Order By`, `Take While`и другие.  
   
  Например следующий код определяет запрос, возвращающий все выпускников из списка студентов.  
   
- [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
+ [!code-vb[VbLINQVbFeatures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#9)]  
   
  Определение запроса компилируется в код, аналогичный приведенному ниже, который использует два лямбда-выражения для определения аргументов для `Where` и `Select`.  
   
- [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
+ [!code-vb[VbLINQVbFeatures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#10)]  
   
  Любой из версий, которые могут выполняться с помощью `For Each` цикла:  
   
- [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
+ [!code-vb[VbLINQVbFeatures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#11)]  
   
  Дополнительные сведения см. в разделе [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   

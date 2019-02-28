@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574317"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976529"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 Объект *универсальной процедуры*, называемой *универсальный метод*, — это процедура, определенная с помощью по крайней мере один тип параметра. Это позволяет настроить типы данных к его требованиям при каждом вызове процедуры вызывающему коду.  
@@ -29,7 +29,7 @@ ms.locfileid: "54574317"
 ## <a name="type-inference"></a>Вывод типа  
  Универсальную процедуру можно вызвать без аргументов типа вообще. При вызове его таким образом, компилятор пытается определить соответствующий тип данных для передачи аргументов в процедуру типа. Это называется *вывод типа*. В следующем коде показано вызов в котором компилятор выводит, что ему следует передать тип `String` параметру типа `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
  Если компилятор не может вывести аргументы типа из контекста вызова, он сообщает об ошибке. Одной из возможных причин такой ошибки является несоответствие ранга массива. Например предположим, что вы определяете обычный параметр как массив с параметром типа. При вызове универсальной процедуры предоставив массив другого ранга (число измерений), несоответствие вызывает сбой вывода типа. В следующем коде показано вызов в который двумерный массив передается в процедуру, ожидающую одномерный массив.  
   
@@ -53,14 +53,14 @@ End Sub
  В следующем примере определяется универсальный `Function` процедуре, чтобы найти конкретный элемент в массиве. Он определяет один параметр типа и использует его для создания двух параметров в списке параметров.  
   
 ### <a name="code"></a>Код  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Комментарии  
  В предыдущем примере требуется возможность сравнения `searchValue` отношению к каждому элементу `searchArray`. Чтобы обеспечить эту возможность, он ограничивает параметр типа `T` для реализации <xref:System.IComparable%601> интерфейс. Код использует <xref:System.IComparable%601.CompareTo%2A> вместо метода `=` оператор, так как нет никакой гарантии, что аргумент типа, предоставленный для `T` поддерживает `=` оператор.  
   
  Вы можете протестировать `findElement` процедуры следующим кодом.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
  Предыдущие вызовы `MsgBox` отображения «0», «1» и «-1"соответственно.  
   

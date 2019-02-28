@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b8bec965e5a149466863cde7a2646128469cbd0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512987"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972174"
 ---
 # <a name="property-statement"></a>Property Statement
 Объявляет имя свойства и процедуры свойства, используемые для хранения и извлечения значения свойства.  
@@ -132,7 +132,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      `interface.definedname`  
   
-    |Отделение|Описание|  
+    |Отделение|Описание:|  
     |---|---|  
     |`interface`|Обязательный. Имя интерфейса, реализуемого этим свойством, содержащей, класс или структура.|  
     |`definedname`|Обязательный. Имя, по которому это свойство определено в `interface`.|  
@@ -190,22 +190,22 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   **Возвращаемое значение.** Для возвращения значения из `Get` процедуры, можно присвоить значение имени свойства или включить ее в `Return` инструкции. В следующем примере присваивается значение имени свойства `quoteForTheDay` , а затем использует `Exit Property` инструкция возвращает.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]  
   
      Если вы используете `Exit Property` без присвоения значения `name`, `Get` процедура возвращает значение по умолчанию для типа данных свойства.  
   
      `Return` Оператор, в то же время назначает `Get` процедура возвращать значение и завершает процедуру. Это показано в следующем примере.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере объявляется свойство в классе.  
   
- [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>См. также
 - [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)

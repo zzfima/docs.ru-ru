@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585621"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973032"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Основные операции запроса (Visual Basic)
 Этот раздел содержит краткое введение в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений в Visual Basic и некоторых типичных операций, выполняемых в запросе. Дополнительные сведения см. в следующих разделах:  
@@ -34,7 +34,7 @@ ms.locfileid: "54585621"
 ## <a name="specifying-the-data-source-from"></a>Указание источника данных (от)  
  В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запроса, первым шагом является указание источника данных, необходимо выполнить запрос. Таким образом `From` предложения в запросе всегда располагается первым. Операторы запросов, выберите и формирование результатов в зависимости от типа источника.  
   
- [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
+ [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
  `From` Предложение указывает источник данных, `customers`и *переменная диапазона*, `cust`. Переменная диапазона находится как переменная итерации цикла, за исключением того, что в выражении запроса не происходит фактической итерации. При выполнении запроса, обычно с помощью `For Each` цикла, переменная диапазона используется как ссылка на каждый последующий элемент в `customers`. Так как компилятор может определить тип `cust`, нет необходимости указывать его в явном виде. Примеры запросов, написанных с использованием и без явную типизацию, см. в разделе [связи типов в операциях запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54585621"
 ## <a name="filtering-data-where"></a>Фильтрация данных (где)  
  Возможно, наиболее распространенной операцией запроса является применение фильтра в форме логического выражения. Запрос возвращает только те элементы, для которых выражение является истинным. Объект `Where` предложение используется для выполнения фильтрации. Фильтр указывает элементы в источнике данных для включения в результирующей последовательности. В следующем примере включаются только клиенты, находящиеся в Лондоне.  
   
- [!code-vb[VbLINQBasicOps#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_2.vb)]  
+ [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
  Можно использовать логические операторы, такие как `And` и `Or` для объединения критериев фильтров в `Where` предложение. Например для получения только заказчиков из Лондона с именем Devon, используйте следующий код:  
   
@@ -62,7 +62,7 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="ordering-data-order-by"></a>Упорядочение данных (Order By)  
  Часто бывает удобно упорядочить возвращенные данные в определенном порядке. `Order By` Предложение сортирует элементы возвращаемой последовательности по по указанному полю или полям. Например, следующий запрос сортирует результаты на основе `Name` свойство. Поскольку `Name` является строкой, возвращаемые данные будут отсортированы в алфавитном порядке, от A до Z.  
   
- [!code-vb[VbLINQBasicOps#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_3.vb)]  
+ [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
  Для упорядочения результатов в обратном порядке от Я до А используется предложение `Order By...Descending`. По умолчанию используется `Ascending` когда ни одно `Ascending` , ни `Descending` указан.  
   
@@ -73,11 +73,11 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Чтобы извлечь коллекцию, состоящую из полных `Customer` объектов, выберите саму переменную диапазона:  
   
- [!code-vb[VbLINQBasicOps#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_4.vb)]  
+ [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
  Если `Customer` экземпляр больших объектов, содержит много полей, и все, что вы хотите получить — это имя, можно выбрать `cust.Name`, как показано в следующем примере. Вывод локального типа распознает и изменит тип результата из коллекции `Customer` объектов в коллекции строк.  
   
- [!code-vb[VbLINQBasicOps#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_5.vb)]  
+ [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
  Чтобы выбрать несколько полей из источника данных, у вас есть два варианта:  
   
@@ -91,30 +91,30 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 -   Определите именованный тип, содержащий конкретные поля, которые вы хотите включить в результат и создание и инициализация экземпляров типа в `Select` предложение. Используйте этот параметр только в том случае, если необходимо использовать отдельные результаты за пределами коллекции, в котором они будут возвращены, или в том случае, если необходимо передать их в качестве параметров в вызовах методов. Тип `londonCusts5` в следующем примере является IEnumerable (Of NamePhone).  
   
-     [!code-vb[VbLINQBasicOps#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_7.vb)]  
+     [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
-     [!code-vb[VbLINQBasicOps#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_8.vb)]  
+     [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
  Дополнительные сведения об использовании `Select` предложение в Visual Basic, см. в разделе [предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
 ## <a name="joining-data-join-and-group-join"></a>Данные соединения (Join и групповое соединение)  
  Вы можете объединить несколько источников данных в `From` предложение несколькими способами. Например следующий код использует два источника данных и неявно объединяет свойства из каждого из них в результат. Запрос выбирает студентов, чьи фамилии начинаются с гласных.  
   
- [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
+ [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
 >  Этот код можно выполнить с помощью списка студентов, созданный в [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` Ключевое слово эквивалентно `INNER JOIN` в SQL. Он объединяет две коллекции, на основе сопоставления значений ключа между элементами двух коллекций. Запрос возвращает все или часть элементов коллекции с совпадающими значениями ключей. Например следующий код дублирует действие предыдущего неявного объединения.  
   
- [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
+ [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
  `Group Join` объединяет коллекции в одну иерархическую коллекцию, так же, как `LEFT JOIN` в SQL. Дополнительные сведения см. в разделе [предложение Join](../../../../visual-basic/language-reference/queries/join-clause.md) и [предложение Join группы](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Группирование данных (Группировать по)  
  Вы можете добавить `Group By` предложение для группирования элементов в результатах запроса, в соответствии с одного или нескольких полей элементов. Например следующий код группирует студентов по курсам.  
   
- [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
+ [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
  Если вы запустите этот код, используя список учащихся, созданные в [как: Создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), выходные данные `For Each` инструкция является:  
   
@@ -148,7 +148,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Вариант, показанный в следующем коде упорядочивает класс лет и упорядочивает учащихся в течение каждого года по фамилии.  
   
- [!code-vb[VbLINQBasicOps#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_12.vb)]  
+ [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
  Дополнительные сведения о `Group By`, см. в разделе [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   

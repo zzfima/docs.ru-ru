@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создать свойство (Visual Basic)
+title: Практическое руководство. Создать свойство (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734043"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970965"
 ---
-# <a name="how-to-create-a-property-visual-basic"></a>Как выполнить Создать свойство (Visual Basic)
+# <a name="how-to-create-a-property-visual-basic"></a>Практическое руководство. Создать свойство (Visual Basic)
 Заключите определение свойства между `Property` инструкции и `End Property` инструкции. В этом определении вы определяете `Get` процедуре `Set` или обе. Код свойства находится в этих процедурах.  
   
  `Get` Процедура получает значение свойства и `Set` процедура сохраняет значение. Если требуется, что свойство будет иметь доступ на чтение/запись, необходимо определить обе процедуры. Для свойства только для чтения, нужно определить только `Get`, и для свойства только для записи, нужно определить только `Set`.  
@@ -54,11 +54,11 @@ ms.locfileid: "54734043"
 ## <a name="example"></a>Пример  
  В следующем примере создается свойство чтения/записи, которая хранит полное имя в качестве двух составных имен, имя и фамилию. Когда вызывающий код считывает `fullName`, `Get` процедура объединяет два составных имени и возвращает полное имя. Когда вызывающий код присваивает новое полное имя, `Set` процедура пытается разделить его на два составных имени. Если не удается найти пробел, он хранит все как имя.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  В следующем примере показано вызовы процедур свойств из `fullName`. Первый вызов задает значение свойства, а второй вызов извлекает его.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

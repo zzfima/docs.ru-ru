@@ -40,7 +40,7 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
   
 |Кому|См.|  
 |--------|---------|  
-|Создайте новое приложение Windows Forms с помощью Visual Studio|[Пошаговое руководство: Создание формы простой Windows](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Создайте новое приложение Windows Forms с помощью Visual Studio|[Учебник 1. Создание приложения для просмотра рисунков](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Создание графических объектов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

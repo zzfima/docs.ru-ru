@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600093"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978245"
 ---
 # <a name="ialink-interface"></a>Интерфейс IALink
 Помогает при конструировании сборок платформы .NET Framework. Помимо прочего интерфейс содержит методы, которые помогают в написании манифеста многомодульных сборок, подписывание сборок со строгими именами и создание файлов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Метод1 AddFile](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [Метод AddFile](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [Метод1 AddImport](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [Метод AddImport](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [Метод CloseAssembly](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54600093"
   
  [Метод GetResolutionScope](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [Метод1 GetScope](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope-метод](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [Метод GetWin32ResBlob](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   

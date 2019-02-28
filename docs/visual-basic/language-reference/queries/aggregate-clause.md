@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547096"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981963"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Предложение Aggregate (Visual Basic)
 Применяет один или несколько агрегатных функций к коллекции.  
@@ -54,25 +54,25 @@ Aggregate element [As type] In collection _
 
 Возвращает `true` все ли элементы в коллекции удовлетворяют указанному условию; в противном случае возвращает `false`. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Любой
 
 Возвращает `true` Если любой элемент в коллекции удовлетворяет указанному условию; в противном случае возвращает `false`. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Метод Average
 
 Вычисляет среднее значение всех элементов в коллекции, или указанное выражение для всех элементов в коллекции. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Количество
 
 Подсчитывает количество элементов в коллекции. Можно указать необязательное `Boolean` выражение для подсчета числа элементов в коллекции, которые удовлетворяют условию. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Группа
 
@@ -86,25 +86,25 @@ Aggregate element [As type] In collection _
 
 Вычисляет максимальное значение из коллекции, или указанное выражение для всех элементов в коллекции. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Минимум
 
 Вычисляет минимальное значение из коллекции, или указанное выражение для всех элементов в коллекции. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
 Вычисляет сумму всех элементов в коллекции, или указанное выражение для всех элементов в коллекции. Ниже представлен пример такого кода.
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Пример  
 
 В следующем примере показано, как использовать `Aggregate` предложение для применения агрегатных функций к результатам запроса.  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Создание определяемых пользователем агрегатных функций
 
@@ -112,11 +112,11 @@ Aggregate element [As type] In collection _
   
  К примеру в следующем примере пользовательской агрегатной функции, которая вычисляет значение медианы из коллекции чисел. Существуют две перегрузки `Median` метода расширения. Первая перегрузка принимает в качестве входных данных, коллекция элементов типа `IEnumerable(Of Double)`. Если `Median` Агрегатная функция вызывается для поля типа `Double`, этот метод будет вызываться. Вторая перегрузка `Median` метод может передаваться любой универсального типа. Универсальная перегрузка `Median` метод принимает второй параметр, который ссылается на `Func(Of T, Double)` лямбда-выражения для проецирования значение для типа (из коллекции), как значение соответствующего типа `Double`. Затем он делегирует расчет значения медианы другой перегрузкой `Median` метод. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  В следующем примере показано примеры запросов, которые вызывают `Median` агрегатную функцию в коллекцию типа `Integer`и коллекция элементов типа `Double`. Запрос, который вызывает `Median` агрегатную функцию в коллекции с типом `Double` вызывает перегрузку `Median` метод, который принимает в качестве входных данных, коллекция элементов типа `Double`. Запрос, который вызывает `Median` агрегатную функцию в коллекции с типом `Integer` вызывает универсальную перегрузку `Median` метод.  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>См. также
 

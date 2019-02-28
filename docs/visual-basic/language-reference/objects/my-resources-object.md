@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065873"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973734"
 ---
 # <a name="myresources-object"></a>Объект My.Resources
 Предоставляет свойства и классы для доступа к ресурсам приложения.  
@@ -53,29 +53,29 @@ ms.locfileid: "55065873"
 ## <a name="example"></a>Пример  
  В этом примере заголовок формы устанавливается строковый ресурс с именем `Form1Title` в файл ресурсов приложения. Для работы этого примера приложение должно иметь строку с именем `Form1Title` в файле ресурсов.  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Пример  
  В этом примере задает значок формы на значок с именем `Form1Icon` , хранится в файле ресурсов приложения. Для работы этого примера приложение должно иметь значок с именем `Form1Icon` в файле ресурсов.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Пример  
  В этом примере задает фоновое изображение формы на ресурс образа с именем `Form1Background`, который находится в файле ресурсов приложения. Для работы этого примера приложение должно иметь ресурс изображения с именем `Form1Background` в файле ресурсов.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Пример  
  В этом примере воспроизводится звук, который хранится в виде звукового ресурса с именем `Form1Greeting` в файл ресурсов приложения. Для работы этого примера приложение должно иметь звукового ресурса с именем `Form1Greeting` в файле ресурсов. `My.Computer.Audio.Play` Метод доступен только для приложений Windows Forms.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Пример  
  В этом примере извлекается французскую версию строковый ресурс приложения. Ресурс называется `Message`. Чтобы изменить язык и региональные параметры, `My.Resources` использует объект, в примере используется <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Для работы этого примера приложение должно иметь строку с именем `Message` в его ресурсе файл и приложение должны иметь версию файла ресурсов, Resources.fr-FR.resx французского языка. Если приложение не поддерживает версию файла ресурсов, французского языка `My.Resource` объект извлекает ресурс из файла ресурсов культуры по умолчанию.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>См. также
 - [Управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

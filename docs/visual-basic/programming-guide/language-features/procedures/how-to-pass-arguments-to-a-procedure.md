@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Передача аргументов в процедуру (Visual Basic)
+title: Практическое руководство. Передача аргументов в процедуру (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691233"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974397"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Как выполнить Передача аргументов в процедуру (Visual Basic)
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Практическое руководство. Передача аргументов в процедуру (Visual Basic)
 При вызове процедуры, необходимо выполнить имя процедуры со списком аргументов в скобках. Необходимо указать аргумент, соответствующий каждому обязательному параметру в процедуре можно определить, и при необходимости можно указать аргументы для `Optional` параметров. Если вы не предоставляете `Optional` параметра в вызове, необходимо включить запятую, чтобы отметить его место в списке аргументов, если указываются все последующие аргументы.  
   
  Если требуется передать аргумент типа данных отличается от соответствующего параметра, такие как `Byte` для `String`, можно задать для ключа проверки типов ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) для `Off`. Если `Option Strict` является `On`, необходимо использовать либо расширяющих преобразований, либо ключевые слова явное преобразование. Дополнительные сведения см. в разделе [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "54691233"
   
      В следующем примере вызывается Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> функции.  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      В предыдущем примере передается обязательный первый аргумент, являющийся строку сообщения для отображения. Он указывается аргумент для необязательный второй параметр, указывающий кнопки, отображаемые в окне сообщения. Поскольку вызов не передается значение, `MsgBox` используется значение по умолчанию, `MsgBoxStyle.OKOnly`, отображающий только **ОК** кнопку.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: c2af3864ef19dbf835397968af0913cd62994305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494435"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977543"
 ---
 # <a name="or-operator-visual-basic"></a>Оператор Or (Visual Basic)
 Выполняет логическое сложение двух `Boolean` выражений или побитовое сложение двух числовых выражений.  
@@ -77,14 +77,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>Пример  
  В следующем примере используется `Or` оператору выполнять логическое сложение двух выражений. В результате `Boolean` значение, представляющее одно из двух выражений ли `True`.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
  В предыдущем примере получался результат `True`, `True`, и `False`, соответственно.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Or` оператор для выполнения логическое сложение с отдельными битами двух числовых выражений. Бит в шаблоне результата устанавливается в том случае, если любой из соответствующих бита в операндов имеет значение 1.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
  В предыдущем примере получался результаты 10, 14 и 14, соответственно.  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700433"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975008"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Оператор For Each...Next (Visual Basic)
 Повторяет группу операторов для каждого элемента в коллекции.  
@@ -64,7 +64,7 @@ Next [ element ]
   
  В следующем примере `For Each`...`Next` оператор используется для итерации по все элементы коллекции-списка.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  Дополнительные примеры см. в разделе [коллекций](../../../standard/collections/index.md) и [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  В следующем примере демонстрируется вложенных `For Each`...`Next` структуры.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  При вложении циклы, каждый цикл должен иметь уникальный `element` переменной.  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  В следующем примере показано, как использовать `Continue For` и `Exit For` инструкций.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  Можно поместить любое количество `Exit For` инструкций в `For Each` цикла. При использовании внутри вложенной `For Each` циклы, `Exit For` выполнение выйти из самого внутреннего цикла передает управление на следующий уровень вложенности.  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  Следующий пример использует функцию итератора. Имеет функции итератора `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. В `ListEvenNumbers` метод, каждая итерация `For Each` тела оператора создает вызов функции итератора, который переходит к следующему `Yield` инструкции.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  Дополнительные сведения см. в разделе [итераторы](../../programming-guide/concepts/iterators.md), [оператор Yield](../../../visual-basic/language-reference/statements/yield-statement.md), и [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  В следующем примере, назначение `m` как начальное значение для `n` не будет компилироваться при `Option Strict` включен, так как преобразование `Long` для `Integer` является сужающим преобразованием. В `For Each` инструкции, однако никакие ошибки компилятора не сообщается, даже если назначения `number` требуется то же самое преобразование из `Long` для `Integer`. В `For Each` инструкцию, которая содержит множество, то во время выполнения возникает ошибка при <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> применяется к большим числом.  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>IEnumerator вызовов  
  При выполнении `For Each`... `Next` начале цикла, Visual Basic проверяет, что `group` ссылается на объект допустимую коллекцию. В противном случае создается исключение. В противном случае он вызывает <xref:System.Collections.IEnumerator.MoveNext%2A> метод и <xref:System.Collections.IEnumerator.Current%2A> свойство объекта перечислителя для возвращения первого элемента. Если `MoveNext` указывает, что отсутствует следующий элемент, то есть, если коллекция пуста, `For Each` цикл останавливается и управление передается оператору, следующему `Next` инструкции. В противном случае Visual Basic задает `element` первого элемента и выполняется блок операторов.  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>Пример  
  В следующем примере перечисляются все папки в каталоге C:\ с помощью <xref:System.IO.DirectoryInfo> класса.  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже пример демонстрирует процедуру сортировки коллекции. В примере сортируются экземпляры `Car` класса, которые хранятся в <xref:System.Collections.Generic.List%601>. Класс `Car` реализует интерфейс <xref:System.IComparable%601>, который требует реализации метода <xref:System.IComparable%601.CompareTo%2A>.  
@@ -170,7 +170,7 @@ End Sub
   
  В методе `ListCars` оператор `cars.Sort()` сортирует список. Этот вызов метода <xref:System.Collections.Generic.List%601.Sort%2A> <xref:System.Collections.Generic.List%601> приводит к тому, что метод `CompareTo` вызывается автоматически для объектов `Car` в `List`.  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>См. также
 - [Коллекции](../../../standard/collections/index.md)
