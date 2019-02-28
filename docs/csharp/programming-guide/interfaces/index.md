@@ -15,7 +15,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 Интерфейс определяется с помощью ключевого слова [interface](../../language-reference/keywords/interface.md), как показано в следующем примере.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 Имя структуры должно быть допустимым [именем идентификатора](../inside-a-program/identifier-names.md) C#. По соглашению имена интерфейсов начинаются с заглавной буквы `I`.
 

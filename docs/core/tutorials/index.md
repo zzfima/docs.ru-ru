@@ -1,16 +1,10 @@
 ---
 title: Учебники по .NET Core
-description: Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows.
+description: "Руководства по .NET\_Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows."
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168752"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core
 
@@ -25,7 +19,6 @@ ms.locfileid: "53168752"
 - [Создание библиотеки классов с помощью Visual Basic](vb-library-with-visual-studio.md)
 - [Тестирование библиотеки классов ](testing-library-with-visual-studio.md)
 - [Использование библиотеки классов ](consuming-library-with-visual-studio.md)
-- [Создание полного решения C# .NET Core в Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB. Начало работы с API SQL и .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Разработка приложений с помощью Visual Studio Code
@@ -48,7 +41,6 @@ ms.locfileid: "53168752"
 - [Модульное тестирование в .NET Core с помощью команды dotnet test](../testing/unit-testing-with-dotnet-test.md)
 - [Модульное тестирование с использованием MSTest и .NET Core](../testing/unit-testing-with-mstest.md)
 - [Разработка библиотек с помощью кроссплатформенных средств](libraries.md)
-- [Управление версиями зависимостей пакетов для .NET Core 1.0](managing-package-dependency-versions.md)
 - [Размещение .NET Core из машинного кода](netcore-hosting.md)
 - [Создание пользовательского шаблона для dotnet](create-custom-template.md)
 
