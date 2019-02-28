@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сортировка результатов запроса с помощью LINQ (Visual Basic)
+title: Практическое руководство. Сортировка результатов запроса с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672777"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967793"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Как выполнить Сортировка результатов запроса с помощью LINQ (Visual Basic)
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Практическое руководство. Сортировка результатов запроса с помощью LINQ (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов.  
   
  Приведенный ниже показано, как создать новое приложение, которое выполняет запросы к базе данных SQL Server и сортирует результаты по нескольким полям с помощью `Order By` предложение. Порядок сортировки для каждого поля можно по возрастанию или убыванию. Дополнительные сведения см. в разделе [предложение Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
@@ -69,7 +69,7 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
      Добавьте следующий код, чтобы `Load` событий для запроса к таблицам, которые представляются как свойства контекста данных и сортировки результатов. Запрос сортирует результаты по количеству заказов клиентов в порядке убывания. Клиенты, имеющие одинаковое количество заказов упорядочиваются по названию компании по возрастанию (по умолчанию).  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

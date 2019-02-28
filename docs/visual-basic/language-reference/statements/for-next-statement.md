@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746277"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968729"
 ---
 # <a name="fornext-statement-visual-basic"></a>Оператор For... Next (Visual Basic)
 Повторяет блок операторов указанное число раз.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  В следующем примере `index` переменной начинается со значения 1 и увеличивается при каждой итерации цикла, заканчивается после значение `index` достигает 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  В следующем примере `number` переменной начинается с 2 и уменьшается на 0,25 на каждой итерации цикла, заканчивается после значение `number` становится равным нулю. `Step` Аргумент `-.25` уменьшает значение, 0,25 на каждой итерации цикла.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  Объект [хотя... Завершить оператор While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) или [сделать... Оператор цикла](../../../visual-basic/language-reference/statements/do-loop-statement.md) работает хорошо, если не известно заранее сколько раз следует выполнить инструкции в цикле. Тем не менее, если предполагается, что для выполнения цикла определенное количество раз, `For`... `Next` цикла является лучшим выбором. При первом входе в цикл, определите количество итераций.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>Вложенные циклы  
  Можно вложить `For` циклы, поместив в одном цикле в другую. В следующем примере демонстрируется вложенных `For`... `Next` структуры с разными значениями шага. Внешний цикл создает строку для каждой итерации цикла. Внутренний цикл уменьшает переменную счетчика цикла для каждой итерации цикла.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  При наличии вложенных циклов, каждый цикл должен иметь уникальный `counter` переменной.  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Пример  
  Следующий пример удаляет все элементы из универсального списка. Вместо [для каждого... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md), показано в примере `For`... `Next` , выполняющий перебор в порядке убывания. В примере используется этот способ, поскольку `removeAt` метод вызывает элементов после удаленным элементом, получают меньшее значение индекса.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже пример проходит через перечисления, объявленный с помощью [оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере параметры инструкции использовать класс, который имеет перегрузки операторов для `+`, `-`, `>=`, и `<=` операторы.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Collections.Generic.List%601>

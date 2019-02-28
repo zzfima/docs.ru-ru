@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828375"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965232"
 ---
 # <a name="debugging-structures"></a>Структуры отладки
+
 В этом разделе описаны неуправляемые структуры, которые использует API отладки.
 
 ## <a name="in-this-section"></a>В этом разделе
@@ -25,7 +26,7 @@ ms.locfileid: "55828375"
 
  [Структура CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) определяет версию среды выполнения (CLR) для целей отладки.
 
- [Структура1 codechunkinfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) представляет одинарный блок кода в памяти.
+ [Структура CodeChunkInfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) представляет одинарный блок кода в памяти.
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) содержит сведения о функциях, которые в настоящее время активны в кадрах потока.
 
@@ -71,9 +72,8 @@ ms.locfileid: "55828375"
 
  [Структура StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) обеспечивает простой контекст, который может использоваться вместо полной `CONTEXT` структуры.
 
-
-
 ## <a name="related-sections"></a>Связанные разделы
+
  [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

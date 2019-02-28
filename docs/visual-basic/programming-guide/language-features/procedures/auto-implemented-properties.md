@@ -9,27 +9,27 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495466"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967208"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Автоматически реализуемые свойства (Visual Basic)
 *Автоматически реализуемые свойства* позволяют быстро задать свойство класса без необходимости написания кода для `Get` и `Set` свойство. При написании кода для автоматически реализуемого свойства компилятор Visual Basic автоматически создает закрытое поле для хранения переменной свойства, в дополнение к созданию связанных процедур `Get` и `Set`.  
   
  С помощью автоматически реализуемых свойств вы сможете объявлять свойства, включая значение по умолчанию, в одной строке. В следующем примере показано три объявления свойства.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
  Автоматически реализуемые свойства эквивалентны свойствам, значения которых хранятся в закрытом поле. В следующем примере кода показано автоматически реализуемое свойство.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
  В следующем примере кода показан эквивалентный код для предыдущего примера автоматически реализуемого свойства.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
  В следующем примере кода показана реализация свойств только для чтения:  
   
@@ -63,7 +63,7 @@ End Class
 ## <a name="initializing-an-auto-implemented-property"></a>Инициализация автоматически реализуемого свойства  
  Любое выражение, которое может использоваться для инициализации поля, можно применять для инициализации автоматически реализуемого свойства. При инициализации автоматически реализуемого свойства выражение анализируется и передается процедуре `Set` для свойства. В следующих примерах кода показаны некоторые автоматически реализуемые свойства с начальными значениями.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
  Невозможно инициализировать автоматически реализуемое свойство, которое является элементом `Interface` или помечено как `MustOverride`.  
   
@@ -71,7 +71,7 @@ End Class
   
  При объявлении автоматически реализуемого свойства как массива невозможно указать явные границы массива. Однако можно задать значение с помощью инициализатора массива, как показано в следующих примерах.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Определения свойств, для которых требуется стандартный синтаксис  
  Автоматически реализуемые свойства удобны и поддерживают множество сценариев программирования. Тем не менее, существуют ситуации, в которых автоматически реализуемые свойства и приходится применять стандартный, или *расширен*, синтаксис свойств.  
@@ -80,7 +80,7 @@ End Class
   
 -   Добавить код для процедуры `Get` или `Set` свойства, например для проверки входящих значений в процедуре `Set`. Например, вам требуется убедиться, что строка, представляющая номер телефона, содержит необходимое количество цифр перед заданием значения свойства.  
   
--   Указать другой уровень доступа для процедуры `Get` и `Set`. Например, вам может потребоваться сделать процедуру `Set` `Private`, а процедуру `Get` — `Public`.  
+-   Указать другой уровень доступа для процедуры `Get` и `Set`. Например, вам может потребоваться сделать процедуру `Set``Private`, а процедуру `Get` — `Public`.  
   
 -   Создать свойства типа `WriteOnly`.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582530"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968937"
 ---
 # <a name="goto-statement"></a>Оператор GoTo
 Осуществляет безусловный переход на указанную строку в процедуре.  
@@ -37,7 +37,7 @@ GoTo line
  `GoTo` Оператор может выполнять переход только к строкам в процедуре, в котором он находится. Строка должна содержать строку, метка `GoTo` могут ссылаться на. Дополнительные сведения см. в разделе [Как Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo` операторы могут затруднить кода чтение и обслуживание. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` операторы могут затруднить кода чтение и обслуживание. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [Поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Нельзя использовать `GoTo` инструкции для выхода из блоков `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, или `Using`... `End Using` конструкции к метке внутри.  
   
@@ -60,7 +60,7 @@ GoTo line
 ## <a name="example"></a>Пример  
  В следующем примере используется `GoTo` инструкция ветви на метки в процедуре.  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)

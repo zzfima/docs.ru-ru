@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Вызов процедуры, которая не возвращает значение (Visual Basic)
+title: Практическое руководство. Вызов процедуры, которая не возвращает значение (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: f85c7a7edf4d05dc50166ad4f30080c2e595cf65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590647"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965570"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Как выполнить Вызов процедуры, которая не возвращает значение (Visual Basic)
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Практическое руководство. Вызов процедуры, которая не возвращает значение (Visual Basic)
 Объект `Sub` процедура не возвращает значение вызывающему коду. Вызвать его напрямую с помощью отдельного вызывающего оператора. Его нельзя вызвать, просто указав ее имя в выражении.  
   
 ### <a name="to-call-a-sub-procedure"></a>Для вызова процедуры Sub  
@@ -26,7 +26,7 @@ ms.locfileid: "54590647"
   
      В следующем примере вызывается Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> функции для активации окна приложения. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> принимает заголовок окна в качестве единственного аргумента. Он не возвращает значение вызывающему коду. Если Блокнот не запущена, в примере создается исключение <xref:System.ArgumentException>. `Shell` Предполагается приложения находятся в указанных путей.  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

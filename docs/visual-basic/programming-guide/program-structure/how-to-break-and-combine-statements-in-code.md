@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Разбиение и объединение инструкций в коде (Visual Basic)
+title: Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619919"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967182"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Как выполнить Разбиение и объединение инструкций в коде (Visual Basic)
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)
 При написании кода, в некоторых случаях может создать длинный оператор, требующий горизонтальной прокрутки в редакторе кода. Несмотря на то, что это не повлияет на способ ваш код, он усложняет задачу вы или кто-то еще чтение кода, как оно отображается на мониторе. В таких случаях следует обдумать разбиение одной инструкции long в несколько строк.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Чтобы разбить на несколько строк одной инструкции  
@@ -40,7 +40,7 @@ ms.locfileid: "54619919"
   
      В следующем примере инструкция разбивается на четыре строки завершает символы продолжения строки, но последняя строка.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
      С помощью этой последовательности делает код более удобным для чтения, так и печати.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54619919"
   
 -   Разместите операторов с запятой (`:`), как показано в следующем примере.  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>См. также
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

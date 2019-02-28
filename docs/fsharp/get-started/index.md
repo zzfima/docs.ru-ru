@@ -1,15 +1,9 @@
 ---
-title: Начало работы сF#
-description: Узнайте, как приступить к работе с F# языка программирования.
+title: 'Начало работы сF#'
+description: 'Узнайте, как приступить к работе с F# языка программирования.'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170825"
 ---
-# <a name="get-started-with-f"></a>Начало работы сF# #
+# <a name="get-started-with-f"></a>Начало работы с F\#
 
 Вы можете начать работу с F# на вашем компьютере или в интерактивном режиме.
 

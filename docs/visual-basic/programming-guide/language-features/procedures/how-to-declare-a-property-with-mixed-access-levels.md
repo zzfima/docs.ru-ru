@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объявление свойства со смешанным уровнем доступа (Visual Basic)
+title: Практическое руководство. Объявление свойства со смешанным уровнем доступа (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels [Visual Basic], properties
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514261"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972590"
 ---
-# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Как выполнить Объявление свойства со смешанным уровнем доступа (Visual Basic)
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Практическое руководство. Объявление свойства со смешанным уровнем доступа (Visual Basic)
 Если вы хотите, чтобы `Get` и `Set` процедуры в свойство, чтобы иметь различные уровни доступа, можно использовать менее строгий уровень в `Property` инструкции и более строгий уровень в любом `Get` или `Set` инструкция. Вы можете использовать смешанным уровнем доступа для свойства, определенные части кода, чтобы иметь возможность получить значение свойства, а другие части кода, чтобы иметь возможность изменить значение.  
   
  Дополнительные сведения об уровнях доступа см. в разделе [уровни в Visual Basic доступа](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "54514261"
   
 3.  Не указывайте уровень доступа на другие процедуры свойства. Предполагается уровень доступа, объявленные в `Property` инструкции. Можно ограничить доступ только к одной из процедур свойства.  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      В приведенном выше примере `Get` процедуры имеет те же `Protected` доступа, что и само свойство, хотя `Set` процедура имеет `Private` доступа. Класс, производный от `employee` может считывать `salary` значение, но только `employee` класс может установить его.  
   

@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugILFrame
+title: Интерфейс ICorDebugILFrame
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73cf7f26b228fa5aa458a6de312df3bf777e0206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580516"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965989"
 ---
-# <a name="icordebugilframe-interface1"></a>Интерфейс1 ICorDebugILFrame
+# <a name="icordebugilframe-interface"></a>Интерфейс ICorDebugILFrame
+
 Представляет кадр стека кода промежуточного языка MSIL. Этот интерфейс является подклассом ICorDebugFrame-интерфейс.  
   
 ## <a name="methods"></a>Методы  

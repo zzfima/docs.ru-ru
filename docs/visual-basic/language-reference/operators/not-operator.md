@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: cd93316ada1fcf0997922f71a8efc5a3cf411d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614619"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981222"
 ---
 # <a name="not-operator-visual-basic"></a>Оператор Not (Visual Basic)
 Выполняет логическое отрицание `Boolean` выражения или побитовое отрицание в числовом выражении.  
@@ -64,14 +64,14 @@ result = Not expression
 ## <a name="example"></a>Пример  
  В следующем примере используется `Not` оператор логического отрицания `Boolean` выражение. В результате `Boolean` значение, которое представляет обратное значение выражения.  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
  В предыдущем примере получался результат `False` и `True`, соответственно.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Not` оператор для выполнения логического отрицания отдельных битов числового выражения. Бит в шаблоне результат присваивается обратное соответствующий бит в шаблоне операнда, включая бит знака.  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
  В предыдущем примере получался результаты – 11, – 9 и – 7 соответственно.  
   

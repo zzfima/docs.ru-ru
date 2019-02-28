@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объявление объекта с помощью инициализатора объектов (Visual Basic)
+title: Практическое руководство. Объявление объекта с помощью инициализатора объектов (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0673c9faceb3bd9fc71123a2ae22abbc7061c04
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561076"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970211"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Как выполнить Объявление объекта с помощью инициализатора объектов (Visual Basic)
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Практическое руководство. Объявление объекта с помощью инициализатора объектов (Visual Basic)
 Инициализаторы объектов позволяют объявлять и создавать экземпляр класса в одной инструкции. Кроме того в то же время можно инициализировать один или несколько членов экземпляра без вызова конструктора с параметрами.  
   
  При использовании инициализатора объекта для создания экземпляра именованного типа, вызывается конструктор по умолчанию для класса, следуют инициализации назначенных членов в указанном порядке.  
   
  Ниже показано, как создать экземпляр `Student` класс тремя разными способами. Класс имеет имя, фамилию и свойства класса год, среди прочего. Каждый из трех объявлений создает новый экземпляр класса `Student`, со свойством `First` задается значение «Michael», свойство `Last` значение «Такер», а все остальные элементы значение к значениям по умолчанию. Результат каждого объявления в процедуре соответствует приведенному ниже, который не используют инициализатора объекта.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
  Для реализации `Student` , представлена в разделе [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Вы можете скопировать код из этого раздела, чтобы настроить класс и создать список `Student` объектов для работы с.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54561076"
   
 3.  В списке инициализации включают каждое свойство, которое необходимо инициализировать и присвойте ему начальное значение. Имя свойства является стоять точка.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      Можно инициализировать один или несколько членов класса.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "54561076"
   
 6.  Тип `With` и затем инициализатора объекта для инициализации одного или нескольких членов нового экземпляра.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
 7.  Можно упростить определение на предыдущем шаге, опустив `As Student`. После этого компилятор определяет, что `student3` является экземпляром класса `Student` , используя вывод локального типа.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
      Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

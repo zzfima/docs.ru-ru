@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 234cd23c487f92cfa1e2761dd7a6caadf8820704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685806"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979545"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Вопросы, связанные с перегрузкой процедур (Visual Basic)
 При перегрузке процедур необходимо использовать другой *подпись* для каждой из перегруженных версий. Обычно это означает, что каждая версия необходимо указать другим списком параметров. Дополнительные сведения см. в разделе «Разных подпись» в [перегрузка процедур](./procedure-overloading.md).  
@@ -85,11 +85,11 @@ ms.locfileid: "54685806"
 ## <a name="implicit-overloads-for-optional-parameters"></a>Неявные перегрузки для дополнительных параметров  
  Процедуры с [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметром эквивалентен двум перегруженным процедурам, один с необязательным параметром, а другая — нет. Невозможно перегрузить такую процедуру со списком параметров, соответствующий любому из этих вариантов. Следующие объявления, иллюстрируют это.  
   
- [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
- [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
- [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
  Для процедуры с более чем один необязательный параметр имеется набор неявные перегрузки, поступивших на логикой, аналогично приведенному в предыдущем примере.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "54685806"
   
  Эти неявные перегрузки показывают следующие объявления.  
   
- [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
  Не могут перегружать процедуру со списком параметров, который принимает одномерный массив для массива параметров. Тем не менее можно использовать подписи других неявных перегрузок. Следующие объявления, иллюстрируют это.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Программирование в качестве альтернативы с перегрузкой  
  Если вы хотите разрешить вызывающий код для передачи различных типов данных в параметр, альтернативный подход — программирование. Можно задать ключ для проверки типа `Off` сочетанием [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) или [Дополнительные сведения](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) параметр компилятора. Затем у вас нет объявления типа данных параметра. Однако такой подход имеет следующие недостатки по сравнению с перегрузкой:  

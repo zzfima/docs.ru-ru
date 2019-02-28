@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532767"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970536"
 ---
 # <a name="interface-statement-visual-basic"></a>Оператор Interface (Visual Basic)
 Объявляет имя интерфейса и представляет определения членов, которые входят в интерфейс.  
@@ -95,7 +95,7 @@ End Interface
   
      Если присвоить экземпляр класса переменной, уровень доступа к членам может основываться на является ли тип данных переменной базового интерфейса или реализующего класса. Это показано в следующем примере.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      Если доступ к членам класса через `varAsInterface`, все они имеют общий доступ. Тем не менее если выполняется обращение к членам через `varAsClass`, `Sub` процедуры `doSomething` закрытым.  
   
@@ -108,7 +108,7 @@ End Interface
 ## <a name="example"></a>Пример  
  В следующем примере используется `Interface` инструкцию, чтобы определить интерфейс с именем `thisInterface`, который должен быть реализован с помощью `Property` инструкции и `Function` инструкции.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  Обратите внимание, что `Property` и `Function` инструкций не возникнут новые блоки, заканчивая `End Property` и `End Function` в интерфейсе. Интерфейс определяет только подписи его члены. Полный `Property` и `Function` блоки отображаются в класс, реализующий `thisInterface`.  
   

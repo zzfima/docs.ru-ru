@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496953"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981430"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Представляет значение по умолчанию любого типа данных. Для ссылочных типов, значение по умолчанию — `null` ссылки. Для типов значений значение по умолчанию зависит от того, является ли тип значения допускает значения NULL.  
@@ -30,11 +30,11 @@ ms.locfileid: "54496953"
   
  Если переменная имеет тип значения, который не допускает значения NULL, назначение `Nothing` для его заменяет его на значение по умолчанию для объявленного типа. Если тип содержит члены переменной, они все готово к значениям по умолчанию. Следующий пример иллюстрирует это для скалярных типов.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  Если переменная имеет ссылочный тип, назначение `Nothing` переменной заменяет его на `null` ссылку на тип переменной. Переменная, которой присваивается `null` ссылки не связан с любым объектом. В следующем примере это показано.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  При проверке ли ссылка (или допускает значения NULL тип значения), переменная является `null`, не используйте `= Nothing` или `<> Nothing`. Всегда используйте `Is Nothing` или `IsNot Nothing`.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54496953"
   
  В следующем примере показано сравнение с использованием `Is` и `IsNot` операторы.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  Если переменная объявлена без использования `As` предложение и присвойте ему значение `Nothing`, переменную с типом `Object`. Примером этого является `Dim something = Nothing`. В этом случае возникает ошибка времени компиляции при `Option Strict` включен и `Option Infer` отключен.  
   

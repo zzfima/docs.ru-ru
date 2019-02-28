@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Подключение нескольких событий к одному обработчику в Windows Forms
+title: Практическое руководство. Подключение нескольких событий к одному обработчику в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 527e2c594f236f94ce23e4fd21238b8605af308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502447"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967871"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Как выполнить Подключение нескольких событий к одному обработчику в Windows Forms
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Практическое руководство. Подключение нескольких событий к одному обработчику в Windows Forms
 При разработке приложения вам может понадобиться один обработчик событий, для нескольких событий, или несколько событий выполните ту же процедуру. Например часто бывает мощные-экономии времени была команда меню для вызова того же события, что кнопки на форме они предоставляют одинаковую функциональность. Это можно сделать с помощью представления "события" окна свойств в C# или с помощью `Handles` ключевое слово и **имя класса** и **имя метода** раскрывающиеся списки в редакторе кода Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Для подключения нескольких событий к одному обработчику в Visual Basic  
@@ -46,7 +46,7 @@ ms.locfileid: "54502447"
   
 6.  Добавьте соответствующий код в обработчик событий.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Для подключения нескольких событий к одному обработчику вC#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Для подключения нескольких событий к одному обработчику в C\#
   
 1.  Выберите элемент управления, к которому вы хотите подключить обработчик событий.  
   

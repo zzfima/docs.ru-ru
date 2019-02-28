@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugObjectEnum
+title: Интерфейс ICorDebugObjectEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a9f10301db488e4ca68ce5fdaf0ba767053d7d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 452216a2ba4e8013d107977d82eae1508b2aba78
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547005"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967767"
 ---
-# <a name="icordebugobjectenum-interface1"></a>Интерфейс1 ICorDebugObjectEnum
+# <a name="icordebugobjectenum-interface"></a>Интерфейс ICorDebugObjectEnum
+
 Реализует методы ICorDebugEnum и выполняет перечисление массивов объектов по их относительным виртуальным адресам (RVA).  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Получает RVA заданного числа объектов из перечисления, начиная с текущей позиции.|  
   

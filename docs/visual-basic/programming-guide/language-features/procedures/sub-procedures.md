@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638123"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977582"
 ---
 # <a name="sub-procedures-visual-basic"></a>Подпрограммы (Visual Basic)
 Объект `Sub` процедура — это последовательность операторов Visual Basic, заключенным `Sub` и `End Sub` инструкций. `Sub` Процедура выполняет задачи и возвращает управление вызывающему коду, но не возвращает значение вызывающему коду.  
@@ -30,7 +30,7 @@ ms.locfileid: "54638123"
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
  Синтаксис объявления `Sub` процедура выглядит следующим образом:  
   
- `[` *модификаторы* `] Sub` *subname* `[(` *список_параметров*  `)]`  
+ `[` *модификаторы* `] Sub` *subname* `[(` *список_параметров* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -43,11 +43,11 @@ ms.locfileid: "54638123"
   
  Синтаксис для каждого параметра в списке параметров выглядит следующим образом:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *имя_параметра*`As`*тип данных*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *имя_параметра*`As`*тип данных*  
   
  Если параметр является необязательным, необходимо также указать значение по умолчанию как часть объявления. Синтаксис для указания значения по умолчанию выглядит следующим образом:  
   
- `Optional [ByVal | ByRef]`  *имя_параметра*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *имя_параметра*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Параметры в качестве локальных переменных  
  Когда управление передается в процедуру, каждый параметр рассматривается как локальная переменная. Это означает, что его времени существования совпадает со значением, процедуры и ее область действия является вся процедура.  
@@ -66,11 +66,11 @@ ms.locfileid: "54638123"
 ### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
  Следующие `Sub` процедура показывает оператору компьютера, какую задачу, приложение собирается выполнить, а также указана метка времени. Вместо повторения этого кода в начале каждой задачи, приложение вызывает `tellOperator` из различных расположений. Каждый вызов передает строку в `task` , указывающий, запущенную задачу.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  В следующем примере показано типичный вызов `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

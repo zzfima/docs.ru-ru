@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552038"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969379"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 Операторы сравнения сравнивают два выражения и возвращают `Boolean` значение, представляющее отношение их значения. Для сравнения числовых значений, операторы для сравнения строк и операторы для сравнения объектов существует оператора. Ниже представлено описание всех трех типов операторов.  
@@ -61,17 +61,17 @@ ms.locfileid: "54552038"
 ## <a name="comparing-objects"></a>Сравнение объектов  
  Visual Basic сравнивает две переменные объектной ссылки с [оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md) и [оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md). Чтобы определить, если две ссылочные переменные ссылаются на один и тот же экземпляр объекта, можно использовать любой из этих операторов. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  В приведенном выше примере `x Is y` принимает значение `True`, так как обе переменные ссылаются на один экземпляр. Сравните этот результат, показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  В приведенном выше примере `x Is y` принимает значение `False`, так как несмотря на то, что переменные ссылаются на объекты одного типа, они ссылаются на разные экземпляры этого типа.  
   
  Если вы хотите проверить два объекта, не указывает на один и тот же экземпляр `IsNot` оператор позволяет избежать грамматически неловкий сочетание `Not` и `Is`. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  В приведенном выше примере `If a IsNot b` эквивалентен `If Not a Is b`.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54552038"
   
  Когда `typename` указывает тип интерфейса, а затем `TypeOf`... `Is` возвращает значение `True` Если объект реализует тип интерфейса. Когда `typename` является типом класса, то выражение возвращает `True` Если объект является экземпляром указанного класса или класса, производного от указанного класса. Это показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  В приведенном выше примере `TypeOf x Is Control` выражение, результатом которого является `True` так как тип `x` — `Button`, который наследует от `Control`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugObjectValue2
+title: Интерфейс ICorDebugObjectValue2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63fc2001f611bc4c199d2a8800af8e5210f37c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c361b12fdfd30873f8c756e710e6f1a12ade0aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653233"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979688"
 ---
-# <a name="icordebugobjectvalue2-interface1"></a>Интерфейс1 ICorDebugObjectValue2
+# <a name="icordebugobjectvalue2-interface"></a>Интерфейс ICorDebugObjectValue2
+
 Расширяет интерфейс «ICorDebugObjectValue» для поддержки наследования и переопределений.  
   
 ## <a name="methods"></a>Методы  

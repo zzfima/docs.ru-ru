@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655079"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968274"
 ---
 # <a name="type-list-visual-basic"></a>Список типов (Visual Basic)
 Указывает *параметры типа* для *универсального* программный элемент. Несколько параметров разделяются запятыми. Ниже приведен синтаксис для одного параметра типа.  
@@ -80,17 +80,17 @@ ms.locfileid: "54655079"
 ## <a name="example"></a>Пример  
  В следующем примере показано каркасное определение класса универсального словаря dictionary, включая каркас функции для добавления новой записи в словарь.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Пример  
  Поскольку `dictionary` является универсальным, использующий ее код можно создать различные объекты из него, каждый необходимости те же функциональные возможности, но выполняется на другой тип данных. В следующем примере показано строку кода, который создает `dictionary` со `String` записей и `Integer` ключи.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере каркас определения, созданный в предыдущем примере.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>См. также
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

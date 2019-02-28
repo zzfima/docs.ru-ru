@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 741374cc375e33868239161af23a38af7680b290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f13964c09b60d02cd5e9f5fc9e2998d7758c3d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684071"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979311"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Указывает, что переменная или свойство можно читать, но не записываются.  
@@ -24,7 +24,8 @@ ms.locfileid: "54684071"
   
 ## <a name="rules"></a>Правила  
   
--   **Контекст объявления.** `ReadOnly` можно использовать только на уровне модуля. Это означает, что контекст объявления для `ReadOnly` элемент должен быть класс, структура или модуль и не может быть исходный файл, пространство имен или процедуры.  
+-   **Контекст объявления.** 
+  `ReadOnly` можно использовать только на уровне модуля. Это означает, что контекст объявления для `ReadOnly` элемент должен быть класс, структура или модуль и не может быть исходный файл, пространство имен или процедуры.  
   
 -   **Комбинированные модификаторы.** Нельзя указать `ReadOnly` вместе с `Static` в одном объявлении.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "54684071"
 ## <a name="example"></a>Пример  
  В следующем примере определяется `ReadOnly` свойство для даты, на котором сотрудник был принят на работу. Класс хранит значение свойства как внутренне `Private` переменной, а только код внутри класса, это значение можно изменить. Тем не менее, свойство является `Public`, и любой код, который можно получить доступ к классу можно считать свойство.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
  Модификатор `ReadOnly` можно использовать в следующих контекстах:  
   
