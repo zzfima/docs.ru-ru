@@ -13,7 +13,7 @@
 ### [Когда следует развернуть контейнеры Windows в Service Fabric](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md)
 ### [Когда следует развертывать контейнеры Windows в службе контейнеров Azure (ACS-Kubernetes)](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
 ### [Выбор вычислительных платформ Azure для контейнерных приложений](./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md)
-### [Создание гибких служб, готовых для развертывания в облаке: принятие временных сбоев в облаке](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+### [Создание устойчивых служб, готовых к использованию в облаке: принятие временных сбоев в облаке](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
 ### [Модернизация приложений с помощью мониторинга и данных телеметрии](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md)
 ### [Модернизация жизненного цикла приложений с помощью конвейеров непрерывной интеграции и непрерывного развертывания и средств DevOps в облаке](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 ### [Переход на гибридные облачные сценарии](./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)

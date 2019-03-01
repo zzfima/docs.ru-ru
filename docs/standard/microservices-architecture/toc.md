@@ -1,4 +1,4 @@
-# [Микрослужбы .NET: архитектура контейнерных приложений .NET](index.md)
+# [Микрослужбы .NET. архитектура контейнерных приложений .NET](index.md)
 ## [Общие сведения о контейнерах и Docker](container-docker-introduction/index.md)
 ### [Что такое Docker?](container-docker-introduction/docker-defined.md)
 ### [Терминология Docker](container-docker-introduction/docker-terminology.md)
