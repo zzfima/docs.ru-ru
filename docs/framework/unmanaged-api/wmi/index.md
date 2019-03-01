@@ -1,15 +1,9 @@
 ---
-title: WMI и счетчики производительности (справочник по неуправляемым API)
-description: Сводные данные по неуправляемому API-интерфейсу .NET Framework для WMI и счетчиков производительности.
+title: "WMI и счетчики производительности (справочник по неуправляемым\_API)"
+description: "Сводные данные по неуправляемому API-интерфейсу .NET\_Framework для WMI и счетчиков производительности."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069515"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчики производительности (справочник по неуправляемым API)
 
@@ -19,7 +13,7 @@ ms.locfileid: "44069515"
   
 API включает в себя следующие функции:
 
-| Функция | Описание: |
+| Функция | Описание |
 |---------|---------|
 | [Функция BeginEnumeration](beginenumeration.md) | Сбрасывает перечислитель в начало перечисления свойств объекта WMI. |
 | [Функция BeginMethodEnumeration](beginmethodenumeration.md) |  Начинает перечисление методов, доступных для объекта. |
@@ -73,5 +67,6 @@ API включает в себя следующие функции:
 | [Функция VerifyClient](verifyclientkey.md) | Проверяет, что ключ клиента имеет верные параметры безопасности. |
 | [Функция WritePropertyValue](writepropertyvalue.md) | Записывает указанное число байт в свойство, заданное маркером свойства. |
 
- ## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
+
 [Справочник по неуправляемым API](../index.md) 

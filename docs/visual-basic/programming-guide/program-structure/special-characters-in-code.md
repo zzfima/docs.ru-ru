@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 1541ac1793c9f3c082b688fecd4eb82fb5b59590
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726732"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971901"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Специальные символы в коде (Visual Basic)
 Иногда необходимо использовать специальные символы в коде, то есть символы, которые не являются буквой или цифрой. Знаки препинания и специальные символы в кодировке Visual Basic имеют различные применения, от организации текста программы до определения задач, выполняемых компилятором или скомпилированной программой. Эти знаки не определяют операции, подлежащие выполнению.  
@@ -43,14 +43,14 @@ ms.locfileid: "54726732"
 ## <a name="parentheses"></a>Круглые скобки  
  Используйте круглые скобки при определении процедуры, такие как `Sub` или `Function`. Все списки аргументов в процедуру необходимо заключить в круглые скобки. Можно также использовать круглые скобки для помещения переменные или аргументы в логические группы, особенно в том, чтобы переопределить порядок применения операторов в сложное выражение по умолчанию. Это показано в следующем примере.  
   
- [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
  После выполнения предыдущего примера кода, значение `d` 8,225 и значение `e` равно 3. Расчет `d` использует приоритет по умолчанию `/` над `+` и эквивалентно `d = b + (c / a)`. Круглые скобки в вычислении `e` наивысший приоритет.  
   
 ## <a name="separators"></a>Разделители  
  Разделители выполняют предполагает их название: они разделяют сегменты кода. В Visual Basic, разделителя используется двоеточие (`:`). Разделители используются в том случае, если вы хотите использовать несколько операторов в отдельных строках в одну строку. Это позволяет сэкономить место и улучшает читаемость кода. В следующем примере показано три инструкции, разделенные точкой с запятой.  
   
- [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
  Дополнительные сведения см. в разделе [Как Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54726732"
 ## <a name="concatenation"></a>Сцепление  
  Используйте `&` оператор для *объединение*, или связывание строк друг с другом. Не следует путать его с `+` оператор, который складывает числовых значений. Если вы используете `+` оператор для сцепления при работе с числовыми значениями, можно получить неверные результаты. В следующем примере это показано.  
   
- [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
+ [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
  После выполнения предыдущего примера кода, значение `resultA` 21.01 и значение `resultB` — «10.0111».  
   
@@ -69,12 +69,12 @@ ms.locfileid: "54726732"
 ### <a name="dot--operator"></a>Точка (.) Оператор  
  Используйте `.` оператор на класс, структуру, интерфейс или перечисление, как оператор доступа к члену. Элемент может быть поле, свойство, событие или метод. Это показано в следующем примере.  
   
- [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
+ [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
 ### <a name="exclamation-point--operator"></a>Восклицательный знак (!) Оператор  
  Используйте `!` оператор только для класса или интерфейса, как оператор доступа к словарям. Класс или интерфейс должен иметь свойство по умолчанию, принимающего один `String` аргумент. Идентификатор, следующий сразу `!` оператор становится значение аргумента, передаваемое свойство по умолчанию в виде строки. В следующем примере это показано.  
   
- [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
+ [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
  Три выходных строк `MsgBox` все отобразить значение `32856`. В первой строке используется традиционный доступ к свойству `index`, вторая использует тот факт, `index` является свойством по умолчанию класса `hasDefault`, а третья использует словарный доступ к классу.  
   

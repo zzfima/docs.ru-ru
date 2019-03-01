@@ -33,7 +33,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 В следующем примере показана реализация интерфейса <xref:System.IEquatable%601>. Реализующий класс `Car` должен предоставлять реализацию метода <xref:System.IEquatable%601.Equals%2A>.  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 Свойства и индексаторы класса могут определять дополнительные методы доступа для свойства или индексатора, определенного в интерфейсе. Например, интерфейс может объявлять свойство, имеющее акцессор [get](../../language-reference/keywords/get.md). Класс, реализующий этот интерфейс, может объявлять это же свойство с обоими акцессорами (`get` и [set](../../language-reference/keywords/set.md)). Однако если свойство или индексатор использует явную реализацию, методы доступа должны совпадать. Дополнительные сведения о явной реализации см. в статьях [Явная реализация интерфейса](explicit-interface-implementation.md) и [Свойства интерфейса](../classes-and-structs/interface-properties.md).  
 
