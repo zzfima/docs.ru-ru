@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628062"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200992"
 ---
 # <a name="comparison-operators-visual-basic"></a>Операторы сравнения (Visual Basic)
 Ниже приведены операторы сравнения, определенные в Visual Basic.  
@@ -146,7 +146,7 @@ result = string Like pattern
 ## <a name="example"></a>Пример  
  В следующем примере показаны различные способы использования операторов сравнения, используемые для сравнения выражений. Операторы сравнения возвращают `Boolean` результат, представляет ли указанное выражение, результатом которого является `True`. При применении `>` и `<` операторы в строки, будет выполнено сравнение с использованием обычной алфавитной сортировки строк. Этот порядок может зависеть от настроек языкового стандарта. Зависит ли порядок сортировки учитывает регистр, или не [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) параметр.  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  В приведенном выше примере первое сравнение возвращает `False` и вернуть оставшиеся сравнения `True`.  
   

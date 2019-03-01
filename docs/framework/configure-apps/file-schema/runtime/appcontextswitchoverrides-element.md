@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966155"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203552"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -41,7 +41,7 @@ ms.locfileid: "56966155"
   
 ### <a name="value-attribute"></a>значение атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |«имя = значение»|Имя коммутатора предопределенные вместе с его значением (`true` или `false`). Несколько пар имя значение параметра разделяются точками с запятой («;»). Список имен предопределенных коммутатора, поддерживаемые платформой .NET Framework см. в разделе "Примечания".|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "56966155"
   
  .NET Framework поддерживает следующие параметры:  
   
-|Имя коммутатора|Описание|Представленные|  
+|Имя коммутатора|Описание:|Представленные|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Определяет, использует ли Windows Presentation Foundation это алгоритм для прежних версий для макета элемента управления. Дополнительные сведения см. в разделе [Устранение рисков. Макет WPF](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Определяет, является ли алгоритм по умолчанию, используемый для подписывания частей пакетов PackageDigitalSignatureManager SHA1 или SHA256.|.NET Framework 4.7.1|
@@ -88,6 +88,7 @@ ms.locfileid: "56966155"
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Отключает оповещения на стороне сервера SslStream TLS.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Элементы управления ли [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) сериализует некоторые управляющие символы, основанные на стандартах ECMAScript версий 6 и 8. Дополнительные сведения см. в разделе [Устранение рисков. Сериализация управляющих символов с помощью DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Элементы управления ли <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает несколько корректировки или только одного набора для часового пояса. Если `true`, он использует <xref:System.TimeZoneInfo> введите для сериализации и десериализации данных даты и времени; в противном случае используется <xref:System.TimeZone> тип, который не поддерживает несколько правил коррекции.|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Элементы управления ли <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> использует больший размер массива во время сериализации и десериализации объектов. Установите этот переключатель, `true` для повышения производительности при сериализации и десериализации больших графов объектов, типы, такие как <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Элементы управления ли <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> конструктор задает новый объект <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> свойство со ссылкой на существующий объект. Дополнительные сведения см. в разделе [Устранение рисков. Конструктор ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Элементы управления ли попытка повторно использовать <xref:System.Security.Cryptography.AesCryptoServiceProvider> выдает дешифратор <xref:System.Security.Cryptography.CryptographicException>. Дополнительные сведения см. в разделе [дешифратор AesCryptoServiceProvider предоставляет преобразование для повторного использования](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Элементы управления ли значение [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) свойство [IntPtr](xref:System.IntPtr) что представляет область памяти окна обработки, или это дескриптор окна (HWND). Дополнительные сведения см. в разделе [Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   

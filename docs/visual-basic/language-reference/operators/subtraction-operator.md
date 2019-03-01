@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 8526f632b7e54c03bd16c3af70375179cd7cf277
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724477"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201226"
 ---
 # <a name="--operator-visual-basic"></a>Оператор - (Visual Basic)
 Возвращает разность двух числовых выражений или отрицательное значение числового выражения.  
@@ -48,7 +48,7 @@ ms.locfileid: "54724477"
  Тип данных результата является числовым типом, соответствующим типам данных `expression1` и `expression2`. См. в таблицах «Целочисленных арифметических операций» [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
+ все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
   
 ## <a name="remarks"></a>Примечания  
  При первом использовании показано в приведенном примере `–` оператор *двоичных* оператор арифметического вычитания для разницы между двумя числовыми выражениями.  
@@ -63,7 +63,7 @@ ms.locfileid: "54724477"
 ## <a name="example"></a>Пример  
  В следующем примере используется `–` оператор вычисляет и возвращает разность двух чисел, а затем меняет знак числа.  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
  После выполнения этих инструкций `binaryResult` содержит значение 124,45 и `unaryResult` содержит значение – 334,90.  
   

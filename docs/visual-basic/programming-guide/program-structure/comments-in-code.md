@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977504"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201681"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
 В примерах кодов часто встречается символ начала комментария (`'`). Этот символ дает компилятору Visual Basic проигнорировать последующий текст, или *комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
@@ -60,7 +60,7 @@ ms.locfileid: "56977504"
 >  Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее `'` символов и **комментарий**/**Uncomment** кнопки гораздо проще использовать и требует меньше места и памяти.  
   
 ## <a name="see-also"></a>См. также
-- [Документирование кода с комментариями XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Основные инстинкты — документирование кода с комментариями XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

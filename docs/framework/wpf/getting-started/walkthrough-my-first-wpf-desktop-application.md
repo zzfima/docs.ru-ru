@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748379"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212382"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание первого классического приложения WPF
 
@@ -205,9 +205,9 @@ ms.locfileid: "56748379"
 
 10. Добавить образ с именем *watermark.png* в проект. Можно создать собственный образ, скопируйте файл из образца кода или его [здесь](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).
 
-   1. Щелкните правой кнопкой мыши узел проекта и выберите **добавить** > **существующий элемент**, или нажмите клавишу **Shift**+**Alt** + **Объект**.
+    1. Щелкните правой кнопкой мыши узел проекта и выберите **добавить** > **существующий элемент**, или нажмите клавишу **Shift**+**Alt** + **Объект**.
 
-   2. В **добавить существующий элемент** диалоговое окно, перейдите к файлу изображения, который вы хотите использовать, а затем выберите **добавить**.
+    2. В **добавить существующий элемент** диалоговое окно, перейдите к файлу изображения, который вы хотите использовать, а затем выберите **добавить**.
 
 ## <a name="build-and-run-the-application"></a>Построение и запуск приложения
 

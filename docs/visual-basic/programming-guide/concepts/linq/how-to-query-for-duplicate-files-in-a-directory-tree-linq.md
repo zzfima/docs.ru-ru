@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
+title: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5663c368c319c8c667171f65292667029951dae9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667184"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200628"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Как выполнить Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
 Иногда файлы с одинаковыми именами могут находиться в нескольких папках. Например, в папке установки Visual Studio несколько папок содержат файл readme.htm. В этом примере показано, как запросить такие повторяющиеся имена файлов в указанной корневой папке. Во втором примере показано, как запросить файлы, размер и время создания которых также совпадают.  
   
 ## <a name="example"></a>Пример  
@@ -55,14 +55,14 @@ Module QueryDuplicateFileNames
         PageOutput(duplicates, trimLength)  
   
     End Sub  
-    ' Pages console diplay for large query results. No more than one group per page.  
+    ' Pages console display for large query results. No more than one group per page.  
     ' This sub specifically works with group queries of FileInfo objects  
     ' but can be modified for any type.  
     Sub PageOutput(ByVal groupQuery, ByVal charsToSkip)  
   
         ' "3" = 1 line for extension key + 1 for "Press any key" + 1 for input cursor.  
         Dim numLines As Integer = Console.WindowHeight - 3  
-        ' Flag to indicate whether there are more results to diplay  
+        ' Flag to indicate whether there are more results to display  
         Dim goAgain As Boolean = True  
   
         For Each fg As IEnumerable(Of System.IO.FileInfo) In groupQuery  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7185802a3857fcd73c63d097090a2a7809f65279
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825931"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202279"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>Интерфейс IXCLRDataMethodInstance
 
@@ -33,7 +33,7 @@ ms.locfileid: "55825931"
 | Метод                                                                                                                  | Описание:                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | Возвращает IL для сведений о сопоставлении адрес. |
-| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Получает наиболее характерные адрес точки входа для компиляция в собственном коде все возможные точки входа для метода... |
+| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Получает наиболее характерные адрес точки входа для компиляция в собственном коде все возможные точки входа для метода. |
 
 
 ## <a name="remarks"></a>Примечания

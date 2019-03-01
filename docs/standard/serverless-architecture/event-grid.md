@@ -4,12 +4,12 @@ description: Сетка событий Azure — это бессерверное
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145899"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212187"
 ---
 # <a name="event-grid"></a>"Сетка событий"
 
@@ -90,7 +90,7 @@ Azure предоставляет несколько служб обмена со
 
 Главным преимуществом с помощью сетки событий является автоматическое сообщения, созданные Azure. В Azure, ресурсы автоматически опубликовать *разделе* , позволяет подписаться на различные события. Ниже перечислены типы ресурсов, типы сообщений и событий, которые были доступны автоматически.
 
-| Ресурсов Azure | Тип события. | Описание: |
+| Ресурсов Azure | Тип события. | Описание |
 | -------------- | ---------- | ----------- |
 | Подписка Azure | Microsoft.Resources.ResourceWriteSuccess | Возникает при создании ресурса, или операция обновления завершается успешно. |
 | | Microsoft.Resources.ResourceWriteFailure | Вызывается, когда Создание ресурса или происходит сбой операции обновления. |
@@ -124,7 +124,7 @@ Azure предоставляет несколько служб обмена со
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Аналитика Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Перенос приложения в облако с помощью бессерверных функций Azure](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Сетка событий Azure](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Сетка событий Azure](https://docs.microsoft.com/azure/event-grid/overview)
 * [Схема событий службы "Сетка событий" Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Концентраторы событий Azure](https://docs.microsoft.com/azure/event-hubs)
 * [Документация по функциям Azure](https://docs.microsoft.com/azure/azure-functions)

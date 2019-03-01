@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694143"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201187"
 ---
 # <a name="qualifiersetput-function"></a>Функция QualifierSet_Put
 Записывает именованный квалификатор и значение. Новый квалификатор перезаписывает предыдущее значение с тем же именем. Если квалификатор не существует, он создается. 
@@ -60,14 +60,14 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Квалификатор может переопределяться в производном классе или экземпляре. **Это значение по умолчанию.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Квалификатор распространяется в экземпляры. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Квалификатор распространяется в производные классы. |
-| "WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Квалификатор невозможно переопределить в производном классе или экземпляре. |
-| "WBEM_FLAVOR_AMENDED | 0x80 | Квалификатор локализуется. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Квалификатор невозможно переопределить в производном классе или экземпляре. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Квалификатор локализуется. |
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Возникла Недопустимая попытка указать **ключ** квалификатор для свойства, которое не может быть ключом. Ключи указываются om c; в группах доступности определение объекта и не могут быть изменены для каждого экземпляра. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |

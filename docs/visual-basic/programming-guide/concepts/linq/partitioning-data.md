@@ -2,12 +2,12 @@
 title: Секционирование данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06db2ac3e556e647fed576a7fa0c89b881b748c9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728272"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202149"
 ---
 # <a name="partitioning-data-visual-basic"></a>Секционирование данных (Visual Basic)
 Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.  
@@ -32,22 +32,22 @@ ms.locfileid: "54728272"
 ### <a name="skip"></a>Skip  
  В следующем примере кода используется `Skip` предложение в Visual Basic, чтобы пропустить первые четыре строки в массиве строк перед возвращением оставшихся строк в массиве.  
   
- [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
+ [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
  В следующем примере кода используется `Skip While` предложение в Visual Basic для пропуска строк в массиве, при первой буквы строки «». Возвращаются оставшихся строк в массиве.  
   
- [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
+ [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
  В следующем примере кода используется `Take` предложение в Visual Basic для возврата первых двух строк в массиве строк.  
   
- [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
+ [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
  В следующем примере кода используется `Take While` предложение в Visual Basic для получения строк из массива, тогда как длина строки меньше пяти.  
   
- [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
+ [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Linq>

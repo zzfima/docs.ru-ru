@@ -2,16 +2,11 @@
 title: Службы WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Astoria
-- WCF Data Services, getting started
+  - Astoria
+  - 'WCF Data Services, getting started'
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 6fd81a6bd4449cc0ef11b68320f366368d5edb7e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092492"
 ---
+
 # <a name="wcf-data-services-45"></a>Службы WCF Data Services 4.5
 
 Службы WCF Data Services (прежнее название «Службы данных ADO.NET») — это компонент платформы .NET Framework, которая позволяет создавать службы, использующие [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления и получения данных через Интернет или интрасеть с помощью семантики [ передачи репрезентативного состояния (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. OData использует правила сущность связь [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных ассоциациями.
@@ -28,111 +23,111 @@ ms.locfileid: "56092492"
 
 Необходимо перейти непосредственно к…
 
--   [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
--   [Краткое руководство по Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Краткое руководство по Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [Краткое руководство по Silverlight для разработчиков Windows Phone](https://go.microsoft.com/fwlink/?LinkID=214535)
+- [Краткое руководство по Silverlight для разработчиков Windows Phone](https://go.microsoft.com/fwlink/?LinkID=214535)
 
 Просто Ознакомьте меня примерами кода...
 
--   [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [Практическое руководство. Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
--   [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
 
 Я хочу узнать больше о OData...
 
- -   [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
--   [OData: ПАКЕТ SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: ПАКЕТ SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
--   [OData: Часто задаваемые вопросы](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData: Часто задаваемые вопросы](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Я хочу посмотреть некоторые видеоматериалы...
 
--   [Руководство для начинающих по службам данных WCF](https://go.microsoft.com/fwlink/?LinkId=220864)
+- [Руководство для начинающих по службам данных WCF](https://go.microsoft.com/fwlink/?LinkId=220864)
 
--   [Видеофильмы о службах данных WCF для разработчиков](https://go.microsoft.com/fwlink/?LinkId=220861)
+- [Видеофильмы о службах данных WCF для разработчиков](https://go.microsoft.com/fwlink/?LinkId=220861)
 
--   [OData: Веб-узел разработчиков](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData: Веб-узел разработчиков](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Я хочу см. в разделе примеров end-to-end...
 
--   [Образцы документации по службам WCF Data Services в коллекции образцов MSDN](https://go.microsoft.com/fwlink/?LinkID=220865)
+- [Образцы документации по службам WCF Data Services в коллекции образцов MSDN](https://go.microsoft.com/fwlink/?LinkID=220865)
 
--   [Другие образцы служб WCF Data Services в коллекции образцов MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
+- [Другие образцы служб WCF Data Services в коллекции образцов MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
--   [OData: ПАКЕТ SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData: ПАКЕТ SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 Как происходит интеграция со средствами Visual Studio
 
--   [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
 
--   [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+- [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
--   [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
 
 Рекомендуемые действия в этой ситуации
 
--   [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+- [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
--   [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [Сценарии приложения](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
+- [Сценарии приложения](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
 
 Я хочу использовать Silverlight...
 
--   [Краткое руководство по Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
+- [Краткое руководство по Silverlight](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [Службы WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
+- [Службы WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
 
--   [Приступая к работе с Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366)
+- [Приступая к работе с Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366)
 
 Я хочу использовать LINQ...
 
--   [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 
--   [Рекомендации по LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+- [Рекомендации по LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
 
--   [Практическое руководство. Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
 Я по-прежнему требуются некоторые дополнительные сведения...
 
--   [Блог группы служб WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [Блог группы служб WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=150511)
 
--   [Ресурсы](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [Ресурсы](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
 
--   [Центр разработчиков WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=220868)
+- [Центр разработчиков WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=220868)
 
--   [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
+- [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>В этом разделе
 
- [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+[Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
- Обзор возможностей и функций, доступных в службах WCF Data Services.
+Обзор возможностей и функций, доступных в службах WCF Data Services.
 
- [Новые возможности в службах WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[Новые возможности в службах WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
- Описывает новые возможности в службах WCF Data Services и поддержка новых функций OData.
+Описывает новые возможности в службах WCF Data Services и поддержка новых функций OData.
 
- [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+[Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
- Описывает предоставление и использование веб-каналов OData с помощью служб данных WCF.
+Описывает предоставление и использование веб-каналов OData с помощью служб данных WCF.
 
- [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+[Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 
- Описывает создание и настройка службы данных, которая предоставляет веб-каналов OData.
+Описывает создание и настройка службы данных, которая предоставляет веб-каналов OData.
 
- [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+[Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 
- Описывает использование клиентских библиотек для использования каналов OData из клиентского приложения .NET Framework.
+Описывает использование клиентских библиотек для использования каналов OData из клиентского приложения .NET Framework.
 
 ## <a name="see-also"></a>См. также
 

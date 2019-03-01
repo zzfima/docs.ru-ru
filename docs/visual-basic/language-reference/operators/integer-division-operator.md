@@ -17,12 +17,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: ac306038aefba4ca0e0f13fa2945d01c27c0804d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce7bdaa2bcbf2ba67f24c7e129f8f9a03a28c52
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654689"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201915"
 ---
 # <a name="-operator-visual-basic"></a>Оператор \ (Visual Basic)
 Делит два числа и возвращает целочисленный результат.  
@@ -64,7 +64,7 @@ expression1 \ expression2
 ## <a name="example"></a>Пример  
  В следующем примере используется `\` оператора для выполнения операции деления целое число. Результатом является целое число, представляющее целочисленное частное двух операндов, а остальное удаляются.  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#18)]  
   
  Выражения в предыдущем примере возвращают значения 2, 3, 33 и -22 соответственно.  
   

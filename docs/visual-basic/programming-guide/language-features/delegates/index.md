@@ -2,32 +2,26 @@
 title: Делегаты (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- delegates [Visual Basic]
-- Visual Basic code, delegates
+  - 'delegates [Visual Basic]'
+  - 'Visual Basic code, delegates'
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 99fe0eee194fae21615652c9426bf6027fbf4354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652887"
 ---
 # <a name="delegates-visual-basic"></a>Делегаты (Visual Basic)
-Делегаты являются объектами, которые ссылаются на методы. Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования. Но в отличие от указателей функций делегаты Visual Basic — это ссылочный тип, на основе класса <xref:System.Delegate?displayProperty=nameWithType>. Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.  
+Делегаты являются объектами, которые ссылаются на методы. Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования. Но в отличие от указателей функций делегаты Visual Basic являются ссылочными типами и основаны на классе <xref:System.Delegate?displayProperty=nameWithType>. Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.  
   
 ## <a name="delegates-and-events"></a>Делегаты и события  
  Делегаты полезны в тех ситуациях, когда требуется промежуточное звено между вызывающей и вызываемой процедурами. Например, вы хотите создать объект, который создает события и в зависимости от обстоятельств может вызывать разные обработчики событий. К сожалению, этот объект не может знать заранее, какой обработчик событий обрабатывает конкретное событие. Visual Basic позволяет динамически связывать обработчики событий с событиями путем создания делегата при использовании `AddHandler` инструкции. Во время выполнения делегат передает вызовы в соответствующий обработчик событий.  
   
- Несмотря на то, что можно создавать свои собственные делегаты, в большинстве случаев Visual Basic создает делегат в соответствии с имеющимися подробные сведения. Например, инструкция `Event` неявно определяет класс делегата с именем `<EventName>EventHandler`. Он размещается как вложенный класс в том классе, который содержит инструкцию `Event`, а его сигнатура совпадает с сигнатурой события. Инструкция `AddressOf` неявно создает экземпляр делегата, который ссылается на конкретную процедуру. Следующие два фрагмента кода эквивалентны. В первой строке вы видите явное создание экземпляра `Eventhandler`, который ссылается на метод `Button1_Click`, переданный в качестве аргумента. Вторая строка делает то же самое, но более удобна в использовании.  
+ Несмотря на то, что можно создавать свои собственные делегаты, в большинстве случаев Visual Basic создает делегат и берет на себя сведения для вас. Например, инструкция `Event` неявно определяет класс делегата с именем `<EventName>EventHandler`. Он размещается как вложенный класс в том классе, который содержит инструкцию `Event`, а его сигнатура совпадает с сигнатурой события. Инструкция `AddressOf` неявно создает экземпляр делегата, который ссылается на конкретную процедуру. Следующие два фрагмента кода эквивалентны. В первой строке вы видите явное создание экземпляра `Eventhandler`, который ссылается на метод `Button1_Click`, переданный в качестве аргумента. Вторая строка делает то же самое, но более удобна в использовании.  
   
- [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
+ [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]  
   
  Сокращенный способ создания делегатов вы можете использовать в любом месте кода, где компилятор может определить тип делегата по контексту.  
   
 ## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Объявление событий, использующих существующий тип делегата  
  В некоторых ситуациях вам потребуется объявить, чтобы событие использовало в качестве своего делегата уже существующий тип делегата. Для этого используется следующий синтаксис:  
   
- [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
+ [!code-vb[VbVbalrDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#7)]  
   
  Это удобно, когда нужно направить к одному обработчику несколько событий.  
   
@@ -53,7 +47,7 @@ ms.locfileid: "33652887"
   
  В следующем примере показано, как использовать `AddressOf` и лямбда-выражения для указания ссылки на делегат.  
   
- [!code-vb[VbVbalrDelegates#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_3.vb)]  
+ [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]  
   
  Сигнатура функции должна соответствовать сигнатуре типа делегата. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Дополнительные примеры лямбда-выражений и назначений `AddressOf` делегатам см. в статье [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) (Неявное преобразование делегата).  
   
@@ -62,6 +56,6 @@ ms.locfileid: "33652887"
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Вызов метода делегата](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|Предоставляет пример, в котором показано, как связать метод с делегатом и вызвать этот метод через делегат.|  
-|[How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) (Практическое руководство. Передача процедур другой процедуре в Visual Basic)|Демонстрирует использование делегатов для передачи одной процедуры в другую процедуру.|  
+|[Практическое руководство. Передача процедур другой процедуре в Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|Демонстрирует использование делегатов для передачи одной процедуры в другую процедуру.|  
 |[Неявное преобразование делегата](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Описывает, как можно назначить делегаты или обработчики для подпрограмм и функций, если их сигнатуры не совпадают|  
 |[События](../../../../visual-basic/programming-guide/language-features/events/index.md)|Предоставляет обзор событий в Visual Basic.|

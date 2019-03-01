@@ -2,15 +2,9 @@
 title: События (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- events [Visual Basic], about events
-- events [Visual Basic]
+  - 'events [Visual Basic], about events'
+  - 'events [Visual Basic]'
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065795"
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
 Хотя в проект Visual Studio можно представить как набор процедур, выполняемых в определенной последовательности, на самом деле, большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, называемыми *события*.  
@@ -23,12 +17,12 @@ ms.locfileid: "55065795"
 ### <a name="declaring-events"></a>Объявление событий  
  События объявляются внутри классов, структур, модулей и интерфейсов с помощью ключевого слова `Event`, как показано в следующем примере:  
   
- [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
+ [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Создание событий  
  Событие действует как сообщение о том, что произошло нечто важное. Рассылка такого сообщения называется *созданием* события. В Visual Basic, события создаются `RaiseEvent` инструкции, как показано в следующем примере:  
   
- [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
+ [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
  События должны создаваться в пределах области действия класса, модуля или структуры, в которых они объявлены. Например, производный класс не может создавать события, унаследованные от базового класса.  
   
@@ -49,7 +43,7 @@ ms.locfileid: "55065795"
 ### <a name="withevents-and-the-handles-clause"></a>Оператор WithEvents и предложение Handles  
  Инструкция `WithEvents` и предложение `Handles` предоставляют декларативный способ указания обработчиков событий. Если объект объявлен с ключевым словом `WithEvents`, созданные им события могут обрабатываться любой процедурой с инструкцией `Handles` для этого события, как показано в следующем примере:  
   
- [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
+ [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
   
  Инструкция `WithEvents` и предложение `Handles` часто являются наилучшим решением для обработки событий, так как декларативный синтаксис позволяет легко создавать, читать и отлаживать код программы. Но использование переменных `WithEvents` имеет ряд ограничений.  
   
@@ -65,18 +59,18 @@ ms.locfileid: "55065795"
   
  В некоторых случаях такие как события, связанные с помощью форм или элементов управления, Visual Basic автоматически задействует пустой обработчик событий и связывает его с событием. Например, при двойном щелчке кнопки на форме в режиме конструктора, Visual Basic создает пустой обработчик событий и `WithEvents` переменной для кнопки, как показано в следующем коде:  
   
- [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
+ [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler и RemoveHandler  
  Инструкция `AddHandler` похожа на предложение `Handles`, поскольку тоже позволяет задавать обработчик событий. Но `AddHandler` в сочетании с `RemoveHandler` обеспечивает большую гибкость, чем предложение `Handles`. Она позволяет динамически добавлять, удалять и изменять обработчики событий, связанные с событием. Если вы хотите обрабатывать общие события или события от структуры, необходимо использовать `AddHandler`.  
   
  `AddHandler` принимает два аргумента: имя события, которое предоставляет отправитель события, например элемент управления, и выражение, определяющее делегат. Класс делегата при использовании `AddHandler` не обязательно указывать явно, поскольку инструкция `AddressOf` всегда возвращает ссылку на делегат. Следующий пример связывает обработчик событий с событием, создаваемым объектом:  
   
- [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
+ [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
  Инструкция `RemoveHandler`, которая отсоединяет событие от обработчика событий, использует такой же синтаксис, как `AddHandler`. Пример:  
   
- [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
+ [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
  В следующем примере обработчик событий связывается с событием, а затем создается событие. Обработчик событий перехватывает это событие и выводит сообщение.  
   
@@ -84,20 +78,20 @@ ms.locfileid: "55065795"
   
  Наконец, второй обработчик событий удаляется и событие создается в третий раз. Поскольку теперь нет обработчиков событий, связанных с этим событием, никакие действия не выполняются.  
   
- [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
+ [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Обработка событий, наследуемых от базового класса  
  *Производные классы*, которые наследуют характеристики из базового класса, могут обрабатывать события, создаваемые этим базовым классом, используя инструкцию `Handles MyBase`.  
   
-#### <a name="to-handle-events-from-a-base-class"></a>Обработка событий из базового класса  
+### <a name="to-handle-events-from-a-base-class"></a>Обработка событий из базового класса  
   
 -   Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Пример:  
   
-     [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
+     [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
 ## <a name="related-sections"></a>Связанные разделы  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Пошаговое руководство: Объявление и вызов событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Предоставляет пошаговую инструкцию для объявления и создания событий класса.|  
 |[Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Описывает способ создания процедуры обработчика событий.|  

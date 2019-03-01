@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Число, суммы или среднего значения данных с помощью LINQ (Visual Basic)
+title: Практическое руководство. Число, суммы или среднего значения данных с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - average operator [LINQ in Visual Basic]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: e95f9d75ab9db07b55257bbf6ca951a898b2fb2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ff57029768c89e584fd2d7381fd79e38fbed14f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735095"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203458"
 ---
-# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Как выполнить Число, суммы или среднего значения данных с помощью LINQ (Visual Basic)
+# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Практическое руководство. Число, суммы или среднего значения данных с помощью LINQ (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов.  
   
  В следующем примере показано, как создать новое приложение, которое выполняет запросы к базе данных SQL Server. Пример подсчитывает, суммирует и усредняет результаты с помощью `Aggregate` и `Group By` предложения. Дополнительные сведения см. в разделе [предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
@@ -73,7 +73,7 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
      Добавьте следующий код, чтобы `Load` событий для запроса к таблицам, которые представляются как свойства из вашего <xref:System.Data.Linq.DataContext> и count, sum и среднее значение. В образце используется `Aggregate` предложение, чтобы получить один результат и `Group By` предложение для отображения среднего значения для сгруппированных результатов.  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form6.vb#13)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
