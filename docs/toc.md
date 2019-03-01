@@ -27,12 +27,12 @@
 ### [Базовые типы](standard/base-types/)
 ## [Библиотеки классов .NET](standard/class-libraries.md)
 ## [Анализаторы](standard/analyzers/index.md)
-### [Анализатор API](standard/analyzers/api-analyzer.md) 
+### [Анализатор API](standard/analyzers/api-analyzer.md)
 ### [Анализатор переносимости](standard/analyzers/portability-analyzer.md)
 ### [Анализатор Framework](standard/analyzers/framework-analyzer.md)
 ## [Обработка и создание исключений](standard/exceptions/)
 ## [Сборки в .NET](standard/assembly/index.md)
-### [Формат файла сборки .NET](standard/assembly/file-format.md) 
+### [Формат файла сборки .NET](standard/assembly/file-format.md)
 ## [Сборка мусора](standard/garbage-collection/)
 ## [Универсальные типы](standard/generics.md)
 ## [Делегаты и лямбда-выражения](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [Новые возможности .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Новые возможности .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Учебники](core/tutorials/index.md)
-### [Создание полного решения .NET Core в Windows с помощью Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
 ### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
 ### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [Организация и тестирование проектов с использованием командной строки .NET Core](core/tutorials/testing-with-cli.md)
 ### [Разработка библиотек с помощью кроссплатформенных средств](core/tutorials/libraries.md)
 ### [Разработка приложений ASP.NET Core](core/tutorials/aspnet-core.md)
-### [Управление версиями зависимостей пакетов для .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
 ### [Размещение .NET Core из машинного кода](core/tutorials/netcore-hosting.md)
 ### [Создание пользовательского шаблона для dotnet](core/tutorials/create-custom-template.md)
 ## [Пакеты, метапакеты и платформы](core/packages.md)
@@ -270,7 +268,9 @@
 ## [Обзор языка C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## Новые возможности C#
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 — предварительная версия 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [Настройка доступа к объектам через My](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Основные понятия программирования](visual-basic/programming-guide/concepts/index.md)
-### [Сборки в .NET](standard/assembly/index.md)
 ### [Асинхронное программирование с использованием ключевых слов Async и Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Атрибуты](visual-basic/programming-guide/concepts/attributes/index.md)
+### [Сведения о вызывающем объекте](visual-basic/programming-guide/concepts/caller-information.md)
+### [Коллекции](visual-basic/programming-guide/concepts/collections.md)
+### [Ковариация и контрвариантность](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [Деревья выражений](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [Итераторы](visual-basic/programming-guide/concepts/iterators.md)
 ### [Синтаксис LINQ](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1211,7 +1213,7 @@
 #### [Проверка промежуточных значений данных конвейера](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Обучение регрессионной модели](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [Определение важности признаков модели с помощью PFI](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### Использование обученной модели  
+### Использование обученной модели
 #### [Использование PredictionEngine для поочередного прогнозирования](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Реализация обученной модели](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
