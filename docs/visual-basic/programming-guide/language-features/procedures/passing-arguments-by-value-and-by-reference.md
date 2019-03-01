@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725367"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978479"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Передача аргументов по значению и по ссылке (Visual Basic)
 В Visual Basic, можно передать аргумент в процедуру *по значению* или *по ссылке*. Этот процесс называется *механизма передачи*, и определяет, является ли процедура может изменить элемент программирования, в аргументе в вызывающем коде. Объявление процедуры определяет механизм передачи для каждого параметра, указав [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) ключевое слово.  
@@ -62,11 +62,11 @@ ms.locfileid: "54725367"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере показано, когда для передачи аргументов по значению, а когда для их передачи по ссылке. Процедура `Calculate` имеет оба `ByVal` и `ByRef` параметр. Дана процентная ставка, `rate`и суммы денег, `debt`, задачей процедуры является вычисление нового значения для `debt` , являющееся результатом применения процентную ставку на исходное значение `debt`. Так как `debt` — `ByRef` параметра, новая сумма отражается в значении аргумента в вызывающем коде, который соответствует `debt`. Параметр `rate` — `ByVal` параметр поскольку `Calculate` не изменяйте его значение.  
   
 ### <a name="code"></a>Код  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры](./index.md)

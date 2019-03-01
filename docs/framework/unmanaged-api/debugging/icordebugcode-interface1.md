@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugCode
+title: Интерфейс ICorDebugCode
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2fe1e854069d9b5d566fc00420615e0c06b3d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ca47eb5508907297a78dba1ab2b0a6d2b8ece0d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575951"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976932"
 ---
-# <a name="icordebugcode-interface1"></a>Интерфейс1 ICorDebugCode
+# <a name="icordebugcode-interface"></a>Интерфейс ICorDebugCode
+
 Представляет сегмент кода на языке MSIL или сегмент машинного кода.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|Создает точку останова с указанным смещением.|  
 |[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Возвращает относительный виртуальный адрес (RVA) в фрагменте кода, это `ICorDebugCode` представляет.|  

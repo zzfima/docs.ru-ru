@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686677"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965919"
 ---
 # <a name="if-operator-visual-basic"></a>Оператор If (Visual Basic)
 Использует сокращенные вычисления условно возвращать одно из двух значений. `If` Оператор может вызываться с тремя аргументами или с двумя аргументами.  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  `If` Оператор, который вызывается с тремя аргументами работает подобно `IIf` функции, за исключением того, что она использует сокращенным вычислением. `IIf` Функция всегда проверяет все три аргументов, тогда как `If` оператор, который имеет три аргумента принимает только два из них. Первый `If` вычисления аргумента и результат приводится к `Boolean` значение, `True` или `False`. Если значение равно `True`, `argument2` является вычисляется и возвращается его значение, но `argument3` не вычисляется. Если значение `Boolean` выражение является `False`, `argument3` является вычисляется и возвращается его значение, но `argument2` не вычисляется. Следующие примеры иллюстрируют использование `If` при использовании три аргумента:  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  В следующем примере показано значение сокращенным вычислением. В примере показано две попытки деления переменной `number` переменной `divisor` кроме случая, когда `divisor` равно нулю. В этом случае должно возвращаться значение 0 и не должно быть предпринята попытка выполнить деление потому, что приведет к ошибке времени выполнения. Так как `If` использование выражений сокращенным вычислением, оно оценивается как второй или третий аргумент, в зависимости от значения первого аргумента. Если первый аргумент имеет значение true, делитель не равен нулю, и безопасно вычисления второго аргумента и деление. Если первый аргумент имеет значение false, вычисляется только третий аргумент, и возвращается значение 0. Таким образом, если делитель равен 0, не предпринимается попытка выполнить деление и ошибка не появляется. Тем не менее поскольку `IIf` не использует сокращенные вычисления, второй аргумент вычисляется даже в том случае, если первый аргумент имеет значение false. Это приводит к ошибке деления на ноль во время выполнения.  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>Оператор If с двумя аргументами  
  Первый аргумент `If` можно опустить. Благодаря этому оператор, вызываемый с помощью только два аргумента. Следующий список применяется, только если `If` оператор был вызван с двумя аргументами.  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  Когда `Boolean` аргумент указан, первый аргумент должен быть ссылкой или тип, допускающий значение NULL. Если первый аргумент принимает значение `Nothing`, возвращается значение второго аргумента. Во всех остальных случаях возвращается значение первого аргумента. В следующем примере показано, как работает это вычисление.  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

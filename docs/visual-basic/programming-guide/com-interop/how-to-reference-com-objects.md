@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Ссылаться на COM-объекты из Visual Basic
+title: Практическое руководство. Ссылаться на COM-объекты из Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: c9d6a2ad6146ebd90be330813a44d092c044348b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534934"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980195"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Как выполнить Ссылаться на COM-объекты из Visual Basic
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Практическое руководство. Ссылаться на COM-объекты из Visual Basic
 В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов необходимо создать сборку взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и затем перенаправляется на фактический объект COM. Ответы от COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  
   
  COM-объект можно ссылаться без использования сборки взаимодействия, внедряя сведения о типе для COM-объекта в сборку .NET. Чтобы внедрить сведения о типе, присвойте `Embed Interop Types` свойства `True` для ссылки на COM-объект. При компиляции с помощью компилятора командной строки, используйте `/link` параметр, чтобы ссылаться на библиотеки COM. Дополнительные сведения см. в разделе [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "54534934"
   
 3.  Чтобы упростить доступ к сборке взаимодействия, добавьте `Imports` в начало класса или модуля, в котором используется COM-объекта. Например, в следующем примере кода импортирует пространство имен `INKEDLib` для объектов, на которые ссылается `Microsoft InkEdit Control 1.0` библиотеки.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Чтобы создать сборку взаимодействия, при помощи средства Tlbimp  
   

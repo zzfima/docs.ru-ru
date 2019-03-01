@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543452"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980949"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Влияние языка и региональных параметров на строки в Visual Basic
 Эта страница справки описывается, как Visual Basic использует язык и региональные параметры для выполнения преобразования строк и сравнения.  
@@ -44,7 +44,7 @@ ms.locfileid: "54543452"
   
  Чтобы преобразовать дату в строку культуры, передайте <xref:System.Globalization.CultureInfo> в объект даты <xref:System.DateTime.ToString%28System.IFormatProvider%29> метод. Например, следующий код отображает «07/04/2005 00:00:00», независимо от параметров языка и региональных параметров приложения.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Литералы даты всегда интерпретируются в соответствии с английского языка и региональных параметров.  
@@ -60,11 +60,11 @@ ms.locfileid: "54543452"
   
  `StrComp` Функция возвращает целое число, указывающее на соотношение двух сравниваемых строк на основе порядка сортировки. Положительное значение для результата указывает, что первая строка больше второй строки. Отрицательный результат указывает, первая строка меньше и нулевое значение указывает на равенство между строками.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  Можно также использовать [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] партнер `StrComp` функции <xref:System.String.Compare%2A?displayProperty=nameWithType> метод. Это статический перегруженный метод базового строкового класса. В следующем примере показано, как используется этот метод:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  Для более детального контроля над выполнением сравнения можно использовать дополнительные перегрузки <xref:System.String.Compare%2A> метод. С помощью <xref:System.String.Compare%2A?displayProperty=nameWithType> метод, можно использовать `comparisonType` аргумент, чтобы указать тип выполняемого сравнения для использования.  
   

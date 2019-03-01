@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654893"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976490"
 ---
 # <a name="on-error-statement-visual-basic"></a>Оператор On Error (Visual Basic)
 Включает процедуру обработки ошибок и определяет местоположение этой подпрограммы в процедуре. Можно также отключить процедуру обработки ошибок.  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Оператор Throw  
  Ошибка, вызвавшая с `Err.Raise` метода задает `Exception` свойства в только что созданный экземпляр <xref:System.Exception> класса. Для поддержки вызова исключений, производных типов, `Throw` поддерживается оператор на языке. Это принимает один параметр, являющийся экземпляром исключение. Следующий пример показывает, как эти функции можно использовать с существующей поддержку обработки исключений:  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  Обратите внимание, что `On Error GoTo` оператор перехватывает все ошибки, независимо от того, класс исключений.  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Чтобы предотвратить код обработки ошибок при отсутствии ошибок, поместите `Exit Sub`, `Exit Function`, или `Exit Property` инструкции непосредственно перед процедуру обработки ошибок, как в следующем фрагменте:  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  Ниже, код обработки ошибок следует `Exit Sub` инструкции и предшествует `End Sub` инструкцию, чтобы отделить его от процедуры. Код обработки ошибок можно поместить в любом месте в процедуре.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  При создании объекта, который обращается к другим объектам, можно попытаться обработать любые необработанные ошибки, возвращаемые. Если не удается сопоставить коды ошибок в `Err.Number` на один из собственных ошибок, а затем передавать их обратно в вызывающий объект. Следует определить свою ошибку, добавив код ошибки для `VbObjectError` константы. Например если код ошибки 1052, присвойте ее следующим образом:  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  Системные ошибки во время вызовов Windows библиотеки динамической компоновки (DLL), не вызывайте исключения и не может перехватить с перехват ошибок в Visual Basic. При вызове функций DLL, необходимо проверять каждое возвращаемое значение успех или неудачу (в соответствии со спецификациями API) и в случае сбоя, проверьте значение `Err` объекта `LastDLLError` свойство.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179433"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965622"
 ---
 # <a name="xml-and-soap-serialization"></a>Сериализация XML и SOAP
 
@@ -49,7 +49,7 @@ XML-сериализация может также использоваться 
 [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)  
 Содержит список атрибутов, используемых для управления XML-сериализацией.
 
-[Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+[Практическое руководство. Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 Содержит сложный сценарий, в котором описывается, как создавать несколько потоков XML путем переопределения сериализации.
 
 [Практическое руководство. Управление сериализацией производных классов](how-to-control-serialization-of-derived-classes.md)  
@@ -61,7 +61,7 @@ XML-сериализация может также использоваться 
 [Сериализация XML с использованием XML-веб-служб](xml-serialization-with-xml-web-services.md)  
 Содержит объяснение способов использования XML-сериализации в веб-службах XML.
 
-[Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[Практическое руководство. Сериализация объекта как Stream XML с кодировкой SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 Описывает использование <xref:System.Xml.Serialization.XmlSerializer> класс, чтобы создать закодированный SOAP XML потоки, которые соответствуют раздела 5 документа консорциума World Wide Web (W3C) [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
 
 [Практическое руководство. Переопределение сериализации XML с кодировкой SOAP](how-to-override-encoded-soap-xml-serialization.md)  
@@ -84,10 +84,7 @@ XML-сериализация может также использоваться 
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Расширенные технологии разработки](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
-Содержит ссылки на дополнительные сведения о сложных задачах и методиках разработки приложений в платформе .NET Framework.
-
-[Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 Содержит разделы с описаниями и объяснением программирования XML-веб-служб с помощью ASP.NET.
 
 ## <a name="see-also"></a>См. также

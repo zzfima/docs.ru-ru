@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728074"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974748"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Устранение неполадок, связанных с типами данных (Visual Basic)
 Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при выполнении операций над встроенными типами данных.  
@@ -40,7 +40,7 @@ ms.locfileid: "54728074"
   
  В следующем примере показано неправильное и правильное сравнение двух `Double` значения.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  В предыдущем примере используется <xref:System.Double.ToString%2A> метод <xref:System.Double> структурировать таким образом, чтобы его можно указать высокую точность, чем `CStr` использует ключевое слово. Значение по умолчанию — 15 цифр, но формата «G17» расширяет его до 17 знаков.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54728074"
   
  В следующем примере показано возможная неточность операндов с плавающей запятой.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  В предыдущем примере используется <xref:System.Double.ToString%2A> метод <xref:System.Double> структурировать таким образом, чтобы его можно указать высокую точность, чем `CStr` использует ключевое слово. Значение по умолчанию — 15 цифр, но формата «G17» расширяет его до 17 знаков.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54728074"
   
  В следующем примере показано успешные и неудачные попытки назначения литерала `Char` переменной.  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  Всегда есть риск при использовании сужающего преобразования, так как они могут завершиться ошибкой во время выполнения. Например, преобразование из `String` для `Char` может завершиться ошибкой, если `String` значение содержит более одного символа. Таким образом, в программировании лучше использовать `C` символ типа.  
   

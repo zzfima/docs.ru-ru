@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739206"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973630"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
 Добавляет возможности запросов в Visual Basic Language-Integrated Query (LINQ) и предоставляет простые и мощные возможности при работе с любыми видами данных. Вместо отправки запроса к базе данных должны быть обработаны или работы с отдельный синтаксис запросов для каждого типа данных, которую нужно найти, LINQ представляет запросы как часть языка Visual Basic. Синтаксис запросов не зависит от типа данных.  
@@ -26,12 +26,12 @@ ms.locfileid: "55739206"
   
  Например в следующем примере кода показан запрос LINQ, возвращающий список заказчиков из коллекции и группирующий их по расположению.  
   
- [!code-vb[VbVbalrIntroToLINQ#1](codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Выполнение примеров  
  Для запуска примеров во введении и в [структура запроса LINQ](#structure-of-a-linq-query) разделе, включают следующий код, который возвращает список клиентов и заказов.  
   
- [!code-vb[VbVbalrIntroToLINQ#31](codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
 ## <a name="linq-providers"></a>Поставщики LINQ  
  Объект *поставщик LINQ* сопоставляет запросы LINQ в Visual Basic с запрашиваемым источником данных. При написании запроса LINQ поставщик принимает запрос и переводит его в команды, которые источник данных будет способен выполнить. Затем поставщик преобразует данные из источника в объекты, составляющие результат запроса. И, наконец, при отправке обновлений на источник данных он преобразует объекты в данные.  
@@ -50,23 +50,23 @@ ms.locfileid: "55739206"
   
  Выражение запроса начинается с предложения `From`. Это предложение определяет исходные данные для запроса и переменные, которые используются для обращения к каждому элементу источника данных по отдельности. Эти переменные называются *переменные диапазона* или *переменные итерации*. Предложение `From` является обязательным для запросов, кроме запросов `Aggregate`, где предложение `From` использовать необязательно. После определения области и источника запроса в предложении `From` или `Aggregate` можно добавить любую комбинацию предложений для уточнения запроса. Сведения о предложениях запросов см. в разделе операторов запросов LINQ в Visual Basic далее в этом разделе. Например, следующий запрос определяет исходную коллекцию данных клиента как переменную `customers` и как итерационную переменную `cust`.  
   
- [!code-vb[VbVbalrIntroToLINQ#2](codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
  Данный пример составляет допустимый запрос сам по себе, однако особенно эффективным запрос становится при добавлении нескольких предложений, уточняющих его результат. Например, предложение `Where` позволяет отфильтровать результат по одному или нескольким значениям. Каждое выражение запроса — это одна строка кода, так что предложения можно просто добавлять в конец запроса. Запрос можно разбить на несколько строк текста для улучшения читаемости с помощью символ подчеркивания (\_) символ продолжения строки. В приведенном ниже примере кода показан пример запроса с предложением `Where`.  
   
- [!code-vb[VbVbalrIntroToLINQ#3](codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
  Другое эффективное предложение запроса — это предложение `Select`, которое позволяет возвращать из источника данных только избранные поля. Запросы LINQ возвращают перечислимые коллекции строго типизированных объектов. Запрос может вернуть коллекцию как анонимных, так и именованных типов. Предложение `Select` позволяет вернуть из источника данных отдельное поле. В этом случае типом возвращаемой коллекции является тип этого поля. Кроме того, предложение `Select` позволяет вернуть из источника данных несколько полей. В этом случае типом возвращаемой коллекции становится новый анонимный тип. Возвращенные запросом поля можно сопоставить с полями указанного именованного типа. В приведенном ниже примере кода показано выражение запроса, возвращающее коллекцию анонимных типов, члены которой заполняются данными из выбранных полей источника данных.  
   
- [!code-vb[VbVbalrIntroToLINQ#4](codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#4)]  
   
  Запросы LINQ могут также использоваться для объединения нескольких источников данных и получения единого результата. Это можно сделать с помощью одного или нескольких предложений `From` или с помощью предложений `Join` или `Group Join`. В приведенном ниже примере кода показано выражение запроса, объединяющее данные клиентов и заказов и возвращающее коллекцию анонимных типов, содержащих объединенные данные.  
   
- [!code-vb[VbVbalrIntroToLINQ#5](codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#5)]  
   
  Для получения иерархического результата, содержащего коллекцию объектов клиента, в запросе можно использовать предложение `Group Join`. Каждый объект клиента имеет свойство, содержащее коллекцию всех заказов этого клиента. В приведенном ниже примере кода показано выражение запроса, объединяющее данные клиентов и заказов в иерархический результат и возвращающее коллекцию анонимных типов. Запрос возвращает тип, у которого есть свойство `CustomerOrders`, содержащее коллекцию данных заказов клиента. У него также есть свойство `OrderTotal`, которое содержит общую сумму всех заказов этого клиента. (Этот запрос эквивалентен LEFT OUTER JOIN).  
   
- [!code-vb[VbVbalrIntroToLINQ#6](codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
  Имеется несколько дополнительных операторов запросов LINQ, которые можно использовать для создания эффективных выражений запросов. В следующем разделе описываются различные предложения запросов, которые можно использовать в выражениях запросов. Сведения о предложениях запросов в Visual Basic, см. в разделе [запросы](../../../../visual-basic/language-reference/queries/index.md).  
   
@@ -78,13 +78,13 @@ ms.locfileid: "55739206"
 
 Либо [ `From` предложение](../../../../visual-basic/language-reference/queries/from-clause.md) или `Aggregate` предложение необходимо для начала запроса. Предложение `From` определяет коллекцию источника и переменную итерации для запроса. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select - предложение
 
 Необязательный параметр. Объект [ `Select` предложение](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итераций для запроса. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
 Если предложение `Select` не указано, то переменные итераций для запроса состоят из переменных итераций, указанных предложением `From` или `Aggregate`.
 
@@ -92,83 +92,83 @@ ms.locfileid: "55739206"
 
 Необязательный параметр. Объект [ `Where` предложение](../../../../visual-basic/language-reference/queries/where-clause.md) определяет условие фильтрации для запроса. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Предложение Order By]
 
 | Необязательно. [ `Order By` Предложение](../../../../visual-basic/language-reference/queries/order-by-clause.md) определяет порядок сортировки для столбцов в запросе. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join - предложение
 
 Необязательный параметр. Объект [ `Join` предложение](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну коллекцию. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By - предложение
 
 Необязательный параметр. Объект [ `Group By` предложение](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join - предложение
 
 Необязательный параметр. Объект [ `Group Join` предложение](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate - предложение
 
 Либо [ `Aggregate` предложение](../../../../visual-basic/language-reference/queries/aggregate-clause.md) или `From` предложение необходимо для начала запроса. Предложение `Aggregate` применяет к коллекции одну или несколько агрегатных функций. Например, можно использовать `Aggregate` предложение для вычисления суммы всех элементов, возвращаемых запросом, как показано в следующем примере.
 
-[!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
 Предложение `Aggregate` можно также использовать для изменения запроса. Например, с помощью предложения `Aggregate` можно произвести вычисление с соответствующей коллекцией запросов. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#15](codesnippet/VisualBasic/introduction-to-linq_16.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let - предложение
 
 Необязательный параметр. Объект [ `Let` предложение](../../../../visual-basic/language-reference/queries/let-clause.md) вычисляет значение и присваивает его новой переменной в запросе. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct - предложение
 
 Необязательный параметр. Объект `Distinct` предложение ограничивает значения текущей переменной итерации, чтобы исключить повторяющиеся значения в результатах запроса. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip - предложение
 
 Необязательный параметр. Объект [ `Skip` предложение](../../../../visual-basic/language-reference/queries/skip-clause.md) пропускает указанное число элементов в коллекции и возвращает остальные элементы. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While - предложение
 
 Необязательный параметр. Объект [ `Skip While` предложение](../../../../visual-basic/language-reference/queries/skip-while-clause.md) пропускает элементы в коллекции, до тех пор, пока заданное условие имеет `true` и затем возвращает оставшиеся элементы. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take - предложение
 
 Необязательный параметр. Объект [ `Take` предложение](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число идущих подряд элементов с начала коллекции. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While - предложение
 
 Необязательный параметр. Объект [ `Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекции до тех пор, пока заданное условие имеет `true` и пропускает остальные элементы. Пример:
 
-[!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
 ## <a name="use-additional-linq-query-features"></a>Использовать дополнительные возможности запросов LINQ  
   
 Обращаясь к членам перечислимых и доступных для запроса типов, предоставляемых технологией LINQ, можно использовать дополнительные возможности запросов LINQ. Для этого на результат выражения запроса необходимо вызвать определенный оператор запроса. Например, в следующем примере используется <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> метод, чтобы объединить результаты двух запросов в один. Для возвращения результата запроса в виде универсального списка используется метод <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>.
   
- [!code-vb[VbVbalrIntroToLINQ#22](codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
  Дополнительные сведения о дополнительных возможностях LINQ см. в разделе [Общие сведения о стандартных операторах запроса](../../concepts/linq/standard-query-operators-overview.md).  
   
@@ -207,13 +207,13 @@ ms.locfileid: "55739206"
   
  В приведенном ниже примере кода показано, как создать элемент XML, получить доступ к его дочерним элементам и атрибутам и сделать запросы к содержимому элемента с помощью LINQ.  
   
- [!code-vb[VbXmlSamples#8](../../../language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
+ [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
  Дополнительные сведения см. в разделе [XML](../xml/index.md).  
   
 ## <a name="related-resources"></a>Связанные ресурсы  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |---|---|  
 |[XML](../../language-features/xml/index.md)|Описание возможностей XML в Visual Basic, который может запрашиваться и, которые позволяют включать XML как объекты данных первого класса в коде Visual Basic.|  
 |[Запросы](../../../language-reference/queries/index.md)|Содержит справочные сведения о предложениях запросов, которые доступны в Visual Basic.|  

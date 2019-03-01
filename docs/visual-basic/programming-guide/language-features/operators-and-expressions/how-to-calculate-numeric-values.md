@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Вычисление числовых значений (Visual Basic)
+title: Практическое руководство. Вычисление числовых значений (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560757"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974306"
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>Как выполнить Вычисление числовых значений (Visual Basic)
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>Практическое руководство. Вычисление числовых значений (Visual Basic)
 Вы можете вычислить числовые значения с помощью числовых выражений. Объект *числовое выражение* является выражение, которое содержит литералы, константы и переменные, представляющие числовых значений и операторов, работать с этими значениями.  
   
 ## <a name="calculating-numeric-values"></a>Вычисление числовых значений  
@@ -43,7 +43,7 @@ ms.locfileid: "54560757"
   
 -   Чтобы назначить значение, представленное числового выражения, переменной, как показано в следующем примере, можно использовать оператор присваивания.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      В предыдущем примере, значение выражения в правой части оператора равно (`=`) присваивается переменной `j` слева от оператора, поэтому `j` вычисляется как 276.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54560757"
   
 -   Используйте круглые скобки, чтобы включить операции, которые вы хотите сначала необходимо выполнить. В следующем примере показано два разных результата с теми же операндов и операторов.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      В предыдущем примере, расчет `j` выполняет оператор сложения (`+`) первый так как скобки вокруг `(67 + i)` переопределить обычный приоритет и значение, присваиваемое `j` является 276 (4 раза 69). Расчет `k` операторы выполняются в обычном порядке (`*` перед `+`) и значение, присваиваемое `k` является 270 (268 плюс 2).  
   

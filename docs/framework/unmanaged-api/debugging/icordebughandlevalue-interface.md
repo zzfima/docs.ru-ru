@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugHandleValue
+title: Интерфейс ICorDebugHandleValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHandleValue
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 102fcff6120822c5de0ede45d43a9cd064270085
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dddc1665dff5c1a0629d25aa99066ce6eeca94a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715482"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981443"
 ---
-# <a name="icordebughandlevalue-interface1"></a>Интерфейс1 ICorDebugHandleValue
+# <a name="icordebughandlevalue-interface"></a>Интерфейс ICorDebugHandleValue
+
 Подкласс ICorDebugReferenceValue, представляющий значение ссылки, для которого отладчик создал дескриптор для сборки мусора.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Dispose](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Освобождает дескриптор, который ссылается этот `ICorDebugHandleValue` объекта без явно освобождая указатель интерфейса.|  
 |[Метод GetHandleType](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Возвращает значение CorDebugHandleType, описывающее тип ссылается этот дескриптор `ICorDebugHandleValue`.|  

@@ -3,17 +3,17 @@ title: Мониторинг служб контейнерных приложен
 description: Узнайте, некоторые ключевые аспекты мониторинга контейнера архитектуры
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 925db543617deb28590cf6631ebbda3ee96836c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221190"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975749"
 ---
 # <a name="monitor-containerized-application-services"></a>Мониторинг служб контейнерных приложений
 
-Крайне важно для приложений разбить на несколько контейнеров и микрослужб иметь возможность отслеживать и анализировать поведение приложения.
+Крайне важно для приложений разбить на несколько контейнеров и микрослужб иметь возможность отслеживать и анализировать поведение всего приложения.
 
 ## <a name="microsoft-application-insights"></a>Microsoft Application Insights
 
@@ -25,76 +25,56 @@ ms.locfileid: "56221190"
 
 ![пример](./media/image1.png)
 
-Рис. 6-1. Application Insights, мониторинг узлов Docker и контейнеры
+**Рис. 6-1**. Application Insights, мониторинг узлов Docker и контейнеры
 
 При запуске [образ Application Insights Docker](https://hub.docker.com/r/microsoft/applicationinsights/) на узле Docker, можно воспользоваться преимуществами следующих:
 
--   Данные телеметрии о всех контейнеров, запущенных на узле жизненного цикла — запустить, остановить и т. д.
+- Данные телеметрии о всех контейнеров, запущенных на узле жизненного цикла — запустить, остановить и т. д.
 
--   Счетчики производительности для всех контейнеров: ЦП, памяти, использование сети и многое другое.
+- Счетчики производительности для всех контейнеров: ЦП, памяти, использование сети и многое другое.
 
--   Если вы установили также [пакет SDK Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) в приложениях, выполняющихся в контейнерах, все данные телеметрии этих приложений будут иметь дополнительные свойства, идентифицирующие контейнер и хост-компьютер. Таким образом например, если у вас есть экземпляры приложения, запущенные на нескольких узлах, вы легко сможете отфильтровать данные телеметрии приложения по узлу.
+- Если вы установили также [пакет SDK Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) в приложениях, выполняющихся в контейнерах, все данные телеметрии этих приложений будут иметь дополнительные свойства, идентифицирующие контейнер и хост-компьютер. Таким образом например, если у вас есть экземпляры приложения, запущенные на нескольких узлах, вы легко сможете отфильтровать данные телеметрии приложения по узлу.
 
 ### <a name="setting-up-application-insights-to-monitor-docker-applications-and-docker-hosts"></a>Настройка Application Insights для мониторинга приложений Docker и узлов Docker
 
 Чтобы создать ресурс Application Insights, следуйте инструкциям в статьях, представленных в списке ниже. Портал Azure создаст необходимый скрипт для вас.
 
--   **Мониторинг приложений Docker в Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+- **Мониторинг приложений Docker в Application Insights:** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-docker>
 
--   **Приложения Insights Docker образ в Docker Hub и Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) и <https://github.com/Microsoft/ApplicationInsights-Docker>
+- **Приложения Insights Docker образ в Docker Hub и GitHub:** \
+  <https://hub.docker.com/r/microsoft/applicationinsights/> и \
+  <https://github.com/Microsoft/ApplicationInsights-Docker>
 
--   **Настройка Application Insights для ASP.NET:**  
-[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+- **Настройка Application Insights для веб-приложений ASP.NET и ASP.NET Core:** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-asp-net>
 
--   **Application Insights для веб-страниц:**  
-<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
+- **Application Insights для веб-страниц:**  
+  <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
-## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
+## <a name="security-backup-and-monitoring-services"></a>Безопасности, архивации и мониторинга служб
 
-[Operations Management Suite](https://microsoft.com/oms) — это упрощенное решение управления ИТ, которое предоставляет log analytics, автоматизации, архивации и site recovery. На основе [запросы](https://blogs.technet.microsoft.com/msoms/2016/01/21/easy-microsoft-operations-management-suite-search-queries/) в Operations Management Suite, вы можете отправить [оповещения](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-monitoring-alerts) и установить исправление через [службы автоматизации Azure](https://docs.microsoft.com/azure/automation/). Оно также легко интегрируется в существующие решения управления для обеспечения единого представления панели прозрачного стекла. Operations Management Suite помогает управлять и защищать в локальной и облачной инфраструктурой.
+Существует множество поддержки кода с большим количеством сведения, которые необходимо обрабатывать для обеспечения приложений и инфраструктуры в верхнем деление условие для поддержки бизнес-потребностей, и ситуация становится более сложных в мире микрослужб, поэтому нужен способ При необходимости предпринять действия, имеют высокого уровня и подробные представления.
 
-### <a name="operations-management-suitehttpsmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](https://microsoft.com/oms) решение контейнеров для Docker
+Azure предлагает инструменты для управления и предоставления унифицированного представления из четырех важных аспектов облачным и локальным ресурсам:
 
-Помимо предоставления ценных служб, сам по себе, решение контейнера для операций управления Suite можно управлять и отслеживать узлы Docker и контейнеры, отображая сведения о размещении контейнеров и узлов контейнеров, какие контейнеры запущены или в состоянии сбоя и Docker daemon и контейнер журналов, отправляемых в *stdout* и *stderr*. Оно также показывает метрики производительности, такие как загрузка ЦП, объем памяти, характеристики сети и хранилища для контейнера и узлов, чтобы помочь устранить ошибки и обнаружить конфликтующие соседние контейнеры.
+- **Безопасность**. С помощью [центра безопасности](https://azure.microsoft.com/services/security-center/).
+  - Получите полную видимость и контроль безопасности виртуальных машин, приложений и рабочих нагрузок.
+  - Централизованное управление политиками безопасности и интегрировать существующие процессы и средства.
+  - Обнаруживать реальные угрозы расширенной аналитики.
 
-![](./media/image2.png)
+- **Резервное копирование**. С помощью [служба архивации Azure](https://azure.microsoft.com/services/backup/).
+  - Избежать дорогостоящего прерывания работы, удовлетворить требования соответствия и защиты данных от программ-шантажистов, а также человеческих ошибок.
+  - Храните данные резервного копирования, шифрования при передаче и хранении.
+  - Обеспечить доступ на основе многофакторной проверки подлинности для предотвращения несанкционированного использования.
 
-Рис. 6-2. Сведения о контейнерах Docker, представленной в Operations Management Suite
+- **Мониторинг**. С помощью [мониторинг Azure](https://azure.microsoft.com/solutions/monitoring/), [Log Analytics](https://azure.microsoft.com/services/log-analytics/), и [Application Insights](https://azure.microsoft.com/services/application-insights/).
+  - Получите подробные сведения о работоспособности и производительности рабочих нагрузок в Azure, приложения и инфраструктуру.
+  - Собирать данные из любого источника и получать аналитическую информацию в виртуальные машины, контейнеры и приложения.
+  - Поиск необходимой информации с помощью интерактивных запросов и компонент full-text search. 
+  - Выполните анализ основной причины расширенные средства аналитики, включая алгоритмы машинного обучения.
 
-Application Insights и Operations Management Suite сосредоточиться на мониторинга действий; Тем не менее Application Insights больше фокусируется на наблюдение за приложениями сами благодаря этот пакет SDK в приложение. Тем не менее Operations Management Suite гораздо больше фокусируется на инфраструктуре вокруг узлов, а также он предлагает глубокий анализ журналов в масштабе то же время предоставляя системе очень гибкий управляемых данными поиска и запроса.
-
-Так как Operations Management Suite реализуется как облачная служба, возможно он приступить к работе быстро с минимальными затратами на службы инфраструктуры. Новые возможности предоставляются автоматически, что на текущее обслуживание и обновление затраты.
-
-С помощью Operations Management Suite контейнер решения, можно сделать следующее:
-
--   Централизовать и сопоставлять миллионам журналов из контейнеров Docker в нужном масштабе
-
--   Просмотреть сведения о всех узлов контейнера в одном месте
-
--   Знать, какие контейнеры запущенных, какой образ их работы и где они выполняются:
-
--   Быстро диагностировать контейнеры «шумный сосед», которые могут вызвать проблемы на узлах контейнера
-
--   Журнал аудита для действий см. в разделе о контейнерах
-
--   Устранение неполадок путем просмотра и поиска централизованные журналы без удаленного взаимодействия с узлами Docker
-
--   Находить контейнеры, которые могут быть «шумных соседей» и занимает слишком много ресурсов на узле
-
--   Просмотреть централизованного ЦП, памяти, хранения и сведения об использовании и производительности сети для контейнеров
-
--   Создать тестовые контейнеры Docker с помощью службы автоматизации Azure
-
-Вы увидите сведения о производительности с помощью запросов, такие как тип = Perf, как показано на рис. 6-3.
-
-![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
-
-Рис. 6-3. Метрики производительности узлов Docker, представленной в Operations Management Suite
-
-Сохранение запросов также — это стандартная функция в Operations Management Suite, которая помогает сохранять запросы, оказавшиеся полезными и трендов в вашей системе.
-
-**Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение для контейнеров в [Operations Management Suite](https://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
+- **К локальным ресурсам**. С помощью [действительно согласованное гибридное облако](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
 >[Назад](manage-production-docker-environments.md)

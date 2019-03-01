@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugFunction
+title: Интерфейс ICorDebugFunction
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b810ce8634781438faccac25f96442624a78ea0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c2a4dc823768b722e9069c411be787a66989b2a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676774"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977114"
 ---
-# <a name="icordebugfunction-interface1"></a>Интерфейс1 ICorDebugFunction
+# <a name="icordebugfunction-interface"></a>Интерфейс ICorDebugFunction
+
 Представляет управляемую функцию или метод.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Создает точку останова в начале этой функции.|  
 |[Метод GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Возвращает объект, представляющий класс, членом которых является эта функция ICorDebugClass.|  

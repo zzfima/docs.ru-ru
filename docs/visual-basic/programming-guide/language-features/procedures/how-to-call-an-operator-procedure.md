@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Вызов процедуры оператора (Visual Basic)
+title: Практическое руководство. Вызов процедуры оператора (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: fc658dd7ef001c8d3ef7761bd2a7889f70e9e4a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667587"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978973"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Как выполнить Вызов процедуры оператора (Visual Basic)
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Практическое руководство. Вызов процедуры оператора (Visual Basic)
 Вызов процедуры оператора, используя символ оператора в выражении. При наличии оператора преобразования следует вызвать [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для преобразования значения из одного типа в другой.  
   
  Процедуры операторов не вызывается явно. Просто используйте оператор, или `CType` функции, в операторе присваивания или выражение, так же, вы обычно используется оператор. Visual Basic выполняет вызов процедуры оператора.  
@@ -44,7 +44,7 @@ ms.locfileid: "54667587"
 ## <a name="example"></a>Пример  
  В следующем примере создается два <xref:System.TimeSpan> структуры, складывает их и сохраняет результат в третьей <xref:System.TimeSpan> структуры. <xref:System.TimeSpan> Структура определяет процедуры оператора для перегрузки нескольких стандартных операторов.  
   
- [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
  Так как <xref:System.TimeSpan> перегружает стандартный `+` оператор, в предыдущем примере вызывается процедура оператора при вычислении значения `combinedSpan`.  
   

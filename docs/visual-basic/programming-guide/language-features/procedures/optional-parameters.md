@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552233"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965773"
 ---
 # <a name="optional-parameters-visual-basic"></a>Необязательные параметры (Visual Basic)
 Некоторые аргументы процедуры можно задать как необязательные, тем самым указывая, что их можно не задавать при вызове процедуры. *Необязательные параметры* обозначаются `Optional` ключевое слово в определении процедуры. Действуют следующие правила.  
@@ -47,12 +47,12 @@ Sub name(argument 1, , , argument 4)
   
  При первом вызове `MsgBox` указываются все три аргумента в том порядке, в котором они определены в `MsgBox`. При втором вызове указывается только обязательный аргумент. При третьем и четвертом вызове указываются первый и третий аргументы. Третий вызов указывает аргумент по позиции, а четвертый — по имени.  
   
- [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Определение наличия необязательного аргумента  
  Процедура во время выполнения не может отличить пропущенный аргумент от аргумента, для которого в вызывающем коде явным образом задано значение по умолчанию. Если такое различение существенно, можно задать в качестве значения по умолчанию значение, которое вряд ли будет использоваться. В следующей процедуре определяется необязательный параметр `office`и проверяется его значение по умолчанию `QJZ`, чтобы увидеть опущен ли он в вызове:  
   
- [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
  Если необязательный параметр имеет ссылочный тип, например, `String`, то можно использовать `Nothing` в качестве значения по умолчанию, при условии, что это не является ожидаемым значением аргумента.  
   

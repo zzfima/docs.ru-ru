@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666583"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971290"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  
@@ -56,11 +56,11 @@ ms.locfileid: "54666583"
   
 1.  Найдите место в `Main` метод проекта, который помечен следующим образом:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Скопируйте следующий код и вставьте его в.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Наведите указатель мыши на `studentQuery` в код, чтобы убедитесь, что тип назначаемого компилятора `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54666583"
   
 1.  Добавьте следующий `For Each` цикл под запросом в проекте.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Наведите указатель мыши на управляющей переменной цикла `studentRecord` для просмотра типа данных. Тип `studentRecord` выводится как `Student`, так как `studentQuery` возвращает коллекцию `Student` экземпляров.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54666583"
   
 1.  Добавьте код в этом разделе, чтобы ввести локальный идентификатор в выражении запроса. Локальный идентификатор будет содержать промежуточные результаты. В следующем примере `name` является идентификатором, который содержит объединение учащегося первый имени и фамилии. Для удобства можно использовать локальный идентификатор, или он может повысить производительность, сохраняя результаты выражения, в противном случае будет вычисляться несколько раз.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54666583"
   
 1.  Добавьте запрос и `For Each` цикл из этого раздела, чтобы создать запрос, который создает последовательность, элементы которой отличаются от элементов в исходной коллекции. В следующем примере источником является коллекция `Student` объекты, но только один элемент для каждого объекта, возвращается: имя, Фамилия студентов Орехов. Так как `currentStudent.First` представляет собой строку, тип данных последовательности, возвращаемой `studentQuery3` является `IEnumerable(Of String)`, последовательность строк. Как и в предыдущих примерах, тип назначения данных, для `studentQuery3` остается компилятору определить с помощью вывод локального типа.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Наведите указатель мыши на `studentQuery3` в коде, чтобы убедиться, что назначенный тип `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ ms.locfileid: "54666583"
   
      В следующем примере создается запрос, возвращающий имя и ранг руководителями, успеваемость составляет от 1 до 10, в порядке ранга для учебных заведений. В этом примере тип `studentQuery4` должен быть выведен, поскольку `Select` предложение возвращает экземпляр анонимного типа, а анонимный тип не имеет имени.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
   
 ## <a name="additional-examples"></a>Дополнительные примеры  
  Теперь, когда вы знакомы с основами, ниже приведен список дополнительных примеров, который иллюстрирует гибкость и мощь [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов. Каждый пример предшествует краткое описание его назначение. Наведите указатель мыши над переменной результата запроса для каждого запроса, чтобы просмотреть определенный тип. Используйте `For Each` цикла для получения результатов.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Дополнительные сведения  
  После ознакомления с основными принципами работы с запросами, вы будете готовы прочитать документацию и примеры для конкретного типа [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют:  

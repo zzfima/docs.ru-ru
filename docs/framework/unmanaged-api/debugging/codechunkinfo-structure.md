@@ -1,5 +1,5 @@
 ---
-title: Структура1 codechunkinfo
+title: Структура CodeChunkInfo
 ms.date: 03/30/2017
 api_name:
 - CodeChunkInfo
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d658e360fcfd3fda837c6d7ccab9458594ce9641
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522548"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977920"
 ---
-# <a name="codechunkinfo-structure1"></a>Структура1 codechunkinfo
+# <a name="codechunkinfo-structure"></a>Структура CodeChunkInfo
+
 Представляет одинарный блок кода в памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,7 +38,7 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`startAddr`|Объект `CORDB_ADDRESS` значение, указывающее начальный адрес фрагмента данных.|  
 |`length`|Размер в байтах блока.|  

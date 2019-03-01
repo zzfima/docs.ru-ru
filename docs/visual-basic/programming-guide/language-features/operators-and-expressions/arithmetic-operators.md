@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730741"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981274"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Арифметические операторы в Visual Basic
 Арифметические операторы используются для выполнения многих известных арифметических операций, включая вычисление числовых значений, представленных литералы, переменные, другие выражения, функции и вызовы свойства и константы. Также классифицируются с арифметическими операторами являются операторы поразрядного сдвига, которые работают на уровне отдельных битов операндов и сдвиг их битовых шаблонов влево или вправо.  
@@ -26,29 +26,29 @@ ms.locfileid: "54730741"
 ## <a name="arithmetic-operations"></a>Арифметические операции  
  Вы можете добавить два значения в выражении вместе с [оператором "+"](../../../../visual-basic/language-reference/operators/addition-operator.md), или вычесть единицу из другого и [-оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  Отрицание также использует [-оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), но только с одним операндом, как показано следующем примере.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  Умножение и деление используйте [* оператор](../../../../visual-basic/language-reference/operators/multiplication-operator.md) и [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), соответственно, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  Используется для возведения в степень [^ оператор](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  Целочисленное деление выполняется с помощью [\ оператора (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Целочисленное деление возвращает частное, т. е целое число, представляющее число раз делитель можно разделить без остатка делится делимое. Как делитель, так и делимое должны быть целочисленными типами (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, и `ULong`) для этого оператора. Все другие типы необходимо сначала преобразовать в целочисленный тип. В следующем примере показано целочисленное деление.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  Арифметический модуль выполняется с помощью [оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md). Этот оператор возвращает остаток после деления делимого целое количество раз. Если как делитель, так и делимое целочисленных типов, возвращаемое значение является неотъемлемой частью. Если делитель и делимое являются типами с плавающей запятой, возвращаемое значение также является с плавающей запятой. В следующем примере показано такое поведение.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Попытка деления на ноль  
  Деление на ноль приводит к разным результатам в зависимости от используемых типов данных. В виде раздельных целочисленных значений (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] вызывает <xref:System.DivideByZeroException> исключение. В операции деления с `Decimal` или `Single` тип данных, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] также выдает <xref:System.DivideByZeroException> исключение.  
@@ -80,7 +80,7 @@ ms.locfileid: "54730741"
   
  Следующий пример сдвигает `Integer` значение влево и вправо.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  Арифметические сдвиги никогда не создают исключения переполнения.  
   

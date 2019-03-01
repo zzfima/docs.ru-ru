@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678406"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975619"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Определение анонимного типа (Visual Basic)
 В ответ на объявление экземпляра анонимного типа компилятор создает определение нового класса, который содержит указанные свойства для типа.  
@@ -17,7 +17,7 @@ ms.locfileid: "54678406"
 ## <a name="compiler-generated-code"></a>Созданный компилятором код  
  Для следующее определение `product`, компилятор создает определение нового класса, который содержит свойства `Name`, `Price`, и `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  Определение класса содержит определения свойств следующего вида. Обратите внимание, что не `Set` метод для ключевых свойств. Значения свойств ключа доступны только для чтения.  
   
@@ -66,13 +66,13 @@ End Class
   
      Например, в следующих примерах `Equals` возвращает `True` только для `employee01` и `employee08`. Комментарий перед каждой строке указывается причина, почему нового экземпляра не соответствует `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` предоставляет соответствующим образом уникальный алгоритм GetHashCode. Алгоритм использует только ключевые свойства для вычисления хэш-код.  
   
 -   `ToString` Возвращает строку объединены значения свойств, как показано в следующем примере. Включены ключевые и неключевые свойства.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  Явно именованные свойства анонимного типа не должны конфликтовать с эти созданные методы. То есть нельзя использовать `.Equals`, `.GetHashCode`, или `.ToString` для имени свойства.  
   

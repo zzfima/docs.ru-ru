@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595582"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978505"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
 *Универсальный тип* является одиночным элементом программирования, который используется для выполнения одинаковой функциональности для различных типов данных. При определении универсальных классов или процедур не нужно определять отдельную версию для каждого типа данных, для которых может потребоваться выполнение этой функциональности.  
@@ -55,7 +55,7 @@ ms.locfileid: "54595582"
   
  Допустим, вам нужно создать и использовать класс очереди, который работает с определенным типом данных, например `String`. Можно объявить такой класс из <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, как показано в следующем примере.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  Теперь можно использовать `stringQ` для работы исключительно со значениями `String` . Так как `stringQ` предназначен конкретно для `String` , а не является универсальным для значений `Object` , вам не потребуется позднее связывание или преобразование типа. Это экономит время выполнения и сокращает число ошибок во время выполнения.  
   
@@ -64,17 +64,17 @@ ms.locfileid: "54595582"
 ## <a name="example-of-a-generic-class"></a>Пример универсального класса  
  В следующем примере показано определение каркаса универсального класса.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  В предыдущем каркасе `t` — это *параметр типа*, то есть заполнитель для типа данных, указанного при объявлении класса. В другом месте в коде можно объявлять различные версии `classHolder` , указав различные типы данных для `t`. Два таких объявления показаны в следующем примере.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  Предыдущие инструкции объявляют *сконструированные классы*, в которых указанный тип заменяет параметр типа. Эта замена распространяется по всему коду сконструированного класса. В следующем примере показано, как процедура `processNewItem` выглядит в `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Более полный пример, см. в разделе [как: Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Более полный пример см. в подразделе [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Допустимые элементы программирования  
  Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет несколько универсальных классов, структур и интерфейсов, которые представляют собой часто используемые универсальные элементы. Пространство имен <xref:System.Collections.Generic?displayProperty=nameWithType> предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента посмотрите, не существует ли он уже в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
@@ -110,7 +110,7 @@ ms.locfileid: "54595582"
 ### <a name="example-of-a-constraint"></a>Пример ограничения  
  В следующем примере показано каркасное определение класса с ограничением, которое требует аргумент типа для реализации <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  Если последующий код попытается создать класс из `itemManager` , используя тип, который не реализует <xref:System.IComparable>, компилятор сообщит об ошибке.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54595582"
 ### <a name="example-of-multiple-constraints"></a>Пример множественных ограничений  
  В следующем примере показано каркасное определение универсального класса со списком ограничений в параметре типа. В коде, который создает экземпляр этого класса, аргумент типа должен реализовывать интерфейсы <xref:System.IComparable> и <xref:System.IDisposable> , быть ссылочным типом и предоставлять доступ к конструктору без параметров.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Важные термины  
  Универсальные типы вводят и используют следующие термины.  

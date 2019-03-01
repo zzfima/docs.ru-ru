@@ -2,11 +2,11 @@
 title: AssemblyAttributesGoHereS
 ms.date: 03/30/2017
 api_name:
-- AssemblyAttributesGoHereS
+- System.Runtime.CompilerServices.AssemblyAttributesGoHereS
 api_location:
-- alink.dll
+- mscorlib.dll
 api_type:
-- COM
+- Assembly
 f1_keywords:
 - AssemblyAttributesGoHereS
 helpviewer_keywords:
@@ -17,33 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3506462aaf8d040126d979801460772b3cd47f9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74447f52c75ae22e513c6f07950630d37bad191a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969834"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
-Используется ALink как заполнитель для хранения сведений о пользовательских атрибутах.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-AssemblyAttributesGoHereS  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Ссылки на этот тип можно включать в модули NETMODULE, источник которых содержат пользовательские атрибуты сборки. При построении манифеста сборки из одного или нескольких файлов, содержащих ссылки на эти NETMODULE, ALink использует сведения, подключенные к этим ссылкам, для выдачи фактических пользовательских атрибутов. Таким образом, экземпляр этого типа никогда не создается, а ссылки на него используются только как часть процесса сборки и бесполезны в окончательной сборке.  
-  
- Ссылки на этот тип указывают пользовательские атрибуты, связанные с безопасностью, которые нельзя использовать многократно.  
-  
- Эти типы помечены как «внутренние» в .NET Framework и находятся в <xref:System.Runtime.CompilerServices>.  
-  
-## <a name="requirements"></a>Требования  
- mscorlib.dll  
-  
+
+Используется ALink как заполнитель для хранения сведений о пользовательских атрибутах.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+internal sealed class AssemblyAttributesGoHereS
+```
+
+## <a name="remarks"></a>Примечания
+
+Ссылки на этот тип можно включать в модули NETMODULE, источник которых содержат пользовательские атрибуты сборки. При построении манифеста сборки из одного или нескольких файлов, содержащих ссылки на эти NETMODULE, ALink использует сведения, подключенные к этим ссылкам, для выдачи фактических пользовательских атрибутов. Таким образом, экземпляр этого типа никогда не создается, а ссылки на него используются только как часть процесса сборки и бесполезны в окончательной сборке.
+
+Ссылки на этот тип указывают пользовательские атрибуты, связанные с безопасностью, которые нельзя использовать многократно.
+
+Эти типы помечены как «внутренние» в .NET Framework и находятся в папке <xref:System.Runtime.CompilerServices> пространства имен.
+
+## <a name="requirements"></a>Требования
+
+mscorlib.dll
+
 ## <a name="see-also"></a>См. также
-- [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)
-- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)
-- [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)
+
+- [AssemblyAttributesGoHere](assemblyattributesgohere.md)
+- [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)
+- [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)

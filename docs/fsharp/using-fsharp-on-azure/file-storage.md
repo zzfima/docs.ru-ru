@@ -1,16 +1,16 @@
 ---
-title: Начало работы с хранилищем файлов Azure с помощью F#
+title: Начало работы с хранилищем файлов Azure с использованиемF#
 description: Store файла данных в облаке с хранилищем файлов Azure и подключить к общей облачной папке из виртуальной машины Azure (ВМ) или из локального приложения под управлением Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569347"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969600"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Начало работы с хранилищем файлов Azure с помощью F# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Начало работы с хранилищем файлов Azure с помощью языка F\#
 
 Хранилище файлов Azure — это служба, предоставляющая файловые ресурсы в облаке, используя стандартные [протокол Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Поддерживаются протоколы SMB 2.1 и SMB 3.0. С хранилищем файлов Azure можно переносить устаревшие приложения, использующие файловые ресурсы Azure быстро и без дорогостоящей перезаписи. Приложения, работающие на виртуальных машинах Azure или облачных службах или из локальных клиентов можно подключить файловый ресурс в облаке, так же, как настольное приложение подключает обычную общую папку SMB. Любое количество компонентов приложений можно подключать и одновременно получить доступ к общей папки хранилища.
 
@@ -21,9 +21,9 @@ ms.locfileid: "33569347"
 Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранения](/azure/storage/storage-create-storage-account).
 Вам также потребуется ключ доступа к хранилищу для этой учетной записи.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Создать скрипт F# и начала F#, интерактивный
+## <a name="create-an-f-script-and-start-f-interactive"></a>Создание F# сценариев и запустить F# интерактивный
 
-Примеры в этой статье можно использовать в F# приложение или скрипт F#. Чтобы создать скрипт F#, создайте файл с `.fsx` расширение, например `files.fsx`, в среде разработки F#.
+Примеры в этой статье можно использовать в любом F# приложения или F# скрипта. Чтобы создать F# скрипт, создайте файл с `.fsx` расширение, например `files.fsx`в вашей F# среды разработки.
 
 Затем используйте [диспетчера пакетов](package-management.md) например [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) для установки `WindowsAzure.Storage` пакета и ссылка `WindowsAzure.Storage.dll` в скрипте, с помощью `#r`директива.
 

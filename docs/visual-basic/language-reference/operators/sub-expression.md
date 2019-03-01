@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496313"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966727"
 ---
 # <a name="sub-expression-visual-basic"></a>Часть выражения (Visual Basic)
 Объявляет параметры и код, которые определяют подпрограммы лямбда-выражение.  
@@ -55,7 +55,7 @@ End Sub
 ## <a name="example"></a>Пример  
  Ниже приведен пример лямбда-выражения, который записывает значение в консоль. В примере синтаксиса однострочный и многострочный лямбда-выражения для подпрограммы. Дополнительные примеры см. в разделе [лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614514"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972811"
 ---
 # <a name="putclasswmi-function"></a>Функция PutClassWmi
 Создает новый класс или обновляет существующий.  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор, WMI не сохраняет любые квалификаторы с измененная версия. </br> В противном случае набор, предполагается, что этот объект не локализовано, а все квалификаторы — storedwith данного экземпляра. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор, WMI не сохраняет любые квалификаторы с измененная версия. <br> В противном случае набор, предполагается, что этот объект не локализовано, а все квалификаторы — storedwith данного экземпляра. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Создайте класс, если он не существует, или заменяет его, если он уже существует. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Обновите класс. Класс должен существовать для успешного вызова. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Создайте класс. Вызов завершается неудачей, если класс уже существует. |

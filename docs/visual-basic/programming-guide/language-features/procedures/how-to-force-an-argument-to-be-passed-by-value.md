@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Принудительная аргумента передаваться по значению (Visual Basic)
+title: Практическое руководство. Принудительная аргумента передаваться по значению (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706645"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970289"
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Как выполнить Принудительная аргумента передаваться по значению (Visual Basic)
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Практическое руководство. Принудительная аргумента передаваться по значению (Visual Basic)
 Объявление процедуры определяет механизм передачи. Если параметр объявлен [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic и ожидает передачи соответствующего аргумента по ссылке. Это позволяет процедуре для изменения значения элемента программирования, в аргументе в вызывающем коде. Если вы хотите защитить основные элементы от таких изменений, можно переопределить `ByRef` механизм передачи в процедуре вызовите, заключив имя аргумента в скобки. Эти скобки являются дополнением к круглым скобкам, содержащим список аргументов в вызове.  
   
  Вызывающий код не может переопределить [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) механизм.  
@@ -35,9 +35,9 @@ ms.locfileid: "54706645"
 ## <a name="example"></a>Пример  
  В следующем примере переопределяется `ByRef` объявление параметра. В вызове, требующем `ByVal`, обратите внимание на два уровня скобок.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Когда `str` заключен в дополнительные скобки в списке аргументов, `setNewString` процедура не может изменить его значение в вызывающий код, и `MsgBox` отображает «Не может быть заменен при передаче ByVal». При `str` не заключен в дополнительные скобки процедуру можно изменить его, и `MsgBox` отображает «Это новое значение для аргумента inString».  
   

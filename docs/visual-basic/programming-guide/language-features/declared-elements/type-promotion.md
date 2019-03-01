@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722034"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969197"
 ---
 # <a name="type-promotion-visual-basic"></a>Повышение типа (Visual Basic)
 При объявлении элемента программирования в модуле Visual Basic повышает уровень своей области, в пространство имен, содержащей модуль. Этот процесс называется *повышение типа*.  
   
  Следующий пример показывает определение схемы модуля и двух членов этого модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  В рамках `projModule`программирования элементы, объявленные на уровне модуля повышаются до `projNamespace`. В приведенном выше примере `basicEnum` и `innerClass` повышаются, но `numberSub` — нет, поскольку он не объявлен на уровне модуля.  
   
 ## <a name="effect-of-type-promotion"></a>Эффект повышения типа  
  Повышение типа применяется что уточняющей строке не нужно включать имя модуля. Следующий пример делает два вызова процедуры в предыдущем примере.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  В предыдущем примере первый вызов используются полные квалификационные строки. Тем не менее это не необходимо из-за повышение типа. Второй вызов также доступ к членам модуля без включения `projModule` в строки квалификации.  
   
 ## <a name="defeat-of-type-promotion"></a>Отмена повышения типа  
  Если пространство имен уже содержит член с тем же именем члена модуля, повышение типа для члена модуля отменяется. Следующий пример показывает определение схемы перечисления и модуль в рамках одного пространства имен.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  В приведенном выше примере Visual Basic невозможно повысить уровень класс `abc` для `thisNameSpace` так, как перечисление с тем же именем на уровне пространства имен уже существует. Чтобы получить доступ к `abcSub`, необходимо использовать полной строки `thisNamespace.thisModule.abc.abcSub`. Тем не менее, класс `xyz` по-прежнему может повышаться, и вы можете получить доступ к `xyzSub` с более короткая строка квалификации `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54722034"
   
  **Последствия.** Отмена повышения типа частичного определения может привести к непредсказуемым результатам и даже ошибкам компилятора. Следующий пример показывает скелет разделяемые определения класса, один из которых находится внутри модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  В предыдущем примере разработчик может ожидать, что компилятор объединить два частичных определения из `sampleClass`. Однако компилятор не учитывает предложения в течение частичное определение внутри `sampleModule`. Таким образом, он попытается скомпилировать два отдельных и различных класса, и именованные `sampleClass` , но с другой квалификации пути.  
   

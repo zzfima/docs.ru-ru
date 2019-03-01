@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объявление константы (Visual Basic)
+title: Практическое руководство. Объявление константы (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678841"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964939"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Как выполнить Объявление константы (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
 Использовании `Const` инструкцию, чтобы объявление константы и присвойте ему значение. Объявляя константу, понятное имя назначается значение. После объявления константа не может изменить или присвоить новое значение.  
   
  Вы объявите константу в процедуре или в раздел объявлений модуля, класса или структуры. Класс или структура на уровне константы являются `Private` по умолчанию, но также может быть объявлено как `Public`, `Friend`, `Protected`, или `Protected Friend` для соответствующего уровня доступа к коду.  
@@ -43,7 +43,7 @@ ms.locfileid: "54678841"
   
 -   Написать объявление, которое включает спецификатор доступа `Const` ключевое слово и выражение, как показано в следующих примерах:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      Когда [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) — `Off` и [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) — `On`, константа необходимо объявить явно путем указания типа данных (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, или `String`).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54678841"
   
 -   Написать объявление, которое включает в себя `As` ключевое слово и явных типов данных, как показано в следующих примерах:  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      Можно объявить несколько констант в одной строке, несмотря на то, что ваш код более удобочитаемым, если объявляется только одной константы в строке. Если в одной строке объявляется несколько констант, все они должны иметь тот же уровень доступа (`Public`, `Private`, `Friend`, `Protected`, или `Protected Friend`).  
   

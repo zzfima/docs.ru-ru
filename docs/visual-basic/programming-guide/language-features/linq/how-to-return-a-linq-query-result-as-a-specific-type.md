@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
+title: Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500620"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973500"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Как выполнить Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов. По умолчанию запросы LINQ возвращают список объектов как анонимный тип. Можно также указать, чтобы запрос возвращал список определенного типа с помощью `Select` предложение.  
   
  Приведенный ниже показано, как создать новое приложение, которое выполняет запросы к базе данных SQL Server и результаты запроса проецируются как конкретный именованный тип. Дополнительные сведения см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) и [предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
@@ -63,7 +63,7 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
 3.  После `End Class` инструкции класса Form1 добавьте следующий код для создания `CustomerInfo` тип, содержащий результаты запроса для этого примера.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
 4.  При добавлении таблиц в конструктор O/R designer добавлены <xref:System.Data.Linq.DataContext> объект в проект. Этот объект содержит код, который необходимо иметь для доступа к этим таблицам и для доступа к отдельным объектам и коллекциям для каждой таблицы. <xref:System.Data.Linq.DataContext> Объектов для проекта имя на основе имени файла .dbml. Для этого проекта <xref:System.Data.Linq.DataContext> объект называется `northwindDataContext`.  
   
@@ -71,7 +71,7 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
      В `Load` класса Form1, добавьте следующий код для запроса к таблицам, которые представляются как свойства контекста данных. `Select` Предложение запроса будет создан новый `CustomerInfo` типа вместо анонимного типа для каждого элемента результата запроса.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
 5.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

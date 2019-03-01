@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Изменение XML-литералов (Visual Basic)
+title: Практическое руководство. Изменение XML-литералов (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636343"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974722"
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a>Как выполнить Изменение XML-литералов (Visual Basic)
+# <a name="how-to-modify-xml-literals-visual-basic"></a>Практическое руководство. Изменение XML-литералов (Visual Basic)
 Visual Basic предоставляет удобный способ изменения XML-литералов. Можно добавить или удалить элементы и атрибуты, и можно также заменить существующий элемент новым элементом XML. В этом разделе содержит несколько примеров того, как изменить существующий XML-литерал.  
   
 ### <a name="to-modify-the-value-of-an-xml-literal"></a>Чтобы изменить значение XML-литерала  
@@ -22,7 +22,7 @@ Visual Basic предоставляет удобный способ измене
   
      В следующем примере кода показано, как значение всех \<цена > элементов в XML-документа.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      Ниже показан образец XML-источника и изменение XML из этого примера кода.  
   
@@ -65,7 +65,7 @@ Visual Basic предоставляет удобный способ измене
   
 1.  Чтобы добавить атрибут в XML-литерал, сначала получите ссылку на XML-литерал. Затем можно добавить атрибут, добавив новое свойство оси атрибута XML. Можно также добавить новый <xref:System.Xml.Linq.XAttribute> объекта на XML-литерал с помощью <xref:System.Xml.Linq.XContainer.Add%2A> метод. В следующем примере оба варианта.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      Ниже показан образец XML-источника и изменение XML из этого примера кода.  
   
@@ -111,7 +111,7 @@ Visual Basic предоставляет удобный способ измене
   
      В следующем примере показано примеры каждого из этих методов.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      Ниже показан образец XML-источника и изменение XML из этого примера кода.  
   
@@ -155,7 +155,7 @@ Visual Basic предоставляет удобный способ измене
   
 1.  Чтобы удалить элемент или атрибут из XML-литерала, получить ссылку на элемент или атрибут и вызовите `Remove` метод, как показано в следующем примере.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      Ниже показан образец XML-источника и изменение XML из этого примера кода.  
   
@@ -203,7 +203,7 @@ Visual Basic предоставляет удобный способ измене
   
      В следующем примере кода заменяет все \<описание > элементов при помощи \<абстрактный > элемента. Содержание \<описание > элемент сохраняется в новом \<абстрактный > элемента с помощью <xref:System.Xml.Linq.XContainer.Nodes%2A> свойство \<описание > <xref:System.Xml.Linq.XElement> объекта.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      Ниже показан образец XML-источника и изменение XML из этого примера кода.  
   

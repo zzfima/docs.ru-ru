@@ -17,7 +17,7 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 ## <a name="assigning-values"></a>Назначение значений  
  Для выполнения вычислений и присвоения результата переменной используются операторы присваивания, как показано в следующем примере.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  В этом примере знак равенства (`=`) является оператором присваивания, а не оператором равенства. Значение присваивается переменной `applesSold`.  

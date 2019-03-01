@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648210"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980455"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Пошаговое руководство. Реализация наследования с использованием COM-объектов (Visual Basic)
 Можно создавать классы Visual Basic из `Public` классов в COM-объекты, даже были созданы в более ранних версиях Visual Basic. Свойства и методы классов, унаследованных от объектов COM могут быть переопределены или перегружены так же, как свойства и методы базового класса могут быть переопределены или перегружены. Наследование от COM-объектов используется, при наличии существующей библиотеки класса, перекомпиляция не требуется.  
@@ -94,15 +94,15 @@ ms.locfileid: "54648210"
   
 6.  Добавьте следующий код в верхнюю часть `MathClass` для наследования от класса COM.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
 7.  Перегрузите открытый метод базового класса, добавив следующий код, чтобы `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
 8.  Расширить наследуемого класса, добавив следующий код, чтобы `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
  Новый класс наследует свойства базового класса в COM-объекта, перегружающий метод и определяет новый метод для расширения класса.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54648210"
   
 2.  На кнопке панели `Click` процедуры обработчика событий, добавьте следующий код для создания экземпляра `MathClass` и вызова перегруженных методов:  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
 3.  Запустите проект, нажав клавишу F5.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525031"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981404"
 ---
 # <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 Делит два числа и возвращает только остаток.  
@@ -36,7 +36,7 @@ number1 Mod number2
  Обязательный. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
+ все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
   
 ## <a name="result"></a>Результат
 
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>Пример  
  В следующем примере используется `Mod` оператор деления двух чисел и возвращает только остаток. Если оба числа число с плавающей запятой, результатом является числом с плавающей запятой, представляющее остаток.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано возможная неточность операндов с плавающей запятой. В первой инструкции, операнды имеют `Double`, и 0,2 является периодической бесконечной двоичной дробью, сохраненное значение 0,20000000000000001. Во втором операторе символа типа литерала `D` приводит оба операнда для `Decimal`, и 0,2 имеет точное представление.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

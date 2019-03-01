@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создать строку из массива значений типа Char (Visual Basic)
+title: Практическое руководство. Создать строку из массива значений типа Char (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: a067474d6b32589a34b031d5c3ea4e5a4be55834
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3a4caf0967ab77de7d91470e43e52521dbd2da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611466"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975515"
 ---
-# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Как выполнить Создать строку из массива значений типа Char (Visual Basic)
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Практическое руководство. Создать строку из массива значений типа Char (Visual Basic)
 Этот пример создает строки «abcd» из отдельных символов.  
   
 ## <a name="example"></a>Пример  
- [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
+ [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Этот метод не имеет специальных требований.  

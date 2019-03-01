@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658199"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981703"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Объявляет символ оператора, операнды и код, которые определяют процедуру оператора для класса или структуры.  
@@ -168,7 +168,7 @@ End Operator
 ## <a name="example"></a>Пример  
  В следующем примере кода используется `Operator` инструкции для определения контура структуры, которая включает в себя процедуры оператора `And`, `Or`, `IsFalse`, и `IsTrue` операторы. `And` и `Or` каждого используются два операнда типа `abc` и типом возвращаемого значения `abc`. `IsFalse` и `IsTrue` принимать одним операндом типа `abc` и возвращают `Boolean`. Эти определения позволяют вызывающий код для использования `And`, `AndAlso`, `Or`, и `OrElse` с операндами типа `abc`.  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)

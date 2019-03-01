@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определить оператор преобразования (Visual Basic)
+title: Практическое руководство. Определить оператор преобразования (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 76d0769456e30766b830023c1f27381ceca59cbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521534"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974644"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Как выполнить Определить оператор преобразования (Visual Basic)
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>Практическое руководство. Определить оператор преобразования (Visual Basic)
 Если вы определили, класса или структуры, можно определить оператор преобразования типа между типом класса или структуры и другой тип данных (таких как `Integer`, `Double`, или `String`).  
   
  Определите преобразование типа как [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) процедуры внутри класса или структуры. Все процедуры преобразования должны быть `Public Shared`, и каждый из них необходимо указать либо [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) или [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
@@ -26,11 +26,11 @@ ms.locfileid: "54521534"
 ## <a name="example"></a>Пример  
  В следующем примере определяется операторы преобразования между структурой `digit` и `Byte`.  
   
- [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
  Вы можете проверить структуру `digit` следующим кодом.  
   
- [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>См. также
 - [Процедуры операторов](./operator-procedures.md)

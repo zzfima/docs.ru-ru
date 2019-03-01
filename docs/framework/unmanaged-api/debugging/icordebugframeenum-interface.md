@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugFrameEnum
+title: Интерфейс ICorDebugFrameEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrameEnum
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91609d7afde9338d194dce96cdc852e3505f2a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb1c5bccf43e107cb976016c277c93b146498e1f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575532"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978206"
 ---
-# <a name="icordebugframeenum-interface1"></a>Интерфейс1 ICorDebugFrameEnum
+# <a name="icordebugframeenum-interface"></a>Интерфейс ICorDebugFrameEnum
+
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugFrame.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Возвращает заданное число `ICorDebugFrame` экземпляров из перечисления, начиная с текущей позиции.|  
   

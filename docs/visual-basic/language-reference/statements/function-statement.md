@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565908"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971641"
 ---
 # <a name="function-statement-visual-basic"></a>Оператор Function (Visual Basic)
 Объявляет имя, параметры и код, которые определяют `Function` процедуры.  
@@ -156,7 +156,7 @@ End Function
   
      `eventvariable.event`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`eventvariable`|Обязательный. Объектной переменной, объявленной с типом данных класса или структуры, который вызывает событие.|  
     |`event`|Обязательный. Имя события, которое обрабатывает эту процедуру.|  
@@ -193,11 +193,11 @@ End Function
   
  `Return` Инструкции одновременно назначает возвращаемое значение и выход из функции, как показано в следующем примере.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  В следующем примере присваивается значение имени функции `myFunction` , а затем использует `Exit Function` инструкция возвращает.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function` И `Return` инструкции вызывают Немедленный выход из `Function` процедуры. Любое количество `Exit Function` и `Return` инструкций может находиться в любом в процедуре, и вы можете комбинировать `Exit Function` и `Return` инструкций.  
   
@@ -240,19 +240,19 @@ End Function
 ## <a name="example"></a>Пример  
  В следующем примере используется `Function` инструкцию для объявления имени, параметров и кода, образующих текст `Function` процедуры. `ParamArray` Модификатор разрешает функции принимать переменное число аргументов.  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере вызывается функция, объявленная в предыдущем примере.  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `DelayAsync` — `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return` , которая возвращает целое число. Поэтому объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип — `Task(Of Integer)`, вычисление `Await` выражение в `DoSomethingAsync` создает целое. Это показано в этом операторе: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Процедура является примером `Async Sub` процедуры. Так как `DoSomethingAsync` — `Async` функции, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показано в следующей инструкции: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Процедура должна быть определена с помощью `Async` модификатор из-за `Await` выражение.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>См. также
 - [Оператор Sub](sub-statement.md)

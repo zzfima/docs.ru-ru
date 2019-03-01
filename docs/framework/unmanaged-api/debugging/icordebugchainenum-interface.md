@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChainEnum Interface1
+title: Интерфейс ICorDebugChainEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChainEnum
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c43b850e8a49d78ff1b1815e7ce6b4c857fb6c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57a36f1d15ad251781b4d9843086a966fa2d4585
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730663"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982132"
 ---
-# <a name="icordebugchainenum-interface1"></a>ICorDebugChainEnum Interface1
+# <a name="icordebugchainenum-interface"></a>Интерфейс ICorDebugChainEnum
+
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugChain.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Возвращает заданное число `ICorDebugChain` экземпляров из перечисления, начиная с текущей позиции.|  
   

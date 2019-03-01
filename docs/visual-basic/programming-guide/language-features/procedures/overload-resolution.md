@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 734cc521fe2e8b7af5ca594ced8c3a0a22603af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525954"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966233"
 ---
 # <a name="overload-resolution-visual-basic"></a>Разрешение перегрузки (Visual Basic)
 Когда компилятор Visual Basic обнаруживает вызов процедуры, которая определена в нескольких перегруженных версиях, компилятор должен определить, какую из перегрузок для вызова. Это достигается путем выполнения следующих шагов:  
@@ -41,9 +41,9 @@ ms.locfileid: "54525954"
   
  Следующий пример иллюстрирует этот процесс разрешения перегрузки.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента (`Short`) сужается к типу соответствующего параметра (`Byte`). Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке (`Short` и `Single`) можно расширить до соответствующего типа в третьей перегрузке (`Integer` и `Single`). Вторая перегрузка требует меньшего расширения, поэтому компилятор использует его для вызова.  
   

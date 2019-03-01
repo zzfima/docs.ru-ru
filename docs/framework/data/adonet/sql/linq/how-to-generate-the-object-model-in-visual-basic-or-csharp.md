@@ -1,15 +1,15 @@
 ---
-title: Как выполнить создать модель объектов на языке Visual Basic или C#
+title: Практическое руководство. создать модель объектов на языке Visual Basic или C#
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 79b2656ec72e2b93592742ddd39e7bfe4dcd7c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510576"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974606"
 ---
-# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Как выполнить создать модель объектов на языке Visual Basic или C# #
+# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Практическое руководство. Создание модели объектов в Visual Basic или c#\#
 В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектная модель используемого языка программирования сопоставляется с реляционной базой данных. Предусмотрено два средства для автоматического создания Visual Basic или C# модели на основе метаданных существующей базы данных.  
   
 -   Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания объектной модели. [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Предоставляет мощный пользовательский интерфейс для привлечения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели. Дополнительные сведения см. [средства Linq to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 5980549dd063b2c7d5c60ebd4e9762284c072009
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586622"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966779"
 ---
 # <a name="determining-object-type-visual-basic"></a>Определение типа объекта (Visual Basic)
 Универсальные объектные переменные (то есть переменные необходимо обозначить как `Object`) может содержать объекты любого класса. При использовании переменных типа `Object`, может потребоваться предпринять различные действия на основе класса объекта; например, некоторые объекты могут не поддерживать определенное свойство или метод. Visual Basic предоставляет два средства определения типа объекта, хранящегося в переменной объекта: `TypeName` функции и `TypeOf...Is` оператор.  
@@ -22,15 +22,15 @@ ms.locfileid: "54586622"
 ## <a name="typename-and-typeofis"></a>Имя типа и TypeOf... —  
  `TypeName` Функция возвращает строку и является лучшим выбором, если вам нужно хранить или отображать имя класса объекта, как показано в следующем фрагменте кода:  
   
- [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
+ [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
  `TypeOf...Is` Оператор отлично подходит для тестирования тип объекта, так как это намного быстрее, чем в эквивалентное ему строковое сравнение с помощью `TypeName`. В следующем фрагменте кода используется `TypeOf...Is` в `If...Then...Else` инструкции:  
   
- [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
+ [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
  Предупреждение здесь должно быть выполнено. `TypeOf...Is` Оператор возвращает `True` Если определенного типа, или объекта является производным от определенного типа. Почти все, что делается с помощью Visual Basic включает в себя объекты, которые содержат элементы считаются не обычно объекты, такие как строки и целые числа. Эти объекты являются производными от и наследуют методы из <xref:System.Object>. При передаче `Integer` и вычислении с `Object`, `TypeOf...Is` оператор возвращает `True`. В следующем примере сообщается, что параметр `InParam` одновременно `Object` и `Integer`:  
   
- [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
+ [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
  В следующем примере используются оба `TypeOf...Is` и `TypeName` для определения типа объекта, переданного в него в `Ctrl` аргумент. `TestObject` Вызовы процедур `ShowType` с три различных типа элементов управления.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54586622"
   
 3.  Добавьте следующий код в форму:  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
+     [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>

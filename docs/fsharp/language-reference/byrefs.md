@@ -2,12 +2,12 @@
 title: Byrefs
 description: Дополнительные сведения о byref и типов, схожих с byref в F#, которые используются для программирования низкого уровня.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611585"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976555"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 Цель `outref<'T>` необходимо указать, что указатель должен выполняться только чтение. Неожиданно `outref<'T>` разрешает чтение базового значение несмотря на свое название. Это необходимо для обеспечения совместимости. Семантически `outref<'T>` ничем не отличается от `byref<'T>`.
 
-### <a name="interop-with-c"></a>Взаимодействие с C# #
+### <a name="interop-with-c"></a>Взаимодействие с c#\#
 
 Язык C# поддерживает `in ref` и `out ref` ключевые слова, в дополнение к `ref` возвращает. В следующей таблице показано, как F# интерпретирует что C# выдает:
 

@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Возвращение значения из процедуры (Visual Basic)
+title: Практическое руководство. Возвращение значения из процедуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615261"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976737"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Как выполнить Возвращение значения из процедуры (Visual Basic)
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Практическое руководство. Возвращение значения из процедуры (Visual Basic)
 Объект `Function` процедура возвращает значение вызывающему коду, выполнив `Return` инструкции или путем добавления `Exit Function` или `End Function` инструкции.  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Для возврата значения с помощью инструкции Return  
@@ -26,11 +26,11 @@ ms.locfileid: "54615261"
   
      Следующие `Function` процедура рассчитывается самая длинная сторона, гипотенуза прямоугольного треугольника и возвращает его вызывающему коду.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      В следующем примере показано типичный вызов `hypotenuse`, который сохраняет возвращаемое значение.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Для возврата значения с помощью Exit Function или End Function  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845984"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979818"
 ---
 # <a name="synclock-statement"></a>Оператор SyncLock
 Применяет монопольную блокировку для блока инструкций, перед выполнением блока.  
@@ -29,10 +29,10 @@ End SyncLock
   
 ## <a name="parts"></a>Части  
  `lockobject`  
- Обязательно. Выражение, возвращающее ссылку на объект.  
+ Обязательный. Выражение, возвращающее ссылку на объект.  
   
  `block`  
- Необязательный. Блок операторов, которые должны выполняться, когда блокировка получена.  
+ Необязательный параметр. Блок операторов, которые должны выполняться, когда блокировка получена.  
   
  `End SyncLock`  
  Завершает `SyncLock` блока.  
@@ -75,19 +75,19 @@ End SyncLock
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере класс, который поддерживает простой список сообщений. Сообщения хранятся в массиве, а последний элемент этого массива в переменной. `addAnotherMessage` Процедура увеличивает значение последнего элемента и сохраняет новое сообщение. Эти две операции защищены с помощью `SyncLock` и `End SyncLock` инструкции, так как после последнего элемента был увеличен, должен храниться новое сообщение, прежде, чем любой другой поток может снова увеличить последнего элемента.  
   
  Если `simpleMessageList` один список сообщений для всех его экземпляров, переменные общих классов `messagesList` и `messagesLast` должна быть объявлена как `Shared`. В данном случае переменная `messagesLock` также должен быть `Shared`, таким образом, чтобы могла быть объект блокировки, используемые каждым экземпляром.  
   
 ### <a name="code"></a>Код  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Описание:  
  В следующем примере используются потоки и `SyncLock`. Поскольку `SyncLock` присутствует оператор, блокировка оператора является критической секции и `balance` никогда не будет отрицательным числом. Вы можете закомментировать `SyncLock` и `End SyncLock` инструкции, чтобы увидеть эффект пропускают `SyncLock` ключевое слово.  
   
 ### <a name="code"></a>Код  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>Комментарии  
   

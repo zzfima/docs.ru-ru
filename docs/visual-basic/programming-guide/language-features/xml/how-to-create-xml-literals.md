@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Создание XML-литералов (Visual Basic)
+title: Практическое руководство. Создание XML-литералов (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560598"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974254"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Как выполнить Создание XML-литералов (Visual Basic)
+# <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
 XML документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерала. В примерах в этом разделе показано, как создать элемент XML, содержит три дочерних элемента и способ создания XML-документа.  
   
  Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
@@ -20,7 +20,7 @@ XML документ, фрагмент или элемент можно созд
   
 -   Создайте встроенный XML, используя синтаксис XML, который является таким же, как фактический синтаксис XML.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
      Выполните код. Ниже приведен результат выполнения этого кода.  
   
@@ -38,7 +38,7 @@ XML документ, фрагмент или элемент можно созд
   
 -   Создайте встроенный XML-документ. Следующий код создает XML-документ, который имеет синтаксис литерала XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
      Выполните код. Ниже приведен результат выполнения этого кода.  
   

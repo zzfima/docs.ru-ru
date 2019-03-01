@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание процедуры (Visual Basic)
+title: Практическое руководство. Создание процедуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 06fed04a0ebe7a0b3111a94308d15d01bcf47c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636538"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970809"
 ---
-# <a name="how-to-create-a-procedure-visual-basic"></a>Как выполнить Создание процедуры (Visual Basic)
+# <a name="how-to-create-a-procedure-visual-basic"></a>Практическое руководство. Создание процедуры (Visual Basic)
 Заключите процедуру между начальной оператор объявления (`Sub` или `Function`) и окончания оператор объявления (`End Sub` или `End Function`). Код процедуры находится в диапазоне от этих инструкций.  
   
  Процедура не может содержать другую процедуру, поэтому его начала и конца инструкции должны быть вне любых других процедур.  
@@ -51,7 +51,7 @@ ms.locfileid: "54636538"
 ## <a name="example"></a>Пример  
  Следующие `Function` процедура вычисляет самая длинная сторона гипотенузы прямоугольного треугольника, значения для двух других сторон.  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>См. также
 

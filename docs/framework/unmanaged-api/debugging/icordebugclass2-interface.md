@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugClass2
+title: Интерфейс ICorDebugClass2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass2
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb70016560f453caf7a7a3eed3e1aa6b5fc9f0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46358a66d79030aeea42c75827f05cf07fa925ea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967754"
 ---
-# <a name="icordebugclass2-interface1"></a>Интерфейс1 ICorDebugClass2
+# <a name="icordebugclass2-interface"></a>Интерфейс ICorDebugClass2
+
 Представляет универсальный класс или класс параметром метода типа <xref:System.Type>. Этот интерфейс расширяет [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetParameterizedType](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Получает объявление типа для этого класса.|  
 |[Метод SetJMCStatus](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Для каждого метода этого класса задает значение, указывающее, является ли метод определяемого пользователем кода.|  
@@ -48,5 +49,5 @@ ms.locfileid: "54557374"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Интерфейс1 ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [Интерфейс ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

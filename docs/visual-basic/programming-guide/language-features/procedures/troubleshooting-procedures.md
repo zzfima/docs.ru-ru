@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648551"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972005"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Устранение неполадок в процедурах (Visual Basic)
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с процедурами.  
@@ -41,7 +41,7 @@ ms.locfileid: "54648551"
   
  **Правильный подход:** Чтобы иметь возможность изменять элементы массива, который должен быть возвращен, определение внутреннего массива как локальная переменная. В следующем примере компилируется без ошибок.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Аргумент не изменяется путем вызова процедуры  
  Если вы планируете разрешить процедуре изменять программный элемент базового аргумента в вызывающем коде, его необходимо передавать по ссылке. Однако процедуру можно доступа к элементам аргумента ссылочного типа, даже если он передается по значению.  
@@ -52,13 +52,13 @@ ms.locfileid: "54648551"
   
  В следующем примере определяется две процедуры, которые принимают переменную массива по значению и работают на своих элементов. Процедура `increase` просто добавляет единицу к каждому элементу. Процедура `replace` присваивает новый массив в параметре `a()` и добавляет единицу к каждому элементу. Тем не менее переназначение не влияет на базовую переменную массива в вызывающем коде, так как `a()` объявляется `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  Следующий пример выполняет вызовы `increase` и `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Первый `MsgBox` вызове отображается «после увеличения (n): 11, 21, 31, 41". Так как `n` является ссылочным типом, `increase` может изменить его элементы, несмотря на то, что он передается `ByVal`.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54648551"
   
  **Правильный подход:** Чтобы иметь возможность изменить элемент базовой переменной, передайте его по ссылке. В следующем примере показано изменение в объявлении `replace` , позволяющее заменить один массив на другой в вызывающем коде.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>Не удалось определить перегрузку  
  Если вы хотите определить перегруженные версии процедуры, необходимо использовать с тем же именем, но другой сигнатурой. Если компилятор не может отличить объявление от перегрузки с такой же сигнатурой, он создает ошибку.  
@@ -108,9 +108,9 @@ ms.locfileid: "54648551"
   
  Следующий пример иллюстрирует процесс разрешения перегрузки.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента (`Short`) сужается к типу соответствующего параметра (`Byte`). Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке (`Short` и `Single`) можно расширить до соответствующего типа в третьей перегрузке (`Integer` и `Single`). Вторая перегрузка требует меньшего расширения, поэтому компилятор использует его для вызова.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "54648551"
   
  **Правильный подход:** Чтобы иметь возможность вызов перегруженной процедуры без неоднозначности, используйте [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в соответствии с типами данных аргументов в типы параметров. В следующем примере показан вызов `z` , требующий разрешения вторая перегрузка.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Перегрузка разрешение с необязательными и ParamArray-аргументы  
  Если две перегрузки процедуры имеют идентичные подписи, за исключением того, что последний параметр объявляется [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) в одном и [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов процедуры в соответствии с наиболее точное соответствие. Для получения дополнительной информации см. [Overload Resolution](./overload-resolution.md).  

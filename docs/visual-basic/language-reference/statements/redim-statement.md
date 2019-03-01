@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee30e885a08d3e8302d7b6083c1c65e525006c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617330"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973435"
 ---
 # <a name="redim-statement-visual-basic"></a>Оператор ReDim (Visual Basic)
 Перераспределяет область хранения для переменной массива.  
@@ -88,7 +88,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## <a name="example"></a>Пример  
  В приведенном ниже примере производится увеличение размера последнего измерения динамического массива без потери существующих данных, а затем уменьшение размера массива с частичной потерей данных. Кроме того, размер массива уменьшается до исходного значения и все элементы массива инициализируются повторно.  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
  Оператор `Dim` создает новый массив с тремя измерениями. Каждое измерение объявляется с границей 10, поэтому индекс массива для каждого измерения может варьироваться в диапазоне от 0 до 10. В приведенном ниже описании эти три измерения называются слоем, строкой и столбцом.  
   

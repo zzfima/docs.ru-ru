@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551791"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970302"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Основы наследования (Visual Basic)
 `Inherits` Инструкция используется для объявления новый класс с именем *производный класс*, основываясь на существующий класс, известный как *базового класса*. Производные классы наследуют и могут расширять свойства, методы, события, поля и константы, определенные в базовом классе. В следующем разделе описаны некоторые правила наследования и модификаторов, которые можно использовать для изменения способа классы наследуют или наследования:  
@@ -62,14 +62,14 @@ ms.locfileid: "54551791"
   
  В следующем примере определяется базовый класс, `Payroll,` и производный класс, `BonusPayroll`, который переопределяет унаследованный метод `PayEmployee`. Процедура `RunPayroll`, создает и затем передает `Payroll` объекта и `BonusPayroll` в функцию `Pay`, который выполняет `PayEmployee` обоих объектов.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase-ключевое слово  
  `MyBase` Ключевое слово ведет себя как объектную переменную, которая ссылается на базовый класс текущего экземпляра класса. `MyBase` часто используется для доступа к членам базового класса, переопределены или скрыты в производном классе. В частности `MyBase.New` используется для явного вызова конструктора базового класса из конструктора производного класса.  
   
  Например предположим, что вы разрабатываете производного класса, который переопределяет метод, унаследованный от базового класса. Переопределенный метод можно вызвать метод в базовом классе и изменить возвращаемое значение, как показано в следующем фрагменте кода:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  Следующий список описывает ограничения на использование `MyBase`:  
   

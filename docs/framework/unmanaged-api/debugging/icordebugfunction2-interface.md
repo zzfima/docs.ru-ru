@@ -1,5 +1,5 @@
 ---
-title: Интерфейс1 ICorDebugFunction2
+title: Интерфейс ICorDebugFunction2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction2
@@ -16,19 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 190e2323fb07dbca6e156d7a24397997e54b6da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d051c7d61d6ade1fc0d313c47125d9c196bcca1d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540797"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979592"
 ---
-# <a name="icordebugfunction2-interface1"></a>Интерфейс1 ICorDebugFunction2
+# <a name="icordebugfunction2-interface"></a>Интерфейс ICorDebugFunction2
+
 Логически расширяет интерфейс ICorDebugFunction для обеспечения поддержки Just My Code пошаговую отладку, который пропускает непользовательский код.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод EnumerateNativeCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|(Еще не реализовано). Получает указатель на интерфейс ICorDebugCodeEnum, содержащий инструкции машинного кода в функции, на которые ссылается этот объект ICorDebugFunction2.|  
 |[Метод GetJMCStatus](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|Получает значение, указывающее, помечена ли эта функция как пользовательский код.|  

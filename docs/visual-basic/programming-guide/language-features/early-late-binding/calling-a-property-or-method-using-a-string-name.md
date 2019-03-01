@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731530"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967533"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Вызов свойства или метода с помощью строкового имени (Visual Basic)
 В большинстве случаев доступ к свойствам и методам объекта во время разработки и написать код для их обработки. Однако в некоторых случаях может не известно, какие свойства и методы объекта заранее или необходима гибкость конечному пользователю для указания свойств или выполнения методов во время выполнения.  
@@ -35,11 +35,11 @@ ms.locfileid: "54731530"
   
  Предположим, что добавьте ссылку на сборку, содержащую класс с именем `MathClass`, который имеет новую функцию с именем `SquareRoot`, как показано в следующем коде:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  Ваше приложение может использовать текстовые поля для элемента управления, какой метод будет вызван и ее аргументов. Например если `TextBox1` содержит выражение для вычисления, и `TextBox2` — используется для ввода имени функции, можно использовать следующий код для вызова `SquareRoot` функцию для выражения в `TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  Если ввести «64» в `TextBox1`, «SquareRoot» в `TextBox2`, а затем вызвать `CallMath` процедуры, квадратный корень числа в `TextBox1` вычисляется. Код в примере вызывает `SquareRoot` функции (которая принимает строку, содержащую выражение для оценки в качестве обязательный аргумент) и возвращает значение «8» в `TextBox1` (квадратный корень из 64). Конечно, если пользователь вводит недопустимую строку в `TextBox2`, если строка содержит имя свойства вместо метода, или если метод имеет дополнительный аргумент, возникает ошибка времени выполнения. Необходимо добавить надежный код обработки ошибок, при использовании `CallByName` чтобы реагировать на эти или другие ошибки.  
   
