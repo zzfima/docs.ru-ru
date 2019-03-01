@@ -16,7 +16,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="declaring-and-initializing-strings"></a>Объявление и инициализация строк  
  Вы можете объявлять и инициализировать строки различными способами, как показано в следующем примере:  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  Обратите внимание, что вы не используете оператор [new](../../../csharp/language-reference/keywords/new-operator.md) для создания объекта строки, за исключением случаев инициализации строки с помощью массива символов.  
   
@@ -84,16 +84,16 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="substrings"></a>Подстроки  
  Подстрока — это последовательность символов, содержащихся в строке. Используйте метод <xref:System.String.Substring%2A>, чтобы создать новую строку из части исходной строки. Одно вхождение подстроки или несколько можно найти с помощью метода <xref:System.String.IndexOf%2A>. Используйте метод <xref:System.String.Replace%2A>, чтобы заменить все вхождения указанной подстроки новой строкой. Как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку. Дополнительные сведения см. в [практическом руководстве по поиску строк](../../how-to/search-strings.md) и [практическом руководстве по изменению содержимого строк](../../how-to/modify-string-contents.md).  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>Доступ к отдельным символам  
  Используя нотацию массива со значением индекса, можно получить доступ только для чтения к отдельным символам, как показано в следующем примере:  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  Если вам необходимо изменить отдельные символы в строке и функций методов <xref:System.String> вам недостаточно, используйте объект <xref:System.Text.StringBuilder>, чтобы изменить отдельные символы "на месте", а затем создайте новую строку для сохранения результатов с помощью методов <xref:System.Text.StringBuilder>. В следующем примере предположим, что необходимо определенным образом изменить исходную строку, а затем сохранить результаты для дальнейшего использования:  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Строки NULL и пустые строки  
  Пустая строка — это экземпляр объекта <xref:System.String?displayProperty=nameWithType>, который содержит нуль символов. Пустые строки часто используются в различных сценариях программирования для представления пустого текстового поля. Вы можете вызывать методы для пустых строк, так как они являются допустимыми объектами <xref:System.String?displayProperty=nameWithType>. Пустые строки инициализируются следующим образом:  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  В отличие от пустых строк строка NULL не ссылается на экземпляр объекта <xref:System.String?displayProperty=nameWithType>, поэтому любая попытка вызвать метод для строки NULL приводит к исключению <xref:System.NullReferenceException>. Но вы можете использовать строки NULL в операциях объединения и сравнения с другими строками. В следующих примерах показаны случаи, в которых ссылка на строку NULL вызывает и не вызывает исключение:  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Использование класса StringBuilder для быстрого создания строк  
  Операции со строками в .NET хорошо оптимизированы, и в большинстве случаев они не снижают производительность. Но в некоторых сценариях, например в сплошных циклах, которые выполняются сотни и тысячи раз, операции со строками могут повлиять на производительность. Класс <xref:System.Text.StringBuilder> создает строковый буфер, который ускоряет работу, если программа выполняет много операций над строками. Строка <xref:System.Text.StringBuilder> также позволяет заново присваивать отдельные символы, что не поддерживает встроенный строковый тип данных. Например, этот код изменяет содержимое строки без создания новой строки:  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  В этом примере объект <xref:System.Text.StringBuilder> используется для создания строки из набора числовых типов:  
   
