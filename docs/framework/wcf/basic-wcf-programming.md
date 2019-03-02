@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261795"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251083"
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В этом разделе представлены основные принципы создания приложений Windows Communication Foundation (WCF).  
@@ -32,7 +32,7 @@ ms.locfileid: "56261795"
  Описание основных принципов размещения служб в приложении.  
   
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
- Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и размещения клиентом WCF.  
+ Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и содержать клиента WCF.  
   
  [Введение в расширяемость](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Описывает способы расширения WCF для создания пользовательских решений.  
