@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244782"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211901"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
@@ -34,8 +34,8 @@ ms.locfileid: "53244782"
 
 > [!TIP]
 > Нужно ли устанавливать редактор кода? Попробуйте использовать [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Использование генератора XML-сериализатора Майкрософт в консольном приложении .NET Core 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Использование генератора XML-сериализатора Майкрософт в консольном приложении .NET Core
 
 Приведенные ниже инструкции описывают, как использовать генератор XML-сериализатора Майкрософт в консольном приложении .NET Core.
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Добавление ссылки на пакет Microsoft.XmlSerializer.Generator в проекте MyApp
 
-Используйте команду [`dotnet add package`](../tools//dotnet-add-package.md), чтобы добавить ссылку в проект. 
+Используйте команду [`dotnet add package`](../tools//dotnet-add-package.md), чтобы добавить ссылку в проект.
 
 Тип:
 
@@ -107,7 +107,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 Введите следующую команду в окне консоли:
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > Описанные в этом руководстве команды и шаги для запуска приложения используются только во время разработки. Когда вы будете готовы развернуть приложение, можете ознакомиться с другими [стратегиями развертывания](../deploying/index.md) для приложений .NET Core и командой [`dotnet publish`](../tools/dotnet-publish.md).
 
-Если все пройдет успешно, в папке выходных данных создается сборка с именем *MyApp.XmlSerializers.dll*. 
+Если все пройдет успешно, в папке выходных данных создается сборка с именем *MyApp.XmlSerializers.dll*.
 
 Поздравляем! Вы только что:
 > [!div class="checklist"]

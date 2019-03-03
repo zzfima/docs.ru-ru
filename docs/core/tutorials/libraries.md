@@ -4,12 +4,12 @@ description: Узнайте, как создавать библиотеки дл
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169369"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212070"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
 
@@ -58,9 +58,9 @@ ms.locfileid: "53169369"
     ```
 
 2. Можно использовать более раннюю или более позднюю версию .NET Standard, изменив значение в узле `TargetFramework` файла проекта.
-    
+
     Версии .NET Standard обладают обратной совместимостью. Это означает, что библиотеки `netstandard1.0` выполняются на платформах `netstandard1.1` и более поздних версий. Однако прямой совместимости нет: более ранние платформы .NET Standard не могут ссылаться на более поздние. Это значит, что библиотеки `netstandard1.0` не могут ссылаться на библиотеки, предназначенные для `netstandard1.1` или более поздних версий. Выберите версию Standard, которая предоставляет подходящее сочетание интерфейсов API и поддерживаемых платформ для ваших потребностей. Сейчас рекомендуем использовать версию `netstandard1.4`.
-    
+
 3. Если требуется нацеливание на .NET Framework версии 4.0 или более ранней или использование интерфейса API, доступного в .NET Framework, но не в .NET Standard (например, `System.Drawing`), прочитайте следующие подразделы, чтобы узнать, как осуществляется настройка для разных версий.
 
 ## <a name="how-to-target-the-net-framework"></a>Нацеливание на .NET Framework
@@ -131,7 +131,7 @@ ms.locfileid: "53169369"
 Вы заметите три основных изменения:
 
 1. Узел `TargetFramework` был заменен на `TargetFrameworks`, внутри которого содержатся три моникера целевой платформы.
-1. Добавлен узел `<ItemGroup>` для целевой платформы `net40 `, который извлекает одну ссылку на .NET Framework.
+1. Добавлен узел `<ItemGroup>` для целевой платформы `net40`, который извлекает одну ссылку на .NET Framework.
 1. Добавлен узел `<ItemGroup>` для целевой платформы `net45`, который извлекает две ссылки на .NET Framework.
 
 Система сборки распознает следующие символы препроцессора, используемые в директивах `#if`:
@@ -256,7 +256,7 @@ netstandard1.4/
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`. Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
-    
+
 Вот и все! Теперь вы можете протестировать библиотеку для всех платформ с помощью средств командной строки. Теперь, когда все настроено, протестировать библиотеку очень легко:
 
 1. Внесите изменения в библиотеку.
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 Ссылку на проект лучше всего добавить с помощью интерфейса командной строки .NET Core. Из каталогов проекта **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** выполните следующую команду:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Теперь файлы **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** будут ссылаться на **AwesomeLibrary.Core** в качестве целевого объекта `ProjectReference`.  Чтобы это проверить, просмотрите файлы проектов, и вы увидите в них следующий код:

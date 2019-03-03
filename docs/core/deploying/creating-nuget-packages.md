@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170058"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211797"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Как создать пакет NuGet с помощью средств интерфейса командной строки (CLI) .NET Core
 
@@ -28,13 +28,13 @@ ms.locfileid: "53170058"
 Восстановив пакеты, можно перейти в каталог, где находится библиотека:
 
 ```console
-$ cd src/SuperAwesomeLibrary`
+cd src/SuperAwesomeLibrary
 ```
 
 Затем нужно выполнить всего лишь одну команду в командной строке:
 
 ```console
-$ dotnet pack
+dotnet pack
 ```
 
 Папка `/bin/Debug` теперь будет выглядеть так:
@@ -50,7 +50,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 Обратите внимание на то, что при этом создается пакет, который можно отлаживать. Если вы хотите создать пакет NuGet с двоичными файлами выпуска, вам нужно просто добавить параметр `--configuration` (или `-c`) и использовать `release` в качестве аргумента.
 
 ```console
-$ dotnet pack --configuration release
+dotnet pack --configuration release
 ```
 
 В папке `/bin` теперь будет папка `release`, содержащая пакет NuGet с двоичными файлами выпуска:
