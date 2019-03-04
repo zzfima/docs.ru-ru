@@ -7,60 +7,60 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 2222c06b71b3063c848495aec52fd4acf0674073
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c083855ea298fa62459d107651e62c13d65c52c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520624"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972837"
 ---
-# <a name="how-to-delete-a-file-in-visual-basic"></a><span data-ttu-id="1fd0b-102">Как выполнить Удаление файла в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1fd0b-102">How to: Delete a File in Visual Basic</span></span>
-<span data-ttu-id="1fd0b-103">Метод `DeleteFile` объекта `My.Computer.FileSystem` позволяет удалить файл.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-103">The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file.</span></span> <span data-ttu-id="1fd0b-104">Параметры метода позволяют указать, следует ли отправлять удаленный файл в **корзину**, следует ли запрашивать у пользователя подтверждение удаления файла и что делать при отмене пользователем операции.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-104">Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.</span></span>  
+# <a name="how-to-delete-a-file-in-visual-basic"></a><span data-ttu-id="f4756-102">Как выполнить Удаление файла в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f4756-102">How to: Delete a File in Visual Basic</span></span>
+<span data-ttu-id="f4756-103">Метод `DeleteFile` объекта `My.Computer.FileSystem` позволяет удалить файл.</span><span class="sxs-lookup"><span data-stu-id="f4756-103">The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file.</span></span> <span data-ttu-id="f4756-104">Параметры метода позволяют указать, следует ли отправлять удаленный файл в **корзину**, следует ли запрашивать у пользователя подтверждение удаления файла и что делать при отмене пользователем операции.</span><span class="sxs-lookup"><span data-stu-id="f4756-104">Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.</span></span>  
   
-### <a name="to-delete-a-text-file"></a><span data-ttu-id="1fd0b-105">Удаление текстового файла</span><span class="sxs-lookup"><span data-stu-id="1fd0b-105">To delete a text file</span></span>  
+### <a name="to-delete-a-text-file"></a><span data-ttu-id="f4756-105">Удаление текстового файла</span><span class="sxs-lookup"><span data-stu-id="f4756-105">To delete a text file</span></span>  
   
--   <span data-ttu-id="1fd0b-106">Для удаления файла используйте метод `DeleteFile`.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-106">Use the `DeleteFile` method to delete the file.</span></span> <span data-ttu-id="1fd0b-107">В следующем коде показано, как удалить файл с именем `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-107">The following code demonstrates how to delete the file named `test.txt`.</span></span>  
+-   <span data-ttu-id="f4756-106">Для удаления файла используйте метод `DeleteFile`.</span><span class="sxs-lookup"><span data-stu-id="f4756-106">Use the `DeleteFile` method to delete the file.</span></span> <span data-ttu-id="f4756-107">В следующем коде показано, как удалить файл с именем `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="f4756-107">The following code demonstrates how to delete the file named `test.txt`.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
-### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a><span data-ttu-id="1fd0b-108">Удаление текстового файла с запросом подтверждения удаления файла</span><span class="sxs-lookup"><span data-stu-id="1fd0b-108">To delete a text file and ask the user to confirm that the file should be deleted</span></span>  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a><span data-ttu-id="f4756-108">Удаление текстового файла с запросом подтверждения удаления файла</span><span class="sxs-lookup"><span data-stu-id="f4756-108">To delete a text file and ask the user to confirm that the file should be deleted</span></span>  
   
--   <span data-ttu-id="1fd0b-109">Для удаления файла используйте метод `DeleteFile`, присвоив параметру`showUI` значение `AllDialogs`.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-109">Use the `DeleteFile` method to delete the file, setting `showUI` to `AllDialogs`.</span></span> <span data-ttu-id="1fd0b-110">В следующем коде демонстрируется удаление файла `test.txt` с запросом у пользователя подтверждения удаления файла.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-110">The following code demonstrates how to delete the file named `test.txt` and allow the user to confirm that the file should be deleted.</span></span>  
+-   <span data-ttu-id="f4756-109">Для удаления файла используйте метод `DeleteFile`, присвоив параметру`showUI` значение `AllDialogs`.</span><span class="sxs-lookup"><span data-stu-id="f4756-109">Use the `DeleteFile` method to delete the file, setting `showUI` to `AllDialogs`.</span></span> <span data-ttu-id="f4756-110">В следующем коде демонстрируется удаление файла `test.txt` с запросом у пользователя подтверждения удаления файла.</span><span class="sxs-lookup"><span data-stu-id="f4756-110">The following code demonstrates how to delete the file named `test.txt` and allow the user to confirm that the file should be deleted.</span></span>  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
-### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a><span data-ttu-id="1fd0b-111">Удаление текстового файла и отправка его в корзину</span><span class="sxs-lookup"><span data-stu-id="1fd0b-111">To delete a text file and send it to the Recycle Bin</span></span>  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a><span data-ttu-id="f4756-111">Удаление текстового файла и отправка его в корзину</span><span class="sxs-lookup"><span data-stu-id="f4756-111">To delete a text file and send it to the Recycle Bin</span></span>  
   
--   <span data-ttu-id="1fd0b-112">Для удаления файла используйте метод `DeleteFile`, присвоив параметру `SendToRecycleBin` значение `recycle`.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-112">Use the `DeleteFile` method to delete the file, specifying `SendToRecycleBin` for the `recycle` parameter.</span></span> <span data-ttu-id="1fd0b-113">В следующем коде демонстрируется удаление файла `test.txt` и отправка его в **корзину**.</span><span class="sxs-lookup"><span data-stu-id="1fd0b-113">The following code demonstrates how to delete the file named `test.txt` and send it to the **Recycle Bin**.</span></span>  
+-   <span data-ttu-id="f4756-112">Для удаления файла используйте метод `DeleteFile`, присвоив параметру `SendToRecycleBin` значение `recycle`.</span><span class="sxs-lookup"><span data-stu-id="f4756-112">Use the `DeleteFile` method to delete the file, specifying `SendToRecycleBin` for the `recycle` parameter.</span></span> <span data-ttu-id="f4756-113">В следующем коде демонстрируется удаление файла `test.txt` и отправка его в **корзину**.</span><span class="sxs-lookup"><span data-stu-id="f4756-113">The following code demonstrates how to delete the file named `test.txt` and send it to the **Recycle Bin**.</span></span>  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="1fd0b-114">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="1fd0b-114">Robust Programming</span></span>  
- <span data-ttu-id="1fd0b-115">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="1fd0b-115">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="f4756-114">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="f4756-114">Robust Programming</span></span>  
+ <span data-ttu-id="f4756-115">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="f4756-115">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="1fd0b-116">Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-116">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="f4756-116">Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-116">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-117">Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-117">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+-   <span data-ttu-id="f4756-117">Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-117">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-118">Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-118">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="f4756-118">Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-118">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-119">Имя файла или папки в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-119">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+-   <span data-ttu-id="f4756-119">Имя файла или папки в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-119">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-120">Файл уже используется (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-120">The file is in use (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="f4756-120">Файл уже используется (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-120">The file is in use (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-121">У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="f4756-121">У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-122">Файл не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-122">The file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
+-   <span data-ttu-id="f4756-122">Файл не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-122">The file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-123">Пользователь не имеет разрешения на удаление файла, или файл доступен только для чтения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-123">The user does not have permission to delete the file, or the file is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
+-   <span data-ttu-id="f4756-123">Пользователь не имеет разрешения на удаление файла, или файл доступен только для чтения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-123">The user does not have permission to delete the file, or the file is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-124">Существует ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-124">A partial-trust situation exists in which the user does not have sufficient permissions (<xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="f4756-124">Существует ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-124">A partial-trust situation exists in which the user does not have sufficient permissions (<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="1fd0b-125">Пользователь отменил действие и `onUserCancel` задано `ThrowException` (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="1fd0b-125">The user cancelled the operation and `onUserCancel` is set to `ThrowException` (<xref:System.OperationCanceledException>).</span></span>  
+-   <span data-ttu-id="f4756-125">Пользователь отменил действие и `onUserCancel` задано `ThrowException` (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="f4756-125">The user cancelled the operation and `onUserCancel` is set to `ThrowException` (<xref:System.OperationCanceledException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fd0b-126">См. также</span><span class="sxs-lookup"><span data-stu-id="1fd0b-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4756-126">См. также</span><span class="sxs-lookup"><span data-stu-id="f4756-126">See also</span></span>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>
 - <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
-- [<span data-ttu-id="1fd0b-127">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="1fd0b-127">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [<span data-ttu-id="f4756-127">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="f4756-127">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
