@@ -1041,6 +1041,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - Конструктор действия FlowChart или другие конструкторы действий рабочих процессов могут отображать все объекты в их расположениях по умолчанию в отличие от значений вложенных свойств.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 
