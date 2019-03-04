@@ -33,6 +33,7 @@
 ## [Обработка и создание исключений](standard/exceptions/)
 ## [Сборки в .NET](standard/assembly/index.md)
 ### [Формат файла сборки .NET](standard/assembly/file-format.md)
+### [Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core](standard/assembly/unloadability-howto.md)
 ## [Сборка мусора](standard/garbage-collection/)
 ## [Универсальные типы](standard/generics.md)
 ## [Делегаты и лямбда-выражения](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [Обзор языка C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## Новые возможности C#
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 — предварительная версия 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
