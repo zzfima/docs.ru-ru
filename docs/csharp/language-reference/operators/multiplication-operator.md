@@ -1,43 +1,47 @@
 ---
 title: '* Справочник по C#. Оператор -'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977348"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="d9a82-102">Справочник по C#. Оператор \*</span><span class="sxs-lookup"><span data-stu-id="d9a82-102">\* operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="09020-102">Справочник по C#. Оператор \*</span><span class="sxs-lookup"><span data-stu-id="09020-102">\* operator (C# Reference)</span></span>
 
-<span data-ttu-id="d9a82-103">Оператор умножения (`*`) вычисляет произведение операндов.</span><span class="sxs-lookup"><span data-stu-id="d9a82-103">The multiplication operator (`*`) computes the product of its operands.</span></span> <span data-ttu-id="d9a82-104">Все числовые типы имеют предопределенные операторы умножения.</span><span class="sxs-lookup"><span data-stu-id="d9a82-104">All numeric types have predefined multiplication operators.</span></span>
+<span data-ttu-id="09020-103">Оператор `*` поддерживается в двух формах: унарный оператор косвенного обращения к указателю или бинарный оператор умножения.</span><span class="sxs-lookup"><span data-stu-id="09020-103">The `*` operator is supported in two forms: a unary pointer indirection operator or a binary multiplication operator.</span></span>
 
-<span data-ttu-id="d9a82-105">Кроме того, `*` служит оператором разыменования, позволяющим выполнять чтение указателя и запись в него.</span><span class="sxs-lookup"><span data-stu-id="d9a82-105">`*` also serves as the dereference operator, which allows reading and writing to a pointer.</span></span>
+## <a name="pointer-indirection-operator"></a><span data-ttu-id="09020-104">Оператор косвенного обращения к указателю</span><span class="sxs-lookup"><span data-stu-id="09020-104">Pointer indirection operator</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="d9a82-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="d9a82-106">Remarks</span></span>
+<span data-ttu-id="09020-105">Используйте унарный оператор `*` для получения переменной, на который указывает операнд типа указателя.</span><span class="sxs-lookup"><span data-stu-id="09020-105">Use the unary `*` operator to obtain the variable to which an operand of a pointer type points.</span></span> <span data-ttu-id="09020-106">Дополнительные сведения см. в [практическом руководстве по получению значения переменной указателя](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).</span><span class="sxs-lookup"><span data-stu-id="09020-106">For more information, see [How to: obtain the value of a pointer variable](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).</span></span>
 
-<span data-ttu-id="d9a82-107">Оператор `*` также используется для объявления типов указателей и для разыменования указателей.</span><span class="sxs-lookup"><span data-stu-id="d9a82-107">The `*` operator is also used to declare pointer types and to dereference pointers.</span></span> <span data-ttu-id="d9a82-108">Этот оператор может использоваться только в небезопасных контекстах, обозначенных с помощью ключевого слова [unsafe](../keywords/unsafe.md) и требующих параметр компилятора [/unsafe](../compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="d9a82-108">This operator can only be used in unsafe contexts, denoted by the use of the [unsafe](../keywords/unsafe.md) keyword, and requiring the [/unsafe](../compiler-options/unsafe-compiler-option.md) compiler option.</span></span>  <span data-ttu-id="d9a82-109">Оператор разыменования также известен как оператор косвенного обращения.</span><span class="sxs-lookup"><span data-stu-id="d9a82-109">The dereference operator is also known as the indirection operator.</span></span>
+<span data-ttu-id="09020-107">Для оператора косвенного обращения к указателю `*` требуется контекст [unsafe](../keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="09020-107">The pointer indirection operator `*` requires [unsafe](../keywords/unsafe.md) context.</span></span>
 
-<span data-ttu-id="d9a82-110">Определяемые пользователем типы могут вызвать перегрузку бинарного оператора `*` (см. раздел [operator](../keywords/operator.md)) .</span><span class="sxs-lookup"><span data-stu-id="d9a82-110">User-defined types can overload the binary `*` operator (see [operator](../keywords/operator.md)).</span></span> <span data-ttu-id="d9a82-111">При перегрузке бинарного оператора соответствующий оператор присвоения (если таковой имеется) также неявно перегружается.</span><span class="sxs-lookup"><span data-stu-id="d9a82-111">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>
+## <a name="multiplication-operator"></a><span data-ttu-id="09020-108">Оператор умножения</span><span class="sxs-lookup"><span data-stu-id="09020-108">Multiplication operator</span></span>
 
-## <a name="example"></a><span data-ttu-id="d9a82-112">Пример</span><span class="sxs-lookup"><span data-stu-id="d9a82-112">Example</span></span>
+<span data-ttu-id="09020-109">Для числовых типов оператор `*` вычисляет результат двух операндов:</span><span class="sxs-lookup"><span data-stu-id="09020-109">For numeric types, the `*` operator computes the product of its operands:</span></span>
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a><span data-ttu-id="d9a82-113">Пример</span><span class="sxs-lookup"><span data-stu-id="d9a82-113">Example</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="09020-110">Возможность перегрузки оператора</span><span class="sxs-lookup"><span data-stu-id="09020-110">Operator overloadability</span></span>
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+<span data-ttu-id="09020-111">Определяемые пользователем типы могут вызвать [перегрузку](../keywords/operator.md) бинарного оператора `*`.</span><span class="sxs-lookup"><span data-stu-id="09020-111">User-defined types can [overload](../keywords/operator.md) a binary `*` operator.</span></span> <span data-ttu-id="09020-112">При перегрузке бинарного оператора `*` неявно перегружается и соответствующий [оператор присваивания умножения](multiplication-assignment-operator.md) `*=`.</span><span class="sxs-lookup"><span data-stu-id="09020-112">When a binary `*` operator is overloaded, the [multiplication assignment operator](multiplication-assignment-operator.md) `*=` is also implicitly overloaded.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9a82-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d9a82-114">See also</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="09020-113">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="09020-113">C# language specification</span></span>
 
-- [<span data-ttu-id="d9a82-115">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="d9a82-115">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="d9a82-116">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="d9a82-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="d9a82-117">Небезопасный код и указатели</span><span class="sxs-lookup"><span data-stu-id="d9a82-117">Unsafe Code and Pointers</span></span>](../../programming-guide/unsafe-code-pointers/index.md)
-- [<span data-ttu-id="d9a82-118">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="d9a82-118">C# Operators</span></span>](index.md)
+<span data-ttu-id="09020-114">См. дополнительные сведения об [операторе косвенного обращения к указателю](~/_csharplang/spec/unsafe-code.md#pointer-indirection) и [операторе умножения](~/_csharplang/spec/expressions.md#multiplication-operator) в [спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="09020-114">For more information, see the [Pointer indirection](~/_csharplang/spec/unsafe-code.md#pointer-indirection) and [Multiplication operator](~/_csharplang/spec/expressions.md#multiplication-operator) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="09020-115">См. также</span><span class="sxs-lookup"><span data-stu-id="09020-115">See also</span></span>
+
+- [<span data-ttu-id="09020-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="09020-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="09020-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="09020-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="09020-118">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="09020-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="09020-119">Типы указателей</span><span class="sxs-lookup"><span data-stu-id="09020-119">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
