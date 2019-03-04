@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 032e06e674f2298d68f879f3ad474c79e3ff02db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659501"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975242"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Как выполнить Чтение параметров приложения в Visual Basic
 Пользовательский параметр можно прочитать с помощью свойства объекта `My.Settings`.  
@@ -21,7 +21,7 @@ ms.locfileid: "54659501"
 ## <a name="example"></a>Пример  
  В этом пример выводится значение параметра `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-read-application-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  Для надлежащего выполнения этого примера приложение должно иметь параметр `Nickname` типа `String`. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   

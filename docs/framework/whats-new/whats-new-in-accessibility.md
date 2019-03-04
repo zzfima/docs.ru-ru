@@ -9,16 +9,16 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675443"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212512"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
-Платформа .NET Framework ориентирована на то, чтобы сделать приложения более доступными для ваших пользователей. Специальные возможности позволяют приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Начиная с .NET Framework 4.7.1, платформа .NET Framework включает большое число улучшений специальных возможностей, позволяющих разработчикам создавать доступные приложения. 
+Платформа .NET Framework ориентирована на то, чтобы сделать приложения более доступными для ваших пользователей. Специальные возможности позволяют приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Начиная с .NET Framework 4.7.1, платформа .NET Framework включает большое число улучшений специальных возможностей, позволяющих разработчикам создавать доступные приложения.
 
 ## <a name="accessibility-switches"></a>Переключатель специальных возможностей
 
@@ -51,7 +51,7 @@ ms.locfileid: "55675443"
 
 ### <a name="restoring-legacy-behavior"></a>Восстановление поведения из предыдущих версий
 
-Для приложений, ориентированных на версии .NET Framework, начиная с 4.7.1, можно отключить функции специальных возможностей, добавив следующий параметр в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установив значение `true`. Например, следующая конфигурация задает отказ от функций специальных возможностей, представленных в .NET Framework 4.7.2:  
+Для приложений, ориентированных на версии .NET Framework, начиная с 4.7.1, можно отключить функции специальных возможностей, добавив следующий параметр в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установив значение `true`. Например, следующая конфигурация задает отказ от функций специальных возможностей, представленных в .NET Framework 4.7.2:
 
 ```xml
 <runtime>
@@ -69,6 +69,7 @@ ms.locfileid: "55675443"
 - [Windows Presentation Foundation (WPF)](#wpf472)
 
 <a name="winforms472"></a>
+
 ### <a name="windows-forms"></a>Windows Forms
 
 **Определенные в ОС цвета в темах высокой контрастности**
@@ -80,7 +81,7 @@ ms.locfileid: "55675443"
 - Элементы управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.CheckBox>, у которых для параметра <xref:System.Windows.Forms.ButtonBase.FlatStyle> установлено значение <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> или <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>. Ранее выбранные цвета текста и фона не были контрастными и текст было сложно читать.
 
 - Элементы управления, содержащиеся в <xref:System.Windows.Forms.GroupBox>, у которого для свойства <xref:System.Windows.Forms.Control.Enabled> установлено значение `false`.
- 
+
 - Элементы управления <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox> и <xref:System.Windows.Forms.ToolStripDropDownButton>, которые имеют повышенное значение контрастности яркости в режиме высокой контрастности.
 
 - Свойство <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> класса <xref:System.Windows.Forms.DataGridViewLinkCell>.
@@ -89,7 +90,7 @@ ms.locfileid: "55675443"
 
 Начиная с .NET Framework 4.7.2 усовершенствована поддержка экранного диктора:
 
-- Он сообщает значение свойства <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> при объявлении текста <xref:System.Windows.Forms.ToolStripMenuItem>. 
+- Он сообщает значение свойства <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> при объявлении текста <xref:System.Windows.Forms.ToolStripMenuItem>.
 
 - Он указывает, когда для свойства <xref:System.Windows.Forms.Control.Enabled> элемента <xref:System.Windows.Forms.ToolStripMenuItem> задано значение `false`.
 
@@ -122,6 +123,7 @@ ms.locfileid: "55675443"
 - Элемент управления <xref:System.Windows.Forms.ToolStripButton> позволяет отображать фокус, если он содержится в <xref:System.Windows.Forms.ToolStripPanel>, для свойства <xref:System.Windows.Forms.ToolStripPanel.TabStop> которого задано значение `true`
 
 <a name="wpf472"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **Изменения элементов управления CheckBox и RadioButton**
@@ -151,6 +153,7 @@ ms.locfileid: "55675443"
 - [Конструктор рабочих процессов Windows Workflow Foundation (WF)](#wf471)
 
 <a name="wpf471"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **Улучшения средств чтения с экрана**
@@ -160,14 +163,14 @@ ms.locfileid: "55675443"
 - В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.Expander> объявлялись средствами чтения с экрана как кнопки. Начиная с .NET Framework 4.7.1, они правильно объявляются как развертываемые/свертываемые группы.
 
 - В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.DataGridCell> объявлялись средствами чтения с экрана как настраиваемые. Начиная с .NET Framework 4.7.1, они правильно объявляются как ячейка сетки данных (локализованная).
- 
+
 - Начиная с .NET Framework 4.7.1, средства чтения с экрана объявляют имя изменяемого <xref:System.Windows.Controls.ComboBox>.
 
 - В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.PasswordBox> объявлялись как "в представлении нет элементов" или имели иное неправильное поведение. Начиная с .NET Framework 4.7.1, эта проблема устранена.
 
 **Поддержка динамических областей автоматизации пользовательского интерфейса**
 
-Средства чтения с экрана, такие как экранный диктор, помогают людям читать содержимое пользовательского интерфейса приложения. Обычно для этого используется преобразование текста в речь для содержимого, находящегося в фокусе. Однако если элемент пользовательского интерфейса изменяется и находится не в фокусе, пользователь может не получить уведомление и пропустить важные сведения. Динамические области призваны решить эту проблему. Разработчик может использовать их для информирования средства чтения с экрана или любого другого клиента автоматизации пользовательского интерфейса о важных изменениях элемента пользовательского интерфейса. После этого средство чтения с экрана может решить, уведомлять ли пользователя об этом изменении. 
+Средства чтения с экрана, такие как экранный диктор, помогают людям читать содержимое пользовательского интерфейса приложения. Обычно для этого используется преобразование текста в речь для содержимого, находящегося в фокусе. Однако если элемент пользовательского интерфейса изменяется и находится не в фокусе, пользователь может не получить уведомление и пропустить важные сведения. Динамические области призваны решить эту проблему. Разработчик может использовать их для информирования средства чтения с экрана или любого другого клиента автоматизации пользовательского интерфейса о важных изменениях элемента пользовательского интерфейса. После этого средство чтения с экрана может решить, уведомлять ли пользователя об этом изменении.
 
 Для поддержки динамических областей в WPF добавлены следующие API:
 
@@ -176,19 +179,19 @@ ms.locfileid: "55675443"
 - Присоединенное свойство **AutomationProperties.LiveSetting**, уведомляющее средство чтения с экрана о том, насколько важно изменение пользовательского интерфейса для пользователя.
 
 - Свойство<xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>, которое идентифицирует присоединенное свойство **AutomationProperties.LiveSetting**.
- 
+
 - Метод <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType>, который можно переопределить для предоставления значения **LiveSetting**.
 
 - Методы <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType>, которые возвращают и задают значение **LiveSetting**.
- 
+
 - Перечисление <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, которое определяет следующие возможные значения **LiveSetting**:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Элемент не отправляет уведомления при изменении содержимого динамической области.   
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Элемент отправляет уведомления, не прерывающие работу, при изменении содержимого динамической области.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Элемент не отправляет уведомления при изменении содержимого динамической области.
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Элемент отправляет уведомления, не прерывающие работу, при изменении содержимого динамической области.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Элемент отправляет уведомления, прерывающие работу, при изменении содержимого динамической области.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Элемент отправляет уведомления, прерывающие работу, при изменении содержимого динамической области.
 
-Вы можете создать динамическую область, задав свойство **AutomationProperties.LiveSetting** для нужного элемента, как показано в следующем примере:   
+Вы можете создать динамическую область, задав свойство **AutomationProperties.LiveSetting** для нужного элемента, как показано в следующем примере:
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
@@ -216,7 +219,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     Визуальный элемент фокуса для элемента управления <xref:System.Windows.Controls.Expander> теперь отображается. Визуальные элементы клавиатуры для элементов управления <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.RadioButton> также видимы. Например:
 
     До: 
-    
+
     ![Элемент управления Expander с фокусом до внесения улучшений](media/expander-before.png)
 
     После: 
@@ -224,21 +227,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     ![Элемент управления Expander с фокусом после внесения улучшений](media/expander-after.png)
 
 - Элементы управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton>
- 
+
     Текст в элементах управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton> теперь стало проще читать, когда он выбран при использовании тем с высокой контрастностью. Например:
 
     До: 
 
     ![Переключатель высокой контрастности до внесения улучшений](media/radio-button-before.png)
-    
+
     После: 
 
     ![Переключатель высокой контрастности после внесения улучшений](media/radio-button-after.png)
 
 - Элемент управления <xref:System.Windows.Controls.ComboBox>
- 
+
     Начиная с .NET Framework 4.7.1, граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
-    
+
     До: 
 
      ![Отключенная граница и текст поля со списком до внесения улучшений](media/combo-disabled-before.png)
@@ -252,7 +255,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     До:
 
     ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
-    
+
     После: 
 
     ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
@@ -262,7 +265,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     До: 
 
     ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
-    
+
     После: 
 
     ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
@@ -274,24 +277,25 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     До: 
 
     ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
-    
+
     После:   
- 
+
     ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
-    
+
     Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1, эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры, начиная с .NET Framework 4.7.1.
 
     До: 
 
     ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
- 
+
     После:    
-  
-    ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png)  
+
+    ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png) 
 
 Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
+
 ### <a name="windows-forms-accessibility-improvements"></a>Улучшения специальных возможностей в Windows Forms
 
 В компонент Windows Forms (WinForms) платформы .NET Framework 4.7.1 были внесены изменения специальных возможностей в следующих областях:
@@ -304,6 +308,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
+
 Некоторые примеры изменения режима высокой контрастности:
 
 - Лучше читаются флажки в элементах <xref:System.Windows.Forms.MenuStrip>.
@@ -331,9 +336,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - К элементу управления <xref:System.Windows.Forms.MonthCalendar> может обратиться как экранный диктор, так и любое другое средство автоматизации пользовательского интерфейса.
 
 - Элемент управления <xref:System.Windows.Forms.CheckedListBox> оповещает экранный диктор об изменении состояния флажка элемента, чтобы пользователь узнал, что значение элемента списка изменилось.
- 
+
 - Элемент управления <xref:System.Windows.Forms.DataGridViewCell> сообщает правильное состояние доступа только для чтения экранному диктору.
- 
+
 - Теперь экранный диктор может прочитать отключенный текст <xref:System.Windows.Forms.ToolStripMenuItem>, хотя раньше он пропускал отключенные пункты меню.
 
 **Улучшенная поддержка шаблонов специальных возможностей автоматизации пользовательского интерфейса**
@@ -341,9 +346,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 Начиная с .NET Framework 4.7.1, разработчики средств специальных возможностей могут использовать стандартные шаблоны специальных возможностей API и свойства для нескольких элементов управления WinForms. Некоторые из этих улучшений специальных возможностей:
 
 - <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ToolStripSplitButton> теперь поддерживают [шаблон развертывания/свертывания](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
- 
+
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell> теперь поддерживает [шаблон переключения](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md).
- 
+
 - Элемент управления <xref:System.Windows.Forms.ToolStripItem> поддерживает свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> и [шаблон развертывания/свертывания](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
 - Элементы управления <xref:System.Windows.Forms.NumericUpDown> и <xref:System.Windows.Forms.DomainUpDown> поддерживают свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name>.
@@ -356,8 +361,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - Сокращение ненужных позиций табуляции.
 - Улучшенные отчеты о типах элементов управления.
 - Улучшенная работа экранного диктора.
- 
+
 <a name="aspnet471"></a>
+
 ### <a name="aspnet-web-controls"></a>Веб-элементы управления ASP.NET
 
 Начиная с .NET Framework 4.7.1 и Visual Studio 2017 15.3 в ASP.NET улучшена работа веб-элементов управления ASP.NET с технологией специальных возможностей в Visual Studio. Внесены следующие изменения:
@@ -369,13 +375,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - Изменения для улучшения навигации с помощью клавиатуры для таких элементов, как диалоговое окно **Поля** в мастере **полей страничного навигатора**, диалоговое окно **Настроить ObjectContext** или **Настроить выбор данных** в мастере **настройки источника данных**.
 
 <a name="tools471"></a>
+
 ### <a name="net-sdk-tools"></a>.NET SDK Tools
 
-В [редакторе конфигурации (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) и [средстве Service Trace Viewer (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) были устранены различные ошибки специальных возможностей. В основном это были незначительные проблемы, например не определялось имя или некорректно реализовывались шаблоны автоматизации пользовательского интерфейса. Многие пользователи могли не замечать неверные значения, но пользователям, использующим вспомогательные технологии, такие как средства чтения с экрана, будет проще использовать эти средства пакета SDK. 
+В [редакторе конфигурации (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) и [средстве Service Trace Viewer (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) были устранены различные ошибки специальных возможностей. В основном это были незначительные проблемы, например не определялось имя или некорректно реализовывались шаблоны автоматизации пользовательского интерфейса. Многие пользователи могли не замечать неверные значения, но пользователям, использующим вспомогательные технологии, такие как средства чтения с экрана, будет проще использовать эти средства пакета SDK.
 
 Эти усовершенствования меняют предыдущее поведение, например порядок фокуса клавиатуры.
 
 <a name="wf471"></a>
+
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Конструктор рабочих процессов Windows Workflow Foundation (WF)
 
 Ниже перечислены изменения специальных возможностей в конструкторе рабочих процессов:
@@ -442,4 +450,3 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 ## <a name="see-also"></a>См. также
 
 - [Новые возможности .NET Framework](whats-new.md)
-

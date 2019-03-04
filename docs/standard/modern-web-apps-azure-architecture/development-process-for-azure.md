@@ -4,19 +4,19 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827478"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202110"
 ---
 # <a name="development-process-for-azure"></a>Процесс разработки для Azure
 
 > _"Благодаря облаку частные лица и небольшие компании могут практически мгновенно получить доступ к услугам корпоративного класса"._  
 > _— Рой Стефан (Roy Stephan)_
 
- ## <a name="vision"></a>Концепция
+## <a name="vision"></a>Концепция
 
 > *Разрабатывайте эффективные приложения ASP .NET Core любым удобным способом, используя Visual Studio или dotnet CLI и Visual Studio Code или подходящий вам редактор.*
 
