@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9664a3e5b5a68ae44bb129c9c550011683c81f16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559289"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981301"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Определение различия между передачей структуры и ссылки класса в метод
 В следующем примере демонстрируется, чем передача [структуры](../../../csharp/language-reference/keywords/struct.md) в метод отличается от передачи экземпляра [класса](../../../csharp/language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  
@@ -24,7 +24,7 @@ ms.locfileid: "54559289"
  Различия демонстрируются в выходных данных следующего примера. Значение поля `willIChange` экземпляра класса изменяется в результате вызова метода `ClassTaker`, поскольку этот метод находит указанное поле экземпляра класса по адресу, содержащемуся в параметре. Поле `willIChange` структуры в вызывающем методе не изменяется в результате вызова метода `StructTaker`, поскольку значением аргумента является копия самой структуры, а не ее адреса. `StructTaker` изменяет саму копию, которая будет утрачена после завершения вызова `StructTaker`.  
   
 ## <a name="example"></a>Пример  
- [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+ [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
 ## <a name="see-also"></a>См. также
 

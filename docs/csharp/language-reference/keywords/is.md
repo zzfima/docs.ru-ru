@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710356"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977062"
 ---
-# <a name="is-c-reference"></a>is (Справочник по C#) #
+# <a name="is-c-reference"></a>is (Справочник по C#)
 
 Проверяет совместимость объекта с заданным типом или (начиная с C# 7.0) проверяет выражение на соответствие шаблону.
 
-## <a name="testing-for-type-compatibility"></a>Тестирование на совместимость типов ##
+## <a name="testing-for-type-compatibility"></a>Тестирование на совместимость типов
 
 Ключевое слово `is` оценивает совместимость типов во время выполнения. Оно определяет, может ли экземпляр объекта или результат выражения быть преобразован в указанный тип. Он имеет следующий синтаксис:
 
@@ -56,7 +56,7 @@ ms.locfileid: "54710356"
 
 Начиная с C# 7.0 можно использовать сопоставление шаблонов с [шаблоном типа](#type), чтобы создавать лаконичный код, использующий оператор `is`.
 
-## <a name="pattern-matching-with-is"></a>Сопоставление шаблонов с `is` ##
+## <a name="pattern-matching-with-is"></a>Сопоставление шаблонов с `is`
 
 Начиная с C# 7.0 операторы `is` и [switch](../../../csharp/language-reference/keywords/switch.md) поддерживают сопоставление шаблонов. Ключевое слово `is` поддерживает следующие шаблоны:
 
@@ -104,7 +104,7 @@ ms.locfileid: "54710356"
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Шаблон константы ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Шаблон константы
 
 При выполнении сопоставления с шаблоном константы `is` проверяет, равно ли выражение указанной константе. В C# 6 и более ранних версиях шаблон константы поддерживается оператором [switch](switch.md). Начиная с C# 7.0 он поддерживается и оператором `is`. Он имеет следующий синтаксис:
 

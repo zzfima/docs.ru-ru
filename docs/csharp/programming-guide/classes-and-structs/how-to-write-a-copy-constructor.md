@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 252e66229b75c545c85aa175267ea267c138a087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 169bdfc53d0c30ffc14e5a9525920679a94fbf23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573128"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982145"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Создание конструктора копий
 В C# не предусмотрен конструктор копии для объектов, однако его можно написать самостоятельно.  
@@ -19,7 +19,7 @@ ms.locfileid: "54573128"
 ## <a name="example"></a>Пример  
  В следующем примере [класс](../../../csharp/language-reference/keywords/class.md) `Person` определяет конструктор копии, который использует экземпляр `Person`в качестве аргумента. Значения свойств аргумента присваиваются свойствам нового экземпляра `Person`. Код содержит дополнительный конструктор копии, который отправляет свойства `Name` и `Age` экземпляра, который необходимо скопировать конструктору экземпляра класса.  
   
- [!code-csharp[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
+ [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
 ## <a name="see-also"></a>См. также
 

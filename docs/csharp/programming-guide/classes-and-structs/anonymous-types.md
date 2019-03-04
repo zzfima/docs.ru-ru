@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729763"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971173"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Анонимные типы (Руководство по программированию в C#)
 Анонимные типы позволяют легко инкапсулировать свойства только для чтения в один объект без необходимости предварительного определения типа. Имя типа создается компилятором и недоступно на уровне исходного кода. Тип каждого свойства выводится компилятором.  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Если имена членов в анонимном типе не указаны, компилятор присваивает членам анонимного типа такие же имена, как у свойств, используемых для их инициализации. Необходимо указать имя для свойства, инициализируемого с помощью выражения, как показано в предыдущем примере. В следующем примере используются имена свойств анонимного типа `Color` и `Price`.  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  Обычно, если для инициализации переменной используется анонимный тип, необходимо обозначить ее как неявно типизированную переменную с помощью ключевого слова [var](../../../csharp/language-reference/keywords/var.md). Имя типа не может быть указано в объявлении переменной, так как доступ к базовому имени анонимного типа имеет только компилятор. Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

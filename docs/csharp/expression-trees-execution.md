@@ -3,12 +3,12 @@ title: Выполнение деревьев выражений
 description: Сведения о выполнении деревьев выражений путем их преобразования в исполняемые инструкции промежуточного языка (IL).
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207395"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201850"
 ---
 # <a name="executing-expression-trees"></a>Выполнение деревьев выражений
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 Делегат, возвращенный этим методом, замкнулся на объекте `constant`, который был ликвидирован. (Причиной ликвидации является то, что он был объявлен в операторе `using`.) 
 
-Теперь при выполнении делегата, возвращаемого этим методом, будет возникать исключение `ObjecctDisposedException`.
+Теперь при выполнении делегата, возвращаемого этим методом, будет возникать исключение `ObjectDisposedException`.
 
 Может показаться странным, что ошибка времени выполнения представляет конструкцию времени компиляции, но таковы особенности работы с деревьями выражений.
 

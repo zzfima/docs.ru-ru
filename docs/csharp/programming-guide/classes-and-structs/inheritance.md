@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607021"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202357"
 ---
 # <a name="inheritance-c-programming-guide"></a>Наследование (Руководство по программированию на C#)
 
@@ -35,7 +35,7 @@ ms.locfileid: "54607021"
   
  В следующем примере показано, как выражаются в C# отношения между классами, продемонстрированные на предыдущем рисунке. В примере также показано, как `WorkItem` переопределяет виртуальный метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> и как класс `ChangeRequest` наследует `WorkItem` реализацию метода.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Абстрактные и виртуальные методы  
  Когда базовый класс объявляет метод как [виртуальный](../../../csharp/language-reference/keywords/virtual.md), производный класс может [переопределить](../../../csharp/language-reference/keywords/override.md) метод с помощью своей собственной реализации. Если базовый класс объявляет член как [абстрактный](../../../csharp/language-reference/keywords/abstract.md), этот метод должен быть переопределен в любом неабстрактном классе, который прямо наследует от этого класса. Если производный класс сам является абстрактным, то он наследует абстрактные члены, не реализуя их. Абстрактные и виртуальные члены являются основой для полиморфизма, который является второй основной характеристикой объектно-ориентированного программирования. Дополнительные сведения см. в разделе [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
