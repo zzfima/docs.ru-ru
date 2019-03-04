@@ -3,14 +3,14 @@ title: Создание запросов LINQ на языке C#
 description: Узнайте, как создавать запросы LINQ на языке C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 0837ebc6ebb2282ea26fad29ac1c31c87a0627ce
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: df77326b921d22d90cf90c12e9c0f472d808ed95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857818"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981339"
 ---
-# <a name="write-linq-queries-in-c"></a>Создание запросов LINQ на языке C# #
+# <a name="write-linq-queries-in-c"></a>Создание запросов LINQ на языке C\#
 
 В этой статье рассматриваются три способа создания запросов LINQ в C#:
 

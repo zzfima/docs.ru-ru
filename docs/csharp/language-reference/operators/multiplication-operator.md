@@ -1,43 +1,47 @@
 ---
 title: '* Справочник по C#. Оператор -'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977348"
 ---
 # <a name="-operator-c-reference"></a>Справочник по C#. Оператор *
 
-Оператор умножения (`*`) вычисляет произведение операндов. Все числовые типы имеют предопределенные операторы умножения.
+Оператор `*` поддерживается в двух формах: унарный оператор косвенного обращения к указателю или бинарный оператор умножения.
 
-Кроме того, `*` служит оператором разыменования, позволяющим выполнять чтение указателя и запись в него.
+## <a name="pointer-indirection-operator"></a>Оператор косвенного обращения к указателю
 
-## <a name="remarks"></a>Примечания
+Используйте унарный оператор `*` для получения переменной, на который указывает операнд типа указателя. Дополнительные сведения см. в [практическом руководстве по получению значения переменной указателя](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).
 
-Оператор `*` также используется для объявления типов указателей и для разыменования указателей. Этот оператор может использоваться только в небезопасных контекстах, обозначенных с помощью ключевого слова [unsafe](../keywords/unsafe.md) и требующих параметр компилятора [/unsafe](../compiler-options/unsafe-compiler-option.md).  Оператор разыменования также известен как оператор косвенного обращения.
+Для оператора косвенного обращения к указателю `*` требуется контекст [unsafe](../keywords/unsafe.md).
 
-Определяемые пользователем типы могут вызвать перегрузку бинарного оператора `*` (см. раздел [operator](../keywords/operator.md)) . При перегрузке бинарного оператора соответствующий оператор присвоения (если таковой имеется) также неявно перегружается.
+## <a name="multiplication-operator"></a>Оператор умножения
 
-## <a name="example"></a>Пример
+Для числовых типов оператор `*` вычисляет результат двух операндов:
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>Пример
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+Определяемые пользователем типы могут вызвать [перегрузку](../keywords/operator.md) бинарного оператора `*`. При перегрузке бинарного оператора `*` неявно перегружается и соответствующий [оператор присваивания умножения](multiplication-assignment-operator.md) `*=`.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+См. дополнительные сведения об [операторе косвенного обращения к указателю](~/_csharplang/spec/unsafe-code.md#pointer-indirection) и [операторе умножения](~/_csharplang/spec/expressions.md#multiplication-operator) в [спецификации языка C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md)
 - [Операторы в C#](index.md)
+- [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)

@@ -3,14 +3,14 @@ title: Управление версиями в C# | Руководство по
 description: Сведения о принципах работы управления версиями в C# и .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243495"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965674"
 ---
-# <a name="versioning-in-c"></a>Управление версиями в C# #
+# <a name="versioning-in-c"></a>Управление версиями в C\#
 
 В этом учебнике вы получите представление об управлении версиями в .NET. Кроме того, вы узнаете, какие факторы следует учитывать при управлении версиями библиотеки и обновлении до ее новой версии.
 
