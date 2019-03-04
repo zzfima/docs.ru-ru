@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: f303687fb86e23191727df769af52811a93fe71e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56b156545fac2aba09d32139fdaad26da711e018
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715794"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966220"
 ---
 # <a name="playing-sounds-visual-basic"></a>Воспроизведение звуков (Visual Basic)
 Объект `My.Computer.Audio` предоставляет методы для воспроизведения звуков.  
@@ -26,20 +26,20 @@ ms.locfileid: "54715794"
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук. Если `AudioPlayMode.WaitToComplete` указан, `My.Computer.Audio.Play` дожидается завершения звука, прежде чем выполнение вызывающего кода будет продолжено. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук. Пользуясь этим примером, убедитесь в том, что ресурсы приложения включают звуковой WAV-файла с именем Waterfall.  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
+ [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
 ## <a name="playing-looping-sounds"></a>Циклическое воспроизведение звука  
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме, если задан параметр `PlayMode.BackgroundLoop`. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
+ [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме, если задан параметр `PlayMode.BackgroundLoop`. Пользуясь этим примером, убедитесь в том, что ресурсы приложения включают звуковой WAV-файла с именем Waterfall.  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
+ [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   
  Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54715794"
   
  Код в следующем примере останавливает звук, который воспроизводится в фоновом режиме.  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
+ [!code-vb[VbVbalrMyComputer#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#18)]  
   
  Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54715794"
   
  Код в следующем примере использует метод `My.Computer.Audio.PlaySystemSound` для воспроизведения системного звука.  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
+ [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Devices.Audio>

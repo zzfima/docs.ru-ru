@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: ea2cad121a6722b2cb59e29831f90648ad4cff78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10d1d25f830ff563cf70369e7b9d4c66f639c121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664698"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969795"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Как выполнить Запись в журнал сведений об исключениях в Visual Basic
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал сведений об исключениях, возникающих в приложении. Эти примеры демонстрируют применение метода `My.Application.Log.WriteException` для регистрации явно перехваченных исключений и исключений, которые не обрабатываются.  
@@ -21,25 +21,25 @@ ms.locfileid: "54664698"
   
 1.  Создайте метод, который будет генерировать сведения об исключении.  
   
-     [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
 2.  Воспользуйтесь блоком `Try...Catch` для перехвата исключения.  
   
-     [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
 3.  Поместите код, который может генерировать исключение, в блок `Try`.  
   
      Раскомментируйте строки `Dim` и `MsgBox`, чтобы вызвать исключение <xref:System.NullReferenceException>.  
   
-     [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
 4.  В блоке `Catch` для записи сведений об исключении используйте метод `My.Application.Log.WriteException`.  
   
-     [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
      В следующем примере показан полный код для записи обработанного исключения в журнал.  
   
-     [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
 ### <a name="to-log-an-unhandled-exception"></a>Запись необработанного исключения в журнал  
   
@@ -59,11 +59,11 @@ ms.locfileid: "54664698"
   
 6.  Добавьте метод `My.Application.Log.WriteException` в обработчик событий `UnhandledException` .  
   
-     [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
      В следующем примере показан полный код для записи необработанного исключения в журнал.  
   
-     [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>

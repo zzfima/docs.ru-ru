@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c7a66677-cb59-4cbf-969a-d2e8fc61a6ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06af0e10080977800479ed5aa444c63bde2d371e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fde68d0a938ed04380bf0e99cc0c544793571d77
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726459"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965583"
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Как выполнить Повышение скорости выполнения небольших тел циклов
-Когда цикл <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> имеет небольшое тело, он может выполняться значительно медленнее, чем эквивалентный последовательный цикл, такой как цикл [for](~/docs/csharp/language-reference/keywords/for.md) в C# и цикл [For](https://msdn.microsoft.com/library/c470a263-9b49-4308-8fd6-8592b84a7980) в Visual Basic. Снижение производительности происходит вследствие нагрузки, связанной с секционированием данных и стоимостью вызова делегата в каждой итерации цикла. Для разрешения таких сценариев класс <xref:System.Collections.Concurrent.Partitioner> предоставляет метод <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType>, который позволяет выполнять последовательный цикл для тела делегата, чтобы делегат вызывался только один раз для каждой секции, а не по разу в каждой итерации. Дополнительные сведения см. в разделе [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+Когда цикл <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> имеет небольшое тело, он может выполняться значительно медленнее, чем эквивалентный последовательный цикл, такой как цикл [for](../../csharp/language-reference/keywords/for.md) в C# и цикл [For](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/44kykk21(v=vs.90)) в Visual Basic. Снижение производительности происходит вследствие нагрузки, связанной с секционированием данных и стоимостью вызова делегата в каждой итерации цикла. Для разрешения таких сценариев класс <xref:System.Collections.Concurrent.Partitioner> предоставляет метод <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType>, который позволяет выполнять последовательный цикл для тела делегата, чтобы делегат вызывался только один раз для каждой секции, а не по разу в каждой итерации. Дополнительные сведения см. в разделе [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
@@ -30,5 +30,6 @@ ms.locfileid: "54726459"
 
 - [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-- [Итераторы](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+- [Iterators (C#)](../../csharp/programming-guide/concepts/iterators.md) (Итераторы (C#))
+- [Iterators (Visual Basic)](../../visual-basic/programming-guide/concepts/iterators.md) (Итераторы (Visual Basic))
 - [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

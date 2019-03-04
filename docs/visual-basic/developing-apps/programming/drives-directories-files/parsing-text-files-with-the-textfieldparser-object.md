@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 09821e9b1985913b7433b070ae19c4818265926e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585406"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969743"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Анализ текстовых файлов с помощью объекта TextFieldParser (Visual Basic)
 Объект `TextFieldParser` позволяет анализировать и обрабатывать файлы очень большого размера, по своей структуре имеющие вид столбцов текста с разделителями, например файлы журнала или старые базы данных. Анализ текстового файла с помощью объекта `TextFieldParser` похож на итерацию содержимого текстового файла, а метод анализа, связанный с извлечением полей текста, напоминает методы работы со строками, используемые для маркировки разделенных строк.  
@@ -19,11 +19,11 @@ ms.locfileid: "54585406"
 ## <a name="parsing-different-types-of-text-files"></a>Анализ различных типов текстовых файлов  
  Текстовые файлы могут иметь поля различной ширины, разделенные тем или иными символом, например запятой или знаком табуляции. Определите `TextFieldType` и разделитель, как в следующем примере, в котором с помощью метода `SetDelimiters` определяется текстовый файл со знаком табуляции в качестве разделителя:  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
  Другие текстовые файлы могут иметь поля фиксированной ширины. В этом случае необходимо определить `TextFieldType` как `FixedWidth` и задать ширину каждого поля, как в примере ниже. В этом примере столбцы текста определяются с помощью метода `SetFieldWidths`: первый столбец имеет ширину 5 символов, второй — 10, третий — 11, а четвертый столбец имеет переменную ширину.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
  После определения формата можно обработать весь файл в цикле, используя для обработки каждой строки метод `ReadFields`.  
   

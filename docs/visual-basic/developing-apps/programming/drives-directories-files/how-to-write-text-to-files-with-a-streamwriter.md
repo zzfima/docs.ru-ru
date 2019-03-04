@@ -6,18 +6,18 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: 39c6ad59ad965f566c77f72dd4a97335494d6382
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ee4e7ba2953d15c63739f0e9c2c46e6be17133c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678529"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965019"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Как выполнить Запись текста в файлы с помощью StreamWriter в Visual Basic
 В этом примере с помощью метода `My.Computer.FileSystem.OpenTextFileWriter` открывается объект <xref:System.IO.StreamWriter>, который используется для записи строки в текстовый файл с помощью метода <xref:System.IO.TextWriter.WriteLine%2A> класса <xref:System.IO.StreamWriter>.  
   
 ## <a name="example"></a>Пример  
- [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
+ [!code-vb[VbFileIOWrite#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#5)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  

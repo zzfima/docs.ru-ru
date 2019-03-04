@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574547"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836283"
 ---
 # <a name="what-is-managed-code"></a>Что такое управляемый код
 
@@ -39,6 +39,6 @@ ms.locfileid: "33574547"
 
 ## <a name="more-resources"></a>Дополнительные ресурсы
 
-*   [Общие сведения об основных понятиях .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Небезопасный код и указатели](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [Взаимодействие (руководство по программированию на C#)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [Общие сведения о платформе .NET Framework](../framework/get-started/overview.md)
+* [Небезопасный код и указатели](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Взаимодействие на уровне машинного кода](./native-interop/index.md)

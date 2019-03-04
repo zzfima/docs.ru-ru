@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: dab285f175838fb71e4218cbafdd4f7593c9e786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611298"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966949"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Как выполнить Сохранение пользовательских параметров в Visual Basic
 Для сохранения изменений в параметрах пользователя можно использовать метод `My.Settings.Save`.  
@@ -26,7 +26,7 @@ ms.locfileid: "54611298"
 ## <a name="example"></a>Пример  
  В этом примере изменяется значение параметра пользователя `LastChanged`, а затем изменение сохраняется путем вызова метода `My.Settings.Save`.  
   
- [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
  Для надлежащего выполнения этого примера приложение должно иметь пользовательский параметр `LastChanged` типа `Date`. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   

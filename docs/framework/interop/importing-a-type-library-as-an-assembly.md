@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218911"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835243"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 Определения COM-типов обычно хранятся в библиотеке типов. С другой стороны, CLS-совместимые компиляторы создают в сборке метаданные типов. Эти два источника сведений о типах заметно отличаются. В этом разделе описываются способы создания метаданных из библиотеки типов. Результирующая сборка и называется сборкой взаимодействия, а содержащиеся в ней сведения о типах позволяют приложениям .NET Framework использовать COM-типы.  
@@ -44,7 +44,7 @@ ms.locfileid: "56218911"
   
 -   Visual Studio  
   
-     Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) и [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
+     Visual Studio 2005 автоматически преобразует COM-типы библиотеки типов в метаданные сборки. Инструкции см. в разделе [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 -   [Программа импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ ms.locfileid: "56218911"
 - [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Практическое руководство. Создание сборок взаимодействия из библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [Пошаговое руководство: Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [Пошаговое руководство: Внедрение данных о типах из сборок Microsoft Office в Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
