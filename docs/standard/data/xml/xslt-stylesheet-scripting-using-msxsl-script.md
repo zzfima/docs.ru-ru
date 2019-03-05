@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267304"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835256"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Создание скриптов таблиц стилей XSLT с помощью \<msxsl:script>
 Класс <xref:System.Xml.Xsl.XslTransform> поддерживает внедрение скриптов с помощью элемента `script`.  
@@ -31,7 +31,7 @@ ms.locfileid: "55267304"
   
  , где `msxsl` является префиксом, привязанным к пространству имен `urn:schemas-microsoft-com:xslt`.  
   
- Атрибут `language` не является обязательным, но если он указан, его значение должно быть одним из следующих: C#, VB, JScript, JavaScript, VisualBasic, или CSharp. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
+ Атрибут `language` не является обязательным, но если он указан, его значение должно быть одним из следующих: C#, VB, JScript, JavaScript, VisualBasic или CSharp. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
   
  Атрибут `implements-prefix` обязателен. Этот атрибут используется для объявления пространства имен и связывания его с блоком скрипта. Значением этого атрибута является префикс, соответствующий пространству имен. Пространство имен может быть определено где-то в таблице стилей.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "55267304"
   
  Чтобы получить свидетельство из сборки используется метод `this.GetType().Assembly.Evidence`. Чтобы получить свидетельство из универсального идентификатора ресурсов (URI) используется метод `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- При использовании методов <xref:System.Xml.Xsl.XslTransform.Load%2A>, которые принимают объект <xref:System.Xml.XmlResolver>, но не объект `Evidence`, зона безопасности для сборки имеет по умолчанию полный уровень доверия. Дополнительные сведения см. в статьях <xref:System.Security.SecurityZone> и [Именованные наборы разрешений](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ При использовании методов <xref:System.Xml.Xsl.XslTransform.Load%2A>, которые принимают объект <xref:System.Xml.XmlResolver>, но не объект `Evidence`, зона безопасности для сборки имеет по умолчанию полный уровень доверия. Дополнительные сведения см. в статьях <xref:System.Security.SecurityZone> и [Именованные наборы разрешений](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Функции можно объявлять внутри элемента `msxsl:script`. В следующей таблице показаны пространства имен, поддерживаемые по умолчанию. Можно использовать классы вне перечисленных пространств имен. Однако эти классы должны указываться полными именами.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "55267304"
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Если функция скрипта использует один из следующих числовых типов: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal, они приводятся к типу Double, который преобразуется в тип number W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
+ Если функция скрипта использует один из следующих числовых типов: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal, — они приводятся к типу Double, который преобразуется в тип number W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
   
  Если функция скрипта использует тип, отличный от перечисленных выше, или функция не компилируется при загрузке таблицы стилей в объект <xref:System.Xml.Xsl.XslTransform>, возникает исключение.  
   

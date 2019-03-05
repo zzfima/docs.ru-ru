@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130498"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981885"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Разработка приложения на основе микрослужб
 
@@ -158,7 +158,7 @@ ms.locfileid: "53130498"
 
 - Простая CRUD, однослойная, одноуровневая архитектура.
 
-- [Классическая многоуровневая архитектура](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
+- [Классическая многоуровневая архитектура](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
 - [Многоуровневая архитектура с предметно-ориентированным проектированием](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
