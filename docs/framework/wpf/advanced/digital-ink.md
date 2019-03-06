@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537477"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353131"
 ---
 # <a name="digital-ink"></a>Рукописный ввод
-В этом разделе обсуждается использование рукописного ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В большинстве случаев найден только в SDK для планшетных ПК, рукописного теперь доступен в ядро Windows Presentation Foundation. Это означает, что теперь можно разрабатывать полноценные приложений для планшетных ПК с помощью возможностей Windows Presentation Foundation.  
+В этом разделе рассматривается использование рукописного ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Традиционно доступная только в комплекте SDK для планшетных ПК, рукописный ввод теперь доступна в ядре Windows Presentation Foundation. Это означает, что теперь можно разрабатывать полноценных приложений для планшетных ПК с помощью возможности Windows Presentation Foundation.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Разделы общих сведений](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [Разделы практического руководства](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+ [Разделы общих сведений](digital-ink-overviews.md)  
+  [Разделы практического руководства](digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+ [Windows Presentation Foundation](../index.md)

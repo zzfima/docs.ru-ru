@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682960"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371675"
 ---
 # <a name="attached-events-overview"></a>Общие сведения о вложенных событиях
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] определяет компонент языка и тип события, называемый *присоединенным событием*. Концепция присоединенного события позволяет добавить обработчик для конкретного события в произвольный элемент, а не в элемент, который фактически определяет или наследует событие. В этом случае ни объект, потенциально вызывающий событие, ни конечный обрабатывающий экземпляр не определяет или иным образом не "владеет" событием.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682960"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Предполагается, что вы ознакомились с разделами [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md) и [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Предполагается, что вы ознакомились с разделами [Общие сведения о перенаправленных событиях](routed-events-overview.md) и [Обзор XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Синтаксис присоединенных событий  
@@ -36,7 +36,7 @@ ms.locfileid: "54682960"
   
  Например, ниже приведен синтаксис [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для подключения обработчика для пользовательского присоединенного события `NeedsCleaning`.  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Обратите внимание на префикс `aqua:`. Префикс необходим в этом случае, поскольку присоединенное событие является пользовательским событием, которое поступает из пользовательского сопоставленного xmlns.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682960"
   
  Как правило, присоединенное событие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не сильно отличается от перенаправленного события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Различие заключается в выборе источника события и его представления классом в качестве члена (что также влияет на синтаксис обработчика [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]).  
   
- Тем не менее, как было отмечено ранее, существующие присоединенные события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предназначены для обработки в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Гораздо чаще целью событий является включение составного элемента для передачи состояния в родительский элемент при компоновке. В этом случае событие обычно вызывается в коде и зависит от обработки класса в соответствующем родительском классе. Например, элементы в пределах <xref:System.Windows.Controls.Primitives.Selector> ожидаются для вызова присоединенного <xref:System.Windows.Controls.Primitives.Selector.Selected> обрабатываются события, который затем класс <xref:System.Windows.Controls.Primitives.Selector> класса и дальнейшим потенциальным преобразованием классом <xref:System.Windows.Controls.Primitives.Selector> класс в другое перенаправленное событие, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Дополнительные сведения о перенаправленных событиях и обработке классов см. в разделе [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Тем не менее, как было отмечено ранее, существующие присоединенные события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предназначены для обработки в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Гораздо чаще целью событий является включение составного элемента для передачи состояния в родительский элемент при компоновке. В этом случае событие обычно вызывается в коде и зависит от обработки класса в соответствующем родительском классе. Например, элементы в пределах <xref:System.Windows.Controls.Primitives.Selector> ожидаются для вызова присоединенного <xref:System.Windows.Controls.Primitives.Selector.Selected> обрабатываются события, который затем класс <xref:System.Windows.Controls.Primitives.Selector> класса и дальнейшим потенциальным преобразованием классом <xref:System.Windows.Controls.Primitives.Selector> класс в другое перенаправленное событие, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Дополнительные сведения о перенаправленных событиях и обработке классов см. в разделе [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Определение собственных присоединенных событий как перенаправленных событий  
@@ -80,10 +80,10 @@ ms.locfileid: "54682960"
   
  Например, следующий код определяет присоединенное событие `NeedsCleaning` в классе владельца`Aquarium`, используя стратегию присоединенных событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для объявления присоединенного события как перенаправленного события.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Обратите внимание, что метод, используемый для установления поля идентификатора присоединенного события, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, является фактически тот же метод, который используется для регистрации неприсоединенных перенаправленных событий. Все присоединенные события и перенаправленные события регистрируются в централизованном внутреннем хранилище. Эта реализация хранилища событий обеспечивает поддержку режима "события в качестве интерфейса", который рассматривается в разделе [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Обратите внимание, что метод, используемый для установления поля идентификатора присоединенного события, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, является фактически тот же метод, который используется для регистрации неприсоединенных перенаправленных событий. Все присоединенные события и перенаправленные события регистрируются в централизованном внутреннем хранилище. Эта реализация хранилища событий обеспечивает поддержку режима "события в качестве интерфейса", который рассматривается в разделе [Общие сведения о перенаправленных событиях](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Вызов присоединенного события WPF  
@@ -92,6 +92,6 @@ ms.locfileid: "54682960"
  Тем не менее при определении пользовательского присоединенного события на основе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модель создания вложенных событий на <xref:System.Windows.RoutedEvent>, можно использовать <xref:System.Windows.UIElement.RaiseEvent%2A> для вызова присоединенного события из любого <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement>. Вызов перенаправленного события (присоединенного или нет) требует объявления конкретного элемента в дереве элементов в качестве источника события; Этот источник указывается как <xref:System.Windows.UIElement.RaiseEvent%2A> вызывающего объекта. За определение того, какой элемент передается как источник в дереве, отвечает служба.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Общие сведения о перенаправленных событиях](routed-events-overview.md)
+- [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)
+- [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)

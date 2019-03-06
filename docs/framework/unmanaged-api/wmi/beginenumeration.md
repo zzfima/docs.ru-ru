@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369296"
 ---
 # <a name="beginenumeration-function"></a>Функция BeginEnumeration
 Сбрасывает перечислитель на начало перечисления.  
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>Параметры
 
-`vFunc`  
+`vFunc`\
 [in] Этот параметр не используется.
 
-`ptr` [in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
+`ptr`\
+[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in] Побитовое сочетание флагов или значения, описанные в ["Примечания"](#remarks) раздел, который управляет свойствами включена в перечисление.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -81,7 +82,7 @@ HRESULT BeginEnumeration (
 
 Для классов:
 
-Константа  |Значение  |Описание  |
+Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Ограничения перечисления для свойства при переопределении в определении класса. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Ограничения перечисления для свойства, переопределить в определении текущего класса и новые свойства, определенные в классе. |
@@ -105,4 +106,5 @@ HRESULT BeginEnumeration (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361165"
 ---
 # <a name="graphics"></a>Графика
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что упрощает разработчикам создание интересных пользовательских интерфейсов и содержимого.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Эффекты для точечных рисунков](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [Кисти](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [Объекты рисования](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [Геометрические объекты](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [Изображения](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [Фигуры](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [Преобразования](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [Настройки реестра графической отрисовки](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Эффекты для точечных рисунков](bitmap-effects.md)  
+ [Кисти](brushes.md)  
+ [Объекты рисования](drawings.md)  
+ [Геометрические объекты](geometries.md)  
+ [Изображения](images.md)  
+ [Фигуры](shapes.md)  
+ [Преобразования](transformations.md)  
+ [Настройки реестра графической отрисовки](graphics-rendering-registry-settings.md)  
+ [Разделы практического руководства](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Shapes.Shape>
@@ -36,6 +36,6 @@ ms.locfileid: "54662391"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Графика и мультимедиа](index.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

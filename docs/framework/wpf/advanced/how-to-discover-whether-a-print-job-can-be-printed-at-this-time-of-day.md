@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение возможности печати в заданное время суток
+title: Практическое руководство. Определение возможности печати в заданное время суток
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2abb9939917d4fc10a345b6199e2eb67054bf0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352741"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Как выполнить Определение возможности печати в заданное время суток
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Практическое руководство. Определение возможности печати в заданное время суток
 Очереди печати не всегда доступны для 24 часа в сутки. Они имеют свойства времени начала и окончания, которые могут устанавливаться отключив их в определенное время суток. Эту функцию можно, например, чтобы зарезервировать принтер для использования только определенным подразделением после 17: 00. Этот отдел будет иметь другой очереди обслуживания принтера от других отделов использовать. Устанавливается в очередь для других отделов станет недоступной после 17: 00, то время как очередь для привилегированного отдела может быть быть доступна в любое время.  
   
  Кроме того задания печати, сами можно задать для печати только в указанный промежуток времени.  
@@ -47,9 +47,9 @@ ms.locfileid: "54676696"
   
  При создании отчетов время суток, <xref:System.DateTime.ToShortTimeString%2A> метод называется также в том случае, так как этот метод подавляет лет, месяцев и дней из выходных данных. Его нельзя ограничить доступность очереди печати или печати для определенного года, месяцев или дней.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
- [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
- [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
+ [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
+ [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
  Две перегруженные версии **ReportAvailabilityAtThisTime** метод идентичны, за исключением типа, переданные им, поэтому только <xref:System.Printing.PrintQueue> версии представлена ниже.  
   
@@ -64,19 +64,19 @@ ms.locfileid: "54676696"
   
  Тем не менее, эти два свойства ничем не <xref:System.DateTime> объектов. Они являются <xref:System.Int32>задающими время как количество минут после полуночи в формате UTC. Поэтому нам придется преобразовать наш <xref:System.DateTime> объект минут после полуночи. Когда это будет сделано, метод просто проверяет ли «сейчас» между начала очереди, а также время, устанавливает флаг в значение false, если «сейчас» не между двумя значениями времени и возвращает этот флаг «до».  
   
- [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
- [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
- [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
+ [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
+ [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
  **TimeConverter.ConvertToLocalHumanReadableTime** (представленный в следующем примере кода) метод не использует все методы, появившиеся в Microsoft .NET Framework, поэтому краткое обсуждение. Этот метод имеет задачу двойного преобразования: оно должно принимать целое число минут после полуночи в формате выражения и преобразовать его в удобное для восприятия времени, и его необходимо преобразовать в местное время. Он делает это, сначала создавая <xref:System.DateTime> объект, который устанавливается значение полуночи в формате UTC, а затем использует <xref:System.DateTime.AddMinutes%2A> метод, чтобы добавить минуты, которые были переданы в метод. Эта команда возвращает новый <xref:System.DateTime> содержащий исходное время, который был передан в метод. <xref:System.DateTime.ToLocalTime%2A> Метод затем преобразует это в местное время.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
- [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
- [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
+ [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
+ [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Документы в WPF](documents-in-wpf.md)
+- [Общие сведения о печати](printing-overview.md)

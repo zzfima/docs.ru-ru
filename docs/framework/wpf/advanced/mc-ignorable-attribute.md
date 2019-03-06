@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573940"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375393"
 ---
 # <a name="mcignorable-attribute"></a>Атрибут mc: Ignorable
 Указывает, какие [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] префиксы пространства имен в файле разметки могут игнорироваться [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора. `mc:Ignorable` Атрибут поддерживает совместимость разметки для пользовательского сопоставления пространства имен и [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] управления версиями.  
@@ -59,7 +59,7 @@ ms.locfileid: "54573940"
   
  Если вы реализуете [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора, не должны вызывать реализация обработчика, синтаксического анализа или обработки ошибок для разрешения типов для любого элемента или атрибута, который определяется префикс, который определяется как `mc:Ignorable`. Но реализация обработчика по-прежнему может вызывать исключения, которые являются побочным результатом сбоя загрузки или обработки, таких как в приведенном выше примере одного дочернего элемента элемента.  
   
- По умолчанию [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора будет игнорировать содержимое внутри игнорируемого элемента. Тем не менее, можно указать дополнительный атрибут, [атрибут mc: ProcessContent](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), для продолжения обработки содержимого в пределах игнорируемого элемента следующим доступным родительским элементом.  
+ По умолчанию [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора будет игнорировать содержимое внутри игнорируемого элемента. Тем не менее, можно указать дополнительный атрибут, [атрибут mc: ProcessContent](mc-processcontent-attribute.md), для продолжения обработки содержимого в пределах игнорируемого элемента следующим доступным родительским элементом.  
   
  Можно указать несколько префиксов в атрибуте, используя один или несколько символов пробела в качестве разделителя, например: `mc:Ignorable="ignore1 ignore2"`.  
 
@@ -67,6 +67,6 @@ ms.locfileid: "54573940"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Markup.XamlReader>
-- [Атрибут PresentationOptions: Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Атрибут PresentationOptions: Freeze](presentationoptions-freeze-attribute.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Документы в WPF](documents-in-wpf.md)

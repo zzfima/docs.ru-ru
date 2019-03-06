@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375198"
 ---
 # <a name="data-binding-wpf"></a>Привязка данных (WPF)
-Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и надежный способ представления и работать с данными о приложениях. Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.  
+Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Общие сведения о привязке данных](data-binding-overview.md)  
+ [Общие сведения об источниках привязки](binding-sources-overview.md)  
+ [Общие сведения о шаблонах данных](data-templating-overview.md)  
+ [Общие сведения об объявлении привязок](binding-declarations-overview.md)  
+ [Разделы практического руководства](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ ms.locfileid: "33555782"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Перетаскивание](../advanced/drag-and-drop.md)  
   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Привязка данных](../advanced/optimizing-performance-data-binding.md)  
   
- [Пошаговое руководство. Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Пошаговое руководство: Кэширование данных приложения WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

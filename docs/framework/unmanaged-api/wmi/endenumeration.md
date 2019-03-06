@@ -16,35 +16,35 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f80503277d6a5d748dffa7783a19c6353b2e7f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351402"
 ---
 # <a name="endenumeration-function"></a>Функция EndEnumeration
-Завершает работу вызовом последовательности перечисления [функция BeginEnumeration](beginenumeration.md).  
+
+Завершает работу вызовом последовательности перечисления [функция BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT EndEnumeration (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`vFunc`  
+`vFunc`\
 [in] Этот параметр не используется.
 
-`ptr`  
+`ptr`\
 [in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
-
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -54,19 +54,21 @@ HRESULT EndEnumeration (
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) метод.
 
-Вызов `EndEnumeration` функция не является обязательным, но рекомендуется, так как он освобождает ресурсы, связанные с перечислением. Тем не менее важными ресурсами освобождаются автоматически при запуске следующего перечисления или объект освобождается.
+Вызов `EndEnumeration` функция не является обязательным, но рекомендуется, так как он освобождает ресурсы, связанные с перечислением. Однако ресурсы освобождаются автоматически при запуске следующего перечисления или объект освобождается.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

@@ -2,15 +2,9 @@
 title: Справочник по Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- language reference
-- Visual Basic code, language reference
+  - language reference
+  - 'Visual Basic code, language reference'
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083912"
 ---
 # <a name="reference-visual-basic"></a>Справочник по Visual Basic
 Этот раздел содержит ссылки на сведения о различных аспектах программирования на Visual Basic.  
@@ -27,13 +21,6 @@ ms.locfileid: "44083912"
   
  [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Ссылки на полный спецификации языка Visual Basic, который содержит подробные сведения о всех аспектах языка.  
-  
-## <a name="reference"></a>Ссылка  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- Это пространство имен содержит классы элементов управления Visual Basic Power Packs. Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms.  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- Это пространство имен предоставляет компонент, позволяющий напечатать факсимильное изображение формы в том виде, в каком она отображается на экране.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие элементы пользовательского интерфейса (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  

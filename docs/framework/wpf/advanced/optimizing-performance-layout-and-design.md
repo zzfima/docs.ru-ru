@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623876"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367951"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Оптимизация производительности: Разметка и разработка
 Разработка приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может повлиять на его производительность в результате создания ненужных служебных данных при вычислении макета и проверки ссылок на объекты. Конструирование объектов, особенно во время выполнения, может повлиять на характеристики производительности приложения.  
@@ -49,7 +49,7 @@ ms.locfileid: "54623876"
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Используйте наиболее эффективную панель там, где возможно  
  Сложность прохода разметки непосредственно основана на поведения <xref:System.Windows.Controls.Panel>-используемых элементов, производных. Например <xref:System.Windows.Controls.Grid> или <xref:System.Windows.Controls.StackPanel> элемент управления предоставляет гораздо больше возможностей, чем <xref:System.Windows.Controls.Canvas> элемента управления. Ценой этого значительного увеличения функциональности является увеличение затрат производительности. Тем не менее если не требуется функциональность, <xref:System.Windows.Controls.Grid> предоставляет элемент управления, следует использовать менее затратные варианты, например <xref:System.Windows.Controls.Canvas> или настраиваемую панель.  
   
- Дополнительные сведения см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Дополнительные сведения см. в разделе [Общие сведения о панелях](../controls/panels-overview.md).  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>Обновление вместо замены RenderTransform  
  Можно обновить <xref:System.Windows.Media.Transform> вместо замены его в качестве значения <xref:System.Windows.UIElement.RenderTransform%2A> свойство. Это особенно актуально в скриптах, включающих анимацию. Обновление существующего <xref:System.Windows.Media.Transform>, вы избегаете инициирования ненужных вычислений разметки.  
@@ -64,19 +64,19 @@ ms.locfileid: "54623876"
   
  В следующем примере кода демонстрируется создание дерева сверху вниз.  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>См. также
-- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+- [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
+- [Планирование производительности приложения](planning-for-application-performance.md)
+- [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
+- [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
+- [Поведение объекта](optimizing-performance-object-behavior.md)
+- [Ресурсы приложений](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Привязка данных](optimizing-performance-data-binding.md)
+- [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
+- [Макет](layout.md)

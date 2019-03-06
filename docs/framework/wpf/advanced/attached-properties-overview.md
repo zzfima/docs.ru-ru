@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370128"
 ---
 # <a name="attached-properties-overview"></a>Общие сведения о вложенных свойствах зависимостей
 
@@ -20,7 +20,7 @@ ms.locfileid: "54706236"
 
 ## Предварительные требования <a name="prerequisites"></a>
 
-Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также понимать XAML и знаете, как создавать приложения WPF.
+Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также понимать XAML и знаете, как создавать приложения WPF.
 
 ## Зачем использовать вложенные свойства <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ ms.locfileid: "54706236"
 
 Ниже приведен пример как можно задать <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> в XAML:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Обратите внимание, что использование похож на статическое свойство; Вы всегда ссылаться на тип <xref:System.Windows.Controls.DockPanel> , является владельцем и регистрирует присоединенное свойство, а не ссылается на экземпляр, заданный по имени.
 
-Кроме того, поскольку присоединенное свойство в XAML является атрибутом, который устанавливается в разметке, операция задания является значимой. Нельзя напрямую получить свойство в XAML, хотя существуют некоторые косвенные механизмы для сравнения значений, такие как триггеры в стилях (подробнее см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+Кроме того, поскольку присоединенное свойство в XAML является атрибутом, который устанавливается в разметке, операция задания является значимой. Нельзя напрямую получить свойство в XAML, хотя существуют некоторые косвенные механизмы для сравнения значений, такие как триггеры в стилях (подробнее см. в разделе [Стилизация и использование шаблонов](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Реализация присоединенного свойства в WPF
 
@@ -64,8 +64,8 @@ ms.locfileid: "54706236"
 
 В следующем примере кода показано задание присоединенного свойства в коде. В этом примере `myCheckBox` является экземпляром класса <xref:System.Windows.Controls.CheckBox> класса.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Аналогично XAML регистр, если `myCheckBox` бы еще не добавлен как дочерний элемент элемента `myDockPanel` третьей строкой кода, то Четвертая строка кода не приведет к исключению, но значение свойства не будет взаимодействовать с <xref:System.Windows.Controls.DockPanel> родительского и, следовательно, не имела бы смысла. Только <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> заданное для дочернего элемента с наличием <xref:System.Windows.Controls.DockPanel> родительский элемент будет влиять на поведение в отображаемом приложении. (В этом случае вы может задать присоединенное свойство, а затем подключиться к дереву. Аналогично, можно подключиться к дереву, а затем задать присоединенное свойство. Любая последовательность действий дает тот же результат.)
 
@@ -73,7 +73,7 @@ ms.locfileid: "54706236"
 
 При регистрации свойства <xref:System.Windows.FrameworkPropertyMetadata> определяет характеристики свойства, такие как ли свойство влиять на отрисовку, измерение и т. д. Метаданные для присоединенного свойства, как правило, не отличаются от задаваемых для свойства зависимостей. Если задать значение по умолчанию в переопределении для метаданных присоединенного свойства, это значение становится значением по умолчанию неявного присоединенного свойства для экземпляров переопределяющего класса. В частности, значение по умолчанию передается, если некоторый процесс запрашивает значение присоединенного свойства с помощью метода доступа `Get` для этого свойства, указывая экземпляр класса, в котором заданы метаданные, и значение для этого присоединенного свойства не задано иным образом.
 
-Если вы хотите разрешить наследование значений свойства, следует использовать присоединенные свойства, вместо неприсоединенных свойств зависимостей. Подробнее см. в разделе [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Если вы хотите разрешить наследование значений свойства, следует использовать присоединенные свойства, вместо неприсоединенных свойств зависимостей. Подробнее см. в разделе [Наследование значения свойства](property-value-inheritance.md).
 
 ## Настраиваемые присоединенные свойства <a name="custom"></a>
 
@@ -83,7 +83,7 @@ ms.locfileid: "54706236"
 
 Другой сценарий использования присоединенного свойства — когда класс представляет службу и требуется реализовать более прозрачную интеграцию службы классами.
 
-Еще одним сценарием является для получения поддержки конструктора WPF для Visual Studio, такие как **свойства** редактирование окна. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Еще одним сценарием является для получения поддержки конструктора WPF для Visual Studio, такие как **свойства** редактирование окна. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md).
 
 Как упоминалось ранее, свойство следует регистрировать как присоединенное, если требуется использовать наследование значения свойства.
 
@@ -118,8 +118,8 @@ ms.locfileid: "54706236"
 
 В следующем примере показано регистрации свойства зависимостей (с помощью <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метод), а также **Get_PropertyName_** и **Set_PropertyName_** методы доступа. В этом примере именем присоединенного свойства является `IsBubbleSource`. Таким образом, методы доступа должны называться `GetIsBubbleSource` и `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Атрибуты присоединенного свойства
 
@@ -135,16 +135,16 @@ WPF определяет несколько [!INCLUDE[TLA2#tla_netframewkattr#pl
 
 ## Дополнительные сведения о вложенных свойствах <a name="more"></a>
 
--   Дополнительные сведения о создании присоединенного свойства см. в разделе [Регистрация присоединенного свойства](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Дополнительные сведения о создании присоединенного свойства см. в разделе [Регистрация присоединенного свойства](how-to-register-an-attached-property.md).
 
--   Более сложные сценарии использования свойств зависимостей и присоединенных свойств см. в разделе [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Более сложные сценарии использования свойств зависимостей и присоединенных свойств см. в разделе [Пользовательские свойства зависимостей](custom-dependency-properties.md).
 
 -   Свойство можно также зарегистрировать как присоединенное свойство и как свойство зависимостей, но тем не менее предоставить реализации "оболочки". В этом случае свойство можно задать как для данного элемента, так и для любого элемента с помощью синтаксиса подключенных свойств XAML. Например, свойство с соответствующим сценарием для стандартной и присоединенной <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.DependencyProperty>
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Регистрация присоединенного свойства](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Пользовательские свойства зависимостей](custom-dependency-properties.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Регистрация присоединенного свойства](how-to-register-an-attached-property.md)

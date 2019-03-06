@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bb8379776066802277886b54c60c502ad58768e0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748171"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361906"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста
 В этом примере показано, как создать элемент управления, который имеет клавишу доступа и поддерживает обтекание текстом. В примере используется <xref:System.Windows.Controls.Label> управления для демонстрации этих понятий.  
@@ -24,7 +24,7 @@ ms.locfileid: "56748171"
   
  <xref:System.Windows.Controls.Label> Управления не поддерживает обтекание текстом. Если нужна метка, которая охватывает несколько строк, то можно вложить другой элемент, который поддерживает обтекание текстом, и поместить этот элемент внутрь метки. В следующем примере показано, как использовать <xref:System.Windows.Controls.TextBlock> для создания метки, которая охватывает несколько строк текста.  
   
- [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
+ [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **Добавление клавиши доступа и обтекания текстом в метку**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "56748171"
   
  В следующем примере показано, как создать <xref:System.Windows.Controls.Label> который имеет клавишу доступа и поддерживает обтекание текстом. Чтобы включить обтекание текстом, в примере задается <xref:System.Windows.Controls.AccessText.TextWrapping%2A> свойство и использует знак подчеркивания для указания клавиши доступа. (Символ, который следует сразу за символом подчеркивания, является клавишей доступа).  
   
- [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>См. также
 - [Практическое руководство. Установка целевого свойства метки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

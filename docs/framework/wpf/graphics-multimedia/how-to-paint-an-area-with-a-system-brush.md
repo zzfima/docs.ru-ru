@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Закраска области с помощью системной кисти
+title: Практическое руководство. Закраска области с помощью системной кисти
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system brushes [WPF], painting with
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 6977410a596a943a23c3841e80edf4cfed1bf6b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644941"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364116"
 ---
-# <a name="how-to-paint-an-area-with-a-system-brush"></a>Как выполнить Закраска области с помощью системной кисти
+# <a name="how-to-paint-an-area-with-a-system-brush"></a>Практическое руководство. Закраска области с помощью системной кисти
 <xref:System.Windows.SystemColors> Класс предоставляет доступ к системным кистям и цветам, такие как <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, и <xref:System.Windows.SystemColors.DesktopBrush%2A>. Системная кисть — это <xref:System.Windows.Media.SolidColorBrush> объект, который закрашивает область с помощью указанного системного цвета. Системная кисть всегда дает сплошную заливку; ее нельзя использовать для создания градиентной заливки.  
   
  Системные кисти можно использовать как статический или динамический ресурс. Используйте динамический ресурс, если нужно автоматическое обновление кисти при изменении пользователем кисти во время выполнения приложения; в противном случае используйте статический ресурс. Класс SystemColors содержит разнообразные статические свойства, которые следуют строгому правилу именования:  
@@ -34,19 +34,19 @@ ms.locfileid: "54644941"
   
      Возвращает динамическую ссылку <xref:System.Windows.Media.Color> структуру указанного системного цвета.  
   
- Системный цвет является <xref:System.Windows.Media.Color> структуры, который может использоваться для настройки кисти. Например, можно создать с помощью системных цветов, задав градиент <xref:System.Windows.Media.GradientStop.Color%2A> свойства <xref:System.Windows.Media.LinearGradientBrush> градиента объекта с системными цветами. Например, см. в разделе [использование системных цветов в градиенте](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Системный цвет является <xref:System.Windows.Media.Color> структуры, который может использоваться для настройки кисти. Например, можно создать с помощью системных цветов, задав градиент <xref:System.Windows.Media.GradientStop.Color%2A> свойства <xref:System.Windows.Media.LinearGradientBrush> градиента объекта с системными цветами. Например, см. в разделе [использование системных цветов в градиенте](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется динамическая ссылка на системную кисть для установки фона кнопки.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
   
  В следующем примере используется статическая ссылка на системную кисть для установки фона кнопки.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
   
- Пример, демонстрирующий использование системных цветов в градиенте, см. в разделе [использование системных цветов в градиенте](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Пример, демонстрирующий использование системных цветов в градиенте, см. в разделе [использование системных цветов в градиенте](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>См. также
-- [Использование системных цветов в градиенте](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)
-- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Использование системных цветов в градиенте](how-to-use-system-colors-in-a-gradient.md)
+- [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)

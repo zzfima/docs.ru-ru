@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630857"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379696"
 ---
 # <a name="document-serialization-and-storage"></a>Сериализация и хранение документов
 Microsoft .NET Framework предоставляет мощную среду для создания и отображения документов высокого качества.  Улучшенные возможности, поддерживающие фиксированные и потоковые документы, улучшенные элементы управления просмотром в сочетании с мощными возможностями двумерной и трехмерной графики позволяют вывести приложения .NET Framework на новый уровень качества и взаимодействия с пользователем.  Возможность гибко управлять представлением документа в памяти является ключевой функцией программы .NET Framework, а также возможность эффективно сохранять и загружать документы из хранилища данных необходима практически во всех приложениях.  Процесс преобразования документа из внутреннего представления в памяти во внешнее хранилище данных называется сериализацией.  Обратный процесс чтения хранилища данных и воссоздания исходного экземпляра в памяти называется десериализацией.  
@@ -41,7 +41,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
     -   Поддержка интерфейса пользователя для пользовательских параметров и настроек среды выполнения.  
   
 ### <a name="xps-print-path"></a>Способ печати XPS  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати также предоставляет расширяемый механизм записи документов посредством вывода на печать.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] служит как формат файла документа и имеет собственный формат очереди печати для [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] можно отправлять непосредственно на совместимые с [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] принтеры, без преобразования в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md).  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати также предоставляет расширяемый механизм записи документов посредством вывода на печать.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] служит как формат файла документа и имеет собственный формат очереди печати для [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] можно отправлять непосредственно на совместимые с [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] принтеры, без преобразования в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](printing-overview.md).  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Подключаемые сериализаторы  
@@ -54,11 +54,11 @@ Microsoft .NET Framework предоставляет мощную среду дл
   
  В следующем примере показано приложение, использующее <xref:System.Windows.Documents.Serialization.SerializerProvider> метод в свойстве «Свойство PlugInFileFilter».  Свойство PlugInFileFilter перечисляет установленные подключаемые модули и создает строку фильтра с доступными файловыми параметрами для <xref:Microsoft.Win32.SaveFileDialog>.  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  После выбора пользователем имя выходного файла, в следующем примере показано использование <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> для сохранения заданного документа в указанном формате.  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>Установка подключаемых сериализаторов  
@@ -77,6 +77,6 @@ Microsoft .NET Framework предоставляет мощную среду дл
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Документы в WPF](documents-in-wpf.md)
+- [Общие сведения о печати](printing-overview.md)
 - [XML Paper Specification: обзор](https://go.microsoft.com/fwlink?LinkID=106246)

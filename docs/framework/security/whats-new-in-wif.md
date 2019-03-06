@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360234"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Новые возможности Windows Identity Foundation 4.5
 Первая версия Windows Identity Foundation (WIF) поставлялась в виде отдельного загружаемого файла и называлась WIF 3.5, поскольку она вышла одновременно с .NET 3.5 с пактом обновления 1 (SP1). Начиная с версии .NET 4.5 WIF является частью .NET framework. Прямая доступность классов WIF на этой платформе обеспечивает гораздо более глубокую интеграцию удостоверения на базе утверждений с платформой .NET, благодаря которой использовать утверждения становится проще. Приложения, написанные для WIF 3.5, должны быть изменены для использования новой модели. Дополнительные сведения см. в разделе [Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "55275422"
   
 -   Декларативная настройка WIF теперь выполняется в элементах [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) и [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Дополнительные сведения о настройке WIF см. в разделе [Справочник по конфигурации WIF](../../../docs/framework/security/wif-configuration-reference.md).  
   
-## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>Другие важные изменения .NET и возможности, связанные с интеграцией WIF с .NET  
+## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>Другие важные изменения .NET и функции, связанные с интеграцией WIF с .NET  
   
 -   Возможность выполнения авторизации на основе утверждений теперь является частью .NET Framework. Можно настроить объект <xref:System.Security.Claims.ClaimsAuthorizationManager>, а затем использовать классы <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> и <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> для осуществления императивной и декларативной проверки доступа к коду. Авторизация на основе утверждений обеспечивает большую гибкость и детализацию по сравнению с обычной проверкой доступа на основе ролей. Кроме того, она позволяет лучше отделить политику авторизации от бизнес-логики, так как в бизнес-логике можно использовать проверку доступа на базе конкретного утверждения или набора утверждений, а политику авторизации для этих утверждений можно настроить декларативно в элементе [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md).  
   

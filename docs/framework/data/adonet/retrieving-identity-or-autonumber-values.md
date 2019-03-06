@@ -5,28 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: 367caeb1d38203c7a6fe7ff576a1cd8c8eb1d3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63db9aa4d6be0a01b4b5b354a27536c614548c20
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355562"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Извлечение идентификации или значений автонумерации
 
 Первичным ключом в реляционной базе данных является столбец или сочетание столбцов, которые всегда содержат уникальные значения. Если известно значение первичного ключа, то можно найти строку, которая содержит это значение. Такие СУРБД, как SQL Server, Oracle и Microsoft Access/Jet, поддерживают создание столбцов с автоматически увеличивающимися значениями, которые могут назначаться в качестве первичных ключей. Эти значения формируются сервером по мере добавления строк в таблицу. В SQL Server задается свойство идентификатора столбца, в Oracle создается последовательность Sequence, а в Microsoft Access создается столбец AutoNumber.
 
- Для формирования автоматически увеличивающихся значений также можно использовать объект <xref:System.Data.DataColumn>, присвоив его свойству <xref:System.Data.DataColumn.AutoIncrement%2A> значение true. Но это может привести к появлению повторяющихся значений в отдельных экземплярах <xref:System.Data.DataTable>, если в нескольких клиентских приложениях будут независимо формироваться автоматически увеличивающиеся значения. Применение сервера для формирования автоматически увеличивающихся значений позволяет устранить потенциальные конфликты, поскольку каждый пользователь может получать создаваемые сервером значения для каждой вставляемой строки.
+Для формирования автоматически увеличивающихся значений также можно использовать объект <xref:System.Data.DataColumn>, присвоив его свойству <xref:System.Data.DataColumn.AutoIncrement%2A> значение true. Но это может привести к появлению повторяющихся значений в отдельных экземплярах <xref:System.Data.DataTable>, если в нескольких клиентских приложениях будут независимо формироваться автоматически увеличивающиеся значения. Применение сервера для формирования автоматически увеличивающихся значений позволяет устранить потенциальные конфликты, поскольку каждый пользователь может получать создаваемые сервером значения для каждой вставляемой строки.
 
- Во время вызова метода `Update` объекта `DataAdapter` база данных может отправлять данные обратно в приложение ADO.NET в качестве выходных параметров или в виде первой возвращенной записи результирующего набора инструкции SELECT, выполняемой в том же пакете, что и инструкция INSERT. Среда ADO.NET позволяет получать эти значения и обновлять соответствующие столбцы в обновляемом объекте <xref:System.Data.DataRow>.
+Во время вызова метода `Update` объекта `DataAdapter` база данных может отправлять данные обратно в приложение ADO.NET в качестве выходных параметров или в виде первой возвращенной записи результирующего набора инструкции SELECT, выполняемой в том же пакете, что и инструкция INSERT. Среда ADO.NET позволяет получать эти значения и обновлять соответствующие столбцы в обновляемом объекте <xref:System.Data.DataRow>.
 
- Некоторые СУБД, такие как Microsoft Access Jet, не поддерживают выходные параметры и не могут обрабатывать несколько инструкций в одном пакете. Работая с ядром базы данных Jet, новое значение AutoNumber, создаваемое для вставленной строки, можно получить, выполнив отдельную команду SELECT в обработчике событий `RowUpdated` объекта `DataAdapter`.
+Некоторые СУБД, такие как Microsoft Access Jet, не поддерживают выходные параметры и не могут обрабатывать несколько инструкций в одном пакете. Работая с ядром базы данных Jet, новое значение AutoNumber, создаваемое для вставленной строки, можно получить, выполнив отдельную команду SELECT в обработчике событий `RowUpdated` объекта `DataAdapter`.
 
 > [!NOTE]
 > Подход, альтернативный по отношению к использованию автоматически увеличивающегося значения, состоит в применении метода <xref:System.Guid.NewGuid%2A> объекта <xref:System.Guid> для формирования идентификатора GUID (глобально уникального идентификатора) на клиентском компьютере, который может копироваться на сервер при вставке каждой новой строки. Метод `NewGuid` формирует 16-байтовое двоичное значение с помощью алгоритма, который обеспечивает высокую вероятность того, что ни одно из полученных значений не будет повторяться. В базе данных SQL Server идентификатор GUID хранится в столбце `uniqueidentifier`, который может автоматически создаваться в SQL Server с помощью функции `NEWID()` языка Transact-SQL. Использование идентификатора GUID в качестве первичного ключа может привести к снижению производительности. SQL Server обеспечивает поддержку `NEWSEQUENTIALID()` функцию, которая создает последовательные значения идентификатора GUID, глобальная уникальность не гарантируется, но которые могут быть более эффективно индексировать.
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>Получение значений столбца идентификатора в базе данных SQL Server
- При работе с Microsoft SQL Server можно создать хранимую процедуру с выходным параметром, возвращающим значение идентификатора для вставленной строки. В следующей таблице описаны три функции Transact-SQL, применимые в SQL Server, с помощью которых можно извлекать значения столбцов идентификаторов.
+
+При работе с Microsoft SQL Server можно создать хранимую процедуру с выходным параметром, возвращающим значение идентификатора для вставленной строки. В следующей таблице описаны три функции Transact-SQL, применимые в SQL Server, с помощью которых можно извлекать значения столбцов идентификаторов.
 
 |Функция|Описание|
 |--------------|-----------------|
@@ -45,21 +46,22 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
- После этого данную хранимую процедуру можно указать в качестве источника <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> объекта <xref:System.Data.SqlClient.SqlDataAdapter>. Свойство <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> объекта <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> должно иметь значение <xref:System.Data.CommandType.StoredProcedure>. Получение выходного значения идентификатора осуществляется путем создания объекта <xref:System.Data.SqlClient.SqlParameter>, который имеет свойство <xref:System.Data.ParameterDirection> со значением <xref:System.Data.ParameterDirection.Output>. При `InsertCommand` — обработано, автоматически увеличивающееся значение идентификатора возвращается и помещаются в **CategoryID** столбца текущей строки, если задать <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> свойство команды вставки имеет значение `UpdateRowSource.OutputParameters` или `UpdateRowSource.Both`.
+После этого данную хранимую процедуру можно указать в качестве источника <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> объекта <xref:System.Data.SqlClient.SqlDataAdapter>. Свойство <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> объекта <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> должно иметь значение <xref:System.Data.CommandType.StoredProcedure>. Получение выходного значения идентификатора осуществляется путем создания объекта <xref:System.Data.SqlClient.SqlParameter>, который имеет свойство <xref:System.Data.ParameterDirection> со значением <xref:System.Data.ParameterDirection.Output>. При `InsertCommand` — обработано, автоматически увеличивающееся значение идентификатора возвращается и помещаются в **CategoryID** столбца текущей строки, если задать <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> свойство команды вставки имеет значение `UpdateRowSource.OutputParameters` или `UpdateRowSource.Both`.
 
- Если в команде вставки выполняется пакет, который включает и инструкцию INSERT, и инструкцию SELECT, возвращающую новое значение идентификатора, то это новое значение можно получить, задав свойство `UpdatedRowSource` команды вставки, равное `UpdateRowSource.FirstReturnedRecord`.
+Если в команде вставки выполняется пакет, который включает и инструкцию INSERT, и инструкцию SELECT, возвращающую новое значение идентификатора, то это новое значение можно получить, задав свойство `UpdatedRowSource` команды вставки, равное `UpdateRowSource.FirstReturnedRecord`.
 
- [!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
- [!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]
+[!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
+[!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]
 
 ## <a name="merging-new-identity-values"></a>Слияние новых значений идентификаторов
- Распространенный сценарий состоит в вызове метода `GetChanges` объекта `DataTable` для создания копии, которая содержит только изменившиеся строки, после чего эта новая копия используется при вызове метода `Update` объекта `DataAdapter`. Это особенно удобно, если требуется упаковать и передать изменившиеся строки для отдельного компонента, который выполняет обновление. После обновления эта копия может содержать новые значения идентификаторов, которые затем должны быть переданы обратно в оригинал `DataTable` для слияния. Причем новые значения идентификаторов, по всей вероятности, будут отличаться от исходных значений в `DataTable`. Чтобы выполнить это слияние, исходные значения **AutoIncrement** столбцы в копии должны сохраняться, чтобы иметь возможность находить и обновлять существующие строки в исходном `DataTable`, вместо того чтобы добавлять новые строки, содержащие новые значения идентификаторов. Однако по умолчанию эти первоначальные значения теряются после вызова метода `Update` объекта `DataAdapter`, поскольку для каждой обновляемой строки `AcceptChanges` неявно вызывается метод `DataRow`.
 
- Существует два способа сохранения первоначальных значений `DataColumn` в объекте `DataRow` во время обновления `DataAdapter`.
+Распространенный сценарий состоит в вызове метода `GetChanges` объекта `DataTable` для создания копии, которая содержит только изменившиеся строки, после чего эта новая копия используется при вызове метода `Update` объекта `DataAdapter`. Это особенно удобно, если требуется упаковать и передать изменившиеся строки для отдельного компонента, который выполняет обновление. После обновления эта копия может содержать новые значения идентификаторов, которые затем должны быть переданы обратно в оригинал `DataTable` для слияния. Причем новые значения идентификаторов, по всей вероятности, будут отличаться от исходных значений в `DataTable`. Чтобы выполнить это слияние, исходные значения **AutoIncrement** столбцы в копии должны сохраняться, чтобы иметь возможность находить и обновлять существующие строки в исходном `DataTable`, вместо того чтобы добавлять новые строки, содержащие новые значения идентификаторов. Однако по умолчанию эти первоначальные значения теряются после вызова метода `Update` объекта `DataAdapter`, поскольку для каждой обновляемой строки `AcceptChanges` неявно вызывается метод `DataRow`.
 
--   Первый способ сохранения первоначальных значений состоит в присвоении свойству `AcceptChangesDuringUpdate` объекта `DataAdapter` значения `false`. Это влияет на каждый объект `DataRow` в обновляемом объекте `DataTable`. Дополнительные сведения и пример кода см. в разделе <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.
+Существует два способа сохранения первоначальных значений `DataColumn` в объекте `DataRow` во время обновления `DataAdapter`.
 
--   Второй способ предусматривает применение в обработчике событий `RowUpdated` объекта `DataAdapter` кода, в котором свойству <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> присваивается значение <xref:System.Data.UpdateStatus.SkipCurrentRow>. Значение `DataRow` обновляется, но первоначальное значение каждого объекта `DataColumn` сохраняется. Этот способ позволяет сохранять первоначальные значения одних строк, но не других. Например, в коде можно сохранить первоначальные значения добавляемых строк, а не изменяемых или удаляемых строк путем проверки значения <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> с последующим присваиванием свойству <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> значения <xref:System.Data.UpdateStatus.SkipCurrentRow> только для строк со свойством `StatementType` равным `Insert`.
+- Первый способ сохранения первоначальных значений состоит в присвоении свойству `AcceptChangesDuringUpdate` объекта `DataAdapter` значения `false`. Это влияет на каждый объект `DataRow` в обновляемом объекте `DataTable`. Дополнительные сведения и пример кода см. в разделе <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.
+
+- Второй способ предусматривает применение в обработчике событий `RowUpdated` объекта `DataAdapter` кода, в котором свойству <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> присваивается значение <xref:System.Data.UpdateStatus.SkipCurrentRow>. Значение `DataRow` обновляется, но первоначальное значение каждого объекта `DataColumn` сохраняется. Этот способ позволяет сохранять первоначальные значения одних строк, но не других. Например, в коде можно сохранить первоначальные значения добавляемых строк, а не изменяемых или удаляемых строк путем проверки значения <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> с последующим присваиванием свойству <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> значения <xref:System.Data.UpdateStatus.SkipCurrentRow> только для строк со свойством `StatementType` равным `Insert`.
 
 Если любой из этих способов используется для сохранения первоначальных значений в объекте `DataRow` во время обновления `DataAdapter`, то в приложении ADO.NET выполняется ряд действий по замене текущих значений `DataRow` на новые значения, возвращаемые в качестве выходных параметров или в виде первой возвращаемой строки результирующего набора, с сохранением первоначального значения в каждом `DataColumn`. Сначала вызывается метод `AcceptChanges` объекта `DataRow` для сохранения текущих значений в качестве первоначальных значений, а затем присваиваются новые значения. После этого у объектов `DataRows`, у которых свойство <xref:System.Data.DataRow.RowState%2A> равно <xref:System.Data.DataRowState.Added>, значение этого свойства `RowState` заменяется на <xref:System.Data.DataRowState.Modified>, что может не соответствовать ожиданиям.
 
@@ -75,7 +77,8 @@ SET @Identity = SCOPE_IDENTITY()
 |<xref:System.Data.UpdateRowSource.OutputParameters>|Вызывается метод `AcceptChanges`, и все выходные параметры сопоставляются с измененной строкой в `DataTable`, в связи с чем свойству `RowState` присваивается значение `Modified`. Если выходные параметры отсутствуют, то `RowState` становится равным `Unchanged`.|
 
 ### <a name="example"></a>Пример
- В этом примере демонстрируется извлечение измененных строк из `DataTable` и использование объекта <xref:System.Data.SqlClient.SqlDataAdapter> для обновления источника данных и получения нового значения столбца идентификаторов. В <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> выполняются две инструкции Transact-SQL; первая из них представляет собой инструкцию INSERT, а вторая является инструкцией SELECT, в которой для получения значения идентификатора используется функция SCOPE_IDENTITY.
+
+В этом примере демонстрируется извлечение измененных строк из `DataTable` и использование объекта <xref:System.Data.SqlClient.SqlDataAdapter> для обновления источника данных и получения нового значения столбца идентификаторов. В <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> выполняются две инструкции Transact-SQL; первая из них представляет собой инструкцию INSERT, а вторая является инструкцией SELECT, в которой для получения значения идентификатора используется функция SCOPE_IDENTITY.
 
 ```sql
 INSERT INTO dbo.Shippers (CompanyName)
@@ -84,39 +87,41 @@ SELECT ShipperID, CompanyName FROM dbo.Shippers
 WHERE ShipperID = SCOPE_IDENTITY();
 ```
 
- Свойство `UpdatedRowSource` команды вставки задается равным `UpdateRowSource.FirstReturnedRow`, а свойство <xref:System.Data.MissingSchemaAction> объекта `DataAdapter` задается равным `MissingSchemaAction.AddWithKey`. Объект `DataTable` заполняется, и в коде происходит добавление новой строки к `DataTable`. Затем измененные строки извлекаются в новый объект `DataTable`, передаваемый в `DataAdapter`, с помощью которого после этого происходит обновление на сервере.
+Свойство `UpdatedRowSource` команды вставки задается равным `UpdateRowSource.FirstReturnedRow`, а свойство <xref:System.Data.MissingSchemaAction> объекта `DataAdapter` задается равным `MissingSchemaAction.AddWithKey`. Объект `DataTable` заполняется, и в коде происходит добавление новой строки к `DataTable`. Затем измененные строки извлекаются в новый объект `DataTable`, передаваемый в `DataAdapter`, с помощью которого после этого происходит обновление на сервере.
 
- [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
- [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]
+[!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
+[!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]
 
- В обработчике событий `OnRowUpdated` проверяется значение <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> свойства <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs>, чтобы определить, была ли вставлена данная строка. Если результат этой проверки является положительным, то свойство <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> задается равным <xref:System.Data.UpdateStatus.SkipCurrentRow>. Строка обновляется, но первоначальные значения в строке сохраняются. В основной части рассматриваемой процедуры вызывается метод <xref:System.Data.DataSet.Merge%2A> для слияния нового значения идентификатора с оригинальным значением `DataTable`, и в конечном счете вызывается метод `AcceptChanges`.
+В обработчике событий `OnRowUpdated` проверяется значение <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> свойства <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs>, чтобы определить, была ли вставлена данная строка. Если результат этой проверки является положительным, то свойство <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> задается равным <xref:System.Data.UpdateStatus.SkipCurrentRow>. Строка обновляется, но первоначальные значения в строке сохраняются. В основной части рассматриваемой процедуры вызывается метод <xref:System.Data.DataSet.Merge%2A> для слияния нового значения идентификатора с оригинальным значением `DataTable`, и в конечном счете вызывается метод `AcceptChanges`.
 
- [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
- [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]
+[!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
+[!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Получение значений Autonumber в программе Microsoft Access
- В этом разделе представлен образец, показывающий, как получить значения `Autonumber` из базы данных Jet 4.0. Ядро базы данных Jet не поддерживает выполнение нескольких инструкций в пакете или использование выходных параметров, поэтому использовать какой-либо из описанных выше методов для возврата нового значения `Autonumber`, присвоенного вставленной строке, нельзя. Тем не менее, можно добавить код для `RowUpdated` обработчик событий, который выполняет отдельные SELECT @@IDENTITY инструкции для получения нового `Autonumber` значение.
+
+В этом разделе представлен образец, показывающий, как получить значения `Autonumber` из базы данных Jet 4.0. Ядро базы данных Jet не поддерживает выполнение нескольких инструкций в пакете или использование выходных параметров, поэтому использовать какой-либо из описанных выше методов для возврата нового значения `Autonumber`, присвоенного вставленной строке, нельзя. Тем не менее, можно добавить код для `RowUpdated` обработчик событий, который выполняет отдельные SELECT @@IDENTITY инструкции для получения нового `Autonumber` значение.
 
 ### <a name="example"></a>Пример
- Вместо добавления сведений о схеме с использованием `MissingSchemaAction.AddWithKey` в этом примере конфигурация `DataTable` настраивается с помощью правильной схемы до вызова <xref:System.Data.OleDb.OleDbDataAdapter> для заполнения `DataTable`. В этом случае **CategoryID** столбце настроено на уменьшение значения в каждой вставляемой строке, начиная с нуля, задав <xref:System.Data.DataColumn.AutoIncrement%2A> для `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0, и <xref:System.Data.DataColumn.AutoIncrementStep%2A> значение -1. После этого производится добавление двух новых строк и вызывается метод `GetChanges` для добавления изменившихся строк в новый объект `DataTable`, который передан методу `Update`.
 
- [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
- [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
+Вместо добавления сведений о схеме с использованием `MissingSchemaAction.AddWithKey` в этом примере конфигурация `DataTable` настраивается с помощью правильной схемы до вызова <xref:System.Data.OleDb.OleDbDataAdapter> для заполнения `DataTable`. В этом случае **CategoryID** столбце настроено на уменьшение значения в каждой вставляемой строке, начиная с нуля, задав <xref:System.Data.DataColumn.AutoIncrement%2A> для `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 0, и <xref:System.Data.DataColumn.AutoIncrementStep%2A> значение -1. После этого производится добавление двух новых строк и вызывается метод `GetChanges` для добавления изменившихся строк в новый объект `DataTable`, который передан методу `Update`.
 
- В обработчике событий `RowUpdated` используется то же открытое соединение <xref:System.Data.OleDb.OleDbConnection>, что и в инструкции `Update` объекта `OleDbDataAdapter`. В нем происходит проверка значения `StatementType` свойства <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> для вставленных строк. Для каждой вставленной строки создается новая <xref:System.Data.OleDb.OleDbCommand> создается для выполнять инструкцию SELECT @@IDENTITY инструкции соединения, возвращающей новое `Autonumber` значение, которое помещается в **CategoryID** столбец `DataRow`. Затем свойству `Status` присваивается значение `UpdateStatus.SkipCurrentRow`, что позволяет блокировать скрытый вызов `AcceptChanges`. В основной части процедуры вызывается метод `Merge` для слияния этих двух объектов `DataTable`, и в конечном счете вызывается `AcceptChanges`.
+[!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
+[!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
- [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
- [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
+В обработчике событий `RowUpdated` используется то же открытое соединение <xref:System.Data.OleDb.OleDbConnection>, что и в инструкции `Update` объекта `OleDbDataAdapter`. В нем происходит проверка значения `StatementType` свойства <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> для вставленных строк. Для каждой вставленной строки создается новая <xref:System.Data.OleDb.OleDbCommand> создается для выполнять инструкцию SELECT @@IDENTITY инструкции соединения, возвращающей новое `Autonumber` значение, которое помещается в **CategoryID** столбец `DataRow`. Затем свойству `Status` присваивается значение `UpdateStatus.SkipCurrentRow`, что позволяет блокировать скрытый вызов `AcceptChanges`. В основной части процедуры вызывается метод `Merge` для слияния этих двух объектов `DataTable`, и в конечном счете вызывается `AcceptChanges`.
+
+[!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
+[!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
 
 ### <a name="retrieving-identity-values"></a>Извлечение значений идентификаторов
 
 Мы часто задаем столбец как идентификатор, когда значения в столбце должны быть уникальными. А иногда нам требуется значение идентификатора для новых данных. В этом примере показано, как извлекать значения идентификаторов:
 
--   Создает хранимую процедуру для вставки данных и возвращения значения идентификатора.
+- Создает хранимую процедуру для вставки данных и возвращения значения идентификатора.
 
--   Выполняет команду для вставки новых данных и отображения результата.
+- Выполняет команду для вставки новых данных и отображения результата.
 
--   Использует <xref:System.Data.SqlClient.SqlDataAdapter> для вставки новых данных и отображения результата.
+- Использует <xref:System.Data.SqlClient.SqlDataAdapter> для вставки новых данных и отображения результата.
 
 Перед компиляцией и выполнением образца необходимо создать образец базы данных с помощью следующего скрипта:
 
@@ -428,7 +433,7 @@ class Program {
       }
    }
 
-   /// For a Jet 4.0 database, we need use the sigle statement and event handler to insert new rows and retrieve the identity value.
+   /// For a Jet 4.0 database, we need use the single statement and event handler to insert new rows and retrieve the identity value.
    static void InsertPersonInJet4Database(String connectionString, String firstName, String lastName) {
       String commandText = "Insert into Person(FirstName,LastName) Values(?,?)";
       using (OleDbConnection conn = new OleDbConnection(connectionString)) {

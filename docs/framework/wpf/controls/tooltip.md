@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367574"
 ---
 # <a name="tooltip"></a>ToolTip
-Всплывающая подсказка представляет небольшое всплывающее окно, которое появляется при наведении указателя мыши на элемент, например, на <xref:System.Windows.Controls.Button>.  
+Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>.  
   
- На следующем рисунке показан указатель мыши, который указывает **закрыть**<xref:System.Windows.Controls.Button>, который затем отображает ее определение <xref:System.Windows.Controls.ToolTip>.  
+ На следующем рисунке показан указатель мыши на **закрыть**<xref:System.Windows.Controls.Button>, который затем отображает ее определение <xref:System.Windows.Controls.ToolTip>.  
   
- Кнопка закрытия с всплывающей подсказкой  
+ Кнопка "Закрыть" с всплывающей подсказкой  
   
- ![Снимок экрана подсказки](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![Снимок экрана подсказки](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о всплывающих подсказках](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [Разделы практического руководства](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [Общие сведения о всплывающих подсказках](tooltip-overview.md)  
+  [Разделы практического руководства](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ ms.locfileid: "33556982"
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [Разделы практического руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Общие сведения о контекстном меню](popup-overview.md)  
+  [Разделы практического руководства](popup-how-to-topics.md)

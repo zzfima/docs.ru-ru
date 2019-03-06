@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287500"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367191"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Тип "\<имя_переменной >" не могут быть получены, так как границы цикла и переменной шага нет расширяющего преобразования к одному типу
 Вы написали `For...Next` цикл, в котором компилятор не может вывести тип данных для управляющей переменной цикла, потому, что выполняются следующие условия:  

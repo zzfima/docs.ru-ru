@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 402bbcb9ad5e462a55c5ec2716417f512f03ee19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718199"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373222"
 ---
 # <a name="execquerywmi-function"></a>Функция ExecQueryWmi
-Выполняет запрос для получения объектов.  
+
+Выполняет запрос для получения объектов.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT ExecQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,53 +44,54 @@ HRESULT ExecQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Строка с допустимым запросом язык, поддерживаемый управления Windows. Оно должно быть «WQL», сокращение для языка запросов WMI.
 
-`strQuery`  
+`strQuery`\
 [in] Текст запроса. Этот параметр не может быть `null`.
 
-`lFlags`   
-[in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде: 
+`lFlags`\
+[in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-| Константа | Значение  | Описание:  |
+| Константа | Значение  | Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если набор, функция извлекает измененные квалификаторы, хранящиеся в локализованных имен языкового стандарта текущего соединения. <br/> В противном случае набор, функция получает только квалификаторы, хранящихся в пространство имен немедленно. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Этот флаг приводит к Полусинхронный вызов. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Функция возвращает только вперед перечислителя. Обычно перечислители только вперед, выполняются быстрее и использовать меньше памяти, чем обычные перечислители, но они не допускают вызовы [клона](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI сохраняет указатели на объекты в enumration до их появления. | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI сохраняет указатели на объекты в перечислении, до их появления. |
 | `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Гарантирует, что все возвращаемые объекты имеют достаточно информации, в них, так что свойства системы, такие как **__PATH**, **__RELPATH**, и **__SERVER**, не являются `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Этот флаг используется для создания прототипов. Он не выполняет запрос и возвращает объект, который выглядит как типичный результирующий объект. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Причины прямой доступ к поставщику для класса, задается независимо от его родительского класса или его подклассов. |
 
 Рекомендуемые флаги `WBEM_FLAG_RETURN_IMMEDIATELY` и `WBEM_FLAG_FORWARD_ONLY` для достижения оптимальной производительности.
 
-`pCtx`  
-[in] Как правило, это значение равно `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) экземпляр, который может использоваться поставщиком, предоставляющего запрошенного классы. 
+`pCtx`\
+[in] Как правило, это значение равно `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) экземпляр, который может использоваться поставщиком, предоставляющего запрошенного классы.
 
-`ppEnum`  
+`ppEnum`\
 [out] При отсутствии ошибок, получающей указатель на перечислитель, который позволяет вызывающей стороне для получения экземпляров в результирующем наборе запроса. Запрос может содержать результирующий набор с нуля экземпляров. См. в разделе ["Примечания"](#remarks) Дополнительные сведения.
 
-`authLevel`  
+`authLevel`\
 [in] Уровень авторизации.
 
-`impLevel` [in] Уровень олицетворения.
+`impLevel`\
+[in] Уровень олицетворения.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Указатель на [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объект, представляющий текущее пространство имен.
 
-`strUser`   
+`strUser`\
 [in] Имя пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strPassword`   
+`strPassword`\
 [in] Пароль. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strAuthority`   
+`strAuthority`\
 [in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -109,7 +111,7 @@ HRESULT ExecQueryWmi (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Сбой удаленной процедуры вызова (RPC) связь между текущим процессом и WMI. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Запрос указывает класс, который не существует. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemServices::ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) метод.
@@ -120,12 +122,14 @@ HRESULT ExecQueryWmi (
 
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

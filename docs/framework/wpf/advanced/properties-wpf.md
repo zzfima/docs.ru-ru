@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352611"
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
   
 ## <a name="in-this-section"></a>В этом разделе  
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [Метаданные свойств среды](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [Приоритет значения свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Свойства зависимости "только для чтения"](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [Загрузка кода XAML и свойства зависимостей](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Общие сведения о присоединенных свойствах](attached-properties-overview.md)
+- [Пользовательские свойства зависимостей](custom-dependency-properties.md)
+- [Метаданные свойства зависимостей](dependency-property-metadata.md)
+- [Проверка и обратные вызовы свойства зависимостей](dependency-property-callbacks-and-validation.md)
+- [Метаданные свойств среды](framework-property-metadata.md)
+- [Приоритет значения свойства зависимостей](dependency-property-value-precedence.md)
+- [Свойства зависимости "только для чтения"](read-only-dependency-properties.md)
+- [Наследование значения свойства](property-value-inheritance.md)
+- [Безопасность свойства зависимостей](dependency-property-security.md)
+- [Шаблоны безопасного конструктора для DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
+- [Свойства зависимостей типа коллекции](collection-type-dependency-properties.md)
+- [Загрузка кода XAML и свойства зависимостей](xaml-loading-and-dependency-properties.md)
+- [Разделы практического руководства](properties-how-to-topics.md)
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +45,12 @@ ms.locfileid: "56745577"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML в WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [События](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ресурсы](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Модель содержимого WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Архитектура WPF](wpf-architecture.md)  
+  [XAML в WPF](xaml-in-wpf.md)  
+  [Базовые элементы](base-elements.md)  
+  [Дерево элементов и сериализация](element-tree-and-serialization.md)  
+  [События](events-wpf.md)  
+  [Ввод](input-wpf.md)  
+  [Ресурсы](resources-wpf.md)  
+  [Модель содержимого WPF](../controls/wpf-content-model.md)  
+  [Потоковая модель](threading-model.md)

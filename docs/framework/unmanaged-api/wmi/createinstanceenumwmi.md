@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498299"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373053"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi function
-Возвращает перечислитель, который возвращает экземпляры указанного класса, которые соответствуют указанные критерии выбора. 
+
+Возвращает перечислитель, который возвращает экземпляры указанного класса, которые соответствуют указанные критерии выбора.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strFilter,
    [in] long                    lFlags,
@@ -42,16 +43,16 @@ HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`strFilter`    
+`strFilter`\
 [in] Имя класса, для которого требуются экземпляры. Этот параметр не может быть `null`.
 
-`lFlags`   
-[in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде: 
+`lFlags`\
+[in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание:  |
 |---------|---------|---------|
@@ -60,31 +61,32 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_SHALLOW` | 1 | Перечисление содержит только чистые экземпляры этого класса и исключает все экземпляры из подклассов, которые предоставляют свойства, не найден в этом классе. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Этот флаг приводит к Полусинхронный вызов. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Функция возвращает только вперед перечислителя. Обычно перечислители только вперед, выполняются быстрее и использовать меньше памяти, чем обычные перечислители, но они не допускают вызовы [клона](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI сохраняет указатели на объекты в enumration до их появления. | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI сохраняет указатели на объекты в перечислении, до их появления. |
 
 Рекомендуемые флаги `WBEM_FLAG_RETURN_IMMEDIATELY` и `WBEM_FLAG_FORWARD_ONLY` для достижения оптимальной производительности.
 
-`pCtx`  
+`pCtx`\
 [in] Как правило, это значение равно `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) экземпляр, который может использоваться поставщиком, предоставляющего запрошенного экземпляров.
 
-`ppEnum`  
+`ppEnum`\
 [out] Получает указатель на перечислитель.
 
-`authLevel`  
+`authLevel`\
 [in] Уровень авторизации.
 
-`impLevel` [in] Уровень олицетворения.
+`impLevel`\
+[in] Уровень олицетворения.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Указатель на [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объект, представляющий текущее пространство имен.
 
-`strUser`   
+`strUser`\
 [in] Имя пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strPassword`   
+`strPassword`\
 [in] Пароль. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strAuthority`   
+`strAuthority`\
 [in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -101,7 +103,7 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI был, вероятно, остановлена или перезапустить. Вызовите [ConnectServerWmi](connectserverwmi.md) еще раз. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Сбой удаленной процедуры вызова (RPC) связь между текущим процессом и WMI. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemServices::CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) метод.
@@ -110,12 +112,14 @@ HRESULT CreateInstanceEnumWmi (
 
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

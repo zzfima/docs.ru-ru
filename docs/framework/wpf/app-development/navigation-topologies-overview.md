@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: f7aa47d8613cb206273410626ef0c38d226a9365
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356784"
 ---
 # <a name="navigation-topologies-overview"></a>Общие сведения о топологии переходов
 <a name="introduction"></a> Данный обзор представляет введение в топологии навигации в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Последовательно рассматриваются три общие топологии навигации с примерами.  
   
 > [!NOTE]
->  Перед прочтением этого раздела следует ознакомиться с концепцией структурной навигации в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] с помощью страничных функций. Дополнительные сведения по этим темам см. в разделе [Общие сведения о структурной навигации](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
+>  Перед прочтением этого раздела следует ознакомиться с концепцией структурной навигации в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] с помощью страничных функций. Дополнительные сведения по этим темам см. в разделе [Общие сведения о структурной навигации](structured-navigation-overview.md).  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -36,17 +36,17 @@ ms.locfileid: "54498441"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Топологии навигации  
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], навигация обычно состоит из страниц (<xref:System.Windows.Controls.Page>) с гиперссылками (<xref:System.Windows.Documents.Hyperlink>), перейти на другие страницы, при щелчке. Посещенные страницы определяются по [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (см. в разделе [URI типа Pack в WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)). Рассмотрим следующий простой пример, показывающий страницы, гиперссылки и [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], навигация обычно состоит из страниц (<xref:System.Windows.Controls.Page>) с гиперссылками (<xref:System.Windows.Documents.Hyperlink>), перейти на другие страницы, при щелчке. Посещенные страницы определяются по [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (см. в разделе [URI типа Pack в WPF](pack-uris-in-wpf.md)). Рассмотрим следующий простой пример, показывающий страницы, гиперссылки и [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
  Эти страницы располагаются в *топологии навигации* структура которой определяется, как переходы между страницами. Эта конкретная топология навигации подходит для простых сценариев, хотя навигация может требовать более сложные топологии, некоторые из которых могут быть определены только при запуске приложения.  
   
  В этом разделе рассматриваются три общие топологии навигации: *Фиксированная линейная*, *фиксированная иерархическая*, и *динамически создаваемого*. Каждая топология навигации демонстрируется на примере, который имеет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] как показано на следующем рисунке:  
   
- ![Страницы задач с элементами данных](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Страницы задач с элементами данных](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Топологии структурной навигации  
@@ -62,7 +62,7 @@ ms.locfileid: "54498441"
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Навигация при фиксированной линейной топологии  
  Фиксированная линейная топология является аналогом структуры мастера с одной или несколькими страницами, по которым можно переходить в фиксированной последовательности. На следующем рисунке показана высокоуровневая структура и поток мастера с фиксированной линейной топологией.  
   
- ![Схема топологии навигации](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Схема топологии навигации](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
   
  Типичные варианты поведения для навигации по фиксированной линейной топологии могут быть следующие.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54498441"
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Динамическая навигация при фиксированной иерархической топологии  
  В некоторых приложениях страницы позволяют осуществлять переход на две или несколько страниц, как показано на следующем рисунке.  
   
- ![Страница, с которой можно перейти на несколько страниц](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Страница, с которой можно перейти на несколько страниц](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
   
  Эта структура называется фиксированной иерархической топологией, и последовательность обхода иерархии часто определяется во время выполнения приложением или пользователем. Во время выполнения каждая страница в иерархии, позволяющая выполнять переходы на несколько страниц, собирает данные, необходимые для определения страниц для перехода. Следующий рисунок иллюстрирует одну из нескольких возможных последовательностей переходов на основе предыдущего рисунка.  
   
- ![Схема топологии навигации](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Схема топологии навигации](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
   
  Несмотря на то, что последовательность переходов по страницам в фиксированной иерархической структуре определяется во время выполнения, взаимодействие с пользователем такое же, как в фиксированной линейной топологии.  
   
@@ -116,11 +116,11 @@ ms.locfileid: "54498441"
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Навигация при динамически создаваемой топологии  
  В некоторых приложениях последовательность, в которой осуществляется переход на две или более страниц, может быть определена только во время выполнения пользователем, приложением или внешними данными. Следующий рисунок иллюстрирует набор страниц с неопределенной последовательностью навигации.  
   
- ![Схема топологии навигации](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Схема топологии навигации](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
   
  На следующем рисунке показана последовательность навигации, которая была выбрана пользователем во время выполнения.  
   
- ![Схема навигации](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Схема навигации](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
   
  Эта последовательность навигации называется динамически создаваемой топологией. Взаимодействие с пользователем такое же, как и в предыдущих топологиях навигации.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "54498441"
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Общие сведения о структурной навигации](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+- [Общие сведения о структурной навигации](structured-navigation-overview.md)

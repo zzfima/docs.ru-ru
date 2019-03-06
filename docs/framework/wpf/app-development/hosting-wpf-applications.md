@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546895"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352274"
 ---
 # <a name="hosting-wpf-applications"></a>Размещение WPF-приложений
-Приложения браузера WPF XAML (XBAP) являются многофункциональных клиентских приложений, которые можно развернуть на веб-сервере и запускать в браузере. WPF узла (PresentationHost.exe) зарегистрирован в качестве оболочки и обработчика MIME для файлов XBAP и XAML. Таким образом Internet Explorer знает, что для запуска узла WPF, когда запускается приложение XBAP. Firefox пользователей можно установить дополнительные компоненты, позволяющие Firefox узел XBAP. XBAP может размещаться в других браузерах или автономных приложений с помощью собственного браузера API размещения, предоставляемых платформой WPF.  
+Приложения браузера WPF XAML (XBAP), расширенные клиентские приложения, которые можно развернуть на веб-сервере и запускать в браузере. Ведущее приложение WPF (PresentationHost.exe) регистрируется как оболочка и обработчик MIME для файлов XBAP и XAML. Таким образом Internet Explorer знает, что для запуска ведущего приложения WPF, когда запускается приложение XBAP. Пользователи Firefox можно установить дополнительные компоненты, которые позволяют разместить XBAP-приложения также Firefox. Приложение XBAP может размещаться в других браузерах или автономных приложений с помощью собственного браузера размещения API, предоставляемые платформой WPF.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-   [Основное приложение WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [Надстройки Firefox для поддержки развертывания приложений .NET](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [Интерфейсы API для поддержки размещения в собственном браузере WPF](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+ [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md)  
+   [Основное приложение WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md)  
+  [Надстройки Firefox для поддержки развертывания приложений .NET](firefox-add-ons-to-support-net-application-deployment.md)  
+  [Интерфейсы API для поддержки размещения в собственном браузере WPF](native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Windows в WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Сборка и развертывание](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Общие сведения об управлении приложением](application-management-overview.md)  
+  [Windows в WPF](windows-in-wpf-applications.md)  
+  [Общие сведения о переходах](navigation-overview.md)  
+  [Сборка и развертывание](building-and-deploying-wpf-applications.md)

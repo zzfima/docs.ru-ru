@@ -1,49 +1,46 @@
 ---
-title: Стили и шаблоны элемента RadioButton
+title: Стили и шаблоны элемента Thumb
 ms.date: 03/30/2017
 helpviewer_keywords:
-- styles [WPF], RadioButton
-- RadioButton [WPF], styles and templates
-- ControlTemplate [WPF], RadioButton
-- states [WPF], RadioButton
-- templates [WPF], RadioButton
-- parts [WPF], RadioButton
-ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
-ms.openlocfilehash: 4f401c928db57a75bafa7fee0e59542b2eb8a3b6
+- states [WPF], Thumb
+- styles [WPF], Thumb
+- templates [WPF], Thumb
+- Thumb [WPF], styles and templates
+- ControlTemplate [WPF], Thumb
+- parts [WPF], Thumb
+ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
+ms.openlocfilehash: ffeec38cef04f49afc114a1946d88621063d700a
 ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377215"
+ms.locfileid: "57367639"
 ---
-# <a name="radiobutton-styles-and-templates"></a>Стили и шаблоны элемента RadioButton
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.RadioButton> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+# <a name="thumb-syles-and-templates"></a>Стили и шаблоны элемента Thumb
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.Thumb> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="radiobutton-parts"></a>Элементы RadioButton  
- <xref:System.Windows.Controls.RadioButton> Управления не имеет частей с именами.  
+## <a name="thumb-parts"></a>Бегунок частей  
+ <xref:System.Windows.Controls.Primitives.Thumb> Управления не имеет частей с именами.  
   
-## <a name="radiobutton-states"></a>Состояния RadioButton  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.RadioButton> элемента управления.  
+## <a name="thumb-states"></a>Бегунок состояний  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.Thumb> элемента управления.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание:|  
-|----------------------|---------------------------|-----------------|  
+|-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Нажато|CommonStates|Элемент управления нажат.|  
 |Отключено|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Помечено|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.|  
-|Unchecked|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.|  
-|Неопределенное|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> — `true`, и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> является `null`.|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
   
-## <a name="radiobutton-controltemplate-example"></a>Пример шаблона элемента управления RadioButton  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.RadioButton> элемента управления.  
+## <a name="thumb-controltemplate-example"></a>Пример шаблона элемента управления Thumb  
+ В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Primitives.Thumb> элемента управления.  
   
- [!code-xaml[ControlTemplateExamples#RadioButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/radiobutton.xaml#radiobutton)]  
+ [!code-xaml[ControlTemplateExamples#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]  
   
  В предыдущем примере используется один или несколько из следующих ресурсов.  
   

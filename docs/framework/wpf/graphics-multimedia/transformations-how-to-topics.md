@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361360"
 ---
 # <a name="transformations-how-to-topics"></a>Разделы руководства, посвященные преобразованиям
 В подразделах этого раздела описывается, как будут применяться различные преобразования к объектам.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Применение преобразования к элементу при возникновении события](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [Применение нескольких преобразований к объекту](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [Создание элемента Spin](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [Вращение объекта](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [Масштабирование элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [Наклон элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [Определение источника преобразования с помощью относительных значений](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [Перемещение элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [Использование MatrixTransform для создания пользовательских преобразований](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Применение преобразования к элементу при возникновении события](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [Применение нескольких преобразований к объекту](how-to-apply-multiple-transforms-to-an-object.md)  
+ [Создание элемента Spin](how-to-make-an-element-spin-in-place.md)  
+ [Вращение объекта](how-to-rotate-an-object.md)  
+ [Масштабирование элемента](how-to-scale-an-element.md)  
+ [Наклон элемента](how-to-skew-an-element.md)  
+ [Определение источника преобразования с помощью относительных значений](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [Перемещение элемента](how-to-translate-an-element.md)  
+ [Использование MatrixTransform для создания пользовательских преобразований](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Transform>
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+- [Графика и мультимедиа](index.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)
+- [Макет](../advanced/layout.md)
