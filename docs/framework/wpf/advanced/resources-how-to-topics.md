@@ -7,23 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546169"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356246"
 ---
 # <a name="resources-how-to-topics"></a>Разделы руководства, посвященные ресурсам
 В этом разделе описываются способы использования ресурсов Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Определение и создание ссылки на ресурс](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Использование ресурсов приложения](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [Использование SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Использование разделов системных шрифтов](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Использование SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Использование разделов системных параметров](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Определение и создание ссылки на ресурс](how-to-define-and-reference-a-resource.md)  
+ [Использование ресурсов приложения](how-to-use-application-resources.md)  
+ [Использование SystemFonts](how-to-use-systemfonts.md)  
+ [Использование разделов системных шрифтов](how-to-use-system-fonts-keys.md)  
+ [Использование SystemParameters](how-to-use-systemparameters.md)  
+ [Использование разделов системных параметров](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -35,4 +35,4 @@ ms.locfileid: "33546169"
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [Ресурсы XAML](xaml-resources.md)
