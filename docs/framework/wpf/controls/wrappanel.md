@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362153"
 ---
-# <a name="wrappanel"></a><span data-ttu-id="4ce79-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="4ce79-102">WrapPanel</span></span>
-<span data-ttu-id="4ce79-103"><xref:System.Windows.Controls.WrapPanel> Элемент размещает дочерние элементы в последовательности слева направо, перенося содержимое на следующую строку на границе содержащего поля.</span><span class="sxs-lookup"><span data-stu-id="4ce79-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="baf75-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="baf75-102">WrapPanel</span></span>
+<span data-ttu-id="baf75-103"><xref:System.Windows.Controls.WrapPanel> Элемент размещает дочерние элементы в последовательности слева направо, перенося содержимое на следующую строку на границе содержащего поля.</span><span class="sxs-lookup"><span data-stu-id="baf75-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4ce79-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4ce79-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="baf75-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="baf75-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -33,9 +33,9 @@ ms.locfileid: "33554032"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="4ce79-105">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4ce79-105">Related Sections</span></span>  
- [<span data-ttu-id="4ce79-106">Макет</span><span class="sxs-lookup"><span data-stu-id="4ce79-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="baf75-105">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="baf75-105">Related Sections</span></span>  
+ [<span data-ttu-id="baf75-106">Макет</span><span class="sxs-lookup"><span data-stu-id="baf75-106">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="4ce79-107">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="4ce79-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ <span data-ttu-id="baf75-107">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="baf75-107">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="4ce79-108">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4ce79-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="baf75-108">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="baf75-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

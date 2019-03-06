@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366573"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="5118d-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="5118d-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="5118d-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого на основе страниц.</span><span class="sxs-lookup"><span data-stu-id="5118d-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="5118d-104">Сравните с <xref:System.Windows.Controls.FlowDocumentScrollViewer>, отображает <xref:System.Windows.Documents.FlowDocument> содержимого в средстве просмотра прокрутки.</span><span class="sxs-lookup"><span data-stu-id="5118d-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="8dba4-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="8dba4-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="8dba4-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого на основе страниц.</span><span class="sxs-lookup"><span data-stu-id="8dba4-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="8dba4-104">Сравните с <xref:System.Windows.Controls.FlowDocumentScrollViewer>, отображает <xref:System.Windows.Documents.FlowDocument> содержимого в средстве просмотра прокрутки.</span><span class="sxs-lookup"><span data-stu-id="8dba4-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5118d-105">См. также</span><span class="sxs-lookup"><span data-stu-id="5118d-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8dba4-105">См. также</span><span class="sxs-lookup"><span data-stu-id="8dba4-105">See also</span></span>
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="5118d-106">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="5118d-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [<span data-ttu-id="5118d-107">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="5118d-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="5118d-108">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="5118d-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="8dba4-106">Общие сведения о документах нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="8dba4-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="8dba4-107">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="8dba4-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="8dba4-108">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="8dba4-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

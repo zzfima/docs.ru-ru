@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Закрашивание области с помощью Visual
+title: Практическое руководство. Закрашивание области с помощью Visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: 2fa5e11ffceac6563ec3fcc7ec8df84e5857da2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b63b4be5e1f916648677150ffb558445ffa72c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661481"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363076"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="ada06-102">Как выполнить Закрашивание области с помощью Visual</span><span class="sxs-lookup"><span data-stu-id="ada06-102">How to: Paint an Area with a Visual</span></span>
-<span data-ttu-id="ada06-103">В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> класс для закраски области с <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="ada06-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  
+# <a name="how-to-paint-an-area-with-a-visual"></a><span data-ttu-id="11c97-102">Практическое руководство. Закрашивание области с помощью Visual</span><span class="sxs-lookup"><span data-stu-id="11c97-102">How to: Paint an Area with a Visual</span></span>
+<span data-ttu-id="11c97-103">В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> класс для закраски области с <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="11c97-103">This example shows how to use the <xref:System.Windows.Media.VisualBrush> class to paint an area with a <xref:System.Windows.Media.Visual>.</span></span>  
   
- <span data-ttu-id="ada06-104">В следующем примере несколько элементов управления и панель используются в качестве фона для прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="ada06-104">In the following example, several controls and a panel are used as the background of a rectangle.</span></span>  
+ <span data-ttu-id="11c97-104">В следующем примере несколько элементов управления и панель используются в качестве фона для прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="11c97-104">In the following example, several controls and a panel are used as the background of a rectangle.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ada06-105">Пример</span><span class="sxs-lookup"><span data-stu-id="ada06-105">Example</span></span>  
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+## <a name="example"></a><span data-ttu-id="11c97-105">Пример</span><span class="sxs-lookup"><span data-stu-id="11c97-105">Example</span></span>  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- <span data-ttu-id="ada06-106">Дополнительные сведения о <xref:System.Windows.Media.VisualBrush> и Дополнительные примеры см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) Обзор.</span><span class="sxs-lookup"><span data-stu-id="ada06-106">For more information about <xref:System.Windows.Media.VisualBrush> and additional examples, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) overview.</span></span>  
+ <span data-ttu-id="11c97-106">Дополнительные сведения о <xref:System.Windows.Media.VisualBrush> и Дополнительные примеры см. в разделе [Рисование с помощью изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md) Обзор.</span><span class="sxs-lookup"><span data-stu-id="11c97-106">For more information about <xref:System.Windows.Media.VisualBrush> and additional examples, see the [Painting with Images, Drawings, and Visuals](painting-with-images-drawings-and-visuals.md) overview.</span></span>  
   
- <span data-ttu-id="ada06-107">Данный пример кода является частью большего примера для <xref:System.Windows.Media.VisualBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="ada06-107">This code example is part of a larger example provided for the <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="ada06-108">Полный пример см. в разделе [пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).</span><span class="sxs-lookup"><span data-stu-id="ada06-108">For the complete sample, see the [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
+ <span data-ttu-id="11c97-107">Данный пример кода является частью большего примера для <xref:System.Windows.Media.VisualBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="11c97-107">This code example is part of a larger example provided for the <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="11c97-108">Полный пример см. в разделе [пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).</span><span class="sxs-lookup"><span data-stu-id="11c97-108">For the complete sample, see the [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ada06-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ada06-109">See also</span></span>
-- [<span data-ttu-id="ada06-110">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="ada06-110">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="11c97-109">См. также</span><span class="sxs-lookup"><span data-stu-id="11c97-109">See also</span></span>
+- [<span data-ttu-id="11c97-110">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="11c97-110">Painting with Images, Drawings, and Visuals</span></span>](painting-with-images-drawings-and-visuals.md)

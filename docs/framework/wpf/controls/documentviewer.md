@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365429"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="4f61e-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="4f61e-102">DocumentViewer</span></span>
-<span data-ttu-id="4f61e-103"><xref:System.Windows.Controls.DocumentViewer> Управления используется для просмотра <xref:System.Windows.Documents.FixedDocument> содержимое (например, [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] документов) в формате с разбиением на страницы.</span><span class="sxs-lookup"><span data-stu-id="4f61e-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="01c10-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="01c10-102">DocumentViewer</span></span>
+<span data-ttu-id="01c10-103"><xref:System.Windows.Controls.DocumentViewer> Управления используется для просмотра <xref:System.Windows.Documents.FixedDocument> содержимое (например, [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] документов) в формате с разбиением на страницы.</span><span class="sxs-lookup"><span data-stu-id="01c10-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4f61e-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4f61e-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="01c10-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="01c10-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="4f61e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="4f61e-105">See also</span></span>
-- [<span data-ttu-id="4f61e-106">Документы</span><span class="sxs-lookup"><span data-stu-id="4f61e-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)
-- [<span data-ttu-id="4f61e-107">Сериализация и хранение документов</span><span class="sxs-lookup"><span data-stu-id="4f61e-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="4f61e-108">Общие сведения о печати</span><span class="sxs-lookup"><span data-stu-id="4f61e-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="01c10-105">См. также</span><span class="sxs-lookup"><span data-stu-id="01c10-105">See also</span></span>
+- [<span data-ttu-id="01c10-106">Документы</span><span class="sxs-lookup"><span data-stu-id="01c10-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="01c10-107">Сериализация и хранение документов</span><span class="sxs-lookup"><span data-stu-id="01c10-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="01c10-108">Общие сведения о печати</span><span class="sxs-lookup"><span data-stu-id="01c10-108">Printing Overview</span></span>](../advanced/printing-overview.md)

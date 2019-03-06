@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 39fb0dcfe0110a0badcd552d711db40086d46fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551153"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377340"
 ---
-# <a name="bulletdecorator"></a><span data-ttu-id="35487-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="35487-102">BulletDecorator</span></span>
-<span data-ttu-id="35487-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> имеет два свойства содержимого: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> и <xref:System.Windows.Controls.Decorator.Child%2A>.</span><span class="sxs-lookup"><span data-stu-id="35487-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="35487-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Свойство определяет <xref:System.Windows.UIElement> для использования в качестве маркера.</span><span class="sxs-lookup"><span data-stu-id="35487-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="35487-105"><xref:System.Windows.Controls.Decorator.Child%2A> Свойство определяет <xref:System.Windows.UIElement> , визуально выравнивается с маркером.</span><span class="sxs-lookup"><span data-stu-id="35487-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
+# <a name="bulletdecorator"></a><span data-ttu-id="b19c3-102">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="b19c3-102">BulletDecorator</span></span>
+<span data-ttu-id="b19c3-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> имеет два свойства содержимого: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> и <xref:System.Windows.Controls.Decorator.Child%2A>.</span><span class="sxs-lookup"><span data-stu-id="b19c3-103"><xref:System.Windows.Controls.Primitives.BulletDecorator> has two content properties: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> and <xref:System.Windows.Controls.Decorator.Child%2A>.</span></span> <span data-ttu-id="b19c3-104"><xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Определяет свойство <xref:System.Windows.UIElement> для использования в качестве маркера.</span><span class="sxs-lookup"><span data-stu-id="b19c3-104">The <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> property defines the <xref:System.Windows.UIElement> to use as a bullet.</span></span> <span data-ttu-id="b19c3-105"><xref:System.Windows.Controls.Decorator.Child%2A> Определяет свойство <xref:System.Windows.UIElement> , визуально выравнивается с маркером.</span><span class="sxs-lookup"><span data-stu-id="b19c3-105">The <xref:System.Windows.Controls.Decorator.Child%2A> property defines a <xref:System.Windows.UIElement> that visually aligns with the bullet.</span></span>  
   
- <span data-ttu-id="35487-106">Ниже приведены примеры элементов управления, использующие <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span><span class="sxs-lookup"><span data-stu-id="35487-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
+ <span data-ttu-id="b19c3-106">Ниже приведены примеры элементов управления, использующих <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span><span class="sxs-lookup"><span data-stu-id="b19c3-106">The following illustration shows examples of controls that use a <xref:System.Windows.Controls.Primitives.BulletDecorator>.</span></span>  
   
- <span data-ttu-id="35487-107">![3 BulletDecorators: флажок RadioButton, TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "руководство.")</span><span class="sxs-lookup"><span data-stu-id="35487-107">![3 BulletDecorators: CheckBox, RadioButton, TextBox](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")</span></span>  
+ <span data-ttu-id="b19c3-107">![3 объекта Bulletdecorator: Текстовое поле RadioButton, CheckBox](./media/bulletdecorator.png "BulletDecorator")</span><span class="sxs-lookup"><span data-stu-id="b19c3-107">![3 BulletDecorators: CheckBox, RadioButton, TextBox](./media/bulletdecorator.png "BulletDecorator")</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="35487-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="35487-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b19c3-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="b19c3-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

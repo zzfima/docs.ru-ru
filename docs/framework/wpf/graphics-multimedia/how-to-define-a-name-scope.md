@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение пространства имен
+title: Практическое руководство. Определение пространства имен
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Storyboards [WPF], animating in procedural code
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
-ms.openlocfilehash: 656c1e9af11697cd4a1253bdab673887765976a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6afb59550d774109c62c283905495c76b0834b3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674470"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370375"
 ---
-# <a name="how-to-define-a-name-scope"></a><span data-ttu-id="74d92-102">Как выполнить Определение пространства имен</span><span class="sxs-lookup"><span data-stu-id="74d92-102">How to: Define a Name Scope</span></span>
-<span data-ttu-id="74d92-103">Для анимации с <xref:System.Windows.Media.Animation.Storyboard> в коде, необходимо создать <xref:System.Windows.NameScope> и регистрировать имена целевых объектов с элементом, который является владельцем этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="74d92-103">To animate with <xref:System.Windows.Media.Animation.Storyboard> in code, you must create a <xref:System.Windows.NameScope> and register the target objects' names with the element that owns that name scope.</span></span> <span data-ttu-id="74d92-104">В следующем примере <xref:System.Windows.NameScope> создается для `myMainPanel`.</span><span class="sxs-lookup"><span data-stu-id="74d92-104">In the following example, a <xref:System.Windows.NameScope> is created for `myMainPanel`.</span></span> <span data-ttu-id="74d92-105">Две кнопки `button1` и `button2`, добавляются в панели, а также их имена, которые зарегистрированы.</span><span class="sxs-lookup"><span data-stu-id="74d92-105">Two buttons, `button1` and `button2`, are added to the panel, and their names registered.</span></span> <span data-ttu-id="74d92-106">Нескольких анимаций и <xref:System.Windows.Media.Animation.Storyboard> создаются.</span><span class="sxs-lookup"><span data-stu-id="74d92-106">Several animations and a <xref:System.Windows.Media.Animation.Storyboard> are created.</span></span> <span data-ttu-id="74d92-107">Раскадровки <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод используется для запуска анимаций.</span><span class="sxs-lookup"><span data-stu-id="74d92-107">The storyboard's <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method is used to start the animations.</span></span>  
+# <a name="how-to-define-a-name-scope"></a><span data-ttu-id="311d2-102">Практическое руководство. Определение пространства имен</span><span class="sxs-lookup"><span data-stu-id="311d2-102">How to: Define a Name Scope</span></span>
+<span data-ttu-id="311d2-103">Для анимации с <xref:System.Windows.Media.Animation.Storyboard> в коде, необходимо создать <xref:System.Windows.NameScope> и регистрировать имена целевых объектов с элементом, который является владельцем этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="311d2-103">To animate with <xref:System.Windows.Media.Animation.Storyboard> in code, you must create a <xref:System.Windows.NameScope> and register the target objects' names with the element that owns that name scope.</span></span> <span data-ttu-id="311d2-104">В следующем примере <xref:System.Windows.NameScope> создается для `myMainPanel`.</span><span class="sxs-lookup"><span data-stu-id="311d2-104">In the following example, a <xref:System.Windows.NameScope> is created for `myMainPanel`.</span></span> <span data-ttu-id="311d2-105">Две кнопки `button1` и `button2`, добавляются в панели, а также их имена, которые зарегистрированы.</span><span class="sxs-lookup"><span data-stu-id="311d2-105">Two buttons, `button1` and `button2`, are added to the panel, and their names registered.</span></span> <span data-ttu-id="311d2-106">Нескольких анимаций и <xref:System.Windows.Media.Animation.Storyboard> создаются.</span><span class="sxs-lookup"><span data-stu-id="311d2-106">Several animations and a <xref:System.Windows.Media.Animation.Storyboard> are created.</span></span> <span data-ttu-id="311d2-107">Раскадровки <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод используется для запуска анимаций.</span><span class="sxs-lookup"><span data-stu-id="311d2-107">The storyboard's <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method is used to start the animations.</span></span>  
   
- <span data-ttu-id="74d92-108">Так как `button1`, `button2`, и `myMainPanel` все той же области имен, один из них может использоваться с <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод для запуска анимаций.</span><span class="sxs-lookup"><span data-stu-id="74d92-108">Because `button1`, `button2`, and `myMainPanel` all share the same name scope, any one of them can be used with the <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method to start the animations.</span></span>  
+ <span data-ttu-id="311d2-108">Так как `button1`, `button2`, и `myMainPanel` все той же области имен, один из них может использоваться с <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод для запуска анимаций.</span><span class="sxs-lookup"><span data-stu-id="311d2-108">Because `button1`, `button2`, and `myMainPanel` all share the same name scope, any one of them can be used with the <xref:System.Windows.Media.Animation.Storyboard> <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method to start the animations.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="74d92-109">Пример</span><span class="sxs-lookup"><span data-stu-id="74d92-109">Example</span></span>  
- [!code-csharp[StoryboardBeginAnimation_procedural_snip#NameScopeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/CSharp/ScopeExample.cs#namescopeexample)]
- [!code-vb[StoryboardBeginAnimation_procedural_snip#NameScopeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/visualbasic/scopeexample.vb#namescopeexample)]  
+## <a name="example"></a><span data-ttu-id="311d2-109">Пример</span><span class="sxs-lookup"><span data-stu-id="311d2-109">Example</span></span>  
+ [!code-csharp[StoryboardBeginAnimation_procedural_snip#NameScopeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/CSharp/ScopeExample.cs#namescopeexample)]
+ [!code-vb[StoryboardBeginAnimation_procedural_snip#NameScopeExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/visualbasic/scopeexample.vb#namescopeexample)]  
   
-## <a name="see-also"></a><span data-ttu-id="74d92-110">См. также</span><span class="sxs-lookup"><span data-stu-id="74d92-110">See also</span></span>
-- [<span data-ttu-id="74d92-111">Анимация свойства с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="74d92-111">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)
-- [<span data-ttu-id="74d92-112">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="74d92-112">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="311d2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="311d2-110">See also</span></span>
+- [<span data-ttu-id="311d2-111">Анимация свойства с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="311d2-111">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)
+- [<span data-ttu-id="311d2-112">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="311d2-112">Animation Overview</span></span>](animation-overview.md)

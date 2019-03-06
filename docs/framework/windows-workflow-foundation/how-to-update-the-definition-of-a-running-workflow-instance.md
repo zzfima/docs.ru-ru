@@ -1,69 +1,69 @@
 ---
-title: Как обновить определение выполняющегося экземпляра рабочего процесса
+title: Практическое руководство. Обновить определение выполняющегося экземпляра рабочего процесса
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: da8b6adeede1fddf39c818568cfd884c3add317f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1f5980ed360e8dfb4aaac92e1e5e7236ffb9f409
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123843"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376597"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="b8961-102">Как обновить определение выполняющегося экземпляра рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="b8961-102">How to: Update the Definition of a Running Workflow Instance</span></span>
-<span data-ttu-id="b8961-103">Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="b8961-104">Это позволяет реализовать исправление ошибки, внедрение новых требований или учет непредвиденных изменений.</span><span class="sxs-lookup"><span data-stu-id="b8961-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="b8961-105">Этот шаг в этом руководстве показано, как использовать динамическое обновление для изменения сохраненных экземпляров `v1` рабочего процесса угадывания чисел в соответствии с новыми функциями, представленными в [как: узел нескольких версий рабочего процесса Side-by-Side ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="b8961-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="be096-102">Практическое руководство. Обновить определение выполняющегося экземпляра рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="be096-102">How to: Update the Definition of a Running Workflow Instance</span></span>
+<span data-ttu-id="be096-103">Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="be096-104">Это позволяет реализовать исправление ошибки, внедрение новых требований или учет непредвиденных изменений.</span><span class="sxs-lookup"><span data-stu-id="be096-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="be096-105">Этот шаг в этом руководстве показано, как использовать динамическое обновление для изменения сохраненных экземпляров `v1` рабочего процесса угадывания чисел в соответствии с новыми функциями, представленными в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="be096-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="b8961-106">Чтобы скачать полную версию или просмотреть пошаговое видео учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="b8961-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="be096-106">Чтобы скачать полную версию или просмотреть пошаговое видео учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="be096-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="b8961-107">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="b8961-107">In this topic</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="be096-107">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="be096-107">In this topic</span></span>  
   
--   [<span data-ttu-id="b8961-108">Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="b8961-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
+-   [<span data-ttu-id="be096-108">Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="be096-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   
--   [<span data-ttu-id="b8961-109">Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
+-   [<span data-ttu-id="be096-109">Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
   
--   [<span data-ttu-id="b8961-110">Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
+-   [<span data-ttu-id="be096-110">Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
   
--   [<span data-ttu-id="b8961-111">Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
+-   [<span data-ttu-id="be096-111">Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
   
--   [<span data-ttu-id="b8961-112">Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="b8961-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
+-   [<span data-ttu-id="be096-112">Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="be096-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [<span data-ttu-id="b8961-113">Для создания обновленной сборки рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="b8961-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [<span data-ttu-id="be096-113">Для создания обновленной сборки рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="be096-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
--   [<span data-ttu-id="b8961-114">Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="b8961-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="be096-114">Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="be096-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [<span data-ttu-id="b8961-115">Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="b8961-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
+-   [<span data-ttu-id="be096-115">Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="be096-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [<span data-ttu-id="b8961-116">Для запуска приложения с обновленными рабочими процессами</span><span class="sxs-lookup"><span data-stu-id="b8961-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="be096-116">Для запуска приложения с обновленными рабочими процессами</span><span class="sxs-lookup"><span data-stu-id="be096-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [<span data-ttu-id="b8961-117">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="b8961-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [<span data-ttu-id="be096-117">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="be096-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a> <span data-ttu-id="b8961-118">Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="b8961-118">To create the CreateUpdateMaps project</span></span>  
+### <a name="BKMK_CreateProject"></a> <span data-ttu-id="be096-118">Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="be096-118">To create the CreateUpdateMaps project</span></span>  
   
-1.  <span data-ttu-id="b8961-119">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="b8961-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
+1.  <span data-ttu-id="be096-119">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="be096-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
-2.  <span data-ttu-id="b8961-120">В **установленные** выберите **Visual C#**, **Windows** (или **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="b8961-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
+2.  <span data-ttu-id="be096-120">В **установленные** выберите **Visual C#**, **Windows** (или **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="be096-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="b8961-121">В зависимости от того, какой язык программирования задан как основной в Visual Studio, узел **Visual C#** или **Visual Basic** может находиться в разделе **Другие языки** узла **Установленные** .</span><span class="sxs-lookup"><span data-stu-id="b8961-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="be096-121">В зависимости от того, какой язык программирования задан как основной в Visual Studio, узел **Visual C#** или **Visual Basic** может находиться в разделе **Другие языки** узла **Установленные** .</span><span class="sxs-lookup"><span data-stu-id="be096-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="b8961-122">Убедитесь, что в раскрывающемся списке версий .NET Framework выбран пункт **.NET Framework 4.5** .</span><span class="sxs-lookup"><span data-stu-id="b8961-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="b8961-123">Выберите **консольное приложение** из **Windows** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="b8961-124">Тип **CreateUpdateMaps** в **имя** поле и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b8961-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="be096-122">Убедитесь, что в раскрывающемся списке версий .NET Framework выбран пункт **.NET Framework 4.5** .</span><span class="sxs-lookup"><span data-stu-id="be096-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="be096-123">Выберите **консольное приложение** из **Windows** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="be096-124">Тип **CreateUpdateMaps** в **имя** поле и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="be096-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="b8961-125">Щелкните правой кнопкой мыши **CreateUpdateMaps** в **обозревателе решений** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="b8961-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="be096-125">Щелкните правой кнопкой мыши **CreateUpdateMaps** в **обозревателе решений** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="be096-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="b8961-126">Выберите **Framework** из **сборки** узел в **добавить ссылку** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="b8961-127">Тип **System.Activities** в **поиск сборок** поле, чтобы отфильтровать сборки и легче выбрать необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="b8961-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
+4.  <span data-ttu-id="be096-126">Выберите **Framework** из **сборки** узел в **добавить ссылку** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="be096-127">Тип **System.Activities** в **поиск сборок** поле, чтобы отфильтровать сборки и легче выбрать необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="be096-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
 
-5.  <span data-ttu-id="b8961-128">Установите флажок рядом с **System.Activities** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+5.  <span data-ttu-id="be096-128">Установите флажок рядом с **System.Activities** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-6.  <span data-ttu-id="b8961-129">Тип **сериализации** в **поиск сборок** поле, а также установите флажок рядом с **System.Runtime.Serialization** из **результатов поиска**  списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="be096-129">Тип **сериализации** в **поиск сборок** поле, а также установите флажок рядом с **System.Runtime.Serialization** из **результатов поиска**  списка.</span><span class="sxs-lookup"><span data-stu-id="be096-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="b8961-130">Тип **System.Xaml** в **поиск сборок** поле, а также установите флажок рядом с **System.Xaml** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="be096-130">Тип **System.Xaml** в **поиск сборок** поле, а также установите флажок рядом с **System.Xaml** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="b8961-131">Нажмите кнопку **ОК** закрыть **диспетчер ссылок** и добавить ссылки.</span><span class="sxs-lookup"><span data-stu-id="b8961-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
+8.  <span data-ttu-id="be096-131">Нажмите кнопку **ОК** закрыть **диспетчер ссылок** и добавить ссылки.</span><span class="sxs-lookup"><span data-stu-id="be096-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-9. <span data-ttu-id="b8961-132">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="b8961-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+9. <span data-ttu-id="be096-132">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="be096-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -89,7 +89,7 @@ ms.locfileid: "49123843"
     using Microsoft.CSharp.Activities;
     ```
 
-10. <span data-ttu-id="b8961-133">Добавьте два следующих строковых члена в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
+10. <span data-ttu-id="be096-133">Добавьте два следующих строковых члена в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const mapPath = "..\..\..\PreviousVersions"
@@ -101,7 +101,7 @@ ms.locfileid: "49123843"
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";
     ```
 
-11. <span data-ttu-id="b8961-134">Добавьте в класс `StartUpdate` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="b8961-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-135">Этот метод загружает указанное определение рабочего процесса языка XAML в `ActivityBuilder`, а затем вызывает `DynamicUpdate.PrepareForUpdate`.</span><span class="sxs-lookup"><span data-stu-id="b8961-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="b8961-136">`PrepareForUpdate` создает копию экземпляра определения рабочего процесса в `ActivityBuilder`.</span><span class="sxs-lookup"><span data-stu-id="b8961-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="b8961-137">После изменения определения рабочего процесса эта копия используется вместе с измененным определением рабочего процесса для создания схемы обновления.</span><span class="sxs-lookup"><span data-stu-id="b8961-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
+11. <span data-ttu-id="be096-134">Добавьте в класс `StartUpdate` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="be096-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-135">Этот метод загружает указанное определение рабочего процесса языка XAML в `ActivityBuilder`, а затем вызывает `DynamicUpdate.PrepareForUpdate`.</span><span class="sxs-lookup"><span data-stu-id="be096-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="be096-136">`PrepareForUpdate` создает копию экземпляра определения рабочего процесса в `ActivityBuilder`.</span><span class="sxs-lookup"><span data-stu-id="be096-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="be096-137">После изменения определения рабочего процесса эта копия используется вместе с измененным определением рабочего процесса для создания схемы обновления.</span><span class="sxs-lookup"><span data-stu-id="be096-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
 
     ```vb
     Private Function StartUpdate(name As String) As ActivityBuilder
@@ -165,7 +165,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-12. <span data-ttu-id="b8961-138">Затем добавьте следующий метод `CreateUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-139">При этом создается схема динамического обновления путем вызова DynamicUpdateServices.CreateUpdateMap, а затем схема сохраняется с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="b8961-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="b8961-140">Эта схема обновления содержит данные, необходимые среде выполнения для обновления экземпляра сохраненного рабочего процесса, который был запущен с использованием определения, содержащегося в `ActivityBuilder`, чтобы он завершился с использованием обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
+12. <span data-ttu-id="be096-138">Затем добавьте следующий метод `CreateUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-139">При этом создается схема динамического обновления путем вызова DynamicUpdateServices.CreateUpdateMap, а затем схема сохраняется с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="be096-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="be096-140">Эта схема обновления содержит данные, необходимые среде выполнения для обновления экземпляра сохраненного рабочего процесса, который был запущен с использованием определения, содержащегося в `ActivityBuilder`, чтобы он завершился с использованием обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)
@@ -199,7 +199,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-13. <span data-ttu-id="b8961-141">Добавьте в класс `SaveUpdatedDefinition` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="b8961-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-142">Этот метод сохраняет новое определение рабочего процесса после создания схемы обновления.</span><span class="sxs-lookup"><span data-stu-id="b8961-142">This method saves the updated workflow definition once the update map is created.</span></span>
+13. <span data-ttu-id="be096-141">Добавьте в класс `SaveUpdatedDefinition` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="be096-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-142">Этот метод сохраняет новое определение рабочего процесса после создания схемы обновления.</span><span class="sxs-lookup"><span data-stu-id="be096-142">This method saves the updated workflow definition once the update map is created.</span></span>
 
     ```vb
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)
@@ -224,9 +224,9 @@ ms.locfileid: "49123843"
     }
     ```
 
-###  <a name="BKMK_StateMachine"></a> <span data-ttu-id="b8961-143">Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-143">To update StateMachineNumberGuessWorkflow</span></span>
+### <a name="BKMK_StateMachine"></a> <span data-ttu-id="be096-143">Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-143">To update StateMachineNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="b8961-144">Добавьте `CreateStateMachineUpdateMap` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
+1.  <span data-ttu-id="be096-144">Добавьте `CreateStateMachineUpdateMap` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -240,7 +240,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-2.  <span data-ttu-id="b8961-145">Вызовите `StartUpdate` и получите ссылку на корневое действие `StateMachine` рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
+2.  <span data-ttu-id="be096-145">Вызовите `StartUpdate` и получите ссылку на корневое действие `StateMachine` рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
 
     ```vb
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")
@@ -256,7 +256,7 @@ ms.locfileid: "49123843"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3.  <span data-ttu-id="b8961-146">Затем обновите выражения двух `WriteLine` действий, которые отображают, является ли догадка пользователя слишком большое или слишком мало, чтобы они соответствовали обновлениям, сделанным в [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="b8961-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="be096-146">Затем обновите выражения двух `WriteLine` действий, которые отображают, является ли догадка пользователя слишком большое или слишком мало, чтобы они соответствовали обновлениям, сделанным в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="be096-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -288,7 +288,7 @@ ms.locfileid: "49123843"
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");
     ```
 
-4.  <span data-ttu-id="b8961-147">Затем добавьте новое действие `WriteLine`, которое отображает последнее сообщение.</span><span class="sxs-lookup"><span data-stu-id="b8961-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
+4.  <span data-ttu-id="be096-147">Затем добавьте новое действие `WriteLine`, которое отображает последнее сообщение.</span><span class="sxs-lookup"><span data-stu-id="be096-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
 
     ```vb
     'Create the new WriteLine that displays the closing message.
@@ -317,7 +317,7 @@ ms.locfileid: "49123843"
     sm.States[1].Transitions[0].Action = wl;
     ```
 
-5.  <span data-ttu-id="b8961-148">После обновления рабочего процесса вызовите `CreateUpdateMaps` и `SaveUpdatedDefinition`.</span><span class="sxs-lookup"><span data-stu-id="b8961-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="b8961-149">`CreateUpdateMaps` создает и сохраняет `DynamicUpdateMap`, а `SaveUpdatedDefinition` сохраняет обновленное определение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
+5.  <span data-ttu-id="be096-148">После обновления рабочего процесса вызовите `CreateUpdateMaps` и `SaveUpdatedDefinition`.</span><span class="sxs-lookup"><span data-stu-id="be096-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="be096-149">`CreateUpdateMaps` создает и сохраняет `DynamicUpdateMap`, а `SaveUpdatedDefinition` сохраняет обновленное определение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
 
     ```vb
     'Create the update map.
@@ -335,7 +335,7 @@ ms.locfileid: "49123843"
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");
     ```
 
-     <span data-ttu-id="b8961-150">Ниже приведен полный пример метода `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="b8961-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
+     <span data-ttu-id="be096-150">Ниже приведен полный пример метода `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="be096-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -417,9 +417,9 @@ ms.locfileid: "49123843"
     }
     ```
 
-###  <a name="BKMK_Flowchart"></a> <span data-ttu-id="b8961-151">Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-151">To update FlowchartNumberGuessWorkflow</span></span>
+### <a name="BKMK_Flowchart"></a> <span data-ttu-id="be096-151">Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-151">To update FlowchartNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="b8961-152">Добавьте следующий метод `CreateFlowchartUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-153">Этот метод аналогичен `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="b8961-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="b8961-154">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса блок-схемы и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="be096-152">Добавьте следующий метод `CreateFlowchartUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-153">Этот метод аналогичен `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="be096-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="be096-154">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса блок-схемы и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateFlowchartUpdateMap()
@@ -531,9 +531,9 @@ ms.locfileid: "49123843"
     }
     ```
 
-###  <a name="BKMK_Sequential"></a> <span data-ttu-id="b8961-155">Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="b8961-155">To update SequentialNumberGuessWorkflow</span></span>
+### <a name="BKMK_Sequential"></a> <span data-ttu-id="be096-155">Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="be096-155">To update SequentialNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="b8961-156">Добавьте следующий метод `CreateSequentialUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-157">Этот метод аналогичен двум другим методам.</span><span class="sxs-lookup"><span data-stu-id="b8961-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="b8961-158">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса последовательности и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="be096-156">Добавьте следующий метод `CreateSequentialUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-157">Этот метод аналогичен двум другим методам.</span><span class="sxs-lookup"><span data-stu-id="be096-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="be096-158">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса последовательности и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateSequentialUpdateMap()
@@ -611,9 +611,9 @@ ms.locfileid: "49123843"
     }
     ```
 
-###  <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="b8961-159">Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="b8961-159">To build and run the CreateUpdateMaps application</span></span>
+### <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="be096-159">Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="be096-159">To build and run the CreateUpdateMaps application</span></span>
 
-1.  <span data-ttu-id="b8961-160">Обновите метод `Main` и добавьте следующие три вызова методов.</span><span class="sxs-lookup"><span data-stu-id="b8961-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="b8961-161">Эти методы добавляются в следующие разделы.</span><span class="sxs-lookup"><span data-stu-id="b8961-161">These methods are added in the following sections.</span></span> <span data-ttu-id="b8961-162">Каждый метод обновляет соответствующий рабочий процесс угадывания числа и создает `DynamicUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="b8961-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
+1.  <span data-ttu-id="be096-160">Обновите метод `Main` и добавьте следующие три вызова методов.</span><span class="sxs-lookup"><span data-stu-id="be096-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="be096-161">Эти методы добавляются в следующие разделы.</span><span class="sxs-lookup"><span data-stu-id="be096-161">These methods are added in the following sections.</span></span> <span data-ttu-id="be096-162">Каждый метод обновляет соответствующий рабочий процесс угадывания числа и создает `DynamicUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="be096-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
 
     ```vb
     Sub Main()
@@ -636,53 +636,53 @@ ms.locfileid: "49123843"
     }
     ```
 
-2.  <span data-ttu-id="b8961-163">Щелкните правой кнопкой мыши **CreateUpdateMaps** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="b8961-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+2.  <span data-ttu-id="be096-163">Щелкните правой кнопкой мыши **CreateUpdateMaps** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="be096-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-3.  <span data-ttu-id="b8961-164">Нажмите сочетание клавиш CTRL+SHIFT+B для сборки решения, а затем нажмите CTRL+F5, чтобы запустить приложение `CreateUpdateMaps`.</span><span class="sxs-lookup"><span data-stu-id="b8961-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
-
-    > [!NOTE]
-    >  <span data-ttu-id="b8961-165">`CreateUpdateMaps` Приложение не отображает свое состояние во время выполнения, но если взглянуть **NumberGuessWorkflowActivities_du** папки и **PreviousVersions** вы увидите папку файлы определения обновленный рабочий процесс и схем обновлений.</span><span class="sxs-lookup"><span data-stu-id="b8961-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
-
-     <span data-ttu-id="b8961-166">После создания схем обновлений и изменения определений рабочего процесса необходимо построить обновленную сборку рабочих процессов с обновленными определениями.</span><span class="sxs-lookup"><span data-stu-id="b8961-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
-
-###  <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="b8961-167">Для создания обновленной сборки рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="b8961-167">To build the updated workflow assembly</span></span>
-
-1.  <span data-ttu-id="b8961-168">Откройте второй экземпляр Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="b8961-168">Open a second instance of Visual Studio 2012.</span></span>
-
-2.  <span data-ttu-id="b8961-169">Выберите **откройте**, **решение или проект** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="b8961-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
-
-3.  <span data-ttu-id="b8961-170">Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)выберите **NumberGuessWorkflowActivities.csproj**  (или **vbproj**) и нажмите кнопку **откройте**.</span><span class="sxs-lookup"><span data-stu-id="b8961-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
-
-4.  <span data-ttu-id="b8961-171">В **обозревателе решений**, щелкните правой кнопкой мыши **SequentialNumberGuessWorkflow.xaml** и выберите **исключить из проекта**.</span><span class="sxs-lookup"><span data-stu-id="b8961-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="b8961-172">Сделать то же самое **FlowchartNumberGuessWorkflow.xaml** и **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="b8961-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="b8961-173">Эта процедура удаляет предыдущие версии определений рабочих процессов из проекта.</span><span class="sxs-lookup"><span data-stu-id="b8961-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
-
-5.  <span data-ttu-id="b8961-174">Выберите **добавить существующий элемент** из **проекта** меню.</span><span class="sxs-lookup"><span data-stu-id="b8961-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
-
-6.  <span data-ttu-id="b8961-175">Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="b8961-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
-
-7.  <span data-ttu-id="b8961-176">Выберите **файлы XAML (\*.xaml;\*. XOML)** из **файлы типа** стрелку раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
-
-8.  <span data-ttu-id="b8961-177">Выберите **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, и **StateMachineNumberGuessWorkflow_du.xaml** и нажмите кнопку  **Добавление**.</span><span class="sxs-lookup"><span data-stu-id="b8961-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+3.  <span data-ttu-id="be096-164">Нажмите сочетание клавиш CTRL+SHIFT+B для сборки решения, а затем нажмите CTRL+F5, чтобы запустить приложение `CreateUpdateMaps`.</span><span class="sxs-lookup"><span data-stu-id="be096-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="b8961-178">Чтобы выбрать несколько элементов одновременно, при нажатии левой кнопки мыши удерживайте нажатой клавишу CTRL.</span><span class="sxs-lookup"><span data-stu-id="b8961-178">CTRL+Click to select multiple items at a time.</span></span>
+    >  <span data-ttu-id="be096-165">`CreateUpdateMaps` Приложение не отображает свое состояние во время выполнения, но если взглянуть **NumberGuessWorkflowActivities_du** папки и **PreviousVersions** вы увидите папку файлы определения обновленный рабочий процесс и схем обновлений.</span><span class="sxs-lookup"><span data-stu-id="be096-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
 
-     <span data-ttu-id="b8961-179">Это действие добавит обновленные версии определений рабочих процессов в проект.</span><span class="sxs-lookup"><span data-stu-id="b8961-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+     <span data-ttu-id="be096-166">После создания схем обновлений и изменения определений рабочего процесса необходимо построить обновленную сборку рабочих процессов с обновленными определениями.</span><span class="sxs-lookup"><span data-stu-id="be096-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
 
-9. <span data-ttu-id="b8961-180">Для сборки проекта нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="b8961-180">Press CTRL+SHIFT+B to build the project.</span></span>
+### <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="be096-167">Для создания обновленной сборки рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="be096-167">To build the updated workflow assembly</span></span>
 
-10. <span data-ttu-id="b8961-181">Выберите **закрыть решение** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="b8961-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="b8961-182">Файл решения для проекта не является обязательным, поэтому щелкните **нет** закрыть Visual Studio без сохранения файла решения.</span><span class="sxs-lookup"><span data-stu-id="b8961-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="b8961-183">Выберите **выхода** из **файл** меню, чтобы закрыть Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b8961-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+1.  <span data-ttu-id="be096-168">Откройте второй экземпляр Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="be096-168">Open a second instance of Visual Studio 2012.</span></span>
 
-11. <span data-ttu-id="b8961-184">Откройте проводник Windows и перейдите к **NumberGuessWorkflowActivities_du\bin\Debug** папку (или **bin\Release** в зависимости от параметров проекта).</span><span class="sxs-lookup"><span data-stu-id="b8961-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+2.  <span data-ttu-id="be096-169">Выберите **откройте**, **решение или проект** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="be096-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
 
-12. <span data-ttu-id="b8961-185">Переименуйте **NumberGuessWorkflowActivities.dll** для **NumberGuessWorkflowActivities_v15.dll**и скопируйте его **PreviousVersions** папку, созданную в [Как: размещения нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="b8961-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="be096-170">Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)выберите **NumberGuessWorkflowActivities.csproj** (или **vbproj**) и нажмите кнопку **откройте**.</span><span class="sxs-lookup"><span data-stu-id="be096-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="b8961-186">Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="b8961-186">To update WorkflowVersionMap with the new versions</span></span>
+4.  <span data-ttu-id="be096-171">В **обозревателе решений**, щелкните правой кнопкой мыши **SequentialNumberGuessWorkflow.xaml** и выберите **исключить из проекта**.</span><span class="sxs-lookup"><span data-stu-id="be096-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="be096-172">Сделать то же самое **FlowchartNumberGuessWorkflow.xaml** и **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="be096-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="be096-173">Эта процедура удаляет предыдущие версии определений рабочих процессов из проекта.</span><span class="sxs-lookup"><span data-stu-id="be096-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
 
-1.  <span data-ttu-id="b8961-187">Переключитесь на исходный экземпляр Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="b8961-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+5.  <span data-ttu-id="be096-174">Выберите **добавить существующий элемент** из **проекта** меню.</span><span class="sxs-lookup"><span data-stu-id="be096-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
 
-2.  <span data-ttu-id="b8961-188">Дважды щелкните **WorkflowVersionMap.cs** (или **WorkflowVersionMap.vb**) в разделе **NumberGuessWorkflowHost** проекта, чтобы открыть его.</span><span class="sxs-lookup"><span data-stu-id="b8961-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+6.  <span data-ttu-id="be096-175">Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="be096-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
-3.  <span data-ttu-id="b8961-189">Добавьте три новых идентификатора рабочих процессов непосредственно под шестью имеющимися объявлениями идентификаторов рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="b8961-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="b8961-190">В данном учебнике `1.5.0.0` используется в качестве `WorkflowIdentity.Version` для идентификаторов динамического обновления.</span><span class="sxs-lookup"><span data-stu-id="b8961-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="b8961-191">Эти новые идентификаторы `v15` будут использоваться для указания правильного определения динамически сохраняемых экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
+7.  <span data-ttu-id="be096-176">Выберите **файлы XAML (\*.xaml;\*. XOML)** из **файлы типа** стрелку раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="be096-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
+
+8.  <span data-ttu-id="be096-177">Выберите **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, и **StateMachineNumberGuessWorkflow_du.xaml** и нажмите кнопку  **Добавление**.</span><span class="sxs-lookup"><span data-stu-id="be096-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="be096-178">Чтобы выбрать несколько элементов одновременно, при нажатии левой кнопки мыши удерживайте нажатой клавишу CTRL.</span><span class="sxs-lookup"><span data-stu-id="be096-178">CTRL+Click to select multiple items at a time.</span></span>
+
+     <span data-ttu-id="be096-179">Это действие добавит обновленные версии определений рабочих процессов в проект.</span><span class="sxs-lookup"><span data-stu-id="be096-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+
+9. <span data-ttu-id="be096-180">Для сборки проекта нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="be096-180">Press CTRL+SHIFT+B to build the project.</span></span>
+
+10. <span data-ttu-id="be096-181">Выберите **закрыть решение** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="be096-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="be096-182">Файл решения для проекта не является обязательным, поэтому щелкните **нет** закрыть Visual Studio без сохранения файла решения.</span><span class="sxs-lookup"><span data-stu-id="be096-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="be096-183">Выберите **выхода** из **файл** меню, чтобы закрыть Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="be096-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+
+11. <span data-ttu-id="be096-184">Откройте проводник Windows и перейдите к **NumberGuessWorkflowActivities_du\bin\Debug** папку (или **bin\Release** в зависимости от параметров проекта).</span><span class="sxs-lookup"><span data-stu-id="be096-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+
+12. <span data-ttu-id="be096-185">Переименуйте **NumberGuessWorkflowActivities.dll** для **NumberGuessWorkflowActivities_v15.dll**и скопируйте его **PreviousVersions** папку, созданную в [Как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="be096-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="be096-186">Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="be096-186">To update WorkflowVersionMap with the new versions</span></span>
+
+1.  <span data-ttu-id="be096-187">Переключитесь на исходный экземпляр Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="be096-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+
+2.  <span data-ttu-id="be096-188">Дважды щелкните **WorkflowVersionMap.cs** (или **WorkflowVersionMap.vb**) в разделе **NumberGuessWorkflowHost** проекта, чтобы открыть его.</span><span class="sxs-lookup"><span data-stu-id="be096-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+3.  <span data-ttu-id="be096-189">Добавьте три новых идентификатора рабочих процессов непосредственно под шестью имеющимися объявлениями идентификаторов рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="be096-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="be096-190">В данном учебнике `1.5.0.0` используется в качестве `WorkflowIdentity.Version` для идентификаторов динамического обновления.</span><span class="sxs-lookup"><span data-stu-id="be096-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="be096-191">Эти новые идентификаторы `v15` будут использоваться для указания правильного определения динамически сохраняемых экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
 
     ```vb
     'Current version identities.
@@ -718,7 +718,7 @@ ms.locfileid: "49123843"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;
     ```
 
-4.  <span data-ttu-id="b8961-192">В конце конструктора добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="b8961-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="b8961-193">Этот код инициализирует идентификаторы рабочих процессов с динамическим обновлением, загружает соответствующие определения и добавляет их в словарь версий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
+4.  <span data-ttu-id="be096-192">В конце конструктора добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="be096-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="be096-193">Этот код инициализирует идентификаторы рабочих процессов с динамическим обновлением, загружает соответствующие определения и добавляет их в словарь версий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
 
     ```vb
     'Initialize the dynamic update workflow identities.
@@ -796,7 +796,7 @@ ms.locfileid: "49123843"
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     <span data-ttu-id="b8961-194">В следующем примере продемонстрирован в завершенном виде класс `WorkflowVersionMap`.</span><span class="sxs-lookup"><span data-stu-id="b8961-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
+     <span data-ttu-id="be096-194">В следующем примере продемонстрирован в завершенном виде класс `WorkflowVersionMap`.</span><span class="sxs-lookup"><span data-stu-id="be096-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
 
     ```vb
     Public Module WorkflowVersionMap
@@ -1061,36 +1061,36 @@ ms.locfileid: "49123843"
     }
     ```
 
-5.  <span data-ttu-id="b8961-195">Для сборки проекта нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="b8961-195">Press CTRL+SHIFT+B to build the project.</span></span>
+5.  <span data-ttu-id="be096-195">Для сборки проекта нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="be096-195">Press CTRL+SHIFT+B to build the project.</span></span>
 
-###  <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="b8961-196">Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="b8961-196">To apply the dynamic updates</span></span>
+### <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="be096-196">Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="be096-196">To apply the dynamic updates</span></span>
 
-1.  <span data-ttu-id="b8961-197">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="b8961-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
+1.  <span data-ttu-id="be096-197">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="be096-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
 
-2.  <span data-ttu-id="b8961-198">В **установленные** выберите **Visual C#**, **Windows** (или **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="b8961-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
+2.  <span data-ttu-id="be096-198">В **установленные** выберите **Visual C#**, **Windows** (или **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="be096-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="b8961-199">В зависимости от того, какой язык программирования задан как основной в Visual Studio, узел **Visual C#** или **Visual Basic** может находиться в разделе **Другие языки** узла **Установленные** .</span><span class="sxs-lookup"><span data-stu-id="b8961-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="be096-199">В зависимости от того, какой язык программирования задан как основной в Visual Studio, узел **Visual C#** или **Visual Basic** может находиться в разделе **Другие языки** узла **Установленные** .</span><span class="sxs-lookup"><span data-stu-id="be096-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="b8961-200">Убедитесь, что в раскрывающемся списке версий .NET Framework выбран пункт **.NET Framework 4.5** .</span><span class="sxs-lookup"><span data-stu-id="b8961-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="b8961-201">Выберите **консольное приложение** из **Windows** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="b8961-202">Тип **ApplyDynamicUpdate** в **имя** поле и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b8961-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="be096-200">Убедитесь, что в раскрывающемся списке версий .NET Framework выбран пункт **.NET Framework 4.5** .</span><span class="sxs-lookup"><span data-stu-id="be096-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="be096-201">Выберите **консольное приложение** из **Windows** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="be096-202">Тип **ApplyDynamicUpdate** в **имя** поле и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="be096-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="b8961-203">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в **обозревателе решений** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="b8961-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="be096-203">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в **обозревателе решений** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="be096-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="b8961-204">Нажмите кнопку **решение** и установите флажок рядом с полем **NumberGuessWorkflowHost**.</span><span class="sxs-lookup"><span data-stu-id="b8961-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="b8961-205">Эта ссылка не требуется для того, чтобы `ApplyDynamicUpdate` мог использовать класс `NumberGuessWorkflowHost.WorkflowVersionMap`.</span><span class="sxs-lookup"><span data-stu-id="b8961-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
+4.  <span data-ttu-id="be096-204">Нажмите кнопку **решение** и установите флажок рядом с полем **NumberGuessWorkflowHost**.</span><span class="sxs-lookup"><span data-stu-id="be096-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="be096-205">Эта ссылка не требуется для того, чтобы `ApplyDynamicUpdate` мог использовать класс `NumberGuessWorkflowHost.WorkflowVersionMap`.</span><span class="sxs-lookup"><span data-stu-id="be096-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
 
-5.  <span data-ttu-id="b8961-206">Выберите **Framework** из **сборки** узел в **добавить ссылку** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="b8961-207">Тип **System.Activities** в **поиск сборок** поле.</span><span class="sxs-lookup"><span data-stu-id="b8961-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="b8961-208">При этом будут отфильтрованы сборки и станет легче выбрать необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="b8961-208">This will filter the assemblies and make the desired references easier to select.</span></span>
+5.  <span data-ttu-id="be096-206">Выберите **Framework** из **сборки** узел в **добавить ссылку** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="be096-207">Тип **System.Activities** в **поиск сборок** поле.</span><span class="sxs-lookup"><span data-stu-id="be096-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="be096-208">При этом будут отфильтрованы сборки и станет легче выбрать необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="be096-208">This will filter the assemblies and make the desired references easier to select.</span></span>
 
-6.  <span data-ttu-id="b8961-209">Установите флажок рядом с **System.Activities** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="be096-209">Установите флажок рядом с **System.Activities** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="b8961-210">Тип **сериализации** в **поиск сборок** поле, а также установите флажок рядом с **System.Runtime.Serialization** из **результатов поиска**  списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="be096-210">Тип **сериализации** в **поиск сборок** поле, а также установите флажок рядом с **System.Runtime.Serialization** из **результатов поиска**  списка.</span><span class="sxs-lookup"><span data-stu-id="be096-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="b8961-211">Тип **DurableInstancing** в **поиск сборок** поле, а также установите флажок рядом с **System.Activities.DurableInstancing** и  **System.Runtime.DurableInstancing** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="b8961-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
+8.  <span data-ttu-id="be096-211">Тип **DurableInstancing** в **поиск сборок** поле, а также установите флажок рядом с **System.Activities.DurableInstancing** и  **System.Runtime.DurableInstancing** из **результаты поиска** списка.</span><span class="sxs-lookup"><span data-stu-id="be096-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
 
-9. <span data-ttu-id="b8961-212">Нажмите кнопку **ОК** закрыть **диспетчер ссылок** и добавить ссылки.</span><span class="sxs-lookup"><span data-stu-id="b8961-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
+9. <span data-ttu-id="be096-212">Нажмите кнопку **ОК** закрыть **диспетчер ссылок** и добавить ссылки.</span><span class="sxs-lookup"><span data-stu-id="be096-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-10. <span data-ttu-id="b8961-213">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в обозревателе решений и выберите **добавить**, **класс**.</span><span class="sxs-lookup"><span data-stu-id="b8961-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="b8961-214">Тип `DynamicUpdateInfo` в **имя** поле и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="b8961-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
+10. <span data-ttu-id="be096-213">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в обозревателе решений и выберите **добавить**, **класс**.</span><span class="sxs-lookup"><span data-stu-id="be096-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="be096-214">Тип `DynamicUpdateInfo` в **имя** поле и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="be096-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
 
-11. <span data-ttu-id="b8961-215">Добавьте следующие два члена в класс `DynamicUpdateInfo`.</span><span class="sxs-lookup"><span data-stu-id="b8961-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="b8961-216">В следующем примере продемонстрирован в завершенном виде класс `DynamicUpdateInfo`.</span><span class="sxs-lookup"><span data-stu-id="b8961-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="b8961-217">Этот класс содержит сведения о схеме обновления и новом идентификаторе, который используется при обновлении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
+11. <span data-ttu-id="be096-215">Добавьте следующие два члена в класс `DynamicUpdateInfo`.</span><span class="sxs-lookup"><span data-stu-id="be096-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="be096-216">В следующем примере продемонстрирован в завершенном виде класс `DynamicUpdateInfo`.</span><span class="sxs-lookup"><span data-stu-id="be096-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="be096-217">Этот класс содержит сведения о схеме обновления и новом идентификаторе, который используется при обновлении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
 
     ```vb
     Public Class DynamicUpdateInfo
@@ -1107,7 +1107,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-12. <span data-ttu-id="b8961-218">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="b8961-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+12. <span data-ttu-id="be096-218">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="be096-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -1119,9 +1119,9 @@ ms.locfileid: "49123843"
     using System.Activities.DynamicUpdate;
     ```
 
-13. <span data-ttu-id="b8961-219">Дважды щелкните **Program.cs** (или **Module1.vb**) в обозревателе решений.</span><span class="sxs-lookup"><span data-stu-id="b8961-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
+13. <span data-ttu-id="be096-219">Дважды щелкните **Program.cs** (или **Module1.vb**) в обозревателе решений.</span><span class="sxs-lookup"><span data-stu-id="be096-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
 
-14. <span data-ttu-id="b8961-220">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="b8961-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+14. <span data-ttu-id="be096-220">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="be096-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports NumberGuessWorkflowHost
@@ -1144,7 +1144,7 @@ ms.locfileid: "49123843"
     using System.Activities.DurableInstancing;
     ```
 
-15. <span data-ttu-id="b8961-221">Добавьте следующий член строки подключения в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="b8961-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
+15. <span data-ttu-id="be096-221">Добавьте следующий член строки подключения в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="be096-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
@@ -1155,9 +1155,9 @@ ms.locfileid: "49123843"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="b8961-222">В строке подключения могут указываться различные имена серверов в зависимости от выпуска SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b8961-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
+    >  <span data-ttu-id="be096-222">В строке подключения могут указываться различные имена серверов в зависимости от выпуска SQL Server.</span><span class="sxs-lookup"><span data-stu-id="be096-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
 
-16. <span data-ttu-id="b8961-223">Добавьте в класс `GetIDs` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="b8961-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-224">Этот метод возвращает список сохраненных идентификаторов экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-224">This method returns a list of persisted workflow instance ids.</span></span>
+16. <span data-ttu-id="be096-223">Добавьте в класс `GetIDs` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="be096-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-224">Этот метод возвращает список сохраненных идентификаторов экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-224">This method returns a list of persisted workflow instance ids.</span></span>
 
     ```vb
     Function GetIds() As IList(Of Guid)
@@ -1210,7 +1210,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-17. <span data-ttu-id="b8961-225">Добавьте в класс `LoadMap` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="b8961-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-226">Этот метод создает словарь, который сопоставляет идентификаторы рабочих процессов `v1` со схемами обновления и новыми идентификаторами, которые используются для обновления соответствующих экземпляров сохраненных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="b8961-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
+17. <span data-ttu-id="be096-225">Добавьте в класс `LoadMap` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="be096-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-226">Этот метод создает словарь, который сопоставляет идентификаторы рабочих процессов `v1` со схемами обновления и новыми идентификаторами, которые используются для обновления соответствующих экземпляров сохраненных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="be096-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
 
     ```vb
     Function LoadMap(mapName As String) As DynamicUpdateMap
@@ -1253,7 +1253,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-18. <span data-ttu-id="b8961-227">Добавьте в класс `LoadMaps` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="b8961-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="b8961-228">Этот метод загружает три схемы обновления и создает словарь, сопоставляющий идентификаторы рабочего процесса `v1` со схемами обновлений.</span><span class="sxs-lookup"><span data-stu-id="b8961-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
+18. <span data-ttu-id="be096-227">Добавьте в класс `LoadMaps` (`Program`) следующий метод `Module1`.</span><span class="sxs-lookup"><span data-stu-id="be096-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="be096-228">Этот метод загружает три схемы обновления и создает словарь, сопоставляющий идентификаторы рабочего процесса `v1` со схемами обновлений.</span><span class="sxs-lookup"><span data-stu-id="be096-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
 
     ```vb
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)
@@ -1325,7 +1325,7 @@ ms.locfileid: "49123843"
     }
     ```
 
-19. <span data-ttu-id="b8961-229">Добавьте следующий код к `Main`.</span><span class="sxs-lookup"><span data-stu-id="b8961-229">Add the following code to `Main`.</span></span> <span data-ttu-id="b8961-230">Этот код выполняет итерацию по сохраненным экземплярам рабочих процессов и проверяет каждый идентификатор `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="b8961-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="b8961-231">Если `WorkflowIdentity` сопоставляется с экземпляром рабочего процесса `v1`, к `WorkflowApplication` применяются обновленное определение рабочего процесса и обновленный идентификатор.</span><span class="sxs-lookup"><span data-stu-id="b8961-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="b8961-232">Затем вызывается метод `WorkflowApplication.Load` с экземпляром и схемой обновления, который применяет схему.</span><span class="sxs-lookup"><span data-stu-id="b8961-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="b8961-233">После обновления измененный экземпляр сохраняется методом `Unload`.</span><span class="sxs-lookup"><span data-stu-id="b8961-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
+19. <span data-ttu-id="be096-229">Добавьте следующий код к `Main`.</span><span class="sxs-lookup"><span data-stu-id="be096-229">Add the following code to `Main`.</span></span> <span data-ttu-id="be096-230">Этот код выполняет итерацию по сохраненным экземплярам рабочих процессов и проверяет каждый идентификатор `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="be096-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="be096-231">Если `WorkflowIdentity` сопоставляется с экземпляром рабочего процесса `v1`, к `WorkflowApplication` применяются обновленное определение рабочего процесса и обновленный идентификатор.</span><span class="sxs-lookup"><span data-stu-id="be096-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="be096-232">Затем вызывается метод `WorkflowApplication.Load` с экземпляром и схемой обновления, который применяет схему.</span><span class="sxs-lookup"><span data-stu-id="be096-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="be096-233">После обновления измененный экземпляр сохраняется методом `Unload`.</span><span class="sxs-lookup"><span data-stu-id="be096-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
 
     ```vb
     Dim store = New SqlWorkflowInstanceStore(connectionString)
@@ -1408,35 +1408,35 @@ ms.locfileid: "49123843"
     }
     ```
 
-20. <span data-ttu-id="b8961-234">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="b8961-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+20. <span data-ttu-id="be096-234">Щелкните правой кнопкой мыши **ApplyDynamicUpdate** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="be096-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-21. <span data-ttu-id="b8961-235">Нажмите сочетание клавиш CTRL+SHIFT+B для сборки решения, затем сочетание клавиш Ctrl+F5 для запуска приложения `ApplyDynamicUpdate` и обновления экземпляров сохраненных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="b8961-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="b8961-236">Должны выводиться следующие данные.</span><span class="sxs-lookup"><span data-stu-id="b8961-236">You should see output similar to the following.</span></span> <span data-ttu-id="b8961-237">Рабочие процессы версии 1.0.0.0 обновлены до версии 1.5.0.0, а рабочие процессы версии 2.0.0.0 не обновлены.</span><span class="sxs-lookup"><span data-stu-id="b8961-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
+21. <span data-ttu-id="be096-235">Нажмите сочетание клавиш CTRL+SHIFT+B для сборки решения, затем сочетание клавиш Ctrl+F5 для запуска приложения `ApplyDynamicUpdate` и обновления экземпляров сохраненных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="be096-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="be096-236">Должны выводиться следующие данные.</span><span class="sxs-lookup"><span data-stu-id="be096-236">You should see output similar to the following.</span></span> <span data-ttu-id="be096-237">Рабочие процессы версии 1.0.0.0 обновлены до версии 1.5.0.0, а рабочие процессы версии 2.0.0.0 не обновлены.</span><span class="sxs-lookup"><span data-stu-id="be096-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
 
- <span data-ttu-id="b8961-238">**Проверка: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
+ <span data-ttu-id="be096-238">**Проверка: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: StateMachineNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: StateMachineNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: FlowchartNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: FlowchartNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: SequentialNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: SequentialNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: SequentialNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: SequentialNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: StateMachineNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: StateMachineNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
+**проверки: FlowchartNumberGuessWorkflow; Версия = 1.0.0.0**
 **обновлено до: FlowchartNumberGuessWorkflow; Версии = 1.5.0.0**
-**проверка: StateMachineNumberGuessWorkflow; Версия = 2.0.0.0**
-**проверка: StateMachineNumberGuessWorkflow; Версия = 2.0.0.0**
-**проверка: FlowchartNumberGuessWorkflow; Версия = 2.0.0.0**
-**проверка: FlowchartNumberGuessWorkflow; Версия = 2.0.0.0**
-**проверка: SequentialNumberGuessWorkflow; Версия = 2.0.0.0**
-**проверка: SequentialNumberGuessWorkflow; Версия = 2.0.0.0**
-**нажмите любую клавишу для продолжения...**</span><span class="sxs-lookup"><span data-stu-id="b8961-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+**проверки: StateMachineNumberGuessWorkflow; Версия = 2.0.0.0**
+**проверки: StateMachineNumberGuessWorkflow; Версия = 2.0.0.0**
+**проверки: FlowchartNumberGuessWorkflow; Версия = 2.0.0.0**
+**проверки: FlowchartNumberGuessWorkflow; Версия = 2.0.0.0**
+**проверки: SequentialNumberGuessWorkflow; Версия = 2.0.0.0**
+**проверки: SequentialNumberGuessWorkflow; Версия = 2.0.0.0**
+**нажмите любую клавишу для продолжения...**</span><span class="sxs-lookup"><span data-stu-id="be096-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
 **Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
@@ -1462,30 +1462,30 @@ ms.locfileid: "49123843"
 **Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0**
 **Press any key to continue . . .**</span></span>
 
-###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="b8961-239">Для запуска приложения с обновленными рабочими процессами</span><span class="sxs-lookup"><span data-stu-id="b8961-239">To run the application with the updated workflows</span></span>
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="be096-239">Для запуска приложения с обновленными рабочими процессами</span><span class="sxs-lookup"><span data-stu-id="be096-239">To run the application with the updated workflows</span></span>
 
-1.  <span data-ttu-id="b8961-240">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="b8961-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+1.  <span data-ttu-id="be096-240">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="be096-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-2.  <span data-ttu-id="b8961-241">Нажмите CTRL+F5, чтобы запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="b8961-241">Press CTRL+F5 to run the application.</span></span>
+2.  <span data-ttu-id="be096-241">Нажмите CTRL+F5, чтобы запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="be096-241">Press CTRL+F5 to run the application.</span></span>
 
-3.  <span data-ttu-id="b8961-242">Нажмите кнопку **новая игра** для запуска нового рабочего процесса и обратите внимание, сведения о версии под окном состояния, которые указывает рабочий процесс является `v2` рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
+3.  <span data-ttu-id="be096-242">Нажмите кнопку **новая игра** для запуска нового рабочего процесса и обратите внимание, сведения о версии под окном состояния, которые указывает рабочий процесс является `v2` рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
 
-4.  <span data-ttu-id="b8961-243">Выберите один из `v1` рабочих процессов, запущенных в начале [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="b8961-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="b8961-244">Обратите внимание, что сведения о версии под окном состояния указывает, что рабочий процесс — это версия **1.5.0.0** рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="b8961-245">Следует отметить, что сведения о предыдущих догадках не отображаются; показано только то, оказались они больше или меньше нужного значения.</span><span class="sxs-lookup"><span data-stu-id="b8961-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
+4.  <span data-ttu-id="be096-243">Выберите один из `v1` рабочих процессов, запущенных в начале [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="be096-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="be096-244">Обратите внимание, что сведения о версии под окном состояния указывает, что рабочий процесс — это версия **1.5.0.0** рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="be096-245">Следует отметить, что сведения о предыдущих догадках не отображаются; показано только то, оказались они больше или меньше нужного значения.</span><span class="sxs-lookup"><span data-stu-id="be096-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
 
- <span data-ttu-id="b8961-246">**Введите число от 1 до 10**
-**guess слишком мал.**</span><span class="sxs-lookup"><span data-stu-id="b8961-246">**Please enter a number between 1 and 10**
+ <span data-ttu-id="be096-246">**Введите число от 1 до 10**
+**guess слишком мал.**</span><span class="sxs-lookup"><span data-stu-id="be096-246">**Please enter a number between 1 and 10**
 **Your guess is too low.**</span></span>
 
-5.  <span data-ttu-id="b8961-247">Запишите `InstanceId`, затем вводите догадки, пока рабочий процесс не будет завершен.</span><span class="sxs-lookup"><span data-stu-id="b8961-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="b8961-248">В окне состояния отображаются сведения о содержимом догадок, поскольку действия `WriteLine` были обновлены с помощью динамического обновления.</span><span class="sxs-lookup"><span data-stu-id="b8961-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
+5.  <span data-ttu-id="be096-247">Запишите `InstanceId`, затем вводите догадки, пока рабочий процесс не будет завершен.</span><span class="sxs-lookup"><span data-stu-id="be096-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="be096-248">В окне состояния отображаются сведения о содержимом догадок, поскольку действия `WriteLine` были обновлены с помощью динамического обновления.</span><span class="sxs-lookup"><span data-stu-id="be096-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
 
- <span data-ttu-id="b8961-249">**Введите число от 1 до 10**
+ <span data-ttu-id="be096-249">**Введите число от 1 до 10**
 **guess слишком мал.** 
  **Введите число от 1 до 10**
 **5-слишком мало.** 
  **Введите число от 1 до 10**
 **7 слишком велико.** 
  **Введите число от 1 до 10**
-**Поздравляем, Вы угадали число за 4 попытки.**</span><span class="sxs-lookup"><span data-stu-id="b8961-249">**Please enter a number between 1 and 10**
+**Поздравляем, Вы угадали число за 4 попытки.**</span><span class="sxs-lookup"><span data-stu-id="be096-249">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1494,16 +1494,16 @@ ms.locfileid: "49123843"
 **Please enter a number between 1 and 10**
 **Congratulations, you guessed the number in 4 turns.**</span></span>
 
-6.  <span data-ttu-id="b8961-250">Откройте проводник Windows и перейдите к **NumberGuessWorkflowHost\bin\debug** папку (или **bin\release** в зависимости от параметров проекта) и откройте файл трассировки с помощью блокнота, соответствующий для завершенного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="b8961-251">Если вы не вносили запишите `InstanceId` можно определить правильный файл отслеживания с помощью **Дата изменения** сведения в обозревателе Windows.</span><span class="sxs-lookup"><span data-stu-id="b8961-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="b8961-252">Последняя строка данных отслеживания содержит данные только что добавленного действия `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="b8961-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
+6.  <span data-ttu-id="be096-250">Откройте проводник Windows и перейдите к **NumberGuessWorkflowHost\bin\debug** папку (или **bin\release** в зависимости от параметров проекта) и откройте файл трассировки с помощью блокнота, соответствующий для завершенного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="be096-251">Если вы не вносили запишите `InstanceId` можно определить правильный файл отслеживания с помощью **Дата изменения** сведения в обозревателе Windows.</span><span class="sxs-lookup"><span data-stu-id="be096-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="be096-252">Последняя строка данных отслеживания содержит данные только что добавленного действия `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="be096-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
 
- <span data-ttu-id="b8961-253">**Введите число от 1 до 10**
+ <span data-ttu-id="be096-253">**Введите число от 1 до 10**
 **guess слишком мал.** 
  **Введите число от 1 до 10**
 **5-слишком мало.** 
  **Введите число от 1 до 10**
 **7 слишком велико.** 
  **Введите число от 1 до 10**
-**6-правильное число. Вы угадали число за 4 попытки.**</span><span class="sxs-lookup"><span data-stu-id="b8961-253">**Please enter a number between 1 and 10**
+**6-правильное число. Вы угадали число за 4 попытки.**</span><span class="sxs-lookup"><span data-stu-id="be096-253">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1512,14 +1512,14 @@ ms.locfileid: "49123843"
 **Please enter a number between 1 and 10**
 **6 is correct. You guessed it in 4 turns.**</span></span>
 
-###  <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="b8961-254">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="b8961-254">To enable starting previous versions of the workflows</span></span>
- <span data-ttu-id="b8961-255">Если больше нет рабочих процессов для обновления, можно изменить приложение `NumberGuessWorkflowHost`, чтобы разрешить запуск предыдущих версий рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="b8961-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
+### <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="be096-254">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="be096-254">To enable starting previous versions of the workflows</span></span>
+ <span data-ttu-id="be096-255">Если больше нет рабочих процессов для обновления, можно изменить приложение `NumberGuessWorkflowHost`, чтобы разрешить запуск предыдущих версий рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="be096-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
 
-1.  <span data-ttu-id="b8961-256">Дважды щелкните **WorkflowHostForm** в **обозревателе решений**и выберите **WorkflowType** поле со списком.</span><span class="sxs-lookup"><span data-stu-id="b8961-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
+1.  <span data-ttu-id="be096-256">Дважды щелкните **WorkflowHostForm** в **обозревателе решений**и выберите **WorkflowType** поле со списком.</span><span class="sxs-lookup"><span data-stu-id="be096-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
 
-2.  <span data-ttu-id="b8961-257">В **свойства** выберите **элементы** свойство и нажмите кнопку с многоточием для изменения **элементы** коллекции.</span><span class="sxs-lookup"><span data-stu-id="b8961-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
+2.  <span data-ttu-id="be096-257">В **свойства** выберите **элементы** свойство и нажмите кнопку с многоточием для изменения **элементы** коллекции.</span><span class="sxs-lookup"><span data-stu-id="be096-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
 
-3.  <span data-ttu-id="b8961-258">Добавьте в коллекцию следующие три элемента.</span><span class="sxs-lookup"><span data-stu-id="b8961-258">Add the following three items to the collection.</span></span>
+3.  <span data-ttu-id="be096-258">Добавьте в коллекцию следующие три элемента.</span><span class="sxs-lookup"><span data-stu-id="be096-258">Add the following three items to the collection.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow v1
@@ -1527,7 +1527,7 @@ ms.locfileid: "49123843"
     SequentialNumberGuessWorkflow v1
     ```
 
-     <span data-ttu-id="b8961-259">Коллекция `Items` будет иметь шесть элементов.</span><span class="sxs-lookup"><span data-stu-id="b8961-259">The completed `Items` collection will have six items.</span></span>
+     <span data-ttu-id="be096-259">Коллекция `Items` будет иметь шесть элементов.</span><span class="sxs-lookup"><span data-stu-id="be096-259">The completed `Items` collection will have six items.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow
@@ -1538,9 +1538,9 @@ ms.locfileid: "49123843"
     SequentialNumberGuessWorkflow v1
     ```
 
-4.  <span data-ttu-id="b8961-260">Дважды щелкните **WorkflowHostForm** в **обозревателе решений**и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="b8961-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
+4.  <span data-ttu-id="be096-260">Дважды щелкните **WorkflowHostForm** в **обозревателе решений**и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="be096-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
 
-5.  <span data-ttu-id="b8961-261">Добавьте три новых условия в `switch` (или `Select Case`) инструкции в `NewGame_Click` обработчик, чтобы сопоставить новые элементы в **WorkflowType** поле со списком для сопоставления удостоверения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b8961-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
+5.  <span data-ttu-id="be096-261">Добавьте три новых условия в `switch` (или `Select Case`) инструкции в `NewGame_Click` обработчик, чтобы сопоставить новые элементы в **WorkflowType** поле со списком для сопоставления удостоверения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="be096-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
 
     ```vb
     Case "SequentialNumberGuessWorkflow v1"
@@ -1567,7 +1567,7 @@ ms.locfileid: "49123843"
         break;
     ```
 
-     <span data-ttu-id="b8961-262">Следующий пример содержит полную инструкцию `switch` (или `Select Case`).</span><span class="sxs-lookup"><span data-stu-id="b8961-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
+     <span data-ttu-id="be096-262">Следующий пример содержит полную инструкцию `switch` (или `Select Case`).</span><span class="sxs-lookup"><span data-stu-id="be096-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
 
     ```vb
     Select Case WorkflowType.SelectedItem.ToString()
@@ -1620,4 +1620,4 @@ ms.locfileid: "49123843"
     };
     ```
 
-6.  <span data-ttu-id="b8961-263">Нажмите клавиши CTRL+F5 для сборки и запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="b8961-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="b8961-264">Теперь можно запустить версии `v1` рабочего процесса, так же как и текущие версии.</span><span class="sxs-lookup"><span data-stu-id="b8961-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="b8961-265">Чтобы динамически обновить эти новые экземпляры, запустите **ApplyDynamicUpdate** приложения.</span><span class="sxs-lookup"><span data-stu-id="b8961-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>
+6.  <span data-ttu-id="be096-263">Нажмите клавиши CTRL+F5 для сборки и запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="be096-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="be096-264">Теперь можно запустить версии `v1` рабочего процесса, так же как и текущие версии.</span><span class="sxs-lookup"><span data-stu-id="be096-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="be096-265">Чтобы динамически обновить эти новые экземпляры, запустите **ApplyDynamicUpdate** приложения.</span><span class="sxs-lookup"><span data-stu-id="be096-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>

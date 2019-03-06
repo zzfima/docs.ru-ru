@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Построение стандартного диалогового окна пользовательского интерфейса с помощью сетки
+title: Практическое руководство. Построение стандартного диалогового окна пользовательского интерфейса с помощью сетки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 893b3f7fda3314b158f7c67392a0913e30a92c09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372871"
 ---
-# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a><span data-ttu-id="acda9-102">Как выполнить Построение стандартного диалогового окна пользовательского интерфейса с помощью сетки</span><span class="sxs-lookup"><span data-stu-id="acda9-102">How to: Build a Standard UI Dialog Box by Using Grid</span></span>
-<span data-ttu-id="acda9-103">В этом примере показано, как создать стандартную [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] диалоговое окно с помощью <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="acda9-103">This example shows how to create a standard [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dialog box by using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a><span data-ttu-id="d56f4-102">Практическое руководство. Построение стандартного диалогового окна пользовательского интерфейса с помощью сетки</span><span class="sxs-lookup"><span data-stu-id="d56f4-102">How to: Build a Standard UI Dialog Box by Using Grid</span></span>
+<span data-ttu-id="d56f4-103">В этом примере показано, как создать стандартную [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] диалоговое окно с помощью <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="d56f4-103">This example shows how to create a standard [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dialog box by using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="acda9-104">Пример</span><span class="sxs-lookup"><span data-stu-id="acda9-104">Example</span></span>  
- <span data-ttu-id="acda9-105">В следующем примере создается диалоговое окно, похожее **запуска** диалогового окна в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] операционной системы.</span><span class="sxs-lookup"><span data-stu-id="acda9-105">The following example creates a dialog box like the **Run** dialog box in the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] operating system.</span></span>  
+## <a name="example"></a><span data-ttu-id="d56f4-104">Пример</span><span class="sxs-lookup"><span data-stu-id="d56f4-104">Example</span></span>  
+ <span data-ttu-id="d56f4-105">В следующем примере создается диалоговое окно, похожее **запуска** диалогового окна в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] операционной системы.</span><span class="sxs-lookup"><span data-stu-id="d56f4-105">The following example creates a dialog box like the **Run** dialog box in the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] operating system.</span></span>  
   
- <span data-ttu-id="acda9-106">В примере создается <xref:System.Windows.Controls.Grid> и использует <xref:System.Windows.Controls.ColumnDefinition> и <xref:System.Windows.Controls.RowDefinition> классам определять пятью столбцами и четырьмя строками.</span><span class="sxs-lookup"><span data-stu-id="acda9-106">The example creates a <xref:System.Windows.Controls.Grid> and uses the <xref:System.Windows.Controls.ColumnDefinition> and <xref:System.Windows.Controls.RowDefinition> classes to define five columns and four rows.</span></span>  
+ <span data-ttu-id="d56f4-106">В примере создается <xref:System.Windows.Controls.Grid> и использует <xref:System.Windows.Controls.ColumnDefinition> и <xref:System.Windows.Controls.RowDefinition> классам определять пятью столбцами и четырьмя строками.</span><span class="sxs-lookup"><span data-stu-id="d56f4-106">The example creates a <xref:System.Windows.Controls.Grid> and uses the <xref:System.Windows.Controls.ColumnDefinition> and <xref:System.Windows.Controls.RowDefinition> classes to define five columns and four rows.</span></span>  
   
- <span data-ttu-id="acda9-107">Затем добавляет и помещает <xref:System.Windows.Controls.Image>, `RunIcon.png`, чтобы представить образ, который находится в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="acda9-107">The example then adds and positions an <xref:System.Windows.Controls.Image>, `RunIcon.png`, to represent the image that is found in the dialog box.</span></span> <span data-ttu-id="acda9-108">Изображение размещается в первом столбце и строке <xref:System.Windows.Controls.Grid> (в левом верхнем углу).</span><span class="sxs-lookup"><span data-stu-id="acda9-108">The image is placed in the first column and row of the <xref:System.Windows.Controls.Grid> (the upper-left corner).</span></span>  
+ <span data-ttu-id="d56f4-107">Затем добавляет и помещает <xref:System.Windows.Controls.Image>, `RunIcon.png`, чтобы представить образ, который находится в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="d56f4-107">The example then adds and positions an <xref:System.Windows.Controls.Image>, `RunIcon.png`, to represent the image that is found in the dialog box.</span></span> <span data-ttu-id="d56f4-108">Изображение размещается в первом столбце и строке <xref:System.Windows.Controls.Grid> (в левом верхнем углу).</span><span class="sxs-lookup"><span data-stu-id="d56f4-108">The image is placed in the first column and row of the <xref:System.Windows.Controls.Grid> (the upper-left corner).</span></span>  
   
- <span data-ttu-id="acda9-109">Затем в примере добавляется <xref:System.Windows.Controls.TextBlock> элемент в первый столбец, который охватывает оставшиеся столбцы первой строки.</span><span class="sxs-lookup"><span data-stu-id="acda9-109">Next, the example adds a <xref:System.Windows.Controls.TextBlock> element to the first column, which spans the remaining columns of the first row.</span></span> <span data-ttu-id="acda9-110">Он добавляет другой <xref:System.Windows.Controls.TextBlock> элемент второй строки в первом столбце, для представления **откройте** текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="acda9-110">It adds another <xref:System.Windows.Controls.TextBlock> element to the second row in the first column, to represent the **Open** text box.</span></span> <span data-ttu-id="acda9-111">Объект <xref:System.Windows.Controls.TextBlock> с помощью которой представляет область ввода данных.</span><span class="sxs-lookup"><span data-stu-id="acda9-111">A <xref:System.Windows.Controls.TextBlock> follows, which represents the data entry area.</span></span>  
+ <span data-ttu-id="d56f4-109">Затем в примере добавляется <xref:System.Windows.Controls.TextBlock> элемент в первый столбец, который охватывает оставшиеся столбцы первой строки.</span><span class="sxs-lookup"><span data-stu-id="d56f4-109">Next, the example adds a <xref:System.Windows.Controls.TextBlock> element to the first column, which spans the remaining columns of the first row.</span></span> <span data-ttu-id="d56f4-110">Он добавляет другой <xref:System.Windows.Controls.TextBlock> элемент второй строки в первом столбце, для представления **откройте** текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="d56f4-110">It adds another <xref:System.Windows.Controls.TextBlock> element to the second row in the first column, to represent the **Open** text box.</span></span> <span data-ttu-id="d56f4-111">Объект <xref:System.Windows.Controls.TextBlock> с помощью которой представляет область ввода данных.</span><span class="sxs-lookup"><span data-stu-id="d56f4-111">A <xref:System.Windows.Controls.TextBlock> follows, which represents the data entry area.</span></span>  
   
- <span data-ttu-id="acda9-112">Наконец, в примере добавляется три <xref:System.Windows.Controls.Button> элементов в последнюю строку, которые представляют **ОК**, **отменить**, и **Обзор** события.</span><span class="sxs-lookup"><span data-stu-id="acda9-112">Finally, the example adds three <xref:System.Windows.Controls.Button> elements to the final row, which represent the **OK**, **Cancel**, and **Browse** events.</span></span>  
+ <span data-ttu-id="d56f4-112">Наконец, в примере добавляется три <xref:System.Windows.Controls.Button> элементов в последнюю строку, которые представляют **ОК**, **отменить**, и **Обзор** события.</span><span class="sxs-lookup"><span data-stu-id="d56f4-112">Finally, the example adds three <xref:System.Windows.Controls.Button> elements to the final row, which represent the **OK**, **Cancel**, and **Browse** events.</span></span>  
   
- [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
- [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
+ [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
+ [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="acda9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="acda9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d56f4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d56f4-113">See also</span></span>
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [<span data-ttu-id="acda9-114">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="acda9-114">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="acda9-115">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="acda9-115">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)
+- [<span data-ttu-id="d56f4-114">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="d56f4-114">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="d56f4-115">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d56f4-115">How-to Topics</span></span>](grid-how-to-topics.md)

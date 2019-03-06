@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580789"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376862"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="013de-102">Программирование визуального слоя</span><span class="sxs-lookup"><span data-stu-id="013de-102">Visual Layer Programming</span></span>
-<span data-ttu-id="013de-103"><xref:System.Windows.Media.Visual> Объект — это основное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта, Главная роль которого заключается в поддержке отрисовки.</span><span class="sxs-lookup"><span data-stu-id="013de-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="013de-104">Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от <xref:System.Windows.Media.Visual> класса и использовать его для сохранения данных отрисовки.</span><span class="sxs-lookup"><span data-stu-id="013de-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="73969-102">Программирование визуального слоя</span><span class="sxs-lookup"><span data-stu-id="73969-102">Visual Layer Programming</span></span>
+<span data-ttu-id="73969-103"><xref:System.Windows.Media.Visual> Объект — это основное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта, Главная роль которого заключается в поддержке отрисовки.</span><span class="sxs-lookup"><span data-stu-id="73969-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="73969-104">Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от <xref:System.Windows.Media.Visual> класса и использовать его для сохранения данных отрисовки.</span><span class="sxs-lookup"><span data-stu-id="73969-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="013de-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="013de-105">In This Section</span></span>  
- [<span data-ttu-id="013de-106">Проверка нажатия на визуальном уровне</span><span class="sxs-lookup"><span data-stu-id="013de-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="013de-107">Использование объектов DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="013de-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="013de-108">Учебник. По размещению визуальных объектов в приложении Win32</span><span class="sxs-lookup"><span data-stu-id="013de-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="013de-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="013de-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="73969-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="73969-105">In This Section</span></span>  
+ [<span data-ttu-id="73969-106">Проверка нажатия на визуальном уровне</span><span class="sxs-lookup"><span data-stu-id="73969-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="73969-107">Использование объектов DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="73969-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
+ [<span data-ttu-id="73969-108">Учебник. По размещению визуальных объектов в приложении Win32</span><span class="sxs-lookup"><span data-stu-id="73969-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="73969-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="73969-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="013de-110">См. также</span><span class="sxs-lookup"><span data-stu-id="013de-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73969-110">См. также</span><span class="sxs-lookup"><span data-stu-id="73969-110">See also</span></span>
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="013de-111">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="013de-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="013de-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="013de-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="73969-111">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="73969-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="73969-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="73969-112">Graphics and Multimedia</span></span>](index.md)

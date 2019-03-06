@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366248"
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="40fc6-102">Разделы руководства по Panel</span><span class="sxs-lookup"><span data-stu-id="40fc6-102">Panel How-to Topics</span></span>
-<span data-ttu-id="40fc6-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Panel> элемент и связанные [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="40fc6-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="6f55f-102">Разделы руководства по Panel</span><span class="sxs-lookup"><span data-stu-id="6f55f-102">Panel How-to Topics</span></span>
+<span data-ttu-id="6f55f-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Panel> элемент и связанные [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6f55f-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="40fc6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="40fc6-104">In This Section</span></span>  
- [<span data-ttu-id="40fc6-105">Создание пользовательского элемента панели</span><span class="sxs-lookup"><span data-stu-id="40fc6-105">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="40fc6-106">Переопределение метода панели OnRender</span><span class="sxs-lookup"><span data-stu-id="40fc6-106">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="40fc6-107">Определение свойств высоты элемента</span><span class="sxs-lookup"><span data-stu-id="40fc6-107">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="40fc6-108">Определение свойств ширины элемента</span><span class="sxs-lookup"><span data-stu-id="40fc6-108">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6f55f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="6f55f-104">In This Section</span></span>  
+ [<span data-ttu-id="6f55f-105">Создание пользовательского элемента панели</span><span class="sxs-lookup"><span data-stu-id="6f55f-105">Create a Custom Panel Element</span></span>](how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="6f55f-106">Переопределение метода панели OnRender</span><span class="sxs-lookup"><span data-stu-id="6f55f-106">Override the Panel OnRender Method</span></span>](how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="6f55f-107">Определение свойств высоты элемента</span><span class="sxs-lookup"><span data-stu-id="6f55f-107">Set the Height Properties of an Element</span></span>](how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="6f55f-108">Определение свойств ширины элемента</span><span class="sxs-lookup"><span data-stu-id="6f55f-108">Set the Width Properties of an Element</span></span>](how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="40fc6-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="40fc6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6f55f-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6f55f-109">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -38,9 +38,9 @@ ms.locfileid: "56747922"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="40fc6-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="40fc6-110">Related Sections</span></span>  
- [<span data-ttu-id="40fc6-111">Макет</span><span class="sxs-lookup"><span data-stu-id="40fc6-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="6f55f-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="6f55f-110">Related Sections</span></span>  
+ [<span data-ttu-id="6f55f-111">Макет</span><span class="sxs-lookup"><span data-stu-id="6f55f-111">Layout</span></span>](../advanced/layout.md)  
   
- <span data-ttu-id="40fc6-112">[Пошаговое руководство: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="40fc6-112">[Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
+ <span data-ttu-id="6f55f-112">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="6f55f-112">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="40fc6-113">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="40fc6-113">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="6f55f-113">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6f55f-113">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

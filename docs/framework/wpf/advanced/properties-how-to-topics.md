@@ -8,21 +8,21 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544489"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368497"
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="4a7e2-102">Разделы пошагового руководства по свойствам</span><span class="sxs-lookup"><span data-stu-id="4a7e2-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="4a7e2-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4a7e2-103">In This Section</span></span>  
- [<span data-ttu-id="4a7e2-104">Реализация свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="4a7e2-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="4a7e2-105">Добавление типа владельца для свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="4a7e2-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="4a7e2-106">Регистрация присоединенного свойства</span><span class="sxs-lookup"><span data-stu-id="4a7e2-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="4a7e2-107">Переопределение метаданных для свойств зависимостей</span><span class="sxs-lookup"><span data-stu-id="4a7e2-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="8b47f-102">Разделы пошагового руководства по свойствам</span><span class="sxs-lookup"><span data-stu-id="8b47f-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="8b47f-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8b47f-103">In This Section</span></span>  
+ [<span data-ttu-id="8b47f-104">Реализация свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="8b47f-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="8b47f-105">Добавление типа владельца для свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="8b47f-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="8b47f-106">Регистрация присоединенного свойства</span><span class="sxs-lookup"><span data-stu-id="8b47f-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="8b47f-107">Переопределение метаданных для свойств зависимостей</span><span class="sxs-lookup"><span data-stu-id="8b47f-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="4a7e2-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4a7e2-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8b47f-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8b47f-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -31,5 +31,5 @@ ms.locfileid: "33544489"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="4a7e2-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4a7e2-109">Related Sections</span></span>  
- [<span data-ttu-id="4a7e2-110">Свойства</span><span class="sxs-lookup"><span data-stu-id="4a7e2-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="8b47f-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8b47f-109">Related Sections</span></span>  
+ [<span data-ttu-id="8b47f-110">Свойства</span><span class="sxs-lookup"><span data-stu-id="8b47f-110">Properties</span></span>](properties-wpf.md)

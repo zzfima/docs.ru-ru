@@ -7,26 +7,26 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350752"
 ---
-# <a name="input-wpf"></a><span data-ttu-id="faa4d-102">Ввод (WPF)</span><span class="sxs-lookup"><span data-stu-id="faa4d-102">Input (WPF)</span></span>
-<span data-ttu-id="faa4d-103">Windows Presentation Foundation (WPF) поддерживает несколько типов входных данных.</span><span class="sxs-lookup"><span data-stu-id="faa4d-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="faa4d-104">Этот входной включает текст, сенсорный ввод, мыши, команды, фокус, сенсорный ввод, и перетащите и рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="faa4d-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="faa4d-105">В этом разделе описываются темы, связанные с входных данных в WPF.</span><span class="sxs-lookup"><span data-stu-id="faa4d-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="1fa86-102">Ввод (WPF)</span><span class="sxs-lookup"><span data-stu-id="1fa86-102">Input (WPF)</span></span>
+<span data-ttu-id="1fa86-103">Windows Presentation Foundation (WPF) поддерживает несколько видов входных данных.</span><span class="sxs-lookup"><span data-stu-id="1fa86-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="1fa86-104">Эти входные данные, включает в себя текст, сенсорного ввода, мыши, команды, фокус, касания, перетаскивания и вставки и рукописный ввод.</span><span class="sxs-lookup"><span data-stu-id="1fa86-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="1fa86-105">В этом разделе описываются темы, связанные с ввода в WPF.</span><span class="sxs-lookup"><span data-stu-id="1fa86-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="faa4d-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="faa4d-106">In This Section</span></span>  
- [<span data-ttu-id="faa4d-107">Общие сведения о входных данных</span><span class="sxs-lookup"><span data-stu-id="faa4d-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="faa4d-108">Общие сведения о системе команд</span><span class="sxs-lookup"><span data-stu-id="faa4d-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="faa4d-109">Общие сведения о фокусе</span><span class="sxs-lookup"><span data-stu-id="faa4d-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="faa4d-110">Стилизация фокуса в элементах управления и FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="faa4d-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="faa4d-111">Пошаговое руководство. Создание первого приложения для обработки касаний</span><span class="sxs-lookup"><span data-stu-id="faa4d-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="faa4d-112">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="faa4d-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="faa4d-113">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="faa4d-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1fa86-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1fa86-106">In This Section</span></span>  
+ [<span data-ttu-id="1fa86-107">Общие сведения о входных данных</span><span class="sxs-lookup"><span data-stu-id="1fa86-107">Input Overview</span></span>](input-overview.md)  
+ [<span data-ttu-id="1fa86-108">Общие сведения о системе команд</span><span class="sxs-lookup"><span data-stu-id="1fa86-108">Commanding Overview</span></span>](commanding-overview.md)  
+ [<span data-ttu-id="1fa86-109">Общие сведения о фокусе</span><span class="sxs-lookup"><span data-stu-id="1fa86-109">Focus Overview</span></span>](focus-overview.md)  
+ [<span data-ttu-id="1fa86-110">Стилизация фокуса в элементах управления и FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="1fa86-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="1fa86-111">Пошаговое руководство: Создание первого приложения для сенсорного ввода</span><span class="sxs-lookup"><span data-stu-id="1fa86-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="1fa86-112">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="1fa86-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="1fa86-113">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="1fa86-113">Digital Ink</span></span>](digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="faa4d-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="faa4d-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1fa86-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="1fa86-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -41,6 +41,6 @@ ms.locfileid: "33544236"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="faa4d-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="faa4d-115">Related Sections</span></span>  
- [<span data-ttu-id="faa4d-116">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="faa4d-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="faa4d-117">События</span><span class="sxs-lookup"><span data-stu-id="faa4d-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="1fa86-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="1fa86-115">Related Sections</span></span>  
+ [<span data-ttu-id="1fa86-116">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="1fa86-116">Controls</span></span>](../controls/index.md)  
+  [<span data-ttu-id="1fa86-117">События</span><span class="sxs-lookup"><span data-stu-id="1fa86-117">Events</span></span>](events-wpf.md)
