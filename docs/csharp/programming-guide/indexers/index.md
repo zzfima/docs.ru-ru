@@ -48,7 +48,7 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
   
 -   Индексаторы могут иметь более одного формального параметра, например при доступе к двумерному массиву.  
   
-##  <a name="BKMK_RelatedSections"></a> Связанные разделы  
+## <a name="BKMK_RelatedSections"></a> Связанные разделы  
   
 -   [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

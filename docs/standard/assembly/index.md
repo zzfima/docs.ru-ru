@@ -50,8 +50,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
  - [Формат файла сборки .NET](file-format.md)
  - [Сборки в среде CLR](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Дружественные сборки (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Дружественные сборки (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Дружественные сборки](friend-assemblies.md)  
  - [Практическое руководство. Загрузка и выгрузка сборок (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Практическое руководство. Загрузка и выгрузка сборок (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core](unloadability-howto.md)

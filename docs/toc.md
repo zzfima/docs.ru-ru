@@ -505,15 +505,6 @@
 ### [Доступ к данным](visual-basic/developing-apps/accessing-data.md)
 ### [Создание и использование компонентов](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Печать и отчеты](visual-basic/developing-apps/printing/index.md)
-#### [Компонент PrintForm](visual-basic/developing-apps/printing/printform-component.md)
-#### [Практическое руководство. Печать прокручиваемой формы](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [Практическое руководство. Печать клиентской и неклиентской области формы](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [Практическое руководство. Печать клиентской области формы](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [Практическое руководство. Печать формы с помощью компонента PrintForm](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [Развертывание приложений, ссылающихся на компонент PrintForm](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Добавление печатаемых отчетов в приложения Visual Studio](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Основы разработки приложений Windows Forms](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [Настройка проектов и расширение объекта My в Visual Basic](visual-basic/developing-apps/customizing-extending-my/index.md)

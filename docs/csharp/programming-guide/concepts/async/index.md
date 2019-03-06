@@ -10,7 +10,7 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
   
 В этом разделе рассматриваются области и методы использования асинхронного программирования, а также приводятся ссылки на вспомогательные разделы с дополнительными сведениями и примерами.  
   
-##  <a name="BKMK_WhentoUseAsynchrony"></a> Async повышает скорость реагирования  
+## <a name="BKMK_WhentoUseAsynchrony"></a> Async повышает скорость реагирования  
  Асинхронность необходимо использовать при наличии потенциально блокирующих работу действий, например при осуществлении доступа к Интернету. Доступ к веб-ресурсу иногда осуществляется медленно или с задержкой. Если такое действие блокируется в синхронном процессе, все приложение вынуждено ожидать. В асинхронном процессе приложение может перейти к следующей операции, не зависящей от веб-ресурса, до завершения блокирующей задачи.  
   
  В следующей таблице показаны стандартные области, в которых асинхронное программирование повышает скорость реагирования. Перечисленные API-интерфейсы платформы .NET и среды выполнения Windows содержат методы, поддерживающие асинхронное программирование.  
@@ -28,7 +28,7 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
   
  Асинхронный подход добавляет эквивалент автоматической передачи в список параметров, выбранных при создании асинхронных операций. То есть разработчик может пользоваться всеми преимуществами традиционного асинхронного программирования, прикладывая гораздо меньше усилий.  
   
-##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> Методы Async проще создавать  
+## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Методы Async проще создавать  
  В C# основой асинхронного программирования. являются ключевые слова [async](../../../../csharp/language-reference/keywords/async.md) и [await](../../../../csharp/language-reference/keywords/await.md). Они позволяют использовать ресурсы платформы .NET Framework, .NET Core или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Асинхронные методы, которые определяются с помощью ключевого слова `async`, называются *методами async*.  
   
  Ниже приводится пример асинхронного метода. Почти все элементы кода должны быть вам знакомы. Комментарии указывают на возможности, добавляемые для создания асинхронности.  
@@ -97,7 +97,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
  Дополнительные сведения об асинхронности в предыдущих версиях платформы .NET Framework, см. в статье [TPL and Traditional .NET Framework Asynchronous Programming](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md) (Библиотека параллельных задач и традиционное асинхронное программирование в .NET Framework).  
   
-##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Что происходит в методе Async  
+## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Что происходит в методе Async  
  В асинхронном программировании важнее всего понимать, как поток управления перемещается из метода в метод. Следующая схема описывает этот процесс.  
   
  ![Трассировка асинхронной программы](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
@@ -132,19 +132,19 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 Дополнительные сведения о потоке управления см. в статье [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах на C#).  
   
-##  <a name="BKMK_APIAsyncMethods"></a> Async-методы API-интерфейсов  
+## <a name="BKMK_APIAsyncMethods"></a> Async-методы API-интерфейсов  
  Где же найти методы для асинхронного программирования (такие как `GetStringAsync`)? Платформа .NET Framework 4.5 и более поздние версии, а также .NET Core содержат большое количество элементов, совместимых с `async` и `await`. Они содержат суффикс Async в имени элемента и возвращают тип <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Например, класс `System.IO.Stream` имеет такие методы, как <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> и <xref:System.IO.Stream.WriteAsync%2A>, наряду с синхронными методами <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> и <xref:System.IO.Stream.Write%2A>.  
   
  Среда выполнения Windows также содержит множество методов, которые можно использовать в сочетании с `async` и `await` в приложениях Windows. См. дополнительные сведения о [потоковом и асинхронном программировании](/windows/uwp/threading-async/) для разработки UWP, [асинхронном программировании (приложения Магазина Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), а также [вызове асинхронных API в C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)), если вы используете предыдущие версии среды выполнения Windows.  
   
-##  <a name="BKMK_Threads"></a> Потоки  
+## <a name="BKMK_Threads"></a> Потоки  
 Асинхронные методы используются для неблокирующих операций. Выражение `await` в асинхронном методе не блокирует текущий поток на время выполнения ожидаемой задачи. Вместо этого выражение регистрирует остальную часть метода как продолжение и возвращает управление вызывающему объекту асинхронного метода.  
   
 Ключевые слова `async` и `await` не вызывают создания дополнительных потоков. Асинхронные методы не требуют многопоточности, поскольку асинхронный метод не выполняется в собственном потоке. Метод выполняется в текущем контексте синхронизации и использует время в потоке, только когда метод активен. Метод <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> можно применять для перемещения операций, использующих ресурсы ЦП, в фоновый поток, однако фоновый поток не имеет смысла применять для процесса, который просто ждет результата.  
   
 Асинхронный подход к асинхронному программированию практически по всем параметрам имеет преимущество перед другими подходами. В частности, такой подход эффективнее, чем использование класса <xref:System.ComponentModel.BackgroundWorker> для привязанных к вводу-выводу операций, так как используется более простой код и вам не нужно специально предотвращать состояние гонки. В сочетании с методом <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> асинхронное программирование лучше <xref:System.ComponentModel.BackgroundWorker> для операций, использующих ресурсы процессора, так как оно отделяет координацию выполнения кода от действий, которые `Task.Run` перемещает в пул потоков.  
   
-##  <a name="BKMK_AsyncandAwait"></a> Async и Await  
+## <a name="BKMK_AsyncandAwait"></a> Async и Await  
  Если с помощью модификатора [async](../../../../csharp/language-reference/keywords/async.md) указать, что метод является асинхронным, у вас появятся следующие две возможности.  
   
 -   Асинхронный метод сможет использовать [await](../../../../csharp/language-reference/keywords/await.md) для обозначения точек приостановки. Оператор `await` сообщает компилятору, что асинхронный метод не может выполняться после этой точки до завершения ожидаемого асинхронного процесса. На это время управление возвращается вызывающему объекту асинхронного метода.  
@@ -161,7 +161,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 -   [await](../../../../csharp/language-reference/keywords/await.md)  
   
-##  <a name="BKMK_ReturnTypesandParameters"></a> Типы и параметры возвращаемого значения  
+## <a name="BKMK_ReturnTypesandParameters"></a> Типы и параметры возвращаемого значения  
 В результате работы асинхронного метода обычно возвращается <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Внутри асинхронного метода оператор `await` применяется к задаче, возвращаемой из вызова другого асинхронного метода.  
   
 В качестве возвращаемого типа указывается <xref:System.Threading.Tasks.Task%601>, если метод содержит оператор [return](../../../../csharp/language-reference/keywords/return.md), который задает операнд типа `TResult`. 
@@ -223,12 +223,12 @@ await GetTaskAsync();
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
    
   
-##  <a name="BKMK_NamingConvention"></a> Соглашение об именовании  
+## <a name="BKMK_NamingConvention"></a> Соглашение об именовании  
 По соглашению имена методов, возвращающих обычно поддерживающие ожидание типы (например, `Task`, `Task<T>`, `ValueTask` и `ValueTask<T>`), должны заканчиваться на Async. Имена методов, которые запускают асинхронную операцию, но не возвращают поддерживающий ожидание тип, не должны заканчиваться на Async, но могут начинаться с Begin, Start или другой команды, предполагающей, что метод не возвращает и не выдает результат операции.
   
  Соглашение можно игнорировать в тех случаях, когда событие, базовый класс или контракт интерфейса предлагает другое имя. Например, не следует переименовывать общие обработчики событий, такие как `Button1_Click`.  
   
-##  <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры (Visual Studio)  
+## <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры (Visual Studio)  
   
 |Заголовок|Описание|Пример|  
 |-----------|-----------------|------------|  
@@ -245,7 +245,7 @@ await GetTaskAsync();
 |[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))|Описывает новый шаблон для асинхронности в платформе .NET Framework. Шаблон основан на типах <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.||  
 |[Видеоролики об async на канале Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Предоставляет ссылки на различные видеоролики об асинхронном программировании.||  
   
-##  <a name="BKMK_CompleteExample"></a> Полный пример  
+## <a name="BKMK_CompleteExample"></a> Полный пример  
  Ниже представлен код файла MainWindow.xaml.cs из приложения Windows Presentation Foundation (WPF), которое обсуждается в этой статье. Вы можете скачать [пример использования Async из руководства по использованию ключевых слов Async и Await](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).  
   
 ```csharp  

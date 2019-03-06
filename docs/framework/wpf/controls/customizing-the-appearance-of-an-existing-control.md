@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547297"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375107"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a> Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, заменяется внешний вид существующего элемента управления без изменения его функциональных возможностей. Например, можно сделать кнопки в приложении круглыми вместо установленных по умолчанию квадратных, но кнопка по-прежнему будет вызывать <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
@@ -26,16 +26,16 @@ ms.locfileid: "54547297"
   
  На следующих рисунках <xref:System.Windows.Controls.Button> , использующий <xref:System.Windows.Controls.ControlTemplate> , созданный в этом разделе.  
   
- ![Кнопка с пользовательским шаблоном элемента управления. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Кнопка с пользовательским шаблоном элемента управления. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Кнопка, использующая пользовательский шаблон элемента управления  
   
- ![Кнопка с красной границей. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Кнопка с красной границей. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Кнопка, использующая пользовательский шаблон элемента управления, когда на ней находится указатель мыши  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- В этом разделе предполагается, что пользователь понимает процесс создания и использования элементов управления и стилей, который рассматривался в разделе [Элементы управления](../../../../docs/framework/wpf/controls/index.md). Основные понятия, описанные в этом разделе применяются к элементам, которые наследуют <xref:System.Windows.Controls.Control> класса, за исключением <xref:System.Windows.Controls.UserControl>. Невозможно применить <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.UserControl>.  
+ В этом разделе предполагается, что пользователь понимает процесс создания и использования элементов управления и стилей, который рассматривался в разделе [Элементы управления](index.md). Основные понятия, описанные в этом разделе применяются к элементам, которые наследуют <xref:System.Windows.Controls.Control> класса, за исключением <xref:System.Windows.Controls.UserControl>. Невозможно применить <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.UserControl>.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>Когда следует создавать объект ControlTemplate  
@@ -47,12 +47,12 @@ ms.locfileid: "54547297"
   
  На следующем рисунке показано <xref:System.Windows.Controls.CheckBox> , по умолчанию использует <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Флажок с шаблоном элемента управления по умолчанию. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Флажок с шаблоном элемента управления по умолчанию. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Элемент управления CheckBox, использующий шаблон элемента управления по умолчанию  
   
  На следующем рисунке показано <xref:System.Windows.Controls.CheckBox> , использующий пользовательский <xref:System.Windows.Controls.ControlTemplate> для размещения содержимого <xref:System.Windows.Controls.CheckBox> над индикатором выделения и отображения знака X при <xref:System.Windows.Controls.CheckBox> выбран.  
   
- ![Флажок с пользовательским шаблоном элемента управления. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![Флажок с пользовательским шаблоном элемента управления. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Элемент управления CheckBox, использующий пользовательский шаблон элемента управления  
   
  <xref:System.Windows.Controls.ControlTemplate> Для <xref:System.Windows.Controls.CheckBox> в этом примере является относительно сложным, поэтому в этом разделе используется более простой пример создания <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button>.  
@@ -71,14 +71,14 @@ ms.locfileid: "54547297"
   
 -   Объект <xref:System.Windows.Controls.ContentPresenter> , отображающий содержимое кнопки. <xref:System.Windows.Controls.ContentPresenter> Позволяет любой тип объекта для отображения.  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Сохранение функциональности свойств элемента управления с помощью TemplateBinding  
- При создании нового <xref:System.Windows.Controls.ControlTemplate>, по-прежнему может потребоваться использовать общие свойства для изменения внешнего вида элемента управления. [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) расширение разметки привязывает свойство элемента, который находится в <xref:System.Windows.Controls.ControlTemplate> на открытое свойство, которое определяется элементом управления. Использование расширения [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) позволяет свойствам элемента управления действовать в качестве параметров шаблона. Это означает, что при задании свойства элемента управления соответствующее значение передается в элемент, который содержит [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+ При создании нового <xref:System.Windows.Controls.ControlTemplate>, по-прежнему может потребоваться использовать общие свойства для изменения внешнего вида элемента управления. [TemplateBinding](../advanced/templatebinding-markup-extension.md) расширение разметки привязывает свойство элемента, который находится в <xref:System.Windows.Controls.ControlTemplate> на открытое свойство, которое определяется элементом управления. Использование расширения [TemplateBinding](../advanced/templatebinding-markup-extension.md) позволяет свойствам элемента управления действовать в качестве параметров шаблона. Это означает, что при задании свойства элемента управления соответствующее значение передается в элемент, который содержит [TemplateBinding](../advanced/templatebinding-markup-extension.md).  
   
- В следующем примере повторяется часть предыдущего примера, который использует [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) расширение разметки для привязки свойств элементов, которые находятся в <xref:System.Windows.Controls.ControlTemplate> к общим свойствам, которые определены на кнопке.  
+ В следующем примере повторяется часть предыдущего примера, который использует [TemplateBinding](../advanced/templatebinding-markup-extension.md) расширение разметки для привязки свойств элементов, которые находятся в <xref:System.Windows.Controls.ControlTemplate> к общим свойствам, которые определены на кнопке.  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  В этом примере <xref:System.Windows.Controls.Grid> имеет его <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> шаблон свойство привязан к <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Так как <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> будет привязано к шаблону, можно создать несколько кнопок, используйте тот же <xref:System.Windows.Controls.ControlTemplate> и задайте <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> в разные значения для каждой кнопки. Если <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> шаблон не был привязан к свойству элемента в <xref:System.Windows.Controls.ControlTemplate>, задание <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> кнопки бы не оказывают влияния на внешний вид кнопки.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "54547297"
   
  В следующем примере создается две кнопки, использующих <xref:System.Windows.Controls.ControlTemplate> определенный в предыдущем примере. В примере задается <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, и <xref:System.Windows.Controls.Control.FontSize%2A> свойства для каждой из кнопок. Установка <xref:System.Windows.Controls.Control.Background%2A> свойство оказывает влияние, поскольку это привязано к шаблону <xref:System.Windows.Controls.ControlTemplate>. Несмотря на то что <xref:System.Windows.Controls.Control.Foreground%2A> и <xref:System.Windows.Controls.Control.FontSize%2A> свойства не привязано к шаблону, их настройке оказывает влияние, поскольку их значения являются наследуемыми.  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  В предыдущем примере получался результат, аналогичный показанному на следующем рисунке.  
   
- ![Две кнопки, одна синяя, а другая — фиолетовая. ](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![Две кнопки, одна синяя, а другая — фиолетовая. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 Две кнопки с различными цветами фона  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,11 +127,11 @@ ms.locfileid: "54547297"
   
  В следующем примере показан <xref:System.Windows.VisualState> , изменяет внешний вид <xref:System.Windows.Controls.Button> когда указатель мыши находится над ней. <xref:System.Windows.Media.Animation.Storyboard> Изменяет цвет границы кнопки, изменив цвет `BorderBrush`. При ссылке на <xref:System.Windows.Controls.ControlTemplate> пример в начале этого раздела, можно увидеть, что `BorderBrush` имя <xref:System.Windows.Media.SolidColorBrush> , назначенный <xref:System.Windows.Controls.Border.Background%2A> из <xref:System.Windows.Controls.Border>.  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  Элемент управления отвечает за определение состояний как часть своего контракта, что подробно рассматривается в подразделе [Настройка других элементов управления через понимание контракта элемента управления](#customizing_other_controls_by_understanding_the_control_contract) далее в этом разделе. В следующей таблице перечислены состояния, которые указаны для <xref:System.Windows.Controls.Button>.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
@@ -147,20 +147,20 @@ ms.locfileid: "54547297"
 > [!NOTE]
 >  Не забудьте задать <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> присоединенного свойства в корне <xref:System.Windows.FrameworkElement> из <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  В предыдущем примере получался результат, аналогичный показанному на следующих рисунках.  
   
- ![Кнопка с пользовательским шаблоном элемента управления. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Кнопка с пользовательским шаблоном элемента управления. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Кнопка, использующая пользовательский шаблон элемента управления в нормальном состоянии  
   
- ![Кнопка с красной границей. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Кнопка с красной границей. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Кнопка, использующая пользовательский шаблон элемента управления в состоянии, когда указатель мыши находится над кнопкой  
   
- ![Граница прозрачна на нажатой кнопке. ](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![Граница прозрачна на нажатой кнопке. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 Кнопка, использующая пользовательский шаблон элемента управления в состоянии, когда она нажата  
   
- Визуальные состояния элементов управления, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Визуальные состояния элементов управления, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [Стили и шаблоны элемента Control](control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Задание поведения элемента управления, когда он переходит между состояниями  
@@ -177,12 +177,12 @@ ms.locfileid: "54547297"
 ### <a name="specifying-the-duration-of-a-transition"></a>Задание продолжительности перехода  
  Можно указать, сколько времени занимает переход, задав <xref:System.Windows.VisualTransition.GeneratedDuration%2A> свойство. В предыдущем примере имеется <xref:System.Windows.VisualState> , указывающий, что граница кнопки становится прозрачной при нажатии кнопки, но анимация продолжается слишком долго, чтобы быть заметной при быстро нажата и отпущена кнопка. Можно использовать <xref:System.Windows.VisualTransition> для задания периода времени занимает элемент управления переходить в нажатом состоянии. В следующем примере задается, что переход элемента управления в нажатое состояние занимает одну сотую секунды.  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Задание изменений внешнего вида элемента управления во время перехода  
  <xref:System.Windows.VisualTransition> Содержит <xref:System.Windows.Media.Animation.Storyboard> , начинается, когда элемент управления переходит между состояниями. Например, можно указать, что определенная анимация происходит при переходе элемента управления из состояния `MouseOver` в состояние `Normal`. В следующем примере создается <xref:System.Windows.VisualTransition> , указывающий, что когда пользователь перемещает указатель мыши за пределы кнопки, граница кнопки изменяет цвет на синий, а затем на желтый и затем на черный в течение полутора секунд.  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>Указание места применения VisualTransition  
  Объект <xref:System.Windows.VisualTransition> можно ограничить только определенными состояниями, или его можно применять в любое время переходы между состояниями элемента управления. В приведенном выше примере <xref:System.Windows.VisualTransition> применяется, когда элемент управления переходит из `MouseOver` состояние `Normal` состоянии; в примере перед ним, <xref:System.Windows.VisualTransition> применяется, когда элемент управления переходит в `Pressed` состояние. Ограничивается <xref:System.Windows.VisualTransition> применяется, задав <xref:System.Windows.VisualTransition.To%2A> и <xref:System.Windows.VisualTransition.From%2A> свойства. В таблице ниже приведено описание уровней ограничений от наибольшего до наименьшего.  
@@ -196,7 +196,7 @@ ms.locfileid: "54547297"
   
  Может иметь несколько <xref:System.Windows.VisualTransition> объекты в <xref:System.Windows.VisualStateGroup> , ссылающиеся на том же состоянии, но они будут использоваться в порядке, в предыдущей таблице. В следующем примере есть два <xref:System.Windows.VisualTransition> объектов. Когда элемент управления переходит из `Pressed` состояние `MouseOver` состояние, <xref:System.Windows.VisualTransition> , содержащую одновременно <xref:System.Windows.VisualTransition.From%2A> и <xref:System.Windows.VisualTransition.To%2A> используется набор. Когда элемент управления переходит из состояния, отличного от `Pressed`, в состояние `MouseOver`, используется другой объект.  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  <xref:System.Windows.VisualStateGroup> Имеет <xref:System.Windows.VisualStateGroup.Transitions%2A> свойство, содержащее <xref:System.Windows.VisualTransition> объектов, которые применяются к <xref:System.Windows.VisualState> объекты в <xref:System.Windows.VisualStateGroup>. Как <xref:System.Windows.Controls.ControlTemplate> автор, вы можете свободно включать <xref:System.Windows.VisualTransition> требуется. Тем не менее если <xref:System.Windows.VisualTransition.To%2A> и <xref:System.Windows.VisualTransition.From%2A> свойствам присваиваются имена состояний, не включенных в <xref:System.Windows.VisualStateGroup>, <xref:System.Windows.VisualTransition> учитывается.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "54547297"
   
 -   из состояния `MouseOver` в состояние `Normal`.  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Настройка других элементов управления через понимание контракта элемента управления  
@@ -229,25 +229,25 @@ ms.locfileid: "54547297"
   
  В следующем примере показан <xref:System.Windows.TemplatePartAttribute> объекты, которые определены на <xref:System.Windows.Controls.ComboBox> класса. Логика <xref:System.Windows.Controls.ComboBox> ожидает найти <xref:System.Windows.Controls.TextBox> с именем `PART_EditableTextBox` и <xref:System.Windows.Controls.Primitives.Popup> с именем `PART_Popup` в его <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  В следующем примере показано упрощенное <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ComboBox> , включающий элементы, которые определяются <xref:System.Windows.TemplatePartAttribute> объектов на <xref:System.Windows.Controls.ComboBox> класса.  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>Состояния в контракте элемента управления  
  Состояния элемента управления также являются частью контракта элемента управления. Пример создания <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button> показано, как задавать внешний вид <xref:System.Windows.Controls.Button> зависимости от его состояния. Создании <xref:System.Windows.VisualState> для каждого указанного состояния и помещения всех <xref:System.Windows.VisualState> объектов данной общей папки <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> в <xref:System.Windows.VisualStateGroup>, как описано в разделе [изменение внешнего вида элемента управления в зависимости от его состояния](#changing_the_appearance_of_a_control_depending_on_its_state) ранее в этом раздел. Сторонние элементы управления должны указывать состояния с помощью <xref:System.Windows.TemplateVisualStateAttribute>, который позволяет средствам разработки, таким как Expression Blend, чтобы предоставить состояния элемента управления для создания шаблонов элементов управления.  
   
- Контракты элементов управления, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], в разделе [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Контракты элементов управления, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], в разделе [Стили и шаблоны элемента Control](control-styles-and-templates.md).  
   
 ### <a name="properties-in-the-control-contract"></a>Свойства в контракте элемента управления  
- Общие свойства, визуально влияющие на элемент управления, также включаются в контракт элемента управления. Можно задать эти свойства, чтобы изменить внешний вид элемента управления без создания нового <xref:System.Windows.Controls.ControlTemplate>. Можно также использовать [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) расширение разметки для привязки свойств элементов, которые находятся в <xref:System.Windows.Controls.ControlTemplate> к общим свойствам, которые определяются <xref:System.Windows.Controls.Button>.  
+ Общие свойства, визуально влияющие на элемент управления, также включаются в контракт элемента управления. Можно задать эти свойства, чтобы изменить внешний вид элемента управления без создания нового <xref:System.Windows.Controls.ControlTemplate>. Можно также использовать [TemplateBinding](../advanced/templatebinding-markup-extension.md) расширение разметки для привязки свойств элементов, которые находятся в <xref:System.Windows.Controls.ControlTemplate> к общим свойствам, которые определяются <xref:System.Windows.Controls.Button>.  
   
  В следующем примере показан контракт элемента управления "Кнопка".  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  При создании <xref:System.Windows.Controls.ControlTemplate>, часто бывает проще начать с существующего <xref:System.Windows.Controls.ControlTemplate> и внести в него изменения. Можно выполнить одно из следующих действий, чтобы изменить существующий <xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ ms.locfileid: "54547297"
 ## <a name="complete-example"></a>Полный пример  
  В следующем примере показан полный <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , рассматривается в этом разделе.  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>См. также
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Стилизация и использование шаблонов](styling-and-templating.md)
