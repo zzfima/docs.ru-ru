@@ -8,21 +8,21 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367600"
 ---
-# <a name="panel"></a><span data-ttu-id="cc96e-102">Panel</span><span class="sxs-lookup"><span data-stu-id="cc96e-102">Panel</span></span>
-<span data-ttu-id="cc96e-103"><xref:System.Windows.Controls.Panel> является базовым классом для всех элементов, которые поддерживают макет приложения в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cc96e-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="panel"></a><span data-ttu-id="5131a-102">Panel</span><span class="sxs-lookup"><span data-stu-id="5131a-102">Panel</span></span>
+<span data-ttu-id="5131a-103"><xref:System.Windows.Controls.Panel> является базовым классом для всех элементов, поддерживающих макет приложения в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5131a-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cc96e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="cc96e-104">In This Section</span></span>  
- [<span data-ttu-id="cc96e-105">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="cc96e-105">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="cc96e-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="cc96e-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5131a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5131a-104">In This Section</span></span>  
+ [<span data-ttu-id="5131a-105">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="5131a-105">Panels Overview</span></span>](panels-overview.md)  
+ [<span data-ttu-id="5131a-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="5131a-106">How-to Topics</span></span>](panel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="cc96e-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="cc96e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5131a-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5131a-107">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33554928"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="cc96e-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cc96e-108">Related Sections</span></span>  
- [<span data-ttu-id="cc96e-109">Макет</span><span class="sxs-lookup"><span data-stu-id="cc96e-109">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="5131a-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5131a-108">Related Sections</span></span>  
+ [<span data-ttu-id="5131a-109">Макет</span><span class="sxs-lookup"><span data-stu-id="5131a-109">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="cc96e-110">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="cc96e-110">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ <span data-ttu-id="5131a-110">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="5131a-110">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="cc96e-111">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="cc96e-111">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="5131a-111">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5131a-111">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

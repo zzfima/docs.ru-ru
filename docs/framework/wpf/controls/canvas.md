@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553278"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351055"
 ---
-# <a name="canvas"></a><span data-ttu-id="d606c-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="d606c-102">Canvas</span></span>
-<span data-ttu-id="d606c-103"><xref:System.Windows.Controls.Canvas> Представляет элемент управления макета, позволяющий абсолютное позиционирование дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="d606c-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="d82bb-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="d82bb-102">Canvas</span></span>
+<span data-ttu-id="d82bb-103"><xref:System.Windows.Controls.Canvas> Представляет элемент управления макета, которая позволяет абсолютное положение дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="d82bb-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d606c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d606c-104">In This Section</span></span>  
- [<span data-ttu-id="d606c-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d606c-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d82bb-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d82bb-104">In This Section</span></span>  
+ [<span data-ttu-id="d82bb-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d82bb-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d606c-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d606c-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d82bb-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d82bb-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553278"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="d606c-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d606c-107">Related Sections</span></span>  
- [<span data-ttu-id="d606c-108">Макет</span><span class="sxs-lookup"><span data-stu-id="d606c-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="d82bb-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d82bb-107">Related Sections</span></span>  
+ [<span data-ttu-id="d82bb-108">Макет</span><span class="sxs-lookup"><span data-stu-id="d82bb-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="d606c-109">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="d606c-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ <span data-ttu-id="d82bb-109">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="d82bb-109">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="d606c-110">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d606c-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="d82bb-110">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d82bb-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

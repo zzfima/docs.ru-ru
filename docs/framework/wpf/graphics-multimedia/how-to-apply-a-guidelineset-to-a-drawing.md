@@ -1,33 +1,33 @@
 ---
-title: Как выполнить Применение GuidelineSet к рисованию
+title: Практическое руководство. Применение GuidelineSet к рисованию
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GuidelineSet property [WPF], applying to drawings
 - graphics [WPF], GuidelineSet property
 ms.assetid: 45f3e0b4-8820-45a7-b865-b8ea5b17b0c8
-ms.openlocfilehash: 4bd2ee349f2c1855a9af6b4c00f2630cd50a9108
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88c44cadce916c2ce10165a586e813ecaaaec672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493382"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362998"
 ---
-# <a name="how-to-apply-a-guidelineset-to-a-drawing"></a><span data-ttu-id="9caca-102">Как выполнить Применение GuidelineSet к рисованию</span><span class="sxs-lookup"><span data-stu-id="9caca-102">How to: Apply a GuidelineSet to a Drawing</span></span>
-<span data-ttu-id="9caca-103">В этом примере показано, как применить <xref:System.Windows.Media.GuidelineSet> для <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="9caca-103">This example shows how to apply a <xref:System.Windows.Media.GuidelineSet> to a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
+# <a name="how-to-apply-a-guidelineset-to-a-drawing"></a><span data-ttu-id="1c5d4-102">Практическое руководство. Применение GuidelineSet к рисованию</span><span class="sxs-lookup"><span data-stu-id="1c5d4-102">How to: Apply a GuidelineSet to a Drawing</span></span>
+<span data-ttu-id="1c5d4-103">В этом примере показано, как применить <xref:System.Windows.Media.GuidelineSet> для <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-103">This example shows how to apply a <xref:System.Windows.Media.GuidelineSet> to a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
- <span data-ttu-id="9caca-104"><xref:System.Windows.Media.DrawingGroup> Класс является единственным типом <xref:System.Windows.Media.Drawing> с <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="9caca-104">The <xref:System.Windows.Media.DrawingGroup> class is the only type of <xref:System.Windows.Media.Drawing> that has a <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> property.</span></span> <span data-ttu-id="9caca-105">Чтобы применить <xref:System.Windows.Media.GuidelineSet> к другому типу <xref:System.Windows.Media.Drawing>, добавьте его в <xref:System.Windows.Media.DrawingGroup> , а затем применить <xref:System.Windows.Media.GuidelineSet> для вашей <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="9caca-105">To apply a <xref:System.Windows.Media.GuidelineSet> to another type of <xref:System.Windows.Media.Drawing>, add it to a <xref:System.Windows.Media.DrawingGroup> and then apply the <xref:System.Windows.Media.GuidelineSet> to your <xref:System.Windows.Media.DrawingGroup>.</span></span>  
+ <span data-ttu-id="1c5d4-104"><xref:System.Windows.Media.DrawingGroup> Класс является единственным типом <xref:System.Windows.Media.Drawing> с <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-104">The <xref:System.Windows.Media.DrawingGroup> class is the only type of <xref:System.Windows.Media.Drawing> that has a <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> property.</span></span> <span data-ttu-id="1c5d4-105">Чтобы применить <xref:System.Windows.Media.GuidelineSet> к другому типу <xref:System.Windows.Media.Drawing>, добавьте его в <xref:System.Windows.Media.DrawingGroup> , а затем применить <xref:System.Windows.Media.GuidelineSet> для вашей <xref:System.Windows.Media.DrawingGroup>.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-105">To apply a <xref:System.Windows.Media.GuidelineSet> to another type of <xref:System.Windows.Media.Drawing>, add it to a <xref:System.Windows.Media.DrawingGroup> and then apply the <xref:System.Windows.Media.GuidelineSet> to your <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9caca-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9caca-106">Example</span></span>  
- <span data-ttu-id="9caca-107">В следующем примере создается два <xref:System.Windows.Media.DrawingGroup> объекты, которые практически идентичны; единственное отличие заключается в: второй <xref:System.Windows.Media.DrawingGroup> имеет <xref:System.Windows.Media.GuidelineSet> и первый — нет.</span><span class="sxs-lookup"><span data-stu-id="9caca-107">The following example creates two <xref:System.Windows.Media.DrawingGroup> objects that are almost identical; the only difference is: the second <xref:System.Windows.Media.DrawingGroup> has a <xref:System.Windows.Media.GuidelineSet> and the first does not.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c5d4-106">Пример</span><span class="sxs-lookup"><span data-stu-id="1c5d4-106">Example</span></span>  
+ <span data-ttu-id="1c5d4-107">В следующем примере создается два <xref:System.Windows.Media.DrawingGroup> объекты, которые практически идентичны; единственное отличие заключается в: второй <xref:System.Windows.Media.DrawingGroup> имеет <xref:System.Windows.Media.GuidelineSet> и первый — нет.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-107">The following example creates two <xref:System.Windows.Media.DrawingGroup> objects that are almost identical; the only difference is: the second <xref:System.Windows.Media.DrawingGroup> has a <xref:System.Windows.Media.GuidelineSet> and the first does not.</span></span>  
   
- <span data-ttu-id="9caca-108">На следующем рисунке показан результат выполнения этого примера.</span><span class="sxs-lookup"><span data-stu-id="9caca-108">The following illustration shows the output from the example.</span></span> <span data-ttu-id="9caca-109">Так как два различия в отрисовке <xref:System.Windows.Media.DrawingGroup> объекты не очень заметны, части рисунков увеличены.</span><span class="sxs-lookup"><span data-stu-id="9caca-109">Because the rendering difference between the two <xref:System.Windows.Media.DrawingGroup> objects is so subtle, portions of the drawings are enlarged.</span></span>  
+ <span data-ttu-id="1c5d4-108">На следующем рисунке показан результат выполнения этого примера.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-108">The following illustration shows the output from the example.</span></span> <span data-ttu-id="1c5d4-109">Так как два различия в отрисовке <xref:System.Windows.Media.DrawingGroup> объекты не очень заметны, части рисунков увеличены.</span><span class="sxs-lookup"><span data-stu-id="1c5d4-109">Because the rendering difference between the two <xref:System.Windows.Media.DrawingGroup> objects is so subtle, portions of the drawings are enlarged.</span></span>  
   
- <span data-ttu-id="9caca-110">![DrawingGroup c GuidelineSet и без него ](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span><span class="sxs-lookup"><span data-stu-id="9caca-110">![A DrawingGroup with and without a GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span></span>  
+ <span data-ttu-id="1c5d4-110">![DrawingGroup c GuidelineSet и без него ](./media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span><span class="sxs-lookup"><span data-stu-id="1c5d4-110">![A DrawingGroup with and without a GuidelineSet](./media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span></span>  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupGuidelineSetExample.cs#graphicsmmdrawinggroupguidelinesetexamplewholepage)]
- [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupGuidelineSetExample.xaml#graphicsmmdrawinggroupguidelinesetexamplewholepage)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupGuidelineSetExample.cs#graphicsmmdrawinggroupguidelinesetexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupGuidelineSetExample.xaml#graphicsmmdrawinggroupguidelinesetexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="9caca-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9caca-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c5d4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="1c5d4-111">See also</span></span>
 - <xref:System.Windows.Media.DrawingGroup>
 - <xref:System.Windows.Media.GuidelineSet>
-- [<span data-ttu-id="9caca-112">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="9caca-112">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [<span data-ttu-id="1c5d4-112">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="1c5d4-112">Drawing Objects Overview</span></span>](drawing-objects-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обработка загруженного события
+title: Практическое руководство. Обработка загруженного события
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - events [WPF], Loaded
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
-ms.openlocfilehash: 187d75c436913140855f4d860eb3b6ad4656f309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4916d3cfd20d082a8466f61fc74e16db2f0f346
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682947"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353352"
 ---
-# <a name="how-to-handle-a-loaded-event"></a><span data-ttu-id="86610-102">Как выполнить Обработка загруженного события</span><span class="sxs-lookup"><span data-stu-id="86610-102">How to: Handle a Loaded Event</span></span>
-<span data-ttu-id="86610-103">В этом примере демонстрируется обработка <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> событий и соответствующий скрипт для обработки этого события.</span><span class="sxs-lookup"><span data-stu-id="86610-103">This example shows how to handle the <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> event, and an appropriate scenario for handling that event.</span></span> <span data-ttu-id="86610-104">Создает обработчик <xref:System.Windows.Controls.Button> при загрузке страницы.</span><span class="sxs-lookup"><span data-stu-id="86610-104">The handler  creates a <xref:System.Windows.Controls.Button> when the page loads.</span></span>  
+# <a name="how-to-handle-a-loaded-event"></a><span data-ttu-id="e454b-102">Практическое руководство. Обработка загруженного события</span><span class="sxs-lookup"><span data-stu-id="e454b-102">How to: Handle a Loaded Event</span></span>
+<span data-ttu-id="e454b-103">В этом примере демонстрируется обработка <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> событий и соответствующий скрипт для обработки этого события.</span><span class="sxs-lookup"><span data-stu-id="e454b-103">This example shows how to handle the <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> event, and an appropriate scenario for handling that event.</span></span> <span data-ttu-id="e454b-104">Создает обработчик <xref:System.Windows.Controls.Button> при загрузке страницы.</span><span class="sxs-lookup"><span data-stu-id="e454b-104">The handler  creates a <xref:System.Windows.Controls.Button> when the page loads.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="86610-105">Пример</span><span class="sxs-lookup"><span data-stu-id="86610-105">Example</span></span>  
- <span data-ttu-id="86610-106">В следующем примере используется [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] вместе с файлом кода.</span><span class="sxs-lookup"><span data-stu-id="86610-106">The following example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] together with a code-behind file.</span></span>  
+## <a name="example"></a><span data-ttu-id="e454b-105">Пример</span><span class="sxs-lookup"><span data-stu-id="e454b-105">Example</span></span>  
+ <span data-ttu-id="e454b-106">В следующем примере используется [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] вместе с файлом кода.</span><span class="sxs-lookup"><span data-stu-id="e454b-106">The following example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] together with a code-behind file.</span></span>  
   
- [!code-xaml[FELoaded#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml#xaml)]  
+ [!code-xaml[FELoaded#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml#xaml)]  
   
- [!code-csharp[FELoaded#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml.cs#handler)]
- [!code-vb[FELoaded#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FELoaded/VisualBasic/default.xaml.vb#handler)]  
+ [!code-csharp[FELoaded#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml.cs#handler)]
+ [!code-vb[FELoaded#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FELoaded/VisualBasic/default.xaml.vb#handler)]  
   
-## <a name="see-also"></a><span data-ttu-id="86610-107">См. также</span><span class="sxs-lookup"><span data-stu-id="86610-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e454b-107">См. также</span><span class="sxs-lookup"><span data-stu-id="e454b-107">See also</span></span>
 - <xref:System.Windows.FrameworkElement>
-- [<span data-ttu-id="86610-108">События времени жизни объекта</span><span class="sxs-lookup"><span data-stu-id="86610-108">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)
-- [<span data-ttu-id="86610-109">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="86610-109">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [<span data-ttu-id="86610-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="86610-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+- [<span data-ttu-id="e454b-108">События времени жизни объекта</span><span class="sxs-lookup"><span data-stu-id="e454b-108">Object Lifetime Events</span></span>](object-lifetime-events.md)
+- [<span data-ttu-id="e454b-109">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="e454b-109">Routed Events Overview</span></span>](routed-events-overview.md)
+- [<span data-ttu-id="e454b-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="e454b-110">How-to Topics</span></span>](base-elements-how-to-topics.md)

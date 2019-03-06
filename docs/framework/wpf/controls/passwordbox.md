@@ -7,17 +7,17 @@ helpviewer_keywords:
 - PasswordBox control [WPF]
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
-ms.openlocfilehash: e40eb22981e397a22e8b73a46244aaa0299ff8a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d83e00a7f636052cf871d7bd104b37c077e4950
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708265"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361685"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="de153-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="de153-102">PasswordBox</span></span>
-<span data-ttu-id="de153-103"><xref:System.Windows.Controls.PasswordBox> Управления используется для ввода важных или конфиденциальных сведений.</span><span class="sxs-lookup"><span data-stu-id="de153-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="af529-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="af529-102">PasswordBox</span></span>
+<span data-ttu-id="af529-103"><xref:System.Windows.Controls.PasswordBox> Управления используется для ввода важных или конфиденциальных сведений.</span><span class="sxs-lookup"><span data-stu-id="af529-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de153-104">См. также</span><span class="sxs-lookup"><span data-stu-id="de153-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af529-104">См. также</span><span class="sxs-lookup"><span data-stu-id="af529-104">See also</span></span>
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="de153-105">Библиотека элементов управления</span><span class="sxs-lookup"><span data-stu-id="de153-105">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)
+- [<span data-ttu-id="af529-105">Библиотека элементов управления</span><span class="sxs-lookup"><span data-stu-id="af529-105">Control Library</span></span>](control-library.md)

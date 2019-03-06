@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367158"
 ---
-# <a name="repeatbutton"></a><span data-ttu-id="8ef15-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="8ef15-102">RepeatButton</span></span>
-<span data-ttu-id="8ef15-103"><xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="8ef15-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="8ef15-104">Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> обеспечивает элементы, можно контролировать, когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.</span><span class="sxs-lookup"><span data-stu-id="8ef15-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
+# <a name="repeatbutton"></a><span data-ttu-id="cb866-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="cb866-102">RepeatButton</span></span>
+<span data-ttu-id="cb866-103"><xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="cb866-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="cb866-104">Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> элементы позволяют контролировать когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.</span><span class="sxs-lookup"><span data-stu-id="cb866-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
   
- <span data-ttu-id="8ef15-105">На рисунке показан пример три состояния кнопок повтора управления, по умолчанию, PointerFocused и нажата кнопка.</span><span class="sxs-lookup"><span data-stu-id="8ef15-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="8ef15-106">Первая кнопка показывает состояние по умолчанию <xref:System.Windows.Controls.Primitives.RepeatButton>.</span><span class="sxs-lookup"><span data-stu-id="8ef15-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="8ef15-107">Во втором показан как внешний вид кнопки меняется при наведении указателя мыши на кнопку, предоставив ему фокус.</span><span class="sxs-lookup"><span data-stu-id="8ef15-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="8ef15-108">Последняя кнопка показывает внешний вид <xref:System.Windows.Controls.Primitives.RepeatButton> когда пользователь нажимает кнопку мыши над элементом управления.</span><span class="sxs-lookup"><span data-stu-id="8ef15-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
+ <span data-ttu-id="cb866-105">Приведенный ниже рисунок показывает пример из трех состояний элемента управления кнопки повтора, по умолчанию, PointerFocused и Pressed.</span><span class="sxs-lookup"><span data-stu-id="cb866-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="cb866-106">Первая кнопка показывает состояние по умолчанию <xref:System.Windows.Controls.Primitives.RepeatButton>.</span><span class="sxs-lookup"><span data-stu-id="cb866-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="cb866-107">Вторая показывает, как внешний вид кнопки изменяется при наведении указателя мыши над кнопкой, предоставляя ему фокус.</span><span class="sxs-lookup"><span data-stu-id="cb866-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="cb866-108">Последняя кнопка показывает внешний вид <xref:System.Windows.Controls.Primitives.RepeatButton> когда пользователь нажимает кнопку мыши над элементом управления.</span><span class="sxs-lookup"><span data-stu-id="cb866-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
   
- <span data-ttu-id="8ef15-109">![Повторите состояния кнопки](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="8ef15-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
-<span data-ttu-id="8ef15-110">Типичные RepeatButton</span><span class="sxs-lookup"><span data-stu-id="8ef15-110">Typical RepeatButton</span></span>  
+ <span data-ttu-id="cb866-109">![Повторите состояния кнопки](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="cb866-109">![Repeat button states](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
+<span data-ttu-id="cb866-110">Типичный RepeatButton</span><span class="sxs-lookup"><span data-stu-id="cb866-110">Typical RepeatButton</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8ef15-111">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8ef15-111">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cb866-111">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="cb866-111">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8ef15-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8ef15-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cb866-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="cb866-112">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="8ef15-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8ef15-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="cb866-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cb866-113">Related Sections</span></span>

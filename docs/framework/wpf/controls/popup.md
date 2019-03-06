@@ -9,26 +9,26 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370661"
 ---
-# <a name="popup"></a><span data-ttu-id="b9bdd-102">Контекстное меню</span><span class="sxs-lookup"><span data-stu-id="b9bdd-102">Popup</span></span>
-<span data-ttu-id="b9bdd-103"><xref:System.Windows.Controls.Primitives.Popup> Элемент управления отображает содержимое в отдельном окне, расположенном поверх текущего окна приложения.</span><span class="sxs-lookup"><span data-stu-id="b9bdd-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="01c49-102">Контекстное меню</span><span class="sxs-lookup"><span data-stu-id="01c49-102">Popup</span></span>
+<span data-ttu-id="01c49-103"><xref:System.Windows.Controls.Primitives.Popup> Управления отображает содержимое в отдельном окне, расположенном поверх текущего окна приложения.</span><span class="sxs-lookup"><span data-stu-id="01c49-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="b9bdd-104">На следующем рисунке показана <xref:System.Windows.Controls.Primitives.Popup> управления, расположенный по отношению к <xref:System.Windows.Controls.Button> , являющимся его родителем.</span><span class="sxs-lookup"><span data-stu-id="b9bdd-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
+ <span data-ttu-id="01c49-104">На следующем рисунке показано <xref:System.Windows.Controls.Primitives.Popup> управления, расположенный по отношению к <xref:System.Windows.Controls.Button> , являющимся его родителем.</span><span class="sxs-lookup"><span data-stu-id="01c49-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
   
- <span data-ttu-id="b9bdd-105">![Иллюстрация всплывающего окна](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="b9bdd-105">![Popup illustration](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span></span>  
+ <span data-ttu-id="01c49-105">![Иллюстрация всплывающего окна](./media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="01c49-105">![Popup illustration](./media/popuppicture.JPG "PopupPicture")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b9bdd-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="b9bdd-106">In This Section</span></span>  
- [<span data-ttu-id="b9bdd-107">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="b9bdd-107">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [<span data-ttu-id="b9bdd-108">Поведение при размещении контекстного меню</span><span class="sxs-lookup"><span data-stu-id="b9bdd-108">Popup Placement Behavior</span></span>](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [<span data-ttu-id="b9bdd-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="b9bdd-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="01c49-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="01c49-106">In This Section</span></span>  
+ [<span data-ttu-id="01c49-107">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="01c49-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="01c49-108">Поведение при размещении контекстного меню</span><span class="sxs-lookup"><span data-stu-id="01c49-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="01c49-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="01c49-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b9bdd-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="b9bdd-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="01c49-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="01c49-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="b9bdd-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b9bdd-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="01c49-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="01c49-111">Related Sections</span></span>
