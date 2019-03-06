@@ -9,25 +9,25 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671984"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367131"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="ae913-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ae913-102">ScrollViewer</span></span>
-<span data-ttu-id="ae913-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="ae913-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="6c277-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6c277-102">ScrollViewer</span></span>
+<span data-ttu-id="6c277-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="6c277-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ae913-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ae913-104">In This Section</span></span>  
- [<span data-ttu-id="ae913-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="ae913-105">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [<span data-ttu-id="ae913-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="ae913-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6c277-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="6c277-104">In This Section</span></span>  
+ [<span data-ttu-id="6c277-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6c277-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="6c277-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="6c277-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ae913-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ae913-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6c277-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6c277-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="ae913-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ae913-108">See also</span></span>
-- [<span data-ttu-id="ae913-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="ae913-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="ae913-110">Макет</span><span class="sxs-lookup"><span data-stu-id="ae913-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="6c277-108">См. также</span><span class="sxs-lookup"><span data-stu-id="6c277-108">See also</span></span>
+- [<span data-ttu-id="6c277-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="6c277-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="6c277-110">Макет</span><span class="sxs-lookup"><span data-stu-id="6c277-110">Layout</span></span>](../advanced/layout.md)

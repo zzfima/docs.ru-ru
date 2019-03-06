@@ -7,37 +7,37 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373261"
 ---
-# <a name="brushes-how-to-topics"></a><span data-ttu-id="1cd83-102">Разделы практического руководства, посвященные кистям</span><span class="sxs-lookup"><span data-stu-id="1cd83-102">Brushes How-to Topics</span></span>
-<span data-ttu-id="1cd83-103">В следующих разделах демонстрируется, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для рисования содержимого экрана.</span><span class="sxs-lookup"><span data-stu-id="1cd83-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
+# <a name="brushes-how-to-topics"></a><span data-ttu-id="f4d1b-102">Разделы практического руководства, посвященные кистям</span><span class="sxs-lookup"><span data-stu-id="f4d1b-102">Brushes How-to Topics</span></span>
+<span data-ttu-id="f4d1b-103">В следующих разделах показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для рисования содержимого экрана.</span><span class="sxs-lookup"><span data-stu-id="f4d1b-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1cd83-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1cd83-104">In This Section</span></span>  
- [<span data-ttu-id="1cd83-105">Анимация цвета или прозрачности объекта SolidColorBrush</span><span class="sxs-lookup"><span data-stu-id="1cd83-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [<span data-ttu-id="1cd83-106">Анимация положения или цвета ограничения градиента</span><span class="sxs-lookup"><span data-stu-id="1cd83-106">Animate the Position or Color of a Gradient Stop</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [<span data-ttu-id="1cd83-107">Создание отражения</span><span class="sxs-lookup"><span data-stu-id="1cd83-107">Create a Reflection</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [<span data-ttu-id="1cd83-108">Создание различных шаблонов мозаики с помощью TileBrush</span><span class="sxs-lookup"><span data-stu-id="1cd83-108">Create Different Tile Patterns with a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [<span data-ttu-id="1cd83-109">Определение пера</span><span class="sxs-lookup"><span data-stu-id="1cd83-109">Define a Pen</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [<span data-ttu-id="1cd83-110">Заливка области с помощью рисунка</span><span class="sxs-lookup"><span data-stu-id="1cd83-110">Paint an Area with a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [<span data-ttu-id="1cd83-111">Заливка области с помощью изображения</span><span class="sxs-lookup"><span data-stu-id="1cd83-111">Paint an Area with an Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [<span data-ttu-id="1cd83-112">Заливка области с помощью линейного градиента</span><span class="sxs-lookup"><span data-stu-id="1cd83-112">Paint an Area with a Linear Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [<span data-ttu-id="1cd83-113">Заливка области с помощью радиального градиента</span><span class="sxs-lookup"><span data-stu-id="1cd83-113">Paint an Area with a Radial Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [<span data-ttu-id="1cd83-114">Заливка области с помощью сплошного цвета</span><span class="sxs-lookup"><span data-stu-id="1cd83-114">Paint an Area with a Solid Color</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [<span data-ttu-id="1cd83-115">Заливка области с помощью системной кисти</span><span class="sxs-lookup"><span data-stu-id="1cd83-115">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [<span data-ttu-id="1cd83-116">Заливка области с помощью видео</span><span class="sxs-lookup"><span data-stu-id="1cd83-116">Paint an Area with a Video</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [<span data-ttu-id="1cd83-117">Заливка области с помощью визуального элемента</span><span class="sxs-lookup"><span data-stu-id="1cd83-117">Paint an Area with a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [<span data-ttu-id="1cd83-118">Сохранение пропорций изображения, используемого в качестве фона</span><span class="sxs-lookup"><span data-stu-id="1cd83-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [<span data-ttu-id="1cd83-119">Установка горизонтального и вертикального выравнивания объекта TileBrush</span><span class="sxs-lookup"><span data-stu-id="1cd83-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [<span data-ttu-id="1cd83-120">Установка размера плитки для объекта TileBrush</span><span class="sxs-lookup"><span data-stu-id="1cd83-120">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [<span data-ttu-id="1cd83-121">Преобразование кисти</span><span class="sxs-lookup"><span data-stu-id="1cd83-121">Transform a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [<span data-ttu-id="1cd83-122">Использование системных цветов в градиенте</span><span class="sxs-lookup"><span data-stu-id="1cd83-122">Use System Colors in a Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f4d1b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f4d1b-104">In This Section</span></span>  
+ [<span data-ttu-id="f4d1b-105">Анимация цвета или прозрачности объекта SolidColorBrush</span><span class="sxs-lookup"><span data-stu-id="f4d1b-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [<span data-ttu-id="f4d1b-106">Анимация положения или цвета ограничения градиента</span><span class="sxs-lookup"><span data-stu-id="f4d1b-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [<span data-ttu-id="f4d1b-107">Создание отражения</span><span class="sxs-lookup"><span data-stu-id="f4d1b-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
+ [<span data-ttu-id="f4d1b-108">Создание различных шаблонов мозаики с помощью TileBrush</span><span class="sxs-lookup"><span data-stu-id="f4d1b-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [<span data-ttu-id="f4d1b-109">Определение пера</span><span class="sxs-lookup"><span data-stu-id="f4d1b-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
+ [<span data-ttu-id="f4d1b-110">Заливка области с помощью рисунка</span><span class="sxs-lookup"><span data-stu-id="f4d1b-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
+ [<span data-ttu-id="f4d1b-111">Заливка области с помощью изображения</span><span class="sxs-lookup"><span data-stu-id="f4d1b-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
+ [<span data-ttu-id="f4d1b-112">Заливка области с помощью линейного градиента</span><span class="sxs-lookup"><span data-stu-id="f4d1b-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [<span data-ttu-id="f4d1b-113">Заливка области с помощью радиального градиента</span><span class="sxs-lookup"><span data-stu-id="f4d1b-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [<span data-ttu-id="f4d1b-114">Заливка области с помощью сплошного цвета</span><span class="sxs-lookup"><span data-stu-id="f4d1b-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
+ [<span data-ttu-id="f4d1b-115">Заливка области с помощью системной кисти</span><span class="sxs-lookup"><span data-stu-id="f4d1b-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="f4d1b-116">Заливка области с помощью видео</span><span class="sxs-lookup"><span data-stu-id="f4d1b-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
+ [<span data-ttu-id="f4d1b-117">Заливка области с помощью визуального элемента</span><span class="sxs-lookup"><span data-stu-id="f4d1b-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
+ [<span data-ttu-id="f4d1b-118">Сохранение пропорций изображения, используемого в качестве фона</span><span class="sxs-lookup"><span data-stu-id="f4d1b-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [<span data-ttu-id="f4d1b-119">Установка горизонтального и вертикального выравнивания объекта TileBrush</span><span class="sxs-lookup"><span data-stu-id="f4d1b-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [<span data-ttu-id="f4d1b-120">Установка размера плитки для объекта TileBrush</span><span class="sxs-lookup"><span data-stu-id="f4d1b-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="f4d1b-121">Преобразование кисти</span><span class="sxs-lookup"><span data-stu-id="f4d1b-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
+ [<span data-ttu-id="f4d1b-122">Использование системных цветов в градиенте</span><span class="sxs-lookup"><span data-stu-id="f4d1b-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
   
-## <a name="reference"></a><span data-ttu-id="1cd83-123">Ссылка</span><span class="sxs-lookup"><span data-stu-id="1cd83-123">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f4d1b-123">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f4d1b-123">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -50,7 +50,7 @@ ms.locfileid: "33557541"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="1cd83-124">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="1cd83-124">Related Sections</span></span>  
- [<span data-ttu-id="1cd83-125">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="1cd83-125">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="f4d1b-124">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f4d1b-124">Related Sections</span></span>  
+ [<span data-ttu-id="f4d1b-125">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="f4d1b-125">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="1cd83-126">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="1cd83-126">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="f4d1b-126">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="f4d1b-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

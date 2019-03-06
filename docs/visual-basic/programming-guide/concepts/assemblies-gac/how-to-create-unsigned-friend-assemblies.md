@@ -2,21 +2,21 @@
 title: Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5e475f3a0fdc9350e43b89db16724ef0f544071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748132"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369569"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="4ff59-102">Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ff59-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
-<span data-ttu-id="4ff59-103">В этом примере показано использование дружественных сборок с неподписанными сборками.</span><span class="sxs-lookup"><span data-stu-id="4ff59-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="b0245-102">Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0245-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="b0245-103">В этом примере показано использование дружественных сборок с неподписанными сборками.</span><span class="sxs-lookup"><span data-stu-id="b0245-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="4ff59-104">Создание сборки и дружественной сборки</span><span class="sxs-lookup"><span data-stu-id="4ff59-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="b0245-104">Создание сборки и дружественной сборки</span><span class="sxs-lookup"><span data-stu-id="b0245-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="4ff59-105">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="4ff59-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="b0245-105">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="b0245-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="4ff59-106">Создайте файл Visual Basic `friend_signed_A.` , содержащий следующий код.</span><span class="sxs-lookup"><span data-stu-id="4ff59-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="4ff59-107">Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.</span><span class="sxs-lookup"><span data-stu-id="4ff59-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="b0245-106">Создайте файл Visual Basic `friend_signed_A.` , содержащий следующий код.</span><span class="sxs-lookup"><span data-stu-id="b0245-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="b0245-107">Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.</span><span class="sxs-lookup"><span data-stu-id="b0245-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ ms.locfileid: "56748132"
     End Class  
     ```  
   
-3.  <span data-ttu-id="4ff59-108">Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.</span><span class="sxs-lookup"><span data-stu-id="4ff59-108">Compile and sign friend_signed_A by using the following command.</span></span>  
+3.  <span data-ttu-id="b0245-108">Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.</span><span class="sxs-lookup"><span data-stu-id="b0245-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  <span data-ttu-id="4ff59-109">Создайте файл Visual Basic `friend_unsigned_B` , содержащий следующий код.</span><span class="sxs-lookup"><span data-stu-id="4ff59-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="4ff59-110">Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `Friend` из friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="4ff59-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="b0245-109">Создайте файл Visual Basic `friend_unsigned_B` , содержащий следующий код.</span><span class="sxs-lookup"><span data-stu-id="b0245-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="b0245-110">Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `Friend` из friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="b0245-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,24 +69,24 @@ ms.locfileid: "56748132"
     End Module  
     ```  
   
-5.  <span data-ttu-id="4ff59-111">Скомпилируйте сборку friend_signed_B с помощью приведенной ниже команды.</span><span class="sxs-lookup"><span data-stu-id="4ff59-111">Compile friend_signed_B by using the following command.</span></span>  
+5.  <span data-ttu-id="b0245-111">Скомпилируйте сборку friend_signed_B с помощью приведенной ниже команды.</span><span class="sxs-lookup"><span data-stu-id="b0245-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     <span data-ttu-id="4ff59-112">Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4ff59-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="4ff59-113">Можно явно задать сборку с помощью `/out` параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="4ff59-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
+     <span data-ttu-id="b0245-112">Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="b0245-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="b0245-113">Можно явно задать сборку с помощью `/out` параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="b0245-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
   
-6.  <span data-ttu-id="4ff59-114">Запустите файл friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="4ff59-114">Run the friend_signed_B.exe file.</span></span>  
+6.  <span data-ttu-id="b0245-114">Запустите файл friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="b0245-114">Run the friend_signed_B.exe file.</span></span>  
   
-     <span data-ttu-id="4ff59-115">Программа выводит две строки: Class1.Test и Class2.Test.</span><span class="sxs-lookup"><span data-stu-id="4ff59-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="b0245-115">Программа выводит две строки: Class1.Test и Class2.Test.</span><span class="sxs-lookup"><span data-stu-id="b0245-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="4ff59-116">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4ff59-116">.NET Framework Security</span></span>  
- <span data-ttu-id="4ff59-117">Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство.</span><span class="sxs-lookup"><span data-stu-id="4ff59-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="4ff59-118">Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.</span><span class="sxs-lookup"><span data-stu-id="4ff59-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="b0245-116">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b0245-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="b0245-117">Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство.</span><span class="sxs-lookup"><span data-stu-id="b0245-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="b0245-118">Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.</span><span class="sxs-lookup"><span data-stu-id="b0245-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ff59-119">См. также</span><span class="sxs-lookup"><span data-stu-id="4ff59-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0245-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b0245-119">See also</span></span>
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="4ff59-120">Сборки в .NET</span><span class="sxs-lookup"><span data-stu-id="4ff59-120">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
-- [<span data-ttu-id="4ff59-121">Дружественные сборки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ff59-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
-- [<span data-ttu-id="4ff59-122">Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ff59-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [<span data-ttu-id="4ff59-123">Основные понятия о программировании руководство</span><span class="sxs-lookup"><span data-stu-id="4ff59-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="b0245-120">Сборки в .NET</span><span class="sxs-lookup"><span data-stu-id="b0245-120">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="b0245-121">Дружественные сборки</span><span class="sxs-lookup"><span data-stu-id="b0245-121">Friend Assemblies</span></span>](../../../../standard/assembly/friend-assemblies.md)
+- [<span data-ttu-id="b0245-122">Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0245-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [<span data-ttu-id="b0245-123">Основные понятия о программировании руководство</span><span class="sxs-lookup"><span data-stu-id="b0245-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
