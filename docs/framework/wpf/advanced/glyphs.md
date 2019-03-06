@@ -10,23 +10,23 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: a629d74c7b76e5daf2460c63b040fbe37a3a36d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353183"
 ---
-# <a name="glyphs"></a><span data-ttu-id="317bc-102">Глифы</span><span class="sxs-lookup"><span data-stu-id="317bc-102">Glyphs</span></span>
-<span data-ttu-id="317bc-103">Глифы являются низкоуровневые иллюстрацию символ для отображения на экране.</span><span class="sxs-lookup"><span data-stu-id="317bc-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="317bc-104">предоставляет прямой доступ к глифам для клиентов, которым требуется перехватывать и сохранять текст после форматирования.</span><span class="sxs-lookup"><span data-stu-id="317bc-104">provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
+# <a name="glyphs"></a><span data-ttu-id="ff5cc-102">Глифы</span><span class="sxs-lookup"><span data-stu-id="ff5cc-102">Glyphs</span></span>
+<span data-ttu-id="ff5cc-103">Глифы являются низкоуровневые иллюстрацию символ для отображения на экране.</span><span class="sxs-lookup"><span data-stu-id="ff5cc-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="ff5cc-104">предоставляет прямой доступ к глифам для клиентов, которым требуется перехватывать и сохранять текст после форматирования.</span><span class="sxs-lookup"><span data-stu-id="ff5cc-104">provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="317bc-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="317bc-105">In This Section</span></span>  
- [<span data-ttu-id="317bc-106">Знакомство с объектом GlyphRun и элементом Glyphs</span><span class="sxs-lookup"><span data-stu-id="317bc-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [<span data-ttu-id="317bc-107">Практическое руководство. Рисование текста с помощью глифов</span><span class="sxs-lookup"><span data-stu-id="317bc-107">How to: Draw Text Using Glyphs</span></span>](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ff5cc-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ff5cc-105">In This Section</span></span>  
+ [<span data-ttu-id="ff5cc-106">Знакомство с объектом GlyphRun и элементом Glyphs</span><span class="sxs-lookup"><span data-stu-id="ff5cc-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [<span data-ttu-id="ff5cc-107">Практическое руководство. Рисование текста с помощью глифов</span><span class="sxs-lookup"><span data-stu-id="ff5cc-107">How to: Draw Text Using Glyphs</span></span>](draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a><span data-ttu-id="317bc-108">См. также</span><span class="sxs-lookup"><span data-stu-id="317bc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff5cc-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ff5cc-108">See also</span></span>
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>
-- [<span data-ttu-id="317bc-109">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="317bc-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="317bc-110">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="317bc-110">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [<span data-ttu-id="ff5cc-109">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="ff5cc-109">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="ff5cc-110">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="ff5cc-110">Typography in WPF</span></span>](typography-in-wpf.md)

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367574"
 ---
-# <a name="tooltip"></a><span data-ttu-id="f79ab-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="f79ab-102">ToolTip</span></span>
-<span data-ttu-id="f79ab-103">Всплывающая подсказка представляет небольшое всплывающее окно, которое появляется при наведении указателя мыши на элемент, например, на <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="f79ab-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="1c20e-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="1c20e-102">ToolTip</span></span>
+<span data-ttu-id="1c20e-103">Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="1c20e-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="f79ab-104">На следующем рисунке показан указатель мыши, который указывает **закрыть**<xref:System.Windows.Controls.Button>, который затем отображает ее определение <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="f79ab-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="1c20e-104">На следующем рисунке показан указатель мыши на **закрыть**<xref:System.Windows.Controls.Button>, который затем отображает ее определение <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="1c20e-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="f79ab-105">Кнопка закрытия с всплывающей подсказкой</span><span class="sxs-lookup"><span data-stu-id="f79ab-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="1c20e-105">Кнопка "Закрыть" с всплывающей подсказкой</span><span class="sxs-lookup"><span data-stu-id="1c20e-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="f79ab-106">![Снимок экрана подсказки](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="f79ab-106">![ToolTip screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="1c20e-106">![Снимок экрана подсказки](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="1c20e-106">![ToolTip screen shot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f79ab-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f79ab-107">In This Section</span></span>  
- [<span data-ttu-id="f79ab-108">Общие сведения о всплывающих подсказках</span><span class="sxs-lookup"><span data-stu-id="f79ab-108">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [<span data-ttu-id="f79ab-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="f79ab-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1c20e-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1c20e-107">In This Section</span></span>  
+ [<span data-ttu-id="1c20e-108">Общие сведения о всплывающих подсказках</span><span class="sxs-lookup"><span data-stu-id="1c20e-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="1c20e-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="1c20e-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f79ab-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f79ab-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1c20e-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="1c20e-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="f79ab-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f79ab-111">Related Sections</span></span>  
- [<span data-ttu-id="f79ab-112">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="f79ab-112">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [<span data-ttu-id="f79ab-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="f79ab-113">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="1c20e-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="1c20e-111">Related Sections</span></span>  
+ [<span data-ttu-id="1c20e-112">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="1c20e-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="1c20e-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="1c20e-113">How-to Topics</span></span>](popup-how-to-topics.md)

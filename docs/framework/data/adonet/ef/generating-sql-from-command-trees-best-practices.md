@@ -2,141 +2,151 @@
 title: Создание кода SQL из деревьев команд. Рекомендации
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659099"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369673"
 ---
-# <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="7b204-102">Создание кода SQL из деревьев команд. Рекомендации</span><span class="sxs-lookup"><span data-stu-id="7b204-102">Generating SQL from Command Trees - Best Practices</span></span>
-<span data-ttu-id="7b204-103">Деревья команд выходного запроса по своей структуре близки к моделям запросов, выражаемым на языке SQL.</span><span class="sxs-lookup"><span data-stu-id="7b204-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="7b204-104">Однако модули записи поставщика при создании кода SQL на основе дерева команд выходного запроса сталкиваются с некоторыми распространенными проблемами.</span><span class="sxs-lookup"><span data-stu-id="7b204-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="7b204-105">Они обсуждаются в данном разделе.</span><span class="sxs-lookup"><span data-stu-id="7b204-105">This topic discusses these challenges.</span></span> <span data-ttu-id="7b204-106">В следующем разделе приводится образец поставщика, показывающий решение этих проблем.</span><span class="sxs-lookup"><span data-stu-id="7b204-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  
-  
-## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a><span data-ttu-id="7b204-107">Группирование узлов DbExpression в инструкции SELECT языка SQL</span><span class="sxs-lookup"><span data-stu-id="7b204-107">Group DbExpression Nodes in a SQL SELECT Statement</span></span>  
- <span data-ttu-id="7b204-108">Типичная инструкция SQL имеет вложенную структуру следующего вида:</span><span class="sxs-lookup"><span data-stu-id="7b204-108">A typical SQL statement has a nested structure of the following shape:</span></span>  
-  
-```  
-SELECT …  
-FROM …  
-WHERE …  
-GROUP BY …  
-ORDER BY …  
-```  
-  
- <span data-ttu-id="7b204-109">Одно или несколько предложений могут быть пустыми.</span><span class="sxs-lookup"><span data-stu-id="7b204-109">One or more clauses may be empty.</span></span>  <span data-ttu-id="7b204-110">Вложенная инструкция SELECT может находиться в любой строке.</span><span class="sxs-lookup"><span data-stu-id="7b204-110">A nested SELECT statement could occur in any of the lines.</span></span>  
-  
- <span data-ttu-id="7b204-111">Результат преобразования дерева команд запроса в инструкцию SELECT языка SQL будет содержать по одному подзапросу на каждый реляционный оператор.</span><span class="sxs-lookup"><span data-stu-id="7b204-111">A possible translation of a query command tree into a SQL SELECT statement would produce one subquery for every relational operator.</span></span> <span data-ttu-id="7b204-112">Однако это приведет к возникновению излишних вложенных запросов, и в результате инструкцию будет трудно читать.</span><span class="sxs-lookup"><span data-stu-id="7b204-112">However, that would lead to unnecessary nested subqueries that would be difficult to read.</span></span>  <span data-ttu-id="7b204-113">В некоторых хранилищах данных производительность такого запроса будет низкой.</span><span class="sxs-lookup"><span data-stu-id="7b204-113">On some data stores, the query may perform poorly.</span></span>  
-  
- <span data-ttu-id="7b204-114">В качестве примера рассмотрим следующее дерево команд запроса:</span><span class="sxs-lookup"><span data-stu-id="7b204-114">As an example, consider the following query command tree</span></span>  
-  
-```  
-Project (  
-a.x,  
-   a = Filter(  
-      b.y = 5,   
-      b = Scan("TableA")  
-   )  
-)  
-```  
-  
- <span data-ttu-id="7b204-115">Неэффективное преобразование даст нам:</span><span class="sxs-lookup"><span data-stu-id="7b204-115">An inefficient translation would produce:</span></span>  
-  
-```  
-SELECT a.x  
-FROM (   SELECT *  
-         FROM TableA as b  
-         WHERE b.y = 5) as a  
-```  
-  
- <span data-ttu-id="7b204-116">Заметьте, что каждый узел реляционного выражения превращается в отдельную инструкцию SELECT языка SQL.</span><span class="sxs-lookup"><span data-stu-id="7b204-116">Note that every relational expression node becomes a new SQL SELECT statement.</span></span>  
-  
- <span data-ttu-id="7b204-117">Следовательно, важно агрегировать как можно больше узлов выражений в одну инструкцию SELECT языка SQL, не нарушая правильности инструкции.</span><span class="sxs-lookup"><span data-stu-id="7b204-117">Therefore, it is important to aggregate as many expression nodes as possible into a single SQL SELECT statement while preserving correctness.</span></span>  
-  
- <span data-ttu-id="7b204-118">Результат такого агрегирования для приведенного выше примера будет иметь следующий вид:</span><span class="sxs-lookup"><span data-stu-id="7b204-118">The result of such aggregation for the example presented above would be:</span></span>  
-  
-```  
-SELECT b.x   
-FROM TableA as b  
-WHERE b.y = 5  
-```  
-  
-## <a name="flatten-joins-in-a-sql-select-statement"></a><span data-ttu-id="7b204-119">Уплощение соединений в инструкции SELECT языка SQL</span><span class="sxs-lookup"><span data-stu-id="7b204-119">Flatten Joins in a SQL SELECT Statement</span></span>  
- <span data-ttu-id="7b204-120">Частным случаем агрегирования нескольких узлов в одну инструкцию SELECT языка SQL является агрегирование нескольких выражений соединения.</span><span class="sxs-lookup"><span data-stu-id="7b204-120">One case of aggregating multiple nodes into a single SQL SELECT statement is aggregating multiple join expressions into a single SQL SELECT statement.</span></span> <span data-ttu-id="7b204-121">Класс DbJoinExpression представляет одно соединение между двумя исходными таблицами.</span><span class="sxs-lookup"><span data-stu-id="7b204-121">DbJoinExpression represents a single join between two inputs.</span></span> <span data-ttu-id="7b204-122">Но в одной инструкции SELECT языка SQL можно задать несколько соединений.</span><span class="sxs-lookup"><span data-stu-id="7b204-122">However, as part of a single SQL SELECT statement, more than one join can be specified.</span></span> <span data-ttu-id="7b204-123">В этом случае соединения выполняются в порядке, в котором они указаны.</span><span class="sxs-lookup"><span data-stu-id="7b204-123">In that case the joins are performed in the order specified.</span></span>  
-  
- <span data-ttu-id="7b204-124">Левосторонние соединения (которые выглядят как левые дочерние другого соединения) проще сделать плоскими и превратить в одну инструкцию SELECT языка SQL.</span><span class="sxs-lookup"><span data-stu-id="7b204-124">Left spine joins, (joins that appear as a left child of another join) can be more easily flattened into a single SQL SELECT statement.</span></span> <span data-ttu-id="7b204-125">В качестве примера рассмотрим следующее дерево команд запроса:</span><span class="sxs-lookup"><span data-stu-id="7b204-125">For example, consider the following query command tree:</span></span>  
-  
-```  
-InnerJoin(  
-   a = LeftOuterJoin(  
-   b = Extent("TableA")  
-   c = Extent("TableB")  
-   ON b.y = c.x ),  
-   d = Extent("TableC")   
-   ON a.b.y = d.z  
-)  
-```  
-  
- <span data-ttu-id="7b204-126">Оно верно переводится в следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="7b204-126">This can be correctly translated into:</span></span>  
-  
-```  
-SELECT *  
-FROM TableA as b  
-LEFT OUTER JOIN TableB as c ON b.y = c.x  
-INNER JOIN TableC as d ON b.y = d.z  
-```  
-  
- <span data-ttu-id="7b204-127">Однако соединения, не являющиеся левосторонними соединениями, невозможно легко превратить в плоскую структуру, и не следует пытаться это сделать.</span><span class="sxs-lookup"><span data-stu-id="7b204-127">However, non-left spine joins cannot easily be flattened, and you should not try to flatten them.</span></span> <span data-ttu-id="7b204-128">В качестве примера рассмотрим соединения в следующем дереве команд запроса:</span><span class="sxs-lookup"><span data-stu-id="7b204-128">For example, the joins in the following query command tree:</span></span>  
-  
-```  
-InnerJoin(  
-   a = Extent("TableA")   
-   b = LeftOuterJoin(  
-   c = Extent("TableB")  
-   d = Extent("TableC")  
-   ON c.y = d.x),  
-   ON a.z = b.c.y  
-)  
-```  
-  
- <span data-ttu-id="7b204-129">Это дерево будет преобразовано в инструкцию SELECT языка SQL с подзапросом.</span><span class="sxs-lookup"><span data-stu-id="7b204-129">Would be translated to a SQL SELECT statement with a sub-query.</span></span>  
-  
-```  
-SELECT *  
-FROM TableA as a  
-INNER JOIN (SELECT *   
-   FROM TableB as c   
-   LEFT OUTER JOIN TableC as d  
-   ON c.y = d.x) as b  
-ON b.y = d.z  
-```  
-  
-## <a name="input-alias-redirecting"></a><span data-ttu-id="7b204-130">Перенаправление входных псевдонимов</span><span class="sxs-lookup"><span data-stu-id="7b204-130">Input Alias Redirecting</span></span>  
- <span data-ttu-id="7b204-131">Чтобы понять, что представляет собой перенаправление входных псевдонимов, рассмотрим структуру реляционных выражений, таких как DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression и DbSkipExpression.</span><span class="sxs-lookup"><span data-stu-id="7b204-131">To explain input alias redirecting, consider the structure of the relational expressions, such as DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression, and DbSkipExpression.</span></span>  
-  
- <span data-ttu-id="7b204-132">Каждый из этих типов имеет одно или несколько свойств Input, описывающих входную коллекцию; для представления каждого элемента этого входа во время обхода коллекции используется переменная привязки, соответствующая данному элементу.</span><span class="sxs-lookup"><span data-stu-id="7b204-132">Each of these types has one or more Input properties that describe an input collection, and a binding variable corresponding to each input is used to represent each element of that input during a collection traversal.</span></span> <span data-ttu-id="7b204-133">Переменная привязки используется для ссылки на входной элемент, например в свойстве Predicate выражения DbFilterExpression или свойстве Projection выражения DbProjectExpression.</span><span class="sxs-lookup"><span data-stu-id="7b204-133">The binding variable is used when referring to the input element, for example in the Predicate property of a DbFilterExpression or the Projection property of a DbProjectExpression.</span></span>  
-  
- <span data-ttu-id="7b204-134">При агрегировании большего числа узлов реляционных выражений в одну инструкцию SELECT языка SQL и вычислении выражения, являющегося частью реляционного выражения (например, свойства Projection выражения DbProjectExpression), используемая переменная привязки может не совпадать с псевдонимом входного значения, так как несколько привязок выражений будут перенаправлены в один и тот же экстент.</span><span class="sxs-lookup"><span data-stu-id="7b204-134">When aggregating more relational expression nodes into a single SQL SELECT statement, and evaluating an expression that is part of a relational expression (for example part of the Projection property of a DbProjectExpression) the binding variable that it uses may not be the same as the alias of the input, as multiple expression bindings would have to be redirected to a single extent.</span></span>  <span data-ttu-id="7b204-135">Эта проблема называется переименованием псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="7b204-135">This problem is called alias renaming.</span></span>  
-  
- <span data-ttu-id="7b204-136">Рассмотрим первый пример данного раздела.</span><span class="sxs-lookup"><span data-stu-id="7b204-136">Consider the first example in this topic.</span></span> <span data-ttu-id="7b204-137">При примитивном преобразовании Projection a.x (DbPropertyExpression(a, x)) правильно будет преобразовать в `a.x`, поскольку мы создали псевдоним входного значения «a» для соответствия переменной привязки.</span><span class="sxs-lookup"><span data-stu-id="7b204-137">If doing the naïve translation and translating the Projection a.x (DbPropertyExpression(a, x)), it is correct to translate it into `a.x` because we have aliased the input as "a" to match the binding variable.</span></span>  <span data-ttu-id="7b204-138">Однако при агрегировании обоих узлов в единую инструкцию SELECT языка SQL то же выражение DbPropertyExpression следует преобразовать в `b.x`, так как для входного значения был задан псевдоним «b».</span><span class="sxs-lookup"><span data-stu-id="7b204-138">However, when aggregating both the nodes into a single SQL SELECT statement, you need to translate the same DbPropertyExpression into `b.x`, as the input has been aliased with "b".</span></span>  
-  
-## <a name="join-alias-flattening"></a><span data-ttu-id="7b204-139">Преобразование псевдонимов соединений в плоские</span><span class="sxs-lookup"><span data-stu-id="7b204-139">Join Alias Flattening</span></span>  
- <span data-ttu-id="7b204-140">В отличие от любых других реляционных выражений в дереве выходных команд, результирующим типом для выражения DbJoinExpression является строка, состоящая из двух столбцов, каждый из которых соответствует одному из входов.</span><span class="sxs-lookup"><span data-stu-id="7b204-140">Unlike any other relational expression in an output command tree, the DbJoinExpression outputs a result type that is a row consisting of two columns, each of which corresponds to one of the inputs.</span></span> <span data-ttu-id="7b204-141">При построении DbPropertyExpresssion для доступа к скалярному свойству, образованному соединением, это выражение будет содержать еще одно выражение DbPropertyExpresssion.</span><span class="sxs-lookup"><span data-stu-id="7b204-141">When a DbPropertyExpresssion is built to access a scalar property originating from a join, it is over another DbPropertyExpresssion.</span></span>  
-  
- <span data-ttu-id="7b204-142">Например, можно указать «a.b.y» в примере 2 и «b.c.y» в примере 3.</span><span class="sxs-lookup"><span data-stu-id="7b204-142">Examples include "a.b.y" in example 2 and "b.c.y" in example 3.</span></span> <span data-ttu-id="7b204-143">Однако в соответствующих инструкциях SQL они именуются «b.y».</span><span class="sxs-lookup"><span data-stu-id="7b204-143">However in the corresponding SQL statements these are referred as "b.y".</span></span> <span data-ttu-id="7b204-144">Такое присвоение новых псевдонимов называется уплощением псевдонимов соединений.</span><span class="sxs-lookup"><span data-stu-id="7b204-144">This re-aliasing is called join alias flattening.</span></span>  
-  
-## <a name="column-name-and-extent-alias-renaming"></a><span data-ttu-id="7b204-145">Переименование столбцов и псевдонимов экстентов</span><span class="sxs-lookup"><span data-stu-id="7b204-145">Column Name and Extent Alias Renaming</span></span>  
- <span data-ttu-id="7b204-146">Если запрос SELECT языка SQL, содержащий соединение, должен быть выполнен в проекции, то при перечислении всех участвующих в запросе столбцов из входных таблиц может произойти коллизия имен, так как имена столбцов во входных таблицах могут совпадать.</span><span class="sxs-lookup"><span data-stu-id="7b204-146">If a SQL SELECT query that has a join has to be completed with a projection, when enumerating all the participating columns from the inputs, a name collision may occur, as more than one input may have the same column name.</span></span> <span data-ttu-id="7b204-147">Чтобы избежать коллизии, следует использовать для столбца другое имя.</span><span class="sxs-lookup"><span data-stu-id="7b204-147">Use a different name for the column to avoid the collision.</span></span>  
-  
- <span data-ttu-id="7b204-148">Кроме того, при уплощении соединений участвующие в запросе таблицы (или вложенные запросы) могут содержать конфликтующие псевдонимы. В таком случае эти псевдонимы следует переименовать.</span><span class="sxs-lookup"><span data-stu-id="7b204-148">Also, when flattening joins, participating tables (or subqueries) may have colliding aliases in which case these need to be renamed.</span></span>  
-  
-## <a name="avoid-select-"></a><span data-ttu-id="7b204-149">Предотвращение применения инструкции SELECT \*</span><span class="sxs-lookup"><span data-stu-id="7b204-149">Avoid SELECT \*</span></span>  
- <span data-ttu-id="7b204-150">Не следует использовать оператор `SELECT *` для выборки из базовых таблиц.</span><span class="sxs-lookup"><span data-stu-id="7b204-150">Do not use `SELECT *` to select from base tables.</span></span> <span data-ttu-id="7b204-151">В модели хранения [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения может включать только подмножество столбцов в таблице базы данных.</span><span class="sxs-lookup"><span data-stu-id="7b204-151">The storage model in an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application may only include a subset of the columns that are in the database table.</span></span> <span data-ttu-id="7b204-152">В этом случае оператор `SELECT *` может выдать неверный результат.</span><span class="sxs-lookup"><span data-stu-id="7b204-152">In this case, `SELECT *` may produce an incorrect result.</span></span> <span data-ttu-id="7b204-153">Вместо этого следует указать все столбцы, участвующие в запросе, по именам столбцов из результирующего типа выражений, участвующих в запросе.</span><span class="sxs-lookup"><span data-stu-id="7b204-153">Instead, you should specify all participating columns by using the column names from the result type of the participating expressions.</span></span>  
-  
-## <a name="reuse-of-expressions"></a><span data-ttu-id="7b204-154">Повторное использование выражений</span><span class="sxs-lookup"><span data-stu-id="7b204-154">Reuse of Expressions</span></span>  
- <span data-ttu-id="7b204-155">Выражения в дереве команд запроса, передаваемом [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], могут быть использованы повторно.</span><span class="sxs-lookup"><span data-stu-id="7b204-155">Expressions may be reused in the query command tree passed by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="7b204-156">Не следует предполагать, что каждое выражение появляется в дереве команд запроса только один раз.</span><span class="sxs-lookup"><span data-stu-id="7b204-156">Do not assume that each expression appears only once in the query command tree.</span></span>  
-  
-## <a name="mapping-primitive-types"></a><span data-ttu-id="7b204-157">Сопоставление примитивных типов</span><span class="sxs-lookup"><span data-stu-id="7b204-157">Mapping Primitive Types</span></span>  
- <span data-ttu-id="7b204-158">При сопоставлении концептуальных типов (типов модели EDM) с типами поставщика следует проводить сопоставление с самым большим типом (Int32), чтобы поместились все возможные значения.</span><span class="sxs-lookup"><span data-stu-id="7b204-158">When mapping conceptual (EDM) types to provider types, you should map to the widest type (Int32) so that all possible values fit.</span></span> <span data-ttu-id="7b204-159">Кроме того, следует избегать сопоставления для типов, которые не может использоваться во многих операциях, таких как типы больших двоичных ОБЪЕКТОВ (например, `ntext` в SQL Server).</span><span class="sxs-lookup"><span data-stu-id="7b204-159">Also, avoid mapping to types that cannot be used for many operations, like BLOB types (for example, `ntext` in SQL Server).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7b204-160">См. также</span><span class="sxs-lookup"><span data-stu-id="7b204-160">See also</span></span>
-- [<span data-ttu-id="7b204-161">Создание SQL</span><span class="sxs-lookup"><span data-stu-id="7b204-161">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+# <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="63340-102">Создание кода SQL из деревьев команд. Рекомендации</span><span class="sxs-lookup"><span data-stu-id="63340-102">Generating SQL from Command Trees - Best Practices</span></span>
+
+<span data-ttu-id="63340-103">Деревья команд выходного запроса по своей структуре близки к моделям запросов, выражаемым на языке SQL.</span><span class="sxs-lookup"><span data-stu-id="63340-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="63340-104">Однако модули записи поставщика при создании кода SQL на основе дерева команд выходного запроса сталкиваются с некоторыми распространенными проблемами.</span><span class="sxs-lookup"><span data-stu-id="63340-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="63340-105">Они обсуждаются в данном разделе.</span><span class="sxs-lookup"><span data-stu-id="63340-105">This topic discusses these challenges.</span></span> <span data-ttu-id="63340-106">В следующем разделе приводится образец поставщика, показывающий решение этих проблем.</span><span class="sxs-lookup"><span data-stu-id="63340-106">In the next topic, the sample provider shows how to address these challenges.</span></span>
+
+## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a><span data-ttu-id="63340-107">Группирование узлов DbExpression в инструкции SELECT языка SQL</span><span class="sxs-lookup"><span data-stu-id="63340-107">Group DbExpression Nodes in a SQL SELECT Statement</span></span>
+
+<span data-ttu-id="63340-108">Типичная инструкция SQL имеет вложенную структуру следующего вида:</span><span class="sxs-lookup"><span data-stu-id="63340-108">A typical SQL statement has a nested structure of the following shape:</span></span>
+
+```sql
+SELECT …
+FROM …
+WHERE …
+GROUP BY …
+ORDER BY …
+```
+
+<span data-ttu-id="63340-109">Одно или несколько предложений могут быть пустыми.</span><span class="sxs-lookup"><span data-stu-id="63340-109">One or more clauses may be empty.</span></span>  <span data-ttu-id="63340-110">Вложенная инструкция SELECT может находиться в любой строке.</span><span class="sxs-lookup"><span data-stu-id="63340-110">A nested SELECT statement could occur in any of the lines.</span></span>
+
+<span data-ttu-id="63340-111">Результат преобразования дерева команд запроса в инструкцию SELECT языка SQL будет содержать по одному подзапросу на каждый реляционный оператор.</span><span class="sxs-lookup"><span data-stu-id="63340-111">A possible translation of a query command tree into a SQL SELECT statement would produce one subquery for every relational operator.</span></span> <span data-ttu-id="63340-112">Однако это приведет к возникновению излишних вложенных запросов, и в результате инструкцию будет трудно читать.</span><span class="sxs-lookup"><span data-stu-id="63340-112">However, that would lead to unnecessary nested subqueries that would be difficult to read.</span></span>  <span data-ttu-id="63340-113">В некоторых хранилищах данных производительность такого запроса будет низкой.</span><span class="sxs-lookup"><span data-stu-id="63340-113">On some data stores, the query may perform poorly.</span></span>
+
+<span data-ttu-id="63340-114">В качестве примера рассмотрим следующее дерево команд запроса:</span><span class="sxs-lookup"><span data-stu-id="63340-114">As an example, consider the following query command tree</span></span>
+
+```
+Project (
+a.x,
+   a = Filter(
+      b.y = 5,
+      b = Scan("TableA")
+   )
+)
+```
+
+<span data-ttu-id="63340-115">Неэффективное преобразование даст нам:</span><span class="sxs-lookup"><span data-stu-id="63340-115">An inefficient translation would produce:</span></span>
+
+```sql
+SELECT a.x
+FROM (   SELECT *
+         FROM TableA as b
+         WHERE b.y = 5) as a
+```
+
+<span data-ttu-id="63340-116">Заметьте, что каждый узел реляционного выражения превращается в отдельную инструкцию SELECT языка SQL.</span><span class="sxs-lookup"><span data-stu-id="63340-116">Note that every relational expression node becomes a new SQL SELECT statement.</span></span>
+
+<span data-ttu-id="63340-117">Следовательно, важно агрегировать как можно больше узлов выражений в одну инструкцию SELECT языка SQL, не нарушая правильности инструкции.</span><span class="sxs-lookup"><span data-stu-id="63340-117">Therefore, it is important to aggregate as many expression nodes as possible into a single SQL SELECT statement while preserving correctness.</span></span>
+
+<span data-ttu-id="63340-118">Результат такого агрегирования для приведенного выше примера будет иметь следующий вид:</span><span class="sxs-lookup"><span data-stu-id="63340-118">The result of such aggregation for the example presented above would be:</span></span>
+
+```sql
+SELECT b.x
+FROM TableA as b
+WHERE b.y = 5
+```
+
+## <a name="flatten-joins-in-a-sql-select-statement"></a><span data-ttu-id="63340-119">Уплощение соединений в инструкции SELECT языка SQL</span><span class="sxs-lookup"><span data-stu-id="63340-119">Flatten Joins in a SQL SELECT Statement</span></span>
+
+<span data-ttu-id="63340-120">Частным случаем агрегирования нескольких узлов в одну инструкцию SELECT языка SQL является агрегирование нескольких выражений соединения.</span><span class="sxs-lookup"><span data-stu-id="63340-120">One case of aggregating multiple nodes into a single SQL SELECT statement is aggregating multiple join expressions into a single SQL SELECT statement.</span></span> <span data-ttu-id="63340-121">Класс DbJoinExpression представляет одно соединение между двумя исходными таблицами.</span><span class="sxs-lookup"><span data-stu-id="63340-121">DbJoinExpression represents a single join between two inputs.</span></span> <span data-ttu-id="63340-122">Но в одной инструкции SELECT языка SQL можно задать несколько соединений.</span><span class="sxs-lookup"><span data-stu-id="63340-122">However, as part of a single SQL SELECT statement, more than one join can be specified.</span></span> <span data-ttu-id="63340-123">В этом случае соединения выполняются в порядке, в котором они указаны.</span><span class="sxs-lookup"><span data-stu-id="63340-123">In that case the joins are performed in the order specified.</span></span>
+
+<span data-ttu-id="63340-124">Левосторонние соединения (которые выглядят как левые дочерние другого соединения) проще сделать плоскими и превратить в одну инструкцию SELECT языка SQL.</span><span class="sxs-lookup"><span data-stu-id="63340-124">Left spine joins, (joins that appear as a left child of another join) can be more easily flattened into a single SQL SELECT statement.</span></span> <span data-ttu-id="63340-125">В качестве примера рассмотрим следующее дерево команд запроса:</span><span class="sxs-lookup"><span data-stu-id="63340-125">For example, consider the following query command tree:</span></span>
+
+```
+InnerJoin(
+   a = LeftOuterJoin(
+   b = Extent("TableA")
+   c = Extent("TableB")
+   ON b.y = c.x ),
+   d = Extent("TableC")
+   ON a.b.y = d.z
+)
+```
+
+<span data-ttu-id="63340-126">Оно верно переводится в следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="63340-126">This can be correctly translated into:</span></span>
+
+```sql
+SELECT *
+FROM TableA as b
+LEFT OUTER JOIN TableB as c ON b.y = c.x
+INNER JOIN TableC as d ON b.y = d.z
+```
+
+<span data-ttu-id="63340-127">Однако соединения, не являющиеся левосторонними соединениями, невозможно легко превратить в плоскую структуру, и не следует пытаться это сделать.</span><span class="sxs-lookup"><span data-stu-id="63340-127">However, non-left spine joins cannot easily be flattened, and you should not try to flatten them.</span></span> <span data-ttu-id="63340-128">В качестве примера рассмотрим соединения в следующем дереве команд запроса:</span><span class="sxs-lookup"><span data-stu-id="63340-128">For example, the joins in the following query command tree:</span></span>
+
+```
+InnerJoin(
+   a = Extent("TableA")
+   b = LeftOuterJoin(
+   c = Extent("TableB")
+   d = Extent("TableC")
+   ON c.y = d.x),
+   ON a.z = b.c.y
+)
+```
+
+<span data-ttu-id="63340-129">Это дерево будет преобразовано в инструкцию SELECT языка SQL с подзапросом.</span><span class="sxs-lookup"><span data-stu-id="63340-129">Would be translated to a SQL SELECT statement with a sub-query.</span></span>
+
+```sql
+SELECT *
+FROM TableA as a
+INNER JOIN (SELECT *
+   FROM TableB as c
+   LEFT OUTER JOIN TableC as d
+   ON c.y = d.x) as b
+ON b.y = d.z
+```
+
+## <a name="input-alias-redirecting"></a><span data-ttu-id="63340-130">Перенаправление входных псевдонимов</span><span class="sxs-lookup"><span data-stu-id="63340-130">Input Alias Redirecting</span></span>
+
+<span data-ttu-id="63340-131">Чтобы понять, что представляет собой перенаправление входных псевдонимов, рассмотрим структуру реляционных выражений, таких как DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression и DbSkipExpression.</span><span class="sxs-lookup"><span data-stu-id="63340-131">To explain input alias redirecting, consider the structure of the relational expressions, such as DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression, and DbSkipExpression.</span></span>
+
+<span data-ttu-id="63340-132">Каждый из этих типов имеет одно или несколько свойств Input, описывающих входную коллекцию; для представления каждого элемента этого входа во время обхода коллекции используется переменная привязки, соответствующая данному элементу.</span><span class="sxs-lookup"><span data-stu-id="63340-132">Each of these types has one or more Input properties that describe an input collection, and a binding variable corresponding to each input is used to represent each element of that input during a collection traversal.</span></span> <span data-ttu-id="63340-133">Переменная привязки используется для ссылки на входной элемент, например в свойстве Predicate выражения DbFilterExpression или свойстве Projection выражения DbProjectExpression.</span><span class="sxs-lookup"><span data-stu-id="63340-133">The binding variable is used when referring to the input element, for example in the Predicate property of a DbFilterExpression or the Projection property of a DbProjectExpression.</span></span>
+
+<span data-ttu-id="63340-134">При агрегировании большего числа узлов реляционных выражений в одну инструкцию SELECT языка SQL и вычислении выражения, являющегося частью реляционного выражения (например, свойства Projection выражения DbProjectExpression), используемая переменная привязки может не совпадать с псевдонимом входного значения, так как несколько привязок выражений будут перенаправлены в один и тот же экстент.</span><span class="sxs-lookup"><span data-stu-id="63340-134">When aggregating more relational expression nodes into a single SQL SELECT statement, and evaluating an expression that is part of a relational expression (for example part of the Projection property of a DbProjectExpression) the binding variable that it uses may not be the same as the alias of the input, as multiple expression bindings would have to be redirected to a single extent.</span></span>  <span data-ttu-id="63340-135">Эта проблема называется переименованием псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="63340-135">This problem is called alias renaming.</span></span>
+
+<span data-ttu-id="63340-136">Рассмотрим первый пример данного раздела.</span><span class="sxs-lookup"><span data-stu-id="63340-136">Consider the first example in this topic.</span></span> <span data-ttu-id="63340-137">При примитивном преобразовании Projection a.x (DbPropertyExpression(a, x)) правильно будет преобразовать в `a.x`, поскольку мы создали псевдоним входного значения «a» для соответствия переменной привязки.</span><span class="sxs-lookup"><span data-stu-id="63340-137">If doing the naïve translation and translating the Projection a.x (DbPropertyExpression(a, x)), it is correct to translate it into `a.x` because we have aliased the input as "a" to match the binding variable.</span></span>  <span data-ttu-id="63340-138">Однако при агрегировании обоих узлов в единую инструкцию SELECT языка SQL то же выражение DbPropertyExpression следует преобразовать в `b.x`, так как для входного значения был задан псевдоним «b».</span><span class="sxs-lookup"><span data-stu-id="63340-138">However, when aggregating both the nodes into a single SQL SELECT statement, you need to translate the same DbPropertyExpression into `b.x`, as the input has been aliased with "b".</span></span>
+
+## <a name="join-alias-flattening"></a><span data-ttu-id="63340-139">Преобразование псевдонимов соединений в плоские</span><span class="sxs-lookup"><span data-stu-id="63340-139">Join Alias Flattening</span></span>
+
+<span data-ttu-id="63340-140">В отличие от любых других реляционных выражений в дереве выходных команд, результирующим типом для выражения DbJoinExpression является строка, состоящая из двух столбцов, каждый из которых соответствует одному из входов.</span><span class="sxs-lookup"><span data-stu-id="63340-140">Unlike any other relational expression in an output command tree, the DbJoinExpression outputs a result type that is a row consisting of two columns, each of which corresponds to one of the inputs.</span></span> <span data-ttu-id="63340-141">При построении DbPropertyExpression для доступа к скалярному свойству, образованному соединением, оно находится над очередным DbPropertyExpression.</span><span class="sxs-lookup"><span data-stu-id="63340-141">When a DbPropertyExpression is built to access a scalar property originating from a join, it is over another DbPropertyExpression.</span></span>
+
+<span data-ttu-id="63340-142">Например, можно указать «a.b.y» в примере 2 и «b.c.y» в примере 3.</span><span class="sxs-lookup"><span data-stu-id="63340-142">Examples include "a.b.y" in example 2 and "b.c.y" in example 3.</span></span> <span data-ttu-id="63340-143">Однако в соответствующих инструкциях SQL они именуются «b.y».</span><span class="sxs-lookup"><span data-stu-id="63340-143">However in the corresponding SQL statements these are referred as "b.y".</span></span> <span data-ttu-id="63340-144">Такое присвоение новых псевдонимов называется уплощением псевдонимов соединений.</span><span class="sxs-lookup"><span data-stu-id="63340-144">This re-aliasing is called join alias flattening.</span></span>
+
+## <a name="column-name-and-extent-alias-renaming"></a><span data-ttu-id="63340-145">Переименование столбцов и псевдонимов экстентов</span><span class="sxs-lookup"><span data-stu-id="63340-145">Column Name and Extent Alias Renaming</span></span>
+
+<span data-ttu-id="63340-146">Если запрос SELECT языка SQL, содержащий соединение, должен быть выполнен в проекции, то при перечислении всех участвующих в запросе столбцов из входных таблиц может произойти коллизия имен, так как имена столбцов во входных таблицах могут совпадать.</span><span class="sxs-lookup"><span data-stu-id="63340-146">If a SQL SELECT query that has a join has to be completed with a projection, when enumerating all the participating columns from the inputs, a name collision may occur, as more than one input may have the same column name.</span></span> <span data-ttu-id="63340-147">Чтобы избежать коллизии, следует использовать для столбца другое имя.</span><span class="sxs-lookup"><span data-stu-id="63340-147">Use a different name for the column to avoid the collision.</span></span>
+
+<span data-ttu-id="63340-148">Кроме того, при уплощении соединений участвующие в запросе таблицы (или вложенные запросы) могут содержать конфликтующие псевдонимы. В таком случае эти псевдонимы следует переименовать.</span><span class="sxs-lookup"><span data-stu-id="63340-148">Also, when flattening joins, participating tables (or subqueries) may have colliding aliases in which case these need to be renamed.</span></span>
+
+## <a name="avoid-select-"></a><span data-ttu-id="63340-149">Предотвращение применения инструкции SELECT \*</span><span class="sxs-lookup"><span data-stu-id="63340-149">Avoid SELECT \*</span></span>
+
+<span data-ttu-id="63340-150">Не следует использовать оператор `SELECT *` для выборки из базовых таблиц.</span><span class="sxs-lookup"><span data-stu-id="63340-150">Do not use `SELECT *` to select from base tables.</span></span> <span data-ttu-id="63340-151">В модели хранения [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения может включать только подмножество столбцов в таблице базы данных.</span><span class="sxs-lookup"><span data-stu-id="63340-151">The storage model in an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application may only include a subset of the columns that are in the database table.</span></span> <span data-ttu-id="63340-152">В этом случае оператор `SELECT *` может выдать неверный результат.</span><span class="sxs-lookup"><span data-stu-id="63340-152">In this case, `SELECT *` may produce an incorrect result.</span></span> <span data-ttu-id="63340-153">Вместо этого следует указать все столбцы, участвующие в запросе, по именам столбцов из результирующего типа выражений, участвующих в запросе.</span><span class="sxs-lookup"><span data-stu-id="63340-153">Instead, you should specify all participating columns by using the column names from the result type of the participating expressions.</span></span>
+
+## <a name="reuse-of-expressions"></a><span data-ttu-id="63340-154">Повторное использование выражений</span><span class="sxs-lookup"><span data-stu-id="63340-154">Reuse of Expressions</span></span>
+
+<span data-ttu-id="63340-155">Выражения в дереве команд запроса, передаваемом [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], могут быть использованы повторно.</span><span class="sxs-lookup"><span data-stu-id="63340-155">Expressions may be reused in the query command tree passed by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="63340-156">Не следует предполагать, что каждое выражение появляется в дереве команд запроса только один раз.</span><span class="sxs-lookup"><span data-stu-id="63340-156">Do not assume that each expression appears only once in the query command tree.</span></span>
+
+## <a name="mapping-primitive-types"></a><span data-ttu-id="63340-157">Сопоставление примитивных типов</span><span class="sxs-lookup"><span data-stu-id="63340-157">Mapping Primitive Types</span></span>
+
+<span data-ttu-id="63340-158">При сопоставлении концептуальных типов (типов модели EDM) с типами поставщика следует проводить сопоставление с самым большим типом (Int32), чтобы поместились все возможные значения.</span><span class="sxs-lookup"><span data-stu-id="63340-158">When mapping conceptual (EDM) types to provider types, you should map to the widest type (Int32) so that all possible values fit.</span></span> <span data-ttu-id="63340-159">Кроме того, следует избегать сопоставления для типов, которые не может использоваться во многих операциях, таких как типы больших двоичных ОБЪЕКТОВ (например, `ntext` в SQL Server).</span><span class="sxs-lookup"><span data-stu-id="63340-159">Also, avoid mapping to types that cannot be used for many operations, like BLOB types (for example, `ntext` in SQL Server).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="63340-160">См. также</span><span class="sxs-lookup"><span data-stu-id="63340-160">See also</span></span>
+
+- [<span data-ttu-id="63340-161">Создание SQL</span><span class="sxs-lookup"><span data-stu-id="63340-161">SQL Generation</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

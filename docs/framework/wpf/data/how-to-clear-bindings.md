@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Очистка привязок
+title: Практическое руководство. Очистка привязок
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: bd0f42b868c316cb9a6344134d4aaf01930519ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508436"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360239"
 ---
-# <a name="how-to-clear-bindings"></a><span data-ttu-id="6a36f-102">Как выполнить Очистка привязок</span><span class="sxs-lookup"><span data-stu-id="6a36f-102">How to: Clear Bindings</span></span>
-<span data-ttu-id="6a36f-103">В этом примере показано, как удалять привязки к объекту.</span><span class="sxs-lookup"><span data-stu-id="6a36f-103">This example shows how to clear bindings from an object.</span></span>  
+# <a name="how-to-clear-bindings"></a><span data-ttu-id="49ef2-102">Практическое руководство. Очистка привязок</span><span class="sxs-lookup"><span data-stu-id="49ef2-102">How to: Clear Bindings</span></span>
+<span data-ttu-id="49ef2-103">В этом примере показано, как удалять привязки к объекту.</span><span class="sxs-lookup"><span data-stu-id="49ef2-103">This example shows how to clear bindings from an object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a36f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="6a36f-104">Example</span></span>  
- <span data-ttu-id="6a36f-105">Чтобы удалить привязку из отдельного свойства объекта, вызовите <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="6a36f-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="6a36f-106">Следующий пример удаляет привязку из <xref:System.Windows.Controls.TextBlock.TextProperty> из *mytext*, <xref:System.Windows.Controls.TextBlock> объекта.</span><span class="sxs-lookup"><span data-stu-id="6a36f-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="49ef2-104">Пример</span><span class="sxs-lookup"><span data-stu-id="49ef2-104">Example</span></span>  
+ <span data-ttu-id="49ef2-105">Чтобы удалить привязку из отдельного свойства объекта, вызовите <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="49ef2-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="49ef2-106">Следующий пример удаляет привязку из <xref:System.Windows.Controls.TextBlock.TextProperty> из *mytext*, <xref:System.Windows.Controls.TextBlock> объекта.</span><span class="sxs-lookup"><span data-stu-id="49ef2-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
   
- [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
- [!code-vb[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
+ [!code-csharp[CodeOnlyBinding#ClearBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
+ [!code-vb[CodeOnlyBinding#ClearBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
   
- <span data-ttu-id="6a36f-107">Очистка привязки удаляет привязку так, что значение свойства зависимостей изменяется на то значение, которое было бы без привязки.</span><span class="sxs-lookup"><span data-stu-id="6a36f-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="6a36f-108">Это значение может быть значением по умолчанию, унаследованным или значением из привязки шаблона данных.</span><span class="sxs-lookup"><span data-stu-id="6a36f-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
+ <span data-ttu-id="49ef2-107">Очистка привязки удаляет привязку так, что значение свойства зависимостей изменяется на то значение, которое было бы без привязки.</span><span class="sxs-lookup"><span data-stu-id="49ef2-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="49ef2-108">Это значение может быть значением по умолчанию, унаследованным или значением из привязки шаблона данных.</span><span class="sxs-lookup"><span data-stu-id="49ef2-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
   
- <span data-ttu-id="6a36f-109">Чтобы удалить привязки из всех возможных свойств объекта, используйте <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span><span class="sxs-lookup"><span data-stu-id="6a36f-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
+ <span data-ttu-id="49ef2-109">Чтобы удалить привязки из всех возможных свойств объекта, используйте <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span><span class="sxs-lookup"><span data-stu-id="49ef2-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a36f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="6a36f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49ef2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="49ef2-110">See also</span></span>
 - <xref:System.Windows.Data.BindingOperations>
-- [<span data-ttu-id="6a36f-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="6a36f-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="6a36f-112">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="6a36f-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [<span data-ttu-id="49ef2-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="49ef2-111">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="49ef2-112">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="49ef2-112">How-to Topics</span></span>](data-binding-how-to-topics.md)

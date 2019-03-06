@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352611"
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="479fd-102">Свойства (WPF)</span><span class="sxs-lookup"><span data-stu-id="479fd-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="479fd-103">предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].</span><span class="sxs-lookup"><span data-stu-id="479fd-103">provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="479fd-104">В совокупности эти службы обычно называются системой свойств WPF.</span><span class="sxs-lookup"><span data-stu-id="479fd-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="479fd-105">Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.</span><span class="sxs-lookup"><span data-stu-id="479fd-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="0912c-102">Свойства (WPF)</span><span class="sxs-lookup"><span data-stu-id="0912c-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="0912c-103">предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0912c-103">provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="0912c-104">В совокупности эти службы обычно называются системой свойств WPF.</span><span class="sxs-lookup"><span data-stu-id="0912c-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="0912c-105">Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.</span><span class="sxs-lookup"><span data-stu-id="0912c-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="479fd-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="479fd-106">In This Section</span></span>  
-- [<span data-ttu-id="479fd-107">Общие сведения о свойствах зависимости</span><span class="sxs-lookup"><span data-stu-id="479fd-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [<span data-ttu-id="479fd-108">Общие сведения о присоединенных свойствах</span><span class="sxs-lookup"><span data-stu-id="479fd-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [<span data-ttu-id="479fd-109">Пользовательские свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-109">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [<span data-ttu-id="479fd-110">Метаданные свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-110">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [<span data-ttu-id="479fd-111">Проверка и обратные вызовы свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-111">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [<span data-ttu-id="479fd-112">Метаданные свойств среды</span><span class="sxs-lookup"><span data-stu-id="479fd-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [<span data-ttu-id="479fd-113">Приоритет значения свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [<span data-ttu-id="479fd-114">Свойства зависимости "только для чтения"</span><span class="sxs-lookup"><span data-stu-id="479fd-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [<span data-ttu-id="479fd-115">Наследование значения свойства</span><span class="sxs-lookup"><span data-stu-id="479fd-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [<span data-ttu-id="479fd-116">Безопасность свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [<span data-ttu-id="479fd-117">Шаблоны безопасного конструктора для DependencyObjects</span><span class="sxs-lookup"><span data-stu-id="479fd-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [<span data-ttu-id="479fd-118">Свойства зависимостей типа коллекции</span><span class="sxs-lookup"><span data-stu-id="479fd-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [<span data-ttu-id="479fd-119">Загрузка кода XAML и свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="479fd-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [<span data-ttu-id="479fd-120">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="479fd-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="0912c-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0912c-106">In This Section</span></span>  
+- [<span data-ttu-id="0912c-107">Общие сведения о свойствах зависимости</span><span class="sxs-lookup"><span data-stu-id="0912c-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
+- [<span data-ttu-id="0912c-108">Общие сведения о присоединенных свойствах</span><span class="sxs-lookup"><span data-stu-id="0912c-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
+- [<span data-ttu-id="0912c-109">Пользовательские свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
+- [<span data-ttu-id="0912c-110">Метаданные свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
+- [<span data-ttu-id="0912c-111">Проверка и обратные вызовы свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
+- [<span data-ttu-id="0912c-112">Метаданные свойств среды</span><span class="sxs-lookup"><span data-stu-id="0912c-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
+- [<span data-ttu-id="0912c-113">Приоритет значения свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
+- [<span data-ttu-id="0912c-114">Свойства зависимости "только для чтения"</span><span class="sxs-lookup"><span data-stu-id="0912c-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
+- [<span data-ttu-id="0912c-115">Наследование значения свойства</span><span class="sxs-lookup"><span data-stu-id="0912c-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
+- [<span data-ttu-id="0912c-116">Безопасность свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-116">Dependency Property Security</span></span>](dependency-property-security.md)
+- [<span data-ttu-id="0912c-117">Шаблоны безопасного конструктора для DependencyObjects</span><span class="sxs-lookup"><span data-stu-id="0912c-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
+- [<span data-ttu-id="0912c-118">Свойства зависимостей типа коллекции</span><span class="sxs-lookup"><span data-stu-id="0912c-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
+- [<span data-ttu-id="0912c-119">Загрузка кода XAML и свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0912c-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
+- [<span data-ttu-id="0912c-120">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="0912c-120">How-to Topics</span></span>](properties-how-to-topics.md)
   
-## <a name="reference"></a><span data-ttu-id="479fd-121">Ссылка</span><span class="sxs-lookup"><span data-stu-id="479fd-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0912c-121">Ссылка</span><span class="sxs-lookup"><span data-stu-id="0912c-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -44,13 +44,13 @@ ms.locfileid: "56745577"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="479fd-122">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="479fd-122">Related Sections</span></span>  
- [<span data-ttu-id="479fd-123">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="479fd-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="479fd-124">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="479fd-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="479fd-125">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="479fd-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="479fd-126">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="479fd-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="479fd-127">События</span><span class="sxs-lookup"><span data-stu-id="479fd-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="479fd-128">Ввод</span><span class="sxs-lookup"><span data-stu-id="479fd-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="479fd-129">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="479fd-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="479fd-130">Модель содержимого WPF</span><span class="sxs-lookup"><span data-stu-id="479fd-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="479fd-131">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="479fd-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="0912c-122">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0912c-122">Related Sections</span></span>  
+ [<span data-ttu-id="0912c-123">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="0912c-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="0912c-124">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="0912c-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="0912c-125">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="0912c-125">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="0912c-126">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="0912c-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="0912c-127">События</span><span class="sxs-lookup"><span data-stu-id="0912c-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="0912c-128">Ввод</span><span class="sxs-lookup"><span data-stu-id="0912c-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="0912c-129">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="0912c-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="0912c-130">Модель содержимого WPF</span><span class="sxs-lookup"><span data-stu-id="0912c-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="0912c-131">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="0912c-131">Threading Model</span></span>](threading-model.md)

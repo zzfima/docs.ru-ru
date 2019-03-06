@@ -1,5 +1,5 @@
 ---
-title: Функция GetPropertyOrigin (Справочник по API Unmnaged)
+title: Функция GetPropertyOrigin (Справочник по неуправляемым API)
 description: Функция GetPropertyOrigin определяет класс, в котором объявлено свойство.
 ms.date: 11/06/2017
 api_name:
@@ -16,69 +16,72 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e5cd6ee438b33fd07fd7c3242cc3c2a6513dd9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368877"
 ---
-# <a name="getpropertyorigin-function"></a><span data-ttu-id="2827a-103">Функция GetPropertyOrigin</span><span class="sxs-lookup"><span data-stu-id="2827a-103">GetPropertyOrigin function</span></span>
-<span data-ttu-id="2827a-104">Определяет класс, в котором объявлено свойство.</span><span class="sxs-lookup"><span data-stu-id="2827a-104">Determines the class in which a property is declared.</span></span>
+# <a name="getpropertyorigin-function"></a><span data-ttu-id="14348-103">Функция GetPropertyOrigin</span><span class="sxs-lookup"><span data-stu-id="14348-103">GetPropertyOrigin function</span></span>
+
+<span data-ttu-id="14348-104">Определяет класс, в котором объявлено свойство.</span><span class="sxs-lookup"><span data-stu-id="14348-104">Determines the class in which a property is declared.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a><span data-ttu-id="2827a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2827a-105">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="14348-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="14348-105">Syntax</span></span>
+
+```cpp
 HRESULT GetPropertyOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
-```  
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="2827a-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="2827a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="14348-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="14348-106">Parameters</span></span>
 
-`vFunc`  
-<span data-ttu-id="2827a-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="2827a-107">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="14348-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="14348-107">[in] This parameter is unused.</span></span>
 
-`ptr`  
-<span data-ttu-id="2827a-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="2827a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+`ptr`\
+<span data-ttu-id="14348-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="14348-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
-`wszMethodName`  
-<span data-ttu-id="2827a-109">[in] Имя свойства для объекта, класс-владелец которого запрашивается.</span><span class="sxs-lookup"><span data-stu-id="2827a-109">[in] The name of the property for the object whose owning class is being requested.</span></span> 
+`wszMethodName`\
+<span data-ttu-id="14348-109">[in] Имя свойства для объекта, класс-владелец которого запрашивается.</span><span class="sxs-lookup"><span data-stu-id="14348-109">[in] The name of the property for the object whose owning class is being requested.</span></span>
 
-`pstrClassName`  
-<span data-ttu-id="2827a-110">[out] Получает имя класса, которому принадлежит свойство.</span><span class="sxs-lookup"><span data-stu-id="2827a-110">[out] Receives the name of the class that owns the property.</span></span>
+`pstrClassName`\
+<span data-ttu-id="14348-110">[out] Получает имя класса, которому принадлежит свойство.</span><span class="sxs-lookup"><span data-stu-id="14348-110">[out] Receives the name of the class that owns the property.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="2827a-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2827a-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="14348-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="14348-111">Return value</span></span>
 
-<span data-ttu-id="2827a-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="2827a-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="14348-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="14348-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="2827a-113">Константа</span><span class="sxs-lookup"><span data-stu-id="2827a-113">Constant</span></span>  |<span data-ttu-id="2827a-114">Значение</span><span class="sxs-lookup"><span data-stu-id="2827a-114">Value</span></span>  |<span data-ttu-id="2827a-115">Описание</span><span class="sxs-lookup"><span data-stu-id="2827a-115">Description</span></span>  |
+|<span data-ttu-id="14348-113">Константа</span><span class="sxs-lookup"><span data-stu-id="14348-113">Constant</span></span>  |<span data-ttu-id="14348-114">Значение</span><span class="sxs-lookup"><span data-stu-id="14348-114">Value</span></span>  |<span data-ttu-id="14348-115">Описание:</span><span class="sxs-lookup"><span data-stu-id="14348-115">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="2827a-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="2827a-116">0x80041001</span></span> | <span data-ttu-id="2827a-117">Произошел общий сбой.</span><span class="sxs-lookup"><span data-stu-id="2827a-117">There has been a general failure.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="2827a-118">0x80041002</span><span class="sxs-lookup"><span data-stu-id="2827a-118">0x80041002</span></span> | <span data-ttu-id="2827a-119">Указанное свойство не найден.</span><span class="sxs-lookup"><span data-stu-id="2827a-119">The specified property was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="2827a-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="2827a-120">0x80041008</span></span> | <span data-ttu-id="2827a-121">Параметр не является допустимым.</span><span class="sxs-lookup"><span data-stu-id="2827a-121">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="2827a-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="2827a-122">0x80041006</span></span> | <span data-ttu-id="2827a-123">Недостаточно памяти для завершения операции.</span><span class="sxs-lookup"><span data-stu-id="2827a-123">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="2827a-124">0</span><span class="sxs-lookup"><span data-stu-id="2827a-124">0</span></span> | <span data-ttu-id="2827a-125">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="2827a-125">The function call was successful.</span></span>  |
-  
-## <a name="remarks"></a><span data-ttu-id="2827a-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="2827a-126">Remarks</span></span>
+|`WBEM_E_FAILED` | <span data-ttu-id="14348-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="14348-116">0x80041001</span></span> | <span data-ttu-id="14348-117">Произошел общий сбой.</span><span class="sxs-lookup"><span data-stu-id="14348-117">There has been a general failure.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="14348-118">0x80041002</span><span class="sxs-lookup"><span data-stu-id="14348-118">0x80041002</span></span> | <span data-ttu-id="14348-119">Указанное свойство не найден.</span><span class="sxs-lookup"><span data-stu-id="14348-119">The specified property was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="14348-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="14348-120">0x80041008</span></span> | <span data-ttu-id="14348-121">Параметр не является допустимым.</span><span class="sxs-lookup"><span data-stu-id="14348-121">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="14348-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="14348-122">0x80041006</span></span> | <span data-ttu-id="14348-123">Недостаточно памяти для завершения операции.</span><span class="sxs-lookup"><span data-stu-id="14348-123">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="14348-124">0</span><span class="sxs-lookup"><span data-stu-id="14348-124">0</span></span> | <span data-ttu-id="14348-125">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="14348-125">The function call was successful.</span></span>  |
 
-<span data-ttu-id="2827a-127">Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) метод.</span><span class="sxs-lookup"><span data-stu-id="2827a-127">This function wraps a call to the [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="14348-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="14348-126">Remarks</span></span>
 
-<span data-ttu-id="2827a-128">Поскольку класс может наследовать свойства из одного или нескольких базовых классов, разработчики часто требуется определить свойство, в котором определен данный метод.</span><span class="sxs-lookup"><span data-stu-id="2827a-128">Because a class can inherit properties from one or more base classes, developers often want to determine the property in which a given method is defined.</span></span>
+<span data-ttu-id="14348-127">Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) метод.</span><span class="sxs-lookup"><span data-stu-id="14348-127">This function wraps a call to the [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) method.</span></span>
 
-<span data-ttu-id="2827a-129">`pstrClassName` Параметр не должен указывать на допустимый `BSTR` перед вызовом функции, так как это `out` параметр; этот указатель не освобождается после возвращения функции.</span><span class="sxs-lookup"><span data-stu-id="2827a-129">The `pstrClassName` parameter must not point to a valid `BSTR` before the function is called because this is an `out` parameter; this pointer is not deallocated after the function returns.</span></span>
+<span data-ttu-id="14348-128">Поскольку класс может наследовать свойства из одного или нескольких базовых классов, разработчики часто требуется определить свойство, в котором определен данный метод.</span><span class="sxs-lookup"><span data-stu-id="14348-128">Because a class can inherit properties from one or more base classes, developers often want to determine the property in which a given method is defined.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="2827a-130">Требования</span><span class="sxs-lookup"><span data-stu-id="2827a-130">Requirements</span></span>  
-<span data-ttu-id="2827a-131">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2827a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2827a-132">**Заголовок.** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="2827a-132">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="2827a-133">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2827a-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2827a-134">См. также</span><span class="sxs-lookup"><span data-stu-id="2827a-134">See also</span></span>
-- [<span data-ttu-id="2827a-135">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="2827a-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="14348-129">`pstrClassName` Параметр не должен указывать на допустимый `BSTR` перед вызовом функции, так как это `out` параметр; этот указатель не освобождается после возвращения функции.</span><span class="sxs-lookup"><span data-stu-id="14348-129">The `pstrClassName` parameter must not point to a valid `BSTR` before the function is called because this is an `out` parameter; this pointer is not deallocated after the function returns.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="14348-130">Требования</span><span class="sxs-lookup"><span data-stu-id="14348-130">Requirements</span></span>
+
+<span data-ttu-id="14348-131">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14348-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="14348-132">**Заголовок.** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="14348-132">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="14348-133">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="14348-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="14348-134">См. также</span><span class="sxs-lookup"><span data-stu-id="14348-134">See also</span></span>
+
+- [<span data-ttu-id="14348-135">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="14348-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
