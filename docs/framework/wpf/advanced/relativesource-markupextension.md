@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96a00afc08f2c5593dad5a3a47ab46045ff6b0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365117"
 ---
 # <a name="relativesource-markupextension"></a>Расширение разметки RelativeSource
-Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые будут использоваться в [расширения разметки привязки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> определенного в XAML.  
+Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые будут использоваться в [расширения разметки привязки](binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> определенного в XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
@@ -61,11 +61,11 @@ ms.locfileid: "54559390"
 |`intLevel`|Необязательно для режима `FindAncestor`. Уровень предка (вычисляется в направлении родителя в логическом дереве).|  
   
 ## <a name="remarks"></a>Примечания  
- `{RelativeSource TemplatedParent}` Использование привязки — это ключевая методика, которая решает большего размера концепцию разделения элемента управления пользовательского интерфейса и логики элемента управления. Это делает возможным привязку из определения шаблона к созданному по шаблону родительскому элементу (экземпляр объекта времени выполнения, в котором применяется шаблон). В этом случае [расширения разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) на самом деле является сокращением для следующего выражения привязки: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` или `{RelativeSource TemplatedParent}` использования включены только соответствующие в XAML, который определяет шаблон. Дополнительные сведения см. в разделе [расширения разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+ `{RelativeSource TemplatedParent}` Использование привязки — это ключевая методика, которая решает большего размера концепцию разделения элемента управления пользовательского интерфейса и логики элемента управления. Это делает возможным привязку из определения шаблона к созданному по шаблону родительскому элементу (экземпляр объекта времени выполнения, в котором применяется шаблон). В этом случае [расширения разметки TemplateBinding](templatebinding-markup-extension.md) на самом деле является сокращением для следующего выражения привязки: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` или `{RelativeSource TemplatedParent}` использования включены только соответствующие в XAML, который определяет шаблон. Дополнительные сведения см. в разделе [расширения разметки TemplateBinding](templatebinding-markup-extension.md)  
   
  `{RelativeSource FindAncestor}` является главным образом используется в шаблонах элементов управления или прогнозируемый автономных композициях пользовательского интерфейса, для случаев, где элемент управления всегда должен быть в визуальном дереве определенного типа предка. Например, элементы в элементе управления элементами могут использовать вхождения `FindAncestor` для привязки к свойствам предка элемента управления элементами. Либо элементы, которые являются частью композиции элемента управления в шаблоне, могут использовать привязки `FindAncestor` к родительским элементам в той же структуре композиции.  
   
- В синтаксисе объектного элемента для режима `FindAncestor`, показанного выше в разделах синтаксиса XAML, второй синтаксис объектного элемента используется специально для режима `FindAncestor`. Режим `FindAncestor` требует значения <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Необходимо задать <xref:System.Windows.Data.RelativeSource.AncestorType%2A> как атрибут [расширение разметки x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) ссылка на тип искомого предка. Значение <xref:System.Windows.Data.RelativeSource.AncestorType%2A> используется при обработке запроса привязки во время выполнения.  
+ В синтаксисе объектного элемента для режима `FindAncestor`, показанного выше в разделах синтаксиса XAML, второй синтаксис объектного элемента используется специально для режима `FindAncestor`. Режим `FindAncestor` требует значения <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Необходимо задать <xref:System.Windows.Data.RelativeSource.AncestorType%2A> как атрибут [расширение разметки x: Type](../../xaml-services/x-type-markup-extension.md) ссылка на тип искомого предка. Значение <xref:System.Windows.Data.RelativeSource.AncestorType%2A> используется при обработке запроса привязки во время выполнения.  
   
  Для режима `FindAncestor` необязательное свойство <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> может помочь устранить неоднозначность поиска предка в случаях, где в дереве элементов, возможно, существует более одного предка данного типа.  
   
@@ -99,17 +99,17 @@ ms.locfileid: "54559390"
     </ListBox.ItemTemplate>  
 ```  
   
- Описание привязки данных, так как не рассматриваются здесь, см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Описание привязки данных, так как не рассматриваются здесь, см. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализации обработчика XAML обработка данного расширения разметки определяется <xref:System.Windows.Data.RelativeSource> класса.  
   
- `RelativeSource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `RelativeSource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Data.Binding>
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Общие сведения об объявлении привязок](../data/binding-declarations-overview.md)
+- [Расширение разметки x:Type](../../xaml-services/x-type-markup-extension.md)

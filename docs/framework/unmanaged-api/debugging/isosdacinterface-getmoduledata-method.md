@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 80b15f076dfe7a7bbbe7e28d9d68f01255e47202
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369959"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Метод ISOSDacInterface::GetModuleData
 
@@ -39,9 +39,11 @@ HRESULT GetModuleData(
 
 ### <a name="parameters"></a>Параметры
 
-`moduleAddr` [in] Адрес модуля для получения сведений для.
+`moduleAddr`\
+[in] Адрес модуля для получения сведений для.
 
-`data` [out] [DacpModuleData структуры](dacpmoduledata-structure.md) для хранения информации о загруженного модуля.
+`data`\
+[out] [DacpModuleData структуры](dacpmoduledata-structure.md) для хранения информации о загруженного модуля.
 
 
 ## <a name="remarks"></a>Примечания
@@ -57,5 +59,5 @@ HRESULT GetModuleData(
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Отладка](index.md)
+- [Интерфейс ISOSDacInterface](isosdacinterface-interface.md)

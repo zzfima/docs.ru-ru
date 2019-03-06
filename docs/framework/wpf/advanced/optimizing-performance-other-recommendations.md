@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358942"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Оптимизация производительности: Другие рекомендации
-<a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
+<a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md).  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703683"
 ## <a name="navigation-to-object"></a>Переход к объекту  
  <xref:System.Windows.Navigation.NavigationWindow> Объект является производным от <xref:System.Windows.Window> и расширяет его поддержкой навигации по содержимому, главным образом путем объединения <xref:System.Windows.Navigation.NavigationService> и журнала. Вы можете обновить клиентскую область <xref:System.Windows.Navigation.NavigationWindow> , если указать [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] или объект. В следующем примере демонстрируются оба способа.  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  Каждый <xref:System.Windows.Navigation.NavigationWindow> объект имеет журнал, в котором записывается история переходов данного пользователя в этом окне. Одной из целей создания журнала является возможность разрешить пользователям повторять действия.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703683"
   
  При переходе с помощью объекта в журнал сохраняется полное визуальное дерево объекта. Это означает, что при каждом повторном посещении страницы она отображается немедленно без необходимости реконструирования. В этом случае затраты на хранение журнала высоки, а скорость воссоздания страниц низкая.  
   
- При использовании <xref:System.Windows.Navigation.NavigationWindow> объекта, необходимо будет следует учитывать влияние журналирования на производительность приложения. Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ При использовании <xref:System.Windows.Navigation.NavigationWindow> объекта, необходимо будет следует учитывать влияние журналирования на производительность приложения. Дополнительные сведения см. в разделе [Общие сведения о переходах](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>Проверка попадания курсора мыши на больших трехмерных поверхностях  
@@ -73,12 +73,12 @@ ms.locfileid: "54703683"
  Служба кэширования шрифтов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] используется для совместной обработки данных шрифтов приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Первое запускаемое приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запускает эту службу, если она еще не запущена. Если вы используете [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], можно задать службы «Windows Presentation Foundation (WPF) Font Cache 3.0.0.0» из «Вручную» (по умолчанию) «Автоматически (отложенный запуск)», чтобы уменьшить длительность начального запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
   
 ## <a name="see-also"></a>См. также
-- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Планирование производительности приложения](planning-for-application-performance.md)
+- [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
+- [Разметка и разработка](optimizing-performance-layout-and-design.md)
+- [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
+- [Поведение объекта](optimizing-performance-object-behavior.md)
+- [Ресурсы приложений](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Привязка данных](optimizing-performance-data-binding.md)
+- [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

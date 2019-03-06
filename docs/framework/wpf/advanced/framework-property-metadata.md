@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 73ac80786b95c214cbba5924301b21f9c6e32837
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379280"
 ---
 # <a name="framework-property-metadata"></a>Метаданные свойств среды
 Параметры метаданных свойств среды сообщаются для свойств элементов объектов, которые, как считается, в архитектуре [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] находятся на уровне среды WPF. В целом привязка к уровню среды WPF подразумевает, что такие функции, как отрисовка, привязка данных и уточнение системных свойств, обрабатываются в презентации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] и исполняемых файлах. Метаданные свойств среды запрашиваются этими системами для определения функциональных характеристик конкретных свойств элемента.  
@@ -19,7 +19,7 @@ ms.locfileid: "54649821"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Вам следует также ознакомиться с разделом [Метаданные свойства зависимости](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Вам следует также ознакомиться с разделом [Метаданные свойства зависимости](dependency-property-metadata.md).  
   
 <a name="What_Is_Communicated_by_Framework_Property"></a>   
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>Передаваемые сведения в метаданных свойств среды  
@@ -32,11 +32,11 @@ ms.locfileid: "54649821"
 -   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. По умолчанию свойства зависимости не наследуют значения. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> позволяет перемещать путь наследования в визуальное дерево, которое необходимо для некоторых сценариев управления.  
   
     > [!NOTE]
-    >  Термин "наследует" в контексте значений свойств имеет особое значение для свойств зависимостей; это означает, что дочерние элементы могут наследовать фактическое значение свойства зависимости от родительских элементов (это обусловлено возможностью системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на уровне среды WPF). Это не имеет ничего общего непосредственно с типом управляемого кода и наследованием элементов через производные типы. Подробнее см. в разделе [Наследование значения свойства](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+    >  Термин "наследует" в контексте значений свойств имеет особое значение для свойств зависимостей; это означает, что дочерние элементы могут наследовать фактическое значение свойства зависимости от родительских элементов (это обусловлено возможностью системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на уровне среды WPF). Это не имеет ничего общего непосредственно с типом управляемого кода и наследованием элементов через производные типы. Подробнее см. в разделе [Наследование значения свойства](property-value-inheritance.md).  
   
--   Передающие характеристики привязки данных (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). По умолчанию свойства зависимости в среде поддерживают привязку данных с односторонним поведением привязки. Привязку данных можно было бы отключить, если бы сценарий для нее отсутствовал в принципе (поскольку они должны быть гибкими и расширяемыми, однако примеров таких свойств в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] по умолчанию не много). Можно задать привязку для получения двусторонней привязки по умолчанию для свойств, объединяющих поведения элемента управления среди их составляющих (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> приведен пример) или если двусторонняя привязка является распространенным и ожидаемым сценарием для пользователей (<xref:System.Windows.Controls.TextBox.Text%2A> является примером). Изменение метаданных, связанных с привязкой данных, влияет только на значение по умолчанию; на уровне отдельных привязок это значение по умолчанию всегда можно изменить. Сведения о режимах связывания и связывании в целом см. в разделе [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Передающие характеристики привязки данных (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). По умолчанию свойства зависимости в среде поддерживают привязку данных с односторонним поведением привязки. Привязку данных можно было бы отключить, если бы сценарий для нее отсутствовал в принципе (поскольку они должны быть гибкими и расширяемыми, однако примеров таких свойств в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] по умолчанию не много). Можно задать привязку для получения двусторонней привязки по умолчанию для свойств, объединяющих поведения элемента управления среди их составляющих (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> приведен пример) или если двусторонняя привязка является распространенным и ожидаемым сценарием для пользователей (<xref:System.Windows.Controls.TextBox.Text%2A> является примером). Изменение метаданных, связанных с привязкой данных, влияет только на значение по умолчанию; на уровне отдельных привязок это значение по умолчанию всегда можно изменить. Сведения о режимах связывания и связывании в целом см. в разделе [Общие сведения о связывании данных](../data/data-binding-overview.md).  
   
--   Отчеты, должны ли свойства приложения или службы, поддерживающие ведение журнала (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Для общих элементов ведение журнала не включено по умолчанию, но оно выборочно включается для некоторых пользовательских элементов управления вводом. Это свойство предназначено для прочтения службами ведения журнала, включая реализацию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ведения журнала, и обычно устанавливается для пользовательских элементов управления, таких как пользовательский выбор в списках, который необходимо сохранять на протяжении нескольких шагов навигации. Сведения о журнале см. в разделе [Общие сведения о навигации](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   Отчеты, должны ли свойства приложения или службы, поддерживающие ведение журнала (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Для общих элементов ведение журнала не включено по умолчанию, но оно выборочно включается для некоторых пользовательских элементов управления вводом. Это свойство предназначено для прочтения службами ведения журнала, включая реализацию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ведения журнала, и обычно устанавливается для пользовательских элементов управления, таких как пользовательский выбор в списках, который необходимо сохранять на протяжении нескольких шагов навигации. Сведения о журнале см. в разделе [Общие сведения о навигации](../app-development/navigation-overview.md).  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>Чтение FrameworkPropertyMetadata  
@@ -74,6 +74,6 @@ ms.locfileid: "54649821"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Метаданные свойства зависимостей](dependency-property-metadata.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Пользовательские свойства зависимостей](custom-dependency-properties.md)

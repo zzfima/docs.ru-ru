@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Задание источника преобразования с помощью относительных значений
+title: Практическое руководство. Задание источника преобразования с помощью относительных значений
 ms.date: 03/30/2017
 helpviewer_keywords:
 - origins of Transforms [WPF]
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352572"
 ---
-# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Как выполнить Задание источника преобразования с помощью относительных значений
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Практическое руководство. Задание источника преобразования с помощью относительных значений
 В этом примере показано, как использовать относительные значения для указания источника <xref:System.Windows.UIElement.RenderTransform%2A> , применяемый к <xref:System.Windows.FrameworkElement>.  
   
  При повороте, масштабирование или наклон <xref:System.Windows.FrameworkElement> с помощью <xref:System.Windows.UIElement.RenderTransform%2A> свойство, значение по умолчанию применяет преобразование в верхний левый угол элемента. Если требуется выполнить поворот, масштабирование или наклон в центре элемента, можно скорректировать действие, задав центр преобразования в центре элемента. Но для этого способа требуется знание размера элемента. Более простой способ применить преобразование к центру элемента является установка его <xref:System.Windows.UIElement.RenderTransformOrigin%2A> значение (0,5, 0,5), а не задавать значение центра преобразования.  
@@ -23,23 +23,23 @@ ms.locfileid: "54570620"
   
  Ниже показан результат преобразования для следующего примера.  
   
- ![Кнопка, преобразованная с использованием RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![Кнопка, преобразованная с использованием RenderTransform](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 Поворот по часовой стрелке на 45 градусов с использованием свойства RenderTransform  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  В следующем примере также используется <xref:System.Windows.Media.RotateTransform> для поворота <xref:System.Windows.Controls.Button> 45 градусов по часовой стрелке, однако в этом примере устанавливается <xref:System.Windows.UIElement.RenderTransformOrigin%2A> кнопки значение (0,5, 0,5). В результате кнопка поворачивается вокруг центра, а не вокруг левого верхнего угла.  
   
  Ниже показан результат преобразования для следующего примера.  
   
- ![Кнопка, преобразованная относительно ее центра](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![Кнопка, преобразованная относительно ее центра](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 Поворот на 45 градусов с использованием свойства RenderTransform с заданным для RenderTransformOrigin значением (0,5, 0,5)  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Дополнительные сведения о преобразовании <xref:System.Windows.FrameworkElement> объектов, см. в разделе [Общие сведения о преобразованиях](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+ Дополнительные сведения о преобразовании <xref:System.Windows.FrameworkElement> объектов, см. в разделе [Общие сведения о преобразованиях](transforms-overview.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Transform>
-- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Общие сведения о классах Transform](transforms-overview.md)
+- [Разделы практического руководства](transformations-how-to-topics.md)

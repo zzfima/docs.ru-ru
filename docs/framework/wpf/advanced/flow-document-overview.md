@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 34bab81f10b52829558e9a44c6bd4e1ed6c0fdbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361412"
 ---
 # <a name="flow-document-overview"></a>Общие сведения о документах нефиксированного формата
 Документы нефиксированного формата предназначены для более удобного просмотра и чтения. Вместо того чтобы использовать какой-либо определенный макет, документы нефиксированного формата динамически корректируют и перемещают содержимое с учетом переменных времени выполнения, таких как размер окна, разрешение устройства и дополнительные пользовательские настройки. Кроме того, в документах нефиксированного формата доступны расширенные возможности, такие как разбивка на страницы и столбцы. В этом разделе представлены общие сведения о документах нефиксированного формата и способах их создания.  
@@ -23,22 +23,22 @@ ms.locfileid: "54648512"
   
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Что такое документ нефиксированного формата  
- Документ нефиксированного формата предназначен для "переформатирования содержимого" в зависимости от размера окна, разрешения устройства и других переменных среды. Кроме того, документы нефиксированного формата имеют несколько встроенных возможностей, включая поиск, режимы просмотра, оптимизирующие читаемость, и возможность менять размер и внешний вид шрифта. Документы нефиксированного формата следует использовать, если удобство чтения является основным приоритетом. Напротив, документы фиксированного формата предназначены для статического представления. Документы фиксированного формата полезны в тех случаях, когда важна точная передача содержимого источника. См. в разделе [документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md) Дополнительные сведения о разных типах документов.  
+ Документ нефиксированного формата предназначен для "переформатирования содержимого" в зависимости от размера окна, разрешения устройства и других переменных среды. Кроме того, документы нефиксированного формата имеют несколько встроенных возможностей, включая поиск, режимы просмотра, оптимизирующие читаемость, и возможность менять размер и внешний вид шрифта. Документы нефиксированного формата следует использовать, если удобство чтения является основным приоритетом. Напротив, документы фиксированного формата предназначены для статического представления. Документы фиксированного формата полезны в тех случаях, когда важна точная передача содержимого источника. См. в разделе [документы в WPF](documents-in-wpf.md) Дополнительные сведения о разных типах документов.  
   
  Ниже показан образец документа нефиксированного формата, отображенного в нескольких окнах разных размеров. При изменении области отображения содержимое переформатируется для оптимального использования доступного пространства.  
   
- ![Переформатирование содержимого в документе нефиксированного формата](../../../../docs/framework/wpf/advanced/media/edocs-flowdocument.png "eDocs_FlowDocument")  
+ ![Переформатирование содержимого в документе нефиксированного формата](./media/edocs-flowdocument.png "eDocs_FlowDocument")  
   
  Как показано на рисунке выше, содержимое нефиксированного формата может включать многие компоненты, такие как абзацы, списки, изображения и др. Эти компоненты соответствуют элементам в разметке и объектам в процедурном коде. Рассмотрим более подробно эти классы позже на [потока связанные классы](#flow_related_classes) раздел в этом обзоре. Сейчас ниже приведен простой пример кода, создающий документ нефиксированного формата, состоит из абзаца с выделенным полужирным текстом и списка.
   
- [!code-xaml[FlowOvwSnippets_snip#SimpleFlowExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SimpleFlowExample.xaml#simpleflowexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#SimpleFlowExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SimpleFlowExample.xaml#simpleflowexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/SimpleFlowExample.cs#simpleflowcodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/SimpleFlowExample.vb#simpleflowcodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/SimpleFlowExample.cs#simpleflowcodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#SimpleFlowCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/SimpleFlowExample.vb#simpleflowcodeonlyexamplewholepage)]  
   
  На рисунке ниже представлен результат выполнения этого фрагмента кода.  
   
- ![Снимок экрана: Примера FlowDocument](../../../../docs/framework/wpf/advanced/media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
+ ![Снимок экрана: Примера FlowDocument](./media/flow-ovw-first-example.png "Flow_Ovw_First_Example")  
   
  В этом примере <xref:System.Windows.Controls.FlowDocumentReader> управления используется для размещения содержимого нефиксированного формата. См. в разделе [типы документов нефиксированного формата](#flow_document_types) Дополнительные сведения о потоковом содержимом, размещение элементов управления. <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, и <xref:System.Windows.Documents.Bold> элементы используются для управления форматированием содержимого на основе их порядка в разметке. Например <xref:System.Windows.Documents.Bold> элемент охватывает только часть текста в абзаце; таким образом, что часть текста полужирным шрифтом. Если вы когда-либо работали с HTML, такой сценарий будет вам знаком.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54648512"
 ## <a name="flow-document-types"></a>Типы документов нефиксированного формата  
  Отображение содержимого документа нефиксированного формата и его вид зависят от того, какой объект используется для размещения содержимого. Существует четыре элемента управления, поддерживающих Просмотр содержимого нефиксированного формата: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, и <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Эти элементы управления кратко описаны ниже.  
   
- **Примечание:** <xref:System.Windows.Documents.FlowDocument> необходим для непосредственного размещения содержимого нефиксированного, поэтому все эти элементы управления просмотром используют <xref:System.Windows.Documents.FlowDocument> для размещения содержимого нефиксированного формата.  
+ **Примечание:** <xref:System.Windows.Documents.FlowDocument> необходим для непосредственного размещения содержимого нефиксированного, поэтому все эти элементы управления просмотром используют <xref:System.Windows.Documents.FlowDocument> для размещения содержимого нефиксированного формата.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader> включает функции, которые позволяют пользователю динамически переключаться между разными режимами просмотра, включая постраничный (страницы в a-time), две страницы в раз (книжный формат) режиме непрерывной прокрутки (без дна) и режим просмотра. Дополнительные сведения об этих режимах просмотра см. в разделе <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Если возможность динамически переключаться между режимами просмотра не требуется <xref:System.Windows.Controls.FlowDocumentPageViewer> и <xref:System.Windows.Controls.FlowDocumentScrollViewer> предоставляют облегченные средства просмотра содержимого, исправленных в определенном режиме просмотра.  
@@ -69,7 +69,7 @@ ms.locfileid: "54648512"
  По умолчанию вертикальная полоса прокрутки отображается всегда, а горизонтальная полоса прокрутки становится видимой при необходимости. Значение по умолчанию пользовательский Интерфейс для <xref:System.Windows.Controls.FlowDocumentScrollViewer> не включает панель инструментов; Однако <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> свойство может использоваться для включения встроенной панели инструментов.  
   
 ### <a name="richtextbox"></a>RichTextBox  
- Использовании <xref:System.Windows.Controls.RichTextBox> Если вы хотите разрешить пользователю редактировать содержимое нефиксированного формата. Например, если вы хотите создать редактор, который позволял бы пользователю манипулировать такими как таблицы, курсив и полужирное форматирование и т. д, использовалась бы <xref:System.Windows.Controls.RichTextBox>. См. в разделе [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md) Дополнительные сведения.  
+ Использовании <xref:System.Windows.Controls.RichTextBox> Если вы хотите разрешить пользователю редактировать содержимое нефиксированного формата. Например, если вы хотите создать редактор, который позволял бы пользователю манипулировать такими как таблицы, курсив и полужирное форматирование и т. д, использовалась бы <xref:System.Windows.Controls.RichTextBox>. См. в разделе [Общие сведения о RichTextBox](../controls/richtextbox-overview.md) Дополнительные сведения.  
   
  **Примечание.** Содержимое внутри потока <xref:System.Windows.Controls.RichTextBox> работать не так, как в других элементах управления. Например, отсутствуют столбцы в <xref:System.Windows.Controls.RichTextBox> и поэтому не автоматического изменения размеров. Кроме того, стандартные встроенные функции содержимого нефиксированного формата, такие как поиск, режим просмотра, навигация по страницам и увеличение недоступны в <xref:System.Windows.Controls.RichTextBox>.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54648512"
 ## <a name="flow-related-classes"></a>Классы, связанные с содержимым нефиксированного формата  
  На приведенной ниже схеме показаны объекты, которые чаще всего используется с содержимым нефиксированного формата:  
   
- ![Схема: Иерархия классов элемента содержимого потока](../../../../docs/framework/wpf/advanced/media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
+ ![Схема: Иерархия классов элемента содержимого потока](./media/flow-class-hierarchy.png "Flow_Class_Hierarchy")  
   
  В работе с размещением содержимого используются две важные категории:  
   
@@ -102,10 +102,10 @@ ms.locfileid: "54648512"
   
  <xref:System.Windows.Documents.Paragraph> обычно используется для группировки содержимого в абзац. Самый простой и распространенный способ использования класса Paragraph — составление текстового абзаца.  
   
- [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/ParagraphExample.cs#paragraphcodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/ParagraphExample.vb#paragraphcodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/ParagraphExample.cs#paragraphcodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#ParagraphCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/ParagraphExample.vb#paragraphcodeonlyexamplewholepage)]  
   
  Тем не менее может также содержать другие производные встроенные элементы, как можно будет увидеть ниже. 
   
@@ -115,10 +115,10 @@ ms.locfileid: "54648512"
   
  В приведенном ниже примере три абзаца определены в одном разделе <xref:System.Windows.Documents.Section>. Раздел содержит <xref:System.Windows.Documents.TextElement.Background%2A> значение свойства Red, поэтому цвет фона абзаца — тоже красный.  
   
- [!code-xaml[FlowOvwSnippets_snip#SectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SectionExample.xaml#sectionexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#SectionExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SectionExample.xaml#sectionexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#SectionCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/SectionExample.cs#sectioncodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#SectionCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/SectionExample.vb#sectioncodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#SectionCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/SectionExample.cs#sectioncodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#SectionCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/SectionExample.vb#sectioncodeonlyexamplewholepage)]  
   
  **BlockUIContainer**  
   
@@ -126,33 +126,33 @@ ms.locfileid: "54648512"
   
  В следующем примере показано, как использовать <xref:System.Windows.Documents.BlockUIContainer> для размещения элемента <xref:System.Windows.UIElement> объекты в потоковом содержимом.  
   
- [!code-xaml[SpanSnippets#_BlockUIXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
+ [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
  На следующем рисунке показана отрисовка этого примера.  
   
- ![Снимок экрана: Объект UIElement, внедренный в содержимое нефиксированного формата](../../../../docs/framework/wpf/advanced/media/blockuicontainer.png "BlockUIContainer")  
+ ![Снимок экрана: Объект UIElement, внедренный в содержимое нефиксированного формата](./media/blockuicontainer.png "BlockUIContainer")  
   
  **List**  
   
  <xref:System.Windows.Documents.List> используется для создания маркированного или нумерованного списка. Задайте <xref:System.Windows.Documents.List.MarkerStyle%2A> свойства <xref:System.Windows.TextMarkerStyle> значение перечисления, чтобы определить стиль списка. В приведенном ниже примере показано, как создать простой список.  
   
- [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#ListCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/ListExample.cs#listcodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#ListCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/ListExample.vb#listcodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#ListCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/ListExample.cs#listcodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#ListCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/ListExample.vb#listcodeonlyexamplewholepage)]  
   
  **Примечание:** <xref:System.Windows.Documents.List> является единственным элементом потока, который использует <xref:System.Windows.Documents.ListItemCollection> для управления дочерними элементами.  
   
  **Таблица**  
   
- <xref:System.Windows.Documents.Table> используется для создания таблицы. <xref:System.Windows.Documents.Table> аналогичен <xref:System.Windows.Controls.Grid> элемент, но имеет больше возможностей и, следовательно, требует больше ресурсов. Так как <xref:System.Windows.Controls.Grid> — <xref:System.Windows.UIElement>, его нельзя использовать в содержимое нефиксированного формата, если он не содержится в <xref:System.Windows.Documents.BlockUIContainer> или <xref:System.Windows.Documents.InlineUIContainer>. Дополнительные сведения о <xref:System.Windows.Documents.Table>, см. в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table> используется для создания таблицы. <xref:System.Windows.Documents.Table> аналогичен <xref:System.Windows.Controls.Grid> элемент, но имеет больше возможностей и, следовательно, требует больше ресурсов. Так как <xref:System.Windows.Controls.Grid> — <xref:System.Windows.UIElement>, его нельзя использовать в содержимое нефиксированного формата, если он не содержится в <xref:System.Windows.Documents.BlockUIContainer> или <xref:System.Windows.Documents.InlineUIContainer>. Дополнительные сведения о <xref:System.Windows.Documents.Table>, см. в разделе [Общие сведения о таблицах](table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Встроенные классы  
  **Выполнить**  
   
  <xref:System.Windows.Documents.Run> используется для хранения неформатированного текста. Можно ожидать <xref:System.Windows.Documents.Run> объектов для использования в содержимое потока. Тем не менее, в разметке <xref:System.Windows.Documents.Run> элементов не должна использоваться явным образом. <xref:System.Windows.Documents.Run> является обязательным для использования при создании или управлении ими документы нефиксированного формата с помощью кода. Например, в разметке ниже первый <xref:System.Windows.Documents.Paragraph> указывает <xref:System.Windows.Documents.Run> элемент явно, а второй — нет. Оба абзаца создают идентичные выходные данные.  
   
- [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
+ [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
  **Примечание.**  Начиная с версии [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> свойство <xref:System.Windows.Documents.Run> объект является свойством зависимостей. Можно привязать <xref:System.Windows.Documents.Run.Text%2A> свойства к данным источника, такое как <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Свойство полностью поддерживает одностороннюю привязку. <xref:System.Windows.Documents.Run.Text%2A> Свойство также поддерживает двухстороннюю привязку, за исключением <xref:System.Windows.Controls.RichTextBox>. Пример см. в разделе <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
@@ -162,20 +162,20 @@ ms.locfileid: "54648512"
   
  Ниже приведен пример <xref:System.Windows.Documents.Span> , используемого для хранения встроенного содержимого, включая текстовые, <xref:System.Windows.Documents.Bold> элемент и <xref:System.Windows.Controls.Button>.  
   
- [!code-xaml[FlowOvwSnippets_snip#SpanExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SpanExample.xaml#spanexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#SpanExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SpanExample.xaml#spanexamplewholepage)]  
   
  На следующем снимке экрана показана отрисовка этого примера.  
   
- ![Снимок экрана: Пример отображенного элемента Span](../../../../docs/framework/wpf/advanced/media/flow-spanexample.gif "Flow_SpanExample")  
+ ![Снимок экрана: Пример отображенного элемента Span](./media/flow-spanexample.gif "Flow_SpanExample")  
   
  **InlineUIContainer**  
   
  <xref:System.Windows.Documents.InlineUIContainer> позволяет <xref:System.Windows.UIElement> элементы (т. е. элемент управления, такие как <xref:System.Windows.Controls.Button>) для внедрения в <xref:System.Windows.Documents.Inline> элемент содержимого. Этот элемент является встроенным эквивалентом <xref:System.Windows.Documents.BlockUIContainer> описано выше. Ниже приведен пример, использующий <xref:System.Windows.Documents.InlineUIContainer> вставляемый <xref:System.Windows.Controls.Button> , встроенный в <xref:System.Windows.Documents.Paragraph>.  
   
- [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/InlineUIContainerExample.cs#inlineuicontainercodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/InlineUIContainerExample.vb#inlineuicontainercodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/InlineUIContainerExample.cs#inlineuicontainercodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#InlineUIContainerCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/InlineUIContainerExample.vb#inlineuicontainercodeonlyexamplewholepage)]  
   
  **Примечание:** <xref:System.Windows.Documents.InlineUIContainer> не нужно использовать в разметке явным образом. Если не указан, <xref:System.Windows.Documents.InlineUIContainer> будет создаваться в любом случае, при компиляции кода.  
   
@@ -185,14 +185,14 @@ ms.locfileid: "54648512"
   
  В следующем примере показано, как внедрить <xref:System.Windows.Documents.Figure> в абзац текста.  
   
- [!code-xaml[FlowOvwSnippets_snip#FigureExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/FigureExample.xaml#figureexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#FigureExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/FigureExample.xaml#figureexamplewholepage)]  
   
- [!code-csharp[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/FigureExample.cs#figurecodeonlyexamplewholepage)]
- [!code-vb[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/FigureExample.vb#figurecodeonlyexamplewholepage)]  
+ [!code-csharp[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/CSharp/FigureExample.cs#figurecodeonlyexamplewholepage)]
+ [!code-vb[FlowOvwSnippets_procedural_snip#FigureCodeOnlyExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowOvwSnippets_procedural_snip/VisualBasic/FigureExample.vb#figurecodeonlyexamplewholepage)]  
   
  На рисунке ниже показано, как будет выглядеть этот пример.  
   
- ![Снимок экрана: Пример рисунка](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
+ ![Снимок экрана: Пример рисунка](./media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
  <xref:System.Windows.Documents.Figure> и <xref:System.Windows.Documents.Floater> отличаются несколькими способами и используются для разных сценариев.  
   
@@ -218,11 +218,11 @@ ms.locfileid: "54648512"
   
  <xref:System.Windows.Documents.LineBreak> вызывает разрыв строки в содержимом нефиксированного формата. В следующем примере показано использование функции <xref:System.Windows.Documents.LineBreak>.  
   
- [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   
  На следующем снимке экрана показана отрисовка этого примера.  
   
- ![Снимок экрана: Пример LineBreak](../../../../docs/framework/wpf/advanced/media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
+ ![Снимок экрана: Пример LineBreak](./media/flow-ovw-linebreakexample.png "Flow_Ovw_LineBreakExample")  
   
 ### <a name="flow-collection-elements"></a>Элементы коллекции нефиксированного формата  
  Во многих примерах выше <xref:System.Windows.Documents.BlockCollection> и <xref:System.Windows.Documents.InlineCollection> используются для создания содержимого нефиксированного формата программными средствами. Например, чтобы добавить элементы в <xref:System.Windows.Documents.Paragraph>, используется следующий синтаксис:  
@@ -247,58 +247,58 @@ ms.locfileid: "54648512"
   
  В качестве примера использования <xref:System.Windows.Documents.BlockCollection>, в следующем примере создается новый <xref:System.Windows.Documents.Section> , а затем использует **добавить** метод, чтобы добавить новый <xref:System.Windows.Documents.Paragraph> для <xref:System.Windows.Documents.Section> содержимое.  
   
- [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
- [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
+ [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
+ [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
  Помимо добавления элементов в коллекцию нефиксированного формата элементы также можно удалять.  В следующем примере удаляется последний <xref:System.Windows.Documents.Inline> элемент <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
- [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
+ [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
  В следующем примере удаляется все содержимое (<xref:System.Windows.Documents.Inline> элементы) из <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
- [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesClear](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
+ [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
  При работе с содержимым нефиксированного формата программными средствами эти коллекции, скорее всего, будут использоваться довольно активно.  
   
  Использует ли элемент нефиксированного формата <xref:System.Windows.Documents.InlineCollection> (встроенные элементы) или <xref:System.Windows.Documents.BlockCollection> (блоков) для хранения своих дочерних элементов зависит от типа дочерних элементов (<xref:System.Windows.Documents.Block> или <xref:System.Windows.Documents.Inline>) может содержаться в родительском. Правила включения для элементов размещения содержимого обобщаются в схеме содержимого в следующем разделе.  
   
- **Примечание.** Третий тип коллекции, используемый с содержимым нефиксированного формата <xref:System.Windows.Documents.ListItemCollection>, но эта коллекция используется только с <xref:System.Windows.Documents.List>. Кроме того, существует несколько коллекций, используемых с <xref:System.Windows.Documents.Table>. См. в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md) Дополнительные сведения.  
+ **Примечание.** Третий тип коллекции, используемый с содержимым нефиксированного формата <xref:System.Windows.Documents.ListItemCollection>, но эта коллекция используется только с <xref:System.Windows.Documents.List>. Кроме того, существует несколько коллекций, используемых с <xref:System.Windows.Documents.Table>. См. в разделе [Общие сведения о таблицах](table-overview.md) Дополнительные сведения.  
   
 <a name="content_schema"></a>   
 ## <a name="content-schema"></a>Схема содержимого  
  Учитывая количество различных элементов в документах нефиксированного формата, может быть очень сложно отследить, какой тип дочерних элементов может содержать тот или иной элемент. На схеме ниже представлены правила включения для элементов нефиксированного формата. Стрелки указывают возможные связи "родитель-потомок".  
   
- ![Схема: Схема вместимости потока содержимого](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
+ ![Схема: Схема вместимости потока содержимого](./media/flow-content-schema.png "Flow_Content_Schema")  
   
  Как видно из приведенной выше схемы, потомки для элемента не обязательно определяются тем, является ли <xref:System.Windows.Documents.Block> элемент или <xref:System.Windows.Documents.Inline> элемент. Например <xref:System.Windows.Documents.Span> ( <xref:System.Windows.Documents.Inline> элемент) может иметь только <xref:System.Windows.Documents.Inline> дочерних элементов при <xref:System.Windows.Documents.Figure> (также <xref:System.Windows.Documents.Inline> элемент) может иметь только <xref:System.Windows.Documents.Block> дочерних элементов. Таким образом, схему можно использовать для быстрого определения элемента, который может содержаться в другом элементе. В качестве примера используем схему, чтобы определить, как создать содержимое нефиксированного <xref:System.Windows.Controls.RichTextBox>.  
   
  **1.** Объект <xref:System.Windows.Controls.RichTextBox> должен содержать <xref:System.Windows.Documents.FlowDocument> который в свою очередь, должен содержать <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент из предыдущей диаграммы.  
   
- ![Схема: Правила вместимости RichTextBox](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
+ ![Схема: Правила вместимости RichTextBox](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
  Разметка может выглядеть следующим образом.  
   
- [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
+ [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
  **2.** Согласно схеме, существует несколько <xref:System.Windows.Documents.Block> элементов для выбора из в том числе <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, и <xref:System.Windows.Documents.BlockUIContainer> (см. выше классы, производные от блока). Предположим, мы хотим <xref:System.Windows.Documents.Table>. В соответствии с приведенной выше схеме <xref:System.Windows.Documents.Table> содержит <xref:System.Windows.Documents.TableRowGroup> содержащий <xref:System.Windows.Documents.TableRow> элементы, которые содержат <xref:System.Windows.Documents.TableCell> элементы, которые содержат <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент для <xref:System.Windows.Documents.Table> из схемы выше.  
   
- ![Схема: Родительский&#47;дочерний элементы для таблицы](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
+ ![Схема: Родительский&#47;дочерний элементы для таблицы](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
  Ниже приводится соответствующая разметка.  
   
- [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
+ [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
  **3.** Опять же один или несколько <xref:System.Windows.Documents.Block> требуются элементы <xref:System.Windows.Documents.TableCell>. Для удобства поместим часть текста в ячейку. Это можно сделать с помощью <xref:System.Windows.Documents.Paragraph> с <xref:System.Windows.Documents.Run> элемент. Ниже приведен соответствующий сегмент из схемы, показывающий, что <xref:System.Windows.Documents.Paragraph> может занять <xref:System.Windows.Documents.Inline> элемент, который <xref:System.Windows.Documents.Run> ( <xref:System.Windows.Documents.Inline> элемент) может принять только обычный текст.  
   
- ![Схема: Родительский&#47;дочерний элементы для параграфа](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
+ ![Схема: Родительский&#47;дочерний элементы для параграфа](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
- ![Схема: Родительский&#47;дочерний элементы для запуска](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
+ ![Схема: Родительский&#47;дочерний элементы для запуска](./media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  Ниже приведен полный пример в виде разметки.  
   
- [!code-xaml[FlowOvwSnippets_snip#SchemaExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#SchemaExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
   
 <a name="customizing_text"></a>   
 ## <a name="customizing-text"></a>Настройка текста  
@@ -309,51 +309,51 @@ ms.locfileid: "54648512"
   
  В следующем примере показано, как задать свойство <xref:System.Windows.Documents.Paragraph.TextDecorations%2A> объекта <xref:System.Windows.Documents.Paragraph>.  
   
- [!code-xaml[InlineSnippets#_Paragraph_TextDecXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_paragraph_textdecxaml)]  
+ [!code-xaml[InlineSnippets#_Paragraph_TextDecXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_paragraph_textdecxaml)]  
   
- [!code-csharp[InlineSnippets#_Paragraph_TextDec](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_paragraph_textdec)]
- [!code-vb[InlineSnippets#_Paragraph_TextDec](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_paragraph_textdec)]  
+ [!code-csharp[InlineSnippets#_Paragraph_TextDec](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_paragraph_textdec)]
+ [!code-vb[InlineSnippets#_Paragraph_TextDec](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_paragraph_textdec)]  
   
  На следующем рисунке показана отрисовка этого примера.  
   
- ![Снимок экрана: Текст с эффектом зачеркивания по умолчанию](../../../../docs/framework/wpf/advanced/media/inline-textdec-strike.png "Inline_TextDec_Strike")  
+ ![Снимок экрана: Текст с эффектом зачеркивания по умолчанию](./media/inline-textdec-strike.png "Inline_TextDec_Strike")  
   
  На следующих рисунках показаны как **надчеркивание**, **базовых показателей**, и **Underline** украшения.  
   
- ![Снимок экрана: Надчеркивание TextDecorator](../../../../docs/framework/wpf/advanced/media/inline-textdec-over.png "Inline_TextDec_Over")  
+ ![Снимок экрана: Надчеркивание TextDecorator](./media/inline-textdec-over.png "Inline_TextDec_Over")  
   
- ![Снимок экрана: По умолчанию влияние на текст направляющей](../../../../docs/framework/wpf/advanced/media/inline-textdec-base.png "Inline_TextDec_Base")  
+ ![Снимок экрана: По умолчанию влияние на текст направляющей](./media/inline-textdec-base.png "Inline_TextDec_Base")  
   
- ![Снимок экрана: Текст с эффектом подчеркивания по умолчанию](../../../../docs/framework/wpf/advanced/media/inline-textdec-under.png "Inline_TextDec_Under")  
+ ![Снимок экрана: Текст с эффектом подчеркивания по умолчанию](./media/inline-textdec-under.png "Inline_TextDec_Under")  
   
 ### <a name="typography"></a>Типографская разметка  
  <xref:System.Windows.Documents.TextElement.Typography%2A> Свойство также представлено включив большинство связанные с потоком содержимого <xref:System.Windows.Documents.TextElement>, <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Controls.TextBlock>, и <xref:System.Windows.Controls.TextBox>. Это свойство используется для управления типографскими характеристиками текста (т. е. малыми прописными или строчными буквами, надстрочными и подстрочными символами и т. д.).  
   
  В следующем примере показано, как задать <xref:System.Windows.Documents.TextElement.Typography%2A> атрибут, с помощью <xref:System.Windows.Documents.Paragraph> качестве элемента примера.  
   
- [!code-xaml[TextElementSnippets#_TextElement_TypogXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_typogxaml)]  
+ [!code-xaml[TextElementSnippets#_TextElement_TypogXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml#_textelement_typogxaml)]  
   
  На следующем рисунке показана отрисовка этого примера.  
   
- ![Снимок экрана: Текст с измененной типографией](../../../../docs/framework/wpf/advanced/media/textelement-typog.png "TextElement_Typog")  
+ ![Снимок экрана: Текст с измененной типографией](./media/textelement-typog.png "TextElement_Typog")  
   
  Напротив, на следующем рисунке показано, как отрисовывается аналогичный пример с типографскими характеристиками по умолчанию.  
   
- ![Снимок экрана: Текст с измененной типографией](../../../../docs/framework/wpf/advanced/media/textelement-typog-default.png "TextElement_Typog_Default")  
+ ![Снимок экрана: Текст с измененной типографией](./media/textelement-typog-default.png "TextElement_Typog_Default")  
   
  В следующем примере показано, как задать <xref:System.Windows.Controls.TextBox.Typography%2A> свойства программным способом.  
   
- [!code-csharp[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_typog)]
- [!code-vb[TextElementSnippets#_TextElement_Typog](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
+ [!code-csharp[TextElementSnippets#_TextElement_Typog](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textelement_typog)]
+ [!code-vb[TextElementSnippets#_TextElement_Typog](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
- См. в разделе [оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md) Дополнительные сведения об оформлении.  
+ См. в разделе [оформление в WPF](typography-in-wpf.md) Дополнительные сведения об оформлении.  
   
 ## <a name="see-also"></a>См. также
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
-- [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)
-- [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)
-- [Общие сведения о заметках](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+- [Text](optimizing-performance-text.md)
+- [Оформление в WPF](typography-in-wpf.md)
+- [Разделы практического руководства](flow-content-elements-how-to-topics.md)
+- [Общие сведения о модели содержимого TextElement](textelement-content-model-overview.md)
+- [Общие сведения о RichTextBox](../controls/richtextbox-overview.md)
+- [Документы в WPF](documents-in-wpf.md)
+- [Общие сведения о таблицах](table-overview.md)
+- [Общие сведения о заметках](annotations-overview.md)

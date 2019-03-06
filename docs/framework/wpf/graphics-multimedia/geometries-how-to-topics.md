@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: cb8efd32302287de1d80ef68cf98bfa071b7feaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664685"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361646"
 ---
 # <a name="geometries-how-to-topics"></a>Разделы руководства, посвященные геометрии
 В подразделах этого раздела демонстрируется использование <xref:System.Windows.Media.Geometry> объектов в приложениях.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Анимация объекта EllipseGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [Анимация размера объекта ArcSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [Управление заливкой составных фигур](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [Создание объединенных геометрических объектов](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [Создание составной фигуры](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [Создание линии с помощью объекта LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [Создание LineSegment в PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [Создание фигуры с помощью объекта PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Создание фигуры с помощью объекта StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [Создание кривой Безье второго порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Создание нескольких подконтуров внутри объекта PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [Определение прямоугольника с помощью объекта RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [Скругление углов объекта RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [Анимация объекта EllipseGeometry](how-to-animate-an-ellipsegeometry.md)  
+ [Анимация размера объекта ArcSegment](how-to-animate-the-size-of-an-arcsegment.md)  
+ [Управление заливкой составных фигур](how-to-control-the-fill-of-a-composite-shape.md)  
+ [Создание объединенных геометрических объектов](how-to-create-a-combined-geometry.md)  
+ [Создание составной фигуры](how-to-create-a-composite-shape.md)  
+ [Создание кривой Безье третьего порядка](how-to-create-a-cubic-bezier-curve.md)  
+ [Создание линии с помощью объекта LineGeometry](how-to-create-a-line-using-a-linegeometry.md)  
+ [Создание LineSegment в PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [Создание фигуры с помощью объекта PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [Создание фигуры с помощью объекта StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [Создание кривой Безье второго порядка](how-to-create-a-quadratic-bezier-curve.md)  
+ [Создание эллиптической дуги](how-to-create-an-elliptical-arc.md)  
+ [Создание нескольких подконтуров внутри объекта PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [Определение прямоугольника с помощью объекта RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [Скругление углов объекта RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Графика и мультимедиа](index.md)

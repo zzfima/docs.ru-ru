@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование SystemParameters
+title: Практическое руководство. Использование SystemParameters
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541668"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375159"
 ---
-# <a name="how-to-use-systemparameters"></a>Как выполнить Использование SystemParameters
+# <a name="how-to-use-systemparameters"></a>Практическое руководство. Использование SystemParameters
 В этом примере показано, как получить доступ и использовать свойства <xref:System.Windows.SystemParameters> для изменения стиля или настроек кнопки.  
   
 ## <a name="example"></a>Пример  
@@ -24,16 +24,16 @@ ms.locfileid: "54541668"
   
  В следующем примере показано, как получить доступ и использовать статические значения объекта <xref:System.Windows.SystemParameters> для создания стиля или настроек кнопки. Этот пример разметки изменяет размер кнопки, применяя <xref:System.Windows.SystemParameters> значения к кнопке.  
   
- [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
  Чтобы использовать значения из <xref:System.Windows.SystemParameters> в коде, не нужно использовать статические или динамические ссылки на ресурсы. Вместо этого используйте значения <xref:System.Windows.SystemParameters> класса. Хотя неключевые свойства очевидно определены как статические, поведение среды выполнения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , размещенного системой будут пересчитываться свойства в режиме реального времени, и правильно учитываться вносимые пользователем изменения значений системы. В следующем примере показано, как задать ширину и высоту кнопки с помощью <xref:System.Windows.SystemParameters> значения.  
   
- [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
- [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
+ [!code-csharp[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
+ [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.SystemParameters>
-- [Заливка области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Использование SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [Использование разделов системных параметров](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [Заливка области с помощью системной кисти](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [Использование SystemFonts](how-to-use-systemfonts.md)
+- [Использование разделов системных параметров](how-to-use-system-parameters-keys.md)
+- [Разделы практического руководства](resources-how-to-topics.md)

@@ -16,47 +16,49 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555106"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365949"
 ---
 # <a name="qualifiersetgetnames-function"></a>Функция QualifierSet_GetNames
-Возвращает имена всех квалификаторов или определенных квалификаторов, доступные из текущего объекта или свойства. 
+
+Возвращает имена всех квалификаторов или определенных квалификаторов, доступные из текущего объекта или свойства.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT QualifierSet_GetNames (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags,
    [out] SAFEARRAY (BSTR)**  pstrNames
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`vFunc`   
+`vFunc`\
 [in] Этот параметр не используется.
 
-`ptr`   
+`ptr`\
 [in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.
 
-`lFlags`   
+`lFlags`\
 [in] Одно из следующих значений, определяющих, какие имена, чтобы включить в перечисление или флаги.
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |  | 0 | Возвращает имена всех квалификаторов. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Возвращать только имена квалификаторы объекту или текущего свойства. <br/> Для свойства: Возвращает только квалификаторов, определенных в свойстве (включая переопределения), а не квалификаторы, распространяются из определения класса. <br/> Для экземпляра: Возвращает только квалификатор с определенным экземпляром имена. <br/> Для класса: Возвращать только квалификаторы для класса beiong производным.
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Возвращать только имена квалификаторы объекту или текущего свойства. <br/> Для свойства: Возвращает только квалификаторов, определенных в свойстве (включая переопределения), а не квалификаторы, распространяются из определения класса. <br/> Для экземпляра: Возвращает только квалификатор с определенным экземпляром имена. <br/> Для класса: Возвращать только квалификаторы для производного класса.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Возврат только имена квалификаторы распространяются из другого объекта. <br/> Для свойства: Возврат распространяются только квалификаторы к этому свойству из определения класса, а не из самого свойства. <br/> Для экземпляра: Возврат только эти квалификаторы распространяются из определения класса. <br/> Для класса: Возвращаемое значение, только те имена квалификатор, наследуемые от родительских классов. |
 
-`pstrNames` [out] Новый `SAFEARRAY` , содержащий запрошенную имена. Массив может иметь 0 элементов. Если возникает ошибка, новый `SAFEARRAY` не возвращается.
+`pstrNames`\
+[out] Новый `SAFEARRAY` , содержащий запрошенную имена. Массив может иметь 0 элементов. Если возникает ошибка, новый `SAFEARRAY` не возвращается.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -67,21 +69,23 @@ HRESULT QualifierSet_GetNames (
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Не хватает памяти, позволяющих начать новое перечисление. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) метод.
 
-После получения имена квалификатор, каждый префикс доступен по имени путем вызова [QualifierSet_Get](qualifierset-get.md) функции. 
+После получения имена квалификатор, каждый префикс доступен по имени путем вызова [QualifierSet_Get](qualifierset-get.md) функции.
 
 Это не ошибка для данного объекта иметь нуль квалификаторы, поэтому число строк в `pstrNames` при возврате может быть равен 0, несмотря на то, что функция возвращает `WBEM_S_NO_ERROR`.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

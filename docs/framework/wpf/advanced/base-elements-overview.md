@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 73d854d601de05c2cb7dd6063e4a5f2907b09f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578671"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372834"
 ---
 # <a name="base-elements-overview"></a>Общие сведения о базовых элементах
 Большое количество классов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, которые обычно называются в документации по [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] базовыми классами элементов. Эти классы являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, и <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Класс также имеет отношение, так как это общий базовый класс обоих <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement>  
@@ -26,7 +26,7 @@ ms.locfileid: "54578671"
 ## <a name="choosing-which-element-to-derive-from"></a>Выбор элемента для наследования  
  Наиболее удобным способом создания другого класса, расширяющего возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], является наследование от одного из классов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Тогда вы получаете максимально возможное количество наследуемых функций благодаря существующей иерархии классов. В этом разделе перечислены возможности, предоставляемые тремя наиболее важными классами элементов. Эти сведения помогут вам решить, какой класс использовать для наследования.  
   
- При реализации элемента управления, который в действительности является одним из наиболее распространенных причин для создания производного от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] класса, может потребоваться являются производными от класса, который является практическим управления семейства базовый класс элемента управления, или на как минимум <xref:System.Windows.Controls.Control> базового класса. Некоторые рекомендации и практические примеры см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ При реализации элемента управления, который в действительности является одним из наиболее распространенных причин для создания производного от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] класса, может потребоваться являются производными от класса, который является практическим управления семейства базовый класс элемента управления, или на как минимум <xref:System.Windows.Controls.Control> базового класса. Некоторые рекомендации и практические примеры см. в разделе [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md).  
   
  Если вы не создаете элемент управления, а хотите создать производный класс от класса, который находится выше по иерархии, в следующих разделах вы найдете рекомендации по определению характеристик для каждого базового класса элементов.  
   
@@ -38,57 +38,57 @@ ms.locfileid: "54578671"
   
  Если вы создаете класс, производный от <xref:System.Windows.UIElement>, вы наследуете следующие функциональные возможности, предоставляемые <xref:System.Windows.DependencyObject>:  
   
--   Базовая поддержка для анимируемых значений свойств. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Базовая поддержка для анимируемых значений свойств. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md).  
   
--   Базовая поддержка событий ввода и поддержка команд. Дополнительные сведения см. в разделе [Общие сведения о вводе данных](../../../../docs/framework/wpf/advanced/input-overview.md) и [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Базовая поддержка событий ввода и поддержка команд. Дополнительные сведения см. в разделе [Общие сведения о вводе данных](input-overview.md) и [Общие сведения о системе команд](commanding-overview.md).  
   
 -   Виртуальные методы, которые можно переопределить для передачи данных в систему макета.  
   
  Если вы создаете класс, производный от <xref:System.Windows.FrameworkElement>, вы наследуете следующие функциональные возможности, предоставляемые <xref:System.Windows.UIElement>:  
   
--   Поддержка стилей и раскадровок. Дополнительные сведения см. в разделе <xref:System.Windows.Style> и [Общие сведения о раскадровках](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+-   Поддержка стилей и раскадровок. Дополнительные сведения см. в разделе <xref:System.Windows.Style> и [Общие сведения о раскадровках](../graphics-multimedia/storyboards-overview.md).  
   
--   Поддержка привязки данных. Более подробную информацию см. в разделе [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Поддержка привязки данных. Более подробную информацию см. в разделе [Общие сведения о связывании данных](../data/data-binding-overview.md).  
   
--   Поддержка ссылок на динамические ресурсы. Дополнительные сведения см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Поддержка ссылок на динамические ресурсы. Дополнительные сведения см. в разделе [Ресурсы XAML](xaml-resources.md).  
   
--   Поддержка наследования значений свойств и других флагов в метаданных, которые помогают передавать сведения о состоянии свойств в службы платформы, такие как привязка данных, управление стилями и реализация структуры макета. Дополнительные сведения см. в разделе [Метаданные свойств платформы](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Поддержка наследования значений свойств и других флагов в метаданных, которые помогают передавать сведения о состоянии свойств в службы платформы, такие как привязка данных, управление стилями и реализация структуры макета. Дополнительные сведения см. в разделе [Метаданные свойств платформы](framework-property-metadata.md).  
   
--   Понятие логического дерева. Дополнительные сведения см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+-   Понятие логического дерева. Дополнительные сведения см. в разделе [Деревья в WPF](trees-in-wpf.md).  
   
 -   Поддержка практической реализации уровня платформы WPF система макета, включая <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> переопределения, которое может обнаружить изменения в свойствах, влияющих на макет.  
   
  Если вы создаете класс, производный от <xref:System.Windows.ContentElement>, вы наследуете следующие функциональные возможности, предоставляемые <xref:System.Windows.DependencyObject>:  
   
--   Поддержка анимации. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Поддержка анимации. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md).  
   
--   Базовая поддержка событий ввода и поддержка команд. Дополнительные сведения см. в разделе [Общие сведения о вводе данных](../../../../docs/framework/wpf/advanced/input-overview.md) и [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Базовая поддержка событий ввода и поддержка команд. Дополнительные сведения см. в разделе [Общие сведения о вводе данных](input-overview.md) и [Общие сведения о системе команд](commanding-overview.md).  
   
  Если вы создаете класс, производный от <xref:System.Windows.FrameworkContentElement>, вы получаете следующие функциональные возможности, предоставляемые <xref:System.Windows.ContentElement>:  
   
--   Поддержка стилей и раскадровок. Дополнительные сведения см. в разделе <xref:System.Windows.Style> и [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Поддержка стилей и раскадровок. Дополнительные сведения см. в разделе <xref:System.Windows.Style> и [Общие сведения об анимации](../graphics-multimedia/animation-overview.md).  
   
--   Поддержка привязки данных. Более подробную информацию см. в разделе [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Поддержка привязки данных. Более подробную информацию см. в разделе [Общие сведения о связывании данных](../data/data-binding-overview.md).  
   
--   Поддержка ссылок на динамические ресурсы. Дополнительные сведения см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Поддержка ссылок на динамические ресурсы. Дополнительные сведения см. в разделе [Ресурсы XAML](xaml-resources.md).  
   
--   Поддержка наследования значений свойств и других флагов в метаданных, которые помогают передавать сведения о состоянии свойств в службы платформы, такие как привязка данных, управление стилями и реализация структуры макета. Дополнительные сведения см. в разделе [Метаданные свойств платформы](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Поддержка наследования значений свойств и других флагов в метаданных, которые помогают передавать сведения о состоянии свойств в службы платформы, такие как привязка данных, управление стилями и реализация структуры макета. Дополнительные сведения см. в разделе [Метаданные свойств платформы](framework-property-metadata.md).  
   
 -   Вы не наследуете доступ к изменениям системы макета (таких как <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Реализации системы макета доступны только на <xref:System.Windows.FrameworkElement>. Однако вы наследуете <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> переопределения, которое может обнаружить изменения в свойства, которые влияют на макет и о них любым узлам содержимого.  
   
- Модели содержимого описаны в документации для различных классов. Модель содержимого, принятая для класса, возможно, является тем фактором, который следует рассмотреть при выборе подходящего класса для наследования. Дополнительные сведения см. в разделе [Модель содержимого WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+ Модели содержимого описаны в документации для различных классов. Модель содержимого, принятая для класса, возможно, является тем фактором, который следует рассмотреть при выборе подходящего класса для наследования. Дополнительные сведения см. в разделе [Модель содержимого WPF](../controls/wpf-content-model.md).  
   
 <a name="other_base_classes"></a>   
 ## <a name="other-base-classes"></a>Другие базовые классы  
   
 ### <a name="dispatcherobject"></a>DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject> обеспечивает поддержку для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модели и включает все объекты, созданные для работы с потоками [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, которым будет связана <xref:System.Windows.Threading.Dispatcher>. Даже если вы не являются производными от <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, или <xref:System.Windows.Media.Visual>, рекомендуется наследование от <xref:System.Windows.Threading.DispatcherObject> для получения поддержки потоковой модели. Дополнительные сведения см. в разделе [Модель потоков](../../../../docs/framework/wpf/advanced/threading-model.md).  
+ <xref:System.Windows.Threading.DispatcherObject> обеспечивает поддержку для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модели и включает все объекты, созданные для работы с потоками [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, которым будет связана <xref:System.Windows.Threading.Dispatcher>. Даже если вы не являются производными от <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, или <xref:System.Windows.Media.Visual>, рекомендуется наследование от <xref:System.Windows.Threading.DispatcherObject> для получения поддержки потоковой модели. Дополнительные сведения см. в разделе [Модель потоков](threading-model.md).  
   
 ### <a name="visual"></a>Визуальный элемент  
- <xref:System.Windows.Media.Visual> реализует концепцию двумерного объекта, который обычно требует визуального представления в приблизительно прямоугольной области. Реальное отображение объекта <xref:System.Windows.Media.Visual> происходит в других классах (не автономный), но <xref:System.Windows.Media.Visual> класс предоставляет известный тип, который используется в процессах отображения на разных уровнях. <xref:System.Windows.Media.Visual> реализует проверку попадания курсора, но он не предоставляет события, сообщающие положительных результатах проверки (они находятся в <xref:System.Windows.UIElement>). Дополнительные сведения см. в разделе [Программирование визуального слоя](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md).  
+ <xref:System.Windows.Media.Visual> реализует концепцию двумерного объекта, который обычно требует визуального представления в приблизительно прямоугольной области. Реальное отображение объекта <xref:System.Windows.Media.Visual> происходит в других классах (не автономный), но <xref:System.Windows.Media.Visual> класс предоставляет известный тип, который используется в процессах отображения на разных уровнях. <xref:System.Windows.Media.Visual> реализует проверку попадания курсора, но он не предоставляет события, сообщающие положительных результатах проверки (они находятся в <xref:System.Windows.UIElement>). Дополнительные сведения см. в разделе [Программирование визуального слоя](../graphics-multimedia/visual-layer-programming.md).  
   
 ### <a name="freezable"></a>Freezable  
- <xref:System.Windows.Freezable> имитирует постоянство в изменяемом объекте, предоставляя средства для создания копий объекта, когда требуется постоянный объект или необходим для повышения производительности. <xref:System.Windows.Freezable> Тип обеспечивает общую основу для определенных графических элементов, таких геометрических объектов и кисти, а также анимации. В частности <xref:System.Windows.Freezable> не <xref:System.Windows.Media.Visual>; он может содержать свойства, которые становятся дочерними свойствами при <xref:System.Windows.Freezable> применяется для заполнения значения свойства другого объекта, и эти дочерние свойства могут влиять на отрисовку. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ <xref:System.Windows.Freezable> имитирует постоянство в изменяемом объекте, предоставляя средства для создания копий объекта, когда требуется постоянный объект или необходим для повышения производительности. <xref:System.Windows.Freezable> Тип обеспечивает общую основу для определенных графических элементов, таких геометрических объектов и кисти, а также анимации. В частности <xref:System.Windows.Freezable> не <xref:System.Windows.Media.Visual>; он может содержать свойства, которые становятся дочерними свойствами при <xref:System.Windows.Freezable> применяется для заполнения значения свойства другого объекта, и эти дочерние свойства могут влиять на отрисовку. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](freezable-objects-overview.md).  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
@@ -99,6 +99,6 @@ ms.locfileid: "54578671"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.Control>
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
-- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md)
+- [Архитектура WPF](wpf-architecture.md)

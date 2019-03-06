@@ -6,20 +6,20 @@ helpviewer_keywords:
 - performance [WPF]
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
-ms.openlocfilehash: c17d6dc697bd21682b9c5654305807596864af1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a893d0591cce180b199febee2907af1f45f51fe6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377355"
 ---
 # <a name="performance"></a>Производительность
 Достижения оптимальной производительности приложения необходимы предусмотрительность в разработке приложений и понимание рекомендаций по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработки приложений. В этом разделе представлены дополнительные сведения о построении высокопроизводительных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Пошаговое руководство: Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [Уровни графической отрисовки](graphics-rendering-tiers.md)  
+ [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)  
+ [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.RenderCapability>  
@@ -29,5 +29,5 @@ ms.locfileid: "54733822"
  <xref:System.Diagnostics.PresentationTraceSources>  
   
 ## <a name="see-also"></a>См. также
-- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
-- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Макет](layout.md)
+- [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

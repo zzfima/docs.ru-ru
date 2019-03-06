@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 78031ed80fe83b736a351886457f9200534f470b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5d23ec44d9fb7a244fc635ac174cf81ead173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591517"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362192"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Функция ForwardTranslateAccelerator (WPF Справочник по неуправляемым API)
 Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.  
@@ -37,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  `true` Если приложение уже получил возможность для обработки входящего сообщения, но не предусмотрена. в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. в разделе [системные требования .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. в разделе [системные требования .NET Framework](../../get-started/system-requirements.md).  
   
  **БИБЛИОТЕКА DLL:**  
   
@@ -48,4 +48,4 @@ HRESULT ForwardTranslateAccelerator(
  **Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

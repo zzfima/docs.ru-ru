@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538878"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355614"
 ---
 # <a name="digital-ink-how-to-topics"></a>Разделы руководства по рукописному вводу
 ## <a name="in-this-section"></a>В этом разделе  
- [Выбор рукописного ввода из пользовательского элемента управления](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [Добавление пользовательских данных в данные рукописного ввода](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [Удаление рукописного ввода в пользовательском элементе управления](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [Распознавание жестов приложений](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [Перетаскивание рукописного текста](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [Привязка данных к InkCanvas](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [Анализ рукописного ввода с помощью подсказок анализа](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [Поворот рукописного текста](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [Отключение объекта RealTimeStylus для WPF-приложений](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [Выбор рукописного ввода из пользовательского элемента управления](how-to-select-ink-from-a-custom-control.md)  
+  [Добавление пользовательских данных в данные рукописного ввода](how-to-add-custom-data-to-ink-data.md)  
+  [Удаление рукописного ввода в пользовательском элементе управления](how-to-erase-ink-on-a-custom-control.md)  
+  [Распознавание жестов приложений](how-to-recognize-application-gestures.md)  
+  [Перетаскивание рукописного текста](how-to-drag-and-drop-ink.md)  
+  [Привязка данных к InkCanvas](how-to-data-bind-to-an-inkcanvas.md)  
+  [Анализ рукописного ввода с помощью подсказок анализа](how-to-analyze-ink-with-analysis-hints.md)  
+  [Поворот рукописного текста](how-to-rotate-ink.md)  
+  [Отключение объекта RealTimeStylus для WPF-приложений](disable-the-realtimestylus-for-wpf-applications.md)

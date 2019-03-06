@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362634"
 ---
 # <a name="custom-rendering-ink"></a>Пользовательская отрисовка рукописных данных
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Свойство штриха позволяет задавать внешний вид штриха, включая его размер, цвет и форму, но могут возникнуть ситуации, которые вы хотите настроить внешний вид что <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> разрешить. Может потребоваться настроить отображение рукописного фрагмента с эффектом аэрографа, масляной живописи и т. д. Windows Presentation Foundation (WPF) позволяет настроить отрисовку рукописных фрагментов путем реализации пользовательского <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и <xref:System.Windows.Ink.Stroke> объекта.  
@@ -37,7 +37,7 @@ ms.locfileid: "54635591"
   
  Предусмотрено три класса для реализации динамической отрисовки рукописных фрагментов.  
   
-1.  **DynamicRenderer**: Реализация класса, унаследованного от класса <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Этот класс является специализированным <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , отображающий штрих, так как он отрисовывается. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Осуществляет отрисовку в отдельном потоке, поэтому поверхность рукописного ввода появляется для сбора рукописных фрагментов даже при блокировке потока пользовательского интерфейса приложения. Дополнительные сведения о потоковой модели см. в статье [Потоковая модель рукописного ввода](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md). Чтобы настроить динамическую отрисовку штриха, переопределите <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> метод.  
+1.  **DynamicRenderer**: Реализация класса, унаследованного от класса <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Этот класс является специализированным <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , отображающий штрих, так как он отрисовывается. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Осуществляет отрисовку в отдельном потоке, поэтому поверхность рукописного ввода появляется для сбора рукописных фрагментов даже при блокировке потока пользовательского интерфейса приложения. Дополнительные сведения о потоковой модели см. в статье [Потоковая модель рукописного ввода](the-ink-threading-model.md). Чтобы настроить динамическую отрисовку штриха, переопределите <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> метод.  
   
 2.  **Stroke**: Реализация класса, унаследованного от класса <xref:System.Windows.Ink.Stroke>. Этот класс отвечает за статическую отрисовку <xref:System.Windows.Input.StylusPoint> данные после преобразования в <xref:System.Windows.Ink.Stroke> объекта. Переопределить <xref:System.Windows.Ink.Stroke.DrawCore%2A> согласуется метод, чтобы гарантировать статической отрисовки штриха с динамической отрисовкой.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54635591"
   
  В следующем примере настраиваемый <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , который выполняет отрисовку рукописного ввода с эффектом кисти линейного градиента.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>Реализация пользовательских штрихов  
@@ -64,10 +64,10 @@ ms.locfileid: "54635591"
   
  Следующие C# код демонстрирует пользовательский <xref:System.Windows.Ink.Stroke> класс, который выполняет визуализацию <xref:System.Windows.Input.StylusPoint> данные в виде трехмерного штриха.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>Реализация пользовательского объекта InkCanvas  
@@ -83,7 +83,7 @@ ms.locfileid: "54635591"
   
  Следующие C# код демонстрирует пользовательский <xref:System.Windows.Controls.InkCanvas> класс, который использует настраиваемый <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и сбор пользовательских штрихов.  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  <xref:System.Windows.Controls.InkCanvas> Может иметь несколько <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Можно добавить несколько <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> объектов <xref:System.Windows.Controls.InkCanvas> , добавив их в <xref:System.Windows.UIElement.StylusPlugIns%2A> свойство.  
   
@@ -92,4 +92,4 @@ ms.locfileid: "54635591"
  Можно настроить отображение рукописного фрагмента путем наследования своих собственных <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, и <xref:System.Windows.Controls.InkCanvas> классы. Вместе эти классы гарантируют согласованность внешнего вида штриха в момент, когда пользователь рисует штрих, и после его сбора.  
   
 ## <a name="see-also"></a>См. также
-- [Дополнительная обработка рукописных фрагментов](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)

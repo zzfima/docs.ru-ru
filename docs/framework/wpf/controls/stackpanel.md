@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553745"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361239"
 ---
 # <a name="stackpanel"></a>StackPanel
-<xref:System.Windows.Controls.StackPanel> Элемент используется для расположения дочерних элементов по горизонтали или вертикали.  
+<xref:System.Windows.Controls.StackPanel> Элемент используется для расположения дочерних элементов, горизонтально или вертикально.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Разделы практического руководства](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553745"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

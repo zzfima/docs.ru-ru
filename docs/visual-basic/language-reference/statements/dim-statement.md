@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975204"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360268"
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 Объявляет и выделяет область хранения для одной или нескольких переменных.  
@@ -100,7 +100,7 @@ Dim [ WithEvents ] variablelist
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
-    |Отделение|Описание|  
+    |Отделение|Описание:|  
     |---|---|  
     |`variablename`|Обязательный. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
     |`boundslist`|Необязательный параметр. Список границ для каждого измерения массива.|  
@@ -246,7 +246,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Дополнительные сведения о литералах массива см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a> Типы данных по умолчанию и значения  
+## <a name="default"></a> Типы данных по умолчанию и значения  
  В следующей таблице перечислены результаты различных сочетаний заданных типов данных и инициализаторов в операторе `Dim`.  
   
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  

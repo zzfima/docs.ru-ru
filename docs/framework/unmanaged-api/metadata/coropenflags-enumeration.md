@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683622"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364425"
 ---
 # <a name="coropenflags-enumeration"></a>Перечисление CorOpenFlags
 Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.|  
 |`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.|  
 |`ofNoTypeLib`|Является устаревшей. Этот флаг отклонен.|  
-|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [среды выполнения Windows и среда CLR - под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Зарезервировано для внутреннего использования.|  
 |`ofReserved2`|Зарезервировано для внутреннего использования.|  
 |`ofReserved`|Зарезервировано для внутреннего использования.|  

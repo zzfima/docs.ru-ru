@@ -7,28 +7,28 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: 75e1a92e683da5260718febf2a248e45496b64bf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746945"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374795"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Разделы практического руководства, посвященные построению и развертыванию
 Следующие разделы показывают, как создать файлы проекта для различных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] типов приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Определение установленной версии WPF](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [Проверка наличия установленной платформы .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [Проверка наличия установленной платформы .NET Framework 3.5](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Проверка наличия установленного подключаемого модуля WPF для Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+ [Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [Определение установленной версии WPF](how-to-determine-the-installed-version-of-wpf.md)  
+ [Проверка наличия установленной платформы .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [Проверка наличия установленной платформы .NET Framework 3.5](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Проверка наличия установленного подключаемого модуля WPF для Firefox](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Построение приложения WPF](building-a-wpf-application-wpf.md)  
   
- [Развертывание приложений WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)  
   
  [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   

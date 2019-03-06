@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364831"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -33,7 +33,7 @@ ms.locfileid: "54503213"
   
  Привязку данных можно рассмотреть на примере следующего [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения со страницы [примера привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703).  
   
- ![Снимок экрана примера привязки данных](../../../../docs/framework/wpf/data/media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![Снимок экрана примера привязки данных](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  Выше приведен [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения, который отображает список лотов аукциона. Приложение демонстрирует следующие возможности привязки данных.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54503213"
   
  При нажатии кнопки *Добавить продукт* появляется следующая форма.  
   
- ![Добавить страницу списка продуктов](../../../../docs/framework/wpf/data/media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
+ ![Добавить страницу списка продуктов](./media/databinding-demo-addproductlisting.png "DataBinding_Demo_AddProductListing")  
   
  Пользователь может изменить поля формы, просмотреть список продуктов с помощью панелей краткого предварительного просмотра и подробного предварительного просмотра и нажать кнопку *Отправить*, для добавления данных нового продукта. К новой записи будут применимы все существующие функциональные возможности группировки, фильтрации и сортировки. В этом конкретном случае элемент, введенный на приведенном выше рисунке, будет отображаться как второй элемент в категории *Компьютер*.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54503213"
   
  Независимо от того, какой элемент привязывается и какой источник данных используется, каждая привязка всегда соответствует модели, показанной на следующем рисунке.  
   
- ![Основная схема привязки данных](../../../../docs/framework/wpf/data/media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Основная схема привязки данных](./media/databindingmostbasic.png "DataBindingMostBasic")  
   
  Как показано на приведенном выше рисунке, привязка данных является по существу мостом между целью привязки и источником привязки. На рисунке представлены следующие основные концепции привязки данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54503213"
   
 -   Целевое свойство должно быть свойством зависимостей. Большинство <xref:System.Windows.UIElement> свойств являются свойствами зависимостей, и большинство свойств зависимостей, за исключением доступных только для чтения, по умолчанию поддерживает привязку данных. (Только <xref:System.Windows.DependencyObject> типы могут определять свойства зависимостей и все <xref:System.Windows.UIElement>являются производными от <xref:System.Windows.DependencyObject>.)  
   
--   Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Привязка данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает данные в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] данных или веб-службы или XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Привязка данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает данные в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] данных или веб-службы или XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
   
  В процессе чтения других разделов [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] важно помнить, что при связывании цель привязки *привязывается к* источнику привязки. Например, при отображении некоторых базовых [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные в <xref:System.Windows.Controls.ListBox> с использованием привязки данных, выполняется привязка к <xref:System.Windows.Controls.ListBox> для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "54503213"
   
  Возможно, требуется, чтобы в приложении пользователи могли изменить данные и передать их обратно объекту источника. Или может потребоваться не предоставлять пользователям возможности обновления источника данных. Это можно управлять, задав <xref:System.Windows.Data.Binding.Mode%2A> свойство вашей <xref:System.Windows.Data.Binding> объекта. На следующем рисунке показаны различные типы потоков данных.  
   
- ![Поток данных привязки данных](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
+ ![Поток данных привязки данных](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
 -   <xref:System.Windows.Data.BindingMode.OneWay> Привязка передает изменения свойства источника для автоматического обновления целевого свойства, но изменения свойства цели не передаются обратно к свойству источника. Этот тип привязки подходит, если привязываемый элемент управления неявно доступен только для чтения. Например, можно привязаться к источнику, такому как биржевые сводки, или, возможно, свойство цели не имеет интерфейса для внесения изменений, например цвета фона привязанной к данным таблицы. Если нет необходимости отслеживать изменения целевого свойства, можно работать в режиме привязки <xref:System.Windows.Data.BindingMode.OneWay> — в этом случае удастся избежать издержек режима привязки <xref:System.Windows.Data.BindingMode.TwoWay>.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54503213"
   
 -   Не показано на рисунке является <xref:System.Windows.Data.BindingMode.OneTime> привязки, который вызывает инициализировать целевое свойство источника, но последующие изменения не распространяются. Это означает, что, если в контексте данных производятся изменения или меняется объект, это изменение не отражается в целевом свойстве. Этот тип привязки подходит при использовании данных там, где приемлемо использовать снимок текущего состояния или данные действительно являются статичными. Этот тип привязки также является полезным, если нужно инициализировать целевое свойство с использованием какого-либо значения из исходного свойства, а контекст данных заранее неизвестен. Это, по сути, упрощенная форма привязки <xref:System.Windows.Data.BindingMode.OneWay>, которая обеспечивает более высокую производительность в случаях, когда исходное значение не меняется.  
   
- Обратите внимание, что для обнаружения изменений в источнике (применимо к <xref:System.Windows.Data.BindingMode.OneWay> и <xref:System.Windows.Data.BindingMode.TwoWay> привязок), источник должен реализовывать механизм уведомлений об изменениях соответствующее свойство <xref:System.ComponentModel.INotifyPropertyChanged>. См. в разделе [реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) пример <xref:System.ComponentModel.INotifyPropertyChanged> реализации.  
+ Обратите внимание, что для обнаружения изменений в источнике (применимо к <xref:System.Windows.Data.BindingMode.OneWay> и <xref:System.Windows.Data.BindingMode.TwoWay> привязок), источник должен реализовывать механизм уведомлений об изменениях соответствующее свойство <xref:System.ComponentModel.INotifyPropertyChanged>. См. в разделе [реализация уведомления об изменении свойства](how-to-implement-property-change-notification.md) пример <xref:System.ComponentModel.INotifyPropertyChanged> реализации.  
   
  <xref:System.Windows.Data.Binding.Mode%2A> Страницу свойств предоставляет дополнительные сведения о режимах привязки и пример того, как указать направление привязки.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54503213"
   
  Однако обновляется ли значение источника при изменении текста или после завершения изменения текста и отвода указателя мыши от элемента TextBox? <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство привязки определяет, что инициирует обновления источника. Точки стрелок вправо на следующем рисунке показывают роль <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство:  
   
- ![Схема UpdateSourceTrigger](../../../../docs/framework/wpf/data/media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Схема UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
   
  Если <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, затем значение указывает правую стрелку действия <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки обновляется сразу, как изменения целевого свойства. Тем не менее если <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, а затем это значение обновляется только новое значение при свойство цели теряет фокус.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "54503213"
 |Свойство изменено|При вводе в <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> элементы управления в окне чата|  
 |Явные|Когда приложение вызывает <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> элементы управления в редактируемой форме (обновляет значения источника только в том случае, когда пользователь нажимает кнопку «Отправить»)|  
   
- Пример см. в разделе [Практическое руководство. Управление обновлением источника из поля TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Пример см. в разделе [Практическое руководство. Управление обновлением источника из поля TextBox](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 <a name="creating_a_binding"></a>   
 ## <a name="creating-a-binding"></a>Создание привязки  
@@ -126,13 +126,13 @@ ms.locfileid: "54503213"
   
  Рассмотрим следующий пример, в котором объектом источника привязки является класс с именем *MyData*, определенный в пространстве имен *SDKSample*. В качестве демонстрационного примера класс *MyData* имеет строковое свойство с именем *ColorName* со значением Red. Таким образом, в этом примере создается кнопка с красным фоном.  
   
- [!code-xaml[BindNonTextProperty#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
+ [!code-xaml[BindNonTextProperty#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page1.xaml#1)]  
   
- Дополнительные сведения о синтаксисе объявления привязки и примеры настройки привязки в коде см. в разделе [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md).  
+ Дополнительные сведения о синтаксисе объявления привязки и примеры настройки привязки в коде см. в разделе [Общие сведения об объявлении привязок](binding-declarations-overview.md).  
   
  Если применить этот пример к основной диаграмме, полученное изображение будет выглядеть следующим образом. Это <xref:System.Windows.Data.BindingMode.OneWay> привязке, так как свойство Background поддерживает <xref:System.Windows.Data.BindingMode.OneWay> привязки по умолчанию.  
   
- ![Схема привязки данных](../../../../docs/framework/wpf/data/media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Схема привязки данных](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
   
  Может возникнуть вопрос, почему это работает, даже если *ColorName* свойство имеет строковый тип при <xref:System.Windows.Controls.Control.Background%2A> свойство имеет тип <xref:System.Windows.Media.Brush>. Это происходит в результате преобразования типов по умолчанию, которое обсуждается в разделе [Преобразование данных](#data_conversion).  
   
@@ -142,9 +142,9 @@ ms.locfileid: "54503213"
   
  Есть несколько способов для указания объекта источника привязки. С помощью <xref:System.Windows.FrameworkElement.DataContext%2A> на родительский элемент может быть удобно при привязке нескольких свойств к одному источнику. Однако иногда удобнее указывать источник привязки в отдельных объявлениях привязки. Для предыдущего примера, вместо использования <xref:System.Windows.FrameworkElement.DataContext%2A> свойство, можно указать источник привязки, задав <xref:System.Windows.Data.Binding.Source%2A> свойства непосредственно в объявлении привязки кнопки, как показано в следующем примере:  
   
- [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
+ [!code-xaml[BindNonTextProperty#BackgroundBindingCompact](~/samples/snippets/csharp/VS_Snippets_Wpf/BindNonTextProperty/CS/Page2.xaml#backgroundbindingcompact)]  
   
- Кроме установки <xref:System.Windows.FrameworkElement.DataContext%2A> свойство на элементе напрямую, наследование <xref:System.Windows.FrameworkElement.DataContext%2A> от предка (например, кнопки в первом примере) и явного указания источника привязки, задав <xref:System.Windows.Data.Binding.Source%2A> свойство <xref:System.Windows.Data.Binding> (например, кнопки в последнем примере), можно также использовать <xref:System.Windows.Data.Binding.ElementName%2A> свойство или <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство, чтобы указать источник привязки. <xref:System.Windows.Data.Binding.ElementName%2A> Свойство полезно, если при привязке к другим элементам в приложении, например при использовании ползунка для настройки ширины кнопки. <xref:System.Windows.Data.Binding.RelativeSource%2A> Свойство полезно, если привязка задается в <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.Style>. Дополнительные сведения см. в разделе [Указание источника привязки](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+ Кроме установки <xref:System.Windows.FrameworkElement.DataContext%2A> свойство на элементе напрямую, наследование <xref:System.Windows.FrameworkElement.DataContext%2A> от предка (например, кнопки в первом примере) и явного указания источника привязки, задав <xref:System.Windows.Data.Binding.Source%2A> свойство <xref:System.Windows.Data.Binding> (например, кнопки в последнем примере), можно также использовать <xref:System.Windows.Data.Binding.ElementName%2A> свойство или <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство, чтобы указать источник привязки. <xref:System.Windows.Data.Binding.ElementName%2A> Свойство полезно, если при привязке к другим элементам в приложении, например при использовании ползунка для настройки ширины кнопки. <xref:System.Windows.Data.Binding.RelativeSource%2A> Свойство полезно, если привязка задается в <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.Style>. Дополнительные сведения см. в разделе [Указание источника привязки](how-to-specify-the-binding-source.md).  
   
 <a name="specifying_the_path_to_the_value"></a>   
 ### <a name="specifying-the-path-to-the-value"></a>Указание пути к значению  
@@ -154,7 +154,7 @@ ms.locfileid: "54503213"
   
  Обратите внимание, что, несмотря на то, что мы и подчеркнули, <xref:System.Windows.Data.Binding.Path%2A> к используемому значению является одним из четырех необходимых компонентов привязки, в сценариях, когда вы хотите выполнить привязку ко всему объекту, используемое значение будет таким же, как объект источника привязки. В таком случае это касается и не указывайте <xref:System.Windows.Data.Binding.Path%2A>. Рассмотрим следующий пример.  
   
- [!code-xaml[MasterDetail#EmptyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
+ [!code-xaml[MasterDetail#EmptyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetail/CSharp/Page1.xaml#emptybinding)]  
   
  В приведенном выше примере используется синтаксис пустой привязки: {Binding}. В этом случае <xref:System.Windows.Controls.ListBox> наследует DataContext от родительского элемента DockPanel (не показано в следующем примере). Если путь не указан, по умолчанию производится привязка ко всему объекту. Другими словами, в этом примере путь был указан, так как выполняется привязка <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство ко всему объекту. (Подробное описание см. в разделе [Привязка к коллекциям](#binding_to_collections).)  
   
@@ -168,16 +168,16 @@ ms.locfileid: "54503213"
   
  Например, рассмотрим следующую команду, где *myDataObject* является экземпляром класса *MyData* класс, *myBinding* является источником <xref:System.Windows.Data.Binding> объекта и *MyData* класс представляет собой определенный класс, который содержит строковое свойство с именем *MyDataProperty*. В этом примере привязывается текстовое содержимое *mytext*, экземпляр <xref:System.Windows.Controls.TextBlock>, *MyDataProperty*.  
   
- [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
- [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
+ [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
+ [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
  Один и тот же объект *myBinding* можно использовать для создания других привязок. Например, можно использовать объект *myBinding* для привязки текстового содержимого флажка к *MyDataProperty*. В этом сценарии будут два экземпляра <xref:System.Windows.Data.BindingExpression> совместное использование *myBinding* объекта.  
   
  Объект <xref:System.Windows.Data.BindingExpression> объекта можно получить с помощью возвращаемого значения метода <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> в объекте с привязкой к данным. В следующих разделах описываются некоторые примеры использования <xref:System.Windows.Data.BindingExpression> класса:  
   
--   [Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Практическое руководство. Управление обновлением источника из поля TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Практическое руководство. Управление обновлением источника из поля TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Преобразование данных  
@@ -185,18 +185,18 @@ ms.locfileid: "54503213"
   
  Если добавить эти сведения в рисунок из раздела [Создание привязки](#creating_a_binding), схема будет выглядеть следующим образом.  
   
- ![Схема привязки данных](../../../../docs/framework/wpf/data/media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Схема привязки данных](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
   
  Однако, что делать, если вместо свойства строкового типа объект источника привязки имеет *цвет* свойство типа <xref:System.Windows.Media.Color>? В этом случае в порядке для создания привязки необходимо включить первый *цвет* значение свойства в нечто, <xref:System.Windows.Controls.Control.Background%2A> значение свойства. Необходимо создать пользовательский преобразователь, реализовав <xref:System.Windows.Data.IValueConverter> интерфейс, как показано в следующем примере:  
   
- [!code-csharp[ColorPicker_snip#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
- [!code-vb[ColorPicker_snip#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
+ [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
+ [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
   
  <xref:System.Windows.Data.IValueConverter> Справочной странице предоставляет дополнительные сведения.  
   
  Теперь пользовательский преобразователь используется вместо преобразования по умолчанию и схема выглядит следующим образом.  
   
- ![Схема привязки данных](../../../../docs/framework/wpf/data/media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Схема привязки данных](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
   
  Таким образом, преобразования по умолчанию могут быть доступны благодаря преобразователям типов, присутствующим в типе, к которому производится привязка. Такое поведение будет зависеть от того, какие преобразователи типов доступны в целевом объекте. Если существуют какие-то сомнением, создайте свой собственный преобразователь.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "54503213"
   
  К счастью, наша основная схема по-прежнему применима. При связывании <xref:System.Windows.Controls.ItemsControl> коллекции, то диаграмма будет выглядеть следующим образом:  
   
- ![Схема ItemsControl привязки данных](../../../../docs/framework/wpf/data/media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Схема ItemsControl привязки данных](./media/databindingitemscontrol.png "DataBindingItemsControl")  
   
  Как показано на этой схеме для привязки <xref:System.Windows.Controls.ItemsControl> на объект коллекции <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойством является свойство для использования. Можно представить себе <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство как содержимое <xref:System.Windows.Controls.ItemsControl>. Обратите внимание, что привязка <xref:System.Windows.Data.BindingMode.OneWay> поскольку <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> поддерживает свойство <xref:System.Windows.Data.BindingMode.OneWay> привязки по умолчанию.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "54503213"
 ### <a name="how-to-implement-collections"></a>Способы реализации коллекций  
  Пользователь может выполнить перечисление любой коллекции, реализующей <xref:System.Collections.IEnumerable> интерфейс. Тем не менее чтобы настроить динамические привязки таким образом, чтобы обновить вставки и удаления элементов в коллекции [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] автоматически, в коллекции должен быть реализован <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейс. Этот интерфейс предоставляет событие, которое должно вызываться при каждом изменении коллекции.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является встроенной реализацией коллекции данных, предоставляющей <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейс. Обратите внимание, что для полной поддержки передачи значений данных от объектов источника для целевых объектов, каждый объект в коллекции, который поддерживает свойства связывания должен также реализовывать <xref:System.ComponentModel.INotifyPropertyChanged> интерфейс. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является встроенной реализацией коллекции данных, предоставляющей <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейс. Обратите внимание, что для полной поддержки передачи значений данных от объектов источника для целевых объектов, каждый объект в коллекции, который поддерживает свойства связывания должен также реализовывать <xref:System.ComponentModel.INotifyPropertyChanged> интерфейс. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
   
  Перед реализацией свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.ObjectModel.ObservableCollection%601> или один из существующей коллекции классов, таких как <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, и <xref:System.ComponentModel.BindingList%601>, среди прочих. Если имеется расширенный скрипт и требуется реализовать свою собственную коллекцию, рассмотрите возможность использования <xref:System.Collections.IList>, который предоставляет неуниверсальную коллекцию объектов, которые можно получить индивидуальный доступ по индексу и, следовательно, максимальную производительность.  
   
@@ -243,14 +243,14 @@ ms.locfileid: "54503213"
 #### <a name="how-to-create-a-view"></a>Создание представления  
  Одним из способов создания и использования представления является непосредственное создание объекта представления и затем использование его в качестве источника привязки. В качестве примера рассмотрим приложение [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703), показанное в подразделе [Понятие привязки данных](#what_is_data_binding). Приложение реализовано таким образом, чтобы <xref:System.Windows.Controls.ListBox> привязывается к представлению коллекции данных, а не в коллекции данных напрямую. Следующий пример извлекается из приложения [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703). <xref:System.Windows.Data.CollectionViewSource> Класс является [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] прокси-сервера, который наследует от класса <xref:System.Windows.Data.CollectionView>. В данном конкретном примере <xref:System.Windows.Data.CollectionViewSource.Source%2A> представления привязан к *AuctionItems* коллекции (типа <xref:System.Collections.ObjectModel.ObservableCollection%601>) текущего объекта приложения.  
   
- [!code-xaml[DataBindingLab#WindowResources1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
-[!code-xaml[DataBindingLab#CollectionViewSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
-[!code-xaml[DataBindingLab#WindowResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
+ [!code-xaml[DataBindingLab#WindowResources1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources1)]  
+[!code-xaml[DataBindingLab#CollectionViewSource](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#collectionviewsource)]  
+[!code-xaml[DataBindingLab#WindowResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#windowresources2)]  
   
  Ресурс *listingDataView* выступает в качестве источника привязки для элементов в приложении, такие как <xref:System.Windows.Controls.ListBox>:  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
   
  Чтобы создать другое представление для той же коллекции, можно создать другое <xref:System.Windows.Data.CollectionViewSource> экземпляра и присвоить ему другое `x:Key` имя.  
   
@@ -265,44 +265,44 @@ ms.locfileid: "54503213"
 ##### <a name="using-a-default-view"></a>Использование представления по умолчанию  
  Один из способов создания и использования представления коллекции заключается в указании представления коллекции в качестве источника привязки. WPF также создает представление коллекции по умолчанию для каждой коллекции, используемой в качестве источника привязки. Если выполнить привязку непосредственно к коллекции, WPF выполняет привязку к представлению коллекции по умолчанию. Обратите внимание, что данное представление по умолчанию совместно используется всеми привязками к одной и той же коллекции, поэтому изменения, внесенные в представление по умолчанию одним привязанным элементом управления либо кодом (например, сортировка или изменение указателя на текущий элемент, что будет рассмотрено ниже), распространяются на все привязки к одной коллекции.  
   
- Чтобы получить представление по умолчанию, используйте <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> метод. Пример см. в разделе [Практическое руководство. Получение представления по умолчанию для коллекции данных](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).  
+ Чтобы получить представление по умолчанию, используйте <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> метод. Пример см. в разделе [Практическое руководство. Получение представления по умолчанию для коллекции данных](how-to-get-the-default-view-of-a-data-collection.md).  
   
 ##### <a name="collection-views-with-adonet-datatables"></a>Использование представлений коллекций с таблицами данных ADO.NET  
  Для повышения производительности представления коллекций для ADO.NET <xref:System.Data.DataTable> или <xref:System.Data.DataView> объектов делегируют функции сортировки и фильтрации для <xref:System.Data.DataView>. При этом функции сортировки и фильтрации совместно используются всеми представлениями коллекции для источника данных. Чтобы включить для независимой сортировки и фильтрации для каждого представления коллекции, инициализируйте каждое представление коллекции с собственным <xref:System.Data.DataView> объекта.  
   
 #### <a name="sorting"></a>Сортировка  
- Как уже отмечалось ранее, представления могут применять сортировку для коллекции. Так как данные находятся в базовой коллекции, они могут иметь или не иметь некий порядок следования. Представление коллекции позволяет установить порядок или изменить порядок, используемый по умолчанию, на основе введенных признаков сравнения. Так как это представление данных на стороне клиента, распространенным скриптом является сортировка пользователем столбцов табличных данных по значениям, содержащимся в столбце. С использованием представлений управляемая пользователем сортировка может применяться еще раз без необходимости внесения изменений в основную коллекцию или создания повторного запроса к содержимому коллекции. Пример см. в разделе [Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).  
+ Как уже отмечалось ранее, представления могут применять сортировку для коллекции. Так как данные находятся в базовой коллекции, они могут иметь или не иметь некий порядок следования. Представление коллекции позволяет установить порядок или изменить порядок, используемый по умолчанию, на основе введенных признаков сравнения. Так как это представление данных на стороне клиента, распространенным скриптом является сортировка пользователем столбцов табличных данных по значениям, содержащимся в столбце. С использованием представлений управляемая пользователем сортировка может применяться еще раз без необходимости внесения изменений в основную коллекцию или создания повторного запроса к содержимому коллекции. Пример см. в разделе [Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).  
   
  В следующем примере показано логика сортировки «Сортировать по категориям и дате» <xref:System.Windows.Controls.CheckBox> приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в [новые возможности привязки данных?](#what_is_data_binding) раздел:  
   
- [!code-csharp[DataBindingLab#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
- [!code-vb[DataBindingLab#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
+ [!code-csharp[DataBindingLab#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#8)]
+ [!code-vb[DataBindingLab#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#8)]  
   
 #### <a name="filtering"></a>Фильтрация  
  Представления могут применять к коллекции фильтр. Это означает, что несмотря на то что элемент может существовать в коллекции, его конкретное представление предназначено для отображения только некоторого подмножества полной коллекции. Возможна фильтрация по условию в данных. Например, как показано в приложение в [новые возможности привязки данных?](#what_is_data_binding) разделе «Показывать только товары по сниженным ценам» <xref:System.Windows.Controls.CheckBox> содержит логику фильтрации товаров с ценой 25 долл. Следующий код выполняется для установки *ShowOnlyBargainsFilter* как <xref:System.Windows.Data.CollectionViewSource.Filter> обработчик событий при, <xref:System.Windows.Controls.CheckBox> выбран:  
   
- [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
- [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
  Обработчик события *ShowOnlyBargainsFilter* реализуется следующим образом.  
   
- [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
- [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
- Если вы используете один из <xref:System.Windows.Data.CollectionView> классы напрямую вместо того <xref:System.Windows.Data.CollectionViewSource>, использовалась бы <xref:System.Windows.Data.CollectionView.Filter%2A> свойство, чтобы указать обратный вызов. Пример см. в разделе [Практическое руководство. Фильтрация данных в представлении](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md).  
+ Если вы используете один из <xref:System.Windows.Data.CollectionView> классы напрямую вместо того <xref:System.Windows.Data.CollectionViewSource>, использовалась бы <xref:System.Windows.Data.CollectionView.Filter%2A> свойство, чтобы указать обратный вызов. Пример см. в разделе [Практическое руководство. Фильтрация данных в представлении](how-to-filter-data-in-a-view.md).  
   
 #### <a name="grouping"></a>Группирование  
  За исключением внутреннего класса, <xref:System.Collections.IEnumerable> коллекции, все представления коллекций поддерживают функцию группировки, которая позволяет разбить коллекцию в представлении коллекции на логические группы. Группы могут быть явными, если пользователь предоставляет список групп, или неявными, если эти группы создаются динамически в зависимости от данных.  
   
  В следующем примере показано логику «Группировать по категории» <xref:System.Windows.Controls.CheckBox>:  
   
- [!code-csharp[DataBindingLab#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
- [!code-vb[DataBindingLab#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
+ [!code-csharp[DataBindingLab#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#6)]
+ [!code-vb[DataBindingLab#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#6)]  
   
- Другой пример группировки см. в разделе [Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).  
+ Другой пример группировки см. в разделе [Практическое руководство. Группировка элементов в объекте ListView, реализующем GridView](../controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).  
   
 #### <a name="current-item-pointers"></a>Указатели на текущий элемент  
- В представлениях также присутствует понятие текущего элемента. Существует возможность перемещаться по объектам в представлении коллекции. При переходе перемещается указатель элемента, позволяющий извлечь объект, расположенный в определенном месте в коллекции. Пример см. в разделе [Перемещение по объектам в Data CollectionView](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
+ В представлениях также присутствует понятие текущего элемента. Существует возможность перемещаться по объектам в представлении коллекции. При переходе перемещается указатель элемента, позволяющий извлечь объект, расположенный в определенном месте в коллекции. Пример см. в разделе [Перемещение по объектам в Data CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
  Поскольку WPF выполняет привязку к коллекции только с помощью представления (либо указанного пользователем, либо представления коллекции по умолчанию), для всех привязок к коллекциям имеется указатель на текущий элемент. При привязке к представлению символ косой черты ("/") в значении `Path` указывает на текущий элемент представления. В следующем примере контекст данных является представлением коллекции. В первой строке выполняется привязка к коллекции. Во второй строке выполняется привязка к текущему элементу коллекции. В третьей строке выполняется привязка к свойству `Description` текущего элемента коллекции.  
   
@@ -326,13 +326,13 @@ ms.locfileid: "54503213"
   
  Для реализации этого сценария необходимо наличие двух или более элементов управления, привязанных к одному и тому же представлению. В следующем примере из [пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703) показана разметка элементов <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ContentControl> появится в приложении [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в [новые возможности привязки данных?](#what_is_data_binding) раздел:  
   
- [!code-xaml[DataBindingLab#Master1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
-[!code-xaml[DataBindingLab#Master2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
-[!code-xaml[DataBindingLab#Detail](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
+ [!code-xaml[DataBindingLab#Master1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master1)]  
+[!code-xaml[DataBindingLab#Master2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#master2)]  
+[!code-xaml[DataBindingLab#Detail](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml#detail)]  
   
  Обратите внимание, что оба элемента управления привязаны к одному источнику, статическому ресурсу *listingDataView* (просмотреть определение этого ресурса можно в подразделе [Создание представления](#how_to_create_a_view)). Это работает, поскольку если объект одноэлементного множества ( <xref:System.Windows.Controls.ContentControl> в данном случае) связан с представлением коллекции, он автоматически привязывается к <xref:System.Windows.Data.CollectionView.CurrentItem%2A> представления. Обратите внимание, что <xref:System.Windows.Data.CollectionViewSource> объекты автоматически синхронизировать денежного формата и выделение. Если элемент управления списка не привязан к <xref:System.Windows.Data.CollectionViewSource> объект как в этом примере, то необходимо задать его <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> свойства `true` для правильной работы.  
   
- Другие примеры см. в разделах [Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) и [Практическое руководство. Использование шаблона "главный — подчиненный" с иерархическими данными](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
+ Другие примеры см. в разделах [Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента](how-to-bind-to-a-collection-and-display-information-based-on-selection.md) и [Практическое руководство. Использование шаблона "главный — подчиненный" с иерархическими данными](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).  
   
  Можно заметить, что в приведенном выше примере используется шаблон. На самом деле, данные не будут отображаться выбранным способом без использования шаблонов (один явно используется элементом <xref:System.Windows.Controls.ContentControl> и неявно используется <xref:System.Windows.Controls.ListBox>). К шаблонам данных мы перейдем в следующем разделе.  
   
@@ -340,17 +340,17 @@ ms.locfileid: "54503213"
 ## <a name="data-templating"></a>Шаблоны данных  
  Без использования шаблонов данных [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения в подразделе [Понятие привязки данных](#what_is_data_binding) будет выглядеть следующим образом.  
   
- ![Демонстрация привязки данных без шаблонов данных](../../../../docs/framework/wpf/data/media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Демонстрация привязки данных без шаблонов данных](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
   
  Как показано в примере в предыдущем разделе, как <xref:System.Windows.Controls.ListBox> управления и <xref:System.Windows.Controls.ContentControl> привязаны к всему объекту коллекции (или точнее, представление объекта коллекции) из *AuctionItem*s. Отсутствии особых инструкций по способу отображения сбора данных <xref:System.Windows.Controls.ListBox> отображает строковое представление каждого объекта в базовой коллекции и <xref:System.Windows.Controls.ContentControl> отображает строковое представление объекта, он связан.  
   
  Чтобы решить эту проблему, приложение определяет <xref:System.Windows.DataTemplate>s. Как показано в примере в предыдущем разделе, <xref:System.Windows.Controls.ContentControl> явным образом использует *detailsProductListingTemplate*<xref:System.Windows.DataTemplate>. <xref:System.Windows.Controls.ListBox> Управления неявно использует следующий <xref:System.Windows.DataTemplate> при отображении *AuctionItem* объектов в коллекции:  
   
- [!code-xaml[DataBindingLab#AuctionItemDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
+ [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
  С помощью этих двух <xref:System.Windows.DataTemplate>, результирующий пользовательский Интерфейс имеет, описанной в [новые возможности привязки данных?](#what_is_data_binding) раздел. Как видно из этого снимка, в дополнение к возможности размещать данные в элементах управления, <xref:System.Windows.DataTemplate>s позволяют определять подходящие визуальные элементы для данных. Например <xref:System.Windows.DataTrigger>s используются выше <xref:System.Windows.DataTemplate> таким образом, чтобы *AuctionItem*s с *SpecialFeatures* значение *выделите* отображались с Оранжевые границы и помечается звездочкой.  
   
- Дополнительные сведения о шаблонах данных см. в разделе [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ Дополнительные сведения о шаблонах данных см. в разделе [Общие сведения о шаблонах данных](data-templating-overview.md).  
   
 <a name="data_validation"></a>   
 ## <a name="data-validation"></a>Проверка данных  
@@ -360,7 +360,7 @@ ms.locfileid: "54503213"
 ### <a name="associating-validation-rules-with-a-binding"></a>Связь правил проверки и привязки  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Модель привязки данных, вы сможете связать <xref:System.Windows.Data.Binding.ValidationRules%2A> с вашей <xref:System.Windows.Data.Binding> объекта. Например, следующий пример связывает <xref:System.Windows.Controls.TextBox> к свойству с именем `StartPrice` и добавляет <xref:System.Windows.Controls.ExceptionValidationRule> объект <xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType> свойство.  
   
- [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
+ [!code-xaml[DataBindingLab#DefaultValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
  Объект <xref:System.Windows.Controls.ValidationRule> объект проверяет, является ли допустимым значение свойства. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются следующие два встроенных <xref:System.Windows.Controls.ValidationRule> объектов:  
   
@@ -370,12 +370,12 @@ ms.locfileid: "54503213"
   
  Можно также создать свои собственные правила проверки путем наследования от <xref:System.Windows.Controls.ValidationRule> класса и реализации <xref:System.Windows.Controls.ValidationRule.Validate%2A> метод. В следующем примере показано правило, используемое элементом *Добавление списка продуктов* «Дата начала» <xref:System.Windows.Controls.TextBox> из [новые возможности привязки данных?](#what_is_data_binding) раздел:  
   
- [!code-csharp[DataBindingLab#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
- [!code-vb[DataBindingLab#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
+ [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
+ [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
  *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> использует этот *FutureDateRule*, как показано в следующем примере:  
   
- [!code-xaml[DataBindingLab#CustomValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
+ [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   
  Обратите внимание, что поскольку <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, механизм привязки обновляет значение источника при каждом нажатии клавиши, то есть он также проверяет каждое правило в <xref:System.Windows.Data.Binding.ValidationRules%2A> коллекцию при каждом нажатии клавиши. Это будет обсуждаться далее в разделе "Процесс проверки".  
   
@@ -383,23 +383,23 @@ ms.locfileid: "54503213"
 ### <a name="providing-visual-feedback"></a>Предоставление визуального отклика  
  Если пользователь вводит недопустимое значение, можно сформировать отклик приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] на ошибку. Один из способов обеспечения такого отклика является установление <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> присоединенное свойство пользовательского <xref:System.Windows.Controls.ControlTemplate>. Как показано в предыдущем подразделе, *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> использует <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> вызывается *validationTemplate*. В следующем примере показано определение элемента *validationTemplate*.  
   
- [!code-xaml[DataBindingLab#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
+ [!code-xaml[DataBindingLab#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#1)]  
   
  <xref:System.Windows.Controls.AdornedElementPlaceholder> Элемент указывает, где должен размещаться элемент управления.  
   
  Кроме того, можно также использовать <xref:System.Windows.Controls.ToolTip> отображение сообщений об ошибках. Оба *StartDateEntryForm* и *StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>используют стиль *textStyleTextBox*, который создает <xref:System.Windows.Controls.ToolTip> , Отображает сообщение об ошибке. В следующем примере показано определение элемента *textStyleTextBox*. Присоединенное свойство <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> является `true` когда один или несколько привязок к свойствам связанного элемента находятся в ошибки.  
   
- [!code-xaml[DataBindingLab#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
+ [!code-xaml[DataBindingLab#14](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#14)]  
   
  С помощью пользовательского <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и <xref:System.Windows.Controls.ToolTip>, *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> при ошибке проверки выглядит следующим образом:  
   
- ![Ошибка проверки привязки данных](../../../../docs/framework/wpf/data/media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
+ ![Ошибка проверки привязки данных](./media/databindingdemo-validation.PNG "DataBindingDemo_Validation")  
   
  Если ваш <xref:System.Windows.Data.Binding> имеет правила проверки, но вы не укажете <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> на связанный элемент управления, по умолчанию <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> будет использоваться для уведомления пользователей об ошибке проверки. Значение по умолчанию <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> — это шаблон элемента управления, определяющий красную границу графического уровня. По умолчанию <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и <xref:System.Windows.Controls.ToolTip>, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] из *StartPriceEntryForm* <xref:System.Windows.Controls.TextBox> при ошибке проверки выглядит следующим образом:  
   
- ![Ошибка проверки привязки данных](../../../../docs/framework/wpf/data/media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
+ ![Ошибка проверки привязки данных](./media/databindingdemo-validationdefault.PNG "DataBindingDemo_ValidationDefault")  
   
- Пример предоставления логики проверки всех элементов управления в диалоговом окне см. в подразделе "Пользовательские диалоговые окна" раздела [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Пример предоставления логики проверки всех элементов управления в диалоговом окне см. в подразделе "Пользовательские диалоговые окна" раздела [Общие сведения о диалоговых окнах](../app-development/dialog-boxes-overview.md).  
   
 ### <a name="validation-process"></a>Процесс проверки  
  Проверка обычно выполняется, когда целевое значение передается свойству источника привязки. Эта операция выполняется по <xref:System.Windows.Data.BindingMode.TwoWay> и <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки. Таким образом, что причина обновления источника зависит от значения <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойства, как описано в разделе [что инициирует обновления источника](#what_triggers_source_updates) раздел.  
@@ -431,9 +431,9 @@ ms.locfileid: "54503213"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [Новые возможности в WPF версии 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)
-- [Привязка к результатам запроса LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Новые возможности в WPF версии 4.5](../getting-started/whats-new.md)
+- [Привязка к результатам запроса LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Привязка данных](../advanced/optimizing-performance-data-binding.md)
 - [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Привязка к источнику данных ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Привязка к источнику данных ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

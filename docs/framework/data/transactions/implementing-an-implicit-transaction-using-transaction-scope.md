@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645851"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375250"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  
@@ -41,7 +41,7 @@ ms.locfileid: "54645851"
 ## <a name="rolling-back-a-transaction"></a>Откат транзакции  
  Если требуется откатить транзакцию, не следует вызывать метод <xref:System.Transactions.TransactionScope.Complete%2A> в пределах области транзакции. Например, можно вызвать исключение в пределах области. При этом будет выполнен откат транзакции, в которой участвует область.  
   
-##  <a name="ManageTxFlow"></a> Управление потоком транзакций с помощью объекта TransactionScopeOption  
+## <a name="ManageTxFlow"></a> Управление потоком транзакций с помощью объекта TransactionScopeOption  
  Область транзакции можно сделать вложенной, вызвав метод, использующий объект <xref:System.Transactions.TransactionScope>, из метода, использующего собственную область, как в случае метода `RootMethod` в следующем примере.  
   
 ```csharp  

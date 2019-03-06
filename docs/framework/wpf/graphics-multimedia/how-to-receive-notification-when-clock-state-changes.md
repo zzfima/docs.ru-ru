@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение уведомлений при изменениях состояния часов
+title: Практическое руководство. Получение уведомлений при изменениях состояния часов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - clocks [WPF], notification of state changes
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-ms.openlocfilehash: 116647b6b7df9c012ee7d5f08abd760b7f310f71
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363141"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Как выполнить Получение уведомлений при изменениях состояния часов
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Практическое руководство. Получение уведомлений при изменениях состояния часов
 Часов <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> событие возникает при его <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> становится недействительным, например при запуске или остановке часов. Можно зарегистрировать для этого события напрямую, используя <xref:System.Windows.Media.Animation.Clock>, или с помощью <xref:System.Windows.Media.Animation.Timeline>.  
   
  В следующем примере <xref:System.Windows.Media.Animation.Storyboard> и два <xref:System.Windows.Media.Animation.DoubleAnimation> объекты используются для анимации ширины двух прямоугольников. <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> Событие используется для прослушивания изменений состояния часов.  
   
 ## <a name="example"></a>Пример  
- [!code-xaml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
   
- [!code-csharp[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml.cs#_graphicsmm_stateeventhandlers)]
- [!code-vb[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/stateexample.xaml.vb#_graphicsmm_stateeventhandlers)]  
+ [!code-csharp[timingbehaviors_snip#_graphicsmm_StateEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml.cs#_graphicsmm_stateeventhandlers)]
+ [!code-vb[timingbehaviors_snip#_graphicsmm_StateEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/stateexample.xaml.vb#_graphicsmm_stateeventhandlers)]  
   
  На следующем рисунке показаны различные состояния анимаций введите в качестве родительской временной шкалы (*раскадровки*) продвижения.  
   
- ![Синхронизация состояния для раскадровки с двумя анимациями](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm_3timelines")  
+ ![Синхронизация состояния для раскадровки с двумя анимациями](./media/graphicsmm-3timelines.png "graphicsmm_3timelines")  
   
  В следующей таблице показаны значения времени, по которому *Animation1*в <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> вызывает событие:  
   

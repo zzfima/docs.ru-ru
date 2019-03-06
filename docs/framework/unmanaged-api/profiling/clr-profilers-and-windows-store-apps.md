@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358552"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Профилировщики CLR и приложений Windows Store
 
@@ -126,7 +126,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 Можно использовать <xref:Windows.Management.Deployment.PackageManager> класса, необходимо создать этот список. `PackageManager` — Это класс среды выполнения Windows, которая доступна для классических приложений, и на самом деле это *только* для классических приложений.
 
-В следующем примере кода из гипотетической пользовательского интерфейса Profiler, записывается в виде классического приложения в C# yses `PackageManager` для создания списка приложений Windows:
+В следующем примере кода из гипотетической пользовательского интерфейса Profiler, записывается в виде классического приложения в C# использует `PackageManager` для создания списка приложений Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ WinMD-файлов, таких как обычные модули содержа
 
 Соответствующие дело в том, что вызовы, выполняемые для потоков, созданных средой ваш профилировщик всегда считаются синхронным, даже если эти вызовы будут осуществляться за пределами реализация одного из библиотеки DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) методы. По крайней мере, который используется так. Теперь, когда среда CLR отключил ваш профилировщик потока в управляемый поток из-за вызов [метод ForceGC](icorprofilerinfo-forcegc-method.md), что поток больше не считается ваш профилировщик потока. Таким образом, среда CLR обеспечивает более строгое определение что рассматривается как синхронные, для этого потока, — а именно, вызов должен инициироваться внутри одного из библиотеки DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) методы для определения, как синхронный.
 
-Что это означает на практике? Большинство [ICorProfilerInfo](icorprofilerinfo-interface.md) методы только можно безопасно вызывать асинхронно и сразу же не удастся иначе. Таким образом, если библиотека DLL Profiler повторно использует ваш [метод ForceGC](icorprofilerinfo-forcegc-method.md) потока для других вызовов, обычно выполняется в потоках, созданных с помощью профилировщика (к примеру, чтобы [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), или [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), будет трудно. Даже асинхронной строго типизированную функцию как [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) есть специальные правила, при вызове из управляемых потоков. (См. в записи блога [пошаговый анализ стеков Profiler: основы и более](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) подробнее.)
+Что это означает на практике? Большинство [ICorProfilerInfo](icorprofilerinfo-interface.md) методы только можно безопасно вызывать асинхронно и сразу же не удастся иначе. Таким образом, если библиотека DLL Profiler повторно использует ваш [метод ForceGC](icorprofilerinfo-forcegc-method.md) потока для других вызовов, обычно выполняется в потоках, созданных с помощью профилировщика (к примеру, чтобы [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), или [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), будет трудно. Даже асинхронной строго типизированную функцию как [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) есть специальные правила, при вызове из управляемых потоков. (См. в записи блога [Profiler стеков при помощи: Основы и более](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) подробнее.)
 
 Таким образом, рекомендуется, чтобы любой поток, создает библиотеки DLL Profiler для вызова [метод ForceGC](icorprofilerinfo-forcegc-method.md) следует использовать *только* для запуска сборки мусора и последующего ответа на обратные вызовы сборки Мусора. Его не следует вызывать в API профилирования для выполнения других задач, таких как стек выборки или отсоединения.
 

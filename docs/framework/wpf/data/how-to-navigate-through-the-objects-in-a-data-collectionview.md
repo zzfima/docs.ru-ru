@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Перемещение по объектам в Data CollectionView
+title: Практическое руководство. Перемещение по объектам в Data CollectionView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-ms.openlocfilehash: c7de491a76ba6f8d5164c91f8c20bea4a8fa56d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9272a2f635a62abdac2746f2c8cce515812706f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355783"
 ---
-# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Как выполнить Перемещение по объектам в Data CollectionView
+# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Практическое руководство. Перемещение по объектам в Data CollectionView
 Представления позволяют просматривать по-разному в зависимости от сортировки, фильтрации и группировки же коллекцию данных. Представления также предоставляют понятием текущего указателя записи и включить перемещение указателя. В этом примере показано, как получить текущий объект, а также перемещение по объектам в коллекции данных с помощью функциональных возможностей, предоставляемых в <xref:System.Windows.Data.CollectionView> класса.  
   
 ## <a name="example"></a>Пример  
@@ -26,12 +26,12 @@ ms.locfileid: "54688406"
   
  <xref:System.Windows.Data.CollectionView.CurrentItem%2A> Приведенное свойства представления `Order` для возврата текущего элемента в коллекции.  
   
- [!code-csharp[CollectionView#OnButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
- [!code-vb[CollectionView#OnButton](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
+ [!code-csharp[CollectionView#OnButton](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
+ [!code-vb[CollectionView#OnButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Сортировка данных в представлении](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [Фильтрация данных в представлении](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [Сортировка и группировка данных с помощью представления в XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Сортировка данных в представлении](how-to-sort-data-in-a-view.md)
+- [Фильтрация данных в представлении](how-to-filter-data-in-a-view.md)
+- [Сортировка и группировка данных с помощью представления в XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

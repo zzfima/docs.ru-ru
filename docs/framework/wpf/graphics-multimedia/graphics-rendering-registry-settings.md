@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375354"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "54556159"
   
  Параметр **отключения аппаратного ускорения** позволяет отключить аппаратное ускорение для тестирования и отладки. При появлении артефактов отрисовки в приложении попробуйте отключить аппаратное ускорение. Если артефакт исчезает, проблема может быть связана с видеодрайвером.  
   
- Параметр **отключить аппаратное ускорение** имеет тип DWORD и может принимать значение 0 или 1. Значение 1 отключает аппаратное ускорение. Значение 0 включает аппаратное ускорение, если система соответствует требованиям для аппаратного ускорения; дополнительные сведения см. в разделе [Уровни отрисовки графики](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Параметр **отключить аппаратное ускорение** имеет тип DWORD и может принимать значение 0 или 1. Значение 1 отключает аппаратное ускорение. Значение 0 включает аппаратное ускорение, если система соответствует требованиям для аппаратного ускорения; дополнительные сведения см. в разделе [Уровни отрисовки графики](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Максимальное значение мультисэмплинга  
@@ -98,5 +98,5 @@ ms.locfileid: "54556159"
  Параметр **использовать средство программной прорисовки** принимает значение типа DWORD. Значение 0 указывает, что средство программной прорисовки не используется. Любое другое ненулевое значение приводит к тому, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать средство программной прорисовки.  
   
 ## <a name="see-also"></a>См. также
-- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Уровни графической отрисовки](../advanced/graphics-rendering-tiers.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

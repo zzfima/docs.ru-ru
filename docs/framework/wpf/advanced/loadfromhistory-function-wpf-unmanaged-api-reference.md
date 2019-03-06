@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 42be46d836a299139bded938237fe2a06e9794a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 155b83b8b904350bd6faf73ea21d1db4f83085b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376134"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>Функция LoadFromHistory (WPF Справочник по неуправляемым API)
 Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.  
@@ -37,7 +37,7 @@ HRESULT LoadFromHistory_export(
  Указатель на контекст привязки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. в разделе [системные требования .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. в разделе [системные требования .NET Framework](../../get-started/system-requirements.md).  
   
  **БИБЛИОТЕКА DLL:**  
   
@@ -48,4 +48,4 @@ HRESULT LoadFromHistory_export(
  **Версии платформы .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551691"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362231"
 ---
 # <a name="listbox"></a>ListBox
-Объект <xref:System.Windows.Controls.ListBox> элемент управления предоставляет пользователям список выбираемых элементов.  
+Объект <xref:System.Windows.Controls.ListBox> управления предоставляет пользователям список выбираемых элементов.  
   
- На следующем рисунке показан типичный <xref:System.Windows.Controls.ListBox>.  
+ На следующем рисунке показано типичное <xref:System.Windows.Controls.ListBox>.  
   
- ![Снимок экрана ListBox](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+ ![Снимок экрана ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
 Стандартный элемент управления ListBox  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [Разделы практического руководства](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ListBox>  

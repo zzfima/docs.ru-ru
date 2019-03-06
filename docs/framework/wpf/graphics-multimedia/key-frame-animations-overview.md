@@ -6,19 +6,19 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661598"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362985"
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
 В этом разделе рассказывается об анимации по ключевым кадрам. Методика анимации по ключевым кадрам позволяет использовать более двух целевых значений и контролировать применяемый метод интерполяции.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для понимания предлагаемого материала необходимо знакомство с принципами анимации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и понятием временной шкалы. Общие сведения об анимации см. в разделе [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Также полезно иметь знания по анимации From/To/By. Дополнительные сведения см. в разделе "Общие сведения об анимации From/To/By".  
+ Для понимания предлагаемого материала необходимо знакомство с принципами анимации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и понятием временной шкалы. Общие сведения об анимации см. в разделе [Общие сведения об анимации](animation-overview.md). Также полезно иметь знания по анимации From/To/By. Дополнительные сведения см. в разделе "Общие сведения об анимации From/To/By".  
   
 <a name="whatisakeyframeanimation"></a>   
 ## <a name="what-is-a-key-frame-animation"></a>Что такое анимации по ключевым кадрам?  
@@ -32,13 +32,13 @@ ms.locfileid: "54661598"
   
 -   Для каждого целевого значения создайте ключевой кадр соответствующего типа, задайте для него значение и <xref:System.Windows.Media.Animation.KeyTime>и его добавления анимации <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> коллекции.  
   
--   Свяжите анимацию со свойством так же как при анимации From/To/By. Дополнительные сведения о применении анимации к свойству с помощью раскадровки см. в разделе [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+-   Свяжите анимацию со свойством так же как при анимации From/To/By. Дополнительные сведения о применении анимации к свойству с помощью раскадровки см. в разделе [Общие сведения о раскадровке](storyboards-overview.md).  
   
  В следующем примере используется <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> для анимации <xref:System.Windows.Shapes.Rectangle> элемент в четырех разных местах.  
   
- [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- From/To/By, такие как анимации, анимации по полным кадрам может применяться к свойству с помощью <xref:System.Windows.Media.Animation.Storyboard> в разметке и коде или с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод в коде. Анимации по полным кадрам может также использовать для создания <xref:System.Windows.Media.Animation.AnimationClock> и применить его к одному или нескольким свойствам. Дополнительные сведения о различных способах применения анимации см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ From/To/By, такие как анимации, анимации по полным кадрам может применяться к свойству с помощью <xref:System.Windows.Media.Animation.Storyboard> в разметке и коде или с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод в коде. Анимации по полным кадрам может также использовать для создания <xref:System.Windows.Media.Animation.AnimationClock> и применить его к одному или нескольким свойствам. Дополнительные сведения о различных способах применения анимации см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="key-frame-animation-types"></a>Типы анимации по ключевым кадрам  
@@ -99,7 +99,7 @@ ms.locfileid: "54661598"
   
 -   Наконец, анимация переходит к значению ключевого кадра с наиболее поздним моментом времени, равным или меньшим, чем анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- Если продолжительность анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> — <xref:System.Windows.Duration.Automatic%2A> или его <xref:System.Windows.Media.Animation.Timeline.Duration%2A> равно времени последнего ключевого кадра, анимация завершается. В противном случае, если продолжительность анимации <xref:System.Windows.Duration> больше, чем время последнего ключевого кадра, анимация удерживает значение ключевого кадра, пока не достигнет конца своего <xref:System.Windows.Duration>. Как и анимациях при анимации по ключевым кадрам использует его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства, чтобы определить, является ли он сохраняется ее конечное значение при достижении конца активного периода. Дополнительные сведения см. в разделе [Общие сведения о характере поведения во времени](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
+ Если продолжительность анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> — <xref:System.Windows.Duration.Automatic%2A> или его <xref:System.Windows.Media.Animation.Timeline.Duration%2A> равно времени последнего ключевого кадра, анимация завершается. В противном случае, если продолжительность анимации <xref:System.Windows.Duration> больше, чем время последнего ключевого кадра, анимация удерживает значение ключевого кадра, пока не достигнет конца своего <xref:System.Windows.Duration>. Как и анимациях при анимации по ключевым кадрам использует его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства, чтобы определить, является ли он сохраняется ее конечное значение при достижении конца активного периода. Дополнительные сведения см. в разделе [Общие сведения о характере поведения во времени](timing-behaviors-overview.md).  
   
  В следующем примере используется <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> объект, определенный в предыдущем примере для демонстрации как <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> и <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> работают свойства.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "54661598"
   
 -   Так как <xref:System.Windows.Media.Animation.Timeline.Duration%2A> анимации было установлено на 10 секунд, анимация поддерживает конечное значение для двух секунд до окончания во время = 0:0:10.  
   
- [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
 <a name="interpolationmethods"></a>   
 ## <a name="interpolation-methods"></a>Методы интерполяции  
@@ -155,7 +155,7 @@ ms.locfileid: "54661598"
 ### <a name="splined-interpolation"></a>Интерполяция сплайнами  
  Интерполяция сплайнами может использоваться для достижения более реалистичных временных эффектов. Так как анимация часто используется для имитации эффектов, возникающих в реальном мире, разработчикам могут потребоваться полный контроль над ускорением и замедлением объектов и точная манипуляция временными сегментами. Ключевые кадры-сплайны позволяют выполнять анимацию с интерполяцией сплайнами. С другими ключевыми кадрами задаются <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> и <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. С помощью опорных кадров сплайна, также следует указать <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. В следующем примере показан один сплайновый опорный кадр для <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Обратите внимание, что <xref:System.Windows.Media.Animation.KeySpline> свойство; что отличает ключевой кадр-сплайн от других типов ключевых кадров.  
   
- [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
  Кривая Безье третьего порядка определяется начальной точкой, конечной точкой и двумя контрольными точками. <xref:System.Windows.Media.Animation.KeySpline> Свойство ключевого кадра-сплайна определяет две контрольные точки кривой Безье, которая расширяет от (0,0) и (1,1). Первая контрольная точка управляет коэффициентом кривизны первой половины кривой Безье, а вторая контрольная точка — коэффициентом кривизны второй половины сегмента. Полученная кривая описывает скорость изменения для этого ключевого кадра-сплайна. Чем круче кривая, тем быстрее ключевой кадр изменяет свои значения. Когда кривая становится более пологой, ключевой кадр медленнее изменяет свои значения.  
   
@@ -163,25 +163,25 @@ ms.locfileid: "54661598"
   
  В следующем примере задается <xref:System.Windows.Media.Animation.KeySpline> 0,1 1,0, которое создает следующую кривую Безье.  
   
- ![Кривая Безье](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")  
+ ![Кривая Безье](./media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")  
 Ключевой сплайн с контрольными точками (0,0, 1,0) и (1,0, 0,0)  
   
- [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
  Этот ключевой кадр вначале выполняет быстрое движение, затем замедляется и снова ускоряется перед завершением.  
   
  В следующем примере задается <xref:System.Windows.Media.Animation.KeySpline> из 0.75,1.0 0.5,0.25, который создает следующую кривую Безье.  
   
- ![Кривая Безье](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")  
+ ![Кривая Безье](./media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")  
 Ключевой сплайн с контрольными точками (0,25, 0,5) и (0,75, 1,0)  
   
- [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
  Так как кривизна кривой Безье изменяется незначительно, этот ключевой кадр выполняет движение почти с постоянной скоростью, несколько замедляясь перед завершением.  
   
  В следующем примере используется <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> для анимации положения прямоугольника. Так как <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> использует <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> объектов, переход от одного значения ключевого кадра использует интерполяцию сплайнами.  
   
- [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
+ [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
  Интерполяцию сплайнами не так просто понять. Попробуйте поэкспериментировать с различными параметрами. [Пример анимации по ключевым сплайнам](https://go.microsoft.com/fwlink/?LinkID=160011) позволяет, изменяя значения ключевого сплайна, просмотреть результат на анимации.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "54661598"
   
  В следующем примере <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> создается, используется линейная, сплайнами и дискретную интерполяцию.  
   
- [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
+ [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
 <a name="keytimes"></a>   
 ## <a name="more-about-duration-and-key-times"></a>Дополнительные сведения о длительности и временной шкале  
@@ -212,7 +212,7 @@ ms.locfileid: "54661598"
   
 -   Четвертый ключевой кадр выполняет анимацию от 500 до 600. Она запускается после окончания третьего ключевого кадра (в момент времени 9 секунд), выполняется в течение 1 секунды и заканчивается в момент времени = 0:0:10.  
   
- [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Значения в процентах  
  Процентное значение указывает, что окончания опорного кадра в определенный процент анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] значение в процентах указывается как число, за которым следует символ `%`. В коде используйте <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> метод и передать его <xref:System.Double> в процентах. Значение должно быть больше или равно 0 и меньше или равно 100 %. В следующем примере показана анимация длительностью 10 секунд с четырьмя ключевыми кадрами, время которых указывается в виде значений в процентах.  
@@ -225,7 +225,7 @@ ms.locfileid: "54661598"
   
 -   Четвертый ключевой кадр выполняет анимацию от 500 до 600. Она запускается после окончания третьего ключевого кадра (в момент времени 9 секунд), выполняется в течение 1 секунды и заканчивается в момент времени = 0:0:10 (1 * 10 = 10).  
   
- [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
 ### <a name="special-value-uniform"></a>Специальное значение, равномерный метод  
  Используйте <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> о времени, когда требуется, чтобы каждый опорный кадр продолжался одинаковое время.  
@@ -240,14 +240,14 @@ ms.locfileid: "54661598"
   
 -   Четвертый ключевой кадр выполняет анимацию от 500 до 600. Она запускается после окончания второго ключевого кадра (в момент времени 7,5 секунды), выполняется в течение 2,5 секунд и заканчивается в момент времени = 0:0:1.  
   
- [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
 ### <a name="special-value-paced"></a>Определенное значение, пошаговый метод  
  Используйте <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> о времени, когда требуется анимировать с постоянной скоростью.  
   
  Объект <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ключевое время выделяет доступное время в соответствии с длиной каждого ключевого кадра для определения длительности каждого кадра.  Это приводит к тому, что скорость или темп анимации остается постоянной.  Ниже примере показана анимация длительностью 10 секунд и три ключевых кадра, время задаются в виде <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
- [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
+ [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
  Обратите внимание, что, если время последнего ключевого кадра является <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> или <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, его расчетное время будет задано до 100 процентов. Если первый ключевой кадр в многокадровой анимации является пошаговым, его расчетное время будет задано в размере 0. (Если коллекция ключевых кадров содержит только один кадр и этот кадр пошаговый, его расчетное время будет задано в размере 100 %.)  
   
@@ -289,7 +289,7 @@ ms.locfileid: "54661598"
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Пример анимации ключевого сплайна](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
-- [Общие сведения о характере поведения во времени](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)
+- [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

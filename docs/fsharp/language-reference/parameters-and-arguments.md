@@ -2,12 +2,12 @@
 title: Параметры и аргументы
 description: Дополнительные сведения о F# поддержка языков для определения параметров и передачи аргументов в функции, методы и свойства.
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352287"
 ---
 # <a name="parameters-and-arguments"></a>Параметры и аргументы
 
@@ -135,17 +135,17 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-Можно также указать новый объект как значение параметра по умолчанию. Например `Foo` член может иметь необязательный `CanceallationToken` как входной вместо:
+Можно также указать новый объект как значение параметра по умолчанию. Например `Foo` член может иметь необязательный `CancellationToken` как входной вместо:
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

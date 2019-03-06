@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352026"
 ---
 # <a name="optimizing-performance-data-binding"></a>Оптимизация производительности: Привязка данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -74,14 +74,14 @@ ms.locfileid: "54668019"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет привязать данные к содержимому [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]; однако привязка данных к содержимому [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] выполняется медленнее, чем привязка данных к объектам [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Не преобразуйте данные объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] в XML, если единственной целью этого является привязка данных.  
   
 ## <a name="see-also"></a>См. также
-- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Пошаговое руководство: Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
+- [Планирование производительности приложения](planning-for-application-performance.md)
+- [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
+- [Разметка и разработка](optimizing-performance-layout-and-design.md)
+- [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
+- [Поведение объекта](optimizing-performance-object-behavior.md)
+- [Ресурсы приложений](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
+- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

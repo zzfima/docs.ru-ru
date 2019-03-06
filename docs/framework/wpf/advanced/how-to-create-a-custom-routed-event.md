@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание пользовательских перенаправленных событий
+title: Практическое руководство. Создание пользовательских перенаправленных событий
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: f6d043dc2975770fe9111c6266096eefb3fe15b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373404"
 ---
-# <a name="how-to-create-a-custom-routed-event"></a>Как выполнить Создание пользовательских перенаправленных событий
+# <a name="how-to-create-a-custom-routed-event"></a>Практическое руководство. Создание пользовательских перенаправленных событий
 Пользовательское событие поддерживало маршрутизацию событий, необходимо зарегистрировать <xref:System.Windows.RoutedEvent> с помощью <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> метод. В этом примере демонстрируются основные принципы создания пользовательских перенаправленных событий.  
   
 ## <a name="example"></a>Пример  
@@ -25,16 +25,16 @@ ms.locfileid: "54671698"
   
  Обратите внимание, что по сути, в этом примере реализуется весь подкласс <xref:System.Windows.Controls.Button>; Этот подкласс создается в виде отдельной сборки, а затем создается экземпляр в виде пользовательского класса на отдельном [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы. Это призвано проиллюстрировать тот факт, что производные от классов элементы управления можно вставлять в деревья, состоящие из других элементов управления, и что в этой ситуации пользовательские события в этих элементах управления имеют те же функции маршрутизации событий, что и собственный элемент [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
- [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
+ [!code-csharp[RoutedEventCustom#CustomClass](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
+ [!code-vb[RoutedEventCustom#CustomClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
  События нисходящей маршрутизации создаются таким же способом, но с <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> присвоено <xref:System.Windows.RoutingStrategy.Tunnel> в вызове регистрации. По соглашению события нисходящей маршрутизации в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют префикс Preview.  
   
- Пример функционирования восходящей маршрутизации событий см. в разделе [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ Пример функционирования восходящей маршрутизации событий см. в разделе [Обработка перенаправленных событий](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Общие сведения о перенаправленных событиях](routed-events-overview.md)
+- [Общие сведения о входных данных](input-overview.md)
+- [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md)

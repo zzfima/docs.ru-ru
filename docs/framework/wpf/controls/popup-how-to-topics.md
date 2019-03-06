@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553719"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362530"
 ---
 # <a name="popup-how-to-topics"></a>Разделы практического руководства, посвященные всплывающему меню
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Primitives.Popup> элемента управления для отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.Primitives.Popup> управления для отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Анимация контекстного меню](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [Определение пользовательского расположения контекстного меню](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [Анимация контекстного меню](how-to-animate-a-popup.md)  
+ [Определение пользовательского расположения контекстного меню](how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Общие сведения о контекстном меню](popup-overview.md)

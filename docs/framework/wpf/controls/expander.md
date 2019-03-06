@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371948"
 ---
 # <a name="expander"></a>Expander
-<xref:System.Windows.Controls.Expander> Позволяет пользователю просмотреть заголовок и развернуть заголовок, чтобы просмотреть дополнительные сведения, или свернуть раздел до заголовка.  
+<xref:System.Windows.Controls.Expander> Позволяет пользователю просмотреть заголовок и развернуть заголовок, чтобы просмотреть дополнительные сведения или свернуть раздел до заголовка.  
   
  Ниже приведен пример этого элемента управления в развернутом положении.  
   
- ![Пример расширителя](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Пример расширителя](./media/expanderexample.JPG "ExpanderExample")  
 Expander - элемент управления  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о расширителе](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Общие сведения о расширителе](expander-overview.md)  
+ [Разделы практического руководства](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Expander>  

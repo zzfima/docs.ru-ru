@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524004"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352000"
 ---
 # <a name="property-change-events"></a>События изменения свойств
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] определяет несколько событий, которые возникают в ответ на изменение значения свойства. Часто этим свойством является свойство зависимостей. Самим событием иногда является перенаправляемое событие, а иногда — стандартное событие [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Определение события зависит от сценария, так как некоторые изменения свойств лучше перенаправлять через дерево элементов, тогда как другие в основном влияют только на объект, в котором это свойство изменено.  
@@ -33,7 +33,7 @@ ms.locfileid: "54524004"
   
  Поскольку имеется старое и новое значение, то может казаться заманчивым использовать этот обработчик событий в качестве проверяющего элемента управления для значения свойства. Однако большинство событий изменения свойств создается не для этого. Как правило, предоставляются значения, на основе которых можно действовать в других логических областях кода, но на самом деле изменение значений из обработчика событий не рекомендуется и может привести к непреднамеренной рекурсии в зависимости от реализации обработчика.  
   
- Если свойство является пользовательское свойство зависимости, или вы работаете с производным классом где определен код создания экземпляра, существует гораздо лучший механизм отслеживания изменений свойств, встроенной в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы свойств: обратные вызовы системы свойств <xref:System.Windows.CoerceValueCallback> и <xref:System.Windows.PropertyChangedCallback>. Дополнительные сведения об использовании системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для проверки и приведения см. в разделах [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) и [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Если свойство является пользовательское свойство зависимости, или вы работаете с производным классом где определен код создания экземпляра, существует гораздо лучший механизм отслеживания изменений свойств, встроенной в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы свойств: обратные вызовы системы свойств <xref:System.Windows.CoerceValueCallback> и <xref:System.Windows.PropertyChangedCallback>. Дополнительные сведения об использовании системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для проверки и приведения см. в разделах [Проверка и обратные вызовы свойства зависимостей](dependency-property-callbacks-and-validation.md) и [Пользовательские свойства зависимостей](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>События DependencyPropertyChanged  
  Другая пара типов, которые являются частью сценария события изменения свойств является <xref:System.Windows.DependencyPropertyChangedEventArgs> и <xref:System.Windows.DependencyPropertyChangedEventHandler>. События для этих изменений свойств не перенаправляются; это стандартные события [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. <xref:System.Windows.DependencyPropertyChangedEventArgs> является типом отчетов, так как он является производным от данных необычные события <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> — это структура, а не класс.  
@@ -59,8 +59,8 @@ ms.locfileid: "54524004"
   
  Триггеры свойств, как правило, подходят для сценариев, в которых одно или несколько свойств Appearance должны изменяться в зависимости от состояния другого свойства в том же элементе.  
   
- Дополнительные сведения о триггерах свойств см. в разделе [Использование стилей и шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Дополнительные сведения о триггерах свойств см. в разделе [Использование стилей и шаблонов](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Общие сведения о перенаправленных событиях](routed-events-overview.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)

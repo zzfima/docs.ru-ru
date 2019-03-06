@@ -17,45 +17,49 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52f3f382e022600e946a4c8f531f4eea5f3d8a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fefbab6b2ea9fbbfd90e03c41578a924f99c7a0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364168"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Метод IMetaDataTables::GetUserString
-Получает жестко заданную строку по указанному индексу в строковый столбец в текущей области.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT GetUserString (  
-    [in]  ULONG       ixUserString,  
-    [out] ULONG       *pcbData,  
-    [out] const void  **ppData  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `ixUserString`  
- [in] Значение индекса, из которого извлекается строка жестко.  
-  
- `pcbData`  
- [out] Чистые; ointer размеру `ppData`.  
-  
- `ppData`  
- [out] Указатель на указатель возвращаемой строки.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** Cor.h  
-  
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+Получает жестко заданную строку по указанному индексу в строковый столбец в текущей области.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT GetUserString (
+    [in]  ULONG       ixUserString,
+    [out] ULONG       *pcbData,
+    [out] const void  **ppData
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+`ixUserString`\
+[in] Значение индекса, из которого извлекается строка жестко.
+
+`pcbData`\
+[out] Указатель на размер `ppData`.
+
+`ppData`\
+[out] Указатель на указатель возвращаемой строки.
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** Cor.h
+
+**Библиотека:** Используется как ресурс в MsCorEE.dll
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>См. также
-- [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+
+- [Интерфейс IMetaDataTables](imetadatatables-interface.md)
+- [Интерфейс IMetaDataTables2](imetadatatables2-interface.md)

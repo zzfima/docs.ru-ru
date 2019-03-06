@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670320"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352338"
 ---
 # <a name="drawings-how-to-topics"></a>Разделы руководства, посвященные изображениям
 В этом разделе описываются способы использования <xref:System.Windows.Media.Drawing> объектов для рисования фигур, изображений и текста.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Применение объекта GuidelineSet к рисунку](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [Создание составного рисунка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [Создание объекта GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [Рисование изображения с помощью объекта ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [Воспроизведение мультимедиа с помощью объекта VideoDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [Использование рисунка в качестве источника изображения](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [Применение объекта GuidelineSet к рисунку](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [Создание составного рисунка](how-to-create-a-composite-drawing.md)  
+  [Создание объекта GeometryDrawing](how-to-create-a-geometrydrawing.md)  
+  [Рисование изображения с помощью объекта ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
+  [Воспроизведение мультимедиа с помощью объекта VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
+  [Использование рисунка в качестве источника изображения](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Drawing>
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Графика и мультимедиа](index.md)

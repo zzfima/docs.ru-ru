@@ -16,40 +16,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594646"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360446"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Перечисление CorThreadSafetyOptions
-Задает флаги для выбора параметров безопасности потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-typedef enum CorThreadSafetyOptions {  
-    MDThreadSafetyDefault       = 0x00000000,  
-    MDThreadSafetyOff           = 0x00000000,  
-    MDThreadSafetyOn            = 0x00000001,  
-} CorThreadSafetyOptions;  
-```  
-  
-## <a name="members"></a>Участники  
-  
-|Член|Описание:|  
-|------------|-----------------|  
-|`MDThreadSatetyDefault`|Значение по умолчанию. Эквивалентно `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Указывает, что нельзя установить блокировку потоков чтения/записи.|  
-|`MDThreadSatetyOn`|Указывает, что блокировки потоков чтения/записи может быть задано.|  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorHdr.h  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Задает флаги для выбора параметров безопасности потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+typedef enum CorThreadSafetyOptions {
+    MDThreadSafetyDefault       = 0x00000000,
+    MDThreadSafetyOff           = 0x00000000,
+    MDThreadSafetyOn            = 0x00000001,
+} CorThreadSafetyOptions;
+```
+
+## <a name="members"></a>Участники
+
+|Член|Описание:|
+|------------|-----------------|
+|`MDThreadSafetyDefault`|Значение по умолчанию. Эквивалентно `MDThreadSafetyOff`.|
+|`MDThreadSafetyOff`|Указывает, что нельзя установить блокировку потоков чтения/записи.|
+|`MDThreadSafetyOn`|Указывает, что блокировки потоков чтения/записи может быть задано.|
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** CorHdr.h
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

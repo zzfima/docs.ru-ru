@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545229"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359410"
 ---
 # <a name="calendar"></a>Календарь
 Календарь позволяет пользователю выбрать дату с помощью визуального отображения календаря.  
@@ -19,7 +19,7 @@ ms.locfileid: "54545229"
   
  На следующем рисунке показаны два <xref:System.Windows.Controls.Calendar> элементы управления, одна с выбранными и затемненными датами и без.  
   
- ![Элементы управления календаря](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Элементы управления календаря](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Элементы управления календаря  
   
  Следующая таблица содержит сведения о задачах, которые обычно связаны с <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ ms.locfileid: "54545229"
 |ПРОБЕЛ или ввод|<xref:System.Windows.Controls.CalendarMode.Year> или <xref:System.Windows.Controls.CalendarMode.Decade>|Коммутаторы <xref:System.Windows.Controls.Calendar.DisplayMode%2A> для <xref:System.Windows.Controls.CalendarMode.Month> или <xref:System.Windows.Controls.CalendarMode.Year> представленный элемент, имеющий фокус.|  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Элементы управления](index.md)
+- [Стилизация и использование шаблонов](styling-and-templating.md)

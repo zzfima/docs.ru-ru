@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360983"
 ---
 # <a name="fonts-wpf"></a>Шрифты (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает поддержку представление форматированного текста с помощью [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты. Стандартный пакет [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты входит в состав [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Упаковка шрифтов с приложениями](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [Пакет образцов шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [Возможности шрифта OpenType](opentype-font-features.md)  
+ [Упаковка шрифтов с приложениями](packaging-fonts-with-applications.md)  
+ [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md)  
+ [Разделы практического руководства](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Документы в WPF](documents-in-wpf.md)
+- [Оформление в WPF](typography-in-wpf.md)

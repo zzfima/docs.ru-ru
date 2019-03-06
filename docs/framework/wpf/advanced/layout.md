@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738830"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369855"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -41,22 +41,22 @@ ms.locfileid: "54738830"
   
  На рисунке ниже представлен простой макет.  
   
- ![Обычная сетка без ограничивающего прямоугольника.](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Обычная сетка без ограничивающего прямоугольника.](./media/boundingbox1.png "boundingbox1")  
   
  Этот макет можно получить с помощью приведенного ниже кода [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Один <xref:System.Windows.Controls.TextBlock> элемент размещается внутри <xref:System.Windows.Controls.Grid>. Хотя текст заполняет только верхний левый угол первого столбца, выделенное пространство для <xref:System.Windows.Controls.TextBlock> самом деле гораздо больше. Ограничивающий прямоугольник любого <xref:System.Windows.FrameworkElement> можно получить с помощью <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> метод. На следующем рисунке показан ограничивающий прямоугольник для <xref:System.Windows.Controls.TextBlock> элемент.  
   
- ![Теперь ограничивающий прямоугольник для TextBlock отображается.](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![Теперь ограничивающий прямоугольник для TextBlock отображается.](./media/boundingbox2.png "boundingbox2")  
   
  Как показано желтым прямоугольником, выделенное пространство для <xref:System.Windows.Controls.TextBlock> элемент деле гораздо больше, чем кажется. При добавлении дополнительных элементов <xref:System.Windows.Controls.Grid>, это выделение может сжиматься или растягиваться в зависимости от типа и размера добавляемых элементов.  
   
  Ячейка макета элемента <xref:System.Windows.Controls.TextBlock> преобразуется в <xref:System.Windows.Shapes.Path> с помощью <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> метод. Этот способ может быть полезен для отображения ограничивающего прямоугольника элемента.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>Система макета  
@@ -122,7 +122,7 @@ ms.locfileid: "54738830"
   
 -   Следует учитывать, что определенные изменения значений свойств могут привести к выполнению системой макета рекурсивного обновления.  
   
-     Свойства зависимостей, значения которых могут привести к инициализации системы макета, помечаются общими флагами. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> и <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> предоставляют полезные указания о том, какое свойство изменяется вызовут рекурсивное обновление системой макета. Как правило, должен иметь любое свойство, которое может повлиять на размер ограничивающего прямоугольника элемента <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> флаг задано значение true. Дополнительные сведения см. в [обзоре свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Свойства зависимостей, значения которых могут привести к инициализации системы макета, помечаются общими флагами. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> и <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> предоставляют полезные указания о том, какое свойство изменяется вызовут рекурсивное обновление системой макета. Как правило, должен иметь любое свойство, которое может повлиять на размер ограничивающего прямоугольника элемента <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> флаг задано значение true. Дополнительные сведения см. в [обзоре свойств зависимостей](dependency-properties-overview.md).  
   
 -   По возможности используйте <xref:System.Windows.UIElement.RenderTransform%2A> вместо <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "54738830"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Что дальше?  
- Понимание механизма измерения и упорядочивания элементов — это первый шаг к пониманию макета. Дополнительные сведения о доступных <xref:System.Windows.Controls.Panel> элементов, см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md). Чтобы лучше понять различные свойства размещения, которые могут повлиять на макет, см. раздел [Общие сведения о свойствах Alignment, Margin, Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Пример настраиваемого <xref:System.Windows.Controls.Panel> элемент, см. в разделе [пример Custom Radial Panel](https://go.microsoft.com/fwlink/?LinkID=159982). Когда будете готовы к помещению все вместе в облегченное приложение, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Понимание механизма измерения и упорядочивания элементов — это первый шаг к пониманию макета. Дополнительные сведения о доступных <xref:System.Windows.Controls.Panel> элементов, см. в разделе [Общие сведения о панелях](../controls/panels-overview.md). Чтобы лучше понять различные свойства размещения, которые могут повлиять на макет, см. раздел [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md). Пример настраиваемого <xref:System.Windows.Controls.Panel> элемент, см. в разделе [пример Custom Radial Panel](https://go.microsoft.com/fwlink/?LinkID=159982). Когда будете готовы к помещению все вместе в облегченное приложение, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Общие сведения о свойствах Alignment, Margin, Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Общие сведения о панелях](../controls/panels-overview.md)
+- [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md)
+- [Разметка и разработка](optimizing-performance-layout-and-design.md)

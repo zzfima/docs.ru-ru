@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Кодирование и декодирование изображения в формате JPEG
+title: Практическое руководство. Кодирование и декодирование изображения в формате JPEG
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JPEG decoding [WPF]
 - JPEG encoding [WPF]
 ms.assetid: b8cfde37-9f68-4911-a05e-51d8d7bdec7b
-ms.openlocfilehash: db42411f71e2934f3e5f86a06f434da220f1882e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f64ef8537f22ea996cbcf274885de1f3968267a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373794"
 ---
-# <a name="how-to-encode-and-decode-a-jpeg-image"></a>Как выполнить Кодирование и декодирование изображения в формате JPEG
+# <a name="how-to-encode-and-decode-a-jpeg-image"></a>Практическое руководство. Кодирование и декодирование изображения в формате JPEG
 
 Следующие примеры показывают, как декодировать и кодировать изображение JPEG, используя заданный <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> и <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> объектов.  
   
@@ -42,4 +42,4 @@ ms.locfileid: "54603512"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Общие сведения об обработке изображений](imaging-overview.md)

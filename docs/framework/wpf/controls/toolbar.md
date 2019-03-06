@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361932"
 ---
 # <a name="toolbar"></a>ToolBar
-<xref:System.Windows.Controls.ToolBar> Управления является контейнером для группы команд или элементов управления, которые обычно связаны по функциональности.  
+<xref:System.Windows.Controls.ToolBar> Управления — это контейнер для группы команд или элементов управления, обычно возникающих в их функции.  
   
- На следующих рисунках горизонтальные и вертикальные <xref:System.Windows.Controls.ToolBar> элементов управления.  
+ На следующих рисунках показаны горизонтальные и вертикальные <xref:System.Windows.Controls.ToolBar> элементов управления.  
   
- ![Горизонтальная панель инструментов](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![Горизонтальная панель инструментов](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Горизонтальная панель инструментов  
   
- ![Вертикальная панель инструментов](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
-Вертикальная панель инструментов  
+ ![Вертикальной панели инструментов](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+Вертикальной панели инструментов  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о панели инструментов](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Определение стиля элементов управления на панели инструментов](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Общие сведения о панели инструментов](toolbar-overview.md)  
+  [Определение стиля элементов управления на панели инструментов](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ToolBar>  

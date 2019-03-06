@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353066"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя Windows Presentation Foundation (WPF) предоставляет широкий набор служб безопасности, предусмотрена также возможность средства безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
   
- ![Иллюстрация системы безопасности WPF](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Иллюстрация системы безопасности WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  В остальной части этого раздела рассматриваются компоненты на каждом из этих уровней, относящихся к [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -140,14 +140,14 @@ ms.locfileid: "56836348"
   
  На следующем рисунке показано отношение между зонами, наборами разрешений, разрешениями и ресурсами.  
   
- ![Наборы разрешений CAS](../../../docs/framework/wpf/media/caspermissionsets.png "CASPermissionSets")  
+ ![Наборы разрешений CAS](./media/caspermissionsets.png "CASPermissionSets")  
   
  Ограничения песочницы безопасности зоны Интернета в равной степени применяются к любому коду, который [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] импортирует из системной библиотеки, включая [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Это гарантирует, что каждый бит кода блокируется, даже [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. К сожалению, чтобы иметь возможность выполнения, [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] необходимо выполнять функции, которым требуется больше разрешений, чем те, которые включены в песочнице безопасности зоны Интернета.  
   
  Рассмотрим приложение [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], в котором имеется следующая страница:  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Для выполнения этого [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] базовый код [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] должен выполнить больше функций, чем доступно вызываемому [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], в том числе:  
   
@@ -165,8 +165,8 @@ ms.locfileid: "56836348"
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] выполняет это с помощью **Assert** метод разрешения. В следующем примере кода показано, как это происходит.  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  **Assert** сущности, предотвращает ограничение неограниченных разрешений, необходимых [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Интернет не будучи ограниченными разрешениями зоны [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
   
@@ -182,7 +182,7 @@ ms.locfileid: "56836348"
 ### <a name="security-critical-methodology"></a>Методология, критическая с точки зрения безопасности  
  В отношении кода [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], который использует разрешения для включения песочницы зоны Интернета для приложений [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], должна поддерживаться наивысшая возможная степень аудита и контроля безопасности. Для облегчения этого требования, .NET Framework обеспечивает новую поддержку для управляемого кода, который повышает привилегии. В частности [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] позволяет определить код, который повышает привилегии и пометьте его атрибутом <xref:System.Security.SecurityCriticalAttribute>; любой код, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute> становится *прозрачного* использовании этой методологии. В свою очередь, управляемому коду, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute>, запрещено повышать привилегии.  
   
- С точки зрения безопасности методологии, позволяет организацию [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] кода, который повышает привилегии в *с точки зрения безопасности ядра*, а остальное остается прозрачным. Изоляция кода, с точки зрения безопасности позволяет [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] командой инженеров сосредоточиться дополнительный анализ и источника контроль безопасности с точки зрения безопасности ядре, критическом стандартных методов безопасности (см. в разделе [стратегия безопасности WPF — Проектирование безопасности](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)).  
+ С точки зрения безопасности методологии, позволяет организацию [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] кода, который повышает привилегии в *с точки зрения безопасности ядра*, а остальное остается прозрачным. Изоляция кода, с точки зрения безопасности позволяет [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] командой инженеров сосредоточиться дополнительный анализ и источника контроль безопасности с точки зрения безопасности ядре, критическом стандартных методов безопасности (см. в разделе [стратегия безопасности WPF — Проектирование безопасности](wpf-security-strategy-security-engineering.md)).  
   
  Обратите внимание на то, что платформа .NET Framework позволяет доверенному коду расширять [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] песочнице зоны Интернета, позволяя разработчикам создавать управляемые сборки, которые помечены атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) и развертываются для пользователя глобального кэша СБОРОК. Пометка сборки атрибутом APTCA является исключительно важной операцией безопасности, так как позволяет вызывать эту сборку любому коду, включая вредоносный код из Интернета. При этом необходимо использовать особую осторожность и рекомендации, и пользователи должны указывать, что доверяют этому программному обеспечению, чтобы установить его.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "56836348"
   
 ## <a name="see-also"></a>См. также
 - [Общие сведения о безопасности в Microsoft Internet Explorer 6 в Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)
-- [Безопасность](../../../docs/framework/wpf/security-wpf.md)
-- [Безопасность частичного доверия в WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [Стратегия безопасности WPF — проектирование безопасности](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Управление доступом для кода](../misc/code-access-security.md)
+- [Безопасность](security-wpf.md)
+- [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)
+- [Стратегия безопасности WPF — проектирование безопасности](wpf-security-strategy-security-engineering.md)

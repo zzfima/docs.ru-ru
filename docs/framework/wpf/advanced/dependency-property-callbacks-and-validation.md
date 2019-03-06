@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363934"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Проверка и обратные вызовы свойства зависимостей
 В этом разделе описывается создание свойства зависимостей с помощью альтернативных пользовательских реализаций функций, связанных со свойствами, таких как определение проверки, обратные вызовы, которые совершаются при каждом изменении эффективного значения свойства, и переопределение возможных внешних влияний на определение значения. В этом разделе также рассматриваются сценарии, в которых подходит расширение стандартных правил для системы свойств с помощью этих методов.  
@@ -25,14 +25,14 @@ ms.locfileid: "54576464"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- В этом разделе предполагается, что вы понимаете основные сценарии реализации свойства зависимостей и способы применения метаданных к настраиваемому свойству зависимостей. Дополнительные сведения см. в разделах [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) и [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ В этом разделе предполагается, что вы понимаете основные сценарии реализации свойства зависимостей и способы применения метаданных к настраиваемому свойству зависимостей. Дополнительные сведения см. в разделах [Пользовательские свойства зависимостей](custom-dependency-properties.md) и [Метаданные свойства зависимостей](dependency-property-metadata.md).  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Обратные вызовы проверки  
  Обратные вызовы проверки можно назначить свойству зависимостей при первой регистрации. Обратный вызов проверки не является частью метаданных свойства; Это прямой ввод <xref:System.Windows.DependencyProperty.Register%2A> метод. Поэтому после того, как будет создан обратный вызов проверки для свойства зависимостей, он уже не может быть переопределен новой реализацией.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Обратные вызовы реализуются так, что они получают значение объекта. Они возвращают `true`, если полученное значение является допустимым для свойства. В противном случае — возвращают `false`. Предполагается, что свойство принадлежит допустимому типу (зарегистрированному в системе свойств), поэтому проверка типов в обратных вызовах обычно не выполняется. Обратные вызовы используются системой свойств в различных операциях. Сюда входят инициализация типов по значению по умолчанию, программное изменение путем вызова <xref:System.Windows.DependencyObject.SetValue%2A>, или попытка переопределить метаданные с помощью нового значения по умолчанию. Если обратный вызов проверки совершается любой из этих операций и возвращает `false`, вызывается исключение. Программисты должны быть готовы обрабатывать эти исключения. Обычно обратные вызовы проверки используются для проверки значений перечислений или для ограничения значений целых чисел, когда это свойство задает измерения, которые должны быть больше или равны нулю.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "54576464"
   
  Ниже приведен пример кода для обратного вызова сценария очень простой проверки: проверка того, свойства, который типизируется как <xref:System.Double> -примитив не <xref:System.Double.PositiveInfinity> или <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Обратные вызовы с привязкой к значению и события изменения свойств  
@@ -51,18 +51,18 @@ ms.locfileid: "54576464"
   
  Ниже приведен пример очень краткого кода для одного из трех свойств зависимостей, иллюстрирующий эту связь. В примере показано, как регистрируется свойство `CurrentReading` для набора связанных свойств (максимальное, минимальное, текущее) объекта *Reading. Он использует проверку, как это показано в предыдущем разделе.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Обратный вызов при изменении свойства текущего объекта используется для пересылки изменений в другие зависимые свойства путем явного выполнения обратных вызовов с привязкой к значению, зарегистрированных для этих свойств.  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  При выполнении обратных вызовов с привязкой к значению проверяются значения свойств, от которых потенциально зависит текущее свойство, и принудительно изменяется его значение при необходимости.  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  Значения свойств по умолчанию не изменяются. Значение свойства равно значению по умолчанию может произойти, если значение свойства по-прежнему имеет его первоначальное значение по умолчанию, или через Очистка других значений с <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ ms.locfileid: "54576464"
  Система свойств будет рассматривать любой <xref:System.Windows.CoerceValueCallback> , возвращающий значение <xref:System.Windows.DependencyProperty.UnsetValue> как особый случай. Это особый случай означает, что изменение свойства, которое привело к <xref:System.Windows.CoerceValueCallback> должно быть отклонено системой свойств, и система свойств вместо этого может сообщить предыдущее значение свойства. Этот механизм можно использовать для того, чтобы убедиться, что изменения свойства, инициированные асинхронно, все еще действительны для текущего состояния объекта, и, если это не так, запретить эти изменения. Другой возможный сценарий. Вы можете выборочно запретить значения в зависимости от того, какой компонент определения значения свойства отвечает за переданное значение. Чтобы сделать это, можно использовать <xref:System.Windows.DependencyProperty> переданной функции обратного вызова и идентификатор свойства как входные данные для <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, а затем обработать <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Метаданные свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Метаданные свойства зависимостей](dependency-property-metadata.md)
+- [Пользовательские свойства зависимостей](custom-dependency-properties.md)
