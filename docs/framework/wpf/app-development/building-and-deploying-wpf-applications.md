@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547145"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368055"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Построение и развертывание приложений WPF
 Сборки и развертывания модели предоставляет возможность создания и развертывания приложений локально и удаленно, включая следующие:  
   
--   MSBuild: системы, расположенного в пространстве имен Microsoft.Build.Tasks.Windows сборки .NET.  
+-   MSBuild: системы, расположенных в пространстве имен Microsoft.Build.Tasks.Windows сборки .NET.  
   
 -   Ресурсы: работа с ресурсами пользовательского интерфейса.  
   
 -   Развертывание ClickOnce: публикация и развертывание системы .NET.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Развертывание приложений WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Построение приложения WPF](building-a-wpf-application-wpf.md)  
+ [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)  
+ [Разделы практического руководства](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  MSBuild  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Windows в WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [Размещение](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [Общие сведения об управлении приложением](application-management-overview.md)  
+  [Windows в WPF](windows-in-wpf-applications.md)  
+  [Общие сведения о переходах](navigation-overview.md)  
+  [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md)  
+  [Размещение](hosting-wpf-applications.md)

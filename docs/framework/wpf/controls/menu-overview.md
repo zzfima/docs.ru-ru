@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: b1f3889803ba681542349443276041d312293bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626879"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360953"
 ---
 # <a name="menu-overview"></a>Обзор меню
 <xref:System.Windows.Controls.Menu> Класс позволяет организовывать элементы, связанные с командами и обработчиками событий в иерархическом порядке. Каждый <xref:System.Windows.Controls.Menu> элемент содержит коллекцию <xref:System.Windows.Controls.MenuItem> элементов.  
@@ -24,10 +24,10 @@ ms.locfileid: "54626879"
 ## <a name="creating-menus"></a>Создание меню  
  В следующем примере создается <xref:System.Windows.Controls.Menu> для операций с текстом в <xref:System.Windows.Controls.TextBox>. <xref:System.Windows.Controls.Menu> Содержит <xref:System.Windows.Controls.MenuItem> объектов, использующих <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, и <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> свойства и <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, и <xref:System.Windows.Controls.MenuItem.Click> события.  
   
- [!code-xaml[MenuItemCommandsAndEvents#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+ [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
   
- [!code-csharp[MenuItemCommandsAndEvents#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
- [!code-vb[MenuItemCommandsAndEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="menus_with_shortcutkeys"></a>   
 ## <a name="menuitems-with-keyboard-shortcuts"></a>Элементы MenuItems с сочетаниями клавиш  
@@ -37,15 +37,15 @@ ms.locfileid: "54626879"
 ### <a name="inputgesturetext"></a>InputGestureText  
  В следующем примере показано, как использовать <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> свойство, чтобы назначить сочетания клавиш для <xref:System.Windows.Controls.MenuItem> элементов управления. Таким образом можно лишь поместить сочетания клавиш в элемент меню.  Не связывает команду с <xref:System.Windows.Controls.MenuItem>. Приложение должно обработать введенные пользователем данные для выполнения действия.  
   
- [!code-xaml[MenuEvent#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
+ [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
 ### <a name="command"></a>Команда  
  В следующем примере показано, как использовать <xref:System.Windows.Controls.MenuItem.Command%2A> свойство, связываемое **откройте** и **Сохранить** команды с параметром <xref:System.Windows.Controls.MenuItem> элементов управления. Не только свойство command связать команду с <xref:System.Windows.Controls.MenuItem>, но также предоставляет жест ввода текста для использования в качестве ярлыка.  
   
- [!code-xaml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
+ [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- <xref:System.Windows.Controls.MenuItem> Класс также имеет <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> свойство, которое указывает элемент, где происходит действие команды. Если <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> не задано, элемент, имеющий фокус клавиатуры получает команду. Дополнительные сведения о командах см. в разделе [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+ <xref:System.Windows.Controls.MenuItem> Класс также имеет <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> свойство, которое указывает элемент, где происходит действие команды. Если <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> не задано, элемент, имеющий фокус клавиатуры получает команду. Дополнительные сведения о командах см. в разделе [Общие сведения о системе команд](../advanced/commanding-overview.md).  
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>Задание стиля меню  
@@ -53,11 +53,11 @@ ms.locfileid: "54626879"
   
  В первом примере кода определяется <xref:System.Windows.Style> вызывается `Simple` , показано, как использовать текущие параметры системы в стиле. Код назначает `MenuHighlightBrush` цвет в качестве цвета фона меню и `MenuTextBrush` цвет в качестве цвета текста меню. Обратите внимание на использование ключей ресурсов для назначения кистей.  
   
- [!code-xaml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
+ [!code-xaml[MenuStylesSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
  В следующем примере используется <xref:System.Windows.Trigger> элементы, которые позволяют изменять внешний вид <xref:System.Windows.Controls.MenuItem> в ответ на события, происходящие на <xref:System.Windows.Controls.Menu>. Если навести указатель мыши <xref:System.Windows.Controls.Menu>, цвет переднего плана и изменить характеристики шрифта элементов меню.  
   
- [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
+ [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>См. также
 - [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

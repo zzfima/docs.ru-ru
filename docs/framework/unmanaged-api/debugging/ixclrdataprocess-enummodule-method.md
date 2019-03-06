@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0398d18f9568754231082d63b4c6a2c865d8c6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738135"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363310"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>Метод IXCLRDataProcess::EnumModule
 
@@ -37,11 +37,13 @@ HRESULT EnumModule(
 );
 ```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`handle` [in, out] Дескриптор для перечисления модули.
+`handle`\
+[in, out] Дескриптор для перечисления модули.
 
-`mod` [out] Перечислимый модуль.
+`mod`\
+[out] Перечислимый модуль.
 
 ## <a name="remarks"></a>Примечания
 
@@ -56,7 +58,7 @@ HRESULT EnumModule(
 
 ## <a name="see-also"></a>См. также
 
-- [Перечисление CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
-- [Интерфейс IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Перечисление CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Отладка](index.md)
+- [Интерфейс IXCLRDataModule](ixclrdatamodule-interface.md)
+- [Интерфейс IXCLRDataProcess](ixclrdataprocess-interface.md)

@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52edc72e3714ceaf8cc92f272da6a374eb324dad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367126"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Функция CloneEnumWbemClassObject
-Создает логическую копию перечислителя, сохраняя текущую позицию в перечислении.  
-  
+Создает логическую копию перечислителя, сохраняя текущую позицию в перечислении.
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```
 HRESULT CloneEnumWbemClassObject (
    [out] IEnumWbemClassObject**  ppEnum, 
    [in] DWORD                    authLevel,
@@ -40,29 +40,29 @@ HRESULT CloneEnumWbemClassObject (
    [in] BSTR                     strPassword,
    [in BSTR]                     strAuthority 
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Параметры
 
-`ppEnum`  
+`ppEnum`\
 [out] Получает указатель на новый [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
-`authLevel`  
+`authLevel`\
 [in] Уровень авторизации.
 
-`impLevel` [in] Уровень олицетворения.
+`impLevel`\
+[in] Уровень олицетворения.
 
-`pCurrentEnumWbemClassObject`  
+`pCurrentEnumWbemClassObject`\
 [out] Указатель на [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) экземпляра для клонирования.
 
-`strUser`   
+`strUser`\
 [in] Имя пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strPassword`   
+`strPassword`\
 [in] Пароль. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strAuthority`   
-[in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
+`strAuthority`\ [in] имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -75,12 +75,12 @@ HRESULT CloneEnumWbemClassObject (
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Не хватает памяти завершить операцию. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Сбой удаленной процедуры вызова (RPC) связь между текущим процессом и WMI. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) метод.
 
-Этот метод копирует только «оптимальных затрат». Из-за динамической природы множество объектов CIM вполне возможно, что новый перечислитель не перечислить тот же набор объектов, что перечислитель источника.  
+Этот метод копирует только «оптимальных затрат». Из-за динамической природы множество объектов CIM вполне возможно, что новый перечислитель не перечислить тот же набор объектов, что перечислитель источника.
 
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
@@ -88,12 +88,13 @@ HRESULT CloneEnumWbemClassObject (
 
 Например, см. в разделе [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) метод.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Заголовок.** WMINet_Utils.idl
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

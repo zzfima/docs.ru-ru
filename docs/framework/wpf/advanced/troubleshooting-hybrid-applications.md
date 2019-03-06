@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370102"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Устранение неполадок смешанных приложений
 <a name="introduction"></a> В этом разделе перечислены некоторые общие проблемы, которые могут возникать при создании смешанных приложений, одновременно использующих технологии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "56748704"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Масштабирование  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют разные модели масштабирования. Некоторые преобразования масштаба [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] являются показательными для элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], а некоторые — нет. Например, масштабирование элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] к 0 будет работать, но если попытаться масштабировать тот же элемент управления обратно на ненулевое значение, то размер элемента управления останется равным 0. Дополнительные сведения см. в разделе [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют разные модели масштабирования. Некоторые преобразования масштаба [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] являются показательными для элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], а некоторые — нет. Например, масштабирование элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] к 0 будет работать, но если попытаться масштабировать тот же элемент управления обратно на ненулевое значение, то размер элемента управления останется равным 0. Дополнительные сведения см. в разделе [Вопросы, связанные с макетом элемента WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Адаптер  
@@ -53,7 +53,7 @@ ms.locfileid: "56748704"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>Сопоставление свойств  
- Некоторые сопоставления свойств требуют всесторонней интерпретации для того, чтобы связать отличающиеся реализации между технологиями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Сопоставления свойств позволяют коду реагировать на изменения в шрифтах, цветах и других свойствах. В общем случае сопоставление свойств работает посредством прослушивания событий *Property*Changed или вызовов On*Property*Changed и установки свойств либо в дочернем элементе управления, либо в его адаптере. Дополнительные сведения см. в разделе [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Некоторые сопоставления свойств требуют всесторонней интерпретации для того, чтобы связать отличающиеся реализации между технологиями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Сопоставления свойств позволяют коду реагировать на изменения в шрифтах, цветах и других свойствах. В общем случае сопоставление свойств работает посредством прослушивания событий *Property*Changed или вызовов On*Property*Changed и установки свойств либо в дочернем элементе управления, либо в его адаптере. Дополнительные сведения см. в разделе [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>Связанные с макетом свойства в размещенном содержимом  
@@ -66,7 +66,7 @@ ms.locfileid: "56748704"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- Не устанавливайте эти свойства непосредственно в размещенном содержимом. Дополнительные сведения см. в разделе [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ Не устанавливайте эти свойства непосредственно в размещенном содержимом. Дополнительные сведения см. в разделе [Вопросы, связанные с макетом элемента WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>Приложения навигации  
@@ -76,7 +76,7 @@ ms.locfileid: "56748704"
 ## <a name="message-loop-interoperation"></a>Взаимодействие с циклом обработки сообщений  
  При работе с циклом обработки сообщений [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сообщения могут обрабатываться не так, как ожидалось. <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> Вызывается метод <xref:System.Windows.Forms.Integration.WindowsFormsHost> конструктор. Этот метод добавляет фильтр сообщений к циклу обработки сообщений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот фильтр вызывает <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> метод Если <xref:System.Windows.Forms.Control?displayProperty=nameWithType> целевой сообщения и переводит либо отправляет сообщение.  
   
- При отображении <xref:System.Windows.Window> в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] цикл обработки сообщений с <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, ввод чего-либо только при вызове <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> метод. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Альбома <xref:System.Windows.Window> и добавляет <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, который перенаправляет сообщения, связанные с ключом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] цикл обработки сообщений. Дополнительные сведения см. в разделе [Windows Forms и архитектура ввода взаимодействия WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+ При отображении <xref:System.Windows.Window> в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] цикл обработки сообщений с <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, ввод чего-либо только при вызове <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> метод. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Альбома <xref:System.Windows.Window> и добавляет <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, который перенаправляет сообщения, связанные с ключом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] цикл обработки сообщений. Дополнительные сведения см. в разделе [Windows Forms и архитектура ввода взаимодействия WPF](windows-forms-and-wpf-interoperability-input-architecture.md).  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>Непрозрачность и организация по уровням  
@@ -88,7 +88,7 @@ ms.locfileid: "56748704"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  
- Визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] в элементе управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] могут быть недоступны. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Метод вызывается в шаблоне для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения. Несмотря на то что этот метод не вызывается по умолчанию, если вы используете [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] для создания проекта, вы получите визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] для элементов управления, если доступен Comctl32.dll версии 6.0. Необходимо вызвать <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод перед созданием дескрипторов в потоке. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] в элементе управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] могут быть недоступны. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Метод вызывается в шаблоне для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения. Несмотря на то что этот метод не вызывается по умолчанию, если вы используете [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] для создания проекта, вы получите визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] для элементов управления, если доступен Comctl32.dll версии 6.0. Необходимо вызвать <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод перед созданием дескрипторов в потоке. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Лицензированные элементы управления  
@@ -108,7 +108,7 @@ ms.locfileid: "56748704"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>При удалении папки obj появляется список ошибок времени разработки  
  Если удаляется папка obj, появляется список ошибок времени разработки.  
   
- При разработке с использованием <xref:System.Windows.Forms.Integration.ElementHost>, конструктор Windows Forms использует созданные файлы в папке Debug или Release внутри папки obj проекта. При удалении этих файлов появляется список ошибок времени разработки. Для устранения этой проблемы следует перестроить проект. Дополнительные сведения см. в разделе [Ошибки во время разработки в конструкторе Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ При разработке с использованием <xref:System.Windows.Forms.Integration.ElementHost>, конструктор Windows Forms использует созданные файлы в папке Debug или Release внутри папки obj проекта. При удалении этих файлов появляется список ошибок времени разработки. Для устранения этой проблемы следует перестроить проект. Дополнительные сведения см. в разделе [Ошибки во время разработки в конструкторе Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost и IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748704"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Взаимодействие в конструкторе WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Windows Forms и архитектура ввода взаимодействия WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Практическое руководство. Включение визуальных стилей в гибридном приложении](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Ошибки во время разработки в конструкторе Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms и архитектура ввода взаимодействия WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Практическое руководство. Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Вопросы, связанные с макетом элемента WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
+- [Ошибки во время разработки в конструкторе Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Миграция и взаимодействие систем](migration-and-interoperability.md)

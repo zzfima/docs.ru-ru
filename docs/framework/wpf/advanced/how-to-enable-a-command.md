@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Включение команды
+title: Практическое руководство. Включение команды
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: 904d5a3404b693c383731eda01e9e43b2d5126fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622069"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355068"
 ---
-# <a name="how-to-enable-a-command"></a>Как выполнить Включение команды
-Следующий пример демонстрирует использование команд в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В примере показано связывание <xref:System.Windows.Input.RoutedCommand> для <xref:System.Windows.Controls.Button>, создание <xref:System.Windows.Input.CommandBinding>и создавать обработчики событий, которые реализуют <xref:System.Windows.Input.RoutedCommand>.  Дополнительные сведения о системе команд см. в разделе [сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+# <a name="how-to-enable-a-command"></a>Практическое руководство. Включение команды
+Следующий пример демонстрирует использование команд в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В примере показано связывание <xref:System.Windows.Input.RoutedCommand> для <xref:System.Windows.Controls.Button>, создание <xref:System.Windows.Input.CommandBinding>и создавать обработчики событий, которые реализуют <xref:System.Windows.Input.RoutedCommand>.  Дополнительные сведения о системе команд см. в разделе [сведения о системе команд](commanding-overview.md).  
   
 ## <a name="example"></a>Пример  
  В первой части кода создает [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], который состоит из <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.StackPanel>и создает <xref:System.Windows.Input.CommandBinding> , связывает обработчики команд с <xref:System.Windows.Input.RoutedCommand>.  
@@ -27,17 +27,17 @@ ms.locfileid: "54622069"
   
  Без <xref:System.Windows.Input.CommandBinding> отсутствует логика команды, только механизм для вызова команды.  Когда <xref:System.Windows.Controls.Button> нажатии <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> вызывается для целевого объекта команды, за которым следует <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.  Эти события проходят по дереву элементов, ищете <xref:System.Windows.Input.CommandBinding> для этой конкретной командой.  Стоит отметить, что поскольку <xref:System.Windows.RoutedEvent> проходят и поднимаются по дереву элементов, необходимо соблюдать осторожность, где <xref:System.Windows.Input.CommandBinding> помещается.   Если <xref:System.Windows.Input.CommandBinding> на одноуровневого элемента для целевого объекта команды или другой узел, который не является в маршруте <xref:System.Windows.RoutedEvent>, <xref:System.Windows.Input.CommandBinding> не затрагиваются.  
   
- [!code-xaml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
+ [!code-xaml[EnableCloseCommand#CloseCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
   
- [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
- [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
+ [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
   
  В следующем разделе кода реализует <xref:System.Windows.Input.CommandManager.Executed> и <xref:System.Windows.Input.CommandBinding.CanExecute> обработчики событий.  
   
  <xref:System.Windows.Input.CommandManager.Executed> Обработчик вызывает метод, чтобы закрыть открытый файл.  <xref:System.Windows.Input.CommandBinding.CanExecute> Обработчик вызывает метод, чтобы определить, открыт ли файл.  Если файл был открыт, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> присваивается `true`; в противном случае он становится равным `false`.  
   
- [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
- [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
+ [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Общие сведения о системе команд](commanding-overview.md)
