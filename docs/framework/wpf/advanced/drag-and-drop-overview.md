@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356485"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "54492577"
   
  В операции копирования и вставки для временного хранения передаваемых данных используется системный буфер обмена; в операции перетаскивания для хранения данных используется <xref:System.Windows.DataObject>. Концептуально объект данных состоит из одной или нескольких пар <xref:System.Object>, содержащих фактические данные и соответствующий идентификатор формата данных.  
   
- Источник перетаскивания инициирует операцию перетаскивания путем вызова статического метода <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> и передачи в него передаваемых данных. Метод <xref:System.Windows.DragDrop.DoDragDrop%2A> будет автоматически включать данные в <xref:System.Windows.DataObject> при необходимости. Для большего контроля над форматом данных можно включать данные в <xref:System.Windows.DataObject> перед их передачей в метод <xref:System.Windows.DragDrop.DoDragDrop%2A>. Цель перетаскивания отвечает за извлечение данных из <xref:System.Windows.DataObject>. Дополнительные сведения о работе с объектами данных см. в разделе [Данные и объекты данных](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Источник перетаскивания инициирует операцию перетаскивания путем вызова статического метода <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> и передачи в него передаваемых данных. Метод <xref:System.Windows.DragDrop.DoDragDrop%2A> будет автоматически включать данные в <xref:System.Windows.DataObject> при необходимости. Для большего контроля над форматом данных можно включать данные в <xref:System.Windows.DataObject> перед их передачей в метод <xref:System.Windows.DragDrop.DoDragDrop%2A>. Цель перетаскивания отвечает за извлечение данных из <xref:System.Windows.DataObject>. Дополнительные сведения о работе с объектами данных см. в разделе [Данные и объекты данных](data-and-data-objects.md).  
   
  Исходный и целевой объекты операции перетаскивания являются элементами пользовательского интерфейса; однако данные, которые в действительности передаются, обычно не имеют визуального представления. Вы можете написать код для визуального представления перетаскиваемых данных, например такого, которое происходит при перетаскивании файлов в проводнике. По умолчанию взаимодействие предоставляется пользователю путем изменения курсора для представления воздействия, которое операция перетаскивания оказывает на данные: например, перемещаются данные или копируются.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54492577"
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>События перетаскивания  
- Операции перетаскивания поддерживают модель управления событиями.  Источник и цель перетаскивания используют стандартный набор событий для обработки операций перетаскивания.  В следующих таблицах приведены стандартные события перетаскивания. Это вложенные события в классе <xref:System.Windows.DragDrop>. Дополнительные сведения о вложенных событиях см. в разделе [Общие сведения о вложенных событиях](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Операции перетаскивания поддерживают модель управления событиями.  Источник и цель перетаскивания используют стандартный набор событий для обработки операций перетаскивания.  В следующих таблицах приведены стандартные события перетаскивания. Это вложенные события в классе <xref:System.Windows.DragDrop>. Дополнительные сведения о вложенных событиях см. в разделе [Общие сведения о вложенных событиях](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>События источника перетаскивания  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54492577"
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Это версия нисходящей маршрутизации события <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Это версия нисходящей маршрутизации события <xref:System.Windows.DragDrop.Drop>.|  
   
- Для обработки событий перетаскивания для экземпляров объекта добавьте обработчики событий, перечисленных в таблицах выше. Для обработки событий перетаскивания на уровне класса переопределите соответствующие виртуальные методы On*Event и On\*PreviewEvent. Дополнительные сведения см. в разделе [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Для обработки событий перетаскивания для экземпляров объекта добавьте обработчики событий, перечисленных в таблицах выше. Для обработки событий перетаскивания на уровне класса переопределите соответствующие виртуальные методы On*Event и On\*PreviewEvent. Дополнительные сведения см. в разделе [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Реализация перетаскивания  
@@ -123,9 +123,9 @@ ms.locfileid: "54492577"
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Пример перетаскивания  
- В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полное описание действий по реализации перетаскивания и вставки, см. в разделе [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ В этом разделе описывается реализация перетаскивания для элемента <xref:System.Windows.Shapes.Ellipse>. Элемент <xref:System.Windows.Shapes.Ellipse> является как источником, так и целью перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса. В следующем XAML показан элемент <xref:System.Windows.Shapes.Ellipse> и связанные с перетаскиванием события, которые он обрабатывает. Полное описание действий по реализации перетаскивания и вставки, см. в разделе [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Включение элемента в качестве источника перетаскивания  
  Объект, являющийся источником перетаскивания, отвечает за:  
@@ -142,8 +142,8 @@ ms.locfileid: "54492577"
   
  Ваше приложение должно определить, когда происходит перетаскивание, а затем инициировать операцию перетаскивания путем вызова метода <xref:System.Windows.DragDrop.DoDragDrop%2A>. Обычно это происходит, когда возникает событие <xref:System.Windows.UIElement.MouseMove> в перетаскиваемом элементе при нажатой клавише мыши. В следующем примере показано, как инициировать операцию перетаскивания в обработчике событий <xref:System.Windows.UIElement.MouseMove> элемента <xref:System.Windows.Shapes.Ellipse>, чтобы сделать его источником перетаскивания. Передаваемые данные — это строковое представление свойства <xref:System.Windows.Shapes.Shape.Fill%2A> эллипса.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  В обработчике событий <xref:System.Windows.UIElement.MouseMove> вызовите метод <xref:System.Windows.DragDrop.DoDragDrop%2A> для инициации операции перетаскивания. Метод <xref:System.Windows.DragDrop.DoDragDrop%2A> принимает три следующих параметра.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "54492577"
   
 -   `allowedEffects` — одно из значений перечисления <xref:System.Windows.DragDropEffects>, которое определяет разрешенные эффекты операции перетаскивания.  
   
- В параметр `data` может быть передан любой сериализуемый объект. Если данные еще не заключены в объект <xref:System.Windows.DataObject>, они автоматически заключаются в новый объект <xref:System.Windows.DataObject>. Для передачи нескольких элементов данных вы должны создать объект <xref:System.Windows.DataObject> самостоятельно и передать его в метод <xref:System.Windows.DragDrop.DoDragDrop%2A>. Дополнительные сведения см. в разделе [Данные и объекты данных](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ В параметр `data` может быть передан любой сериализуемый объект. Если данные еще не заключены в объект <xref:System.Windows.DataObject>, они автоматически заключаются в новый объект <xref:System.Windows.DataObject>. Для передачи нескольких элементов данных вы должны создать объект <xref:System.Windows.DataObject> самостоятельно и передать его в метод <xref:System.Windows.DragDrop.DoDragDrop%2A>. Дополнительные сведения см. в разделе [Данные и объекты данных](data-and-data-objects.md).  
   
  Параметр `allowedEffects` используется для указания, какие действия с передаваемыми данными источник перетаскивания будет разрешать цели перетаскивания. Обычные значения для источника перетаскивания — <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> и <xref:System.Windows.DragDropEffects.All>.  
   
@@ -192,32 +192,32 @@ ms.locfileid: "54492577"
   
  В следующем примере показан обработчик событий <xref:System.Windows.DragDrop.DragEnter> для элемента <xref:System.Windows.Shapes.Ellipse>. Этот код выполняет предварительный просмотр эффектов операции перетаскивания путем сохранения текущей кисти <xref:System.Windows.Shapes.Shape.Fill%2A>. Затем он использует метод <xref:System.Windows.DataObject.GetDataPresent%2A> для проверки, содержит ли объект <xref:System.Windows.DataObject>, перетаскиваемый над эллипсом, строковые данные, которые можно преобразовать в <xref:System.Windows.Media.Brush>. Если да, то данные извлекаются с помощью метода <xref:System.Windows.DataObject.GetData%2A> Затем они преобразуются в <xref:System.Windows.Media.Brush> и применяются к эллипсу. Это изменение отменяется в обработчике событий <xref:System.Windows.DragDrop.DragLeave>. Если данные невозможно преобразовать в <xref:System.Windows.Media.Brush>, никакие действия не выполняются.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  Событие <xref:System.Windows.DragDrop.DragOver> постоянно возникает при перетаскивании данных на цель перетаскивания. Это событие является спаренным с событием <xref:System.Windows.DragDrop.GiveFeedback> в источнике перетаскивания. В обработчике событий <xref:System.Windows.DragDrop.DragOver>, как правило, используются методы <xref:System.Windows.DataObject.GetDataPresent%2A> и <xref:System.Windows.DataObject.GetData%2A> для проверки, имеют ли передаваемые данные формат, который может обработать цель перетаскивания. Можно также проверить, нажаты ли клавиши-модификаторы, которые обычно указывают, какую операцию предполагает выполнять пользователь — перемещения или копирования. После выполнения этих проверок вы устанавливаете свойство <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType>, чтобы уведомить источник перетаскивания, какой эффект окажет перетаскивание данных. Источник перетаскивания получает эти сведения в аргументах события <xref:System.Windows.DragDrop.GiveFeedback> и может задать соответствующий курсор, чтобы обеспечить отзыв для пользователя.  
   
  В следующем примере показан обработчик событий <xref:System.Windows.DragDrop.DragOver> для элемента <xref:System.Windows.Shapes.Ellipse>. В этом коде проверяется, содержит ли объект <xref:System.Windows.DataObject>, перетаскиваемый над эллипсом, строковые данные, которые можно преобразовать в <xref:System.Windows.Media.Brush>. Если содержит, то код устанавливает для свойства <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> значение <xref:System.Windows.DragDropEffects.Copy>. Это указывает источнику перетаскивания, что данные можно скопировать в эллипс. Если данные невозможно преобразовать в <xref:System.Windows.Media.Brush>, для свойства <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> устанавливается значение <xref:System.Windows.DragDropEffects.None>. Это указывает источнику перетаскивания, что эллипс не является допустимым конечным расположением сброса для данных.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  Событие <xref:System.Windows.DragDrop.DragLeave> возникает, когда данные перетаскиваются за границу целевого объекта без сбрасывания. Обработка этого события позволяет отменить любые действия, которые были выполнены в обработчике событий <xref:System.Windows.DragDrop.DragEnter>.  
   
  В следующем примере показан обработчик событий <xref:System.Windows.DragDrop.DragLeave> для элемента <xref:System.Windows.Shapes.Ellipse>. Этот код отменяет предварительный просмотр, выполненный в обработчике событий <xref:System.Windows.DragDrop.DragEnter>, путем применения сохраненного объекта <xref:System.Windows.Media.Brush> к эллипсу.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  Событие <xref:System.Windows.DragDrop.Drop> возникает при сбросе данных в цель перетаскивания; по умолчанию это происходит при отпускании кнопки мыши. В обработчике событий <xref:System.Windows.DragDrop.Drop> вы используете метод <xref:System.Windows.DataObject.GetData%2A> для извлечения передаваемых данных из объекта <xref:System.Windows.DataObject> и выполнения обработки данных, необходимой для вашего приложения. Событие <xref:System.Windows.DragDrop.Drop> завершает операцию перетаскивания.  
   
  В следующем примере показан обработчик событий <xref:System.Windows.DragDrop.Drop> для элемента <xref:System.Windows.Shapes.Ellipse>. Этот код применяет эффекты операции перетаскивания. Он аналогичен коду в обработчике событий <xref:System.Windows.DragDrop.DragEnter>. Он проверяет, содержит ли объект <xref:System.Windows.DataObject>, перетаскиваемый над эллипсом, строковые данные, которые можно преобразовать в <xref:System.Windows.Media.Brush>. Если это так, то к эллипсу применяется объект <xref:System.Windows.Media.Brush>. Если данные невозможно преобразовать в <xref:System.Windows.Media.Brush>, никакие действия не выполняются.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Clipboard>
-- [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [Пошаговое руководство: Включение перетаскивания для пользовательского элемента управления](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Разделы практического руководства](drag-and-drop-how-to-topics.md)
+- [Перетаскивание](drag-and-drop.md)

@@ -13,81 +13,81 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547883"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377032"
 ---
 # <a name="the-ink-threading-model"></a>Потоковая модель рукописного ввода
-Одно из преимуществ рукописного ввода на планшетных ПК — что он сходство с записи с обычной ручкой и документ.  Для этого пера получать входные данные гораздо быстрее мыши и отображает рукописные данные как записи пользователя.  Потока пользовательского интерфейса приложения недостаточно для сбора данных пера и отображения рукописного ввода, так как он может быть заблокирован.  Чтобы устранить эту проблему, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.  
+Одним из преимуществ рукописного ввода на планшетном ПК является, что его сходство с записи с помощью регулярного пера и бумаги.  В этой ситуации планшетное перо получать входные данные гораздо быстрее мыши и отображает рукописные данные как записи пользователя.  Поток пользовательского интерфейса (UI) приложения недостаточно для сбора данных пера и отрисовка рукописных данных, так как он может быть заблокирован.  Чтобы устранить эту проблему, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.  
   
- Ниже перечислены потоки, принимающие участие в сборе и отображении рукописного ввода.  
+ Ниже перечислены потоки, примите участие в сборе и отображении рукописный ввод.  
   
--   Потоком пера потока, который принимает ввод от пера.  (На самом деле это пул потоков, но в этом разделе он называется потоком пера.)  
+-   Поток пера - поток, который принимает ввод от пера.  (На самом деле это пул потоков, но в этом разделе он называется пуле потоков пера.)  
   
--   Потоком пользовательского интерфейса приложения - поток, который определяет пользовательский интерфейс приложения.  
+-   Поток пользовательского интерфейса приложения - поток, который определяет пользовательский интерфейс приложения.  
   
--   Поток динамической отрисовки - поток, который отображает рукописные данные, то время как пользователь штриха. Поток динамической отрисовки отличается от потока, отображающего другие элементы пользовательского интерфейса для приложения, как было сказано в окне WPF [потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md).  
+-   Поток динамической отрисовки - поток, который отображает рукописные данные при пользователь рисует штрих. Поток динамической отрисовки отличается от потока, отображающего другие элементы пользовательского интерфейса для приложения, как упоминалось в Windows Presentation Foundation [потоковая модель](threading-model.md).  
   
- Модель рукописного ввода совпадает ли приложение использует <xref:System.Windows.Controls.InkCanvas> или пользовательского элемента управления подобное в [создания элемента управления ввода рукописного ввода](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  Несмотря на то, что в этом разделе обсуждаются потоки в терминах <xref:System.Windows.Controls.InkCanvas>, те же принципы применяются при создании пользовательского элемента управления.  
+ Модель рукописного ввода совпадает ли приложение использует <xref:System.Windows.Controls.InkCanvas> или пользовательский элемент управления, аналогичный показанному на [Создание элемента управления рукописным ввода](creating-an-ink-input-control.md).  Несмотря на то, что в этом разделе обсуждается создание потоков на основе <xref:System.Windows.Controls.InkCanvas>, те же принципы применяются при создании пользовательского элемента управления.  
   
 ## <a name="threading-overview"></a>Работа с потоками Обзор  
- На следующей схеме показана модель потоков, когда пользователем штриха:  
+ На следующей схеме показана модель потоков, когда пользователь рисует штрих:  
   
- ![Потоковая модель во время отрисовки мазка. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
+ ![Потоковая модель во время отрисовки мазка. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Действия, происходящие во время рисования штрих  
+1.  Действия, происходящие во время пользователь рисует штрих  
   
-    1.  Когда пользователь рисует штрих, точки пера поставляются в потоке пера.  Подключаемые модули пера, включая <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, принимают точки пера в потоке пера и иметь возможность изменить их, прежде чем <xref:System.Windows.Controls.InkCanvas> их получает.  
+    1.  Когда пользователь рисует штрих, точки пера поставляются потоке пера.  Подключаемые модули пера, включая <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>примите точки пера в потоке пера и иметь возможность изменить их перед <xref:System.Windows.Controls.InkCanvas> их получает.  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Воспроизводит точки пера в потоке динамической отрисовки. Это происходит в то же время на предыдущем этапе.  
+    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Отображает точки пера в поток динамической отрисовки. Это происходит в то же время на предыдущем шаге.  
   
     3.  <xref:System.Windows.Controls.InkCanvas> Получает точки пера в потоке пользовательского интерфейса.  
   
 2.  Действия, происходящие после пользователь завершает штрих  
   
-    1.  Когда пользователь завершает рисование штриха, <xref:System.Windows.Controls.InkCanvas> создает <xref:System.Windows.Ink.Stroke> объекта и добавляет его в <xref:System.Windows.Controls.InkPresenter>, который статически его отображает.  
+    1.  Когда пользователь заканчивает рисование штриха, <xref:System.Windows.Controls.InkCanvas> создает <xref:System.Windows.Ink.Stroke> и добавляет его к <xref:System.Windows.Controls.InkPresenter>, который статически его отображает.  
   
-    2.  Поток пользовательского интерфейса оповещает <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , статически штриха отображается, поэтому <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> удаляет его визуальное представление штриха.  
+    2.  Поток пользовательского интерфейса оповещает <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , статически выполняется отрисовка росчерка пера, поэтому <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> удаляет его визуальное представление штриха.  
   
-## <a name="ink-collection-and-stylus-plug-ins"></a>Коллекция рукописного ввода и подключаемых модулей пера  
- Каждый <xref:System.Windows.UIElement> имеет <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> получать и изменять точки пера в потоке пера. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты получают точки пера согласно порядку их следования в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
+## <a name="ink-collection-and-stylus-plug-ins"></a>Сбор рукописных фрагментов и подключаемых модулей пера  
+ Каждый <xref:System.Windows.UIElement> имеет <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> получать и изменять точки пера в потоке пера. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты получают точки пера, в соответствии с их порядок в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
   
- На следующей схеме показана гипотетическая ситуация где <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекцию <xref:System.Windows.UIElement> содержит `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, и `stylusPlugin2`в этом порядке.  
+ На следующей схеме показана гипотетическую ситуацию где <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекцию <xref:System.Windows.UIElement> содержит `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, и `stylusPlugin2`в этом порядке.  
   
- ![Порядок модулей пера влияет на выходные данные. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")  
+ ![Порядок модулей пера влияет на выходные данные. ](./media/inkthreading-pluginorder.png "InkThreading_PluginOrder")  
   
- На предыдущей диаграмме выполняется следующим образом:  
+ На предыдущей диаграмме происходит следующее поведение:  
   
-1.  `StylusPlugin1` изменяет значения x и y.  
+1.  `StylusPlugin1` изменения значений x и y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Получает измененные точки пера и помещает их в поток динамической отрисовки.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Получает измененные точки пера и отображает их в поток динамической отрисовки.  
   
-3.  `StylusPlugin2` Получает измененные точки пера и выполняет дальнейшие изменения значений x и y.  
+3.  `StylusPlugin2` Получает измененные точки пера и дальнейшие изменения значений x и y.  
   
-4.  Приложение собирает точки пера и, когда пользователь завершает штрих статически отображает штриха.  
+4.  Приложение собирает точки пера и, когда пользователь заканчивает штриха, статически отображает штрих.  
   
- Предположим, что `stylusPlugin1` ограничивает точки пера в прямоугольник и `stylusPlugin2` переносит точки пера вправо.  В приведенном выше сценарии <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> принимает ограниченные, но не перенесенные точки пера.  Когда пользователь рисует обводку, штриха отображается в пределах границ прямоугольника, но он не доступен для перевода, пока пользователь отрывает перо.  
+ Предположим, что `stylusPlugin1` ограничивает точки пера в прямоугольник и `stylusPlugin2` переносит точки пера вправо.  В приведенном выше сценарии <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> принимает ограниченные, но не перенесенные точки пера.  Когда пользователь рисует штрих, выполняется отрисовка росчерка пера в границах прямоугольника, но он не доступен для перевода, пока пользователь отрывает перо.  
   
-### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a>Выполнение операций с подключаемым модулем в потоке пользовательского интерфейса пера  
- Поскольку точные попадания не может выполняться в потоке пера, некоторые элементы могут иногда получать ввод от пера предназначен для других элементов. Если требуется, чтобы убедиться, что входные данные было правильно направлены до выполнения операции, подписаться и выполнить операцию в <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, или <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> метод. Эти методы вызываются потоком приложения после завершения проверки актуальности проверки нажатия. Для подписки на эти методы вызовите <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> в методе, который выполняется в потоке пера.  
+### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a>Выполнение операций с помощью пера, подключаемый модуль, в потоке пользовательского интерфейса  
+ Так как точные попадания не может выполняться в потоке пера, некоторые элементы могут иногда получать пера, предназначенный для других элементов. Если требуется, чтобы убедиться в том, правильно направлен входных данных перед выполнением операции, подписаться на и выполнить операцию в <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, или <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> метод. Эти методы вызываются потоком приложения после точной проверки нажатия. Чтобы подписаться на эти методы, вызов <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> метод в методе, который генерируется в потоке пера.  
   
- На следующей схеме показана связь между потоком пера и потоком пользовательского интерфейса по отношению к событиям пера <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
+ На следующей схеме показана связь между потоком пера и поток пользовательского интерфейса по отношению к событиям пера <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Потоковые модели рукописного ввода &#40;пользовательский Интерфейс и перо&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Потоковые модели рукописного ввода &#40;пользовательский Интерфейс и перо&#41;](./media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
-## <a name="rendering-ink"></a>Подготовка к просмотру рукописного ввода  
- Как пользователь штриха, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные в отдельном потоке, поэтому данные «идут» от пера даже в том случае, если поток пользовательского интерфейса занят.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево в потоке динамической отрисовки, который получает точки пера.  Когда пользователь завершает штрих <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> запросом получать уведомления, когда приложение выполняет следующий этап отрисовки.  После завершения работы приложения следующего прохода отрисовки <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очищает его визуального дерева.  Этот процесс показан на следующей схеме.  
+## <a name="rendering-ink"></a>Отрисовка рукописных данных  
+ Когда пользователь рисует штрих, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные в отдельном потоке, поэтому данные для «поток» от пера даже в том случае, если поток пользовательского интерфейса занят.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево на поток динамической отрисовки, так как он собирает точки пера.  Когда пользователь заканчивает штриха, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> запрашивает получать уведомления, когда приложение выполняет следующего прохода отрисовки.  После следующего прохода отрисовки, завершения работы приложения <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очищает его визуального дерева.  Следующая диаграмма иллюстрирует этот процесс.  
   
- ![Работа с потоками схема рукописного ввода](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")  
+ ![Рукописный ввод, схема потоков](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
 1.  Пользователь начинает штриха.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Создает визуальное дерево.  
   
-2.  Пользователь рисует штриха.  
+2.  Пользователь рисует штрих.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "33547883"
   
     1.  <xref:System.Windows.Controls.InkPresenter> Добавляет штрих в визуальном дереве.  
   
-    2.  Уровень интеграции носителя (MIL) статически отображает штрихи.  
+    2.  Уровень интеграции мультимедиа (MIL) статически отображает штрихи.  
   
     3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Очищает визуальные элементы.

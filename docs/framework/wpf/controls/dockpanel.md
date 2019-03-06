@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361880"
 ---
 # <a name="dockpanel"></a>DockPanel
-<xref:System.Windows.Controls.DockPanel> Элемент используется для размещения содержимого дочернего элемента вдоль края контейнера макета.  
+<xref:System.Windows.Controls.DockPanel> Элемент используется для размещения содержимого дочерних вдоль края контейнера макета.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+ [Разделы практического руководства](dockpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +36,8 @@ ms.locfileid: "33550817"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

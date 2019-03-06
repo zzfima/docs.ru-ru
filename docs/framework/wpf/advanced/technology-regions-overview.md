@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695745"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352494"
 ---
 # <a name="technology-regions-overview"></a>Общие сведения об областях применения технологий
 Если в приложении используются несколько технологий представления, такие как WPF, Win32 или DirectX, то они должны совместно использовать области отрисовки в общем окне верхнего уровня. В этом разделе описываются проблемы, которые могут повлиять на представление и выходные данные приложения взаимодействия с WPF.  
@@ -25,23 +25,23 @@ ms.locfileid: "54695745"
 ### <a name="region-examples"></a>Примеры областей  
  На следующем рисунке показано приложение, в котором одновременно используются [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Каждая технология использует отдельный, неперекрывающийся набор пикселей, и проблемы с областями отсутствуют.  
   
- ![Окно, которое не имеет проблем со свободным пространством](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Окно, которое не имеет проблем со свободным пространством](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
   
  Предположим, что это приложение использует положение указателя мыши для создания анимации, которая пытается выполнить отрисовку поверх любой из этих трех областей. Независимо от того, какая технология отвечает за анимацию, эта технология нарушила бы область двух других. На рисунке показана попытка отрисовать круг WPF поверх области Win32.  
   
- ![Схема взаимодействия](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Схема взаимодействия](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
   
  Другое нарушение — это попытка использовать прозрачность/альфа-смешение между различными технологиями.  На следующей иллюстрации окно [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] нарушает области [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Так как пиксели в этом окне [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] являются полупрозрачными, они должны принадлежать и [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], что невозможно.  Так что это еще одно нарушение, и его нельзя построить.  
   
- ![Схема взаимодействия](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Схема взаимодействия](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
   
  В предыдущих трех примерах использовались прямоугольные области, но возможны разные формы.  Например, в области может быть отверстие. На следующем рисунке показана область [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] с прямоугольным отверстием. Это размер областей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] вместе.  
   
- ![Схема взаимодействия](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Схема взаимодействия](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
   
  Области также могут быть полностью непрямоугольными или иметь любую форму, описываемую [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HRGN (область).  
   
- ![Схема взаимодействия](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Схема взаимодействия](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>Прозрачность и окна верхнего уровня  
  Диспетчер окон Windows в действительности обрабатывает только HWND [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Таким образом каждый [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> является HWND. <xref:System.Windows.Window> HWND должны соблюдаться общие правила для любого HWND. Внутри этого HWND код [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может выполнять любую поддержку [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Но для взаимодействия с другими HWND на рабочем столе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] должен соответствовать правилам обработки и отрисовки [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает непрямоугольные окна с помощью [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] — HRGN для непрямоугольных окон, и многослойные окна для альфа-смешения на уровне отдельных пикселей.  
@@ -61,6 +61,6 @@ ms.locfileid: "54695745"
 -   Если приложение работает в [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], многослойные окна поверх поверхностей [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] мерцают при отрисовке приложения [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  (Фактическая последовательность отрисовки заключается в том, что [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] скрывает многослойное окно, выполняется рисование [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], а затем возвращает [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] многослойное окно).  Это ограничение накладывается и на многослойные окна вне [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>См. также
-- [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Пошаговое руководство: Размещение часов WPF в Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [Размещение содержимого Win32 в WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+- [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)
+- [Пошаговое руководство: Размещение часов WPF в Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [Размещение содержимого Win32 в WPF](hosting-win32-content-in-wpf.md)

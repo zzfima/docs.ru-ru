@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613848"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976334"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Итерация дерева каталогов
 Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Обрабатываемые исключения и действия, выполняемые с каждым файлом или папкой, предоставляются только в качестве примеров. Этот код следует изменить в соответствии с конкретными требованиями. Дополнительные сведения см. в комментариях в коде.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показана итерация файлов и папок в дереве каталога без использования рекурсии. Этот метод использует универсальный тип коллекции <xref:System.Collections.Generic.Stack%601>, который представляет стек типа "последним пришел — первым вышел" (LIFO).  
   
  Обрабатываемые исключения и действия, выполняемые с каждым файлом или папкой, предоставляются только в качестве примеров. Этот код следует изменить в соответствии с конкретными требованиями. Дополнительные сведения см. в комментариях в коде.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  Обычно проверка каждой папки на наличие у приложения разрешений на ее открытие занимает слишком много времени. Поэтому в примере кода эта часть операции просто включена в блок `try/catch`. Блок `catch` можно изменить так, чтобы при отказе в доступе к папке предпринималась попытка повысить права, а затем повторная попытка получить доступ. Как правило, следует перехватывать только те исключения, которые можно обработать, не оставляя приложение в неопределенном состоянии.  
   

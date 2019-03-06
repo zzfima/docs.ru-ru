@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367158"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-<xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>. Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> обеспечивает элементы, можно контролировать, когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.  
+<xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>. Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> элементы позволяют контролировать когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.  
   
- На рисунке показан пример три состояния кнопок повтора управления, по умолчанию, PointerFocused и нажата кнопка. Первая кнопка показывает состояние по умолчанию <xref:System.Windows.Controls.Primitives.RepeatButton>. Во втором показан как внешний вид кнопки меняется при наведении указателя мыши на кнопку, предоставив ему фокус. Последняя кнопка показывает внешний вид <xref:System.Windows.Controls.Primitives.RepeatButton> когда пользователь нажимает кнопку мыши над элементом управления.  
+ Приведенный ниже рисунок показывает пример из трех состояний элемента управления кнопки повтора, по умолчанию, PointerFocused и Pressed. Первая кнопка показывает состояние по умолчанию <xref:System.Windows.Controls.Primitives.RepeatButton>. Вторая показывает, как внешний вид кнопки изменяется при наведении указателя мыши над кнопкой, предоставляя ему фокус. Последняя кнопка показывает внешний вид <xref:System.Windows.Controls.Primitives.RepeatButton> когда пользователь нажимает кнопку мыши над элементом управления.  
   
- ![Повторите состояния кнопки](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
-Типичные RepeatButton  
+ ![Повторите состояния кнопки](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+Типичный RepeatButton  
   
 ## <a name="in-this-section"></a>В этом разделе  
   

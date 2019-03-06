@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555404"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357759"
 ---
 # <a name="treeview-how-to-topics"></a>Разделы руководства, посвященные элементу управления TreeView
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.TreeView> элемента управления для отображения информации в виде иерархической структуры.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.TreeView> управления для отображения сведений в виде иерархической структуры.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание простых или сложных элементов TreeView](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Использование элементов SelectedValue, SelectedValuePath и SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Привязка элемента управления TreeView к данным неопределенной глубины](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Повышение производительности элемента управления TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Поиск элемента TreeViewItem в TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Создание простых или сложных элементов TreeView](how-to-create-simple-or-complex-treeviews.md)  
+  [Использование элементов SelectedValue, SelectedValuePath и SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Привязка элемента управления TreeView к данным неопределенной глубины](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Повышение производительности элемента управления TreeView](how-to-improve-the-performance-of-a-treeview.md)  
+  [Поиск элемента TreeViewItem в TreeView](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.TreeView>  

@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994277"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358500"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Разделы руководства по анимации и таймерам
 В следующих разделах показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] анимации и системы в приложениях.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Ускорение или замедление анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [Накапливание значений анимации в повторяющихся циклах](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Добавление выходного значения анимации к начальному значению анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [Анимация в ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [Анимация с использованием стилей](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [Анимация прозрачности элемента или кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [Изменение скорости часов без изменения скорости шкалы времени](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [Управление раскадровкой после ее запуска с помощью интерактивных методов](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Управление анимацией с помощью From, To и By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [Определение пространства имен](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [Получение уведомлений при изменениях состояния часов](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Повторение анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Поиск раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [Поиск раскадровки в синхронном режиме](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [Определение длительности анимации](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Определение свойства после его анимации с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [Упрощение анимации с помощью дочерних шкал времени](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Задание значения свойства HandoffBehavior для анимаций раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [Определение режима FillBehavior для временной шкалы, достигшей конца периода активности](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [Определение автоматического реверса для шкалы времени](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Запуск анимации при изменении значения свойства](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Использование триггеров событий для управления раскадровкой после ее запуска](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md)  
+ [Накапливание значений анимации в повторяющихся циклах](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Добавление выходного значения анимации к начальному значению анимации](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Анимация свойства без использования раскадровки](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [Анимация в ControlTemplate](how-to-animate-in-a-controltemplate.md)  
+ [Анимация с использованием стилей](how-to-animate-in-a-style.md)  
+ [Анимация прозрачности элемента или кисти](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [Изменение скорости часов без изменения скорости шкалы времени](change-the-speed-of-a-clock.md)  
+ [Управление раскадровкой после ее запуска с помощью интерактивных методов](how-to-control-a-storyboard-after-it-starts.md)  
+ [Управление анимацией с помощью From, To и By](how-to-control-an-animation-using-from-to-and-by.md)  
+ [Определение пространства имен](how-to-define-a-name-scope.md)  
+ [Получение уведомлений при изменениях состояния часов](how-to-receive-notification-when-clock-state-changes.md)  
+ [Повторение анимации](how-to-repeat-an-animation.md)  
+ [Поиск раскадровки](how-to-seek-a-storyboard.md)  
+ [Поиск раскадровки в синхронном режиме](how-to-seek-a-storyboard-synchronously.md)  
+ [Определение длительности анимации](how-to-set-a-duration-for-an-animation.md)  
+ [Определение свойства после его анимации с помощью раскадровки](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [Упрощение анимации с помощью дочерних шкал времени](how-to-simplify-animations-by-using-child-timelines.md)  
+ [Задание значения свойства HandoffBehavior для анимаций раскадровки](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [Определение режима FillBehavior для временной шкалы, достигшей конца периода активности](specify-the-fillbehavior-for-a-timeline.md)  
+ [Определение автоматического реверса для шкалы времени](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Запуск анимации при изменении значения свойства](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Использование триггеров событий для управления раскадровкой после ее запуска](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ ms.locfileid: "45994277"
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Графика и мультимедиа](index.md)

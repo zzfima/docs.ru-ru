@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Привязка элемента управления TreeView к данным неопределенной глубины
+title: Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 702a86f049635423a31e554d205dcc3cf4aa799d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605371"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377240"
 ---
-# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Как выполнить Привязка элемента управления TreeView к данным неопределенной глубины
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины
 Возможны ситуации, когда необходимо выполнить привязку <xref:System.Windows.Controls.TreeView> к источнику данных, глубина которого неизвестно.  Это может произойти, когда данные рекурсивных по своей природе, например в файловой системе, где папок может содержать папки, или организационной структуры компании, где у сотрудников были другими сотрудниками в качестве непосредственных подчиненных.  
   
  Источник данных должен иметь иерархическую объектную модель. Например `Employee` класс может содержать коллекцию объектов Employee, подчиненных этого сотрудника. Если данные представлены в виде, не является иерархической, необходимо построить иерархическое представление данных.  
@@ -23,8 +23,8 @@ ms.locfileid: "54605371"
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует способ привязки <xref:System.Windows.Controls.TreeView> иерархических данных и используйте <xref:System.Windows.HierarchicalDataTemplate> для указания <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для каждого <xref:System.Windows.Controls.TreeViewItem>.  <xref:System.Windows.Controls.TreeView> Привязывается к XML-данные о сотрудниках компании.  Каждый `Employee` элемент может содержать другие `Employee` элементы, чтобы указать, кому подчиняется. Так как данные является рекурсивной, <xref:System.Windows.HierarchicalDataTemplate> могут применяться для каждого уровня.  
   
- [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Общие сведения о шаблонах данных](../data/data-templating-overview.md)

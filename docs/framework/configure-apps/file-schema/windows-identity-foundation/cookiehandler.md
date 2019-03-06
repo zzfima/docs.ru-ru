@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
 ms.openlocfilehash: dc0613bb727f9ed061c3b5d494bdc279515b56e9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285869"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369020"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler >
 Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.  
@@ -44,7 +44,7 @@ ms.locfileid: "55285869"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |имя|Указывает базовое имя для записываемых файлов cookie. Значение по умолчанию — «FedAuth».|  
-|путем|Указывает значение пути для записываемых файлов cookie. Значение по умолчанию — «HttpRuntime.AppDomainAppVirtualPath».|  
+|path|Указывает значение пути для записываемых файлов cookie. Значение по умолчанию — «HttpRuntime.AppDomainAppVirtualPath».|  
 |режим|Один из <xref:System.IdentityModel.Services.CookieHandlerMode> значений, указывающее тип обработчика файлов cookie, используемый SAM. Могут использоваться следующие значения:<br /><br /> -«Default» — так же, как «Chunked».<br />-Шифрование «фрагментированной» – используется экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса. Этот обработчик файлов cookie гарантирует, что отдельные файлы cookie не превышает заданный максимальный размер. Он делает это, потенциально «фрагментация» один логический файл cookie на несколько файлов cookie на лету.<br />-«Custom» – используется экземпляр пользовательского класса, производного от <xref:System.IdentityModel.Services.CookieHandler>. Производный класс ссылается `<customCookieHandler>` дочерний элемент.<br /><br /> По умолчанию используется «Default».|  
 |persistentSessionLifetime|Указывает время существования постоянных сеансов. Если значение равно нулю, всегда используются временные сеансы. Значение по умолчанию — «помечает», который указывает временный сеанс. Максимальное значение равно «365:0:0», который указывает сеанс 365 дней. Значение должно быть указано в соответствии с следующее ограничение: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, где самое левое значение указывает дни, среднее значение (при его наличии) указывает часы и самое правое значение (при его наличии) указывает минуты.|  
 |RequireSsl|Указывает, создается ли флаг «Безопасно» для записываемых файлов cookie. Если это значение задано, файлы cookie сеанса входа доступна только по протоколу HTTPS. Значение по умолчанию - "true".|  
@@ -53,14 +53,14 @@ ms.locfileid: "55285869"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Default» или шифрование «фрагментированной».|  
 |[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Задает тип обработчика пользовательских файлов cookie. Этот элемент должен присутствовать Если `mode` атрибут `<cookieHandler>` элемент является «Custom». Он не может присутствовать для других значений параметра `mode` атрибута. Пользовательский тип должен быть производным от <xref:System.IdentityModel.Services.CookieHandler> класса.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   

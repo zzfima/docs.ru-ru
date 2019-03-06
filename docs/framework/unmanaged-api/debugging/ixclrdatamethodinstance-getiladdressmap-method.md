@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567195"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373495"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>Метод IXCLRDataMethodInstance::GetILAddressMap
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>Параметры
 
-`mapLen` [in] Длина массива предоставленного сопоставления.
+`mapLen`\
+[in] Длина массива предоставленного сопоставления.
 
-`mapNeeded` [out] Число записей карты, необходимые для метода.
+`mapNeeded`\
+[out] Число записей карты, необходимые для метода.
 
-`maps` [out, size_is(mapLen)] Массив для хранения записей карты.
+`maps`\
+[out, size_is(mapLen)] Массив для хранения записей карты.
 
 ## <a name="remarks"></a>Примечания
 
@@ -59,5 +62,5 @@ HRESULT GetILAddressMap(
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Отладка](index.md)
+- [Интерфейс IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

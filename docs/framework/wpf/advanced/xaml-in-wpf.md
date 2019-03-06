@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710775"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362907"
 ---
 # <a name="xaml-in-wpf"></a>XAML в WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] — это язык разметки для декларативной приложения программирования. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализован обработчик и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализованы таким образом, что они предоставляют требуемый тип, резервирующий представление XAML. Как правило, можно создать большую часть вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательский Интерфейс приложения в разметке XAML.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Код программной части и XAML в WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [Области видимости имен XAML в WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [Встроенные стили и шаблоны](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [Обработки пробелов в XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverters и XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [Сущности знаков XML и XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [Возможности пространства имен языка XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Возможности языка: совместимость разметки (mc:)](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)  
+ [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)  
+ [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md)  
+ [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)  
+ [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)  
+ [Пространства имен XAML и сопоставление пространств имен для WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [Области видимости имен XAML в WPF](wpf-xaml-namescopes.md)  
+ [Встроенные стили и шаблоны](inline-styles-and-templates.md)  
+ [Обработки пробелов в XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverters и XAML](typeconverters-and-xaml.md)  
+ [Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [Пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [Расширения XAML WPF](wpf-xaml-extensions.md)  
+ [Совместимость разметки (mc:) Возможности языка](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [События](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ресурсы](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Архитектура WPF](wpf-architecture.md)  
+  [Базовые элементы](base-elements.md)  
+  [Дерево элементов и сериализация](element-tree-and-serialization.md)  
+  [Свойства](properties-wpf.md)  
+  [События](events-wpf.md)  
+  [Ввод](input-wpf.md)  
+  [Ресурсы](resources-wpf.md)  
+  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Потоковая модель](threading-model.md)

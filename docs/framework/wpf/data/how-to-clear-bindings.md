@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Очистка привязок
+title: Практическое руководство. Очистка привязок
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: bd0f42b868c316cb9a6344134d4aaf01930519ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508436"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360239"
 ---
-# <a name="how-to-clear-bindings"></a>Как выполнить Очистка привязок
+# <a name="how-to-clear-bindings"></a>Практическое руководство. Очистка привязок
 В этом примере показано, как удалять привязки к объекту.  
   
 ## <a name="example"></a>Пример  
  Чтобы удалить привязку из отдельного свойства объекта, вызовите <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> как показано в следующем примере. Следующий пример удаляет привязку из <xref:System.Windows.Controls.TextBlock.TextProperty> из *mytext*, <xref:System.Windows.Controls.TextBlock> объекта.  
   
- [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
- [!code-vb[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
+ [!code-csharp[CodeOnlyBinding#ClearBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
+ [!code-vb[CodeOnlyBinding#ClearBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
   
  Очистка привязки удаляет привязку так, что значение свойства зависимостей изменяется на то значение, которое было бы без привязки. Это значение может быть значением по умолчанию, унаследованным или значением из привязки шаблона данных.  
   
@@ -31,5 +31,5 @@ ms.locfileid: "54508436"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Data.BindingOperations>
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

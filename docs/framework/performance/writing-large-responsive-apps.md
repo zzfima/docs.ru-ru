@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358175"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#. 
@@ -467,7 +467,6 @@ class Compilation { /*...*/
 - [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Производительность](../../../docs/framework/performance/index.md)
 - [Советы по повышению производительности .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Средство анализа производительности Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
 - [Channel 9 учебники по PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Пакет SDK для .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [репозиторий DotNet/roslyn на GitHub](https://github.com/dotnet/roslyn)

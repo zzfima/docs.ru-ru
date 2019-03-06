@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375328"
 ---
 # <a name="windows-forms-overview"></a>Общие сведения о Windows Forms
 
@@ -45,7 +45,7 @@ ms.locfileid: "46007369"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
 |Использование элемента управления <xref:System.Windows.Forms.ToolStrip>|[Практическое руководство. Создание базового элемента управления ToolStrip со стандартными элементами с помощью конструктора](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Создание графических элементов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
@@ -65,9 +65,9 @@ ms.locfileid: "46007369"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Работа с источниками данных [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Использование окна "Источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
+|Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Работа с источниками данных [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Использование окна "Источники данных"|[Привязка элементов управления Windows Forms к данным в Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Использование параметров приложения|[Практическое руководство. Создание параметров приложения](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Развертывание приложений на клиентских компьютерах
@@ -84,7 +84,7 @@ ms.locfileid: "46007369"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Развертывание приложения с помощью [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Развертывание приложения с помощью [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |Обновление развертывания [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
 |Управление безопасностью с помощью [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 

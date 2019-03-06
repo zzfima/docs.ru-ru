@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Использование сетки для автоматической разметки
+title: Практическое руководство. Использование сетки для автоматической разметки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 0eda70a7d8cc5abb70b5043cbaa1d4fc418bb1f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357486"
 ---
-# <a name="how-to-use-a-grid-for-automatic-layout"></a>Как выполнить Использование сетки для автоматической разметки
+# <a name="how-to-use-a-grid-for-automatic-layout"></a>Практическое руководство. Использование сетки для автоматической разметки
 В этот примере описаны способы использования сетки для автоматической разметки с целью создания локализуемого приложения.  
   
  Локализация [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] может занять много времени. Часто при локализации, помимо перевода текста, необходимо изменять размеры и положение элементов. В прошлом каждый язык, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] переводился требовал коррекции. Теперь с возможностями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] можно разрабатывать элементы, сокращающие потребность в коррекции. Подход к написанию приложений, в которых проще изменять размер и положение элементов, называется `auto layout`.  
@@ -22,13 +22,13 @@ ms.locfileid: "54611427"
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показано использование сетки.  
   
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  На приведенном ниже рисунке показан результат выполнения примера кода.  
   
- ![Пример сетки](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Пример сетки](./media/glob-grid.png "glob_grid")  
 Grid  
   
 ## <a name="see-also"></a>См. также
-- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Обзор использования автоматической разметки](use-automatic-layout-overview.md)
+- [Использование автоматической разметки для создания кнопки](how-to-use-automatic-layout-to-create-a-button.md)

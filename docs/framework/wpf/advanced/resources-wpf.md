@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372208"
 ---
 # <a name="resources-wpf"></a>Ресурсы WPF.
-Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы — в первую очередь двух типах ресурсов: XAML ресурсы и файлы данных ресурсов. Ресурсы XAML примеры кисти и стили. Файлы данных ресурсов, файлы данных не является исполняемым, необходимые для приложения.  
+Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы являются в основном два типа ресурсов: Ресурсы XAML и файлы данных ресурсов. Примерами XAML ресурсов являются кисти и стили. Ресурс данных называются файлы неисполняемые данные, необходимые для приложения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [URI типа "pack" в WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Ресурсы XAML](xaml-resources.md)  
+ [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.ResourceDictionary>  
   
- [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [Расширение разметки StaticResource](staticresource-markup-extension.md)  
   
- [Расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [Расширение разметки DynamicResource](dynamicresource-markup-extension.md)  
   
- [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [Директива x:Key](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [XAML в WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [XAML в WPF](xaml-in-wpf.md)

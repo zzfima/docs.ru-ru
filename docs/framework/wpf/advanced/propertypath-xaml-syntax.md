@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648770"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363518"
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 <xref:System.Windows.PropertyPath> Поддерживает сложный встроенный объект [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксиса для настройки различных свойств, которые принимают <xref:System.Windows.PropertyPath> тип в качестве значения. Этом разделе описана <xref:System.Windows.PropertyPath> синтаксис применительно к привязки и анимации.  
@@ -28,7 +28,7 @@ ms.locfileid: "54648770"
 ## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath для объектов в привязке данных  
  Привязка данных является функцией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которую можно привязать к целевому значению любого свойства зависимостей. Однако источник такой привязки данных не обязательно должен быть свойством зависимостей. Это может быть любой тип свойства, распознаваемый применимым поставщиком данных. Пути свойств используются особенно для <xref:System.Windows.Data.ObjectDataProvider>, который используется для получения источников привязки из [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов и их свойств.  
   
- Обратите внимание, что привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как он не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого использовать <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A> также указываются в виде строки, но не документируется здесь. см. в разделе [привязка к данным XML с помощью XMLDataProvider и запросов XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Обратите внимание, что привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как он не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого использовать <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A> также указываются в виде строки, но не документируется здесь. см. в разделе [привязка к данным XML с помощью XMLDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Ключом к пониманию путей к свойствам в привязке к данным является то, что можно настроить целевой объект привязки на отдельное значение свойства либо использовать привязку к целевым свойствам, которые принимают списки или коллекции. При связывании коллекций, например привязки <xref:System.Windows.Controls.ListBox> , будет расширяться в зависимости от количества элементов данных в коллекции, а затем путь к свойству должен ссылаться на объект коллекции, а не отдельные элементы коллекции. Механизм привязки данных будет соответствовать коллекции, используемой как источник данных в тип целевого объекта привязки автоматически, что приводит к заполнению <xref:System.Windows.Controls.ListBox> массивом элементов.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648770"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- / в этом синтаксисе используется для навигации в иерархическом объекте источника данных. Поддерживается несколько шагов в иерархии с последовательными символами /. Обход источников учитывает текущую позицию указателя записи, которая определяется синхронизацией данных с пользовательским интерфейсом его представления. Дополнительные сведения о привязке к иерархическим объектам источника данных и концепции указателя текущей записи в привязке данных см. в разделе [Использование шаблона "Основной/подробности" с иерархическими данными](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) или [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ / в этом синтаксисе используется для навигации в иерархическом объекте источника данных. Поддерживается несколько шагов в иерархии с последовательными символами /. Обход источников учитывает текущую позицию указателя записи, которая определяется синхронизацией данных с пользовательским интерфейсом его представления. Дополнительные сведения о привязке к иерархическим объектам источника данных и концепции указателя текущей записи в привязке данных см. в разделе [Использование шаблона "Основной/подробности" с иерархическими данными](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) или [Общие сведения о привязке данных](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  Внешне этот синтаксис походит на [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Настоящую [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] выражение для привязки к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] источник данных не используется в качестве <xref:System.Windows.Data.Binding.Path%2A> значение и вместо этого следует использовать для взаимоисключающего <xref:System.Windows.Data.Binding.XPath%2A> свойство.  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>Общие рекомендации для отношений "объект/свойство" для анимаций  
- Подробнее о концепциях анимации в целом см. в разделах [Общие сведения о раскадровке ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) и [Общие сведения об анимации ](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Подробнее о концепциях анимации в целом см. в разделах [Общие сведения о раскадровке ](../graphics-multimedia/storyboards-overview.md) и [Общие сведения об анимации ](../graphics-multimedia/animation-overview.md).  
   
  Тип значения или анимируемое свойство должны являться объектами <xref:System.Windows.Freezable> тип или типы-примитивы. Свойство, которое запускает путь должен разрешаться как имя свойства зависимостей, которое существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` должно быть именем свойства зависимостей, существующего в объекте, который является значением `propertyName`. Другими словами `propertyName2` существовать как свойства зависимости в тип, являющийся `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
- Косвенное назначение анимации необходимо из-за примененных стилей и шаблонов. Чтобы целевой объект анимации, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> на целевой объект и что имя устанавливается с помощью [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) или <xref:System.Windows.FrameworkElement.Name%2A>. Хотя элементы шаблона и стиля также могут иметь имена, эти имена действительны только в области имен стиля и шаблона. (Если бы шаблоны и стили совместно использовали пространства имен с разметкой приложения, имена не могли бы быть уникальными. Стили и шаблоны буквально разделяются между экземплярами и могут сохранять повторяющиеся имена). Таким образом, если отдельные свойства элемента, которые нужно анимировать, исходят из стиля или шаблона, то нужно начать с именованного экземпляра элемента, который не происходит из шаблона стиля. Затем укажите целевой объект в визуальном дереве стиля или шаблона, чтобы достичь свойства, которое нужно анимировать.  
+ Косвенное назначение анимации необходимо из-за примененных стилей и шаблонов. Чтобы целевой объект анимации, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> на целевой объект и что имя устанавливается с помощью [x: Name](../../xaml-services/x-name-directive.md) или <xref:System.Windows.FrameworkElement.Name%2A>. Хотя элементы шаблона и стиля также могут иметь имена, эти имена действительны только в области имен стиля и шаблона. (Если бы шаблоны и стили совместно использовали пространства имен с разметкой приложения, имена не могли бы быть уникальными. Стили и шаблоны буквально разделяются между экземплярами и могут сохранять повторяющиеся имена). Таким образом, если отдельные свойства элемента, которые нужно анимировать, исходят из стиля или шаблона, то нужно начать с именованного экземпляра элемента, который не происходит из шаблона стиля. Затем укажите целевой объект в визуальном дереве стиля или шаблона, чтобы достичь свойства, которое нужно анимировать.  
   
  Например <xref:System.Windows.Controls.Panel.Background%2A> свойство <xref:System.Windows.Controls.Panel> является полным <xref:System.Windows.Media.Brush> (фактически <xref:System.Windows.Media.SolidColorBrush>), который поступил из шаблона темы. Для анимации <xref:System.Windows.Media.Brush> полностью, то потребуется потребовалась бы BrushAnimation (возможно, одна для каждого <xref:System.Windows.Media.Brush> типа) и нет такого типа. Чтобы анимировать кисть, вместо этого анимируются свойства определенного <xref:System.Windows.Media.Brush> типа. Необходимо получить из <xref:System.Windows.Media.SolidColorBrush> для его <xref:System.Windows.Media.SolidColorBrush.Color%2A> для применения <xref:System.Windows.Media.Animation.ColorAnimation> существует. Путь к свойству в этом примере будет `Background.Color`.  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.PropertyPath>
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Общие сведения о раскадровке](../graphics-multimedia/storyboards-overview.md)

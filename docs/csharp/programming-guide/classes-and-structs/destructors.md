@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652169"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202890"
 ---
 # <a name="finalizers-c-programming-guide"></a>Методы завершения (руководство по программированию в C#)
 Методы завершения (также называемые **деструкторами**) используются для любой необходимой окончательной очистки, когда сборщик мусора окончательно удаляет экземпляра класса.  
@@ -31,7 +31,7 @@ ms.locfileid: "54652169"
   
  Например, ниже показано объявление метода завершения для класса `Car`.
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 Метод завершения можно также реализовать как определение тела выражения, как показано в следующем примере.
 
@@ -81,7 +81,7 @@ protected override void Finalize()
 ## <a name="example"></a>Пример  
  В приведенном ниже примере создаются три класса, образующих цепочку наследования. Класс `First` является базовым, класс `Second` является производным от класса `First`, а класс `Third` является производным от класса `Second`. Все три класса имеют методы завершения. В методе `Main` создается экземпляр самого дальнего в цепочке наследования класса. При выполнении программы обратите внимание на то, что методы завершения для всех трех классов вызываются автоматически в порядке от самого дальнего до первого в цепочке наследования.  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 307c8e86ac6834631ba4086de5d7e27c0e32b87b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593996"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366715"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 <xref:System.Windows.Controls.FlowDocumentScrollViewer> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого в контейнере прокрутки. Сравните с <xref:System.Windows.Controls.FlowDocumentPageViewer>, который отображает содержимое по страницам.  
@@ -22,5 +22,5 @@ ms.locfileid: "54593996"
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Documents.FlowDocument>
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Документы в WPF](../advanced/documents-in-wpf.md)
+- [Общие сведения о документах нефиксированного формата](../advanced/flow-document-overview.md)

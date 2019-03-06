@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079403"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373963"
 ---
 # <a name="how-to-animate-in-a-style"></a>Как анимация с использованием стилей
 
@@ -20,8 +20,8 @@ ms.locfileid: "47079403"
 
 ## <a name="example"></a>Пример
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 Обратите внимание, что при анимации в стиле, возможно, к целевым объектам, которые не существуют. Например, предположим, что стиль использует <xref:System.Windows.Media.SolidColorBrush> переопределяется свойство фона кнопки, но в определенный момент стиль и фона кнопки задается с помощью <xref:System.Windows.Media.LinearGradientBrush>.  Для анимации <xref:System.Windows.Media.SolidColorBrush> не создается исключение; анимация завершатся сбоем без уведомления.
 
-Дополнительные сведения о синтаксисе планирования раскадровки, см. в разделе [Общие сведения о раскадровках](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Дополнительные сведения об анимации см. в разделе [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Дополнительные сведения о стилях см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Дополнительные сведения о синтаксисе планирования раскадровки, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md). Дополнительные сведения об анимации см. в разделе [Общие сведения об анимации](animation-overview.md). Дополнительные сведения о стилях см. в разделе [Стилизация и использование шаблонов](../controls/styling-and-templating.md).

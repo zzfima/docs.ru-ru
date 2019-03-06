@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265354"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368172"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Новые возможности WPF версии 4.5
 <a name="introduction"></a> Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265354"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Улучшенная поддержка установления слабой ссылки на событие  
- Реализация шаблона слабых событий стала проще, поскольку подписчики на события теперь могут принимать в ней участие без реализации дополнительного интерфейса.  Универсальный <xref:System.Windows.WeakEventManager> класс также позволяет подписчикам участвовать в шаблоне слабых событий, если выделенный <xref:System.Windows.WeakEventManager> для определенного события не существует.  Дополнительные сведения см. в разделе [Шаблоны слабых событий](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ Реализация шаблона слабых событий стала проще, поскольку подписчики на события теперь могут принимать в ней участие без реализации дополнительного интерфейса.  Универсальный <xref:System.Windows.WeakEventManager> класс также позволяет подписчикам участвовать в шаблоне слабых событий, если выделенный <xref:System.Windows.WeakEventManager> для определенного события не существует.  Дополнительные сведения см. в разделе [Шаблоны слабых событий](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Новые методы для класса Dispatcher  
- Класс Dispatcher определяет новые методы для синхронных и асинхронных операций.  Синхронный <xref:System.Windows.Threading.Dispatcher.Invoke%2A> метод определяет перегрузки, принимающие <xref:System.Action> или <xref:System.Func%601> параметра. Новый асинхронный метод <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, также принимает <xref:System.Action> или <xref:System.Func%601> как параметр обратного вызова и она возвращает <xref:System.Windows.Threading.DispatcherOperation> или <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> И <xref:System.Windows.Threading.DispatcherOperation%601> классы определяют <xref:System.Threading.Tasks.Task> свойство.  При вызове <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, можно использовать `await` ключевого слова with либо <xref:System.Windows.Threading.DispatcherOperation> или связанного <xref:System.Threading.Tasks.Task>. Если требуется синхронно дождаться <xref:System.Threading.Tasks.Task> , возвращаемый <xref:System.Windows.Threading.DispatcherOperation> или <xref:System.Windows.Threading.DispatcherOperation%601>, вызовите <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> метода расширения. Вызов <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> будет привести к взаимоблокировке, если операция помещается в очередь в вызывающий поток. Дополнительные сведения об использовании <xref:System.Threading.Tasks.Task> для выполнения асинхронных операций, см. в разделе [параллелизм задач (библиотека параллельных задач)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ Класс Dispatcher определяет новые методы для синхронных и асинхронных операций.  Синхронный <xref:System.Windows.Threading.Dispatcher.Invoke%2A> метод определяет перегрузки, принимающие <xref:System.Action> или <xref:System.Func%601> параметра. Новый асинхронный метод <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, также принимает <xref:System.Action> или <xref:System.Func%601> как параметр обратного вызова и она возвращает <xref:System.Windows.Threading.DispatcherOperation> или <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> И <xref:System.Windows.Threading.DispatcherOperation%601> классы определяют <xref:System.Threading.Tasks.Task> свойство.  При вызове <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, можно использовать `await` ключевого слова with либо <xref:System.Windows.Threading.DispatcherOperation> или связанного <xref:System.Threading.Tasks.Task>. Если требуется синхронно дождаться <xref:System.Threading.Tasks.Task> , возвращаемый <xref:System.Windows.Threading.DispatcherOperation> или <xref:System.Windows.Threading.DispatcherOperation%601>, вызовите <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> метода расширения. Вызов <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> будет привести к взаимоблокировке, если операция помещается в очередь в вызывающий поток. Дополнительные сведения об использовании <xref:System.Threading.Tasks.Task> для выполнения асинхронных операций, см. в разделе [параллелизм задач (библиотека параллельных задач)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Расширения разметки для событий  
  WPF 4.5 поддерживает расширения разметки для событий.  Несмотря на то, что WPF не определяет расширение разметки для применения с событиями, третьи стороны могут создавать расширение разметки, которое можно использовать с событиями.  
   
 ## <a name="see-also"></a>См. также
-- [Новые возможности .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Новые возможности .NET Framework](../../whats-new/index.md)

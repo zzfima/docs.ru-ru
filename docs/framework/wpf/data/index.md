@@ -13,8 +13,8 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы можно связывать с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] также предоставляет механизм передачи данных с помощью операций перетаскивания.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Привязка данных](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Привязка данных](data-binding-wpf.md)  
+ [Перетаскивание](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Data>  
@@ -26,12 +26,12 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)  
+ [Элементы управления](../controls/index.md)  
   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Привязка данных](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
-- [Пошаговое руководство: Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
+- [Пошаговое руководство: Кэширование данных приложения WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

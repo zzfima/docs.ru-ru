@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 18564e0de8f88e89f8fb71d28ee3bfeccceea4ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86910434e572bc19595d1664347f35d7a39eb75b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365109"
 ---
 # <a name="getrawinputdevices"></a>Получение необработанных устройств ввода
 Позволяет программе PresentationHost.exe обнаруживать устройства необработанного ввода (устройства HID), которые интересуют ведущее приложение.  
@@ -23,12 +23,12 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
 #### <a name="parameters"></a>Параметры  
  `ppEnum`  
   
- [out] Указатель на [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) для перечисления устройств необработанного ввода.  
+ [out] Указатель на [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) для перечисления устройств необработанного ввода.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
  HRESULT:  
   
- S_OK — [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) только будет использоваться программой PresentationHost.exe, если возвращается значение S_OK.  
+ S_OK — [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) только будет использоваться программой PresentationHost.exe, если возвращается значение S_OK.  
   
  E_NOTIMPL  
   
@@ -39,4 +39,4 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
   
 ## <a name="see-also"></a>См. также
 - [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)
-- [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)
+- [FilterInputMessage](filterinputmessage.md)

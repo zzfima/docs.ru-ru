@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362022"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Упрощение отладки в .NET изображения
 
@@ -34,7 +34,7 @@ ms.locfileid: "48036030"
 
 Например, если сборки, необходимо выполнить отладку называется *MyApp.exe*, то можно создать текстовый файл с именем *MyApp.ini*, в той же папке, что *MyApp.exe*, который содержит Эти три строки:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ AllowOptimize=0
 **DebuggableAttribute** одновременно применяется ко всей сборке, а не к ее отдельным модулям. Средства разработки должны, таким образом, подключать пользовательские атрибуты к классу **System.Runtime.CompilerServices.AssemblyAttributesGoHere** или, если сборка уже создана, к токену метаданных сборки. Средство ALink активизируется эти **DebuggableAttribute** атрибуты из каждого модуля в сборку, они становятся частью. Если возникает конфликт, сбой операции ALink.
 
 > [!NOTE]
-> В .NET Framework версии 1.0 **DebuggableAttribute** добавляется компилятором Microsoft Visual C++, если указаны параметры компилятора **/clr** и **/Zi**. В .NET Framework версии 1.1 **DebugabbleAttribute** можно добавить как вручную (в коде), так и с помощью параметра **/ASSEMBLYDEBUG** компоновщика.
+> В .NET Framework версии 1.0 **DebuggableAttribute** добавляется компилятором Microsoft Visual C++, если указаны параметры компилятора **/clr** и **/Zi**. В версии 1.1 платформы .NET Framework, необходимо добавить **DebuggableAttribute** вручную в коде или используйте **/ASSEMBLYDEBUG** параметр компоновщика.
 
 ## <a name="see-also"></a>См. также
 

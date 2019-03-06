@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555184"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970575"
 ---
 # <a name="net-class-library-overview"></a>Обзор библиотеки классов .NET
 
@@ -96,8 +96,8 @@ ms.locfileid: "54555184"
 ||<xref:System.UInt16>|16-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /> - или -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float32**</br> или</br>**single**|  
-||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**float**</br> или </br> **double**|  
+|С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float32**<br> или<br>**single**|  
+||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**float**<br> или <br> **double**|  
 |Logical|<xref:System.Boolean>|Логическое значение (true или false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Другое|<xref:System.Char>|Символ Юникода (16-разрядный).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|128-разрядное десятичное значение.|**Decimal**|**decimal**|**Decimal**|**decimal**|  

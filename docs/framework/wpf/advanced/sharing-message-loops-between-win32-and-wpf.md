@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 6ee440d91bf241949923074dfd5163a49cfd9979
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378223"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Совместное использование циклов обработки сообщений между Win32 и WPF
 В этом разделе описывается, как реализовать цикл обработки сообщений для взаимодействия с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], либо с помощью существующих сообщений раскрытия цикл в <xref:System.Windows.Threading.Dispatcher> или создав цикл обработки отдельных сообщений на [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] сторона кода взаимодействия.  
@@ -64,6 +64,6 @@ ms.locfileid: "54740974"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
-- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)
+- [Потоковая модель](threading-model.md)
+- [Общие сведения о входных данных](input-overview.md)

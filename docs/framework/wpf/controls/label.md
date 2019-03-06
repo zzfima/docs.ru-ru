@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376173"
 ---
 # <a name="label"></a>Метка
 <xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически сложилось так, что <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , поставляемый в комплекте с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
@@ -21,7 +21,7 @@ ms.locfileid: "56746906"
   
  На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [Как Установка целевого свойства метки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Свойства отображения помеченные по использованию](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![Свойства отображения помеченные по использованию](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  

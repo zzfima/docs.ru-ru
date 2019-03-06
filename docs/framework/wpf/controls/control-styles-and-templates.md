@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079731"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373209"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержит визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его нового и полного <xref:System.Windows.Controls.ControlTemplate>.  
@@ -34,38 +34,38 @@ ms.locfileid: "47079731"
 |Aero.NormalColor.xaml|Тема по умолчанию в ОС Windows Vista.|  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Стили и шаблоны элемента Button](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Стили и шаблоны элемента Calendar](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [Стили и шаблоны элемента CheckBox](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [Стили и шаблоны элемента ComboBox](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [Стили и шаблоны элемента ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [Стили и шаблоны элемента DataGrid](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [Стили и шаблоны элемента DatePicker](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [Стили и шаблоны элемента DocumentViewer](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Стили и шаблоны элемента Expander](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Стили и шаблоны элемента Frame](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [Стили и шаблоны элемента GroupBox](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Стили и шаблоны элемента Label](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [Стили и шаблоны элемента ListBox](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [Стили и шаблоны элемента ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Стили и шаблоны элемента Menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [Стили и шаблоны элемента NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox стили и шаблоны](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [Стили и шаблоны элемента ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [Стили и шаблоны элемента RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton стили и шаблоны](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [Стили и шаблоны элемента ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Стили и шаблоны элемента ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Стили и шаблоны элемента Slider](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [Стили и шаблоны элемента StatusBar](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [Стили и шаблоны элемента TabControl](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [Стили и шаблоны элемента TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Бегунок стили и шаблоны](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Элемент управления ToggleButton стили и шаблоны](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [Стили и шаблоны элемента ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [Стили и шаблоны элемента ToolTip](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [Стили и шаблоны элемента TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Стили и шаблоны элемента Window](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Стили и шаблоны элемента Button](button-styles-and-templates.md)  
+ [Стили и шаблоны элемента Calendar](calendar-styles-and-templates.md)  
+ [Стили и шаблоны элемента CheckBox](checkbox-styles-and-templates.md)  
+ [Стили и шаблоны элемента ComboBox](combobox-styles-and-templates.md)  
+ [Стили и шаблоны элемента ContextMenu](contextmenu-styles-and-templates.md)  
+ [Стили и шаблоны элемента DataGrid](datagrid-styles-and-templates.md)  
+ [Стили и шаблоны элемента DatePicker](datepicker-styles-and-templates.md)  
+ [Стили и шаблоны элемента DocumentViewer](documentviewer-styles-and-templates.md)  
+ [Стили и шаблоны элемента Expander](expander-styles-and-templates.md)  
+ [Стили и шаблоны элемента Frame](frame-styles-and-templates.md)  
+ [Стили и шаблоны элемента GroupBox](groupbox-styles-and-templates.md)  
+ [Стили и шаблоны элемента Label](label-styles-and-templates.md)  
+ [Стили и шаблоны элемента ListBox](listbox-styles-and-templates.md)  
+ [Стили и шаблоны элемента ListView](listview-styles-and-templates.md)  
+ [Стили и шаблоны элемента Menu](menu-styles-and-templates.md)  
+ [Стили и шаблоны элемента NavigationWindow](navigationwindow-styles-and-templates.md)  
+ [PasswordBox стили и шаблоны](passwordbox-syles-and-templates.md)  
+ [Стили и шаблоны элемента ProgressBar](progressbar-styles-and-templates.md)  
+ [Стили и шаблоны элемента RadioButton](radiobutton-styles-and-templates.md)  
+ [RepeatButton стили и шаблоны](repeatbutton-syles-and-templates.md)  
+ [Стили и шаблоны элемента ScrollBar](scrollbar-styles-and-templates.md)  
+ [Стили и шаблоны элемента ScrollViewer](scrollviewer-styles-and-templates.md)  
+ [Стили и шаблоны элемента Slider](slider-styles-and-templates.md)  
+ [Стили и шаблоны элемента StatusBar](statusbar-styles-and-templates.md)  
+ [Стили и шаблоны элемента TabControl](tabcontrol-styles-and-templates.md)  
+ [Стили и шаблоны элемента TextBox](textbox-styles-and-templates.md)  
+ [Бегунок стили и шаблоны](thumb-syles-and-templates.md)  
+ [Элемент управления ToggleButton стили и шаблоны](togglebutton-syles-and-templates.md)  
+ [Стили и шаблоны элемента ToolBar](toolbar-styles-and-templates.md)  
+ [Стили и шаблоны элемента ToolTip](tooltip-styles-and-templates.md)  
+ [Стили и шаблоны элемента TreeView](treeview-styles-and-templates.md)  
+ [Стили и шаблоны элемента Window](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ ms.locfileid: "47079731"
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
   
- [Использование стилей и шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Использование стилей и шаблонов](styling-and-templating.md)

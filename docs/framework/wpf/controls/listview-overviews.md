@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551064"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370336"
 ---
 # <a name="listview-overviews"></a>Общие сведения о ListView
 В подразделах этого раздела показано, как использовать <xref:System.Windows.Controls.ListView> элемента управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Общие сведения о стилях заголовков столбцов GridView и шаблонах](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [Общие сведения об элементе управления ListView](listview-overview.md)  
+ [Общие сведения о GridView](gridview-overview.md)  
+ [Общие сведения о стилях заголовков столбцов GridView и шаблонах](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ ms.locfileid: "33551064"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Разделы практического руководства](listview-how-to-topics.md)

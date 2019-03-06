@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 67978e49a8c23c4b25234ecbb3639c696c7232f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655651"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366001"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>Метод IXCLRDataProcess::EndEnumMethodInstancesByAddress
 
@@ -36,9 +36,10 @@ HRESULT EndEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`handle` [out] Дескриптор для перечисления экземпляров метода.
+`handle`\
+[out] Дескриптор для перечисления экземпляров метода.
 
 ## <a name="remarks"></a>Примечания
 
@@ -53,6 +54,6 @@ HRESULT EndEnumMethodInstancesByAddress(
 
 ## <a name="see-also"></a>См. также
 
-- [Перечисление CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Перечисление CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Отладка](index.md)
+- [Интерфейс IXCLRDataProcess](ixclrdataprocess-interface.md)

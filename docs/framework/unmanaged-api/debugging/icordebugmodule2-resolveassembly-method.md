@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359696"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>Метод ICorDebugModule2::ResolveAssembly
-Разрешает сборку ссылается указанный токен метаданных.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `tkAsemblyRef`  
- [in] `mdToken` Значение, которое ссылается на сборку.  
-  
- `ppAssembly`  
- [out] Указатель на адрес объекта ICorDebugAssembly, представляющий сборку.  
-  
-## <a name="remarks"></a>Примечания  
- Если сборка еще не загружен при `ResolveAssembly` вызывается HRESULT будет возвращено значение CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок:** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+Разрешает сборки, упоминаемой в заданным токеном метаданных.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+`tkAssemblyRef`\
+[in] `mdToken` Значение, которое ссылается на сборку.
+
+`ppAssembly`\
+[out] Указатель на адрес объекта ICorDebugAssembly, представляющий сборку.
+
+## <a name="remarks"></a>Примечания
+
+Если сборка еще не загружен при `ResolveAssembly` вызывается HRESULT возвращается значение CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** CorDebug.idl, CorDebug.h
+
+**Библиотека:** CorGuids.lib
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

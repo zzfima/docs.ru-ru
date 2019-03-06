@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367882"
 ---
 # <a name="advanced-ink-handling"></a>Дополнительная обработка рукописных данных
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Поставляется с <xref:System.Windows.Controls.InkCanvas>, и элементом, можно поместить в приложение, чтобы немедленно начать сбор и отображение рукописного ввода. Однако если <xref:System.Windows.Controls.InkCanvas> управления не предоставляет необходимый уровень управления, то можно использовать элемент управления на более высоком уровне путем настройки своей собственной коллекции рукописного ввода и классов отрисовки рукописного ввода с помощью <xref:System.Windows.Input.StylusPlugIns>.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Поставляется с <xref:System.Windows.Controls.InkCanvas>, и является элементом, можно поместить в приложение, чтобы немедленно начать сбор и отображение рукописного ввода. Тем не менее если <xref:System.Windows.Controls.InkCanvas> управления не предоставляет необходимый уровень элемента управления, можно использовать элемент управления на более высоком уровне путем настройки своей собственной коллекции рукописного ввода и классы отрисовки рукописного ввода с помощью <xref:System.Windows.Input.StylusPlugIns>.  
   
- <xref:System.Windows.Input.StylusPlugIns> Классы предоставляют механизм для реализации низкоуровневого управления <xref:System.Windows.Input.Stylus> входных данных и динамическим отрисовкой рукописного ввода. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для обеспечения оптимальной производительности. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Специализированный <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, позволяет динамически настраивать отрисовки рукописного ввода данных в режиме реального времени означает, что <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Рисует рукописный сразу же, как <xref:System.Windows.Input.StylusPoint> данные создаются, чтобы он выглядел так «поток» от пера устройство.  
+ <xref:System.Windows.Input.StylusPlugIns> Классы предоставляют механизм для реализации низкоуровневого управления <xref:System.Windows.Input.Stylus> входных данных и динамической отрисовки рукописных фрагментов. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для обеспечения оптимальной производительности. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Специализированный <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, позволяет динамически настраивать отрисовку рукописных данных в режиме реального времени означает, что <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Рисует рукописный ввод как <xref:System.Windows.Input.StylusPoint> данные создаются, чтобы он выглядел так «поток» от пера устройство.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Пользовательская отрисовка рукописных данных](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Перехват ввода, осуществляемого пером](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Создание элемента управления рукописным вводом](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Потоковая модель рукописного ввода](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Пользовательская отрисовка рукописных данных](custom-rendering-ink.md)  
+  [Перехват ввода, осуществляемого пером](intercepting-input-from-the-stylus.md)  
+  [Создание элемента управления рукописным вводом](creating-an-ink-input-control.md)  
+  [Потоковая модель рукописного ввода](the-ink-threading-model.md)

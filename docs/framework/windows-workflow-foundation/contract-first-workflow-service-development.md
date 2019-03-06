@@ -2,15 +2,15 @@
 title: Разработка службы рабочих процессов на основе контракта
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 10129fcb40d86d1ca7e42bce68b072e9118bcc88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519497"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373066"
 ---
 # <a name="contract-first-workflow-service-development"></a>Разработка службы рабочих процессов на основе контракта
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса контракта. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте. В этом разделе содержатся общие сведения о том, как действия и свойства в службе рабочих процессов сопоставляются с атрибутами контракта службы. Пример с пошаговыми инструкциями создания рабочих процессов на основе контракта службы, в разделе [как: создание службы рабочего процесса, который использует существующий контракт службы](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса первого контракта. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте. В этом разделе содержатся общие сведения о том, как действия и свойства в службе рабочих процессов сопоставляются с атрибутами контракта службы. Для пошаговых инструкций по созданию рабочего процесса первого контракта службы, см. в разделе [как: Создание службы рабочего процесса, который использует существующий контракт службы](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
@@ -26,13 +26,13 @@ ms.locfileid: "33519497"
   
     -   [Атрибуты контракта ошибок](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
--   [Дополнительные сведения и сведения о реализации](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Дополнительная поддержка и сведения о реализации](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
   
     -   [Неподдерживаемые возможности контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
     -   [Создание настроенных действий обмена сообщениями](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a> Сопоставление атрибутов контракта службы с атрибутами рабочего процесса  
+## <a name="MappingAttributes"></a> Сопоставление атрибутов контракта службы с атрибутами рабочего процесса  
  Таблицы в следующих разделах показывают различные атрибуты и свойства WCF, а также как они сопоставляются с действиями по обмену сообщениями и их свойствами в рабочем процессе на основе контракта.  
   
 -   [Атрибуты контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -45,27 +45,27 @@ ms.locfileid: "33519497"
   
 -   [Атрибуты контракта ошибок](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a> Атрибуты контракта службы  
+### <a name="ServiceContract"></a> Атрибуты контракта службы  
   
 |Имя свойства|Поддерживается|Описание|Проверка рабочего процесса|  
 |-------------------|---------------|-----------------|-------------------|  
 |CallbackContract|Нет|Возвращает или задает тип контракта обратного вызова, если контракт является дуплексным.|(не определено)|  
 |ConfigurationName|Нет|Возвращает или задает имя, используемое для поиска службы в файле конфигурации приложения.|(не определено)|  
 |HasProtectionLevel|Да|Возвращает значение, указывающее, присвоен ли участнику уровень защиты.|Свойство Receive.ProtectionLevel не должно иметь значение NULL.|  
-|Имя|Да|Возвращает или задает имя для \<portType > элемент в языке описания веб-служб (WSDL).|Свойство Receive.ServiceContractName.LocalName должно согласовываться.|  
-|Пространство имен|Да|Возвращает или задает пространство имен \<portType > элемент в языке описания веб-служб (WSDL).|Свойство Receive.ServiceContractName.NameSpace должно согласовываться.|  
+|Имя|Да|Возвращает или задает имя для \<portType > элемент в язык описания веб-служб (WSDL).|Свойство Receive.ServiceContractName.LocalName должно согласовываться.|  
+|Пространство имен|Да|Возвращает или задает пространство имен \<portType > элемент в язык описания веб-служб (WSDL).|Свойство Receive.ServiceContractName.NameSpace должно согласовываться.|  
 |ProtectionLevel|Да|Указывает, должна ли привязка для контракта поддерживать значение свойства ProtectionLevel.|Свойство Receive.ProtectionLevel должно согласовываться.|  
 |SessionMode|Нет|Возвращает или задает значение, указывающее, разрешены, запрещены или требуются ли сеансы.|(не определено)|  
 |TypeId|Нет|В случае реализации в производном классе возвращает уникальный идентификатор для этого атрибута. (Наследуется от атрибута.)|(не определено)|  
   
  Вставьте сюда основную часть подраздела.  
   
-###  <a name="OperationContract"></a> Атрибуты контракта операции  
+### <a name="OperationContract"></a> Атрибуты контракта операции  
   
 |Имя свойства|Поддерживается|Описание|Проверка рабочего процесса|  
 |-------------------|---------------|-----------------|-------------------|  
 |Действие|Да|Возвращает или задает действие WS-Addressing сообщения запроса.|Свойство Receive.Action должно согласовываться.|  
-|AsyncPattern|Нет|Указывает, что операция реализуется асинхронно с помощью блок Begin\<ИмяМетода > и End\<ИмяМетода > пары методов в контракте службы.|(не определено)|  
+|AsyncPattern|Нет|Указывает, что операция реализуется асинхронно с помощью Begin\<ИмяМетода > и End\<ИмяМетода > пары методов в контракте службы.|(не определено)|  
 |HasProtectionLevel|Да|Возвращает значение, указывающее, должны ли сообщения этой операции шифроваться, подписываться или шифроваться и подписываться.|Свойство Receive.ProtectionLevel не должно иметь значение NULL.|  
 |IsInitiating|Нет|Возвращает или задает значение, указывающее, реализует ли метод операцию, которая может инициировать сеанс на сервере (если такой сеанс существует).|(не определено)|  
 |IsOneWay|Да|Возвращает или задает значение, указывающее, возвращает ли операция ответное сообщение.|(Не существует SendReply для этого Receive ИЛИ ReceiveReply для этого Send.)|  
@@ -75,7 +75,7 @@ ms.locfileid: "33519497"
 |ReplyAction|Да|Возвращает или задает значение действия SOAP для ответного сообщения операции.|Свойство SendReply.Action должно согласовываться.|  
 |TypeId|Нет|В случае реализации в производном классе возвращает уникальный идентификатор для этого атрибута. (Наследуется от атрибута.)|(не определено)|  
   
-###  <a name="MessageContract"></a> Атрибуты контракта сообщения  
+### <a name="MessageContract"></a> Атрибуты контракта сообщения  
   
 |Имя свойства|Поддерживается|Описание|Проверка рабочего процесса|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "33519497"
 |WrapperName|Да|Возвращает или задает имя элемента программы-оболочки текста сообщения.|Проверка не выполняется (Receive.Content и SendReply.Content должны согласовываться с типом контракта сообщения).|  
 |WrapperNamespace|Нет|Возвращает или задает пространство имен элемента программы-оболочки текста сообщения.|(не определено)|  
   
-###  <a name="DataContract"></a> Атрибуты контракта данных  
+### <a name="DataContract"></a> Атрибуты контракта данных  
   
 |Имя свойства|Поддерживается|Описание|Проверка рабочего процесса|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -95,7 +95,7 @@ ms.locfileid: "33519497"
 |Пространство имен|Да|Возвращает или задает пространство имен для контракта данных типа.|Проверка не выполняется (Receive.Content и SendReply.Content должны согласовываться с типом контракта сообщения).|  
 |TypeId|Нет|В случае реализации в производном классе возвращает уникальный идентификатор для этого атрибута. (Наследуется от атрибута.)|(не определено)|  
   
-###  <a name="FaultContract"></a> Атрибуты контракта ошибок  
+### <a name="FaultContract"></a> Атрибуты контракта ошибок  
   
 |Имя свойства|Поддерживается|Описание|Проверка рабочего процесса|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -107,27 +107,27 @@ ms.locfileid: "33519497"
 |ProtectionLevel|Нет|Задает уровень защиты, который требуется от привязки для ошибки SOAP.|(не определено)|  
 |TypeId|Нет|В случае реализации в производном классе возвращает уникальный идентификатор для этого атрибута. (Наследуется от атрибута.)|(не определено)|  
   
-##  <a name="AdditionalSupport"></a> Дополнительные сведения и сведения о реализации  
+## <a name="AdditionalSupport"></a> Дополнительная поддержка и сведения о реализации  
   
 -   [Неподдерживаемые возможности контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [Создание настроенных действий обмена сообщениями](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a> Неподдерживаемые возможности контракта службы  
+### <a name="UnsupportedFeatures"></a> Неподдерживаемые возможности контракта службы  
   
 -   Использовать библиотеку параллельных задач (TPL) в контрактах невозможно.  
   
 -   Наследование в контрактах службы не поддерживается.  
   
-###  <a name="ActivityGeneration"></a> Создание настроенных действий обмена сообщениями  
+### <a name="ActivityGeneration"></a> Создание настроенных действий обмена сообщениями  
  Два общих статических метода добавляются в действия <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> для поддержки создания предварительно настроенных действий сообщения, если используются службы рабочих процессов на основе контракта.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- Действие, созданное этими методами, должно пройти проверку по контракту и поэтому используется как часть логики проверки для <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>. Действия <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> и <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> предварительно настроены для соответствия импортированному контракту. На странице свойств содержимого для действий в конструкторе рабочих процессов **сообщение** или **параметры** разделы предварительно настроены для соответствия контракту.  
+ Действие, созданное этими методами, должно пройти проверку по контракту и поэтому используется как часть логики проверки для <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>. Действия <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> и <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> предварительно настроены для соответствия импортированному контракту. На странице свойств содержимого для действий в конструкторе рабочих процессов **сообщение** или **параметры** разделах предварительно настроены для соответствия контракту.  
   
- Настроить WCF проблем, контрактов также обрабатываются путем возвращения отдельный набор <xref:System.ServiceModel.Activities.SendReply> действия для каждой ошибки, которые отображаются в <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
+ Настройки контрактов также обрабатываются путем возвращения набора отдельных ошибок WCF <xref:System.ServiceModel.Activities.SendReply> действия для каждой ошибки, которые отображаются в <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
   
- Для других частей <xref:System.ServiceModel.Description.OperationDescription> , не поддерживаются в службах WF сегодня (поведение WebGet/WebInvoke или поведение пользовательской операции), API обрабатывает их как часть создания и настройки. Исключения не формируются.
+ Для других частей <xref:System.ServiceModel.Description.OperationDescription> , которые не поддерживаются в службах WF сегодня (поведение WebGet/WebInvoke или поведение пользовательской операции), API будет игнорировать эти значения как часть создания и настройки. Исключения не формируются.

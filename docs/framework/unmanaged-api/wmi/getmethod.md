@@ -16,50 +16,51 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a405c5e245558e6b8d1b389bfc143faae4550a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb8919e8760616676ea5ff99069e2d2ceb5f7451
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577598"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370700"
 ---
 # <a name="getmethod-function"></a>Функция GetMethod
+
 Получает сведения об указанном методе.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT GetMethod (
-   [in] int                vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszName,
    [in] LONG                lFlags,
    [out] IWbemClassObject** ppInSignature,
    [out] IWbemClassObject** ppOutSignature
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`vFunc`  
+`vFunc`\
 [in] Этот параметр не используется.
 
-`ptr`  
+`ptr`\
 [in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
-`wszName`  
+`wszName`\
 [in] Имя метода. Этот параметр не может быть `null` и должен указывать на допустимый `LPCWSTR`.
 
-`lFlags`  
+`lFlags`\
 [in] Зарезервировано. Этот параметр должен быть 0.
 
-`ppInSignature`   
-[out] Указатель на адрес [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляр, описывающий в paramteers методу. Этот параметр учитывается, если он становится равным `null`. 
+`ppInSignature`\
+[out] Указатель на адрес [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляр, описывающий входные параметры метода. Этот параметр учитывается, если он становится равным `null`.
 
-`ppOutSignature`  
-[out] Указатель на адрес [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляр, описывающий выходные параметры метода. Этот параметр учитывается, если он становится равным `null`. 
+`ppOutSignature`\
+[out] Указатель на адрес [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляр, описывающий выходные параметры метода. Этот параметр учитывается, если он становится равным `null`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -70,21 +71,23 @@ HRESULT GetMethod (
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найден. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) метод.
 
 Можно установить Windows Management [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указатель на `null` Если у метода нет входные параметры.
 
-В `ppInSignature` и `ppOutSignature` описывают входным и выходным параметрами, соответственно, в виде свойств `IWbemClassObject` экземпляр системного класса [_Parameters](/windows/desktop/WmiSdk/--parameters). Свойства в `ppInsignature` именуются `Param` *n*, где *n* позиция параметра в сигнатуре метода (такие как `Param1`, `Param2`и т. д.). Свойства в `ppOutSignature` также называются `Param` *n*, и возвращаемое значение имеет имя `ReturnValue`. Дополнительные сведения и пример см. в разделе [IWbemClassObject::GetMethod метод](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+В `ppInSignature` и `ppOutSignature` описывают входным и выходным параметрами, соответственно, в виде свойств `IWbemClassObject` экземпляр системного класса [_Parameters](/windows/desktop/WmiSdk/--parameters). Свойства в `ppInSignature` именуются `Param` *n*, где *n* позиция параметра в сигнатуре метода (такие как `Param1`, `Param2`и т. д.). Свойства в `ppOutSignature` также называются `Param` *n*, и возвращаемое значение имеет имя `ReturnValue`. Дополнительные сведения и пример см. в разделе [IWbemClassObject::GetMethod метод](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
-## <a name="requirements"></a>Требования  
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

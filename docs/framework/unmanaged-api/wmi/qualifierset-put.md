@@ -16,50 +16,53 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201187"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378847"
 ---
 # <a name="qualifiersetput-function"></a>Функция QualifierSet_Put
-Записывает именованный квалификатор и значение. Новый квалификатор перезаписывает предыдущее значение с тем же именем. Если квалификатор не существует, он создается. 
+
+Записывает именованный квалификатор и значение. Новый квалификатор перезаписывает предыдущее значение с тем же именем. Если квалификатор не существует, он создается.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT QualifierSet_Put (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName,
    [in] VARIANT*             pVal,
    [in] LONG                 lFlavor
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`vFunc`   
+`vFunc`\
 [in] Этот параметр не используется.
 
-`ptr`   
+`ptr`\
 [in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.
 
-`wszName`   
+`wszName`\
 [in] Имя квалификатора для записи.
 
-`pVal` [in] Указатель на допустимую `VARIANT` , содержащий квалификатор для записи. Этот параметр не может быть `null`.
+`pVal`\
+[in] Указатель на допустимую `VARIANT` , содержащий квалификатор для записи. Этот параметр не может быть `null`.
 
-`lFlavor` [in] Одно из следующих констант, который определяет требуемый квалификаторов для этот квалификатор. Значение по умолчанию — `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor`\
+[in] Одно из следующих констант, который определяет требуемый квалификаторов для этот квалификатор. Значение по умолчанию — `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Квалификатор может переопределяться в производном классе или экземпляре. **Это значение по умолчанию.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Квалификатор распространяется в экземпляры. |
-| `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Квалификатор распространяется в производные классы. |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Квалификатор распространяется в производные классы. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Квалификатор невозможно переопределить в производном классе или экземпляре. |
 | `WBEM_FLAVOR_AMENDED` | 0x80 | Квалификатор локализуется. |
 
@@ -74,17 +77,19 @@ HRESULT QualifierSet_Put (
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Параметр не является типом квалификатора. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Невозможно вызвать `QualifierSet_Put` метод квалификатор, так как объект-владелец не разрешает переопределения. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) метод.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

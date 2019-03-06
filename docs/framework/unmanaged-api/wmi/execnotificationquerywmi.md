@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566987"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352884"
 ---
 # <a name="execnotificationquerywmi-function"></a>Функция ExecNotificationQueryWmi
-Выполняет запрос для получения событий. Вызов возвращается немедленно, а вызывающий объект может опросить возвращенном перечислителе для событий, при их поступлении. Освобождение возвращенном перечислителе отменяет запрос.  
+
+Выполняет запрос для получения событий. Вызов возвращается немедленно, а вызывающий объект может опросить возвращенном перечислителе для событий, при их поступлении. Освобождение возвращенном перечислителе отменяет запрос.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,46 +44,47 @@ HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Параметры
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Строка с допустимым запросом язык, поддерживаемый управления Windows. Оно должно быть «WQL», сокращение для языка запросов WMI.
 
-`strQuery`  
+`strQuery`\
 [in] Текст запроса. Этот параметр не может быть `null`.
 
-`lFlags`   
-[in] Комбинация из следующих двух флагов, влияющих на поведение этой функции. Эти значения определены в *WbemCli.h* файл заголовка, или их можно определить как константы в коде. 
+`lFlags`\
+[in] Комбинация из следующих двух флагов, влияющих на поведение этой функции. Эти значения определены в *WbemCli.h* файл заголовка, или их можно определить как константы в коде.
 
 | Константа | Значение  | Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Этот флаг приводит к Полусинхронный вызов. Если этот флаг не установлен, вызов завершается ошибкой. Это обусловлено их получения постоянно, это означает, что пользователь должен опросить возвращенном перечислителе. Блокирует этот вызов бесконечно делает, невозможно. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Функция возвращает только вперед перечислителя. Обычно перечислители только вперед, выполняются быстрее и использовать меньше памяти, чем обычные перечислители, но они не допускают вызовы [клона](clone.md). |
 
-`pCtx`  
-[in] Как правило, это значение равно `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) экземпляр, который может использоваться поставщиком, предоставляющего запрошенные события. 
+`pCtx`\
+[in] Как правило, это значение равно `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) экземпляр, который может использоваться поставщиком, предоставляющего запрошенные события.
 
-`ppEnum`  
+`ppEnum`\
 [out] При отсутствии ошибок, получающей указатель на перечислитель, который позволяет вызывающей стороне для получения экземпляров в результирующем наборе запроса. См. в разделе ["Примечания"](#remarks) Дополнительные сведения.
 
-`authLevel`  
+`authLevel`\
 [in] Уровень авторизации.
 
-`impLevel` [in] Уровень олицетворения.
+`impLevel`\
+[in] Уровень олицетворения.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Указатель на [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объект, представляющий текущее пространство имен.
 
-`strUser`   
+`strUser`\
 [in] Имя пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strPassword`   
+`strPassword`\
 [in] Пароль. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
-`strAuthority`   
+`strAuthority`\
 [in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -96,7 +98,7 @@ HRESULT ExecNotificationQueryWmi (
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Запрос указывает класс, который не существует. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Запрошено слишком много точности в доставку событий. Должно быть указано больше погрешность опроса. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Requess запросов, которые можно предоставить больше информации, чем управления Windows. Это `HRESULT` возвращается при запросе событий приводит к запросу, чтобы опросить все объекты в пространстве имен. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Запрос запрашивает больше информации, чем может предоставить управления Windows. Это `HRESULT` возвращается при запросе событий приводит к запросу, чтобы опросить все объекты в пространстве имен. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Запрос содержит синтаксическую ошибку. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Запрошенный язык запросов не поддерживается. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Запрос является слишком сложным. |
@@ -105,7 +107,7 @@ HRESULT ExecNotificationQueryWmi (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Сбой удаленной процедуры вызова (RPC) связь между текущим процессом и WMI. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Невозможно проанализировать запрос. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
-  
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция создает оболочку для вызова [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) метод.
@@ -116,12 +118,14 @@ HRESULT ExecNotificationQueryWmi (
 
 Если происходит сбой вызова функции, можно получить дополнительные сведения об ошибке, вызвав [GetErrorInfo](geterrorinfo.md) функции.
 
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** WMINet_Utils.idl
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

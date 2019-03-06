@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364012"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Достижение максимальной производительности WPF 3D
 При использовании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для создания трехмерных элементов управления и включения трехмерных сцен в приложениях, важно рассмотреть вопрос оптимизации производительности. Здесь представлен список 3D классов и свойств, которые влияют на производительность приложения, а также рекомендации по оптимизации производительности при их использовании.  
   
- В этом разделе предполагается, что хорошо знакомы с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] трехмерные функции. В этом документе приводятся советы для «уровень отрисовки 2» — примерно определяется как оборудование, поддерживающее версия построителя текстуры 2.0 и вершинный построитель текстуры версии 2.0. Дополнительные сведения см. в разделе [уровни отрисовки графики](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ В этом разделе предполагается, что хорошо знакомы с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] трехмерные функции. В этом документе приводятся советы для «уровень отрисовки 2» — примерно определяется как оборудование, поддерживающее версия построителя текстуры 2.0 и вершинный построитель текстуры версии 2.0. Дополнительные сведения см. в разделе [уровни отрисовки графики](../advanced/graphics-rendering-tiers.md).  
   
 ## <a name="performance-impact-high"></a>Влияние на производительность: High  
   
@@ -60,4 +60,4 @@ ms.locfileid: "54508664"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Чтобы свести к минимуму время создания больших коллекций в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], например MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, и <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, предварительно размер коллекции, перед заполнением значение. Если это возможно передайте коллекции конструкторов предварительно заполненных такие структуры данных, массивов или списков.|  
   
 ## <a name="see-also"></a>См. также
-- [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Обзор трехмерной графики](3-d-graphics-overview.md)

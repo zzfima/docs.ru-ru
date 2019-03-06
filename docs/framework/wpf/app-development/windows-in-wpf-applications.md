@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353859"
 ---
 # <a name="windows-in-wpf-applications"></a>Окна в приложениях WPF
-Пользователи взаимодействуют с приложениями при помощи окон. Основным предназначением окна является размещение и отображение содержимого. Тип содержимого, размещаемого в окне зависит от типа данных, что приложение работает по, которые могут включать мультимедиа, страницы расширяемого языка разметки приложений (XAML), веб-страницы, документы, таблицы базы данных и записи и сведения о системе.  
+Пользователи взаимодействуют с приложениями с помощью windows. Основным предназначением окна является размещение и отображение содержимого. Тип содержимого, размещаемого в окне зависит от типа данных, что приложение работает, включающие мультимедиа, расширяемый язык разметки приложений (XAML) страницы, веб-страниц, документы, таблицы базы данных и записи и сведения о системе.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об окнах WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Общие сведения об окнах WPF](wpf-windows-overview.md)  
+ [Общие сведения о диалоговых окнах](dialog-boxes-overview.md)  
+ [Разделы практического руководства](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ ms.locfileid: "33550781"
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Размещение](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [Сборка и развертывание](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Общие сведения об управлении приложением](application-management-overview.md)  
+  [Общие сведения о переходах](navigation-overview.md)  
+  [Размещение](hosting-wpf-applications.md)  
+  [Сборка и развертывание](building-and-deploying-wpf-applications.md)

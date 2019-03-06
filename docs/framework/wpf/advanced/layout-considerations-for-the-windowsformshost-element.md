@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625631"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366547"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 Здесь описывается, как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.  
@@ -28,11 +28,11 @@ ms.locfileid: "54625631"
   
  Макет в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] зависящие от устройства и скорее всего, будут статическими. Как правило [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] абсолютного позиционирования элементов управления формы с помощью измерений, указанных в аппаратно зависимые пиксели. Тем не менее [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживают некоторые функции динамического макета, как описано в следующей таблице.  
   
-|Функция макета|Описание|  
+|Функция макета|Описание:|  
 |--------------------|-----------------|  
-|Автоматическое изменение размера|Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменение размера элементов управления, с целью отображения их содержимое должным образом. Дополнительные сведения см. в разделе [Общие](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
+|Автоматическое изменение размера|Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменение размера элементов управления, с целью отображения их содержимое должным образом. Дополнительные сведения см. в разделе [Общие](../../winforms/controls/autosize-property-overview.md).|  
 |Привязка и закрепление|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления поддерживают размещение и изменение размера, основанное на родительском контейнере. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Автоматическое масштабирование|Контейнерные элементы управления, измените размер себя и своих потомков в зависимости от разрешения на устройство вывода или размер в пикселях шрифта контейнера по умолчанию. Дополнительные сведения см. в разделе [автоматическое масштабирование в Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
+|Автоматическое масштабирование|Контейнерные элементы управления, измените размер себя и своих потомков в зависимости от разрешения на устройство вывода или размер в пикселях шрифта контейнера по умолчанию. Дополнительные сведения см. в разделе [автоматическое масштабирование в Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Контейнеры макета|<xref:System.Windows.Forms.FlowLayoutPanel> И <xref:System.Windows.Forms.TableLayoutPanel> элементы управления, упорядочить их дочерние элементы управления и размер самостоятельно, в соответствии с их содержимое.|  
   
 ## <a name="layout-limitations"></a>Ограничения макета  
@@ -73,7 +73,7 @@ ms.locfileid: "54625631"
 |Переполнение|При <xref:System.Windows.Forms.Integration.WindowsFormsHost> преобразует элемент из `double` значения `int` значения, возможна переполнения. Значения, размер которых превышает <xref:System.Int32.MaxValue> присваивается <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Свойства, связанные с макетом  
- Свойства, управляющие поведением макета в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов сопоставляются соответствующим образом с <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент. Дополнительные сведения см. в разделе [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Свойства, управляющие поведением макета в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов сопоставляются соответствующим образом с <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент. Дополнительные сведения см. в разделе [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>Изменения макета в размещенный элемент управления  
  Изменения макета в размещаемом [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления распространяются на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для запуска обновлений макета. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Метод <xref:System.Windows.Forms.Integration.WindowsFormsHost> гарантирует, что изменения макета в размещенный элемент управления вызывает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработчик макетов для запуска.  
@@ -101,7 +101,7 @@ ms.locfileid: "54625631"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Пошаговое руководство: Упорядочение Windows Forms элементы управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Пошаговое руководство: Упорядочение Windows Forms элементы управления в WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Элементы управления упорядочение Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
+- [Миграция и взаимодействие систем](migration-and-interoperability.md)

@@ -8,27 +8,27 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650448"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362764"
 ---
 # <a name="fromtoby-animations-overview"></a>Общие сведения об анимациях From/To/By
 В этом разделе описываются способы использования анимаций From/To/By для свойств зависимостей. Анимация From/To/By создает переход между двумя целевыми значениями.  
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для понимания этого раздела необходимо ознакомиться с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] средствах анимации. Общие сведения о возможностях анимации, см. в разделе [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Для понимания этого раздела необходимо ознакомиться с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] средствах анимации. Общие сведения о возможностях анимации, см. в разделе [Общие сведения об анимации](animation-overview.md).  
   
 <a name="whatisanimation"></a>   
 ## <a name="what-is-a-fromtoby-animation"></a>Что такое анимация From/To/By?  
  From/To/By анимации — это разновидность <xref:System.Windows.Media.Animation.AnimationTimeline> , создает переход между начальным и конечным значением. Количество времени, которое занимает переход определяется <xref:System.Windows.Media.Animation.Timeline.Duration%2A> этой анимации.  
   
- From/To/By можно применить анимацию к свойству с помощью <xref:System.Windows.Media.Animation.Storyboard> в разметке и коде или с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод в коде. Вы также может использовать анимацию для создания <xref:System.Windows.Media.Animation.AnimationClock> и применить его к одному или нескольким свойствам. Дополнительные сведения о различных способах применения анимации см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ From/To/By можно применить анимацию к свойству с помощью <xref:System.Windows.Media.Animation.Storyboard> в разметке и коде или с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод в коде. Вы также может использовать анимацию для создания <xref:System.Windows.Media.Animation.AnimationClock> и применить его к одному или нескольким свойствам. Дополнительные сведения о различных способах применения анимации см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).  
   
- Анимация From/To/By может иметь не более двух целевых значений. Если требуется анимация, у которой более двух целевых значений, используйте анимацию по ключевым кадрам. Анимации по ключевым кадрам описаны в [сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+ Анимация From/To/By может иметь не более двух целевых значений. Если требуется анимация, у которой более двух целевых значений, используйте анимацию по ключевым кадрам. Анимации по ключевым кадрам описаны в [сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="fromtoby-animation-types"></a>Типы анимации From/To/By  
@@ -83,15 +83,15 @@ ms.locfileid: "54650448"
   
  В примерах этого раздела используется <xref:System.Windows.Media.Animation.DoubleAnimation>, который является типом анимации From/To/By, для анимации <xref:System.Windows.FrameworkElement.Width%2A> свойство <xref:System.Windows.Shapes.Rectangle> то есть 10 аппаратно-независимых пикселях в высокого уровня и 100 аппаратно-независимых пикселей в ширину.  
   
- Несмотря на то, что каждый пример использует <xref:System.Windows.Media.Animation.DoubleAnimation>, From, To и By свойства всех From/To/By анимации ведут себя одинаково. Хотя в каждом из этих примеров используется <xref:System.Windows.Media.Animation.Storyboard>, анимации From/To/By можно использовать в других целях. Дополнительные сведения см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Несмотря на то, что каждый пример использует <xref:System.Windows.Media.Animation.DoubleAnimation>, From, To и By свойства всех From/To/By анимации ведут себя одинаково. Хотя в каждом из этих примеров используется <xref:System.Windows.Media.Animation.Storyboard>, анимации From/To/By можно использовать в других целях. Дополнительные сведения см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).  
   
 ### <a name="fromto"></a>От/кому  
  При задании <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> значения одновременно, анимация выполняется от значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство, которое задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.  
   
  В следующем примере задается <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> 50 и его <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> в значение 300. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 50 до 300.  
   
- [!code-csharp[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
- [!code-vb[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
+ [!code-vb[basicvalues_snip#FromToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
   
 ### <a name="to"></a>Кому  
  Если задано только <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство, анимация выполняется от базового значения анимируемого свойства или из выходных данных составляющей анимации, которая ранее была применена к тому же свойству, которое задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство.  
@@ -100,32 +100,32 @@ ms.locfileid: "54650448"
   
  В следующем примере задается только <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> до 300. Так как начальное значение не указано, <xref:System.Windows.Media.Animation.DoubleAnimation> использует базовое значение (100) <xref:System.Windows.FrameworkElement.Width%2A> свойство в качестве своего начального значения. <xref:System.Windows.FrameworkElement.Width%2A> Из <xref:System.Windows.Shapes.Rectangle> анимируется от 100 до конечного значения анимации 300.  
   
- [!code-csharp[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
- [!code-vb[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
+ [!code-csharp[basicvalues_snip#ToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
+ [!code-vb[basicvalues_snip#ToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
 ### <a name="by"></a>На  
  Если задано только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство анимации, анимация выполняется от базового значения анимируемого свойства или из выходных данных составляющей анимации к сумме этого значения и значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство.  
   
  В следующем примере задается только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> до 300. Так как в примере указывается начальное значение, <xref:System.Windows.Media.Animation.DoubleAnimation> использует базовое значение <xref:System.Windows.FrameworkElement.Width%2A> свойства, 100, как начальное значение. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 100: 400. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 100 до 400.  
   
- [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
- [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
+ [!code-csharp[basicvalues_snip#ByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
+ [!code-vb[basicvalues_snip#ByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
   
 ### <a name="fromby"></a>From/By  
  При задании <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства анимации, анимация выполняется от значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства, чтобы значение, которое указано на сумму <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.  
   
  В следующем примере задается <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> 50 и его <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> в значение 300. Конечное значение определяется добавлением <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> значение анимации, 300, к начальному значению, 50: 350. В результате <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> анимируется от 50 до 350.  
   
- [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
- [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
+ [!code-vb[basicvalues_snip#FromByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
   
 ### <a name="from"></a>Исходный тип  
  Если указано только <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> значение анимации, анимация выполняется от значения, который задается параметром <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство, к базовому значению анимируемого свойства или выходных данных составляющей анимации.  
   
  В следующем примере задается только <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство <xref:System.Windows.Media.Animation.DoubleAnimation> до 50. Так как конечное значение не указано, <xref:System.Windows.Media.Animation.DoubleAnimation> использует базовое значение <xref:System.Windows.FrameworkElement.Width%2A> 100 свойства, в качестве конечного значения. <xref:System.Windows.FrameworkElement.Width%2A> Из <xref:System.Windows.Shapes.Rectangle> анимируется от 50 до базового значения <xref:System.Windows.FrameworkElement.Width%2A> 100 свойства.  
   
- [!code-csharp[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
- [!code-vb[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
+ [!code-csharp[basicvalues_snip#FromAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
+ [!code-vb[basicvalues_snip#FromAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
   
 ### <a name="toby"></a>To/By  
  Если заданы оба <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства анимации, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство учитывается.  
@@ -134,18 +134,18 @@ ms.locfileid: "54650448"
 ## <a name="other-animation-types"></a>Другие типы анимаций  
  From/To/By ― не единственный тип анимации, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет: он также предоставляет анимации по ключевым кадрам и анимация с использованием пути.  
   
--   Анимация по ключевым кадрам анимирует по любому числу конечных значений, описанных с помощью ключевых кадров. Дополнительные сведения см. в разделе [сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+-   Анимация по ключевым кадрам анимирует по любому числу конечных значений, описанных с помощью ключевых кадров. Дополнительные сведения см. в разделе [сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).  
   
--   Анимация пути формирует выходные значения из <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. в разделе [Общие сведения об анимации пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+-   Анимация пути формирует выходные значения из <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. в разделе [Общие сведения об анимации пути](path-animations-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также позволяет создавать собственные настраиваемые типы анимации. Дополнительные сведения см. в разделе [Общие сведения о настраиваемых анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также позволяет создавать собственные настраиваемые типы анимации. Дополнительные сведения см. в разделе [Общие сведения о настраиваемых анимации](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Общие сведения об анимации с использованием пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Общие сведения о пользовательской анимации](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
+- [Общие сведения об анимации с использованием пути](path-animations-overview.md)
+- [Общие сведения о пользовательской анимации](custom-animations-overview.md)
 - [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)

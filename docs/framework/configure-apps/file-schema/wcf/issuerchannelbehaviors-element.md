@@ -2,55 +2,60 @@
 title: Элемент <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 624848db4cead14e46c97bba7404adcb65e43d4d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357252"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > элемент
-Содержит коллекцию поведений конечной точки клиента "Windows Communication Foundation (WCF)" (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров безопасности. Определенным поведениям не могут содержать [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  
-  
- \<system.ServiceModel>  
-\<варианты поведения >  
-раздел endpointBehaviors  
-\<поведение >  
-\<clientCredentials>  
-\<issuedToken>  
-\<issuerChannelBehaviors>  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```xml  
+
+Содержит коллекцию поведений конечной точки клиента "Windows Communication Foundation (WCF)" (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров безопасности. Определенным поведениям не могут содержать [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.
+
+\<system.ServiceModel>\
+\<варианты поведения > \
+endpointBehaviors section\
+\<поведение > \
+\<clientCredentials > \
+\<issuedToken > \
+\<issuerChannelBehaviors>
+
+## <a name="syntax"></a>Синтаксис
+
+```xml
 <issuerChannelBehaviors>
-  <add behaviorConfiguraton="string"
+  <add behaviorConfiguration="string"
        issuerAddress="string" />
 </issuerChannelBehaviors>
-```  
-  
-## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
-  
-### <a name="attributes"></a>Атрибуты  
- Отсутствует.  
-  
-### <a name="child-elements"></a>Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Добавляет поведение в коллекцию.|  
-  
-### <a name="parent-elements"></a>Родительские элементы  
-  
-|Элемент|Описание:|  
-|-------------|-----------------|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.|  
-  
-## <a name="remarks"></a>Примечания  
- Этот элемент используется, когда для связи со службой необходимо любое поведение (кроме поведений, в которые включаются элементы `<clientCredentials>`). Например если [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) поведение элемент должен быть включен.  
-  
+```
+
+## <a name="attributes-and-elements"></a>Атрибуты и элементы
+
+В следующих разделах описаны атрибуты, дочерние и родительские элементы.
+
+### <a name="attributes"></a>Атрибуты
+
+Отсутствует.
+
+### <a name="child-elements"></a>Дочерние элементы
+
+|Элемент|Описание|
+|-------------|-----------------|
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Добавляет поведение в коллекцию.|
+
+### <a name="parent-elements"></a>Родительские элементы
+
+|Элемент|Описание:|
+|-------------|-----------------|
+|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.|
+
+## <a name="remarks"></a>Примечания
+
+Этот элемент используется, когда для связи со службой необходимо любое поведение (кроме поведений, в которые включаются элементы `<clientCredentials>`). Например если [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) поведение элемент должен быть включен.
+
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>

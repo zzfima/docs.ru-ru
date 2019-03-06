@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Изменение размера строк с помощью разделителя GridSplitter
+title: Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resizing grid rows [WPF]
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740142"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370050"
 ---
-# <a name="how-to-resize-rows-with-a-gridsplitter"></a>Как выполнить Изменение размера строк с помощью разделителя GridSplitter
+# <a name="how-to-resize-rows-with-a-gridsplitter"></a>Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter
 В этом примере показано, как использовать горизонтальный <xref:System.Windows.Controls.GridSplitter> для перераспределения пространства между двумя строками в <xref:System.Windows.Controls.Grid> без изменения размеров <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Пример  
@@ -23,9 +23,9 @@ ms.locfileid: "54740142"
   
  В следующем примере показано, как определить горизонтальный <xref:System.Windows.Controls.GridSplitter> , изменяет размеры соседних строк.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- Объект <xref:System.Windows.Controls.GridSplitter> , не имеющий собственной строки может быть скрыт другими элементами управления в <xref:System.Windows.Controls.Grid>. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в разделе [Проверка видимости GridSplitter](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ Объект <xref:System.Windows.Controls.GridSplitter> , не имеющий собственной строки может быть скрыт другими элементами управления в <xref:System.Windows.Controls.Grid>. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в разделе [Проверка видимости GridSplitter](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Создание GridSplitter, который занимает строку**  
   
@@ -33,9 +33,9 @@ ms.locfileid: "54740142"
   
  В следующем примере показано, как определить горизонтальный <xref:System.Windows.Controls.GridSplitter> который занимает строку и изменяет размеры строк на обеих сторонах.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.GridSplitter>
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Разделы практического руководства](gridsplitter-how-to-topics.md)

@@ -3,12 +3,12 @@ title: Начало работы с семантическим анализом
 description: В этом учебнике содержатся общие сведения о работе с семантическим анализом с помощью пакета SDK для компилятора .NET.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484622"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202578"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Начало работы с семантическим анализом
 
@@ -117,7 +117,7 @@ Press any key to continue . . .
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Эта исходная последовательность содержит все элементы, включая свойства и поля, поэтому ее нужно отфильтровать с помощью метода <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType>, чтобы найти элементы, которые являются объектами <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType>:
+Эта исходная последовательность содержит все элементы, включая свойства и поля, поэтому ее нужно отфильтровать с помощью метода <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType>, чтобы найти элементы, которые являются объектами <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType>:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

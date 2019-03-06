@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546648"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371818"
 ---
 # <a name="wpf-xaml-extensions"></a>Расширения XAML WPF
 ## <a name="in-this-section"></a>В этом разделе  
- [Привязка расширения разметки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [Расширение разметки ColorConvertedBitmap](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [Расширение разметки ComponentResourceKey](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [Расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [Расширение разметки RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [Расширение разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [Расширение разметки ThemeDictionary](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [Синтаксис PropertyPath в XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [Атрибут PresentationOptions: Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [Привязка расширения разметки](binding-markup-extension.md)  
+  [Расширение разметки ColorConvertedBitmap](colorconvertedbitmap-markup-extension.md)  
+  [Расширение разметки ComponentResourceKey](componentresourcekey-markup-extension.md)  
+  [Расширение разметки DynamicResource](dynamicresource-markup-extension.md)  
+  [Расширение разметки RelativeSource](relativesource-markupextension.md)  
+  [Расширение разметки StaticResource](staticresource-markup-extension.md)  
+  [Расширение разметки TemplateBinding](templatebinding-markup-extension.md)  
+  [Расширение разметки ThemeDictionary](themedictionary-markup-extension.md)  
+  [Синтаксис PropertyPath в XAML](propertypath-xaml-syntax.md)  
+  [Атрибут PresentationOptions: Freeze](presentationoptions-freeze-attribute.md)

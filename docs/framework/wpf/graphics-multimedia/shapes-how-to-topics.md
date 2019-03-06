@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358071"
 ---
 # <a name="shapes-how-to-topics"></a>Разделы практического руководства, посвященные объектам класса Shape
 В подразделах этого раздела демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Рисование замкнутой фигуры с помощью элемента Polygon](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [Рисование эллипса или круга](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [Рисование линии](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Рисование ломаной с помощью элемента Polyline](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [Рисование прямоугольника](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [Изменение завершения отрезка в конце линии или сегмента](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Рисование замкнутой фигуры с помощью элемента Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Рисование эллипса или круга](how-to-draw-an-ellipse-or-a-circle.md)  
+ [Рисование линии](how-to-draw-a-line.md)  
+ [Рисование ломаной с помощью элемента Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Рисование прямоугольника](how-to-draw-a-rectangle.md)  
+ [Изменение завершения отрезка в конце линии или сегмента](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Shapes.Shape>
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Графика и мультимедиа](index.md)

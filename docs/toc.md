@@ -33,6 +33,7 @@
 ## [Обработка и создание исключений](standard/exceptions/)
 ## [Сборки в .NET](standard/assembly/index.md)
 ### [Формат файла сборки .NET](standard/assembly/file-format.md)
+### [Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core](standard/assembly/unloadability-howto.md)
 ## [Сборка мусора](standard/garbage-collection/)
 ## [Универсальные типы](standard/generics.md)
 ## [Делегаты и лямбда-выражения](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [Обзор языка C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## Новые возможности C#
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 — предварительная версия 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -503,15 +504,6 @@
 
 ### [Доступ к данным](visual-basic/developing-apps/accessing-data.md)
 ### [Создание и использование компонентов](visual-basic/developing-apps/creating-and-using-components.md)
-
-### [Печать и отчеты](visual-basic/developing-apps/printing/index.md)
-#### [Компонент PrintForm](visual-basic/developing-apps/printing/printform-component.md)
-#### [Практическое руководство. Печать прокручиваемой формы](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [Практическое руководство. Печать клиентской и неклиентской области формы](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [Практическое руководство. Печать клиентской области формы](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [Практическое руководство. Печать формы с помощью компонента PrintForm](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [Развертывание приложений, ссылающихся на компонент PrintForm](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Добавление печатаемых отчетов в приложения Visual Studio](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
 ### [Основы разработки приложений Windows Forms](visual-basic/developing-apps/windows-forms/index.md)
 

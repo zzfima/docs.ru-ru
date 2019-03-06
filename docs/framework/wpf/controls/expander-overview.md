@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369933"
 ---
 # <a name="expander-overview"></a>Общие сведения об элементе управления Expander
 <xref:System.Windows.Controls.Expander> Управления обеспечивает способ предоставления содержимого в развертываемой области, имеющей вид окна и включающей заголовок.  
@@ -23,7 +23,7 @@ ms.locfileid: "54693760"
 ## <a name="creating-a-simple-expander"></a>Создание простого элемента управления Expander  
  Приведенный ниже показано, как создать простое <xref:System.Windows.Controls.Expander> элемента управления. В этом примере создается <xref:System.Windows.Controls.Expander> что выглядит как на предыдущем рисунке.  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A> И <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> из <xref:System.Windows.Controls.Expander> могут также содержать сложного содержимого, такие как <xref:System.Windows.Controls.RadioButton> и <xref:System.Windows.Controls.Image> объектов.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693760"
   
  **Expander в ScrollViewer**  
   
- ![Элемент управления Expander со ScrollBar](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Элемент управления Expander со ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  При размещении <xref:System.Windows.Controls.Expander> контролировать <xref:System.Windows.Controls.ScrollViewer>, задайте <xref:System.Windows.Controls.ScrollViewer> измерения свойство, соответствующее направление, в котором <xref:System.Windows.Controls.Expander> открывается содержимое размер <xref:System.Windows.Controls.Expander> области содержимого. Например, если задать <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойство <xref:System.Windows.Controls.Expander> для <xref:System.Windows.Controls.ExpandDirection.Down> (область содержимого открывается вниз), задайте <xref:System.Windows.FrameworkElement.Height%2A> свойство <xref:System.Windows.Controls.ScrollViewer> требуемую высоту для области содержимого элемента управления. Если вместо этого задать размерность высоты самого содержимого, <xref:System.Windows.Controls.ScrollViewer> не распознает этот параметр и таким образом, не предоставит прокручиваемое содержимое.  
   
  В следующем примере показано, как создать <xref:System.Windows.Controls.Expander> элемента управления, который имеет сложное содержимое и содержит <xref:System.Windows.Controls.ScrollViewer> элемента управления. В этом примере создается <xref:System.Windows.Controls.Expander> это похоже на рисунке в начале этого раздела.  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>Использование свойств выравнивания  
@@ -62,4 +62,4 @@ ms.locfileid: "54693760"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Разделы практического руководства](expander-how-to-topics.md)

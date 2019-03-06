@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362695"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201330"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки .NET Standard с помощью .NET Core в Visual Studio 2017
 
@@ -163,7 +163,7 @@ ms.locfileid: "54362695"
 
    ![Окно "Обозреватель тестов" с сообщением о том, что утверждение Is False ошибочно](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Удалите код, который вы добавили ранее (`"Error", `), и выполните тест еще раз. Теперь тесты будут пройдены.
+1. Отмените изменение, которое вы внесли на шаге 1, и удалите строку "Error". Еще раз запустите тест. Теперь тесты будут пройдены.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Тестирование версии выпуска для библиотеки
 

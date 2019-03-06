@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362020"
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 В этом разделе предлагается интерактивный обзор иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "54634588"
   
  Основные компоненты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] показаны на приведенном ниже рисунке. Красные разделы диаграммы (PresentationFramework, PresentationCore и milcore) представляют собой основные части кода [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Только один из этих компонентов является неуправляемым — milcore. Компонент milcore написан в неуправляемом коде, чтобы обеспечить тесную интеграцию с [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Все отрисовки в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] выполняются с помощью подсистемы [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], позволяющей эффективно использовать оборудование и программное обеспечение для отрисовки. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также необходим тонкий контроль над памятью и выполнением. Обработчик композиции в milcore крайне чувствителен к производительности и требует отказа от многих преимуществ [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] в пользу производительности.  
   
- ![Положение WPF в платформе .NET Framework.](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![Положение WPF в платформе .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   
  Связь между управляемыми и неуправляемыми частями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] обсуждается далее в этом разделе. Остальная часть управляемой модели программирования описана ниже.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54634588"
   
  При программировании [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], создании <xref:System.Windows.Media.Visual> элементов и производные типы, которые осуществляют внутреннее взаимодействие с деревом композиции через этот протокол обмена сообщениями. Каждый <xref:System.Windows.Media.Visual> в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] может создать один, ни один или несколько узлов композиции.  
   
- ![Дерево визуальных элементов Windows Presentation Foundation.](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Дерево визуальных элементов Windows Presentation Foundation.](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  Здесь имеется один очень важный архитектурный момент — все дерево визуальных объектов и инструкций по рисованию кэшируется. С графической точки зрения, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует систему сохраненной отрисовки. Это позволяет системе осуществлять перерисовку с высокой частотой без блокирования системы композиции при обратных вызовах, обращенных к коду пользователя. Это помогает предотвратить признаки неотвечающего приложения.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "54634588"
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Общие сведения о привязке данных](../data/data-binding-overview.md)
+- [Макет](layout.md)
+- [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md)

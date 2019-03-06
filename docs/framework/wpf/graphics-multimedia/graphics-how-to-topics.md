@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358797"
 ---
 # <a name="graphics-how-to-topics"></a>Разделы практического руководства, посвященные графике
 В следующих разделах показано, как использовать графических возможностей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Анимация прямоугольника](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [Анимация расположения объекта с помощью PointAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [Преобразование объектов Point и Vector](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [Использование стеклянной рамки в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Практическое руководство. Использование кэшированного элемента в качестве кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Анимация прямоугольника](how-to-animate-a-rectangle.md)  
+ [Анимация расположения объекта с помощью PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Преобразование объектов Point и Vector](how-to-transform-points-and-vectors.md)  
+ [Использование стеклянной рамки в приложении WPF](extend-glass-frame-into-a-wpf-application.md)  
+ [Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Практическое руководство. Использование кэшированного элемента в качестве кисти](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ ms.locfileid: "54688220"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Графика и мультимедиа](index.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 2e3acf3de082db5b2cd586bed06cdb782e52d543
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80873f7a08d241c80dd663ee09d2ea0180fb505d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359345"
 ---
 # <a name="control-customization"></a>Настройка элементов управления
 Эта категория охватывает различные базовые классы, интерфейсы и другие элементы и основные понятия, используемые при создании полнофункциональных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Рекомендации по разработке элементов управления с возможностью использования стилей](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [Декоративные элементы](../../../../docs/framework/wpf/controls/adorners.md)  
- [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+ [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
+ [Рекомендации по разработке элементов управления с возможностью использования стилей](guidelines-for-designing-stylable-controls.md)  
+ [Декоративные элементы](adorners.md)  
+ [Стили и шаблоны элемента управления](control-styles-and-templates.md)  
+ [Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>См. также
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Стилизация и использование шаблонов](styling-and-templating.md)

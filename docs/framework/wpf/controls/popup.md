@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370661"
 ---
 # <a name="popup"></a>Контекстное меню
-<xref:System.Windows.Controls.Primitives.Popup> Элемент управления отображает содержимое в отдельном окне, расположенном поверх текущего окна приложения.  
+<xref:System.Windows.Controls.Primitives.Popup> Управления отображает содержимое в отдельном окне, расположенном поверх текущего окна приложения.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.Primitives.Popup> управления, расположенный по отношению к <xref:System.Windows.Controls.Button> , являющимся его родителем.  
+ На следующем рисунке показано <xref:System.Windows.Controls.Primitives.Popup> управления, расположенный по отношению к <xref:System.Windows.Controls.Button> , являющимся его родителем.  
   
- ![Иллюстрация всплывающего окна](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![Иллюстрация всплывающего окна](./media/popuppicture.JPG "PopupPicture")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Поведение при размещении контекстного меню](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Общие сведения о контекстном меню](popup-overview.md)  
+ [Поведение при размещении контекстного меню](popup-placement-behavior.md)  
+ [Разделы практического руководства](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Primitives.Popup>  

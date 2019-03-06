@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355133"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Ограничивает неявное преобразование типов данных расширяющими преобразованиями, запрещает позднее связывание и неявную типизацию, которые приводят к `Object` типа.  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  На **компиляции** вкладку, задайте значение в **Option Strict** поле.  
   
-###  <a name="conditions"></a> Чтобы задать конфигурации предупреждений в интегрированной среде разработки  
+### <a name="conditions"></a> Чтобы задать конфигурации предупреждений в интегрированной среде разработки  
  При использовании [компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) вместо `Option Strict` инструкции, вы получите дополнительный контроль условиями, которые выдают сообщения об ошибках. **Конфигурации предупреждений** раздел **страница "Компиляция"** имеет параметры, которые соответствуют три условия, которые вызывают ошибку времени компиляции при `Option Strict` включен. Ниже приведены эти параметры.  
   
 -   **Неявное преобразование**  

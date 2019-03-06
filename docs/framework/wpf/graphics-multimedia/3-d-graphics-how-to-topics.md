@@ -7,34 +7,34 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554856"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353560"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Практические руководства, посвященные 3-D графике
-В этом разделе демонстрируется использование [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] графических изображений в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.  
+В подразделах этого раздела демонстрируется использование [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] графики в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание трехмерной сцены](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [Применение рисования к трехмерной модели](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [Применение материала к лицевой и обратной стороне трехмерного объекта](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [Применение эмиссионного материала к трехмерному объекту](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [Преобразование масштаба трехмерной модели](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [Применение множественных преобразований к трехмерной модели](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [Анимация трехмерных преобразований](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [Анимация трехмерного вращения с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Анимация трехмерного поворота с помощью Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [Анимация трехмерного вращения с помощью кватернионов](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [Анимация трехмерного поворота с помощью ключевых кадров (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [Анимация положения и направления камеры в трехмерной сцене](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [Анимация положения и направления камеры с помощью ключевых кадров](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [Анимация свойств материалов в трехмерной сцене](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Проверка нажатия в Viewport3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Проверка структур Point4D на равенство и неравенство](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [Создание трехмерной сцены](how-to-create-a-3-d-scene.md)  
+ [Применение рисования к трехмерной модели](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [Применение материала к лицевой и обратной стороне трехмерного объекта](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [Применение эмиссионного материала к трехмерному объекту](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [Преобразование масштаба трехмерной модели](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [Применение множественных преобразований к трехмерной модели](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [Анимация трехмерных преобразований](how-to-animate-3-d-translations.md)  
+ [Анимация трехмерного вращения с помощью раскадровки](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Анимация трехмерного поворота с помощью Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [Анимация трехмерного вращения с помощью кватернионов](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [Анимация трехмерного поворота с помощью ключевых кадров (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [Анимация положения и направления камеры в трехмерной сцене](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [Анимация положения и направления камеры с помощью ключевых кадров](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [Анимация свойств материалов в трехмерной сцене](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Проверка нажатия в Viewport3D](how-to-hit-test-in-a-viewport3d.md)  
+ [Проверка структур Point4D на равенство и неравенство](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -46,4 +46,4 @@ ms.locfileid: "33554856"
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Графика и мультимедиа](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сортировка столбцов GridView при нажатии на заголовок
+title: Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365416"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Как выполнить Сортировка столбцов GridView при нажатии на заголовок
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
 В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> Просмотр режима и их содержимого, когда пользователь щелкает заголовок столбца для сортировки.  
   
 ## <a name="example"></a>Пример  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Общие сведения об элементе управления ListView](listview-overview.md)
+- [Общие сведения о GridView](gridview-overview.md)
+- [Разделы практического руководства](listview-how-to-topics.md)

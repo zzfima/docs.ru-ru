@@ -6,33 +6,33 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 8ad664f5b689a2305afc17f4b480fdc445d64e25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583470"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203721"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Использование исключений (Руководство по программированию на C#)
 В C# ошибки в программе в среде выполнения передаются через программу с помощью механизма, который называется исключениями. Исключения вызываются кодом, который встречает ошибку, и перехватываются кодом, который может ее исправить. Исключения могут вызываться средой CLR .NET Framework или кодом в программе. Вызванное исключение передается вверх по стеку вызовов, пока не будет найден соответствующий оператор `catch`. Не перехваченные исключения обрабатываются универсальным обработчиком исключений, предоставляемым системой, которая отображает диалоговое окно.  
   
  Исключения представляются классами, производными от <xref:System.Exception>. Этот класс определяет тип исключения и содержит свойства с подробными сведениями об исключении. При вызове исключения создается экземпляр производного класса, а также могут настраиваться свойства исключения. После этого с помощью ключевого слова `throw` вызывается объект. Например:  
   
- [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#1)]  
   
  После выдачи исключения среда выполнения проверяет, входит ли текущий оператор в блок `try`. Если да, она проверяет, может ли какой-либо из блоков `catch`, связанных с блоком `try`, перехватить исключение. Блоки `Catch` обычно задают типы исключений; если тип блока `catch` совпадает с типом или базовым классом исключения, блок `catch` может обработать этот метод. Например:  
   
- [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#2)]  
   
  Если оператор, который вызывает исключение, не находится в блоке `try` или блок `try`, в который он входит, не имеет соответствующего блока `catch`, среда выполнения проверяет вызывающий метод на наличие оператора `try` и блоков `catch`. Среда выполнения продолжает перебирать стек вызовов в поиска подходящего блока `catch`. После того как блок `catch` будет найден и выполнен, управление передается оператору, следующему после блока `catch`.  
   
  Оператор `try` может содержать не один блок `catch`. Выполняется первый оператор `catch`, который может обработать исключение; все последующие операторы `catch` игнорируются, даже если они совместимы. В связи с этим блоки catch следует располагать в порядке от наиболее конкретных (наиболее производных) до наименее конкретных. Например:  
   
- [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#3)]  
   
  Прежде чем выполнять блок `catch`, среда выполнения проверяет наличие блоков `finally`. Блоки `Finally` позволяют программисту удалить любое неоднозначное состояние, которое может остаться после прерванного блока `try`, а также освободить любые внешние ресурсы (включая обработчики графики, соединители баз данных или файловые потоки), не дожидаясь, пока сборщик мусора в среде выполнения завершит объекты. Например:  
   
- [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#4)]  
   
  Если `WriteByte()` выдает исключение, код во втором блоке `try`, который пытается открыть файл повторно, завершается ошибкой, если `file.Close()` не вызывается, а файл остается заблокированным. Поскольку блоки `finally` выполняются, даже если выдается исключение, блок `finally` в предыдущем примере обеспечивает правильное закрытие файла и помогает избежать ошибки.  
   

@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: a94d855a88fafd0f8faf98c98601142802701dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544857"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366625"
 ---
 # <a name="migration-and-interoperability"></a>Миграция и взаимодействие систем
 Эта страница содержит ссылки на документы, посвященные реализации взаимодействия между [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений и другие виды [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Взаимодействие WPF и Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [Взаимодействие WPF и Windows Forms](wpf-and-windows-forms-interoperation.md)  
+ [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)  
+ [Взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>Ссылка  
   
 |Термин|Определение|  
 |----------|----------------|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|Элемент, который можно использовать для размещения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления как элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|Объект [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления, который можно использовать для размещения [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.|  
-|<xref:System.Windows.Interop.HwndSource>|Узлы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] область в пределах [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] приложения.|  
-|<xref:System.Windows.Interop.HwndHost>|Базовый класс для <xref:System.Windows.Forms.Integration.WindowsFormsHost>, определяет базовые возможности, все технологии на основе HWND, используемых при размещении с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Подкласс этот параметр, чтобы разместить [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окно в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения.|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|Вспомогательный класс для условий отчетности среды браузера для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, размещенных в браузере.|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|Объект [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления, который можно использовать для размещения [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.|  
+|<xref:System.Windows.Interop.HwndSource>|Узлы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] регионом в пределах [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] приложения.|  
+|<xref:System.Windows.Interop.HwndHost>|Базовый класс для <xref:System.Windows.Forms.Integration.WindowsFormsHost>, определяет базовые возможности, все технологии на основе HWND использовать, если они размещаются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Подкласс это для размещения [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения.|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|Вспомогательный класс для условий отчетности среды браузера для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, размещенного в браузере.|  
   
 ## <a name="related-sections"></a>Связанные разделы

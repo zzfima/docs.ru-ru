@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Рисование ломаной с помощью элемента Polyline
+title: Практическое руководство. Рисование ломаной с помощью элемента Polyline
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: c4aab17958180710c392491a27cc22fa006f8c5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688978"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378188"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Как выполнить Рисование ломаной с помощью элемента Polyline
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Практическое руководство. Рисование ломаной с помощью элемента Polyline
 В этом примере показано, как рисование ломаной, которая представляет собой последовательность соединенных линий, с помощью <xref:System.Windows.Shapes.Polyline> элемент.  
   
  Чтобы Рисование ломаной, создайте <xref:System.Windows.Shapes.Polyline> элемента и использование его <xref:System.Windows.Shapes.Polyline.Points%2A> свойство, чтобы указать вершины фигуры. Наконец, используйте <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> свойств, описывающих ломаной линии структуры, так как в строку без штриха является невидимым.  
@@ -28,7 +28,7 @@ ms.locfileid: "54688978"
 ## <a name="example"></a>Пример  
  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], допустимым синтаксисом для точек является список с разделителями запятыми координат x и y пар.  
   
- [!code-xaml[drawingwithshapeelements#PolylineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolylineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polylineexample.xaml#polylineexample1)]  
   
  Несмотря на то, что в этом примере используется <xref:System.Windows.Controls.Canvas> должен содержать ломаные линии, можно использовать элементы polyline (и все остальные элементы фигуры) с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control> , поддерживающий нетекстовое содержимое.  
   
@@ -39,4 +39,4 @@ ms.locfileid: "54688978"
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>
 - [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)

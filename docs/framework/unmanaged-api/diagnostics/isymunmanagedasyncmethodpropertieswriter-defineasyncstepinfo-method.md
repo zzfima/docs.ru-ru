@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: defd38798453c8b82ec23605d12d41e5b90aaabc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555574"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352910"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>Метод ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo
 Определить группу async await операций в текущем методе.  
   
- Смещение каждого yield соответствует инструкции return оператором await, определение потенциальных yield. Каждый `breakpointMethod` / `breakpointOffset` пары сообщает, где будет возобновлена асинхронной операции, (который может быть в другом методе.  
+ Смещение каждого yield соответствует инструкции return оператором await, определение потенциальных yield. Каждый `breakpointMethod` / `breakpointOffset` пары сообщает, где асинхронной операции будет возобновлена, который может быть в другом методе.  
   
 ## <a name="syntax"></a>Синтаксис  
   

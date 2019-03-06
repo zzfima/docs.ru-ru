@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365572"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Начало работы с рукописными данными в WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы использовать в следующих примерах, в первую очередь [установите Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Полезно также знать способы написания базовых приложений WPF. Помощь по началу работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Чтобы использовать в следующих примерах, в первую очередь [установите Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Полезно также знать способы написания базовых приложений WPF. Помощь по началу работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Быстрый запуск
 
@@ -42,7 +42,7 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 3. Тип `<InkCanvas/>` между `<Grid>` теги.
 
-   ![Конструктор XAML с тегом InkCanvas](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![Конструктор XAML с тегом InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. Нажмите клавишу **F5** для запуска приложения в отладчике.
 
@@ -70,7 +70,7 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 Этот XAML создает градиентный фон поверхности рукописного ввода.
 
-![Цвета градиента на рукописный ввод поверхности в приложении WPF](media/getting-started-with-ink/gradient-colors.png)
+![Цвета градиента на рукописный ввод поверхности в приложении WPF](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>Добавление кода программной части XAML
 
@@ -78,12 +78,12 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 1. Задайте `MouseRightButtonUp` обработчика в вашей XAML:
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. В **обозревателе решений**, разверните файл MainWindow.xaml и откройте файл с выделенным кодом (MainWindow.xaml.cs или MainWindow.xaml.vb). Добавьте следующий код обработчика событий:
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. Запустите приложение. Добавьте рукописные и щелкните правой кнопкой мыши, с помощью мыши или эквивалента нажатие и удерживание с помощью пера.
 
@@ -99,18 +99,18 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 1. Вставьте следующий код в файле Program.cs или Program.vb:
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. Добавьте ссылки на сборки PresentationCore, PresentationFramework и WindowsBase, щелкнув правой кнопкой мыши **ссылки** в **обозревателе решений** и выбрав **добавить ссылку на**.
 
-   ![Диспетчер ссылок, показывающий PresentationCore и PresentationFramework](media/getting-started-with-ink/references.png)
+   ![Диспетчер ссылок, показывающий PresentationCore и PresentationFramework](./media/getting-started-with-ink/references.png)
 
 1. Постройте приложение, нажав клавишу **F5**.
 
 ## <a name="see-also"></a>См. также
 
-- [Рукописный ввод](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [Сбор рукописных данных](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [Распознавание рукописного ввода](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [Хранение рукописных данных](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [Рукописный ввод](digital-ink.md)
+- [Сбор рукописных данных](collecting-ink.md)
+- [Распознавание рукописного ввода](handwriting-recognition.md)
+- [Хранение рукописных данных](storing-ink.md)

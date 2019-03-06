@@ -2,17 +2,11 @@
 title: Производительность .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance [.NET Framework]
-- reliability [.NET Framework]
+  - 'performance [.NET Framework]'
+  - 'reliability [.NET Framework]'
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221177"
 ---
 # <a name="net-framework-performance"></a>Производительность .NET Framework
 Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения. Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования. В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.  
@@ -49,11 +43,10 @@ ms.locfileid: "56221177"
 |Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], написанные на C++, C# и Visual Basic|[Рекомендации по повышению производительности приложений Магазина Windows на C++, C# и Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Общие сведения о производительности ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
-|Windows Forms|[Практические советы по повышению производительности приложений Windows Forms](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Кэширование в приложениях платформы .NET Framework](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Содержит описание методик кэширования данных, применяемых для повышения производительности приложения.|  
 |[Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)|Содержит описание способов инициализации объектов по мере необходимости для повышения производительности, особенно при запуске приложения.|  

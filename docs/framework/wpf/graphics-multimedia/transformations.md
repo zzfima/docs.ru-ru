@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570529"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352455"
 ---
 # <a name="transformations"></a>Преобразования
 Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Общие сведения о классах Transform](transforms-overview.md)  
+ [Разделы практического руководства](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Transform>
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Макет](../../../../docs/framework/wpf/advanced/layout.md)
+- [Графика и мультимедиа](index.md)
+- [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)
+- [Макет](../advanced/layout.md)

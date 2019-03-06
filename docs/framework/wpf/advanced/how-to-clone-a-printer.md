@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Клонирование принтера
+title: Практическое руководство. Клонирование принтера
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677229"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378831"
 ---
-# <a name="how-to-clone-a-printer"></a>Как выполнить Клонирование принтера
+# <a name="how-to-clone-a-printer"></a>Практическое руководство. Клонирование принтера
 Большинство компаний рано или поздно купит нескольких принтеров той же модели. Как правило они все устанавливаются с практически одинаковыми параметрами. Установка каждого принтера может занимать много времени и подвержено ошибкам. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Пространства имен и <xref:System.Printing.PrintServer.InstallPrintQueue%2A> класс, который предоставляется через Microsoft .NET Framework дает возможность мгновенно установить любое число дополнительных очередей печати, которые копируются из существующей очереди печати.  
   
 ## <a name="example"></a>Пример  
@@ -52,8 +52,8 @@ ms.locfileid: "54677229"
   
  Пример приведен ниже.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ ms.locfileid: "54677229"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Документы в WPF](documents-in-wpf.md)
+- [Общие сведения о печати](printing-overview.md)

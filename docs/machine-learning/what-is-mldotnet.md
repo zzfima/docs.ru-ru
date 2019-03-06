@@ -4,17 +4,17 @@ description: Познакомьтесь с ML.NET — бесплатной кр
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55252423"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250966"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Основы ML.NET и машинного обучения
 
-ML.NET — это бесплатная кроссплатформенная платформа машинного обучения с открытым кодом, позволяющая вам создавать специализированные решения машинного обучения и интегрировать их в свои приложения .NET. С помощью API ML.NET вы можете интегрировать искусственный интеллект в свои приложения, используя уже имеющиеся навыки .NET и не выходя из .NET.
+ML.NET — это бесплатная кроссплатформенная платформа машинного обучения с открытым кодом, позволяющая вам создавать специализированные решения машинного обучения и интегрировать их в свои приложения .NET. С помощью API ML.NET вы можете интегрировать искусственный интеллект в свои приложения, используя уже имеющиеся навыки .NET и не выходя из .NET.
 
 ## <a name="what-is-machine-learning"></a>Что такое машинное обучение?
 

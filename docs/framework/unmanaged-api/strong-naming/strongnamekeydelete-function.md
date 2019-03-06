@@ -16,48 +16,54 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eace88e5034c61b7608a6d777608cc2544b8564
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc785a48d0cdf1cf2fdc0245a27b8ef35fd2d81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688484"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364523"
 ---
 # <a name="strongnamekeydelete-function"></a>Функция StrongNameKeyDelete
-Удаляет указанный контейнер ключей.  
-  
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) метод вместо этого.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-BOOLEAN StrongNameKeyDelete (  
-    [in]  LPCWSTR   wszKeyContainer  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `wszKeyContainer`  
- [in] Имя контейнера ключа для удаления.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
-  
-## <a name="remarks"></a>Примечания  
- Используйте [StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md) функции importa пару открытого и закрытого ключей в контейнер.  
-  
- Если `StrongNameKeyDelete` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** StrongName.h  
-  
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Удаляет указанный контейнер ключей.
+
+Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) метод вместо этого.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+BOOLEAN StrongNameKeyDelete (
+    [in]  LPCWSTR   wszKeyContainer
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+`wszKeyContainer`\
+[in] Имя контейнера ключа для удаления.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+`true` После успешного выполнения; в противном случае `false`.
+
+## <a name="remarks"></a>Примечания
+
+Используйте [StrongNameKeyInstall](strongnamekeyinstall-function.md) для импорта пару открытого и закрытого ключей в контейнер.
+
+Если `StrongNameKeyDelete` функция не завершена, вызвать [StrongNameErrorInfo](strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** StrongName.h
+
+**Библиотека:** Включена как ресурс в MsCorEE.dll
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>См. также
-- [Метод StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [Метод StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [Метод StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [Метод StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

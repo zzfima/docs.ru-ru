@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379241"
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -39,11 +39,11 @@ ms.locfileid: "54563760"
   
  В следующем примере показано, как можно создать кнопку как часть [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Этот пример дает лишь общее представление о том, как в языке XAML представлены распространенные метафоры программирования для такого объекта как [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (это неполный пример).  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
 <a name="xaml_syntax_in_brief"></a>   
 ## <a name="xaml-syntax-in-brief"></a>Краткое описание синтаксиса XAML  
- Далее приводятся описание основных форм синтаксиса XAML и короткий пример разметки. В этих разделах не приводится полная информация о каждой форме синтаксиса (например, представление в системе резервных типов). Дополнительные сведения об особенностях синтаксиса XAML для каждой формы синтаксиса, представленной в этом разделе см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Далее приводятся описание основных форм синтаксиса XAML и короткий пример разметки. В этих разделах не приводится полная информация о каждой форме синтаксиса (например, представление в системе резервных типов). Дополнительные сведения об особенностях синтаксиса XAML для каждой формы синтаксиса, представленной в этом разделе см. в разделе [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md).  
   
  Значительная часть материалов в следующих нескольких разделах будет уже знакома тем, кто имеет опыт работы с языком XML. Это обусловлено базовыми принципами разработки языка XAML.  На языке XAML определяются собственные, но эти концепции работать внутри XML язык и форма разметки.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54563760"
   
  Синтаксис объектного элемента всегда начинается с открывающей угловой скобки (\<). За ней следует имя типа, для которого требуется создать экземпляр. (Имя может содержать префикс. Описание этого понятия будет приведено далее.) После этого при необходимости можно объявить атрибуты объектного элемента. Для завершения тега объектного элемента введите закрывающую угловую скобку (>). Вместо этого можно использовать самозакрывающуюся форму, в которой отсутствует содержимое, установив в конце тега косую черту и закрывающую угловую скобку (/>). Например, снова рассмотрим предыдущий фрагмент разметки.  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
  В нем указано два объектных элемента: `<StackPanel>` (с содержимым и последующим закрывающим тегом) и `<Button .../>` (самозакрывающаяся форма с несколькими атрибутами). Объектные элементы `StackPanel` и `Button` сопоставлены с именем класса, определенным [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и являющимся частью сборок [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. При задании тега объектного элемента создается инструкция обработки XAML для создания нового экземпляра. Каждый экземпляр создается путем вызова конструктора по умолчанию для базового типа при синтаксическом анализе и загрузке XAML-кода.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54563760"
   
  Синтаксис атрибутов — это наиболее простой синтаксис задания свойств, интуитивно понятный разработчикам, которые раньше использовали языки разметки. Например, следующая разметка создает кнопку с красным текстом и синим фоном и отображает текст, заданный как `Content`.  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
   
 ### <a name="property-element-syntax"></a>Синтаксис элемента свойства  
  Для некоторых свойств объектного элемента невозможен синтаксис атрибутов, так как объект или сведения, необходимые для задания значения свойства, не могут быть адекватно представлены в строке, указываемой в кавычках, с соблюдением ограничений синтаксиса атрибутов. В этих случаях может использоваться другой синтаксис — синтаксис элементов свойств.  
@@ -70,7 +70,7 @@ ms.locfileid: "54563760"
   
  Если синтаксис атрибутов допустим, его использование, как правило, более удобно и приводит к созданию более компактной разметки, но часто выбор связан только со стилем, а не с техническими ограничениями. В следующем примере те же свойства задаются так же, как в предыдущем примере синтаксиса атрибутов, но на этот раз с помощью синтаксиса элементов свойств для всех свойств `Button`.  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
   
 ### <a name="collection-syntax"></a>Синтаксис коллекции  
  Язык XAML включает некоторые оптимизации, делающие разметку более удобной для чтения. Одна из оптимизаций заключается в том, что, если определенное свойство принимает тип коллекции, элементы, объявленные в разметке как дочерние в пределах значения этого свойства, становятся частью коллекции. В этом случае коллекция дочерних объектных элементов является значением, которое задается для свойства коллекции.  
@@ -112,7 +112,7 @@ ms.locfileid: "54563760"
   blue button</Button>  
 ```  
   
- Дополнительные сведения об этом ограничении свойств содержимого XAML см. в подразделе "Свойства содержимого XAML" раздела [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Дополнительные сведения об этом ограничении свойств содержимого XAML см. в подразделе "Свойства содержимого XAML" раздела [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md).  
   
 ### <a name="text-content"></a>Текстовое содержимое  
  Небольшое количество элементов XAML могут непосредственно обрабатывать текст как содержимое. Это происходит в одной из следующих ситуаций.  
@@ -153,53 +153,53 @@ ms.locfileid: "54563760"
 ### <a name="attribute-syntax-events"></a>Синтаксис атрибутов (события)  
  Синтаксис атрибутов также можно использовать для элементов, которые являются событиями, а не свойствами. В этом случае имя атрибута является именем события. События для языка XAML реализованы в WPF таким образом, что значение атрибута является именем обработчика, реализующего делегат этого события. Например, в следующей разметке назначается обработчик для <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события <xref:System.Windows.Controls.Button> , созданного в разметке:  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- Помимо этого примера синтаксиса атрибутов, имеется больше информации по событиям и XAML в WPF. Например, может возникнуть вопрос, что представляет и как определяется указанный здесь атрибут `ClickHandler`. Ответ можно найти в следующем подразделе [События и код программной части XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#events_and_xaml_codebehind) этого раздела.  
+ Помимо этого примера синтаксиса атрибутов, имеется больше информации по событиям и XAML в WPF. Например, может возникнуть вопрос, что представляет и как определяется указанный здесь атрибут `ClickHandler`. Ответ можно найти в следующем подразделе [События и код программной части XAML](xaml-overview-wpf.md#events_and_xaml_codebehind) этого раздела.  
   
 <a name="case_and_white space_in_xaml"></a>   
 ## <a name="case-and-white-space-in-xaml"></a>Регистр и пробелы в XAML  
  Вообще говоря, в языке XAML учитывается регистр символов. При разрешении резервных типов в WPF XAML регистр учитывается по тем же правилам, что и для CLR. Объектные элементы, элементы свойств и имена атрибутов должны быть указаны с учетом регистра символов при сравнении по имени с базовым типом в сборке или с элементом типа. В ключевых словах и примитивах в языке XAML также учитывается регистр. В значениях регистр учитывается не всегда. Учет регистра для значений будет зависеть от поведения преобразователя типов, связанного со свойством, которое принимает значение, или с соответствующим типом значения свойства. Например, свойства, принимающие <xref:System.Boolean> типа может принимать либо `true` или `True` как эквивалентные, но только в том случае, так как преобразование строки типа синтаксический анализатор WPF XAML <xref:System.Boolean> уже рассматривает их как эквиваленты.  
   
- WPF XAML обработчики и сериализаторы будет игнорировать или удалить все незначимые пробелы и будет нормализовать любой значащий пробел. Это согласуется с рекомендациями по умолчанию поведение пустого пространства в спецификации XAML. Данное поведение типично только при задании строки в свойствах содержимого XAML. Проще говоря, XAML преобразует пробелы, символы табуляции и перевода строки в пробелы, а затем сохраняет один пробел, если таковой найден с любого конца непрерывной строки. Полное описание обработки пробелов в XAML не рассматривается в этом разделе. Дополнительные сведения см. в разделе [обработки в XAML пробелов](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ WPF XAML обработчики и сериализаторы будет игнорировать или удалить все незначимые пробелы и будет нормализовать любой значащий пробел. Это согласуется с рекомендациями по умолчанию поведение пустого пространства в спецификации XAML. Данное поведение типично только при задании строки в свойствах содержимого XAML. Проще говоря, XAML преобразует пробелы, символы табуляции и перевода строки в пробелы, а затем сохраняет один пробел, если таковой найден с любого конца непрерывной строки. Полное описание обработки пробелов в XAML не рассматривается в этом разделе. Дополнительные сведения см. в разделе [обработки в XAML пробелов](../../xaml-services/whitespace-processing-in-xaml.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Расширения разметки  
  Расширения разметки являются понятием языка XAML. При использовании для предоставления значения синтаксиса атрибутов фигурные скобки (`{` и `}`) указывают на использование расширения разметки. При обработке XAML расширения разметки обрабатываются иначе, чем значения атрибутов, обычно рассматриваемые как литеральная строка или как значение, которое может быть преобразовано в строку.  
   
- Наиболее распространенными расширениями разметки, используемыми при программирования приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], являются [Binding](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), используемое для выражений привязки данных, и ссылки на ресурсы [StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) и [DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Используя расширения разметки, можно использовать синтаксис атрибутов для указания значений свойств, которые в целом не поддерживают синтаксис атрибутов. В расширениях разметки часто используются промежуточные типы выражений для включения функций, которые присутствуют только во время выполнения, например откладывание значений или ссылка на другие объекты.  
+ Наиболее распространенными расширениями разметки, используемыми при программирования приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], являются [Binding](binding-markup-extension.md), используемое для выражений привязки данных, и ссылки на ресурсы [StaticResource](staticresource-markup-extension.md) и [DynamicResource](dynamicresource-markup-extension.md). Используя расширения разметки, можно использовать синтаксис атрибутов для указания значений свойств, которые в целом не поддерживают синтаксис атрибутов. В расширениях разметки часто используются промежуточные типы выражений для включения функций, которые присутствуют только во время выполнения, например откладывание значений или ссылка на другие объекты.  
   
- Например, следующий элемент задает значение <xref:System.Windows.FrameworkElement.Style%2A> свойства с помощью синтаксиса атрибутов. <xref:System.Windows.FrameworkElement.Style%2A> Свойство принимает экземпляр <xref:System.Windows.Style> класс, который по умолчанию не может быть создан с помощью строки синтаксиса атрибутов. Но в этом случае атрибут ссылается на определенное расширение разметки [StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Когда это расширение разметки обрабатывается, оно возвращает ссылку на стиль, экземпляр которого был ранее создан в качестве ключевого ресурса в словаре ресурсов.  
+ Например, следующий элемент задает значение <xref:System.Windows.FrameworkElement.Style%2A> свойства с помощью синтаксиса атрибутов. <xref:System.Windows.FrameworkElement.Style%2A> Свойство принимает экземпляр <xref:System.Windows.Style> класс, который по умолчанию не может быть создан с помощью строки синтаксиса атрибутов. Но в этом случае атрибут ссылается на определенное расширение разметки [StaticResource](staticresource-markup-extension.md). Когда это расширение разметки обрабатывается, оно возвращает ссылку на стиль, экземпляр которого был ранее создан в качестве ключевого ресурса в словаре ресурсов.  
   
- [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
+ [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- Список всех расширений разметки для XAML, реализованных в WPF, см. в разделе [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Список ссылок на расширения разметки, которые определены в сборке System.Xaml и более доступных для реализаций .NET Framework XAML, см. в разделе [пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Дополнительные сведения о понятиях расширений разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Список всех расширений разметки для XAML, реализованных в WPF, см. в разделе [Расширения XAML WPF](wpf-xaml-extensions.md). Список ссылок на расширения разметки, которые определены в сборке System.Xaml и более доступных для реализаций .NET Framework XAML, см. в разделе [пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md). Дополнительные сведения о понятиях расширений разметки см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Преобразователи типов  
- В разделе [Краткое описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief) было отмечено, что необходимо обеспечить возможность задать значение атрибута строкой. Основная собственная обработка преобразования строк в другие типы объектов или простые значения основана на <xref:System.String> сам тип, помимо некоторой собственной обработки для определенных типов, таких как <xref:System.DateTime> или <xref:System.Uri>. Но многие типы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] или члены этих типов расширяют основное поведение обработки атрибутов строк таким образом, что экземпляры более сложных типов объектов могут быть заданы как строки и атрибуты.  
+ В разделе [Краткое описание синтаксиса XAML](xaml-overview-wpf.md#xaml_syntax_in_brief) было отмечено, что необходимо обеспечить возможность задать значение атрибута строкой. Основная собственная обработка преобразования строк в другие типы объектов или простые значения основана на <xref:System.String> сам тип, помимо некоторой собственной обработки для определенных типов, таких как <xref:System.DateTime> или <xref:System.Uri>. Но многие типы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] или члены этих типов расширяют основное поведение обработки атрибутов строк таким образом, что экземпляры более сложных типов объектов могут быть заданы как строки и атрибуты.  
   
  <xref:System.Windows.Thickness> Структуры является примером типа, для которого включено преобразование типа для использования XAML. <xref:System.Windows.Thickness> Указывает измерения в рамках вложенного прямоугольника и используется в качестве значения для свойств, таких как <xref:System.Windows.FrameworkElement.Margin%2A>. Размещая преобразователь типов на <xref:System.Windows.Thickness>, все свойства, использующие <xref:System.Windows.Thickness> , легче указать в XAML, так как они могут быть указаны как атрибуты. В следующем примере используется синтаксис, преобразование и атрибут типа, чтобы предоставить значение для <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
- [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
+ [!code-xaml[XAMLOvwSupport#MarginTCE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
  В предыдущем примере синтаксиса атрибутов эквивалентен следующему более подробному примеру синтаксиса, где <xref:System.Windows.FrameworkElement.Margin%2A> задается с помощью синтаксиса элемента свойства, содержащего <xref:System.Windows.Thickness> объектного элемента. Четыре ключевых свойств <xref:System.Windows.Thickness> заданы как атрибуты в новом экземпляре:  
   
- [!code-xaml[XAMLOvwSupport#MarginVerbose](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
+ [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
 >  Кроме того, существует ограниченное количество объектов, для которых преобразование типов является единственным открытым способом присвоения свойству значения нужного типа без использования подкласса, так как у самого типа отсутствует конструктор по умолчанию. Например, <xref:System.Windows.Input.Cursor>.  
   
- Дополнительные сведения о поддержке преобразователя типов для синтаксиса атрибутов см. в разделе [TypeConverters и XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Дополнительные сведения о поддержке преобразователя типов для синтаксиса атрибутов см. в разделе [TypeConverters и XAML](typeconverters-and-xaml.md).  
   
 <a name="xaml_root_elements_and_xaml_namespaces"></a>   
 ## <a name="xaml-root-elements-and-xaml-namespaces"></a>Корневые элементы XAML и пространства имен XAML  
  Файл XAML должен иметь только один корневой элемент, чтобы одновременно быть файлом [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] с правильным форматом и допустимым файлом XAML. В скриптах WPF используется корневой элемент, имеющий значимый в модели приложения WPF (например, <xref:System.Windows.Window> или <xref:System.Windows.Controls.Page> для страницы, <xref:System.Windows.ResourceDictionary> для внешнего словаря или <xref:System.Windows.Application> для определения приложения). В следующем примере показано корневой элемент обычного файла XAML для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы с корневым элементом <xref:System.Windows.Controls.Page>.  
   
- [!code-xaml[XAMLOvwSupport#RootOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
-[!code-xaml[XAMLOvwSupport#RootOnly2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
+ [!code-xaml[XAMLOvwSupport#RootOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
+[!code-xaml[XAMLOvwSupport#RootOnly2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
   
  Корневой элемент также содержит атрибуты `xmlns` и `xmlns:x`. Эти атрибуты указывают обработчику XAML, какие пространства имен XAML содержат определения типов для резервных типов, на которые будет ссылаться разметка в качестве элементов. Атрибут `xmlns` специально указывает пространство имен XAML по умолчанию. В пределах пространства имен XAML по умолчанию объектные элементы в разметке можно указывать без префикса. Для большинства сценариев приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и практически для всех примеров, приведенных в разделах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], пространство имен XAML по умолчанию сопоставлено с пространством имен [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. Атрибут `xmlns:x` указывает дополнительное пространство имен XAML, которое сопоставлено пространству имен языка [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)].  
   
@@ -212,17 +212,17 @@ ms.locfileid: "54563760"
 ### <a name="the-x-prefix"></a>Префикс x:  
  В предыдущем примере корневого элемента префикс `x:` использовался для сопоставления пространства имен XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], которое является выделенным пространством имен XAML, поддерживающим конструкции языка XAML. Префикс `x:` используется для сопоставления данного пространства имен XAML в шаблонах для проектов, в примерах и в документации по всему этому [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Пространство имен XAML для языка XAML содержит несколько конструкций программирования, которые очень часто используются в XAML. Ниже приведен список наиболее распространенных конструкций программирования с префиксом `x:`, которые могут вам потребоваться.  
   
--   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): Задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
+-   [x: Key](../../xaml-services/x-key-directive.md): Задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
   
--   [x: Class](../../../../docs/framework/xaml-services/x-class-directive.md): Указывает [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространство имен и имя класса для класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
+-   [x: Class](../../xaml-services/x-class-directive.md): Указывает [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространство имен и имя класса для класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
   
--   [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md): Задает имя объекта времени выполнения для экземпляра, который существует в коде во время выполнения, после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
+-   [x: Name](../../xaml-services/x-name-directive.md): Задает имя объекта времени выполнения для экземпляра, который существует в коде во время выполнения, после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
   
--   [x: Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md): Позволяет использовать ссылку, возвращающую статическое значение, которое не может быть свойством, совместимым с XAML.  
+-   [x: Static](../../xaml-services/x-static-markup-extension.md): Позволяет использовать ссылку, возвращающую статическое значение, которое не может быть свойством, совместимым с XAML.  
   
--   [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): Создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
+-   [x: Type](../../xaml-services/x-type-markup-extension.md): Создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
   
- Существуют дополнительные конструкции программирования в пространстве имен XAML/с префиксом `x:`, которые применяются не так часто. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Существуют дополнительные конструкции программирования в пространстве имен XAML/с префиксом `x:`, которые применяются не так часто. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>Пользовательские префиксы и пользовательские типы в XAML  
@@ -243,9 +243,9 @@ ms.locfileid: "54563760"
 </Page>  
 ```  
   
- Дополнительные сведения о пользовательских типах в языке XAML см. в разделе [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Дополнительные сведения о пользовательских типах в языке XAML см. в разделе [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md).  
   
- Дополнительные сведения об отношении пространств имен XML и пространств имен кода программной части в сборках см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Дополнительные сведения об отношении пространств имен XML и пространств имен кода программной части в сборках см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>События и код программной части XAML  
@@ -253,35 +253,35 @@ ms.locfileid: "54563760"
   
  В приведенных примерах было использовано несколько кнопок, но ни с одной из этих кнопок не было ассоциировано логическое поведение. Первичным механизмом добавления поведения для объектного элемента на уровне приложения является использование существующего события элементного класса и написание специального обработчика для этого события, которое вызывается при возникновении этого события во время выполнения. Имя события и имя обработчика для использования указываются в разметке, тогда как код, который реализует обработчик, определен в коде программной части.  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
- [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
+ [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
+ [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
  Обратите внимание, что файл кода программной части использует пространство имен CLR `ExampleNamespace` и объявляет `ExamplePage` как разделяемый класс в этом пространстве имен. Это аналогично значению атрибута `x:Class` `ExampleNamespace`.`ExamplePage`, предоставленному в корне разметки. Компилятор разметки WPF создает разделяемый класс для любого скомпилированного файла XAML путем создания класса, производного от типа корневого элемента. При предоставлении кода программной части, который также определяет тот же разделяемый класс, результирующий код объединяется внутри того же пространства имен и класса скомпилированного приложения.  
   
- Дополнительные сведения о требованиях к созданию кода программной части в WPF см. в подразделе "Код программной части, обработчик событий и требования частичного класса" раздела [Код программной части и XAML в WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Дополнительные сведения о требованиях к созданию кода программной части в WPF см. в подразделе "Код программной части, обработчик событий и требования частичного класса" раздела [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md).  
   
- Если создание отдельного файла кода программной части нежелательно, то можно также встроить код в файл XAML. Однако встроенный код является менее гибким методом, имеющим значительные ограничения. Дополнительные сведения см. в разделе [Код программной части и XAML в WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Если создание отдельного файла кода программной части нежелательно, то можно также встроить код в файл XAML. Однако встроенный код является менее гибким методом, имеющим значительные ограничения. Дополнительные сведения см. в разделе [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md).  
   
 ### <a name="routed-events"></a>Перенаправленные события  
- Одна из наиболее важных возможностей в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] — перенаправленное событие. Перенаправленные события позволяют элементу обрабатывать событие, которое было вызвано другим элементом, пока они связаны через отношение дерева. При задании обработки события атрибутом XAML перенаправленное событие может отслеживаться и обрабатываться любым элементом, включая те, для которых это событие не указано в таблице членов класса. Это достигается путем уточнения атрибута имени события именем класса владельца. Например, родительский `StackPanel` в текущем `StackPanel`  /  `Button` пример может зарегистрировать обработчик для кнопки дочернего элемента <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий с помощью атрибута `Button.Click` на `StackPanel` элемент объекта с именем обработчика в качестве значения атрибута. Дополнительные сведения о принципах работы перенаправленных событий см. в разделе [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Одна из наиболее важных возможностей в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] — перенаправленное событие. Перенаправленные события позволяют элементу обрабатывать событие, которое было вызвано другим элементом, пока они связаны через отношение дерева. При задании обработки события атрибутом XAML перенаправленное событие может отслеживаться и обрабатываться любым элементом, включая те, для которых это событие не указано в таблице членов класса. Это достигается путем уточнения атрибута имени события именем класса владельца. Например, родительский `StackPanel` в текущем `StackPanel`  /  `Button` пример может зарегистрировать обработчик для кнопки дочернего элемента <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий с помощью атрибута `Button.Click` на `StackPanel` элемент объекта с именем обработчика в качестве значения атрибута. Дополнительные сведения о принципах работы перенаправленных событий см. в разделе [Общие сведения о перенаправленных событиях](routed-events-overview.md).  
   
 <a name="x_name_and_xaml_named_elements"></a>   
 ## <a name="xaml-named-elements"></a>Именованные элементы XAML  
- По умолчанию экземпляр объекта, созданный в графе объекта путем обработки объектного элемента XAML, не имеет уникального идентификатора или ссылки на объект. Напротив, если конструктор вызывается в коде, результат конструктора почти всегда используется для указания созданного экземпляра в качестве значения переменной, чтобы на него можно было ссылаться в дальнейшем коде. Для предоставления стандартизованного доступа к объектам, созданным с помощью определения разметки, в языке XAML определяется [атрибут x:Name](../../../../docs/framework/xaml-services/x-name-directive.md). Можно задать значение атрибута `x:Name` для любого объектного элемента. В коде программной части выбранный идентификатор эквивалентен переменной экземпляра, которая ссылается на созданный экземпляр. Именованные элементы во всех отношениях действуют так, как если бы они были экземплярами объекта (имя только ссылается на этот экземпляр), и в приложении код программной части может ссылаться на именованные элементы для обработки взаимодействий времени выполнения. Эта связь между экземплярами и переменными выполняется компилятором разметки WPF XAML, и в частности функции например <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> , не рассматриваемые в этом разделе подробно.  
+ По умолчанию экземпляр объекта, созданный в графе объекта путем обработки объектного элемента XAML, не имеет уникального идентификатора или ссылки на объект. Напротив, если конструктор вызывается в коде, результат конструктора почти всегда используется для указания созданного экземпляра в качестве значения переменной, чтобы на него можно было ссылаться в дальнейшем коде. Для предоставления стандартизованного доступа к объектам, созданным с помощью определения разметки, в языке XAML определяется [атрибут x:Name](../../xaml-services/x-name-directive.md). Можно задать значение атрибута `x:Name` для любого объектного элемента. В коде программной части выбранный идентификатор эквивалентен переменной экземпляра, которая ссылается на созданный экземпляр. Именованные элементы во всех отношениях действуют так, как если бы они были экземплярами объекта (имя только ссылается на этот экземпляр), и в приложении код программной части может ссылаться на именованные элементы для обработки взаимодействий времени выполнения. Эта связь между экземплярами и переменными выполняется компилятором разметки WPF XAML, и в частности функции например <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> , не рассматриваемые в этом разделе подробно.  
   
  Элементы XAML уровня среды WPF наследуют <xref:System.Windows.FrameworkElement.Name%2A> свойство, которое эквивалентно значению XAML, который определен `x:Name` атрибута. Некоторые другие классы также предоставляют эквиваленты уровня свойств для `x:Name`, который также обычно определяется как свойство `Name`. Вообще говоря, если не удается найти свойство `Name` в таблице членов для выбранного элемента или типа, вместо него следует использовать атрибут `x:Name`. `x:Name` Значения будут обеспечивают идентификатор элемента XAML, который может использоваться во время выполнения, либо определенными подсистемами, либо вспомогательными методами, такими как <xref:System.Windows.FrameworkElement.FindName%2A>.  
   
  В следующем примере задается <xref:System.Windows.FrameworkElement.Name%2A> на <xref:System.Windows.Controls.StackPanel> элемент. Затем обработчик на <xref:System.Windows.Controls.Button> внутри этого <xref:System.Windows.Controls.StackPanel> ссылки <xref:System.Windows.Controls.StackPanel> через его ссылку на экземпляр `buttonContainer` как задается <xref:System.Windows.FrameworkElement.Name%2A>.  
   
- [!code-xaml[XAMLOvwSupport#NamedE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
-[!code-xaml[XAMLOvwSupport#NamedE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
+ [!code-xaml[XAMLOvwSupport#NamedE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
+[!code-xaml[XAMLOvwSupport#NamedE2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
   
- [!code-csharp[XAMLOvwSupport#NameCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
- [!code-vb[XAMLOvwSupport#NameCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
+ [!code-csharp[XAMLOvwSupport#NameCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
+ [!code-vb[XAMLOvwSupport#NameCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
   
- Как и в случае с переменными, имена экземпляров классов XAML регулируются понятием области, так что обеспечивается уникальность имен в пределах определенной области с известными границами. Основная разметка, определяющая страницу, обозначает одну уникальную область видимости имен XAML с корневым элементом страницы в качестве границы. Однако другие источники разметки могут взаимодействовать со страницей во время выполнения, например стили или шаблоны в стилях, и такие источники разметки часто имеют свои собственные области видимости имен XAML, не обязательно связанные с областью видимости имен XAML страницы. Дополнительные сведения о `x:Name` и области видимости имен XAML, см. в разделе <xref:System.Windows.FrameworkElement.Name%2A>, [директива x: Name](../../../../docs/framework/xaml-services/x-name-directive.md), или [области видимости имен XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ Как и в случае с переменными, имена экземпляров классов XAML регулируются понятием области, так что обеспечивается уникальность имен в пределах определенной области с известными границами. Основная разметка, определяющая страницу, обозначает одну уникальную область видимости имен XAML с корневым элементом страницы в качестве границы. Однако другие источники разметки могут взаимодействовать со страницей во время выполнения, например стили или шаблоны в стилях, и такие источники разметки часто имеют свои собственные области видимости имен XAML, не обязательно связанные с областью видимости имен XAML страницы. Дополнительные сведения о `x:Name` и области видимости имен XAML, см. в разделе <xref:System.Windows.FrameworkElement.Name%2A>, [директива x: Name](../../xaml-services/x-name-directive.md), или [области видимости имен XAML WPF](wpf-xaml-namescopes.md).  
   
 <a name="attached_properties_and_attached_events"></a>   
 ## <a name="attached-properties-and-attached-events"></a>Вложенные свойства и события  
@@ -295,11 +295,11 @@ ms.locfileid: "54563760"
   
  В следующем примере показано <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> вложенного свойства зависимостей. <xref:System.Windows.Controls.DockPanel> Класс определяет методы доступа для <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> и поэтому владеет вложенным свойством. <xref:System.Windows.Controls.DockPanel> Класс также включает логику, которая выполняет итерацию его дочерних элементов и специально проверяет каждый элемент на набор значений <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Если значение обнаруживается, это значение используется в процессе разметки для расположения дочерних элементов. Использование <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> присоединенного свойства и возможности размещения на самом деле является мотивирующим сценарием для <xref:System.Windows.Controls.DockPanel> класса.  
   
- [!code-xaml[XAMLOvwSupport#DockAP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
+ [!code-xaml[XAMLOvwSupport#DockAP](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] большинство вложенных свойств (или все такие свойства) также реализуются как свойства зависимости. Дополнительные сведения см. в разделе [Общие сведения о вложенных свойствах зависимостей](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] большинство вложенных свойств (или все такие свойства) также реализуются как свойства зависимости. Дополнительные сведения см. в разделе [Общие сведения о вложенных свойствах зависимостей](attached-properties-overview.md).  
   
- Вложенные события используют аналогичную форму *тип_владельца*.*имя_события* синтаксиса атрибутов. Подобно невложенным событиям, значение атрибута для вложенного события в XAML задает имя метода обработчика, который вызывается, когда событие обрабатывается для элемента. Использование вложенного события в XAML WPF менее распространено. Дополнительные сведения см. в разделе [Общие сведения о вложенных событиях](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Вложенные события используют аналогичную форму *тип_владельца*.*имя_события* синтаксиса атрибутов. Подобно невложенным событиям, значение атрибута для вложенного события в XAML задает имя метода обработчика, который вызывается, когда событие обрабатывается для элемента. Использование вложенного события в XAML WPF менее распространено. Дополнительные сведения см. в разделе [Общие сведения о вложенных событиях](attached-events-overview.md).  
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Базовые типы и XAML  
@@ -309,7 +309,7 @@ ms.locfileid: "54563760"
 ## <a name="xaml-security"></a>Безопасность XAML  
  XAML — это язык разметки, непосредственно представляющий создание и выполнение объекта. Таким образом, элементы, созданные в XAML, имеют такие же возможности взаимодействия с системными ресурсами (например, сетевой доступ и операции ввода-вывода файловой системы), как и эквивалентный созданный код.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] платформы безопасности [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Это означает, что содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], работающее в зоне Интернет, сократило разрешения исполнения. "Свободный XAML" (страницы некомпилированного XAML, интерпретируемые во время загрузки средства просмотра XAML) и [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] обычно выполняются в этой Интернет-зоне и используют один набор разрешений.  Однако XAML, загруженный в полностью доверенное приложение, имеет такой же доступ к системным ресурсам, как ведущее приложение. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] платформы безопасности [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Это означает, что содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], работающее в зоне Интернет, сократило разрешения исполнения. "Свободный XAML" (страницы некомпилированного XAML, интерпретируемые во время загрузки средства просмотра XAML) и [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] обычно выполняются в этой Интернет-зоне и используют один набор разрешений.  Однако XAML, загруженный в полностью доверенное приложение, имеет такой же доступ к системным ресурсам, как ведущее приложение. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Загрузка XAML из кода  
@@ -317,20 +317,20 @@ ms.locfileid: "54563760"
   
 <a name="whats_next"></a>   
 ## <a name="whats-next"></a>Дальнейшие действия  
- Этот раздел содержит основные сведения о терминологии и понятиях синтаксиса XAML применительно к WPF. Дополнительные сведения об используемых здесь терминах см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Этот раздел содержит основные сведения о терминологии и понятиях синтаксиса XAML применительно к WPF. Дополнительные сведения об используемых здесь терминах см. в разделе [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md).  
   
- Если вы еще не сделали это, выполните упражнения из раздела руководства [Пошаговое руководство: Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). При создании приложения, ориентированного на разметку и описанного в руководстве, упражнения помогут лучше осознать многие понятия, описанные в этом разделе.  
+ Если вы еще не сделали это, выполните упражнения из раздела руководства [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md). При создании приложения, ориентированного на разметку и описанного в руководстве, упражнения помогут лучше осознать многие понятия, описанные в этом разделе.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует конкретную модель приложения, основанный на <xref:System.Windows.Application> класса. Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует конкретную модель приложения, основанный на <xref:System.Windows.Application> класса. Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../app-development/application-management-overview.md).  
   
- В разделе [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) представлены дополнительные сведения о том, как построить включающие XAML приложения из командной строки и в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+ В разделе [Построение приложения WPF](../app-development/building-a-wpf-application-wpf.md) представлены дополнительные сведения о том, как построить включающие XAML приложения из командной строки и в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   
- В разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) представлены дополнительные сведения о разнообразии свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и описано понятие свойств зависимостей.  
+ В разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md) представлены дополнительные сведения о разнообразии свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и описано понятие свойств зависимостей.  
   
 ## <a name="see-also"></a>См. также
-- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
-- [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
-- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)
+- [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)
+- [Пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Расширения XAML WPF](wpf-xaml-extensions.md)
+- [Общие сведения о базовых элементах](base-elements-overview.md)
+- [Деревья в WPF](trees-in-wpf.md)

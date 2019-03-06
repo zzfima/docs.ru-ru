@@ -16,32 +16,34 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721149"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377421"
 ---
 # <a name="setsecurity-function"></a>Функция SetSecurity
-Получает маркер олицетворения, связанный с текущим потоком.   
-  
+
+Получает маркер олицетворения, связанный с текущим потоком. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+## <a name="syntax"></a>Синтаксис
+
+```
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Параметры
 
-`pNeedToReset` [out] При возврате функции, содержит указатель на `boolean` , указывающее, следует ли сбросить маркер путем вызова [ResetSecurity](resetsecurity.md) функции.  
+`pNeedToReset`\
+[out] При возврате функции, содержит указатель на `boolean` , указывающее, следует ли сбросить маркер путем вызова [ResetSecurity](resetsecurity.md) функции.
 
-`token`  
+`token`\
 [out] При возврате функции, содержит указатель на дескриптор токена олицетворения, связанный с текущим потоком. Его значение может быть `null` имеется ли токен, не связанный с текущим потоком. 
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -49,13 +51,15 @@ HRESULT SetSecurity (
 Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).
 
 Если функция завершается с ошибкой, возвращается код ошибки. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** WMINet_Utils.idl  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>Требования
+
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Заголовок.** WMINet_Utils.idl
+
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>См. также
+
 - [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

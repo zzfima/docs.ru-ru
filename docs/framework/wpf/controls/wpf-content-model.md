@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 751cbcc3a3b70f0937a8fe84c0fad5d8771a32ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718160"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373101"
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
@@ -40,7 +40,7 @@ ms.locfileid: "54718160"
   
  Элементы управления, производные от этих классов, могут содержать тот же тип содержимого и обрабатывать содержимое аналогичным образом. На рисунке ниже показаны элементы управления из каждой модели содержимого, содержащие изображение и некоторый текст.  
   
- ![Button, GroupBox, Listbox, TreeViewItem](../../../../docs/framework/wpf/controls/media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Button, GroupBox, Listbox, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Элементы управления, содержащие один произвольный объект  
  <xref:System.Windows.Controls.ContentControl> Класса содержит один элемент произвольного содержимого. Его свойство содержимого — <xref:System.Windows.Controls.ContentControl.Content%2A>. Следующие элементы управления наследуют <xref:System.Windows.Controls.ContentControl> и используют его модель содержимого:  
@@ -87,7 +87,7 @@ ms.locfileid: "54718160"
   
  На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> присваивается строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
- ![Четыре кнопки](../../../../docs/framework/wpf/controls/media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
+ ![Четыре кнопки](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
 Четыре кнопки с различными типами содержимого  
   
  Например, как задать <xref:System.Windows.Controls.ContentControl.Content%2A> свойство, см. в разделе <xref:System.Windows.Controls.ContentControl>.  
@@ -105,7 +105,7 @@ ms.locfileid: "54718160"
   
  На следующем рисунке показаны два <xref:System.Windows.Controls.TabItem> объектов. Первый <xref:System.Windows.Controls.TabItem> имеет <xref:System.Windows.UIElement> объектов как <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.Label>. Второй <xref:System.Windows.Controls.TabItem> имеет строку в <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.TextBlock> в <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
+ ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
 Элемент управления TabControl, который использует различные типы в свойстве Header  
   
  Пример создания <xref:System.Windows.Controls.TabItem> объектов, см. в разделе <xref:System.Windows.Controls.HeaderedContentControl>.  
@@ -147,7 +147,7 @@ ms.locfileid: "54718160"
   
 -   Объект <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
- ![ListBox с четырьмя типами содержимого](../../../../docs/framework/wpf/controls/media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
+ ![ListBox с четырьмя типами содержимого](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
 Элемент управления ListBox, содержащий несколько типов объектов  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Элементы управления, содержащие заголовок и коллекцию произвольных объектов  
@@ -189,7 +189,7 @@ ms.locfileid: "54718160"
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Дополнительные сведения см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Дополнительные сведения см. в разделе [Общие сведения о панелях](panels-overview.md).  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Классы, влияющие на внешний вид объекта UIElement  
@@ -215,12 +215,12 @@ ms.locfileid: "54718160"
   
  На следующем рисунке показано <xref:System.Windows.Controls.TextBox> с (снабжен) <xref:System.Windows.Controls.Border> вокруг него.  
   
- ![TextBox с черной границей](../../../../docs/framework/wpf/controls/media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
+ ![TextBox с черной границей](./media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
 Элемент управления TextBlock с границей вокруг него  
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>Классы, предоставляющие визуальную обратную связь об объекте UIElement  
- <xref:System.Windows.Documents.Adorner> Предоставляет пользователю визуальные подсказки. Например, использовать <xref:System.Windows.Documents.Adorner> для добавления функциональных обработчиков к элементам или предоставления сведения о состоянии об элементе управления. <xref:System.Windows.Documents.Adorner> Класс предоставляет платформу, которые можно создавать собственные декоративные элементы. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет никаких реализованных декоративных элементов. Дополнительные сведения см. в разделе [Общие сведения о декоративных элементах](../../../../docs/framework/wpf/controls/adorners-overview.md).  
+ <xref:System.Windows.Documents.Adorner> Предоставляет пользователю визуальные подсказки. Например, использовать <xref:System.Windows.Documents.Adorner> для добавления функциональных обработчиков к элементам или предоставления сведения о состоянии об элементе управления. <xref:System.Windows.Documents.Adorner> Класс предоставляет платформу, которые можно создавать собственные декоративные элементы. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предоставляет никаких реализованных декоративных элементов. Дополнительные сведения см. в разделе [Общие сведения о декоративных элементах](adorners-overview.md).  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>Классы, позволяющие пользователям вводить текст  
@@ -250,7 +250,7 @@ ms.locfileid: "54718160"
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>Классы, выполняющие форматирование пользовательского текста  
- <xref:System.Windows.Documents.TextElement> и связанные с ним классы позволяют вам форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматируют текст в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объекты являются <xref:System.Windows.Documents.Block> элементов и <xref:System.Windows.Documents.Inline> элементов. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например, абзац или список. <xref:System.Windows.Documents.Inline> Элемент представляет собой часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы задают форматирование текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md).  
+ <xref:System.Windows.Documents.TextElement> и связанные с ним классы позволяют вам форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматируют текст в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объекты являются <xref:System.Windows.Documents.Block> элементов и <xref:System.Windows.Documents.Inline> элементов. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например, абзац или список. <xref:System.Windows.Documents.Inline> Элемент представляет собой часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы задают форматирование текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>См. также
-- [Дополнительно](../../../../docs/framework/wpf/advanced/index.md)
+- [Дополнительно](../advanced/index.md)

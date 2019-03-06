@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 924d099a17390eeac61bd87a0c3ca0e05b1c8172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672088"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360564"
 ---
 # <a name="popup-placement-behavior"></a>Поведение при размещении контекстного меню
 Объект <xref:System.Windows.Controls.Primitives.Popup> управления отображает содержимое в отдельном окне, расположенном поверх приложения. Можно указать положение <xref:System.Windows.Controls.Primitives.Popup> по отношению к элементу управления, мыши или экрана с помощью <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства.  Эти свойства совместной работы позволяют гибко указывать положение <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -26,11 +26,11 @@ ms.locfileid: "54672088"
 ## <a name="positioning-the-popup"></a>Размещение всплывающего окна  
  Размещение <xref:System.Windows.Controls.Primitives.Popup> может быть относительно <xref:System.Windows.UIElement> или на весь экран.  В следующем примере создается четыре <xref:System.Windows.Controls.Primitives.Popup> элементов управления, относящихся к <xref:System.Windows.UIElement>— в данном случае это изображение. Все <xref:System.Windows.Controls.Primitives.Popup> элементы управления имеют <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> свойство значение `image1`, но каждый <xref:System.Windows.Controls.Primitives.Popup> имеет другое значение свойства размещения.  
   
- [!code-xaml[PopupPositionSnippet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]  
+ [!code-xaml[PopupPositionSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#3)]  
   
  На следующем рисунке показано изображение и <xref:System.Windows.Controls.Primitives.Popup> элементов управления  
   
- ![Изображение с четырьмя элементами управления всплывающих окон](../../../../docs/framework/wpf/controls/media/popupplacementintro.png "PopupPlacementIntro")  
+ ![Изображение с четырьмя элементами управления всплывающих окон](./media/popupplacementintro.png "PopupPlacementIntro")  
 Изображение с четырьмя всплывающими окнами  
   
  В этом простом примере показано, как задать <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> и <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства, но с помощью <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства, у вас есть еще большего контроля над where <xref:System.Windows.Controls.Primitives.Popup> находится.  
@@ -54,20 +54,20 @@ ms.locfileid: "54672088"
   
  В следующем примере создается <xref:System.Windows.Controls.Primitives.Popup> то есть дочерний <xref:System.Windows.Controls.Canvas>.  В примере задается <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> свойство <xref:System.Windows.Controls.Primitives.Popup>. Значение по умолчанию для <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom?displayProperty=nameWithType>, поэтому <xref:System.Windows.Controls.Primitives.Popup> отображается под <xref:System.Windows.Controls.Canvas>.  
   
- [!code-xaml[PopupPositionSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#1)]  
+ [!code-xaml[PopupPositionSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#1)]  
   
  На следующем рисунке показано, что <xref:System.Windows.Controls.Primitives.Popup> расположено относительно <xref:System.Windows.Controls.Canvas>.  
   
- ![Элемент управления Popup без PlacementTarget](../../../../docs/framework/wpf/controls/media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
+ ![Элемент управления Popup без PlacementTarget](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
 Всплывающее окно без PlacementTarget  
   
  В следующем примере создается <xref:System.Windows.Controls.Primitives.Popup> то есть дочерний <xref:System.Windows.Controls.Canvas>, но на этот раз <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> присваивается `ellipse1`, поэтому появится всплывающее окно под <xref:System.Windows.Shapes.Ellipse>.  
   
- [!code-xaml[PopupPositionSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
+ [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
   
  На следующем рисунке показано, что <xref:System.Windows.Controls.Primitives.Popup> расположено относительно <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Размещение всплывающего окна относительно эллипса](../../../../docs/framework/wpf/controls/media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
+ ![Размещение всплывающего окна относительно эллипса](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
 Всплывающее окно с PlacementTarget  
   
 > [!NOTE]
@@ -78,11 +78,11 @@ ms.locfileid: "54672088"
   
  В следующем примере создается два <xref:System.Windows.Controls.Canvas> объектов, каждый из которых содержит <xref:System.Windows.Shapes.Rectangle> и <xref:System.Windows.Controls.Primitives.Popup>.  В обоих случаях целевым объектом для <xref:System.Windows.Controls.Primitives.Popup> является <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Controls.Primitives.Popup> В первом <xref:System.Windows.Controls.Canvas> имеет <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> задано с помощью его <xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>, <xref:System.Windows.Rect.Width%2A>, и <xref:System.Windows.Rect.Height%2A> свойства, значение 50, 50, 50 и 100 соответственно. <xref:System.Windows.Controls.Primitives.Popup> Во втором <xref:System.Windows.Controls.Canvas> имеет <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> значение.  Таким образом первый <xref:System.Windows.Controls.Primitives.Popup> находится ниже <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , а второй <xref:System.Windows.Controls.Primitives.Popup> находится ниже <xref:System.Windows.Controls.Canvas>. Каждый <xref:System.Windows.Controls.Canvas> также содержит <xref:System.Windows.Shapes.Rectangle> , имеет те же границы как <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> для первого <xref:System.Windows.Controls.Primitives.Popup>.  Обратите внимание, что <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> не создает видимого элемента в приложении; в примере создается <xref:System.Windows.Shapes.Rectangle> для представления <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>.  
   
- [!code-xaml[PopupPositionSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#4)]  
+ [!code-xaml[PopupPositionSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#4)]  
   
  На следующем рисунке показан результат примера, приведенного выше.  
   
- ![Всплывающее окно с PlacementRectangle и без](../../../../docs/framework/wpf/controls/media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
+ ![Всплывающее окно с PlacementRectangle и без](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
 Всплывающее меню с PlacementRectangle и без него  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>Исходная точка и точка выравнивания всплывающего окна  
@@ -90,11 +90,11 @@ ms.locfileid: "54672088"
   
  В следующем примере создается <xref:System.Windows.Controls.Primitives.Popup> и задает <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства до 20.  <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Свойству <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> (по умолчанию), поэтому исходная точка расположена в левом нижнем углу целевой области, и точка выравнивания всплывающего окна находится в левом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- [!code-xaml[PopupPositionSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]  
+ [!code-xaml[PopupPositionSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#5)]  
   
  На следующем рисунке показан результат примера, приведенного выше.  
   
- ![Размещение всплывающего окна в точке выравнивания начала цели](../../../../docs/framework/wpf/controls/media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
+ ![Размещение всплывающего окна в точке выравнивания начала цели](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
 Всплывающее окно с HorizontalOffset и VerticalOffset  
   
 <a name="How"></a>   
@@ -120,31 +120,31 @@ ms.locfileid: "54672088"
   
  На следующих рисунках <xref:System.Windows.Controls.Primitives.Popup>, целевая область, исходная точка и выравнивания всплывающего окна точки для каждого <xref:System.Windows.Controls.Primitives.PlacementMode> значение. На каждом рисунке целевая область закрашена желтым, а <xref:System.Windows.Controls.Primitives.Popup> — синий.  
   
- ![Всплывающее окно с абсолютным или AbsolutePoint размещением](../../../../docs/framework/wpf/controls/media/popupplacementabsolute.png "PopupPlacementAbsolute")  
+ ![Всплывающее окно с абсолютным или AbsolutePoint размещением](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
 Абсолютное размещение или размещение с помощью AbsolutePoint  
   
- ![Всплывающее окно с нижним размещением](../../../../docs/framework/wpf/controls/media/popupplacementbottom.png "PopupPlacementBottom")  
+ ![Всплывающее окно с нижним размещением](./media/popupplacementbottom.png "PopupPlacementBottom")  
 Расположение снизу  
   
- ![Всплывающее окно с размещением по центру](../../../../docs/framework/wpf/controls/media/popupplacementcenter.png "PopupPlacementCenter")  
+ ![Всплывающее окно с размещением по центру](./media/popupplacementcenter.png "PopupPlacementCenter")  
 Размещение в центре  
   
- ![Всплывающее окно с левым размещением](../../../../docs/framework/wpf/controls/media/popupplacementleft.png "PopupPlacementLeft")  
+ ![Всплывающее окно с левым размещением](./media/popupplacementleft.png "PopupPlacementLeft")  
 Размещение слева  
   
- ![Всплывающее окно с размещением относительны мыши](../../../../docs/framework/wpf/controls/media/popupplacementmouse.png "PopupPlacementMouse")  
+ ![Всплывающее окно с размещением относительны мыши](./media/popupplacementmouse.png "PopupPlacementMouse")  
 Размещение относительно мыши  
   
- ![Всплывающее окно с размещением MousePoint](../../../../docs/framework/wpf/controls/media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
+ ![Всплывающее окно с размещением MousePoint](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
 Размещение относительно MousePoint  
   
- ![Всплывающее окно с относительным или RelativePoint размещением](../../../../docs/framework/wpf/controls/media/popupplacementrelative.png "PopupPlacementRelative")  
+ ![Всплывающее окно с относительным или RelativePoint размещением](./media/popupplacementrelative.png "PopupPlacementRelative")  
 Относительное размещение или размещение с помощью RelativePoint  
   
- ![Всплывающее окно с правым размещением](../../../../docs/framework/wpf/controls/media/popupplacementright.png "PopupPlacementRight")  
+ ![Всплывающее окно с правым размещением](./media/popupplacementright.png "PopupPlacementRight")  
 Размещение справа  
   
- ![Всплывающее окно с верхним размещением](../../../../docs/framework/wpf/controls/media/popupplacementtop.png "PopupPlacementTop")  
+ ![Всплывающее окно с верхним размещением](./media/popupplacementtop.png "PopupPlacementTop")  
 Размещение сверху  
   
 <a name="When"></a>   
@@ -178,7 +178,7 @@ ms.locfileid: "54672088"
 ### <a name="aligning-to-the-screen-edge"></a>Выравнивание по краю экрана  
  Объект <xref:System.Windows.Controls.Primitives.Popup> может выровняться по краю экрана путем изменения расположения, так что всего <xref:System.Windows.Controls.Primitives.Popup> отображается на экране.  В этом случае расстояние между точкой выравнивания всплывающего окна, целевой объект может отличаться от значения <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>. Когда <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, или <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>, <xref:System.Windows.Controls.Primitives.Popup> выравнивается по каждому краю экрана.  Например, предположим, что <xref:System.Windows.Controls.Primitives.Popup> имеет <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> присвоено <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> равным 100.  Если нижний край экрана скрывает полностью или частично <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.Primitives.Popup> выравнивается вдоль нижнего края экрана и расстояние по вертикали между началом координат целевого объекта и всплывающее окно точка выравнивания находится меньше 100. Эта ситуация представлена на рисунке ниже.  
   
- ![Всплывающее окно, выравниваемое по краю экрана](../../../../docs/framework/wpf/controls/media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
+ ![Всплывающее окно, выравниваемое по краю экрана](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
 Всплывающее окно выравнивается по краю экрана.  
   
 ### <a name="changing-the-popup-alignment-point"></a>Изменение точки выравнивания всплывающего окна  
@@ -186,12 +186,12 @@ ms.locfileid: "54672088"
   
  На следующем рисунке показано, что если нижний край экрана скрывает полностью или частично <xref:System.Windows.Controls.Primitives.Popup>, точка выравнивания всплывающего окна находится в нижнем левом углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно нижнего края экрана](../../../../docs/framework/wpf/controls/media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
+ ![Новая точка выравнивания относительно нижнего края экрана](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
 Всплывающее окно достигает нижнего края экрана и меняет положение точки выравнивания.  
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup> скрыт с правого края экрана, точка выравнивания всплывающего окна находится в правом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания всплывающего окна края экрана](../../../../docs/framework/wpf/controls/media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
+ ![Новая точка выравнивания всплывающего окна края экрана](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
 Всплывающее окно достигает правого края экрана и меняет положение точки выравнивания.  
   
  Если <xref:System.Windows.Controls.Primitives.Popup> достигает нижнего и правого краев экрана, точка выравнивания всплывающего окна находится в правом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -201,31 +201,31 @@ ms.locfileid: "54672088"
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> и <xref:System.Windows.Controls.Primitives.Popup> достигает нижнего края экрана, исходная точка расположена в левом верхнем углу целевой области, и точка выравнивания всплывающего окна находится в нижнем левом углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно нижнего края экрана](../../../../docs/framework/wpf/controls/media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
+ ![Новая точка выравнивания относительно нижнего края экрана](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
 Размещение по нижнему краю и всплывающее окно достигают нижнего края экрана  
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Left> и <xref:System.Windows.Controls.Primitives.Popup> встречает левый край экрана, исходная точка расположена в правом верхнем углу целевой области, и точка выравнивания всплывающего окна находится в левом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно левого края экрана](../../../../docs/framework/wpf/controls/media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
+ ![Новая точка выравнивания относительно левого края экрана](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
 Размещение по левому краю и всплывающее окно достигают левого края экрана.  
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Right> и <xref:System.Windows.Controls.Primitives.Popup> встречает правый край экрана, исходная точка расположена в левом верхнем углу целевой области, и точка выравнивания всплывающего окна находится в правом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно правого края экрана](../../../../docs/framework/wpf/controls/media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
+ ![Новая точка выравнивания относительно правого края экрана](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
 Размещение по правому краю и всплывающее окно достигают правого края экрана.  
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Top> и <xref:System.Windows.Controls.Primitives.Popup> встречает верхний край экрана, исходная точка расположена в левом нижнем углу целевой области, и точка выравнивания всплывающего окна находится в левом верхнем углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно верхнего края экрана](../../../../docs/framework/wpf/controls/media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
+ ![Новая точка выравнивания относительно верхнего края экрана](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
 Размещение по верхнему краю и всплывающее окно достигают верхнего края экрана.  
   
  На следующем рисунке показано, что при <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> — <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> и <xref:System.Windows.Controls.Primitives.Popup> достигает нижнего края экрана, исходная точка расположена в левом верхнем углу целевой области (границы указателя мыши), а также выравнивания всплывающего окна точка находится в нижнем левом углу <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Новая точка выравнивания относительно мыши возле края экрана](../../../../docs/framework/wpf/controls/media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
+ ![Новая точка выравнивания относительно мыши возле края экрана](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
 Размещение относительно мыши и всплывающее окно достигают нижнего края экрана.  
   
 ### <a name="customizing-popup-placement"></a>Настройка размещения контекстного меню  
- Точка выравнивания всплывающего окна целевой можно настроить, задав <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Затем определите <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат, который возвращает набор возможных точек размещения и основные оси (в порядке предпочтения) для <xref:System.Windows.Controls.Primitives.Popup>. Точка, в которой отображается наибольшую часть <xref:System.Windows.Controls.Primitives.Popup> выбран.  Положение <xref:System.Windows.Controls.Primitives.Popup> изменяется автоматически в том случае, если <xref:System.Windows.Controls.Primitives.Popup> скрыто за краем экрана. См. пример в разделе [Указание пользовательского расположения контекстного меню](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Точка выравнивания всплывающего окна целевой можно настроить, задав <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Затем определите <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат, который возвращает набор возможных точек размещения и основные оси (в порядке предпочтения) для <xref:System.Windows.Controls.Primitives.Popup>. Точка, в которой отображается наибольшую часть <xref:System.Windows.Controls.Primitives.Popup> выбран.  Положение <xref:System.Windows.Controls.Primitives.Popup> изменяется автоматически в том случае, если <xref:System.Windows.Controls.Primitives.Popup> скрыто за краем экрана. См. пример в разделе [Указание пользовательского расположения контекстного меню](how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>См. также
 - [Пример размещения всплывающего окна](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

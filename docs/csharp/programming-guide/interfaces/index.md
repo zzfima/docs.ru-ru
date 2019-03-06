@@ -62,7 +62,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
  [Практическое руководство. Явная реализация элементов двух интерфейсов](how-to-explicitly-implement-members-of-two-interfaces.md)  
  В этом разделе содержится пример явной реализации членов интерфейсов с помощью наследования.  
   
-##  <a name="BKMK_RelatedSections"></a> Связанные разделы
+## <a name="BKMK_RelatedSections"></a> Связанные разделы
 
 - [Свойства интерфейса](../classes-and-structs/interface-properties.md)  
 - [Индексаторы в интерфейсах](../indexers/indexers-in-interfaces.md)  

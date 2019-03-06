@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661286"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363986"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Шаблоны безопасного конструктора для DependencyObjects
 Как правило, конструкторы классов не должны выполнять обратные вызовы, такие как виртуальные методы или делегаты, поскольку конструкторы могут вызываться в качестве базовой инициализации конструкторов для производного класса. Ввод виртуального объекта может выполняться в состоянии незавершенной инициализации любого заданного объекта. Однако сама система свойств внутренне вызывает и предоставляет обратные вызовы как часть системы свойств зависимостей. Так же просто, операция, как установка значения свойства зависимостей с <xref:System.Windows.DependencyObject.SetValue%2A> вызов потенциально включает обратный вызов где-то в процессе определения. По этой причине следует соблюдать осторожность при установке значений свойств зависимостей в теле конструктора, что может стать проблемой, если тип используется в качестве базового класса. Имеется определенный шаблон для реализации <xref:System.Windows.DependencyObject> конструкторов, позволяет избежать определенных неполадок с состояниями свойств зависимостей и обратными вызовами, которые здесь описаны.  
@@ -20,7 +20,7 @@ ms.locfileid: "54661286"
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Виртуальные методы системы свойств  
- Следующие виртуальные методы или обратные вызовы потенциально вызываются во время вычисления <xref:System.Windows.DependencyObject.SetValue%2A> вызов, который задает значение свойства зависимостей: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Каждый из этих виртуальных методов или обратных вызовов служит определенной цели в расширении универсальности системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и свойств зависимостей. Дополнительные сведения об использовании этих виртуальных методов для настройки определения значений свойств см. в разделе [Проверка и обратные вызовы свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ Следующие виртуальные методы или обратные вызовы потенциально вызываются во время вычисления <xref:System.Windows.DependencyObject.SetValue%2A> вызов, который задает значение свойства зависимостей: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Каждый из этих виртуальных методов или обратных вызовов служит определенной цели в расширении универсальности системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и свойств зависимостей. Дополнительные сведения об использовании этих виртуальных методов для настройки определения значений свойств см. в разделе [Проверка и обратные вызовы свойств зависимостей](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Выполнение правила FxCop и виртуальные методы системы свойств  
  Если используется средство FXCop от Майкрософт как часть процесса построения и создаются производные от определенных классов среды [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], вызывающие базовый конструктор, либо реализуются собственные свойства зависимостей в производных классах, можно столкнуться с нарушением правил FXCop. Строка имени для этого нарушения:  
@@ -115,6 +115,6 @@ public MyClass : SomeBaseClass {
  Эти же шаблоны применяются при установке свойства, не имеет оболочки, для удобства настройки свойств, а значения устанавливаются с помощью <xref:System.Windows.DependencyObject.SetValue%2A>. Вызовы <xref:System.Windows.DependencyObject.SetValue%2A> которые проходят через параметры конструктора должны также вызывать конструктор класса по умолчанию для инициализации.  
   
 ## <a name="see-also"></a>См. также
-- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Безопасность свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Пользовательские свойства зависимостей](custom-dependency-properties.md)
+- [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
+- [Безопасность свойства зависимостей](dependency-property-security.md)

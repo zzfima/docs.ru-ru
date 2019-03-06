@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601939"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203302"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Использование индексаторов. Руководство по программированию на C#
 
-Применение индексаторов упрощает работу с синтаксисом, позволяя создавать [классы](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md) и [интерфейсы](../../../csharp/language-reference/keywords/interface.md), к которым клиентские приложения могут обращаться так же, как к массиву. Индексаторы чаще всего реализуются в типах, предназначенных преимущественно для инкапсуляции внутренней коллекции или массива. Допустим, у вас есть класс `TempRecord`, представляющий журнал с 10 измерениями температуры по шкале Фаренгейта за период в 24 часа. Этот класс содержит массив `temps` типа `float[]` для хранения значений температуры. Реализация индексатора в этом классе позволит клиентам получать доступ к значениям температуры в экземпляре `TempRecord`, используя `float temp = tr[4]` вместо `float temp = tr.temps[4]`. Это позволяет не только упростить синтаксис клиентских приложений, но и облегчить понимание кода класса и его предназначения другими разработчиками.  
+Применение индексаторов упрощает работу с синтаксисом, позволяя создавать [классы](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md) и [интерфейсы](../../../csharp/language-reference/keywords/interface.md), к которым клиентские приложения могут обращаться так же, как к массиву. Индексаторы чаще всего реализуются в типах, предназначенных преимущественно для инкапсуляции внутренней коллекции или массива. Допустим, у вас есть класс `TempRecord`, представляющий журнал с 10 измерениями температуры по шкале Фаренгейта за период в 24 часа. Этот класс содержит массив `temps` типа `float[]` для хранения значений температуры. Реализация индексатора в этом классе позволит клиентам получать доступ к значениям температуры в экземпляре `TempRecord`, используя `float temp = tr[4]` вместо `float temp = tr.temps[4]`. Это позволяет не только упростить синтаксис клиентских приложений, но и облегчить понимание кода класса и его предназначения другими разработчиками.  
   
 Чтобы объявить индексатор для класса или структуры, используйте ключевое слово [this](../../../csharp/language-reference/keywords/this.md), как в следующем примере:
 
@@ -53,7 +53,7 @@ public int this[int index]   // Indexer declaration
   
  Обратите внимание, что при определении прав доступа индексатора, например в инструкции `Console.Write`, вызывается метод доступа [get](../../../csharp/language-reference/keywords/get.md). Таким образом, если метод доступа `get` отсутствует, возникает ошибка времени компиляции.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Индексирование с использованием других значений
 
@@ -63,7 +63,7 @@ public int this[int index]   // Indexer declaration
   
 Этот пример объявляет класс, который хранит названия дней недели. Метод доступа `get` принимает название дня в виде строкового значения и возвращает соответствующее целое число. Например, для Sunday возвращается значение 0, для Monday — 1 и т. д.  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость
 

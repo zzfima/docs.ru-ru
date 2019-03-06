@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ToolTip control [WPF], how-to topics
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
-ms.openlocfilehash: d00085d3aec5e7337162f9e9d073653b6356c625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377785"
 ---
 # <a name="tooltip-how-to-topics"></a>Разделы руководства по ToolTip
 ## <a name="in-this-section"></a>В этом разделе  
- [Определение положения всплывающей подсказки](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [Использование свойства BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+ [Определение положения всплывающей подсказки](how-to-position-a-tooltip.md)  
+  [Использование свойства BetweenShowDelay](how-to-use-the-betweenshowdelay-property.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ToolTip>  
@@ -27,6 +27,6 @@ ms.locfileid: "33552861"
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Общие сведения о контекстном меню](popup-overview.md)  
   
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Разделы практического руководства](popup-how-to-topics.md)

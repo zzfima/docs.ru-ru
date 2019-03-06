@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370765"
 ---
 # <a name="menu"></a>Меню
-Объект <xref:System.Windows.Controls.Menu> — это элемент управления, который обеспечивает иерархическую организацию элементов, связанных с помощью команд или обработчиков событий. Каждый <xref:System.Windows.Controls.Menu> может содержать несколько <xref:System.Windows.Controls.MenuItem> элементов управления. Каждый <xref:System.Windows.Controls.MenuItem> может вызвать команду или вызвать `Click` обработчика событий. Объект <xref:System.Windows.Controls.MenuItem> также может иметь несколько <xref:System.Windows.Controls.MenuItem> элементы как дочерние элементы, формирующие подменю.  
+Объект <xref:System.Windows.Controls.Menu> является элементом управления, который обеспечивает иерархическую организацию элементов, связанных с использованием команд или обработчиков событий. Каждый <xref:System.Windows.Controls.Menu> может содержать несколько <xref:System.Windows.Controls.MenuItem> элементов управления. Каждый <xref:System.Windows.Controls.MenuItem> можно вызвать команду или вызывают `Click` обработчик событий. Объект <xref:System.Windows.Controls.MenuItem> также может иметь несколько <xref:System.Windows.Controls.MenuItem> элементы как дочерние элементы, формирующие подменю.  
   
- Ниже показаны три различных состояния элемента управления меню. Состояние по умолчанию — когда нет устройства, такие как указатель мыши находится на <xref:System.Windows.Controls.Menu>. Состояние фокуса возникает при наведении указателя мыши на <xref:System.Windows.Controls.Menu> и состояние нажатия возникает при нажатии кнопки мыши над <xref:System.Windows.Controls.Menu>.  
+ Ниже показаны три различных состояний элемента управления меню. Состояние по умолчанию — когда нет устройства, такие как указатель мыши находится на <xref:System.Windows.Controls.Menu>. Состояние фокуса происходит, когда указатель мыши наведен на <xref:System.Windows.Controls.Menu> и состояние нажатия возникает при нажатии кнопки мыши над <xref:System.Windows.Controls.Menu>.  
   
- ![Состояния меню](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
+ ![Состояния меню](./media/ss-ctl-menu.gif "SS_CTL_menu")  
 Меню в различных состояниях  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Обзор меню](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Обзор меню](menu-overview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Menu>  

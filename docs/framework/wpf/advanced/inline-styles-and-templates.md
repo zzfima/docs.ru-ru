@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373391"
 ---
 # <a name="inline-styles-and-templates"></a>Встроенные стили и шаблоны
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет <xref:System.Windows.Style> объекты и объекты шаблона (<xref:System.Windows.FrameworkTemplate> подклассы) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз. По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , которые принимают типы <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда ссылки на ресурсы в существующие стили и шаблоны, а не определения новых.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496920"
   
  Обычно нет причин для задания встроенный стиль или шаблон, даже если вы планируете использовать этот стиль или шаблон в этом расположении. Большинство элементов, которые может принимать стиля или шаблона, также поддерживают свойство content и модель содержимого. Если вы используете только любое логическое дерево создавать с помощью стилей или шаблонов один раз, было бы даже проще заполнить это свойство содержимого с помощью эквивалентных дочерние элементы в прямой разметки. Это будет полностью обойти механизмы стиля и шаблона.  
   
- Других синтаксисов, включаемые расширения разметки, которые возвращают объект возможны также стили и шаблоны. Два таких расширения, имеющие возможные сценарии включают в себя [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) и <xref:System.Windows.Data.Binding>.  
+ Других синтаксисов, включаемые расширения разметки, которые возвращают объект возможны также стили и шаблоны. Два таких расширения, имеющие возможные сценарии включают в себя [TemplateBinding](templatebinding-markup-extension.md) и <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>См. также
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Стилизация и использование шаблонов](../controls/styling-and-templating.md)

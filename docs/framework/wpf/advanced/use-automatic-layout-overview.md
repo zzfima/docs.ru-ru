@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609607"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353599"
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации разработчикам о написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемым [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом локализации интерфейса пользователя было много времени. Каждый язык, на который переводился пользовательского интерфейса требовал попиксельного выравнивания. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, чтобы локализаторам требовалось выполнять меньше изменений размеров и расположений для выполнения. Подход к написанию приложений, в которых проще изменять размер и положение элементов называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  
@@ -33,15 +33,15 @@ ms.locfileid: "54609607"
 ## <a name="automatic-layout-and-controls"></a>Автоматическая разметка и элементы управления  
  Автоматическая разметка позволяет приложению устанавливать размер элемента управления автоматически. Например, элемент управления может измениться, чтобы вместить строку целиком. Эта возможность позволяет локализаторам перевести строку; больше не требуется изменять размер элемента управления, чтобы полностью отобразить переведенный текст. В следующем примере создается кнопка с текстом на английском языке.  
   
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  В этом примере все, что нужно сделать, чтобы подпись кнопки была на испанском языке, — это изменить текст. Например, примененная к объекту директива  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  На приведенном ниже рисунке показан результат выполнения примеров кода.  
   
- ![Та же кнопка с текстом на разных языках](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![Та же кнопка с текстом на разных языках](./media/globalizationbutton.png "GlobalizationButton")  
 Кнопка с автоматически изменяемым размером  
   
 <a name="autolayout_coding"></a>   
@@ -54,13 +54,13 @@ ms.locfileid: "54609607"
 
 - Используйте <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, и <xref:System.Windows.Controls.Grid> для размещения элементов управления.
 
-Обсуждение различных типов панелей, см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).
+Обсуждение различных типов панелей, см. в разделе [Общие сведения о панелях](../controls/panels-overview.md).
 
 **Не устанавливайте фиксированный размер окна**
 
 - Используйте ключевое слово <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Пример:
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
 **Добавить <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
@@ -92,22 +92,22 @@ ms.locfileid: "54609607"
 ## <a name="automatic-layout-and-grids"></a>Автоматическая разметка и сетки  
  <xref:System.Windows.Controls.Grid> Элемент, полезен для автоматической разметки, так как он позволяет разработчику позиционировать элементы. Объект <xref:System.Windows.Controls.Grid> способен распределять имеющееся пространство среди своих дочерних элементов при помощи упорядочения столбцов и строк элемента управления. Элементы пользовательского интерфейса могут занимать несколько ячеек, и возможно размещение сетки внутри сетки. Сетки полезны, поскольку они позволяют создавать и позиционировать сложные пользовательского интерфейса. В следующем примере демонстрируется использование сетки для размещения нескольких кнопок и текста. Обратите внимание на то, что высоты и ширины ячейки установлено значение <xref:System.Windows.GridUnitType.Auto>; таким образом, ячейка, содержащая кнопку с изображением, изменяется в соответствии изображение.  
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  На приведенном ниже рисунке показана сетка, созданная с помощью предыдущего кода.  
   
- ![Пример сетки](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Пример сетки](./media/glob-grid.png "glob_grid")  
 Grid  
   
 <a name="autolay_grids_issharedsizescope"></a>   
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Автоматическая разметка и сетки, использующие свойство IsSharedSizeScope  
  Объект <xref:System.Windows.Controls.Grid> полезен в локализуемых приложениях для создания элементов управления, чтобы вместить содержимое. Однако иногда требуется, чтобы элемент управления сохранял определенный размер, независимо от содержимого. Например, если имеются кнопки ОК, "Отмена" и "Обзор", то, возможно, не требуется выравнивать размер этих кнопок по размеру содержимого. В этом случае <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> присоединенное свойство полезно для общего использования одного размера несколькими элементами сетки. В следующем примере демонстрируется совместное использование столбцов и строк, изменение размера данных между несколькими <xref:System.Windows.Controls.Grid> элементов.  
   
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Примечание** полный пример кода, см. в разделе [общей папки свойств размера между сетками](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **Примечание** полный пример кода, см. в разделе [общей папки свойств размера между сетками](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>См. также
-- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Использование сетки для автоматической разметки](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Глобализация для WPF](globalization-for-wpf.md)
+- [Использование автоматической разметки для создания кнопки](how-to-use-automatic-layout-to-create-a-button.md)
+- [Использование сетки для автоматической разметки](how-to-use-a-grid-for-automatic-layout.md)

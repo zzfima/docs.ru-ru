@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ScrollBar control [WPF]
 - controls [WPF], ScrollBar
 ms.assetid: 60f27d35-8f7b-4285-89d2-28336a4c073a
-ms.openlocfilehash: 9ae7334172b5cbc4ea7fb6be3caebcf2c47589ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 242dbdeeed5408815878aa30ef276019e1ccc2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358851"
 ---
 # <a name="scrollbar"></a>ScrollBar
-Объект <xref:System.Windows.Controls.Primitives.ScrollBar> позволяет просматривать содержимое, выходящее за пределы текущей области видимости, перемещая <xref:System.Windows.Controls.Primitives.Thumb> для отображения содержимого.  
+Объект <xref:System.Windows.Controls.Primitives.ScrollBar> позволяет просматривать содержимое, выходящее за пределы текущей области просмотра, перемещая <xref:System.Windows.Controls.Primitives.Thumb> для отображения содержимого.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Настройка размера ползунка в ScrollBar](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
+ [Настройка размера ползунка в ScrollBar](how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358474"
 ---
 # <a name="popup-overview"></a>Общие сведения о контекстном меню
 <xref:System.Windows.Controls.Primitives.Popup> Управления предоставляет способ отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения относительно обозначенного элемента или экранных координат. В данном разделе представлены <xref:System.Windows.Controls.Primitives.Popup> управления и предоставляет сведения о его использовании.  
@@ -22,27 +22,27 @@ ms.locfileid: "54616811"
  Объект <xref:System.Windows.Controls.Primitives.Popup> управления отображает содержимое в отдельном окне относительно элемента или точки на экране. Когда <xref:System.Windows.Controls.Primitives.Popup> является видимым, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> свойству `true`.  
   
 > [!NOTE]
->  Объект <xref:System.Windows.Controls.Primitives.Popup> не открывается автоматически при перемещении указателя мыши на родительский объект. Если вы хотите, чтобы <xref:System.Windows.Controls.Primitives.Popup> чтобы автоматически открыть, используйте <xref:System.Windows.Controls.ToolTip> или <xref:System.Windows.Controls.ToolTipService> класса. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+>  Объект <xref:System.Windows.Controls.Primitives.Popup> не открывается автоматически при перемещении указателя мыши на родительский объект. Если вы хотите, чтобы <xref:System.Windows.Controls.Primitives.Popup> чтобы автоматически открыть, используйте <xref:System.Windows.Controls.ToolTip> или <xref:System.Windows.Controls.ToolTipService> класса. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](tooltip-overview.md).  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>Создание всплывающего окна  
  В следующем примере показано определение <xref:System.Windows.Controls.Primitives.Popup> управления, являющийся дочерним элементом элемента <xref:System.Windows.Controls.Button> элемента управления. Так как <xref:System.Windows.Controls.Button> может иметь только один дочерний элемент, в этом примере помещает текст для <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.Primitives.Popup> элементов управления в <xref:System.Windows.Controls.StackPanel>. Содержание <xref:System.Windows.Controls.Primitives.Popup> отображается в <xref:System.Windows.Controls.TextBlock> элемент управления, который отображает текст в отдельном окне, расположенном поверх окна приложения рядом с соответствующим <xref:System.Windows.Controls.Button> элемента управления.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Элементы управления, реализующие контекстное меню  
  Вы можете создавать <xref:System.Windows.Controls.Primitives.Popup> элементы управления в другие элементы управления. Следующие элементы управления реализуют <xref:System.Windows.Controls.Primitives.Popup> управления для конкретных целей:  
   
--   <xref:System.Windows.Controls.ToolTip>. Если вы хотите создать подсказку для элемента, используйте <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> классы. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Если вы хотите создать подсказку для элемента, используйте <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> классы. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Если вы хотите создать контекстное меню для элемента, используйте <xref:System.Windows.Controls.ContextMenu> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Если вы хотите создать контекстное меню для элемента, используйте <xref:System.Windows.Controls.ContextMenu> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](contextmenu-overview.md).  
   
 -   <xref:System.Windows.Controls.ComboBox>. Если вы хотите создать элемент управления выбора, который содержит поле с раскрывающимся списком, может быть использовано отображаемое или скрытое, <xref:System.Windows.Controls.ComboBox> элемента управления.  
   
--   <xref:System.Windows.Controls.Expander>. Если вы хотите создать элемент управления, отображающий заголовок со свертываемой областью отображения содержимого, используйте <xref:System.Windows.Controls.Expander> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. Если вы хотите создать элемент управления, отображающий заголовок со свертываемой областью отображения содержимого, используйте <xref:System.Windows.Controls.Expander> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления Expander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Внешний вид и поведение контекстного меню  
@@ -74,13 +74,13 @@ ms.locfileid: "54616811"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Определение положения контекстного меню  
- Можно разместить всплывающее окно, задав <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> свойства. Дополнительные сведения см. в разделе [Поведение при размещении контекстного меню](../../../../docs/framework/wpf/controls/popup-placement-behavior.md). Когда <xref:System.Windows.Controls.Primitives.Popup> отображается на экране, его положение не перемещен родительского.  
+ Можно разместить всплывающее окно, задав <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> свойства. Дополнительные сведения см. в разделе [Поведение при размещении контекстного меню](popup-placement-behavior.md). Когда <xref:System.Windows.Controls.Primitives.Popup> отображается на экране, его положение не перемещен родительского.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Настройка размещения контекстного меню  
  Вы можете настроить размещение <xref:System.Windows.Controls.Primitives.Popup> управления, указав набор координат, относящихся к <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> место <xref:System.Windows.Controls.Primitives.Popup> для отображения.  
   
- Чтобы настроить размещение, задайте <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Затем определите <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат, который возвращает набор возможных точек размещения и основные оси (в порядке предпочтения) для <xref:System.Windows.Controls.Primitives.Popup>. Точка, в которой отображается наибольшая часть <xref:System.Windows.Controls.Primitives.Popup> выбирается автоматически. См. пример в разделе [Указание пользовательского расположения контекстного меню](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Чтобы настроить размещение, задайте <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> свойства <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Затем определите <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> делегат, который возвращает набор возможных точек размещения и основные оси (в порядке предпочтения) для <xref:System.Windows.Controls.Primitives.Popup>. Точка, в которой отображается наибольшая часть <xref:System.Windows.Controls.Primitives.Popup> выбирается автоматически. См. пример в разделе [Указание пользовательского расположения контекстного меню](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Контекстное меню и визуальное дерево  
@@ -96,5 +96,5 @@ ms.locfileid: "54616811"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Разделы практического руководства](popup-how-to-topics.md)
+- [Разделы практического руководства](tooltip-how-to-topics.md)

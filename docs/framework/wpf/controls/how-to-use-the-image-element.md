@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование элемента изображения
+title: Практическое руководство. Использование элемента изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: d7aa2e0e9bd33dfcd68bd19b5084fa1666232a5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec3ca16915038ebbb68df24bfd071168c346663d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372470"
 ---
-# <a name="how-to-use-the-image-element"></a>Как выполнить Использование элемента изображения
+# <a name="how-to-use-the-image-element"></a>Практическое руководство. Использование элемента изображения
 В этом примере показано, как добавлять изображения в приложении с помощью <xref:System.Windows.Controls.Image> элемент.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как построить изображение шириной 200 пикселей. В этом примере [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения изображения используются как синтаксис атрибута, так и синтаксис тега свойства. Дополнительные сведения о синтаксисе атрибутов и синтаксисе свойств см. в разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Объект <xref:System.Windows.Media.Imaging.BitmapImage> используется для определения источника данных изображения и явно определен в примере синтаксиса тега свойства. Кроме того <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> из <xref:System.Windows.Media.Imaging.BitmapImage> присваивается такой же ширины, что <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Controls.Image>. Это позволяет использовать минимальный объем памяти при построении изображения.  
+ В следующем примере показано, как построить изображение шириной 200 пикселей. В этом примере [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения изображения используются как синтаксис атрибута, так и синтаксис тега свойства. Дополнительные сведения о синтаксисе атрибутов и синтаксисе свойств см. в разделе [Общие сведения о свойствах зависимостей](../advanced/dependency-properties-overview.md). Объект <xref:System.Windows.Media.Imaging.BitmapImage> используется для определения источника данных изображения и явно определен в примере синтаксиса тега свойства. Кроме того <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> из <xref:System.Windows.Media.Imaging.BitmapImage> присваивается такой же ширины, что <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Controls.Image>. Это позволяет использовать минимальный объем памяти при построении изображения.  
   
 > [!NOTE]
 >  Как правило, если вы хотите указать размер сформированного изображения, укажите только <xref:System.Windows.FrameworkElement.Width%2A> или <xref:System.Windows.FrameworkElement.Height%2A> , но не оба. Если задано одно значение, пропорции изображения сохраняются. В противном случае изображение может внезапно оказаться растянутым или искривленным. Для управления изображение растяжением, используйте <xref:System.Windows.Controls.Image.Stretch%2A> и <xref:System.Windows.Controls.Image.StretchDirection%2A> свойства.  
@@ -30,7 +30,7 @@ ms.locfileid: "54530805"
   
  <xref:System.Windows.Controls.Image.Stretch%2A> Свойство определяет, как источник изображения растягивается для заполнения элемента изображения. Дополнительные сведения см. в описании перечисления <xref:System.Windows.Media.Stretch>.  
   
- [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как построить изображение шириной 200 пикселей с использованием кода.  
@@ -38,8 +38,8 @@ ms.locfileid: "54530805"
 > [!NOTE]
 >  Установка <xref:System.Windows.Media.Imaging.BitmapImage> свойства должна быть выполнена внутри <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> и <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> блока.  
   
- [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
- [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Общие сведения об обработке изображений](../graphics-multimedia/imaging-overview.md)

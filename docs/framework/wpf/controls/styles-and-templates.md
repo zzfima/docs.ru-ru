@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553372"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372079"
 ---
 # <a name="styles-and-templates"></a>Стили и шаблоны
-Windows Presentation Foundation (WPF) Стилизация и использование шаблонов относятся к набору функций (стили, шаблоны, триггеры и раскадровки), позволяющих приложения, документа или пользовательского интерфейса (UI) конструктор создавать визуально привлекательные приложения, а также для стандартизируйте определенный внешний вид своего продукта.  
+Windows Presentation Foundation (WPF) Стилизация и использование шаблонов относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют приложения, документа или конструктор пользовательских интерфейса (UI) для создания визуально привлекательных приложений, а также стандартизировать определенный внешний вид своих продуктов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Поиск элемента, созданного шаблоном ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Стилизация и использование шаблонов](styling-and-templating.md)  
+  [Практическое руководство. Найти, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Windows Presentation Foundation (WPF) Стилизация и использов
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Дополнительно](../../../../docs/framework/wpf/advanced/index.md)  
-  [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Дополнительно](../advanced/index.md)  
+  [Настройка элементов управления](control-customization.md)  
+  [Графика и мультимедиа](../graphics-multimedia/index.md)

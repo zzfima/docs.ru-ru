@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bab20301c5413f8bbe95d44b87e06d3b3870c9e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377707"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Метод ICorDebugManagedCallback::Break
-Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> выполнения инструкции в потоке кода.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-HRESULT Break (  
-    [in] ICorDebugAppDomain *pAppDomain,  
-    [in] ICorDebugThread    *thread  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `pAppDOmain`  
- [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит инструкцию break.  
-  
- `thread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, который содержит инструкцию break.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** CorDebug.idl, CorDebug.h  
-  
- **Библиотека:** CorGuids.lib  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> выполнения инструкции в потоке кода.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT Break (
+    [in] ICorDebugAppDomain *pAppDomain,
+    [in] ICorDebugThread    *thread
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+`pAppDomain`\
+[in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит инструкцию break.
+
+`thread`\
+[in] Указатель на объект ICorDebugThread, представляющий поток, который содержит инструкцию break.
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** CorDebug.idl, CorDebug.h
+
+**Библиотека:** CorGuids.lib
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>См. также
-- [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [Интерфейс ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

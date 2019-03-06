@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493616"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359540"
 ---
 # <a name="imaging-how-to-topics"></a>Разделы практического руководства, посвященные обработке изображений
 В подразделах этого раздела демонстрируется использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для отображения или изменения точечных рисунков.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Использование объекта BitmapImage в XAML](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [Загрузка изображения в виде эскиза](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [Применение преобразования к объекту BitmapImage](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Создание растрового изображения из визуального элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [Кодирование визуального элемента в файл изображения](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [Создание объекта BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [Связывание объектов BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [Преобразование объекта BitmapSource в другой индексированный формат PixelFormat](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [Преобразование BitmapSource в индексированный формат пикселей](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [Кодирование и декодирование изображения в формате JPEG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [Кодирование и декодирование изображения в формате BMP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [Кодирование и декодирование изображения в формате PNG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [Кодирование и декодирование изображения в формате WDP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [Кодирование и декодирование изображения в формате GIF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [Кодирование и декодирование изображения в формате TIFF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [Запись метаданных в растровое изображение](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [Чтение метаданных из растрового изображения](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [Использование объекта BitmapImage в XAML](how-to-use-a-bitmapimage.md)  
+ [Загрузка изображения в виде эскиза](how-to-load-an-image-as-a-thumbnail.md)  
+ [Применение преобразования к объекту BitmapImage](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [Создание растрового изображения из визуального элемента](how-to-create-a-bitmap-from-a-visual.md)  
+ [Кодирование визуального элемента в файл изображения](how-to-encode-a-visual-to-an-image-file.md)  
+ [Создание объекта BitmapSource](how-to-create-a-new-bitmapsource.md)  
+ [Связывание объектов BitmapSource](how-to-chain-bitmapsource-objects-together.md)  
+ [Преобразование объекта BitmapSource в другой индексированный формат PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [Преобразование BitmapSource в индексированный формат пикселей](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [Кодирование и декодирование изображения в формате JPEG](how-to-encode-and-decode-a-jpeg-image.md)  
+ [Кодирование и декодирование изображения в формате BMP](how-to-encode-and-decode-a-bmp-image.md)  
+ [Кодирование и декодирование изображения в формате PNG](how-to-encode-and-decode-a-png-image.md)  
+ [Кодирование и декодирование изображения в формате WDP](how-to-encode-and-decode-a-wdp-image.md)  
+ [Кодирование и декодирование изображения в формате GIF](how-to-encode-and-decode-a-gif-image.md)  
+ [Кодирование и декодирование изображения в формате TIFF](how-to-encode-and-decode-a-tiff-image.md)  
+ [Запись метаданных в растровое изображение](how-to-write-metadata-to-a-bitmap.md)  
+ [Чтение метаданных из растрового изображения](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Image>  
@@ -44,4 +44,4 @@ ms.locfileid: "54493616"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Общие сведения об обработке изображений](imaging-overview.md)

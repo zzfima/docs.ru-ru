@@ -16,56 +16,62 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd52fce8033876f0599fa0ba25fae0850c0e01f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b3fc69b2edf611383402b13555cf33be10dbad3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366586"
 ---
 # <a name="strongnamekeyinstall-function"></a>Функция StrongNameKeyInstall
-Импортирует пару открытого и закрытого ключей в контейнер.  
-  
- Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) метод вместо этого.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-BOOLEAN StrongNameKeyInstall (  
-    [in]  LPCWSTR   wszKeyContainer,  
-    [in]  BYTE      *pbKeyBlob,  
-    [in]  ULONG     cbKeyBlob  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `wszKeyContainer`  
- [in] Имя контейнера ключа. `wszKeyContainer` должен быть непустой строкой.  
-  
- `pbKeyBlob`  
- [in] Двоичный пару ключей.  
-  
- `cbKeyBlob`  
- [in] Размер в байтах из `pbKeyBlob`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `true` После успешного выполнения; в противном случае `false`.  
-  
-## <a name="remarks"></a>Примечания  
- Используйте [StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md) функции, чтобы удалить контейнер ключей.  
-  
- Если `StrongNameKeyInstall` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.  
-  
-## <a name="requirements"></a>Требования  
- **Платформы:** WindSee [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Заголовок.** StrongName.h  
-  
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
-  
- **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Импортирует пару открытого и закрытого ключей в контейнер.
+
+Эта функция является устаревшей. Используйте [ICLRStrongName::StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) метод вместо этого.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+BOOLEAN StrongNameKeyInstall (
+    [in]  LPCWSTR   wszKeyContainer,
+    [in]  BYTE      *pbKeyBlob,
+    [in]  ULONG     cbKeyBlob
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+`wszKeyContainer`\
+[in] Имя контейнера ключа. `wszKeyContainer` должен быть непустой строкой.
+
+`pbKeyBlob`\
+[in] Двоичный пару ключей.
+
+`cbKeyBlob`\
+[in] Размер в байтах из `pbKeyBlob`.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+`true` После успешного выполнения; в противном случае `false`.
+
+## <a name="remarks"></a>Примечания
+
+Используйте [StrongNameKeyDelete](strongnamekeydelete-function.md) функции, чтобы удалить контейнер ключей.
+
+Если `StrongNameKeyInstall` функция не завершена, вызвать [StrongNameErrorInfo](strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.
+
+## <a name="requirements"></a>Требования
+
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+
+**Заголовок.** StrongName.h
+
+**Библиотека:** Включена как ресурс в MsCorEE.dll
+
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>См. также
-- [Метод StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [Метод StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [Метод StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [Метод StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [Интерфейс ICLRStrongName](../hosting/iclrstrongname-interface.md)

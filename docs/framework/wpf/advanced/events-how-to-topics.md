@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543531"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370980"
 ---
 # <a name="events-how-to-topics"></a>Разделы руководства, посвященные событиям
-В этом разделе описываются способы использования событий в WPF.  
+В подразделах этого раздела описывается использование событий в WPF.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Добавление обработчика событий с помощью кода](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Создание пользовательских перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Поиск элемента источника в обработчике событий](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Добавление обработки классов для перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Добавление обработчика событий с помощью кода](how-to-add-an-event-handler-using-code.md)  
+ [Обработка перенаправленных событий](how-to-handle-a-routed-event.md)  
+ [Создание пользовательских перенаправленных событий](how-to-create-a-custom-routed-event.md)  
+ [Поиск элемента источника в обработчике событий](how-to-find-the-source-element-in-an-event-handler.md)  
+ [Добавление обработки классов для перенаправленных событий](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.RoutedEvent>  

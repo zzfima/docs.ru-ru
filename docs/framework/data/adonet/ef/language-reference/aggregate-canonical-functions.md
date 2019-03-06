@@ -2,18 +2,18 @@
 title: Статистические канонические функции
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708978"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372806"
 ---
 # <a name="aggregate-canonical-functions"></a>Статистические канонические функции
 
 Статистические выражения - выражения, которые уменьшают количество входных значений, например, до одного значения. Статистические выражения обычно используются совместно с предложением группирования GROUP BY выражения SELECT, а на область их использования накладываются ограничения.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Канонические функции Aggegate Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Статистические канонические функции Entity SQL
 
 Ниже приведены статистические канонические функции Entity SQL.
 
@@ -31,7 +31,7 @@ ms.locfileid: "54708978"
 
 **Пример**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ ms.locfileid: "54708978"
 
 **Пример**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 Возвращает объем данных, подвергаемых статистической обработке, включая значения NULL и повторяющиеся значения.
 
@@ -185,7 +185,7 @@ ms.locfileid: "54708978"
 **Пример**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Эквивалентную функциональность предоставляет управляемый поставщик клиента Microsoft SQL. Дополнительные сведения см. в разделе [функции SqlClient для Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -206,7 +206,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 В следующем примере вычисляется средняя величина заказа для каждого продукта.
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Выражения внутри статистической функции на основе групп вычисляются в области разрешения имен, видимой для выражения предложения WHERE.
 
-Как и в [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], статистические функции на основе группы можно также указать все или модификатор DISTINCT. Если задан модификатор DISTINCT, то перед вычислением статистической функции из входного набора исключаются повторяющиеся значения. Если задан модификатор ALL (или не указан никакой модификатор), то исключение повторяющихся значений не выполняется.  
+Как и в [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], статистические функции на основе группы можно также указать все или модификатор DISTINCT. Если задан модификатор DISTINCT, то перед вычислением статистической функции из входного набора исключаются повторяющиеся значения. Если задан модификатор ALL (или не указан никакой модификатор), то исключение повторяющихся значений не выполняется.
 
 ## <a name="see-also"></a>См. также
 

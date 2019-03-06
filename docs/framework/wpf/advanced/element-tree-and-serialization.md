@@ -8,21 +8,21 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355809"
 ---
 # <a name="element-tree-and-serialization"></a>Дерево элементов и сериализация
 Между элементами программирования WPF часто возникают отношения типа "дерево" в том или ином виде. Например, пользовательский интерфейс приложения, созданный в XAML, можно представить в виде дерева объектов. Дерево элементов можно разделить на два дискретных, но иногда существующих параллельно друг другу дерева: логическое дерево и визуальное дерево. Сериализация в WPF подразумевает сохранение состояния этих двух деревьев и состояния приложения и запись этих данных в файл (возможно, в формате XAML).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Ограничения сериализации в XamlWriter.Save](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [Инициализация для объектных элементов, которые не находятся в дереве объектов](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [Деревья в WPF](trees-in-wpf.md)  
+ [Ограничения сериализации в XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
+ [Инициализация для объектных элементов, которые не находятся в дереве объектов](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [Разделы практического руководства](element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Markup>  
@@ -32,12 +32,12 @@ ms.locfileid: "33542865"
  <xref:System.Windows.Media.VisualTreeHelper>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML в WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [События](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ресурсы](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Архитектура WPF](wpf-architecture.md)  
+  [XAML в WPF](xaml-in-wpf.md)  
+  [Базовые элементы](base-elements.md)  
+  [Свойства](properties-wpf.md)  
+  [События](events-wpf.md)  
+  [Ввод](input-wpf.md)  
+  [Ресурсы](resources-wpf.md)  
+  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Потоковая модель](threading-model.md)

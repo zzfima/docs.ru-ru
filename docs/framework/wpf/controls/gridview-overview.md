@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578537"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360203"
 ---
 # <a name="gridview-overview"></a>Общие сведения о GridView
 <xref:System.Windows.Controls.GridView> режим — один из режимов представления для <xref:System.Windows.Controls.ListView> элемента управления. <xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки. В данном разделе представлены <xref:System.Windows.Controls.GridView> класса и возможности его использования.  
@@ -29,19 +29,19 @@ ms.locfileid: "54578537"
   
  **Представление GridView содержимого ListView**  
   
- ![Стилизированный ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![Стилизированный ListView](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> столбцы представляются <xref:System.Windows.Controls.GridViewColumn> объекты, размер которых может автоматически в соответствии с содержимым. При необходимости можно явно задать <xref:System.Windows.Controls.GridViewColumn> ширину. Можно изменить размеры столбцов, перетащив границу между заголовками столбцов. Также динамически можно добавлять, удалять, заменять и изменять порядок столбцов, так как эта функция встроена в <xref:System.Windows.Controls.GridView>. Тем не менее <xref:System.Windows.Controls.GridView> нельзя напрямую обновлять данные, он отображает.  
   
  В следующем примере показано определение <xref:System.Windows.Controls.GridView> , отображаются данные о сотрудниках. В этом примере <xref:System.Windows.Controls.ListView> определяет `EmployeeInfoDataSource` как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Определения свойств для <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> привязать <xref:System.Windows.Controls.GridViewColumn> содержимого `EmployeeInfoDataSource` категории данных.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  На следующем рисунке показана таблица, которая создается в предыдущем примере.  
   
  **Объект GridView, отображающий данные из ItemsSource**  
   
- ![ListView с выходными данными GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView с выходными данными GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Макет и стиль GridView  
@@ -55,7 +55,7 @@ ms.locfileid: "54578537"
   
  Чтобы указать выравнивание содержимого в столбце <xref:System.Windows.Controls.GridView>, определить <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>. Не используйте <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> и <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> свойства <xref:System.Windows.Controls.ListView> содержимое, которое отображается с помощью <xref:System.Windows.Controls.GridView>.  
   
- Чтобы указать свойства шаблонов и стилей для заголовков столбцов, используйте <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, и <xref:System.Windows.Controls.GridViewColumnHeader> классы. Дополнительные сведения см. в разделе [Общие сведения о стилях заголовков столбцов GridView и шаблонах](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ Чтобы указать свойства шаблонов и стилей для заголовков столбцов, используйте <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, и <xref:System.Windows.Controls.GridViewColumnHeader> классы. Дополнительные сведения см. в разделе [Общие сведения о стилях заголовков столбцов GridView и шаблонах](gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>Добавление визуальных элементов в GridView  
@@ -65,7 +65,7 @@ ms.locfileid: "54578537"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>Применение стилей к строкам в GridView  
- Используйте <xref:System.Windows.Controls.GridViewRowPresenter> и <xref:System.Windows.Controls.GridViewHeaderRowPresenter> классы для форматирования и отображения строк <xref:System.Windows.Controls.GridView>. Пример того, как стилей к строкам в <xref:System.Windows.Controls.GridView> режим просмотра, см. в разделе [стиля строки в ListView, реализующем GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
+ Используйте <xref:System.Windows.Controls.GridViewRowPresenter> и <xref:System.Windows.Controls.GridViewHeaderRowPresenter> классы для форматирования и отображения строк <xref:System.Windows.Controls.GridView>. Пример того, как стилей к строкам в <xref:System.Windows.Controls.GridView> режим просмотра, см. в разделе [стиля строки в ListView, реализующем GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>Проблемы выравнивания при использовании ItemContainerStyle  
@@ -83,7 +83,7 @@ ms.locfileid: "54578537"
   
      Пользователи могут изменить порядок столбцов в <xref:System.Windows.Controls.GridView> путем нажатия левой кнопки мыши над заголовком столбца и перетаскивания этого столбца в новую позицию. Пока пользователь перетаскивает заголовок столбца, отображается плавающей версии заголовка, а также сплошная черная линия, показывающая место вставки столбца.  
   
-     Если вы хотите изменить стиль по умолчанию для плавающей версии заголовка, укажите <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.GridViewColumnHeader> типа, который является инициируется при <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> свойству <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Дополнительные сведения см. в разделе [Как создать стиль для перетаскиваемого заголовка столбца GridView](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
+     Если вы хотите изменить стиль по умолчанию для плавающей версии заголовка, укажите <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.GridViewColumnHeader> типа, который является инициируется при <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> свойству <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Дополнительные сведения см. в разделе [Как создать стиль для перетаскиваемого заголовка столбца GridView](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 -   **Изменение размера столбца по его содержимому**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578537"
   
      Пользователи могут выбрать один или несколько элементов в <xref:System.Windows.Controls.GridView>.  
   
-     Если вы хотите изменить <xref:System.Windows.Style> выбранного элемента, см. в разделе [Применение триггеров для определения стиля выбранных элементов в ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
+     Если вы хотите изменить <xref:System.Windows.Style> выбранного элемента, см. в разделе [Применение триггеров для определения стиля выбранных элементов в ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
 -   **Прокрутка для просмотра содержимого, изначально не отображаемого на экране**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578537"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>Получение других настраиваемых представлений  
- <xref:System.Windows.Controls.GridView> Класс, который является производным от <xref:System.Windows.Controls.ViewBase> абстрактного класса, является только одним из возможных режимов представления для <xref:System.Windows.Controls.ListView> класса. Можно создать другие настраиваемые представления для <xref:System.Windows.Controls.ListView> путем наследования от <xref:System.Windows.Controls.ViewBase> класса. Пример настраиваемого режима представления см. в разделе [Создание пользовательского режима представления для ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ <xref:System.Windows.Controls.GridView> Класс, который является производным от <xref:System.Windows.Controls.ViewBase> абстрактного класса, является только одним из возможных режимов представления для <xref:System.Windows.Controls.ListView> класса. Можно создать другие настраиваемые представления для <xref:System.Windows.Controls.ListView> путем наследования от <xref:System.Windows.Controls.ViewBase> класса. Пример настраиваемого режима представления см. в разделе [Создание пользовательского режима представления для ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>Вспомогательные классы GridView  
@@ -136,6 +136,6 @@ ms.locfileid: "54578537"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Общие сведения об элементе управления ListView](listview-overview.md)
+- [Сортировка столбцов GridView при нажатии на заголовок](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [Разделы практического руководства](listview-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание LineSegment в PathGeometry
+title: Практическое руководство. Создание LineSegment в PathGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6862ab02c288f9cfd1fac4a8c22079b0cf91016
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356186"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Как выполнить Создание LineSegment в PathGeometry
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Практическое руководство. Создание LineSegment в PathGeometry
 В этом примере показано, как создать сегмент линии. Чтобы создать сегмент линии, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.LineSegment> классы.  
   
 ## <a name="example"></a>Пример  
  В следующем примере рисуется <xref:System.Windows.Media.LineSegment> из (10, 50) к (200, 70). На следующем рисунке показан итоговый <xref:System.Windows.Media.LineSegment>; для показа системы координат добавлена фоновая сетка.  
   
- ![LineSegment в PathFigure](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
+ ![LineSegment в PathFigure](./media/graphicsmm-pathgeometrylinesegment.png "graphicsmm_pathgeometrylinesegment")  
 LineSegment между точками (10,50) и (200,70)  
   
  [xaml]  
@@ -35,7 +35,7 @@ LineSegment между точками (10,50) и (200,70)
   
  [xaml]  
   
- (Обратите внимание, что этот синтаксис атрибута фактически создает <xref:System.Windows.Media.StreamGeometry>, облегченные версии <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. на странице [Синтаксис разметки пути](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).)  
+ (Обратите внимание, что этот синтаксис атрибута фактически создает <xref:System.Windows.Media.StreamGeometry>, облегченные версии <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. на странице [Синтаксис разметки пути](path-markup-syntax.md).)  
   
  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] сегмент линии можно также начертить с использованием синтаксиса элемента объекта. Следующий пример эквивалентен предыдущему примеру [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -106,4 +106,4 @@ Dim myPathFigure As New PathFigure()
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.GeometryDrawing>
 - <xref:System.Windows.Shapes.Path>
-- [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Общие сведения о классе Geometry](geometry-overview.md)

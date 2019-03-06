@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359618"
 ---
 # <a name="base-elements"></a>Базовые элементы
-Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализуют значительный процент общих элемент функций, доступных в программировании WPF. Эти четыре класса, называются в этом пакете SDK на базовые классы элементов.  
+Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализовать значительный процент от общих элемент функциям, доступным в программировании WPF. Эти четыре класса, называются в этом пакете SDK классах базовых элементов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Общие сведения о свойствах Alignment, Margin, Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [Общие сведения о базовых элементах](base-elements-overview.md)  
+ [Общие сведения об объектах класса Freezable](freezable-objects-overview.md)  
+ [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md)  
+ [Разделы практического руководства](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.UIElement>  
@@ -32,12 +32,12 @@ ms.locfileid: "33539469"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML в WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [События](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ресурсы](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Архитектура WPF](wpf-architecture.md)  
+  [XAML в WPF](xaml-in-wpf.md)  
+  [Дерево элементов и сериализация](element-tree-and-serialization.md)  
+  [Свойства](properties-wpf.md)  
+  [События](events-wpf.md)  
+  [Ввод](input-wpf.md)  
+  [Ресурсы](resources-wpf.md)  
+  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Потоковая модель](threading-model.md)

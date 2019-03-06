@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543459"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375185"
 ---
 # <a name="globalization-and-localization"></a>Глобализация и локализация
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет широкие возможности для разработки международных приложений.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет расширенную поддержку разработки международных приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о глобализации и локализации WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [Общие сведения о двусторонних возможностях в WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md)  
+ [Глобализация для WPF](globalization-for-wpf.md)  
+ [Обзор использования автоматической разметки](use-automatic-layout-overview.md)  
+ [Атрибуты и комментарии локализации](localization-attributes-and-comments.md)  
+ [Общие сведения о двусторонних возможностях в WPF](bidirectional-features-in-wpf-overview.md)  
+ [Разделы практического руководства](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "33543459"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Обработка xml:lang в XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [Обработка xml:lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>Связанные разделы

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550957"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359397"
 ---
 # <a name="canvas-how-to-topics"></a>Разделы руководства, посвященные холсту для рисования Canvas
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Canvas> элемента абсолютное положение дочерних элементов.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.Canvas> элемент для абсолютно размещения дочерних элементов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Расположение границы вокруг содержимого холста](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Получение или определение свойств размещения холста](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Создание и использование холста](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Использование вложенных свойств холста для расположения дочерних элементов](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Изменение размеров холста с помощью бегунка](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Расположение границы вокруг содержимого холста](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Получение или определение свойств размещения холста](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Создание и использование холста](how-to-create-and-use-a-canvas.md)  
+ [Использование вложенных свойств холста для расположения дочерних элементов](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Изменение размеров холста с помощью бегунка](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ ms.locfileid: "33550957"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обработка перенаправленных событий
+title: Практическое руководство. Обработка перенаправленных событий
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561339"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368198"
 ---
-# <a name="how-to-handle-a-routed-event"></a>Как выполнить Обработка перенаправленных событий
+# <a name="how-to-handle-a-routed-event"></a>Практическое руководство. Обработка перенаправленных событий
 В этом примере показаны принципы работы восходящей маршрутизации событий и создания обработчика, который может обрабатывать данные перенаправленных событий.  
   
 ## <a name="example"></a>Пример  
@@ -27,16 +27,16 @@ ms.locfileid: "54561339"
   
  Обратите внимание, что в родительском <xref:System.Windows.Controls.StackPanel> элемент, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> имя события, указанные в виде атрибута, частично определяется путем именования <xref:System.Windows.Controls.Button> класса. <xref:System.Windows.Controls.Button> Класс является <xref:System.Windows.Controls.Primitives.ButtonBase> производным классом, имеющим <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие в списке его участников. Необходимо использовать этот метод частичного определения для прикрепления обработчика событий, если обрабатываемое событие не существует в списке участников элемента, к которому прикреплен обработчик перенаправленного события.  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  В следующем примере показана обработка <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  В этом примере сообщается, какой элемент обрабатывает событие, а какой — вызывает. Обработчик событий выполняется, когда пользователь нажимает одну из кнопок.  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.RoutedEvent>
-- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Общие сведения о входных данных](input-overview.md)
+- [Общие сведения о перенаправленных событиях](routed-events-overview.md)
+- [Разделы практического руководства](events-how-to-topics.md)
+- [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)

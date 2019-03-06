@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373261"
 ---
 # <a name="brushes-how-to-topics"></a>Разделы практического руководства, посвященные кистям
-В следующих разделах демонстрируется, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для рисования содержимого экрана.  
+В следующих разделах показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для рисования содержимого экрана.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Анимация цвета или прозрачности объекта SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [Анимация положения или цвета ограничения градиента](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [Создание отражения](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [Создание различных шаблонов мозаики с помощью TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [Определение пера](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [Заливка области с помощью рисунка](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [Заливка области с помощью изображения](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [Заливка области с помощью линейного градиента](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [Заливка области с помощью радиального градиента](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [Заливка области с помощью сплошного цвета](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [Заливка области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Заливка области с помощью видео](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [Заливка области с помощью визуального элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [Сохранение пропорций изображения, используемого в качестве фона](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [Установка горизонтального и вертикального выравнивания объекта TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [Установка размера плитки для объекта TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [Преобразование кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [Использование системных цветов в градиенте](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [Анимация цвета или прозрачности объекта SolidColorBrush](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [Анимация положения или цвета ограничения градиента](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [Создание отражения](how-to-create-a-reflection.md)  
+ [Создание различных шаблонов мозаики с помощью TileBrush](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [Определение пера](how-to-define-a-pen.md)  
+ [Заливка области с помощью рисунка](how-to-paint-an-area-with-a-drawing.md)  
+ [Заливка области с помощью изображения](how-to-paint-an-area-with-an-image.md)  
+ [Заливка области с помощью линейного градиента](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [Заливка области с помощью радиального градиента](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [Заливка области с помощью сплошного цвета](how-to-paint-an-area-with-a-solid-color.md)  
+ [Заливка области с помощью системной кисти](how-to-paint-an-area-with-a-system-brush.md)  
+ [Заливка области с помощью видео](how-to-paint-an-area-with-a-video.md)  
+ [Заливка области с помощью визуального элемента](how-to-paint-an-area-with-a-visual.md)  
+ [Сохранение пропорций изображения, используемого в качестве фона](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [Установка горизонтального и вертикального выравнивания объекта TileBrush](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [Установка размера плитки для объекта TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [Преобразование кисти](how-to-transform-a-brush.md)  
+ [Использование системных цветов в градиенте](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ ms.locfileid: "33557541"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Графика и мультимедиа](index.md)  
   
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

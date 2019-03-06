@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554412"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353989"
 ---
 # <a name="slider"></a>Slider
 <xref:System.Windows.Controls.Slider> Позволяет выбрать из диапазона значений путем перемещения <xref:System.Windows.Controls.Primitives.Thumb> вдоль <xref:System.Windows.Controls.Primitives.Track>.  
   
- Ниже приведен пример горизонтального <xref:System.Windows.Controls.Slider> элемента управления.  
+ Ниже показан пример горизонтального <xref:System.Windows.Controls.Slider> элемента управления.  
   
- ![Горизонтальный ползунок с отметками](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
+ ![Горизонтальный ползунок с отметками](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Настройка делений на ползунке](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+ [Настройка делений на ползунке](how-to-customize-the-ticks-on-a-slider.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Slider>  

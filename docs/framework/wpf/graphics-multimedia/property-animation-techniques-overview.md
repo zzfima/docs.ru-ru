@@ -9,19 +9,19 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 641fe7aa752e9c1a4e4fb10d2a454b1d977a0c7e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366781"
 ---
 # <a name="property-animation-techniques-overview"></a>Общие сведения о методах анимации свойств
 В этом разделе описываются различные подходы к анимации свойств: раскадровки, локальные анимации, часы и покадровая анимация.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для понимания этого раздела необходимо ознакомиться с базовыми средствами анимации, которые описаны в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Для понимания этого раздела необходимо ознакомиться с базовыми средствами анимации, которые описаны в разделе [Общие сведения об эффектах анимации](animation-overview.md).  
   
 <a name="summary"></a>   
 ## <a name="different-ways-to-animate"></a>Различные способы анимации  
@@ -38,13 +38,13 @@ ms.locfileid: "56746313"
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>Раскадровка  
- Используйте <xref:System.Windows.Media.Animation.Storyboard> при необходимости определить и применить анимации с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], интерактивного управления анимациями после запуска, создания сложного дерева анимаций или анимации в <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.DataTemplate>. Для объекта анимируется с <xref:System.Windows.Media.Animation.Storyboard>, он должен быть <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, или он должен использоваться для задания <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Дополнительные сведения см. в разделе [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Используйте <xref:System.Windows.Media.Animation.Storyboard> при необходимости определить и применить анимации с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], интерактивного управления анимациями после запуска, создания сложного дерева анимаций или анимации в <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.DataTemplate>. Для объекта анимируется с <xref:System.Windows.Media.Animation.Storyboard>, он должен быть <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, или он должен использоваться для задания <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Дополнительные сведения см. в разделе [Общие сведения о раскадровке](storyboards-overview.md).  
   
  Объект <xref:System.Windows.Media.Animation.Storyboard> — это специальный тип контейнера <xref:System.Windows.Media.Animation.Timeline> , предоставляющей сведения об анимации, которую она содержит. Для анимации с <xref:System.Windows.Media.Animation.Storyboard>, выполните следующие три действия.  
   
 1.  Объявите <xref:System.Windows.Media.Animation.Storyboard> и одну или несколько анимаций.  
   
-2.  Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> присоединенного свойства для указания целевого объекта и свойства каждой анимации.  
+2.  Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> присоединенного свойства для указания целевого объекта и свойства каждой анимации.  
   
 3.  (Только код) Определение <xref:System.Windows.NameScope> для <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Зарегистрируйте имена объектов для анимации с помощью <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "56746313"
   
 |Раскадровка запускается с помощью метода...|Применение к конкретным экземплярам|Стиль|Шаблон элемента управления|Шаблон данных|Пример|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- Дополнительные сведения о <xref:System.Windows.Media.Animation.Storyboard> объектов, см. в разделе [Общие сведения о раскадровках](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Дополнительные сведения о <xref:System.Windows.Media.Animation.Storyboard> объектов, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).  
   
 ## <a name="local-animations"></a>Локальная анимация  
  Локальные анимации предоставляют удобный способ для анимации свойства зависимостей любого <xref:System.Windows.Media.Animation.Animatable> объекта. Используйте локальную анимацию, когда необходимо применить одну анимацию к свойству и не требуется интерактивно управлять анимацией после ее запуска. В отличие от <xref:System.Windows.Media.Animation.Storyboard> анимации, локальной анимации можно анимировать объект, не связанный с <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Также не нужно определять <xref:System.Windows.NameScope> для этого типа анимации.  
@@ -76,14 +76,14 @@ ms.locfileid: "56746313"
   
  В следующем примере показано, как анимировать ширину и цвет фона для <xref:System.Windows.Controls.Button>.  
   
- [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
- [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
- [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
+ [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
+ [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
+ [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
 ## <a name="clock-animations"></a>Часы  
  Используйте <xref:System.Windows.Media.MediaPlayer.Clock%2A> объектов при необходимости выполнить анимацию без использования <xref:System.Windows.Media.Animation.Storyboard> и вы хотите создать сложные деревья временных или интерактивно управлять анимацией после запуска. Можно использовать объекты Clock для анимации свойства зависимостей любого <xref:System.Windows.Media.Animation.Animatable> объекта.  
   
- Нельзя использовать <xref:System.Windows.Media.Animation.Clock> объекты непосредственно для анимации в стилях, управлять шаблонами и шаблонах данных. (Анимации и системы времени фактически используют <xref:System.Windows.Media.Animation.Clock> объектов для анимации в стили, шаблоны элементов управления и шаблонах данных, но необходимо создать эти <xref:System.Windows.Media.Animation.Clock> объекты из <xref:System.Windows.Media.Animation.Storyboard>. Дополнительные сведения о связи между <xref:System.Windows.Media.Animation.Storyboard> объектов и <xref:System.Windows.Media.Animation.Clock> объектов, см. в разделе [анимации и общие сведения о характере системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).)  
+ Нельзя использовать <xref:System.Windows.Media.Animation.Clock> объекты непосредственно для анимации в стилях, управлять шаблонами и шаблонах данных. (Анимации и системы времени фактически используют <xref:System.Windows.Media.Animation.Clock> объектов для анимации в стили, шаблоны элементов управления и шаблонах данных, но необходимо создать эти <xref:System.Windows.Media.Animation.Clock> объекты из <xref:System.Windows.Media.Animation.Storyboard>. Дополнительные сведения о связи между <xref:System.Windows.Media.Animation.Storyboard> объектов и <xref:System.Windows.Media.Animation.Clock> объектов, см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).)  
   
  Для применения одного <xref:System.Windows.Media.Animation.Clock> к свойству, выполните следующие действия.  
   
@@ -95,8 +95,8 @@ ms.locfileid: "56746313"
   
  В следующем примере показано, как создать <xref:System.Windows.Media.Animation.AnimationClock> и применить его к двум похожим свойствам.  
   
- [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
- [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
+ [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
+ [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
  Чтобы создать дерево временной шкалы и использовать его анимации свойств, выполните следующие действия.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "56746313"
   
 3.  Итерации по <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> из <xref:System.Windows.Media.Animation.ClockGroup> и примените его дочерние <xref:System.Windows.Media.Animation.Clock> объектов. Для каждого <xref:System.Windows.Media.Animation.AnimationClock> дочерний элемент, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationClock> к указанному свойству  
   
- Дополнительные сведения об объектах часов см. в разделе [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Дополнительные сведения об объектах часов см. в разделе [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md).  
   
 ## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>Покадровая анимация: Обход анимации и системы управления временем  
  Этот подход следует использовать, если требуется полностью обойти систему анимации WPF [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Один из сценариев для такого подхода — анимация физики, при которой на каждом шаге анимации требуется пересчитывать объекты на основе последнего набора итераций объектов.  
@@ -122,7 +122,7 @@ ms.locfileid: "56746313"
  Дополнительные сведения см. в разделе <xref:System.Windows.Media.CompositionTarget.Rendering> страницы.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения о раскадровке](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
-- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
+- [Общие сведения о свойствах зависимости](../advanced/dependency-properties-overview.md)

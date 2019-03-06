@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825957"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352598"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Метод ISOSDacInterface::GetMethodDescData
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`methodDesc` [in] Адрес MethodDesc.
+`methodDesc`\
+[in] Адрес MethodDesc.
 
-`ip` [in] IP-адрес метода.
+`ip`\
+[in] IP-адрес метода.
 
-`data` [out] Данные, связанные с MethodDesc, возвращенный внутренним API.
+`data`\
+[out] Данные, связанные с MethodDesc, возвращенный внутренним API.
 
-`cRevertedRejitVersions` [out] Число версий rejit возвращенного в предыдущее состояние.
+`cRevertedRejitVersions`\
+[out] Число версий rejit возвращенного в предыдущее состояние.
 
-`rgRevertedRejitData` [out] Данные, связанные с версиями возвращенного в предыдущее состояние rejit, возвращенный внутренним API.
+`rgRevertedRejitData`\
+[out] Данные, связанные с версиями возвращенного в предыдущее состояние rejit, возвращенный внутренним API.
 
-`pcNeededRevertedRejitData` [out] Число байтов, необходимое для хранения данных, связанные с восстанавливаемой версиями ReJit.
+`pcNeededRevertedRejitData`\
+[out] Число байтов, необходимое для хранения данных, связанные с восстанавливаемой версиями ReJit.
 
 ## <a name="remarks"></a>Примечания
 
@@ -68,5 +74,5 @@ HRESULT GetMethodDescData(
 
 ## <a name="see-also"></a>См. также
 
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Отладка](index.md)
+- [Интерфейс ISOSDacInterface](isosdacinterface-interface.md)

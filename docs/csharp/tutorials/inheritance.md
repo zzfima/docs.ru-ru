@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717523"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836647"
 ---
 # <a name="inheritance-in-c-and-net"></a>Наследование в C# и .NET
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-В некоторых случаях производный класс *обязан* переопределять реализацию базового класса. Члены базового класса, отмеченные ключевым словом [abstract](../language-reference/keywords/abstract.md) (абстрактный), обязательно должны переопределяться в производных классах. При попытке компиляции следующего примера возникнет ошибка компилятора CS0534, "<class> не реализует наследуемый абстрактный член <member>", поскольку класс `B` не предоставляет реализации для `A.Method1`.
+В некоторых случаях производный класс *обязан* переопределять реализацию базового класса. Члены базового класса, отмеченные ключевым словом [abstract](../language-reference/keywords/abstract.md) (абстрактный), обязательно должны переопределяться в производных классах. При попытке компиляции следующего примера возникнет ошибка компилятора CS0534, "&lt;class&gt; не реализует наследуемый абстрактный член &lt;member&gt;", поскольку класс `B` не предоставляет реализации для `A.Method1`.
 
 ```csharp
 public abstract class A

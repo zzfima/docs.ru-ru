@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377681"
 ---
 # <a name="grid-how-to-topics"></a>Разделы практического руководства, посвященные объекту класса Grid
-В этом разделе описываются способы расположения элементов с помощью <xref:System.Windows.Controls.Grid> элемента.  
+В этом разделе описываются способы позиционирования элементов с помощью <xref:System.Windows.Controls.Grid> элемент.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание стандартного диалогового окна пользовательского интерфейса с помощью сетки](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Создание сложной сетки](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Создание элемента сетки](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [Создание и использование объекта GridLengthConverter](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Управление столбцами и строками с помощью коллекций ColumnDefinitionsCollections и RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Размещение дочерних элементов сетки](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Совместное использование свойств размера между сетками](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Создание стандартного диалогового окна пользовательского интерфейса с помощью сетки](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Создание сложной сетки](how-to-create-a-complex-grid.md)  
+ [Создание элемента сетки](how-to-create-a-grid-element.md)  
+ [Создание и использование объекта GridLengthConverter](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [Управление столбцами и строками с помощью коллекций ColumnDefinitionsCollections и RowDefinitionsCollections](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Размещение дочерних элементов сетки](how-to-position-the-child-elements-of-a-grid.md)  
+ [Совместное использование свойств размера между сетками](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ ms.locfileid: "33550369"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

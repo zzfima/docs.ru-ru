@@ -7,23 +7,23 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373482"
 ---
 # <a name="path-animation-how-to-topics"></a>Практические руководства, посвященные анимации пути
 В подразделах этого раздела демонстрируется анимация объекта вдоль пути.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Анимация объекта вдоль контура (двойная анимация)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [Анимация объекта вдоль контура (точечная анимация)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [Анимация объекта вдоль контура (матричная анимация)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Анимация объектов по всему пути (матричная анимации с накоплением смещения)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Поворот объекта с использованием геометрического пути (матрица анимации)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Поворот объекта с использованием геометрического пути](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Анимация объекта вдоль контура (двойная анимация)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Анимация объекта вдоль контура (точечная анимация)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Анимация объекта вдоль контура (матричная анимация)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Анимация объектов по всему пути (матричная анимации с накоплением смещения)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Поворот объекта с использованием геометрического пути (матрица анимации)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Поворот объекта с использованием геометрического пути](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -31,6 +31,6 @@ ms.locfileid: "54665855"
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>См. также
-- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Графика и мультимедиа](index.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)

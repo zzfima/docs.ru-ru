@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361217"
 ---
 # <a name="events-wpf"></a>События (WPF)
 В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представлены перенаправленные события, которые могут вызывать обработчики, существующие в разных прослушивателях дерева элементов в приложении.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Общие сведения о вложенных событиях](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [События времени жизни объекта](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [События предварительного просмотра](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [События изменения свойств](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Обработка событий в Visual Basic и WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Шаблоны слабых событий](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Общие сведения о перенаправленных событиях](routed-events-overview.md)  
+ [Общие сведения о вложенных событиях](attached-events-overview.md)  
+ [События времени жизни объекта](object-lifetime-events.md)  
+ [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md)  
+ [События предварительного просмотра](preview-events.md)  
+ [События изменения свойств](property-change-events.md)  
+ [Обработка событий в Visual Basic и WPF](visual-basic-and-wpf-event-handling.md)  
+ [Шаблоны слабых событий](weak-event-patterns.md)  
+ [Разделы практического руководства](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542591"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML в WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Свойства](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Ввод](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ресурсы](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Модель содержимого WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Архитектура WPF](wpf-architecture.md)  
+  [XAML в WPF](xaml-in-wpf.md)  
+  [Базовые элементы](base-elements.md)  
+  [Дерево элементов и сериализация](element-tree-and-serialization.md)  
+  [Свойства](properties-wpf.md)  
+  [Ввод](input-wpf.md)  
+  [Ресурсы](resources-wpf.md)  
+  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Модель содержимого WPF](../controls/wpf-content-model.md)  
+  [Потоковая модель](threading-model.md)

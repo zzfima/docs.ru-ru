@@ -2,12 +2,12 @@
 title: Итераторы (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 6c03292155057ad9e202fb728cebab9e8a373640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359124"
 ---
 # <a name="iterators-visual-basic"></a>Итераторы (Visual Basic)
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.  
@@ -63,7 +63,7 @@ End Function
 > [!NOTE]
 >  Все примеры в разделе, кроме примера простого итератора, включают [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкций для `System.Collections` и `System.Collections.Generic` пространства имен.  
   
-##  <a name="BKMK_SimpleIterator"></a> Простой итератор  
+## <a name="BKMK_SimpleIterator"></a> Простой итератор  
  В следующем примере имеется один `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. В методе `Main` каждая итерация оператора `For Each` создает вызов функции итератора, которая выполняет следующий оператор `Yield`.  
   
 ```vb  
@@ -88,7 +88,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> Создание класса коллекции  
+## <a name="BKMK_CollectionClass"></a> Создание класса коллекции  
  В следующем примере класс `DaysOfTheWeek` реализует интерфейс <xref:System.Collections.IEnumerable>, которому требуется метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>. Компилятор неявно вызывает метод `GetEnumerator`, который возвращает <xref:System.Collections.IEnumerator>.  
   
  `GetEnumerator` Метод возвращает каждую строку за раз с помощью `Yield` инструкции и `Iterator` является модификатор в объявлении функции.  
@@ -213,7 +213,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a> Блоки "try"  
+## <a name="BKMK_TryBlocks"></a> Блоки "try"  
  Visual Basic позволяет `Yield` инструкции в `Try` блока [попробуйте... CATCH... Оператор Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Объект `Try` блок, который имеет `Yield` инструкция может иметь `Catch` блокируется и может иметь `Finally` блока.  
   
  В следующем примере `Try`, `Catch`, и `Finally` блокирует в функции итератора. `Finally` Блок в функции итератора, выполняется перед `For Each` окончания итерации.  
@@ -253,7 +253,7 @@ End Function
   
  Если `For Each` текст (а не метода итератора) вызывает исключение, `Catch` блок в функции итератора не выполняется, но `Finally` выполняется блок в функции итератора. Объект `Catch` блока внутри функции итератора перехватываются только исключения, возникшие внутри функции итератора.  
   
-##  <a name="BKMK_AnonymousMethods"></a> Анонимные методы  
+## <a name="BKMK_AnonymousMethods"></a> Анонимные методы  
  В Visual Basic анонимная функция может быть функцией итератора. Это показано в следующем примере.  
   
 ```vb  
@@ -303,7 +303,7 @@ End Function
   
  Если проверка находится внутри функции итератора, проверка не может выполняться только в начале первой итерации `For Each` текст.  
   
-##  <a name="BKMK_GenericList"></a> Использование итераторов с универсальным списком  
+## <a name="BKMK_GenericList"></a> Использование итераторов с универсальным списком  
  В следующем примере универсальный класс `Stack(Of T)` также реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Метод `Push` присваивает значения массиву типа `T`. Метод <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> возвращает массив значений с помощью оператора `Yield`.  
   
  Помимо универсального метода <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> должен быть реализован и неуниверсальный метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>. Это связано с тем, что <xref:System.Collections.Generic.IEnumerable%601> наследуется от <xref:System.Collections.IEnumerable>. Неуниверсальная реализация подчиняется универсальной реализации.  
@@ -413,7 +413,7 @@ Public Class Stack(Of T)
 End Class  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> Сведения о синтаксисе  
+## <a name="BKMK_SyntaxInformation"></a> Сведения о синтаксисе  
  Итератор может являться методом или методом доступа `get`. Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом деструкторе.  
   
  Должно существовать неявное преобразование выражения типа в операторе `Yield` в возвращаемый тип итератора.  
@@ -422,7 +422,7 @@ End Class
   
  В Visual Basic «Yield» не является зарезервированным словом и имеет специальное значение только в том случае, если он используется в `Iterator` метод или `get` метода доступа.  
   
-##  <a name="BKMK_Technical"></a> Техническая реализация  
+## <a name="BKMK_Technical"></a> Техническая реализация  
  Хотя итератор создается как метод, компилятор переводит его во вложенный класс, который фактически является конечным автоматом. Этот класс отслеживает положение итератора, пока в клиентском коде выполняется цикл `For Each...Next`.  
   
  Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe для отображения кода промежуточного языка Майкрософт, создаваемого для метода итератора.  
@@ -435,7 +435,7 @@ End Class
   
  Дополнительные сведения см. в разделе [спецификация языка Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
-##  <a name="BKMK_UseOfIterators"></a> Использование итераторов  
+## <a name="BKMK_UseOfIterators"></a> Использование итераторов  
  Итераторы позволяют поддерживать простоту цикла `For Each`, когда необходимо использовать сложный код для заполнения последовательности списков. Это может оказаться полезным в следующих случаях:  
   
 -   Изменение последовательности списков после первой итерации цикла `For Each`.  

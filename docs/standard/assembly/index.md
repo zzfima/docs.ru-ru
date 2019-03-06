@@ -7,7 +7,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
 Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в виде исполняемого файла (.exe) или файла библиотеки динамической компоновки (.dll) и являются составными частями приложений .NET. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
   
- В .NET Core и .NET Framework сборку можно создать из одного или нескольких файлов исходного кода. В .NET Framework сборки могут содержать один или несколько модулей. Благодаря этому в крупных проектах несколько разработчиков могут работать с отдельными файлами или модулями исходного кода, которые вместе образуют единую сборку. Дополнительные сведения см. в статье [Как выполнить создание многофайловой сборки](../../framework/app-domains/how-to-build-a-multifile-assembly.md).
+ В .NET Core и .NET Framework сборку можно создать из одного или нескольких файлов исходного кода. В .NET Framework сборки могут содержать один или несколько модулей. Благодаря этому в крупных проектах несколько разработчиков могут работать с отдельными файлами или модулями исходного кода, которые вместе образуют единую сборку. Дополнительные сведения см. в статье [Как выполнить создании многофайловой сборки](../../framework/app-domains/how-to-build-a-multifile-assembly.md).
   
  Сборки имеют следующие свойства.  
   
@@ -48,11 +48,11 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
 ## <a name="see-also"></a>См. также
 
- - [Формат файла сборки .NET](file-format.md)  
+ - [Формат файла сборки .NET](file-format.md)
  - [Сборки в среде CLR](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Дружественные сборки (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Дружественные сборки (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Дружественные сборки](friend-assemblies.md)  
  - [Практическое руководство. Загрузка и выгрузка сборок (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Практическое руководство. Загрузка и выгрузка сборок (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core](unloadability-howto.md)
  - [Практическое руководство. Определение того, является ли файл сборкой (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
- - [How to: Determine If a File Is an Assembly (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md) (Практическое руководство. Как определить, является ли файл сборкой (Visual Basic))  
+ - [Практическое руководство. Determine If a File Is an Assembly (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md) (Практическое руководство. Как определить, является ли файл сборкой (Visual Basic))  

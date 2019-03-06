@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544292"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352390"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Практические руководства, посвященные входным данным и командам
-В подразделах этого раздела описывается, как использовать инфраструктуру ввода и команд в Windows Presentation Foundation (WPF).  
+В этом разделе описываются способы использования инфраструктуры ввода и команд в Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Включение команды](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Изменение типа курсора](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [Изменение цвета элемента с помощью событий фокуса](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [Применение стиля визуального отображения фокуса к элементу управления](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Определение нажатия клавиши ENTER](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [Создание эффекта выделения с помощью событий](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [Создание объекта, следующего за указателем мыши](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [Создание маршрутизируемой команды RoutedCommand](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [Реализация ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Подключение команды к элементу управления без поддержки команд](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [Подключение команды к элементу управления с поддержкой команд](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [Включение команды](how-to-enable-a-command.md)  
+ [Изменение типа курсора](how-to-change-the-cursor-type.md)  
+ [Изменение цвета элемента с помощью событий фокуса](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [Применение стиля визуального отображения фокуса к элементу управления](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Определение нажатия клавиши ENTER](how-to-detect-when-the-enter-key-pressed.md)  
+ [Создание эффекта выделения с помощью событий](how-to-create-a-rollover-effect-using-events.md)  
+ [Создание объекта, следующего за указателем мыши](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [Создание маршрутизируемой команды RoutedCommand](how-to-create-a-routedcommand.md)  
+ [Реализация ICommandSource](how-to-implement-icommandsource.md)  
+ [Подключение команды к элементу управления без поддержки команд](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [Подключение команды к элементу управления с поддержкой команд](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.UIElement>  

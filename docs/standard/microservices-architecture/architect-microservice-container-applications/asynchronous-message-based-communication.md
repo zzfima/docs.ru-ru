@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148903"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969366"
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 
@@ -77,7 +77,7 @@ ms.locfileid: "53148903"
 
 - [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Использование полной модели [источников событий](https://msdn.microsoft.com/library/dn589792.aspx).
+- Использование полной модели [источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
 - Использование [модели исходящих сообщений](http://gistlabs.com/2014/05/the-outbox/), таблицы базы данных транзакций как очереди сообщений, которая служит основой для компонента генерации событий, создающего и публикующего события.
 

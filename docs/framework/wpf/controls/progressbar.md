@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371337"
 ---
 # <a name="progressbar"></a>ProgressBar
-Объект <xref:System.Windows.Controls.ProgressBar> показывает ход выполнения операции. <xref:System.Windows.Controls.ProgressBar> Управления состоит из окна, которое заполняется системным цветом выделения мере выполнения операции.  
+Объект <xref:System.Windows.Controls.ProgressBar> показывает ход выполнения операции. <xref:System.Windows.Controls.ProgressBar> Элемент управления состоит из окна, которое заполняется системным цветом выделения в процессе выполнения операции.  
   
  На следующем рисунке показан типичный <xref:System.Windows.Controls.ProgressBar>.  
   
- ![Индикатор](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![Индикатор хода выполнения](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
